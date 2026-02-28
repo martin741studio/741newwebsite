@@ -27,10 +27,170 @@
   <link href="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/css/weavy-ai.webflow.shared.4177f1ac9.css"
     rel="stylesheet" type="text/css" integrity="sha384-QXfxrJwJZsoq28EStZW945YIe7YK8KY5/pVxXA0iwbzjxi159EEIqBRH2LkgsHNl"
     crossorigin="anonymous" />
+  <!-- Brand Guidelines Color Overrides -->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    /* Akira Footer Dog Interaction */
+    #akira-traveler {
+      position: absolute;
+      bottom: 0px; 
+      animation: runX 30s linear infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+    #akira-flipper {
+      animation: flipX 30s step-end infinite;
+    }
+    .akira-sprite {
+      width: 96px;
+      height: 96px;
+      position: relative;
+    }
+    .akira-frame {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 100%;
+      opacity: 0;
+    }
+    .akira-frame-1 { animation: spriteCycle 0.6s step-end infinite; animation-delay: 0s; }
+    .akira-frame-2 { animation: spriteCycle 0.6s step-end infinite; animation-delay: 0.15s; }
+    .akira-frame-3 { animation: spriteCycle 0.6s step-end infinite; animation-delay: 0.3s; }
+    .akira-frame-4 { animation: spriteCycle 0.6s step-end infinite; animation-delay: 0.45s; }
+
+    @keyframes spriteCycle {
+      0% { opacity: 1; }
+      25%, 50%, 75%, 100% { opacity: 0; }
+    }
+    @keyframes flipX {
+      0%, 49.99%, 100% { transform: scaleX(1); }
+      50%, 99.99% { transform: scaleX(-1); }
+    }
+    @keyframes runX {
+      0% { left: -80px; }
+      49.99% { left: calc(100% + 80px); }
+      50% { left: calc(100% + 80px); }
+      99.99% { left: -80px; }
+      100% { left: -80px; }
+    }
+
+    .akira-bubble {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%) scale(0.85);
+      transform-origin: bottom center;
+      background: #fdfdfd;
+      border: 2px solid #111;
+      padding: 10px 14px;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 8px;
+      line-height: 1.6;
+      color: #111;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 150ms ease-out, transform 150ms ease-out, visibility 150ms;
+      box-shadow: 3px 3px 0px rgba(0,0,0,0.8);
+      z-index: 10;
+      margin-bottom: 4px;
+      text-align: center;
+    }
+    .akira-bubble.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) scale(1);
+    }
+    .akira-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 6px 6px 0 0;
+      border-style: solid;
+      border-color: #111 transparent transparent transparent;
+    }
+    .akira-bubble::before {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 4px 4px 0 0;
+      border-style: solid;
+      border-color: #fdfdfd transparent transparent transparent;
+      z-index: 1;
+    }
     :root {
-      --brand--lemon: #fac118 !important;
-      --brand--lemon-100: #fac118 !important;
+      /* Overriding neon yellow with the new brand yellow */
+      --brand--lemon: #fac118;
+      /* Overriding footer greenish tint with a neutral grey */
+      --brand--ash-grey: #8c8c8c;
+    }
+
+    /* Partner Logos Marquee */
+    .section_partner-logos {
+      display: flex;
+      align-items: center;
+      width: 100vw;
+      max-width: 100%;
+      overflow: hidden;
+      padding: 4rem 0 2rem 0; /* Adjusted safe padding to accommodate headline */
+      background-color: transparent;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .marquee-wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      /* Optional simple vignette masks to smoothly fade out edges */
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+    
+    .marquee-content {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      animation: scrollMarquee 35s linear infinite;
+    }
+    
+    .marquee-content:hover {
+      /* Optional: Pause on hover makes it easier to click/read the logos */
+      animation-play-state: paused;
+    }
+    
+    @keyframes scrollMarquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    .logo-item {
+      height: 60px;
+      margin: 0 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .logo-item img {
+      max-height: 100%;
+      max-width: 180px;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.6);
+      transition: filter 300ms ease, opacity 300ms ease;
+      cursor: pointer;
+    }
+    
+    .logo-item:hover img {
+      filter: grayscale(0%) opacity(1);
     }
   </style>
   <script
@@ -54,7 +214,23 @@
   <!-- End Google Tag Manager -->
 
   <!-- firstpromoter -->
-  <script>(function (w) { w.fpr = w.fpr || function () { w.fpr.q = w.fpr.q || []; w.fpr.q[arguments[0] == 'set' ? 'unshift' : 'push'](arguments); }; })(window);
+  <script>
+    let akiraBubbleTimer;
+    function toggleAkira() {
+      const bubble = document.getElementById('akira-bubble');
+      if (bubble.classList.contains('show')) {
+        bubble.classList.remove('show');
+        clearTimeout(akiraBubbleTimer);
+      } else {
+        bubble.classList.add('show');
+        clearTimeout(akiraBubbleTimer);
+        akiraBubbleTimer = setTimeout(() => {
+          bubble.classList.remove('show');
+        }, 5000); // Auto-hide after 5 seconds
+      }
+    }
+    
+    (function (w) { w.fpr = w.fpr || function () { w.fpr.q = w.fpr.q || []; w.fpr.q[arguments[0] == 'set' ? 'unshift' : 'push'](arguments); }; })(window);
     fpr("init", { cid: "vzajpas8" });
     fpr("click");
   </script>
@@ -367,9 +543,15 @@
               <div class="line-anchor end"></div>
             </div>
             <div id="node4" node-connect-target="node6" node-connect-target-m=""
-              class="hr-card-text node-connect w-node-_0555fc31-2b1b-83e8-70ea-b785ee076d41-78a6999f"><img
-                src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681cde667778f6f5a7e80bf2_hcard%20-%20text.avif"
-                loading="lazy" alt="" class="hr_img-prompt-st" />
+              class="hr-card-text node-connect w-node-_0555fc31-2b1b-83e8-70ea-b785ee076d41-78a6999f" style="position: relative; width: 17.5vw; min-width: 210px; max-width: 260px;">
+              <div style="position: absolute; top: -28px; left: 0px; font-family: inherit; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; color: #1a1a1a; z-index: 10;">
+                TEXT
+              </div>
+              <div style="background-color: #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.05); width: 100%; height: auto; text-align: left;">
+                <p class="paragraph-line-height-1-15 text-color-stone-grey" style="font-size: clamp(0.75rem, 0.9vw, 0.95rem); margin: 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6; overflow: hidden;">
+                  a gazelle, raccoon, duck, and horse driving playfully in a vintage convertible down an empty road. The raccoon is waving its hand through the window playfully. The horse has its mouth wide open screaming. cinematic.
+                </p>
+              </div>
               <div data-line-path="magnet" class="line-anchor start"></div>
               <div class="line-anchor end"></div>
             </div>
@@ -573,6 +755,8 @@
             </div>
           </div>
           <div class="models_bg-image-layer">
+            <!-- Hardcoded dark overlay to tone down the turquoise videos and boost text contrast -->
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.65); z-index: 50; pointer-events: none;"></div>
             <div class="image-overlay-layer"></div><img loading="eager"
               src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825887e82ac8a8bb8139ebd_GPT%20img%201.avif"
               alt="" class="models_bg-image active" />
@@ -872,6 +1056,46 @@
           </script>
         </div>
       </section>
+      <!-- Scrolling Partner Logos Section -->
+      <section class="section_partner-logos">
+        
+        <!-- Headline -->
+        <div class="padding-global">
+          <div class="simple-container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+              <h2 class="heading-style-xl">Partners</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="marquee-wrapper">
+          <div class="marquee-content">
+            <!-- First Set -->
+            <div class="logo-item"><img src="/assets/logos/immokauf.svg" alt="Immokauf"></div>
+            <div class="logo-item"><img src="/assets/logos/karin_lorenz.svg" alt="Karin Lorenz"></div>
+            <div class="logo-item"><img src="/assets/logos/marina_development.svg" alt="Marina Development"></div>
+            <div class="logo-item"><img src="/assets/logos/marugame_udon.svg" alt="Marugame Udon"></div>
+            <div class="logo-item"><img src="/assets/logos/tacheles_logo.svg" alt="Tacheles"></div>
+            <div class="logo-item"><img src="/assets/logos/versance.svg" alt="Versance"></div>
+            <div class="logo-item"><img src="/assets/logos/wbg_nurnberg.svg" alt="WBG Nurnberg"></div>
+            <div class="logo-item"><img src="/assets/logos/werbeagentur_bamberger.svg" alt="Bamberger"></div>
+            <div class="logo-item"><img src="/assets/logos/the_lawn.png" alt="The Lawn"></div>
+            <div class="logo-item"><img src="/assets/logos/single_fin_bali.png" alt="Single Fin"></div>
+            <!-- Duplicated Set for Infinite Loop -->
+            <div class="logo-item"><img src="/assets/logos/immokauf.svg" alt="Immokauf"></div>
+            <div class="logo-item"><img src="/assets/logos/karin_lorenz.svg" alt="Karin Lorenz"></div>
+            <div class="logo-item"><img src="/assets/logos/marina_development.svg" alt="Marina Development"></div>
+            <div class="logo-item"><img src="/assets/logos/marugame_udon.svg" alt="Marugame Udon"></div>
+            <div class="logo-item"><img src="/assets/logos/tacheles_logo.svg" alt="Tacheles"></div>
+            <div class="logo-item"><img src="/assets/logos/versance.svg" alt="Versance"></div>
+            <div class="logo-item"><img src="/assets/logos/wbg_nurnberg.svg" alt="WBG Nurnberg"></div>
+            <div class="logo-item"><img src="/assets/logos/werbeagentur_bamberger.svg" alt="Bamberger"></div>
+            <div class="logo-item"><img src="/assets/logos/the_lawn.png" alt="The Lawn"></div>
+            <div class="logo-item"><img src="/assets/logos/single_fin_bali.png" alt="Single Fin"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="section_prof-tools">
         <div class="padding-global">
           <div class="simple-container">
@@ -1547,6 +1771,45 @@
         </div>
       </section>
       <footer data-wf--footer--variant="base" class="footer">
+        <!-- Akira Dog Track: Anchored strictly to the DOM flow border above the gray box -->
+        <div style="position: relative; width: 100%; z-index: 10;">
+          <div id="akira-track" style="position: absolute; bottom: -6px; left: 0; width: 100%; pointer-events: none;">
+            <div id="akira-traveler" aria-label="Akira the dog – open message" role="button" tabindex="0" onclick="toggleAkira()">
+              <div id="akira-bubble" class="akira-bubble">
+                Hi! I'm Akira —<br>the owner's dog.
+              </div>
+              <div id="akira-flipper">
+                <div class="akira-sprite">
+                  <!-- Frame 1 -->
+                  <svg class="akira-frame akira-frame-1" viewBox="0 0 16 16" width="96" height="96" shape-rendering="crispEdges">
+                    <path d="M3 12h2v3H3z M9 12h2v3H9z M3 7h8v5H3z M10 3h4v4H10z M14 4h2v2H14z" fill="#fff"/>
+                    <path d="M4 7h3v2H4z M12 3h2v2H12z" fill="#8b5a2b"/>
+                    <path d="M1 5h2v3H1z M10 2h2v2H10z M15 4h1v1H15z M4 14h1v1H4z M10 14h1v1H10z" fill="#222"/>
+                  </svg>
+                  <!-- Frame 2 -->
+                  <svg class="akira-frame akira-frame-2" viewBox="0 0 16 16" width="96" height="96" shape-rendering="crispEdges">
+                    <path d="M4 12h2v2H4z M8 12h2v2H8z M3 7h8v5H3z M10 4h4v4H10z M14 5h2v2H14z" fill="#fff"/>
+                    <path d="M4 7h3v2H4z M12 4h2v2H12z" fill="#8b5a2b"/>
+                    <path d="M1 6h2v2H1z M0 7h1v1H0z M10 3h2v2H10z M15 5h1v1H15z M5 13h1v1H5z M9 13h1v1H9z" fill="#222"/>
+                  </svg>
+                  <!-- Frame 3 -->
+                  <svg class="akira-frame akira-frame-3" viewBox="0 0 16 16" width="96" height="96" shape-rendering="crispEdges">
+                    <path d="M2 12h2v2H2z M1 13h1v1H1z M10 12h2v2H10z M11 13h1v1H11z M3 7h8v5H3z M10 3h4v4H10z M14 4h2v2H14z" fill="#fff"/>
+                    <path d="M4 7h3v2H4z M12 3h2v2H12z" fill="#8b5a2b"/>
+                    <path d="M1 4h2v2H1z M0 3h1v1H0z M10 2h2v2H10z M15 4h1v1H15z M2 13h1v1H2z M11 13h1v1H11z" fill="#222"/>
+                  </svg>
+                  <!-- Frame 4 -->
+                  <svg class="akira-frame akira-frame-4" viewBox="0 0 16 16" width="96" height="96" shape-rendering="crispEdges">
+                    <path d="M3 11h2v3H3z M9 11h2v3H9z M3 7h8v5H3z M10 4h4v4H10z M14 5h2v2H14z" fill="#fff"/>
+                    <path d="M4 7h3v2H4z M12 4h2v2H12z" fill="#8b5a2b"/>
+                    <path d="M1 6h2v2H1z M0 7h1v1H0z M10 3h2v2H10z M15 5h1v1H15z M4 13h1v1H4z M10 13h1v1H10z" fill="#222"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="footer_main-content"><img
             src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/682231a73b5be7ff98f935ac_footer%20Node.svg"
             loading="lazy" alt="" class="footer_node-to-cta" />
@@ -1672,16 +1935,9 @@
                   </svg></div>
               </a></div>
           </div>
-          <div class="footer_bottom-badges"><img
-              src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/69398e51b66cfd37e959fee4_image-SOC2_weavy.avif"
-              loading="lazy" width="Auto" height="Auto" alt="" class="image_soc2-footer-badge" />
-            <div class="footer_soc2-text-wrapp">
-              <div class="text-color-black92">SOC 2 Type II Certified</div>
-              <div class="text-color-stone-grey">Your data is protected with industry-standard security controls.</div>
-            </div>
-          </div>
-          <div class="footer_ending-links-content">
-            <p id="w-node-_67c729d4-f199-0c97-0629-18b9d8ca1a04-d84341ea" class="all-rights-text">Weavy © 2025.    All
+
+          <div class="footer_ending-links-content" style="position: relative;">
+            <p id="w-node-_67c729d4-f199-0c97-0629-18b9d8ca1a04-d84341ea" class="all-rights-text">741.Studio © 2025.    All
               rights reserved.</p>
           </div>
         </div><a id="try_now_bottom" href="https://app.weavy.ai/signin"
