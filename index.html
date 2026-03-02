@@ -160,6 +160,16 @@
       background-image: url("/app/assets/images/BG_CONTRL_yellow.svg") !important;
     }
 
+    .section_workflow-2-app {
+      background-image: 
+        linear-gradient(to bottom, #fff 0%, #fff 50%, rgba(255, 255, 255, 0) 100%), 
+        url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif"),
+        linear-gradient(0deg, rgba(250, 193, 24, 0.35) 0%, #fff 100%) !important;
+      background-position: 0 0, 50% 100%, 0 0 !important;
+      background-repeat: no-repeat, repeat, no-repeat !important;
+      background-size: 100% 100%, auto, cover !important;
+    }
+
     /* Partner Logos Marquee */
     .section_partner-logos {
       display: flex;
@@ -177,21 +187,22 @@
       width: 100%;
       overflow: hidden;
       position: relative;
+      cursor: grab;
+      user-select: none;
       /* Optional simple vignette masks to smoothly fade out edges */
       -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
       mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+    
+    .marquee-wrapper:active {
+      cursor: grabbing;
     }
     
     .marquee-content {
       display: flex;
       align-items: center;
       width: max-content;
-      animation: scrollMarquee 35s linear infinite;
-    }
-    
-    .marquee-content:hover {
-      /* Optional: Pause on hover makes it easier to click/read the logos */
-      animation-play-state: paused;
+      will-change: transform;
     }
     
     @keyframes scrollMarquee {
@@ -473,7 +484,7 @@
                 class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 hide-mobile-landscape">
                 Request a Demo
               </a>
-              <a href="https://app.weavy.ai/signin"
+              <a href="http://clients.741-studio.com/"
                 class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04"> Sign In
               </a>
             </div>
@@ -554,7 +565,7 @@
                 loading="lazy" alt="" class="hr_img-c-difference" style="border-radius: 12px; height: 100%; object-fit: cover; width: 100%;" /><img
                 src="/app/assets/images/sunburst_flare_hero.png"
                 loading="lazy" alt="" class="hr_img-c-difference-mobile" style="border-radius: 12px; height: 100%; object-fit: cover; width: 100%;" />
-              <div data-line-path="magnet" class="line-anchor start n2"></div>
+              <div data-line-path="magnet" class="line-anchor start n2" style="top: 45px;"></div>
             </div>
             <div id="node3" node-connect-target="node4, node5" node-connect-target-m="node6"
               class="hr-card-stable-diffusion node-connect w-node-_92cb0ff1-51e7-fda9-cd40-e52909242cda-78a6999f" style="position: relative;">
@@ -566,8 +577,8 @@
                 loading="lazy" alt="" class="hr_img-stable-diff" style="border-radius: 12px; height: 100%; object-fit: cover; width: 100%;" /><img
                 src="/app/assets/images/stablediffusionherosection.jpeg"
                 loading="lazy" alt="" class="hr_img-stable-diff-mobile" style="border-radius: 12px; height: 100%; object-fit: cover; width: 100%;" />
-              <div data-line-path="magnet" class="line-anchor start n3"></div>
-              <div class="line-anchor end n3"></div>
+              <div data-line-path="magnet" class="line-anchor start n3" style="top: 45px;"></div>
+              <div class="line-anchor end n3" style="top: 45px;"></div>
             </div>
             <div id="node5" node-connect-target="node6" node-connect-target-m="node6"
               class="hr-card-flux-2-1 node-connect w-node-ae4103dc-5e48-5c0c-7a06-82cd9453cae2-78a6999f" style="position: relative;">
@@ -578,8 +589,8 @@
                 loading="lazy" alt="" class="hr_img-flux" style="border-radius: 12px; height: 100%; object-fit: cover; width: 100%;" /><img
                 src="/app/assets/images/imageflux1.1herosection.jpg"
                 loading="lazy" alt="" class="hr_img-flux-mobile" style="border-radius: 12px; height: 100%; object-fit: cover; width: 100%;" />
-              <div class="line-anchor start n5" style="top: 40px;"></div>
-              <div class="line-anchor end" style="top: 40px;"></div>
+              <div class="line-anchor start n5" style="top: 45px;"></div>
+              <div class="line-anchor end" style="top: 45px;"></div>
             </div>
             <div id="node4" node-connect-target="node6" node-connect-target-m=""
               class="hr-card-text node-connect w-node-_0555fc31-2b1b-83e8-70ea-b785ee076d41-78a6999f" style="position: relative; width: 17.5vw; min-width: 210px; max-width: 260px;">
@@ -591,8 +602,8 @@
                   A massive, bright yellow iridescent smiley face balloon tightly inflated and playfully bouncing inside a small, fluorescent-lit office room. Realistic, documentary-style footage.
                 </p>
               </div>
-              <div data-line-path="magnet" class="line-anchor start" style="top: 40px;"></div>
-              <div class="line-anchor end" style="top: 40px;"></div>
+              <div data-line-path="magnet" class="line-anchor start" style="top: 45px;"></div>
+              <div class="line-anchor end" style="top: 45px;"></div>
             </div>
             <div id="node6" class="hr-card-minimax-video w-node-_0be630c0-22dc-cede-1dbf-f7e269927488-78a6999f">
               <div class="hero-video">
@@ -1110,23 +1121,27 @@
             <div class="logo-item"><img src="/assets/logos/immokauf.svg" alt="Immokauf"></div>
             <div class="logo-item"><img src="/assets/logos/karin_lorenz.svg" alt="Karin Lorenz"></div>
             <div class="logo-item"><img src="/assets/logos/marina_development.svg" alt="Marina Development"></div>
-            <div class="logo-item"><img src="/assets/logos/marugame_udon.svg" alt="Marugame Udon"></div>
+            <div class="logo-item"><img src="/app/public/assets/logos/marugame-udon-logo.png" alt="Marugame Udon"></div>
             <div class="logo-item"><img src="/assets/logos/tacheles_logo.svg" alt="Tacheles"></div>
             <div class="logo-item"><img src="/assets/logos/versance.svg" alt="Versance"></div>
             <div class="logo-item"><img src="/assets/logos/wbg_nurnberg.svg" alt="WBG Nurnberg"></div>
             <div class="logo-item"><img src="/assets/logos/werbeagentur_bamberger.svg" alt="Bamberger"></div>
-            <div class="logo-item"><img src="/assets/logos/the_lawn.png" alt="The Lawn"></div>
+            <div class="logo-item"><img src="/app/public/assets/logos/thelawncanggu1.png" alt="The Lawn"></div>
+            <div class="logo-item"><img src="/app/public/assets/logos/avli_moderngreek.png" alt="Avli Modern Greek"></div>
+            <div class="logo-item"><img src="/app/public/assets/logos/talkinfive.png" alt="Talkinfive"></div>
             <div class="logo-item"><img src="/assets/logos/single_fin_bali.png" alt="Single Fin"></div>
             <!-- Duplicated Set for Infinite Loop -->
             <div class="logo-item"><img src="/assets/logos/immokauf.svg" alt="Immokauf"></div>
             <div class="logo-item"><img src="/assets/logos/karin_lorenz.svg" alt="Karin Lorenz"></div>
             <div class="logo-item"><img src="/assets/logos/marina_development.svg" alt="Marina Development"></div>
-            <div class="logo-item"><img src="/assets/logos/marugame_udon.svg" alt="Marugame Udon"></div>
+            <div class="logo-item"><img src="/app/public/assets/logos/marugame-udon-logo.png" alt="Marugame Udon"></div>
             <div class="logo-item"><img src="/assets/logos/tacheles_logo.svg" alt="Tacheles"></div>
             <div class="logo-item"><img src="/assets/logos/versance.svg" alt="Versance"></div>
             <div class="logo-item"><img src="/assets/logos/wbg_nurnberg.svg" alt="WBG Nurnberg"></div>
             <div class="logo-item"><img src="/assets/logos/werbeagentur_bamberger.svg" alt="Bamberger"></div>
-            <div class="logo-item"><img src="/assets/logos/the_lawn.png" alt="The Lawn"></div>
+            <div class="logo-item"><img src="/app/public/assets/logos/thelawncanggu1.png" alt="The Lawn"></div>
+            <div class="logo-item"><img src="/app/public/assets/logos/avli_moderngreek.png" alt="Avli Modern Greek"></div>
+            <div class="logo-item"><img src="/app/public/assets/logos/talkinfive.png" alt="Talkinfive"></div>
             <div class="logo-item"><img src="/assets/logos/single_fin_bali.png" alt="Single Fin"></div>
           </div>
         </div>
@@ -2134,6 +2149,80 @@
             ease: "power2.out"
           }, 0);
         }
+
+        // --- Draggable Infinite Marquee Implementation ---
+        (function() {
+          const wrapper = document.querySelector('.marquee-wrapper');
+          const content = document.querySelector('.marquee-content');
+          if (!wrapper || !content) return;
+
+          let x = 0;
+          let isDragging = false;
+          let startX = 0;
+          let lastX = 0;
+          let velocity = 0;
+          let rafId = null;
+
+          function getWidth() {
+            return content.offsetWidth / 2;
+          }
+
+          function animate() {
+            if (!isDragging) {
+              x -= 0.6; // Base scroll speed
+              
+              // Apply simple "inertia" if you want, but for now just normal scroll
+              const width = getWidth();
+              if (width > 0) {
+                if (x <= -width) x += width;
+                if (x > 0) x -= width;
+              }
+              content.style.transform = `translateX(${x}px)`;
+            }
+            rafId = requestAnimationFrame(animate);
+          }
+
+          // Start loop
+          animate();
+
+          function handleStart(pageX) {
+            isDragging = true;
+            startX = pageX - x;
+            lastX = pageX;
+            velocity = 0;
+          }
+
+          function handleMove(pageX) {
+            if (!isDragging) return;
+            x = pageX - startX;
+            velocity = pageX - lastX;
+            lastX = pageX;
+
+            const width = getWidth();
+            if (width > 0) {
+              if (x <= -width) { x += width; startX += width; }
+              if (x > 0) { x -= width; startX -= width; }
+            }
+            content.style.transform = `translateX(${x}px)`;
+          }
+
+          function handleEnd() {
+            isDragging = false;
+          }
+
+          // Mouse Events
+          wrapper.addEventListener('mousedown', (e) => handleStart(e.pageX));
+          window.addEventListener('mousemove', (e) => handleMove(e.pageX));
+          window.addEventListener('mouseup', handleEnd);
+
+          // Touch Events
+          wrapper.addEventListener('touchstart', (e) => handleStart(e.touches[0].pageX), { passive: true });
+          window.addEventListener('touchmove', (e) => handleMove(e.touches[0].pageX), { passive: true });
+          window.addEventListener('touchend', handleEnd);
+          
+          // Pause auto-scroll on hover if not dragging
+          wrapper.addEventListener('mouseenter', () => { if(!isDragging) { /* speed could be reduced here if desired */ } });
+        })();
       });
     </script>
 
