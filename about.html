@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html data-wf-domain="www.weavy.ai" data-wf-page="about-page" data-wf-site="681b040781d5b5e278a69989">
+
+<head>
+    <meta charset="utf-8" />
+    <title>About | 741.Studio - Architecting Digital Growth</title>
+    <meta content="Learn about 741.Studio and founder Martin Drendel. We build high-performance digital assets that maximize leverage and ROI." name="description" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/css/weavy-ai.webflow.shared.4177f1ac9.css" rel="stylesheet" type="text/css" />
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        :root {
+            --brand--lemon: #fac118;
+            --brand--dark: #0d0d0e;
+            --brand--white: #ffffff;
+        }
+
+        body {
+            background-color: var(--brand--dark);
+            color: var(--brand--white);
+            font-family: Inter, sans-serif;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .navbar_main {
+            background-color: var(--brand--dark);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section_hero-about {
+            padding: 12rem 2rem 8rem;
+            text-align: center;
+            background-image: linear-gradient(0deg, var(--brand--dark) 0%, rgba(250, 193, 24, 0.05) 100%);
+        }
+
+        .about_heading {
+            font-size: clamp(3rem, 6vw, 6rem);
+            line-height: 1;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .about_subheading {
+            font-size: clamp(1.2rem, 2vw, 1.8rem);
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        .section_founder {
+            padding: 8rem 2rem;
+            background-color: #111;
+        }
+
+        .founder_grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        @media (max-width: 991px) {
+            .founder_grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+        }
+
+        .founder_image_wrapper {
+            position: relative;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .founder_image {
+            width: 100%;
+            display: block;
+            filter: grayscale(20%);
+            transition: filter 0.5s ease;
+        }
+
+        .founder_image:hover {
+            filter: grayscale(0%);
+        }
+
+        .founder_name_overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 3rem 2rem 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+        }
+
+        .founder_name_overlay h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0;
+            color: var(--brand--lemon);
+        }
+
+        .founder_title {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .heading-style-l {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .text-highlight {
+            color: var(--brand--lemon);
+        }
+
+        .section_values {
+            padding: 8rem 2rem;
+        }
+
+        .values_grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .values_grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .value_card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 1.5rem;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .value_card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: var(--brand--lemon);
+        }
+
+        .value_icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .value_card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--brand--lemon);
+        }
+
+        .value_card p {
+            font-size: 1rem;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        /* Partner Logos Marquee (Synced with Homepage) */
+        .section_partner-logos {
+            padding: 6rem 0;
+            background-color: var(--brand--dark);
+            overflow: hidden;
+        }
+
+        .marquee-wrapper {
+            width: 100%;
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .marquee-content {
+            display: flex;
+            width: max-content;
+            animation: scrollMarquee 40s linear infinite;
+        }
+
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .logo-item {
+            padding: 0 4rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-item img {
+            height: 50px;
+            filter: grayscale(100%) brightness(2);
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-item img:hover {
+            opacity: 1;
+        }
+
+        .footer {
+            padding: 6rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* CTA Button */
+        .cta_btn {
+            display: inline-block;
+            background-color: var(--brand--lemon);
+            color: var(--brand--dark);
+            padding: 1.2rem 2.5rem;
+            border-radius: 100px;
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta_btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(250, 193, 24, 0.3);
+        }
+
+        /* Akira Placeholder Styles */
+        #akira-traveler {
+            position: absolute;
+            bottom: 20px;
+            animation: runX 30s linear infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        @keyframes runX {
+            0% { left: -80px; }
+            100% { left: 100%; }
+        }
+
+        .akira-bubble {
+            background: #fff;
+            color: #000;
+            padding: 8px 12px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        #akira-traveler:hover .akira-bubble {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- GLOBAL NAVBAR -->
+        <nav class="navbar_main">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; max-width: 1400px; margin: 0 auto;">
+                <a href="/" class="brand">
+                    <img src="/app/assets/images/logo_white.png" alt="741 Studio" style="max-height: 40px;">
+                </a>
+                <div style="display: flex; gap: 2.5rem; align-items: center;">
+                    <a href="/app/portfolio_full.html" class="nav_text-link" style="color: white; text-decoration: none; font-weight: 600; opacity: 0.7;">Portfolio</a>
+                    <a href="/local-seo.html" class="nav_text-link" style="color: white; text-decoration: none; font-weight: 600; opacity: 0.7;">Local SEO</a>
+                    <a href="/about.html" class="nav_text-link" style="color: var(--brand--lemon); text-decoration: none; font-weight: 600;">About</a>
+                    <a href="http://clients.741-studio.com/" class="nav_text-link" style="color: white; text-decoration: none; font-weight: 600; opacity: 0.7;">Sign In</a>
+                    <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="cta_btn" style="padding: 0.8rem 1.5rem; font-size: 0.9rem;">Start Now</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <header class="section_hero-about">
+            <h1 class="about_heading">Architecting <span class="text-highlight">Autonomy</span></h1>
+            <p class="about_subheading">
+                741.Studio is a high-leverage digital agency dedicated to building scalable growth engines. We don't just "design" — we engineer assets that compound value and protect your focus.
+            </p>
+        </header>
+
+        <!-- FOUNDER -->
+        <section class="section_founder">
+            <div class="founder_grid">
+                <div class="founder_image_wrapper">
+                    <img src="/app/assets/local-seo/images/founder_martin.png" alt="Martin Drendel" class="founder_image">
+                    <div class="founder_name_overlay">
+                        <h3>MARTIN DRENDEL</h3>
+                        <span class="founder_title">CEO & Founder</span>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="heading-style-l" style="margin-bottom: 2rem;">Growth as a <span class="text-highlight">System</span>, Not a Task.</h2>
+                    <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 1.5rem; opacity: 0.8;">
+                        "My philosophy is simple: complexity is the enemy of execution. At 741.Studio, we apply a strategic lens to every project, identifying the 20% of actions that drive 80% of the results."
+                    </p>
+                    <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 2rem; opacity: 0.8;">
+                        Whether it's dominating Local SEO or architecting a premium digital presence, our goal is to create systems that operate with autonomy. We look at the unit economics, the power dynamics of your market, and the long-term civilizational cycles that shape demand.
+                    </p>
+                    <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="cta_btn">Work with Martin</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALUES -->
+        <section class="section_values">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <h2 class="heading-style-l">The <span class="text-highlight">741</span> Framework</h2>
+            </div>
+            <div class="values_grid">
+                <div class="value_card">
+                    <div class="value_icon">⚖️</div>
+                    <h3>Strategic Leverage</h3>
+                    <p>We focus on moves that create asymmetric opportunities. Maximum output for targeted input.</p>
+                </div>
+                <div class="value_card">
+                    <div class="value_icon">🛡️</div>
+                    <h3>Focus Protection</h3>
+                    <p>We build systems that reduce noise. Our interfaces and workflows are designed to protect your attention.</p>
+                </div>
+                <div class="value_card">
+                    <div class="value_icon">📈</div>
+                    <h3>Compounding Assets</h3>
+                    <p>Every piece of code we write and every pixel we place is designed to build long-term value for your brand.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARTNERS -->
+        <section class="section_partner-logos">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 1.2rem; opacity: 0.5; letter-spacing: 0.3em; text-transform: uppercase;">Trusted By Performance Leaders</h2>
+            </div>
+            <div class="marquee-wrapper">
+                <div class="marquee-content">
+                    <!-- Set 1 -->
+                    <div class="logo-item"><img src="/assets/logos/immokauf.svg" alt="Immokauf"></div>
+                    <div class="logo-item"><img src="/assets/logos/karin_lorenz.svg" alt="Karin Lorenz"></div>
+                    <div class="logo-item"><img src="/app/public/assets/logos/marugame-udon-logo.png" alt="Marugame Udon"></div>
+                    <div class="logo-item"><img src="/assets/logos/tacheles_logo.svg" alt="Tacheles"></div>
+                    <div class="logo-item"><img src="/assets/logos/versance.svg" alt="Versance"></div>
+                    <div class="logo-item"><img src="/app/public/assets/logos/thelawncanggu1.png" alt="The Lawn"></div>
+                    <!-- Duplicated for Loop -->
+                    <div class="logo-item"><img src="/assets/logos/immokauf.svg" alt="Immokauf"></div>
+                    <div class="logo-item"><img src="/assets/logos/karin_lorenz.svg" alt="Karin Lorenz"></div>
+                    <div class="logo-item"><img src="/app/public/assets/logos/marugame-udon-logo.png" alt="Marugame Udon"></div>
+                    <div class="logo-item"><img src="/assets/logos/tacheles_logo.svg" alt="Tacheles"></div>
+                    <div class="logo-item"><img src="/assets/logos/versance.svg" alt="Versance"></div>
+                    <div class="logo-item"><img src="/app/public/assets/logos/thelawncanggu1.png" alt="The Lawn"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; max-width: 1200px; margin: 0 auto;">
+                <div>
+                    <img src="/app/assets/images/logo_white.png" alt="741 Studio" style="max-height: 30px; margin-bottom: 2rem;">
+                    <p style="opacity: 0.5; max-width: 300px; line-height: 1.6;">
+                        Helping performance-driven leaders dominate their digital territories through code, design, and strategy.
+                    </p>
+                </div>
+                <div style="display: flex; gap: 4rem;">
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <h4 style="font-size: 0.8rem; text-transform: uppercase; color: var(--brand--lemon);">Platform</h4>
+                        <a href="/app/portfolio_full.html" style="color: white; opacity: 0.6; text-decoration: none;">Portfolio</a>
+                        <a href="/local-seo.html" style="color: white; opacity: 0.6; text-decoration: none;">Local SEO</a>
+                        <a href="/about.html" style="color: white; opacity: 0.6; text-decoration: none;">About</a>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <h4 style="font-size: 0.8rem; text-transform: uppercase; color: var(--brand--lemon);">Legal</h4>
+                        <a href="#" style="color: white; opacity: 0.6; text-decoration: none;">Terms</a>
+                        <a href="#" style="color: white; opacity: 0.6; text-decoration: none;">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 6rem; opacity: 0.3; font-size: 0.8rem;">
+                © 2026 741.STUDIO. ALL RIGHTS RESERVED.
+            </div>
+        </footer>
+
+        <!-- Akira Dog -->
+        <div id="akira-traveler">
+            <div class="akira-bubble">Hi! I'm Akira.</div>
+            <div style="width: 48px; height: 48px; background: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: black; font-weight: bold;">🐶</div>
+        </div>
+    </div>
+
+    <script>
+        // Simple scroll reveal
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => {
+                const top = sec.getBoundingClientRect().top;
+                if (top < window.innerHeight * 0.8) {
+                    sec.style.opacity = "1";
+                    sec.style.transform = "translateY(0)";
+                }
+            });
+        });
+        
+        // Initial state for reveal
+        document.querySelectorAll('section').forEach(sec => {
+            sec.style.opacity = "0";
+            sec.style.transform = "translateY(30px)";
+            sec.style.transition = "all 0.8s ease-out";
+        });
+        // Reveal first section immediately
+        setTimeout(() => {
+            window.dispatchEvent(new Event('scroll'));
+        }, 100);
+    </script>
+</body>
+
+</html>
