@@ -248,23 +248,13 @@
         <div class="navbar-right w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
           <div class="nav-bar-right">
             <div class="nav-links-wrapper">
-              <a href="/collective"
-                class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 hide-mobile-landscape">
-                COLLECTIVE
-              </a>
-              <a href="/enterprise"
-                class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 hide-mobile-landscape">
-                ENTERPRISE
-              </a>
-              <a href="/app/portfolio_full.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+              <a href="/app/portfolio_full.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 active">
                 Portfolio
               </a>
-              <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro?utm_source=top_bar&amp;utm_medium=request_a_demo"
-                target="_blank"
-                class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 hide-mobile-landscape">
-                Request a Demo
+              <a href="/local-seo.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+                Local SEO
               </a>
-              <a href="https://app.741.studio/signin"
+              <a href="http://clients.741-studio.com/"
                 class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04"> Sign In
               </a>
             </div>
@@ -279,7 +269,7 @@
             </div>
           </div>
         </div>
-        <a id="try_now_top" href="https://app.741.studio/signin"
+        <a id="try_now_top" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro"
           class="huge_nav-button is-real w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 w-inline-block">
           <div class="nav-button-spacer">
           </div>
@@ -399,8 +389,17 @@
             right: var(--spacing-md);
             display: flex;
             gap: 0;
-            z-index: 10;
-            pointer-events: all;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            z-index: 100;
+            padding: 0 var(--spacing-md);
+            mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+          }
+          .slides-navigation::-webkit-scrollbar {
+            display: none;
           }
 
           .slide-nav-item {
@@ -408,22 +407,25 @@
             flex-direction: column;
             cursor: pointer;
             padding: var(--spacing-sm);
-            flex: 1;
+            min-width: 150px;
+            flex: 0 0 auto;
             border: none;
             background: none;
+            transition: transform 0.3s ease;
           }
-
+          .slide-nav-item:hover {
+            transform: translateY(-4px);
+          }
           .slide-progress-line {
             width: 100%;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.2);
+            height: 3px;
+            background: rgba(255, 255, 255, 0.1);
             margin-bottom: 8px;
-            border-radius: 1px;
+            border-radius: 4px;
             overflow: hidden;
           }
 
           .slide-progress-fill {
-            height: 100%;
             width: 0%;
             background: var(--color-accent);
             transition: width 0.1s ease, opacity 0.3s ease;
@@ -635,7 +637,7 @@
           <div class="help-text">DRAG TO EXPLORE</div>
 
           <div class="slide-number">01</div>
-          <div class="slide-total">04</div>
+          <div class="slide-total">18</div>
 
           <!-- Since the user only provided CSS and no JS/GLSL shaders, I will mock the WebGL Canvas visually for now with the first image -->
           <div class="webgl-canvas">
@@ -704,11 +706,6 @@
                   href="https://content.741.studio/terms-of-service" target="_blank"
                   class="text-link-xsmall is-allcaps">Terms</a><a href="https://content.741.studio/privacy-policy"
                   target="_blank" class="text-link-xsmall is-allcaps">Privacy</a>
-              </div>
-              <div class="footer_ending-links-column">
-                <div class="text-link-xsmall is-footer-column-title">Connect</div><a
-                  id="w-node-_16dc701c-9023-4353-382d-b1cb0cc3f126-d84341ea" href="/collective"
-                  class="text-link-xsmall is-allcaps">Collective</a>
               </div>
               <div class="footer_ending-links-column">
                 <div class="text-link-xsmall is-footer-column-title">Resources</div><a
@@ -1598,19 +1595,44 @@
         }
       };
       // Navigation
-      const navigateToSlide = (targetIndex) => {
+      const navigateToSlide = async (targetIndex) => {
         if (isTransitioning || targetIndex === currentSlideIndex) return;
+        
+        // Safety lock on the index
+        targetIndex = (targetIndex + slides.length) % slides.length;
+        
         stopAutoSlideTimer();
-        // Quickly reset current slide progress when manually navigating
         quickResetProgress(currentSlideIndex);
+
+        // On-demand texture loading if background load hasn't finished
+        if (!slideTextures[targetIndex]) {
+          try {
+            console.log(`Loading texture on demand for slide ${targetIndex}`);
+            const texture = await loadImageTexture(slides[targetIndex].media);
+            slideTextures[targetIndex] = texture;
+          } catch (error) {
+            console.error(`Critical: Failed to load slide ${targetIndex}, skipping...`);
+            handleSlideChange(); // try next one
+            return;
+          }
+        }
+
         const currentTexture = slideTextures[currentSlideIndex];
         const targetTexture = slideTextures[targetIndex];
-        if (!currentTexture || !targetTexture) return;
+        
+        if (!currentTexture || !targetTexture) {
+           console.warn("Missing textures for transition. Index:", currentSlideIndex, targetIndex);
+           isTransitioning = false;
+           safeStartTimer(500);
+           return;
+        }
+
         isTransitioning = true;
         shaderMaterial.uniforms.uTexture1.value = currentTexture;
         shaderMaterial.uniforms.uTexture2.value = targetTexture;
         shaderMaterial.uniforms.uTexture1Size.value = currentTexture.userData.size;
         shaderMaterial.uniforms.uTexture2Size.value = targetTexture.userData.size;
+
         // Handle DOM overlay updates
         const mockupImg = document.getElementById("current-mockup");
         const contentOverlay = document.getElementById("content-overlay");
@@ -1618,7 +1640,6 @@
         const overlayDesc = document.getElementById("overlay-description");
         const nextSlide = slides[targetIndex];
 
-        // Fade out current content
         if (mockupImg) mockupImg.classList.remove("active");
         if (contentOverlay) contentOverlay.classList.remove("active");
 
@@ -1636,14 +1657,18 @@
         updateCounter(currentSlideIndex);
         updateNavigationState(currentSlideIndex);
 
-        // We don't have TweenMax globally, simple linear animation for the progress proxy
+        // Auto-scroll navigation item into view
+        const activeNav = document.getElementById(`nav-${targetIndex + 1}`);
+        if (activeNav) {
+          activeNav.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+
         const startTime = performance.now();
         const duration = TRANSITION_DURATION() * 1000;
 
         const animateTransition = (time) => {
           const elapsed = time - startTime;
           const p = Math.min(elapsed / duration, 1.0);
-          // Simple ease-in-out
           const easedProgress = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
 
           shaderMaterial.uniforms.uProgress.value = easedProgress;
