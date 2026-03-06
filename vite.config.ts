@@ -11,6 +11,13 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: '../dist',
       emptyOutDir: true,
+      rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, '04_site/index.html'),
+          localSeo: path.resolve(__dirname, '04_site/pages/local-seo.html'),
+          about: path.resolve(__dirname, '04_site/pages/about.html'),
+        },
+      },
     },
     plugins: [
       react(), 

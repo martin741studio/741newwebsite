@@ -277,20 +277,7 @@
 <body>
     <div class="page-wrapper">
         <!-- GLOBAL NAVBAR -->
-        <nav class="navbar_main">
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; max-width: 1400px; margin: 0 auto;">
-                <a href="/" class="brand">
-                    <img src="/assets/images/logo_white.png" alt="741 Studio" style="max-height: 40px;">
-                </a>
-                <div style="display: flex; gap: 2.5rem; align-items: center;">
-                    <a href="/pages/portfolio_full.html" class="nav_text-link" style="color: white; text-decoration: none; font-weight: 600; opacity: 0.7;">Portfolio</a>
-                    <a href="/pages/local-seo.html" class="nav_text-link" style="color: white; text-decoration: none; font-weight: 600; opacity: 0.7;">Local SEO</a>
-                    <a href="/pages/about.html" class="nav_text-link" style="color: var(--brand--lemon); text-decoration: none; font-weight: 600;">About</a>
-                    <a href="http://clients.741-studio.com/" class="nav_text-link" style="color: white; text-decoration: none; font-weight: 600; opacity: 0.7;">Sign In</a>
-                    <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="cta_btn" style="padding: 0.8rem 1.5rem; font-size: 0.9rem;">Start Now</a>
-                </div>
-            </div>
-        </nav>
+        {{> header }}
 
         <!-- HERO -->
         <header class="section_hero-about">
@@ -373,39 +360,7 @@
         </section>
 
         <!-- FOOTER -->
-        <footer class="footer">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; max-width: 1200px; margin: 0 auto;">
-                <div>
-                    <img src="/assets/images/logo_white.png" alt="741 Studio" style="max-height: 30px; margin-bottom: 2rem;">
-                    <p style="opacity: 0.5; max-width: 300px; line-height: 1.6;">
-                        Results Driven. We build high-performance digital assets that maximize leverage and ROI.
-                    </p>
-                </div>
-                <div style="display: flex; gap: 4rem;">
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <h4 style="font-size: 0.8rem; text-transform: uppercase; color: var(--brand--lemon);">Platform</h4>
-                        <a href="/pages/portfolio_full.html" style="color: white; opacity: 0.6; text-decoration: none;">Portfolio</a>
-                        <a href="/pages/local-seo.html" style="color: white; opacity: 0.6; text-decoration: none;">Local SEO</a>
-                        <a href="/pages/about.html" style="color: white; opacity: 0.6; text-decoration: none;">About</a>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 2rem; align-items: center;">
-                    <a href="https://www.linkedin.com/company/741-studio" target="_blank" style="color: white; opacity: 0.6; text-decoration: none; font-size: 0.9rem;">LinkedIn</a>
-                    <a href="https://www.instagram.com/741.studio/" target="_blank" style="color: white; opacity: 0.6; text-decoration: none; font-size: 0.9rem;">Instagram</a>
-                    <a href="https://x.com/Madredao741" target="_blank" style="color: white; opacity: 0.6; text-decoration: none; font-size: 0.9rem;">X</a>
-                    <a href="https://www.youtube.com/@741studio3" target="_blank" style="color: white; opacity: 0.6; text-decoration: none; font-size: 0.9rem;">YouTube</a>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 6rem; opacity: 0.3; font-size: 0.8rem;">
-                © 2026 741.STUDIO. ALL RIGHTS RESERVED.
-            </div>
-        </footer>
-
-        <!-- Akira Dog -->
-        <div id="akira-traveler">
-            <div class="akira-bubble">Hi! I'm Akira.</div>
-            <div style="width: 48px; height: 48px; background: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: black; font-weight: bold;">🐶</div>
-        </div>
+        {{> footer }}
     </div>
 
     <script>
