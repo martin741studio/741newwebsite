@@ -27,6 +27,28 @@
     <script src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989%2F6544eda5f000985a163a8687%2F6830de8fbc3ef49c91c3f557%2Ffinsweetcomponentsconfig-1.0.0.js" type="module" async="" siteId="681b040781d5b5e278a69989" finsweet="components"></script>
 </head>
 <body>
+    <div class="code_responsive-dom w-embed">
+        <style>
+            html,
+            body {
+                font-size: 1vw;
+            }
+
+            @media screen and (min-width: 1440px) {
+                html,
+                body {
+                    font-size: 14.4px;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                html,
+                body {
+                    font-size: 1.8vw;
+                }
+            }
+        </style>
+    </div>
     <div class="page-wrapper">
         <div class="main-wrapper">
             {{> header }}
@@ -40,5 +62,32 @@
     <script src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/js/webflow.schunk.e0c428ff9737f919.js" type="text/javascript" integrity="sha384-ar82P9eriV3WGOD8Lkag3kPxxkFE9GSaSPalaC0MRlR/5aACGoFQNfyqt0dNuYvt" crossorigin="anonymous"></script>
     <script src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/js/webflow.schunk.dde2c6d4ef1627b8.js" type="text/javascript" integrity="sha384-YfUIfbu+Y6qOhqFl4pd1j4IhyPtVGkIpg3XTZl42mx0UlCZ94fhPGqv164BgZR5i" crossorigin="anonymous"></script>
     <script src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/js/webflow.3a34c156.6bb9f3ec92cc8a2c.js" type="text/javascript" integrity="sha384-y2LHaBcXisshnyI66CT0UMc3F8B66GKTVNszsJyDO0XtxNQ58vniXtuf6IOpi1u/" crossorigin="anonymous"></script>
+
+    <!-- Lenis JS -->
+    <script defer src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+    <!-- Lenis JS function tweaks-->
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize Lenis
+        const lenis = new Lenis({
+          lerp: 0.1,
+          wheelMultiplier: 0.9,
+          gestureOrientation: "vertical",
+          normalizeWheel: false,
+          smoothTouch: false
+        });
+
+        // Sync Lenis scroll with GSAP ScrollTrigger
+        lenis.on('scroll', ScrollTrigger.update);
+
+        // Add Lenis to GSAP's ticker so both update together
+        gsap.ticker.add((time) => {
+          lenis.raf(time * 1000); // Convert GSAP time (seconds) to ms
+        });
+
+        // Disable GSAP lag smoothing for precise scroll updates
+        gsap.ticker.lagSmoothing(0);
+      });
+    </script>
 </body>
 </html>
