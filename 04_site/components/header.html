@@ -60,34 +60,38 @@
   </a>
 
   <style>
-    /* 1. Scale down the top banner text heavily on mobile for readability */
+    /* 1. Scale UP the top banner text on mobile for readability */
     @media screen and (max-width: 768px) {
       .navbar_main .banner_rich-text p {
-        font-size: 0.85rem !important;
+        font-size: 14px !important;
         line-height: 1.3 !important;
         margin-bottom: 0 !important;
       }
 
       .navbar_main .banner_component {
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        height: auto !important;
+        /* Allow the banner to grow as text wraps */
       }
     }
 
-    /* 2. Global setting to smooth transition the whole header up and down on mobile scroll */
+    /* 2. Global setting to smooth transition the individually fixed header components up and down on mobile scroll */
     @media screen and (max-width: 768px) {
-      .navbar_main {
-        position: sticky !important;
-        top: 0;
-        z-index: 1000;
-        /* Smooth transform for hiding */
-        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
-        background-color: transparent;
-        /* Rely on inner components for bg */
+
+      .navbar_main.is-hidden-up .banner_component,
+      .navbar_main.is-hidden-up .navbar-left,
+      .navbar_main.is-hidden-up .navbar-right,
+      .navbar_main.is-hidden-up .huge_nav-button.is-real {
+        transform: translateY(-250%) !important;
       }
 
-      .navbar_main.is-hidden-up {
-        transform: translateY(-100%);
+      /* Apply transition directly to the elements that are fixed by Weavy */
+      .navbar_main .banner_component,
+      .navbar_main .navbar-left,
+      .navbar_main .navbar-right,
+      .navbar_main .huge_nav-button.is-real {
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
       }
     }
   </style>
