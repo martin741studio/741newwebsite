@@ -58,4 +58,64 @@
       Start Now
     </div>
   </a>
+
+  <style>
+    /* 1. Scale down the top banner text heavily on mobile for readability */
+    @media screen and (max-width: 768px) {
+      .navbar_main .banner_rich-text p {
+        font-size: 0.85rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 0 !important;
+      }
+
+      .navbar_main .banner_component {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+      }
+    }
+
+    /* 2. Global setting to smooth transition the whole header up and down on mobile scroll */
+    @media screen and (max-width: 768px) {
+      .navbar_main {
+        position: sticky !important;
+        top: 0;
+        z-index: 1000;
+        /* Smooth transform for hiding */
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        background-color: transparent;
+        /* Rely on inner components for bg */
+      }
+
+      .navbar_main.is-hidden-up {
+        transform: translateY(-100%);
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navbar = document.querySelector('.navbar_main');
+      if (!navbar) return;
+
+      let lastScrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 768) {
+          let currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+          // Downward scroll (buffer of 60px to avoid jumpiness at the very top)
+          if (currentScroll > lastScrollTop && currentScroll > 60) {
+            navbar.classList.add('is-hidden-up');
+          }
+          // Upward scroll
+          else if (currentScroll < lastScrollTop) {
+            navbar.classList.remove('is-hidden-up');
+          }
+
+          lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        } else {
+          navbar.classList.remove('is-hidden-up');
+        }
+      });
+    });
+  </script>
 </div>
