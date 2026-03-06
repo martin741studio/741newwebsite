@@ -16,6 +16,8 @@ export default defineConfig(({ mode }) => {
           main: path.resolve(__dirname, '04_site/index.html'),
           localSeo: path.resolve(__dirname, '04_site/pages/local-seo.html'),
           about: path.resolve(__dirname, '04_site/pages/about.html'),
+          faq: path.resolve(__dirname, '04_site/pages/faq.html'),
+          portfolio: path.resolve(__dirname, '04_site/pages/portfolio_full.html'),
         },
       },
     },
