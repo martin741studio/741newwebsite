@@ -659,6 +659,7 @@
       document.addEventListener('DOMContentLoaded', function () {
         // === TOOLS IMAGE SLIDER (FADE ONLY) ===
         const imageSlider = new Splide('.splide.tools-image', {
+          start: 4,
           type: 'fade',
           rewind: true,
           arrows: false,
@@ -670,6 +671,7 @@
 
         // === TOOL TAGS SLIDER (NAVIGATION CHIPS) ===
         const tagSlider = new Splide('.splide.tool-tags', {
+          start: 4,
           type: 'loop',
           isNavigation: true,
           focus: 'center',

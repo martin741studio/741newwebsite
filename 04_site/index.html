@@ -363,232 +363,234 @@
   <script src="https://cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js" type="text/javascript"></script>
 
   <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW3B9LZJ" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW3B9LZJ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Lenis JS -->
-    <script defer src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
-    <!-- Lenis JS function tweaks-->
-    <script defer>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Initialize Lenis
-        const lenis = new Lenis({
-          lerp: 0.1,
-          wheelMultiplier: 0.9,
-          gestureOrientation: "vertical",
-          normalizeWheel: false,
-          smoothTouch: false
-        });
-
-        // Sync Lenis scroll with GSAP ScrollTrigger
-        lenis.on('scroll', ScrollTrigger.update);
-
-        // Add Lenis to GSAP's ticker so both update together
-        gsap.ticker.add((time) => {
-          lenis.raf(time * 1000); // Convert GSAP time (seconds) to ms
-        });
-
-        // Disable GSAP lag smoothing for precise scroll updates
-        gsap.ticker.lagSmoothing(0);
+  <!-- Lenis JS -->
+  <script defer src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+  <!-- Lenis JS function tweaks-->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Initialize Lenis
+      const lenis = new Lenis({
+        lerp: 0.1,
+        wheelMultiplier: 0.9,
+        gestureOrientation: "vertical",
+        normalizeWheel: false,
+        smoothTouch: false
       });
-    </script>
 
-    <!-- Splide slider - Workflows section - (there is custom css embedded as well) -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.2/dist/js/splide.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        // === TOOLS IMAGE SLIDER (FADE ONLY) ===
-        const imageSlider = new Splide('.splide.tools-image', {
-          type: 'fade',
-          rewind: true,
-          arrows: false,
-          pagination: false,
-          drag: false,
-          speed: 500,
-          perMove: 1, // one slide at a time
+      // Sync Lenis scroll with GSAP ScrollTrigger
+      lenis.on('scroll', ScrollTrigger.update);
+
+      // Add Lenis to GSAP's ticker so both update together
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000); // Convert GSAP time (seconds) to ms
+      });
+
+      // Disable GSAP lag smoothing for precise scroll updates
+      gsap.ticker.lagSmoothing(0);
+    });
+  </script>
+
+  <!-- Splide slider - Workflows section - (there is custom css embedded as well) -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.2/dist/js/splide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // === TOOLS IMAGE SLIDER (FADE ONLY) ===
+      const imageSlider = new Splide('.splide.tools-image', {
+        start: 4, // Default to Upscale on mobile
+        type: 'fade',
+        rewind: true,
+        arrows: false,
+        pagination: false,
+        drag: false,
+        speed: 500,
+        perMove: 1, // one slide at a time
+      });
+
+      // === TOOL TAGS SLIDER (NAVIGATION CHIPS) ===
+      const tagSlider = new Splide('.splide.tool-tags', {
+        start: 4, // Default to Upscale on mobile
+        type: 'loop',
+        isNavigation: true,
+        focus: 'center',
+        perPage: 3,
+        perMove: 1,
+        flickMaxPages: 1,            // prevent multiple-slide flicks
+        flickPower: 200,             // require a firm drag
+        gap: '2rem',
+        arrows: false,
+        pagination: false,
+        breakpoints: {
+          767: { perPage: 3, perMove: 1, gap: '1rem' },
+          479: { perPage: 2, perMove: 1, gap: '2rem' }
+        }
+      });
+
+      // === CHIP ACTIVE STATE LOGIC ===
+      tagSlider.on('move', () => {
+        document.querySelectorAll('.slide_super-chip').forEach(chip => {
+          chip.style.backgroundColor = '#fff';
         });
 
-        // === TOOL TAGS SLIDER (NAVIGATION CHIPS) ===
-        const tagSlider = new Splide('.splide.tool-tags', {
-          type: 'loop',
-          isNavigation: true,
-          focus: 'center',
+        const activeSlide = tagSlider.Components.Slides.getAt(tagSlider.index);
+        const activeChip = activeSlide.slide.querySelector('.slide_super-chip');
+        if (activeChip) {
+          activeChip.style.backgroundColor = '#fac118';
+        }
+      });
+
+      // === Mount and Sync Sliders ===
+      imageSlider.sync(tagSlider);
+      imageSlider.mount();
+      tagSlider.mount();
+
+      // === SLIDER 2 (OTHER COMPONENTS) ===
+      document.querySelectorAll('.slider2').forEach(slider => {
+        new Splide(slider, {
           perPage: 3,
           perMove: 1,
-          flickMaxPages: 1,            // prevent multiple-slide flicks
-          flickPower: 200,             // require a firm drag
-          gap: '2rem',
+          focus: 'center',
+          type: 'loop',
+          gap: '2em',
           arrows: false,
           pagination: false,
+          speed: 800,
+          dragAngleThreshold: 80,
+          rewind: false,
+          waitForTransition: false,
+          updateOnMove: true,
+          trimSpace: false,
           breakpoints: {
-            767: { perPage: 3, perMove: 1, gap: '1rem' },
-            479: { perPage: 2, perMove: 1, gap: '2rem' }
+            991: { perPage: 3, gap: '4vw' },
+            767: { perPage: 1, gap: '4vw' },
+            479: { perPage: 1, gap: '1vw' }
           }
-        });
-
-        // === CHIP ACTIVE STATE LOGIC ===
-        tagSlider.on('move', () => {
-          document.querySelectorAll('.slide_super-chip').forEach(chip => {
-            chip.style.backgroundColor = '#fff';
-          });
-
-          const activeSlide = tagSlider.Components.Slides.getAt(tagSlider.index);
-          const activeChip = activeSlide.slide.querySelector('.slide_super-chip');
-          if (activeChip) {
-            activeChip.style.backgroundColor = '#fac118';
-          }
-        });
-
-        // === Mount and Sync Sliders ===
-        imageSlider.sync(tagSlider);
-        imageSlider.mount();
-        tagSlider.mount();
-
-        // === SLIDER 2 (OTHER COMPONENTS) ===
-        document.querySelectorAll('.slider2').forEach(slider => {
-          new Splide(slider, {
-            perPage: 3,
-            perMove: 1,
-            focus: 'center',
-            type: 'loop',
-            gap: '2em',
-            arrows: false,
-            pagination: false,
-            speed: 800,
-            dragAngleThreshold: 80,
-            rewind: false,
-            waitForTransition: false,
-            updateOnMove: true,
-            trimSpace: false,
-            breakpoints: {
-              991: { perPage: 3, gap: '4vw' },
-              767: { perPage: 1, gap: '4vw' },
-              479: { perPage: 1, gap: '1vw' }
-            }
-          }).mount();
-        });
+        }).mount();
       });
-    </script>
-    <!-- Nav button shrink and grow (EDGAR) -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        gsap.registerPlugin(ScrollTrigger);
+    });
+  </script>
+  <!-- Nav button shrink and grow (EDGAR) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      gsap.registerPlugin(ScrollTrigger);
 
-        const navLinks = document.querySelectorAll(".nav-link-text-block-large");
+      const navLinks = document.querySelectorAll(".nav-link-text-block-large");
 
-        // Detect screen width (landscape and down: 767px and below)
-        const isMobileOrTablet = window.matchMedia("(max-width: 767px)").matches;
+      // Detect screen width (landscape and down: 767px and below)
+      const isMobileOrTablet = window.matchMedia("(max-width: 767px)").matches;
 
-        if (!isMobileOrTablet) {
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: "body",
-              start: "top top",
-              end: "150px",
-              scrub: true,
-              onUpdate: (self) => {
-                navLinks.forEach(el => {
-                  if (self.progress > 0.5) {
-                    el.classList.remove("nav-normal-case");
-                  } else {
-                    el.classList.add("nav-normal-case");
-                  }
-                });
-              }
+      if (!isMobileOrTablet) {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "body",
+            start: "top top",
+            end: "150px",
+            scrub: true,
+            onUpdate: (self) => {
+              navLinks.forEach(el => {
+                if (self.progress > 0.5) {
+                  el.classList.remove("nav-normal-case");
+                } else {
+                  el.classList.add("nav-normal-case");
+                }
+              });
             }
-          });
+          }
+        });
 
-          tl.to(".nav-link-text-block-large", {
-            fontSize: "12px",
-            letterSpacing: "0.15px",
-            ease: "power2.out"
-          }, 0);
+        tl.to(".nav-link-text-block-large", {
+          fontSize: "12px",
+          letterSpacing: "0.15px",
+          ease: "power2.out"
+        }, 0);
 
-          tl.to(".nav-button-spacer", {
-            height: "0rem",
-            ease: "power2.out"
-          }, 0);
+        tl.to(".nav-button-spacer", {
+          height: "0rem",
+          ease: "power2.out"
+        }, 0);
+      }
+
+      // --- Draggable Infinite Marquee Implementation ---
+      (function () {
+        const wrapper = document.querySelector('.marquee-wrapper');
+        const content = document.querySelector('.marquee-content');
+        if (!wrapper || !content) return;
+
+        let x = 0;
+        let isDragging = false;
+        let startX = 0;
+        let lastX = 0;
+        let velocity = 0;
+        let rafId = null;
+
+        function getWidth() {
+          return content.offsetWidth / 2;
         }
 
-        // --- Draggable Infinite Marquee Implementation ---
-        (function () {
-          const wrapper = document.querySelector('.marquee-wrapper');
-          const content = document.querySelector('.marquee-content');
-          if (!wrapper || !content) return;
+        function animate() {
+          if (!isDragging) {
+            x -= 0.6; // Base scroll speed
 
-          let x = 0;
-          let isDragging = false;
-          let startX = 0;
-          let lastX = 0;
-          let velocity = 0;
-          let rafId = null;
-
-          function getWidth() {
-            return content.offsetWidth / 2;
-          }
-
-          function animate() {
-            if (!isDragging) {
-              x -= 0.6; // Base scroll speed
-
-              // Apply simple "inertia" if you want, but for now just normal scroll
-              const width = getWidth();
-              if (width > 0) {
-                if (x <= -width) x += width;
-                if (x > 0) x -= width;
-              }
-              content.style.transform = `translateX(${x}px)`;
-            }
-            rafId = requestAnimationFrame(animate);
-          }
-
-          // Start loop
-          animate();
-
-          function handleStart(pageX) {
-            isDragging = true;
-            startX = pageX - x;
-            lastX = pageX;
-            velocity = 0;
-          }
-
-          function handleMove(pageX) {
-            if (!isDragging) return;
-            x = pageX - startX;
-            velocity = pageX - lastX;
-            lastX = pageX;
-
+            // Apply simple "inertia" if you want, but for now just normal scroll
             const width = getWidth();
             if (width > 0) {
-              if (x <= -width) { x += width; startX += width; }
-              if (x > 0) { x -= width; startX -= width; }
+              if (x <= -width) x += width;
+              if (x > 0) x -= width;
             }
             content.style.transform = `translateX(${x}px)`;
           }
+          rafId = requestAnimationFrame(animate);
+        }
 
-          function handleEnd() {
-            isDragging = false;
+        // Start loop
+        animate();
+
+        function handleStart(pageX) {
+          isDragging = true;
+          startX = pageX - x;
+          lastX = pageX;
+          velocity = 0;
+        }
+
+        function handleMove(pageX) {
+          if (!isDragging) return;
+          x = pageX - startX;
+          velocity = pageX - lastX;
+          lastX = pageX;
+
+          const width = getWidth();
+          if (width > 0) {
+            if (x <= -width) { x += width; startX += width; }
+            if (x > 0) { x -= width; startX -= width; }
           }
+          content.style.transform = `translateX(${x}px)`;
+        }
 
-          // Mouse Events
-          wrapper.addEventListener('mousedown', (e) => handleStart(e.pageX));
-          window.addEventListener('mousemove', (e) => handleMove(e.pageX));
-          window.addEventListener('mouseup', handleEnd);
+        function handleEnd() {
+          isDragging = false;
+        }
 
-          // Touch Events
-          wrapper.addEventListener('touchstart', (e) => handleStart(e.touches[0].pageX), { passive: true });
-          window.addEventListener('touchmove', (e) => handleMove(e.touches[0].pageX), { passive: true });
-          window.addEventListener('touchend', handleEnd);
+        // Mouse Events
+        wrapper.addEventListener('mousedown', (e) => handleStart(e.pageX));
+        window.addEventListener('mousemove', (e) => handleMove(e.pageX));
+        window.addEventListener('mouseup', handleEnd);
 
-          // Pause auto-scroll on hover if not dragging
-          wrapper.addEventListener('mouseenter', () => { if (!isDragging) { /* speed could be reduced here if desired */ } });
-        })();
-      });
-    </script>
+        // Touch Events
+        wrapper.addEventListener('touchstart', (e) => handleStart(e.touches[0].pageX), { passive: true });
+        window.addEventListener('touchmove', (e) => handleMove(e.touches[0].pageX), { passive: true });
+        window.addEventListener('touchend', handleEnd);
+
+        // Pause auto-scroll on hover if not dragging
+        wrapper.addEventListener('mouseenter', () => { if (!isDragging) { /* speed could be reduced here if desired */ } });
+      })();
+    });
+  </script>
 
 
 
-  </body>
+</body>
 
 </html>
