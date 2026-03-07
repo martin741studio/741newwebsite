@@ -31,59 +31,6 @@
   <style>
     /* Akira Footer Dog Interaction - MOVED TO components/footer.html */
 
-    :root {
-      /* Overriding neon yellow with the new brand yellow */
-      --brand--lemon: #fac118;
-      /* Overriding footer greenish tint with a neutral grey */
-      --brand--ash-grey: #8c8c8c;
-      /* Overriding global Webflow turquoise tint variables */
-      --brand--french-gray: #fac118;
-      --brand--french-gray-op-45: rgba(250, 193, 24, 0.45);
-    }
-
-    /* Global Background Tint Overrides (Replacing Turquoise with Brand Yellow) */
-    .section-hero {
-      background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 34%, rgba(250, 193, 24, 0.35) 71%), url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif") !important;
-    }
-
-    .hero-draggbles-comp {
-      background-image: linear-gradient(rgba(255, 252, 243, 0), #fffcf3 40%, #fef6dc 77%, #fde9ae) !important;
-    }
-
-    .two_section-wrapper {
-      background-image: url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif"), linear-gradient(0deg, #fff, rgba(250, 193, 24, 0.6) 52%, #fff), linear-gradient(#fff, #fff) !important;
-    }
-
-    .section_prof-tools {
-      background-image: url("/assets/BG_TOOLS_yellow-Fs5pcewf.svg") !important;
-    }
-
-    /* Force display for missing desktop visual */
-    @media screen and (min-width: 992px) {
-      .prof-tools-interactionable-wrapper {
-        display: flex !important;
-        position: relative !important;
-        min-height: 63rem !important;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .prof_center-image-wrapp {
-        position: absolute !important;
-        width: 100rem !important;
-        height: 62.8rem !important;
-        left: 50% !important;
-        top: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        pointer-events: none;
-      }
-    }
-
-    /* Ensure initial default image renders visible */
-    img.image-tools-inner.is-default {
-      opacity: 1 !important;
-    }
-
     /* Fix Explore workflows missing on mobile */
     @media screen and (max-width: 991px) {
       .section_workflows-slider {
@@ -92,12 +39,6 @@
     }
 
     @media screen and (max-width: 991px) {
-      .section_prof-tools-mobile {
-        background-image: url("/assets/BG_TOOLS_yellow-Fs5pcewf.svg"), linear-gradient(to bottom, #ffe58f 0%, #ffffff 45%) !important;
-        background-position: left top, left top !important;
-        background-repeat: repeat, no-repeat !important;
-        background-size: 250%, 100% 100% !important;
-      }
 
       .line-anchor.start.n3,
       .line-anchor.start.n2 {
@@ -125,20 +66,6 @@
         text-align: center !important;
         width: 100%;
       }
-    }
-
-    .section_outcome {
-      background-image: url("/assets/BG_CONTRL_yellow-DqpbWuP3.svg") !important;
-    }
-
-    .section_workflow-2-app {
-      background-image:
-        linear-gradient(to bottom, #fff 0%, #fff 50%, rgba(255, 255, 255, 0) 100%),
-        url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif"),
-        linear-gradient(0deg, rgba(250, 193, 24, 0.35) 0%, #fff 100%) !important;
-      background-position: 0 0, 50% 100%, 0 0 !important;
-      background-repeat: no-repeat, repeat, no-repeat !important;
-      background-size: 100% 100%, auto, cover !important;
     }
 
     /* Partner Logos Marquee */
@@ -367,7 +294,7 @@
     }
   </style>
   <script type="module" crossorigin src="/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/weavy-DYNX50B9.css">
+  <link rel="stylesheet" crossorigin href="/assets/weavy-C6iUU-ok.css">
 </head>
 
 <body>
@@ -854,6 +781,7 @@
                 /* Staggered down */
                 width: 100% !important;
                 height: auto !important;
+                aspect-ratio: 12.2 / 14 !important;
               }
       
               #node3.w-node-_92cb0ff1-51e7-fda9-cd40-e52909242cda-78a6999f {
