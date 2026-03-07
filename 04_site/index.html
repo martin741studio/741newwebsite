@@ -3,24 +3,20 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Weavy | AI-Powered Design Workflows, Built for Creative Pros</title>
+  <title>741.Studio | Architecting Digital Growth</title>
   <meta
-    content="Transform your creative vision into scalable workflows with Weavy. Integrate AI models and editing tools in one seamless, node-based platform."
+    content="741.Studio is a digital growth studio helping companies increase visibility, traffic, and leads through modern websites, local SEO, and performance marketing."
     name="description" />
-  <meta content="Weavy | AI-Powered Design Workflows, Built for Creative Pros" property="og:title" />
+  <meta content="741.Studio | Architecting Digital Growth" property="og:title" />
   <meta
-    content="Transform your creative vision into scalable workflows with Weavy. Integrate AI models and editing tools in one seamless, node-based platform."
+    content="741.Studio is a digital growth studio helping companies increase visibility, traffic, and leads through modern websites, local SEO, and performance marketing."
     property="og:description" />
+  <meta content="/assets/images/logo_white.png" property="og:image" />
+  <meta content="741.Studio | Architecting Digital Growth" property="twitter:title" />
   <meta
-    content="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6829db27001db19910ac428b_OG%20image%20option1.avif"
-    property="og:image" />
-  <meta content="Weavy | AI-Powered Design Workflows, Built for Creative Pros" property="twitter:title" />
-  <meta
-    content="Transform your creative vision into scalable workflows with Weavy. Integrate AI models and editing tools in one seamless, node-based platform."
+    content="741.Studio is a digital growth studio helping companies increase visibility, traffic, and leads through modern websites, local SEO, and performance marketing."
     property="twitter:description" />
-  <meta
-    content="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6829db27001db19910ac428b_OG%20image%20option1.avif"
-    property="twitter:image" />
+  <meta content="/assets/images/logo_white.png" property="twitter:image" />
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -392,7 +388,6 @@
   <script src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/js/webflow.3a34c156.6bb9f3ec92cc8a2c.js"
     type="text/javascript" integrity="sha384-y2LHaBcXisshnyI66CT0UMc3F8B66GKTVNszsJyDO0XtxNQ58vniXtuf6IOpi1u/"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js" type="text/javascript"></script>
 
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW3B9LZJ" height="0" width="0"
@@ -423,6 +418,61 @@
 
       // Disable GSAP lag smoothing for precise scroll updates
       gsap.ticker.lagSmoothing(0);
+    });
+  </script>
+
+  <!-- Premium Scroll Reveal Implementation (Reference Standard) -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Single Elements: Gentle fade in and slide up
+      const revealElements = document.querySelectorAll('.reveal-up');
+      revealElements.forEach((el) => {
+        gsap.fromTo(el,
+          {
+            y: 30,
+            opacity: 0
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%", // Trigger when element's top hits 85% of screen
+              once: true // Play only once for premium feel
+            }
+          }
+        );
+      });
+
+      // Grouped Elements (Cards, Lists, Grids): Staggered gentle fade in and slide up
+      const staggerGroups = document.querySelectorAll('.reveal-stagger-group');
+      staggerGroups.forEach((group) => {
+        const items = group.querySelectorAll('.reveal-item');
+        if (items.length > 0) {
+          gsap.fromTo(items,
+            {
+              y: 30,
+              opacity: 0
+            },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.8,
+              stagger: 0.15, // 150ms delay between each item
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: group,
+                start: "top 85%",
+                once: true
+              }
+            }
+          );
+        }
+      });
     });
   </script>
 

@@ -25,6 +25,9 @@
   <div class="navbar-right w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
     <div class="nav-bar-right">
       <div class="nav-links-wrapper">
+        <a href="/" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+          Home
+        </a>
         <a href="/pages/portfolio_full.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
           Portfolio
         </a>
@@ -226,6 +229,20 @@
         text-align: center !important;
         width: 100% !important;
         display: block !important;
+      }
+
+      .nav-links-wrapper .nav_text-link.w--current,
+      .nav-links-wrapper .nav_text-link:hover {
+        color: #000 !important;
+      }
+
+      /* Global Mobile Typography Readability Overrides */
+      p,
+      li,
+      .text-size-medium {
+        font-size: 2.2rem !important;
+        /* scales correctly against 1.8vw root bounds for ~16px mobile text */
+        line-height: 1.4 !important;
       }
     }
   </style>
