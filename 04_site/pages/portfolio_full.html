@@ -1296,6 +1296,33 @@
         if (!navContainer) return;
 
         navContainer.innerHTML = "";
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        let isDragging = false;
+
+        navContainer.addEventListener('mousedown', (e) => {
+          isDown = true;
+          isDragging = false;
+          startX = e.pageX - navContainer.offsetLeft;
+          scrollLeft = navContainer.scrollLeft;
+        });
+        navContainer.addEventListener('mouseleave', () => {
+          isDown = false;
+        });
+        navContainer.addEventListener('mouseup', () => {
+          isDown = false;
+        });
+        navContainer.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - navContainer.offsetLeft;
+          const walk = (x - startX) * 2;
+          if (Math.abs(walk) > 5) isDragging = true;
+          navContainer.scrollLeft = scrollLeft - walk;
+        });
+
         slides.forEach((slide, index) => {
           const navItem = document.createElement("button");
           navItem.className = `slide-nav-item${index === currentSlideIndex ? " active" : ""}`;
@@ -1308,6 +1335,7 @@
     `;
           navItem.addEventListener("click", (e) => {
             e.stopPropagation();
+            if (isDragging) return;
             if (index !== currentSlideIndex && !isTransitioning) {
               navigateToSlide(index);
             }
@@ -1664,9 +1692,11 @@
         }
       });
       document.addEventListener("touchstart", (e) => {
+        if (e.target.closest(".slides-navigation")) return;
         touchStartX = e.changedTouches[0].screenX;
       });
       document.addEventListener("touchend", (e) => {
+        if (e.target.closest(".slides-navigation")) return;
         touchEndX = e.changedTouches[0].screenX;
         handleSwipe();
       });
