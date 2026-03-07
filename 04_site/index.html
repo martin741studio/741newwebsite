@@ -23,10 +23,15 @@
   <link href="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/css/weavy-ai.webflow.shared.4177f1ac9.css"
     rel="stylesheet" type="text/css" integrity="sha384-QXfxrJwJZsoq28EStZW945YIe7YK8KY5/pVxXA0iwbzjxi159EEIqBRH2LkgsHNl"
     crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  </noscript>
   <!-- Brand Guidelines Color Overrides -->
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
     /* Akira Footer Dog Interaction - MOVED TO components/footer.html */
 
     :root {
@@ -54,6 +59,39 @@
 
     .section_prof-tools {
       background-image: url("/assets/images/BG_TOOLS_yellow.svg") !important;
+    }
+
+    /* Force display for missing desktop visual */
+    @media screen and (min-width: 992px) {
+      .prof-tools-interactionable-wrapper {
+        display: flex !important;
+        position: relative !important;
+        min-height: 63rem !important;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .prof_center-image-wrapp {
+        position: absolute !important;
+        width: 100rem !important;
+        height: 62.8rem !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        pointer-events: none;
+      }
+    }
+
+    /* Ensure initial default image renders visible */
+    img.image-tools-inner.is-default {
+      opacity: 1 !important;
+    }
+
+    /* Fix Explore workflows missing on mobile */
+    @media screen and (max-width: 991px) {
+      .section_workflows-slider {
+        display: block !important;
+      }
     }
 
     @media screen and (max-width: 991px) {
