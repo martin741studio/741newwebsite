@@ -20,7 +20,13 @@
     </div>
     <div id="w-node-ad200bf5-388c-5543-8832-565bb87fbb2f-78a6999f" class="hero-draggbles-comp reveal-stagger-group">
       <div id="node1" node-connect-target="node3" node-connect-target-m="node3"
-        class="hr-card-3d node-connect w-node-d74cab7c-d307-4f7d-afc1-55ae76f00d3d-78a6999f reveal-item">
+        class="hr-card-3d node-connect w-node-d74cab7c-d307-4f7d-afc1-55ae76f00d3d-78a6999f reveal-item"
+        style="position: relative;">
+        <div
+          style="position: absolute; top: -30px; left: 0px; font-family: inherit; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
+          <span style="font-weight: 800; color: #111; margin-right: 1.5rem;">MODEL</span><span
+            style="font-weight: 600; color: #555;">3D RODIN</span>
+        </div>
         <div class="drag-handle"></div>
         <div data-line-path="fluid" class="line-anchor start n1"></div>
         <div class="_3d-model-holder">
@@ -102,7 +108,13 @@
         <div data-line-path="magnet" class="line-anchor start" style="top: 45px;"></div>
         <div class="line-anchor end" style="top: 45px;"></div>
       </div>
-      <div id="node6" class="hr-card-minimax-video w-node-_0be630c0-22dc-cede-1dbf-f7e269927488-78a6999f reveal-item">
+      <div id="node6" class="hr-card-minimax-video w-node-_0be630c0-22dc-cede-1dbf-f7e269927488-78a6999f reveal-item"
+        style="position: relative;">
+        <div
+          style="position: absolute; top: -30px; left: 0px; font-family: inherit; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
+          <span style="font-weight: 800; color: #111; margin-right: 1.5rem;">VIDEO</span><span
+            style="font-weight: 600; color: #555;">MINIMAX</span>
+        </div>
         <div class="hero-video">
           <div class="line-anchor end n6" style="left: 0;"></div>
           <div id="node6" class="hero-vid-embed w-embed"><img src="/assets/videos/smilevideo2.gif"
@@ -112,6 +124,31 @@
       </div>
     </div>
     <style>
+      .hr-card-color-reference,
+      .hr-card-stable-diffusion,
+      .hr-card-flux-2-1,
+      .hr-card-minimax-video {
+        height: auto !important;
+      }
+
+      .hr-card-text {
+        height: auto !important;
+        max-height: none !important;
+      }
+
+      .hr-card-color-reference,
+      .hr-card-stable-diffusion,
+      .hr-card-flux-2-1,
+      .hr-card-minimax-video,
+      .hr-card-text,
+      .hr-card-3d {
+        position: relative !important;
+      }
+
+      .hero-video {
+        position: relative !important;
+      }
+
       @media screen and (max-width: 767px) {
         .hero-draggbles-comp {
           display: grid !important;
@@ -119,6 +156,13 @@
           gap: 1.5rem !important;
           padding-bottom: 2rem;
           align-items: start;
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
+
+        .hero-draggbles-comp>div {
+          min-width: 0 !important;
+          box-sizing: border-box !important;
         }
 
         #node2.w-node-_52114269-2ff0-e113-4d3f-3ab9ae07e166-78a6999f {
@@ -174,6 +218,7 @@
           width: 100% !important;
           justify-self: center !important;
           max-width: 100% !important;
+          display: inline-flex !important;
         }
       }
     </style>
