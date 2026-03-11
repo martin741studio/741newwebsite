@@ -1,4 +1,11 @@
+---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/n41stu5/public_html/
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp -f dist/index.html $DEPLOYPATH
+    - /bin/cp -f dist/robots.txt $DEPLOYPATH
+    - /bin/cp -f dist/sitemap.xml $DEPLOYPATH
+    - /bin/rm -rf $DEPLOYPATH/assets
+    - /bin/rm -rf $DEPLOYPATH/pages
+    - /bin/cp -R dist/assets $DEPLOYPATH
+    - /bin/cp -R dist/pages $DEPLOYPATH
