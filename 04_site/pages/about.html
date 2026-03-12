@@ -299,6 +299,68 @@
         .huge_nav-button {
             mix-blend-mode: normal !important;
         }
+
+        /* Mobile overrides to standardize with homepage */
+        @media (max-width: 767px) {
+            .grid-container.is-hero.is-banner-top {
+                padding-top: 12rem !important;
+            }
+
+            .seo_section p,
+            .seo_section p.text-size-medium {
+                font-size: 2.2rem !important;
+                line-height: 1.4 !important;
+            }
+
+            .seo_section p.text-size-medium {
+                margin-top: 1rem;
+            }
+
+            .vertical-wrapp {
+                padding-left: 0 !important;
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+
+            .heading_h1-hero {
+                text-align: center !important;
+                margin-top: 20px !important;
+                width: 100% !important;
+                align-self: center !important;
+            }
+
+            .h1-wrapper.extra-bot-pad {
+                margin-bottom: 2rem !important;
+            }
+
+            .paragraph-wrapper {
+                text-align: center !important;
+            }
+
+            .text-size-large {
+                font-size: 2.5rem !important;
+                line-height: 1.15 !important;
+            }
+
+            .seo_btn {
+                font-size: 2.5rem !important;
+                padding: 18px 40px !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                margin: 40px auto 0 auto !important;
+                width: max-content !important;
+            }
+
+            .seo_tagline {
+                display: none !important;
+            }
+
+            .founder_grid {
+                grid-template-columns: 1fr !important;
+                text-align: center;
+            }
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
@@ -343,18 +405,18 @@
                         style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%; grid-column: 1 / -1 !important; padding-top: 4rem;">
                         <div class="seo_tagline">Who We Are</div>
                         <div class="h1-wrapper extra-bot-pad" style="padding-bottom: 0.5rem; padding-top: 5px;">
-                            <h1 style="font-size: clamp(2.5rem, 6vw, 6rem); line-height: 1.1; text-align: center;"
-                                class="heading_h1-hero">
+                            <h1 class="heading_h1-hero reveal-up">
                                 Architecting <span class="seo_highlight">Autonomy</span>
                             </h1>
                         </div>
                         <div class="paragraph-wrapper" style="max-width: 700px; margin: 0 auto;">
-                            <p class="text-size-large">
+                            <p class="text-size-large reveal-up">
                                 741.Studio is a high-leverage digital agency dedicated to building scalable growth
                                 engines. We don't just "design" — we engineer assets that compound value and protect
                                 your focus.
                             </p>
-                            <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="seo_btn">Start a
+                            <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro"
+                                class="seo_btn reveal-up">Start a
                                 Project</a>
                         </div>
                     </div>
@@ -364,7 +426,7 @@
             <!-- FOUNDER -->
             <section class="seo_section" style="background-color: #fff; color: #111;">
                 <div class="founder_grid">
-                    <div class="founder_image_wrapper">
+                    <div class="founder_image_wrapper reveal-up">
                         <img src="/assets/local-seo/images/founder_martin.png" alt="Martin Drendel"
                             class="founder_image" style="width: 100%;">
                         <div class="founder_name_overlay">
@@ -373,19 +435,20 @@
                         </div>
                     </div>
                     <div>
-                        <h2 class="heading-style-l" style="margin-bottom: 2rem;">Growth as a <span
+                        <h2 class="heading-style-l reveal-up" style="margin-bottom: 2rem;">Growth as a <span
                                 class="seo_highlight">System</span>, Not a Task.</h2>
-                        <p class="text-size-medium" style="margin-bottom: 1.5rem; color: #333;">
+                        <p class="text-size-medium reveal-up" style="margin-bottom: 1.5rem; color: #333;">
                             "My philosophy is simple: complexity is the enemy of execution. At 741.Studio, we apply a
                             strategic lens to every project, identifying the 20% of actions that drive 80% of the
                             results."
                         </p>
-                        <p class="text-size-medium" style="margin-bottom: 2rem; color: #333;">
+                        <p class="text-size-medium reveal-up" style="margin-bottom: 2rem; color: #333;">
                             Whether it's dominating Local SEO or architecting a premium digital presence, our goal is to
                             create systems that operate with autonomy. We look at the unit economics, the power dynamics
                             of your market, and the long-term civilizational cycles that shape demand.
                         </p>
-                        <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="seo_btn">Work with
+                        <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="seo_btn reveal-up">Work
+                            with
                             Martin</a>
                     </div>
                 </div>
@@ -393,24 +456,24 @@
 
             <!-- VALUES -->
             <section class="seo_section">
-                <div style="text-align: center; margin-bottom: 5rem;">
+                <div style="text-align: center; margin-bottom: 5rem;" class="reveal-up">
                     <h2 class="heading-style-l">The <span class="seo_highlight">741</span> Framework</h2>
                     <p class="text-size-medium">The non-negotiable standards we apply to every product we engineer.</p>
                 </div>
-                <div class="values_grid">
-                    <div class="seo_card">
+                <div class="values_grid reveal-stagger-group">
+                    <div class="seo_card reveal-item">
                         <div class="value_icon" style="font-size: 3rem; margin-bottom: 1rem;">⚖️</div>
                         <h3 class="heading-style-m">Strategic Leverage</h3>
                         <p>We focus on moves that create asymmetric opportunities. Maximum output for targeted input.
                         </p>
                     </div>
-                    <div class="seo_card">
+                    <div class="seo_card reveal-item">
                         <div class="value_icon" style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
                         <h3 class="heading-style-m">Focus Protection</h3>
                         <p>We build systems that reduce noise. Our interfaces and workflows are designed to protect your
                             attention.</p>
                     </div>
-                    <div class="seo_card">
+                    <div class="seo_card reveal-item">
                         <div class="value_icon" style="font-size: 3rem; margin-bottom: 1rem;">📈</div>
                         <h3 class="heading-style-m">Compounding Assets</h3>
                         <p>Every piece of code we write and every pixel we place is designed to build long-term value
@@ -552,6 +615,60 @@
             // Pause auto-scroll on hover if not dragging
             wrapper.addEventListener('mouseenter', () => { if (!isDragging) { /* speed could be reduced here if desired */ } });
         })();
+    </script>
+    <!-- Premium Scroll Reveal Implementation (Reference Standard) -->
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Single Elements: Gentle fade in and slide up
+            const revealElements = document.querySelectorAll('.reveal-up');
+            revealElements.forEach((el) => {
+                gsap.fromTo(el,
+                    {
+                        y: 30,
+                        opacity: 0
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 85%", // Trigger when element's top hits 85% of screen
+                            once: true // Play only once for premium feel
+                        }
+                    }
+                );
+            });
+
+            // Grouped Elements (Cards, Lists, Grids): Staggered gentle fade in and slide up
+            const staggerGroups = document.querySelectorAll('.reveal-stagger-group');
+            staggerGroups.forEach((group) => {
+                const items = group.querySelectorAll('.reveal-item');
+                if (items.length > 0) {
+                    gsap.fromTo(items,
+                        {
+                            y: 30,
+                            opacity: 0
+                        },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.8,
+                            stagger: 0.15, // 150ms delay between each item
+                            ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: group,
+                                start: "top 85%",
+                                once: true
+                            }
+                        }
+                    );
+                }
+            });
+        });
     </script>
 </body>
 

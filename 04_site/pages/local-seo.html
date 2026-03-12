@@ -282,6 +282,13 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
+
+            p.text-size-medium {
+                font-size: 2.2rem !important;
+                /* scales correctly against 1.8vw root bounds for ~16px mobile text */
+                line-height: 1.4 !important;
+                margin-top: 1rem;
+            }
         }
 
         .founder_image_wrapper {
@@ -343,6 +350,61 @@
             aspect-ratio: 16/9;
             cursor: pointer;
             border: 1px solid #333;
+        }
+
+        /* Mobile overrides to standardize with homepage */
+        @media (max-width: 767px) {
+            .grid-container.is-hero.is-banner-top {
+                padding-top: 12rem !important;
+            }
+
+            .seo_section p,
+            .seo_section p.text-size-medium {
+                font-size: 2.2rem !important;
+                /* scales correctly against 1.8vw root bounds for ~16px mobile text */
+                line-height: 1.4 !important;
+            }
+
+            .vertical-wrapp {
+                padding-left: 0 !important;
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+
+            .heading_h1-hero {
+                text-align: center !important;
+                margin-top: 20px !important;
+                width: 100% !important;
+                align-self: center !important;
+            }
+
+            .h1-wrapper.extra-bot-pad {
+                margin-bottom: 2rem !important;
+            }
+
+            .paragraph-wrapper {
+                text-align: center !important;
+            }
+
+            .text-size-large {
+                font-size: 2.5rem !important;
+                line-height: 1.15 !important;
+            }
+
+            .seo_btn {
+                font-size: 2.5rem !important;
+                /* equates to 18-20px given html 1.8vw base constraint */
+                padding: 18px 40px !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                margin: 40px auto 0 auto !important;
+                width: max-content !important;
+            }
+
+            .seo_tagline {
+                display: none !important;
+            }
         }
     </style>
     <script
@@ -433,18 +495,18 @@
                         style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%; grid-column: 1 / -1 !important; padding-top: 4rem;">
                         <div class="seo_tagline">Google Maps & Local Search</div>
                         <div class="h1-wrapper extra-bot-pad" style="padding-bottom: 0.5rem; padding-top: 5px;">
-                            <h1 style="font-size: clamp(2.5rem, 6vw, 6rem); line-height: 1.1; text-align: center;"
-                                class="heading_h1-hero">
+                            <h1 class="heading_h1-hero reveal-up">
                                 Local SEO Agency: Become the <span class="seo_highlight">Market Leader</span> in Your
                                 Region
                             </h1>
                         </div>
                         <div class="paragraph-wrapper" style="max-width: 700px; margin: 0 auto;">
-                            <p class="text-size-large">
+                            <p class="text-size-large reveal-up">
                                 Local SEO from 741.Studio for service providers who want to dominate regionally instead
                                 of just being locally visible.
                             </p>
-                            <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="seo_btn">Free
+                            <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro"
+                                class="seo_btn reveal-up">Free
                                 Potential Analysis</a>
                         </div>
                     </div>
@@ -454,7 +516,7 @@
             <!-- INTRO SECTION -->
             <section class="seo_section">
                 <div class="seo_grid">
-                    <div>
+                    <div class="reveal-up">
                         <h2 class="heading-style-l">Your Team for <span class="seo_highlight">Regional Dominance</span>
                         </h2>
                         <p class="text-size-medium">
@@ -471,7 +533,7 @@
                         <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="seo_btn">Start Locally
                             Now</a>
                     </div>
-                    <div class="seo_card">
+                    <div class="seo_card reveal-up">
                         <div class="video-container"
                             style="margin-bottom: 2rem; border-radius: 1rem; overflow: hidden; position: relative; padding-bottom: 56.25%; height: 0;">
                             <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
@@ -489,7 +551,7 @@
 
             <!-- LOGOS MARQUEE (TRUST) -->
             <section class="section_partner-logos">
-                <div class="marquee-wrapper">
+                <div class="marquee-wrapper reveal-up">
                     <div class="marquee-content">
                         <div class="logo-item"><img src="/assets/logos/immokauf.svg" alt="Immokauf"></div>
                         <div class="logo-item"><img src="/assets/logos/karin_lorenz.svg" alt="Karin Lorenz"></div>
@@ -531,7 +593,7 @@
             <!-- GOOGLE BUSINESS PROFILE SECTION -->
             <section class="seo_section is--dark">
                 <div class="seo_grid">
-                    <div class="seo_card is--dark">
+                    <div class="seo_card is--dark reveal-up">
                         <div
                             style="position: relative; padding-bottom: 62.5%; height: 0; margin-bottom: 2rem; border-radius: 1rem; overflow: hidden;">
                             <iframe
@@ -545,7 +607,7 @@
                         <p>An entry in Google Maps is mandatory today — but only optimized profiles win. We transform
                             your standard entry into a customer magnet.</p>
                     </div>
-                    <div>
+                    <div class="reveal-up">
                         <h2 class="heading-style-l">Dominate the <span class="seo_highlight">Local Pack</span></h2>
                         <p class="text-size-medium">
                             We bring your Google Profile into the "Local Pack" (the coveted top 3 results) into the top
@@ -571,26 +633,26 @@
 
             <!-- STRATEGY ROADMAP SECTION -->
             <section class="seo_section">
-                <div style="text-align: center; margin-bottom: 4rem;">
+                <div style="text-align: center; margin-bottom: 4rem;" class="reveal-up">
                     <h2 class="heading-style-l">Our Roadmap for Your <span class="seo_highlight">Location</span></h2>
                     <p class="text-size-medium">No voodoo, just local SEO strategy. We follow a clear plan to get you
                         calls and leads.</p>
                 </div>
-                <div
+                <div class="reveal-stagger-group"
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
-                    <div class="seo_card">
+                    <div class="seo_card reveal-item">
                         <div class="seo_step_num">01</div>
                         <h3 class="heading-style-s">Status-Quo Analysis</h3>
                         <p>We check your listings, your website, and your review profile inside out. Where are you
                             leaving potential on the table?</p>
                     </div>
-                    <div class="seo_card">
+                    <div class="seo_card reveal-item">
                         <div class="seo_step_num">02</div>
                         <h3 class="heading-style-s">Building Visibility</h3>
                         <p>We optimize your Google Business Profile, clean up incorrect company data on the web, and
                             create content that attracts local customers.</p>
                     </div>
-                    <div class="seo_card">
+                    <div class="seo_card reveal-item">
                         <div class="seo_step_num">03</div>
                         <h3 class="heading-style-s">Reviews and Leads</h3>
                         <p>We help you systematically collect 5-star reviews and monitor your rankings in Google Maps so
@@ -601,38 +663,38 @@
 
             <!-- RESULTS / COMPARISON SECTION -->
             <section class="seo_section is--dark">
-                <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem;">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem;" class="reveal-up">
                     <h2 class="heading-style-l">Real Success: <span class="seo_highlight">Before & After</span></h2>
                     <p>How local SEO works can be read for a long time. You can only really understand it when you see
                         it. Here are the results after just a few weeks of optimization.</p>
                 </div>
-                <div
+                <div class="reveal-stagger-group"
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
-                    <div class="seo_map_item">
+                    <div class="seo_map_item reveal-item">
                         <img src="/assets/local-seo/images/analytics_1.webp" alt="Growth Analytics 1"
                             style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
                     </div>
-                    <div class="seo_map_item">
+                    <div class="seo_map_item reveal-item">
                         <img src="/assets/local-seo/images/analytics_2.webp" alt="Growth Analytics 2"
                             style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
                     </div>
-                    <div class="seo_map_item">
+                    <div class="seo_map_item reveal-item">
                         <img src="/assets/local-seo/images/analytics_3.webp" alt="Growth Analytics 3"
                             style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
                     </div>
-                    <div class="seo_map_item">
+                    <div class="seo_map_item reveal-item">
                         <img src="/assets/local-seo/images/analytics_4.webp" alt="Growth Analytics 4"
                             style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
                     </div>
-                    <div class="seo_map_item">
+                    <div class="seo_map_item reveal-item">
                         <img src="/assets/local-seo/images/analytics_5.webp" alt="Growth Analytics 5"
                             style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
                     </div>
-                    <div class="seo_map_item">
+                    <div class="seo_map_item reveal-item">
                         <img src="/assets/local-seo/images/analytics_6.webp" alt="Growth Analytics 6"
                             style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
                     </div>
-                    <div class="seo_map_item">
+                    <div class="seo_map_item reveal-item">
                         <img src="/assets/local-seo/images/analytics_7.webp" alt="Growth Analytics 7"
                             style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
                     </div>
@@ -645,37 +707,37 @@
 
             <!-- VIDEO TESTIMONIALS SECTION -->
             <section class="seo_section is--dark">
-                <div style="text-align: center; margin-bottom: 4rem;">
+                <div style="text-align: center; margin-bottom: 4rem;" class="reveal-up">
                     <div class="seo_tagline">Success Stories</div>
                     <h2 class="heading-style-l">What Our <span class="seo_highlight">Partners</span> Say</h2>
                 </div>
 
-                <div class="testimonial_grid">
-                    <div class="testimonial_card">
+                <div class="testimonial_grid reveal-stagger-group">
+                    <div class="testimonial_card reveal-item">
                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zorMMzm7pf4"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-                    <div class="testimonial_card">
+                    <div class="testimonial_card reveal-item">
                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/fU_mDQmLA0Y"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-                    <div class="testimonial_card">
+                    <div class="testimonial_card reveal-item">
                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-3mOyczmvMw"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-                    <div class="testimonial_card">
+                    <div class="testimonial_card reveal-item">
                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aYnEI0HNFdg"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
-                    <div class="testimonial_card">
+                    <div class="testimonial_card reveal-item">
                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AuAOc1_1VG0"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -687,7 +749,7 @@
             <!-- FOUNDER SECTION -->
             <section class="section_founder">
                 <div class="founder_grid">
-                    <div class="founder_image_wrapper">
+                    <div class="founder_image_wrapper reveal-up">
                         <img src="/assets/local-seo/images/founder_martin.png" alt="Martin Drendel"
                             class="founder_image">
                         <div class="founder_name_overlay">
@@ -695,7 +757,7 @@
                             <span class="founder_title">CEO & Founder</span>
                         </div>
                     </div>
-                    <div>
+                    <div class="reveal-up">
                         <h2 class="heading-style-l" style="margin-bottom: 2rem;">A Personal Word from our <span
                                 class="seo_highlight">Founder</span></h2>
                         <p class="text-size-medium" style="margin-bottom: 1.5rem;">
@@ -730,8 +792,6 @@
     <script src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/js/webflow.3a34c156.6bb9f3ec92cc8a2c.js"
         type="text/javascript" integrity="sha384-y2LHaBcXisshnyI66CT0UMc3F8B66GKTVNszsJyDO0XtxNQ58vniXtuf6IOpi1u/"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 
     <!-- Lenis JS -->
     <script defer src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
@@ -828,6 +888,60 @@
                     ease: "power2.out"
                 }, 0);
             }
+        });
+    </script>
+    <!-- Premium Scroll Reveal Implementation (Reference Standard) -->
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Single Elements: Gentle fade in and slide up
+            const revealElements = document.querySelectorAll('.reveal-up');
+            revealElements.forEach((el) => {
+                gsap.fromTo(el,
+                    {
+                        y: 30,
+                        opacity: 0
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 85%", // Trigger when element's top hits 85% of screen
+                            once: true // Play only once for premium feel
+                        }
+                    }
+                );
+            });
+
+            // Grouped Elements (Cards, Lists, Grids): Staggered gentle fade in and slide up
+            const staggerGroups = document.querySelectorAll('.reveal-stagger-group');
+            staggerGroups.forEach((group) => {
+                const items = group.querySelectorAll('.reveal-item');
+                if (items.length > 0) {
+                    gsap.fromTo(items,
+                        {
+                            y: 30,
+                            opacity: 0
+                        },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.8,
+                            stagger: 0.15, // 150ms delay between each item
+                            ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: group,
+                                start: "top 85%",
+                                once: true
+                            }
+                        }
+                    );
+                }
+            });
         });
     </script>
 </body>

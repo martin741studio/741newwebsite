@@ -3,34 +3,35 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Weavy | AI-Powered Design Workflows, Built for Creative Pros</title>
+  <title>741.Studio | Architecting Digital Growth</title>
   <meta
-    content="Transform your creative vision into scalable workflows with Weavy. Integrate AI models and editing tools in one seamless, node-based platform."
+    content="741.Studio is a digital growth studio helping companies increase visibility, traffic, and leads through modern websites, local SEO, and performance marketing."
     name="description" />
-  <meta content="Weavy | AI-Powered Design Workflows, Built for Creative Pros" property="og:title" />
+  <meta content="741.Studio | Architecting Digital Growth" property="og:title" />
   <meta
-    content="Transform your creative vision into scalable workflows with Weavy. Integrate AI models and editing tools in one seamless, node-based platform."
+    content="741.Studio is a digital growth studio helping companies increase visibility, traffic, and leads through modern websites, local SEO, and performance marketing."
     property="og:description" />
+  <meta content="/assets/images/logo_white.png" property="og:image" />
+  <meta content="741.Studio | Architecting Digital Growth" property="twitter:title" />
   <meta
-    content="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6829db27001db19910ac428b_OG%20image%20option1.avif"
-    property="og:image" />
-  <meta content="Weavy | AI-Powered Design Workflows, Built for Creative Pros" property="twitter:title" />
-  <meta
-    content="Transform your creative vision into scalable workflows with Weavy. Integrate AI models and editing tools in one seamless, node-based platform."
+    content="741.Studio is a digital growth studio helping companies increase visibility, traffic, and leads through modern websites, local SEO, and performance marketing."
     property="twitter:description" />
-  <meta
-    content="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6829db27001db19910ac428b_OG%20image%20option1.avif"
-    property="twitter:image" />
+  <meta content="/assets/images/logo_white.png" property="twitter:image" />
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link href="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/css/weavy-ai.webflow.shared.4177f1ac9.css"
     rel="stylesheet" type="text/css" integrity="sha384-QXfxrJwJZsoq28EStZW945YIe7YK8KY5/pVxXA0iwbzjxi159EEIqBRH2LkgsHNl"
     crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  </noscript>
   <!-- Brand Guidelines Color Overrides -->
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
     /* Akira Footer Dog Interaction - MOVED TO components/footer.html */
 
     :root {
@@ -60,6 +61,39 @@
       background-image: url("/assets/images/BG_TOOLS_yellow.svg") !important;
     }
 
+    /* Force display for missing desktop visual */
+    @media screen and (min-width: 992px) {
+      .prof-tools-interactionable-wrapper {
+        display: flex !important;
+        position: relative !important;
+        min-height: 63rem !important;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .prof_center-image-wrapp {
+        position: absolute !important;
+        width: 100rem !important;
+        height: 62.8rem !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        pointer-events: none;
+      }
+    }
+
+    /* Ensure initial default image renders visible */
+    img.image-tools-inner.is-default {
+      opacity: 1 !important;
+    }
+
+    /* Fix Explore workflows missing on mobile */
+    @media screen and (max-width: 991px) {
+      .section_workflows-slider {
+        display: block !important;
+      }
+    }
+
     @media screen and (max-width: 991px) {
       .section_prof-tools-mobile {
         background-image: url("/assets/images/BG_TOOLS_yellow.svg"), linear-gradient(to bottom, #ffe58f 0%, #ffffff 45%) !important;
@@ -77,6 +111,22 @@
         top: 4% !important;
         left: auto !important;
         right: 0 !important;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .vertical-wrapp {
+        padding-left: 0 !important;
+      }
+
+      .h1-wrapper.extra-bot-pad {
+        align-items: center !important;
+        text-align: center !important;
+      }
+
+      .heading_h1-hero {
+        text-align: center !important;
+        width: 100%;
       }
     }
 
@@ -376,7 +426,6 @@
   <script src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/js/webflow.3a34c156.6bb9f3ec92cc8a2c.js"
     type="text/javascript" integrity="sha384-y2LHaBcXisshnyI66CT0UMc3F8B66GKTVNszsJyDO0XtxNQ58vniXtuf6IOpi1u/"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js" type="text/javascript"></script>
 
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW3B9LZJ" height="0" width="0"
@@ -407,6 +456,61 @@
 
       // Disable GSAP lag smoothing for precise scroll updates
       gsap.ticker.lagSmoothing(0);
+    });
+  </script>
+
+  <!-- Premium Scroll Reveal Implementation (Reference Standard) -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Single Elements: Gentle fade in and slide up
+      const revealElements = document.querySelectorAll('.reveal-up');
+      revealElements.forEach((el) => {
+        gsap.fromTo(el,
+          {
+            y: 30,
+            opacity: 0
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%", // Trigger when element's top hits 85% of screen
+              once: true // Play only once for premium feel
+            }
+          }
+        );
+      });
+
+      // Grouped Elements (Cards, Lists, Grids): Staggered gentle fade in and slide up
+      const staggerGroups = document.querySelectorAll('.reveal-stagger-group');
+      staggerGroups.forEach((group) => {
+        const items = group.querySelectorAll('.reveal-item');
+        if (items.length > 0) {
+          gsap.fromTo(items,
+            {
+              y: 30,
+              opacity: 0
+            },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.8,
+              stagger: 0.15, // 150ms delay between each item
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: group,
+                start: "top 85%",
+                once: true
+              }
+            }
+          );
+        }
+      });
     });
   </script>
 
