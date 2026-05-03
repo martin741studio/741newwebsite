@@ -131,6 +131,16 @@
       z-index: 2;
     }
 
+    /* Fix zero-height image bug on mobile */
+    .is-mobile-tools-slider .slider-pill_photo {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 100% !important;
+      object-fit: cover !important;
+    }
+
     /* Text Tags (Chips) */
     .slide_super-chip {
       background-color: white;
@@ -191,7 +201,7 @@
   <script
     src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989%2F6544eda5f000985a163a8687%2F6830de8fbc3ef49c91c3f557%2Ffinsweetcomponentsconfig-1.0.0.js"
     type="module" async="" siteId="681b040781d5b5e278a69989" finsweet="components"></script>
-  <script type="module" crossorigin src="/assets/portfolio-BLmTYG6Q.js"></script>
+  <script type="module" crossorigin src="/assets/portfolio-HjdMsTVv.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
 </head>
 
@@ -1513,53 +1523,55 @@
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         // === TOOLS IMAGE SLIDER (FADE ONLY) ===
-        const imageSlider = new Splide('.splide.tools-image', {
-          start: 4,
-          type: 'fade',
-          rewind: true,
-          arrows: false,
-          pagination: false,
-          drag: false,
-          speed: 500,
-          perMove: 1, // one slide at a time
-        });
-
-        // === TOOL TAGS SLIDER (NAVIGATION CHIPS) ===
-        const tagSlider = new Splide('.splide.tool-tags', {
-          start: 4,
-          type: 'loop',
-          isNavigation: true,
-          focus: 'center',
-          perPage: 3,
-          perMove: 1,
-          flickMaxPages: 1,            // prevent multiple-slide flicks
-          flickPower: 200,             // require a firm drag
-          gap: '2rem',
-          arrows: false,
-          pagination: false,
-          breakpoints: {
-            767: { perPage: 3, perMove: 1, gap: '1rem' },
-            479: { perPage: 2, perMove: 1, gap: '2rem' }
-          }
-        });
-
-        // === CHIP ACTIVE STATE LOGIC ===
-        tagSlider.on('move', () => {
-          document.querySelectorAll('.slide_super-chip').forEach(chip => {
-            chip.style.backgroundColor = '#fff';
+        if (document.querySelector('.splide.tools-image')) {
+          const imageSlider = new Splide('.splide.tools-image', {
+            start: 4,
+            type: 'fade',
+            rewind: true,
+            arrows: false,
+            pagination: false,
+            drag: false,
+            speed: 500,
+            perMove: 1, // one slide at a time
           });
 
-          const activeSlide = tagSlider.Components.Slides.getAt(tagSlider.index);
-          const activeChip = activeSlide.slide.querySelector('.slide_super-chip');
-          if (activeChip) {
-            activeChip.style.backgroundColor = '#fac118';
-          }
-        });
+          // === TOOL TAGS SLIDER (NAVIGATION CHIPS) ===
+          const tagSlider = new Splide('.splide.tool-tags', {
+            start: 4,
+            type: 'loop',
+            isNavigation: true,
+            focus: 'center',
+            perPage: 3,
+            perMove: 1,
+            flickMaxPages: 1,            // prevent multiple-slide flicks
+            flickPower: 200,             // require a firm drag
+            gap: '2rem',
+            arrows: false,
+            pagination: false,
+            breakpoints: {
+              767: { perPage: 3, perMove: 1, gap: '1rem' },
+              479: { perPage: 2, perMove: 1, gap: '2rem' }
+            }
+          });
 
-        // === Mount and Sync Sliders ===
-        imageSlider.sync(tagSlider);
-        imageSlider.mount();
-        tagSlider.mount();
+          // === CHIP ACTIVE STATE LOGIC ===
+          tagSlider.on('move', () => {
+            document.querySelectorAll('.slide_super-chip').forEach(chip => {
+              chip.style.backgroundColor = '#fff';
+            });
+
+            const activeSlide = tagSlider.Components.Slides.getAt(tagSlider.index);
+            const activeChip = activeSlide.slide.querySelector('.slide_super-chip');
+            if (activeChip) {
+              activeChip.style.backgroundColor = '#fac118';
+            }
+          });
+
+          // === Mount and Sync Sliders ===
+          imageSlider.sync(tagSlider);
+          imageSlider.mount();
+          tagSlider.mount();
+        }
 
         // === SLIDER 2 (OTHER COMPONENTS) ===
         document.querySelectorAll('.slider2').forEach(slider => {

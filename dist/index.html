@@ -316,6 +316,16 @@
       z-index: 2;
     }
 
+    /* Fix zero-height image bug on mobile */
+    .is-mobile-tools-slider .slider-pill_photo {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 100% !important;
+      object-fit: cover !important;
+    }
+
     /* Text Tags (Chips) */
     .slide_super-chip {
       background-color: white;
@@ -738,10 +748,7 @@
             <div id="node1" node-connect-target="node3" node-connect-target-m="node3"
               class="hr-card-3d node-connect w-node-d74cab7c-d307-4f7d-afc1-55ae76f00d3d-78a6999f reveal-item"
               style="position: relative;">
-              <div
-                style="position: absolute; top: calc(-30px + 1rem); left: 0px; font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
-                <span style="font-weight: 700; color: #111;">3D</span>&nbsp;&nbsp;<span style="font-weight: 400; color: #555;">RODIN 2.0</span>
-              </div>
+              <div class="hr-node-label"><span class="bold-txt">3D</span><span class="light-txt">RODIN 2.0</span></div>
               <div class="drag-handle"></div>
               <div data-line-path="fluid" class="line-anchor start n1"></div>
               <div class="_3d-model-holder">
@@ -752,6 +759,42 @@
                     <div class="progress-bar hide" slot="progress-bar"></div>
                   </model-viewer>
                   <style>
+            .hr-node-label {
+              position: absolute;
+              top: -2.5rem; /* Mobile uniform offset */
+              left: 0px;
+              font-family: inherit;
+              font-size: 0.8rem;
+              letter-spacing: 0.12em;
+              text-transform: uppercase;
+              white-space: nowrap;
+              z-index: 10;
+            }
+      
+            /* Desktop specific offsets for horizontal grid alignment (Weavy Reference) */
+            @media screen and (min-width: 768px) {
+              #node1 .hr-node-label { top: -30px; }
+              #node2 .hr-node-label { top: calc(-30px - 4.5486rem); }
+              #node3 .hr-node-label { top: -30px; }
+              #node5 .hr-node-label { top: calc(-30px + 2.2917rem); }
+              #node4 .hr-node-label { top: -42px; }
+              #node6 .hr-node-label { top: -30px; }
+            }
+      
+            /* Global removal of black bar padding from the video */
+            .hr-card-minimax-video .hero-video {
+              padding: 0 !important;
+            }
+            .hr-node-label .bold-txt {
+              font-weight: 800;
+              color: #111;
+              margin-right: 1.5rem;
+            }
+            .hr-node-label .light-txt {
+              font-weight: 600;
+              color: #555;
+            }
+      
                     .hide {
                       display: none;
                     }
@@ -764,10 +807,7 @@
             <div id="node2" node-connect-target="node3" node-connect-target-m="node3"
               class="hr-card-color-reference node-connect w-node-_52114269-2ff0-e113-4d3f-3ab9ae07e166-78a6999f reveal-item"
               style="position: relative;">
-              <div
-                style="position: absolute; top: calc(-30px - 4.5486rem); left: 0px; font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
-                <span style="font-weight: 700; color: #111;">COLOR</span>&nbsp;&nbsp;<span style="font-weight: 400; color: #555;">REFERENCE</span>
-              </div>
+              <div class="hr-node-label"><span class="bold-txt">COLOR</span><span class="light-txt">REFERENCE</span></div>
               <img src="/assets/sunburst_flare_hero-Dep1pIiM.png" loading="lazy" alt="" class="hr_img-c-difference"
                 style="border-radius: 12px; height: auto; object-fit: cover; width: 100%; aspect-ratio: 1000 / 1000;" /><img
                 src="/assets/sunburst_flare_hero-Dep1pIiM.png" loading="lazy" alt="" class="hr_img-c-difference-mobile"
@@ -777,10 +817,7 @@
             <div id="node3" node-connect-target="node4, node5" node-connect-target-m="node6"
               class="hr-card-stable-diffusion node-connect w-node-_92cb0ff1-51e7-fda9-cd40-e52909242cda-78a6999f reveal-item"
               style="position: relative;">
-              <div
-                style="position: absolute; top: -30px; left: 0px; font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
-                <span style="font-weight: 700; color: #111;">IMAGE</span>&nbsp;&nbsp;<span style="font-weight: 400; color: #555;">STABLE DIFFUSION</span>
-              </div>
+              <div class="hr-node-label"><span class="bold-txt">IMAGE</span><span class="light-txt">STABLE DIFFUSION</span></div>
               <img src="/assets/stablediffusionherosection-DXbEXSVD.jpeg" loading="lazy" alt="" class="hr_img-stable-diff"
                 style="border-radius: 12px; height: auto; object-fit: cover; width: 100%; aspect-ratio: 57 / 73;" /><img
                 src="/assets/stablediffusionherosection-DXbEXSVD.jpeg" loading="lazy" alt="" class="hr_img-stable-diff-mobile"
@@ -791,10 +828,7 @@
             <div id="node5" node-connect-target="node6" node-connect-target-m="node6"
               class="hr-card-flux-2-1 node-connect w-node-ae4103dc-5e48-5c0c-7a06-82cd9453cae2-78a6999f reveal-item"
               style="position: relative;">
-              <div
-                style="position: absolute; top: calc(-30px + 2.2917rem); left: 0px; font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
-                <span style="font-weight: 700; color: #111;">IMAGE</span>&nbsp;&nbsp;<span style="font-weight: 400; color: #555;">FLUX PRO 1.1</span>
-              </div><img src="/assets/imageflux1.1herosection-DKfHEk1R.jpg" loading="lazy" alt="" class="hr_img-flux"
+              <div class="hr-node-label"><span class="bold-txt">IMAGE</span><span class="light-txt">FLUX PRO 1.1</span></div><img src="/assets/imageflux1.1herosection-DKfHEk1R.jpg" loading="lazy" alt="" class="hr_img-flux"
                 style="border-radius: 12px; height: auto; object-fit: cover; width: 100%; aspect-ratio: 1 / 1;" /><img
                 src="/assets/imageflux1.1herosection-DKfHEk1R.jpg" loading="lazy" alt="" class="hr_img-flux-mobile"
                 style="border-radius: 12px; height: auto; object-fit: cover; width: 100%; aspect-ratio: 1 / 1;" />
@@ -804,10 +838,7 @@
             <div id="node4" node-connect-target="node6" node-connect-target-m=""
               class="hr-card-text node-connect w-node-_0555fc31-2b1b-83e8-70ea-b785ee076d41-78a6999f reveal-item"
               style="position: relative; width: 17.5vw; min-width: 210px; max-width: 260px;">
-              <div
-                style="position: absolute; top: -38px; left: 0px; font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
-                <span style="font-weight: 700; color: #111;">TEXT</span>&nbsp;&nbsp;<span style="font-weight: 400; color: #555;">PROMPT</span>
-              </div>
+              <div class="hr-node-label"><span class="bold-txt">TEXT</span><span class="light-txt">PROMPT</span></div>
               <div
                 style="background-color: #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.05); width: 100%; height: auto; text-align: left;">
                 <p class="paragraph-line-height-1-15 text-color-stone-grey"
@@ -819,17 +850,14 @@
               <div data-line-path="magnet" class="line-anchor start" style="top: 45px;"></div>
               <div class="line-anchor end" style="top: 45px;"></div>
             </div>
-            <div id="node6" class="hr-card-minimax-video w-node-_0be630c0-22dc-cede-1dbf-f7e269927488-78a6999f reveal-item"
+            <div id="node6" class="custom-mobile-video-card hr-card-minimax-video w-node-_0be630c0-22dc-cede-1dbf-f7e269927488-78a6999f reveal-item"
               style="position: relative;">
-              <div
-                style="position: absolute; top: calc(-30px + 1.5rem); left: 0px; font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
-                <span style="font-weight: 700; color: #111;">VIDEO</span>&nbsp;&nbsp;<span style="font-weight: 400; color: #555;">MINIMAX VIDEO</span>
-              </div>
-              <div class="hero-video">
+              <div class="hr-node-label"><span class="bold-txt">VIDEO</span><span class="light-txt">MINIMAX VIDEO</span></div>
+              <div class="hero-video" style="background-color: #000; border-radius: 12px; overflow: hidden;">
                 <div class="line-anchor end n6" style="left: 0;"></div>
                 <div id="node6" class="hero-vid-embed w-embed"><video autoplay loop muted playsinline disablepictureinpicture
                     preload="auto"
-                    style="pointer-events: none; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover;">
+                    style="pointer-events: none; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; background: #000;">
                     <!-- 👇 Mobile version (must come first) -->
                     <source src="/assets/smilevideo741-BLQov6j6.mp4" type="video/mp4" media="(max-width: 768px)" />
       
@@ -912,10 +940,12 @@
               }
       
               /* 5. Minimax Video */
-              #node6.w-node-_0be630c0-22dc-cede-1dbf-f7e269927488-78a6999f {
+              .custom-mobile-video-card {
                 order: 5;
                 width: 90vw !important;
                 height: auto !important;
+                min-height: 200px !important;
+                aspect-ratio: 9 / 16 !important;
                 align-self: center !important;
                 z-index: 8 !important;
               }
@@ -2848,7 +2878,7 @@
       });
 
       // === CHIP ACTIVE STATE LOGIC ===
-      tagSlider.on('move', () => {
+      tagSlider.on('move', (newIndex) => {
         document.querySelectorAll('.slide_super-chip').forEach(chip => {
           chip.style.backgroundColor = '#fff';
         });
@@ -2858,10 +2888,17 @@
         if (activeChip) {
           activeChip.style.backgroundColor = '#fac118';
         }
+        
+        // Manual sync to update the main image
+        imageSlider.go(newIndex);
       });
 
-      // === Mount and Sync Sliders ===
-      imageSlider.sync(tagSlider);
+      // === Mount Sliders ===
+      tagSlider.on('mounted', () => {
+        tagSlider.go(0);
+        imageSlider.go(0);
+      });
+      
       imageSlider.mount();
       tagSlider.mount();
 

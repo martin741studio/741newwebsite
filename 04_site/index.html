@@ -316,6 +316,16 @@
       z-index: 2;
     }
 
+    /* Fix zero-height image bug on mobile */
+    .is-mobile-tools-slider .slider-pill_photo {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 100% !important;
+      object-fit: cover !important;
+    }
+
     /* Text Tags (Chips) */
     .slide_super-chip {
       background-color: white;
@@ -554,7 +564,7 @@
       });
 
       // === CHIP ACTIVE STATE LOGIC ===
-      tagSlider.on('move', () => {
+      tagSlider.on('move', (newIndex) => {
         document.querySelectorAll('.slide_super-chip').forEach(chip => {
           chip.style.backgroundColor = '#fff';
         });
@@ -564,10 +574,17 @@
         if (activeChip) {
           activeChip.style.backgroundColor = '#fac118';
         }
+        
+        // Manual sync to update the main image
+        imageSlider.go(newIndex);
       });
 
-      // === Mount and Sync Sliders ===
-      imageSlider.sync(tagSlider);
+      // === Mount Sliders ===
+      tagSlider.on('mounted', () => {
+        tagSlider.go(0);
+        imageSlider.go(0);
+      });
+      
       imageSlider.mount();
       tagSlider.mount();
 

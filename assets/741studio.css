@@ -11075,3 +11075,16 @@ a {
     grid-column: span 2 / span 2;
   }
 }
+
+/* HERO VIDEO MOBILE FIX */
+@media screen and (max-width: 767px) {
+  .hr-card-minimax-video {
+    width: 100%;
+    aspect-ratio: 3/2;
+  }
+  .hero-video {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: 0 !important;
+  }
+}
