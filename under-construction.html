@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>741 Studio | Architecting Digital Growth</title>
+    <meta name="description" content="741 Studio is evolving. High-performance websites, SEO & ads that actually convert. Currently building something powerful.">
+    
+    <!-- SEO / OG -->
+    <meta property="og:title" content="741 Studio | Evolving">
+    <meta property="og:description" content="High-performance websites, SEO & ads that actually convert.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            lemon: '#fac118',
+                            dark: '#0a0a0a',
+                            surface: '#121212',
+                            border: 'rgba(255,255,255,0.1)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .glass:hover {
+            border-color: rgba(250, 193, 24, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #ffffff, #a1a1a1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .accent-gradient-text {
+            background: linear-gradient(to right, #fac118, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 80vw;
+            height: 80vh;
+            background: radial-gradient(circle, rgba(250, 193, 24, 0.05) 0%, rgba(250, 193, 24, 0) 70%);
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            pointer-events: none;
+            animation: pulse-slow 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse-slow {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            100% { transform: translate(-45%, -55%) scale(1.2); opacity: 1; }
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+    </style>
+</head>
+<body class="no-scrollbar">
+    <div class="bg-glow"></div>
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 py-8 px-6 lg:px-12 flex justify-between items-center bg-brand-dark/50 backdrop-blur-md">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-brand-lemon rounded-sm flex items-center justify-center font-black text-black text-xl">7</div>
+            <span class="font-heading font-bold text-2xl tracking-tighter">741 STUDIO</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-white/60 tracking-wide uppercase">
+            <span class="hover:text-brand-lemon cursor-pointer transition-colors">Digital Agency</span>
+            <span class="hover:text-brand-lemon cursor-pointer transition-colors">Performance Growth</span>
+        </div>
+    </header>
+
+    <main class="relative pt-32 lg:pt-48 pb-20 px-6 lg:px-12 max-w-7xl mx-auto">
+        
+        <!-- Hero Section -->
+        <section class="mb-32">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-lemon/20 bg-brand-lemon/5 text-brand-lemon text-xs font-bold uppercase tracking-widest mb-6 reveal-up">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-lemon opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-lemon"></span>
+                </span>
+                Evolving Something Powerful
+            </div>
+            
+            <h1 class="font-heading font-extrabold text-5xl lg:text-8xl mb-8 tracking-tight reveal-up leading-tight">
+                Architecting the Future of <br class="hidden lg:block">
+                <span class="accent-gradient-text">Digital Performance.</span>
+            </h1>
+            
+            <p class="text-white/60 text-lg lg:text-2xl max-w-2xl font-light leading-relaxed mb-12 reveal-up">
+                High-performance websites, SEO & targeted ads designed to scale your business. We are currently rebuilding our site to better serve our global partners.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 reveal-up">
+                <a href="#leads" class="group relative px-8 py-4 bg-brand-lemon text-black font-bold rounded-lg overflow-hidden transition-all hover:scale-105">
+                    <span class="relative z-10">Get Early Access</span>
+                    <div class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
+                </a>
+                <a href="mailto:office@741-studio.com" class="px-8 py-4 border border-white/10 hover:border-brand-lemon/50 hover:bg-white/5 rounded-lg font-bold transition-all">
+                    Contact Us
+                </a>
+            </div>
+        </section>
+
+        <!-- Proof Section -->
+        <section class="mb-32 reveal-up">
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-12"></div>
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-8">
+                <p class="text-white/40 font-medium tracking-wide uppercase text-sm lg:w-1/3">
+                    Already driving growth for businesses across Europe & Bali.
+                </p>
+                <div class="flex flex-wrap justify-center gap-12 lg:gap-20 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="text-2xl font-heading font-black tracking-tighter">100+ CAMPAIGNS</div>
+                    <div class="text-2xl font-heading font-black tracking-tighter">GLOBAL REACH</div>
+                    <div class="text-2xl font-heading font-black tracking-tighter">PREMIUM GROWTH</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-32">
+            <!-- Card 1 -->
+            <div class="glass p-8 rounded-2xl reveal-up group">
+                <div class="mb-6 w-12 h-12 rounded-xl bg-brand-lemon/10 flex items-center justify-center text-brand-lemon group-hover:bg-brand-lemon group-hover:text-black transition-all">
+                    <i data-lucide="search" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl mb-3">Local SEO</h3>
+                <p class="text-white/50 text-sm leading-relaxed">
+                    Dominating local search markets and driving foot traffic to physical locations.
+                </p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="glass p-8 rounded-2xl reveal-up group">
+                <div class="mb-6 w-12 h-12 rounded-xl bg-brand-lemon/10 flex items-center justify-center text-brand-lemon group-hover:bg-brand-lemon group-hover:text-black transition-all">
+                    <i data-lucide="code-2" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl mb-3">Web Development</h3>
+                <p class="text-white/50 text-sm leading-relaxed">
+                    Clean, fast, and conversion-optimized websites built with modern stacks.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glass p-8 rounded-2xl reveal-up group">
+                <div class="mb-6 w-12 h-12 rounded-xl bg-brand-lemon/10 flex items-center justify-center text-brand-lemon group-hover:bg-brand-lemon group-hover:text-black transition-all">
+                    <i data-lucide="trending-up" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl mb-3">Paid Ads</h3>
+                <p class="text-white/50 text-sm leading-relaxed">
+                    ROI-focused campaigns on Google and Meta that maximize every dollar.
+                </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="glass p-8 rounded-2xl reveal-up group">
+                <div class="mb-6 w-12 h-12 rounded-xl bg-brand-lemon/10 flex items-center justify-center text-brand-lemon group-hover:bg-brand-lemon group-hover:text-black transition-all">
+                    <i data-lucide="palette" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl mb-3">Branding</h3>
+                <p class="text-white/50 text-sm leading-relaxed">
+                    Visual identities that command authority and resonate with your target audience.
+                </p>
+            </div>
+        </section>
+
+        <!-- Lead Capture -->
+        <section id="leads" class="max-w-4xl mx-auto glass p-8 lg:p-12 rounded-3xl reveal-up">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl lg:text-4xl mb-4">Request Early Access</h2>
+                <p class="text-white/50">Be the first to know when we launch and get exclusive partnership terms.</p>
+            </div>
+            
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-6" onsubmit="event.preventDefault(); alert('Success! We will contact you soon.');">
+                <div class="space-y-2">
+                    <label class="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">Full Name</label>
+                    <input type="text" placeholder="John Doe" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:outline-none focus:border-brand-lemon transition-all">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">Email Address</label>
+                    <input type="email" placeholder="john@company.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:outline-none focus:border-brand-lemon transition-all">
+                </div>
+                <div class="md:col-span-2 space-y-2">
+                    <label class="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">Business Name</label>
+                    <input type="text" placeholder="Your Agency / Clinic" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:outline-none focus:border-brand-lemon transition-all">
+                </div>
+                <button type="submit" class="md:col-span-2 mt-4 px-8 py-4 bg-brand-lemon text-black font-black rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all uppercase tracking-widest">
+                    Request Notification
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 mt-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-white/40 text-sm">
+                &copy; 2026 741 STUDIO. All Rights Reserved.
+            </div>
+            <div class="flex gap-8 text-white/60 text-sm font-medium">
+                <a href="#" class="hover:text-brand-lemon transition-colors">Instagram</a>
+                <a href="#" class="hover:text-brand-lemon transition-colors">LinkedIn</a>
+                <a href="mailto:office@741-studio.com" class="hover:text-brand-lemon transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Init Icons
+        lucide.createIcons();
+
+        // Reveal Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.to('.reveal-up', {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: 'power4.out',
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: '.reveal-up',
+                    start: 'top 90%',
+                }
+            });
+
+            // Smooth Background Glow movement
+            document.addEventListener('mousemove', (e) => {
+                const { clientX, clientY } = e;
+                const moveX = (clientX - window.innerWidth / 2) / 20;
+                const moveY = (clientY - window.innerHeight / 2) / 20;
+                
+                gsap.to('.bg-glow', {
+                    x: moveX,
+                    y: moveY,
+                    duration: 1,
+                    ease: 'power2.out'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -3,18 +3,19 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>741 Studio | Strategic Design & Development for High-Leverage Growth</title>
+  <title>741 Studio | Portfolio Showcase & Client Success Stories</title>
   <meta
-    content="Accelerate your asset creation with 741 Studio. We combine strategic design with high-performance development to build resilient, scalable digital systems."
+    content="Explore our portfolio of high-performance websites and Local SEO success stories. See how 741 Studio builds resilient, scalable digital growth systems."
     name="description" />
-  <meta content="741 Studio | Strategic Design & Development for High-Leverage Growth" property="og:title" />
+  <link rel="canonical" href="https://741.studio/pages/portfolio_full.html" />
+  <meta content="741 Studio | Portfolio Showcase & Client Success Stories" property="og:title" />
   <meta
-    content="Accelerate your asset creation with 741 Studio. We combine strategic design with high-performance development to build resilient, scalable digital systems."
+    content="Explore our portfolio of high-performance websites and Local SEO success stories. See how 741 Studio builds resilient, scalable digital growth systems."
     property="og:description" />
   <meta content="/assets/images/logo_white.png" property="og:image" />
-  <meta content="741 Studio | Strategic Design & Development for High-Leverage Growth" property="twitter:title" />
+  <meta content="741 Studio | Portfolio Showcase & Client Success Stories" property="twitter:title" />
   <meta
-    content="Accelerate your asset creation with 741 Studio. We combine strategic design with high-performance development to build resilient, scalable digital systems."
+    content="Explore our portfolio of high-performance websites and Local SEO success stories. See how 741 Studio builds resilient, scalable digital growth systems."
     property="twitter:description" />
   <meta content="/assets/images/logo_white.png" property="twitter:image" />
   <meta property="og:type" content="website" />
@@ -463,6 +464,7 @@
             }
           }
 
+          /* SLIDER SPECIFIC OVERRIDES */
           .webgl-canvas {
             position: absolute;
             top: 0;
@@ -470,7 +472,7 @@
             width: 100%;
             height: 100%;
             z-index: 1;
-            background: #000;
+            background: #000 url('/assets/Portfolio/BackgroundImages/pexels-elina-araja-1743227-3320136.jpg') center/cover no-repeat;
           }
 
           .webgl-canvas::after {
@@ -562,10 +564,14 @@
               width: 90%;
               top: 45%;
               padding: 2rem;
+              opacity: 1 !important;
+              transform: translate(-50%, -50%) !important;
             }
 
             .mockup-img {
               max-height: 30vh;
+              opacity: 1 !important;
+              transform: scale(1) !important;
             }
 
             .client-description {
@@ -587,11 +593,11 @@
 
           <div class="content-overlay" id="content-overlay">
             <div class="mockup-wrapper">
-              <img src="" class="mockup-img" alt="Client Mockup" id="current-mockup">
+              <img src="/assets/Portfolio/PhoneMockups/iPhone_16_Pro_Mockup_SingleFin.png" class="mockup-img active" alt="Client Mockup" id="current-mockup">
             </div>
             <div class="client-text-block">
-              <span class="client-title-overlay" id="overlay-title"></span>
-              <p class="client-description" id="overlay-description"></p>
+              <span class="client-title-overlay" id="overlay-title">Single Fin</span>
+              <p class="client-description" id="overlay-description">High volume surf-club in Uluwatu demanding rapid, scalable lead generation and an aggressive digital presence. 741 Studio deployed advanced local SEO structures coupled with precision PPC to dominate organic search and capture high-intent tourist traffic instantly.</p>
             </div>
           </div>
 
@@ -620,7 +626,6 @@
     crossorigin="anonymous"></script>
 
 
-  <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW3B9LZJ" height="0" width="0"
         style="display:none;visibility:hidden"></iframe></noscript>
@@ -779,7 +784,6 @@
 
     <script type="module">
       import * as THREE from "https://esm.sh/three";
-      import { Pane } from "https://cdn.skypack.dev/tweakpane@4.0.4";
 
       // ========================================
       // PRELOADER
@@ -1005,6 +1009,7 @@
       let autoSlideTimer = null;
       let progressAnimation = null;
       let sliderEnabled = false;
+      let webglFailed = false;
       let pane = null;
       let isApplyingPreset = false;
       // UI elements
@@ -1028,7 +1033,7 @@
         },
         {
           title: "Numero Quattro",
-          media: "/assets/Portfolio/BackgroundImages/pexels-mesut-yalcin-1233429888-29027384.jpg",
+          media: "/assets/Portfolio/BackgroundImages/pexels-rudy-kirchner-278171-1229845.jpg",
           mockup: "/assets/Portfolio/ClientMockups/NumeroQuattro.png",
           description: "Re-engineered the digital footprint of a neighborhood Italian staple into a consistent monetization machine. We optimized the offer design to increase average order value through intuitive menu architecture and frictionless bookings."
         },
@@ -1392,7 +1397,7 @@
       };
       // Timer functions
       const startAutoSlideTimer = () => {
-        if (!texturesLoaded || !sliderEnabled || slideTextures.length < 2) return;
+        if (!texturesLoaded || !sliderEnabled || (!webglFailed && slideTextures.length < 2)) return;
         stopAutoSlideTimer();
         let progress = 0;
         const increment = (100 / SLIDE_DURATION()) * PROGRESS_UPDATE_INTERVAL;
@@ -1446,33 +1451,36 @@
         quickResetProgress(currentSlideIndex);
 
         // On-demand texture loading if background load hasn't finished
-        if (!slideTextures[targetIndex]) {
-          try {
-            console.log(`Loading texture on demand for slide ${targetIndex}`);
-            const texture = await loadImageTexture(slides[targetIndex].media);
-            slideTextures[targetIndex] = texture;
-          } catch (error) {
-            console.error(`Critical: Failed to load slide ${targetIndex}, skipping...`);
-            handleSlideChange(); // try next one
+        if (!webglFailed) {
+          if (!slideTextures[targetIndex]) {
+            try {
+              const texture = await loadImageTexture(slides[targetIndex].media);
+              slideTextures[targetIndex] = texture;
+            } catch (error) {
+              console.warn(`Critical: Failed to load slide ${targetIndex}, skipping...`);
+              handleSlideChange(); // try next one
+              return;
+            }
+          }
+
+          const currentTexture = slideTextures[currentSlideIndex];
+          const targetTexture = slideTextures[targetIndex];
+
+          if (!currentTexture || !targetTexture) {
+            console.warn("Missing textures for transition. Index:", currentSlideIndex, targetIndex);
+            isTransitioning = false;
+            safeStartTimer(500);
             return;
           }
+
+          isTransitioning = true;
+          shaderMaterial.uniforms.uTexture1.value = currentTexture;
+          shaderMaterial.uniforms.uTexture2.value = targetTexture;
+          shaderMaterial.uniforms.uTexture1Size.value = currentTexture.userData.size;
+          shaderMaterial.uniforms.uTexture2Size.value = targetTexture.userData.size;
+        } else {
+          isTransitioning = true;
         }
-
-        const currentTexture = slideTextures[currentSlideIndex];
-        const targetTexture = slideTextures[targetIndex];
-
-        if (!currentTexture || !targetTexture) {
-          console.warn("Missing textures for transition. Index:", currentSlideIndex, targetIndex);
-          isTransitioning = false;
-          safeStartTimer(500);
-          return;
-        }
-
-        isTransitioning = true;
-        shaderMaterial.uniforms.uTexture1.value = currentTexture;
-        shaderMaterial.uniforms.uTexture2.value = targetTexture;
-        shaderMaterial.uniforms.uTexture1Size.value = currentTexture.userData.size;
-        shaderMaterial.uniforms.uTexture2Size.value = targetTexture.userData.size;
 
         // Handle DOM overlay updates
         const mockupImg = document.getElementById("current-mockup");
@@ -1486,8 +1494,10 @@
 
         setTimeout(() => {
           if (nextSlide.mockup && mockupImg) {
-            mockupImg.src = nextSlide.mockup;
             mockupImg.onload = () => mockupImg.classList.add("active");
+            mockupImg.src = nextSlide.mockup;
+            mockupImg.alt = `741 Studio Client Portfolio: ${nextSlide.title}`;
+            if (mockupImg.complete) mockupImg.classList.add("active");
           }
           if (overlayTitle) overlayTitle.textContent = nextSlide.title;
           if (overlayDesc) overlayDesc.textContent = nextSlide.description || "";
@@ -1504,27 +1514,34 @@
           activeNav.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         }
 
-        const startTime = performance.now();
-        const duration = TRANSITION_DURATION() * 1000;
+        if (!webglFailed) {
+          const startTime = performance.now();
+          const duration = TRANSITION_DURATION() * 1000;
 
-        const animateTransition = (time) => {
-          const elapsed = time - startTime;
-          const p = Math.min(elapsed / duration, 1.0);
-          const easedProgress = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+          const animateTransition = (time) => {
+            const elapsed = time - startTime;
+            const p = Math.min(elapsed / duration, 1.0);
+            const easedProgress = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
 
-          shaderMaterial.uniforms.uProgress.value = easedProgress;
+            shaderMaterial.uniforms.uProgress.value = easedProgress;
 
-          if (p < 1.0) {
-            requestAnimationFrame(animateTransition);
-          } else {
-            shaderMaterial.uniforms.uProgress.value = 0;
-            shaderMaterial.uniforms.uTexture1.value = targetTexture;
-            shaderMaterial.uniforms.uTexture1Size.value = targetTexture.userData.size;
+            if (p < 1.0) {
+              requestAnimationFrame(animateTransition);
+            } else {
+              shaderMaterial.uniforms.uProgress.value = 0;
+              shaderMaterial.uniforms.uTexture1.value = targetTexture;
+              shaderMaterial.uniforms.uTexture1Size.value = targetTexture.userData.size;
+              isTransitioning = false;
+              safeStartTimer(100);
+            }
+          };
+          requestAnimationFrame(animateTransition);
+        } else {
+          setTimeout(() => {
             isTransitioning = false;
             safeStartTimer(100);
-          }
-        };
-        requestAnimationFrame(animateTransition);
+          }, 800); // give DOM transition time
+        }
       };
 
       const handleSlideChange = () => {
@@ -1663,7 +1680,11 @@
         };
         render();
       };
-      window.addEventListener("load", async () => {
+      let isInitialized = false;
+      const initPortfolio = async () => {
+        if (isInitialized) return;
+        isInitialized = true;
+        
         createSlidesNavigation();
         updateCounter(0);
 
@@ -1674,15 +1695,32 @@
         const overlayDesc = document.getElementById("overlay-description");
 
         if (slides[0].mockup && mockupImg) {
-          mockupImg.src = slides[0].mockup;
           mockupImg.onload = () => mockupImg.classList.add("active");
+          mockupImg.src = slides[0].mockup;
+          mockupImg.alt = `741 Studio Client Portfolio: ${slides[0].title}`;
+          if (mockupImg.complete) mockupImg.classList.add("active");
         }
         if (overlayTitle) overlayTitle.textContent = slides[0].title;
         if (overlayDesc) overlayDesc.textContent = slides[0].description || "";
         if (contentOverlay) contentOverlay.classList.add("active");
 
-        await initializeRenderer();
-      });
+        try {
+          await initializeRenderer();
+        } catch(e) {
+          console.error("WebGL Renderer Error:", e);
+          webglFailed = true;
+          texturesLoaded = true;
+          sliderEnabled = true;
+          safeStartTimer(1500);
+        }
+      };
+
+      if (document.readyState === "complete" || document.readyState === "interactive") {
+        setTimeout(initPortfolio, 1);
+      } else {
+        window.addEventListener("DOMContentLoaded", initPortfolio);
+        window.addEventListener("load", initPortfolio); // backup
+      }
       document.addEventListener("click", (e) => {
         if (e.target.closest(".slides-navigation")) return;
         if (!isTransitioning && sliderEnabled) {

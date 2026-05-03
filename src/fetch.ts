@@ -1,5 +1,5 @@
 async function run() {
-  const res = await fetch('https://weavy.ai/');
+  const res = await fetch('https://741-studio.com/');
   const data = await res.text();
   const urls = data.match(/https:\/\/[^"'\s<>]+/g);
   if (urls) {

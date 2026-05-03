@@ -38,7 +38,6 @@
                   const startAnchor = source.querySelector('.line-anchor.start');
                   const endAnchor = target.querySelector('.line-anchor.end');
                   if (!startAnchor || !endAnchor) {
-                    console.log("No anchors found for:", sourceID, "→", targetID.trim());
                     return;
                   }
 
@@ -64,36 +63,42 @@
             }
 
             function setupDraggables() {
-              if (!isMobile) {
-                elements.forEach(el => {
-                  gsap.set(el, { x: 0, y: 0 });
+              elements.forEach(el => {
+                // Kill existing draggable if it exists to clean up on resize
+                const existing = Draggable.get(el);
+                if (existing) {
+                  existing.kill();
+                }
 
-                  const isHandleOnly =
-                    el.classList.contains("hr-card-3d") &&
-                    el.classList.contains("node-connect");
+                gsap.set(el, { x: 0, y: 0 });
 
-                  Draggable.create(el, {
-                    type: 'x,y',
-                    bounds: '.grid-container.is-hero',
-                    handle: isHandleOnly ? '.drag-handle' : null,
-                    onPress() {
-                      el.style.cursor = 'grabbing';
-                    },
-                    onRelease() {
-                      el.style.cursor = isHandleOnly ? 'default' : 'grab';
-                    },
-                    onDrag() {
-                      lines.forEach(line => line.position());
-                    }
-                  });
-
-                  el.style.cursor = isHandleOnly ? 'default' : 'grab';
-                });
-              } else {
-                elements.forEach(el => {
+                // Disable dragging completely on mobile
+                if (isMobile) {
                   el.style.cursor = 'default';
+                  return;
+                }
+
+                const isHandleOnly =
+                  el.classList.contains("hr-card-3d") &&
+                  el.classList.contains("node-connect");
+
+                Draggable.create(el, {
+                  type: 'x,y',
+                  bounds: '.grid-container.is-hero',
+                  handle: isHandleOnly ? '.drag-handle' : null,
+                  onPress() {
+                    el.style.cursor = 'grabbing';
+                  },
+                  onRelease() {
+                    el.style.cursor = isHandleOnly ? 'default' : 'grab';
+                  },
+                  onDrag() {
+                    lines.forEach(line => line.position());
+                  }
                 });
-              }
+
+                el.style.cursor = isHandleOnly ? 'default' : 'grab';
+              });
             }
 
             function handleResize() {

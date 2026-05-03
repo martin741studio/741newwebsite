@@ -2,16 +2,16 @@ import { motion, useScroll } from "motion/react";
 import { useState, useEffect, useRef } from "react";
 
 const SERVICES_DATA = [
-  { id: "web_design", title: "Web Design", video: "https://assets.weavy.ai/homepage/videos/wan.mp4" },
-  { id: "development", title: "Development", video: "https://assets.weavy.ai/homepage/videos/wan.mp4" },
-  { id: "local_seo", title: "Local SEO", video: "https://assets.weavy.ai/homepage/videos/runway_gen-4.mp4" },
-  { id: "seo", title: "SEO", video: "https://assets.weavy.ai/homepage/videos/runway_gen-4.mp4" },
-  { id: "social_media", title: "Social Media", video: "https://assets.weavy.ai/homepage/videos/Veo2.mp4" },
-  { id: "strategy", title: "Strategy", video: "https://assets.weavy.ai/homepage/videos/Veo2.mp4" },
-  { id: "branding", title: "Branding", video: "https://assets.weavy.ai/homepage/videos/kling.mp4" },
-  { id: "automation", title: "Automation", video: "https://assets.weavy.ai/homepage/videos/kling.mp4" },
-  { id: "ai_integration", title: "AI Integration", video: "https://assets.weavy.ai/homepage/videos/minimax_video.mp4" },
-  { id: "client_acquisition", title: "Client Acquisition", video: "https://assets.weavy.ai/homepage/videos/luma_ray_2.mp4" },
+  { id: "web_design", title: "Web Design", video: "https://assets.741-studio.com/homepage/videos/wan.mp4" },
+  { id: "development", title: "Development", video: "https://assets.741-studio.com/homepage/videos/wan.mp4" },
+  { id: "local_seo", title: "Local SEO", video: "https://assets.741-studio.com/homepage/videos/runway_gen-4.mp4" },
+  { id: "seo", title: "SEO", video: "https://assets.741-studio.com/homepage/videos/runway_gen-4.mp4" },
+  { id: "social_media", title: "Social Media", video: "https://assets.741-studio.com/homepage/videos/Veo2.mp4" },
+  { id: "strategy", title: "Strategy", video: "https://assets.741-studio.com/homepage/videos/Veo2.mp4" },
+  { id: "branding", title: "Branding", video: "https://assets.741-studio.com/homepage/videos/kling.mp4" },
+  { id: "automation", title: "Automation", video: "https://assets.741-studio.com/homepage/videos/kling.mp4" },
+  { id: "ai_integration", title: "AI Integration", video: "https://assets.741-studio.com/homepage/videos/minimax_video.mp4" },
+  { id: "client_acquisition", title: "Client Acquisition", video: "https://assets.741-studio.com/homepage/videos/luma_ray_2.mp4" },
 ];
 
 export default function Services() {

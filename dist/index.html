@@ -3,30 +3,38 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>741.Studio | Architecting Digital Growth</title>
+  <title>741.Studio | Architecting Digital Growth & Local SEO Automation</title>
   <meta
-    content="741.Studio is a digital growth studio helping companies increase visibility, traffic, and leads through modern websites, local SEO, and performance marketing."
+    content="741.Studio is a digital growth studio accelerating SME growth through performance marketing, Local SEO, and AI automation workflows."
     name="description" />
-  <meta content="741.Studio | Architecting Digital Growth" property="og:title" />
+  <link rel="canonical" href="https://741.studio/" />
+  <meta content="741.Studio | Architecting Digital Growth & Local SEO Automation" property="og:title" />
   <meta
-    content="741.Studio is a digital growth studio helping companies increase visibility, traffic, and leads through modern websites, local SEO, and performance marketing."
+    content="741.Studio is a digital growth studio accelerating SME growth through performance marketing, Local SEO, and AI automation workflows."
     property="og:description" />
   <meta content="/assets/logo_white-B6hD-sVy.png" property="og:image" />
-  <meta content="741.Studio | Architecting Digital Growth" property="twitter:title" />
+  <meta content="741.Studio | Architecting Digital Growth & Local SEO Automation" property="twitter:title" />
   <meta
-    content="741.Studio is a digital growth studio helping companies increase visibility, traffic, and leads through modern websites, local SEO, and performance marketing."
+    content="741.Studio is a digital growth studio accelerating SME growth through performance marketing, Local SEO, and AI automation workflows."
     property="twitter:description" />
   <meta content="/assets/images/logo_white.png" property="twitter:image" />
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
+  
+  <link rel="preload" href="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/css/weavy-ai.webflow.shared.4177f1ac9.css" as="style" />
   <link href="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/css/weavy-ai.webflow.shared.4177f1ac9.css"
     rel="stylesheet" type="text/css" integrity="sha384-QXfxrJwJZsoq28EStZW945YIe7YK8KY5/pVxXA0iwbzjxi159EEIqBRH2LkgsHNl"
     crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  </noscript>
   <!-- Brand Guidelines Color Overrides -->
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
     /* Akira Footer Dog Interaction - MOVED TO components/footer.html */
 
     :root {
@@ -40,7 +48,6 @@
     }
 
     /* Global Background Tint Overrides (Replacing Turquoise with Brand Yellow) */
-
     .section-hero {
       background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 34%, rgba(250, 193, 24, 0.35) 71%), url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif") !important;
     }
@@ -55,6 +62,40 @@
 
     .section_prof-tools {
       background-image: url("/assets/BG_TOOLS_yellow-Fs5pcewf.svg") !important;
+    }
+
+    /* Force display for missing desktop visual */
+    @media screen and (min-width: 992px) {
+      .prof-tools-interactionable-wrapper {
+        display: flex !important;
+        position: relative !important;
+        min-height: 63rem !important;
+        align-items: center;
+        justify-content: center;
+        margin-top: -18rem !important;
+      }
+
+      .prof_center-image-wrapp {
+        position: absolute !important;
+        width: 100rem !important;
+        height: 62.8rem !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        pointer-events: none;
+      }
+    }
+
+    /* Ensure initial default image renders visible */
+    img.image-tools-inner.is-default {
+      opacity: 1 !important;
+    }
+
+    /* Fix Explore workflows missing on mobile */
+    @media screen and (max-width: 991px) {
+      .section_workflows-slider {
+        display: block !important;
+      }
     }
 
     @media screen and (max-width: 991px) {
@@ -108,7 +149,6 @@
     }
 
     /* Partner Logos Marquee */
-
     .section_partner-logos {
       display: flex;
       align-items: center;
@@ -696,13 +736,14 @@
           </div>
           <div id="w-node-ad200bf5-388c-5543-8832-565bb87fbb2f-78a6999f" class="hero-draggbles-comp reveal-stagger-group">
             <div id="node1" node-connect-target="node3" node-connect-target-m="node3"
-              class="hr-card-3d node-connect w-node-d74cab7c-d307-4f7d-afc1-55ae76f00d3d-78a6999f reveal-item">
+              class="hr-card-3d node-connect w-node-d74cab7c-d307-4f7d-afc1-55ae76f00d3d-78a6999f reveal-item"
+              style="position: relative;">
+              <div
+                style="position: absolute; top: calc(-30px + 1rem); left: 0px; font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
+                <span style="font-weight: 700; color: #111;">3D</span>&nbsp;&nbsp;<span style="font-weight: 400; color: #555;">RODIN 2.0</span>
+              </div>
               <div class="drag-handle"></div>
-              <div data-line-path="fluid" class="line-anchor start n1"></div><img
-                src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681cd65ba87c69df161752e5_3d_card.avif"
-                loading="lazy" id="3d-model-cover" alt="" class="hr_img-rodin" /><img
-                src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/68349ea45685e2905f5c21e6_3D_RODIN_hero_mobile.avif"
-                loading="lazy" id="3d-model-cover" alt="" class="hr_img-rodin-mobile" />
+              <div data-line-path="fluid" class="line-anchor start n1"></div>
               <div class="_3d-model-holder">
                 <div class="_3d-model w-embed"><model-viewer src="/assets/models/yellow_balloon.glb" camera-controls
                     auto-rotate disable-zoom disable-pan disable-tap camera-orbit="0deg 85deg 3.5m" field-of-view="80deg"
@@ -724,28 +765,26 @@
               class="hr-card-color-reference node-connect w-node-_52114269-2ff0-e113-4d3f-3ab9ae07e166-78a6999f reveal-item"
               style="position: relative;">
               <div
-                style="position: absolute; top: -30px; left: 0px; font-family: inherit; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
-                <span style="font-weight: 800; color: #111; margin-right: 1.5rem;">IMAGE</span><span
-                  style="font-weight: 600; color: #555;">COLOR REFERENCE</span>
+                style="position: absolute; top: calc(-30px - 4.5486rem); left: 0px; font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
+                <span style="font-weight: 700; color: #111;">COLOR</span>&nbsp;&nbsp;<span style="font-weight: 400; color: #555;">REFERENCE</span>
               </div>
               <img src="/assets/sunburst_flare_hero-Dep1pIiM.png" loading="lazy" alt="" class="hr_img-c-difference"
-                style="border-radius: 12px; height: 100%; object-fit: cover; width: 100%;" /><img
+                style="border-radius: 12px; height: auto; object-fit: cover; width: 100%; aspect-ratio: 1000 / 1000;" /><img
                 src="/assets/sunburst_flare_hero-Dep1pIiM.png" loading="lazy" alt="" class="hr_img-c-difference-mobile"
-                style="border-radius: 12px; height: 100%; object-fit: cover; width: 100%;" />
+                style="border-radius: 12px; height: auto; object-fit: cover; width: 100%; aspect-ratio: 1000 / 1000;" />
               <div data-line-path="magnet" class="line-anchor start n2" style="top: 45px;"></div>
             </div>
             <div id="node3" node-connect-target="node4, node5" node-connect-target-m="node6"
               class="hr-card-stable-diffusion node-connect w-node-_92cb0ff1-51e7-fda9-cd40-e52909242cda-78a6999f reveal-item"
               style="position: relative;">
               <div
-                style="position: absolute; top: -30px; left: 0px; font-family: inherit; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
-                <span style="font-weight: 800; color: #111; margin-right: 1.5rem;">IMAGE</span><span
-                  style="font-weight: 600; color: #555;">STABLE DIFFUSION</span>
+                style="position: absolute; top: -30px; left: 0px; font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
+                <span style="font-weight: 700; color: #111;">IMAGE</span>&nbsp;&nbsp;<span style="font-weight: 400; color: #555;">STABLE DIFFUSION</span>
               </div>
-              <img src="/assets/stablediffusionherosection-OxsBuG8G.jpeg" loading="lazy" alt="" class="hr_img-stable-diff"
-                style="border-radius: 12px; height: 100%; object-fit: cover; width: 100%;" /><img
-                src="/assets/stablediffusionherosection-OxsBuG8G.jpeg" loading="lazy" alt="" class="hr_img-stable-diff-mobile"
-                style="border-radius: 12px; height: 100%; object-fit: cover; width: 100%;" />
+              <img src="/assets/stablediffusionherosection-DXbEXSVD.jpeg" loading="lazy" alt="" class="hr_img-stable-diff"
+                style="border-radius: 12px; height: auto; object-fit: cover; width: 100%; aspect-ratio: 57 / 73;" /><img
+                src="/assets/stablediffusionherosection-DXbEXSVD.jpeg" loading="lazy" alt="" class="hr_img-stable-diff-mobile"
+                style="border-radius: 12px; height: auto; object-fit: cover; width: 100%; aspect-ratio: 57 / 73;" />
               <div data-line-path="magnet" class="line-anchor start n3" style="top: 45px;"></div>
               <div class="line-anchor end n3" style="top: 45px;"></div>
             </div>
@@ -753,13 +792,12 @@
               class="hr-card-flux-2-1 node-connect w-node-ae4103dc-5e48-5c0c-7a06-82cd9453cae2-78a6999f reveal-item"
               style="position: relative;">
               <div
-                style="position: absolute; top: -30px; left: 0px; font-family: inherit; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
-                <span style="font-weight: 800; color: #111; margin-right: 1.5rem;">IMAGE</span><span
-                  style="font-weight: 600; color: #555;">FLUX PRO 1.1</span>
-              </div><img src="/assets/imageflux1.1herosection-n4Y3i19P.jpg" loading="lazy" alt="" class="hr_img-flux"
-                style="border-radius: 12px; height: 100%; object-fit: cover; width: 100%;" /><img
-                src="/assets/imageflux1.1herosection-n4Y3i19P.jpg" loading="lazy" alt="" class="hr_img-flux-mobile"
-                style="border-radius: 12px; height: 100%; object-fit: cover; width: 100%;" />
+                style="position: absolute; top: calc(-30px + 2.2917rem); left: 0px; font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
+                <span style="font-weight: 700; color: #111;">IMAGE</span>&nbsp;&nbsp;<span style="font-weight: 400; color: #555;">FLUX PRO 1.1</span>
+              </div><img src="/assets/imageflux1.1herosection-DKfHEk1R.jpg" loading="lazy" alt="" class="hr_img-flux"
+                style="border-radius: 12px; height: auto; object-fit: cover; width: 100%; aspect-ratio: 1 / 1;" /><img
+                src="/assets/imageflux1.1herosection-DKfHEk1R.jpg" loading="lazy" alt="" class="hr_img-flux-mobile"
+                style="border-radius: 12px; height: auto; object-fit: cover; width: 100%; aspect-ratio: 1 / 1;" />
               <div class="line-anchor start n5" style="top: 45px;"></div>
               <div class="line-anchor end" style="top: 45px;"></div>
             </div>
@@ -767,14 +805,13 @@
               class="hr-card-text node-connect w-node-_0555fc31-2b1b-83e8-70ea-b785ee076d41-78a6999f reveal-item"
               style="position: relative; width: 17.5vw; min-width: 210px; max-width: 260px;">
               <div
-                style="position: absolute; top: -30px; left: 0px; font-family: inherit; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
-                <span style="font-weight: 800; color: #111; margin-right: 1.5rem;">TEXT</span><span
-                  style="font-weight: 600; color: #555;">PROMPT</span>
+                style="position: absolute; top: -38px; left: 0px; font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
+                <span style="font-weight: 700; color: #111;">TEXT</span>&nbsp;&nbsp;<span style="font-weight: 400; color: #555;">PROMPT</span>
               </div>
               <div
                 style="background-color: #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.05); width: 100%; height: auto; text-align: left;">
                 <p class="paragraph-line-height-1-15 text-color-stone-grey"
-                  style="font-size: clamp(0.75rem, 0.9vw, 0.95rem); margin: 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6; overflow: hidden;">
+                  style="font-size: clamp(0.75rem, 0.9vw, 0.95rem); margin: 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6; line-clamp: 6; overflow: hidden;">
                   A massive, bright yellow iridescent smiley face balloon tightly inflated and playfully bouncing inside
                   a small, fluorescent-lit office room. Realistic, documentary-style footage.
                 </p>
@@ -782,90 +819,114 @@
               <div data-line-path="magnet" class="line-anchor start" style="top: 45px;"></div>
               <div class="line-anchor end" style="top: 45px;"></div>
             </div>
-            <div id="node6" class="hr-card-minimax-video w-node-_0be630c0-22dc-cede-1dbf-f7e269927488-78a6999f reveal-item">
+            <div id="node6" class="hr-card-minimax-video w-node-_0be630c0-22dc-cede-1dbf-f7e269927488-78a6999f reveal-item"
+              style="position: relative;">
+              <div
+                style="position: absolute; top: calc(-30px + 1.5rem); left: 0px; font-family: inherit; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; z-index: 10;">
+                <span style="font-weight: 700; color: #111;">VIDEO</span>&nbsp;&nbsp;<span style="font-weight: 400; color: #555;">MINIMAX VIDEO</span>
+              </div>
               <div class="hero-video">
                 <div class="line-anchor end n6" style="left: 0;"></div>
                 <div id="node6" class="hero-vid-embed w-embed"><video autoplay loop muted playsinline disablepictureinpicture
-                    preload="auto" style="pointer-events: none; width: 100%; height: 100%; object-fit: cover;">
+                    preload="auto"
+                    style="pointer-events: none; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover;">
                     <!-- 👇 Mobile version (must come first) -->
-                    <source src="/assets/smilevideo741-C5Y7ZEp0.mp4" type="video/mp4" media="(max-width: 768px)" />
+                    <source src="/assets/smilevideo741-BLQov6j6.mp4" type="video/mp4" media="(max-width: 768px)" />
       
                     <!-- 👇 Default / desktop version -->
-                    <source src="/assets/smilevideo741-C5Y7ZEp0.mp4" type="video/mp4" />
+                    <source src="/assets/smilevideo741-BLQov6j6.mp4" type="video/mp4" />
       
                     Your browser does not support the video tag.
                   </video></div>
-              </div><img
-                src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6835ce8a653081a97d92eebd_VIDEO_hero_Desktop.avif"
-                loading="lazy" alt="" class="hr_img-video" /><img
-                src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6835ce9cc9475b88f57c57da_VIDEO_hero_mobile.png"
-                loading="lazy" sizes="(max-width: 685px) 100vw, 685px"
-                srcset="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6835ce9cc9475b88f57c57da_VIDEO_hero_mobile-p-500.png 500w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6835ce9cc9475b88f57c57da_VIDEO_hero_mobile.png 685w"
-                alt="" class="hr_img-video-mobile" />
+              </div>
             </div>
           </div>
           <style>
             @media screen and (max-width: 767px) {
               .hero-draggbles-comp {
-                display: grid !important;
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 1.5rem !important;
-                padding-bottom: 2rem;
-                align-items: start;
-              }
-      
-              #node2.w-node-_52114269-2ff0-e113-4d3f-3ab9ae07e166-78a6999f {
-                grid-column: 1 / 2 !important;
-                grid-row: 1 !important;
-                justify-self: start !important;
-                align-self: start !important;
-                width: 100% !important;
-                margin-top: 0 !important;
-              }
-      
-              #node1.w-node-d74cab7c-d307-4f7d-afc1-55ae76f00d3d-78a6999f {
-                grid-column: 2 / 3 !important;
-                grid-row: 1 / 3 !important;
-                justify-self: end !important;
-                align-self: start !important;
-                margin-top: 6rem !important;
-                /* Staggered down */
-                width: 100% !important;
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 4rem !important; /* Generous gap prevents overlap and shows lines cleanly */
                 height: auto !important;
+                min-height: auto !important;
+                position: relative !important;
+                margin-top: 2rem !important;
+                padding-bottom: 4rem;
+                overflow: visible !important;
               }
       
+              .hero-draggbles-comp > div {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                bottom: auto !important;
+                margin-top: 0 !important;
+                z-index: 5 !important;
+              }
+      
+              /* 1. Color Reference */
+              #node2.w-node-_52114269-2ff0-e113-4d3f-3ab9ae07e166-78a6999f {
+                order: 1;
+                width: 35vw !important;
+                height: auto !important;
+                align-self: flex-start !important;
+                margin-left: 5vw !important;
+                z-index: 6 !important;
+              }
+      
+              /* 2. 3D Rodin */
+              #node1.w-node-d74cab7c-d307-4f7d-afc1-55ae76f00d3d-78a6999f {
+                order: 2;
+                width: 55vw !important;
+                height: 55vw !important;
+                min-height: auto !important;
+                align-self: flex-end !important;
+                margin-right: 5vw !important;
+                z-index: 7 !important;
+              }
+              
+              #node1 ._3d-model {
+                height: 100% !important;
+                min-height: auto !important;
+              }
+      
+              /* 3. Stable Diffusion */
               #node3.w-node-_92cb0ff1-51e7-fda9-cd40-e52909242cda-78a6999f {
-                grid-column: 1 / 2 !important;
-                grid-row: 2 / 4 !important;
-                justify-self: start !important;
-                align-self: start !important;
-                margin-top: 1rem !important;
-                width: 100% !important;
+                order: 3;
+                width: 60vw !important;
+                height: auto !important;
+                align-self: flex-start !important;
+                margin-left: 5vw !important;
+                z-index: 5 !important;
               }
       
+              /* 4. Flux Pro */
               #node5.w-node-ae4103dc-5e48-5c0c-7a06-82cd9453cae2-78a6999f {
-                grid-column: 2 / 3 !important;
-                grid-row: 3 / 5 !important;
-                justify-self: end !important;
-                align-self: start !important;
-                margin-top: 2rem !important;
-                width: 100% !important;
+                order: 4;
+                width: 60vw !important;
+                height: auto !important;
+                align-self: flex-end !important;
+                margin-right: 5vw !important;
+                z-index: 6 !important;
               }
       
+              /* 5. Minimax Video */
               #node6.w-node-_0be630c0-22dc-cede-1dbf-f7e269927488-78a6999f {
-                grid-column: 1 / 3 !important;
-                grid-row: 5 !important;
-                margin-top: 2rem !important;
-                width: 100% !important;
+                order: 5;
+                width: 90vw !important;
+                height: auto !important;
+                align-self: center !important;
+                z-index: 8 !important;
               }
       
+              /* 6. Text Prompt */
               #node4.w-node-_0555fc31-2b1b-83e8-70ea-b785ee076d41-78a6999f {
-                grid-column: 1 / 3 !important;
-                grid-row: 6 !important;
-                margin-top: 2rem !important;
-                width: 100% !important;
-                justify-self: center !important;
-                max-width: 100% !important;
+                order: 6;
+                width: 90vw !important;
+                max-width: none !important;
+                align-self: center !important;
+                z-index: 9 !important;
               }
             }
           </style>
@@ -909,7 +970,6 @@
                         const startAnchor = source.querySelector('.line-anchor.start');
                         const endAnchor = target.querySelector('.line-anchor.end');
                         if (!startAnchor || !endAnchor) {
-                          console.log("No anchors found for:", sourceID, "→", targetID.trim());
                           return;
                         }
       
@@ -935,36 +995,42 @@
                   }
       
                   function setupDraggables() {
-                    if (!isMobile) {
-                      elements.forEach(el => {
-                        gsap.set(el, { x: 0, y: 0 });
+                    elements.forEach(el => {
+                      // Kill existing draggable if it exists to clean up on resize
+                      const existing = Draggable.get(el);
+                      if (existing) {
+                        existing.kill();
+                      }
       
-                        const isHandleOnly =
-                          el.classList.contains("hr-card-3d") &&
-                          el.classList.contains("node-connect");
+                      gsap.set(el, { x: 0, y: 0 });
       
-                        Draggable.create(el, {
-                          type: 'x,y',
-                          bounds: '.grid-container.is-hero',
-                          handle: isHandleOnly ? '.drag-handle' : null,
-                          onPress() {
-                            el.style.cursor = 'grabbing';
-                          },
-                          onRelease() {
-                            el.style.cursor = isHandleOnly ? 'default' : 'grab';
-                          },
-                          onDrag() {
-                            lines.forEach(line => line.position());
-                          }
-                        });
-      
-                        el.style.cursor = isHandleOnly ? 'default' : 'grab';
-                      });
-                    } else {
-                      elements.forEach(el => {
+                      // Disable dragging completely on mobile
+                      if (isMobile) {
                         el.style.cursor = 'default';
+                        return;
+                      }
+      
+                      const isHandleOnly =
+                        el.classList.contains("hr-card-3d") &&
+                        el.classList.contains("node-connect");
+      
+                      Draggable.create(el, {
+                        type: 'x,y',
+                        bounds: '.grid-container.is-hero',
+                        handle: isHandleOnly ? '.drag-handle' : null,
+                        onPress() {
+                          el.style.cursor = 'grabbing';
+                        },
+                        onRelease() {
+                          el.style.cursor = isHandleOnly ? 'default' : 'grab';
+                        },
+                        onDrag() {
+                          lines.forEach(line => line.position());
+                        }
                       });
-                    }
+      
+                      el.style.cursor = isHandleOnly ? 'default' : 'grab';
+                    });
                   }
       
                   function handleResize() {
@@ -1240,8 +1306,7 @@
             <img loading="lazy"
               src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825887d59ff2f86b8fba523_Bria.avif" alt=""
               class="models_bg-image">
-            <div class="overlay-section-top">
-            </div>
+      
             <!-- Hardcoded black opacity layer sitting perfectly on top of all videos/images but below text -->
             <div
               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.35); z-index: 50; pointer-events: none;">
@@ -1454,16 +1519,16 @@
       </section>      <section class="section_prof-tools">
         <div class="padding-global">
           <div class="simple-container">
-            <div class="padding-section-large">
-              <div class="outcome_comp">
-                <div class="tools-header-wrapper reveal-up">
-                  <h2 class="heading-style-xl">With all the professional tools you rely on</h2>
+            <div class="padding-section-large" style="padding-top: 4rem; padding-bottom: 0rem;">
+              <div class="outcome_comp" style="gap: 0rem;">
+                <div class="tools-header-wrapper reveal-up" style="gap: 2rem;">
+                  <h2 class="heading-style-xl" style="margin-bottom: 0;">With all the professional tools you rely on</h2>
                   <p class="text-size-large">In one seamless workflow</p>
                 </div>
                 <div class="prof-tools-interactionable-wrapper reveal-up">
                   <div class="prof_center-image-wrapp"><img
                       src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/68223c9e9705b88c35e76dec_Default%402x.avif"
-                      loading="lazy" sizes="(max-width: 2880px) 100vw, 2880px"
+                      sizes="(max-width: 2880px) 100vw, 2880px"
                       srcset="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/68223c9e9705b88c35e76dec_Default%402x-p-500.png 500w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/68223c9e9705b88c35e76dec_Default%402x-p-800.png 800w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/68223c9e9705b88c35e76dec_Default%402x.avif 2880w"
                       alt="" class="image-tools-inner is-default" /><img
                       src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/68224564b78bd840120b7a38_Blur%402x.avif"
@@ -1602,6 +1667,9 @@
                   showDefaultImage();
                 });
               });
+      
+              // Initialize safely ON LOAD
+              showDefaultImage();
       
               // Scroll reset with IntersectionObserver
               const observerTarget = document.querySelector(".prof-tools-chips-comp");

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>741 Studio | Infrastructure Upgrade</title>
+    
+    <!-- Favicon - Brand Standard -->
+    <link href="/assets/favicon_yellow_v2-wkShtY9b.png" rel="shortcut icon" type="image/png" />
+    <link href="/assets/favicon_yellow_v2-wkShtY9b.png" rel="apple-touch-icon" />
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    
+    <!-- Fonts - Alignment with core CI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Press+Start+2P&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style type="text/css">
+        :root {
+            --brand-lemon: #fac118;
+            --bg-black: #000000;
+            --bg-dark-grey: #0a0a0a;
+            --text-main: #ffffff;
+            --text-dim: #888888;
+            --border-soft: rgba(255, 255, 255, 0.08);
+            --grid-color: rgba(250, 193, 24, 0.03);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .pixel-text { font-family: 'Press Start 2P', cursive; font-size: 8px; letter-spacing: 0.1em; }
+        .heading-text { font-family: 'Outfit', sans-serif; font-weight: 900; }
+
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            padding: 2.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 0.5px solid var(--border-soft);
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-symbol {
+            width: 28px;
+            height: 28px;
+            background: var(--brand-lemon);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            padding: 8rem 0;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .meta-label {
+            color: var(--brand-lemon);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 6.5rem);
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -0.04em;
+            margin-bottom: 3rem;
+        }
+
+        .highlight-text {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            max-width: 550px;
+            color: var(--text-dim);
+            margin-bottom: 4rem;
+            font-weight: 400;
+        }
+
+        /* --- BUTTONS --- */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--brand-lemon);
+            color: #000;
+            padding: 1.25rem 2.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+            transition: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%);
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(250, 193, 24, 0.4);
+        }
+
+        /* --- CARDS GRID --- */
+        .grid-wrap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0;
+            border-top: 1px solid var(--border-soft);
+            border-left: 1px solid var(--border-soft);
+        }
+
+        .grid-item {
+            padding: 3rem;
+            border-right: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+            background: var(--bg-black);
+            transition: 0.3s;
+        }
+
+        .grid-item:hover {
+            background: rgba(250, 193, 24, 0.02);
+        }
+
+        .grid-item .coord {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            opacity: 0.3;
+        }
+
+        .grid-item h3 {
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+            font-size: 18px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .grid-item p {
+            font-size: 13px;
+            color: var(--text-dim);
+        }
+
+        /* --- ACCESS FORM --- */
+        .form-section {
+            padding: 10rem 0;
+            max-width: 500px;
+        }
+
+        .form-box {
+            background: var(--bg-dark-grey);
+            padding: 2.5rem;
+            border: 1px solid var(--border-soft);
+            position: relative;
+        }
+
+        .form-box::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            width: 15px;
+            height: 15px;
+            background: var(--brand-lemon);
+        }
+
+        input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border-soft);
+            padding: 1rem 0;
+            color: #fff;
+            margin-bottom: 2rem;
+            font-size: 16px;
+        }
+
+        input:focus { outline: none; border-bottom-color: var(--brand-lemon); }
+
+        .submit-btn {
+            background: transparent;
+            color: var(--brand-lemon);
+            border: 1px solid var(--brand-lemon);
+            width: 100%;
+            padding: 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover { background: var(--brand-lemon); color: #000; }
+
+        /* --- CONTACT MODAL STYLES (BRAND STANDARD) --- */
+        .shared-contact-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 9999999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .shared-contact-modal.is-open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .contact-modal-box {
+            background: #0a0a0a;
+            border: 1px solid var(--border-soft);
+            width: 90%;
+            max-width: 380px;
+            padding: 50px 30px;
+            position: relative;
+            text-align: center;
+            transform: translateY(30px);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .shared-contact-modal.is-open .contact-modal-box {
+            transform: translateY(0);
+            border-color: var(--brand-lemon);
+        }
+
+        .contact-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 24px;
+            color: #444;
+            transition: 0.2s;
+        }
+
+        .contact-modal-close:hover { color: var(--brand-lemon); }
+
+        .contact-modal-box h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .contact-modal-box p {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .contact-modal-option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 18px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: 0.3s;
+            background: #111;
+            color: #fff !important;
+            border: 1px solid var(--border-soft);
+        }
+
+        .contact-modal-option:hover {
+            background: var(--brand-lemon);
+            color: #000 !important;
+            border-color: var(--brand-lemon);
+        }
+
+        .modal-opt-icon { margin-right: 15px; flex-shrink: 0; }
+
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 5rem 0;
+            border-top: 1px solid var(--border-soft);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes reveal {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal { animation: reveal 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; opacity: 0; }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 4rem; }
+            .footer-inner { flex-direction: column; align-items: flex-start; gap: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="container reveal">
+        <div class="logo-box">
+            <div class="logo-symbol">
+                <span class="pixel-text" style="color: black;">7</span>
+            </div>
+            <span class="heading-text" style="font-size: 1.5rem; tracking: -0.02em;">741 STUDIO</span>
+        </div>
+        <div class="pixel-text" style="opacity: 0.5;">STATUS: UPDATING_INFRA</div>
+    </nav>
+
+    <main class="container">
+        
+        <section class="hero">
+            <div class="reveal delay-1">
+                <div class="meta-label">
+                    <span class="pixel-text">SECURITY_FIRST_ARCHITECTURE</span>
+                </div>
+                <h1 class="heading-text">
+                    Architecting<br>
+                    <span class="highlight-text">Infrastructure</span><br>
+                    Upgrade.
+                </h1>
+                <p class="subtitle">
+                    We are rebuilding for peak performance and military-grade security. 
+                    During this window, we continue to scale selected digital operations.
+                </p>
+                <a href="#" class="cta-btn contact-trigger">Work With Us</a>
+            </div>
+        </section>
+
+
+        <section class="grid-wrap reveal delay-2">
+            <div class="grid-item">
+                <span class="pixel-text coord">[ NODE_01 ]</span>
+                <h3 class="heading-text">Local SEO</h3>
+                <p>Proprietary signals for market domination and hyper-local visibility.</p>
+            </div>
+            <div class="grid-item">
+                <span class="pixel-text coord">[ NODE_02 ]</span>
+                <h3 class="heading-text">Web Dev</h3>
+                <p>High-performance static engines built for speed, conversion, and resilience.</p>
+            </div>
+            <div class="grid-item">
+                <span class="pixel-text coord">[ NODE_03 ]</span>
+                <h3 class="heading-text">Paid Ads</h3>
+                <p>ROI-focused engineering across global distribution networks.</p>
+            </div>
+            <div class="grid-item">
+                <span class="pixel-text coord">[ NODE_04 ]</span>
+                <h3 class="heading-text">Automation / AI</h3>
+                <p>Complex workflow reduction and algorithmic business scaling.</p>
+            </div>
+        </section>
+
+        <section id="leads" class="form-section reveal delay-2">
+            <div class="pixel-text" style="color: var(--brand-lemon); margin-bottom: 2rem;">REQUEST_SECURE_ACCESS</div>
+            <div class="form-box">
+                <form action="mailto:martin@741.studio" method="post" enctype="text/plain">
+                    <input type="email" name="email" placeholder="YOUR_EMAIL_ADDRESS" required>
+                    <button type="submit" class="submit-btn pixel-text" style="font-size: 10px;">Send Transmission</button>
+                </form>
+            </div>
+            <p style="margin-top: 2rem; font-size: 10px; color: var(--text-dim); text-transform: uppercase;">Infrastructure selective. No public API access currently.</p>
+        </section>
+
+
+    </main>
+
+    <footer class="container reveal">
+        <div class="footer-inner">
+            <div>
+                <p class="pixel-text" style="opacity: 0.3; margin-bottom: 2rem;">&copy; 2026 741 STUDIO ARCHITECTS</p>
+                <p class="heading-text" style="font-size: 0.75rem; letter-spacing: 0.1em; opacity: 0.6;">EUROPE • BALI • GLOBAL</p>
+            </div>
+            <div style="display: flex; gap: 3rem;">
+                <a href="https://www.instagram.com/741.studio/" target="_blank" class="pixel-text" style="color: inherit; text-decoration: none; opacity: 0.5;">INSTAGRAM</a>
+                <a href="mailto:martin@741.studio" class="pixel-text" style="color: inherit; text-decoration: none; opacity: 0.5;">CONTACT</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Shared Contact Modal (Brand Standard Restore) -->
+    <div id="sharedContactModal" class="shared-contact-modal">
+        <div class="contact-modal-box">
+            <button id="closeContactModal" class="contact-modal-close" aria-label="Close modal">✕</button>
+            <h2 class="heading-text">Let's talk</h2>
+            <p>Select your preferred communication protocol</p>
+        
+            <a href="https://wa.me/6287860430975" target="_blank" class="contact-modal-option">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="modal-opt-icon">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.00398 21.996L3.3082 17.2343C2.15822 15.244 1.55178 12.9463 1.553 10.5898C1.55598 4.8817 6.20864 0.233989 11.9213 0.233989C14.689 0.235129 17.3005 1.31295 19.2568 3.26806C21.2131 5.22316 22.2905 7.83296 22.2894 10.5976C22.2864 16.3057 17.6337 20.9534 11.9211 20.9534C9.65825 20.9523 7.44755 20.3802 5.50346 19.3093L2.00398 21.996ZM5.91717 17.6186C7.7554 18.7088 9.80556 19.2818 11.9205 19.2828C16.7083 19.2828 20.6158 15.3781 20.6183 10.5959C20.6191 8.27552 19.7153 6.07548 18.0752 4.43632C16.4352 2.79717 14.2323 1.89437 11.9168 1.8934C7.129 1.8934 3.22151 5.7981 3.21903 10.5804C3.218 12.7952 3.82424 14.9452 4.97022 16.8202L4.04576 20.1989L7.5447 18.9959V18.9959H7.54483H7.5447C7.5447 18.9958 7.54471 18.9958 7.54483 18.9957C7.54472 18.9958 7.5447 18.9958 7.5447 18.9959L5.91717 17.6186ZM16.634 14.205C16.3752 14.0755 15.1017 13.4485 14.8646 13.3622C14.6274 13.2758 14.455 13.2327 14.2825 13.4916C14.11 13.7505 13.6143 14.3338 13.4633 14.5065C13.3125 14.6793 13.1616 14.7008 12.9029 14.5714C12.6441 14.4419 11.8087 14.1691 10.819 13.2863C10.0487 12.5993 9.5292 11.7533 9.37829 11.4944C9.22739 11.2355 9.36195 11.0954 9.49186 10.9666C9.60875 10.8509 9.74605 10.6865 9.87538 10.5354C10.0047 10.3843 10.0478 10.2764 10.1341 10.1037C10.2203 9.93103 10.1772 9.77995 10.1125 9.65045C10.0478 9.52095 9.5303 8.24755 9.31464 7.7297C9.10427 7.22442 8.89 7.29177 8.72986 7.284C8.57468 7.27653 8.40217 7.27555 8.22965 7.27555C8.05713 7.27555 7.77685 7.34026 7.53969 7.59914C7.30253 7.85803 6.6342 8.48366 6.6342 9.75653C6.6342 11.0294 7.56126 12.2592 7.69059 12.4319C7.81993 12.6045 9.51325 15.2289 12.1158 16.3533C12.7351 16.6214 13.218 16.7797 13.5939 16.8996C14.2155 17.0974 14.7803 17.0689 15.2275 16.9945C15.7266 16.9115 16.7634 16.3688 16.9789 15.7645C17.1945 15.1601 17.1945 14.6421 17.1298 14.5342C17.0651 14.4263 16.8927 14.3401 16.634 14.205Z" fill="currentColor"/>
+                </svg>
+                WhatsApp
+            </a>
+        
+            <a href="mailto:martin@741.studio" class="contact-modal-option">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="modal-opt-icon">
+                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" />
+                    <path d="M22 6L12 13L2 6" />
+                </svg>
+                Email
+            </a>
+        
+            <a href="https://www.instagram.com/741.studio/" target="_blank" class="contact-modal-option">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="modal-opt-icon">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+                Instagram
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('sharedContactModal');
+            const closeBtn = document.getElementById('closeContactModal');
+            const triggers = document.querySelectorAll('.contact-trigger');
+
+            if (!modal || !closeBtn) return;
+
+            triggers.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    modal.classList.add('is-open');
+                });
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.classList.remove('is-open');
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) modal.classList.remove('is-open');
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+                    modal.classList.remove('is-open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
