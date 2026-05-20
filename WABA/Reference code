@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en" data-astro-cid-sckkx6r4="">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preload" href="/_astro/fonts/be73ffe76f728c6f.woff2" as="font" type="font/woff2" crossorigin="" />
+    <style>
+        @font-face {
+            font-family: VictorNarrow-5004b2c769ce72c4;
+            src: url(&#34;/_astro/fonts/be73ffe76f728c6f.woff2&#34;) format(&#34; woff2&#34; );
+            font-display: swap;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: &#34;
+            VictorNarrow-5004b2c769ce72c4 fallback: Arial&#34;
+            ;
+            src: local(&#34; Arial&#34; );
+            font-display: swap;
+            font-weight: 300;
+            font-style: normal;
+            size-adjust: 70.6594%;
+            ascent-override: 135.8631%;
+            descent-override: 33.9658%;
+            line-gap-override: 0%;
+        }
+
+        :root {
+            --font-title: VictorNarrow-5004b2c769ce72c4, &#34;
+            VictorNarrow-5004b2c769ce72c4 fallback: Arial&#34;
+            ,
+            sans-serif;
+        }
+    </style>
+    <link rel="preload" href="/_astro/fonts/c65585c8cfece219.woff2" as="font" type="font/woff2" crossorigin="" />
+    <link rel="preload" href="/_astro/fonts/a337741eda51b410.woff2" as="font" type="font/woff2" crossorigin="" />
+    <link rel="preload" href="/_astro/fonts/1a99aca83e01f200.woff2" as="font" type="font/woff2" crossorigin="" />
+    <style>
+        @font-face {
+            font-family: Neue-Haas-Grotesk-Display-Pro-27bd2fc2af3ca6a5;
+            src: url(&#34;/_astro/fonts/c65585c8cfece219.woff2&#34;) format(&#34; woff2&#34; );
+            font-display: swap;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: Neue-Haas-Grotesk-Display-Pro-27bd2fc2af3ca6a5;
+            src: url(&#34;/_astro/fonts/a337741eda51b410.woff2&#34;) format(&#34; woff2&#34; );
+            font-display: swap;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: Neue-Haas-Grotesk-Display-Pro-27bd2fc2af3ca6a5;
+            src: url(&#34;/_astro/fonts/1a99aca83e01f200.woff2&#34;) format(&#34; woff2&#34; );
+            font-display: swap;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: &#34;
+            Neue-Haas-Grotesk-Display-Pro-27bd2fc2af3ca6a5 fallback: Arial&#34;
+            ;
+            src: local(&#34; Arial&#34; );
+            font-display: swap;
+            font-weight: 200;
+            font-style: normal;
+            size-adjust: 88.156%;
+            ascent-override: 92.7901%;
+            descent-override: 20.6452%;
+            line-gap-override: 22.6871%;
+        }
+
+        @font-face {
+            font-family: &#34;
+            Neue-Haas-Grotesk-Display-Pro-27bd2fc2af3ca6a5 fallback: Arial&#34;
+            ;
+            src: local(&#34; Arial&#34; );
+            font-display: swap;
+            font-weight: 300;
+            font-style: normal;
+            size-adjust: 88.156%;
+            ascent-override: 92.7901%;
+            descent-override: 20.6452%;
+            line-gap-override: 22.6871%;
+        }
+
+        @font-face {
+            font-family: &#34;
+            Neue-Haas-Grotesk-Display-Pro-27bd2fc2af3ca6a5 fallback: Arial&#34;
+            ;
+            src: local(&#34; Arial&#34; );
+            font-display: swap;
+            font-weight: 500;
+            font-style: normal;
+            size-adjust: 88.156%;
+            ascent-override: 92.7901%;
+            descent-override: 20.6452%;
+            line-gap-override: 22.6871%;
+        }
+
+        :root {
+            --font-body: Neue-Haas-Grotesk-Display-Pro-27bd2fc2af3ca6a5, &#34;
+            Neue-Haas-Grotesk-Display-Pro-27bd2fc2af3ca6a5 fallback: Arial&#34;
+            ,
+            sans-serif;
+        }
+    </style>
+    <link rel="preload" href="/_astro/fonts/1ac6259d48e66f05.woff2" as="font" type="font/woff2" crossorigin="" />
+    <style>
+        @font-face {
+            font-family: VictorNarrowMono-cb690499b31725cb;
+            src: url(&#34;/_astro/fonts/1ac6259d48e66f05.woff2&#34;) format(&#34; woff2&#34; );
+            font-display: swap;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: &#34;
+            VictorNarrowMono-cb690499b31725cb fallback: Arial&#34;
+            ;
+            src: local(&#34; Arial&#34; );
+            font-display: swap;
+            font-weight: 300;
+            font-style: normal;
+            size-adjust: 134.5893%;
+            ascent-override: 81.7301%;
+            descent-override: 18.575%;
+            line-gap-override: 0%;
+        }
+
+        :root {
+            --font-mono: VictorNarrowMono-cb690499b31725cb, &#34;
+            VictorNarrowMono-cb690499b31725cb fallback: Arial&#34;
+            ,
+            sans-serif;
+        }
+    </style>
+    <!-- Google Tag Manager (Partytown) -->
+    <script type="text/partytown">
+      ;(function (w, d, s, l, i) {
+                w[l] = w[l] || []
+                w[l].push({ &#39;gtm.start&#39;: new Date().getTime(), event: &#39;gtm.js&#39; })
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != &#39;dataLayer&#39; ? &#39;&amp;l=&#39; + l : &#39;&#39;
+                j.async = true
+                j.src = &#39;https://www.googletagmanager.com/gtm.js?id=&#39; + i + dl
+                f.parentNode.insertBefore(j, f)
+            })(window, document, &#39;script&#39;, &#39;dataLayer&#39;, &#39;GTM-MF5VWQ6K&#39;)
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="generator" content="Astro v5.13.3" />
+    <meta property="og:image"
+        content="https://cdn.sanity.io/images/lnp5wwlt/production/f95e0a19f3d41a2544591cea48e7eb05f480b25c-2400x1260.jpg?w=1200&amp;h=630" />
+    <meta property="og:site_name" content="Brand Design and Strategy | The Agency of Love and Logic (LOLO)" />
+    <meta property="og:title" content="Brand Design and Strategy | The Agency of Love and Logic (LOLO)" />
+    <meta property="og:description"
+        content="The Agency of Love and Logic (formerly The Workhouse) is a design and strategy  agency creating impactful brands  focused on elevated design, identity, and digital solutions" />
+    <meta property="og:url" content="https://loloagency.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="twitter:title" content="Brand Design and Strategy | The Agency of Love and Logic (LOLO)" />
+    <meta property="twitter:description"
+        content="The Agency of Love and Logic (formerly The Workhouse) is a design and strategy  agency creating impactful brands  focused on elevated design, identity, and digital solutions" />
+    <meta property="twitter:image"
+        content="https://cdn.sanity.io/images/lnp5wwlt/production/f95e0a19f3d41a2544591cea48e7eb05f480b25c-2400x1260.jpg?w=1200&amp;h=630" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta name="chrome" content="nointentdetection" />
+    <title>
+        Brand Design and Strategy | The Agency of Love and Logic (LOLO)
+    </title>
+    <meta name="description"
+        content="The Agency of Love and Logic (formerly The Workhouse) is a design and strategy  agency creating impactful brands  focused on elevated design, identity, and digital solutions" />
+    <style>
+        html.lenis,
+        html.lenis body {
+            height: auto
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain
+        }
+
+        .lenis.lenis-stopped {
+            overflow: clip
+        }
+
+        .lenis.lenis-smooth iframe {
+            pointer-events: none
+        }
+    </style>
+    <link rel="stylesheet" href="/_astro/_slug_.Crwu5ybb.css" />
+    <script>
+        !(function (w, p, f, c) { if (!window.crossOriginIsolated & amp;& amp; !navigator.serviceWorker) return; c = w[p] = Object.assign(w[p] || {}, {&#34; lib &#34;:&#34; /~partytown/ &#34;,&#34; debug &#34;: false }); c[f] = (c[f] || []).concat([&#34; dataLayer.push &#34;])}) (window,&#39; partytown &#39;,&#39; forward &#39;);/* Partytown 0.11.2 - MIT QwikDev */
+        const t = { preserveBehavior: !1 }, e = e =& gt; { if (&#34; string &#34;== typeof e) return [e, t]; const [n, r = t] = e; return [n, { ...t, ...r }] }, n = Object.freeze((t =& gt; { const e = new Set; let n = []; do { Object.getOwnPropertyNames(n).forEach((t =& gt; {&#34; function&#34;== typeof n[t] & amp;& amp; e.add(t) })) } while ((n = Object.getPrototypeOf(n)) !== Object.prototype); return Array.from(e) }) ()); !function (t, r, o, i, a, s, c, l, d, p, u = t, f) { function h() { f || (f = 1,&#34; /&#34;==(c=(s.lib||&#34;/~partytown /&#34;) +(s.debug ?&#34; debug /&#34;:&#34;&#34;))[0] & amp;& amp; (d = r.querySelectorAll(&#39; script[type =&#34; text / partytown &#34;]&#39;), i != t ? i.dispatchEvent(new CustomEvent(&#34; pt1 &#34;, { detail: t })): (l = setTimeout(v, (null == s ? void 0 : s.fallbackTimeout) || 1e4), r.addEventListener(&#34; pt0 &#34;,w), a ? y(1) : o.serviceWorker ? o.serviceWorker.register(c + (s.swPath ||&#34; partytown - sw.js &#34;), { scope: c }).then((function (t) { t.active ? y() : t.installing & amp;& amp; t.installing.addEventListener(&#34; statechange &#34;, (function (t) {&#34; activated &#34;== t.target.state & amp;& amp; y() }))}), console.error): v()))) }function y(e) { p = r.createElement(e ?&#34; script &#34;:&#34; iframe &#34;), t._pttab = Date.now(), e || (p.style.display =&#34; block &#34;, p.style.width =&#34; 0 &#34;, p.style.height =&#34; 0 &#34;, p.style.border =&#34; 0 &#34;, p.style.visibility =&#34; hidden &#34;, p.setAttribute(&#34; aria - hidden &#34;, !0)), p.src = c +&#34; partytown -&#34; +(e ?&#34; atomics.js ? v = 0.11.2 &#34;:&#34; sandbox - sw.html ?&#34; +t._pttab), r.querySelector(s.sandboxParent ||&#34; body &#34;).appendChild(p) } function v(n, o) { for (w(), i == t & amp;& amp; (s.forward || []).map((function (n) { const [r] = e(n); delete t[r.split(&#34;.&#34;)[0]]})), n = 0; n & lt; d.length; n++) (o = r.createElement(&#34; script &#34;)).innerHTML = d[n].innerHTML, o.nonce = s.nonce, r.head.appendChild(o); p & amp;& amp; p.parentNode.removeChild(p)}function w() { clearTimeout(l) } s = t.partytown || {}, i == t & amp;& amp; (s.forward || []).map((function (r) { const [o, { preserveBehavior: i }] = e(r); u = t, o.split(&#34;.&#34;).map((function (e, r, o) { var a; u = u[o[r]] = r + 1 & lt; o.length ? u[o[r]] || (a = o[r + 1], n.includes(a) ? [] : {}) : (() =& gt; { let e = null; if (i) { const { methodOrProperty: n, thisObject: r } = ((t, e) =& gt; { let n = t; for (let t = 0; t & lt; e.length - 1; t += 1)n = n[e[t]]; return { thisObject: n, methodOrProperty: e.length & gt; 0?n[e[e.length - 1]]: void 0 }}) (t, o);&#34; function&#34;== typeof n & amp;& amp; (e = (...t)=& gt; n.apply(r, ...t))}return function () { let n; return e & amp;& amp; (n = e(arguments)), (t._ptf = t._ptf || []).push(o, arguments), n }}) ()}))})),&#34; complete &#34;== r.readyState ? h() : (t.addEventListener(&#34; DOMContentLoaded &#34;,h), t.addEventListener(&#34; load &#34;,h))}(window, document, navigator, top, window.crossOriginIsolated);; (e =& gt; { e.addEventListener(&#34; astro: before - swap &#34;, e =& gt; { let r = document.body.querySelector(&#34; iframe[src *=&#39; /~partytown/ &#39;]&#34;); if (r) e.newDocument.body.append(r) }) }) (document);
+    </script>
+</head>
+
+<body data-transition="wrapper" class="min-h-screen" data-astro-cid-sckkx6r4="">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        &lt;iframe src=&#34;https://www.googletagmanager.com/ns.html?id=GTM-MF5VWQ6K&#34; height=&#34;0&#34;
+        width=&#34;0&#34; style=&#34;display:none;visibility:hidden&#34; data-astro-cid-sckkx6r4&gt;&lt;/iframe&gt;
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="cursor_wrapper fixed left-0 top-0 right-0 h-dvh items-center justify-center pointer-events-none z-14"
+        style="visibility: hidden;">
+        <div class="cursor flex justify-center items-center relative bg-black text-white">
+            <div class="absolute cursor_text text-sm font-mono uppercase px-6 py-2 w-max h-max">
+                <div>
+                    view ↗
+                </div>
+            </div>
+            <div class="absolute cursor_plus text-sm font-mono uppercase p-6">
+                <div class="w-17 h-17">
+                    <svg width="100%" height="100%" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.19924 7.99916L17.0002 7.99985L17.0002 9.2L9.19924 9.19931L9.19993 17.0003L7.99978 17.0003L7.99978 9.19862L-5.71252e-05 9.19931L-5.70747e-05 8.00054L7.99978 7.99985L8.00047 1.82379e-05L9.19924 1.82884e-05L9.19924 7.99916Z"
+                            fill="currentColor">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="cursor_pointer absolute w-[11px] h-[12px] text-black">
+            <svg width="100%" height="100%" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M1.33373 0.0134051C1.96033 -0.0558677 2.27162 0.150128 2.73353 0.474616C5.37047 2.32493 7.82464 4.40494 10.4556 6.26436C11.4477 6.95891 11.0078 8.36989 9.75063 8.46651C8.44521 8.56677 6.60358 8.19671 5.45682 8.7837C4.56914 9.23762 3.7156 10.6194 3.0388 11.365C2.60701 11.8426 2.14911 12.1416 1.4241 11.932C0.27534 11.5984 0.498264 10.4043 0.446047 9.54206C0.313497 7.36179 0.170906 5.1724 0.0664733 2.98667C0.0142568 1.90929 -0.339209 0.195702 1.33373 0.0134051Z"
+                    fill="currentColor">
+                </path>
+            </svg>
+        </div>
+    </div>
+    <nav class="fixed bottom-60 left-1/2 -translate-x-1/2 flex flex-row z-11 l:bottom-30" style="visibility: hidden;">
+        <div class="nav_item-parent l:hidden">
+            <div data-cursor-trigger="button" class="nav_item flex items-center justify-center h-40 nav_info">
+                <div class="nav_info-icon w-full h-full flex justify-center items-center relative z-2">
+                    <svg width="100%" height="100%" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22.7209 23.5626C22.7887 23.4294 23.0916 22.8697 23.0916 22.8697L23.455 23.0975C25.4343 24.2337 27.697 25.164 29.9404 24.6092C30.844 24.3718 31.704 23.817 32.1692 22.986C33.131 21.2999 32.4139 19.2285 30.689 18.4121C29.6715 17.9469 28.4916 17.9687 27.4305 18.257C25.5457 18.7949 24.2326 20.3914 23.2078 21.9758C23.1739 22.0267 23.0068 22.2931 22.9607 22.3658C22.9607 22.3658 21.5629 21.5349 21.2382 21.2974C21.6549 20.607 22.045 19.9044 22.4229 19.1946C22.5077 19.0347 22.5901 18.8724 22.6724 18.7101C23.3362 18.6253 23.9976 18.5041 24.6445 18.3685C27.1834 17.7991 30.202 16.7671 31.8131 14.6061C32.9226 13.1138 32.9154 10.977 31.4133 9.74144C30.1899 8.7094 28.4044 8.81357 27.1228 9.68814C25.4754 10.8219 24.6057 12.7455 23.8184 14.4898C23.2757 15.7181 22.842 16.9754 22.326 18.2013C21.4926 18.2231 20.6592 18.1795 19.838 18.022C18.3214 17.7313 16.7224 17.2662 15.4409 16.4279C13.6796 15.2966 12.6645 13.4142 13.0667 11.304C13.4979 9.06795 15.9423 8.14977 17.9919 8.59553C20.0318 9.03645 22.263 11.1587 21.7107 13.591C21.4999 14.4414 20.7028 15.1972 19.821 15.2554C19.4019 15.282 19.0143 15.0519 18.8277 14.7297C18.6194 14.3663 18.6315 14.0634 18.365 13.9205C18.0452 13.7461 17.6624 13.9544 17.6842 14.3154C17.6963 14.6061 17.8998 14.8338 18.1251 15.001C19.5157 16.0282 21.7906 15.2869 22.3696 13.3512C22.9922 11.2701 21.5605 9.25207 19.5448 8.51559C17.5389 7.77426 14.983 8.11343 13.4688 9.72691C12.2938 11.0012 12.0443 13.0702 12.7057 14.6546C13.8637 17.3073 17.0446 18.4339 19.7241 18.7634C20.5042 18.8603 21.2891 18.8506 22.0716 18.7803C22.0401 18.8457 22.0111 18.9136 21.9796 18.979C21.7518 19.4659 21.5168 19.948 21.2746 20.4253C21.1583 20.6506 21.0396 20.8807 20.9136 21.1085C18.8495 19.8778 16.4414 18.7876 14.0551 19.3787C13.1515 19.6161 12.2914 20.1709 11.8263 21.0019C10.8645 22.688 11.5816 24.7594 13.3065 25.5758C14.324 26.041 15.5038 26.0192 16.565 25.7309C18.4498 25.193 19.7629 23.5965 20.7876 22.0121C20.8797 21.8716 20.9693 21.7287 21.059 21.5857C21.2843 21.7214 22.7693 22.6783 22.7693 22.6783C22.7693 22.6783 21.8972 24.1828 21.5701 24.7957C21.4853 24.9556 21.403 25.1179 21.3206 25.2803C20.6568 25.3651 19.9954 25.4862 19.3486 25.6219C16.8097 26.1912 13.791 27.2232 12.18 29.3842C11.0704 30.8766 11.0777 33.0133 12.5797 34.2489C13.8032 35.2809 15.5886 35.1767 16.8702 34.3022C18.5176 33.1684 19.3873 31.2448 20.1747 29.5005C20.7174 28.2722 21.151 27.0149 21.667 25.789C22.5004 25.7672 23.3338 25.8108 24.1551 25.9683C25.6717 26.259 27.2706 26.7242 28.5522 27.5624C30.3135 28.6938 31.3285 30.5762 30.9264 32.6863C30.4951 34.9224 28.0507 35.8406 26.0012 35.3948C23.9613 34.9539 21.73 32.8316 22.2824 30.3993C22.4932 29.549 23.2902 28.7931 24.1721 28.7349C24.5912 28.7083 24.9788 28.9384 25.1653 29.2607C25.3737 29.6241 25.3616 29.9269 25.6281 30.0698C25.9479 30.2443 26.3306 30.0359 26.3088 29.6749C26.2967 29.3842 26.0932 29.1565 25.8679 28.9893C24.4773 27.9621 22.2025 28.7035 21.6234 30.6391C21.0008 32.7202 22.4326 34.7382 24.4482 35.4747C26.4542 36.2161 29.0101 35.8769 30.5242 34.2634C31.6992 32.9891 31.9487 30.9202 31.2874 29.3358C30.1293 26.683 26.9484 25.5564 24.269 25.227C23.4889 25.1301 22.7039 25.1397 21.9214 25.21C21.9529 25.1446 21.982 25.0768 22.0135 25.0113C22.2412 24.5244 22.4762 24.0423 22.7185 23.565L22.7209 23.5626ZM26.0763 12.0672C26.5317 11.4518 27.0235 10.8898 27.6437 10.461C28.6006 9.78747 29.9428 9.63969 30.8973 10.3834C31.658 10.9528 32.0166 11.9557 31.8567 12.8957C31.7016 13.9035 31.0451 14.7563 30.3183 15.4395C28.3366 17.2129 25.5966 17.9833 22.9825 18.1674C22.9656 18.1674 22.9486 18.1674 22.9341 18.1698C23.9201 16.0985 24.7268 13.9108 26.0787 12.0648L26.0763 12.0672ZM14.1738 25.571C11.9329 24.9895 11.5356 22.5596 13.1878 21.0939C13.8952 20.481 14.8667 20.2387 15.8139 20.1806C17.5268 20.0619 19.242 20.5682 20.7537 21.404C19.351 23.8848 17.3281 26.2929 14.1738 25.5734V25.571ZM29.8265 18.4121C32.0674 18.9935 32.4648 21.4234 30.8125 22.8891C30.1051 23.502 29.1336 23.7443 28.1864 23.8024C26.648 23.909 25.0733 23.5723 23.7118 22.8213C23.5979 22.7583 23.2684 22.5524 23.2684 22.5524L23.4283 22.2641C24.8213 19.8996 26.8055 17.7192 29.8265 18.4096V18.4121ZM17.9216 31.9159C17.4662 32.5312 16.9744 33.0933 16.3542 33.5221C15.3973 34.1956 14.0551 34.3434 13.1006 33.5996C12.3399 33.0303 11.9813 32.0273 12.1412 31.0873C12.2963 30.0795 12.9528 29.2267 13.6796 28.5436C15.6613 26.7702 18.4013 25.9998 21.0154 25.8157C21.0323 25.8157 21.0493 25.8157 21.0638 25.8132C20.0778 27.8846 19.2711 30.0722 17.9192 31.9183L17.9216 31.9159Z"
+                            fill="currentColor">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="nav_item-parent l:hidden">
+            <a href="/strategy" data-cursor-trigger="button"
+                class="nav_item flex items-center justify-center h-40 px-26 pt-2">
+                <div class="relative overflow-hidden self-center">
+                    <div class="text-sm tracking-8 !leading-1 uppercase">
+                        STRATEGY
+                    </div>
+                    <div class="text-sm tracking-8 !leading-1 uppercase absolute left-0 top-0 w-max">
+                        STRATEGY
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="nav_item-parent l:hidden">
+            <a href="/design" data-cursor-trigger="button"
+                class="nav_item flex items-center justify-center h-40 px-26 pt-2">
+                <div class="relative overflow-hidden self-center">
+                    <div class="text-sm tracking-8 !leading-1 uppercase">
+                        DESIGN
+                    </div>
+                    <div class="text-sm tracking-8 !leading-1 uppercase absolute left-0 top-0 w-max">
+                        DESIGN
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="nav_item-parent l:hidden">
+            <a href="/about" data-cursor-trigger="button"
+                class="nav_item flex items-center justify-center h-40 px-26 pt-2">
+                <div class="relative overflow-hidden self-center">
+                    <div class="text-sm tracking-8 !leading-1 uppercase">
+                        ABOUT
+                    </div>
+                    <div class="text-sm tracking-8 !leading-1 uppercase absolute left-0 top-0 w-max">
+                        ABOUT
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="nav_item-parent l:hidden">
+            <a href="/work" data-cursor-trigger="button"
+                class="nav_item flex items-center justify-center h-40 px-26 pt-2">
+                <div class="relative overflow-hidden self-center">
+                    <div class="text-sm tracking-8 !leading-1 uppercase">
+                        WORK
+                    </div>
+                    <div class="text-sm tracking-8 !leading-1 uppercase absolute left-0 top-0 w-max">
+                        WORK
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="nav_item-parent l:hidden">
+            <a href="/journal" data-cursor-trigger="button"
+                class="nav_item flex items-center justify-center h-40 px-26 pt-2">
+                <div class="relative overflow-hidden self-center">
+                    <div class="text-sm tracking-8 !leading-1 uppercase">
+                        journal
+                    </div>
+                    <div class="text-sm tracking-8 !leading-1 uppercase absolute left-0 top-0 w-max">
+                        journal
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="nav_item-parent l:hidden">
+            <a href="/contact" data-cursor-trigger="button"
+                class="nav_item flex items-center justify-center h-40 px-26 pt-2">
+                <div class="relative overflow-hidden self-center">
+                    <div class="text-sm tracking-8 !leading-1 uppercase">
+                        Contact
+                    </div>
+                    <div class="text-sm tracking-8 !leading-1 uppercase absolute left-0 top-0 w-max">
+                        Contact
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="nav_burger items-center justify-center h-44 w-44 rounded-full hidden l:flex p-12">
+            <div class="nav_burger-icon w-full h-full flex justify-center items-center relative">
+                <div class="nav_burger-line absolute left-1/2 h-px w-full bg-current">
+                </div>
+                <div class="nav_burger-line absolute left-1/2 h-px w-full bg-current">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="burger fixed top-0 left-0 right-0 h-dvh z-10 p-cont bg-white" style="visibility: hidden;">
+        <div class="burger_body relative h-full rounded-20 s:rounded-10 overflow-hidden">
+            <div class="burger-scroll h-full" data-lenis-prevent="">
+                <div
+                    class="burger_content relative z-2 grid grid-rows-3 pt-cont pb-54 h-full l:h-auto l:min-h-[calc(100dvh-var(--cont)*2)] l:pb-76 l:flex l:flex-col l:justify-between l:items-center l:gap-40">
+                    <a href="/"
+                        class="burger_logo w-154 h-152 self-start justify-self-center l:self-center l:w-120 l:h-116"
+                        data-cursor-trigger=""> <svg width="100%" height="100%" viewBox="0 0 154 152" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g class="group">
+                                <path
+                                    d="M87.1362 14.0532L88.321 14.0019C88.8594 13.9831 89.9298 13.9492 90.4476 13.9492C91.6789 13.9492 94.0044 13.8941 95.6977 13.994C96.5622 14.045 97.3017 14.3406 97.3017 14.3406L97.3023 10.6832C97.3023 10.6832 96.8173 12.9715 94.3606 13.0697C92.9202 13.1273 91.2153 13.1682 89.9417 13.1682V7.26644C91.3147 7.26724 92.7542 7.27766 93.9665 7.30091C95.9222 7.35638 96.4217 8.98117 96.4217 8.98117V4.73079C96.4217 4.73079 95.9237 6.34957 93.9767 6.4105C92.6417 6.44742 91.1197 6.46634 89.9417 6.46634V1.25605C91.151 1.25681 92.8213 1.28458 94.2052 1.3339C96.8298 1.43633 97.1964 3.74783 97.1964 3.74783L97.1949 0.0761719C97.1949 0.0761719 96.457 0.390253 95.4641 0.440102C93.8667 0.520268 91.3459 0.476489 90.3119 0.476489C89.8059 0.476489 89.1632 0.456096 88.655 0.437059L87.1494 0.371861C87.1494 0.371861 88.1104 0.968615 88.2026 2.02157C88.3306 3.48439 88.294 4.74463 88.294 6.0259V8.00343C88.294 9.21292 88.3718 10.8378 88.1895 12.2502C88.0212 13.5537 87.1362 14.0532 87.1362 14.0532Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M70.63 12.3652C70.5238 13.5896 69.5664 14.0095 69.5664 14.0095H73.5211C73.5211 14.0095 72.6169 13.6131 72.4679 12.4694C72.4045 10.969 72.3706 9.2088 72.3706 7.98149V7.12558C73.3087 7.10649 75.303 7.10649 76.9094 7.10649C78.4936 7.10649 80.4599 7.10649 81.3125 7.12558V7.98149C81.3125 9.19557 81.2801 10.9235 81.2167 12.4093C81.0928 13.5984 80.159 14.0095 80.159 14.0095H84.1122C84.1122 14.0095 83.1859 13.6028 83.0561 12.4254C82.9927 10.9397 82.9602 9.21029 82.9602 8.00203V6.02449C82.9602 4.75459 82.9927 3.3232 83.0502 2.05478C83.1549 0.831854 84.1122 0.411987 84.1122 0.411987H80.159C80.159 0.411987 81.1577 0.84654 81.2284 2.12671C81.2284 2.95793 81.3125 4.33914 81.3125 5.45048V6.24764C80.3729 6.26673 78.2916 6.26673 76.9094 6.26673C75.545 6.26673 73.2733 6.26673 72.3706 6.24764V5.45048C72.3706 4.32593 72.4001 3.21164 72.4546 2.0812C72.5476 0.837725 73.5196 0.411987 73.5196 0.411987H69.5664C69.5664 0.411987 70.3556 0.75698 70.5798 1.73473C70.5798 1.73473 70.7229 4.77811 70.7229 6.02449V8.00203C70.7229 9.19266 70.6905 10.8927 70.63 12.3652Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M58.5055 1.32963C59.2557 1.29515 60.0474 1.27462 60.7744 1.27408C60.8171 2.02175 60.8404 3.02167 60.8404 3.59257V8.00132C60.8404 9.17412 60.7935 11.2298 60.7447 12.3048C60.6869 13.5775 59.6756 14.0091 59.6756 14.0091L63.6296 14.0106C63.6296 14.0106 62.6153 13.5772 62.5595 12.2979C62.5127 11.2245 62.4647 9.17412 62.4647 8.00132V3.59257C62.4647 3.03492 62.4879 2.03972 62.5307 1.27408C63.2577 1.27462 64.0496 1.29517 64.8 1.32967C66.9504 1.5466 67.3811 3.74783 67.3811 3.74783L67.3797 0.0761719C67.3797 0.0761719 66.8361 0.42821 65.9057 0.459089L65.4881 0.472155L65.4898 0.472817C64.3285 0.497824 58.9763 0.49713 57.7866 0.47118L57.3994 0.459089C56.469 0.42821 55.9255 0.0761719 55.9255 0.0761719V0.412994L55.9241 3.74783C55.9241 3.74783 56.3547 1.54635 58.5055 1.32963Z"
+                                    fill="currentColor">
+                                </path>
+                            </g>
+                            <g class="group">
+                                <path
+                                    d="M56.3325 45.1496C56.3325 45.1496 60.5088 44.9572 61.9779 44.9572C64.3524 44.9572 67.3457 44.9757 69.2847 45.0286C70.7309 45.0681 72.5238 45.6366 72.5238 45.6366L72.5267 39.5266C72.5267 39.5266 71.9202 43.3331 67.6166 43.5547C66.1269 43.6408 62.766 43.6742 61.0595 43.6742V32.9064C62.8612 32.9064 65.9614 32.9166 67.1772 32.9414L67.1259 32.9443C70.3969 33.0376 71.2318 35.7536 71.2318 35.7536V28.7106C71.2318 28.7106 70.3969 31.4252 67.1274 31.5185C65.9218 31.5607 62.8377 31.587 61.0595 31.587V22.0685C62.7089 22.0685 66.1078 22.1006 67.5507 22.1647C71.9144 22.3499 72.5267 26.1987 72.5267 26.1987L72.5238 20.1135C72.5238 20.1135 71.6097 20.6573 70.1874 20.72C67.9403 20.7623 63.7196 20.7856 61.7479 20.7856C59.4067 20.7856 56.3325 20.6004 56.3325 20.6004C56.3325 20.6004 58.1361 21.6669 58.228 23.5629C58.3414 25.902 58.407 39.7297 58.2148 42.3462C58.0824 44.1475 56.3325 45.1496 56.3325 45.1496Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M4.89172 42.9119C5.69402 40.8233 6.83407 38.203 8.13763 35.335C9.80932 35.2998 11.1771 35.2998 12.735 35.2998C14.4449 35.2998 16.5728 35.2998 17.9024 35.335C19.0046 37.9151 20.1272 40.612 20.9431 42.859C21.4784 44.4197 20.4984 44.9905 20.4984 44.9905H26.4264C26.4264 44.9905 25.0215 44.3424 24.196 42.622C21.5484 37.1043 17.0215 27.0243 14.3307 20.2208H13.9131C10.4336 27.7727 6.71728 35.4613 2.61983 42.8642C2.00388 43.977 0.611572 44.9971 0.611572 44.9971H5.34471C5.34471 44.9971 4.35998 44.3952 4.89172 42.9119ZM13.3431 24.3621C14.4831 26.9818 16.5728 32.0078 17.3324 33.955C16.2685 33.9903 14.4067 33.9903 12.9629 33.9903C11.5951 33.9903 9.84748 33.9903 8.70758 33.955C9.92344 31.3002 12.2032 26.6275 13.3431 24.3621Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M41.7934 45.9939C45.1878 45.9939 50.4257 44.1165 50.4257 44.1165C50.4257 44.1165 50.3457 38.2801 50.3981 36.3355C50.438 34.8541 51.6373 34.3533 51.6373 34.3533H45.8349C45.8349 34.3533 47.3503 34.9463 47.5227 36.7114C47.6812 38.3332 47.7141 43.2261 47.7141 43.2261C40.0987 46.3938 30.8511 44.1552 30.3208 33.9574C30.0528 28.8041 32.5892 21.6832 39.1109 21.6832C44.8545 21.6832 47.9693 24.2797 49.5897 29.8133C49.4808 26.9244 49.4807 23.5745 49.5358 20.3478C46.6636 23.9003 42.9351 18.3532 34.7975 21.4027C29.7125 23.3083 26.7642 28.4862 27.1479 33.6269C27.8781 43.4122 35.6651 45.9939 41.7934 45.9939Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M98.5022 23.3909C98.702 26.2599 98.8371 30.2361 98.8371 33.3299V39.8211L98.7617 39.8557C98.5341 39.609 83.969 24.814 80.0185 20.6316H76.8506C77.4216 20.9194 77.8648 21.3139 78.2489 21.6962C79.3395 22.7817 79.559 23.6213 79.559 25.1554C79.559 27.6798 79.7168 39.5989 79.4506 42.4879C79.275 44.3938 77.7281 45.0436 77.7281 45.0436H83.2479C83.2479 45.0436 81.6189 44.3356 81.504 42.2498C81.3716 39.8455 81.1534 35.754 81.1534 32.6244V25.7106L81.2679 25.676C81.5331 26.028 97.4732 42.1492 100.049 45.1482H100.615C100.615 45.1482 100.436 25.9588 100.592 23.3204C100.711 21.3143 102.177 20.6327 102.177 20.6327H96.7611C96.7611 20.6327 98.3589 21.3339 98.5022 23.3909Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M132.549 23.0383L132.553 23.0287C135.129 26.8356 138.696 32.4738 140.278 35.0441C140.278 35.0441 140.259 40.2075 140.14 42.2305C140.018 44.2775 138.399 45.1245 138.399 45.1245H144.833C144.833 45.1245 143.168 44.2808 143.092 42.235C143.026 40.4637 142.954 34.6168 142.954 34.6168C144.254 32.3635 148.016 26.6372 150.535 23.0357C152.065 20.912 152.778 20.655 152.778 20.655H147.955C147.955 20.655 149.108 21.2541 148.401 22.8048C146.7 25.979 144.045 30.3924 142.189 33.2275H142.074C139.885 29.7516 137.621 25.9278 135.844 22.7844C135.156 21.2492 136.299 20.655 136.299 20.655H130.305C130.305 20.655 131.018 20.9121 132.549 23.0383Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M110.943 43.7387C110.942 43.739 110.941 43.7392 110.941 43.7395C112.429 44.659 114.179 45.4439 116.243 45.7581C117.038 45.9049 117.863 45.9796 118.71 45.9797C124.646 45.9797 129.099 42.5129 130.219 38.5743C129.745 39.2923 128.929 40.1285 128.232 40.7772C124.391 44.3475 119.038 46.0175 114.314 43.4502C110.854 41.7095 108.275 38.2328 108.003 33.335C107.673 27.4071 111.329 21.6972 117.141 21.6972C122.885 21.6972 125.999 24.2936 127.62 29.8273C127.511 26.9383 127.511 23.5886 127.566 20.3618C124.694 23.9143 120.965 18.3672 112.828 21.4168C107.743 23.3223 104.621 28.502 105.027 33.6409C105.428 38.706 107.846 41.877 110.943 43.7387Z"
+                                    fill="currentColor">
+                                </path>
+                            </g>
+                            <g class="group">
+                                <path
+                                    d="M63.1024 73.6429C63.0271 75.1913 61.5557 76.0623 61.5557 76.0623C61.5557 76.0623 64.8094 75.8884 66.8924 75.8884C69.2505 75.8884 71.0866 75.8596 73.4666 75.9591C75.1861 76.0311 76.9374 76.5729 76.9374 76.5729L76.9379 70.4144C76.9379 70.4144 76.0377 74.1122 71.9314 74.4607C69.9756 74.6266 67.9854 74.6031 66.1255 74.6031C66.0476 73.3865 65.9712 68.4193 65.9712 65.2024V61.6288C65.9712 59.3539 66.0288 56.6878 66.1304 54.3091C66.2828 52.2521 67.8923 51.55 67.8923 51.55H61.3613C61.3613 51.55 62.9957 52.2622 63.1269 54.3551C63.2273 56.7221 63.2841 59.3686 63.2841 61.6288V65.2024C63.2841 67.6416 63.2336 70.9435 63.1024 73.6429Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M14.4083 77.0761C22.578 77.0761 28.243 71.9809 28.243 64.266C28.243 56.3715 22.8092 51.4552 14.4083 51.4552C6.27694 51.4552 0.611572 56.4431 0.611572 64.266C0.611572 72.0882 6.27694 77.0761 14.4083 77.0761ZM14.4083 52.6038C20.5356 52.6038 25.0061 56.6226 25.0061 64.2295C25.0061 71.9445 20.5356 75.856 14.4083 75.856C8.31938 75.856 3.84889 71.9087 3.84889 64.2295C3.84889 56.4073 8.31938 52.6038 14.4083 52.6038Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M41.5541 64.2548C44.8311 64.3483 45.668 67.0705 45.668 67.0705V60.0143C45.668 60.0143 44.8311 62.7337 41.56 62.8286C40.3414 62.871 38.2998 62.8973 36.4968 62.8973V53.3613C38.1603 53.3613 40.5047 53.3871 41.952 53.4576C45.8989 53.6502 46.9658 57.5024 46.9658 57.5024L46.9629 51.4032C46.9629 51.4032 45.7453 51.9199 44.327 52.0096C42.091 52.151 39.2042 52.0754 37.2265 52.0754C36.2355 52.0754 34.9538 52.0271 34.0435 51.9892L31.7971 51.8927C31.7971 51.8927 33.5971 52.9638 33.697 54.8692C33.7953 57.2101 33.8511 59.8141 33.8511 62.041V65.6122C33.8511 67.9136 33.7782 71.6229 33.6852 73.6242C33.589 75.6953 31.9381 76.3976 31.9381 76.3976H38.4114C38.4114 76.3976 36.7629 75.6899 36.6613 73.6008C36.5334 70.9702 36.4968 67.8597 36.4968 65.5772V64.2197C38.2983 64.2197 40.3384 64.2299 41.5541 64.2548Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M78.6987 64.266C78.6987 72.0882 84.364 77.0761 92.4955 77.0761C100.665 77.0761 106.33 71.9809 106.33 64.266C106.33 56.3715 100.896 51.4552 92.4955 51.4552C84.364 51.4552 78.6987 56.4431 78.6987 64.266ZM103.093 64.2295C103.093 71.9445 98.6228 75.856 92.4955 75.856C86.4065 75.856 81.936 71.9087 81.936 64.2295C81.936 56.4073 86.4065 52.6038 92.4955 52.6038C98.6228 52.6038 103.093 56.6226 103.093 64.2295Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M133.546 76.0884C133.546 76.0884 137.702 75.8968 139.164 75.8968C141.527 75.8968 144.783 75.9153 146.713 75.968C148.152 76.0072 149.659 76.5729 149.659 76.5729L149.662 70.4927C149.662 70.4927 149.058 74.2807 144.775 74.5012C143.293 74.5868 139.949 74.6202 138.25 74.6202V63.9048C140.043 63.9048 143.128 63.9149 144.338 63.9396L144.287 63.9425C147.542 64.0353 148.373 66.7382 148.373 66.7382V59.7295C148.373 59.7295 147.542 62.4308 144.289 62.5236C143.089 62.5657 140.02 62.5918 138.25 62.5918V53.1198C139.892 53.1198 143.274 53.1517 144.71 53.2155C149.052 53.3997 149.662 57.2298 149.662 57.2298L149.659 51.1743C149.659 51.1743 148.749 51.7154 147.334 51.7778C145.098 51.8199 140.897 51.8431 138.935 51.8431C136.606 51.8431 133.546 51.6588 133.546 51.6588C133.546 51.6588 135.341 52.7201 135.433 54.6068C135.545 56.9346 135.611 70.6949 135.419 73.2986C135.288 75.0911 133.546 76.0884 133.546 76.0884Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M132.54 51.6915H127.723C127.723 51.6915 128.703 52.2806 128.172 53.8051C126.134 59.4512 122.205 68.6527 120.192 72.7768H120.077C117.963 68.3001 114.298 59.9433 111.933 53.7997C111.404 52.3371 112.392 51.6915 112.392 51.6915H106.488C106.488 51.6915 108.034 52.6044 108.73 54.072L108.73 54.0701C112.18 61.3881 116.709 71.7544 118.359 76.012C118.703 75.9766 119.046 75.9411 119.39 75.9411C119.81 75.9411 120.116 75.9766 120.459 76.012C122.917 70.3519 127.629 59.9566 130.397 54.0706C130.96 52.8808 132.54 51.6915 132.54 51.6915Z"
+                                    fill="currentColor">
+                                </path>
+                            </g>
+                            <g class="group">
+                                <path
+                                    d="M138.316 108.102C139.123 108.251 139.959 108.326 140.818 108.326C146.836 108.326 151.35 104.812 152.486 100.819C152.005 101.547 151.178 102.394 150.471 103.052C146.577 106.672 141.15 108.365 136.361 105.762C132.852 103.997 130.238 100.472 129.962 95.5069C129.628 89.497 133.335 83.7082 139.227 83.7082C145.05 83.7082 148.208 86.3404 149.851 91.9507C149.74 89.0217 149.74 85.6256 149.796 82.3542C146.884 85.9559 143.104 80.332 134.854 83.4237C129.698 85.3557 126.533 90.607 126.945 95.817C127.352 100.952 129.803 104.167 132.943 106.055C132.942 106.055 132.941 106.055 132.941 106.055C134.45 106.988 136.224 107.783 138.316 108.102Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M113.954 96.5392H108.072C108.072 96.5392 109.608 97.1405 109.783 98.93C109.944 100.574 109.977 105.535 109.977 105.535C102.293 109.531 92.5377 105.347 91.9898 95.4926C91.6557 89.4827 95.3627 83.6939 101.255 83.6939C107.078 83.6939 110.236 86.3262 111.878 91.9364C111.768 89.0074 111.768 85.6113 111.824 82.34C108.912 85.9416 105.132 80.3178 96.8815 83.4095C91.7262 85.3414 88.5611 90.5927 88.9732 95.8028C89.7384 105.477 97.7612 108.341 103.974 108.341C107.416 108.341 112.726 106.438 112.726 106.438C112.726 106.438 112.645 100.52 112.698 98.549C112.738 97.047 113.954 96.5392 113.954 96.5392Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M71.8177 108.222C79.9875 108.222 85.6525 103.099 85.6525 95.3407C85.6525 87.4023 80.2186 82.4585 71.8177 82.4585C63.6863 82.4585 58.021 87.4741 58.021 95.3407C58.021 103.207 63.6863 108.222 71.8177 108.222ZM71.8177 83.6135C77.945 83.6135 82.4155 87.6546 82.4155 95.304C82.4155 103.062 77.945 106.995 71.8177 106.995C65.7288 106.995 61.2583 103.026 61.2583 95.304C61.2583 87.4381 65.7288 83.6135 71.8177 83.6135Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M122.032 85.6097H122.038C122.155 83.5218 123.784 82.8129 123.784 82.8129H117.288C117.288 82.8129 118.917 83.5218 119.034 85.6097H119.04C119.14 87.9846 119.197 90.6422 119.197 92.9108V96.4916C119.197 98.8045 119.138 101.892 119.034 104.509C118.917 106.597 117.288 107.306 117.288 107.306H123.784C123.784 107.306 122.155 106.597 122.038 104.509H122.038C121.934 101.882 121.874 98.7806 121.874 96.4916V92.9108C121.874 90.6422 121.931 87.9846 122.032 85.6097Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M44.6364 105.693C44.5579 104.465 44.4808 99.4551 44.4808 96.2102V92.6054C44.4808 90.3108 44.5388 87.6216 44.6413 85.2222C44.795 83.1473 46.4186 82.4392 46.4186 82.4392H39.8308C39.8308 82.4392 41.4794 83.1575 41.6118 85.2687C41.713 87.6562 41.7703 90.3257 41.7703 92.6054V96.2102C41.7703 98.6707 41.7194 102.001 41.587 104.724C41.5111 106.286 40.0269 107.164 40.0269 107.164C40.0269 107.164 43.3089 106.989 45.41 106.989C47.7886 106.989 49.6407 106.96 52.0413 107.06C53.7758 107.133 55.5423 107.68 55.5423 107.68L55.5428 101.467C55.5428 101.467 54.6348 105.197 50.4928 105.549C48.52 105.716 46.5124 105.693 44.6364 105.693Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M30.6479 91.0906L21.4048 91.0052C26.323 93.3283 22.1207 98.0645 19.6619 101.397C17.1454 98.7547 14.493 95.762 12.3277 93.0538C12.3332 93.0511 12.3388 93.0483 12.3443 93.0456L11.7412 92.2746H11.7384C3.55514 82.51 17.1351 78.5908 19.4461 89.9168C19.3631 87.4561 19.3631 84.6077 19.4046 81.8601C17.6635 84.237 15.339 82.1096 12.8395 82.153C5.75974 82.11 4.81396 88.7436 9.26789 93.2768C-6.83153 98.9963 6.81354 115.399 18.5635 104.175C19.2602 104.871 21.0822 106.374 19.2192 107.405H26.4925C24.2338 106.13 22.5714 104.454 20.4863 102.286C24.3218 98.5114 25.1229 92.7587 30.6479 91.0906ZM11.033 106.4C3.53411 106.515 3.01836 95.8636 9.77971 94.0175C11.6959 96.43 15.2846 100.617 17.7806 103.36C16.1317 104.954 13.8189 106.4 11.033 106.4Z"
+                                    fill="currentColor">
+                                </path>
+                            </g>
+                            <g class="group">
+                                <path
+                                    d="M147.494 116.593C143.431 113.828 136.979 114.422 132.504 116.91C132.504 116.91 131.008 117.723 130.346 118.111C130.15 118.233 129.955 118.357 129.762 118.482L130.199 118.701C130.788 118.298 132.634 117.333 132.711 117.3C136.934 115.325 142.469 115.2 146.288 118.013L146.29 118.016C148.547 119.829 150.384 121.568 151.246 127.722C152.864 138.738 143.408 152.018 131.675 150.528C126.883 149.796 123.559 145.97 122.716 139.925C121.963 133.97 124.346 127.742 128.745 123.91C131.858 121.209 137.223 120.002 140.327 123.105C145.235 127.932 143.871 140.396 136.974 139.548H136.971C136.16 139.369 135.705 138.854 135.285 138.383C134.823 137.854 134.422 137.404 133.673 137.499C132.909 137.59 132.408 138.208 132.523 138.984C132.668 140.003 133.753 140.629 135.353 140.683C142.091 140.84 146.001 133.762 145.081 127.619C144.429 122.503 140.501 119.777 135.575 120.468C126.465 121.498 119.195 132.693 120.687 141.605C120.69 141.64 120.695 141.678 120.701 141.716C120.707 141.761 120.716 141.81 120.723 141.856C113.521 155.269 107.363 147.666 97.9894 141.989C99.0475 140.239 100.046 138.452 100.973 136.632C132.069 132.43 121.849 110.891 110.236 117.942C104.787 121.87 102.835 129.7 100.257 135.573C91.9136 135.792 79.1838 131.687 80.9916 121.287C81.8873 116.658 86.9733 114.756 91.2398 115.675C95.4845 116.59 100.127 120.986 98.9777 126.021C98.5089 128.44 94.7045 130.985 92.9796 128.375C92.544 127.625 92.5685 126.999 92.0185 126.698C91.3514 126.338 90.5564 126.771 90.5972 127.516C90.6218 128.118 91.0465 128.589 91.5175 128.936C94.409 131.061 99.1438 129.53 100.35 125.519C102.743 115.475 88.0003 111.306 81.8302 118.016C79.3852 120.655 78.8651 124.937 80.2428 128.224C83.3718 135.069 92.7977 137.343 99.7347 136.765C98.9768 138.403 98.1889 140.005 97.3251 141.591C79.5963 130.513 72.2582 145.899 81.4979 150.842C83.6135 151.804 86.0694 151.761 88.2802 151.162C92.559 149.94 95.3792 146.173 97.6273 142.58C98.0983 142.857 98.5557 143.149 99.005 143.455C100.873 144.669 102.648 146.027 104.472 147.349C106.555 148.818 109.351 150.91 112.009 151.075C114.151 151.167 116.027 150.447 117.631 149.035C119.665 147.244 120.379 146.274 121.473 144.696C121.789 145.531 122.212 146.372 122.702 147.141C122.702 147.143 122.705 147.146 122.705 147.146C123.318 148.086 124.067 148.929 124.956 149.55C127.241 151.304 130.53 151.981 133.96 151.522C139.904 150.73 145.054 147.259 148.72 142.342C152.248 137.581 153.957 131.969 153.472 126.815C153.07 121.869 150.466 118.468 147.494 116.593ZM108.061 122.874C109.005 121.604 110.032 120.436 111.32 119.55C113.313 118.154 116.104 117.851 118.091 119.39C119.676 120.571 120.422 122.644 120.087 124.592C119.766 126.682 118.399 128.446 116.885 129.863C112.736 133.559 106.993 135.146 101.518 135.518C103.568 131.226 105.251 126.695 108.061 122.874ZM83.2895 150.845C78.6283 149.642 77.7978 144.607 81.2393 141.569C85.548 138.2 92.5091 139.711 96.9793 142.212C94.0605 147.349 89.8512 152.335 83.2895 150.845Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M70.4865 116.593C66.4235 113.828 59.9718 114.422 55.4962 116.91C55.4962 116.91 54.0003 117.723 53.339 118.111C53.1431 118.233 52.9472 118.357 52.7542 118.482L53.1913 118.701C53.7809 118.298 55.6268 117.333 55.7035 117.3C59.9267 115.325 65.4615 115.2 69.2802 118.013L69.283 118.016C71.5396 119.829 73.3762 121.568 74.2391 127.722C75.8566 138.738 66.4007 152.018 54.6674 150.528C49.8759 149.796 46.552 145.97 45.709 139.925C44.9561 133.97 47.3389 127.742 51.738 123.91C54.8509 121.209 60.2153 120.002 63.3193 123.105C68.2277 127.932 66.8635 140.396 59.9669 139.548H59.9641C59.1523 139.369 58.6981 138.854 58.278 138.383C57.8153 137.854 57.4151 137.404 56.6657 137.499C55.9015 137.59 55.4011 138.208 55.5161 138.984C55.6609 140.003 56.7452 140.629 58.3461 140.683C65.0836 140.84 68.9937 133.762 68.0737 127.619C67.4219 122.503 63.4936 119.777 58.5675 120.468C49.4579 121.498 42.1874 132.693 43.6794 141.605C43.6822 141.64 43.6879 141.678 43.6936 141.716C43.6992 141.761 43.709 141.81 43.7153 141.856C36.5134 155.269 30.3561 147.666 20.9821 141.989C22.0402 140.239 23.0391 138.452 23.9662 136.632C55.0613 132.43 44.8421 110.891 33.2287 117.942C27.7793 121.87 25.8275 129.7 23.2501 135.573C14.9063 135.792 2.17646 131.687 3.98424 121.287C4.88 116.658 9.96601 114.756 14.2325 115.675C18.4772 116.59 23.1194 120.986 21.9704 126.021C21.5016 128.44 17.6972 130.985 15.9722 128.375C15.5367 127.625 15.5612 126.999 15.0112 126.698C14.3441 126.338 13.5491 126.771 13.5899 127.516C13.6144 128.118 14.0392 128.589 14.5102 128.936C17.4017 131.061 22.1365 129.53 23.3427 125.519C25.7361 115.475 10.9929 111.306 4.82291 118.016C2.37783 120.655 1.85781 124.937 3.23549 128.224C6.36451 135.069 15.7904 137.343 22.7273 136.765C21.9695 138.403 21.1816 140.005 20.3177 141.591C2.58897 130.513 -4.74909 145.899 4.49057 150.842C6.6062 151.804 9.06209 151.761 11.2729 151.162C15.5517 149.94 18.3719 146.173 20.6199 142.58C21.091 142.857 21.5484 143.149 21.9976 143.455C23.8654 144.669 25.6406 146.027 27.4648 147.349C29.5477 148.818 32.3439 150.91 35.0013 151.075C37.144 151.167 39.02 150.447 40.6237 149.035C42.658 147.244 43.3721 146.274 44.4659 144.696C44.7815 145.531 45.2048 146.372 45.6948 147.141C45.6948 147.143 45.6976 147.146 45.6976 147.146C46.3107 148.086 47.0601 148.929 47.9486 149.55C50.2335 151.304 53.5223 151.981 56.9524 151.522C62.8968 150.73 68.0469 147.259 71.7128 142.342C75.2411 137.581 76.9499 131.969 76.4645 126.815C76.0629 121.869 73.4591 118.468 70.4865 116.593ZM31.0534 122.874C31.9981 121.604 33.0246 120.436 34.3124 119.55C36.3055 118.154 39.0962 117.851 41.0838 119.39C42.6684 120.571 43.4144 122.644 43.0795 124.592C42.7583 126.682 41.3915 128.446 39.8776 129.863C35.7284 133.559 29.9852 135.146 24.5107 135.518C26.5609 131.226 28.2435 126.695 31.0534 122.874ZM6.2822 150.845C1.62093 149.642 0.79051 144.607 4.232 141.569C8.54066 138.2 15.5018 139.711 19.9719 142.212C17.0532 147.349 12.8439 152.335 6.2822 150.845Z"
+                                    fill="currentColor">
+                                </path>
+                            </g>
+                        </svg>
+                    </a>
+                    <div class="burger_list hidden l:flex l:flex-col">
+                        <a href="/strategy" style="--addIndex: 0"
+                            class="burger_item-link flex flex-col items-center self-center relative py-5">
+                            <div class="text-md l:text-[calc(var(--spacing)*22)] uppercase">
+                                STRATEGY
+                            </div>
+                        </a>
+                        <a href="/design" style="--addIndex: 0"
+                            class="burger_item-link flex flex-col items-center self-center relative py-5">
+                            <div class="text-md l:text-[calc(var(--spacing)*22)] uppercase">
+                                DESIGN
+                            </div>
+                        </a>
+                        <a href="/about" style="--addIndex: 0"
+                            class="burger_item-link flex flex-col items-center self-center relative py-5">
+                            <div class="text-md l:text-[calc(var(--spacing)*22)] uppercase">
+                                ABOUT
+                            </div>
+                        </a>
+                        <a href="/work" style="--addIndex: 0"
+                            class="burger_item-link flex flex-col items-center self-center relative py-5">
+                            <div class="text-md l:text-[calc(var(--spacing)*22)] uppercase">
+                                WORK
+                            </div>
+                        </a>
+                        <a href="/journal" style="--addIndex: 0"
+                            class="burger_item-link flex flex-col items-center self-center relative py-5">
+                            <div class="text-md l:text-[calc(var(--spacing)*22)] uppercase">
+                                journal
+                            </div>
+                        </a>
+                        <a href="/contact" style="--addIndex: 0"
+                            class="burger_item-link flex flex-col items-center self-center relative py-5">
+                            <div class="text-md l:text-[calc(var(--spacing)*22)] uppercase">
+                                Contact
+                            </div>
+                        </a>
+                    </div>
+                    <div
+                        class="burger_middle grid grid-cols-2 self-start l:self-center l:flex l:flex-col l:items-center">
+                        <p
+                            class="text-lg !leading-1.1 ml-30 w-[34ch] font-extralight l:text-center l:!text-[calc(var(--spacing)*16)] l:font-light l:ml-0">
+                            We bring empathy and clarity to the creation of brands, narratives, and experiences. Through
+                            design and strategy, our work finds relevance in context and connects meaningfully with
+                            people.
+                        </p>
+                        <div class="burger_projects-info -ml-77 relative l:hidden">
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Surface Dermatology Clinic
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    A modern dermatology practice shaped by brand and spatial design, balancing clinical
+                                    expertise with human warmth.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/surface-dermatology-clinic" data-module="Link"
+                                        data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Four Seasons B2B
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    Global luxury hospitality translated into refined B2B communications, aligning
+                                    partners with the Four Seasons promise.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/fourseasons-b2b" data-module="Link" data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    E11even
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    A high-energy restaurant by MLSE, shaped through branding that reflects rhythm,
+                                    identity, and place.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/e11even" data-module="Link" data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    LCBO Holiday Guide
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    Ontario’s trusted beverage retailer expressed through festive seasonal work
+                                    celebrating shared moments.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/lcbo-holiday-guide" data-module="Link" data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Four Seasons Residential
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    An extension of a hospitality icon, positioning each private residences as
+                                    thoughtfully serviced places to live.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/fourseasons-residential" data-module="Link"
+                                        data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Four Seasons Hotel Hampshire
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    A historic English country estate expressed through brand storytelling that frames
+                                    calm, craft, and timeless retreat.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/fourseasons-hampshire" data-module="Link"
+                                        data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Choosing Wisely Canada
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    A national healthcare advocacy organization in Canada advancing evidence-based care,
+                                    shaped through strategic branding.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/choosing-wisely-canada" data-module="Link"
+                                        data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Toronto Pearson Airport
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    Canada&#39;s global aviation hub expressed through digital-first brand execution and
+                                    thoughtfully timed seasonal campaigns.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/toronto-pearson" data-module="Link" data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Four Seasons One Dalton, Boston
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    A modern landmark brought to life  through a brand language that honours  intellect,
+                                    influence, and the power of presence.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/fourseasons-onedalton" data-module="Link"
+                                        data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Surface Dermatology Clinic
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    A modern dermatology practice shaped by brand and spatial design, balancing clinical
+                                    expertise with human warmth.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/surface-dermatology-clinic" data-module="Link"
+                                        data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Four Seasons B2B
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    Global luxury hospitality translated into refined B2B communications, aligning
+                                    partners with the Four Seasons promise.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/fourseasons-b2b" data-module="Link" data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    E11even
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    A high-energy restaurant by MLSE, shaped through branding that reflects rhythm,
+                                    identity, and place.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/e11even" data-module="Link" data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    LCBO Holiday Guide
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    Ontario’s trusted beverage retailer expressed through festive seasonal work
+                                    celebrating shared moments.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/lcbo-holiday-guide" data-module="Link" data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Four Seasons Residential
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    An extension of a hospitality icon, positioning each private residences as
+                                    thoughtfully serviced places to live.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/fourseasons-residential" data-module="Link"
+                                        data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Four Seasons Hotel Hampshire
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    A historic English country estate expressed through brand storytelling that frames
+                                    calm, craft, and timeless retreat.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/fourseasons-hampshire" data-module="Link"
+                                        data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Choosing Wisely Canada
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    A national healthcare advocacy organization in Canada advancing evidence-based care,
+                                    shaped through strategic branding.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/choosing-wisely-canada" data-module="Link"
+                                        data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Toronto Pearson Airport
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    Canada&#39;s global aviation hub expressed through digital-first brand execution and
+                                    thoughtfully timed seasonal campaigns.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/toronto-pearson" data-module="Link" data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="burger_projects-info-item flex flex-col gap-28 items-start">
+                                <div class="text-2xl w-[14ch] !-tracking-3">
+                                    Four Seasons One Dalton, Boston
+                                </div>
+                                <div class="text-base w-[34ch]">
+                                    A modern landmark brought to life  through a brand language that honours  intellect,
+                                    influence, and the power of presence.
+                                </div>
+                                <div class="burger_projects-info-btn">
+                                    <a href="/work/fourseasons-onedalton" data-module="Link"
+                                        data-cursor-trigger="button"
+                                        class="rounded-full flex justify-center items-center cursor-pointer h-35 l:h-30 btn h-30 min-w-110 px-15 text-2xs font-mono uppercase form_submit btn">
+                                        <div class="relative">
+                                            <div class="link_text">
+                                                see project
+                                            </div>
+                                            <div class="absolute left-0 top-0 w-max link_text">
+                                                see project
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="burger_bottom self-end flex flex-col gap-16 pl-30 l:hidden">
+                        <div class="flex flex-row gap-50">
+                            <a href="https://www.instagram.com/theagencyoflolo" target="_blank"
+                                data-cursor-trigger="true" class="font-mono link cursor-pointer block">
+                                <div class="relative">
+                                    <div class="text-sm uppercase link_text">
+                                        instagram
+                                    </div>
+                                    <div class="absolute left-0 top-0 w-max text-sm uppercase link_text">
+                                        instagram
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/company/theagencyofloveandlogic" target="_blank"
+                                data-cursor-trigger="true" class="font-mono link cursor-pointer block">
+                                <div class="relative">
+                                    <div class="text-sm uppercase link_text">
+                                        linkedin
+                                    </div>
+                                    <div class="absolute left-0 top-0 w-max text-sm uppercase link_text">
+                                        linkedin
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <a href="mailto:info@loloagency.com" target="_self" data-cursor-trigger="true"
+                                class="link cursor-pointer block">
+                                <div class="relative">
+                                    <div class="text-2xl !-tracking-3 link_text">
+                                        info@loloagency.com
+                                    </div>
+                                    <div class="absolute left-0 top-0 w-max text-2xl !-tracking-3 link_text">
+                                        info@loloagency.com
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="tel:4165462580" target="_self" data-cursor-trigger="true"
+                                class="link cursor-pointer block">
+                                <div class="relative">
+                                    <div class="text-2xl !-tracking-3 link_text">
+                                        416-546-2580
+                                    </div>
+                                    <div class="absolute left-0 top-0 w-max text-2xl !-tracking-3 link_text">
+                                        416-546-2580
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="text-2xl max-w-[24ch] !-tracking-3">
+                                128 Sterling Rd., Suite 303C, Toronto, ON M6R 2B7 Canada
+                            </div>
+                        </div>
+                    </div>
+                    <div class="burger_projects-imgs absolute top-0 bottom-0 right-0 w-462 flex flex-col l:hidden">
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/surface-dermatology-clinic">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/9839486d014f70d1f4d8f5ef70ab85e2639aebc5-1920x1080.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/9839486d014f70d1f4d8f5ef70ab85e2639aebc5-1920x1080_1wgsyM.webp"
+                                        width="1920" height="1080" alt="Surface Dermatology Clinic"
+                                        class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/fourseasons-b2b">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/d41e99cdab768d6c9325bc04d644b1975432d4d2-1920x1080.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/d41e99cdab768d6c9325bc04d644b1975432d4d2-1920x1080_Z1Xix4J.webp"
+                                        width="1920" height="1080" alt="Four Seasons B2B" class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/e11even">
+                                <div class="blur-video-wrapper w-full h-full w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurVideo">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/ae4fb2c7ef118280b3a11564b9c0c2a91a8c9051-960x674.jpg?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-video-placeholder" aria-hidden="true" />
+                                    <video class="w-full h-full" loop="" autoplay="" muted="true" playsinline=""
+                                        webkit-playsinline="" preload="metadata" style="object-fit: cover;"
+                                        crossorigin="anonymous">
+                                        <source
+                                            data-src="https://lolo-website.b-cdn.net/Work-e11even/0-LOLO-Casestudy-e11even-Cocktail-Art-Direction.mp4"
+                                            type="video/mp4" />
+                                    </video>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/lcbo-holiday-guide">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/afb6bfd28b0d07dec527b0d2a92e7da1ada44b28-1920x1080.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/afb6bfd28b0d07dec527b0d2a92e7da1ada44b28-1920x1080_ZtilEl.webp"
+                                        width="1920" height="1080" alt="LCBO Holiday Guide" class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/fourseasons-residential">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/b4b8aa01a5516931b0ffb9c201d8b618074bc504-1920x1080.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/b4b8aa01a5516931b0ffb9c201d8b618074bc504-1920x1080_21jF2t.webp"
+                                        width="1920" height="1080" alt="Four Seasons Residential"
+                                        class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/fourseasons-hampshire">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/e26966a524421c1bb92858559f42366cb00254c9-1920x1080.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/e26966a524421c1bb92858559f42366cb00254c9-1920x1080_Z1n8sNb.webp"
+                                        width="1920" height="1080" alt="Four Seasons Hotel Hampshire"
+                                        class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/choosing-wisely-canada">
+                                <div class="blur-video-wrapper w-full h-full w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurVideo">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/60389e3aa39891887d1e36ce7f99b4534c924a34-1920x1350.jpg?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-video-placeholder" aria-hidden="true" />
+                                    <video class="w-full h-full" loop="" autoplay="" muted="true" playsinline=""
+                                        webkit-playsinline="" preload="metadata" style="object-fit: cover;"
+                                        crossorigin="anonymous">
+                                        <source
+                                            data-src="https://lolo-website.b-cdn.net/Work%20-%20Unity%20Health/2-LOLO-Casestudy-CWC-System-Design-Strategy.mp4"
+                                            type="video/mp4" />
+                                    </video>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/toronto-pearson">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/ca811518346ed36151271dd8840cf98bda073947-1920x1080.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/ca811518346ed36151271dd8840cf98bda073947-1920x1080_gfprX.webp"
+                                        width="1920" height="1080" alt="Toronto Pearson Airport"
+                                        class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/fourseasons-onedalton">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/86097ce4ed18783f06d26b1615f7692aaa550afc-1858x2048.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/86097ce4ed18783f06d26b1615f7692aaa550afc-1858x2048_ZuApIY.webp"
+                                        width="1858" height="2048" alt="Four Seasons One Dalton, Boston"
+                                        class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/surface-dermatology-clinic">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/9839486d014f70d1f4d8f5ef70ab85e2639aebc5-1920x1080.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/9839486d014f70d1f4d8f5ef70ab85e2639aebc5-1920x1080_1wgsyM.webp"
+                                        width="1920" height="1080" alt="Surface Dermatology Clinic"
+                                        class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/fourseasons-b2b">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/d41e99cdab768d6c9325bc04d644b1975432d4d2-1920x1080.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/d41e99cdab768d6c9325bc04d644b1975432d4d2-1920x1080_Z1Xix4J.webp"
+                                        width="1920" height="1080" alt="Four Seasons B2B" class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/e11even">
+                                <div class="blur-video-wrapper w-full h-full w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurVideo">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/ae4fb2c7ef118280b3a11564b9c0c2a91a8c9051-960x674.jpg?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-video-placeholder" aria-hidden="true" />
+                                    <video class="w-full h-full" loop="" autoplay="" muted="true" playsinline=""
+                                        webkit-playsinline="" preload="metadata" style="object-fit: cover;"
+                                        crossorigin="anonymous">
+                                        <source
+                                            data-src="https://lolo-website.b-cdn.net/Work-e11even/0-LOLO-Casestudy-e11even-Cocktail-Art-Direction.mp4"
+                                            type="video/mp4" />
+                                    </video>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/lcbo-holiday-guide">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/afb6bfd28b0d07dec527b0d2a92e7da1ada44b28-1920x1080.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/afb6bfd28b0d07dec527b0d2a92e7da1ada44b28-1920x1080_ZtilEl.webp"
+                                        width="1920" height="1080" alt="LCBO Holiday Guide" class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/fourseasons-residential">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/b4b8aa01a5516931b0ffb9c201d8b618074bc504-1920x1080.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/b4b8aa01a5516931b0ffb9c201d8b618074bc504-1920x1080_21jF2t.webp"
+                                        width="1920" height="1080" alt="Four Seasons Residential"
+                                        class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/fourseasons-hampshire">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/e26966a524421c1bb92858559f42366cb00254c9-1920x1080.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/e26966a524421c1bb92858559f42366cb00254c9-1920x1080_Z1n8sNb.webp"
+                                        width="1920" height="1080" alt="Four Seasons Hotel Hampshire"
+                                        class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/choosing-wisely-canada">
+                                <div class="blur-video-wrapper w-full h-full w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurVideo">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/60389e3aa39891887d1e36ce7f99b4534c924a34-1920x1350.jpg?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-video-placeholder" aria-hidden="true" />
+                                    <video class="w-full h-full" loop="" autoplay="" muted="true" playsinline=""
+                                        webkit-playsinline="" preload="metadata" style="object-fit: cover;"
+                                        crossorigin="anonymous">
+                                        <source
+                                            data-src="https://lolo-website.b-cdn.net/Work%20-%20Unity%20Health/2-LOLO-Casestudy-CWC-System-Design-Strategy.mp4"
+                                            type="video/mp4" />
+                                    </video>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/toronto-pearson">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/ca811518346ed36151271dd8840cf98bda073947-1920x1080.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/ca811518346ed36151271dd8840cf98bda073947-1920x1080_gfprX.webp"
+                                        width="1920" height="1080" alt="Toronto Pearson Airport"
+                                        class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-6 burger_project-image w-full flex-none flex">
+                            <a class="burger_tile relative w-full aspect-square overflow-hidden flex-none"
+                                data-cursor-trigger="0" href="/work/fourseasons-onedalton">
+                                <div class="blur-image-wrapper object-cover w-full h-full absolute left-0 top-0 pointer-events-none"
+                                    data-module="BlurImage">
+                                    <img src="https://cdn.sanity.io/images/lnp5wwlt/production/86097ce4ed18783f06d26b1615f7692aaa550afc-1858x2048.png?w=20&amp;blur=10&amp;q=30"
+                                        alt="" class="blur-image-placeholder" aria-hidden="true" />
+                                    <img data-src="/_astro/86097ce4ed18783f06d26b1615f7692aaa550afc-1858x2048_ZuApIY.webp"
+                                        width="1858" height="2048" alt="Four Seasons One Dalton, Boston"
+                                        class="blur-image-full" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute z-0 pointer-events-none inset-0">
+                    <canvas id="canvas">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loader fixed left-0 right-0 top-0 h-dvh z-22 bg-black text-white flex justify-center items-center">
+        <div class="loader_logo w-97 h-102" data-src="/_astro/logo.Cbm2COG8.json">
+            <!-- <Logo /> -->
+        </div>
+    </div>
+    <!-- Main -->
+    <main data-transition="container" data-transition-page="home" class="bg-white relative" style="false"
+        data-astro-cid-sckkx6r4="">
+        <div class="banner fixed top-0 left-0 right-0 h-dvh z-9 bg-white" data-module="Banner"
+            style="visibility: hidden;">
+            <div class="banner_content p-cont relative h-full">
+                <div class="absolute inset-0 p-cont">
+                    <div class="block w-full h-full rounded-20 s:rounded-10 overflow-hidden relative">
+                        <canvas class="banner-canvas block w-full h-full">
+                        </canvas>
+                    </div>
+                </div>
+                <div class="flex flex-col h-full justify-between items-center relative z-2 pt-36 pb-[12vh]">
+                    <div class="text-xs uppercase">
+                        The next chapter in our story
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="text-hero">
+                            Love &amp; Logic —
+                        </div>
+                        <div class="flex items-end">
+                            <div class="text-md-lg s:text-xs uppercase -translate-y-[0.18em]">
+                                formerly
+                            </div>
+                            <div class="text-hero">
+                                Workhouse
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-xs uppercase text-center max-w-[60ch]">
+                        We’re a creative agency built on strategy, storytelling, and design — evolving how brands think,
+                        feel,
+                        and connect.
+                    </div>
+                    <div class="banner_close absolute top-cont right-cont w-28 s:w-20">
+                        <div class="close_icon w-full h-full aspect-square cursor-pointer" data-astro-cid-zjlzylye="">
+                            <svg width="100%" height="100%" viewBox="0 0 29 29" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" data-astro-cid-zjlzylye="">
+                                <path d="M0.853516 0.353554L28.3535 27.8536" stroke="currentColor"
+                                    data-astro-cid-zjlzylye="">
+                                </path>
+                                <path d="M27.8535 0.353554L0.353514 27.8536" stroke="currentColor"
+                                    data-astro-cid-zjlzylye="">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="home">
+            <div class="container max-w-none px-cont">
+                <div class="pt-cont h-screen pb-cont s:h-svh">
+                    <div
+                        class="home_body flex flex-col py-20 h-full relative rounded-20 overflow-hidden justify-between s:rounded-10">
+                        <div class="absolute left-1/2 -translate-x-1/2 top-cont z-2 w-154 h-152 l:w-120 l:h-116">
+                            <svg width="100%" height="100%" viewBox="0 0 154 152" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g class="group">
+                                    <path
+                                        d="M87.1362 14.0532L88.321 14.0019C88.8594 13.9831 89.9298 13.9492 90.4476 13.9492C91.6789 13.9492 94.0044 13.8941 95.6977 13.994C96.5622 14.045 97.3017 14.3406 97.3017 14.3406L97.3023 10.6832C97.3023 10.6832 96.8173 12.9715 94.3606 13.0697C92.9202 13.1273 91.2153 13.1682 89.9417 13.1682V7.26644C91.3147 7.26724 92.7542 7.27766 93.9665 7.30091C95.9222 7.35638 96.4217 8.98117 96.4217 8.98117V4.73079C96.4217 4.73079 95.9237 6.34957 93.9767 6.4105C92.6417 6.44742 91.1197 6.46634 89.9417 6.46634V1.25605C91.151 1.25681 92.8213 1.28458 94.2052 1.3339C96.8298 1.43633 97.1964 3.74783 97.1964 3.74783L97.1949 0.0761719C97.1949 0.0761719 96.457 0.390253 95.4641 0.440102C93.8667 0.520268 91.3459 0.476489 90.3119 0.476489C89.8059 0.476489 89.1632 0.456096 88.655 0.437059L87.1494 0.371861C87.1494 0.371861 88.1104 0.968615 88.2026 2.02157C88.3306 3.48439 88.294 4.74463 88.294 6.0259V8.00343C88.294 9.21292 88.3718 10.8378 88.1895 12.2502C88.0212 13.5537 87.1362 14.0532 87.1362 14.0532Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M70.63 12.3652C70.5238 13.5896 69.5664 14.0095 69.5664 14.0095H73.5211C73.5211 14.0095 72.6169 13.6131 72.4679 12.4694C72.4045 10.969 72.3706 9.2088 72.3706 7.98149V7.12558C73.3087 7.10649 75.303 7.10649 76.9094 7.10649C78.4936 7.10649 80.4599 7.10649 81.3125 7.12558V7.98149C81.3125 9.19557 81.2801 10.9235 81.2167 12.4093C81.0928 13.5984 80.159 14.0095 80.159 14.0095H84.1122C84.1122 14.0095 83.1859 13.6028 83.0561 12.4254C82.9927 10.9397 82.9602 9.21029 82.9602 8.00203V6.02449C82.9602 4.75459 82.9927 3.3232 83.0502 2.05478C83.1549 0.831854 84.1122 0.411987 84.1122 0.411987H80.159C80.159 0.411987 81.1577 0.84654 81.2284 2.12671C81.2284 2.95793 81.3125 4.33914 81.3125 5.45048V6.24764C80.3729 6.26673 78.2916 6.26673 76.9094 6.26673C75.545 6.26673 73.2733 6.26673 72.3706 6.24764V5.45048C72.3706 4.32593 72.4001 3.21164 72.4546 2.0812C72.5476 0.837725 73.5196 0.411987 73.5196 0.411987H69.5664C69.5664 0.411987 70.3556 0.75698 70.5798 1.73473C70.5798 1.73473 70.7229 4.77811 70.7229 6.02449V8.00203C70.7229 9.19266 70.6905 10.8927 70.63 12.3652Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M58.5055 1.32963C59.2557 1.29515 60.0474 1.27462 60.7744 1.27408C60.8171 2.02175 60.8404 3.02167 60.8404 3.59257V8.00132C60.8404 9.17412 60.7935 11.2298 60.7447 12.3048C60.6869 13.5775 59.6756 14.0091 59.6756 14.0091L63.6296 14.0106C63.6296 14.0106 62.6153 13.5772 62.5595 12.2979C62.5127 11.2245 62.4647 9.17412 62.4647 8.00132V3.59257C62.4647 3.03492 62.4879 2.03972 62.5307 1.27408C63.2577 1.27462 64.0496 1.29517 64.8 1.32967C66.9504 1.5466 67.3811 3.74783 67.3811 3.74783L67.3797 0.0761719C67.3797 0.0761719 66.8361 0.42821 65.9057 0.459089L65.4881 0.472155L65.4898 0.472817C64.3285 0.497824 58.9763 0.49713 57.7866 0.47118L57.3994 0.459089C56.469 0.42821 55.9255 0.0761719 55.9255 0.0761719V0.412994L55.9241 3.74783C55.9241 3.74783 56.3547 1.54635 58.5055 1.32963Z"
+                                        fill="currentColor">
+                                    </path>
+                                </g>
+                                <g class="group">
+                                    <path
+                                        d="M56.3325 45.1496C56.3325 45.1496 60.5088 44.9572 61.9779 44.9572C64.3524 44.9572 67.3457 44.9757 69.2847 45.0286C70.7309 45.0681 72.5238 45.6366 72.5238 45.6366L72.5267 39.5266C72.5267 39.5266 71.9202 43.3331 67.6166 43.5547C66.1269 43.6408 62.766 43.6742 61.0595 43.6742V32.9064C62.8612 32.9064 65.9614 32.9166 67.1772 32.9414L67.1259 32.9443C70.3969 33.0376 71.2318 35.7536 71.2318 35.7536V28.7106C71.2318 28.7106 70.3969 31.4252 67.1274 31.5185C65.9218 31.5607 62.8377 31.587 61.0595 31.587V22.0685C62.7089 22.0685 66.1078 22.1006 67.5507 22.1647C71.9144 22.3499 72.5267 26.1987 72.5267 26.1987L72.5238 20.1135C72.5238 20.1135 71.6097 20.6573 70.1874 20.72C67.9403 20.7623 63.7196 20.7856 61.7479 20.7856C59.4067 20.7856 56.3325 20.6004 56.3325 20.6004C56.3325 20.6004 58.1361 21.6669 58.228 23.5629C58.3414 25.902 58.407 39.7297 58.2148 42.3462C58.0824 44.1475 56.3325 45.1496 56.3325 45.1496Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M4.89172 42.9119C5.69402 40.8233 6.83407 38.203 8.13763 35.335C9.80932 35.2998 11.1771 35.2998 12.735 35.2998C14.4449 35.2998 16.5728 35.2998 17.9024 35.335C19.0046 37.9151 20.1272 40.612 20.9431 42.859C21.4784 44.4197 20.4984 44.9905 20.4984 44.9905H26.4264C26.4264 44.9905 25.0215 44.3424 24.196 42.622C21.5484 37.1043 17.0215 27.0243 14.3307 20.2208H13.9131C10.4336 27.7727 6.71728 35.4613 2.61983 42.8642C2.00388 43.977 0.611572 44.9971 0.611572 44.9971H5.34471C5.34471 44.9971 4.35998 44.3952 4.89172 42.9119ZM13.3431 24.3621C14.4831 26.9818 16.5728 32.0078 17.3324 33.955C16.2685 33.9903 14.4067 33.9903 12.9629 33.9903C11.5951 33.9903 9.84748 33.9903 8.70758 33.955C9.92344 31.3002 12.2032 26.6275 13.3431 24.3621Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M41.7934 45.9939C45.1878 45.9939 50.4257 44.1165 50.4257 44.1165C50.4257 44.1165 50.3457 38.2801 50.3981 36.3355C50.438 34.8541 51.6373 34.3533 51.6373 34.3533H45.8349C45.8349 34.3533 47.3503 34.9463 47.5227 36.7114C47.6812 38.3332 47.7141 43.2261 47.7141 43.2261C40.0987 46.3938 30.8511 44.1552 30.3208 33.9574C30.0528 28.8041 32.5892 21.6832 39.1109 21.6832C44.8545 21.6832 47.9693 24.2797 49.5897 29.8133C49.4808 26.9244 49.4807 23.5745 49.5358 20.3478C46.6636 23.9003 42.9351 18.3532 34.7975 21.4027C29.7125 23.3083 26.7642 28.4862 27.1479 33.6269C27.8781 43.4122 35.6651 45.9939 41.7934 45.9939Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M98.5022 23.3909C98.702 26.2599 98.8371 30.2361 98.8371 33.3299V39.8211L98.7617 39.8557C98.5341 39.609 83.969 24.814 80.0185 20.6316H76.8506C77.4216 20.9194 77.8648 21.3139 78.2489 21.6962C79.3395 22.7817 79.559 23.6213 79.559 25.1554C79.559 27.6798 79.7168 39.5989 79.4506 42.4879C79.275 44.3938 77.7281 45.0436 77.7281 45.0436H83.2479C83.2479 45.0436 81.6189 44.3356 81.504 42.2498C81.3716 39.8455 81.1534 35.754 81.1534 32.6244V25.7106L81.2679 25.676C81.5331 26.028 97.4732 42.1492 100.049 45.1482H100.615C100.615 45.1482 100.436 25.9588 100.592 23.3204C100.711 21.3143 102.177 20.6327 102.177 20.6327H96.7611C96.7611 20.6327 98.3589 21.3339 98.5022 23.3909Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M132.549 23.0383L132.553 23.0287C135.129 26.8356 138.696 32.4738 140.278 35.0441C140.278 35.0441 140.259 40.2075 140.14 42.2305C140.018 44.2775 138.399 45.1245 138.399 45.1245H144.833C144.833 45.1245 143.168 44.2808 143.092 42.235C143.026 40.4637 142.954 34.6168 142.954 34.6168C144.254 32.3635 148.016 26.6372 150.535 23.0357C152.065 20.912 152.778 20.655 152.778 20.655H147.955C147.955 20.655 149.108 21.2541 148.401 22.8048C146.7 25.979 144.045 30.3924 142.189 33.2275H142.074C139.885 29.7516 137.621 25.9278 135.844 22.7844C135.156 21.2492 136.299 20.655 136.299 20.655H130.305C130.305 20.655 131.018 20.9121 132.549 23.0383Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M110.943 43.7387C110.942 43.739 110.941 43.7392 110.941 43.7395C112.429 44.659 114.179 45.4439 116.243 45.7581C117.038 45.9049 117.863 45.9796 118.71 45.9797C124.646 45.9797 129.099 42.5129 130.219 38.5743C129.745 39.2923 128.929 40.1285 128.232 40.7772C124.391 44.3475 119.038 46.0175 114.314 43.4502C110.854 41.7095 108.275 38.2328 108.003 33.335C107.673 27.4071 111.329 21.6972 117.141 21.6972C122.885 21.6972 125.999 24.2936 127.62 29.8273C127.511 26.9383 127.511 23.5886 127.566 20.3618C124.694 23.9143 120.965 18.3672 112.828 21.4168C107.743 23.3223 104.621 28.502 105.027 33.6409C105.428 38.706 107.846 41.877 110.943 43.7387Z"
+                                        fill="currentColor">
+                                    </path>
+                                </g>
+                                <g class="group">
+                                    <path
+                                        d="M63.1024 73.6429C63.0271 75.1913 61.5557 76.0623 61.5557 76.0623C61.5557 76.0623 64.8094 75.8884 66.8924 75.8884C69.2505 75.8884 71.0866 75.8596 73.4666 75.9591C75.1861 76.0311 76.9374 76.5729 76.9374 76.5729L76.9379 70.4144C76.9379 70.4144 76.0377 74.1122 71.9314 74.4607C69.9756 74.6266 67.9854 74.6031 66.1255 74.6031C66.0476 73.3865 65.9712 68.4193 65.9712 65.2024V61.6288C65.9712 59.3539 66.0288 56.6878 66.1304 54.3091C66.2828 52.2521 67.8923 51.55 67.8923 51.55H61.3613C61.3613 51.55 62.9957 52.2622 63.1269 54.3551C63.2273 56.7221 63.2841 59.3686 63.2841 61.6288V65.2024C63.2841 67.6416 63.2336 70.9435 63.1024 73.6429Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M14.4083 77.0761C22.578 77.0761 28.243 71.9809 28.243 64.266C28.243 56.3715 22.8092 51.4552 14.4083 51.4552C6.27694 51.4552 0.611572 56.4431 0.611572 64.266C0.611572 72.0882 6.27694 77.0761 14.4083 77.0761ZM14.4083 52.6038C20.5356 52.6038 25.0061 56.6226 25.0061 64.2295C25.0061 71.9445 20.5356 75.856 14.4083 75.856C8.31938 75.856 3.84889 71.9087 3.84889 64.2295C3.84889 56.4073 8.31938 52.6038 14.4083 52.6038Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M41.5541 64.2548C44.8311 64.3483 45.668 67.0705 45.668 67.0705V60.0143C45.668 60.0143 44.8311 62.7337 41.56 62.8286C40.3414 62.871 38.2998 62.8973 36.4968 62.8973V53.3613C38.1603 53.3613 40.5047 53.3871 41.952 53.4576C45.8989 53.6502 46.9658 57.5024 46.9658 57.5024L46.9629 51.4032C46.9629 51.4032 45.7453 51.9199 44.327 52.0096C42.091 52.151 39.2042 52.0754 37.2265 52.0754C36.2355 52.0754 34.9538 52.0271 34.0435 51.9892L31.7971 51.8927C31.7971 51.8927 33.5971 52.9638 33.697 54.8692C33.7953 57.2101 33.8511 59.8141 33.8511 62.041V65.6122C33.8511 67.9136 33.7782 71.6229 33.6852 73.6242C33.589 75.6953 31.9381 76.3976 31.9381 76.3976H38.4114C38.4114 76.3976 36.7629 75.6899 36.6613 73.6008C36.5334 70.9702 36.4968 67.8597 36.4968 65.5772V64.2197C38.2983 64.2197 40.3384 64.2299 41.5541 64.2548Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M78.6987 64.266C78.6987 72.0882 84.364 77.0761 92.4955 77.0761C100.665 77.0761 106.33 71.9809 106.33 64.266C106.33 56.3715 100.896 51.4552 92.4955 51.4552C84.364 51.4552 78.6987 56.4431 78.6987 64.266ZM103.093 64.2295C103.093 71.9445 98.6228 75.856 92.4955 75.856C86.4065 75.856 81.936 71.9087 81.936 64.2295C81.936 56.4073 86.4065 52.6038 92.4955 52.6038C98.6228 52.6038 103.093 56.6226 103.093 64.2295Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M133.546 76.0884C133.546 76.0884 137.702 75.8968 139.164 75.8968C141.527 75.8968 144.783 75.9153 146.713 75.968C148.152 76.0072 149.659 76.5729 149.659 76.5729L149.662 70.4927C149.662 70.4927 149.058 74.2807 144.775 74.5012C143.293 74.5868 139.949 74.6202 138.25 74.6202V63.9048C140.043 63.9048 143.128 63.9149 144.338 63.9396L144.287 63.9425C147.542 64.0353 148.373 66.7382 148.373 66.7382V59.7295C148.373 59.7295 147.542 62.4308 144.289 62.5236C143.089 62.5657 140.02 62.5918 138.25 62.5918V53.1198C139.892 53.1198 143.274 53.1517 144.71 53.2155C149.052 53.3997 149.662 57.2298 149.662 57.2298L149.659 51.1743C149.659 51.1743 148.749 51.7154 147.334 51.7778C145.098 51.8199 140.897 51.8431 138.935 51.8431C136.606 51.8431 133.546 51.6588 133.546 51.6588C133.546 51.6588 135.341 52.7201 135.433 54.6068C135.545 56.9346 135.611 70.6949 135.419 73.2986C135.288 75.0911 133.546 76.0884 133.546 76.0884Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M132.54 51.6915H127.723C127.723 51.6915 128.703 52.2806 128.172 53.8051C126.134 59.4512 122.205 68.6527 120.192 72.7768H120.077C117.963 68.3001 114.298 59.9433 111.933 53.7997C111.404 52.3371 112.392 51.6915 112.392 51.6915H106.488C106.488 51.6915 108.034 52.6044 108.73 54.072L108.73 54.0701C112.18 61.3881 116.709 71.7544 118.359 76.012C118.703 75.9766 119.046 75.9411 119.39 75.9411C119.81 75.9411 120.116 75.9766 120.459 76.012C122.917 70.3519 127.629 59.9566 130.397 54.0706C130.96 52.8808 132.54 51.6915 132.54 51.6915Z"
+                                        fill="currentColor">
+                                    </path>
+                                </g>
+                                <g class="group">
+                                    <path
+                                        d="M138.316 108.102C139.123 108.251 139.959 108.326 140.818 108.326C146.836 108.326 151.35 104.812 152.486 100.819C152.005 101.547 151.178 102.394 150.471 103.052C146.577 106.672 141.15 108.365 136.361 105.762C132.852 103.997 130.238 100.472 129.962 95.5069C129.628 89.497 133.335 83.7082 139.227 83.7082C145.05 83.7082 148.208 86.3404 149.851 91.9507C149.74 89.0217 149.74 85.6256 149.796 82.3542C146.884 85.9559 143.104 80.332 134.854 83.4237C129.698 85.3557 126.533 90.607 126.945 95.817C127.352 100.952 129.803 104.167 132.943 106.055C132.942 106.055 132.941 106.055 132.941 106.055C134.45 106.988 136.224 107.783 138.316 108.102Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M113.954 96.5392H108.072C108.072 96.5392 109.608 97.1405 109.783 98.93C109.944 100.574 109.977 105.535 109.977 105.535C102.293 109.531 92.5377 105.347 91.9898 95.4926C91.6557 89.4827 95.3627 83.6939 101.255 83.6939C107.078 83.6939 110.236 86.3262 111.878 91.9364C111.768 89.0074 111.768 85.6113 111.824 82.34C108.912 85.9416 105.132 80.3178 96.8815 83.4095C91.7262 85.3414 88.5611 90.5927 88.9732 95.8028C89.7384 105.477 97.7612 108.341 103.974 108.341C107.416 108.341 112.726 106.438 112.726 106.438C112.726 106.438 112.645 100.52 112.698 98.549C112.738 97.047 113.954 96.5392 113.954 96.5392Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M71.8177 108.222C79.9875 108.222 85.6525 103.099 85.6525 95.3407C85.6525 87.4023 80.2186 82.4585 71.8177 82.4585C63.6863 82.4585 58.021 87.4741 58.021 95.3407C58.021 103.207 63.6863 108.222 71.8177 108.222ZM71.8177 83.6135C77.945 83.6135 82.4155 87.6546 82.4155 95.304C82.4155 103.062 77.945 106.995 71.8177 106.995C65.7288 106.995 61.2583 103.026 61.2583 95.304C61.2583 87.4381 65.7288 83.6135 71.8177 83.6135Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M122.032 85.6097H122.038C122.155 83.5218 123.784 82.8129 123.784 82.8129H117.288C117.288 82.8129 118.917 83.5218 119.034 85.6097H119.04C119.14 87.9846 119.197 90.6422 119.197 92.9108V96.4916C119.197 98.8045 119.138 101.892 119.034 104.509C118.917 106.597 117.288 107.306 117.288 107.306H123.784C123.784 107.306 122.155 106.597 122.038 104.509H122.038C121.934 101.882 121.874 98.7806 121.874 96.4916V92.9108C121.874 90.6422 121.931 87.9846 122.032 85.6097Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M44.6364 105.693C44.5579 104.465 44.4808 99.4551 44.4808 96.2102V92.6054C44.4808 90.3108 44.5388 87.6216 44.6413 85.2222C44.795 83.1473 46.4186 82.4392 46.4186 82.4392H39.8308C39.8308 82.4392 41.4794 83.1575 41.6118 85.2687C41.713 87.6562 41.7703 90.3257 41.7703 92.6054V96.2102C41.7703 98.6707 41.7194 102.001 41.587 104.724C41.5111 106.286 40.0269 107.164 40.0269 107.164C40.0269 107.164 43.3089 106.989 45.41 106.989C47.7886 106.989 49.6407 106.96 52.0413 107.06C53.7758 107.133 55.5423 107.68 55.5423 107.68L55.5428 101.467C55.5428 101.467 54.6348 105.197 50.4928 105.549C48.52 105.716 46.5124 105.693 44.6364 105.693Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M30.6479 91.0906L21.4048 91.0052C26.323 93.3283 22.1207 98.0645 19.6619 101.397C17.1454 98.7547 14.493 95.762 12.3277 93.0538C12.3332 93.0511 12.3388 93.0483 12.3443 93.0456L11.7412 92.2746H11.7384C3.55514 82.51 17.1351 78.5908 19.4461 89.9168C19.3631 87.4561 19.3631 84.6077 19.4046 81.8601C17.6635 84.237 15.339 82.1096 12.8395 82.153C5.75974 82.11 4.81396 88.7436 9.26789 93.2768C-6.83153 98.9963 6.81354 115.399 18.5635 104.175C19.2602 104.871 21.0822 106.374 19.2192 107.405H26.4925C24.2338 106.13 22.5714 104.454 20.4863 102.286C24.3218 98.5114 25.1229 92.7587 30.6479 91.0906ZM11.033 106.4C3.53411 106.515 3.01836 95.8636 9.77971 94.0175C11.6959 96.43 15.2846 100.617 17.7806 103.36C16.1317 104.954 13.8189 106.4 11.033 106.4Z"
+                                        fill="currentColor">
+                                    </path>
+                                </g>
+                                <g class="group">
+                                    <path
+                                        d="M147.494 116.593C143.431 113.828 136.979 114.422 132.504 116.91C132.504 116.91 131.008 117.723 130.346 118.111C130.15 118.233 129.955 118.357 129.762 118.482L130.199 118.701C130.788 118.298 132.634 117.333 132.711 117.3C136.934 115.325 142.469 115.2 146.288 118.013L146.29 118.016C148.547 119.829 150.384 121.568 151.246 127.722C152.864 138.738 143.408 152.018 131.675 150.528C126.883 149.796 123.559 145.97 122.716 139.925C121.963 133.97 124.346 127.742 128.745 123.91C131.858 121.209 137.223 120.002 140.327 123.105C145.235 127.932 143.871 140.396 136.974 139.548H136.971C136.16 139.369 135.705 138.854 135.285 138.383C134.823 137.854 134.422 137.404 133.673 137.499C132.909 137.59 132.408 138.208 132.523 138.984C132.668 140.003 133.753 140.629 135.353 140.683C142.091 140.84 146.001 133.762 145.081 127.619C144.429 122.503 140.501 119.777 135.575 120.468C126.465 121.498 119.195 132.693 120.687 141.605C120.69 141.64 120.695 141.678 120.701 141.716C120.707 141.761 120.716 141.81 120.723 141.856C113.521 155.269 107.363 147.666 97.9894 141.989C99.0475 140.239 100.046 138.452 100.973 136.632C132.069 132.43 121.849 110.891 110.236 117.942C104.787 121.87 102.835 129.7 100.257 135.573C91.9136 135.792 79.1838 131.687 80.9916 121.287C81.8873 116.658 86.9733 114.756 91.2398 115.675C95.4845 116.59 100.127 120.986 98.9777 126.021C98.5089 128.44 94.7045 130.985 92.9796 128.375C92.544 127.625 92.5685 126.999 92.0185 126.698C91.3514 126.338 90.5564 126.771 90.5972 127.516C90.6218 128.118 91.0465 128.589 91.5175 128.936C94.409 131.061 99.1438 129.53 100.35 125.519C102.743 115.475 88.0003 111.306 81.8302 118.016C79.3852 120.655 78.8651 124.937 80.2428 128.224C83.3718 135.069 92.7977 137.343 99.7347 136.765C98.9768 138.403 98.1889 140.005 97.3251 141.591C79.5963 130.513 72.2582 145.899 81.4979 150.842C83.6135 151.804 86.0694 151.761 88.2802 151.162C92.559 149.94 95.3792 146.173 97.6273 142.58C98.0983 142.857 98.5557 143.149 99.005 143.455C100.873 144.669 102.648 146.027 104.472 147.349C106.555 148.818 109.351 150.91 112.009 151.075C114.151 151.167 116.027 150.447 117.631 149.035C119.665 147.244 120.379 146.274 121.473 144.696C121.789 145.531 122.212 146.372 122.702 147.141C122.702 147.143 122.705 147.146 122.705 147.146C123.318 148.086 124.067 148.929 124.956 149.55C127.241 151.304 130.53 151.981 133.96 151.522C139.904 150.73 145.054 147.259 148.72 142.342C152.248 137.581 153.957 131.969 153.472 126.815C153.07 121.869 150.466 118.468 147.494 116.593ZM108.061 122.874C109.005 121.604 110.032 120.436 111.32 119.55C113.313 118.154 116.104 117.851 118.091 119.39C119.676 120.571 120.422 122.644 120.087 124.592C119.766 126.682 118.399 128.446 116.885 129.863C112.736 133.559 106.993 135.146 101.518 135.518C103.568 131.226 105.251 126.695 108.061 122.874ZM83.2895 150.845C78.6283 149.642 77.7978 144.607 81.2393 141.569C85.548 138.2 92.5091 139.711 96.9793 142.212C94.0605 147.349 89.8512 152.335 83.2895 150.845Z"
+                                        fill="currentColor">
+                                    </path>
+                                    <path
+                                        d="M70.4865 116.593C66.4235 113.828 59.9718 114.422 55.4962 116.91C55.4962 116.91 54.0003 117.723 53.339 118.111C53.1431 118.233 52.9472 118.357 52.7542 118.482L53.1913 118.701C53.7809 118.298 55.6268 117.333 55.7035 117.3C59.9267 115.325 65.4615 115.2 69.2802 118.013L69.283 118.016C71.5396 119.829 73.3762 121.568 74.2391 127.722C75.8566 138.738 66.4007 152.018 54.6674 150.528C49.8759 149.796 46.552 145.97 45.709 139.925C44.9561 133.97 47.3389 127.742 51.738 123.91C54.8509 121.209 60.2153 120.002 63.3193 123.105C68.2277 127.932 66.8635 140.396 59.9669 139.548H59.9641C59.1523 139.369 58.6981 138.854 58.278 138.383C57.8153 137.854 57.4151 137.404 56.6657 137.499C55.9015 137.59 55.4011 138.208 55.5161 138.984C55.6609 140.003 56.7452 140.629 58.3461 140.683C65.0836 140.84 68.9937 133.762 68.0737 127.619C67.4219 122.503 63.4936 119.777 58.5675 120.468C49.4579 121.498 42.1874 132.693 43.6794 141.605C43.6822 141.64 43.6879 141.678 43.6936 141.716C43.6992 141.761 43.709 141.81 43.7153 141.856C36.5134 155.269 30.3561 147.666 20.9821 141.989C22.0402 140.239 23.0391 138.452 23.9662 136.632C55.0613 132.43 44.8421 110.891 33.2287 117.942C27.7793 121.87 25.8275 129.7 23.2501 135.573C14.9063 135.792 2.17646 131.687 3.98424 121.287C4.88 116.658 9.96601 114.756 14.2325 115.675C18.4772 116.59 23.1194 120.986 21.9704 126.021C21.5016 128.44 17.6972 130.985 15.9722 128.375C15.5367 127.625 15.5612 126.999 15.0112 126.698C14.3441 126.338 13.5491 126.771 13.5899 127.516C13.6144 128.118 14.0392 128.589 14.5102 128.936C17.4017 131.061 22.1365 129.53 23.3427 125.519C25.7361 115.475 10.9929 111.306 4.82291 118.016C2.37783 120.655 1.85781 124.937 3.23549 128.224C6.36451 135.069 15.7904 137.343 22.7273 136.765C21.9695 138.403 21.1816 140.005 20.3177 141.591C2.58897 130.513 -4.74909 145.899 4.49057 150.842C6.6062 151.804 9.06209 151.761 11.2729 151.162C15.5517 149.94 18.3719 146.173 20.6199 142.58C21.091 142.857 21.5484 143.149 21.9976 143.455C23.8654 144.669 25.6406 146.027 27.4648 147.349C29.5477 148.818 32.3439 150.91 35.0013 151.075C37.144 151.167 39.02 150.447 40.6237 149.035C42.658 147.244 43.3721 146.274 44.4659 144.696C44.7815 145.531 45.2048 146.372 45.6948 147.141C45.6948 147.143 45.6976 147.146 45.6976 147.146C46.3107 148.086 47.0601 148.929 47.9486 149.55C50.2335 151.304 53.5223 151.981 56.9524 151.522C62.8968 150.73 68.0469 147.259 71.7128 142.342C75.2411 137.581 76.9499 131.969 76.4645 126.815C76.0629 121.869 73.4591 118.468 70.4865 116.593ZM31.0534 122.874C31.9981 121.604 33.0246 120.436 34.3124 119.55C36.3055 118.154 39.0962 117.851 41.0838 119.39C42.6684 120.571 43.4144 122.644 43.0795 124.592C42.7583 126.682 41.3915 128.446 39.8776 129.863C35.7284 133.559 29.9852 135.146 24.5107 135.518C26.5609 131.226 28.2435 126.695 31.0534 122.874ZM6.2822 150.845C1.62093 149.642 0.79051 144.607 4.232 141.569C8.54066 138.2 15.5018 139.711 19.9719 142.212C17.0532 147.349 12.8439 152.335 6.2822 150.845Z"
+                                        fill="currentColor">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <h1 class="text-2xl uppercase text-center h1 invisible">
+                            The Agency Of Love And Logic
+                        </h1>
+                        <video class="home_video w-full h-full l:hidden s:hidden"
+                            poster="https://cdn.sanity.io/images/lnp5wwlt/production/38ae871813b1377acbf8d1f2d67f6c601d5f8f43-3800x1900.jpg?w=1024&amp;blur=10&amp;q=30"
+                            fetchpriority="high" muted="" loop="" playsinline="" webkit-playsinline=""
+                            preload="metadata" style="object-fit: cover;">
+                            <source data-src="https://lolo-website.b-cdn.net/Home%20Page/compressed/home.webm"
+                                type="video/mp4" />
+                        </video>
+                        <video class="home_video w-full h-full hidden l:block s:hidden"
+                            poster="https://cdn.sanity.io/images/lnp5wwlt/production/2534c5123036d7d89ccad9f3fb6a1614911a05a8-1080x1920.jpg?w=500&amp;blur=10&amp;q=30"
+                            fetchpriority="high" muted="" loop="" playsinline="" webkit-playsinline=""
+                            preload="metadata" style="object-fit: cover;">
+                            <source data-src="https://lolo-website.b-cdn.net/Home%20Page/compressed/Home-mob.mp4"
+                                type="video/mp4" />
+                        </video>
+                        <video class="home_video w-full h-full hidden s:block"
+                            poster="https://cdn.sanity.io/images/lnp5wwlt/production/2534c5123036d7d89ccad9f3fb6a1614911a05a8-1080x1920.jpg?w=300&amp;blur=10&amp;q=30"
+                            fetchpriority="high" muted="" loop="" playsinline="" webkit-playsinline=""
+                            preload="metadata" style="object-fit: cover;">
+                            <source data-src="https://lolo-website.b-cdn.net/Home%20Page/compressed/Home-mob.mp4"
+                                type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </main>
+    <script type="module" src="/_astro/Layout.astro_astro_type_script_index_0_lang.DvwyQo9a.js">
+    </script>
+</body>
+
+</html>
