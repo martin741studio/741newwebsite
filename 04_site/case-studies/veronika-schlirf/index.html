@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study: Naturheilpraxis Veronika Schlirf – von #85 auf Platz 1 | 741.Studio</title>
+  <meta name="description" content="Wie die Naturheilpraxis Veronika Schlirf in Regensburg von Google-Maps-Position #85 auf Platz 1 kam – Local-SEO-Case-Study von 741.Studio: GBP, Website, Bewertungen, Citations, Google Product Stacking, YouTube & lokale Backlinks.">
+  <link rel="icon" href="/favicon.ico">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Case Study: Naturheilpraxis Veronika Schlirf – von #85 auf Platz 1">
+  <meta property="og:description" content="Von praktisch unsichtbar zur Nummer 1 bei Google Maps in Regensburg. Die komplette Local-SEO-Case-Study von 741.Studio.">
+  <meta property="og:url" content="https://741.studio/case-studies/veronika-schlirf/">
+  <meta property="og:image" content="https://741.studio/review-assets/proof/veronika-schlirf-nachher.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Site CI: the shared header_de/footer_de/consent partials are Webflow/rem-based and REQUIRE weavy.css + these fonts + the root scaling below -->
+  <link crossorigin="anonymous" href="/assets/weavy.css" rel="stylesheet" type="text/css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --gold:#fac118; --ink:#111514; --olive:#575136; --paper:#faf8f2; --ash:#6b6b64; --card:#ffffff; --line:#e7e2d4; --good:#1e7a46; --bad:#b3402e; }
+
+    /* Root scaling must match the main site: the shared header/footer/consent
+       partials + weavy.css are rem-based and assume this scale. This page's own
+       styles are px-based, so they are unaffected by it. */
+    html { font-size: 1vw; }
+    @media screen and (min-width: 1440px) { html { font-size: 14.4px; } }
+    @media screen and (max-width: 600px)  { html { font-size: 1.8vw; } }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; background:var(--paper); color:var(--ink); line-height:1.6; font-size:16px; overflow-x:hidden; }
+    .wrap { max-width:1040px; margin:0 auto; padding:0 22px; }
+    a { color:inherit; }
+    .hero { padding:64px 0 30px; text-align:center; }
+    .hero .kicker { justify-content:center; }
+    .hero h1 { font-size:clamp(30px,5vw,52px); line-height:1.12; font-weight:800; letter-spacing:-.5px; margin-top:10px; }
+    .hero h1 em { font-style:normal; background:linear-gradient(transparent 62%, var(--gold) 62%); padding:0 4px; }
+    .hero p.sub { max-width:660px; margin:18px auto 0; font-size:18px; color:var(--ash); }
+    .proofbar { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin:34px 0 8px; }
+    .proofbar .chip { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 22px; min-width:150px; }
+    .chip b { display:block; font-size:26px; letter-spacing:-.5px; }
+    .chip small { color:var(--ash); font-size:12.5px; text-transform:uppercase; letter-spacing:.6px; }
+    section { padding:52px 0; }
+    section.alt { background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .kicker { display:inline-flex; text-transform:uppercase; letter-spacing:2px; font-size:12px; font-weight:700; color:var(--olive); }
+    h2 { font-size:clamp(24px,3.4vw,34px); letter-spacing:-.4px; margin:8px 0 10px; }
+    .lead { color:var(--ash); max-width:720px; }
+    .shift { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:28px; }
+    .shcol { border-radius:16px; padding:24px; }
+    .shcol.old { background:#efece2; border:1px solid var(--line); }
+    .shcol.new { background:var(--ink); color:#fff; }
+    .shcol h3 { font-size:18px; margin-bottom:14px; }
+    .shcol.new h3 { color:var(--gold); }
+    .shcol ul { list-style:none; }
+    .shcol li { padding:8px 0 8px 26px; position:relative; font-size:14.5px; border-top:1px dashed rgba(0,0,0,.12); }
+    .shcol.old li::before { content:"✕"; position:absolute; left:0; color:var(--bad); font-weight:800; }
+    .shcol.new li { border-top:1px dashed rgba(255,255,255,.15); color:#d8d5c8; }
+    .shcol.new li::before { content:"✓"; position:absolute; left:0; color:var(--gold); font-weight:800; }
+    .kwchips { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+    .kw { background:var(--card); border:1px solid var(--line); border-radius:99px; padding:8px 16px; font-size:14px; }
+    .kw b { color:var(--ink); } .kw span { color:var(--good); font-weight:700; }
+    .clients { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin-top:30px; }
+    .client { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px; }
+    .client .tag { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; color:var(--olive); background:#f0ecdd; border-radius:99px; padding:3px 10px; margin-bottom:10px; }
+    .client h3 { font-size:16.5px; margin-bottom:8px; }
+    .client ul { list-style:none; }
+    .client li { padding:6px 0 6px 22px; position:relative; font-size:14px; color:var(--ash); }
+    .client li::before { content:"→"; position:absolute; left:0; color:var(--gold); font-weight:800; }
+    .case { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:28px; align-items:start; }
+    .case img { width:100%; border-radius:14px; border:1px solid var(--line); display:block; }
+    .case figcaption { font-size:13px; color:var(--ash); margin-top:8px; }
+    .resultchips { display:flex; flex-wrap:wrap; gap:12px; margin:24px 0 6px; }
+    .rc { background:var(--ink); color:#fff; border-radius:12px; padding:12px 18px; }
+    .rc b { color:var(--gold); font-size:22px; display:block; letter-spacing:-.5px; }
+    .rc small { font-size:12px; color:#c9c6b8; }
+    blockquote.q { background:var(--card); border-left:4px solid var(--gold); border-radius:0 14px 14px 0; padding:22px 26px; margin-top:22px; font-size:17px; font-style:italic; max-width:820px; }
+    blockquote.q footer { font-style:normal; font-size:13.5px; color:var(--ash); margin-top:10px; }
+    .todo { background:#fffaf0; border:1px dashed var(--gold); color:#8a6b00; font-style:normal; }
+    .cta { text-align:center; }
+    .btnrow { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:24px; }
+    .btn { display:inline-block; padding:15px 26px; border-radius:12px; font-weight:800; text-decoration:none; font-size:15.5px; }
+    .btn.main { background:var(--gold); color:var(--ink); }
+    .btn.dark { background:var(--ink); color:#fff; }
+    @media (max-width:820px){ .shift { grid-template-columns:1fr; } .case { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+  {{> header_de }}
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="kicker">Case Study · Local SEO · Heilpraktiker</span>
+      <h1>Von Platz&nbsp;#85 auf <em>Platz&nbsp;1</em></h1>
+      <p class="sub">Wie die <b>Naturheilpraxis Veronika Schlirf</b> in Regensburg von praktisch unsichtbar zur Nummer&nbsp;1 bei Google Maps wurde – für „Heilpraktikerin&ldquo; mit 5.400 Suchen pro Monat.</p>
+      <div class="proofbar">
+        <div class="chip"><b>#85 → #1</b><small>Maps-Position „Heilpraktiker&ldquo;</small></div>
+        <div class="chip"><b>0 → 5,0 ★</b><small>Google-Bewertungen</small></div>
+        <div class="chip"><b>5.400</b><small>Suchvolumen / Monat</small></div>
+        <div class="chip"><b>Regensburg</b><small>lokaler Markt</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUSGANGSLAGE -->
+  <section class="alt">
+    <div class="wrap">
+      <span class="kicker">Ausgangslage · März 2024</span>
+      <h2>Praktisch unsichtbar – Position #85.</h2>
+      <p class="lead">Beim Start unserer Analyse rankte die Praxis auf <b>Position 85</b> für „Heilpraktiker&ldquo; – auf Desktop wie mobil. Das Google-Profil war unvollständig, die Website nicht für Handys optimiert, Bewertungen gab es keine, und lokale Signale fehlten komplett. Hier der echte Zustand aus unserem Erst-Audit:</p>
+      <div class="shift">
+        <div class="shcol old">
+          <h3>Google-Business-Profil</h3>
+          <ul>
+            <li>Titel nicht optimiert</li>
+            <li>Keine keyword-optimierte Beschreibung</li>
+            <li>Leistungen &amp; Services nicht eingetragen</li>
+            <li>Öffnungszeiten &amp; Terminlink fehlen</li>
+            <li>Keine Fotos / kein Branding</li>
+            <li>0 Bewertungen, keine Beiträge</li>
+          </ul>
+        </div>
+        <div class="shcol old">
+          <h3>Website, Technik &amp; lokale Präsenz</h3>
+          <ul>
+            <li>Nicht mobil-optimiert</li>
+            <li>Kein Meta-Title / keine Description</li>
+            <li>Kein Schema / keine Rich Results</li>
+            <li>Keine Keywords in H1–H3, keine interne Verlinkung</li>
+            <li>Kein Analytics, kein Tag Manager, keine Search Console</li>
+            <li>Keine Citations, kein Apple-Maps-Eintrag, keine lokalen Backlinks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZIELKEYWORDS -->
+  <section>
+    <div class="wrap">
+      <span class="kicker">Schritt 1 · Keyword-Analyse</span>
+      <h2>Die richtigen Suchbegriffe zuerst.</h2>
+      <p class="lead">Wir haben das reale Suchvolumen im Einzugsgebiet Regensburg ermittelt und die Haupt- und Nebenkeywords festgelegt – die Grundlage für Profil, Website und Inhalte.</p>
+      <div class="kwchips">
+        <span class="kw"><b>Heilpraktikerin</b> · <span>5.400/mtl</span></span>
+        <span class="kw"><b>Naturheilpraxis</b> · <span>5.400/mtl</span></span>
+        <span class="kw"><b>Heiler</b> · <span>1.600/mtl</span></span>
+        <span class="kw"><b>Naturheilpraktiker</b> · <span>720/mtl</span></span>
+        <span class="kw"><b>geistige Wirbelsäulenaufrichtung</b> · <span>390/mtl</span></span>
+        <span class="kw"><b>Vergebungsritual</b> · <span>210/mtl</span></span>
+        <span class="kw"><b>Energetisches Arbeiten</b> · <span>90/mtl</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRATEGIE / UMSETZUNG -->
+  <section class="alt">
+    <div class="wrap">
+      <span class="kicker">Schritt 2 · Umsetzung</span>
+      <h2>Was wir konkret gemacht haben.</h2>
+      <p class="lead">Local SEO gewinnt man nicht mit einem Hebel, sondern mit allen gleichzeitig. Wir haben jeden Parameter unserer Checkliste abgearbeitet – vom Google-Profil bis zu lokalen Backlinks, Google Product Stacking und YouTube-Keyword-Abdeckung.</p>
+      <div class="clients">
+        <div class="client">
+          <span class="tag">Google-Business-Profil</span>
+          <h3>Das Fundament der lokalen Sichtbarkeit</h3>
+          <ul>
+            <li>Keyword-optimierter Titel &amp; 750-Zeichen-Beschreibung</li>
+            <li>Alle Kategorien + Leistungen: Bachblüten, Homöopathie, energetische Wirbelsäulenaufrichtung, Chakrenharmonisierung, Quantenfeldheilung</li>
+            <li>Öffnungszeiten, Terminlink, Fotos &amp; regelmäßige Beiträge</li>
+          </ul>
+        </div>
+        <div class="client">
+          <span class="tag">Website &amp; On-Page</span>
+          <h3>Technisch sauber &amp; keyword-fokussiert</h3>
+          <ul>
+            <li>Mobil-Optimierung &amp; Ladezeit</li>
+            <li>Neue Keyword-H1 + Meta-Title/Description, Schema &amp; Rich Results</li>
+            <li>Interne Verlinkung + neue Inhaltsseite rund um „Energetisches Arbeiten&ldquo;</li>
+          </ul>
+        </div>
+        <div class="client">
+          <span class="tag">Bewertungen</span>
+          <h3>Von 0 auf 5,0 ★</h3>
+          <ul>
+            <li>Bewertungsstrategie mit QR-Code in E-Mail-Signatur</li>
+            <li>Aktive Nachfass-Vorlagen nach Behandlungen</li>
+            <li>Antworten auf jede Bewertung</li>
+          </ul>
+        </div>
+        <div class="client">
+          <span class="tag">Citations &amp; lokale Backlinks</span>
+          <h3>Überall auffindbar &amp; regional vernetzt</h3>
+          <ul>
+            <li>NAP-konsistente Branchenverzeichnisse + Apple Maps &amp; Bing Places</li>
+            <li>Meta-/Facebook-Listing aufgebaut</li>
+            <li>Lokale Partner-Backlinks im Raum Regensburg (741-Link-Netzwerk)</li>
+          </ul>
+        </div>
+        <div class="client">
+          <span class="tag">Google Product Stacking</span>
+          <h3>Die Entität stärken</h3>
+          <ul>
+            <li>Verknüpfte Google-Assets (Business-Profil, Maps, Google Sites/Docs/Slides)</li>
+            <li>Konsistente Entitäts- &amp; Standortsignale an Google</li>
+            <li>Verstärkt lokale Relevanz &amp; Vertrauen</li>
+          </ul>
+        </div>
+        <div class="client">
+          <span class="tag">YouTube &amp; Content-Coverage</span>
+          <h3>Keyword-Abdeckung über Kanäle</h3>
+          <ul>
+            <li>Themen-Content zu Neben-Keywords (Chakrenharmonisierung, Quantenfeldheilung, Wirbelsäulenaufrichtung)</li>
+            <li>YouTube zur Abdeckung der Long-Tail-Suchen</li>
+            <li>Interne Verlinkung auf Kern-Keywords</li>
+          </ul>
+        </div>
+        <div class="client">
+          <span class="tag">Tracking &amp; Reporting</span>
+          <h3>Messbar machen</h3>
+          <ul>
+            <li>Google Analytics 4 + Search Console eingerichtet</li>
+            <li>Wöchentliches Google-Maps-Grid-Tracking (Local Falcon)</li>
+            <li>Fortschritt Woche für Woche dokumentiert</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ERGEBNIS -->
+  <section>
+    <div class="wrap">
+      <span class="kicker">Das Ergebnis</span>
+      <h2>Heute: Platz 1 in Regensburg.</h2>
+      <p class="lead">Gleiche Praxis, gleiche Adresse – aber statt Position 85 steht die Naturheilpraxis Veronika Schlirf heute bei „Heilpraktikerin&ldquo; ganz oben, mit perfekten 5,0 Sternen. Direkt aus dem Google-Maps-Ranking-Scan:</p>
+      <div class="resultchips">
+        <div class="rc"><b>#85 → #1</b><small>Maps-Position</small></div>
+        <div class="rc"><b>0 → 5,0 ★</b><small>Bewertungen</small></div>
+        <div class="rc"><b>Top 3</b><small>im gesamten Einzugsgebiet</small></div>
+      </div>
+      <div class="case">
+        <figure><img src="/review-assets/proof/veronika-schlirf-vorher.jpg" alt="Vorher: Naturheilpraxis Veronika Schlirf auf Position 85, Karte rot" loading="lazy"><figcaption>Vorher: praktisch unsichtbar – Position 85, die ganze Karte rot.</figcaption></figure>
+        <figure><img src="/review-assets/proof/veronika-schlirf-nachher.jpg" alt="Nachher: Naturheilpraxis Veronika Schlirf auf Platz 1, Karte grün" loading="lazy"><figcaption>Nachher: Platz 1 – grüne Karte im gesamten Einzugsgebiet.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAZIT (echtes Testimonial von Veronika kommt später hier rein) -->
+  <section class="alt">
+    <div class="wrap">
+      <span class="kicker">Fazit</span>
+      <h2>Gleiche Praxis. Komplett neue Sichtbarkeit.</h2>
+      <p class="lead">Innerhalb weniger Monate ging es von Google-Maps-Position&nbsp;85 auf Platz&nbsp;1 für „Heilpraktikerin&ldquo; – bei perfekten 5,0&nbsp;Sternen und voller Top-3-Abdeckung im Einzugsgebiet Regensburg. Kein neues Ladenlokal, kein größeres Werbebudget: nur ein konsequent optimiertes Google-Profil, eine saubere, mobil-optimierte Website und starke lokale Signale – Bewertungen, Citations, lokale Backlinks, Google&nbsp;Product&nbsp;Stacking und YouTube-Keyword-Abdeckung, Woche für Woche gemessen und nachgeschärft.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap">
+      <span class="kicker">Dein nächster Schritt</span>
+      <h2>Willst du auch die Nummer 1 werden?</h2>
+      <p class="lead" style="margin:0 auto;">Wir zeigen dir in einer kostenlosen Analyse, wo du heute bei Google Maps stehst – und wie der Weg an die Spitze aussieht.</p>
+      <div class="btnrow">
+        <a href="https://calendly.com/martin-233/15-minute-meeting?back=1" target="_blank" rel="noopener" class="btn main">📅 Kostenlose Analyse buchen</a>
+        <a href="https://wa.me/491711745089?text=Hallo%20741%20Studio,%20ich%20habe%20die%20Case%20Study%20gesehen" target="_blank" rel="noopener" class="btn dark">💬 WhatsApp schreiben</a>
+      </div>
+    </div>
+  </section>
+
+  {{> footer_de }}
+  {{> consent }}
+
+</body>
+</html>

@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="de" data-wf-domain="741.studio">
+<head>
+  <meta charset="utf-8"/>
+  <title>Persönliche Google-Analyse | Praxis Suriya Ingelheim | 741.Studio</title>
+  <meta content="Persönliche Google Maps &amp; Local SEO Video-Analyse für Coralie Suriyapperuma (Praxis Suriya, Ingelheim am Rhein)" name="description"/>
+  <meta content="noindex, nofollow" name="robots"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  
+  <link crossorigin="anonymous" href="/assets/weavy.css" rel="stylesheet" type="text/css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --brand--lemon: #fac118;
+      --brand--ash-grey: #8c8c8c;
+      --brand--french-gray: #fac118;
+    }
+
+    /* Root scaling must match the main site: the shared header/footer/consent
+       partials and weavy.css are rem-based and assume this scale. This page's
+       own styles are px-based, so they are unaffected by it. */
+    html { font-size: 1vw; }
+    @media screen and (min-width: 1440px) { html { font-size: 14.4px; } }
+    @media screen and (max-width: 600px)  { html { font-size: 1.8vw; } }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #fff;
+      color: #1a1a1a;
+      overflow-x: hidden;
+      font-size: 16px;
+    }
+
+    .section-hero-audit {
+      background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.4) 34%, rgba(250, 193, 24, 0.25) 71%), url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif") !important;
+      background-size: cover;
+      background-position: center;
+      padding: 80px 5% 64px;
+      text-align: center;
+    }
+
+    .audit-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #000;
+      color: var(--brand--lemon);
+      padding: 6px 18px;
+      border-radius: 99px;
+      font-size: 12.8px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .audit-headline {
+      font-size: clamp(35.2px, 4vw, 56px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: #000;
+      max-width: 960px;
+      margin: 0 auto 24px;
+    }
+
+    .audit-subheadline {
+      font-size: clamp(16.8px, 1.8vw, 20px);
+      color: #4a4a4a;
+      max-width: 780px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .hero-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1140px;
+      margin: 48px auto 0;
+      text-align: left;
+    }
+
+    .hero-card-item {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      transition: all 0.3s ease;
+    }
+
+    .hero-card-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(250, 193, 24, 0.2);
+      border-color: var(--brand--lemon);
+    }
+
+    .hero-card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(250, 193, 24, 0.15);
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19.2px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .hero-card-title {
+      font-size: 15.2px;
+      font-weight: 800;
+      color: #000;
+      margin-bottom: 4px;
+    }
+
+    .hero-card-sub {
+      font-size: 12.8px;
+      color: #666;
+    }
+
+    .hero-card-badge {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 800;
+      background: #f4f4f4;
+    }
+
+    /* Executive Letter Card */
+    .section-letter {
+      padding: 64px 5%;
+      background: #fafafa;
+    }
+
+    .letter-card {
+      background: #fff;
+      border: 2px solid var(--brand--lemon);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 860px;
+      margin: 0 auto;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    }
+
+    .letter-author-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .author-img {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #000;
+      color: var(--brand--lemon);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 17.6px;
+    }
+
+    .letter-body {
+      font-size: 17.6px;
+      line-height: 1.7;
+      color: #222;
+    }
+
+    .letter-body p {
+      margin-bottom: 14px;
+    }
+
+    /* Loom Video Container */
+    .section-video {
+      padding: 80px 5%;
+      background: #111;
+      color: #fff;
+      text-align: center;
+    }
+
+    .video-frame-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #000;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(250, 193, 24, 0.4);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(250, 193, 24, 0.2);
+    }
+
+    .video-responsive {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+
+    .video-responsive iframe {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%; border: 0;
+    }
+
+    .video-bar {
+      background: #181818;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-top: 1px solid #282828;
+    }
+
+    .video-pill {
+      background: #222;
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 13.6px;
+      color: #aaa;
+      border: 1px solid #333;
+    }
+
+    .video-pill strong { color: #fff; }
+
+    /* Executive Summary Cards */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .summary-box {
+      background: #fff;
+      border-radius: 20px;
+      padding: 32px;
+      border: 1px solid #eee;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .summary-box.green { border-top: 5px solid #10b981; }
+    .summary-box.amber { border-top: 5px solid var(--brand--lemon); }
+    .summary-box.red { border-top: 5px solid #ef4444; }
+
+    .summary-tag {
+      font-size: 12.8px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 99px;
+      width: fit-content;
+      margin-bottom: 16px;
+    }
+
+    .summary-box.green .summary-tag { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+    .summary-box.amber .summary-tag { background: rgba(250, 193, 24, 0.15); color: #b48500; }
+    .summary-box.red .summary-tag { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+    .summary-ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 15.2px;
+      color: #444;
+    }
+
+    .summary-ul li {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .summary-ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      font-weight: 900;
+    }
+
+    /* Tabs & Scorecard */
+    .audit-tab-btn {
+      background: #f0f0f0;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 99px;
+      font-weight: 700;
+      font-size: 14.4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .audit-tab-btn.active {
+      background: #000;
+      color: var(--brand--lemon);
+    }
+
+    .audit-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .audit-score-card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .pill-good { background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 800; padding: 3px 10px; border-radius: 99px; font-size: 12px; }
+    .pill-warning { background: rgba(250, 193, 24, 0.2); color: #92400e; font-weight: 800; padding: 3px 10px; border-radius: 99px; font-size: 12px; }
+    .pill-critical { background: rgba(239, 68, 68, 0.12); color: #b91c1c; font-weight: 800; padding: 3px 10px; border-radius: 99px; font-size: 12px; }
+
+    /* Custom Data Table */
+    .audit-table-wrap {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid #e5e5e5;
+      overflow: hidden;
+      margin-top: 32px;
+    }
+
+    .audit-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 15.2px;
+    }
+
+    .audit-table th {
+      background: #f8f8f8;
+      padding: 14px 20px;
+      font-weight: 800;
+      font-size: 12.8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #eee;
+    }
+
+    .audit-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* Growth Box */
+    .growth-wrapper {
+      background: #111;
+      color: #fff;
+      border-radius: 24px;
+      padding: 48px;
+      text-align: center;
+      border: 1px solid rgba(250, 193, 24, 0.4);
+    }
+
+    .growth-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 30px;
+      align-items: center;
+      margin: 30px 0;
+    }
+
+    .growth-box-item {
+      background: #1c1c1c;
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid #333;
+    }
+
+    .growth-box-item.target {
+      border-color: var(--brand--lemon);
+      background: rgba(250, 193, 24, 0.05);
+    }
+
+    .impact-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      border-top: 1px solid #333;
+      padding-top: 24px;
+    }
+
+    /* Buttons */
+    .btn-741-main {
+      background: var(--brand--lemon);
+      color: #000;
+      font-weight: 800;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-741-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(250, 193, 24, 0.4);
+    }
+
+    .btn-741-dark {
+      background: #000;
+      color: #fff;
+      font-weight: 800;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Mobile-First Responsive System (Max-Width 991px & 768px & 480px) */
+    .tab-nav-scroll {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    /* --- Scroll affordance for the tab strip ---------------------------------
+       On phones the strip scrolls horizontally. Without a cue the 4th tab just
+       looks cut off, so: fade the edges, show a tappable chevron, and give the
+       strip one gentle "peek" the first time it scrolls into view.
+       All of it is driven by JS state classes, so on desktop (where the tabs
+       simply wrap and nothing scrolls) none of it ever appears. */
+    .tab-nav-wrap { position: relative; }
+
+    .tab-nav-wrap::before,
+    .tab-nav-wrap::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 48px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .22s ease;
+      z-index: 2;
+    }
+    .tab-nav-wrap::before { left: 0;  background: linear-gradient(90deg,  #f9f9f9 28%, rgba(249, 249, 249, 0)); }
+    .tab-nav-wrap::after  { right: 0; background: linear-gradient(270deg, #f9f9f9 28%, rgba(249, 249, 249, 0)); }
+    .tab-nav-wrap.can-left::before  { opacity: 1; }
+    .tab-nav-wrap.can-right::after  { opacity: 1; }
+
+    .tab-nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      padding: 0 0 3px;
+      border: 1px solid rgba(26, 26, 26, 0.1);
+      border-radius: 50%;
+      background: #fff;
+      color: #1a1a1a;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(26, 26, 26, 0.16);
+    }
+    .tab-nav-prev { left: 2px; }
+    .tab-nav-next { right: 2px; }
+    .tab-nav-wrap.can-left  .tab-nav-prev { display: flex; }
+    .tab-nav-wrap.can-right .tab-nav-next { display: flex; }
+
+    .tab-nav-hint {
+      display: none;
+      margin: 10px 0 0 !important;
+      font-size: 12px !important;
+      line-height: 1.4 !important;
+      color: #8a8a8a !important;
+    }
+    .tab-nav-wrap.is-scrollable + .tab-nav-hint { display: block; }
+
+    .tab-nav-scroll { scroll-behavior: smooth; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .tab-nav-scroll { scroll-behavior: auto; }
+      .tab-nav-wrap::before,
+      .tab-nav-wrap::after { transition: none; }
+    }
+
+    .growth-arrow-vertical {
+      display: none;
+    }
+
+    @media (max-width: 991px) {
+      .section-hero-audit { padding: 56px 4% 48px; }
+      .audit-headline { font-size: clamp(28.8px, 5vw, 44.8px); }
+      .hero-cards-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+      .summary-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .audit-card-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .impact-row { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .growth-grid { grid-template-columns: 1fr; gap: 20px; }
+    }
+
+    @media (max-width: 768px) {
+      html, body {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+      }
+      
+      /* Fix navbar overlay covering top hero content */
+      .section-hero-audit { 
+        padding-top: 100px !important; 
+        padding-bottom: 28px !important; 
+        padding-left: 16px !important; 
+        padding-right: 16px !important; 
+        text-align: left !important; 
+        box-sizing: border-box !important;
+      }
+      .audit-eyebrow { font-size: 9.8px !important; padding: 4px 10px !important; margin-bottom: 10.5px !important; }
+      .audit-headline, .audit-headline * { font-size: 20.3px !important; line-height: 1.25 !important; margin-bottom: 10.5px !important; text-align: left !important; word-break: break-word !important; }
+      .audit-subheadline, .audit-subheadline * { font-size: 12.32px !important; line-height: 1.45 !important; color: #555 !important; margin-bottom: 17.5px !important; text-align: left !important; word-break: break-word !important; }
+      
+      .hero-cta-group, .final-cta-group {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .btn-741-main, .btn-741-dark {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 12px 18px !important;
+        font-size: 12.6px !important;
+        box-sizing: border-box !important;
+        min-height: 46px !important;
+      }
+
+      .hero-cards-grid { grid-template-columns: 1fr !important; gap: 10px !important; margin-top: 17.5px !important; width: 100% !important; box-sizing: border-box !important; }
+      .hero-card-item { padding: 14px !important; border-radius: 12px !important; box-sizing: border-box !important; }
+      .hero-card-title { font-size: 12.6px !important; }
+      .hero-card-sub { font-size: 10.92px !important; }
+      
+      /* Personal Letter Card & Typography Fixes */
+      .section-letter { padding: 28px 16px !important; box-sizing: border-box !important; }
+      .letter-card { padding: 18px 14px !important; border-radius: 14px !important; border-width: 1.5px !important; box-sizing: border-box !important; max-width: 100% !important; }
+      .letter-author-head { gap: 10px !important; margin-bottom: 12px !important; }
+      .author-img { width: 36px !important; height: 36px !important; font-size: 11.2px !important; font-weight: 900 !important; flex-shrink: 0 !important; }
+      .letter-author-head h4 { font-size: 13.3px !important; line-height: 1.2 !important; margin: 0 !important; }
+      .letter-author-head p { font-size: 10.92px !important; margin: 0 !important; }
+      .letter-body, .letter-body p, .letter-body * { font-size: 12.32px !important; line-height: 1.5 !important; color: #333 !important; word-break: break-word !important; }
+      .letter-body p { margin-bottom: 10px !important; }
+
+      .section-video { padding: 28px 16px !important; text-align: left !important; box-sizing: border-box !important; }
+      .section-video h2 { font-size: 19.6px !important; line-height: 1.25 !important; word-break: break-word !important; }
+      .section-video p { font-size: 11.9px !important; line-height: 1.4 !important; word-break: break-word !important; }
+      .video-frame-wrap { border-radius: 12px !important; width: 100% !important; box-sizing: border-box !important; }
+      .video-bar { flex-direction: column !important; align-items: stretch !important; gap: 8px !important; padding: 12px 14px !important; text-align: center !important; }
+      .video-pill { text-align: center !important; justify-content: center !important; width: 100% !important; box-sizing: border-box !important; font-size: 10.92px !important; }
+
+      /* Executive Summary Cards & List Typography Fixes */
+      .summary-grid { grid-template-columns: 1fr !important; gap: 12px !important; margin-top: 17.5px !important; width: 100% !important; box-sizing: border-box !important; }
+      .summary-box { padding: 16px 14px !important; border-radius: 14px !important; box-sizing: border-box !important; width: 100% !important; max-width: 100% !important; }
+      .summary-box h3 { font-size: 14px !important; margin-bottom: 8px !important; word-break: break-word !important; }
+      .summary-tag { font-size: 10.5px !important; padding: 3px 10px !important; margin-bottom: 10px !important; }
+      .summary-ul { font-size: 11.76px !important; line-height: 1.4 !important; gap: 8px !important; padding-left: 18px !important; margin: 0 !important; }
+      .summary-ul li, .summary-ul li * { font-size: 11.76px !important; line-height: 1.45 !important; word-break: break-word !important; margin-bottom: 6px !important; }
+
+      /* Tabs & Scorecards */
+      .tab-nav-scroll {
+        display: flex !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        justify-content: flex-start !important;
+        padding-bottom: 8px !important;
+        margin-top: 14px !important;
+        flex-wrap: nowrap !important;
+        scrollbar-width: none !important;
+        gap: 6px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .tab-nav-scroll::-webkit-scrollbar { display: none; }
+      .audit-tab-btn {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        padding: 7px 14px !important;
+        font-size: 10.92px !important;
+      }
+
+      .audit-card-grid { grid-template-columns: 1fr !important; gap: 10px !important; margin-top: 14px !important; width: 100% !important; box-sizing: border-box !important; }
+      .audit-score-card { padding: 12px 14px !important; border-radius: 12px !important; box-sizing: border-box !important; }
+      .audit-score-card strong { font-size: 12.32px !important; word-break: break-word !important; }
+      .audit-score-card p, .audit-score-card p * { font-size: 11.2px !important; line-height: 1.4 !important; word-break: break-word !important; }
+
+      .audit-table-wrap {
+        border-radius: 10px !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        margin-top: 14px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding-bottom: 6px !important;
+      }
+      .audit-table { min-width: 660px !important; font-size: 11.2px !important; }
+      .audit-table th, .audit-table td { padding: 8px 10px !important; word-break: normal !important; }
+      .audit-table th { white-space: nowrap !important; font-size: 10.5px !important; }
+
+      .pill-high, .pill-med, .pill-low, .pill-good, .pill-critical {
+        white-space: nowrap !important;
+        display: inline-block !important;
+        padding: 4px 10px !important;
+        font-size: 10.5px !important;
+      }
+
+      /* Quick Wins Frames & Typography */
+      .quickwins-grid-mobile {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .quickwin-item-box {
+        padding: 14px 14px !important;
+        border-radius: 12px !important;
+        gap: 12px !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        display: flex !important;
+      }
+      .quickwin-item-box h4 { font-size: 12.88px !important; line-height: 1.35 !important; font-weight: 800 !important; margin-bottom: 4px !important; word-break: break-word !important; }
+      .quickwin-item-box p, .quickwin-item-box p * { font-size: 11.48px !important; line-height: 1.4 !important; color: #666 !important; word-break: break-word !important; }
+      .quickwin-check-icon { width: 24px !important; height: 24px !important; font-size: 11.2px !important; flex-shrink: 0 !important; margin-top: 2px !important; }
+
+      /* Growth Box & "Organisch Stark" text overflow */
+      .growth-wrapper { padding: 18px 14px !important; border-radius: 16px !important; text-align: left !important; box-sizing: border-box !important; width: 100% !important; }
+      .growth-wrapper h2 { font-size: 18.9px !important; text-align: left !important; margin-bottom: 6px !important; word-break: break-word !important; }
+      .growth-grid { gap: 10px !important; margin: 14px 0 !important; width: 100% !important; box-sizing: border-box !important; }
+      .growth-box-item { padding: 14px 12px !important; border-radius: 12px !important; box-sizing: border-box !important; }
+      .growth-box-item div:nth-child(2) { font-size: 17.5px !important; line-height: 1.2 !important; margin: 4px 0 !important; font-weight: 800 !important; word-break: break-word !important; }
+      .growth-box-item p, .growth-box-item p * { font-size: 11.2px !important; line-height: 1.35 !important; word-break: break-word !important; }
+      .growth-arrow-desktop { display: none !important; }
+      .growth-arrow-vertical { display: block !important; text-align: center !important; font-size: 16.8px !important; color: var(--brand--lemon) !important; margin: 4px 0 !important; }
+      .impact-row { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; padding-top: 14px !important; width: 100% !important; box-sizing: border-box !important; }
+      .impact-row div div:first-child { font-size: 17.5px !important; }
+      .impact-row div div:last-child { font-size: 10.5px !important; }
+
+      /* Section headings carry an inline 2.2rem (35px) which is far too large
+         on a phone. Section-specific rules above (.section-video h2 etc.) have
+         higher specificity and still win. */
+      section h2 { font-size: 22px !important; line-height: 1.25 !important; word-break: break-word !important; }
+      section > div > span { line-height: 1.4 !important; }
+
+      /* Footer: close the 50px white gap above the footer. Akira (the white
+         pixel dog) is anchored to the footer's top edge, so with a white gap
+         her white body vanished into the background. Flush against the dark
+         CTA section above, she reads clearly again. */
+      html body footer.footer { margin-top: 0 !important; }
+    }
+  
+    /* ===== Client Proof Wall (social proof) ===== */
+    .section-proof { background:#f7f6f2; padding:88px 24px; }
+    .section-proof .proof-inner { max-width:1140px; margin:0 auto; }
+    .section-proof h2 { font-size:34px; font-weight:900; color:#1a1a1a; margin-bottom:12px; line-height:1.15; }
+    .section-proof .proof-lead { color:#6b6b6b; font-size:17px; max-width:700px; margin-bottom:4px; }
+    .section-proof .wall { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:12px; margin-top:34px; }
+    .section-proof .wc { display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #ece9e0; border-radius:12px; padding:12px 14px; }
+    .section-proof .av { width:44px; height:44px; min-width:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:15px; color:#fff; letter-spacing:.5px; }
+    .section-proof .wc:nth-child(6n+1) .av { background:#575136; }
+    .section-proof .wc:nth-child(6n+2) .av { background:#8a7d3a; }
+    .section-proof .wc:nth-child(6n+3) .av { background:#1e7a46; }
+    .section-proof .wc:nth-child(6n+4) .av { background:#2f5d8a; }
+    .section-proof .wc:nth-child(6n+5) .av { background:#a05c2c; }
+    .section-proof .wc:nth-child(6n) .av { background:#6b4a7e; }
+    .section-proof .wc b { display:block; font-size:14.5px; line-height:1.25; color:#1a1a1a; }
+    .section-proof .wc small { color:#6b6b6b; font-size:12px; }
+    .section-proof .wc.hl { border-color:#fac118; background:#fffaf0; }
+    .section-proof .avimg { width:44px; height:44px; min-width:44px; border-radius:50%; object-fit:cover; border:1px solid #ece9e0; background:#fff; }
+    .section-proof .wc .res { display:block; font-style:normal; font-size:12px; font-weight:700; color:#1e7a46; margin-top:2px; }
+    .section-proof .wc .res a { color:inherit; text-decoration:none; border-bottom:1px dotted rgba(30,122,70,.5); }
+    .section-proof .wallnote { margin-top:14px; font-size:13px; color:#6b6b6b; }
+    @media (max-width:768px){ .section-proof{padding:56px 18px;} .section-proof h2{font-size:25px;} }
+
+  </style>
+</head>
+<body>
+
+  <!-- Official 741.Studio Header -->
+  {{> header_de}}
+
+  <!-- Hero Section -->
+  <section class="section-hero-audit">
+    <div class="audit-eyebrow">🔒 INDIVIDUELLE GOOGLE MAPS ANALYSE</div>
+    <h1 class="audit-headline">
+      Hallo Coralie,<br>ich habe eine persönliche Analyse der <span style="color:var(--brand--lemon);">Praxis Suriya</span> erstellt.
+    </h1>
+    <p class="audit-subheadline">
+      Vielen Dank, dass du dir die Zeit nimmst. Als kleine Aufmerksamkeit habe ich eine individuelle Analyse erstellt, in der ich zeige, welche Chancen ich für deine Sichtbarkeit bei Google Maps in Ingelheim am Rhein und in Rheinhessen sehe.
+    </p>
+
+    <div class="hero-cta-group">
+      <a href="#loom-video" class="btn-741-main">▶ Video ansehen (ca. 5 Min)</a>
+      <a href="https://calendly.com/martin-233/15-minute-meeting?back=1" target="_blank" class="btn-741-dark">📅 Termin vereinbaren</a>
+    </div>
+
+    <div class="hero-cards-grid">
+      <div class="hero-card-item">
+        <div class="hero-card-icon">🌿</div>
+        <div class="hero-card-title">Praxis Suriya</div>
+        <div class="hero-card-sub">Coralie Suriyapperuma, Heilpraktikerin</div>
+        <div class="hero-card-badge">✓ Klare Nische</div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hero-card-icon">📍</div>
+        <div class="hero-card-title">Google Maps Stand</div>
+        <div class="hero-card-sub">Ingelheim am Rhein</div>
+        <div class="hero-card-badge" style="background:rgba(16,185,129,0.12); color:#047857;">★ 5,0 (12 Google Reviews)</div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hero-card-icon">🌐</div>
+        <div class="hero-card-title">suriya-praxis.de</div>
+        <div class="hero-card-sub">WordPress &amp; Elementor</div>
+        <div class="hero-card-badge" style="background:rgba(250,193,24,0.2); color:#b48500;">Schema Markup fehlt</div>
+      </div>
+      <div class="hero-card-item" style="cursor:pointer;" onclick="document.getElementById('loom-video').scrollIntoView({behavior:'smooth'})">
+        <div class="hero-card-icon" style="background:var(--brand--lemon);">▶</div>
+        <div class="hero-card-title">Loom Video Ready</div>
+        <div class="hero-card-sub">Persönlicher Video-Walkthrough</div>
+        <div class="hero-card-badge" style="background:#000; color:var(--brand--lemon);">3-4 MIN PLAY</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal Message Section -->
+  <section class="section-letter">
+    <div class="letter-card">
+      <div class="letter-author-head">
+        <div class="author-img" style="background:#000; display:flex; align-items:center; justify-content:center;"><img src="/assets/images/logo_white.png" alt="741 Studio" style="height:16px; width:auto;"></div>
+        <div>
+          <h4 style="font-weight:800; font-size:17.6px; margin:0;">Martin Drendel</h4>
+          <p style="font-size:13.6px; color:#777; margin:0;">Senior Local SEO &amp; Growth Consultancy</p>
+        </div>
+      </div>
+      <div class="letter-body">
+        <p>Hallo Coralie,</p>
+        <p>vielen Dank, dass du dir mein persönliches Video für die Praxis Suriya anschaust.</p>
+        <p>Deine digitale Präsenz hat bereits echte Alleinstellungsmerkmale – eine klare Nischen-Positionierung rund um Migräne und Vagusnerv-Regulation, eigene Leistungsseiten je Thema sowie die unkomplizierte Terminanfrage per WhatsApp.</p>
+        <p>In dieser Analyse zeige ich dir die konkreten Hebel, mit denen deine Praxis auch im Google Maps Pack in Ingelheim und Rheinhessen zur ersten Anlaufstelle wird.</p>
+      </div>
+      <div style="border-top:1px solid #eee; padding-top:16px; margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
+        <strong style="color:var(--brand--lemon); font-size:17.6px;">Martin Drendel</strong>
+        <span style="font-size:13.6px; color:#888;">741.Studio • Results Driven</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loom Video Section -->
+  <section class="section-video" id="loom-video">
+    <div style="max-width:760px; margin:0 auto 48px;">
+      <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px; letter-spacing:0.1em;">Persönliches Audit Video</span>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:8px;">Deine Video-Analyse im Detail</h2>
+      <p style="color:#aaa; font-size:16px;">Klick auf Wiedergabe, um den vollständigen, rund 5-minütigen Walkthrough zu starten.</p>
+    </div>
+
+    <div class="video-frame-wrap">
+      <div class="video-responsive">
+        <iframe src="https://www.loom.com/embed/12178efbe7c848c3a041a6fba940e234" title="Google Maps Ranking, schnelle Praxis-Optimierung – Analyse für Praxis Suriya" allowfullscreen></iframe>
+      </div>
+      <div class="video-bar">
+        <div class="video-pill">⏱️ Dauer: <strong>ca. 5 Minuten</strong></div>
+        <div class="video-pill">🎯 Persönlich aufgenommen für: <strong>Praxis Suriya (Coralie Suriyapperuma)</strong></div>
+        <a href="https://calendly.com/martin-233/15-minute-meeting?back=1" target="_blank" class="btn-741-main" style="padding:8px 18px; font-size:13.6px;">Gespräch vereinbaren</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Summary Section -->
+  <section style="padding: 64px 5%; background:#fff; text-align:center;">
+    <div style="max-width:760px; margin:0 auto;">
+      <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px;">Zusammenfassung</span>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:6px;">Wichtigste Erkenntnisse auf einen Blick</h2>
+      <p style="color:#666;">Die 3 wichtigsten Säulen deiner aktuellen digitalen Aufstellung.</p>
+    </div>
+
+    <div class="summary-grid" style="max-width:1140px; margin-left:auto; margin-right:auto;">
+      <div class="summary-box green">
+        <div class="summary-tag">🟢 Stärken</div>
+        <h3 style="font-size:19.2px; font-weight:800; margin-bottom:14px;">Was bereits perfekt läuft</h3>
+        <ul class="summary-ul">
+          <li>Klare Nischen-Positionierung auf Migräne, Nervensystem &amp; Vagusnerv-Regulation – eine echte Alleinstellung.</li>
+          <li>Eigene Leistungsseiten je Thema (Akupunktur, Migräne, Nacken, Kiefer, Ayurveda).</li>
+          <li>Sauberer Meta-Title &amp; Meta-Description sowie gute interne Verlinkung.</li>
+          <li>WhatsApp-Terminanfrage und aktive Social-Media-Präsenz (Instagram, Facebook).</li>
+        </ul>
+      </div>
+      <div class="summary-box amber">
+        <div class="summary-tag">🟠 Größte Chance</div>
+        <h3 style="font-size:19.2px; font-weight:800; margin-bottom:14px;">Größter Sichtbarkeits-Hebel</h3>
+        <ul class="summary-ul">
+          <li><strong>Google-Bewertungen:</strong> Sehr gute Basis mit 5,0 ★ bei 12 Bewertungen – diese Basis gezielt weiter ausbauen, um im Maps-Pack dauerhaft vorne zu bleiben.</li>
+          <li><strong>Google-Business-Profil:</strong> Nebenkategorien, Leistungen, Fotos und Beiträge ergänzen.</li>
+          <li><strong>Reichweite ausbauen:</strong> Ayurveda &amp; Migräne gezielt Richtung Mainz und Wiesbaden erweitern.</li>
+        </ul>
+      </div>
+      <div class="summary-box red">
+        <div class="summary-tag">🔴 Kritische Hürden</div>
+        <h3 style="font-size:19.2px; font-weight:800; margin-bottom:14px;">Aufräumen &amp; Technik</h3>
+        <ul class="summary-ul">
+          <li><strong>NAP-Konsistenz:</strong> Schützenpfad 29 vs. Friedrich-Ebert-Str. 3 sowie zwei unterschiedliche E-Mail-Adressen.</li>
+          <li><strong>Domain-Situation:</strong> Drei Domains im Umlauf – eine davon löst nicht auf.</li>
+          <li><strong>Technik:</strong> Schema-Markup fehlt komplett, GA4 und Search Console sind nicht eingerichtet.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Audit Breakdown Section -->
+  <section style="padding: 64px 5%; background:#f9f9f9; text-align:center;">
+    <div style="max-width:760px; margin:0 auto;">
+      <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px;">Detail-Auswertung</span>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:6px;">Local SEO &amp; Website Scorecard</h2>
+      <p style="color:#666;">Systematische Analyse nach der 741 Studio Audit-Methodik.</p>
+    </div>
+
+    <div class="tab-nav-wrap">
+      <div class="tab-nav-scroll" id="auditTabNav">
+        <button class="audit-tab-btn active" onclick="switchTab('gbp')">📍 Google Business Profile</button>
+        <button class="audit-tab-btn" onclick="switchTab('website')">💻 Website &amp; Technik</button>
+        <button class="audit-tab-btn" onclick="switchTab('citations')">🌐 Citations &amp; Wettbewerb</button>
+        <button class="audit-tab-btn" onclick="switchTab('keywords')">🔍 Keyword-Recherche</button>
+      </div>
+      <button class="tab-nav-arrow tab-nav-prev" type="button" aria-label="Vorherige Bereiche anzeigen">‹</button>
+      <button class="tab-nav-arrow tab-nav-next" type="button" aria-label="Weitere Bereiche anzeigen">›</button>
+    </div>
+    <p class="tab-nav-hint">4 Bereiche – zum Wechseln wischen oder tippen</p>
+
+    <div style="max-width:1140px; margin:0 auto;">
+      <div id="tab-gbp" class="tab-pane active">
+        <div class="audit-card-grid">
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Profil beansprucht &amp; verifiziert</strong>
+              <span class="pill-warning">⚠ Teilweise</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Etablierte Praxis – Beanspruchung &amp; Verifizierung im GBP bestätigen.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Profilname mit Keywords</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">„Heilpraktiker Ingelheim I Praxis Suriya – Ayurveda &amp; Naturheilkunde“ – Ort und Leistungen sind bereits enthalten.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Primäre Kategorie</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">„Heilpraktiker“ ist korrekt als Hauptkategorie hinterlegt.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Nebenkategorien</strong>
+              <span class="pill-critical">✖ Fehlt</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Ergänzen: Akupunkteur, Massagetherapeut, Alternativmediziner.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Leistungen / Services</strong>
+              <span class="pill-critical">✖ Fehlt</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Einzeln eintragen: Migräne-Begleitung, Akupunktur, Ayurveda, Vagusnerv-Regulation.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Öffnungszeiten</strong>
+              <span class="pill-warning">⚠ Teilweise</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Auf der Website Di–Fr 09–19 Uhr – im Google-Profil fordert Google aktuell noch zum Ergänzen der Öffnungszeiten auf.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Telefonnummer</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">0174 7411087 ist hinterlegt.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Adresse &amp; NAP-Konsistenz</strong>
+              <span class="pill-critical">✖ Fehlt</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Schützenpfad 29 vs. Friedrich-Ebert-Str. 3 in Verzeichnissen – dringend vereinheitlichen.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Website-Link</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">suriya-praxis.de verlinkt – künftig nur EINE Domain verwenden.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Terminbuchung / Buchungslink</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Termin-Formular + WhatsApp – stark, auch im GBP verlinken.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Bewertungen – Anzahl</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">5,0 ★ bei 12 Google-Bewertungen – starke Basis, jetzt kontinuierlich ausbauen.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Beiträge / Posts</strong>
+              <span class="pill-warning">⚠ Teilweise</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Aktiver Blog &amp; Instagram – Inhalte zusätzlich als GBP-Beiträge ausspielen.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Chat / Nachrichten</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">WhatsApp ist aktiv – sehr gut umgesetzt.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-website" class="tab-pane">
+        <div class="audit-card-grid">
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">CMS</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">WordPress mit Elementor 4.1.5.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Eigene Leistungsseiten je Service</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">★ Stark: Akupunktur, Migräne, Nacken, Kiefer, Ayurveda haben eigene Seiten.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Mobil-responsive</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Viewport korrekt gesetzt.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Ladezeit / PageSpeed</strong>
+              <span class="pill-warning">⚠ Teilweise</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Elementor-Seiten können schwer werden – Bilder komprimieren &amp; Caching prüfen.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">SSL-Zertifikat</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">HTTPS aktiv.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Von Google indexiert</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Rankt bereits für lokale Begriffe.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Meta-Title</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">„Migräne &amp; Nervenregulation Ingelheim / Praxis Suriya“ – sauber formuliert.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Meta-Description</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Gut formuliert mit den relevanten Leistungen.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Überschriften-Struktur H1–H3</strong>
+              <span class="pill-warning">⚠ Teilweise</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">H1 mit ungewöhnlicher Groß-/Kleinschreibung – bereinigen, eine H1 pro Seite.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Interne Verlinkung</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Leistungen sind untereinander gut verlinkt.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Schema / Rich Results</strong>
+              <span class="pill-critical">✖ Fehlt</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Kein JSON-LD gefunden – MedicalBusiness-Markup fehlt komplett.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Bilder: Alt-Texte</strong>
+              <span class="pill-warning">⚠ Teilweise</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Ca. 5–7 Bilder ohne Alt-Text – mit Leistung + Ort ergänzen.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Open Graph / Meta-Tags</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">og:title, og:description und og:image sind vorhanden.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Google Analytics (GA4)</strong>
+              <span class="pill-critical">✖ Fehlt</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Kein Tracking erkannt – GA4 einrichten.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Google Tag Manager</strong>
+              <span class="pill-critical">✖ Fehlt</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Nicht erkannt – optional über GTM ausspielen.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Search Console / Bing</strong>
+              <span class="pill-critical">✖ Fehlt</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Nicht sichtbar – einrichten und Sitemap einreichen.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Standort-/Kontaktseite</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Google-Map ist eingebunden.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Social-Media-Links</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Facebook und Instagram sind verlinkt.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-citations" class="tab-pane">
+        <div class="audit-card-grid">
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">NAP-Konsistenz über Verzeichnisse</strong>
+              <span class="pill-critical">✖ Fehlt</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Adresse, E-Mail und Domain variieren – wichtigster Aufräum-Punkt.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Domain-Situation</strong>
+              <span class="pill-critical">✖ Fehlt</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">suriya-praxis.de / praxis-suriya.de / .online (löst nicht auf) – auf EINE Hauptdomain konsolidieren.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Citations (Anzahl &amp; Qualität)</strong>
+              <span class="pill-warning">⚠ Teilweise</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Stadtbranchenbuch, branchen-info, theralupa, GelbeSeiten vorhanden.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Branchenverzeichnisse (Heilpraktiker)</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">theralupa u. a. sind vorhanden.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Apple Maps / Business Connect</strong>
+              <span class="pill-critical">✖ Fehlt</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Nicht bestätigt – Eintrag anlegen.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Bing Places</strong>
+              <span class="pill-critical">✖ Fehlt</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Nicht bestätigt – Eintrag anlegen.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Meta / Facebook Business</strong>
+              <span class="pill-good">✓ OK</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Facebook und Instagram (suriya.ayurveda) sind aktiv.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Backlinks (Anzahl &amp; Qualität)</strong>
+              <span class="pill-warning">⚠ Teilweise</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">Überwiegend Verzeichnisse – lokale &amp; thematische Backlinks ausbauen.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Wettbewerber: Naturheilpraxis Ingelheim</strong>
+              <span class="pill-warning">⚠ Teilweise</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">naturheilpraxis-ingelheim.de bietet ebenfalls Akupunktur – Ranking &amp; Reviews live prüfen.</p>
+          </div>
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">Weitere Heilpraktiker Ingelheim</strong>
+              <span class="pill-warning">⚠ Teilweise</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0;">GelbeSeiten-Liste „Top 10 Heilpraktiker Ingelheim“ als Benchmark prüfen.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-keywords" class="tab-pane">
+        <div class="audit-table-wrap">
+          <table class="audit-table">
+            <thead>
+              <tr><th>Keyword</th><th>Einzugsgebiet</th><th>Suchvolumen</th><th>Status / Notiz</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Heilpraktiker Ingelheim</strong></td><td>Ingelheim</td><td>mittel</td><td>Hauptkeyword – eigene Seite vorhanden</td></tr>
+              <tr><td><strong>Migräne Behandlung Ingelheim</strong></td><td>Region</td><td>mittel</td><td>★ Eigene 12-Wochen-Seite – klare Alleinstellung</td></tr>
+              <tr><td><strong>Akupunktur Ingelheim</strong></td><td>Ingelheim</td><td>mittel</td><td>Eigene Seite vorhanden</td></tr>
+              <tr><td><strong>Ayurveda Ingelheim / Mainz</strong></td><td>Region</td><td>mittel</td><td>Ausbaufähig Richtung Mainz &amp; Wiesbaden</td></tr>
+              <tr><td><strong>Schmerztherapie Ingelheim</strong></td><td>Ingelheim</td><td>mittel</td><td>Eigene Seite vorhanden</td></tr>
+              <tr><td><strong>Vagusnerv Therapie</strong></td><td>überregional</td><td>niedrig–mittel</td><td>Nischen-Alleinstellung – stärker ausspielen</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Wins Section -->
+  <section style="padding: 64px 5%; background:#fff; text-align:center;">
+    <div style="max-width:760px; margin:0 auto 40px;">
+      <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px;">Sofort-Maßnahmen</span>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:6px;">Was du bereits morgen verbessern könntest</h2>
+      <p style="color:#666;">Schnelle Quick Wins für deine Praxis mit maximaler Hebelwirkung.</p>
+    </div>
+
+    <div class="quickwins-grid-mobile" style="display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; max-width:1000px; margin:0 auto; text-align:left;">
+      <div class="quickwin-item-box" style="background:#fdfdfd; border:1px solid #eee; padding:20px; border-radius:14px; display:flex; gap:14px;">
+        <div class="quickwin-check-icon" style="width:28px; height:28px; border-radius:8px; background:rgba(250,193,24,0.2); color:#b48500; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0;">✓</div>
+        <div>
+          <h4 style="font-size:16px; font-weight:800; margin-bottom:4px;">NAP &amp; Domains vereinheitlichen</h4>
+          <p style="font-size:13.6px; color:#666; margin:0;">Eine Adresse, eine E-Mail, eine Hauptdomain – die übrigen per 301 weiterleiten.</p>
+        </div>
+      </div>
+      <div class="quickwin-item-box" style="background:#fdfdfd; border:1px solid #eee; padding:20px; border-radius:14px; display:flex; gap:14px;">
+        <div class="quickwin-check-icon" style="width:28px; height:28px; border-radius:8px; background:rgba(250,193,24,0.2); color:#b48500; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0;">✓</div>
+        <div>
+          <h4 style="font-size:16px; font-weight:800; margin-bottom:4px;">Google-Bewertungen aktiv aufbauen</h4>
+          <p style="font-size:13.6px; color:#666; margin:0;">Bewertungs-Link &amp; QR-Code nach der Behandlung – die vorhandenen 12 Bewertungen gezielt weiter ausbauen.</p>
+        </div>
+      </div>
+      <div class="quickwin-item-box" style="background:#fdfdfd; border:1px solid #eee; padding:20px; border-radius:14px; display:flex; gap:14px;">
+        <div class="quickwin-check-icon" style="width:28px; height:28px; border-radius:8px; background:rgba(250,193,24,0.2); color:#b48500; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0;">✓</div>
+        <div>
+          <h4 style="font-size:16px; font-weight:800; margin-bottom:4px;">MedicalBusiness Schema-Markup einbauen</h4>
+          <p style="font-size:13.6px; color:#666; margin:0;">JSON-LD mit Name, Adresse, Geo, Öffnungszeiten, Telefon und Leistungen ergänzen.</p>
+        </div>
+      </div>
+      <div class="quickwin-item-box" style="background:#fdfdfd; border:1px solid #eee; padding:20px; border-radius:14px; display:flex; gap:14px;">
+        <div class="quickwin-check-icon" style="width:28px; height:28px; border-radius:8px; background:rgba(250,193,24,0.2); color:#b48500; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0;">✓</div>
+        <div>
+          <h4 style="font-size:16px; font-weight:800; margin-bottom:4px;">Nebenkategorien &amp; Leistungen im Profil ergänzen</h4>
+          <p style="font-size:13.6px; color:#666; margin:0;">Akupunkteur, Massagetherapeut, Alternativmediziner sowie die einzelnen Leistungen eintragen.</p>
+        </div>
+      </div>
+      <div class="quickwin-item-box" style="background:#fdfdfd; border:1px solid #eee; padding:20px; border-radius:14px; display:flex; gap:14px;">
+        <div class="quickwin-check-icon" style="width:28px; height:28px; border-radius:8px; background:rgba(250,193,24,0.2); color:#b48500; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0;">✓</div>
+        <div>
+          <h4 style="font-size:16px; font-weight:800; margin-bottom:4px;">Bild-Alt-Texte ergänzen &amp; Bilder komprimieren</h4>
+          <p style="font-size:13.6px; color:#666; margin:0;">Z. B. „Akupunktur gegen Migräne in Ingelheim“ – zusätzlich als WebP ausspielen.</p>
+        </div>
+      </div>
+      <div class="quickwin-item-box" style="background:#fdfdfd; border:1px solid #eee; padding:20px; border-radius:14px; display:flex; gap:14px;">
+        <div class="quickwin-check-icon" style="width:28px; height:28px; border-radius:8px; background:rgba(250,193,24,0.2); color:#b48500; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0;">✓</div>
+        <div>
+          <h4 style="font-size:16px; font-weight:800; margin-bottom:4px;">H1 bereinigen</h4>
+          <p style="font-size:13.6px; color:#666; margin:0;">Einheitliche Schreibweise und genau eine H1 pro Seite.</p>
+        </div>
+      </div>
+      <div class="quickwin-item-box" style="background:#fdfdfd; border:1px solid #eee; padding:20px; border-radius:14px; display:flex; gap:14px;">
+        <div class="quickwin-check-icon" style="width:28px; height:28px; border-radius:8px; background:rgba(250,193,24,0.2); color:#b48500; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0;">✓</div>
+        <div>
+          <h4 style="font-size:16px; font-weight:800; margin-bottom:4px;">GA4 Analytics &amp; Search Console einrichten</h4>
+          <p style="font-size:13.6px; color:#666; margin:0;">Sauberes Tracking, um Anfragen und Patient:innen-Herkunft exakt zu messen.</p>
+        </div>
+      </div>
+      <div class="quickwin-item-box" style="background:#fdfdfd; border:1px solid #eee; padding:20px; border-radius:14px; display:flex; gap:14px;">
+        <div class="quickwin-check-icon" style="width:28px; height:28px; border-radius:8px; background:rgba(250,193,24,0.2); color:#b48500; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0;">✓</div>
+        <div>
+          <h4 style="font-size:16px; font-weight:800; margin-bottom:4px;">Apple Maps &amp; Bing Places anlegen</h4>
+          <p style="font-size:13.6px; color:#666; margin:0;">Zusätzliche lokale Sichtbarkeit über Google hinaus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ready-made building blocks -->
+  <section style="padding: 64px 5%; background:#f9f9f9; text-align:center;">
+    <div style="max-width:760px; margin:0 auto 40px;">
+      <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px;">Fertige Bausteine</span>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:6px;">Konkrete Vorschläge zum Übernehmen</h2>
+      <p style="color:#666;">Diese Texte kannst du direkt in dein Google-Business-Profil kopieren.</p>
+    </div>
+
+    <div class="quickwins-grid-mobile" style="display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; max-width:1000px; margin:0 auto; text-align:left;">
+      <div class="quickwin-item-box" style="background:#fff; border:1px solid #eee; padding:20px; border-radius:14px; display:flex; gap:14px;">
+        <div class="quickwin-check-icon" style="width:28px; height:28px; border-radius:8px; background:rgba(250,193,24,0.2); color:#b48500; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0;">1</div>
+        <div>
+          <h4 style="font-size:16px; font-weight:800; margin-bottom:4px;">Profil-Beschreibung (ca. 750 Zeichen)</h4>
+          <p style="font-size:13.6px; color:#666; margin:0;">„Naturheilpraxis in Ingelheim am Rhein: Heilpraktikerin Coralie Suriyapperuma behandelt Migräne, Kopf-, Nacken- &amp; Kieferschmerzen sowie innere Unruhe – mit Akupunktur, Ayurveda, Vagusnerv-Regulation &amp; Mikronährstoffmedizin. Ganzheitlich, persönlich, terminbasiert. Jetzt Termin anfragen.“</p>
+        </div>
+      </div>
+      <div class="quickwin-item-box" style="background:#fff; border:1px solid #eee; padding:20px; border-radius:14px; display:flex; gap:14px;">
+        <div class="quickwin-check-icon" style="width:28px; height:28px; border-radius:8px; background:rgba(250,193,24,0.2); color:#b48500; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0;">2</div>
+        <div>
+          <h4 style="font-size:16px; font-weight:800; margin-bottom:4px;">Leistungen einzeln eintragen</h4>
+          <p style="font-size:13.6px; color:#666; margin:0;">Migräne-Begleitung · Akupunktur · Ayurveda-Massage · Vagusnerv-Regulation · Mikronährstoffmedizin – jeweils mit kurzer Beschreibung.</p>
+        </div>
+      </div>
+      <div class="quickwin-item-box" style="background:#fff; border:1px solid #eee; padding:20px; border-radius:14px; display:flex; gap:14px;">
+        <div class="quickwin-check-icon" style="width:28px; height:28px; border-radius:8px; background:rgba(250,193,24,0.2); color:#b48500; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0;">3</div>
+        <div>
+          <h4 style="font-size:16px; font-weight:800; margin-bottom:4px;">Beitrags-Ideen für Google &amp; Instagram</h4>
+          <p style="font-size:13.6px; color:#666; margin:0;">Migräne-Tipp · Vagusnerv-Übung · Ayurveda-Saisonimpuls · Patientenstimme – Blog-Inhalte einfach zweitverwerten.</p>
+        </div>
+      </div>
+      <div class="quickwin-item-box" style="background:#fff; border:1px solid #eee; padding:20px; border-radius:14px; display:flex; gap:14px;">
+        <div class="quickwin-check-icon" style="width:28px; height:28px; border-radius:8px; background:rgba(250,193,24,0.2); color:#b48500; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0;">4</div>
+        <div>
+          <h4 style="font-size:16px; font-weight:800; margin-bottom:4px;">Einheitliche NAP-Angabe</h4>
+          <p style="font-size:13.6px; color:#666; margin:0;">Überall identisch: Praxis Suriya, Schützenpfad 29, 55218 Ingelheim am Rhein, 0174 7411087 – plus eine einzige E-Mail-Adresse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Growth Section -->
+  <section style="padding: 64px 5%; background:#fafafa;">
+    <div class="growth-wrapper" style="max-width:1140px; margin:0 auto;">
+      <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px;">Wachstums-Potenzial</span>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:6px; color:#fff;">Dein Potenzial im direkten Vergleich</h2>
+
+      <div class="growth-grid">
+        <div class="growth-box-item">
+          <div style="font-size:12.8px; text-transform:uppercase; color:#888; font-weight:800;">Aktueller Stand</div>
+          <div style="font-size:40px; font-weight:900; color:#aaa; margin:8px 0;">Starke Nische</div>
+          <p style="font-size:13.6px; color:#888;">Sehr gute inhaltliche Basis, klare Spezialisierung und 5,0 ★ Bewertungen – aber ungenutztes Maps-Potenzial durch uneinheitliche Daten und ein noch unvollständiges Google-Profil.</p>
+        </div>
+        <div class="growth-arrow-desktop" style="font-size:32px; color:var(--brand--lemon);">➔</div>
+        <div class="growth-arrow-vertical">↓</div>
+        <div class="growth-box-item target">
+          <div style="font-size:12.8px; text-transform:uppercase; color:var(--brand--lemon); font-weight:800;">Ziel-Potenzial</div>
+          <div style="font-size:40px; font-weight:900; color:var(--brand--lemon); margin:8px 0;">Top 1 Maps Pack</div>
+          <p style="font-size:13.6px; color:#bbb;">Erste Anlaufstelle für Migräne, Akupunktur &amp; Naturheilkunde in Ingelheim und Rheinhessen.</p>
+        </div>
+      </div>
+
+      <div class="impact-row">
+        <div>
+          <div style="font-size:28.8px; font-weight:900; color:var(--brand--lemon);">+180%</div>
+          <div style="font-size:13.6px; color:#aaa;">Mehr Terminanfragen</div>
+        </div>
+        <div>
+          <div style="font-size:28.8px; font-weight:900; color:var(--brand--lemon);">+240%</div>
+          <div style="font-size:13.6px; color:#aaa;">Routenplaner-Aufrufe</div>
+        </div>
+        <div>
+          <div style="font-size:28.8px; font-weight:900; color:var(--brand--lemon);">+150%</div>
+          <div style="font-size:13.6px; color:#aaa;">Profil-Aufrufe</div>
+        </div>
+        <div>
+          <div style="font-size:22.4px; font-weight:900; color:var(--brand--lemon);">Top 1</div>
+          <div style="font-size:13.6px; color:#aaa;">Migräne-Expertise der Region</div>
+        </div>
+      </div>
+      <p style="font-size:11.5px; color:#777; margin-top:18px; text-align:center;">Richtwerte aus vergleichbaren Local-SEO-Projekten – keine garantierten Ergebnisse.</p>
+    </div>
+  </section>
+
+  <!-- Action Roadmap Section -->
+  <section style="padding: 64px 5%; background:#fff; text-align:center;">
+    <div style="max-width:760px; margin:0 auto 40px;">
+      <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px;">Priorisierter Fahrplan</span>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:6px;">Das ist mein strukturierter Fahrplan</h2>
+      <p style="color:#666;">Schritt für Schritt zur lokalen Sichtbarkeit für die Praxis Suriya.</p>
+    </div>
+
+    <div class="audit-table-wrap" style="max-width:1140px; margin:0 auto;">
+      <table class="audit-table">
+        <thead>
+          <tr>
+            <th>Maßnahme</th>
+            <th>Priorität</th>
+            <th>Aufwand</th>
+            <th>Verantwortlich / Notiz</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>NAP &amp; Domains vereinheitlichen</strong> (Adresse, E-Mail, EINE Domain)</td>
+            <td><span class="pill-critical">Hoch</span></td>
+            <td>Mittel</td>
+            <td>★ Adresse &amp; Domain widersprüchlich – verwirrt Google &amp; Patient:innen</td>
+          </tr>
+          <tr>
+            <td><strong>Google-Bewertungen aktiv aufbauen</strong> (Link, QR, Nachfass)</td>
+            <td><span class="pill-critical">Hoch</span></td>
+            <td>Mittel</td>
+            <td>Starke 5,0 ★ Basis bei 12 Bewertungen – Anzahl kontinuierlich ausbauen</td>
+          </tr>
+          <tr>
+            <td><strong>MedicalBusiness / LocalBusiness Schema-Markup einbauen</strong></td>
+            <td><span class="pill-critical">Hoch</span></td>
+            <td>Gering</td>
+            <td>Fehlt komplett – Chance auf Rich Results</td>
+          </tr>
+          <tr>
+            <td><strong>Google-Business-Profil vollständig optimieren</strong></td>
+            <td><span class="pill-critical">Hoch</span></td>
+            <td>Mittel</td>
+            <td>Leistungen, Fotos, Beiträge, Kategorien</td>
+          </tr>
+          <tr>
+            <td><strong>GA4 + Google Search Console einrichten</strong></td>
+            <td><span class="pill-warning">Mittel</span></td>
+            <td>Gering</td>
+            <td>Kein Tracking erkannt</td>
+          </tr>
+          <tr>
+            <td><strong>Bild-Alt-Texte ergänzen + Bilder komprimieren</strong></td>
+            <td><span class="pill-warning">Mittel</span></td>
+            <td>Gering</td>
+            <td>5–7 ohne Alt; Ladezeit (Elementor)</td>
+          </tr>
+          <tr>
+            <td><strong>H1 bereinigen</strong> (Groß-/Kleinschreibung, Abstände)</td>
+            <td><span class="pill-warning">Mittel</span></td>
+            <td>Gering</td>
+            <td>Aktuell ungewöhnlich formatiert</td>
+          </tr>
+          <tr>
+            <td><strong>Apple Maps &amp; Bing Places anlegen</strong></td>
+            <td><span class="pill-low">Niedrig</span></td>
+            <td>Gering</td>
+            <td>Zusätzliche lokale Sichtbarkeit</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  
+  <!-- Client Proof Wall (social proof) -->
+  <section class="section-proof">
+    <div class="proof-inner">
+    <h2>Ist der Sprung in die Top 3 realistisch? Für diese Betriebe war er es.</h2>
+    <p class="proof-lead">Jeder Name hier ist echte, geleistete Arbeit — mit dem tatsächlichen Ranking-Sprung, den wir für lokale Betriebe erreicht haben.</p>
+    <div class="wall">
+      <div class="wc hl"><img class="avimg" src="/review-assets/people/bali-healing.jpg" alt="Bali Healing, Canggu" loading="lazy"><div><b>Bali Healing, Canggu</b><small>Holistic Health Center</small><em class="res"><a href="#">▲ Platz 5 → 1 · „Holistic Health Center“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/physio-anatomie.jpg" alt="Physio Anatomie GmbH" loading="lazy"><div><b>Physio Anatomie GmbH</b><small>Physiotherapie</small><em class="res"><a href="#">▲ Platz 12 → 2 · „Physiotherapie Stuttgart“</a></em></div></div>
+      <div class="wc"><span class="av">PK</span><div><b>Physiotherapie Kraft</b><small>Physiotherapie</small><em class="res"><a href="/review-assets/proof/physio-kraft-nachher.jpg" target="_blank">▲ Platz 8 → 1 · „Krankengymnastik“</a></em></div></div>
+      <div class="wc"><span class="av">TM</span><div><b>Torsten Menge</b><small>Psychotherapie</small><em class="res"><a href="/review-assets/proof/torsten-menge-nachher.jpg" target="_blank">▲ Platz 117 → 3 · „Onkologie-Psychologie“</a></em></div></div>
+      <div class="wc"><span class="av">EW</span><div><b>Eva Maria Weber</b><small>Massagepraxis</small><em class="res"><a href="#">▲ Platz 14 → 2 · „Massagepraxis“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/karin-lorenz.jpg" alt="Karin Lorenz" loading="lazy"><div><b>Karin Lorenz</b><small>TCM-Praxis</small><em class="res"><a href="#">▲ Platz 19 → 1 · „Akupunktur & TCM“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/maria-abel.jpg" alt="Maria Abel" loading="lazy"><div><b>Maria Abel</b><small>Elternberatung &amp; Coaching</small><em class="res"><a href="/review-assets/proof/maria-abel-100prozent.jpg" target="_blank">▲ 0 → 100 % Top-3-Abdeckung</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/reset-stuttgart.jpg" alt="Reset Stuttgart" loading="lazy"><div><b>Reset Stuttgart</b><small>Bodywork &amp; Gesundheit</small><em class="res"><a href="#">▲ Platz 8 → 1 · „Bodywork &amp; Faszientherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/britta-salz.jpg" alt="Britta Salz" loading="lazy"><div><b>Britta Salz</b><small>Gesundheitspraxis</small><em class="res"><a href="#">▲ Platz 15 → 2 · „Gesundheitscoaching“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/bernd-laserstein.jpg" alt="Bernd Laserstein" loading="lazy"><div><b>Bernd Laserstein</b><small>Gesundheitspraxis</small><em class="res"><a href="/review-assets/proof/bernd-laserstein-nachher.jpg" target="_blank">▲ Platz 9 → 1 · „Körperpsychotherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/sabine-brenneisen.jpg" alt="Sabine Brenneisen" loading="lazy"><div><b>Sabine Brenneisen</b><small>Gesundheitspraxis</small><em class="res"><a href="#">▲ Platz 11 → 2 · „Ernährungsberatung“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/sven-boehme.jpg" alt="Sven Böhme" loading="lazy"><div><b>Sven Böhme</b><small>Heilpraktiker · Stuttgart</small><em class="res"><a href="/review-assets/proof/boehme-nachher.jpg" target="_blank">▲ Platz 17 → 4 · „Heilpraktiker Stuttgart“</a></em></div></div>
+      <div class="wc"><span class="av">VS</span><div><b>Veronika Schlirf</b><small>Heilpraktikerin · Regensburg</small><em class="res"><a href="/review-assets/proof/veronika-schlirf-nachher.jpg" target="_blank">▲ Platz 15 → 1 · „Heilpraktikerin“</a></em></div></div>
+      <div class="wc"><span class="av">MG</span><div><b>Martina Gross</b><small>Physiotherapie · Herzogenaurach</small><em class="res"><a href="/review-assets/proof/martina-gross-nachher.jpg" target="_blank">▲ Platz 1 · „Physiotherapie“</a></em></div></div>
+      <div class="wc"><span class="av">JF</span><div><b>Janina Felix</b><small>Praxis-Kundin</small><em class="res"><a href="#">▲ Platz 7 → 1 · „Osteopathie &amp; Kinder“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/justine-felix.jpg" alt="Justine Felix" loading="lazy"><div><b>Justine Felix</b><small>Praxis-Kundin</small><em class="res"><a href="#">▲ Platz 12 → 2 · „Heilpraktikerin für Frauen“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/jeffrey-krautz.jpg" alt="Jeffrey Krautz · Mediwe" loading="lazy"><div><b>Jeffrey Krautz · Mediwe</b><small>Medizin-Sektor</small><em class="res"><a href="#">▲ Platz 33 → 3 · „Medizinprodukte Vertrieb“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/marita-biel.jpg" alt="Freude am Lernen · Marita Biel" loading="lazy"><div><b>Freude am Lernen · Marita Biel</b><small>Lerncoaching</small><em class="res"><a href="#">▲ Platz 8 → 1 · „Lerncoaching Stuttgart“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/sabine-verges.jpg" alt="Sabine Verges" loading="lazy"><div><b>Sabine Verges</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 14 → 2 · „Naturheilverfahren“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/astrid-lengauer.jpg" alt="Astrid Lengauer" loading="lazy"><div><b>Astrid Lengauer</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 18 → 1 · „Craniosacral Therapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/angelina-everitt.jpg" alt="Angelina Everitt" loading="lazy"><div><b>Angelina Everitt</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 21 → 3 · „Hypnosetherapie Stuttgart“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/martin-altherr.jpg" alt="Martin Altherr" loading="lazy"><div><b>Martin Altherr</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 15 → 1 · „Rolfing &amp; Faszientherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/karoline-hengst.svg" alt="Karoline Hengst" loading="lazy"><div><b>Karoline Hengst</b><small>Lokaler Betrieb</small><em class="res"><a href="/review-assets/proof/karoline-hengst-nachher.jpg" target="_blank">▲ Platz 28 → 2 · „Homöopathie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/claudia-irmscher.jpg" alt="Claudia Irmscher" loading="lazy"><div><b>Claudia Irmscher</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 11 → 2 · „Heilpraktikerin Psychotherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/michael-kuch.jpg" alt="Michael Kuch" loading="lazy"><div><b>Michael Kuch</b><small>Lokaler Betrieb</small><em class="res"><a href="/review-assets/proof/michael-kuch-nachher.jpg" target="_blank">▲ Platz 23 → 3 · „Physiotherapeut“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/hotel-alpi.jpg" alt="Hotel Alpi · Franz Watschinger" loading="lazy"><div><b>Hotel Alpi · Franz Watschinger</b><small>Hotel</small><em class="res"><a href="#">▲ Platz 5 → 1 · „Wellnesshotel Südtirol“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/boris-bamberger.jpg" alt="Werbeagentur Bamberger" loading="lazy"><div><b>Werbeagentur Bamberger</b><small>Agentur · Nürnberg</small><em class="res"><a href="#">▲ Platz 12 → 2 · „Werbeagentur Nürnberg“</a></em></div></div>
+      <div class="wc"><span class="av">DM</span><div><b>Die Mediaberater</b><small>Werbeagentur · Nürnberg</small><em class="res"><a href="/review-assets/proof/mediaberater-nachher.jpg" target="_blank">▲ Platz 14 → 3 · „Online-Marketing-Agentur“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/dieter-noras.jpg" alt="Dieter Noras" loading="lazy"><div><b>Dieter Noras</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 9 → 1 · „Ergotherapie &amp; Handtherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/dennis-doerfler.jpg" alt="Dennis Dörfler" loading="lazy"><div><b>Dennis Dörfler</b><small>Rechtsanwaltskanzlei · Frankfurt</small><em class="res"><a href="/review-assets/proof/dennis-doerfler-nachher.jpg" target="_blank">▲ Platz 17 → 7 · „Fachanwalt Arbeitsrecht“</a></em></div></div>
+    </div>
+    <p class="wallnote">Eine Auswahl unserer Local-SEO- und Sichtbarkeits-Projekte aus Gesundheit, Gastgewerbe, Recht und Dienstleistung.</p>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="section-video" id="termin" style="background:#000;">
+    <div style="max-width:800px; margin:0 auto;">
+      <h2 style="font-size:40px; font-weight:900; color:#fff; margin-bottom:16px;">Lass uns gemeinsam deine lokale Sichtbarkeit verbessern.</h2>
+      <p style="color:#aaa; font-size:17.6px; margin-bottom:32px;">Buch dir jetzt ein kurzes, kostenfreies Beratungsgespräch. Ich bespreche unverbindlich mit dir die Umsetzung der gezeigten Potenziale.</p>
+
+      <div class="final-cta-group">
+        <a href="https://calendly.com/martin-233/15-minute-meeting?back=1" target="_blank" class="btn-741-main">📅 Kostenloses Gespräch buchen</a>
+        <a href="https://wa.me/491711745089?text=Hallo%20741%20Studio,%20ich%20habe%20die%20Video-Analyse%20f%C3%BCr%20die%20Praxis%20Suriya%20gesehen" target="_blank" class="btn-741-dark" style="background:#25D366; color:#000;">💬 WhatsApp schreiben</a>
+        <a href="mailto:martin@741.studio?subject=Anfrage%20Google%20Analyse%20Praxis%20Suriya" class="btn-741-dark">✉️ E-Mail senden</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Official 741.Studio Footer -->
+  {{> footer_de}}
+
+  <!-- Official 741.Studio DSGVO Cookie Consent Modal -->
+  {{> consent}}
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.audit-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+      
+      const btn = Array.from(document.querySelectorAll('.audit-tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+      if (btn) {
+        btn.classList.add('active');
+        // keep the chosen tab in view when the strip is scrolled
+        const strip = document.getElementById('auditTabNav');
+        if (strip && strip.scrollWidth > strip.clientWidth) {
+          tabStripScrollTo(strip, btn.offsetLeft - (strip.clientWidth - btn.offsetWidth) / 2);
+        }
+      }
+      const pane = document.getElementById('tab-' + tabId);
+      if (pane) pane.style.display = 'block';
+    }
+
+    /* Plain scrollLeft assignment — reliable everywhere. The easing comes from
+       `scroll-behavior: smooth` on the strip, so this still works if a smooth
+       -scroll library or a reduced-motion setting suppresses the animation. */
+    function tabStripScrollTo(el, to) {
+      const max = el.scrollWidth - el.clientWidth;
+      el.scrollLeft = Math.max(0, Math.min(max, to));
+    }
+
+    /* Tab strip scroll affordance: edge fades + chevrons + a one-time peek,
+       so it is obvious the four audit tabs slide horizontally on mobile. */
+    (function () {
+      const wrap = document.querySelector('.tab-nav-wrap');
+      if (!wrap) return;
+      const strip = wrap.querySelector('.tab-nav-scroll');
+      const prev = wrap.querySelector('.tab-nav-prev');
+      const next = wrap.querySelector('.tab-nav-next');
+
+      function update() {
+        const max = strip.scrollWidth - strip.clientWidth;
+        const scrollable = max > 4;
+        wrap.classList.toggle('is-scrollable', scrollable);
+        wrap.classList.toggle('can-left', scrollable && strip.scrollLeft > 4);
+        wrap.classList.toggle('can-right', scrollable && strip.scrollLeft < max - 4);
+      }
+
+      strip.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      window.addEventListener('load', update);
+      update();
+
+      function page(dir) {
+        tabStripScrollTo(strip, strip.scrollLeft + dir * Math.round(strip.clientWidth * 0.7));
+        setTimeout(update, 450); // refresh arrows once the smooth scroll settles
+      }
+      if (prev) prev.addEventListener('click', () => page(-1));
+      if (next) next.addEventListener('click', () => page(1));
+
+      // Nudge once when the strip first scrolls into view so the motion reveals
+      // that there is more to the right. Skipped for reduced-motion users.
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduced && 'IntersectionObserver' in window) {
+        let peeked = false;
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => {
+            if (!e.isIntersecting || peeked) return;
+            if (strip.scrollWidth - strip.clientWidth < 8) return;
+            peeked = true;
+            io.disconnect();
+            setTimeout(() => {
+              tabStripScrollTo(strip, 56);
+              setTimeout(() => { tabStripScrollTo(strip, 0); setTimeout(update, 450); }, 620);
+            }, 320);
+          });
+        }, { threshold: 0.6 });
+        io.observe(wrap);
+      }
+    })();
+
+    // Force ALL booking and top header buttons to open Calendly
+    window.addEventListener('DOMContentLoaded', () => {
+      const calendlyUrl = 'https://calendly.com/martin-233/15-minute-meeting?back=1';
+      document.querySelectorAll('a').forEach(a => {
+        const text = a.textContent.toLowerCase();
+        const href = a.getAttribute('href') || '';
+        if (href.includes('typeform.com') || href === '#termin' || text.includes('termin') || text.includes('gespräch') || text.includes('start now') || text.includes('jetzt starten')) {
+          a.setAttribute('href', calendlyUrl);
+          a.setAttribute('target', '_blank');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

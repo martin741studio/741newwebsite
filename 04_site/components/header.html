@@ -1,3 +1,49 @@
+<script>
+  (function () {
+    // Auto-deliver German to visitors in DE/AT/CH; everyone else stays English.
+    // Respect an explicit EN|DE choice made this session (set by the toggle).
+    if (sessionStorage.getItem('lang_override')) return;
+    // Defensive: never run on the German side (this partial is EN-only anyway).
+    if (window.location.pathname.indexOf('/de/') === 0) return;
+
+    var DACH = ['DE', 'AT', 'CH'];
+
+    function handle(cc) {
+      // A valid country was resolved. Redirect only if it's DACH.
+      if (cc && DACH.indexOf(String(cc).toUpperCase()) !== -1) {
+        sessionStorage.setItem('lang_override', 'de');
+        var path = window.location.pathname;
+        // replace() so the English page isn't left in the Back-button history.
+        window.location.replace(path === '/' ? '/de/' : '/de' + path);
+      }
+    }
+
+    // Resilient geo lookup. All three are free, keyless and CORS-enabled.
+    // We only fall through to the next provider if a request truly fails
+    // (network error / rate limit) so a single outage can't wrongly serve
+    // English to a DACH visitor.
+    function geojs() {
+      return fetch('https://get.geojs.io/v1/ip/country.json')
+        .then(function (r) { return r.json(); })
+        .then(function (d) { if (!d || !d.country) throw new Error('no-country'); handle(d.country); });
+    }
+    function ipwho() {
+      return fetch('https://ipwho.is/')
+        .then(function (r) { return r.json(); })
+        .then(function (d) { if (!d || !d.country_code) throw new Error('no-country'); handle(d.country_code); });
+    }
+    function ipapi() {
+      return fetch('https://ipapi.co/json/')
+        .then(function (r) { return r.json(); })
+        .then(function (d) { if (!d || !d.country_code) throw new Error('no-country'); handle(d.country_code); });
+    }
+
+    geojs()
+      .catch(ipwho)
+      .catch(ipapi)
+      .catch(function (err) { console.log('Geo language check unavailable, staying in English', err); });
+  })();
+</script>
 <div data-wf--navbar--variant="with-banner---black" class="navbar_main">
   <section class="banner_component w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
     <div class="padding-global is-stretch-banner w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
@@ -31,12 +77,33 @@
         <a href="/pages/portfolio_full.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
           Portfolio
         </a>
-        <a href="/pages/local-seo.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
-          Local SEO
-        </a>
+        <!-- Services Dropdown -->
+        <div class="nav_dropdown">
+          <a href="javascript:void(0)" class="nav_dropdown-toggle nav_text-link">
+            Services
+            <svg class="nav_dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 4px; vertical-align: middle;">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+          <div class="nav_dropdown-list">
+            <a href="/pages/local-seo.html" class="nav_dropdown-link">Local SEO</a>
+            <a href="/pages/website-design.html" class="nav_dropdown-link">Website Design</a>
+            <a href="/pages/google-ads-1.html" class="nav_dropdown-link">Google Ads</a>
+            <a href="/pages/meta-ads-2.html" class="nav_dropdown-link">Meta Ads</a>
+          </div>
+        </div>
         <a href="/pages/about.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
           About
         </a>
+        <a href="/pages/blog.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+          Blog
+        </a>
+
+        <div class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" style="display:inline-flex; gap: 8px; align-items:center;">
+          <span style="opacity: 0.5; cursor: default;">EN</span>
+          <span>|</span>
+          <a href="javascript:void(0)" style="color: inherit; text-decoration: none;" onclick="sessionStorage.setItem('lang_override', 'de'); window.location.href = window.location.pathname === '/' ? '/de/' : '/de' + window.location.pathname;">DE</a>
+        </div>
 
         <a href="http://clients.741-studio.com/" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
           Sign In
@@ -245,6 +312,128 @@
         line-height: 1.4 !important;
       }
     }
+
+    /* Prevent navbar-right from clipping absolute elements */
+    .navbar-right {
+      overflow: visible !important;
+    }
+
+    /* Services Dropdown Styling */
+    .nav_dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .nav_dropdown-toggle {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav_dropdown-arrow {
+        transition: transform 0.3s ease;
+      }
+
+      .nav_dropdown:hover .nav_dropdown-arrow,
+      .nav_dropdown.is-open .nav_dropdown-arrow {
+        transform: rotate(180deg);
+      }
+
+      .nav_dropdown-list {
+        position: absolute !important;
+        top: 100% !important;
+        left: 50% !important;
+        transform: translateX(-50%) translateY(10px) !important;
+        background-color: #0b0c10 !important; /* solid brand black */
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 6px !important;
+        padding: 6px !important;
+        min-width: 180px !important;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        z-index: 100000 !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 4px !important;
+      }
+
+      .nav_dropdown:hover .nav_dropdown-list,
+      .nav_dropdown.is-open .nav_dropdown-list {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateX(-50%) translateY(4px) !important;
+      }
+
+      .nav_dropdown-link,
+      .nav_dropdown-link.w--current {
+        display: block !important;
+        background-color: transparent !important;
+        color: #fff !important;
+        text-transform: uppercase !important;
+        font-size: 12px !important;
+        letter-spacing: 0.15px !important;
+        padding: 8px 12px !important;
+        border-radius: 4px !important;
+        text-decoration: none !important;
+        transition: all 0.3s ease !important;
+        text-align: left !important;
+        white-space: nowrap !important;
+      }
+
+      .nav_dropdown-link:hover,
+      .nav_dropdown-link.w--current:hover {
+        background-color: #fff !important;
+        color: #000 !important;
+      }
+
+      @media screen and (max-width: 768px) {
+        .nav_dropdown {
+          width: 100%;
+          text-align: center;
+          margin: 1rem 0;
+        }
+        
+        .nav_dropdown-toggle {
+          justify-content: center;
+          width: 100%;
+        }
+        
+        .nav_dropdown-list {
+          position: static !important;
+          transform: none !important;
+          background-color: transparent !important;
+          border: none !important;
+          padding: 0 !important;
+          max-height: 0;
+          overflow: hidden;
+          opacity: 1 !important;
+          visibility: visible !important;
+          transition: max-height 0.3s ease !important;
+          box-shadow: none !important;
+          backdrop-filter: none !important;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        
+        .nav_dropdown.is-open .nav_dropdown-list {
+          max-height: 250px;
+        }
+        
+        .nav_dropdown-link {
+          font-size: 1.6rem !important;
+          padding: 0.8rem 0 !important;
+          text-align: center !important;
+          color: rgba(255, 255, 255, 0.7) !important;
+        }
+        
+        .nav_dropdown-link:hover {
+          background-color: transparent !important;
+          color: var(--brand--lemon, #fac118) !important;
+        }
+      }
   </style>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -302,6 +491,21 @@
             navLinksWrapper.classList.remove('is-open');
           }
         }, { passive: true });
+
+        // Dropdown toggle logic (desktop & mobile)
+        const dropdown = document.querySelector('.nav_dropdown');
+        const toggle = document.querySelector('.nav_dropdown-toggle');
+        if (toggle && dropdown) {
+          toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdown.classList.toggle('is-open');
+          });
+
+          document.addEventListener('click', () => {
+            dropdown.classList.remove('is-open');
+          });
+        }
       }
     });
   </script>

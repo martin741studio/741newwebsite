@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html data-wf-domain="www.weavy.ai" data-wf-page="681b040781d5b5e278a6999f" data-wf-site="681b040781d5b5e278a69989">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Die verborgenen Tracker in Ihren Fotos: So entfernen Sie Metadaten, bevor Sie senden</title>
+    <meta
+        content="Jedes Foto trägt unsichtbare Metadaten in sich — GPS-Koordinaten, Gerätemodell, Zeitstempel und Bearbeitungsverlauf. Erfahren Sie, wie Sie EXIF-, IPTC- und XMP-Daten offline mit Tools wie ExifTool, MAT2 und MetadataZero entfernen."
+        name="description" />
+    <link rel="canonical" href="https://741.studio/pages/blog/scrub-photo-metadata.html" />
+    <meta content="Die verborgenen Tracker in Ihren Fotos: So entfernen Sie Metadaten, bevor Sie senden" property="og:title" />
+    <meta
+        content="Jedes Foto trägt unsichtbare Metadaten in sich — GPS-Koordinaten, Gerätemodell, Zeitstempel und Bearbeitungsverlauf. Erfahren Sie, wie Sie EXIF-, IPTC- und XMP-Daten offline mit Tools wie ExifTool, MAT2 und MetadataZero entfernen."
+        property="og:description" />
+    <meta content="Die verborgenen Tracker in Ihren Fotos: So entfernen Sie Metadaten, bevor Sie senden" property="twitter:title" />
+    <meta
+        content="Jedes Foto trägt unsichtbare Metadaten in sich — GPS-Koordinaten, Gerätemodell, Zeitstempel und Bearbeitungsverlauf. Erfahren Sie, wie Sie EXIF-, IPTC- und XMP-Daten offline mit Tools wie ExifTool, MAT2 und MetadataZero entfernen."
+        property="twitter:description" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="https://741.studio/pages/blog/scrub-photo-metadata.html" property="og:url" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link href="/assets/weavy.css"
+        rel="stylesheet" type="text/css"
+         />
+
+    <!-- Brand Guidelines Color Overrides -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;500;700&display=swap');
+
+        :root {
+            --brand--lemon: #fac118;
+            --brand--ash-grey: #8c8c8c;
+            --brand--french-gray: #fac118;
+            --brand--french-gray-op-45: rgba(250, 193, 24, 0.45);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif !important;
+            background-color: #fafafa;
+            color: #212126;
+        }
+
+        .section-hero {
+            background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 34%, rgba(250, 193, 24, 0.25) 71%), url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif") !important;
+            padding-top: 10rem;
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+
+        .blog_container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .blog_meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog_content h2 {
+            font-size: 2.2rem;
+            margin-top: 3rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .blog_content h3 {
+            font-size: 1.6rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .blog_content p {
+            font-size: 1.2rem;
+            line-height: 1.65;
+            margin-bottom: 1.8rem;
+            color: #333;
+        }
+
+        .blog_content ul {
+            margin-bottom: 1.8rem;
+            padding-left: 1.5rem;
+        }
+
+        .blog_content li {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
+            color: #333;
+        }
+
+        .highlight_box {
+            background-color: #fff8e1;
+            border-left: 4px solid var(--brand--lemon);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+        }
+
+        .highlight_box p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .seo_btn {
+            background-color: var(--brand--lemon);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .seo_btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(250, 193, 24, 0.3);
+        }
+
+        .huge_nav-button {
+            mix-blend-mode: normal !important;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+</head>
+
+<body>
+
+    <!-- Article Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Die verborgenen Tracker in Ihren Fotos: So entfernen Sie Metadaten, bevor Sie senden",
+      "description": "Jedes Foto trägt unsichtbare Metadaten in sich — GPS-Koordinaten, Gerätemodell, Zeitstempel und Bearbeitungsverlauf. Erfahren Sie, wie Sie EXIF-, IPTC- und XMP-Daten offline mit Tools wie ExifTool, MAT2 und MetadataZero entfernen.",
+      "author": {
+        "@type": "Person",
+        "name": "Martin Drendel",
+        "jobTitle": "CEO & Founder",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "741 Studio",
+          "url": "https://741.studio"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "741 Studio",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://741.studio/assets/images/logo_white.png"
+        }
+      },
+      "datePublished": "2026-07-06",
+      "mainEntityOfPage": "https://741.studio/pages/blog/scrub-photo-metadata.html"
+    }
+    </script>
+
+    <div class="page-wrapper">
+        <div class="main-wrapper">
+            {{> header_de }}
+
+            <!-- HERO SECTION -->
+            <section class="section-hero">
+                <div class="blog_container" style="padding-bottom: 0;">
+                    <div class="seo_tagline">Datenschutz & Metadaten-Sicherheit</div>
+                    <h1 class="reveal-up" style="font-size: 3.5rem; line-height: 1.15; margin-bottom: 1.5rem;">
+                        Die verborgenen Tracker in Ihren Fotos: Metadaten entfernen, bevor Sie senden
+                    </h1>
+                    <div class="blog_meta reveal-up">
+                        <span>Von Martin Drendel</span>
+                        <span>•</span>
+                        <span>6. Juli 2026</span>
+                        <span>•</span>
+                        <span>6 Min. Lesezeit</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ARTICLE CONTENT -->
+            <article class="blog_container" style="padding-top: 0;">
+                <div class="blog_content reveal-up">
+                    <p>
+                        Jedes Mal, wenn Sie ein Foto versenden oder ein Dokument teilen, geben Sie möglicherweise weit mehr preis als nur das Bild selbst. Unter den Pixeln liegt eine Schicht unsichtbarer Informationen — Metadaten —, die festhält, wo die Aufnahme entstand, welches Gerät sie erfasst hat, in welcher Sekunde der Auslöser betätigt wurde und mitunter den gesamten Verlauf jeder Bearbeitung, die Sie vorgenommen haben. Für Unternehmen können diese verborgenen Daten unbemerkt den Standort eines Kunden oder den Namen eines internen Autors offenlegen. Für Privatpersonen können sie genau verraten, wo Sie wohnen.
+                    </p>
+                    <p>
+                        Die unangenehme Wahrheit ist, dass die meisten Menschen diese Daten nie zu Gesicht bekommen — und dennoch reisen sie mit der Datei, wohin auch immer sie geht. Zu lernen, sie zu entfernen, bevor Sie auf „Senden" klicken, ist eine der einfachsten und wirkungsvollsten Datenschutzgewohnheiten, die Sie sich aneignen können.
+                    </p>
+
+                    <h2>Was Metadaten tatsächlich preisgeben</h2>
+                    <p>
+                        Jedes Foto und jedes Dokument enthält verborgene Metadaten. Bei Bildern können EXIF-Daten GPS-Koordinaten, das Kamera- oder Telefonmodell, Objektiv- und Belichtungseinstellungen sowie präzise Zeitstempel bis auf die Sekunde genau offenlegen. Dokumente gehen sogar noch weiter — eine PDF- oder Office-Datei bettet häufig Autorennamen, Firmendetails und vollständige Versionsverläufe ein, die verraten, wer wann an einer Datei gearbeitet hat.
+                    </p>
+                    <p>
+                        Sie können sich nicht darauf verlassen, dass soziale Netzwerke oder Cloud-Speicher dies für Sie bereinigen. Manche Plattformen entfernen Standortdaten beim Hochladen, andere lassen sie vollständig unangetastet, und die Regeln ändern sich ohne Vorwarnung oder Ankündigung. Einen Drittanbieterdienst als zuverlässiges Reinigungswerkzeug zu behandeln, ist ein Risiko, das Sie bei sensiblem Material nicht eingehen sollten.
+                    </p>
+
+                    <div class="highlight_box">
+                        <p>
+                            „Ein einziges Urlaubsfoto kann Ihr Zuhause auf wenige Meter genau lokalisieren. Eine einzige ‚anonymisierte' PDF kann jeden Mitarbeitenden benennen, der sie angefasst hat. Die Daten, die Sie nicht sehen können, sind genau die Daten, die Sie gefährden."
+                        </p>
+                    </div>
+
+                    <h3>Warum das für Unternehmen wichtig ist</h3>
+                    <p>
+                        Wenn Ihr Team Produktfotos, Objektaufnahmen oder Kundendokumente teilt, können eingebettete Metadaten die physische Adresse eines Kunden, die internen Namen von Mitarbeitenden oder den zeitlichen Ablauf eines vertraulichen Projekts durchsickern lassen. In regulierten Branchen kann dieses stille Durchsickern Vertraulichkeitsvereinbarungen und Datenschutzpflichten verletzen, bevor auch nur ein einziges Wort gelesen wurde. Saubere Dateien sind keine nette Beigabe — sie sind Teil des Schutzes der Menschen, die Ihnen ihre Informationen anvertrauen.
+                    </p>
+
+                    <h3>Warum das für Privatpersonen wichtig ist</h3>
+                    <p>
+                        Für Privatpersonen steht die physische Sicherheit auf dem Spiel. Ein Foto Ihres Autos in der Einfahrt, ein Bild eines Kindes im Garten oder eine Aufnahme in einem Online-Marktplatz können allesamt GPS-Koordinaten enthalten, die direkt zu Ihrer Haustür führen. Standortdaten vor dem Veröffentlichen zu entfernen, ist eine grundlegende Maßnahme der persönlichen Sicherheit — keine Paranoia, sondern das digitale Äquivalent dazu, seine Wohnadresse nicht auf einen öffentlichen Aushang zu drucken.
+                    </p>
+
+                    <h2>Echte Schwärzung vs. kosmetisches Verbergen</h2>
+                    <p>
+                        Es gibt einen gefährlichen Irrglauben, dass Verbergen dasselbe sei wie Entfernen. Ein schwarzer Balken über sensiblem Text in einer PDF schwärzt diesen nicht. Der zugrunde liegende Text ist oft noch auswählbar, durchsuchbar und für jeden vollständig wiederherstellbar, der die Datei in einen Texteditor kopiert. Die visuelle Verdeckung ist kosmetisch; die Daten leben weiter.
+                    </p>
+                    <p>
+                        Echte Schwärzung entfernt den zugrunde liegenden Inhalt vollständig aus der Dateistruktur selbst, sodass nichts mehr wiederherstellbar bleibt. Wenn Sie mit Verträgen, Rechnungen oder anderen Dokumenten arbeiten, die Namen und Adressen enthalten, bestehen Sie auf echter Schwärzung statt auf einem Balken, der über die Gefahr gezeichnet wird.
+                    </p>
+
+                    <h2>Einen „Vor dem Senden bereinigen"-Workflow aufbauen</h2>
+                    <p>
+                        Die wichtigste Regel überhaupt lautet: Das Entfernen muss lokal erfolgen. Eine Datei auf einen Online-Reinigungsdienst hochzuladen, legt genau jene Metadaten offen, die Sie entfernen möchten — Sie würden die sensiblen Daten einem Dritten aushändigen, während Sie versuchen, sie zu schützen. Jedes Tool, dem Sie vertrauen, sollte vollständig offline auf Ihrem eigenen Gerät laufen, ohne Umweg über die Cloud.
+                    </p>
+                    <p>
+                        Eine Handvoll bewährter Tools macht dies unkompliziert, und jedes davon entfernt EXIF-, IPTC- und XMP-Daten, ohne die visuelle Qualität Ihrer Dateien zu beeinträchtigen:
+                    </p>
+                    <ul>
+                        <li>✓ <strong>MetadataZero:</strong> Eine plattformübergreifende Desktop-App mit einfacher Stapelverarbeitung per Drag-and-drop, die vollständig offline läuft. Ideal für technisch weniger versierte Teammitglieder, die einfach schnell saubere Dateien benötigen.</li>
+                        <li>✓ <strong>ExifTool:</strong> Die branchenübliche Kommandozeilen-Bibliothek zum Auslesen und Löschen von Metadaten in nahezu jedem Dateiformat. Die erste Wahl für versierte Anwender und automatisierte Abläufe.</li>
+                        <li>✓ <strong>MAT2:</strong> Ein Linux-Tool für Fortgeschrittene, das eingebettete Metadaten aus Audiodateien, Bildern und Office-Dokumenten entfernt und bei Datenschutzexperten und Journalisten beliebt ist.</li>
+                    </ul>
+                    <p>
+                        Für welches Tool Sie sich auch entscheiden, das Ziel ist stets dasselbe: „Vor dem Senden bereinigen" zu einem automatischen Reflex zu machen statt zu einem nachträglichen Gedanken. Eine kurze Checkliste, die an Ihren Arbeitsablauf geheftet ist — entfernen, prüfen, dann teilen — verwandelt Metadaten-Hygiene für Ihr gesamtes Team in eine Selbstverständlichkeit.
+                    </p>
+
+                    <div style="text-align: center; margin-top: 3rem; border-top: 1px solid #eee; padding-top: 2rem;">
+                        <h3 style="margin-top: 0;">Sickern sensible Daten mit Ihren Dateien nach außen?</h3>
+                        <p style="font-size: 1.1rem; color: #555;">Lassen Sie uns überprüfen, wie Ihr Team Bilder und Dokumente teilt, und gemeinsam einen Offline-Workflow zum „Vor dem Senden bereinigen" entwerfen, der Ihre Kunden und Ihre Mitarbeitenden schützt.</p>
+                        <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="seo_btn">Datenschutz-Workflow-Prüfung anfragen</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- FOOTER -->
+            {{> footer_de }}
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const revealElements = document.querySelectorAll('.reveal-up');
+            revealElements.forEach((el) => {
+                gsap.fromTo(el,
+                    {
+                        y: 30,
+                        opacity: 0
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 85%",
+                            once: true
+                        }
+                    }
+                );
+            });
+        });
+    </script>
+  {{> consent }}
+</body>
+
+</html>

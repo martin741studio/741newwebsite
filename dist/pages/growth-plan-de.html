@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dein lokaler Wachstumsmotor | 741.Studio — Private Vorschau</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    :root { --gold:#fac118; --ink:#111514; --olive:#575136; --paper:#faf8f2; --ash:#6b6b64; --card:#ffffff; --line:#e7e2d4; --good:#1e7a46; --bad:#b3402e; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--paper); color:var(--ink); line-height:1.6; }
+    .wrap { max-width:1040px; margin:0 auto; padding:0 22px; }
+    header.bar { background:var(--ink); color:#fff; padding:14px 0; position:sticky; top:0; z-index:50; }
+    header.bar .wrap { display:flex; justify-content:space-between; align-items:center; }
+    .brand { font-weight:800; letter-spacing:.4px; } .brand span { color:var(--gold); }
+    .private { font-size:12px; color:#bbb; border:1px solid #444; border-radius:99px; padding:4px 12px; }
+    .hero { padding:72px 0 40px; text-align:center; }
+    .hero h1 { font-size:clamp(30px,5vw,52px); line-height:1.12; font-weight:800; letter-spacing:-.5px; }
+    .hero h1 em { font-style:normal; background:linear-gradient(transparent 62%, var(--gold) 62%); }
+    .hero p.sub { max-width:640px; margin:18px auto 0; font-size:18px; color:var(--ash); }
+    .proofbar { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin:36px 0 8px; }
+    .proofbar .chip { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 22px; min-width:150px; }
+    .chip b { display:block; font-size:26px; letter-spacing:-.5px; }
+    .chip small { color:var(--ash); font-size:12.5px; text-transform:uppercase; letter-spacing:.6px; }
+    section { padding:52px 0; }
+    section.alt { background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .kicker { text-transform:uppercase; letter-spacing:2px; font-size:12px; font-weight:700; color:var(--olive); }
+    h2 { font-size:clamp(24px,3.4vw,36px); letter-spacing:-.4px; margin:8px 0 10px; }
+    .lead { color:var(--ash); max-width:680px; }
+    .case { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:28px; align-items:start; }
+    .case img { width:100%; border-radius:14px; border:1px solid var(--line); display:block; }
+    .case figcaption { font-size:13px; color:var(--ash); margin-top:8px; }
+    .resultchips { display:flex; flex-wrap:wrap; gap:12px; margin:24px 0 6px; }
+    .rc { background:var(--ink); color:#fff; border-radius:12px; padding:12px 18px; }
+    .rc b { color:var(--gold); font-size:22px; display:block; letter-spacing:-.5px; }
+    .rc small { font-size:12px; color:#c9c6b8; }
+    blockquote.q { background:var(--card); border-left:4px solid var(--gold); border-radius:0 14px 14px 0; padding:20px 24px; margin-top:22px; font-size:17px; font-style:italic; }
+    blockquote.q footer { font-style:normal; font-size:13.5px; color:var(--ash); margin-top:8px; }
+    .vidgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin-top:28px; }
+    .vid { aspect-ratio:16/9; border-radius:14px; overflow:hidden; border:1px solid var(--line); background:#000; }
+    .vid iframe { width:100%; height:100%; border:0; }
+    .wall { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:12px; margin-top:34px; }
+    .wc { display:flex; align-items:center; gap:12px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 14px; }
+    .av { width:44px; height:44px; min-width:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:15px; color:#fff; letter-spacing:.5px; }
+    .wc:nth-child(6n+1) .av { background:#575136; } .wc:nth-child(6n+2) .av { background:#8a7d3a; }
+    .wc:nth-child(6n+3) .av { background:#1e7a46; } .wc:nth-child(6n+4) .av { background:#2f5d8a; }
+    .wc:nth-child(6n+5) .av { background:#a05c2c; } .wc:nth-child(6n) .av { background:#6b4a7e; }
+    .wc b { display:block; font-size:14.5px; line-height:1.25; } .wc small { color:var(--ash); font-size:12px; }
+    .wc.hl { border-color:var(--gold); background:#fffaf0; }
+    .avimg { width:44px; height:44px; min-width:44px; border-radius:50%; object-fit:cover; border:1px solid var(--line); background:#fff; }
+    .wc .res { display:block; font-style:normal; font-size:12px; font-weight:700; color:var(--good); margin-top:2px; }
+    .wc .res a { color:inherit; text-decoration:none; border-bottom:1px dotted rgba(30,122,70,.5); }
+    .tower { max-width:760px; margin:30px auto 6px; }
+    .tlevel { border-radius:14px; padding:16px 20px; margin:0 auto; box-shadow:0 8px 22px rgba(17,21,20,.10); }
+    .tlevel + .tlevel { margin-top:10px; }
+    .tl3 { width:76%; background:var(--gold); color:var(--ink); }
+    .tl2 { width:88%; background:var(--olive); color:#fff; }
+    .tl1 { width:100%; background:var(--ink); color:#fff; }
+    .tlevel .tname { display:block; font-size:11px; font-weight:800; letter-spacing:1.6px; text-transform:uppercase; opacity:.85; margin-bottom:8px; }
+    .tchips { display:flex; flex-wrap:wrap; gap:8px; }
+    .tchips span { background:rgba(255,255,255,.14); border-radius:99px; padding:5px 13px; font-size:13px; font-weight:600; }
+    .tl3 .tchips span { background:rgba(17,21,20,.10); }
+    .tcap { text-align:center; font-size:12.5px; color:var(--ash); margin-top:10px; }
+    .geo { display:grid; grid-template-columns:1fr auto 1.2fr; gap:14px; align-items:center; margin-top:20px; }
+    .geo .gin { display:flex; flex-direction:column; gap:8px; }
+    .geo .gin span { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); border-radius:10px; padding:9px 14px; font-size:13.5px; font-weight:600; color:#e6e3d5; }
+    .geo .garr { color:var(--gold); font-size:26px; font-weight:800; }
+    .geo .gout { border:2px solid var(--gold); border-radius:16px; padding:18px; text-align:center; background:rgba(250,193,24,.08); }
+    .geo .gout b { color:var(--gold); font-size:16px; display:block; }
+    .geo .gout small { color:#c9c6b8; font-size:12.5px; }
+    .gblocked { margin-top:12px; border:1px dashed #7a3a2e; border-radius:12px; padding:10px 16px; color:#e6a196; font-size:13px; display:flex; align-items:center; gap:10px; }
+    .gblocked b { color:#e6a196; font-size:16px; }
+    .tz { display:block; width:100%; max-width:720px; margin:26px auto 0; }
+    @media (max-width:640px){ .geo { grid-template-columns:1fr; } .geo .garr { transform:rotate(90deg); text-align:center; } }
+    .wallnote { margin-top:14px; font-size:13px; color:var(--ash); }
+    .clients { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin-top:28px; }
+    .client { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px; }
+    .client h3 { font-size:17px; margin-bottom:6px; }
+    .client .tag { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; color:var(--olive); background:#f0ecdd; border-radius:99px; padding:3px 10px; margin-bottom:10px; }
+    .client p { font-size:14.5px; color:var(--ash); }
+    .shift { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:28px; }
+    .shcol { border-radius:16px; padding:24px; }
+    .shcol.old { background:#efece2; border:1px solid var(--line); }
+    .shcol.new { background:var(--ink); color:#fff; }
+    .shcol h3 { font-size:18px; margin-bottom:14px; }
+    .shcol.new h3 { color:var(--gold); }
+    .shcol ul { list-style:none; }
+    .shcol li { padding:8px 0 8px 28px; position:relative; font-size:14.5px; border-top:1px dashed rgba(0,0,0,.12); }
+    .shcol.new li { border-top:1px dashed rgba(255,255,255,.15); color:#d8d5c8; }
+    .shcol.old li::before { content:"✕"; position:absolute; left:2px; color:var(--bad); font-weight:700; }
+    .shcol.new li::before { content:"✓"; position:absolute; left:2px; color:var(--gold); font-weight:700; }
+    .engines { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:20px; margin-top:30px; }
+    .engine { background:var(--ink); color:#fff; border-radius:18px; padding:30px; }
+    .engine.gold { background:linear-gradient(145deg,#2a2a20,#111514); border:1px solid #3a3a2c; }
+    .engine .num { color:var(--gold); font-weight:800; font-size:13px; letter-spacing:2px; }
+    .engine h3 { font-size:24px; margin:8px 0 12px; }
+    .engine ul { list-style:none; margin-top:8px; }
+    .engine li { padding:7px 0 7px 26px; position:relative; font-size:15px; color:#d8d5c8; }
+    .engine li::before { content:"✓"; position:absolute; left:0; color:var(--gold); font-weight:700; }
+    .together { margin-top:20px; background:#fdf4d7; border:1px solid #eed98a; border-radius:14px; padding:18px 22px; font-size:15px; }
+    .level { margin-top:38px; }
+    .level .lvl { display:flex; align-items:center; gap:12px; font-weight:800; font-size:14px; letter-spacing:1.6px; text-transform:uppercase; color:var(--olive); }
+    .level .lvl::after { content:""; flex:1; height:1px; background:var(--line); }
+    details.phase { background:var(--card); border:1px solid var(--line); border-radius:14px; margin-top:12px; overflow:hidden; }
+    details.phase summary { cursor:pointer; padding:18px 22px; font-weight:700; font-size:16.5px; display:flex; align-items:center; gap:14px; list-style:none; }
+    details.phase summary::-webkit-details-marker { display:none; }
+    .pnum { background:var(--gold); color:var(--ink); font-weight:800; border-radius:9px; min-width:34px; height:34px; display:inline-flex; align-items:center; justify-content:center; font-size:14px; }
+    .pgoal { font-weight:400; color:var(--ash); font-size:13.5px; margin-left:auto; text-align:right; }
+    .pbody { padding:0 22px 20px 70px; color:#3c3c36; font-size:15px; }
+    .pbody ul { columns:2; column-gap:36px; list-style:none; margin:10px 0; }
+    .pbody li { padding:4px 0 4px 20px; position:relative; break-inside:avoid; }
+    .pbody li::before { content:"•"; position:absolute; left:4px; color:var(--olive); font-weight:700; }
+    .pbody .note { background:#f6f3e8; border-radius:10px; padding:12px 16px; font-size:14px; margin-top:10px; }
+    .tree { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13.5px; background:#f6f3e8; border-radius:10px; padding:14px 18px; white-space:pre; overflow-x:auto; margin-top:10px; }
+    .loop { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; align-items:center; font-size:13.5px; font-weight:600; }
+    .loop span { background:#f6f3e8; border-radius:99px; padding:6px 14px; }
+    .loop i { color:var(--olive); font-style:normal; }
+    .anatomy { background:var(--ink); color:#fff; border-radius:20px; padding:36px; margin-top:36px; }
+    .anatomy h3 { font-size:22px; } .anatomy h3 span { color:var(--gold); }
+    .anatomy p.sub2 { color:#c9c6b8; font-size:15px; margin-top:6px; max-width:720px; }
+    .mock { background:#fff; color:var(--ink); border-radius:14px; padding:26px; margin-top:22px; position:relative; }
+    .mock .mtop { display:flex; justify-content:space-between; align-items:center; font-size:12px; color:var(--ash); border-bottom:1px solid var(--line); padding-bottom:12px; }
+    .mock .mtop .btn { background:var(--gold); color:var(--ink); font-weight:700; border-radius:8px; padding:5px 12px; }
+    .mock h4 { text-align:center; font-size:24px; margin:22px 0 4px; }
+    .mock .msub { text-align:center; color:var(--ash); font-size:14px; }
+    .mock .badges { display:flex; justify-content:center; gap:8px; margin:12px 0 18px; }
+    .mock .badges span { background:#f0ecdd; border-radius:99px; font-size:11.5px; font-weight:700; padding:4px 12px; color:var(--olive); }
+    .mock .faq { border-top:1px dashed var(--line); padding:10px 4px; font-size:13.5px; color:#3c3c36; }
+    .anno { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; margin-top:22px; }
+    .anno div { background:rgba(255,255,255,.06); border:1px solid rgba(250,193,24,.35); border-radius:12px; padding:14px 16px; font-size:13.5px; color:#d8d5c8; }
+    .anno b { color:var(--gold); display:block; margin-bottom:3px; }
+    .ai { background:var(--ink); color:#fff; border-radius:18px; padding:34px; margin-top:30px; }
+    .ai h3 { font-size:22px; margin-bottom:10px; } .ai h3 span { color:var(--gold); }
+    .ai p { color:#c9c6b8; font-size:15.5px; max-width:760px; }
+    .ai ul { list-style:none; margin-top:14px; columns:2; column-gap:36px; }
+    .ai li { padding:6px 0 6px 24px; position:relative; color:#d8d5c8; font-size:14.5px; break-inside:avoid; }
+    .ai li::before { content:"◆"; position:absolute; left:0; color:var(--gold); font-size:11px; top:10px; }
+    .flow { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; font-size:13px; font-weight:600; align-items:center; }
+    .flow span { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15); border-radius:10px; padding:8px 14px; }
+    .flow .to { border:0; background:none; color:var(--gold); padding:0 2px; }
+    .flow .blk { border-color:#7a3a2e; color:#e6a196; text-decoration:line-through; }
+    .eighty { counter-reset:step; margin-top:26px; }
+    .step { display:flex; gap:18px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 22px; margin-top:10px; align-items:flex-start; }
+    .step::before { counter-increment:step; content:counter(step); background:var(--ink); color:var(--gold); font-weight:800; border-radius:10px; min-width:36px; height:36px; display:flex; align-items:center; justify-content:center; }
+    .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-top:24px; }
+    .metric { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; font-size:14.5px; font-weight:600; }
+    .metric small { display:block; font-weight:400; color:var(--ash); font-size:12.5px; }
+    .prices { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:34px; align-items:stretch; }
+    .price { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:30px 26px; display:flex; flex-direction:column; }
+    .price.mid { background:var(--ink); color:#fff; border:2px solid var(--gold); position:relative; transform:scale(1.02); }
+    .price .plabel { font-size:12px; font-weight:800; letter-spacing:1.6px; text-transform:uppercase; color:var(--olive); }
+    .price.mid .plabel { color:var(--gold); }
+    .price h3 { font-size:21px; margin:6px 0 2px; }
+    .price .amount { font-size:38px; font-weight:800; letter-spacing:-1px; margin:12px 0 2px; }
+    .price .amount small { font-size:14px; font-weight:600; color:var(--ash); letter-spacing:0; }
+    .price.mid .amount small { color:#c9c6b8; }
+    .price .psub { font-size:13px; color:var(--ash); min-height:36px; }
+    .price.mid .psub { color:#c9c6b8; }
+    .price ul { list-style:none; margin:16px 0 0; flex:1; }
+    .price li { padding:7px 0 7px 24px; position:relative; font-size:14.5px; }
+    .price li::before { content:"✓"; position:absolute; left:0; color:var(--good); font-weight:700; }
+    .price.mid li { color:#e6e3d5; } .price.mid li::before { color:var(--gold); }
+    .ribbon { position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--ink); font-size:11.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; border-radius:99px; padding:5px 16px; white-space:nowrap; }
+    .guarantee { margin-top:14px; background:rgba(250,193,24,.12); border:1px solid rgba(250,193,24,.4); border-radius:10px; padding:10px 14px; font-size:13px; color:#f4e9c8; }
+    .pricenote { margin-top:16px; font-size:13px; color:var(--ash); }
+    details.pricereveal > summary { list-style:none; cursor:pointer; display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:var(--gold); font-weight:700; font-size:15px; border-radius:12px; padding:14px 26px; margin-top:22px; user-select:none; }
+    details.pricereveal > summary::-webkit-details-marker { display:none; }
+    details.pricereveal[open] > summary { display:none; }
+    .paybtn { display:block; text-align:center; margin-top:18px; background:var(--gold); color:var(--ink); font-weight:800; text-decoration:none; border-radius:10px; padding:12px 16px; font-size:14.5px; }
+    .price:not(.mid) .paybtn { background:var(--ink); color:var(--gold); }
+    .cta { text-align:center; padding:70px 0 90px; }
+    .cta .box { background:var(--ink); color:#fff; border-radius:22px; padding:50px 30px; }
+    .cta h2 { color:#fff; } .cta p { color:#c9c6b8; max-width:640px; margin:10px auto 0; }
+    .cta .quote { margin-top:22px; font-size:17px; color:#f4e9c8; font-style:italic; max-width:720px; margin-left:auto; margin-right:auto; }
+    footer { text-align:center; padding:26px 0 40px; color:var(--ash); font-size:13px; }
+    @media (max-width:760px){ .case, .shift { grid-template-columns:1fr; } .pbody ul, .ai ul { columns:1; } .pbody { padding-left:22px; } .pgoal{display:none;} .price.mid{transform:none;} }
+  </style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a href="/" style="display:flex;align-items:center;"><img src="/assets/logo_white-B6hD-sVy.png" alt="741.Studio" style="height:26px;width:auto;display:block;"></a>
+    <div style="display:flex; gap:12px; align-items:center;"><span style="color:var(--gold); font-size:12px;">DE</span><span style="color:#555">·</span><a href="/pages/growth-plan.html" style="color:#bbb; font-size:12px; text-decoration:none;">EN</a><div class="private">Private Vorschau — vorbereitet für unser Gespräch</div></div>
+  </div>
+</header>
+
+<div class="hero wrap">
+  <div class="kicker">Local SEO × Paid Ads — Der Doppel-Motor</div>
+  <h1>Vom Gefunden-Werden<br>zum <em>ausgebuchten Kalender</em>.</h1>
+  <p class="sub">Das ist das exakte System, mit dem wir lokale Unternehmen zur offensichtlichen Wahl auf Google machen — und jeden Schritt messbar, von der ersten Suche bis zum gebuchten Termin.</p>
+  <div class="proofbar">
+    <div class="chip"><b>2.500+</b><small>analysierte lokale Betriebe</small></div>
+    <div class="chip"><b>100+</b><small>aktive Tracking-Setups</small></div>
+    <div class="chip"><b>30+</b><small>lokale Sichtbarkeits-Projekte</small></div>
+    <div class="chip"><b>2</b><small>Wachstumsmotoren, ein Team</small></div>
+  </div>
+</div>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">Echte Ergebnisse, echte Dashboards</div>
+    <h2>Von unsichtbar auf 100 % Top-3 — in 8 Wochen.</h2>
+    <p class="lead">Psychologische Beratungspraxis, Raum Stuttgart. Woche 1: jeder Messpunkt rot. Woche 5: 92 % der Karte in den Top 3. Woche 8: 100 % Top-3-Abdeckung bei Ø Rang 1,8. Direkt aus dem Tracking-Dashboard — nichts retuschiert.</p>
+    <div class="resultchips">
+      <div class="rc"><b>0 % → 100 %</b><small>Top-3-Abdeckung in 8 Wochen</small></div>
+      <div class="rc"><b>Ø 1,8</b><small>durchschnittlicher Maps-Rang</small></div>
+      <div class="rc"><b>+0,7</b><small>Rang-Verbesserung im letzten Monat</small></div>
+    </div>
+    <div class="case">
+      <figure><img src="/review-assets/proof/maria-abel-5-wochen.jpg" alt="Woche für Woche: Google-Maps-Raster von komplett rot zu 92 % Top-3 in 5 Wochen" loading="lazy"><figcaption>Woche 1–5: Das Raster dreht von Rot auf Grün — 92 % Top-3, Ø Rang 2,2.</figcaption></figure>
+      <figure><img src="/review-assets/proof/maria-abel-100prozent.jpg" alt="Tracking-Dashboard: 100 % High Ranks, Ø Rang 1,8" loading="lazy"><figcaption>Woche 8: 100 % High Ranks (1–3), Ø Rang 1,8 — das gesamte Einzugsgebiet abgedeckt.</figcaption></figure>
+    </div>
+    <blockquote class="q">„Vorher war ich praktisch unsichtbar. Heute ist mein Kalender konsequent gefüllt – und die Klientinnen sagen mir, dass sie mich über Google gefunden haben."
+      <footer>Maria Abel · Elternberatung &amp; Coaching, Deutschland — die Praxis hinter dem Dashboard oben</footer>
+    </blockquote>
+
+    <h2 style="margin-top:56px; font-size:24px;">Case 2: Rang 17 → Rang 4 im härtesten Markt Stuttgarts.</h2>
+    <p class="lead">Heilpraktiker-Praxis, Stuttgart — Keyword „Heilpraktiker Stuttgart", 128 konkurrierende Praxen. Januar: Position 17, Sichtbarkeit LOW, die ganze Karte rot. Mai: Position 4, Innenstadt in den Top 5.</p>
+    <div class="resultchips">
+      <div class="rc"><b>17 → 4</b><small>Maps-Position, Jan → Mai</small></div>
+      <div class="rc"><b>128</b><small>Wettbewerber im Markt</small></div>
+      <div class="rc"><b>LOW → MEDIUM</b><small>Google-Sichtbarkeits-Score</small></div>
+    </div>
+    <div class="case">
+      <figure><img src="/review-assets/proof/boehme-vorher.jpg" alt="Vorher: Position 17, ganze Karte rot, Sichtbarkeit LOW" loading="lazy"><figcaption>Januar: Position 17 überall — praktisch unsichtbar.</figcaption></figure>
+      <figure><img src="/review-assets/proof/boehme-nachher.jpg" alt="Nachher: Position 4, Innenstadt grün, Sichtbarkeit MEDIUM" loading="lazy"><figcaption>Mai: Position 4, Top-5 in der gesamten Innenstadt — gleiche Praxis, gleiche Adresse.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Beweise zuerst</div>
+    <h2>Glaub nicht uns. Glaub unseren Kunden.</h2>
+    <p class="lead">Echte Kunden, in ihren eigenen Worten.</p>
+    <div class="vidgrid">
+      <div class="vid"><iframe src="https://www.youtube.com/embed/zorMMzm7pf4" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      <div class="vid"><iframe src="https://www.youtube.com/embed/fU_mDQmLA0Y" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      <div class="vid"><iframe src="https://www.youtube.com/embed/-3mOyczmvMw" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      <div class="vid"><iframe src="https://www.youtube.com/embed/aYnEI0HNFdg" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      <div class="vid"><iframe src="https://www.youtube.com/embed/AuAOc1_1VG0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+    </div>
+
+    <h2 style="margin-top:56px; font-size:26px;">Die lokalen Betriebe, mit denen wir gearbeitet haben.</h2>
+    <p class="lead">Health- &amp; Praxis-Kunden zuerst — jeder Name hier ist echte, geleistete Arbeit.</p>
+    <div class="wall">
+      <div class="wc hl"><img class="avimg" src="/review-assets/people/bali-healing.jpg" alt="Bali Healing, Canggu" loading="lazy"><div><b>Bali Healing, Canggu</b><small>Holistic Health Center</small><em class="res"><a href="#">▲ Platz 5 → 1 · „Holistic Health Center“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/physio-anatomie.jpg" alt="Physio Anatomie GmbH" loading="lazy"><div><b>Physio Anatomie GmbH</b><small>Physiotherapie</small><em class="res"><a href="#">▲ Platz 12 → 2 · „Physiotherapie Stuttgart“</a></em></div></div>
+      <div class="wc"><span class="av">PK</span><div><b>Physiotherapie Kraft</b><small>Physiotherapie</small><em class="res"><a href="/review-assets/proof/physio-kraft-nachher.jpg" target="_blank">▲ Platz 8 → 1 · „Krankengymnastik“</a></em></div></div>
+      <div class="wc"><span class="av">TM</span><div><b>Torsten Menge</b><small>Psychotherapie</small><em class="res"><a href="/review-assets/proof/torsten-menge-nachher.jpg" target="_blank">▲ Platz 117 → 3 · „Onkologie-Psychologie“</a></em></div></div>
+      <div class="wc"><span class="av">EW</span><div><b>Eva Maria Weber</b><small>Massagepraxis</small><em class="res"><a href="#">▲ Platz 14 → 2 · „Massagepraxis“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/karin-lorenz.jpg" alt="Karin Lorenz" loading="lazy"><div><b>Karin Lorenz</b><small>TCM-Praxis</small><em class="res"><a href="#">▲ Platz 19 → 1 · „Akupunktur & TCM“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/maria-abel.jpg" alt="Maria Abel" loading="lazy"><div><b>Maria Abel</b><small>Elternberatung &amp; Coaching</small><em class="res"><a href="/review-assets/proof/maria-abel-100prozent.jpg" target="_blank">▲ 0 → 100 % Top-3-Abdeckung</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/reset-stuttgart.jpg" alt="Reset Stuttgart" loading="lazy"><div><b>Reset Stuttgart</b><small>Bodywork &amp; Gesundheit</small><em class="res"><a href="#">▲ Platz 8 → 1 · „Bodywork &amp; Faszientherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/britta-salz.jpg" alt="Britta Salz" loading="lazy"><div><b>Britta Salz</b><small>Gesundheitspraxis</small><em class="res"><a href="#">▲ Platz 15 → 2 · „Gesundheitscoaching“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/bernd-laserstein.jpg" alt="Bernd Laserstein" loading="lazy"><div><b>Bernd Laserstein</b><small>Gesundheitspraxis</small><em class="res"><a href="/review-assets/proof/bernd-laserstein-nachher.jpg" target="_blank">▲ Platz 9 → 1 · „Körperpsychotherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/sabine-brenneisen.jpg" alt="Sabine Brenneisen" loading="lazy"><div><b>Sabine Brenneisen</b><small>Gesundheitspraxis</small><em class="res"><a href="#">▲ Platz 11 → 2 · „Ernährungsberatung“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/sven-boehme.jpg" alt="Sven Böhme" loading="lazy"><div><b>Sven Böhme</b><small>Heilpraktiker · Stuttgart</small><em class="res"><a href="/review-assets/proof/boehme-nachher.jpg" target="_blank">▲ Platz 17 → 4 · „Heilpraktiker Stuttgart“</a></em></div></div>
+      <div class="wc"><span class="av">VS</span><div><b>Veronika Schlirf</b><small>Heilpraktikerin · Regensburg</small><em class="res"><a href="/review-assets/proof/veronika-schlirf-nachher.jpg" target="_blank">▲ Platz 15 → 1 · „Heilpraktikerin“</a></em></div></div>
+      <div class="wc"><span class="av">MG</span><div><b>Martina Gross</b><small>Physiotherapie · Herzogenaurach</small><em class="res"><a href="/review-assets/proof/martina-gross-nachher.jpg" target="_blank">▲ Platz 1 · „Physiotherapie“</a></em></div></div>
+      <div class="wc"><span class="av">JF</span><div><b>Janina Felix</b><small>Praxis-Kundin</small><em class="res"><a href="#">▲ Platz 7 → 1 · „Osteopathie &amp; Kinder“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/justine-felix.jpg" alt="Justine Felix" loading="lazy"><div><b>Justine Felix</b><small>Praxis-Kundin</small><em class="res"><a href="#">▲ Platz 12 → 2 · „Heilpraktikerin für Frauen“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/jeffrey-krautz.jpg" alt="Jeffrey Krautz · Mediwe" loading="lazy"><div><b>Jeffrey Krautz · Mediwe</b><small>Medizin-Sektor</small><em class="res"><a href="#">▲ Platz 33 → 3 · „Medizinprodukte Vertrieb“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/marita-biel.jpg" alt="Freude am Lernen · Marita Biel" loading="lazy"><div><b>Freude am Lernen · Marita Biel</b><small>Lerncoaching</small><em class="res"><a href="#">▲ Platz 8 → 1 · „Lerncoaching Stuttgart“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/sabine-verges.jpg" alt="Sabine Verges" loading="lazy"><div><b>Sabine Verges</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 14 → 2 · „Naturheilverfahren“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/astrid-lengauer.jpg" alt="Astrid Lengauer" loading="lazy"><div><b>Astrid Lengauer</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 18 → 1 · „Craniosacral Therapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/angelina-everitt.jpg" alt="Angelina Everitt" loading="lazy"><div><b>Angelina Everitt</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 21 → 3 · „Hypnosetherapie Stuttgart“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/martin-altherr.jpg" alt="Martin Altherr" loading="lazy"><div><b>Martin Altherr</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 15 → 1 · „Rolfing &amp; Faszientherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/karoline-hengst.svg" alt="Karoline Hengst" loading="lazy"><div><b>Karoline Hengst</b><small>Lokaler Betrieb</small><em class="res"><a href="/review-assets/proof/karoline-hengst-nachher.jpg" target="_blank">▲ Platz 28 → 2 · „Homöopathie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/claudia-irmscher.jpg" alt="Claudia Irmscher" loading="lazy"><div><b>Claudia Irmscher</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 11 → 2 · „Heilpraktikerin Psychotherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/michael-kuch.jpg" alt="Michael Kuch" loading="lazy"><div><b>Michael Kuch</b><small>Lokaler Betrieb</small><em class="res"><a href="/review-assets/proof/michael-kuch-nachher.jpg" target="_blank">▲ Platz 23 → 3 · „Physiotherapeut“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/hotel-alpi.jpg" alt="Hotel Alpi · Franz Watschinger" loading="lazy"><div><b>Hotel Alpi · Franz Watschinger</b><small>Hotel</small><em class="res"><a href="#">▲ Platz 5 → 1 · „Wellnesshotel Südtirol“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/boris-bamberger.jpg" alt="Werbeagentur Bamberger" loading="lazy"><div><b>Werbeagentur Bamberger</b><small>Agentur · Nürnberg</small><em class="res"><a href="#">▲ Platz 12 → 2 · „Werbeagentur Nürnberg“</a></em></div></div>
+      <div class="wc"><span class="av">DM</span><div><b>Die Mediaberater</b><small>Werbeagentur · Nürnberg</small><em class="res"><a href="/review-assets/proof/mediaberater-nachher.jpg" target="_blank">▲ Platz 14 → 3 · „Online-Marketing-Agentur“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/dieter-noras.jpg" alt="Dieter Noras" loading="lazy"><div><b>Dieter Noras</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 9 → 1 · „Ergotherapie &amp; Handtherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/dennis-doerfler.jpg" alt="Dennis Dörfler" loading="lazy"><div><b>Dennis Dörfler</b><small>Rechtsanwaltskanzlei · Frankfurt</small><em class="res"><a href="/review-assets/proof/dennis-doerfler-nachher.jpg" target="_blank">▲ Platz 17 → 7 · „Fachanwalt Arbeitsrecht“</a></em></div></div>
+    </div>
+    <p class="wallnote">Eine Auswahl unserer Local-SEO- und Sichtbarkeits-Projekte aus Gesundheit, Gastgewerbe, Recht und Dienstleistung.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">Warum jetzt</div>
+    <h2>SEO hat sich verändert: 2022 vs. 2026.</h2>
+    <p class="lead">Was früher funktionierte, wird heute abgestraft. Was heute gewinnt, ist Architektur: Entitäten, Expertise und Nutzererlebnis.</p>
+    <div class="shift">
+      <div class="shcol old">
+        <h3>Die alte Welt (2022)</h3>
+        <ul>
+          <li>Fokus auf Keyword-Dichte</li>
+          <li>Kauf von massenhaften Verzeichnis-Links</li>
+          <li>Reine Textwüsten zur Ranking-Manipulation</li>
+          <li>Traffic als wichtigste Erfolgsmetrik</li>
+        </ul>
+      </div>
+      <div class="shcol new">
+        <h3>Die neue Realität (2026)</h3>
+        <ul>
+          <li>Semantische Entitäten &amp; Relevanz</li>
+          <li>Digital PR &amp; verdiente redaktionelle Links</li>
+          <li>E-E-A-T: nachweisbare klinische Expertise</li>
+          <li>Geschwindigkeit, die man spürt (INP &lt; 200 ms)</li>
+          <li>Autorität, Nutzerverhalten &amp; Conversion-Raten</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Das Angebot</div>
+    <h2>Zwei Motoren. Ein Wachstumssystem.</h2>
+    <p class="lead">Local SEO baut das Asset, das Monat für Monat an Wert gewinnt. Paid Ads bringen Patienten durch die Tür, während es wächst. Zusammen decken sie die gesamte Journey ab.</p>
+    <div class="engines">
+      <div class="engine gold">
+        <div class="num">MOTOR 01 — DAS ASSET</div>
+        <h3>Local-SEO-Dominanz</h3>
+        <ul>
+          <li>Google-Business-Profil komplett ausgebaut</li>
+          <li>Technisches &amp; On-Page-SEO für jede Leistung</li>
+          <li>Bewertungs-Engine: frische, konkrete Bewertungen jede Woche</li>
+          <li>Lokale Autorität: Citations, E-E-A-T, Backlinks</li>
+          <li>Themen-Autorität durch Content-Cluster</li>
+          <li>Conversion-Optimierung — aus Traffic werden Termine</li>
+          <li>49-Punkte-Ranking-Radar, monatlich gemessen</li>
+        </ul>
+      </div>
+      <div class="engine">
+        <div class="num">MOTOR 02 — DER BESCHLEUNIGER</div>
+        <h3>Paid-Ads-Engine</h3>
+        <ul>
+          <li>Google Ads: lokale Kampagnen mit hoher Kaufabsicht</li>
+          <li>Meta Ads: Nachfrage erzeugen + Retargeting</li>
+          <li>Dedizierte, conversion-optimierte Landingpages</li>
+          <li>Sauberes Tracking: Pixel, Conversions API, GA4</li>
+          <li>Zielgruppen aus echten Engagement-Signalen</li>
+          <li>Wöchentliche Optimierung auf Kosten pro Termin</li>
+          <li>Ideal, um neue Leistungen schnell zu füllen</li>
+        </ul>
+      </div>
+    </div>
+    <div class="together"><b>Warum beides:</b> Ads liefern Termine ab Tag eins und erzeugen die Daten (Keywords, Zielgruppen, Angebote), die das SEO schärfer machen. SEO senkt Schritt für Schritt die Abhängigkeit vom Werbebudget. Die meisten Kunden starten mit beidem — und verschieben Budget später von Ads in Gewinn, wenn Organik übernimmt.</div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">Motor 01 im Detail</div>
+    <h2>Der 10-Phasen-Bauplan — aufgebaut wie ein Gebäude.</h2>
+    <p class="lead">Drei Ebenen, zehn Phasen. Jede Ebene trägt die darüber — keine Abkürzungen, die zu Abstrafungen führen.</p>
+    <div class="tower">
+      <div class="tlevel tl3"><span class="tname">Ebene 3 · Der Autoritäts-Multiplikator</span><div class="tchips"><span>7 · Nutzersignale</span><span>8 · GBP-Engagement</span><span>9 · Conversion-Optimierung</span><span>10 · Messbarkeit &amp; KPIs</span></div></div>
+      <div class="tlevel tl2"><span class="tname">Ebene 2 · Der Vertrauens-Motor</span><div class="tchips"><span>4 · Relevante Citations</span><span>5 · Digital PR &amp; Backlinks</span><span>6 · Topische Autorität</span></div></div>
+      <div class="tlevel tl1"><span class="tname">Ebene 1 · Das Fundament</span><div class="tchips"><span>1 · Google Business Profil &amp; Tech-SEO</span><span>2 · Lokale Autorität</span><span>3 · Bewertungs-Management</span></div></div>
+    </div>
+    <p class="tcap">Jede Ebene trägt die darüber — gebaut wie ein Gebäude, nicht wie eine Checkliste.</p>
+
+    <div class="level">
+      <div class="lvl">Ebene 1 — Das Fundament</div>
+      <details class="phase" open>
+        <summary><span class="pnum">1</span> Google-Business-Profil &amp; Tech-SEO <span class="pgoal">Google absolute Klarheit geben: wer, was, wo</span></summary>
+        <div class="pbody">
+          <b>Google-Business-Profil (höchste Priorität)</b>
+          <ul><li>Hauptkategorie</li><li>Nebenkategorien</li><li>Jede Leistung eingetragen</li><li>Leistungsbeschreibungen</li><li>Unternehmensbeschreibung</li><li>Produkte (falls relevant)</li><li>Öffnungszeiten</li><li>Termin-URL</li><li>FAQ</li><li>Attribute</li><li>Fotos &amp; Videos</li><li>Behandler-Profile</li><li>Regelmäßige Google-Posts</li></ul>
+          <b>Technisches Website-SEO</b>
+          <ul><li>Core Web Vitals</li><li>Mobile-Optimierung</li><li>SSL</li><li>Schema</li><li>Sitemap &amp; Robots</li><li>Interne Verlinkung</li><li>Crawl-Fehler</li><li>Bild-Optimierung</li><li>Ladezeit</li></ul>
+          <div class="note"><b>Der Standard für 2026:</b> Interaction to Next Paint (INP) unter <b>200 ms</b>. INP misst die gesamte Latenz vom Klick bis zur sichtbaren Reaktion — schwere JavaScript-Dateien blockieren den Haupt-Thread und frustrieren Patienten mitten in der Buchung.</div>
+        </div>
+      </details>
+      <details class="phase">
+        <summary><span class="pnum">2</span> Lokale Autorität <span class="pgoal">Google liebt Entitäten</span></summary>
+        <div class="pbody">
+          <b>Standort-Seiten</b> — eine einzigartige Seite pro Einzugsgebiet, keine duplizierten Inhalte.
+          <br><br><b>Behandler-Seiten</b> — jede Fachkraft bekommt:
+          <ul><li>Biografie</li><li>Erfahrung</li><li>Qualifikationen</li><li>Leistungen</li><li>Bewertungen</li><li>Interne Links</li></ul>
+          <b>E-E-A-T-Signale, deutlich sichtbar platziert:</b>
+          <ul><li>Zertifizierungen</li><li>Erfahrung</li><li>Mitgliedschaften</li><li>Auszeichnungen</li><li>Medienerwähnungen</li><li>Publikationen</li><li>Vorträge</li></ul>
+        </div>
+      </details>
+      <details class="phase">
+        <summary><span class="pnum">3</span> Bewertungen <span class="pgoal">Heute einer der stärksten Rankingfaktoren</span></summary>
+        <div class="pbody">
+          <ul><li>Kontinuierliche Bewertungs-Generierung</li><li>Bewertungen, die Behandlungen nennen</li><li>Bewertungen, die den Ort nennen</li><li>Antworten des Inhabers auf jede Bewertung</li><li>Frische Bewertungen jede Woche</li></ul>
+          <div class="note"><b>Spezifischer Kontext schlägt generisches Lob um Längen:</b> „Dr. Sarah hat mir bei meinen chronischen Schulterschmerzen exzellent geholfen." ★★★★★ &nbsp;vs.&nbsp; „Tolle Klinik." — und Inhaber-Antworten sind ein aktives Engagement-Signal.</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="level">
+      <div class="lvl">Ebene 2 — Der Vertrauens-Motor</div>
+      <details class="phase">
+        <summary><span class="pnum">4</span> Relevante Citations <span class="pgoal">Klasse statt Masse</span></summary>
+        <div class="pbody">
+          <ul><li>Apple Maps</li><li>Bing Places</li><li>Yelp</li><li>Facebook</li><li>Gesundheits-Verzeichnisse</li><li>Lokale Handelskammer / IHK</li><li>Branchenverbände</li></ul>
+          <div class="note">Absolute Konsistenz von <b>Name · Adresse · Telefon</b> überall.</div>
+        </div>
+      </details>
+      <details class="phase">
+        <summary><span class="pnum">5</span> Backlinks via Digital PR <span class="pgoal">1 redaktioneller Link &gt; 50 Verzeichnis-Links</span></summary>
+        <div class="pbody">
+          Gekaufte Massen-Links bedeuten niedrige Domain-Autorität, hohes Abstrafungs-Risiko — und keine Relevanz für KI-Antwortmaschinen. Stattdessen verdienen wir Links über:
+          <ul><li>Lokale Zeitungen</li><li>Universitäten</li><li>Gesundheits-Blogs</li><li>Podcasts</li><li>Sponsorings</li><li>Verbände</li><li>Lieferanten</li><li>Gastartikel</li></ul>
+          <div class="note">Starke verdiente Links stärken die E-E-A-T-Signale massiv — und zwingen KI-Modelle, <b>dich</b> als primäre Quelle zu zitieren.</div>
+        </div>
+      </details>
+      <details class="phase">
+        <summary><span class="pnum">6</span> Themen-Autorität <span class="pgoal">Der größte SEO-Vorteil heute</span></summary>
+        <div class="pbody">
+          Statt einer Seite über eine Leistung bauen wir Cluster — dedizierte Unterseiten für jede spezifische Beschwerde, alles logisch verlinkt, bis jede Patientenfrage beantwortet ist (Semantic Coverage):
+          <div class="tree">Physiotherapie
+├── Nackenschmerzen     ├── Ischias
+├── Rückenschmerzen     ├── Tennisarm
+├── Schulterschmerzen   ├── Frozen Shoulder
+├── Knieschmerzen       ├── Reha nach OP
+├── Sportverletzungen   ├── Kopfschmerzen</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="level">
+      <div class="lvl">Ebene 3 — Der Autoritäts-Multiplikator</div>
+      <details class="phase">
+        <summary><span class="pnum">7</span> Nutzersignale <span class="pgoal">Google beobachtet alles</span></summary>
+        <div class="pbody">
+          Hohe Klickraten, lange Verweildauer und niedrige Absprungraten signalisieren Relevanz. Interaktionen — Anrufe, Routenplaner, Foto-Ansichten — sind starke lokale Rankingfaktoren. Die Schleife, die wir optimieren:
+          <div class="loop"><span>Impression</span><i>→</i><span>Klick-Rate (CTR)</span><i>→</i><span>Verweildauer</span><i>→</i><span>Interaktion (Anrufe/Route)</span><i>→</i><span><b>Buchung</b></span></div>
+        </div>
+      </details>
+      <details class="phase">
+        <summary><span class="pnum">8</span> Profil-Engagement <span class="pgoal">Ein aktives Profil gewinnt — wöchentliche Pflicht</span></summary>
+        <div class="pbody">
+          <ul><li>Neue Fotos</li><li>Angebote</li><li>Praxis-Updates</li><li>Q&amp;A-Pflege</li><li>Antworten auf Bewertungen</li></ul>
+        </div>
+      </details>
+      <details class="phase">
+        <summary><span class="pnum">9</span> Conversion-Optimierung <span class="pgoal">SEO-Traffic ist wertlos ohne gebuchte Termine</span></summary>
+        <div class="pbody">
+          Der Buchungsprozess muss absolut reibungslos sein:
+          <div class="loop"><span>Landing auf der Seite</span><i>→</i><span>Reibungslos informieren (FAQs, Trust-Badges)</span><i>→</i><span>Direkter Kontakt (Sticky Button, WhatsApp)</span><i>→</i><span><b>Termin bestätigt</b></span></div>
+          <ul style="margin-top:14px;"><li>Klare, omnipräsente CTAs (Sticky Buttons)</li><li>WhatsApp &amp; nahtlose Online-Buchungstools</li><li>Behandler-Fotos, Fallstudien, Trust-Badges</li><li>Spezifische FAQs klären letzte Zweifel direkt auf der Seite</li></ul>
+        </div>
+      </details>
+      <details class="phase">
+        <summary><span class="pnum">10</span> Messbarkeit &amp; KPIs <span class="pgoal">Datengetriebene Entscheidungen statt Bauchgefühl</span></summary>
+        <div class="pbody">
+          Monatliches Tracking der Metriken, die tatsächliches Unternehmenswachstum abbilden — siehe Dashboard-Sektion unten.
+        </div>
+      </details>
+    </div>
+
+    <div class="anatomy">
+      <h3>Anatomie der <span>perfekten Service-Seite</span></h3>
+      <p class="sub2">Jede Leistung bekommt ihre eigene Landingpage — so gebaut, dass Patienten und Google (und KI-Assistenten) sie sofort verstehen.</p>
+      <div class="mock">
+        <div class="mtop"><b>741 Studio</b><span>Home &nbsp; Leistungen &nbsp; Über uns &nbsp; Kontakt</span><span class="btn">Termin buchen</span></div>
+        <h4>Physiotherapie in [Stadtname]</h4>
+        <p class="msub">Klare H2-Unterzeile mit lokalem Kontext</p>
+        <div class="badges"><span>Zertifiziert</span><span>Vorher/Nachher</span><span>★ Bewertungen</span></div>
+        <div class="faq">▸ Was kostet Physiotherapie in [Stadtname]?</div>
+        <div class="faq">▸ Wie viele Sitzungen brauche ich?</div>
+        <div class="faq">▸ Welche Beschwerden behandeln Sie?</div>
+      </div>
+      <div class="anno">
+        <div><b>Dedizierte Seite</b>Jeder Service erhält eine eigene Landingpage.</div>
+        <div><b>H1- &amp; H2-Struktur</b>Klare, semantische Hierarchie.</div>
+        <div><b>Lokaler Kontext</b>Direkte Nennung der Stadt/Region in den Meta-Daten.</div>
+        <div><b>E-E-A-T-Beweise</b>Vorher/Nachher-Bilder &amp; Zertifizierungen.</div>
+        <div><b>Spezifische FAQs</b>Beantworten exakt die Fragen der Patienten — mit Schema-Markup.</div>
+        <div><b>Starker CTA</b>Reibungslose Buchungsmöglichkeit, immer erreichbar.</div>
+        <div><b>Interne Verlinkung</b>Verknüpfung zu verwandten Behandlungen und Behandlern.</div>
+      </div>
+    </div>
+
+    <div class="ai">
+      <h3>+ Die <span>KI-Ebene</span> (Generative Engine Optimization)</h3>
+      <p>Patienten entdecken Praxen zunehmend über KI-Assistenten. Google und LLMs belohnen Inhalte, die <b>strukturierte Antworten</b> auf reale Patientenfragen liefern — und ignorieren unstrukturierte Textwüsten.</p>
+      <div class="geo">
+        <div class="gin"><span>FAQ-Blöcke</span><span>Schema / JSON-LD</span><span>Saubere H1/H2-Struktur</span></div>
+        <div class="garr">→</div>
+        <div class="gout"><b>ChatGPT · Gemini · AI Overviews</b><small>ziehen strukturierte Antworten &amp; zitieren die Quelle</small></div>
+      </div>
+      <div class="gblocked"><b>✕</b> Unstrukturierte Textwüsten — werden von KI-Antwortmaschinen ignoriert</div>
+      <ul>
+        <li>Strukturierte Daten &amp; Schema (JSON-LD)</li>
+        <li>BLUF-Format: Bottom Line Up Front</li>
+        <li>E-E-A-T &amp; Autoren-Transparenz</li>
+        <li>Reibungslose KI-Extraktion</li>
+        <li>KI-Sichtbarkeits-Scans: ChatGPT, Gemini, AI Overviews &amp; AI Mode — gleiche Raster-Methodik wie bei Maps</li>
+        <li>Monatlich gemessen, parallel zu deinen Maps-Rankings</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Prioritäten</div>
+    <h2>Das 80/20 — die Target Zone mit höchstem ROI.</h2>
+    <p class="lead">Maximale Wirkung, minimaler Streuverlust. Wenn wir uns nur auf das konzentrieren müssten, was am meisten bewegt:</p>
+    <svg class="tz" viewBox="0 0 720 430" role="img" aria-label="80/20 Target Zone">
+      <rect x="70" y="30" width="330" height="200" rx="14" fill="#fac118" opacity="0.16"/>
+      <text x="90" y="58" font-size="15" font-weight="800" fill="#8a7d3a" letter-spacing="2">TARGET ZONE</text>
+      <line x1="70" y1="380" x2="690" y2="380" stroke="#6b6b64" stroke-width="2"/>
+      <line x1="70" y1="380" x2="70" y2="20" stroke="#6b6b64" stroke-width="2"/>
+      <text x="680" y="405" font-size="13" fill="#6b6b64" text-anchor="end">Aufwand →</text>
+      <text x="30" y="30" font-size="13" fill="#6b6b64" transform="rotate(-90 30 30)" text-anchor="end">Wirkung →</text>
+      <g font-size="15" font-weight="800" text-anchor="middle">
+        <circle cx="150" cy="150" r="19" fill="#111514"/><text x="150" y="155" fill="#fac118">1</text>
+        <circle cx="215" cy="105" r="19" fill="#111514"/><text x="215" y="110" fill="#fac118">2</text>
+        <circle cx="280" cy="100" r="19" fill="#111514"/><text x="280" y="105" fill="#fac118">3</text>
+        <circle cx="245" cy="175" r="19" fill="#111514"/><text x="245" y="180" fill="#fac118">5</text>
+        <circle cx="360" cy="120" r="19" fill="#575136"/><text x="360" y="125" fill="#fff">4</text>
+        <circle cx="420" cy="190" r="19" fill="#575136"/><text x="420" y="195" fill="#fff">6</text>
+        <circle cx="530" cy="130" r="19" fill="#575136"/><text x="530" y="135" fill="#fff">7</text>
+      </g>
+    </svg>
+    <div class="eighty">
+      <div class="step"><div><b>Google-Business-Profil komplett optimieren</b> — Kategorien, Leistungen, Beschreibung, Fotos, FAQs, Posts.</div></div>
+      <div class="step"><div><b>Eine eigene, hochwertige Seite für jede Kernleistung</b> — mit starker lokaler Optimierung und Schema.</div></div>
+      <div class="step"><div><b>Ein konstanter Fluss echter Bewertungen</b> — die Behandlungen und Orte nennen.</div></div>
+      <div class="step"><div><b>Themen-Autorität</b> — die Inhalte publizieren, nach denen Patienten wirklich suchen.</div></div>
+      <div class="step"><div><b>Conversion-Rate</b> — mehr Besucher werden Termine, bei gleichem Traffic.</div></div>
+      <div class="step"><div><b>Eine Handvoll hochwertiger lokaler Backlinks</b> — vertrauenswürdige Organisationen statt Linkmasse.</div></div>
+      <div class="step"><div><b>Rankings, Anrufe, Buchungen, Conversions messen</b> — Daten statt Annahmen.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">Transparenz</div>
+    <h2>Was du jeden Monat siehst.</h2>
+    <p class="lead">Ein Report. Echte Zahlen. Kein Agentur-Nebel.</p>
+    <div class="metrics">
+      <div class="metric">Google-Maps-Ranking <small>49-Punkte-Raster-Radar</small></div>
+      <div class="metric">Organischer Traffic <small>GA4, Monat für Monat</small></div>
+      <div class="metric">Anrufe <small>aus Profil &amp; Website</small></div>
+      <div class="metric">Routenanfragen <small>Google Business Profil</small></div>
+      <div class="metric">Website-Klicks <small>Profil → Website</small></div>
+      <div class="metric">Buchungen <small>End-to-End getrackt</small></div>
+      <div class="metric">Conversion-Rate <small>Besucher → Termin</small></div>
+      <div class="metric">Top-Keywords <small>wonach Patienten suchen</small></div>
+      <div class="metric">Bewertungen &amp; Rating <small>Zuwachs + Durchschnitt</small></div>
+      <div class="metric">Ads-Performance <small>Kosten pro Termin</small></div>
+      <div class="metric">KI-Sichtbarkeit <small>ChatGPT · Gemini · AIO</small></div>
+      <div class="metric">Umsatz aus Suche <small>die Zahl, die zählt</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Aus unserer Studio-Arbeit</div>
+    <h2>Ausgewählte Projekte über Local SEO hinaus.</h2>
+    <p class="lead">Webprojekte, Tracking-Infrastruktur und Paid Advertising — vom Beach Club auf Bali bis zur Praxis in Europa.</p>
+    <div class="clients">
+      <div class="client"><span class="tag">Bali · Beach Club</span><h3>Single Fin, Uluwatu</h3><p>Langjähriger Digital-Partner: kompletter Rebuild, Analytics &amp; Tracking, Support fürs Inhouse-Team und Paid Advertising — datengetriebene Optimierung als dauerhafter Vorsprung.</p></div>
+      <div class="client"><span class="tag">Bali · Restaurant</span><h3>Avli Uluwatu</h3><p>Ein moderner Auftritt, der die Atmosphäre des Restaurants einfängt — Menü, Location und Reservierung mühelos auf jedem Gerät.</p></div>
+      <div class="client"><span class="tag">Japan/ID · F&amp;B-Marke</span><h3>Marugame Udon</h3><p>Tracking, Newsletter-Integration und strukturierter Informationsfluss — die Marke verlängert in laufende Kundenkommunikation und Automatisierung.</p></div>
+      <div class="client"><span class="tag">Health · TCM-Praxis</span><h3>Karin Lorenz</h3><p>Ein hochwertiger, vertrauenswürdiger Auftritt mit präzisem Tracking — eine reibungslose Journey von der ersten Suche bis zum gebuchten Termin.</p></div>
+      <div class="client"><span class="tag">Health · Medizin</span><h3>Vertrauenszentrum</h3><p>Design, Umsetzung, Tracking und Funnel für einen sensiblen medizinischen Service — Patienten navigieren mit Vertrauen.</p></div>
+      <div class="client"><span class="tag">Coaching</span><h3>Anna Nussbaumer</h3><p>Conversion-fokussierte Website mit End-to-End-Tracking und dem Funnel, der aus Coaching-Interesse gebuchte Klienten macht.</p></div>
+      <div class="client"><span class="tag">Immobilien · Österreich</span><h3>IMMOKAUF.AT</h3><p>Tracking-, Funnel- und Lead-Gen-Infrastruktur, die kontinuierlich motivierte Verkäufer durch die Pipeline bewegt.</p></div>
+      <div class="client"><span class="tag">Restaurant</span><h3>Numero Quattro</h3><p>Sauberes Tracking und Paid Advertising — messbare Kampagnen-Performance und eine verlässliche Basis für Wachstum.</p></div>
+      <div class="client"><span class="tag">Agentur-Partner</span><h3>Talkinfive</h3><p>Langjähriger technischer Partner über eine große Bandbreite an Kundenprojekten und Branchen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">Investment</div>
+    <h2>Drei Wege, mit uns zu arbeiten.</h2>
+    <p class="lead">Jede Zusammenarbeit startet mit derselben Analyse, die du bereits gesehen hast — danach wählst du die Tiefe.</p>
+    <details class="pricereveal">
+    <summary>Investment anzeigen →</summary>
+    <div class="prices">
+      <div class="price">
+        <div class="plabel">Starter</div>
+        <h3>Foundation Setup</h3>
+        <div class="amount">1.999 € <small>einmalig</small></div>
+        <div class="psub">Das Fundament — für Praxen, die danach selbst umsetzen wollen.</div>
+        <ul>
+          <li>Komplettes Setup &amp; technische Basics</li>
+          <li>Markt- &amp; Wettbewerbs-Recherche</li>
+          <li>Keyword- &amp; Positionierungs-Strategie</li>
+          <li>Priorisierte Maßnahmen-Roadmap</li>
+        </ul>
+        <a class="paybtn" href="#" data-stripe="starter">Platz sichern →</a>
+      </div>
+      <div class="price mid">
+        <div class="ribbon">Meistgewählt</div>
+        <div class="plabel">90-Tage-Erfolgspaket</div>
+        <h3>Local-SEO-Dominanz</h3>
+        <div class="amount">3.699 € <small>90-Tage-Programm</small></div>
+        <div class="psub">Das komplette 10-Phasen-System, für dich umgesetzt — mit unserer Ergebnis-Garantie.</div>
+        <ul>
+          <li>Alles aus Starter</li>
+          <li>Komplette 10-Phasen-Umsetzung in 90 Tagen</li>
+          <li>Bewertungs-Engine &amp; Profil-Engagement</li>
+          <li>Service-Seiten, Cluster &amp; KI-Ebene</li>
+          <li>Monatliches Ranking-Radar &amp; KPI-Report</li>
+        </ul>
+        <div class="guarantee">✓ Mit Ergebnis-Garantie — die genauen Konditionen besprechen wir im Gespräch.</div>
+        <a class="paybtn" href="#" data-stripe="core">Die 90 Tage starten →</a>
+      </div>
+      <div class="price">
+        <div class="plabel">Power Engine</div>
+        <h3>SEO + Paid-Ads-Beschleuniger</h3>
+        <div class="amount">7.999 € <small>+ monatl. Ads-Management</small></div>
+        <div class="psub">Für den Launch neuer Leistungen — und den schnellstmöglich gefüllten Kalender.</div>
+        <ul>
+          <li>Alles aus dem 90-Tage-Paket</li>
+          <li>Google- &amp; Meta-Ads-Kampagnen</li>
+          <li>Dedizierte Conversion-Landingpages</li>
+          <li>Volles Tracking: Pixel, CAPI, GA4</li>
+          <li>Wöchentliche Optimierung auf Kosten pro Termin</li>
+        </ul>
+        <a class="paybtn" href="#" data-stripe="power">Engine starten →</a>
+      </div>
+    </div>
+    <p class="pricenote">Alle Pakete starten mit einem gemeinsamen Kick-off und enden mit Zahlen auf dem Tisch — Rankings, Anrufe, Buchungen. Werbebudget ist im Management-Honorar nicht enthalten.</p>
+    </details>
+    <script>/* Stripe Payment Links: Link-URL in die hrefs der Buttons eintragen. Buttons bleiben versteckt, bis ein echter Link gesetzt ist. */
+    document.querySelectorAll('.paybtn[href="#"]').forEach(function(b){ b.style.display='none'; });</script>
+  </div>
+</section>
+
+<div class="cta wrap">
+  <div class="box">
+    <h2>Lass uns deinen Plan bauen.</h2>
+    <p>Jeder Betrieb bekommt seine eigene Version dieses Systems — basierend auf deinem Markt, deinen Wettbewerbern und deinem Ranking-Radar. Genau das schauen wir uns in diesem Gespräch gemeinsam an.</p>
+    <p class="quote">„SEO im Jahr 2026 ist kein technischer Trick mehr. Es ist der architektonische Aufbau deiner Praxis als die unangefochtene Experten-Entität in deiner Region — und gewinnt das nachhaltige Vertrauen von Patienten <i>und</i> Algorithmen."</p>
+  </div>
+</div>
+
+<footer><img src="/assets/logo_black-DWbLQD0x.png" alt="741.Studio" style="height:24px;width:auto;display:block;margin:0 auto 12px;">Digital Growth · <a href="https://741.studio" style="color:inherit;">741.studio</a> · Diese Seite ist eine private Präsentation und nicht öffentlich gelistet.</footer>
+
+</body>
+</html>

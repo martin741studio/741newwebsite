@@ -3,6 +3,79 @@
 
   <!-- Headline -->
   <style>
+    /* Canonical partner-logos styling — kept in the partial so every page
+       (home + all service pages, EN + DE) renders identically. Because this
+       <style> lives in the <body>, it overrides any divergent per-page
+       .section_partner-logos rules defined earlier in each page's <head>. */
+    .section_partner-logos {
+      display: flex;
+      align-items: center;
+      width: 100vw;
+      max-width: 100%;
+      overflow: hidden;
+      padding: 4rem 0 2rem 0;
+      background-color: transparent;
+      background-image: none;
+      border: none;
+      position: relative;
+      z-index: 10;
+    }
+
+    .marquee-wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      cursor: grab;
+      user-select: none;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
+    .marquee-wrapper:active {
+      cursor: grabbing;
+    }
+
+    .marquee-content {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      gap: 0;
+      padding: 0;
+      will-change: transform;
+    }
+
+    @keyframes scrollMarquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .logo-item {
+      height: 60px;
+      margin: 0 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-item img {
+      max-height: 100%;
+      max-width: 180px;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.6);
+      transition: filter 300ms ease, opacity 300ms ease;
+      cursor: pointer;
+    }
+
+    .logo-item:hover img {
+      filter: grayscale(0%) opacity(1);
+    }
+
     .partner-headline-wrapper {
       text-align: center;
       margin-bottom: 3rem;

@@ -4,3 +4,10 @@ tmp/
 .env
 04_site.zip
 build_workspace/04_site.zip
+
+# Personal Claude Code permission overrides
+.claude/settings.local.json
+.deploy-manifest.json
+
+# API service-account keys (never commit)
+.secrets/

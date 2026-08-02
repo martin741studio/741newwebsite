@@ -1,0 +1,481 @@
+<!-- ============================================================
+     HOME V2 — SPLIT HERO SLIDER · DEUTSCH (Local SEO · Webdesign · Paid Ads)
+     Zwei Spalten: Copy + CTA (links), Produkt-/Proof-Bilder (rechts).
+     Eigenständiger Vanilla-Crossfade (keine Splide-Abhängigkeit noetig).
+     ============================================================ -->
+
+<!-- Editorial serif italic accent (pairs with the site's DM Sans) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap"
+  rel="stylesheet" media="print" onload="this.media='all'" />
+
+<section class="hero2-section">
+  <div class="hero2-wrap">
+    <div class="hero2-slides">
+
+      <!-- ============ SLIDE 1 — LOCAL SEO ============ -->
+      <div class="hero2-slide is-active">
+        <div class="hero2-inner">
+          <div class="hero2-copy">
+            <span class="hero2-badge">90-Tage Top-3-Garantie</span>
+            <h1 class="hero2-title">
+              Schluss mit Unsichtbarkeit.
+              <span class="hero2-accent">Ranken Sie in den Top 3</span>
+              bei Google Maps in 90 Tagen
+            </h1>
+            <p class="hero2-sub">
+              24/7 lokale Sichtbarkeit und Experten-SEO, das Suchende aus Ihrer Nähe in
+              gebuchte Kunden verwandelt, oder wir optimieren kostenlos weiter, bis Sie ranken.
+            </p>
+            <div class="hero2-actions">
+              <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="hero2-btn">
+                Kostenlose Potenzialanalyse <span class="hero2-btn__arrow">&rarr;</span>
+              </a>
+              <div class="hero2-trust">
+                <span class="hero2-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>Beliebt bei lokalen Unternehmern</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero2-visual">
+            <div class="hero2-card hero2-card--scene">
+              <img src="/assets/local-seo/images/local-seo-before-after-de.webp" loading="eager" alt="Vorher-Nachher: eine lokale Praxis steigt von außerhalb der Top 20 auf die Google Maps Top 3, mit 278% mehr Anrufen in 90 Tagen" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ SLIDE 2 — WEBDESIGN ============ -->
+      <div class="hero2-slide hero2-slide--villa">
+        <div class="hero2-inner">
+          <div class="hero2-copy">
+            <span class="hero2-badge">Performance garantiert</span>
+            <h1 class="hero2-title">
+              Schluss mit verlorenen Kunden. Eine Website, die
+              <span class="hero2-accent">verkauft, während Sie schlafen</span>
+            </h1>
+            <p class="hero2-sub">
+              Eine maßgeschneiderte, conversion-optimierte Website, die schneller lädt, Vertrauen
+              schafft und Besucher innerhalb von 45 Tagen in Umsatz verwandelt.
+            </p>
+            <div class="hero2-actions">
+              <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="hero2-btn">
+                Website-Angebot anfordern <span class="hero2-btn__arrow">&rarr;</span>
+              </a>
+              <div class="hero2-trust">
+                <span class="hero2-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>Vertraut von wachsenden Marken</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero2-visual hero2-visual--villa">
+            {{> villa-web-visual_de }}
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ SLIDE 3 — PAID ADS ============ -->
+      <div class="hero2-slide hero2-slide--villa">
+        <div class="hero2-inner">
+          <div class="hero2-copy">
+            <span class="hero2-badge">Qualifizierte Leads garantiert</span>
+            <h1 class="hero2-title">
+              Schluss mit verschwendetem Werbebudget.
+              <span class="hero2-accent">Füllen Sie Ihre Pipeline</span>
+              in 14 Tagen
+            </h1>
+            <p class="hero2-sub">
+              Angebotsstarke Google- und Meta-Ads, die kaltes Scrollen in gebuchte Termine
+              verwandeln, mehr qualifizierte Leads in 14 Tagen oder Sie zahlen unsere Gebühr nicht.
+            </p>
+            <div class="hero2-actions">
+              <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="hero2-btn">
+                Kostenlose Ad-Strategie <span class="hero2-btn__arrow">&rarr;</span>
+              </a>
+              <div class="hero2-trust">
+                <span class="hero2-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>Echte Leads, nicht nur Klicks</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero2-visual hero2-visual--villa">
+            {{> villa-ads-visual_de }}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero2-dots" role="tablist" aria-label="Service wählen">
+      <button class="hero2-dot is-active" data-i="0" aria-label="Lokale SEO"></button>
+      <button class="hero2-dot" data-i="1" aria-label="Webdesign"></button>
+      <button class="hero2-dot" data-i="2" aria-label="Paid Ads"></button>
+    </div>
+  </div>
+
+  <style>
+    /* ---------- Section ---------- */
+    .hero2-section {
+      position: relative;
+      background:
+        radial-gradient(120% 90% at 85% 0%, rgba(250, 193, 24, 0.14) 0%, rgba(250, 193, 24, 0) 55%),
+        linear-gradient(180deg, #fbfaf7 0%, #f6f4ee 100%);
+      overflow: hidden;
+      /* Full-screen hero: the next section stays below the fold */
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero2-wrap {
+      width: 100%;
+      max-width: 90rem;
+      margin: 0 auto;
+      padding: 8rem 4rem 4rem;
+    }
+
+    /* ---------- Crossfade stage ---------- */
+    .hero2-slides { position: relative; min-height: 34rem; }
+
+    .hero2-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.6s ease;
+    }
+    .hero2-slide.is-active {
+      position: relative;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ---------- Two-column layout ---------- */
+    .hero2-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      align-items: center;
+      gap: 4rem;
+      min-height: 34rem;
+    }
+
+    /* ---------- Left: copy ---------- */
+    .hero2-copy { max-width: 34rem; }
+
+    .hero2-badge {
+      display: inline-block;
+      background: #fac118;
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero2-title {
+      color: #1c1c1a;
+      font-size: clamp(2.4rem, 3.6vw, 3.9rem);
+      line-height: 1.06;
+      letter-spacing: -0.01em;
+      font-weight: 600;
+      margin: 0 0 1.4rem;
+    }
+
+    .hero2-accent {
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .hero2-sub {
+      color: #55534d;
+      font-size: clamp(1rem, 1.2vw, 1.2rem);
+      line-height: 1.55;
+      margin: 0 0 2.2rem;
+      max-width: 30rem;
+    }
+
+    .hero2-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      align-items: flex-start;
+    }
+
+    .hero2-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #1f2a22;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 1.05rem 2rem;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .hero2-btn:hover {
+      background: #fac118;
+      color: #1a1a1a;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(31, 42, 34, 0.18);
+    }
+
+    .hero2-btn__arrow { transition: transform 0.25s ease; }
+    .hero2-btn:hover .hero2-btn__arrow { transform: translateX(4px); }
+
+    .hero2-trust {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #6b6862;
+      font-size: 0.9rem;
+    }
+
+    .hero2-stars { color: #fac118; letter-spacing: 0.05em; font-size: 1rem; }
+
+    /* ---------- Right: visual ---------- */
+    .hero2-visual {
+      position: relative;
+      min-height: 30rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero2-card {
+      width: 100%;
+      max-width: 40rem;
+      border-radius: 1.4rem;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(28, 28, 26, 0.14);
+    }
+
+    /* Full-bleed screenshots (results/proof) */
+    .hero2-card--shot { aspect-ratio: 16 / 11; background: #fff; }
+    .hero2-card--shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* Self-contained proof scene (3:2 marketing image, no crop, no accent) */
+    .hero2-card--scene { aspect-ratio: 3 / 2; background: #fff; }
+    .hero2-card--scene img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* Floating device mockups on a soft branded panel */
+    .hero2-card--device {
+      aspect-ratio: 16 / 12;
+      background: linear-gradient(160deg, #fff 0%, #fbf3d9 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.6rem;
+    }
+    .hero2-card--device img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+    /* Small overlapping accent card */
+    .hero2-accent-card {
+      position: absolute;
+      bottom: -1.6rem;
+      left: -1.6rem;
+      width: 12rem;
+      aspect-ratio: 1 / 1;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 18px 36px rgba(28, 28, 26, 0.18);
+      border: 4px solid #fff;
+    }
+    .hero2-accent-card--device {
+      background: linear-gradient(160deg, #fff 0%, #f4f6f3 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    .hero2-accent-card img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+    /* Screenshot/proof inside the small accent card (fills edge to edge) */
+    .hero2-accent-card--shot { padding: 0; background: #fff; }
+    .hero2-accent-card--shot img { object-fit: cover; }
+
+    /* ---------- Paid Ads slide: coded dashboard + floating cards ---------- */
+    .hero2-visual--ads { position: relative; }
+    .ads-dash {
+      width: 100%; max-width: 30rem;
+      background: #fff; border: 1px solid rgba(28,28,26,.06);
+      border-radius: 1.3rem; box-shadow: 0 30px 60px rgba(28,28,26,.16);
+      padding: 1.4rem;
+    }
+    .ads-dash-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .ads-dash-title { font-weight: 700; color: #1c1c1a; font-size: 1rem; }
+    .ads-dash-live { display: inline-flex; align-items: center; gap: .4rem; font-size: .72rem; font-weight: 700; color: #16a34a; text-transform: uppercase; letter-spacing: .04em; }
+    .ads-dash-live i { width: .5rem; height: .5rem; border-radius: 50%; background: #16a34a; display: inline-block; animation: adsPulse 1.6s ease-in-out infinite; }
+    @keyframes adsPulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+    .ads-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: .55rem; margin-bottom: 1rem; }
+    .ads-kpi { background: #f7f6f2; border-radius: .7rem; padding: .6rem .55rem; display: flex; flex-direction: column; gap: .12rem; }
+    .ads-kpi-l { font-size: .64rem; color: #8a8781; }
+    .ads-kpi-v { font-size: 1.15rem; font-weight: 800; color: #1c1c1a; line-height: 1.05; }
+    .ads-kpi-d { font-size: .64rem; font-weight: 800; color: #16a34a; }
+    .ads-chart { height: 5rem; }
+    .ads-chart svg { width: 100%; height: 100%; display: block; }
+
+    .ads-float {
+      position: absolute; z-index: 3; display: flex; align-items: center; gap: .55rem;
+      background: #fff; border: 1px solid rgba(28,28,26,.06); border-radius: .9rem;
+      box-shadow: 0 16px 34px rgba(28,28,26,.16); padding: .55rem .75rem;
+      animation: adsFloat 5.5s ease-in-out infinite;
+    }
+    .ads-float-ico { width: 2rem; height: 2rem; border-radius: .55rem; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
+    .ads-float-ico svg { width: 60%; height: 60%; }
+    .ads-float-txt { display: flex; flex-direction: column; line-height: 1.12; }
+    .ads-float-l { font-weight: 700; font-size: .78rem; color: #1c1c1a; }
+    .ads-float-s { font-size: .64rem; color: #8a8781; }
+    .ads-float-num { display: flex; flex-direction: column; align-items: flex-end; margin-left: .35rem; }
+    .ads-float-v { font-weight: 800; font-size: 1rem; color: #1c1c1a; line-height: 1; }
+    .ads-float-up { font-size: .62rem; font-weight: 800; color: #16a34a; white-space: nowrap; }
+
+    .ads-float--a { top: -1.1rem; left: -1rem; }
+    .ads-float--b { bottom: 3rem; left: -1.8rem; animation-delay: -1.8s; }
+    .ads-float--c { bottom: -1.1rem; right: -0.6rem; animation-delay: -3.6s; }
+
+    @keyframes adsFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    @media (prefers-reduced-motion: reduce) { .ads-float, .ads-dash-live i { animation: none; } }
+
+    @media screen and (max-width: 767px) {
+      .ads-dash { max-width: 100%; padding: 2rem; border-radius: 2rem; }
+      .ads-dash-title { font-size: 2.4rem; }
+      .ads-dash-live { font-size: 1.6rem; }
+      .ads-kpis { gap: 1rem; }
+      .ads-kpi { padding: 1.2rem 1rem; border-radius: 1.2rem; }
+      .ads-kpi-l { font-size: 1.4rem; }
+      .ads-kpi-v { font-size: 2.9rem; }
+      .ads-kpi-d { font-size: 1.4rem; }
+      .ads-chart { height: 8rem; }
+      .ads-float { padding: 1.1rem 1.4rem; gap: 1rem; border-radius: 1.6rem; }
+      .ads-float-ico { width: 4.4rem; height: 4.4rem; border-radius: 1.1rem; }
+      .ads-float-l { font-size: 2rem; }
+      .ads-float-s { font-size: 1.5rem; }
+      .ads-float-v { font-size: 2.4rem; }
+      .ads-float-up { font-size: 1.5rem; }
+      .ads-float--a { top: -1.6rem; left: 0; }
+      .ads-float--b { bottom: 4.5rem; left: 0; animation-delay: -1.8s; }
+      .ads-float--c { bottom: -1.6rem; right: 0; animation-delay: -3.6s; }
+    }
+
+    /* ---------- Dots ---------- */
+    .hero2-dots {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      padding-left: 0.2rem;
+    }
+    .hero2-dot {
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 100px;
+      border: none;
+      padding: 0;
+      background: rgba(28, 28, 26, 0.18);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .hero2-dot.is-active { background: #fac118; width: 1.8rem; }
+
+    /* ---------- Tablet ---------- */
+    @media screen and (max-width: 991px) {
+      .hero2-wrap { padding: 6rem 2.5rem 3.5rem; }
+      .hero2-inner { gap: 2.5rem; }
+      .hero2-accent-card { width: 9rem; }
+    }
+
+    /* ---------- Mobile ---------- */
+    @media screen and (max-width: 767px) {
+      /* Stacked mobile content is taller than the viewport, so let it flow
+         naturally instead of forcing a full-screen height. */
+      .hero2-section { min-height: auto; display: block; }
+
+      /* Fixed header (announcement + nav) is ~100px tall in real px, and the
+         mobile root font is only ~6.75px, so rem-based padding under-clears it.
+         Use a px top-pad that reliably keeps the badge below the nav. */
+      .hero2-wrap { padding: 140px 1.5rem 3.5rem; }
+
+      .hero2-slides { min-height: 0; }
+      .hero2-slide { position: absolute; }
+      .hero2-slide.is-active { position: relative; }
+
+      .hero2-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        min-height: auto;
+      }
+
+      .hero2-copy { max-width: none; }
+
+      .hero2-badge { font-size: 1.5rem; padding: 0.7rem 1.4rem; }
+
+      .hero2-title { font-size: 5rem; line-height: 1.08; }
+
+      .hero2-sub { font-size: 2.2rem; line-height: 1.5; max-width: none; }
+
+      .hero2-btn { font-size: 2rem; padding: 1.5rem 2.6rem; }
+
+      .hero2-trust { font-size: 1.7rem; }
+      .hero2-stars { font-size: 1.9rem; }
+
+      .hero2-visual { min-height: auto; margin-top: 0.5rem; }
+
+      .hero2-card { max-width: 100%; }
+
+      .hero2-accent-card { width: 30%; bottom: -1rem; left: -0.6rem; }
+
+      .hero2-dots { justify-content: center; margin-top: 2.5rem; }
+      .hero2-dot { width: 1.1rem; height: 1.1rem; }
+      .hero2-dot.is-active { width: 3rem; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      function init() {
+        var stage = document.querySelector('.hero2-slides');
+        if (!stage) return;
+        var slides = stage.querySelectorAll('.hero2-slide');
+        var dots = document.querySelectorAll('.hero2-dot');
+        var section = document.querySelector('.hero2-section');
+        var i = 0, timer = null, DURATION = 6500;
+
+        function show(n) {
+          i = (n + slides.length) % slides.length;
+          slides.forEach(function (s, k) { s.classList.toggle('is-active', k === i); });
+          dots.forEach(function (d, k) { d.classList.toggle('is-active', k === i); });
+        }
+        function start() { stop(); timer = setInterval(function () { show(i + 1); }, DURATION); }
+        function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+        dots.forEach(function (d) {
+          d.addEventListener('click', function () { show(parseInt(d.dataset.i, 10)); start(); });
+        });
+        if (section) {
+          section.addEventListener('mouseenter', stop);
+          section.addEventListener('mouseleave', start);
+        }
+
+        show(0);
+        start();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+</section>

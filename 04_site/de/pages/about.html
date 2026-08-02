@@ -1,0 +1,749 @@
+html
+<html data-wf-domain="www.weavy.ai" data-wf-page="681b040781d5b5e278a6999f" data-wf-site="681b040781d5b5e278a69989">
+<head>
+<meta charset="utf-8"/>
+
+<title>Über | 741.Studio – Digitales Wachstum gestalten</title>
+<meta content="Learn about 741.Studio and founder Martin Drendel. We build high-performance digital assets that maximize leverage and ROI." name="description"/>
+<link href="https://741.studio/pages/about.html" rel="canonical"/>
+<meta content="About | 741.Studio - Architecting Digital Growth" property="og:title"/>
+<meta content="Learn about 741.Studio and founder Martin Drendel. We build high-performance digital assets that maximize leverage and ROI." property="og:description"/>
+<meta content="About | 741.Studio - Architecting Digital Growth" property="twitter:title"/>
+<meta content="Learn about 741.Studio and founder Martin Drendel. We build high-performance digital assets that maximize leverage and ROI." property="twitter:description"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link crossorigin="anonymous" href="/assets/weavy.css"  rel="stylesheet" type="text/css"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        /* Partner Logos Marquee */
+        .section_partner-logos {
+            display: flex;
+            align-items: center;
+            width: 100vw;
+            max-width: 100%;
+            overflow: hidden;
+            padding: 4rem 0 2rem 0;
+            background-color: transparent;
+            position: relative;
+            z-index: 10;
+        }
+
+        .marquee-wrapper {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            cursor: grab;
+            user-select: none;
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .marquee-wrapper:active {
+            cursor: grabbing;
+        }
+
+        .marquee-content {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            will-change: transform;
+        }
+
+        @keyframes scrollMarquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .logo-item {
+            height: 60px;
+            margin: 0 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .logo-item img {
+            max-height: 100%;
+            max-width: 180px;
+            object-fit: contain;
+            filter: grayscale(100%) opacity(0.6);
+            transition: filter 300ms ease, opacity 300ms ease;
+            cursor: pointer;
+        }
+
+        .logo-item:hover img {
+            filter: grayscale(0%) opacity(1);
+        }
+
+        /* Global Background Tint Overrides (Replacing Turquoise with Brand Yellow) */
+        .section-hero {
+            background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 34%, rgba(250, 193, 24, 0.35) 71%), url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif") !important;
+        }
+
+        /* Shared / General Styles reused from local-seo */
+        .seo_section {
+            padding: 6rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .seo_section.is--dark {
+            background-color: #111;
+            color: #fff;
+        }
+
+        .seo_grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 991px) {
+            .seo_grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .seo_highlight {
+            color: var(--brand--lemon, #fac118);
+            font-weight: 700;
+        }
+
+        .seo_card {
+            background-color: #f8f8f8;
+            padding: 3rem;
+            border-radius: 2rem;
+            border: 1px solid #eee;
+            height: 100%;
+        }
+
+        .seo_card.is--dark {
+            background-color: #1a1a1a;
+            border-color: #333;
+        }
+
+        .seo_tagline {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--brand--lemon, #fac118);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .seo_btn {
+            background-color: var(--brand--lemon, #fac118);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        .seo_btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(250, 193, 24, 0.3);
+        }
+
+        /* Values Grid */
+        .values_grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .values_grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .value_icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Founder specific styles retained and adapted into local-seo grid format */
+        .founder_grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .founder_grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .founder_image_wrapper {
+            position: relative;
+            background: #fff;
+            padding: 1rem;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            transform: rotate(-2deg);
+        }
+
+        .founder_image_wrapper.is--dark {
+            background: #222;
+        }
+
+        .founder_image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .founder_name_overlay {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--brand--lemon, #fac118);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: rotate(2deg);
+        }
+
+        .founder_name_overlay h3 {
+            margin: 0;
+            font-family: 'Press Start 2P', monospace;
+            font-weight: 900;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            color: #111;
+        }
+
+        .founder_title {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #555;
+            margin-top: 5px;
+            display: block;
+            font-weight: bold;
+        }
+    </style>
+<script type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -o-font-smoothing: antialiased;
+        }
+
+        html,
+        body {
+            overscroll-behavior-y: none;
+        }
+
+        html.lenis {
+            height: auto !important;
+        }
+
+        body.lenis {
+            height: auto !important;
+        }
+    </style>
+<!-- Nav button forced styling -->
+<style>
+        .huge_nav-button {
+            mix-blend-mode: normal !important;
+        }
+
+        /* Mobile overrides to standardize with homepage */
+        @media (max-width: 767px) {
+            .grid-container.is-hero.is-banner-top {
+                padding-top: 12rem !important;
+            }
+
+            .seo_section p,
+            .seo_section p.text-size-medium {
+                font-size: 2.2rem !important;
+                line-height: 1.4 !important;
+            }
+
+            .seo_section p.text-size-medium {
+                margin-top: 1rem;
+            }
+
+            .vertical-wrapp {
+                padding-left: 0 !important;
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+
+            .heading_h1-hero {
+                text-align: center !important;
+                margin-top: 20px !important;
+                width: 100% !important;
+                align-self: center !important;
+            }
+
+            .h1-wrapper.extra-bot-pad {
+                margin-bottom: 2rem !important;
+            }
+
+            .paragraph-wrapper {
+                text-align: center !important;
+            }
+
+            .text-size-large {
+                font-size: 2.5rem !important;
+                line-height: 1.15 !important;
+            }
+
+            .seo_btn {
+                font-size: 2.5rem !important;
+                padding: 18px 40px !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                margin: 40px auto 0 auto !important;
+                width: max-content !important;
+            }
+
+            .seo_tagline {
+                display: none !important;
+            }
+
+            .founder_grid {
+                grid-template-columns: 1fr !important;
+                text-align: center;
+            }
+        }
+    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script async="" finsweet="components" siteid="681b040781d5b5e278a69989" src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989%2F6544eda5f000985a163a8687%2F6830de8fbc3ef49c91c3f557%2Ffinsweetcomponentsconfig-1.0.0.js" type="module"></script>
+</head>
+<body>
+
+<div class="code_responsive-dom w-embed">
+<style>
+            html,
+            body {
+                font-size: 1vw;
+            }
+
+            @media screen and (min-width: 1440px) {
+
+                html,
+                body {
+                    font-size: 14.4px;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+
+                html,
+                body {
+                    font-size: 1.8vw;
+                }
+            }
+        </style>
+</div>
+<div class="page-wrapper">
+<div class="main-wrapper">
+            {{> header_de }}
+
+            <!-- HERO SECTION -->
+<section class="section-hero">
+<div class="grid-container is-hero is-banner-top">
+<div class="vertical-wrapp" id="w-node-_5134b68b-08f8-d177-ea63-19167ba1aa94-78a6999f" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%; grid-column: 1 / -1 !important; padding-top: 4rem;">
+<div class="seo_tagline">Wer wir sind</div>
+<div class="h1-wrapper extra-bot-pad" style="padding-bottom: 0.5rem; padding-top: 5px;">
+<h1 class="heading_h1-hero reveal-up">
+                                Architektur der <span class="seo_highlight">Autonomie</span>
+</h1>
+</div>
+<div class="paragraph-wrapper" style="max-width: 700px; margin: 0 auto;">
+<p class="text-size-large reveal-up">
+                                741.Studio ist eine leistungsstarke Digitalagentur, die sich dem Aufbau skalierbarer
+                                Wachstumsmotoren widmet. Wir „gestalten“ nicht nur – wir entwickeln Systeme, die echten Mehrwert
+                                schaffen und Ihren Fokus schützen.
+                            </p>
+<a class="seo_btn reveal-up" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro">Starten Sie ein
+                                Projekt</a>
+</div>
+</div>
+</div>
+</section>
+
+<style>
+    /* About page — personal / vitalism sections */
+    .about_intro_text { max-width: 780px; margin: 0 auto 3.5rem; text-align: center; }
+    .team_image_wrapper { position: relative; max-width: 1100px; margin: 0 auto; border-radius: 1.5rem; overflow: hidden; aspect-ratio: 16 / 10; box-shadow: 0 30px 60px rgba(0,0,0,0.18); }
+    .team_image { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .team_quote_overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; padding: 2.5rem 6%; background: linear-gradient(to top, rgba(20,18,16,0.82) 0%, rgba(20,18,16,0.2) 38%, rgba(20,18,16,0) 62%); }
+    .team_quote_overlay .q_line { font-family: 'Outfit', sans-serif; font-weight: 800; text-transform: uppercase; color: #f4efe4; line-height: 0.95; letter-spacing: -0.01em; font-size: clamp(1.7rem, 3.8vw, 3rem); text-shadow: 0 2px 20px rgba(0,0,0,0.35); }
+    .childhood_media, .recalibrate_media { position: relative; border-radius: 1.5rem; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.25); background: #111; }
+    .childhood_media { aspect-ratio: 1820 / 1262; }
+    .recalibrate_media { aspect-ratio: 9 / 16; max-width: 340px; margin: 0 auto; }
+    .childhood_media img, .recalibrate_media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+</style>
+
+<!-- MEET THE TEAM -->
+<section class="seo_section" style="background-color: #fff; color: #111;">
+<div class="about_intro_text reveal-up">
+<div class="seo_tagline">Lernen Sie Martin &amp; das Team kennen</div>
+<h2 class="heading-style-l">Ein kleines Team, das etwas <span class="seo_highlight">erschaffen</span> will</h2>
+<p class="text-size-medium" style="color: #333;">
+    Wir sind ein schlankes, remote arbeitendes Team aus Designern, Entwicklern, Media Buyern und Growth
+    Marketern, verteilt auf Indonesien, Deutschland und Australien. Wir kommen für einen konkreten Bedarf
+    zusammen, bringen unsere individuellen Stärken ein und bündeln sie zu einem fokussierten Motor für Ihr
+    Wachstum.
+</p>
+</div>
+<div class="team_image_wrapper reveal-up">
+<img src="/assets/local-seo/images/team-741.jpg" alt="Das Team von 741 Studio" class="team_image" loading="lazy" style="object-position: center 38%;"/>
+<div class="team_quote_overlay">
+<span class="q_line">Gemeinsam Wachsen</span>
+</div>
+</div>
+</section>
+
+<!-- FOUNDER -->
+<section class="seo_section" style="background-color: #fff; color: #111;">
+<div class="founder_grid">
+<div class="founder_image_wrapper reveal-up">
+<img alt="Martin Drendel" class="founder_image" loading="lazy" src="/assets/local-seo/images/founder_martin.jpg" style="width: 100%;"/>
+<div class="founder_name_overlay">
+<h3>MARTIN DRENDEL</h3>
+<span class="founder_title">CEO &amp; Gründer</span>
+</div>
+</div>
+<div>
+<h2 class="heading-style-l reveal-up" style="margin-bottom: 2rem;">Wachstum als <span class="seo_highlight">System</span>, Keine Aufgabe.</h2>
+<p class="text-size-medium reveal-up" style="margin-bottom: 1.5rem; color: #333;">
+                            „Meine Philosophie ist einfach: Komplexität ist der Feind der Ausführung. Bei 741.Studio wenden wir a
+                            Wir betrachten jedes Projekt aus einer strategischen Perspektive und identifizieren die 20 % der Aktionen, die 80 % des Projekts vorantreiben
+                            Ergebnisse."
+                        </p>
+<p class="text-size-medium reveal-up" style="margin-bottom: 2rem; color: #333;">
+                            Ob es darum geht, lokales SEO zu dominieren oder eine erstklassige digitale Präsenz zu entwickeln, unser Ziel ist es
+                            Erstellen Sie Systeme, die autonom arbeiten. Wir betrachten die Einheitsökonomie, die Machtdynamik
+                            Ihres Marktes und die langfristigen Zivilisationszyklen, die die Nachfrage prägen.
+                        </p>
+<a class="seo_btn reveal-up" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro">Arbeit
+                            mit
+                            Martin</a>
+</div>
+</div>
+</section>
+
+<!-- VITALISM -->
+<section class="seo_section is--dark">
+<div class="about_intro_text reveal-up">
+<div class="seo_tagline">Unsere Philosophie</div>
+<h2 class="heading-style-l">Wir glauben an <span class="seo_highlight">Vitalismus</span></h2>
+<p class="text-size-medium">
+    Vitalität ist der rote Faden in allem, was wir schaffen. Unsere Arbeit steckt voller Energie, basiert
+    auf offener Kommunikation und echter Zusammenarbeit und folgt einem einfachen Instinkt: großzügig geben
+    und da sein, wenn Hilfe gebraucht wird.
+</p>
+</div>
+<div class="values_grid reveal-stagger-group">
+<div class="seo_card is--dark reveal-item">
+<div class="value_icon" style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+<h3 class="heading-style-m">Energie &amp; Zusammenarbeit</h3>
+<p>Wir bringen Schwung und klare Kommunikation in jedes Projekt und arbeiten mit Ihnen, nicht nur für
+    Sie.</p>
+</div>
+<div class="seo_card is--dark reveal-item">
+<div class="value_icon" style="font-size: 3rem; margin-bottom: 1rem;">🤝</div>
+<h3 class="heading-style-m">Altruistisches Geben</h3>
+<p>Wir geben mehr, als verlangt wird. Wenn Hilfe gebraucht wird, sind wir da, denn Beziehungen überdauern
+    Transaktionen.</p>
+</div>
+<div class="seo_card is--dark reveal-item">
+<div class="value_icon" style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+<h3 class="heading-style-m">Ergebnisse statt Beschäftigung</h3>
+<p>Wir sind nicht hier, um beschäftigt zu wirken. Wir bauen State-of-the-Art-Workflows, die echte
+    Ergebnisse schaffen und Leben verbessern.</p>
+</div>
+</div>
+</section>
+
+<!-- RECALIBRATE / SURF -->
+<section class="seo_section" style="background-color: #fff; color: #111;">
+<div class="seo_grid">
+<div class="recalibrate_media reveal-up">
+<img src="/assets/videos/surf-recalibrate.gif" alt="Martin beim Surfen zum Neukalibrieren" loading="lazy"/>
+</div>
+<div>
+<div class="seo_tagline">Neu kalibrieren</div>
+<h2 class="heading-style-l reveal-up" style="margin-bottom: 2rem;">Ein klarer Kopf muss <span class="seo_highlight">neu kalibrieren</span></h2>
+<p class="text-size-medium reveal-up" style="margin-bottom: 1.5rem; color: #333;">
+    Großartige Arbeit entsteht nicht durch pausenloses Grinden. Ein guter Arbeitsgeist braucht einen Reset.
+    Für uns heißt das: rein ins Meer, den Lärm hinter sich lassen und schärfer und voller Energie
+    zurückkommen.
+</p>
+<p class="text-size-medium reveal-up" style="color: #333;">
+    So machen wir das bei 741. Balance ist keine Pause von der Arbeit, sie ist das, was die Arbeit
+    großartig macht.
+</p>
+</div>
+</div>
+</section>
+
+<!-- TOGETHER WE GROW (CHILDHOOD) -->
+<section class="seo_section is--dark">
+<div class="seo_grid">
+<div>
+<div class="seo_tagline">Wo alles begann</div>
+<h2 class="heading-style-l reveal-up" style="margin-bottom: 2rem;">Gemeinsam wachsen &amp; <span class="seo_highlight">gestalten</span></h2>
+<p class="text-size-medium reveal-up" style="margin-bottom: 1.5rem;">
+    Der Ehrgeiz war früh da: Teil eines Teams zu sein. Das ist bis heute meine ideale Art, ein Leben zu
+    verbringen, Seite an Seite mit guten Menschen, gemeinsam wachsen und etwas erschaffen.
+</p>
+<p class="text-size-medium reveal-up">
+    Es ist derselbe Geist, den wir zu jedem Kunden mitbringen. Wir arbeiten nicht einfach für Sie, wir
+    stellen uns an Ihre Seite und bauen gemeinsam mit Ihnen.
+</p>
+</div>
+<div class="childhood_media reveal-up">
+<img src="/assets/local-seo/images/martin-child-football.jpg" alt="Martin als Kind mit seiner Jugend-Fußballmannschaft" loading="lazy"/>
+</div>
+</div>
+</section>
+
+<!-- VALUES -->
+<section class="seo_section">
+<div class="reveal-up" style="text-align: center; margin-bottom: 5rem;">
+<h2 class="heading-style-l">Der <span class="seo_highlight">741</span> Rahmen</h2>
+<p class="text-size-medium">Die nicht verhandelbaren Standards, die wir auf jedes von uns entwickelte Produkt anwenden.</p>
+</div>
+<div class="values_grid reveal-stagger-group">
+<div class="seo_card reveal-item">
+<div class="value_icon" style="font-size: 3rem; margin-bottom: 1rem;">⚖️</div>
+<h3 class="heading-style-m">Strategische Hebelwirkung</h3>
+<p>Wir konzentrieren uns auf Bewegungen, die asymmetrische Möglichkeiten schaffen. Maximaler Output für gezielten Input.
+                        </p>
+</div>
+<div class="seo_card reveal-item">
+<div class="value_icon" style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
+<h3 class="heading-style-m">Fokusschutz</h3>
+<p>Wir bauen Systeme, die Lärm reduzieren. Unsere Schnittstellen und Arbeitsabläufe sind darauf ausgelegt, Ihre zu schützen
+                            Aufmerksamkeit.</p>
+</div>
+<div class="seo_card reveal-item">
+<div class="value_icon" style="font-size: 3rem; margin-bottom: 1rem;">📈</div>
+<h3 class="heading-style-m">Zusammengesetzte Vermögenswerte</h3>
+<p>Jeder Code, den wir schreiben, und jedes Pixel, das wir platzieren, ist darauf ausgelegt, langfristigen Wert zu schaffen
+                            für Ihre Marke.</p>
+</div>
+</div>
+</section>
+<!-- LOGOS MARQUEE (TRUST) -->
+            {{> partner-logos_de }}
+
+            <!-- FOOTER -->
+            {{> footer_de }}
+        </div>
+</div>
+<script crossorigin="anonymous" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=681b040781d5b5e278a69989" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/js/webflow.schunk.e0c428ff9737f919.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/js/webflow.schunk.dde2c6d4ef1627b8.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/js/webflow.3a34c156.6bb9f3ec92cc8a2c.js" type="text/javascript"></script>
+
+<!-- Nav button shrink and grow (EDGAR) -->
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const navLinks = document.querySelectorAll(".nav-link-text-block-large");
+
+            // Detect screen width (landscape and down: 767px and below)
+            const isMobileOrTablet = window.matchMedia("(max-width: 767px)").matches;
+
+            if (!isMobileOrTablet) {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "body",
+                        start: "top top",
+                        end: "150px",
+                        scrub: true,
+                        onUpdate: (self) => {
+                            navLinks.forEach(el => {
+                                if (self.progress > 0.5) {
+                                    el.classList.remove("nav-normal-case");
+                                } else {
+                                    el.classList.add("nav-normal-case");
+                                }
+                            });
+                        }
+                    }
+                });
+
+                tl.to(".nav-link-text-block-large", {
+                    fontSize: "12px",
+                    letterSpacing: "0.15px",
+                    ease: "power2.out"
+                }, 0);
+
+                tl.to(".nav-button-spacer", {
+                    height: "0rem",
+                    ease: "power2.out"
+                }, 0);
+            }
+        });
+
+        // --- Draggable Infinite Marquee Implementation ---
+        (function () {
+            const wrapper = document.querySelector('.marquee-wrapper');
+            const content = document.querySelector('.marquee-content');
+            if (!wrapper || !content) return;
+
+            let x = 0;
+            let isDragging = false;
+            let startX = 0;
+            let lastX = 0;
+            let velocity = 0;
+            let rafId = null;
+
+            function getWidth() {
+                return content.offsetWidth / 2;
+            }
+
+            function animate() {
+                if (!isDragging) {
+                    x -= 0.6; // Base scroll speed
+
+                    const width = getWidth();
+                    if (width > 0) {
+                        if (x <= -width) x += width;
+                        if (x > 0) x -= width;
+                    }
+                    content.style.transform = `translateX(${x}px)`;
+                }
+                rafId = requestAnimationFrame(animate);
+            }
+
+            // Start loop
+            animate();
+
+            function handleStart(pageX) {
+                isDragging = true;
+                startX = pageX - x;
+                lastX = pageX;
+                velocity = 0;
+            }
+
+            function handleMove(pageX) {
+                if (!isDragging) return;
+                x = pageX - startX;
+                velocity = pageX - lastX;
+                lastX = pageX;
+
+                const width = getWidth();
+                if (width > 0) {
+                    if (x <= -width) { x += width; startX += width; }
+                    if (x > 0) { x -= width; startX -= width; }
+                }
+                content.style.transform = `translateX(${x}px)`;
+            }
+
+            function handleEnd() {
+                isDragging = false;
+            }
+
+            // Mouse Events
+            wrapper.addEventListener('mousedown', (e) => handleStart(e.pageX));
+            window.addEventListener('mousemove', (e) => handleMove(e.pageX));
+            window.addEventListener('mouseup', handleEnd);
+
+            // Touch Events
+            wrapper.addEventListener('touchstart', (e) => handleStart(e.touches[0].pageX), { passive: true });
+            window.addEventListener('touchmove', (e) => handleMove(e.touches[0].pageX), { passive: true });
+            window.addEventListener('touchend', handleEnd);
+
+            // Pause auto-scroll on hover if not dragging
+            wrapper.addEventListener('mouseenter', () => { if (!isDragging) { /* speed could be reduced here if desired */ } });
+        })();
+    </script>
+<!-- Premium Scroll Reveal Implementation (Reference Standard) -->
+<script defer="">
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Single Elements: Gentle fade in and slide up
+            const revealElements = document.querySelectorAll('.reveal-up');
+            revealElements.forEach((el) => {
+                gsap.fromTo(el,
+                    {
+                        y: 30,
+                        opacity: 0
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 85%", // Trigger when element's top hits 85% of screen
+                            once: true // Play only once for premium feel
+                        }
+                    }
+                );
+            });
+
+            // Grouped Elements (Cards, Lists, Grids): Staggered gentle fade in and slide up
+            const staggerGroups = document.querySelectorAll('.reveal-stagger-group');
+            staggerGroups.forEach((group) => {
+                const items = group.querySelectorAll('.reveal-item');
+                if (items.length > 0) {
+                    gsap.fromTo(items,
+                        {
+                            y: 30,
+                            opacity: 0
+                        },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.8,
+                            stagger: 0.15, // 150ms delay between each item
+                            ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: group,
+                                start: "top 85%",
+                                once: true
+                            }
+                        }
+                    );
+                }
+            });
+        });
+    </script>
+  {{> consent }}
+</body>
+</html>

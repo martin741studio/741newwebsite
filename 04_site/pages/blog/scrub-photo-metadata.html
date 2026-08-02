@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html data-wf-domain="www.weavy.ai" data-wf-page="681b040781d5b5e278a6999f" data-wf-site="681b040781d5b5e278a69989">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>The Hidden Trackers in Your Photos: How to Scrub Metadata Before You Hit Send</title>
+    <meta
+        content="Every photo carries invisible metadata — GPS coordinates, device model, timestamps, and edit history. Learn how to strip EXIF, IPTC and XMP data offline with tools like ExifTool, MAT2, and MetadataZero."
+        name="description" />
+    <link rel="canonical" href="https://741.studio/pages/blog/scrub-photo-metadata.html" />
+    <meta content="The Hidden Trackers in Your Photos: How to Scrub Metadata Before You Hit Send" property="og:title" />
+    <meta
+        content="Every photo carries invisible metadata — GPS coordinates, device model, timestamps, and edit history. Learn how to strip EXIF, IPTC and XMP data offline with tools like ExifTool, MAT2, and MetadataZero."
+        property="og:description" />
+    <meta content="The Hidden Trackers in Your Photos: How to Scrub Metadata Before You Hit Send" property="twitter:title" />
+    <meta
+        content="Every photo carries invisible metadata — GPS coordinates, device model, timestamps, and edit history. Learn how to strip EXIF, IPTC and XMP data offline with tools like ExifTool, MAT2, and MetadataZero."
+        property="twitter:description" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="https://741.studio/pages/blog/scrub-photo-metadata.html" property="og:url" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link href="/assets/weavy.css"
+        rel="stylesheet" type="text/css"
+         />
+
+    <!-- Brand Guidelines Color Overrides -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;500;700&display=swap');
+
+        :root {
+            --brand--lemon: #fac118;
+            --brand--ash-grey: #8c8c8c;
+            --brand--french-gray: #fac118;
+            --brand--french-gray-op-45: rgba(250, 193, 24, 0.45);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif !important;
+            background-color: #fafafa;
+            color: #212126;
+        }
+
+        .section-hero {
+            background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 34%, rgba(250, 193, 24, 0.25) 71%), url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif") !important;
+            padding-top: 10rem;
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+
+        .blog_container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .blog_meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog_content h2 {
+            font-size: 2.2rem;
+            margin-top: 3rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .blog_content h3 {
+            font-size: 1.6rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .blog_content p {
+            font-size: 1.2rem;
+            line-height: 1.65;
+            margin-bottom: 1.8rem;
+            color: #333;
+        }
+
+        .blog_content ul {
+            margin-bottom: 1.8rem;
+            padding-left: 1.5rem;
+        }
+
+        .blog_content li {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
+            color: #333;
+        }
+
+        .highlight_box {
+            background-color: #fff8e1;
+            border-left: 4px solid var(--brand--lemon);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+        }
+
+        .highlight_box p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .seo_btn {
+            background-color: var(--brand--lemon);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .seo_btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(250, 193, 24, 0.3);
+        }
+
+        .huge_nav-button {
+            mix-blend-mode: normal !important;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+</head>
+
+<body>
+
+    <!-- Article Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "The Hidden Trackers in Your Photos: How to Scrub Metadata Before You Hit Send",
+      "description": "Every photo carries invisible metadata — GPS coordinates, device model, timestamps, and edit history. Learn how to strip EXIF, IPTC and XMP data offline with tools like ExifTool, MAT2, and MetadataZero.",
+      "author": {
+        "@type": "Person",
+        "name": "Martin Drendel",
+        "jobTitle": "CEO & Founder",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "741 Studio",
+          "url": "https://741.studio"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "741 Studio",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://741.studio/assets/images/logo_white.png"
+        }
+      },
+      "datePublished": "2026-07-06",
+      "mainEntityOfPage": "https://741.studio/pages/blog/scrub-photo-metadata.html"
+    }
+    </script>
+
+    <div class="page-wrapper">
+        <div class="main-wrapper">
+            {{> header }}
+
+            <!-- HERO SECTION -->
+            <section class="section-hero">
+                <div class="blog_container" style="padding-bottom: 0;">
+                    <div class="seo_tagline">Privacy & Metadata Security</div>
+                    <h1 class="reveal-up" style="font-size: 3.5rem; line-height: 1.15; margin-bottom: 1.5rem;">
+                        The Hidden Trackers in Your Photos: Scrub Metadata Before You Hit Send
+                    </h1>
+                    <div class="blog_meta reveal-up">
+                        <span>By Martin Drendel</span>
+                        <span>•</span>
+                        <span>July 6, 2026</span>
+                        <span>•</span>
+                        <span>6 min read</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ARTICLE CONTENT -->
+            <article class="blog_container" style="padding-top: 0;">
+                <div class="blog_content reveal-up">
+                    <p>
+                        Every time you send a photo or share a document, you may be handing over far more than the image itself. Beneath the pixels sits a layer of invisible information — metadata — that records where the picture was taken, which device captured it, the exact second the shutter fired, and sometimes the full history of every edit you made. For businesses, that hidden data can quietly expose a client's location or an internal author's name. For individuals, it can reveal exactly where you live.
+                    </p>
+                    <p>
+                        The uncomfortable truth is that most people never see this data, yet it travels with the file wherever it goes. Learning to strip it out before you hit send is one of the simplest and most effective privacy habits you can build.
+                    </p>
+
+                    <h2>Understanding What Metadata Actually Reveals</h2>
+                    <p>
+                        Every photo and document carries hidden metadata. For images, EXIF data can reveal GPS coordinates, the camera or phone model, lens and exposure settings, and precise timestamps down to the second. Documents go further still — a PDF or office file often embeds author names, company details, and complete revision histories that expose who worked on a file and when.
+                    </p>
+                    <p>
+                        You cannot rely on social networks or cloud storage to clean this up for you. Some platforms strip location data on upload, others leave it fully intact, and the rules change without warning or announcement. Treating any third-party service as a reliable scrubber is a gamble you do not want to take with sensitive material.
+                    </p>
+
+                    <div class="highlight_box">
+                        <p>
+                            "A single holiday photo can pinpoint your home to within a few metres. A single 'anonymised' PDF can name every employee who touched it. The data you cannot see is exactly the data that puts you at risk."
+                        </p>
+                    </div>
+
+                    <h3>Why This Matters for Businesses</h3>
+                    <p>
+                        When your team shares product photography, site surveys, or client documents, embedded metadata can leak a client's physical address, the internal names of staff, or the timeline of a confidential project. In regulated industries, that quiet leakage can breach confidentiality agreements and data-protection obligations before a single word is read. Clean files are not a nicety — they are part of protecting the people who trust you with their information.
+                    </p>
+
+                    <h3>Why This Matters for Individuals</h3>
+                    <p>
+                        For individuals, the stakes are physical. A photo of your car in the driveway, a picture of a child in the garden, or a shot listed on a marketplace can all carry GPS coordinates that point straight to your front door. Stripping location data before posting is a basic personal-safety measure — not paranoia, but the digital equivalent of not printing your home address on a public flyer.
+                    </p>
+
+                    <h2>True Redaction vs. Cosmetic Hiding</h2>
+                    <p>
+                        There is a dangerous myth that hiding is the same as removing. Drawing a black box over sensitive text in a PDF does not redact it. The underlying text is often still selectable, searchable, and fully recoverable by anyone who copies the file into a text editor. The visual cover-up is cosmetic; the data lives on.
+                    </p>
+                    <p>
+                        True redaction completely removes the underlying content from the file structure itself, so there is nothing left to recover. When you handle contracts, invoices, or any document containing names and addresses, insist on genuine redaction rather than a box drawn on top of the danger.
+                    </p>
+
+                    <h2>Building a "Clean Before Send" Workflow</h2>
+                    <p>
+                        The single most important rule is that scrubbing must happen locally. Uploading a file to an online cleaning service exposes the very metadata you are trying to remove — you would be handing the sensitive data to a third party in the act of trying to protect it. Any tool you trust should run completely offline, on your own device, with no round trip to the cloud.
+                    </p>
+                    <p>
+                        A handful of well-established tools make this straightforward, and each strips EXIF, IPTC and XMP data without degrading the visual quality of your files:
+                    </p>
+                    <ul>
+                        <li>✓ <strong>MetadataZero:</strong> A cross-platform desktop app with simple drag-and-drop batch processing, running entirely offline. Ideal for non-technical team members who just need clean files fast.</li>
+                        <li>✓ <strong>ExifTool:</strong> The industry-standard command-line library for reading and erasing metadata across almost every file format. The go-to choice for power users and automated pipelines.</li>
+                        <li>✓ <strong>MAT2:</strong> An expert-level Linux tool that removes embedded metadata from audio, images, and office documents, favoured by privacy specialists and journalists.</li>
+                    </ul>
+                    <p>
+                        Whichever tool you choose, the goal is the same: make "clean before send" an automatic reflex rather than an afterthought. A short checklist taped to your workflow — strip, verify, then share — turns metadata hygiene into muscle memory for your whole team.
+                    </p>
+
+                    <div style="text-align: center; margin-top: 3rem; border-top: 1px solid #eee; padding-top: 2rem;">
+                        <h3 style="margin-top: 0;">Is sensitive data leaking out with your files?</h3>
+                        <p style="font-size: 1.1rem; color: #555;">Let us review how your team shares images and documents, and design an offline "clean before send" workflow that protects your clients and your people.</p>
+                        <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="seo_btn">Request a Privacy Workflow Review</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- FOOTER -->
+            {{> footer }}
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const revealElements = document.querySelectorAll('.reveal-up');
+            revealElements.forEach((el) => {
+                gsap.fromTo(el,
+                    {
+                        y: 30,
+                        opacity: 0
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 85%",
+                            once: true
+                        }
+                    }
+                );
+            });
+        });
+    </script>
+  {{> consent }}
+</body>
+
+</html>

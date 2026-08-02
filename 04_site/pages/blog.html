@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html data-wf-domain="741.studio" data-wf-page="681b040781d5b5e278a6999f" data-wf-site="681b040781d5b5e278a69989">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>741 Studio Blog | Architecting Digital Growth & Local SEO Automation</title>
+    <meta content="Explore digital growth resources, conversion copywriting strategies, local SEO audits, reputation management guidelines, and n8n workflow blueprints." name="description" />
+    <link rel="canonical" href="https://741.studio/pages/blog.html" />
+    <meta content="741 Studio Blog | Architecting Digital Growth & Local SEO Automation" property="og:title" />
+    <meta content="Explore digital growth resources, conversion copywriting strategies, local SEO audits, reputation management guidelines, and n8n workflow blueprints." property="og:description" />
+    <meta content="741 Studio Blog | Architecting Digital Growth & Local SEO Automation" property="twitter:title" />
+    <meta content="Explore digital growth resources, conversion copywriting strategies, local SEO audits, reputation management guidelines, and n8n workflow blueprints." property="twitter:description" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    
+    <link href="/assets/weavy.css"
+        rel="stylesheet" type="text/css"
+         />
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;500;700&display=swap');
+
+        :root {
+            --brand--lemon: #fac118;
+            --brand--ash-grey: #8c8c8c;
+            --brand--french-gray: #fac118;
+            --brand--french-gray-op-45: rgba(250, 193, 24, 0.45);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif !important;
+            background-color: #fafafa;
+            color: #212126;
+        }
+
+        .section-hero {
+            background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 34%, rgba(250, 193, 24, 0.25) 71%), url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif") !important;
+            padding-top: 10rem;
+            padding-bottom: 5rem;
+            text-align: center;
+        }
+
+        .blog_container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 6rem 1.5rem;
+        }
+
+        /* Controls Section */
+        .blog_controls {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 2rem;
+        }
+
+        .search_wrapper {
+            position: relative;
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+        }
+
+        .search_input {
+            width: 100%;
+            padding: 0.8rem 1rem 0.8rem 2.8rem;
+            border: 1px solid #ddd;
+            border-radius: 100px;
+            font-size: 1rem;
+            font-family: inherit;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .search_input:focus {
+            border-color: var(--brand--lemon);
+            box-shadow: 0 0 10px rgba(250, 193, 24, 0.2);
+        }
+
+        .search_icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            pointer-events: none;
+            width: 18px;
+            height: 18px;
+        }
+
+        .filter_wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter_btn {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ddd;
+            padding: 0.6rem 1.2rem;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .filter_btn:hover {
+            border-color: var(--brand--lemon);
+            background-color: #fffde7;
+        }
+
+        .filter_btn.is-active {
+            background-color: var(--brand--lemon);
+            color: #000;
+            border-color: var(--brand--lemon);
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(250, 193, 24, 0.25);
+        }
+
+        /* Card Grid */
+        .blog_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .blog_grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Blog Card */
+        .blog_card {
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+        }
+
+        .blog_card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(250, 193, 24, 0.12), 0 4px 10px rgba(0, 0, 0, 0.03);
+            border-color: rgba(250, 193, 24, 0.4);
+        }
+
+        .card_image_placeholder {
+            height: 200px;
+            background-image: linear-gradient(135deg, #fef6dc 0%, #fde9ae 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .card_image_placeholder::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif");
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            mix-blend-mode: overlay;
+        }
+
+        .card_category_chip {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: #000;
+            color: #fff;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 5;
+        }
+
+        .card_icon_wrap {
+            width: 54px;
+            height: 54px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            z-index: 5;
+        }
+
+        .card_icon_wrap svg {
+            width: 24px;
+            height: 24px;
+            color: #111;
+        }
+
+        .card_body {
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .card_meta {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 0.8rem;
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+        }
+
+        .card_title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: #111;
+            transition: color 0.3s ease;
+        }
+
+        .blog_card:hover .card_title {
+            color: #d69e05;
+        }
+
+        .card_excerpt {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .card_link {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #111;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .card_link svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .blog_card:hover .card_link svg {
+            transform: translateX(4px);
+        }
+
+        /* Empty State */
+        .empty_state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #fff;
+            border-radius: 12px;
+            border: 1px dashed #ddd;
+            display: none;
+        }
+
+        .empty_state h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .huge_nav-button {
+            mix-blend-mode: normal !important;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+        <div class="main-wrapper">
+            {{> header }}
+
+            <!-- HERO SECTION -->
+            <section class="section-hero">
+                <div class="blog_container" style="padding-bottom: 0;">
+                    <div style="color: #666; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 0.5rem;">Insights & Playbooks</div>
+                    <h1 class="reveal-up" style="font-size: 3.8rem; line-height: 1.1; font-weight: 700; margin-bottom: 1.5rem;">
+                        741 Studio Blog
+                    </h1>
+                    <p style="font-size: 1.25rem; color: #555; max-width: 600px; margin: 0 auto;">
+                        B2B resources, guides, and engineering logs on web design, local SEO, reputation protection, and operations automation.
+                    </p>
+                </div>
+            </section>
+
+            <!-- CONTROLS & BLOG LIST -->
+            <main class="blog_container">
+                <div class="blog_controls">
+                    <!-- Search Bar -->
+                    <div class="search_wrapper">
+                        <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <input type="text" id="search-bar" class="search_input" placeholder="Search articles..." />
+                    </div>
+
+                    <!-- Category Filters -->
+                    <div class="filter_wrapper">
+                        <button class="filter_btn is-active" data-filter="all">All Articles</button>
+                        <button class="filter_btn" data-filter="web-design">Web Design</button>
+                        <button class="filter_btn" data-filter="local-seo">Local SEO</button>
+                        <button class="filter_btn" data-filter="reputation">Reputation</button>
+                        <button class="filter_btn" data-filter="automation">Automation</button>
+                        <button class="filter_btn" data-filter="privacy">Privacy &amp; Security</button>
+                    </div>
+                </div>
+
+                <!-- Articles Grid -->
+                <div id="articles-grid" class="blog_grid">
+                    <!-- Dynamic rendering by JS -->
+                </div>
+
+                <!-- Empty State -->
+                <div id="empty-state" class="empty_state">
+                    <h3>No articles found</h3>
+                    <p>Try adjusting your search terms or category filter.</p>
+                </div>
+            </main>
+
+            <!-- FOOTER -->
+            {{> footer }}
+        </div>
+    </div>
+
+    <script>
+        // Array containing meta-data for all 24 blog posts
+        const articles = [
+            // Privacy & Security series
+            {
+                title: "Erase Your Digital Footprint: The 2026 Guide to the 'Right to Be Forgotten'",
+                excerpt: "Reclaim your privacy in 2026. Use GDPR Article 17, bulk-deletion tools, and data-broker removal services to scrub your active and passive digital footprint.",
+                url: "/pages/blog/right-to-be-forgotten-2026.html",
+                category: "privacy",
+                categoryLabel: "Privacy & Security",
+                date: "July 9, 2026",
+                readTime: "8 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>`
+            },
+            {
+                title: "Beyond Deleting: Why Forensic Experts Can Still See Your Files",
+                excerpt: "Deleting or formatting a drive doesn't destroy data — forensic tools recover it. Learn certified erasure standards (NIST 800-88, IEEE 2883) and how to wipe HDDs & SSDs forever.",
+                url: "/pages/blog/secure-data-wiping.html",
+                category: "privacy",
+                categoryLabel: "Privacy & Security",
+                date: "July 8, 2026",
+                readTime: "7 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>`
+            },
+            {
+                title: "Escaping the Big 5: Building a Serverless, Apocalypse-Proof Digital Life",
+                excerpt: "Move beyond centralized clouds like AWS, Google Cloud and Azure. Discover P2P, serverless architectures — Pear Runtime, Bare, and Keet — for total data sovereignty.",
+                url: "/pages/blog/serverless-p2p-digital-life.html",
+                category: "privacy",
+                categoryLabel: "Privacy & Security",
+                date: "July 7, 2026",
+                readTime: "7 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>`
+            },
+            {
+                title: "The Hidden Trackers in Your Photos: Scrub Metadata Before You Hit Send",
+                excerpt: "Every photo carries invisible GPS coordinates, device info and timestamps. Learn to strip EXIF, IPTC and XMP data offline with ExifTool, MAT2, and MetadataZero.",
+                url: "/pages/blog/scrub-photo-metadata.html",
+                category: "privacy",
+                categoryLabel: "Privacy & Security",
+                date: "July 6, 2026",
+                readTime: "6 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>`
+            },
+            {
+                title: "VPNs Are Evolving: Why Decentralized VPNs (dVPNs) Beat Censorship",
+                excerpt: "Traditional VPNs still require trusting one company. See how dVPNs like Orchid, Sentinel and Mysterium use P2P mesh networks and residential nodes to beat censorship.",
+                url: "/pages/blog/decentralized-vpn-dvpn.html",
+                category: "privacy",
+                categoryLabel: "Privacy & Security",
+                date: "July 5, 2026",
+                readTime: "7 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`
+            },
+            // Deep dives
+            {
+                title: "Why Custom Webflow Beats WordPress for Bali Villas & Australian Agencies",
+                excerpt: "Compare Webflow and WordPress on page load speed, custom designs, security, and search engine optimization. Learn why custom beats template builders.",
+                url: "/pages/blog/webflow-vs-wordpress.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "July 1, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>`
+            },
+            {
+                title: "How to Legally Dispute and Remove Bad Reviews from Google Maps",
+                excerpt: "Struggling with false or malicious 1-star reviews? Read our step-by-step compliance playbook to clean up your Google Maps profile legally.",
+                url: "/pages/blog/remove-bad-google-reviews.html",
+                category: "reputation",
+                categoryLabel: "Reputation",
+                date: "June 29, 2026",
+                readTime: "6 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>`
+            },
+            {
+                title: "Integrating n8n and WhatsApp Automation for High-Converting Booking Flows",
+                excerpt: "Learn how B2B agencies and hotels build automated lead capture and instant WhatsApp autoresponders using self-hosted n8n setups.",
+                url: "/pages/blog/n8n-whatsapp-automation.html",
+                category: "automation",
+                categoryLabel: "Automation",
+                date: "June 27, 2026",
+                readTime: "6 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>`
+            },
+            {
+                title: "Web Design Cost in Bali: Ultimate Agency Pricing Guide (2026)",
+                excerpt: "How much does a professional website cost in Bali? Explore standard web design costs, developer rates, Webflow retainers, and premium agency pricing packages.",
+                url: "/pages/blog/web-design-cost-bali.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "July 1, 2026",
+                readTime: "6 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`
+            },
+            {
+                title: "Google Review Removal Bali: How to Remove Malicious 1-Star Reviews",
+                excerpt: "Struggling with fake or negative 1-star reviews on Google Maps in Bali? Discover the legal dispute playbook and how to delete bad Google reviews.",
+                url: "/pages/blog/google-review-removal-bali.html",
+                category: "reputation",
+                categoryLabel: "Reputation",
+                date: "June 28, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>`
+            },
+            {
+                title: "Certified n8n Developer Bali: Automate Your B2B Operations",
+                excerpt: "Need a certified n8n developer in Bali? We design custom WhatsApp automation, lead generation workflows, CRM integrations, and n8n API setups.",
+                url: "/pages/blog/n8n-developer-bali.html",
+                category: "automation",
+                categoryLabel: "Automation",
+                date: "June 25, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>`
+            },
+            {
+                title: "SEO Agency Bali: Rank #1 on Google and Google Maps",
+                excerpt: "Looking for the best SEO agency in Bali? 741 Studio specializes in B2B Local SEO, Google Business Profile rankings, and high-converting search strategies.",
+                url: "/pages/blog/seo-agency-bali.html",
+                category: "local-seo",
+                categoryLabel: "Local SEO",
+                date: "June 22, 2026",
+                readTime: "7 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>`
+            },
+            // Programmatic keywords
+            {
+                title: "Website Design Bali: Bespoke Conversion-Driven Web Design",
+                excerpt: "Premium website design services in Bali. We design high-converting, custom websites for villas, luxury brands, and digital agencies.",
+                url: "/pages/blog/website-design-bali.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>`
+            },
+            {
+                title: "Best Web Design Agency Bali: Custom Webflow & HTML Developer",
+                excerpt: "Discover the best web design agency in Bali. 741 Studio designs custom, speed-engineered Webflow sites with GSAP scroll animations.",
+                url: "/pages/blog/best-web-design-agency-bali.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>`
+            },
+            {
+                title: "Best Web Design Bali: Custom Speed-Engineered Digital Studios",
+                excerpt: "Get the best web design in Bali. We specialize in bespoke layouts, lightning-fast speeds, and secure SaaS web hosting.",
+                url: "/pages/blog/best-web-design-bali.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>`
+            },
+            {
+                title: "Best Web Designer Bali: Custom Webflow & Interactive Layouts",
+                excerpt: "Looking for the best web designer in Bali? We design premium, interactive websites engineered for local B2B lead generation.",
+                url: "/pages/blog/best-web-designer-bali.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>`
+            },
+            {
+                title: "Web Design Bali: High-Performance Custom Website Engineering",
+                excerpt: "Bespoke web design services in Bali. Custom websites built for speed, conversion rates, and Google Maps local SEO rankings.",
+                url: "/pages/blog/web-design-bali.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>`
+            },
+            {
+                title: "Premium Web Development Studio Bali: 741 Studio Custom Systems",
+                excerpt: "741 Studio is a premium web development studio in Bali. Custom HTML, Webflow, n8n integrations, and conversion design.",
+                url: "/pages/blog/premium-web-development-studio-bali.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>`
+            },
+            {
+                title: "Web Development Pricing Bali: Bespoke Website Cost Guide",
+                excerpt: "Explore web development pricing in Bali. Cost breakdown for custom landing pages, Webflow platforms, and booking integrations.",
+                url: "/pages/blog/web-development-pricing-bali.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg>`
+            },
+            {
+                title: "Web Designer Bali: Bespoke Webflow & Conversion Engineering",
+                excerpt: "Hire a professional web designer in Bali. Bespoke, conversion-focused websites featuring GSAP scroll animations and n8n.",
+                url: "/pages/blog/web-designer-bali.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>`
+            },
+            {
+                title: "Best Website Design Bali: Speed-Optimized Conversion Web Design",
+                excerpt: "Get the best website design in Bali. Rebuild your slow WordPress site into a secure, fast, custom-engineered platform.",
+                url: "/pages/blog/best-website-design-bali.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>`
+            },
+            {
+                title: "Web Development Bali: Bespoke Coding & High-End Visual Systems",
+                excerpt: "Custom web development services in Bali. We code clean, high-performance HTML/CSS and Webflow platforms for B2B leads.",
+                url: "/pages/blog/web-development-bali.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>`
+            },
+            {
+                title: "Best Web Development Bali: Speed-Optimized Custom Frameworks",
+                excerpt: "High-end web development services in Bali. Speed-engineered custom coding for resorts, medical clinics, and B2B clients.",
+                url: "/pages/blog/best-web-development-bali.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>`
+            },
+            {
+                title: "Web Designer Canggu: Bespoke Webflow & Animation Design",
+                excerpt: "Hire a leading web designer in Canggu, Bali. Custom Webflow layouts and conversion-optimized B2B landing pages.",
+                url: "/pages/blog/web-designer-canggu.html",
+                category: "web-design",
+                categoryLabel: "Web Design",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>`
+            },
+            {
+                title: "Best Google Review Removal Bali: Delete Fake 1-Star Reviews",
+                excerpt: "Find the best Google review removal services in Bali. Clean up your Google Business Profile and delete fake 1-star reviews.",
+                url: "/pages/blog/best-google-review-removal-bali.html",
+                category: "reputation",
+                categoryLabel: "Reputation",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>`
+            },
+            {
+                title: "Best Local SEO Bali: Rank #1 in Google Maps Local Pack",
+                excerpt: "Get the best local SEO services in Bali. Optimize your Google Business Profile, build local citations, and rank in the Maps Local Pack.",
+                url: "/pages/blog/best-local-seo-bali.html",
+                category: "local-seo",
+                categoryLabel: "Local SEO",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>`
+            },
+            {
+                title: "Best Automation Agency Bali: Custom n8n & WhatsApp Automation",
+                excerpt: "741 Studio is the best automation agency in Bali. Custom n8n workflow systems, WhatsApp integrations, and CRM funnels.",
+                url: "/pages/blog/best-automation-agency-bali.html",
+                category: "automation",
+                categoryLabel: "Automation",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>`
+            },
+            {
+                title: "Reputation Management Bali: Clean Up Your Google Maps Profile",
+                excerpt: "Professional online reputation management services in Bali. Dispute bad reviews and optimize your Google Business Profile.",
+                url: "/pages/blog/reputation-management-bali.html",
+                category: "reputation",
+                categoryLabel: "Reputation",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>`
+            },
+            {
+                title: "SEO Retainer Price Bali: Monthly Local SEO Retention Guide",
+                excerpt: "Explore local SEO retainer prices in Bali. Understand how much you should invest in a monthly Google Maps retainer.",
+                url: "/pages/blog/seo-retainer-price-bali.html",
+                category: "local-seo",
+                categoryLabel: "Local SEO",
+                date: "June 18, 2026",
+                readTime: "5 min read",
+                icon: `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`
+            }
+        ];
+
+        // DOM elements
+        const grid = document.getElementById('articles-grid');
+        const searchInput = document.getElementById('search-bar');
+        const filterBtns = document.querySelectorAll('.filter_btn');
+        const emptyState = document.getElementById('empty-state');
+
+        let activeCategory = 'all';
+        let searchQuery = '';
+
+        // Render articles list
+        function renderArticles() {
+            // Filter list
+            const filtered = articles.filter(art => {
+                const matchesCategory = activeCategory === 'all' || art.category === activeCategory;
+                const matchesSearch = art.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                     art.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            // Handle empty state
+            if (filtered.length === 0) {
+                grid.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            grid.style.display = 'grid';
+            emptyState.style.display = 'none';
+
+            // Generate HTML
+            grid.innerHTML = filtered.map(art => `
+                <div class="blog_card reveal-item" data-category="${art.category}">
+                    <div class="card_image_placeholder">
+                        <span class="card_category_chip">${art.categoryLabel}</span>
+                        <div class="card_icon_wrap">
+                            ${art.icon}
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <div class="card_meta">
+                            <span>${art.date}</span>
+                            <span>•</span>
+                            <span>${art.readTime}</span>
+                        </div>
+                        <h3 class="card_title">${art.title}</h3>
+                        <p class="card_excerpt">${art.excerpt}</p>
+                        <a href="${art.url}" class="card_link">
+                            Read Article
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+
+            // Apply entry animation using GSAP
+            gsap.fromTo(".reveal-item", 
+                { y: 20, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.4, stagger: 0.05, ease: "power2.out" }
+            );
+        }
+
+        // Initialize listeners
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderArticles();
+        });
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                filterBtns.forEach(b => b.classList.remove('is-active'));
+                btn.classList.add('is-active');
+                activeCategory = btn.getAttribute('data-filter');
+                renderArticles();
+            });
+        });
+
+        // Initial render
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+            renderArticles();
+
+            // Hero animations
+            gsap.fromTo(".reveal-up",
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, ease: "power2.out", stagger: 0.1 }
+            );
+        });
+    </script>
+  {{> consent }}
+</body>
+
+</html>

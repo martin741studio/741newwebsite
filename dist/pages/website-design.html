@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html data-wf-domain="741.studio" data-wf-page="681b040781d5b5e278a6999f" data-wf-site="681b040781d5b5e278a69989">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Bespoke Web Design & Development | 741.Studio | Webflow, WordPress & Custom Code</title>
+    <meta
+        content="We engineer custom, high-converting websites. Bespoke Webflow platforms, clean WordPress engines, Shopify e-commerce, and custom Vite/HTML builds optimized for maximum speed."
+        name="description" />
+    <link rel="canonical" href="https://741.studio/pages/website-design.html" />
+    <meta content="Bespoke Web Design & Development | 741.Studio" property="og:title" />
+    <meta
+        content="We engineer custom, high-converting websites. Bespoke Webflow platforms, clean WordPress engines, Shopify e-commerce, and custom Vite/HTML builds optimized for maximum speed."
+        property="og:description" />
+    <meta content="Bespoke Web Design & Development | 741.Studio" property="twitter:title" />
+    <meta
+        content="We engineer custom, high-converting websites. Bespoke Webflow platforms, clean WordPress engines, Shopify e-commerce, and custom Vite/HTML builds optimized for maximum speed."
+        property="twitter:description" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    
+    
+    <!-- Brand Guidelines Color Overrides -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;500;700&display=swap');
+
+        :root {
+            --brand--lemon: #fac118;
+            --brand--ash-grey: #8c8c8c;
+            --brand--french-gray: #fac118;
+            --brand--french-gray-op-45: rgba(250, 193, 24, 0.45);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif !important;
+            background-color: #fafafa;
+            color: #212126;
+        }
+
+        .section-hero {
+            background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 34%, rgba(250, 193, 24, 0.35) 71%), url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif") !important;
+            padding-top: 12rem;
+            padding-bottom: 8rem;
+            text-align: center;
+        }
+
+        .seo_section {
+            padding: 6rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .seo_section.is--dark {
+            background-color: #0c0d14;
+            color: #fff;
+        }
+
+        .seo_grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 991px) {
+            .seo_grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .seo_highlight {
+            color: var(--brand--lemon);
+            font-weight: 700;
+        }
+
+        .seo_card {
+            background-color: #fff;
+            padding: 3rem;
+            border-radius: 2rem;
+            border: 1px solid #eee;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .seo_card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            border-color: rgba(250, 193, 24, 0.3);
+        }
+
+        .seo_card.is--dark {
+            background-color: #14151f;
+            border-color: #222;
+        }
+
+        .seo_card.is--dark:hover {
+            border-color: rgba(250, 193, 24, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .seo_step_num {
+            font-family: 'Press Start 2P', cursive;
+            color: var(--brand--lemon);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .seo_tagline {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--brand--lemon);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .seo_btn {
+            background-color: var(--brand--lemon);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .seo_btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(250, 193, 24, 0.3);
+        }
+
+        /* Platforms Grid */
+
+        .platforms_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .platforms_grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .platform_item {
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .seo_section.is--dark .platform_item {
+            background-color: #14151f;
+            border-color: #222;
+        }
+
+        .platform_item:hover {
+            transform: translateY(-5px);
+            border-color: var(--brand--lemon);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+
+        .seo_section.is--dark .platform_item:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .platform_header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .platform_badge {
+            background-color: #faf0cc;
+            color: #b27a00;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .seo_section.is--dark .platform_badge {
+            background-color: #2e2609;
+            color: var(--brand--lemon);
+        }
+
+        .platform_icon {
+            width: 42px;
+            height: 42px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .seo_section.is--dark .platform_icon {
+            background-color: #1a1b26;
+        }
+
+        .platform_icon svg {
+            width: 22px;
+            height: 22px;
+            color: #111;
+        }
+
+        .seo_section.is--dark .platform_icon svg {
+            color: #fff;
+        }
+
+        .huge_nav-button {
+            mix-blend-mode: normal !important;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+  
+  <link rel="stylesheet" crossorigin href="/assets/weavy-CxATN43c.css">
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+        <div class="main-wrapper">
+            <script>
+              (function () {
+                // Auto-deliver German to visitors in DE/AT/CH; everyone else stays English.
+                // Respect an explicit EN|DE choice made this session (set by the toggle).
+                if (sessionStorage.getItem('lang_override')) return;
+                // Defensive: never run on the German side (this partial is EN-only anyway).
+                if (window.location.pathname.indexOf('/de/') === 0) return;
+            
+                var DACH = ['DE', 'AT', 'CH'];
+            
+                function handle(cc) {
+                  // A valid country was resolved. Redirect only if it's DACH.
+                  if (cc && DACH.indexOf(String(cc).toUpperCase()) !== -1) {
+                    sessionStorage.setItem('lang_override', 'de');
+                    var path = window.location.pathname;
+                    // replace() so the English page isn't left in the Back-button history.
+                    window.location.replace(path === '/' ? '/de/' : '/de' + path);
+                  }
+                }
+            
+                // Resilient geo lookup. All three are free, keyless and CORS-enabled.
+                // We only fall through to the next provider if a request truly fails
+                // (network error / rate limit) so a single outage can't wrongly serve
+                // English to a DACH visitor.
+                function geojs() {
+                  return fetch('https://get.geojs.io/v1/ip/country.json')
+                    .then(function (r) { return r.json(); })
+                    .then(function (d) { if (!d || !d.country) throw new Error('no-country'); handle(d.country); });
+                }
+                function ipwho() {
+                  return fetch('https://ipwho.is/')
+                    .then(function (r) { return r.json(); })
+                    .then(function (d) { if (!d || !d.country_code) throw new Error('no-country'); handle(d.country_code); });
+                }
+                function ipapi() {
+                  return fetch('https://ipapi.co/json/')
+                    .then(function (r) { return r.json(); })
+                    .then(function (d) { if (!d || !d.country_code) throw new Error('no-country'); handle(d.country_code); });
+                }
+            
+                geojs()
+                  .catch(ipwho)
+                  .catch(ipapi)
+                  .catch(function (err) { console.log('Geo language check unavailable, staying in English', err); });
+              })();
+            </script>
+            <div data-wf--navbar--variant="with-banner---black" class="navbar_main">
+              <section class="banner_component w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+                <div class="padding-global is-stretch-banner w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+                  <div class="container-banner-top">
+                    <div class="banner_wrapper w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+                      <div class="banner_content w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04"
+                        style="text-align: center; width: 100%;">
+                        <div class="banner_rich-text w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 w-richtext">
+                          <p>
+                            <strong> Need help removing unwanted reviews from your accounts? We can
+                              assist you!
+                            </strong>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <div class="navbar-left w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04"><a href="/" class="brand w-nav-brand"><img
+                    src="/assets/logo_white-B6hD-sVy.png" loading="lazy" alt="741 Studio" class="image_nav-logo-desktop"
+                    style="max-height: 48px; width: auto;" /><img src="/assets/logo_white-B6hD-sVy.png" loading="lazy"
+                    alt="741 Studio" height="30" class="image_nav-logo-mobile w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04"
+                    style="max-height: 38px; width: auto;" /></a></div>
+              <div class="navbar-right w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+                <div class="nav-bar-right">
+                  <div class="nav-links-wrapper">
+                    <a href="/" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+                      Home
+                    </a>
+                    <a href="/pages/portfolio_full.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+                      Portfolio
+                    </a>
+                    <!-- Services Dropdown -->
+                    <div class="nav_dropdown">
+                      <a href="javascript:void(0)" class="nav_dropdown-toggle nav_text-link">
+                        Services
+                        <svg class="nav_dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 4px; vertical-align: middle;">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </a>
+                      <div class="nav_dropdown-list">
+                        <a href="/pages/local-seo.html" class="nav_dropdown-link">Local SEO</a>
+                        <a href="/pages/website-design.html" class="nav_dropdown-link">Website Design</a>
+                        <a href="/pages/google-ads-1.html" class="nav_dropdown-link">Google Ads</a>
+                        <a href="/pages/meta-ads-2.html" class="nav_dropdown-link">Meta Ads</a>
+                      </div>
+                    </div>
+                    <a href="/pages/about.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+                      About
+                    </a>
+                    <a href="/pages/blog.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+                      Blog
+                    </a>
+            
+                    <div class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" style="display:inline-flex; gap: 8px; align-items:center;">
+                      <span style="opacity: 0.5; cursor: default;">EN</span>
+                      <span>|</span>
+                      <a href="javascript:void(0)" style="color: inherit; text-decoration: none;" onclick="sessionStorage.setItem('lang_override', 'de'); window.location.href = window.location.pathname === '/' ? '/de/' : '/de' + window.location.pathname;">DE</a>
+                    </div>
+            
+                    <a href="http://clients.741-studio.com/" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+                      Sign In
+                    </a>
+                  </div>
+                </div>
+                <div class="navbar_main-cta-wrapper">
+                  <div class="huge_nav-button-dummy">
+                    <div class="nav-button-spacer">
+                    </div>
+                    <div class="nav-link-text-block-large nav-normal-case">
+                      Start Now
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button id="mobile-menu-btn" class="mobile-menu-toggle" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round">
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+              </button>
+              <a id="try_now_top" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro"
+                class="huge_nav-button is-real w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 w-inline-block">
+                <div class="nav-button-spacer">
+                </div>
+                <div class="nav-link-text-block-large nav-normal-case">
+                  Start Now
+                </div>
+              </a>
+            
+              <style>
+                .mobile-menu-toggle {
+                  display: none;
+                }
+            
+                @media screen and (max-width: 768px) {
+            
+                  /* ROW 1: Black Notification Bar */
+                  .navbar_main .banner_component {
+                    padding-top: 0 !important;
+                    padding-bottom: 0 !important;
+                    height: 52px !important;
+                    min-height: 52px !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                  }
+            
+                  .navbar_main .banner_rich-text {
+                    padding-left: 65px !important;
+                    /* give space for logo */
+                    padding-right: 15px !important;
+                  }
+            
+                  .navbar_main .banner_rich-text p {
+                    font-size: 11px !important;
+                    /* fit cleanly on 2 lines */
+                    line-height: 1.3 !important;
+                    margin-bottom: 0 !important;
+                  }
+            
+                  /* ROW 1: White 741 Studio logo inside the bar on the left */
+                  .navbar-left {
+                    position: fixed !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    height: 52px !important;
+                    width: 60px !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    z-index: 1000 !important;
+                  }
+            
+                  .navbar-left .brand {
+                    padding: 0 !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                  }
+            
+                  .image_nav-logo-mobile {
+                    max-height: 24px !important;
+                    margin: 0 !important;
+                  }
+            
+                  /* ROW 2: Start Now on left, Hamburger on right */
+                  .mobile-menu-toggle {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: fixed;
+                    top: 52px !important;
+                    /* sit exactly below the notification bar */
+                    right: 0px !important;
+                    /* Aligned to the far right */
+                    height: 48px !important;
+                    width: 60px !important;
+                    z-index: 1000;
+                    background: var(--brand--lemon, #fac118);
+                    color: #111;
+                    border: none;
+                    border-bottom-left-radius: 8px !important;
+                    border-bottom-right-radius: 0px !important;
+                    cursor: pointer;
+                    padding: 0;
+                  }
+            
+                  .navbar_main .huge_nav-button.is-real {
+                    top: 52px !important;
+                    /* sit exactly below the notification bar */
+                    left: 0 !important;
+                    right: auto !important;
+                    width: calc(100vw - 60px) !important;
+                    /* Take up all space except the hamburger */
+                    height: 48px !important;
+                    padding: 0 !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    border-bottom-left-radius: 0 !important;
+                    border-bottom-right-radius: 8px !important;
+                  }
+            
+                  .navbar_main .huge_nav-button.is-real .nav-button-spacer {
+                    display: none !important;
+                  }
+            
+                  .navbar_main .huge_nav-button.is-real .nav-link-text-block-large {
+                    font-size: 2.77778rem !important;
+                    /* Restore exactly to original */
+                    font-weight: 400 !important;
+                    text-align: center !important;
+                  }
+            
+                  /* Nav animations: Hard override Webflow's native inline JS styles to ensure perfect sync */
+                  .navbar_main .banner_component,
+                  .navbar_main .navbar-left,
+                  .mobile-menu-toggle,
+                  .navbar_main .huge_nav-button.is-real {
+                    transform: translateY(0px) !important;
+                    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+                  }
+            
+                  .navbar_main.is-hidden-up .banner_component,
+                  .navbar_main.is-hidden-up .navbar-left,
+                  .navbar_main.is-hidden-up .mobile-menu-toggle,
+                  .navbar_main.is-hidden-up .huge_nav-button.is-real {
+                    transform: translateY(-250%) !important;
+                  }
+            
+                  /* Mobile Menu readable overlay */
+                  .nav-links-wrapper {
+                    position: fixed !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    width: 100vw !important;
+                    height: 100vh !important;
+                    background-color: rgba(0, 0, 0, 0.98) !important;
+                    /* pitch black transparent overlay */
+                    backdrop-filter: blur(12px) !important;
+                    /* ensures background behind is fully unreadable */
+                    display: flex !important;
+                    flex-direction: column !important;
+                    justify-content: center !important;
+                    align-items: center !important;
+                    opacity: 0;
+                    visibility: hidden;
+                    pointer-events: none;
+                    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+                    z-index: 99999 !important;
+                    /* Top overlay */
+                    transform: none !important;
+                  }
+            
+                  .nav-links-wrapper.is-open {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    pointer-events: auto !important;
+                  }
+            
+                  .nav-links-wrapper .nav_text-link {
+                    color: #fff !important;
+                    font-size: 2rem !important;
+                    padding: 1.5rem 0 !important;
+                    margin: 0 !important;
+                    text-align: center !important;
+                    width: 100% !important;
+                    display: block !important;
+                  }
+            
+                  .nav-links-wrapper .nav_text-link.w--current,
+                  .nav-links-wrapper .nav_text-link:hover {
+                    color: #000 !important;
+                  }
+            
+                  /* Global Mobile Typography Readability Overrides */
+                  p,
+                  li,
+                  .text-size-medium {
+                    font-size: 2.2rem !important;
+                    /* scales correctly against 1.8vw root bounds for ~16px mobile text */
+                    line-height: 1.4 !important;
+                  }
+                }
+            
+                /* Prevent navbar-right from clipping absolute elements */
+                .navbar-right {
+                  overflow: visible !important;
+                }
+            
+                /* Services Dropdown Styling */
+                .nav_dropdown {
+                    position: relative;
+                    display: inline-block;
+                  }
+            
+                  .nav_dropdown-toggle {
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                  }
+            
+                  .nav_dropdown-arrow {
+                    transition: transform 0.3s ease;
+                  }
+            
+                  .nav_dropdown:hover .nav_dropdown-arrow,
+                  .nav_dropdown.is-open .nav_dropdown-arrow {
+                    transform: rotate(180deg);
+                  }
+            
+                  .nav_dropdown-list {
+                    position: absolute !important;
+                    top: 100% !important;
+                    left: 50% !important;
+                    transform: translateX(-50%) translateY(10px) !important;
+                    background-color: #0b0c10 !important; /* solid brand black */
+                    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+                    border-radius: 6px !important;
+                    padding: 6px !important;
+                    min-width: 180px !important;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+                    z-index: 100000 !important;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+                    display: flex !important;
+                    flex-direction: column !important;
+                    gap: 4px !important;
+                  }
+            
+                  .nav_dropdown:hover .nav_dropdown-list,
+                  .nav_dropdown.is-open .nav_dropdown-list {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    transform: translateX(-50%) translateY(4px) !important;
+                  }
+            
+                  .nav_dropdown-link,
+                  .nav_dropdown-link.w--current {
+                    display: block !important;
+                    background-color: transparent !important;
+                    color: #fff !important;
+                    text-transform: uppercase !important;
+                    font-size: 12px !important;
+                    letter-spacing: 0.15px !important;
+                    padding: 8px 12px !important;
+                    border-radius: 4px !important;
+                    text-decoration: none !important;
+                    transition: all 0.3s ease !important;
+                    text-align: left !important;
+                    white-space: nowrap !important;
+                  }
+            
+                  .nav_dropdown-link:hover,
+                  .nav_dropdown-link.w--current:hover {
+                    background-color: #fff !important;
+                    color: #000 !important;
+                  }
+            
+                  @media screen and (max-width: 768px) {
+                    .nav_dropdown {
+                      width: 100%;
+                      text-align: center;
+                      margin: 1rem 0;
+                    }
+                    
+                    .nav_dropdown-toggle {
+                      justify-content: center;
+                      width: 100%;
+                    }
+                    
+                    .nav_dropdown-list {
+                      position: static !important;
+                      transform: none !important;
+                      background-color: transparent !important;
+                      border: none !important;
+                      padding: 0 !important;
+                      max-height: 0;
+                      overflow: hidden;
+                      opacity: 1 !important;
+                      visibility: visible !important;
+                      transition: max-height 0.3s ease !important;
+                      box-shadow: none !important;
+                      backdrop-filter: none !important;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 10px;
+                    }
+                    
+                    .nav_dropdown.is-open .nav_dropdown-list {
+                      max-height: 250px;
+                    }
+                    
+                    .nav_dropdown-link {
+                      font-size: 1.6rem !important;
+                      padding: 0.8rem 0 !important;
+                      text-align: center !important;
+                      color: rgba(255, 255, 255, 0.7) !important;
+                    }
+                    
+                    .nav_dropdown-link:hover {
+                      background-color: transparent !important;
+                      color: var(--brand--lemon, #fac118) !important;
+                    }
+                  }
+              </style>
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  const navbar = document.querySelector('.navbar_main');
+                  if (!navbar) return;
+            
+                  let lastScrollTop = window.scrollY || document.documentElement.scrollTop;
+            
+                  window.addEventListener('scroll', () => {
+                    if (window.innerWidth <= 768) {
+                      let currentScroll = window.scrollY || document.documentElement.scrollTop;
+            
+                      // Downward scroll (buffer of 60px to avoid jumpiness at the very top)
+                      if (currentScroll > lastScrollTop && currentScroll > 60) {
+                        navbar.classList.add('is-hidden-up');
+                      }
+                      // Upward scroll
+                      else if (currentScroll < lastScrollTop) {
+                        navbar.classList.remove('is-hidden-up');
+                      }
+            
+                      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+                    } else {
+                      navbar.classList.remove('is-hidden-up');
+                    }
+                  });
+            
+                  // Mobile Menu Logic
+                  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                  const navLinksWrapper = document.querySelector('.nav-links-wrapper');
+                  const navLinks = document.querySelectorAll('.nav-links-wrapper .nav_text-link');
+            
+                  if (mobileMenuBtn && navLinksWrapper) {
+                    // Break out of Webflow's navbar CSS by moving the overlay directly to the body!
+                    // This permanently prevents parent transforms or overflow:hidden from breaking the dark background.
+                    if (window.innerWidth <= 768) {
+                      document.body.appendChild(navLinksWrapper);
+                    }
+            
+                    mobileMenuBtn.addEventListener('click', (e) => {
+                      e.preventDefault();
+                      navLinksWrapper.classList.toggle('is-open');
+                    });
+            
+                    // Close menu when a link is clicked
+                    navLinks.forEach(link => {
+                      link.addEventListener('click', () => {
+                        navLinksWrapper.classList.remove('is-open');
+                      });
+                    });
+            
+                    // Close menu on scroll if it is open
+                    window.addEventListener('scroll', () => {
+                      if (navLinksWrapper.classList.contains('is-open')) {
+                        navLinksWrapper.classList.remove('is-open');
+                      }
+                    }, { passive: true });
+            
+                    // Dropdown toggle logic (desktop & mobile)
+                    const dropdown = document.querySelector('.nav_dropdown');
+                    const toggle = document.querySelector('.nav_dropdown-toggle');
+                    if (toggle && dropdown) {
+                      toggle.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        dropdown.classList.toggle('is-open');
+                      });
+            
+                      document.addEventListener('click', () => {
+                        dropdown.classList.remove('is-open');
+                      });
+                    }
+                  }
+                });
+              </script>
+            </div>
+            <!-- HERO SECTION -->
+            <section class="section-hero">
+                <div class="blog_container" style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem;">
+                    <div class="seo_tagline">Conversion Engineering & Design</div>
+                    <h1 class="reveal-up" style="font-size: 4rem; line-height: 1.1; margin-bottom: 2rem; font-weight: 700;">
+                        We Build High-Converting <span class="seo_highlight">Website Systems</span>
+                    </h1>
+                    <p class="reveal-up" style="font-size: 1.35rem; color: #444; max-width: 700px; margin: 0 auto 2rem auto;">
+                        Bespoke Webflow setups, clean custom WordPress code, Shopify storefronts, and pure custom Vite/HTML builds engineered for speed and search engine dominance.
+                    </p>
+                    <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="seo_btn reveal-up">Get Custom Quote</a>
+                </div>
+            </section>
+
+            <!-- PLATFORMS SECTION -->
+            <section class="seo_section is--dark">
+                <div style="max-width: 1200px; margin: 0 auto;">
+                    <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem auto;">
+                        <span class="seo_tagline">Multi-Platform Ecosystem</span>
+                        <h2 style="font-size: 2.8rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem;">
+                            Bespoke Solutions Across Any Technology Stack
+                        </h2>
+                        <p style="font-size: 1.15rem; color: #8c8c8c;">
+                            Different B2B models require different architectures. We build on the optimal platform suited to your operational complexity, maintenance overhead, and conversion needs.
+                        </p>
+                    </div>
+
+                    <div class="platforms_grid">
+                        <!-- Webflow -->
+                        <div class="platform_item">
+                            <div class="platform_header">
+                                <div class="platform_icon">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                                </div>
+                                <h3 style="font-size: 1.5rem; font-weight: 700; margin: 0;">Webflow</h3>
+                                <span class="platform_badge">Premium Design</span>
+                            </div>
+                            <p style="color: #999; line-height: 1.6; font-size: 1rem; margin-bottom: 0;">
+                                Optimal for luxury marketing, professional services, and high-ticket properties. Webflow provides total interaction freedom (GSAP animations), zero plugin reliance, built-in security, and clean semantic code served on AWS global CDNs.
+                            </p>
+                        </div>
+
+                        <!-- WordPress -->
+                        <div class="platform_item">
+                            <div class="platform_header">
+                                <div class="platform_icon">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                                </div>
+                                <h3 style="font-size: 1.5rem; font-weight: 700; margin: 0;">WordPress</h3>
+                                <span class="platform_badge">Custom Theme</span>
+                            </div>
+                            <p style="color: #999; line-height: 1.6; font-size: 1rem; margin-bottom: 0;">
+                                Ideal for websites needing heavy back-end database custom configurations or complex blogging networks. We bypass slow, heavy visual templates (like Elementor or Divi) to construct custom, light-weight PHP themes built for speed and security.
+                            </p>
+                        </div>
+
+                        <!-- Shopify -->
+                        <div class="platform_item">
+                            <div class="platform_header">
+                                <div class="platform_icon">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                                </div>
+                                <h3 style="font-size: 1.5rem; font-weight: 700; margin: 0;">Shopify</h3>
+                                <span class="platform_badge">E-Commerce</span>
+                            </div>
+                            <p style="color: #999; line-height: 1.6; font-size: 1rem; margin-bottom: 0;">
+                                For transaction-heavy brands. We build bespoke custom Liquid templates integrated with headless Shopify architectures to deliver customized shopping flows, frictionless checkout rates, and high-speed product catalog browsing.
+                            </p>
+                        </div>
+
+                        <!-- Custom Code -->
+                        <div class="platform_item">
+                            <div class="platform_header">
+                                <div class="platform_icon">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>
+                                </div>
+                                <h3 style="font-size: 1.5rem; font-weight: 700; margin: 0;">Custom Code</h3>
+                                <span class="platform_badge">Vite / React</span>
+                            </div>
+                            <p style="color: #999; line-height: 1.6; font-size: 1rem; margin-bottom: 0;">
+                                The ultimate in page speed and security. We build standalone custom HTML5/Vite/React platforms that compile to pure, static files. With no servers, database, or plugins to hack, these sites are 100% immune to vulnerabilities and load instantly.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DESIGN SYSTEMS -->
+            <section class="seo_section">
+                <div class="seo_grid">
+                    <div>
+                        <span class="seo_tagline">SPEED ENGINEERED</span>
+                        <h2 style="font-size: 2.8rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem;">
+                            Say Goodbye to Slow Templates & Fragile Page Builders
+                        </h2>
+                        <p style="font-size: 1.15rem; color: #555; line-height: 1.65; margin-bottom: 1.5rem;">
+                            Template builders like Divi, Wix, or unoptimized Elementor WordPress sites load dozens of redundant CSS/JS scripts on every page load. This causes high friction, long loading screens, and ultimately kills your conversion rates.
+                        </p>
+                        <p style="font-size: 1.15rem; color: #555; line-height: 1.65;">
+                            Every website built by 741 Studio undergoes our strict **Phase 5 Verification** protocol. We optimize your layout code, sitemap indexation, search schema metadata, and asset delivery to guarantee a Core Web Vitals rating in the top tier.
+                        </p>
+                    </div>
+                    <div class="seo_card">
+                        <div class="seo_step_num">01.</div>
+                        <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem;">Bespoke Design</h3>
+                        <p style="color: #666; line-height: 1.6;">No pre-built templates. Every layout is drawn in Figma, styled from scratch, and built matching your exact brand aesthetics.</p>
+                        
+                        <div class="seo_step_num" style="margin-top: 2rem;">02.</div>
+                        <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem;">Zero Maintenance Overhead</h3>
+                        <p style="color: #666; line-height: 1.6;">We host our Webflow and custom architectures on global, secure servers. There are no weekly security updates to install, or plugin-breaking alerts to patch.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA SECTION -->
+            <section class="seo_section is--dark" style="text-align: center; padding: 8rem 5%;">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h2 style="font-size: 3.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem;">
+                        Ready to Re-Engineer Your Site for Conversion?
+                    </h2>
+                    <p style="font-size: 1.3rem; color: #a0a0a0; margin-bottom: 2rem;">
+                        Let us analyze your current website layout, identify speed bottlenecks, and outline a custom conversion architecture tailored to your business.
+                    </p>
+                    <a href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" class="seo_btn">Request Free Conversion Audit</a>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer data-wf--footer--variant="base" class="footer">
+              <!-- Akira Dog Track: Anchored strictly to the DOM flow border above the gray box -->
+              <div style="position: relative; width: 100%; z-index: 10;">
+                <div id="akira-track" style="position: absolute; bottom: -6px; left: 0; width: 100%; pointer-events: none;">
+                  <div id="akira-traveler" aria-label="Akira the dog – open message" role="button" tabindex="0"
+                    onclick="toggleAkira()">
+                    <div id="akira-bubble" class="akira-bubble">
+                      Hi! I'm Akira —<br>the owner's dog.
+                    </div>
+                    <div id="akira-flipper">
+                      <div class="akira-sprite">
+                        <!-- Frame 1 -->
+                        <svg class="akira-frame akira-frame-1" viewBox="0 0 16 16" width="96" height="96"
+                          shape-rendering="crispEdges">
+                          <path d="M3 12h2v3H3z M9 12h2v3H9z M3 7h8v5H3z M10 3h4v4H10z M14 4h2v2H14z" fill="#fff" />
+                          <path d="M4 7h3v2H4z M12 3h2v2H12z" fill="#8b5a2b" />
+                          <path d="M1 5h2v3H1z M10 2h2v2H10z M15 4h1v1H15z M4 14h1v1H4z M10 14h1v1H10z" fill="#222" />
+                        </svg>
+                        <!-- Frame 2 -->
+                        <svg class="akira-frame akira-frame-2" viewBox="0 0 16 16" width="96" height="96"
+                          shape-rendering="crispEdges">
+                          <path d="M4 12h2v2H4z M8 12h2v2H8z M3 7h8v5H3z M10 4h4v4H10z M14 5h2v2H14z" fill="#fff" />
+                          <path d="M4 7h3v2H4z M12 4h2v2H12z" fill="#8b5a2b" />
+                          <path d="M1 6h2v2H1z M0 7h1v1H0z M10 3h2v2H10z M15 5h1v1H15z M5 13h1v1H5z M9 13h1v1H9z" fill="#222" />
+                        </svg>
+                        <!-- Frame 3 -->
+                        <svg class="akira-frame akira-frame-3" viewBox="0 0 16 16" width="96" height="96"
+                          shape-rendering="crispEdges">
+                          <path d="M2 12h2v2H2z M1 13h1v1H1z M10 12h2v2H10z M11 13h1v1H11z M3 7h8v5H3z M10 3h4v4H10z M14 4h2v2H14z"
+                            fill="#fff" />
+                          <path d="M4 7h3v2H4z M12 3h2v2H12z" fill="#8b5a2b" />
+                          <path d="M1 4h2v2H1z M0 3h1v1H0z M10 2h2v2H10z M15 4h1v1H15z M2 13h1v1H2z M11 13h1v1H11z" fill="#222" />
+                        </svg>
+                        <!-- Frame 4 -->
+                        <svg class="akira-frame akira-frame-4" viewBox="0 0 16 16" width="96" height="96"
+                          shape-rendering="crispEdges">
+                          <path d="M3 11h2v3H3z M9 11h2v3H9z M3 7h8v5H3z M10 4h4v4H10z M14 5h2v2H14z" fill="#fff" />
+                          <path d="M4 7h3v2H4z M12 4h2v2H12z" fill="#8b5a2b" />
+                          <path d="M1 6h2v2H1z M0 7h1v1H0z M10 3h2v2H10z M15 5h1v1H15z M4 13h1v1H4z M10 13h1v1H10z" fill="#222" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="footer_main-content"><img
+                  src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/682231a73b5be7ff98f935ac_footer%20Node.svg"
+                  loading="lazy" alt="" class="footer_node-to-cta" />
+                <div class="footer_top-content">
+                  <div id="w-node-_31432034-0b36-b686-cc06-99afd84341ee-d84341ea" class="heading-style-xl">Results
+                    Driven</div>
+                  <div id="w-node-_31432034-0b36-b686-cc06-99afd84341f0-d84341ea"
+                    class="heading-style-xxxl font-weight-extra-light">+</div>
+                  <div class="heading-style-xl">Human Creativity</div>
+                </div>
+                <div class="footer_bottom-content"><a href="/" aria-current="page"
+                    class="footer_logo-link w-inline-block w--current"><img src="/assets/logo_white-B6hD-sVy.png" loading="lazy"
+                      alt="741 Studio" class="image-footer-logo-tagline-dsktp" style="max-height: 70px; width: auto;" /><img
+                      src="/assets/logo_white-B6hD-sVy.png" loading="lazy" id="w-node-_31432034-0b36-b686-cc06-99afd84341f6-d84341ea"
+                      alt="741 Studio" class="image-footer-logo-tagline-mobile" style="max-height: 50px; width: auto;" /></a>
+                  <div id="w-node-_31432034-0b36-b686-cc06-99afd84341f7-d84341ea" class="hide-mobile-landscape">
+                    <p class="text-size-small paragraph-line-height-1-15">741.Studio <span class="span_text-opct-60-mobile">is a
+                        digital growth studio helping companies increase visibility, traffic, and leads through modern websites,
+                        local SEO, and performance marketing.</span></p>
+                  </div>
+                  <div id="w-node-_31432034-0b36-b686-cc06-99afd84341fc-d84341ea" class="mobile_footer-ctas"><a
+                      href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" target="_blank"
+                      class="button_mobile-primary w-inline-block">
+                      <div>START NOW</div>
+                    </a></div>
+                </div>
+                <div class="footer-middle-content">
+                  <div id="w-node-_9645d895-1ade-57f6-422c-5c408ed50524-d84341ea" class="footer_links-columns">
+                    <div class="footer_ending-links-column">
+                      <div class="text-link-xsmall is-footer-column-title">Get Started</div><a
+                        id="w-node-_5c8da43b-2729-091f-d468-120075b6c1da-d84341ea" href="/pages/portfolio_full.html"
+                        class="text-link-xsmall is-allcaps">Portfolio</a><a href="/pages/local-seo.html"
+                        class="text-link-xsmall is-allcaps">Local SEO</a><a href="/pages/about.html"
+                        class="text-link-xsmall is-allcaps">About</a>
+                    </div>
+                    <div class="footer_ending-links-column">
+                      <div class="text-link-xsmall is-footer-column-title">Company</div><a
+                        id="w-node-_25ca80f3-474c-feed-dd38-c97db7cfc30d-d84341ea" href="/pages/about.html"
+                        class="text-link-xsmall is-allcaps">About</a><a href="https://www.linkedin.com/company/741-studio"
+                        target="_blank" class="text-link-xsmall is-allcaps">Careers</a><a href="/de/pages/impressum.html"
+                        class="text-link-xsmall is-allcaps">Impressum</a><a href="/de/pages/datenschutz.html"
+                        class="text-link-xsmall is-allcaps">Datenschutz</a><a href="#"
+                        class="text-link-xsmall is-allcaps" onclick="openCookieSettings();return false;">Cookie Settings</a>
+                    </div>
+                  </div>
+                  <div id="w-node-_7b0c18db-9db6-f86f-1954-751be49a3472-d84341ea" class="footer-social-links"><a
+                      aria-label="linkedin" href="https://www.linkedin.com/company/741-studio" target="_blank"
+                      class="footer_social-link w-inline-block">
+                      <div class="icon-1x1-14px w-embed"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_62_27)">
+                            <path
+                              d="M12.4444 0C12.857 0 13.2527 0.163888 13.5444 0.455612C13.8361 0.747335 14 1.143 14 1.55556V12.4444C14 12.857 13.8361 13.2527 13.5444 13.5444C13.2527 13.8361 12.857 14 12.4444 14H1.55556C1.143 14 0.747335 13.8361 0.455612 13.5444C0.163888 13.2527 0 12.857 0 12.4444V1.55556C0 1.143 0.163888 0.747335 0.455612 0.455612C0.747335 0.163888 1.143 0 1.55556 0H12.4444ZM12.0556 12.0556V7.93333C12.0556 7.26086 11.7884 6.61593 11.3129 6.14042C10.8374 5.66492 10.1925 5.39778 9.52 5.39778C8.85889 5.39778 8.08889 5.80222 7.71556 6.40889V5.54556H5.54556V12.0556H7.71556V8.22111C7.71556 7.62222 8.19778 7.13222 8.79667 7.13222C9.08546 7.13222 9.36242 7.24694 9.56663 7.45115C9.77083 7.65536 9.88556 7.93232 9.88556 8.22111V12.0556H12.0556ZM3.01778 4.32444C3.36433 4.32444 3.69668 4.18678 3.94173 3.94173C4.18678 3.69668 4.32444 3.36433 4.32444 3.01778C4.32444 2.29444 3.74111 1.70333 3.01778 1.70333C2.66917 1.70333 2.33483 1.84182 2.08833 2.08833C1.84182 2.33483 1.70333 2.66917 1.70333 3.01778C1.70333 3.74111 2.29444 4.32444 3.01778 4.32444ZM4.09889 12.0556V5.54556H1.94444V12.0556H4.09889Z"
+                              fill="currentcolor" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_62_27">
+                              <rect width="14" height="14" fill="currentcolor" />
+                            </clipPath>
+                          </defs>
+                        </svg></div>
+                    </a><a aria-label="instagram" href="https://www.instagram.com/741.studio/" target="_blank"
+                      class="footer_social-link w-inline-block">
+                      <div class="icon-1x1-14px w-embed"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_62_35)">
+                            <path
+                              d="M4.10091 0.0489565C3.3561 0.0840966 2.84748 0.202957 2.40284 0.377678C1.94266 0.557018 1.55262 0.797679 1.16454 1.18716C0.776454 1.57664 0.537473 1.96696 0.359393 2.42784C0.187052 2.87347 0.0702916 3.38251 0.0373915 4.12773C0.00449137 4.87295 -0.00278866 5.11249 0.000851353 7.01342C0.00449137 8.91435 0.0128914 9.15263 0.0490115 9.89939C0.0845717 10.6441 0.203012 11.1525 0.377733 11.5973C0.557353 12.0575 0.797734 12.4474 1.18736 12.8356C1.57698 13.2238 1.96702 13.4623 2.42902 13.6406C2.87422 13.8127 3.3834 13.93 4.12849 13.9626C4.87357 13.9952 5.11339 14.0028 7.01376 13.9992C8.91412 13.9955 9.15338 13.9871 9.90001 13.9517C10.6466 13.9163 11.1525 13.797 11.5974 13.6231C12.0576 13.4431 12.4477 13.2031 12.8357 12.8134C13.2236 12.4236 13.4625 12.033 13.6404 11.5718C13.8129 11.1266 13.9301 10.6175 13.9624 9.87293C13.995 9.12575 14.0027 8.88719 13.9991 6.98654C13.9954 5.08589 13.9869 4.84761 13.9515 4.10113C13.9161 3.35465 13.7975 2.84771 13.6229 2.40264C13.443 1.94246 13.2029 1.55284 12.8134 1.16434C12.4239 0.775839 12.0331 0.537138 11.572 0.359618C11.1266 0.187277 10.6176 0.0698166 9.87257 0.0376165C9.12748 0.00541635 8.88766 -0.00284368 6.9866 0.000796331C5.08553 0.00443634 4.84753 0.0125564 4.10091 0.0489565ZM4.18267 12.7033C3.50016 12.6736 3.12958 12.5602 2.88262 12.4653C2.55558 12.3393 2.32262 12.187 2.0765 11.9433C1.83038 11.6995 1.67918 11.4657 1.5515 11.1394C1.4556 10.8924 1.3401 10.5223 1.30818 9.83975C1.27346 9.10209 1.26618 8.88061 1.26212 7.01174C1.25806 5.14287 1.2652 4.92167 1.29754 4.18373C1.32666 3.50179 1.44076 3.13079 1.53554 2.88397C1.66154 2.55651 1.8133 2.32396 2.0576 2.07798C2.3019 1.832 2.535 1.68052 2.86162 1.55284C3.1083 1.45652 3.47846 1.342 4.16069 1.30952C4.89891 1.27452 5.12011 1.26752 6.9887 1.26346C8.85728 1.2594 9.07904 1.2664 9.81755 1.29888C10.4995 1.32856 10.8706 1.44154 11.1172 1.53688C11.4444 1.66288 11.6772 1.81422 11.9232 2.05894C12.1691 2.30366 12.3208 2.53593 12.4484 2.86325C12.5449 3.10923 12.6594 3.47925 12.6916 4.16189C12.7268 4.90011 12.7347 5.12145 12.7381 6.9899C12.7415 8.85835 12.7349 9.08025 12.7025 9.81791C12.6727 10.5004 12.5596 10.8711 12.4645 11.1184C12.3385 11.4453 12.1866 11.6784 11.9422 11.9242C11.6978 12.1701 11.4649 12.3215 11.1382 12.4492C10.8918 12.5454 10.5212 12.6602 9.83953 12.6927C9.1013 12.7274 8.8801 12.7347 7.01082 12.7387C5.14153 12.7428 4.92103 12.7352 4.18281 12.7033M9.88923 3.25875C9.8895 3.4249 9.93905 3.58723 10.0316 3.72522C10.1241 3.86321 10.2555 3.97066 10.4091 4.03397C10.5627 4.09728 10.7317 4.11362 10.8946 4.08091C11.0575 4.04821 11.207 3.96793 11.3243 3.85023C11.4416 3.73253 11.5213 3.58269 11.5534 3.41968C11.5855 3.25666 11.5685 3.08778 11.5047 2.9344C11.4408 2.78103 11.3329 2.65003 11.1945 2.558C11.0562 2.46596 10.8937 2.41701 10.7275 2.41734C10.5048 2.41779 10.2914 2.50668 10.1342 2.66446C9.97696 2.82225 9.88885 3.03601 9.88923 3.25875ZM3.4058 7.00698C3.40972 8.99219 5.02197 10.5979 7.00676 10.5941C8.99154 10.5903 10.5983 8.97819 10.5945 6.99298C10.5908 5.00777 8.9781 3.40169 6.99304 3.40561C5.00797 3.40953 3.40202 5.02205 3.4058 7.00698ZM4.66665 7.00446C4.66574 6.54296 4.80169 6.09156 5.05733 5.70733C5.31297 5.3231 5.6768 5.0233 6.10282 4.84585C6.52884 4.6684 6.99791 4.62126 7.45072 4.7104C7.90353 4.79953 8.31974 5.02094 8.64672 5.34663C8.97369 5.67231 9.19675 6.08764 9.28768 6.54009C9.37861 6.99255 9.33333 7.4618 9.15757 7.88852C8.9818 8.31524 8.68345 8.68026 8.30023 8.93741C7.91702 9.19457 7.46616 9.33231 7.00466 9.33323C6.69822 9.33387 6.39466 9.27414 6.11131 9.15745C5.82796 9.04076 5.57038 8.8694 5.35327 8.65315C5.13615 8.43689 4.96377 8.17999 4.84596 7.8971C4.72815 7.61422 4.66722 7.3109 4.66665 7.00446Z"
+                              fill="currentcolor" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_62_35">
+                              <rect width="14" height="14" fill="currentcolor" />
+                            </clipPath>
+                          </defs>
+                        </svg></div>
+                    </a><a aria-label="twitter / x" href="https://x.com/Madredao741" target="_blank"
+                      class="footer_social-link w-inline-block">
+                      <div class="icon-1x1-14px w-embed"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_62_39)">
+                            <path
+                              d="M8.46708 6.08465L13.5545 0.170898H12.349L7.93153 5.30573L4.40334 0.170898H0.333984L5.66931 7.93567L0.333984 14.1372H1.53962L6.20454 8.7146L9.93058 14.1372H13.9999L8.46678 6.08465H8.46708ZM6.8158 8.00408L6.27522 7.23089L1.97402 1.07848H3.8258L7.29692 6.04367L7.8375 6.81686L12.3495 13.2708H10.4978L6.8158 8.00438V8.00408Z"
+                              fill="currentcolor" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_62_39">
+                              <rect width="14" height="14" fill="currentcolor" />
+                            </clipPath>
+                          </defs>
+                        </svg></div>
+                    </a><a aria-label="youtube" href="https://www.youtube.com/@741studio3" target="_blank"
+                      class="footer_social-link w-inline-block">
+                      <div class="icon-1x1-14px w-embed"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <g transform="translate(0, 2.1) scale(0.7)">
+                            <path
+                              d="M19.615 2.184c-.23-.862-.908-1.541-1.77-1.77C16.327 0 10.062 0 10.062 0S3.798 0 2.28.414c-.862.23-1.541.908-1.77 1.77C0 3.702 0 7 0 7s0 3.298.51 4.816c.229.862.908 1.54 1.77 1.77C3.798 14 10.062 14 10.062 14s6.265 0 7.783-.414c.862-.23 1.54-.908 1.77-1.77C20.125 10.298 20.125 7 20.125 7s0-3.298-.51-4.816zM8.05 10.014V3.986L13.287 7l-5.237 3.014z"
+                              fill-rule="evenodd" fill="currentColor" />
+                          </g>
+                        </svg></div>
+                    </a></div>
+                </div>
+            
+                <div class="footer_ending-links-content" style="position: relative;">
+                  <p id="w-node-_67c729d4-f199-0c97-0629-18b9d8ca1a04-d84341ea" class="all-rights-text">741.Studio © 2025.  
+                     All
+                    rights reserved.</p>
+                </div>
+              </div><a id="try_now_bottom" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro"
+                class="footer_cta-button-desktop w-inline-block">
+                <div> Start Now</div><img
+                  src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/682232b5585964c7515fba3b_nore-dot.svg"
+                  loading="lazy" alt="" class="image_footer-cta-node" />
+              </a>
+              <div data-w-id="31432034-0b36-b686-cc06-99afd8434219" class="header_hide-ix-trigger"></div>
+            </footer>
+            
+            <style>
+              /* Akira Footer Dog Interaction */
+              #akira-traveler {
+                position: absolute;
+                bottom: 0px;
+                animation: runX 30s linear infinite;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+                pointer-events: auto;
+              }
+            
+              #akira-flipper {
+                animation: flipX 30s step-end infinite;
+              }
+            
+              .akira-sprite {
+                width: 96px;
+                height: 96px;
+                position: relative;
+              }
+            
+              .akira-frame {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+              }
+            
+              .akira-frame-1 {
+                animation: spriteCycle 0.6s step-end infinite;
+                animation-delay: 0s;
+              }
+            
+              .akira-frame-2 {
+                animation: spriteCycle 0.6s step-end infinite;
+                animation-delay: 0.15s;
+              }
+            
+              .akira-frame-3 {
+                animation: spriteCycle 0.6s step-end infinite;
+                animation-delay: 0.3s;
+              }
+            
+              .akira-frame-4 {
+                animation: spriteCycle 0.6s step-end infinite;
+                animation-delay: 0.45s;
+              }
+            
+              @keyframes spriteCycle {
+                0% {
+                  opacity: 1;
+                }
+            
+                25%,
+                50%,
+                75%,
+                100% {
+                  opacity: 0;
+                }
+              }
+            
+              @keyframes flipX {
+            
+                0%,
+                49.99%,
+                100% {
+                  transform: scaleX(1);
+                }
+            
+                50%,
+                99.99% {
+                  transform: scaleX(-1);
+                }
+              }
+            
+              @keyframes runX {
+                0% {
+                  left: -80px;
+                }
+            
+                49.99% {
+                  left: calc(100% + 80px);
+                }
+            
+                50% {
+                  left: calc(100% + 80px);
+                }
+            
+                99.99% {
+                  left: -80px;
+                }
+            
+                100% {
+                  left: -80px;
+                }
+              }
+            
+              .akira-bubble {
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%) scale(0.85);
+                transform-origin: bottom center;
+                background: #fdfdfd;
+                border: 2px solid #111;
+                padding: 10px 14px;
+                font-family: 'Press Start 2P', monospace;
+                font-size: 8px;
+                line-height: 1.6;
+                color: #111;
+                white-space: nowrap;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 150ms ease-out, transform 150ms ease-out, visibility 150ms;
+                box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.8);
+                z-index: 10;
+                margin-bottom: 4px;
+                text-align: center;
+              }
+            
+              .akira-bubble.show {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(-50%) scale(1);
+              }
+            
+              .akira-bubble::after {
+                content: '';
+                position: absolute;
+                bottom: -6px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-width: 6px 6px 0 0;
+                border-style: solid;
+                border-color: #111 transparent transparent transparent;
+              }
+            
+              .akira-bubble::before {
+                content: '';
+                position: absolute;
+                bottom: -3px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-width: 4px 4px 0 0;
+                border-style: solid;
+                border-color: #fdfdfd transparent transparent transparent;
+                z-index: 1;
+              }
+            
+              :root {
+                --brand--lemon: #fac118;
+                --brand--ash-grey: #8c8c8c;
+                --brand--french-gray: #fac118;
+                --brand--french-gray-op-45: rgba(250, 193, 24, 0.45);
+              }
+            </style>
+            
+            <script>
+              let akiraBubbleTimer;
+              function toggleAkira() {
+                const bubble = document.getElementById('akira-bubble');
+                if (bubble.classList.contains('show')) {
+                  bubble.classList.remove('show');
+                  clearTimeout(akiraBubbleTimer);
+                } else {
+                  bubble.classList.add('show');
+                  clearTimeout(akiraBubbleTimer);
+                  akiraBubbleTimer = setTimeout(() => {
+                    bubble.classList.remove('show');
+                  }, 5000);
+                }
+              }
+            
+              window.toggleAkira = toggleAkira;
+            
+              // Global Contact Modal Logic
+              document.addEventListener('DOMContentLoaded', () => {
+                const modal = document.getElementById('sharedContactModal');
+                const closeBtn = document.getElementById('closeContactModal');
+                if (!modal) return;
+            
+                // Highjack all relevant trigger links universally based on text or known destinations
+                const allLinks = document.querySelectorAll('a');
+                const triggers = [];
+                allLinks.forEach(a => {
+                  const text = (a.innerText || a.textContent).trim().toLowerCase();
+                  const href = a.getAttribute('href') || '';
+                  const isTargetHREF = href.includes('VmiA3c6t') || href.includes('app.weavy.ai/signin');
+                  const isTargetText = [
+                    'start now', 'let\'s talk', 'contact us', 'work with us',
+                    'request a demo', 'start free', 'start a project',
+                    'free consultation', 'start locally', 'optimize my site', 'i want these results'
+                  ].includes(text);
+                  if (isTargetHREF || isTargetText || a.id === 'try_now_top' || a.id === 'try_now_bottom') {
+                    if (!a.classList.contains('contact-modal-option')) {
+                      triggers.push(a);
+                    }
+                  }
+                });
+            
+                triggers.forEach(btn => {
+                  btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Break out of Webflow DOM restrictions by appending to body
+                    if (modal.parentNode !== document.body) {
+                      document.body.appendChild(modal);
+                    }
+                    modal.classList.add('is-open');
+                  });
+                });
+            
+                closeBtn.addEventListener('click', () => {
+                  modal.classList.remove('is-open');
+                });
+            
+                // Click outside to close
+                modal.addEventListener('click', (e) => {
+                  if (e.target === modal) {
+                    modal.classList.remove('is-open');
+                  }
+                });
+            
+                // Close on escape
+                document.addEventListener('keydown', (e) => {
+                  if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+                    modal.classList.remove('is-open');
+                  }
+                });
+              });
+            </script>
+            
+            <!-- Global Shared Contact Modal -->
+            <div id="sharedContactModal" class="shared-contact-modal">
+              <div class="contact-modal-box">
+                <button id="closeContactModal" class="contact-modal-close" aria-label="Close modal">✕</button>
+                <h2>Let's talk</h2>
+                <p>Choose how you'd like to start your project with us.</p>
+            
+                <a href="https://wa.me/6287860430975" target="_blank" class="contact-modal-option c-opt-wa">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="modal-opt-icon">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M2.00398 21.996L3.3082 17.2343C2.15822 15.244 1.55178 12.9463 1.553 10.5898C1.55598 4.8817 6.20864 0.233989 11.9213 0.233989C14.689 0.235129 17.3005 1.31295 19.2568 3.26806C21.2131 5.22316 22.2905 7.83296 22.2894 10.5976C22.2864 16.3057 17.6337 20.9534 11.9211 20.9534C9.65825 20.9523 7.44755 20.3802 5.50346 19.3093L2.00398 21.996ZM5.91717 17.6186C7.7554 18.7088 9.80556 19.2818 11.9205 19.2828C16.7083 19.2828 20.6158 15.3781 20.6183 10.5959C20.6191 8.27552 19.7153 6.07548 18.0752 4.43632C16.4352 2.79717 14.2323 1.89437 11.9168 1.8934C7.129 1.8934 3.22151 5.7981 3.21903 10.5804C3.218 12.7952 3.82424 14.9452 4.97022 16.8202L4.04576 20.1989L7.5447 18.9959V18.9959H7.54483H7.5447C7.5447 18.9958 7.54471 18.9958 7.54483 18.9957C7.54472 18.9958 7.5447 18.9958 7.5447 18.9959L5.91717 17.6186ZM16.634 14.205C16.3752 14.0755 15.1017 13.4485 14.8646 13.3622C14.6274 13.2758 14.455 13.2327 14.2825 13.4916C14.11 13.7505 13.6143 14.3338 13.4633 14.5065C13.3125 14.6793 13.1616 14.7008 12.9029 14.5714C12.6441 14.4419 11.8087 14.1691 10.819 13.2863C10.0487 12.5993 9.5292 11.7533 9.37829 11.4944C9.22739 11.2355 9.36195 11.0954 9.49186 10.9666C9.60875 10.8509 9.74605 10.6865 9.87538 10.5354C10.0047 10.3843 10.0478 10.2764 10.1341 10.1037C10.2203 9.93103 10.1772 9.77995 10.1125 9.65045C10.0478 9.52095 9.5303 8.24755 9.31464 7.7297C9.10427 7.22442 8.89 7.29177 8.72986 7.284C8.57468 7.27653 8.40217 7.27555 8.22965 7.27555C8.05713 7.27555 7.77685 7.34026 7.53969 7.59914C7.30253 7.85803 6.6342 8.48366 6.6342 9.75653C6.6342 11.0294 7.56126 12.2592 7.69059 12.4319C7.81993 12.6045 9.51325 15.2289 12.1158 16.3533C12.7351 16.6214 13.218 16.7797 13.5939 16.8996C14.2155 17.0974 14.7803 17.0689 15.2275 16.9945C15.7266 16.9115 16.7634 16.3688 16.9789 15.7645C17.1945 15.1601 17.1945 14.6421 17.1298 14.5342C17.0651 14.4263 16.8927 14.3401 16.634 14.205Z"
+                      fill="var(--brand--lemon, #fac118)" />
+                  </svg>
+                  WhatsApp
+                </a>
+            
+                <a href="mailto:hello@741.studio" class="contact-modal-option c-opt-email">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="modal-opt-icon">
+                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                      stroke="var(--brand--lemon, #fac118)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M22 6L12 13L2 6" stroke="var(--brand--lemon, #fac118)" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  Email
+                </a>
+            
+                <a href="https://www.instagram.com/741.studio/" target="_blank" class="contact-modal-option c-opt-ig">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="modal-opt-icon">
+                    <path
+                      d="M7.75 2H16.25C19.4256 2 22 4.57436 22 7.75V16.25C22 19.4256 19.4256 22 16.25 22H7.75C4.57436 22 2 19.4256 2 16.25V7.75C2 4.57436 4.57436 2 7.75 2Z"
+                      stroke="var(--brand--lemon, #fac118)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M16 11.3701C16.1234 12.2023 15.9813 13.0523 15.5938 13.7991C15.2063 14.5459 14.5932 15.1515 13.8416 15.5298C13.0901 15.908 12.2385 16.0397 11.4078 15.906C10.5771 15.7724 9.80977 15.3802 9.21485 14.7852C8.61993 14.1903 8.22774 13.423 8.09407 12.5923C7.9604 11.7616 8.09207 10.91 8.47033 10.1585C8.84859 9.40693 9.4542 8.79383 10.201 8.40633C10.9478 8.01884 11.7978 7.8767 12.63 8.00011C13.4789 8.12599 14.2649 8.52155 14.865 9.12173C15.4652 9.72191 15.8607 10.508 15.9866 11.3569L16 11.3701Z"
+                      stroke="var(--brand--lemon, #fac118)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <circle cx="17.5" cy="6.5" r="1.5" fill="var(--brand--lemon, #fac118)" />
+                  </svg>
+                  Instagram
+                </a>
+              </div>
+            </div>
+            
+            <style>
+              /* Global Contact Modal Styles */
+              .shared-contact-modal {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(17, 17, 20, 0.95);
+                backdrop-filter: blur(12px);
+                z-index: 9999999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease, visibility 0.3s ease;
+              }
+            
+              .shared-contact-modal.is-open {
+                opacity: 1;
+                visibility: visible;
+              }
+            
+              .contact-modal-box {
+                background: #0e0e11;
+                border-radius: 16px;
+                border: 1px solid rgba(250, 193, 24, 0.2);
+                width: 90%;
+                max-width: 400px;
+                padding: 40px 30px;
+                position: relative;
+                text-align: center;
+                color: #fff;
+                transform: translateY(20px);
+                transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8);
+              }
+            
+              .shared-contact-modal.is-open .contact-modal-box {
+                transform: translateY(0);
+              }
+            
+              .contact-modal-close {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                font-size: 20px;
+                color: #555;
+                transition: color 0.2s;
+              }
+            
+              .contact-modal-close:hover {
+                color: var(--brand--lemon, #fac118);
+              }
+            
+              .contact-modal-box h2 {
+                font-size: 28px;
+                font-weight: 800;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                font-family: inherit;
+              }
+            
+              .contact-modal-box p {
+                font-size: 15px;
+                color: #999;
+                margin-bottom: 30px;
+                line-height: 1.4;
+              }
+            
+              .contact-modal-option {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 16px;
+                margin-bottom: 12px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 1rem;
+                text-transform: uppercase;
+                transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+                background: #15151a;
+                color: #fff !important;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+              }
+            
+              .contact-modal-option:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 25px rgba(250, 193, 24, 0.15);
+                border-color: rgba(250, 193, 24, 0.5);
+              }
+            
+              .modal-opt-icon {
+                margin-right: 12px;
+                flex-shrink: 0;
+              }
+            </style>        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const revealElements = document.querySelectorAll('.reveal-up');
+            revealElements.forEach((el) => {
+                gsap.fromTo(el,
+                    {
+                        y: 30,
+                        opacity: 0
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 85%",
+                            once: true
+                        }
+                    }
+                );
+            });
+        });
+    </script>
+  <!-- ============================================================
+       COOKIE CONSENT (DSGVO) — self-contained, bilingual (de/en), vanilla JS.
+       No frameworks, no external libraries.
+  
+       Principle: NO marketing/analytics scripts load before consent.
+         - loadMarketingScripts()  -> fires ONLY after "Marketing" is granted
+         - loadAnalyticsScripts()  -> fires ONLY after "Analytics" is granted
+       Add trackers (Meta Pixel, GA4, GTM, Clarity, PostHog) inside those two
+       functions only. Consent is stored in localStorage; the banner is not
+       shown again on return. Reopen anytime via a "Cookie-Einstellungen" link
+       (onclick="openCookieSettings()") or window.openCookieSettings().
+       ============================================================ -->
+  <div id="cc" class="cc" hidden>
+  
+    <!-- Banner -->
+    <section class="cc-banner" role="dialog" aria-modal="false" aria-labelledby="cc-title" aria-describedby="cc-desc">
+      <h2 class="cc-title" id="cc-title"></h2>
+      <p class="cc-desc" id="cc-desc"></p>
+      <div class="cc-actions">
+        <button type="button" class="cc-btn cc-btn--primary" data-cc="accept-all"></button>
+        <button type="button" class="cc-btn cc-btn--soft" data-cc="necessary"></button>
+        <button type="button" class="cc-btn cc-btn--ghost" data-cc="settings"></button>
+      </div>
+    </section>
+  
+    <!-- Settings modal -->
+    <div class="cc-modal" role="dialog" aria-modal="true" aria-labelledby="cc-modal-title" hidden>
+      <div class="cc-modal-backdrop" data-cc="close-settings"></div>
+      <div class="cc-modal-card" role="document">
+        <div class="cc-modal-head">
+          <h2 class="cc-modal-title" id="cc-modal-title"></h2>
+          <button type="button" class="cc-x" data-cc="close-settings" aria-label="Schließen">&times;</button>
+        </div>
+  
+        <ul class="cc-cats">
+          <li class="cc-cat">
+            <div class="cc-cat-text">
+              <span class="cc-cat-name" data-t="necessaryName"></span>
+              <span class="cc-cat-desc" data-t="necessaryDesc"></span>
+            </div>
+            <span class="cc-badge" data-t="alwaysOn"></span>
+          </li>
+          <li class="cc-cat">
+            <div class="cc-cat-text">
+              <span class="cc-cat-name" data-t="analyticsName"></span>
+              <span class="cc-cat-desc" data-t="analyticsDesc"></span>
+            </div>
+            <label class="cc-switch">
+              <input type="checkbox" id="cc-analytics" />
+              <span class="cc-slider" aria-hidden="true"></span>
+            </label>
+          </li>
+          <li class="cc-cat">
+            <div class="cc-cat-text">
+              <span class="cc-cat-name" data-t="marketingName"></span>
+              <span class="cc-cat-desc" data-t="marketingDesc"></span>
+            </div>
+            <label class="cc-switch">
+              <input type="checkbox" id="cc-marketing" />
+              <span class="cc-slider" aria-hidden="true"></span>
+            </label>
+          </li>
+        </ul>
+  
+        <div class="cc-modal-actions">
+          <button type="button" class="cc-btn cc-btn--primary" data-cc="save"></button>
+          <button type="button" class="cc-btn cc-btn--soft" data-cc="necessary"></button>
+          <button type="button" class="cc-btn cc-btn--ghost" data-cc="accept-all"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    /* ---------- Tokens ---------- */
+    .cc {
+      --cc-bg: #ffffff;
+      --cc-fg: #1c1c1a;
+      --cc-muted: #6b6862;
+      --cc-line: rgba(28, 28, 26, 0.10);
+      --cc-accent: #1f2a22;
+      --cc-accent-fg: #ffffff;
+      --cc-brand: #fac118;
+      --cc-radius: 18px;
+      --cc-shadow: 0 20px 60px rgba(28, 28, 26, 0.18);
+      font-family: "Dmsans", "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    .cc *, .cc *::before, .cc *::after { box-sizing: border-box; }
+    .cc[hidden] { display: none; }
+  
+    /* ---------- Banner ---------- */
+    .cc-banner {
+      position: fixed;
+      z-index: 2147483000;
+      right: 24px;
+      bottom: 24px;
+      width: 420px;
+      max-width: calc(100vw - 32px);
+      background: var(--cc-bg);
+      color: var(--cc-fg);
+      border: 1px solid var(--cc-line);
+      border-radius: var(--cc-radius);
+      box-shadow: var(--cc-shadow);
+      padding: 22px 22px 20px;
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .24s ease, transform .24s ease;
+    }
+    .cc.cc-show .cc-banner { opacity: 1; transform: translateY(0); }
+    /* Hide the banner while the settings modal is open so it doesn't peek through */
+    .cc.cc-modal-open .cc-banner { opacity: 0; pointer-events: none; }
+  
+    .cc-title { margin: 0 0 8px; font-size: 1.1rem; font-weight: 700; line-height: 1.2; }
+    .cc-desc { margin: 0 0 18px; font-size: 0.9rem; line-height: 1.55; color: var(--cc-muted); }
+  
+    .cc-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .cc-actions .cc-btn--ghost { grid-column: 1 / -1; }
+  
+    /* ---------- Buttons (equal weight, no dark patterns) ---------- */
+    .cc-btn {
+      appearance: none;
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--cc-line);
+      cursor: pointer;
+      transition: transform .15s ease, background .2s ease, border-color .2s ease, color .2s ease;
+      background: #fff;
+      color: var(--cc-fg);
+      text-align: center;
+      line-height: 1.1;
+    }
+    .cc-btn:hover { transform: translateY(-1px); }
+    .cc-btn:focus-visible { outline: 3px solid rgba(250, 193, 24, 0.6); outline-offset: 2px; }
+    .cc-btn--primary { background: var(--cc-accent); color: var(--cc-accent-fg); border-color: var(--cc-accent); }
+    .cc-btn--primary:hover { background: #17201a; }
+    .cc-btn--soft { background: #f4f2ec; border-color: var(--cc-line); }
+    .cc-btn--ghost { background: transparent; color: var(--cc-muted); border-color: transparent; text-decoration: underline; }
+    .cc-btn--ghost:hover { color: var(--cc-fg); }
+  
+    /* ---------- Settings modal ---------- */
+    .cc-modal { position: fixed; inset: 0; z-index: 2147483001; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .cc-modal[hidden] { display: none; }
+    .cc-modal-backdrop { position: absolute; inset: 0; background: rgba(20, 20, 18, 0.45); opacity: 0; transition: opacity .24s ease; }
+    .cc.cc-modal-open .cc-modal-backdrop { opacity: 1; }
+    .cc-modal-card {
+      position: relative; width: 520px; max-width: 100%; max-height: 90vh; overflow: auto;
+      background: var(--cc-bg); border-radius: var(--cc-radius); box-shadow: var(--cc-shadow);
+      padding: 26px; opacity: 0; transform: translateY(14px); transition: opacity .24s ease, transform .24s ease;
+    }
+    .cc.cc-modal-open .cc-modal-card { opacity: 1; transform: translateY(0); }
+    .cc-modal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+    .cc-modal-title { margin: 0; font-size: 1.2rem; font-weight: 700; }
+    .cc-x { appearance: none; background: none; border: none; font-size: 1.6rem; line-height: 1; color: var(--cc-muted); cursor: pointer; padding: 4px 8px; border-radius: 8px; }
+    .cc-x:hover { color: var(--cc-fg); }
+    .cc-x:focus-visible { outline: 3px solid rgba(250, 193, 24, 0.6); }
+  
+    .cc-cats { list-style: none; margin: 14px 0 22px; padding: 0; }
+    .cc-cat { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; border-top: 1px solid var(--cc-line); }
+    .cc-cat:last-child { border-bottom: 1px solid var(--cc-line); }
+    .cc-cat-text { display: flex; flex-direction: column; gap: 3px; }
+    .cc-cat-name { font-weight: 700; font-size: 0.95rem; }
+    .cc-cat-desc { font-size: 0.82rem; color: var(--cc-muted); line-height: 1.4; }
+    .cc-badge { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #16a34a; background: #e7f6ec; padding: 6px 10px; border-radius: 100px; white-space: nowrap; }
+  
+    /* Toggle switch (accessible checkbox) */
+    .cc-switch { position: relative; display: inline-block; width: 46px; height: 26px; flex: 0 0 auto; }
+    .cc-switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+    .cc-slider { position: absolute; inset: 0; background: #d7d4cc; border-radius: 100px; transition: background .2s ease; }
+    .cc-slider::before { content: ""; position: absolute; height: 20px; width: 20px; left: 3px; top: 3px; background: #fff; border-radius: 50%; transition: transform .2s ease; box-shadow: 0 1px 3px rgba(0,0,0,.2); }
+    .cc-switch input:checked + .cc-slider { background: #16a34a; }
+    .cc-switch input:checked + .cc-slider::before { transform: translateX(20px); }
+    .cc-switch input:focus-visible + .cc-slider { outline: 3px solid rgba(250, 193, 24, 0.6); outline-offset: 2px; }
+  
+    .cc-modal-actions { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  
+    /* ---------- Responsive ---------- */
+    @media (max-width: 600px) {
+      .cc-banner { right: 0; left: 0; bottom: 0; width: 100%; max-width: 100%; border-radius: 18px 18px 0 0; padding: 20px 18px calc(18px + env(safe-area-inset-bottom)); }
+      .cc-actions { grid-template-columns: 1fr; }
+      .cc-modal-actions { grid-template-columns: 1fr; }
+    }
+  
+    @media (prefers-reduced-motion: reduce) {
+      .cc-banner, .cc-modal-card, .cc-modal-backdrop, .cc-btn, .cc-slider, .cc-slider::before { transition: none; }
+    }
+  </style>
+  
+  <script>
+    (function () {
+      "use strict";
+  
+      var STORAGE_KEY = "cc_consent_v1";
+  
+      /* ---------- i18n ---------- */
+      var isDe = (document.documentElement.lang || "en").toLowerCase().indexOf("de") === 0;
+      var T = isDe ? {
+        title: "🍪 Datenschutz & Cookies",
+        desc: "Wir verwenden Cookies, um unsere Website sicher zu betreiben, Inhalte zu verbessern und – mit Ihrer Zustimmung – anonyme Statistiken sowie Marketingmaßnahmen zu ermöglichen. Sie entscheiden selbst, welche Cookies verwendet werden.",
+        acceptAll: "Alle akzeptieren",
+        necessary: "Nur notwendige",
+        settings: "Einstellungen",
+        save: "Auswahl speichern",
+        modalTitle: "Einstellungen",
+        necessaryName: "Notwendige Cookies",
+        necessaryDesc: "Erforderlich für den Betrieb der Website.",
+        alwaysOn: "Immer aktiv",
+        analyticsName: "Analytics",
+        analyticsDesc: "Hilft uns zu verstehen, wie Besucher unsere Website nutzen.",
+        marketingName: "Marketing",
+        marketingDesc: "Ermöglicht personalisierte Werbung und Erfolgsmessung.",
+        close: "Schließen"
+      } : {
+        title: "🍪 Privacy & Cookies",
+        desc: "We use cookies to run our website securely, improve content and — with your consent — enable anonymous statistics and marketing. You decide which cookies are used.",
+        acceptAll: "Accept all",
+        necessary: "Necessary only",
+        settings: "Settings",
+        save: "Save selection",
+        modalTitle: "Settings",
+        necessaryName: "Necessary cookies",
+        necessaryDesc: "Required to operate the website.",
+        alwaysOn: "Always on",
+        analyticsName: "Analytics",
+        analyticsDesc: "Helps us understand how visitors use our website.",
+        marketingName: "Marketing",
+        marketingDesc: "Enables personalized advertising and conversion measurement.",
+        close: "Close"
+      };
+  
+      /* ============================================================
+         SCRIPT LOADERS — trackers live here and ONLY here.
+         Each guards against double-execution.
+         ============================================================ */
+  
+      /* ---- Google Consent Mode v2 ----
+         Google tags (GA4 + GTM) load on EVERY page but obey these signals:
+         denied by default (cookieless pings → conversion modeling), granted
+         after the visitor consents. This is Google's required setup for EU
+         remarketing/personalization. Non-Google tags stay hard-gated below. */
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  
+      window.__ccConsentDefault = function (stored) {
+        var g = stored && stored.marketing ? "granted" : "denied";
+        var a = stored && stored.analytics ? "granted" : "denied";
+        window.gtag("consent", "default", {
+          ad_storage: g, ad_user_data: g, ad_personalization: g,
+          analytics_storage: a,
+          functionality_storage: "granted", security_storage: "granted",
+          wait_for_update: 500
+        });
+        window.gtag("set", "url_passthrough", true);
+        window.gtag("set", "ads_data_redaction", true);
+      };
+  
+      window.__ccConsentUpdate = function (analytics, marketing) {
+        window.gtag("consent", "update", {
+          ad_storage: marketing ? "granted" : "denied",
+          ad_user_data: marketing ? "granted" : "denied",
+          ad_personalization: marketing ? "granted" : "denied",
+          analytics_storage: analytics ? "granted" : "denied"
+        });
+      };
+  
+      // GA4 + GTM — load ALWAYS (Consent Mode gates the data). Runs once.
+      window.loadGoogleTags = function loadGoogleTags() {
+        if (window.__ccGoogleLoaded) return;
+        window.__ccGoogleLoaded = true;
+  
+        /* ---- Google Analytics 4 (gtag) ---- */
+        var ga = document.createElement("script");
+        ga.async = true;
+        ga.src = "https://www.googletagmanager.com/gtag/js?id=G-FZG9BNPQXK";
+        document.head.appendChild(ga);
+        window.gtag("set", "developer_id.dZGVlNj", true);
+        window.gtag("js", new Date());
+        window.gtag("config", "G-FZG9BNPQXK");
+  
+        /* ---- Google Ads (741 Acc) — conversion tracking + remarketing ---- */
+        window.gtag("config", "AW-564129015");
+  
+        /* ---- Google Tag Manager ---- */
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || []; w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true; j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-PW3B9LZJ");
+      };
+  
+      // Fires only after MARKETING consent.
+      window.loadMarketingScripts = function loadMarketingScripts() {
+        if (window.__ccMarketingLoaded) return;
+        window.__ccMarketingLoaded = true;
+  
+        /* ---- Meta Pixel ---- */
+        !function (f, b, e, v, n, t, s) {
+          if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
+          if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0";
+          n.queue = []; t = b.createElement(e); t.async = !0;
+          t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+        }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+        window.fbq("init", "1028202146617964");
+        window.fbq("track", "PageView");
+  
+        /* ---- FirstPromoter (affiliate / referral attribution) ---- */
+        (function (w) { w.fpr = w.fpr || function () { w.fpr.q = w.fpr.q || []; w.fpr.q[arguments[0] == "set" ? "unshift" : "push"](arguments); }; })(window);
+        window.fpr("init", { cid: "vzajpas8" });
+        window.fpr("click");
+      };
+  
+      // Fires only after ANALYTICS consent.
+      window.loadAnalyticsScripts = function loadAnalyticsScripts() {
+        if (window.__ccAnalyticsLoaded) return;
+        window.__ccAnalyticsLoaded = true;
+  
+        /* ---- PostHog ---- */
+        !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init be ys Ss me gs ws capture Ne calculateEventProperties xs register register_once register_for_session unregister unregister_for_session Rs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Is ks createPersonProfile Ps bs opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing $s debug Es getPageViewId captureTraceFeedback captureTraceMetric".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+        window.posthog.init("phc_NT2sOH8m82boUw21Q1Vsr0tQUtjpRJUIE5aoqA0En8T", {
+          api_host: "https://eu.i.posthog.com",
+          person_profiles: "identified_only"
+        });
+      };
+  
+      /* ---------- State + storage ---------- */
+      function readConsent() {
+        try { return JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch (e) { return null; }
+      }
+      function saveConsent(analytics, marketing) {
+        var data = { necessary: true, analytics: !!analytics, marketing: !!marketing, v: 1, ts: new Date().toISOString() };
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e) {}
+        return data;
+      }
+      function applyConsent(c) {
+        window.__ccConsentUpdate(!!(c && c.analytics), !!(c && c.marketing)); // Consent Mode signal
+        if (c && c.analytics) window.loadAnalyticsScripts();  // PostHog
+        if (c && c.marketing) window.loadMarketingScripts();  // Meta Pixel + FirstPromoter
+      }
+  
+      /* ---------- DOM refs ---------- */
+      var root = document.getElementById("cc");
+      if (!root) return;
+      var banner = root.querySelector(".cc-banner");
+      var modal = root.querySelector(".cc-modal");
+      var cbAnalytics = root.querySelector("#cc-analytics");
+      var cbMarketing = root.querySelector("#cc-marketing");
+      var lastFocus = null;
+  
+      /* ---------- Fill texts ---------- */
+      root.querySelector("#cc-title").textContent = T.title;
+      root.querySelector("#cc-desc").textContent = T.desc;
+      root.querySelector("#cc-modal-title").textContent = T.modalTitle;
+      root.querySelector('[data-cc="accept-all"]').textContent = T.acceptAll; // first
+      root.querySelectorAll('[data-cc="accept-all"]').forEach(function (b) { b.textContent = T.acceptAll; });
+      root.querySelectorAll('[data-cc="necessary"]').forEach(function (b) { b.textContent = T.necessary; });
+      root.querySelector('[data-cc="settings"]').textContent = T.settings;
+      root.querySelector('[data-cc="save"]').textContent = T.save;
+      root.querySelector('.cc-x').setAttribute("aria-label", T.close);
+      root.querySelectorAll("[data-t]").forEach(function (el) {
+        var key = el.getAttribute("data-t");
+        if (T[key] != null) el.textContent = T[key];
+      });
+  
+      /* ---------- Banner show/hide ---------- */
+      function showBanner() { root.hidden = false; requestAnimationFrame(function () { root.classList.add("cc-show"); }); }
+      function hideBanner() { root.classList.remove("cc-show"); setTimeout(function () { if (!modalOpen()) root.hidden = true; }, 240); }
+  
+      /* ---------- Settings modal ---------- */
+      function modalOpen() { return !modal.hidden; }
+      function openSettings() {
+        lastFocus = document.activeElement;
+        var c = readConsent();
+        cbAnalytics.checked = c ? !!c.analytics : false;
+        cbMarketing.checked = c ? !!c.marketing : false;
+        root.hidden = false;
+        modal.hidden = false;
+        requestAnimationFrame(function () { root.classList.add("cc-modal-open"); });
+        var f = modal.querySelector(".cc-btn, .cc-switch input, .cc-x");
+        if (f) f.focus();
+        document.addEventListener("keydown", onKeydown);
+      }
+      function closeSettings() {
+        root.classList.remove("cc-modal-open");
+        document.removeEventListener("keydown", onKeydown);
+        setTimeout(function () {
+          modal.hidden = true;
+          if (readConsent()) { root.hidden = true; }               // decided earlier -> hide all
+          else { root.classList.add("cc-show"); }                   // no decision yet -> keep banner
+          if (lastFocus && lastFocus.focus) lastFocus.focus();
+        }, 240);
+      }
+  
+      /* ---------- Keyboard (ESC + focus trap in modal) ---------- */
+      function onKeydown(e) {
+        if (e.key === "Escape") { e.preventDefault(); closeSettings(); return; }
+        if (e.key !== "Tab") return;
+        var f = Array.prototype.slice.call(modal.querySelectorAll('button, [href], input, [tabindex]:not([tabindex="-1"])'))
+          .filter(function (el) { return el.offsetParent !== null; });
+        if (!f.length) return;
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+  
+      /* ---------- Decisions ---------- */
+      function decide(analytics, marketing) {
+        applyConsent(saveConsent(analytics, marketing));
+        if (modalOpen()) closeSettings(); else hideBanner();
+      }
+  
+      /* ---------- Wire events ---------- */
+      root.addEventListener("click", function (e) {
+        var t = e.target.closest("[data-cc]");
+        if (!t) return;
+        var action = t.getAttribute("data-cc");
+        if (action === "accept-all") decide(true, true);
+        else if (action === "necessary") decide(false, false);
+        else if (action === "settings") openSettings();
+        else if (action === "save") decide(cbAnalytics.checked, cbMarketing.checked);
+        else if (action === "close-settings") closeSettings();
+      });
+  
+      /* Public: reopen from a footer link — onclick="openCookieSettings()" */
+      window.openCookieSettings = function () { openSettings(); };
+  
+      /* ---------- Init ---------- */
+      var existing = readConsent();
+      window.__ccConsentDefault(existing);         // Consent Mode v2 default — MUST run before Google tags
+      window.loadGoogleTags();                      // GA4 + GTM load always (cookieless until consent)
+      if (existing) { applyConsent(existing); }     // returning visitor: send consent update + load granted extras
+      else { showBanner(); }                        // first visit: ask
+    })();
+  </script>
+</body>
+
+</html>

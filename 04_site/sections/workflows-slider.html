@@ -1,192 +1,209 @@
-<section class="section_workflows-slider">
-  <div class="padding-global">
-    <div class="simple-container">
-      <div class="padding-section-large is-workflows">
-        <div class="layout_left-align">
-          <div class="workflows-header-wrppaer reveal-up">
-            <h2 class="heading-style-xl">Explore Our Workflows</h2>
-            <p class="paragraph-line-height-1-15">From multi-layer compositing to matte manipulation, Weavy keeps
-              up with your creativity with all the editing tools you recognize and rely on.</p>
-          </div>
-        </div>
-        <div class="container">
-          <div class="slider-css w-embed">
-            <style>
-              /* Disabled Arrow Button */
-              .splide button:disabled {
-                opacity: 0.4;
-              }
+      <section class="section_workflows-slider">
+        <div class="padding-global">
+          <div class="simple-container">
+            <div class="padding-section-large is-workflows">
+              <div class="layout_left-align">
+                <div class="workflows-header-wrppaer">
+                  <h2 class="heading-style-xl">Explore Our Workflows</h2>
+                  <p class="paragraph-line-height-1-15">Explore our proven workflows for marketing automation, SEO, and lead generation that drive measurable results for your business.</p>
+                </div>
+              </div>
+              <div class="container">
+                <div class="slider-css w-embed">
+                  <style>
+                    /* Disabled Arrow Button */
+                    .splide button:disabled {
+                      opacity: 0.4;
+                    }
 
-              /* Dark Sections */
-              .is--dark .splide__arrow {
-                filter: invert(100%);
-              }
+                    /* Dark Sections */
+                    .is--dark .splide__arrow {
+                      filter: invert(100%);
+                    }
 
-              .is--dark .splide__pagination__page {
-                background-color: #dfdad5;
-              }
+                    .is--dark .splide__pagination__page {
+                      background-color: #dfdad5;
+                    }
 
-              /* Pill slider */
-              .splide.pill .splide__pagination {
-                display: none;
-              }
+                    /* Pill slider */
+                    .splide.pill .splide__pagination {
+                      display: none;
+                    }
 
-              .splide__slide.is-active .slider-pill_photo {
-                transform: scale(1.05);
-              }
+                    .splide__slide.is-active .slider-pill_photo {
+                      transform: scale(1.05);
+                    }
 
 
-              /* Tall slider */
-              .splide.tall .splide__pagination {
-                display: none;
-              }
+                    /* Tall slider */
+                    .splide.tall .splide__pagination {
+                      display: none;
+                    }
 
-              .splide__slide.is-active .text-opacity {
-                color: white;
-              }
+                    .splide__slide.is-active .text-opacity {
+                      color: white;
+                    }
 
-              .splide__slide.is-active:hover .text-opacity {
-                color: #fac118;
-              }
+                    .splide__slide.is-active:hover .text-opacity {
+                      color: #fac118;
+                    }
 
-              .splide__slide.is-active .slider-tall_img {
-                transform: scale(1.05);
-                overflow: hidden;
-              }
+                    .splide__slide.is-active .slider-tall_img {
+                      transform: scale(1.05);
+                      overflow: hidden;
+                    }
 
-              .splide__slide.is-active .slider-tall_photo {
-                transform: scale(1.05);
-              }
+                    .splide__slide.is-active .slider-tall_photo {
+                      transform: scale(1.05);
+                    }
 
-              .splide__slide.is-active .rounded {
-                border-radius: 0.75em;
-              }
-            </style>
-          </div>
-          <div class="splide slider2 tall reveal-up">
-            <div class="splide__track">
-              <div class="splide__list">
-                <div class="splide__slide three-cards">
-                  <a href="/pages/local-seo.html" class="w-inline-block"
-                    style="text-decoration: none; color: inherit; display: block; height: 100%; width: 100%;">
-                    <div class="slider-tall center">
-                      <div class="text-opacity">
-                        <h3 class="slider_heading">Local SEO</h3>
+                    .splide__slide.is-active .rounded {
+                      border-radius: 0.75em;
+                    }
+
+                    /* Fix: cards were switched to short rounded thumbnails, but the
+                       track still reserved the original tall-card height
+                       (.slider-tall_img padding-top:149%), leaving a large empty gap
+                       above the navigation arrows. Collapse the slider to the actual
+                       content height so the arrows sit just below the cards. */
+                    .section_workflows-slider .splide.tall,
+                    .section_workflows-slider .splide.tall .splide__track,
+                    .section_workflows-slider .splide.tall .splide__list,
+                    .section_workflows-slider .splide.tall .splide__slide {
+                      height: auto !important;
+                    }
+
+                    .section_workflows-slider .splide.tall .splide__list {
+                      align-items: flex-start !important;
+                    }
+
+                    .section_workflows-slider .slider-tall.center {
+                      height: auto !important;
+                    }
+
+                    .section_workflows-slider .splide__arrows {
+                      margin-top: 1.5rem;
+                    }
+                  </style>
+                </div>
+                <div class="splide slider2 tall">
+                  <div class="splide__track">
+                    <div class="splide__list">
+                      <div class="splide__slide three-cards">
+                        <a href="/pages/local-seo.html" class="w-inline-block" style="text-decoration: none; color: inherit; display: block; height: 100%; width: 100%;">
+                          <div class="slider-tall center">
+                            <div class="text-opacity">
+                              <h3 class="slider_heading">Local SEO</h3>
+                            </div>
+                            <div class="slider-tall_img rounded" style="overflow: hidden;"><img loading="lazy"
+                                src="/assets/Portfolio/ClientMockups/LocalSEO.gif" alt="Local SEO Workflow"
+                                class="slider-tall_photo"
+                                style="object-fit: cover; width: 100%; height: 100%; transform: scale(1.2);" />
+                              <div class="slider_button w-inline-block">
+                                <div>View</div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
                       </div>
-                      <div class="slider-tall_img rounded" style="overflow: hidden;"><img loading="lazy"
-                          src="/assets/Portfolio/ClientMockups/LocalSEO.gif" alt="Local SEO Workflow"
-                          class="slider-tall_photo"
-                          style="object-fit: cover; width: 100%; height: 100%; transform: scale(1.2);" />
-                        <div class="slider_button w-inline-block">
-                          <div>View</div>
+                      <div class="splide__slide three-cards is-active">
+                        <div class="slider-tall center">
+                          <div class="text-opacity">
+                            <h3 class="slider_heading">Wan LoRa Inflate</h3>
+                          </div>
+                          <div class="slider-tall_img rounded"><img loading="lazy"
+                              src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc164_Workflow%2003.avif"
+                              alt="" sizes="(max-width: 991px) 100vw, 926.0999755859375px"
+                              srcset="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc164_Workflow%2003.avif 500w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc164_Workflow%2003.avif 800w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc164_Workflow%2003.avif 840w"
+                              class="slider-tall_photo" /><a href="/pages/contact.html" class="slider_button w-inline-block">
+                              <div>Contact Us</div>
+                            </a></div>
+                        </div>
+                      </div>
+                      <div class="splide__slide three-cards">
+                        <div class="slider-tall center">
+                          <div class="text-opacity">
+                            <h3 class="slider_heading">ControlNet - Structure Reference</h3>
+                          </div>
+                          <div class="slider-tall_img rounded"><img loading="lazy"
+                              src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc16a_Workflow%2002.avif"
+                              alt="" sizes="(max-width: 840px) 100vw, 840px"
+                              srcset="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc16a_Workflow%2002.avif 500w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc16a_Workflow%2002.avif 800w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc16a_Workflow%2002.avif 840w"
+                              class="slider-tall_photo" /><a href="/pages/contact.html" class="slider_button w-inline-block">
+                              <div>Contact Us</div>
+                            </a></div>
+                        </div>
+                      </div>
+                      <div class="splide__slide three-cards">
+                        <div class="slider-tall center">
+                          <div class="text-opacity">
+                            <h3 class="slider_heading">Camera Angle Control</h3>
+                          </div>
+                          <div class="slider-tall_img rounded"><img loading="lazy"
+                              src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc170_Workflow%2004.avif"
+                              alt="" sizes="(max-width: 840px) 100vw, 840px"
+                              srcset="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc170_Workflow%2004.avif 500w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc170_Workflow%2004.avif 800w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc170_Workflow%2004.avif 840w"
+                              class="slider-tall_photo" /><a href="/pages/contact.html" class="slider_button w-inline-block">
+                              <div>Contact Us</div>
+                            </a></div>
+                        </div>
+                      </div>
+                      <div class="splide__slide three-cards">
+                        <div class="slider-tall center">
+                          <div class="text-opacity">
+                            <h3 class="slider_heading">Relight 2.0 human</h3>
+                          </div>
+                          <div class="slider-tall_img rounded"><img loading="lazy"
+                              src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac314fefe464791808_Relight%202.0%20human.avif"
+                              alt="" sizes="(max-width: 840px) 100vw, 840px"
+                              srcset="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac314fefe464791808_Relight%202.0%20human-p-500.avif 500w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac314fefe464791808_Relight%202.0%20human-p-800.avif 800w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac314fefe464791808_Relight%202.0%20human.avif 840w"
+                              class="slider-tall_photo" /><a href="/pages/contact.html" class="slider_button w-inline-block">
+                              <div>Contact Us</div>
+                            </a></div>
+                        </div>
+                      </div>
+
+                      <div class="splide__slide three-cards">
+                        <div class="slider-tall center">
+                          <div class="text-opacity">
+                            <h3 class="slider_heading">Relight - Product</h3>
+                          </div>
+                          <div class="slider-tall_img rounded"><img loading="lazy"
+                              src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac04c55a803826a6e5_Relight%20-%20Product.avif"
+                              alt="" sizes="(max-width: 840px) 100vw, 840px"
+                              srcset="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac04c55a803826a6e5_Relight%20-%20Product-p-500.avif 500w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac04c55a803826a6e5_Relight%20-%20Product-p-800.avif 800w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac04c55a803826a6e5_Relight%20-%20Product.avif 840w"
+                              class="slider-tall_photo" /><a href="/pages/contact.html" class="slider_button w-inline-block">
+                              <div>Contact Us</div>
+                            </a></div>
+                        </div>
+                      </div>
+                      <div class="splide__slide three-cards">
+                        <div class="slider-tall center">
+                          <div class="text-opacity">
+                            <h3 class="slider_heading">Lead Generation</h3>
+                          </div>
+                          <div class="slider-tall_img rounded"><img loading="lazy"
+                              src="/assets/workflows/lead_generation_correct.jpg" alt="" class="slider-tall_photo"
+                              style="object-fit: cover; width: 100%; height: 100%;" /><a
+                              href="https://app.weavy.ai/recipe/4IFNep5XnzgCzv84NN4R" target="_blank"
+                              class="slider_button w-inline-block">
+                              <div>Contact Us</div>
+                            </a></div>
                         </div>
                       </div>
                     </div>
-                  </a>
-                </div>
-                <div class="splide__slide three-cards is-active">
-                  <div class="slider-tall center">
-                    <div class="text-opacity">
-                      <h3 class="slider_heading">Wan LoRa Inflate</h3>
+                  </div>
+                  <div class="splide__arrows hide-mobile-landscape">
+                    <div class="embed w-embed"><button class="splide__arrow splide__arrow--prev"></button></div>
+                    <div class="embed w-embed"><button class="splide__arrow splide__arrow--next"></button></div>
+                    <div class="hide">
+                      <div class="splide__arrow splide__arrow--prev"></div>
+                      <div class="splide__arrow splide__arrow--next"></div>
                     </div>
-                    <div class="slider-tall_img rounded"><img loading="lazy"
-                        src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc164_Workflow%2003.avif"
-                        alt="" sizes="(max-width: 991px) 100vw, 926.0999755859375px"
-                        srcset="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc164_Workflow%2003.avif 500w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc164_Workflow%2003.avif 800w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc164_Workflow%2003.avif 840w"
-                        class="slider-tall_photo" /><a href="https://app.weavy.ai/flow/ajkQsnEdST1Y9ymyTYaZ"
-                        target="_blank" class="slider_button w-inline-block">
-                        <div>Try</div>
-                      </a></div>
                   </div>
                 </div>
-                <div class="splide__slide three-cards">
-                  <div class="slider-tall center">
-                    <div class="text-opacity">
-                      <h3 class="slider_heading">ControlNet - Structure Reference</h3>
-                    </div>
-                    <div class="slider-tall_img rounded"><img loading="lazy"
-                        src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc16a_Workflow%2002.avif"
-                        alt="" sizes="(max-width: 840px) 100vw, 840px"
-                        srcset="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc16a_Workflow%2002.avif 500w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc16a_Workflow%2002.avif 800w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc16a_Workflow%2002.avif 840w"
-                        class="slider-tall_photo" /><a href="https://app.weavy.ai/recipe/lmQ3o3xBQw336nCQx6ee"
-                        target="_blank" class="slider_button w-inline-block">
-                        <div>Try</div>
-                      </a></div>
-                  </div>
-                </div>
-                <div class="splide__slide three-cards">
-                  <div class="slider-tall center">
-                    <div class="text-opacity">
-                      <h3 class="slider_heading">Camera Angle Control</h3>
-                    </div>
-                    <div class="slider-tall_img rounded"><img loading="lazy"
-                        src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc170_Workflow%2004.avif"
-                        alt="" sizes="(max-width: 840px) 100vw, 840px"
-                        srcset="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc170_Workflow%2004.avif 500w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc170_Workflow%2004.avif 800w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681f925d9ecbfaf69c5dc170_Workflow%2004.avif 840w"
-                        class="slider-tall_photo" /><a href="https://app.weavy.ai/recipe/RnmpwkU1BWvR1d2xvDXS"
-                        target="_blank" class="slider_button w-inline-block">
-                        <div>Try</div>
-                      </a></div>
-                  </div>
-                </div>
-                <div class="splide__slide three-cards">
-                  <div class="slider-tall center">
-                    <div class="text-opacity">
-                      <h3 class="slider_heading">Relight 2.0 human</h3>
-                    </div>
-                    <div class="slider-tall_img rounded"><img loading="lazy"
-                        src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac314fefe464791808_Relight%202.0%20human.avif"
-                        alt="" sizes="(max-width: 840px) 100vw, 840px"
-                        srcset="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac314fefe464791808_Relight%202.0%20human-p-500.avif 500w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac314fefe464791808_Relight%202.0%20human-p-800.avif 800w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac314fefe464791808_Relight%202.0%20human.avif 840w"
-                        class="slider-tall_photo" /><a href="https://app.weavy.ai/recipe/YPXM99M6Wujufa0tNgXc"
-                        target="_blank" class="slider_button w-inline-block">
-                        <div>Try</div>
-                      </a></div>
-                  </div>
-                </div>
-
-                <div class="splide__slide three-cards">
-                  <div class="slider-tall center">
-                    <div class="text-opacity">
-                      <h3 class="slider_heading">Relight - Product</h3>
-                    </div>
-                    <div class="slider-tall_img rounded"><img loading="lazy"
-                        src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac04c55a803826a6e5_Relight%20-%20Product.avif"
-                        alt="" sizes="(max-width: 840px) 100vw, 840px"
-                        srcset="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac04c55a803826a6e5_Relight%20-%20Product-p-500.avif 500w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac04c55a803826a6e5_Relight%20-%20Product-p-800.avif 800w, https://cdn.prod.website-files.com/681b040781d5b5e278a69989/6825b0ac04c55a803826a6e5_Relight%20-%20Product.avif 840w"
-                        class="slider-tall_photo" /><a href="https://app.weavy.ai/recipe/oOuwYBIffBhSc2PKxJWL"
-                        target="_blank" class="slider_button w-inline-block">
-                        <div>Try</div>
-                      </a></div>
-                  </div>
-                </div>
-                <div class="splide__slide three-cards">
-                  <div class="slider-tall center">
-                    <div class="text-opacity">
-                      <h3 class="slider_heading">Lead Generation</h3>
-                    </div>
-                    <div class="slider-tall_img rounded"><img loading="lazy"
-                        src="/assets/workflows/lead_generation_correct.jpg" alt="" class="slider-tall_photo"
-                        style="object-fit: cover; width: 100%; height: 100%;" /><a
-                        href="https://app.weavy.ai/recipe/4IFNep5XnzgCzv84NN4R" target="_blank"
-                        class="slider_button w-inline-block">
-                        <div>Try</div>
-                      </a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="splide__arrows hide-mobile-landscape">
-              <div class="embed w-embed"><button class="splide__arrow splide__arrow--prev"></button></div>
-              <div class="embed w-embed"><button class="splide__arrow splide__arrow--next"></button></div>
-              <div class="hide">
-                <div class="splide__arrow splide__arrow--prev"></div>
-                <div class="splide__arrow splide__arrow--next"></div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>

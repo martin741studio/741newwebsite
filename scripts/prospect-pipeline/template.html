@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="de" data-wf-domain="741.studio">
+<head>
+  <meta charset="utf-8"/>
+  <title>Persönliche Google-Analyse | __COMPANY__ | 741.Studio</title>
+  <meta content="Persönliche Google Maps & Local SEO Analyse für __COMPANY__ – __BRANCH__ in __CITY__" name="description"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Persönliche Google-Analyse | __COMPANY__ | 741.Studio"/>
+  <meta property="og:description" content="Persönliche Google Maps & Local SEO Analyse für __COMPANY__ – __BRANCH__ in __CITY__"/>
+  <meta property="og:url" content="https://741.studio/review/__SLUG__/"/>
+  <meta property="og:image" content="https://741.studio/review-assets/__SLUG__/scan-grid.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta content="noindex, nofollow" name="robots"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  
+  <link crossorigin="anonymous" href="/assets/weavy.css" rel="stylesheet" type="text/css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --brand--lemon: #fac118;
+      --brand--ash-grey: #8c8c8c;
+      --brand--french-gray: #fac118;
+    }
+
+    /* Root scaling must match the main site: the shared header/footer/consent
+       partials and weavy.css are rem-based and assume this scale. This page's
+       own styles are px-based, so they are unaffected by it. */
+    html { font-size: 1vw; }
+    @media screen and (min-width: 1440px) { html { font-size: 14.4px; } }
+    @media screen and (max-width: 600px)  { html { font-size: 1.8vw; } }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #fff;
+      color: #1a1a1a;
+      overflow-x: hidden;
+      font-size: 16px;
+    }
+
+    .section-hero-audit {
+      background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.4) 34%, rgba(250, 193, 24, 0.25) 71%), url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif") !important;
+      background-size: cover;
+      background-position: center;
+      padding: 80px 5% 64px;
+      text-align: center;
+    }
+
+    .audit-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #000;
+      color: var(--brand--lemon);
+      padding: 6px 18px;
+      border-radius: 99px;
+      font-size: 12.8px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .audit-headline {
+      font-size: clamp(35.2px, 4vw, 56px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: #000;
+      max-width: 960px;
+      margin: 0 auto 24px;
+    }
+
+    .audit-subheadline {
+      font-size: clamp(16.8px, 1.8vw, 20px);
+      color: #4a4a4a;
+      max-width: 780px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .hero-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1140px;
+      margin: 48px auto 0;
+      text-align: left;
+    }
+
+    .hero-card-item {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      transition: all 0.3s ease;
+    }
+
+    .hero-card-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(250, 193, 24, 0.2);
+      border-color: var(--brand--lemon);
+    }
+
+    .hero-card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(250, 193, 24, 0.15);
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19.2px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .hero-card-title {
+      font-size: 15.2px;
+      font-weight: 800;
+      color: #000;
+      margin-bottom: 4px;
+    }
+
+    .hero-card-sub {
+      font-size: 12.8px;
+      color: #666;
+    }
+
+    .hero-card-badge {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 800;
+      background: #f4f4f4;
+    }
+
+    /* Executive Letter Card */
+    .section-letter {
+      padding: 64px 5%;
+      background: #fafafa;
+    }
+
+    .letter-card {
+      background: #fff;
+      border: 2px solid var(--brand--lemon);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 860px;
+      margin: 0 auto;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    }
+
+    .letter-author-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .author-img {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #000;
+      color: var(--brand--lemon);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 17.6px;
+    }
+
+    .letter-body {
+      font-size: 17.6px;
+      line-height: 1.7;
+      color: #222;
+    }
+
+    .letter-body p {
+      margin-bottom: 14px;
+    }
+
+    /* Loom Video Container */
+    .section-video {
+      padding: 80px 5%;
+      background: #111;
+      color: #fff;
+      text-align: center;
+    }
+
+    .video-frame-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #000;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(250, 193, 24, 0.4);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(250, 193, 24, 0.2);
+    }
+
+    .video-responsive {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+
+    .video-responsive iframe {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%; border: 0;
+    }
+
+    .video-bar {
+      background: #181818;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-top: 1px solid #282828;
+    }
+
+    .video-pill {
+      background: #222;
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 13.6px;
+      color: #aaa;
+      border: 1px solid #333;
+    }
+
+    .video-pill strong { color: #fff; }
+
+    /* Executive Summary Cards */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .summary-box {
+      background: #fff;
+      border-radius: 20px;
+      padding: 32px;
+      border: 1px solid #eee;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .summary-box.green { border-top: 5px solid #10b981; }
+    .summary-box.amber { border-top: 5px solid var(--brand--lemon); }
+    .summary-box.red { border-top: 5px solid #ef4444; }
+
+    .summary-tag {
+      font-size: 12.8px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 99px;
+      width: fit-content;
+      margin-bottom: 16px;
+    }
+
+    .summary-box.green .summary-tag { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+    .summary-box.amber .summary-tag { background: rgba(250, 193, 24, 0.15); color: #b48500; }
+    .summary-box.red .summary-tag { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+    .summary-ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 15.2px;
+      color: #444;
+    }
+
+    .summary-ul li {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .summary-ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      font-weight: 900;
+    }
+
+    /* Tabs & Scorecard */
+    .audit-tab-btn {
+      background: #f0f0f0;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 99px;
+      font-weight: 700;
+      font-size: 14.4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .audit-tab-btn.active {
+      background: #000;
+      color: var(--brand--lemon);
+    }
+
+    .audit-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .audit-score-card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .pill-good { background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 800; padding: 3px 10px; border-radius: 99px; font-size: 12px; }
+    .pill-warning { background: rgba(250, 193, 24, 0.2); color: #92400e; font-weight: 800; padding: 3px 10px; border-radius: 99px; font-size: 12px; }
+    .pill-critical { background: rgba(239, 68, 68, 0.12); color: #b91c1c; font-weight: 800; padding: 3px 10px; border-radius: 99px; font-size: 12px; }
+
+    /* Custom Data Table */
+    .audit-table-wrap {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid #e5e5e5;
+      overflow: hidden;
+      margin-top: 32px;
+    }
+
+    .audit-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 15.2px;
+    }
+
+    .audit-table th {
+      background: #f8f8f8;
+      padding: 14px 20px;
+      font-weight: 800;
+      font-size: 12.8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #eee;
+    }
+
+    .audit-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* Growth Box */
+    .growth-wrapper {
+      background: #111;
+      color: #fff;
+      border-radius: 24px;
+      padding: 48px;
+      text-align: center;
+      border: 1px solid rgba(250, 193, 24, 0.4);
+    }
+
+    .growth-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 30px;
+      align-items: center;
+      margin: 30px 0;
+    }
+
+    .growth-box-item {
+      background: #1c1c1c;
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid #333;
+    }
+
+    .growth-box-item.target {
+      border-color: var(--brand--lemon);
+      background: rgba(250, 193, 24, 0.05);
+    }
+
+    .impact-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      border-top: 1px solid #333;
+      padding-top: 24px;
+    }
+
+    /* Buttons */
+    .btn-741-main {
+      background: var(--brand--lemon);
+      color: #000;
+      font-weight: 800;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-741-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(250, 193, 24, 0.4);
+    }
+
+    .btn-741-dark {
+      background: #000;
+      color: #fff;
+      font-weight: 800;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Mobile-First Responsive System (Max-Width 991px & 768px & 480px) */
+    .tab-nav-scroll {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    /* --- Scroll affordance for the tab strip ---------------------------------
+       On phones the strip scrolls horizontally. Without a cue the 4th tab just
+       looks cut off, so: fade the edges, show a tappable chevron, and give the
+       strip one gentle "peek" the first time it scrolls into view.
+       All of it is driven by JS state classes, so on desktop (where the tabs
+       simply wrap and nothing scrolls) none of it ever appears. */
+    .tab-nav-wrap { position: relative; }
+
+    .tab-nav-wrap::before,
+    .tab-nav-wrap::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 48px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .22s ease;
+      z-index: 2;
+    }
+    .tab-nav-wrap::before { left: 0;  background: linear-gradient(90deg,  #f9f9f9 28%, rgba(249, 249, 249, 0)); }
+    .tab-nav-wrap::after  { right: 0; background: linear-gradient(270deg, #f9f9f9 28%, rgba(249, 249, 249, 0)); }
+    .tab-nav-wrap.can-left::before  { opacity: 1; }
+    .tab-nav-wrap.can-right::after  { opacity: 1; }
+
+    .tab-nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      padding: 0 0 3px;
+      border: 1px solid rgba(26, 26, 26, 0.1);
+      border-radius: 50%;
+      background: #fff;
+      color: #1a1a1a;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(26, 26, 26, 0.16);
+    }
+    .tab-nav-prev { left: 2px; }
+    .tab-nav-next { right: 2px; }
+    .tab-nav-wrap.can-left  .tab-nav-prev { display: flex; }
+    .tab-nav-wrap.can-right .tab-nav-next { display: flex; }
+
+    .tab-nav-hint {
+      display: none;
+      margin: 10px 0 0 !important;
+      font-size: 12px !important;
+      line-height: 1.4 !important;
+      color: #8a8a8a !important;
+    }
+    .tab-nav-wrap.is-scrollable + .tab-nav-hint { display: block; }
+
+    .tab-nav-scroll { scroll-behavior: smooth; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .tab-nav-scroll { scroll-behavior: auto; }
+      .tab-nav-wrap::before,
+      .tab-nav-wrap::after { transition: none; }
+    }
+
+    .growth-arrow-vertical {
+      display: none;
+    }
+
+    @media (max-width: 991px) {
+      .section-hero-audit { padding: 56px 4% 48px; }
+      .audit-headline { font-size: clamp(28.8px, 5vw, 44.8px); }
+      .hero-cards-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+      .summary-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .audit-card-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .impact-row { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .growth-grid { grid-template-columns: 1fr; gap: 20px; }
+    }
+
+    @media (max-width: 768px) {
+      html, body {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+      }
+      
+      /* Fix navbar overlay covering top hero content */
+      .section-hero-audit { 
+        padding-top: 100px !important; 
+        padding-bottom: 28px !important; 
+        padding-left: 16px !important; 
+        padding-right: 16px !important; 
+        text-align: left !important; 
+        box-sizing: border-box !important;
+      }
+      .audit-eyebrow { font-size: 9.8px !important; padding: 4px 10px !important; margin-bottom: 10.5px !important; }
+      .audit-headline, .audit-headline * { font-size: 20.3px !important; line-height: 1.25 !important; margin-bottom: 10.5px !important; text-align: left !important; word-break: break-word !important; }
+      .audit-subheadline, .audit-subheadline * { font-size: 12.32px !important; line-height: 1.45 !important; color: #555 !important; margin-bottom: 17.5px !important; text-align: left !important; word-break: break-word !important; }
+      
+      .hero-cta-group, .final-cta-group {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .btn-741-main, .btn-741-dark {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 12px 18px !important;
+        font-size: 12.6px !important;
+        box-sizing: border-box !important;
+        min-height: 46px !important;
+      }
+
+      .hero-cards-grid { grid-template-columns: 1fr !important; gap: 10px !important; margin-top: 17.5px !important; width: 100% !important; box-sizing: border-box !important; }
+      .hero-card-item { padding: 14px !important; border-radius: 12px !important; box-sizing: border-box !important; }
+      .hero-card-title { font-size: 12.6px !important; }
+      .hero-card-sub { font-size: 10.92px !important; }
+      
+      /* Personal Letter Card & Typography Fixes */
+      .section-letter { padding: 28px 16px !important; box-sizing: border-box !important; }
+      .letter-card { padding: 18px 14px !important; border-radius: 14px !important; border-width: 1.5px !important; box-sizing: border-box !important; max-width: 100% !important; }
+      .letter-author-head { gap: 10px !important; margin-bottom: 12px !important; }
+      .author-img { width: 36px !important; height: 36px !important; font-size: 11.2px !important; font-weight: 900 !important; flex-shrink: 0 !important; }
+      .letter-author-head h4 { font-size: 13.3px !important; line-height: 1.2 !important; margin: 0 !important; }
+      .letter-author-head p { font-size: 10.92px !important; margin: 0 !important; }
+      .letter-body, .letter-body p, .letter-body * { font-size: 12.32px !important; line-height: 1.5 !important; color: #333 !important; word-break: break-word !important; }
+      .letter-body p { margin-bottom: 10px !important; }
+
+      .section-video { padding: 28px 16px !important; text-align: left !important; box-sizing: border-box !important; }
+      .section-video h2 { font-size: 19.6px !important; line-height: 1.25 !important; word-break: break-word !important; }
+      .section-video p { font-size: 11.9px !important; line-height: 1.4 !important; word-break: break-word !important; }
+      .video-frame-wrap { border-radius: 12px !important; width: 100% !important; box-sizing: border-box !important; }
+      .video-bar { flex-direction: column !important; align-items: stretch !important; gap: 8px !important; padding: 12px 14px !important; text-align: center !important; }
+      .video-pill { text-align: center !important; justify-content: center !important; width: 100% !important; box-sizing: border-box !important; font-size: 10.92px !important; }
+
+      /* Executive Summary Cards & List Typography Fixes */
+      .summary-grid { grid-template-columns: 1fr !important; gap: 12px !important; margin-top: 17.5px !important; width: 100% !important; box-sizing: border-box !important; }
+      .summary-box { padding: 16px 14px !important; border-radius: 14px !important; box-sizing: border-box !important; width: 100% !important; max-width: 100% !important; }
+      .summary-box h3 { font-size: 14px !important; margin-bottom: 8px !important; word-break: break-word !important; }
+      .summary-tag { font-size: 10.5px !important; padding: 3px 10px !important; margin-bottom: 10px !important; }
+      .summary-ul { font-size: 11.76px !important; line-height: 1.4 !important; gap: 8px !important; padding-left: 18px !important; margin: 0 !important; }
+      .summary-ul li, .summary-ul li * { font-size: 11.76px !important; line-height: 1.45 !important; word-break: break-word !important; margin-bottom: 6px !important; }
+
+      /* Tabs & Scorecards */
+      .tab-nav-scroll {
+        display: flex !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        justify-content: flex-start !important;
+        padding-bottom: 8px !important;
+        margin-top: 14px !important;
+        flex-wrap: nowrap !important;
+        scrollbar-width: none !important;
+        gap: 6px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .tab-nav-scroll::-webkit-scrollbar { display: none; }
+      .audit-tab-btn {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        padding: 7px 14px !important;
+        font-size: 10.92px !important;
+      }
+
+      .audit-card-grid { grid-template-columns: 1fr !important; gap: 10px !important; margin-top: 14px !important; width: 100% !important; box-sizing: border-box !important; }
+      .audit-score-card { padding: 12px 14px !important; border-radius: 12px !important; box-sizing: border-box !important; }
+      .audit-score-card strong { font-size: 12.32px !important; word-break: break-word !important; }
+      .audit-score-card p, .audit-score-card p * { font-size: 11.2px !important; line-height: 1.4 !important; word-break: break-word !important; }
+
+      .audit-table-wrap {
+        border-radius: 10px !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        margin-top: 14px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding-bottom: 6px !important;
+      }
+      .audit-table { min-width: 660px !important; font-size: 11.2px !important; }
+      .audit-table th, .audit-table td { padding: 8px 10px !important; word-break: normal !important; }
+      .audit-table th { white-space: nowrap !important; font-size: 10.5px !important; }
+
+      .pill-high, .pill-med, .pill-low, .pill-good, .pill-critical {
+        white-space: nowrap !important;
+        display: inline-block !important;
+        padding: 4px 10px !important;
+        font-size: 10.5px !important;
+      }
+
+      /* Quick Wins Frames & Typography */
+      .quickwins-grid-mobile {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .quickwin-item-box {
+        padding: 14px 14px !important;
+        border-radius: 12px !important;
+        gap: 12px !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        display: flex !important;
+      }
+      .quickwin-item-box h4 { font-size: 12.88px !important; line-height: 1.35 !important; font-weight: 800 !important; margin-bottom: 4px !important; word-break: break-word !important; }
+      .quickwin-item-box p, .quickwin-item-box p * { font-size: 11.48px !important; line-height: 1.4 !important; color: #666 !important; word-break: break-word !important; }
+      .quickwin-check-icon { width: 24px !important; height: 24px !important; font-size: 11.2px !important; flex-shrink: 0 !important; margin-top: 2px !important; }
+
+      /* Growth Box & "Organisch Stark" text overflow */
+      .growth-wrapper { padding: 18px 14px !important; border-radius: 16px !important; text-align: left !important; box-sizing: border-box !important; width: 100% !important; }
+      .growth-wrapper h2 { font-size: 18.9px !important; text-align: left !important; margin-bottom: 6px !important; word-break: break-word !important; }
+      .growth-grid { gap: 10px !important; margin: 14px 0 !important; width: 100% !important; box-sizing: border-box !important; }
+      .growth-box-item { padding: 14px 12px !important; border-radius: 12px !important; box-sizing: border-box !important; }
+      .growth-box-item div:nth-child(2) { font-size: 17.5px !important; line-height: 1.2 !important; margin: 4px 0 !important; font-weight: 800 !important; word-break: break-word !important; }
+      .growth-box-item p, .growth-box-item p * { font-size: 11.2px !important; line-height: 1.35 !important; word-break: break-word !important; }
+      .growth-arrow-desktop { display: none !important; }
+      .growth-arrow-vertical { display: block !important; text-align: center !important; font-size: 16.8px !important; color: var(--brand--lemon) !important; margin: 4px 0 !important; }
+      .impact-row { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; padding-top: 14px !important; width: 100% !important; box-sizing: border-box !important; }
+      .impact-row div div:first-child { font-size: 17.5px !important; }
+      .impact-row div div:last-child { font-size: 10.5px !important; }
+
+      /* Section headings carry an inline 2.2rem (35px) which is far too large
+         on a phone. Section-specific rules above (.section-video h2 etc.) have
+         higher specificity and still win. */
+      section h2 { font-size: 22px !important; line-height: 1.25 !important; word-break: break-word !important; }
+      section > div > span { line-height: 1.4 !important; }
+
+      /* Footer: close the 50px white gap above the footer. Akira (the white
+         pixel dog) is anchored to the footer's top edge, so with a white gap
+         her white body vanished into the background. Flush against the dark
+         CTA section above, she reads clearly again. */
+      html body footer.footer { margin-top: 0 !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Official 741.Studio Header -->
+  {{> header_de}}
+
+  <!-- Hero Section -->
+  <section class="section-hero-audit">
+    <div class="audit-eyebrow">🔒 INDIVIDUELLE GOOGLE MAPS ANALYSE</div>
+    <h1 class="audit-headline" id="companyHeadline">
+      Hallo __FIRSTNAME__,<br>wir haben eine persönliche Analyse deiner <span style="color:var(--brand--lemon);">Google-Präsenz</span> erstellt.
+    </h1>
+    <p class="audit-subheadline" id="heroSubheadline">
+      Vielen Dank, dass du dir die Zeit nimmst. Als kleine Aufmerksamkeit haben wir eine individuelle Analyse erstellt, in der wir zeigen, welche Chancen wir für deine Sichtbarkeit bei Google Maps in __CITY__ und Umgebung sehen.
+    </p>
+
+    <div class="hero-cta-group" style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+      <a href="#loom-video" class="btn-741-main">▶ Video ansehen (<span id="loomTimeTag">5 Min</span>)</a>
+      <a href="#termin" class="btn-741-dark">Termin vereinbaren</a>
+    </div>
+
+    <div class="hero-cards-grid">
+      <div class="hero-card-item">
+        <div class="hero-card-icon">🏢</div>
+        <div class="hero-card-title" id="cardCompanyName">Firmen-Profil</div>
+        <div class="hero-card-sub" id="cardBranch">Verifizierter Betrieb</div>
+        <div class="hero-card-badge">✓ LOGO & BRANDING</div>
+      </div>
+      <a class="hero-card-item" href="__MAPS_URL__" target="_blank" rel="noopener" style="text-decoration:none; color:inherit; display:block;">
+        <div class="hero-card-icon">📍</div>
+        <div class="hero-card-title">Google Maps Stand</div>
+        <div class="hero-card-sub" id="cardMapsRankSub">Rang #8 in der Region</div>
+        <div class="hero-card-badge" style="background:rgba(239,68,68,0.1); color:#dc2626;" id="cardMapsRankText">● Rang #8</div>
+        <div style="margin-top:10px; font-size:12.8px; font-weight:800; color:#dc2626;">Google-Profil öffnen →</div>
+      </a>
+      <a class="hero-card-item" href="__WEBSITE_URL__" target="_blank" rel="noopener" style="text-decoration:none; color:inherit; display:block;">
+        <div class="hero-card-icon">🌐</div>
+        <div class="hero-card-title">Website</div>
+        <div class="hero-card-sub">Optimierungs-Potenzial: Hoch</div>
+        <div class="hero-card-badge" style="background:rgba(250,193,24,0.2); color:#b48500;" id="cardMobileSpeed">Speed: 58/100</div>
+        <div style="margin-top:10px; font-size:12.8px; font-weight:800; color:#b48500;">Website öffnen →</div>
+      </a>
+      <div class="hero-card-item" style="cursor:pointer;" onclick="document.getElementById('loom-video').scrollIntoView({behavior:'smooth'})">
+        <div class="hero-card-icon" style="background:var(--brand--lemon);">▶</div>
+        <div class="hero-card-title">Loom Video Ready</div>
+        <div class="hero-card-sub">Persönlicher Video-Walkthrough</div>
+        <div class="hero-card-badge" style="background:#000; color:var(--brand--lemon);" id="cardLoomTime">5 MIN PLAY</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maps-Sichtbarkeit: Vorher / Nachher -->
+  <style>
+    .maps-vs-section{padding:64px 5%;background:#f7f6f2;text-align:center;}
+    .maps-vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1060px;margin:36px auto 0;}
+    .maps-vs-card{background:#fff;border-radius:18px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,0.07);text-align:left;}
+    .maps-vs-badge{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin-bottom:14px;}
+    .maps-vs-card img,.maps-vs-card svg{width:100%;height:auto;border-radius:12px;display:block;}
+    .maps-vs-caption{font-size:14.4px;color:#555;line-height:1.55;margin-top:14px;}
+    .maps-vs-impact{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;max-width:1060px;margin:28px auto 0;}
+    .maps-vs-chip{background:#fff;border:1.5px solid #eceadf;border-radius:999px;padding:11px 20px;font-size:14.4px;font-weight:700;color:#252525;}
+    @media(max-width:768px){.maps-vs-grid{grid-template-columns:1fr;}.maps-vs-section{padding:48px 5%;}}
+  </style>
+  <section class="maps-vs-section">
+    <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px; letter-spacing:0.1em;">Google Maps Sichtbarkeits-Scan</span>
+    <h2 style="font-size:35.2px; font-weight:800; margin-top:8px;">Dein Einzugsgebiet auf einen Blick</h2>
+    <p style="color:#666; max-width:680px; margin:10px auto 0;">Echter Scan vom __SCAN_DATE__ – __GRID_POINTS__ Messpunkte im __RADIUS__-km-Radius rund um deinen Standort, Suchbegriff <b>„__KEYWORD__“</b>. Jede Zahl = deine Position bei Google Maps an genau diesem Ort.</p>
+
+    <div class="maps-vs-grid">
+      <div class="maps-vs-card">
+        <span class="maps-vs-badge" style="background:rgba(239,68,68,0.12); color:#dc2626;">● Heute – echter Scan</span>
+        <img src="/review-assets/__SLUG__/scan-grid.webp" alt="Google Maps Ranking Scan für __COMPANY__" loading="lazy" width="1000" height="1000">
+        <p class="maps-vs-caption">__SCAN_CAPTION__</p>
+      </div>
+      <div class="maps-vs-card">
+        <span class="maps-vs-badge" style="background:rgba(34,150,60,0.12); color:#15803d;">● Das Ziel – so kann es aussehen</span>
+        <svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ziel-Szenario: Top-3-Sichtbarkeit im gesamten Einzugsgebiet (Simulation)">
+          <rect width="700" height="700" fill="#eef4ee"/>
+          <path d="M0 140 L700 110 M0 320 L700 350 M0 540 L700 520 M180 0 L160 700 M420 0 L440 700 M590 0 L575 700" stroke="#dbe6db" stroke-width="10" fill="none"/>
+          <g font-family="Arial, sans-serif" font-weight="bold" font-size="24" text-anchor="middle">
+            <!-- Zeile 1 -->
+            <circle cx="90" cy="90" r="27" fill="#4d9a3f"/><text x="90" y="99" fill="#fff">3</text>
+            <circle cx="177" cy="90" r="27" fill="#2e8b34"/><text x="177" y="99" fill="#fff">2</text>
+            <circle cx="264" cy="90" r="27" fill="#2e8b34"/><text x="264" y="99" fill="#fff">2</text>
+            <circle cx="351" cy="90" r="27" fill="#2e8b34"/><text x="351" y="99" fill="#fff">2</text>
+            <circle cx="438" cy="90" r="27" fill="#2e8b34"/><text x="438" y="99" fill="#fff">2</text>
+            <circle cx="525" cy="90" r="27" fill="#4d9a3f"/><text x="525" y="99" fill="#fff">3</text>
+            <circle cx="612" cy="90" r="27" fill="#4d9a3f"/><text x="612" y="99" fill="#fff">3</text>
+            <!-- Zeile 2 -->
+            <circle cx="90" cy="177" r="27" fill="#4d9a3f"/><text x="90" y="186" fill="#fff">3</text>
+            <circle cx="177" cy="177" r="27" fill="#2e8b34"/><text x="177" y="186" fill="#fff">2</text>
+            <circle cx="264" cy="177" r="27" fill="#136c2e"/><text x="264" y="186" fill="#fff">1</text>
+            <circle cx="351" cy="177" r="27" fill="#136c2e"/><text x="351" y="186" fill="#fff">1</text>
+            <circle cx="438" cy="177" r="27" fill="#2e8b34"/><text x="438" y="186" fill="#fff">2</text>
+            <circle cx="525" cy="177" r="27" fill="#2e8b34"/><text x="525" y="186" fill="#fff">2</text>
+            <circle cx="612" cy="177" r="27" fill="#4d9a3f"/><text x="612" y="186" fill="#fff">3</text>
+            <!-- Zeile 3 -->
+            <circle cx="90" cy="264" r="27" fill="#2e8b34"/><text x="90" y="273" fill="#fff">2</text>
+            <circle cx="177" cy="264" r="27" fill="#136c2e"/><text x="177" y="273" fill="#fff">1</text>
+            <circle cx="264" cy="264" r="27" fill="#136c2e"/><text x="264" y="273" fill="#fff">1</text>
+            <circle cx="351" cy="264" r="27" fill="#136c2e"/><text x="351" y="273" fill="#fff">1</text>
+            <circle cx="438" cy="264" r="27" fill="#136c2e"/><text x="438" y="273" fill="#fff">1</text>
+            <circle cx="525" cy="264" r="27" fill="#2e8b34"/><text x="525" y="273" fill="#fff">2</text>
+            <circle cx="612" cy="264" r="27" fill="#4d9a3f"/><text x="612" y="273" fill="#fff">3</text>
+            <!-- Zeile 4 (Praxis-Zeile) -->
+            <circle cx="90" cy="351" r="27" fill="#2e8b34"/><text x="90" y="360" fill="#fff">2</text>
+            <circle cx="177" cy="351" r="27" fill="#136c2e"/><text x="177" y="360" fill="#fff">1</text>
+            <circle cx="264" cy="351" r="27" fill="#136c2e"/><text x="264" y="360" fill="#fff">1</text>
+            <circle cx="351" cy="351" r="30" fill="#136c2e" stroke="#fac118" stroke-width="5"/><text x="351" y="360" fill="#fff">1</text>
+            <circle cx="438" cy="351" r="27" fill="#136c2e"/><text x="438" y="360" fill="#fff">1</text>
+            <circle cx="525" cy="351" r="27" fill="#2e8b34"/><text x="525" y="360" fill="#fff">2</text>
+            <circle cx="612" cy="351" r="27" fill="#4d9a3f"/><text x="612" y="360" fill="#fff">3</text>
+            <!-- Zeile 5 -->
+            <circle cx="90" cy="438" r="27" fill="#2e8b34"/><text x="90" y="447" fill="#fff">2</text>
+            <circle cx="177" cy="438" r="27" fill="#136c2e"/><text x="177" y="447" fill="#fff">1</text>
+            <circle cx="264" cy="438" r="27" fill="#136c2e"/><text x="264" y="447" fill="#fff">1</text>
+            <circle cx="351" cy="438" r="27" fill="#136c2e"/><text x="351" y="447" fill="#fff">1</text>
+            <circle cx="438" cy="438" r="27" fill="#136c2e"/><text x="438" y="447" fill="#fff">1</text>
+            <circle cx="525" cy="438" r="27" fill="#2e8b34"/><text x="525" y="447" fill="#fff">2</text>
+            <circle cx="612" cy="438" r="27" fill="#4d9a3f"/><text x="612" y="447" fill="#fff">3</text>
+            <!-- Zeile 6 -->
+            <circle cx="90" cy="525" r="27" fill="#4d9a3f"/><text x="90" y="534" fill="#fff">3</text>
+            <circle cx="177" cy="525" r="27" fill="#2e8b34"/><text x="177" y="534" fill="#fff">2</text>
+            <circle cx="264" cy="525" r="27" fill="#2e8b34"/><text x="264" y="534" fill="#fff">2</text>
+            <circle cx="351" cy="525" r="27" fill="#2e8b34"/><text x="351" y="534" fill="#fff">2</text>
+            <circle cx="438" cy="525" r="27" fill="#2e8b34"/><text x="438" y="534" fill="#fff">2</text>
+            <circle cx="525" cy="525" r="27" fill="#4d9a3f"/><text x="525" y="534" fill="#fff">3</text>
+            <circle cx="612" cy="525" r="27" fill="#4d9a3f"/><text x="612" y="534" fill="#fff">3</text>
+            <!-- Zeile 7 -->
+            <circle cx="90" cy="612" r="27" fill="#7aa83f"/><text x="90" y="621" fill="#fff">4</text>
+            <circle cx="177" cy="612" r="27" fill="#4d9a3f"/><text x="177" y="621" fill="#fff">3</text>
+            <circle cx="264" cy="612" r="27" fill="#4d9a3f"/><text x="264" y="621" fill="#fff">3</text>
+            <circle cx="351" cy="612" r="27" fill="#4d9a3f"/><text x="351" y="621" fill="#fff">3</text>
+            <circle cx="438" cy="612" r="27" fill="#4d9a3f"/><text x="438" y="621" fill="#fff">3</text>
+            <circle cx="525" cy="612" r="27" fill="#4d9a3f"/><text x="525" y="621" fill="#fff">3</text>
+            <circle cx="612" cy="612" r="27" fill="#7aa83f"/><text x="612" y="621" fill="#fff">4</text>
+          </g>
+          <g font-family="Arial, sans-serif">
+            <rect x="435" y="655" width="255" height="34" rx="17" fill="#252525" opacity="0.85"/>
+            <text x="562" y="677" fill="#fff" font-size="17" text-anchor="middle" font-weight="bold">Ziel-Szenario (Simulation)</text>
+          </g>
+        </svg>
+        <p class="maps-vs-caption">__TARGET_CAPTION__</p>
+      </div>
+    </div>
+
+    <div class="maps-vs-impact">
+      <span class="maps-vs-chip">📞 Mehr Anrufe direkt aus Google Maps</span>
+      <span class="maps-vs-chip">🧭 Mehr Routen-Anfragen zur Praxis</span>
+      <span class="maps-vs-chip">👥 Patient:innen aus dem gesamten Umland</span>
+    </div>
+    <p style="color:#888; font-size:13px; max-width:640px; margin:18px auto 0;">Wer bei Google Maps in den Top 3 („Local Pack“) steht, bekommt den Großteil aller Klicks, Anrufe und Routen – Positionen ab 10 gehen im Alltag leer aus.</p>
+  </section>
+
+  <!-- Personal Message Section -->
+  <section class="section-letter">
+    <div class="letter-card">
+      <div class="letter-author-head">
+        <div class="author-img">741</div>
+        <div>
+          <h4 style="font-weight:800; font-size:17.6px; margin:0;" id="authorName">Martin Drendel & das 741 Studio Team</h4>
+          <p style="font-size:13.6px; color:#777; margin:0;" id="authorRole">Senior Local SEO & Growth Consultancy</p>
+        </div>
+      </div>
+      <div class="letter-body" id="personalMessageBody">
+        <p id="personalGreeting">Hallo __FIRSTNAME__,</p>
+        <p>vielen Dank, dass du dir unser persönliches Video für deine Praxis anschaust.</p>
+        <p>__LETTER_P1__</p>
+        <p>__LETTER_P2__</p>
+        <p>Wir hoffen, du kannst daraus schon ein paar hilfreiche Ideen mitnehmen.</p>
+      </div>
+      <div style="border-top:1px solid #eee; padding-top:16px; margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
+        <strong style="color:var(--brand--lemon); font-size:17.6px;" id="authorSignName">Martin Drendel</strong>
+        <span style="font-size:13.6px; color:#888;">741.Studio • Results Driven</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Embedded Loom Video Section -->
+  <section class="section-video" id="loom-video">
+    <div style="max-width:760px; margin:0 auto 48px;">
+      <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px; letter-spacing:0.1em;">Persönliches Audit Video</span>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:8px;">Deine Video-Analyse im Detail</h2>
+      <p style="color:#aaa; font-size:16px;">Klick auf Wiedergabe, um den vollständigen Walkthrough zu starten.</p>
+    </div>
+
+    <div class="video-frame-wrap">
+      <div class="video-responsive">
+        <!-- TODO: Loom-Embed einsetzen, sobald das Video fertig ist -->
+        <div style="position:absolute; inset:0; background:#1a1a1a; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px;">
+          <div style="width:72px; height:72px; border-radius:50%; background:var(--brand--lemon); display:flex; align-items:center; justify-content:center; font-size:26px; color:#000;">▶</div>
+          <p style="color:#fff; font-weight:800; font-size:18px; margin:0;">Dein persönliches Video wird gerade erstellt</p>
+          <p style="color:#999; font-size:14px; margin:0;">Schau in Kürze wieder vorbei – die Analyse darunter ist schon vollständig.</p>
+        </div>
+      </div>
+      <div class="video-bar">
+        <div class="video-pill">⏱️ Dauer: <strong id="videoMetaDuration">5 Minuten</strong></div>
+        <div class="video-pill">🎯 Persönlich aufgenommen für: <strong id="videoMetaCompany">Firma</strong></div>
+        <a href="#termin" class="btn-741-main" style="padding:8px 18px; font-size:13.6px;">Nach dem Video: Gespräch vereinbaren</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Summary Section -->
+  <section style="padding: 64px 5%; background:#fff; text-align:center;">
+    <div style="max-width:760px; margin:0 auto;">
+      <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px;">Zusammenfassung</span>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:6px;">Executive Summary</h2>
+      <p style="color:#666;">Die 3 wichtigsten Säulen deiner aktuellen digitalen Aufstellung.</p>
+    </div>
+
+    <div class="summary-grid" style="max-width:1140px; margin-left:auto; margin-right:auto;">
+      <div class="summary-box green">
+        <div class="summary-tag">🟢 Positive Aspekte</div>
+        <h3 style="font-size:19.2px; font-weight:800; margin-bottom:14px;">Was bereits gut läuft</h3>
+        <ul class="summary-ul" id="positivesList">
+          <li>Sehr gute Kundenzufriedenheit & positive Rezensionen.</li>
+          <li>Ansprechendes Firmenlogo und professionelles Erscheinungsbild.</li>
+          <li>Bestehendes Google Unternehmensprofil ist aktiv.</li>
+        </ul>
+      </div>
+      <div class="summary-box amber">
+        <div class="summary-tag">🟠 Größte Chancen</div>
+        <h3 style="font-size:19.2px; font-weight:800; margin-bottom:14px;">Größte Chancen</h3>
+        <ul class="summary-ul" id="opportunitiesList">
+          <li>Optimierung der Haupt- und Nebenkategorien für mehr Aufrufe.</li>
+          <li>Aufbau lokaler Landingpages für umliegende Stadtteile.</li>
+          <li>Einbindung strukturierter Daten (Schema.org) für Dienstleistungen.</li>
+        </ul>
+      </div>
+      <div class="summary-box red">
+        <div class="summary-tag">🔴 Kritische Hürden</div>
+        <h3 style="font-size:19.2px; font-weight:800; margin-bottom:14px;">Kritische Probleme</h3>
+        <ul class="summary-ul" id="criticalList">
+          <li>Fehlende NAP-Konsistenz in Branchenverzeichnissen.</li>
+          <li>Langsame Ladezeiten auf Smartphones.</li>
+          <li>Keine direkten Call-to-Action Buttons zur Terminbuchung.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audit Scorecard & Interactive Tables -->
+  <section style="padding: 64px 5%; background:#f9f9f9; text-align:center;">
+    <div style="max-width:760px; margin:0 auto;">
+      <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px;">Detail-Auswertung</span>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:6px;">Ganzheitliches Local SEO Audit</h2>
+      <p style="color:#666;">Systematische Analyse nach der 741 Studio Audit-Methodik.</p>
+    </div>
+
+    <div style="display:flex; justify-content:center; gap:10px; margin-top:32px; flex-wrap:wrap;">
+      <button class="audit-tab-btn active" onclick="switchTab('gbp')">📍 Google Business Profile</button>
+      <button class="audit-tab-btn" onclick="switchTab('website')">💻 Website & Technik</button>
+      <button class="audit-tab-btn" onclick="switchTab('citations')">🌐 Citations & Wettbewerb</button>
+      <button class="audit-tab-btn" onclick="switchTab('keywords')">🔍 Keyword-Recherche</button>
+    </div>
+
+    <div style="max-width:1140px; margin:0 auto;">
+      <div id="tab-gbp" class="tab-pane active">
+        <div class="audit-card-grid" id="gbpAuditGrid"></div>
+      </div>
+      <div id="tab-website" class="tab-pane" style="display:none;">
+        <div class="audit-card-grid" id="websiteAuditGrid"></div>
+      </div>
+      <div id="tab-citations" class="tab-pane" style="display:none;">
+        <div class="audit-card-grid" id="citationAuditGrid" style="margin-bottom:30px;"></div>
+        <h3 style="text-align:left; font-size:19.2px; font-weight:800; margin-bottom:12px;">Top 3 Wettbewerber-Vergleich</h3>
+        <div class="audit-table-wrap">
+          <table class="audit-table">
+            <thead>
+              <tr>
+                <th>Wettbewerber</th>
+                <th>Maps-Ranking</th>
+                <th>Bewertungen</th>
+                <th>Kategorie</th>
+                <th>Wichtigste Stärke</th>
+              </tr>
+            </thead>
+            <tbody id="competitorsTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div id="tab-keywords" class="tab-pane" style="display:none;">
+        <div class="audit-table-wrap">
+          <table class="audit-table">
+            <thead>
+              <tr>
+                <th>Fokus Keyword</th>
+                <th>Einzugsgebiet</th>
+                <th>Monatl. Suchvolumen</th>
+                <th>Aktuelles Ranking</th>
+              </tr>
+            </thead>
+            <tbody id="keywordsTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Wins Section -->
+  <section style="padding: 64px 5%; background:#fff; text-align:center;">
+    <div style="max-width:760px; margin:0 auto 40px;">
+      <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px;">Sofort-Maßnahmen</span>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:6px;">Was du bereits morgen verbessern könntest</h2>
+      <p style="color:#666;">Einfache Quick Wins für schnelle Hebelwirkung ohne großen Aufwand.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; max-width:1000px; margin:0 auto; text-align:left;" class="quickwins-grid-mobile" id="quickWinsGrid"></div>
+  </section>
+
+  <!-- Growth Section -->
+  <section style="padding: 64px 5%; background:#fafafa;">
+    <div class="growth-wrapper" style="max-width:1140px; margin:0 auto;">
+      <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px;">Wachstums-Potenzial</span>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:6px; color:#fff;">Dein Potenzial im direkten Vergleich</h2>
+      
+      <div class="growth-grid">
+        <div class="growth-box-item">
+          <div style="font-size:12.8px; text-transform:uppercase; color:#888; font-weight:800;">Aktueller Stand</div>
+          <div style="font-size:40px; font-weight:900; color:#aaa; margin:8px 0;" id="growthCurrentRank">Rang #8</div>
+          <p style="font-size:13.6px; color:#888;">Versteckt in den weiteren Ergebnissen. Kaum organische Anrufe.</p>
+        </div>
+        <div class="growth-arrow-desktop" style="font-size:32px; color:var(--brand--lemon);">➔</div><div class="growth-arrow-vertical">↓</div>
+        <div class="growth-box-item target">
+          <div style="font-size:12.8px; text-transform:uppercase; color:var(--brand--lemon); font-weight:800;">Ziel-Potenzial</div>
+          <div style="font-size:40px; font-weight:900; color:var(--brand--lemon); margin:8px 0;" id="growthTargetRank">Top 3 Pack</div>
+          <p style="font-size:13.6px; color:#bbb;">Dominante Platzierung direkt im Sichtfeld moderner Kunden & Patienten.</p>
+        </div>
+      </div>
+
+      <div class="impact-row">
+        <div>
+          <div style="font-size:28.8px; font-weight:900; color:var(--brand--lemon);" id="growthCalls">+180%</div>
+          <div style="font-size:13.6px; color:#aaa;">Mehr Anrufe</div>
+        </div>
+        <div>
+          <div style="font-size:28.8px; font-weight:900; color:var(--brand--lemon);" id="growthRoutes">+240%</div>
+          <div style="font-size:13.6px; color:#aaa;">Mehr Routenplaner</div>
+        </div>
+        <div>
+          <div style="font-size:28.8px; font-weight:900; color:var(--brand--lemon);" id="growthLeads">+150%</div>
+          <div style="font-size:13.6px; color:#aaa;">Mehr Anfragen</div>
+        </div>
+        <div>
+          <div style="font-size:22.4px; font-weight:900; color:var(--brand--lemon);" id="growthTrust">Top 1</div>
+          <div style="font-size:13.6px; color:#aaa;">Regionale Autorität</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Action Roadmap Section -->
+  <section style="padding: 64px 5%; background:#fff; text-align:center;">
+    <div style="max-width:760px; margin:0 auto 40px;">
+      <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px;">Priorisierter Fahrplan</span>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:6px;">Schritt-für-Schritt zur Marktführerschaft</h2>
+      <p style="color:#666;">Transparenter Fahrplan zur Umsetzung aller Optimierungspotenziale.</p>
+    </div>
+
+    <div class="audit-table-wrap" style="max-width:1140px; margin:0 auto;">
+      <table class="audit-table">
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Geplante Maßnahme</th>
+            <th>Priorität</th>
+            <th>Geschätzter Aufwand</th>
+          </tr>
+        </thead>
+        <tbody id="roadmapTableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="section-video" id="termin" style="background:#000;">
+    <div style="max-width:800px; margin:0 auto;">
+      <h2 style="font-size:40px; font-weight:900; color:#fff; margin-bottom:16px;">Lass uns gemeinsam deine lokale Sichtbarkeit verbessern.</h2>
+      <p style="color:#aaa; font-size:17.6px; margin-bottom:32px;">Buch dir jetzt ein kurzes, kostenfreies Beratungsgespräch. Wir besprechen unverbindlich die Umsetzung der gezeigten Potenziale.</p>
+      
+      <div class="final-cta-group" style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+        <a href="https://calendly.com/martin-233/15-minute-meeting?back=1" target="_blank" class="btn-741-main">📅 Kostenloses Gespräch buchen</a>
+        <a href="https://wa.me/491711745089?text=Hallo%20741%20Studio,%20ich%20habe%20die%20Video-Analyse%20gesehen" target="_blank" class="btn-741-dark" style="background:#25D366; color:#000;">💬 WhatsApp schreiben</a>
+        <a href="mailto:martin@741.studio?subject=Anfrage%20Google%20Analyse" class="btn-741-dark">✉️ E-Mail senden</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Official 741.Studio Footer -->
+  {{> footer_de}}
+
+  <!-- Official 741.Studio DSGVO Cookie Consent Modal -->
+  {{> consent}}
+
+  <script>
+  window.PROSPECT_DATA = __PROSPECT_JSON__;
+  </script>
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.audit-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+      
+      const btn = Array.from(document.querySelectorAll('.audit-tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+      if (btn) btn.classList.add('active');
+      const pane = document.getElementById('tab-' + tabId);
+      if (pane) pane.style.display = 'block';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const calendlyUrl = 'https://calendly.com/martin-233/15-minute-meeting?back=1';
+      document.querySelectorAll('a').forEach(a => {
+        const text = a.textContent.toLowerCase();
+        const href = a.getAttribute('href') || '';
+        if (href.includes('typeform.com') || href === '#termin' || text.includes('termin') || text.includes('gespräch') || text.includes('start now') || text.includes('jetzt starten')) {
+          a.setAttribute('href', calendlyUrl);
+          a.setAttribute('target', '_blank');
+        }
+      });
+
+      const data = window.PROSPECT_DATA;
+      if (!data) return;
+
+      if (data.companyName) {
+        document.getElementById('companyHeadline').innerHTML = `Hallo ${data.contactName || data.companyName},<br>wir haben eine persönliche Analyse deiner <span style="color:var(--brand--lemon);">Google-Präsenz</span> erstellt.`;
+        document.getElementById('cardCompanyName').innerText = data.companyName;
+        document.getElementById('videoMetaCompany').innerText = data.companyName;
+      }
+
+      if (data.branch) document.getElementById('cardBranch').innerText = data.branch;
+      if (data.loomDuration) {
+        document.getElementById('loomTimeTag').innerText = data.loomDuration;
+        document.getElementById('cardLoomTime').innerText = data.loomDuration.toUpperCase() + ' PLAY';
+        document.getElementById('videoMetaDuration').innerText = data.loomDuration;
+      }
+      if (data.loomUrl) document.getElementById('loomIframe').src = data.loomUrl;
+
+      if (data.mapsRankDesktop) {
+        document.getElementById('cardMapsRankSub').innerText = data.mapsRankDesktop + ' in der Region';
+        document.getElementById('cardMapsRankText').innerText = '● ' + data.mapsRankDesktop;
+        document.getElementById('growthCurrentRank').innerText = data.mapsRankDesktop;
+      }
+      if (data.mobileSpeedScore) document.getElementById('cardMobileSpeed').innerText = 'Speed: ' + data.mobileSpeedScore;
+
+      if (data.personalMessageGreeting) document.getElementById('personalGreeting').innerText = data.personalMessageGreeting;
+      if (data.authorName) {
+        document.getElementById('authorName').innerText = data.authorName + ' & das 741 Studio Team';
+        document.getElementById('authorSignName').innerText = data.authorName;
+      }
+
+      if (data.positives) document.getElementById('positivesList').innerHTML = data.positives.map(p => `<li>${p}</li>`).join('');
+      if (data.opportunities) document.getElementById('opportunitiesList').innerHTML = data.opportunities.map(o => `<li>${o}</li>`).join('');
+      if (data.criticalIssues) document.getElementById('criticalList').innerHTML = data.criticalIssues.map(c => `<li>${c}</li>`).join('');
+
+      function renderAudit(id, items) {
+        const el = document.getElementById(id);
+        if (!el || !items) return;
+        el.innerHTML = items.map(i => `
+          <div class="audit-score-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <strong style="font-size:15.2px;">${i.title}</strong>
+              <span class="${i.status === 'good' ? 'pill-good' : (i.status === 'warning' ? 'pill-warning' : 'pill-critical')}">${i.status === 'good' ? '✓ OK' : (i.status === 'warning' ? '⚠ Ausbaufähig' : '✖ Kritisch')}</span>
+            </div>
+            <p style="font-size:13.6px; color:#666; margin:0; line-height:1.4;">${i.desc}</p>
+          </div>
+        `).join('');
+      }
+
+      renderAudit('gbpAuditGrid', data.gbpAudit);
+      renderAudit('websiteAuditGrid', data.websiteAudit);
+      renderAudit('citationAuditGrid', data.citationAudit);
+
+      if (data.competitors) {
+        document.getElementById('competitorsTableBody').innerHTML = data.competitors.map(c => `
+          <tr>
+            <td><strong>${c.name}</strong></td>
+            <td><span style="color:#b48500; font-weight:800;">${c.rank}</span></td>
+            <td>${c.reviews}</td>
+            <td>${c.category}</td>
+            <td style="color:#666;">${c.advantage}</td>
+          </tr>
+        `).join('');
+      }
+
+      if (data.keywords) {
+        document.getElementById('keywordsTableBody').innerHTML = data.keywords.map(k => `
+          <tr>
+            <td><strong>${k.keyword}</strong></td>
+            <td>${k.region}</td>
+            <td><span style="color:#b48500; font-weight:800;">${k.volume}</span></td>
+            <td>${k.currentRank}</td>
+          </tr>
+        `).join('');
+      }
+
+      if (data.quickWins) {
+        document.getElementById('quickWinsGrid').innerHTML = data.quickWins.map(q => `
+          <div style="background:#fdfdfd; border:1px solid #eee; padding:20px; border-radius:14px; display:flex; gap:14px;">
+            <div style="width:28px; height:28px; border-radius:8px; background:rgba(250,193,24,0.2); color:#b48500; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0;">✓</div>
+            <div>
+              <h4 style="font-size:16px; font-weight:800; margin-bottom:4px;">${q.title}</h4>
+              <p style="font-size:13.6px; color:#666; margin:0;">${q.desc}</p>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      if (data.growthMetrics) {
+        if (data.growthMetrics.targetRank) document.getElementById('growthTargetRank').innerText = data.growthMetrics.targetRank;
+        if (data.growthMetrics.callsIncrease) document.getElementById('growthCalls').innerText = data.growthMetrics.callsIncrease;
+        if (data.growthMetrics.routesIncrease) document.getElementById('growthRoutes').innerText = data.growthMetrics.routesIncrease;
+        if (data.growthMetrics.leadsIncrease) document.getElementById('growthLeads').innerText = data.growthMetrics.leadsIncrease;
+        if (data.growthMetrics.trustLabel) document.getElementById('growthTrust').innerText = data.growthMetrics.trustLabel;
+      }
+
+      if (data.roadmap) {
+        document.getElementById('roadmapTableBody').innerHTML = data.roadmap.map(r => `
+          <tr>
+            <td><strong>${r.step}</strong></td>
+            <td>${r.action}</td>
+            <td><span class="pill-warning" style="background:${r.priority === 'Hoch' ? 'rgba(239,68,68,0.12)' : 'rgba(250,193,24,0.2)'}; color:${r.priority === 'Hoch' ? '#dc2626' : '#b48500'};">${r.priority}</span></td>
+            <td>${r.effort}</td>
+          </tr>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>

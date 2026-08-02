@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html data-wf-domain="www.weavy.ai" data-wf-page="681b040781d5b5e278a6999f" data-wf-site="681b040781d5b5e278a69989">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Website Design &amp; Development in Bali | 741.Studio</title>
+    <meta content="Websites for businesses in Bali that load fast and turn visitors into bookings. Free 5-point video teardown: speed, mobile, booking path, Google signals and trust." name="description" />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="https://741.studio/pages/bali-web-design.html" />
+    <meta content="Website Design &amp; Development in Bali | 741.Studio" property="og:title" />
+    <meta content="Websites for businesses in Bali that load fast and turn visitors into bookings. Free 5-point video teardown: speed, mobile, booking path, Google signals and trust." property="og:description" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="/assets/weavy.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+    <!-- Meta Pixel (741 Google Maps fix) -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1028202146617964');
+    fbq('track','PageView');
+    </script>
+    <!-- Google Ads base tag (AW-564129015) loads via the consent partial loadGoogleTags(); conversion event 'Lead - Free Audit Request' fires in submit() -->
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        /* Partner Logos Marquee */
+        .section_partner-logos {
+            padding: 4rem 0;
+            background: #fff;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            overflow: hidden;
+        }
+
+        .marquee-wrapper {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            cursor: grab;
+        }
+
+        .marquee-wrapper:active {
+            cursor: grabbing;
+        }
+
+        .marquee-content {
+            display: flex;
+            gap: 4rem;
+            flex-shrink: 0;
+            padding: 0 2rem;
+            will-change: transform;
+        }
+
+        .logo-item {
+            flex-shrink: 0;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-item img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(1) opacity(0.5);
+            transition: all 0.4s ease;
+        }
+
+        .logo-item:hover img {
+            filter: grayscale(0) opacity(1);
+            transform: scale(1.1);
+        }
+
+        /* Akira Footer Dog Interaction */
+        #akira-traveler {
+            position: absolute;
+            bottom: 0px;
+            animation: runX 30s linear infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+
+        #akira-flipper {
+            animation: flipX 30s step-end infinite;
+        }
+
+        .akira-sprite {
+            width: 96px;
+            height: 96px;
+            position: relative;
+        }
+
+        .akira-frame {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+        .akira-frame-1 {
+            animation: spriteCycle 0.6s step-end infinite;
+            animation-delay: 0s;
+        }
+
+        .akira-frame-2 {
+            animation: spriteCycle 0.6s step-end infinite;
+            animation-delay: 0.15s;
+        }
+
+        .akira-frame-3 {
+            animation: spriteCycle 0.6s step-end infinite;
+            animation-delay: 0.3s;
+        }
+
+        .akira-frame-4 {
+            animation: spriteCycle 0.6s step-end infinite;
+            animation-delay: 0.45s;
+        }
+
+        @keyframes spriteCycle {
+            0% {
+                opacity: 1;
+            }
+
+            25%,
+            50%,
+            75%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes flipX {
+
+            0%,
+            49.99%,
+            100% {
+                transform: scaleX(1);
+            }
+
+            50%,
+            99.99% {
+                transform: scaleX(-1);
+            }
+        }
+
+        /* Global Background Tint Overrides (Replacing Turquoise with Brand Yellow) */
+        .section-hero {
+            background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 34%, rgba(250, 193, 24, 0.35) 71%), url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif") !important;
+        }
+
+        /* Local SEO Specific Styles */
+        .seo_section {
+            padding: 6rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .seo_section.is--dark {
+            background-color: #111;
+            color: #fff;
+        }
+
+        .seo_grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 991px) {
+            .seo_grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .seo_highlight {
+            color: var(--brand--lemon);
+            font-weight: 700;
+        }
+
+        .seo_card {
+            background-color: #f8f8f8;
+            padding: 3rem;
+            border-radius: 2rem;
+            border: 1px solid #eee;
+            height: 100%;
+        }
+
+        .seo_card.is--dark {
+            background-color: #1a1a1a;
+            border-color: #333;
+        }
+
+        .seo_step_num {
+            font-family: 'Press Start 2P', cursive;
+            color: var(--brand--lemon);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .seo_map_comparison {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .seo_map_item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .seo_map_item img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .seo_tagline {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--brand--lemon);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .seo_btn {
+            background-color: var(--brand--lemon);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        .seo_btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(250, 193, 24, 0.3);
+        }
+
+        /* Founder Section Styles */
+        .section_founder {
+            background-color: #fcfcfc;
+            padding: 8rem 5%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .founder_grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .founder_grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            p.text-size-medium {
+                font-size: 2.2rem !important;
+                /* scales correctly against 1.8vw root bounds for ~16px mobile text */
+                line-height: 1.4 !important;
+                margin-top: 1rem;
+            }
+        }
+
+        .founder_image_wrapper {
+            position: relative;
+            background: #fff;
+            padding: 1rem;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            transform: rotate(-2deg);
+        }
+
+        .founder_image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .founder_name_overlay {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--brand--lemon);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: rotate(2deg);
+        }
+
+        .founder_name_overlay h3 {
+            margin: 0;
+            font-family: monospace;
+            font-weight: 900;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+            color: #111;
+        }
+
+        .founder_title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #555;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* Video Testimonials Grid */
+        .testimonial_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto;
+        }
+
+        .testimonial_card {
+            background: #000;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            cursor: pointer;
+            border: 1px solid #333;
+        }
+
+        /* Mobile overrides to standardize with homepage */
+        @media (max-width: 767px) {
+            .grid-container.is-hero.is-banner-top {
+                padding-top: 12rem !important;
+            }
+
+            .seo_section p,
+            .seo_section p.text-size-medium {
+                font-size: 2.2rem !important;
+                /* scales correctly against 1.8vw root bounds for ~16px mobile text */
+                line-height: 1.4 !important;
+            }
+
+            .vertical-wrapp {
+                padding-left: 0 !important;
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+
+            .heading_h1-hero {
+                text-align: center !important;
+                margin-top: 20px !important;
+                width: 100% !important;
+                align-self: center !important;
+            }
+
+            .h1-wrapper.extra-bot-pad {
+                margin-bottom: 2rem !important;
+            }
+
+            .paragraph-wrapper {
+                text-align: center !important;
+            }
+
+            .text-size-large {
+                font-size: 2.5rem !important;
+                line-height: 1.15 !important;
+            }
+
+            .seo_btn {
+                font-size: 2.5rem !important;
+                /* equates to 18-20px given html 1.8vw base constraint */
+                padding: 18px 40px !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                margin: 40px auto 0 auto !important;
+                width: max-content !important;
+            }
+
+            .seo_tagline {
+                display: none !important;
+            }
+        }
+    
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -o-font-smoothing: antialiased;
+        }
+
+        html,
+        body {
+            overscroll-behavior-y: none;
+        }
+
+        html.lenis {
+            height: auto !important;
+        }
+
+        body.lenis {
+            height: auto !important;
+        }
+    
+        .huge_nav-button {
+            mix-blend-mode: normal !important;
+        }
+    
+
+    /* ---------- Section ---------- */
+    .hero2-section {
+      position: relative;
+      background:
+        radial-gradient(120% 90% at 85% 0%, rgba(250, 193, 24, 0.14) 0%, rgba(250, 193, 24, 0) 55%),
+        linear-gradient(180deg, #fbfaf7 0%, #f6f4ee 100%);
+      overflow: hidden;
+      /* Full-screen hero: the next section stays below the fold */
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero2-wrap {
+      width: 100%;
+      max-width: 90rem;
+      margin: 0 auto;
+      padding: 8rem 4rem 4rem;
+    }
+
+    /* ---------- Crossfade stage ---------- */
+    .hero2-slides { position: relative; min-height: 34rem; }
+
+    .hero2-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.6s ease;
+    }
+    .hero2-slide.is-active {
+      position: relative;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ---------- Two-column layout ---------- */
+    .hero2-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      align-items: center;
+      gap: 4rem;
+      min-height: 34rem;
+    }
+
+    /* ---------- Left: copy ---------- */
+    .hero2-copy { max-width: 34rem; }
+
+    .hero2-badge {
+      display: inline-block;
+      background: #fac118;
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero2-title {
+      color: #1c1c1a;
+      font-size: clamp(2.4rem, 3.6vw, 3.9rem);
+      line-height: 1.06;
+      letter-spacing: -0.01em;
+      font-weight: 600;
+      margin: 0 0 1.4rem;
+    }
+
+    .hero2-accent {
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .hero2-sub {
+      color: #55534d;
+      font-size: clamp(1rem, 1.2vw, 1.2rem);
+      line-height: 1.55;
+      margin: 0 0 2.2rem;
+      max-width: 30rem;
+    }
+
+    .hero2-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      align-items: flex-start;
+    }
+
+    .hero2-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #1f2a22;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 1.05rem 2rem;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .hero2-btn:hover {
+      background: #fac118;
+      color: #1a1a1a;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(31, 42, 34, 0.18);
+    }
+
+    .hero2-btn__arrow { transition: transform 0.25s ease; }
+    .hero2-btn:hover .hero2-btn__arrow { transform: translateX(4px); }
+
+    .hero2-trust {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #6b6862;
+      font-size: 0.9rem;
+    }
+
+    .hero2-stars { color: #fac118; letter-spacing: 0.05em; font-size: 1rem; }
+
+    /* ---------- Right: visual ---------- */
+    .hero2-visual {
+      position: relative;
+      min-height: 30rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero2-card {
+      width: 100%;
+      max-width: 40rem;
+      border-radius: 1.4rem;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(28, 28, 26, 0.14);
+    }
+
+    /* Full-bleed screenshots (results/proof) */
+    .hero2-card--shot { aspect-ratio: 16 / 11; background: #fff; }
+    .hero2-card--shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* Self-contained proof scene (3:2 marketing image, no crop, no accent) */
+    .hero2-card--scene { aspect-ratio: 3 / 2; background: #fff; }
+    .hero2-card--scene img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* Floating device mockups on a soft branded panel */
+    .hero2-card--device {
+      aspect-ratio: 16 / 12;
+      background: linear-gradient(160deg, #fff 0%, #fbf3d9 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.6rem;
+    }
+    .hero2-card--device img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+    /* Small overlapping accent card */
+    .hero2-accent-card {
+      position: absolute;
+      bottom: -1.6rem;
+      left: -1.6rem;
+      width: 12rem;
+      aspect-ratio: 1 / 1;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 18px 36px rgba(28, 28, 26, 0.18);
+      border: 4px solid #fff;
+    }
+    .hero2-accent-card--device {
+      background: linear-gradient(160deg, #fff 0%, #f4f6f3 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    .hero2-accent-card img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+    /* Screenshot/proof inside the small accent card (fills edge to edge) */
+    .hero2-accent-card--shot { padding: 0; background: #fff; }
+    .hero2-accent-card--shot img { object-fit: cover; }
+
+    /* ---------- Paid Ads slide: coded dashboard + floating cards ---------- */
+    .hero2-visual--ads { position: relative; }
+    .ads-dash {
+      width: 100%; max-width: 30rem;
+      background: #fff; border: 1px solid rgba(28,28,26,.06);
+      border-radius: 1.3rem; box-shadow: 0 30px 60px rgba(28,28,26,.16);
+      padding: 1.4rem;
+    }
+    .ads-dash-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .ads-dash-title { font-weight: 700; color: #1c1c1a; font-size: 1rem; }
+    .ads-dash-live { display: inline-flex; align-items: center; gap: .4rem; font-size: .72rem; font-weight: 700; color: #16a34a; text-transform: uppercase; letter-spacing: .04em; }
+    .ads-dash-live i { width: .5rem; height: .5rem; border-radius: 50%; background: #16a34a; display: inline-block; animation: adsPulse 1.6s ease-in-out infinite; }
+    @keyframes adsPulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+    .ads-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: .55rem; margin-bottom: 1rem; }
+    .ads-kpi { background: #f7f6f2; border-radius: .7rem; padding: .6rem .55rem; display: flex; flex-direction: column; gap: .12rem; }
+    .ads-kpi-l { font-size: .64rem; color: #8a8781; }
+    .ads-kpi-v { font-size: 1.15rem; font-weight: 800; color: #1c1c1a; line-height: 1.05; }
+    .ads-kpi-d { font-size: .64rem; font-weight: 800; color: #16a34a; }
+    .ads-chart { height: 5rem; }
+    .ads-chart svg { width: 100%; height: 100%; display: block; }
+
+    .ads-float {
+      position: absolute; z-index: 3; display: flex; align-items: center; gap: .55rem;
+      background: #fff; border: 1px solid rgba(28,28,26,.06); border-radius: .9rem;
+      box-shadow: 0 16px 34px rgba(28,28,26,.16); padding: .55rem .75rem;
+      animation: adsFloat 5.5s ease-in-out infinite;
+    }
+    .ads-float-ico { width: 2rem; height: 2rem; border-radius: .55rem; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
+    .ads-float-txt { display: flex; flex-direction: column; line-height: 1.12; }
+    .ads-float-l { font-weight: 700; font-size: .78rem; color: #1c1c1a; }
+    .ads-float-s { font-size: .64rem; color: #8a8781; }
+    .ads-float-num { display: flex; flex-direction: column; align-items: flex-end; margin-left: .35rem; }
+    .ads-float-v { font-weight: 800; font-size: 1rem; color: #1c1c1a; line-height: 1; }
+    .ads-float-up { font-size: .62rem; font-weight: 800; color: #16a34a; white-space: nowrap; }
+
+    .ads-float--a { top: -1.1rem; left: -1rem; }
+    .ads-float--b { bottom: 3rem; left: -1.8rem; animation-delay: -1.8s; }
+    .ads-float--c { bottom: -1.1rem; right: -0.6rem; animation-delay: -3.6s; }
+
+    @keyframes adsFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    @media (prefers-reduced-motion: reduce) { .ads-float, .ads-dash-live i { animation: none; } }
+    .ads-float-ico svg { width: 60%; height: 60%; }
+
+    /* Ads composition on mobile: the root font is ~1.8vw, so scale everything up
+       and pull the floating cards in from the viewport edges. */
+    @media screen and (max-width: 767px) {
+      .ads-dash { max-width: 100%; padding: 2rem; border-radius: 2rem; }
+      .ads-dash-title { font-size: 2.4rem; }
+      .ads-dash-live { font-size: 1.6rem; }
+      .ads-kpis { gap: 1rem; }
+      .ads-kpi { padding: 1.2rem 1rem; border-radius: 1.2rem; }
+      .ads-kpi-l { font-size: 1.4rem; }
+      .ads-kpi-v { font-size: 2.9rem; }
+      .ads-kpi-d { font-size: 1.4rem; }
+      .ads-chart { height: 8rem; }
+      .ads-float { padding: 1.1rem 1.4rem; gap: 1rem; border-radius: 1.6rem; }
+      .ads-float-ico { width: 4.4rem; height: 4.4rem; border-radius: 1.1rem; }
+      .ads-float-l { font-size: 2rem; }
+      .ads-float-s { font-size: 1.5rem; }
+      .ads-float-v { font-size: 2.4rem; }
+      .ads-float-up { font-size: 1.5rem; }
+      .ads-float--a { top: -1.6rem; left: 0; }
+      .ads-float--b { bottom: 4.5rem; left: 0; animation-delay: -1.8s; }
+      .ads-float--c { bottom: -1.6rem; right: 0; animation-delay: -3.6s; }
+    }
+
+    /* ---------- Dots ---------- */
+    .hero2-dots {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      padding-left: 0.2rem;
+    }
+    .hero2-dot {
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 100px;
+      border: none;
+      padding: 0;
+      background: rgba(28, 28, 26, 0.18);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .hero2-dot.is-active { background: #fac118; width: 1.8rem; }
+
+    /* ---------- Tablet ---------- */
+    @media screen and (max-width: 991px) {
+      .hero2-wrap { padding: 6rem 2.5rem 3.5rem; }
+      .hero2-inner { gap: 2.5rem; }
+      .hero2-accent-card { width: 9rem; }
+    }
+
+    /* ---------- Mobile ---------- */
+    @media screen and (max-width: 767px) {
+      /* Stacked mobile content is taller than the viewport, so let it flow
+         naturally instead of forcing a full-screen height. */
+      .hero2-section { min-height: auto; display: block; }
+
+      /* Fixed header (announcement + nav) is ~100px tall in real px, and the
+         mobile root font is only ~6.75px, so rem-based padding under-clears it.
+         Use a px top-pad that reliably keeps the badge below the nav. */
+      .hero2-wrap { padding: 140px 1.5rem 3.5rem; }
+
+      .hero2-slides { min-height: 0; }
+      .hero2-slide { position: absolute; }
+      .hero2-slide.is-active { position: relative; }
+
+      .hero2-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        min-height: auto;
+      }
+
+      .hero2-copy { max-width: none; }
+
+      .hero2-badge { font-size: 1.5rem; padding: 0.7rem 1.4rem; }
+
+      .hero2-title { font-size: 5rem; line-height: 1.08; }
+
+      .hero2-sub { font-size: 2.2rem; line-height: 1.5; max-width: none; }
+
+      .hero2-btn { font-size: 2rem; padding: 1.5rem 2.6rem; }
+
+      .hero2-trust { font-size: 1.7rem; }
+      .hero2-stars { font-size: 1.9rem; }
+
+      .hero2-visual { min-height: auto; margin-top: 0.5rem; }
+
+      .hero2-card { max-width: 100%; }
+
+      .hero2-accent-card { width: 30%; bottom: -1rem; left: -0.6rem; }
+
+      .hero2-dots { justify-content: center; margin-top: 2.5rem; }
+      .hero2-dot { width: 1.1rem; height: 1.1rem; }
+      .hero2-dot.is-active { width: 3rem; }
+    }
+  
+
+  .villa-fit { position: relative; width: 100%; aspect-ratio: 1400 / 1080; }
+  .villa-canvas { position: absolute; top: 0; left: 0; width: 1400px; height: 1080px; transform-origin: top left; }
+  /* Enlarge the devices + cards ~16% and re-center them, kept fully inside the 1400x1080 frame */
+  .villa-zoom { position: absolute; inset: 0; transform-origin: 785px 544px; transform: translateX(-85px) scale(1.16); }
+
+  /* Bigger, more prominent visual on the Paid-Ads slide (desktop/tablet only) */
+  @media (min-width: 768px) {
+    .hero2-slide--villa .hero2-inner { grid-template-columns: 0.82fr 1.42fr; gap: 3rem; }
+  }
+
+  /* Floating cards — gentle life, matching the conversion section's motion */
+  .villa-float { animation: villaFloat 5s ease-in-out infinite; will-change: transform; }
+  .villa-float.villa-f2 { animation-duration: 5.6s; animation-delay: -1.4s; }
+  .villa-float.villa-f3 { animation-duration: 6.4s; animation-delay: -2.8s; }
+  .villa-float.villa-f4 { animation-duration: 5.4s; animation-delay: -3.8s; }
+  @keyframes villaFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
+  .villa-pulse { animation: villaPulse 1.7s ease-in-out infinite; }
+  @keyframes villaPulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+  @media (prefers-reduced-motion: reduce) { .villa-float, .villa-pulse { animation: none; } }
+
+/* ---- client wall + project cards (ported from growth-plan) ---- */
+.client-link{display:inline-block;margin-top:14px;font-size:13.5px;font-weight:700;color:#111514;text-decoration:none;border-bottom:2px solid #fac118;}
+.seo_section.is--dark .client-link{color:#fff;}
+.seo_btn.is-ghost{background:transparent;border:2px solid var(--brand--lemon,#fac118);color:inherit;}
+.seo_btn.is-ghost:hover{background:var(--brand--lemon,#fac118);color:#000;}
+.hero2-btn.is-ghost{background:transparent;border:2px solid var(--brand--lemon,#fac118);color:inherit;box-shadow:none;}
+.cta-pair{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin-top:34px;}
+.wc{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #e7e2d4;border-radius:12px;padding:12px 14px;}
+.wc b{display:block;font-size:14.5px;line-height:1.25;color:#111514;}
+.wc small{display:block;font-size:12px;color:#6b6b64;}
+.wc .res{display:block;font-style:normal;font-size:12px;font-weight:700;color:#1e7a46;margin-top:2px;}
+.wc .res a{color:inherit;text-decoration:none;border-bottom:1px dotted rgba(30,122,70,.5);}
+.wc.hl{border-color:#fac118;box-shadow:0 0 0 2px rgba(250,193,24,.25);}
+.avimg{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:1px solid #e7e2d4;background:#fff;}
+.seo_section.is--dark .wc{background:#1a1a1a;border-color:#333;}
+.seo_section.is--dark .wc b{color:#fff;}
+.seo_section.is--dark .wc small{color:#9a9a92;}
+.seo_section.is--dark .wc .res{color:#5cd08a;}
+.seo_section.is--dark .wc.hl{border-color:#fac118;}
+.clients{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:28px;}
+.client{background:#fff;border:1px solid #e7e2d4;border-radius:14px;padding:20px 22px;}
+.client h3{font-size:17px;margin-bottom:6px;color:#111514;}
+.client .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#575136;background:#f0ecdd;border-radius:99px;padding:4px 10px;margin-bottom:10px;}
+.client p{font-size:14.5px;color:#6b6b64;margin:0;}
+.client.is-bali{border-color:#fac118;box-shadow:0 0 0 2px rgba(250,193,24,.2);}
+.seo_section.is--dark .client{background:#1a1a1a;border-color:#333;}
+.seo_section.is--dark .client h3{color:#fff;}
+.seo_section.is--dark .client p{color:#b6b6ae;}
+.seo_section.is--dark .client .tag{background:#2a2a24;color:#e0d9bd;}
+
+
+/* audit quiz overlay */
+.qz-overlay{position:fixed;inset:0;background:rgba(11,12,16,.72);backdrop-filter:blur(4px);z-index:100000;display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 12px;}
+.qz-overlay.open{display:flex;}
+.qz{background:#fff;border-radius:1rem;max-width:560px;width:100%;padding:34px 30px 28px;position:relative;margin:auto 0;}
+.qz-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:26px;color:#8a8a8a;cursor:pointer;line-height:1;}
+.qz-progress{height:6px;background:#eceadf;border-radius:99px;overflow:hidden;margin-bottom:10px;}
+.qz-progress i{display:block;height:100%;background:var(--brand--lemon,#fac118);border-radius:99px;transition:width .25s;}
+.qz-step-label{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;}
+.qz h3{font-size:23px;line-height:1.25;margin:0 0 8px;color:#111;}
+.qz-sub{font-size:14.5px;color:#5c5c5c;margin-bottom:18px;}
+.qz-opts{display:flex;flex-direction:column;gap:10px;}
+.qz-opt{text-align:left;background:#faf8f2;border:1.5px solid #eceadf;border-radius:.75rem;padding:15px 16px;font-size:16px;font-weight:600;color:#111;cursor:pointer;transition:border-color .12s,transform .12s;font-family:inherit;}
+.qz-opt:hover{border-color:var(--brand--lemon,#fac118);transform:translateY(-1px);}
+.qz label{display:block;font-size:13.5px;font-weight:700;margin:14px 0 6px;color:#111;}
+.qz input{width:100%;padding:13px 14px;border:1.5px solid #eceadf;border-radius:.6rem;font-size:16px;font-family:inherit;}
+.qz input:focus{outline:none;border-color:var(--brand--lemon,#fac118);}
+.qz-consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:#5c5c5c;margin-top:14px;line-height:1.45;}
+.qz-consent input{width:auto;margin-top:3px;}
+.qz-err{display:none;background:#fdeaea;color:#b3402e;font-size:13.5px;border-radius:8px;padding:9px 12px;margin-top:12px;}
+.qz-err.show{display:block;}
+.qz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:10px;}
+.qz-back{background:none;border:none;color:#8a8a8a;font-size:14px;cursor:pointer;font-family:inherit;}
+.qz-next{background:var(--brand--lemon,#fac118);color:#111;border:none;font-weight:800;font-size:16px;padding:13px 22px;border-radius:.6rem;cursor:pointer;font-family:inherit;}
+.qz-next:disabled{opacity:.6;cursor:wait;}
+.qz-trust{display:flex;gap:14px;margin-top:18px;padding-top:14px;border-top:1px solid #eceadf;font-size:12.5px;color:#8a8a8a;flex-wrap:wrap;}
+.qz-success p{font-size:14.5px;color:#5c5c5c;margin-bottom:10px;text-align:left;}
+.qz-timer{display:inline-block;background:#fdf7d8;border:1.5px solid #f0d97a;border-radius:999px;padding:8px 18px;font-weight:700;font-size:14.5px;margin:14px 0;}
+/* stat row */
+.bali_stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin:3rem 0 0;}
+@media(max-width:767px){.bali_stats{grid-template-columns:1fr;gap:1.5rem;}}
+.bali_stat{border-left:3px solid var(--brand--lemon,#fac118);padding-left:1.5rem;}
+.bali_stat b{display:block;font-family:'Press Start 2P',cursive;font-size:1.9rem;color:var(--brand--lemon,#fac118);margin-bottom:.9rem;line-height:1;}
+.bali_stat p{font-size:1rem;margin:0;opacity:.9;}
+.bali_shot{width:100%;border-radius:1rem;box-shadow:0 10px 30px rgba(0,0,0,.14);display:block;}
+.bali_calllink{display:inline-block;margin-top:1rem;text-decoration:underline;text-underline-offset:3px;opacity:.7;font-size:.95rem;}
+.hero2-slide{opacity:1 !important;visibility:visible !important;position:relative !important;}
+
+    </style>
+</head>
+
+<body>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1028202146617964&amp;ev=PageView&amp;noscript=1" alt="" /></noscript>
+
+    {{> header }}
+
+    <main>
+    <section class="hero2-section">
+      <div class="hero2-wrap">
+        <div class="hero2-slides">
+          <div class="hero2-slide is-active">
+            <div class="hero2-inner">
+              <div class="hero2-copy">
+                <span class="hero2-badge">Free &middot; Personal video &middot; 24 hours</span>
+                <h1 class="hero2-title">Stop losing bookings. Get a site that <span class="hero2-accent">sells while you sleep</span></h1>
+                <p class="hero2-sub">Before you spend anything on a rebuild, get a free five-point video teardown of the site you have now: speed, mobile, the booking path, what Google reads from it, and whether it earns trust.</p>
+                <div class="hero2-actions cta-pair">
+                  <a href="#audit" data-qz class="hero2-btn">Get my free site review <span class="hero2-btn__arrow">&rarr;</span></a>
+                  <a href="https://wa.me/6287860430975?text=Hi%20741.Studio%20%E2%80%94%20I%27d%20like%20a%20free%20consultation" target="_blank" rel="noopener" class="hero2-btn is-ghost">Chat on WhatsApp</a>
+                </div>
+                <div class="hero2-trust" style="margin-top:1rem;">
+                  <span class="hero2-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  <span>Trusted by businesses across Bali</span>
+                </div>
+              </div>
+              <div class="hero2-visual hero2-visual--villa">
+                {{> villa-web-visual }}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        {{> partner-logos }}
+
+        <section class="seo_section">
+            <div class="seo_grid">
+                <div class="reveal-up">
+                    <div class="seo_tagline">What actually decides it</div>
+                    <h2 class="heading-style-l">A beautiful site can still <span class="seo_highlight">cost you money</span></h2>
+                    <p class="text-size-medium">
+                        Almost everyone opens your site on a phone, often on mobile data that comes and goes.
+                        A heavy template takes six seconds here, and a large share of visitors leave before they
+                        see anything at all. Speed is not a technical detail &mdash; it decides whether the visit exists.
+                    </p>
+                    <p class="text-size-medium">
+                        Then comes the booking path. They liked the photos, and now it is three taps and a contact
+                        form before they can reserve anything. In Indonesia WhatsApp is one tap and the conversation
+                        starts immediately. That gap is most of your lost bookings.
+                    </p>
+                    <div class="cta-pair"><a href="#audit" data-qz class="seo_btn">Get my free site review</a><a href="https://wa.me/6287860430975?text=Hi%20741.Studio%20%E2%80%94%20I%27d%20like%20a%20free%20consultation" target="_blank" rel="noopener" class="seo_btn is-ghost">Chat on WhatsApp</a></div>
+                </div>
+                <div class="reveal-up">
+                    <div class="seo_card">
+                        <div class="seo_tagline">Your free 5-point teardown</div>
+                        <h3 class="heading-style-m">Speed</h3>
+                        <p>What your site costs a visitor on a phone here, and what is making it slow.</p>
+                        <h3 class="heading-style-m" style="margin-top:1.6rem;">Mobile</h3>
+                        <p>How it behaves on a real phone, not on a designer's monitor.</p>
+                        <h3 class="heading-style-m" style="margin-top:1.6rem;">Booking path</h3>
+                        <p>How many taps from landing to booked, and where people drop out.</p>
+                        <h3 class="heading-style-m" style="margin-top:1.6rem;">Google signals</h3>
+                        <p>What your site tells Google about where you are and what you do.</p>
+                        <h3 class="heading-style-m" style="margin-top:1.6rem;">Trust</h3>
+                        <p>Reviews, photos and clarity &mdash; why someone books you over the next option.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seo_section is--dark">
+            <div style="max-width:1200px;margin:0 auto;">
+                <div class="reveal-up">
+                    <div class="seo_tagline">From our studio work</div>
+                    <h2 class="heading-style-l">Selected projects, <span class="seo_highlight">Bali first</span></h2>
+                    <p class="text-size-medium" style="max-width:700px;">Web builds, tracking infrastructure and paid advertising &mdash; from Bali beach clubs to European practices.</p>
+                </div>
+                <div class="clients reveal-stagger-group">
+                <div class="client is-bali reveal-item"><span class="tag">Bali &middot; Beach Club</span><h3>Single Fin, Uluwatu</h3><p>Long-term digital partner: full rebuild, analytics &amp; tracking, in-house team support and paid advertising &mdash; continuous, data-driven optimisation as a lasting edge.</p><a class="client-link" href="/pages/portfolio_full.html">See the project &rarr;</a></div>
+                <div class="client is-bali reveal-item"><span class="tag">Bali &middot; Gym &amp; Recovery</span><h3>Reload Sanctuary, Canggu</h3><p>SEO, website optimisation and backlink building for Canggu&rsquo;s premium gym and recovery club.</p><a class="client-link" href="/pages/portfolio_full.html">See the project &rarr;</a></div>
+                <div class="client is-bali reveal-item"><span class="tag">Bali &middot; Restaurant</span><h3>Avli Uluwatu</h3><p>A modern presence built to capture the restaurant&rsquo;s atmosphere &mdash; effortless menu, location and reservations on any device.</p><a class="client-link" href="/pages/portfolio_full.html">See the project &rarr;</a></div>
+                <div class="client is-bali reveal-item"><span class="tag">Indonesia &middot; Booking Platform</span><h3>Yacht Charter Indonesia</h3><p>A complex booking platform built around discovery: advanced filtering, structured categories and an organised catalog, so visitors navigate a large fleet quickly.</p><a class="client-link" href="/pages/portfolio_full.html">See the project &rarr;</a></div>
+                <div class="client is-bali reveal-item"><span class="tag">Indonesia &middot; Marina Infrastructure</span><h3>Marina Development ID</h3><p>Indonesia&rsquo;s premier marina infrastructure, positioned as a high-profile strategic communication asset &mdash; information structured for international investment acquisition.</p><a class="client-link" href="/pages/portfolio_full.html">See the project &rarr;</a></div>
+                <div class="client is-bali reveal-item"><span class="tag">Property &middot; Acquired</span><h3>Villa Ventures</h3><p>A premium digital presentation of the property and its investment case. Our website supported the brand throughout its growth phase &mdash; the company was ultimately acquired.</p><a class="client-link" href="/pages/portfolio_full.html">See the project &rarr;</a></div>
+                <div class="client reveal-item"><span class="tag">Japan/ID &middot; F&amp;B Brand</span><h3>Marugame Udon</h3><p>Tracking, newsletter integration and structured information flow &mdash; extending the brand into ongoing customer communication and automation.</p><a class="client-link" href="/pages/portfolio_full.html">See the project &rarr;</a></div>
+                <div class="client reveal-item"><span class="tag">Agency Partner</span><h3>Talkinfive</h3><p>A trusted, long-term partnership: development expertise and hands-on digital execution across a wide range of their client projects.</p><a class="client-link" href="/pages/portfolio_full.html">See the project &rarr;</a></div>
+                <div class="client reveal-item"><span class="tag">Restaurant</span><h3>Numero Quattro</h3><p>Clean tracking and paid advertising &mdash; measurable campaign performance and a reliable base for growth.</p><a class="client-link" href="/pages/portfolio_full.html">See the project &rarr;</a></div>
+                <div class="client reveal-item"><span class="tag">Real Estate &middot; Austria</span><h3>IMMOKAUF.AT</h3><p>The tracking, funnel and lead-gen infrastructure that keeps motivated sellers flowing through the pipeline.</p><a class="client-link" href="/pages/portfolio_full.html">See the project &rarr;</a></div>
+                </div>
+                <div style="margin-top:2.2rem;" class="reveal-up">
+                    <a class="seo_btn is-ghost" href="/pages/portfolio_full.html">See the full portfolio &rarr;</a>
+                </div>
+            </div>
+        </section>
+        <section class="seo_section is--dark">
+            <div class="seo_grid">
+                <div class="reveal-up">
+                    <h2 class="heading-style-l">Your site and your <span class="seo_highlight">map pin</span> are one project</h2>
+                    <p class="text-size-medium">
+                        Every OTA booking costs you margin. Platforms are useful for reach, but they charge for owning
+                        the relationship. Your own site is the one channel where the guest is yours &mdash; and it only
+                        works if it can actually close the booking.
+                    </p>
+                    <p class="text-size-medium">
+                        And Google reads your website to decide your Maps position. A site with no clear location
+                        signals, no services spelled out and no structured data holds your ranking down even when your
+                        profile is well kept. Fixing one without the other leaves most of the result on the table.
+                    </p>
+                    <div class="bali_stats">
+                        <div class="bali_stat"><b>6s</b><p>a heavy template takes to load on mobile data here.</p></div>
+                        <div class="bali_stat"><b>1</b><p>tap to open WhatsApp, versus a form three taps deep.</p></div>
+                        <div class="bali_stat"><b>24h</b><p>from request to a personal video teardown. Free either way.</p></div>
+                    </div>
+                </div>
+                <div class="reveal-up">
+                    <div class="seo_card is--dark">
+                        <div class="seo_tagline">Frequently asked</div>
+                        <h3 class="heading-style-m">What if I have no website yet?</h3>
+                        <p>Then we look at what you do have &mdash; Google profile, Instagram, booking setup &mdash; and I tell you what a site would need to do before it is worth building.</p>
+                        <h3 class="heading-style-m" style="margin-top:2rem;">Do you only build one type of site?</h3>
+                        <p>No. WordPress, Webflow or custom, whichever suits the job. What matters is that it loads fast, takes bookings and can be measured.</p>
+                        <h3 class="heading-style-m" style="margin-top:2rem;">Can I keep my current developer?</h3>
+                        <p>Yes. Plenty of what comes out of a teardown is straightforward for whoever already looks after your site.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seo_section">
+            <div class="seo_grid">
+                <div class="reveal-up">
+                    <div class="seo_tagline">On the island</div>
+                    <h2 class="heading-style-l">Built <span class="seo_highlight">here</span>, not offshore</h2>
+                    <p class="text-size-medium">
+                        <strong>Single Fin</strong> in Uluwatu &mdash; full redesign and rebuild, then ongoing tracking,
+                        analytics, support for the in-house marketing team and paid advertising.
+                    </p>
+                    <p class="text-size-medium">
+                        <strong>Avli Uluwatu</strong> &mdash; menu, location and reservations that work on any device, built with our partner agency <strong>Talkinfive</strong>.
+                        <strong>Yacht Charter Indonesia</strong> &mdash; a booking platform with advanced filtering across a large fleet.
+                    </p>
+                    <p class="text-size-medium">
+                        <strong>Villa Ventures</strong> we carried through its growth phase, and the company was ultimately
+                        acquired. We also work with <strong>Reload Sanctuary</strong> in Canggu on SEO and backlinks &mdash;
+                        the same thinking applied after launch.
+                    </p>
+                    <div class="cta-pair"><a href="#audit" data-qz class="seo_btn">Get my free site review</a><a href="https://wa.me/6287860430975?text=Hi%20741.Studio%20%E2%80%94%20I%27d%20like%20a%20free%20consultation" target="_blank" rel="noopener" class="seo_btn is-ghost">Chat on WhatsApp</a></div>
+                </div>
+                <div class="reveal-up">
+                    <img src="/assets/local-seo/images/analytics_3.webp" loading="lazy" alt="Client growth after a website rebuild" class="bali_shot">
+                </div>
+            </div>
+        </section>
+        <section class="section_founder">
+            <div class="founder_grid">
+                <div class="founder_image_wrapper reveal-up">
+                    <img src="/assets/local-seo/images/team-741.jpg" loading="lazy" alt="The 741.Studio team" class="founder_image">
+                    <div class="founder_name_overlay">
+                        <h3>741.STUDIO</h3>
+                        <span class="founder_title">Your team on the ground</span>
+                    </div>
+                </div>
+                <div class="reveal-up">
+                    <h2 class="heading-style-l" style="margin-bottom:2rem;">We are <span class="seo_highlight">on the island</span></h2>
+                    <p class="text-size-medium" style="margin-bottom:1.5rem;">
+                        Not an agency flying in from somewhere else. We are here, in your time zone,
+                        and we can come and look at your place in person.
+                    </p>
+                    <p class="text-size-medium" style="margin-bottom:2.5rem;">
+                        Across Europe and Indonesia we have audited more than 200 local businesses.
+                        Most of them do not lose customers because they are worse than the competition.
+                        They lose them because Google understands them worse. That is the part we make
+                        visible &mdash; and then fix.
+                    </p>
+                    <div class="cta-pair">
+                        <a href="#audit" data-qz class="seo_btn">Get my free site review</a>
+                        <a href="https://wa.me/6287860430975?text=Hi%20741.Studio%20%E2%80%94%20I%27d%20like%20a%20free%20consultation" target="_blank" rel="noopener" class="seo_btn is-ghost">Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="seo_section is--dark" id="audit">
+            <div class="seo_grid" style="grid-template-columns:1fr;text-align:center;">
+                <div class="reveal-up">
+                    <h2 class="heading-style-l">Find out where you actually <span class="seo_highlight">stand</span></h2>
+                    <p class="text-size-medium" style="max-width:620px;margin:0 auto 2rem;">
+                        Sixty seconds to request. A personal video, free, sent to your WhatsApp within 24 hours.
+                    </p>
+                    <div class="cta-pair" style="justify-content:center;">
+                        <a href="#audit" data-qz class="seo_btn">Get my free site review</a>
+                        <a href="https://wa.me/6287860430975?text=Hi%20741.Studio%20%E2%80%94%20I%27d%20like%20a%20free%20consultation" target="_blank" rel="noopener" class="seo_btn is-ghost">Chat on WhatsApp</a>
+                    </div>
+                    <p style="margin-top:2.5rem;font-size:.85rem;opacity:.6;">
+                        PT. Amana Events Indonesia &middot; Bali &middot;
+                        <a href="/pages/legal-notice.html" style="color:inherit;">Legal Notice</a> &middot;
+                        <a href="/pages/privacy-policy.html" style="color:inherit;">Privacy Policy</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {{> footer }}
+    {{> consent }}
+
+<div class="qz-overlay" id="qzOverlay" role="dialog" aria-modal="true">
+  <div class="qz">
+    <button class="qz-close" id="qzClose" aria-label="Close">&times;</button>
+    <div class="qz-progress"><i id="qzBar" style="width:16%"></i></div>
+    <div class="qz-step-label" id="qzStepLabel">Step 1 of 6</div>
+    <div id="qzBody"></div>
+    <div class="qz-err" id="qzErr"></div>
+    <div class="qz-nav" id="qzNav">
+      <button class="qz-back" id="qzBack" style="visibility:hidden">&larr; Back</button>
+      <button class="qz-next" id="qzNext" style="display:none">Next &rarr;</button>
+    </div>
+    <div class="qz-trust"><span>Your data stays private</span><span>Within 24 hours</span><span>Personal video</span><span>Sent via WhatsApp</span></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // reveal animations (same as local-seo.html)
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll('.reveal-up').forEach(function(el){
+      gsap.fromTo(el,{y:30,opacity:0},{y:0,opacity:1,duration:.8,ease:"power2.out",
+        scrollTrigger:{trigger:el,start:"top 85%",once:true}});
+    });
+    document.querySelectorAll('.reveal-stagger-group').forEach(function(group){
+      var items=group.querySelectorAll('.reveal-item');
+      if(items.length) gsap.fromTo(items,{y:30,opacity:0},{y:0,opacity:1,duration:.8,stagger:.15,ease:"power2.out",
+        scrollTrigger:{trigger:group,start:"top 85%",once:true}});
+    });
+  }
+  // Safety net: this is a paid-traffic page. If GSAP/ScrollTrigger never fires
+  // (script blocked, reduced motion, backgrounded tab), nothing must stay invisible.
+  setTimeout(function(){
+    document.querySelectorAll('.reveal-up, .reveal-item').forEach(function(el){
+      if (parseFloat(getComputedStyle(el).opacity) < 0.05) {
+        el.style.opacity = 1; el.style.transform = 'none';
+      }
+    });
+  }, 2000);
+  // draggable infinite partner marquee (same as homepage)
+  (function () {
+    const wrapper = document.querySelector('.marquee-wrapper');
+    const content = document.querySelector('.marquee-content');
+    if (!wrapper || !content) return;
+    let x = 0, isDragging = false, startX = 0, lastX = 0;
+    function getWidth(){ return content.offsetWidth / 2; }
+    function animate(){
+      if(!isDragging){
+        x -= 0.6;
+        const w = getWidth();
+        if(w > 0){ if(x <= -w) x += w; if(x > 0) x -= w; }
+        content.style.transform = 'translateX(' + x + 'px)';
+      }
+      requestAnimationFrame(animate);
+    }
+    animate();
+    function start(p){ isDragging=true; startX=p-x; lastX=p; }
+    function move(p){
+      if(!isDragging) return;
+      x=p-startX; lastX=p;
+      const w=getWidth();
+      if(w>0){ if(x<=-w){x+=w;startX+=w;} if(x>0){x-=w;startX-=w;} }
+      content.style.transform='translateX('+x+'px)';
+    }
+    function end(){ isDragging=false; }
+    wrapper.addEventListener('mousedown',e=>start(e.pageX));
+    window.addEventListener('mousemove',e=>move(e.pageX));
+    window.addEventListener('mouseup',end);
+    wrapper.addEventListener('touchstart',e=>start(e.touches[0].pageX),{passive:true});
+    window.addEventListener('touchmove',e=>move(e.touches[0].pageX),{passive:true});
+    window.addEventListener('touchend',end);
+  })();
+});
+</script>
+<script>
+  (function () {
+    function fitVilla() {
+      document.querySelectorAll('.villa-fit').forEach(function (fit) {
+        var canvas = fit.querySelector('.villa-canvas');
+        if (!canvas) return;
+        var s = fit.clientWidth / 1400;
+        canvas.style.transform = 'scale(' + s + ')';
+      });
+    }
+    if ('ResizeObserver' in window) {
+      var ro = new ResizeObserver(fitVilla);
+      document.querySelectorAll('.villa-fit').forEach(function (f) { ro.observe(f); });
+    }
+    window.addEventListener('resize', fitVilla);
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fitVilla); else fitVilla();
+    window.addEventListener('load', fitVilla);
+  })();
+</script>
+
+<script>
+var QZ_CONFIG={SUPABASE_URL:"https://bgiljrygqvlgwsrjvhnp.supabase.co",SUPABASE_KEY:"sb_publishable_Yuu6gXfuXNQdgWkdIqfU9Q_hmNyX3kH",FALLBACK_EMAIL:"hello@741.studio",FALLBACK_CC:"martin@741.studio",QUELLE:"Google Ads LP \u2013 Bali Web Design (EN)"};
+(function(){
+  var steps=[
+    { key:'branche', type:'options', q:'What kind of business is the website for?', sub:'So the review is judged against the right benchmark.',
+      opts:[{v:'Restaurant / Bar / Cafe',t:'Restaurant, bar or cafe'},{v:'Villa / Accommodation',t:'Villa or accommodation'},{v:'Wellness / Fitness / Spa',t:'Wellness, fitness or spa'},{v:'Clinic / Health',t:'Clinic or health practice'},{v:'Tours / Activities',t:'Tours or activities'},{v:'Retail / Other',t:'Retail or something else'}]},
+    { key:'bewertungen', type:'options', q:'What bothers you most about your current website?', sub:'Pick the one that annoys you the most.',
+      opts:[{v:'Main issue: too slow',t:'It is too slow'},{v:'Main issue: looks outdated',t:'It looks outdated'},{v:'Main issue: no bookings or enquiries',t:'It does not bring bookings or enquiries'},{v:'Main issue: cannot edit it myself',t:'I cannot change anything myself'},{v:'Main issue: no website yet',t:'I do not have a website yet'}]},
+    { key:'akquise', type:'options', q:'How do people book or enquire with you today?', sub:'This is usually where most of the loss sits.',
+      opts:[{v:'Bookings: direct on our website',t:'Directly on our website'},{v:'Bookings: mostly via OTAs/platforms',t:'Mostly through platforms (Booking, Airbnb, GetYourGuide)'},{v:'Bookings: WhatsApp or Instagram DM',t:'WhatsApp or Instagram DM'},{v:'Bookings: walk-in or phone only',t:'Walk-in or phone only'}]},
+    { key:'ziel', type:'options', q:'How many more bookings a month would actually make a difference?', sub:'This tells us what the site has to be worth to you.',
+      opts:[{v:'A handful',t:'A handful would already help'},{v:'10-25 per month',t:'Around 10 to 25 a month'},{v:'25-50 per month',t:'Around 25 to 50 a month'},{v:'50+ per month',t:'More than 50 a month'}]},
+    { key:'standort', type:'input', q:'Your business and where it is', sub:'So I can check it against what is around you.',
+      fields:[{name:'praxisname',label:'Business name',ph:'e.g. Sunset Villa Canggu',type:'text',required:true},{name:'stadt',label:'Area',ph:'e.g. Canggu, Bali',type:'text',required:true}]},
+    { key:'kontakt', type:'contact', q:'Where should the review go?', sub:'A personal video walkthrough, delivered on WhatsApp and email.',
+      fields:[{name:'domain',label:'Your website (leave blank if you do not have one yet)',ph:'e.g. www.yourbusiness.com',type:'text',required:false},{name:'name',label:'Your name',ph:'First and last name',type:'text',required:true},{name:'email',label:'Email',ph:'name@business.com',type:'email',required:true},{name:'telefon',label:'WhatsApp number',ph:'+62 ...',type:'tel',required:true}]}
+  ];
+  var answers={},idx=0;
+  var overlay=document.getElementById('qzOverlay'),body=document.getElementById('qzBody'),bar=document.getElementById('qzBar'),
+      stepLabel=document.getElementById('qzStepLabel'),nav=document.getElementById('qzNav'),btnBack=document.getElementById('qzBack'),
+      btnNext=document.getElementById('qzNext'),errBox=document.getElementById('qzErr');
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+  function render(){
+    var s=steps[idx];errBox.className='qz-err';
+    bar.style.width=Math.round(((idx+1)/steps.length)*100)+'%';
+    stepLabel.textContent='Step '+(idx+1)+' of '+steps.length;
+    btnBack.style.visibility=idx===0?'hidden':'visible';
+    var h='<h3>'+esc(s.q)+'</h3><p class="qz-sub">'+esc(s.sub)+'</p>';
+    if(s.type==='options'){
+      btnNext.style.display='none';h+='<div class="qz-opts">';
+      s.opts.forEach(function(o){h+='<button type="button" class="qz-opt" data-v="'+esc(o.v)+'">'+esc(o.t)+'</button>';});
+      h+='</div>';
+    }else{
+      btnNext.style.display='inline-block';
+      btnNext.textContent=(s.type==='contact')?'Get my free site review \u2192':'Next \u2192';
+      s.fields.forEach(function(f){
+        h+='<label for="qzf_'+f.name+'">'+esc(f.label)+(f.required?'':' <span style="font-weight:400;color:#8a8a8a">(optional)</span>')+'</label>';
+        h+='<input id="qzf_'+f.name+'" name="'+f.name+'" type="'+f.type+'" placeholder="'+esc(f.ph)+'" value="'+esc(answers[f.name]||'')+'">';
+      });
+      if(s.type==='contact'){h+='<div class="qz-consent"><input type="checkbox" id="qzConsent"><label for="qzConsent" style="margin:0;font-weight:400;">I agree that my details will be processed to create and deliver my free review (via email/WhatsApp). <a href="/pages/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a></label></div>';}
+    }
+    body.innerHTML=h;
+    if(s.type==='options'){body.querySelectorAll('.qz-opt').forEach(function(b){b.addEventListener('click',function(){answers[s.key]=b.getAttribute('data-v');next();});});}
+    var f=body.querySelector('input[type=text],input[type=email],input[type=tel]');if(f)f.focus();
+  }
+  function showErr(m){errBox.textContent=m;errBox.className='qz-err show';}
+  function validate(){
+    var s=steps[idx];if(s.type==='options')return true;var ok=true;
+    s.fields.forEach(function(f){
+      var el=document.getElementById('qzf_'+f.name),v=el?el.value.trim():'';answers[f.name]=v;
+      if(f.required&&!v)ok=false;
+      if(f.type==='email'&&v&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v))ok=false;
+      if(f.type==='tel'&&v&&v.replace(/[^0-9]/g,'').length<7)ok=false;
+    });
+    if(!ok){showErr('Please fill in all required fields correctly.');return false;}
+    if(s.type==='contact'){var c=document.getElementById('qzConsent');if(!c||!c.checked){showErr('Please confirm the privacy consent.');return false;}}
+    return true;
+  }
+  function next(){errBox.className='qz-err';if(idx<steps.length-1){idx++;render();}else{submit();}}
+  function payload(){return{quelle:QZ_CONFIG.QUELLE,seite:location.href,branche:answers.branche||'',akquise:answers.akquise||'',bewertungen:answers.bewertungen||'',ziel:answers.ziel||'',stadt:answers.stadt||'',domain:answers.domain||'',praxisname:answers.praxisname||'',name:answers.name||'',email:answers.email||'',telefon:answers.telefon||''};}
+  function submit(){
+    btnNext.disabled=true;btnNext.textContent='Sending \u2026';
+    var p=payload();
+    var gaLead=function(){try{gtag('event','conversion',{'send_to':'AW-564129015/c-PSCOG1utgcEPfZ_4wC'});}catch(e){}};
+    var done=function(){try{fbq('track','Lead');}catch(e){}gaLead();success();};
+    var fallback=function(){try{fbq('track','Lead');}catch(e){}gaLead();var b=Object.keys(p).map(function(k){return k+': '+p[k];}).join('%0D%0A');window.open('mailto:'+QZ_CONFIG.FALLBACK_EMAIL+'?cc='+QZ_CONFIG.FALLBACK_CC+'&subject=New%20Bali%20Website%20Review%20Request&body='+b,'_blank');success();};
+    fetch(QZ_CONFIG.SUPABASE_URL+'/rest/v1/advertorial_leads',{method:'POST',headers:{'Content-Type':'application/json','apikey':QZ_CONFIG.SUPABASE_KEY,'Prefer':'return=minimal'},body:JSON.stringify(p)}).then(function(r){r.ok?done():fallback();}).catch(fallback);
+  }
+  function success(){
+    errBox.className='qz-err';bar.style.width='100%';stepLabel.textContent='Done';nav.style.display='none';
+    body.innerHTML='<div class="qz-success" style="text-align:center">'+
+      '<svg width="72" height="72" viewBox="0 0 72 72"><circle cx="36" cy="36" r="34" fill="#fac118"/><path d="M21 37 L32 48 L52 26" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>'+
+      '<h3>Thanks, '+esc((answers.name||'').split(' ')[0])+'.</h3><div class="qz-timer">Delivered within 24 hours</div>'+'<p>I am going through your site <b>on camera</b>: what it costs a visitor on a phone here, how the booking path holds up, what Google reads from it, and what I would fix first.</p>'+
+      '<p>It will reach you on <b>WhatsApp</b> at '+esc(answers.telefon||'')+' and by <b>email</b> at '+esc(answers.email||'')+'.</p>'+
+      '<p style="text-align:center;margin-top:18px;">Want to talk it through first? <a href="https://calendly.com/martin-233/15-minute-meeting?back=1" target="_blank" rel="noopener" style="font-weight:700;color:#111;">Book a free 20-minute call</a></p></div>';
+  }
+  function open(){idx=0;nav.style.display='flex';btnNext.disabled=false;overlay.classList.add('open');document.body.style.overflow='hidden';try{fbq('trackCustom','QuizOpened');}catch(e){}render();}
+  function close(){overlay.classList.remove('open');document.body.style.overflow='';}
+  document.getElementById('qzClose').addEventListener('click',close);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)close();});
+  btnBack.addEventListener('click',function(){if(idx>0){idx--;render();}});
+  btnNext.addEventListener('click',function(){if(validate())next();});
+  document.querySelectorAll('[data-qz]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();open();});});
+  document.querySelectorAll('[data-call]').forEach(function(a){if(a.getAttribute('href')==='#')a.style.display='none';});
+})();
+</script>
+</body>
+</html>
