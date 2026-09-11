@@ -1,0 +1,388 @@
+<!-- ============================================================
+  PRAXIS HÜWEL · FREQUENZTHERAPIE (Methodenseite)
+  One-Section-Build für das Backend (Seite: "Frequenztherapie New")
+  Alles in EINER Section einfügen: Styles + HTML + FAQ-Schema.
+  Quelle Text: freigegebener Entwurf 09.09.2026 (741 Studio)
+  ============================================================ -->
+<section class="fqt" id="frequenztherapie">
+<style>
+  .fqt{--ink:#22302b;--muted:#5b6b64;--accent:#2f6f5e;--accent-dark:#245348;--accent-soft:#e8f1ed;--gold:#b98a4b;--bg:#faf8f4;--card:#ffffff;--line:#e4e0d7;--radius:18px;
+    font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px;
+    margin:0;padding:0;display:block}
+  .fqt *{box-sizing:border-box;margin:0;padding:0}
+  .fqt .fqt-wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .fqt h1,.fqt h2,.fqt h3{font-family:Georgia,'Times New Roman',serif;font-weight:600;line-height:1.25;color:var(--ink)}
+  .fqt h2{font-size:clamp(26px,4vw,34px);margin-bottom:18px}
+  .fqt h3{font-size:20px}
+  .fqt p{margin-bottom:14px}
+  .fqt a{color:var(--accent);text-decoration:none}
+  .fqt a:hover{text-decoration:underline}
+  .fqt .fqt-eyebrow{display:inline-block;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:7px 16px;margin-bottom:20px}
+  .fqt section{padding:0}
+  .fqt .fqt-block{padding:64px 0}
+  .fqt .fqt-block--alt{background:#f2efe8}
+
+  /* HERO */
+  .fqt-hero{background:linear-gradient(160deg,#1e3d34 0%,#2f6f5e 70%,#3d8571 100%);color:#fff;padding:84px 0 72px;position:relative;overflow:hidden}
+  .fqt-hero::after{content:"";position:absolute;right:-140px;top:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.14),rgba(255,255,255,0) 70%)}
+  .fqt-hero .fqt-eyebrow{background:rgba(255,255,255,.14);color:#dcefe7}
+  .fqt-hero h1{font-size:clamp(30px,5vw,46px);color:#fff;max-width:820px;margin-bottom:22px}
+  .fqt-hero .fqt-lead{font-size:18.5px;color:#e7f1ec;max-width:800px;margin-bottom:30px}
+  .fqt-cta{display:inline-block;background:var(--gold);color:#fff;font-weight:700;font-size:17px;border-radius:999px;padding:15px 32px;box-shadow:0 8px 22px rgba(0,0,0,.22);transition:transform .15s ease,box-shadow .15s ease}
+  .fqt-cta:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.28);text-decoration:none;color:#fff}
+  .fqt-cta--ghost{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.45);box-shadow:none;margin-left:12px}
+  .fqt-hero .fqt-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .fqt-hero .fqt-chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:8px 16px;font-size:14px;color:#eaf4ef}
+
+  /* DEFINITION BOX */
+  .fqt-defbox{background:var(--card);border-left:5px solid var(--accent);border-radius:var(--radius);box-shadow:0 10px 30px rgba(34,48,43,.08);padding:34px 38px;margin-top:-46px;position:relative;z-index:2}
+  .fqt-defbox h3{color:var(--accent);margin-bottom:10px}
+  .fqt-defbox p{margin-bottom:0}
+
+  /* CARDS */
+  .fqt-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:34px}
+  .fqt-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 6px 18px rgba(34,48,43,.05);transition:transform .15s ease,box-shadow .15s ease}
+  .fqt-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(34,48,43,.10)}
+  .fqt-card h3{margin-bottom:10px;font-size:19px}
+  .fqt-card p{margin-bottom:0;color:var(--muted);font-size:16px}
+  .fqt-ico{width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+
+  /* PILLS */
+  .fqt-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .fqt-pill{background:var(--accent-soft);color:var(--accent-dark);border-radius:999px;padding:7px 16px;font-size:14.5px;font-weight:600}
+
+  /* CHECKLIST */
+  .fqt-check{list-style:none;margin-top:22px;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .fqt-check li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 52px;position:relative;font-weight:600}
+  .fqt-check li::before{content:"✓";position:absolute;left:18px;top:14px;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center}
+
+  /* STEPS */
+  .fqt-steps{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:34px;counter-reset:fqtstep}
+  .fqt-step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;position:relative}
+  .fqt-step::before{counter-increment:fqtstep;content:counter(fqtstep);position:absolute;top:-18px;left:24px;width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(47,111,94,.35)}
+  .fqt-step h3{margin:8px 0 10px}
+  .fqt-step p{margin-bottom:0;color:var(--muted);font-size:16px}
+
+  /* BENEFITS */
+  .fqt-benefits{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:30px}
+  .fqt-benefit{background:linear-gradient(150deg,var(--accent) 0%,var(--accent-dark) 100%);color:#fff;border-radius:var(--radius);padding:26px 24px;font-weight:700;font-size:17px}
+  .fqt-benefit span{display:block;font-size:26px;margin-bottom:10px}
+
+  /* SPLIT */
+  .fqt-split{display:grid;gap:34px;grid-template-columns:1fr 1fr;align-items:start;margin-top:10px}
+  @media(max-width:820px){.fqt-split{grid-template-columns:1fr}}
+
+  /* KOSTEN */
+  .fqt-price{background:var(--card);border:2px solid var(--accent);border-radius:var(--radius);padding:32px 34px;max-width:640px}
+  .fqt-price .fqt-price-tag{display:inline-block;background:var(--accent);color:#fff;border-radius:999px;padding:6px 18px;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
+
+  /* FAQ */
+  .fqt-faq{max-width:820px;margin:34px auto 0}
+  .fqt-faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+  .fqt-faq summary{cursor:pointer;list-style:none;padding:20px 56px 20px 24px;font-weight:700;font-size:17px;position:relative}
+  .fqt-faq summary::-webkit-details-marker{display:none}
+  .fqt-faq summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:19px;display:flex;align-items:center;justify-content:center;transition:transform .2s ease}
+  .fqt-faq details[open] summary::after{content:"–";transform:translateY(-50%)}
+  .fqt-faq details p{padding:0 24px 20px;color:var(--muted);margin:0}
+
+  /* BEHANDLER */
+  .fqt-doc{display:flex;gap:26px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 34px;max-width:820px;margin:0 auto;flex-wrap:wrap}
+  .fqt-doc .fqt-doc-badge{width:84px;height:84px;border-radius:50%;background:linear-gradient(150deg,var(--accent),var(--accent-dark));color:#fff;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:30px;flex:0 0 auto}
+  .fqt-doc p{margin-bottom:6px}
+
+  /* FINAL CTA */
+  .fqt-final{background:linear-gradient(160deg,#1e3d34,#2f6f5e);color:#fff;border-radius:calc(var(--radius) + 6px);padding:56px 40px;text-align:center;box-shadow:0 18px 44px rgba(30,61,52,.30)}
+  .fqt-final h2{color:#fff}
+  .fqt-final p{color:#e7f1ec;max-width:640px;margin:0 auto 26px}
+  .fqt-final .fqt-sub{font-size:15px;color:#cfe4db;margin-top:18px;margin-bottom:0}
+
+  /* HWG */
+  .fqt-hwg{border:1px dashed var(--line);border-radius:14px;background:#f6f3ec;padding:22px 26px;font-size:14px;color:var(--muted);max-width:900px;margin:44px auto 0}
+  .fqt-hwg strong{color:var(--ink)}
+
+  @media(max-width:600px){
+    .fqt-hero{padding:64px 0 56px}
+    .fqt .fqt-block{padding:48px 0}
+    .fqt-defbox{padding:26px 22px;margin-top:-30px}
+    .fqt-cta--ghost{margin-left:0;margin-top:12px}
+  }
+</style>
+
+<!-- ================= HERO ================= -->
+<div class="fqt-hero">
+  <div class="fqt-wrap">
+    <span class="fqt-eyebrow">Methoden als Werkzeuge · Ondamed / PEMF</span>
+    <h1>Frequenztherapie in Nürnberg – Ondamed/PEMF bei Heilpraktiker Martin&nbsp;Hüwel</h1>
+    <p class="fqt-lead">Frequenztherapie (Ondamed/PEMF) ist eines meiner vier naturheilkundlichen Werkzeuge und mein zentrales apparatives Verfahren: Über ein breites Spektrum pulsierender elektromagnetischer Felder teste ich individuell aus, welche Impulse Ihr Körper aktuell braucht, und wende die passenden Frequenzen in derselben Sitzung an. Ich setze sie vor allem dort ein, wo Beschwerden immer wiederkehren, schwer greifbar sind oder bisherige Behandlungen nicht den gewünschten Erfolg gebracht haben — zum Beispiel bei Schmerzen im Schulter- und Nackenbereich, Rückenbeschwerden, Migräne oder PostVac-Erschöpfung.</p>
+    <a class="fqt-cta" href="/kontakt.html">▸ Jetzt Erstgespräch vereinbaren</a>
+    <a class="fqt-cta fqt-cta--ghost" href="tel:09116007651">☎ 0911 6007651</a>
+    <div class="fqt-chips">
+      <span class="fqt-chip">📍 Nürbanum · Allersberger Straße 185 · Nürnberg-Südstadt</span>
+      <span class="fqt-chip">🕗 Mo–Sa 8–20 Uhr · So 10–22 Uhr</span>
+      <span class="fqt-chip">✓ Sanft &amp; schmerzfrei</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= DEFINITION ================= -->
+<div class="fqt-wrap">
+  <div class="fqt-defbox">
+    <h3>Was ist Frequenztherapie?</h3>
+    <p>Frequenztherapie ist ein apparatives, biofeedback-gestütztes Verfahren (Ondamed/PEMF), das mit dem elektrischen Regulationssystem des Körpers arbeitet — statt ausschließlich biochemisch anzusetzen. Über eine Biofeedback-Messung wird getestet, wo Belastungen oder Störungen vorliegen und welche Frequenzen der Körper aktuell benötigt; diese werden anschließend gezielt und individuell angewendet. Es handelt sich nicht um ein Standardprogramm, sondern um eine an Ihre aktuelle Situation angepasste Behandlung.</p>
+  </div>
+</div>
+
+<!-- ================= FÜR WEN ================= -->
+<div class="fqt-block">
+  <div class="fqt-wrap">
+    <span class="fqt-eyebrow">Einsatzbereiche</span>
+    <h2>Für wen die Frequenztherapie infrage kommt</h2>
+    <div class="fqt-grid">
+      <div class="fqt-card">
+        <div class="fqt-ico">💆</div>
+        <h3>Schmerzen im Schulter- und Nackenbereich</h3>
+        <p>Akute Schmerzbehandlung, Narbenentstörung sowie Unterstützung bei akuten und chronischen Entzündungen.</p>
+      </div>
+      <div class="fqt-card">
+        <div class="fqt-ico">🏃</div>
+        <h3>Sportverletzungen, Verletzung und Überlastung</h3>
+        <p>Nach Verletzungen wie einem Sturz, einem Autounfall oder einer Sportverletzung — ebenso bei Überlastung durch plötzliche, schwere Belastung oder durch häufige Wiederholung einseitiger Bewegungen.</p>
+      </div>
+      <div class="fqt-card">
+        <div class="fqt-ico">🧠</div>
+        <h3>Kopfschmerzen und Migräne</h3>
+        <p>Migräne ist eine neurologische Erkrankung mit wiederkehrenden Kopfschmerzattacken. Die Frequenztherapie kann hier begleitend zum Einsatz kommen.</p>
+      </div>
+      <div class="fqt-card">
+        <div class="fqt-ico">🦴</div>
+        <h3>Rückenschmerzen und ihre Ursachen</h3>
+        <p>Dazu zählen Muskelverspannungen — verursacht durch langes Sitzen, falsche Körperhaltung, mangelnde Bewegung, schwere körperliche Arbeit oder Stress — sowie ein Bandscheibenvorfall, bei dem der weiche Kern einer Bandscheibe durch den äußeren Ring heraustritt und auf Nervenwurzeln im Rückenmark drückt; das kann zu starken Rückenschmerzen führen, insbesondere im Bereich der Lendenwirbelsäule.</p>
+      </div>
+      <div class="fqt-card">
+        <div class="fqt-ico">🔋</div>
+        <h3>PostVac-Beschwerden, Long Covid, ME/CFS</h3>
+        <p>Bei chronischer Erschöpfung mit immunologischer Beteiligung suchen viele Patientinnen und Patienten nach begleitender Unterstützung — auch hierfür kann die Frequenztherapie ein Baustein sein.</p>
+      </div>
+    </div>
+    <div class="fqt-card" style="margin-top:22px">
+      <h3>Begleitung bei LWS-Diagnosen</h3>
+      <p>Bei starken Schmerzen im Bereich der Lendenwirbelsäule begleite ich unter anderem folgende Diagnosen:</p>
+      <div class="fqt-pills">
+        <span class="fqt-pill">Spinalkanalstenose</span>
+        <span class="fqt-pill">Degeneratives LWS-Syndrom</span>
+        <span class="fqt-pill">Osteoporose mit oder ohne Wirbelkörperfraktur</span>
+        <span class="fqt-pill">Osteochondrose</span>
+        <span class="fqt-pill">Bandscheibenprotrusionen</span>
+        <span class="fqt-pill">Bandscheibenvorfälle</span>
+        <span class="fqt-pill">Lumbago</span>
+        <span class="fqt-pill">Ischialgie</span>
+        <span class="fqt-pill">Lumboischialgie</span>
+        <span class="fqt-pill">Neuralgien (Nervenschmerzen, z.&nbsp;B. Polyneuropathie)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= WANN SINNVOLL ================= -->
+<div class="fqt-block fqt-block--alt">
+  <div class="fqt-wrap">
+    <span class="fqt-eyebrow">Orientierung</span>
+    <h2>Wann die Frequenztherapie sinnvoll sein kann</h2>
+    <p>Ich setze sie besonders dann ein, wenn:</p>
+    <ul class="fqt-check">
+      <li>Schmerzen immer wieder auftreten</li>
+      <li>Beschwerden schwer greifbar oder wechselhaft sind</li>
+      <li>bisherige Behandlungen nicht den gewünschten Erfolg gebracht haben</li>
+      <li>der Körper Unterstützung bei der Regulation braucht</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ================= ABLAUF ================= -->
+<div class="fqt-block">
+  <div class="fqt-wrap">
+    <span class="fqt-eyebrow">Ablauf</span>
+    <h2>Wie die Behandlung abläuft</h2>
+    <div class="fqt-steps">
+      <div class="fqt-step">
+        <h3>Testen</h3>
+        <p>Ihr Körper wird mit einem breiten Spektrum an Frequenzen getestet.</p>
+      </div>
+      <div class="fqt-step">
+        <h3>Messen</h3>
+        <p>Über eine Biofeedback-Messung zeigt sich, wo Belastungen oder Störungen liegen und welche Impulse Ihr Körper aktuell benötigt.</p>
+      </div>
+      <div class="fqt-step">
+        <h3>Anwenden</h3>
+        <p>Die passenden Frequenzen werden direkt in derselben Sitzung angewendet — individuell abgestimmt auf Ihren aktuellen Zustand.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= NUTZEN ================= -->
+<div class="fqt-block fqt-block--alt">
+  <div class="fqt-wrap">
+    <span class="fqt-eyebrow">Ihr Nutzen</span>
+    <h2>Was Sie konkret davon haben</h2>
+    <p>Ziel der Behandlung ist, dass Ihr Körper wieder besser regulieren kann. Das kann sich zeigen durch:</p>
+    <div class="fqt-benefits">
+      <div class="fqt-benefit"><span>🌿</span>weniger Schmerzen</div>
+      <div class="fqt-benefit"><span>🤸</span>mehr Beweglichkeit</div>
+      <div class="fqt-benefit"><span>⚡</span>schnellere Erholung</div>
+      <div class="fqt-benefit"><span>🧘</span>ein stabileres Körpergefühl</div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ANSATZ + KOSTEN ================= -->
+<div class="fqt-block">
+  <div class="fqt-wrap">
+    <div class="fqt-split">
+      <div>
+        <span class="fqt-eyebrow">Mein Ansatz</span>
+        <h2>Keine Standard&shy;programme</h2>
+        <p>Jede Sitzung richtet sich nach dem, was Ihr Körper an diesem Tag braucht. Keine Standardprogramme — sondern eine gezielte, flexible Therapie, die sich an Ihrer aktuellen Situation orientiert.</p>
+        <p>Unser Körper arbeitet nicht nur biochemisch, sondern auch über elektrische Signale und Regulation. Die Frequenztherapie nutzt genau diesen Ansatz, um gestörte Prozesse gezielt zu unterstützen. Wenn Ihr Körper immer wieder „aus dem Gleichgewicht gerät", lohnt es sich, genauer hinzuschauen.</p>
+      </div>
+      <div>
+        <span class="fqt-eyebrow">Kosten</span>
+        <div class="fqt-price">
+          <span class="fqt-price-tag">Paket A · Frequenztherapie Basis</span>
+          <h3>Transparente Preise</h3>
+          <p style="margin-top:10px">Die Frequenztherapie ist Teil von Paket A (Frequenztherapie Basis). Die aktuellen Preise finden Sie auf der <a href="/">Startseite</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= STANDORT ================= -->
+<div class="fqt-block fqt-block--alt">
+  <div class="fqt-wrap">
+    <span class="fqt-eyebrow">Standort</span>
+    <h2>Frequenztherapie in Nürnberg und Umgebung</h2>
+    <p style="max-width:820px">Meine Praxis liegt im Nürbanum in der Nürnberger Südstadt, Allersberger Straße 185, Gebäude A7, 3.&nbsp;OG. Termine gibt es Montag bis Samstag von 8 bis 20 Uhr sowie sonntags — auch für Berufstätige machbar. Zu mir kommen Patientinnen und Patienten aus dem gesamten Nürnberger Raum, auch aus Erlangen, Fürth und Schwabach.</p>
+  </div>
+</div>
+
+<!-- ================= FAQ ================= -->
+<div class="fqt-block">
+  <div class="fqt-wrap">
+    <div style="text-align:center">
+      <span class="fqt-eyebrow">FAQ</span>
+      <h2>Häufige Fragen zur Frequenztherapie</h2>
+    </div>
+    <div class="fqt-faq">
+      <details>
+        <summary>Was ist Frequenztherapie (Ondamed/PEMF)?</summary>
+        <p>Ein apparatives, biofeedback-gestütztes Verfahren, das mit pulsierenden elektromagnetischen Feldern und dem elektrischen Regulationssystem des Körpers arbeitet — individuell ausgetestet statt nach festem Programm.</p>
+      </details>
+      <details>
+        <summary>Ist die Frequenztherapie schmerzhaft?</summary>
+        <p>Nein. Die Anwendung ist sanft und schmerzfrei.</p>
+      </details>
+      <details>
+        <summary>Bei welchen Beschwerden setzen Sie die Frequenztherapie ein?</summary>
+        <p>Unter anderem bei Schulter- und Nackenschmerzen, Sportverletzungen, Kopfschmerzen und Migräne, Rückenschmerzen und LWS-Diagnosen sowie bei PostVac-Beschwerden wie Long Covid oder ME/CFS. Ob sie im Einzelfall sinnvoll ist, kläre ich im Erstgespräch.</p>
+      </details>
+      <details>
+        <summary>Wie läuft eine Sitzung ab?</summary>
+        <p>Ihr Körper wird mit einem breiten Frequenzspektrum getestet. Eine Biofeedback-Messung zeigt, welche Impulse aktuell sinnvoll sind — die passenden Frequenzen wende ich direkt in derselben Sitzung an.</p>
+      </details>
+      <details>
+        <summary>Ersetzt die Frequenztherapie eine ärztliche Behandlung?</summary>
+        <p>Nein. Meine Arbeit ergänzt die ärztliche Versorgung und ersetzt keine ärztliche Diagnose oder Behandlung.</p>
+      </details>
+    </div>
+  </div>
+</div>
+
+<!-- ================= BEHANDLER ================= -->
+<div class="fqt-block fqt-block--alt">
+  <div class="fqt-wrap">
+    <div class="fqt-doc">
+      <div class="fqt-doc-badge">MH</div>
+      <div>
+        <h3>Ihr Behandler</h3>
+        <p>Ich bin Martin Hüwel, Heilpraktiker in Nürnberg mit über 30 Jahren Erfahrung in Medizin und Naturheilkunde — mit Klinik-Hintergrund und fundierter Ausbildung.</p>
+        <a href="/ueber-mich.html">→ Mehr über mich</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ABSCHLUSS-CTA ================= -->
+<div class="fqt-block">
+  <div class="fqt-wrap">
+    <div class="fqt-final">
+      <h2>Schmerzen oder Beschwerden, die einfach nicht verschwinden?</h2>
+      <p>Im Erstgespräch klären wir gemeinsam, ob die Frequenztherapie für Sie sinnvoll ist — in Ruhe und ohne Verkaufsdruck.</p>
+      <a class="fqt-cta" href="/kontakt.html">▸ Jetzt Erstgespräch vereinbaren</a>
+      <p class="fqt-sub">☎ <a href="tel:09116007651" style="color:#fff">0911 6007651</a> · Termine Mo–Sa 8–20 Uhr, So 10–22 Uhr</p>
+    </div>
+
+    <div class="fqt-hwg">
+      <strong>Hinweis:</strong> Die Frequenztherapie ist wissenschaftlich umstritten und wird von der Schulmedizin nicht allgemein anerkannt. Die Angaben beschreiben die Methode und Arbeitsweise; sie stellen kein Heilversprechen dar, ersetzen keine ärztliche Diagnose und keinen Arztbesuch. Ergebnisse sind individuell — insbesondere bei Long Covid und ME/CFS ist keine Heilung oder bestimmte Wirkung zugesichert.
+    </div>
+  </div>
+</div>
+
+<!-- ================= FAQ SCHEMA (SEO/GEO) ================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was ist Frequenztherapie (Ondamed/PEMF)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ein apparatives, biofeedback-gestütztes Verfahren, das mit pulsierenden elektromagnetischen Feldern und dem elektrischen Regulationssystem des Körpers arbeitet — individuell ausgetestet statt nach festem Programm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist die Frequenztherapie schmerzhaft?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Die Anwendung ist sanft und schmerzfrei."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bei welchen Beschwerden setzen Sie die Frequenztherapie ein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unter anderem bei Schulter- und Nackenschmerzen, Sportverletzungen, Kopfschmerzen und Migräne, Rückenschmerzen und LWS-Diagnosen sowie bei PostVac-Beschwerden wie Long Covid oder ME/CFS. Ob sie im Einzelfall sinnvoll ist, kläre ich im Erstgespräch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie läuft eine Sitzung ab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ihr Körper wird mit einem breiten Frequenzspektrum getestet. Eine Biofeedback-Messung zeigt, welche Impulse aktuell sinnvoll sind — die passenden Frequenzen wende ich direkt in derselben Sitzung an."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ersetzt die Frequenztherapie eine ärztliche Behandlung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Meine Arbeit ergänzt die ärztliche Versorgung und ersetzt keine ärztliche Diagnose oder Behandlung."
+      }
+    }
+  ]
+}
+</script>
+</section>
+<!-- ============================================================
+  META-DATEN — im Backend in den Seiteneinstellungen setzen:
+  Title-Tag: Frequenztherapie Nürnberg (Ondamed/PEMF) | Praxis Hüwel
+  Meta-Description: Frequenztherapie (Ondamed/PEMF) bei Heilpraktiker
+  Martin Hüwel in Nürnberg: individuell ausgetestet bei Schmerzen,
+  Migräne & Erschöpfung. Termine ☎ 0911 6007651
+  ============================================================ -->
