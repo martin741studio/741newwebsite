@@ -32,7 +32,7 @@ The output per client is a **target list**, an **outreach run**, a **buy shortli
 5. The agent stops only at the 3 checkpoints and at a failed gate. Between checkpoints it runs without asking.
 6. **Competitor analysis is required.** This is the opposite of the CRO workflow. The top 5 local competitors give the link gap. Competitor link sources are the first targets.
 7. Method sources are never named in client-facing files. The library is called "741 Link-Raster".
-8. **No mail leaves without Martin's go.** The agent drafts all mails. Martin approves each batch at checkpoint 2. Then the agent sends through Airmailer.
+8. **The agent never sends outreach.** It drafts every mail and prepares the batch in the Sheet. Martin or the team approves per row and sends manually (decided 2026-10-11, after the Hüwel pilot) — through Airmailer, each from the address decided in section 7. The agent's job ends at "ready to send"; a human updates the Status column after each real send and reply.
 9. **No payment without Martin's go.** The agent prepares the buy shortlist. Martin pays. The agent then tracks delivery.
 10. **Legal in DACH:** a paid link or a sponsored article must be marked as Werbung or Anzeige where the law requires it. The agent flags every paid placement with `[KENNZEICHNUNG]`. A seller who refuses the mark is dropped.
 11. **Health mode (HWG):** for health clients, no guest post or PR text makes a healing promise. The HWG check from the CRO workflow applies to every text that leaves the agent.
@@ -98,12 +98,38 @@ Drive folder: `Local SEO/<Client name>/Backlinks/`. At every checkpoint the agen
 
 **Order of work per client:** A (already running) → B → D → C → E. Free and local first. Paid last, only to close the gap that B and D cannot close.
 
+### 3.0 Pillar A — the niche-directory part this workflow owns
+
+The Citations module (`citations-listings-module`) owns NAP consistency on the ~90 general DACH directories (Gelbe Seiten, Das Örtliche, Cylex, …) and the big aggregators (GBP, Bing, Apple). It does **not** own industry-specific free directories — those are free backlinks, not NAP infrastructure, and nobody researches them unless this workflow does.
+
+**Known gap (found on the Hüwel pilot, 2026-10-10):** the master `directories` table has a `health` category with 7 entries (jameda, Doctolib, theralupa, arzt-auskunft, DocInsider, sanego, Heilpraktiker.de) — all correctly assigned to Hüwel, all sitting on status `planned`, none live. A free, industry-exact backlink that is already identified and already in the database is worth more than a new one that still needs finding. **Rule: before any new target research, check `client_citations` for the client's industry category and flag every non-`live` row as a Priority-0 target — zero research cost, it is already done.**
+
+**Process A — researching new niche directories (run once per industry, reused across clients in that industry):**
+
+1. Search query templates (swap `[Branche]` for the client's exact profession, try plural and singular):
+   - `"[Branche]" Verzeichnis kostenlos eintragen Deutschland`
+   - `[Branche]suche OR Therapeutensuche [Spezialisierung] Verzeichnis`
+   - `Berufsverband [Branche] Mitgliederliste OR Therapeutensuche`
+   - `"[Branche]" Verzeichnis Krankenkasse OR Zusatzversicherung` (insurance-run directories exist for regulated health professions)
+   - `inurl:verzeichnis OR inurl:suche [Branche] [Bundesland]`
+2. For every hit, verify before adding to the target list: (a) real self-submission exists (not a paid data-broker product like a scraped address list), (b) free or cost stated, (c) the site actually has outbound profile links, not just name+address text, (d) DACH-language and real traffic (quick DataForSEO `backlinks/summary` check — rank 0 with no real signal = skip).
+3. Write every verified hit into `backlink_targets` with `pillar = 'A-niche'` so it is reusable for the next client in the same industry — this is a library, not a one-off list.
+4. Cross-check against the master `directories` table and against the client's existing `client_citations` before adding — never duplicate a row that already exists there under a different name.
+
+**Status:** done once for Heilpraktiker/Naturheilkunde (this pilot). Found beyond the existing 7: `naturheilkunde.de` (Arzt-/Heilpraktikersuche), `dornsteintabelle.de/heilpraktiker` (confirmed free self-registration, insurance-matching list), `aponeo.de` Heilpraktikerverzeichnis (pharmacy-run, many real practices listed). `bdh-online.de/patienten/therapeutensuche/` needs a dedupe check against `bdhn.de` before adding — may be the same association under two domains. Not yet run for any other industry.
+
 ### 3.1 Pillar B — local ecosystem, DACH specifics
+
+**Fixed priority (`rules.md` RH.4) — do not blend with the score, rank in this order first, score within each tier second:**
+
+1. IHK / HWK — only when the client's profession is actually a `Gewerbe` requiring membership. For a `freier Beruf` (Heilpraktiker, Arzt, Architekt, …) this tier does not exist — it is not replaced by the Berufsverband, which stays tier 2.
+2. Berufsverband / niche directory with both trade AND local relevance.
+3. Everything else local, ranked by proximity to the client's own address — closer beats a bigger but farther organisation, because the map pack itself is proximity-based (`rules.md` RH.5).
 
 | Tactic | Where to look | Link type | Note |
 | --- | --- | --- | --- |
-| IHK / HWK | Firmendatenbank of the regional IHK; HWK only for Handwerk | dofollow, high trust | Client must be a member. Usually is. |
-| Berufsverbände | Mitgliederliste of the Fachverband (BDH, FDH, VDH for Heilpraktiker; VPT/IFK for Physio) | dofollow, E-E-A-T | Needs the client's membership number. |
+| IHK / HWK | Firmendatenbank of the regional IHK; HWK only for Handwerk | dofollow, high trust | Tier 1 only if the profession is actually `Gewerbe`-pflichtig — check before assuming. |
+| Berufsverbände | Mitgliederliste of the Fachverband (BDH, FDH, VDH for Heilpraktiker; VPT/IFK for Physio) | dofollow, E-E-A-T | Tier 2 always, never promoted to tier 1 even when IHK does not apply. Needs the client's membership number. |
 | Lokale Presse | Wochenblatt, Stadtmagazin, Lokalteil der Tageszeitung, regional online portals | editorial dofollow | Pitch: opening, expert quote, local event, health day. |
 | Lokale Blogger | "[Stadt] Blog", "[Stadt] Mama Blog", "[Region] Gesundheit Blog" | dofollow or sponsored | Mark sponsored posts. |
 | Vereins-Sponsoring | Sportverein, Kulturverein, Freiwillige Feuerwehr, Schulförderverein | Sponsoren-Seite, dofollow | 100–300 € per year. Cheapest real local link. |
@@ -183,6 +209,7 @@ Max 10. Work targets with 7+ first.
 | Citations status | Yes | Pillar A at 60 % live or higher. Otherwise finish citations first. |
 | Memberships | Recommended | IHK, Verband, Vereine. Ask Martin once. Missing → `[FEHLT: Mitgliedschaften]`. |
 | Client intro possible | Recommended | Can the client send a mail to Verein, Lieferant, Verband? Yes/No. |
+| Review velocity + on-page | Yes | Local backlinks are the lever AFTER review velocity and on-page keywords are solid, not a first move (`rules.md` RH.1). If either is clearly weak, flag `[FEHLT: Grundlagen zuerst]` and recommend that work before this workflow starts. |
 
 **Gate:** All required rows filled or flagged → Step 1. Otherwise stop and list what is missing.
 
@@ -192,39 +219,63 @@ Max 10. Work targets with 7+ first.
 | --- | --- | --- | --- |
 | 1.1 | Own profile: referring domains, DR, dofollow share, anchors, top pages | DataForSEO Backlinks `summary`, `referring_domains`, `anchors` | `profile.md` |
 | 1.2 | Toxic check: spam score, foreign-language domains, PBN patterns | DataForSEO `backlinks` with filters | disavow list if needed |
-| 1.3 | Competitor profiles: same 3 calls for each of the 5 competitors | DataForSEO | `competitors.md` |
-| 1.4 | Link gap: domains that link to 2+ competitors and not to the client | DataForSEO `domain_intersection` | `gap.md`, ranked |
-| 1.5 | Local source scan: IHK, Verbände, Vereine, Presse, Stadtportale for the city | Firecrawl search + built-in browser | source list |
-| 1.6 | Unlinked mentions: brand name, practitioner name, phone number in quotes | DataForSEO Content Analysis, Google | `05-pr/mentions.md` |
-| 1.7 | Existing 741 data: citations status, NAP record, portal texts | Supabase, `00_project/assets/<slug>/` | links and facts |
+| 1.3 | Competitor backlink analysis — **Process B below** | DataForSEO | `competitors.md`, `gap.md` |
+| 1.4 | Citations status check — every `client_citations` row for the client's industry category that is not `live` is a Priority-0 target (section 3.0) | Supabase | folded into `02-targets/targets.md` |
+| 1.5 | Niche directory research — **Process A, section 3.0** | Firecrawl search + DataForSEO verify | `targets-seed.md` entries, reused across clients |
+| 1.6 | Local source scan: Verbände, Vereine, Presse, Stadtportale, Hersteller/Lieferanten for the city — the 6 tactics in rules.md RB.3–RB.9, worked as a checklist, not stopped at the first hit | Firecrawl search + built-in browser | source list |
+| 1.7 | Unlinked mentions: brand name, practitioner name, phone number in quotes | DataForSEO Content Analysis, Google | `05-pr/mentions.md` |
+| 1.8 | Existing 741 data: citations status, NAP record, portal texts | Supabase, `00_project/assets/<slug>/` | links and facts |
 
-**Gate:** All 7 rows filled. A row with no data gets "keine Daten, Grund: …".
+**Gate:** All 8 rows filled. A row with no data gets "keine Daten, Grund: …".
 
-### Step 2 — Target list → `02-targets/targets.md` → **Checkpoint 1**
+**Process B — competitor backlink analysis (step-by-step, replaces ad-hoc calls):**
+
+1. **Select competitors.** Minimum 8, not 5 — a pool of 5 gives too few gap hits to be worth the API cost (confirmed on the Hüwel pilot: 5 competitors → 10 gap domains, 8 competitors → 23). Source: DataForSEO SERP organic, keyword `"[Leistung] [Stadt]"`, DE, depth 20, filtered to real competing practices/businesses (drop directories, schools, franchises). If the nearest/obvious competitor has weak map-grid coverage, that is a signal to expand the search and find who actually dominates the grid instead (`rules.md` RH.2), not to settle for the weak neighbor. Add any competitor Martin or the client names by hand (e.g. a practice already flagged in Local Falcon data) even if it doesn't rank organically.
+2. **Verify each competitor's real domain from their GBP**, not just a name guess, and check for a redirect — an acquired or merged business's domain commonly redirects to the parent's, which would otherwise count the wrong company's links (`rules.md` RH.3).
+3. **Pull referring domains per competitor.** DataForSEO `backlinks/referring_domains`, `limit: 300`, `order_by: rank,desc`, one call per competitor plus one for the client's own domain.
+4. **Run the raw export through the classifier prompt** (`00_project/knowledge/link-library/_derived/local-backlink-classifier-prompt.md`) before manual scoring — it separates local/regional/national/spam with an evidence requirement, cheaper than eyeballing 300+ domains per competitor (`rules.md` RH.6).
+5. **Compute the gap locally** (no need for `domain_intersection` — plain set logic is cheaper and auditable): a domain counts if it links to **2 or more** competitors and does not already link to the client. Record which competitors, for the Quelle column.
+6. **Filter spam before scoring.** A domain with `rank` near 0 despite a high referring-domain or backlink count on itself is a spam/link-farm signal (see `rules.md` RG.3) — drop it, do not score it. A domain is a reciprocal practice-to-practice link (another local competitor's own site, not a directory or publication) — drop it, not scalable and looks manipulative.
+7. **Verify survivors** with one `backlinks/summary` call each before they go into `targets.md` — rank, backlink count, referring-domain count, so the score in Step 2 is real, not guessed.
+
+**Process A — see section 3.0** (niche directory research is Pillar A's job, documented there since it is reused across clients in the same industry, not re-derived per client).
+
+**Checkpoint 1 — Martin reviews the raw baseline before any scoring happens** (added 2026-10-11, after the Hüwel pilot). Show `profile.md`, `competitors.md`, `gap.md`, the Priority-0 citations list, and the raw local-source finds, as plain lists — no score, no Sheet yet. This catches a wrong competitor set or a missed tactic before time goes into Step 2. Approved → go to Step 2. Martin names a competitor to add/drop, or a tactic from RB.3–RB.9 that wasn't worked → redo the relevant part of Step 1 first.
+
+**Rows into the Sheet stay a quick pass, not a full field visit.** A row can carry "vermutl. frei" or an unconfirmed cost — mark it plainly, don't block the row on it (decided 2026-10-11). Confirm cost and contact details only for rows Martin actually ticks `Freigabe` on, as part of Step 3's prep, not before.
+
+**No enforced pillar mix.** The target list reflects what the research actually finds per client — do not pad a thin pillar (e.g. Hersteller/PR) with weak filler just to show every pillar represented (decided 2026-10-11).
+
+### Step 2 — Target list → `02-targets/targets.md` → **Checkpoint 2**
 
 1. Merge: gap domains (1.4) + local sources (1.5) + unlinked mentions (1.6) + seed targets from the library that match industry and region.
-2. Score every target with the formula in section 4. Keep targets with score 5+.
-3. Assign pillar and tactic. Write the contact path and the address form (du/Sie).
+2. Score every target with the formula in section 4 **internally, to decide the row order** — the Score column itself is not shown to Martin (decided 2026-10-11, see "Sheet columns" below). Keep targets the research actually found real; no padding to hit a count.
+3. Assign pillar and tactic. Write the contact path (email or form URL — see Kontakt below) and note the address form (du/Sie) for Step 3, where it is actually used.
 4. Split into: **Free now** (score 7+, cost 2), **Needs client** (effort 0), **Buy candidates** (pillar C, within budget).
 5. Write the 90-day plan: month 1 = Verbände, IHK, Vereine, mentions. Month 2 = Presse, Blogger, Lieferanten. Month 3 = buy to close the gap.
 
-**Table row:**
+**Sheet columns (decided 2026-10-11, after Martin reviewed the first 3 Hüwel versions):**
 
-| # | Domain | Pillar | Taktik | DR | Score | Kosten | Form | Kontakt | Status |
+| # | Domain | Säule | Taktik | DR | Kosten | Quelle | Kontakt | Status | Freigabe |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-**Checkpoint 1 — Martin approves the target list and the 90-day plan.** Approved → status `Ziele freigegeben`. Rows go into `backlink_targets` and `client_backlinks` with status `identified`.
+- **DR** — not the raw DataForSEO 0–1000 rank. Convert with `round(min(rank/10, 100))` and label the column "DR (approx.)" — an approximation of the familiar 0–100 scale, not an official DR figure. State this once in the Sheet's legend, not per cell.
+- **Score and Form are dropped from this table.** Score decided the row order already; showing the number itself adds a figure Martin doesn't act on. Form (du/Sie) only matters when a mail is actually drafted — it lives in the Outreach tab (Step 3), not here.
+- **Kontakt is mandatory** (was specified here but never actually built into the first 3 Sheet versions — fixed 2026-10-11): email address or the submission-form URL. Where it isn't verified yet, write what's plausible (e.g. "Kontaktformular auf der Seite", "Mitgliedsantrag online") rather than inventing a specific address — never fabricate an email. A citations-module row (Priority-0, section 3.0) gets "Self-Service, Citations-Modul" here instead of a contact, since no outreach is needed.
 
-### Step 3 — Outreach → `03-outreach/` → **Checkpoint 2**
+**Checkpoint 2 — Martin approves the target list and the 90-day plan.** Approved → status `Ziele freigegeben`. Rows go into `backlink_targets` and `client_backlinks` with status `identified`.
+
+### Step 3 — Outreach → `03-outreach/` → **Checkpoint 3**
 
 1. Write one template per tactic: Verein, IHK, Verband, Presse, Blogger, Lieferant, Mention reclaim. German. du or Sie by target. Short. One ask. Include what the target gets.
 2. Personalise every mail with one line about the target. No mass text.
 3. Build `batch-01.md`: 20–30 mails. Each with target, contact name, address, subject, body, planned send date.
 4. Flag mails the client must send (Verband with member number, Lieferant with customer number). Put them into a client mail with copy-paste text, same pattern as `client-listing-email-template.md`.
+5. Each mail row gets the same `Freigabe` checkbox pattern as the target list (section 6 below), in the Sheet's Outreach tab — not a single approve-all gate for the whole batch, so Martin can send some rows and hold others.
 
-**Checkpoint 2 — Martin approves the batch.** Approved → the agent sends through Airmailer. Follow-up after 7 days, one time. Status moves to `contacted`, then `replied`, `agreed`, `live`. Every reply is logged.
+**Checkpoint 3 — Martin ticks `Freigabe` per mail.** The agent's work on that row ends at "ready to send". Martin or the team sends manually through Airmailer, from the address decided in section 7. Follow-up after 7 days, one time, also manual. A human moves Status from `contacted` to `replied`, `agreed`, `live` as replies come in and ticks the live URL — the agent does not poll for this (no listings-inbox-poller equivalent for real outreach replies). The agent re-reads the Sheet on the next run and picks up status changes from there.
 
-### Step 4 — Buy shortlist → `04-buy/shortlist.md` → **Checkpoint 3**
+### Step 4 — Buy shortlist → `04-buy/shortlist.md` → **Checkpoint 4**
 
 Only if budget > 0 and after month 1 results are in.
 
@@ -232,7 +283,7 @@ Only if budget > 0 and after month 1 results are in.
 2. Per candidate: domain, DR, traffic, price, proposed anchor, target URL, Kennzeichnung yes/no, seller contact.
 3. Total within budget. Alternatives listed.
 
-**Checkpoint 3 — Martin approves and pays.** The agent tracks delivery, checks the live URL, and runs the indexing checks.
+**Checkpoint 4 — Martin approves and pays.** The agent tracks delivery, checks the live URL, and runs the indexing checks.
 
 ### Step 5 — Monthly run → `07-report/report-YYYY-MM.md`
 
@@ -335,4 +386,4 @@ Viele Grüße
 2. Agent derives `rules.md`, `targets-seed.md`, `scorecard.md` into `00_project/knowledge/link-library/_derived/`. Martin approves.
 3. Agent creates `backlink_targets` and `client_backlinks` in Supabase and seeds the targets.
 4. Agent writes the skill `backlink-dach`.
-5. Martin names the pilot client, budget, and competitors, and says "go". Agent runs Step 0 to Checkpoint 1.
+5. Martin names the pilot client, budget, and competitors, and says "go". Agent runs Step 0 and Step 1 to Checkpoint 1 (baseline review), then on to Checkpoint 2 (target list) after approval.

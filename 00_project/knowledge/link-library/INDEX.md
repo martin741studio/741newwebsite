@@ -1,6 +1,6 @@
 # Link Library (YouTube transcripts)
 
-- Built: 2026-10-10 · Sources: 63 of 97 with transcript
+- Built: 2026-10-10 · Sources: 65 of 98 with transcript
 - Channels: Ahrefs, Brian Dean/Backlinko, Nathan Gotch, Matt Diggity, Chris Palmer SEO
 - Pillar tags: F Fundamentals · G Gap/competitor analysis · B Local ecosystem · C Buy/anchor/audit · D Digital PR/outreach/mentions · E AI citation
 - Internal document. Never name the sources in client material. Call it "741 Link-Raster".
@@ -104,3 +104,4 @@
 | 95 | 12 Months Link Building For Local SEO | Chris Palmer SEO | 89 | 929 | B | 0 | (no transcript) |
 | 96 | What Local SEO Backlinks To Create? | Chris Palmer SEO | 41 | 752 | B | 0 | (no transcript) |
 | 97 | Local Link Building SEO Marketing Google AI Loves | Chris Palmer SEO | 0 |  | B,E | 0 | (no transcript) |
+| 98 | The Million Dollar Local Backlink Maps Strategy (4 Step System) | Todd Anderson - SEO for the Trades | 11 | 303 | B,G | ~7500 | 098-the-million-dollar-local-backlink-maps-strategy-4-step-system.md |
