@@ -1,0 +1,44 @@
+{
+  "run": "00_project/assets/<client>/automation/<slug>",
+  "flow_class": "crm",
+  "generated_at": "2026-10-11T10:40:00+00:00",
+  "cases": [
+    {
+      "id": "T1",
+      "type": "e2e",
+      "title": "TEST member answers the 3 questions -> KlickTipp contact + tag, Pipedrive person + deal + note",
+      "status": "pass",
+      "ran_at": "2026-10-11T10:05:00+00:00",
+      "test_marker": "TEST-741",
+      "input": {"first_name": "TEST-741", "last_name": "Funnel", "email": "test-skool@741.studio"},
+      "readback": {
+        "record_ids": {"klicktipp_contact": "<id>", "pipedrive_person": "<id>", "pipedrive_deal": "<id>", "pipedrive_note": "<id>"},
+        "fields_checked": ["email", "first_name", "last_name", "tag NLP PRAC - SKOOL", "deal stage 161", "deal person link", "note text"]
+      },
+      "evidence": ["evidence/T1-zap-run.png", "evidence/T1-readback.json"]
+    },
+    {
+      "id": "T5",
+      "type": "idempotency",
+      "title": "Same TEST member twice -> one person, one tag, no second series start",
+      "status": "pass",
+      "ran_at": "2026-10-11T10:20:00+00:00",
+      "evidence": ["evidence/T5-readback.json"]
+    },
+    {
+      "id": "T4",
+      "type": "error",
+      "title": "Phone with letters -> KlickTipp step must not fail the whole run",
+      "status": "skip",
+      "skip_reason": "example only: a skipped mandatory type fails check_report.py",
+      "ran_at": "2026-10-11T10:25:00+00:00",
+      "evidence": []
+    }
+  ],
+  "verifier": {
+    "verdict": "pass",
+    "by": "fresh verifier subagent (templates/verifier-prompt.md)",
+    "at": "2026-10-11T10:35:00+00:00",
+    "notes": "Re-read all 4 records in the target systems; fields match the spec."
+  }
+}
