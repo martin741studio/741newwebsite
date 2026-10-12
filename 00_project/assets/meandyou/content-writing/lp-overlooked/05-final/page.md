@@ -10,7 +10,7 @@ url_slug: /lp-overlooked
 title: Sich Gehör verschaffen: Rhetorik mit Michael Ehlers
 meta: Fachlich recht und trotzdem überhört? So verschaffst du dir Gehör: Rhetorikkurs mit Michael Ehlers, seit 1990. Seminar oder erst ein Gespräch.
 legal_mode: none
-status: Final, Freigabe offen (Checkpoint 1)
+status: Final freigegeben (Checkpoint 1, Martin 2026-10-12 „confirmed continue“)
 date: 2026-10-12
 flags: see OPEN-FLAGS.md
 ---
