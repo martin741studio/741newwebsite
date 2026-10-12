@@ -1,0 +1,2 @@
+# me&you / Michael Ehlers — Landingpage „The Overlooked“ (CRO-Lauf, Unterseite 4b)
+Seite: `/lp-overlooked` · Basis: Vorschau v2 `prototype-v2/lp-overlooked.html` (https://clients.741.studio/meandyou/v2/lp-overlooked.html) · Persona: The Overlooked (Design-Richtlinien Abschnitt 02) · Haupt-CTA: Gespräch buchen → `/gespraech-buchen?utm_source=lp-overlooked&utm_content=<abschnitt>` · Quelle: Hauptsession 2026-10-12 · Checkpoints 1 und 2 · Port 8832 · Status: Copy zur Freigabe (Checkpoint 1)

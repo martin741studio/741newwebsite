@@ -1,0 +1,63 @@
+{
+ "date": "2026-10-12",
+ "page": "05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G2 legal": {
+   "mode": "none",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "info": {
+    "words": 1608,
+    "placeholders": 6
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "counts": {
+    "du": 95,
+    "sie": 0,
+    "ich": 15,
+    "wir": 2
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1608,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "[Hinweis] Begriffs-Abdeckung 56 % (25 Begriffe aus mindestens 50 % der Seiten). Fehlen: coaching, stimme, platzhalterinhalt, schaltfläche, drittanbieter, erforderlichen, formular, drittanbietern, business, unternehmen, datenschutz. Pflicht nur, wenn die Suchabsicht den Begriff braucht.",
+    "Direkt-Antwort hat 8 Sätze (Regel: 2 bis 4, etwa 50 Wörter). Kürzen für KI-Zitate."
+   ]
+  }
+ }
+}
