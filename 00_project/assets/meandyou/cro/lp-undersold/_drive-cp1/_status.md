@@ -2,3 +2,4 @@
 2026-10-12 · Step 1 done · 02-data/dataset.md (U1–U16, K1–K15, Orte/Termine, Stimmen S1–S6), brand.md, Benchmark Median 1.194 / Untergrenze 836 · next: Step 2
 2026-10-12 · Step 2 done · 03-diagnosis/diagnosis.md (v2 15/44, 11 Sektionen, P0 10/10) · next: Step 3 Copy (content-writing/lp-undersold)
 2026-10-12 · Step 3 done · content-writing/lp-undersold/05-final/page.md (draft-v5, G1–G6 PASS, Review 78 → 14 Fixes, SEO-Audit 77 → 8 Fixes, 1.440 Wörter), 04-copy/copy.md, gates.md, OPEN-FLAGS.md · next: Checkpoint 1 (Martin)
+2026-10-12 · Drive CP1 · Ordner „CRO LP Undersold“ angelegt (14yCptAjFldgweRhjgcLjiasto9KYx4kk), 12 Dateien hochgeladen und per Liste geprüft · next: Martin gibt Copy frei, dann Step 4 Design-Doc

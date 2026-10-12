@@ -62,7 +62,7 @@ Ziel-Hero: breites Ortsbild in goldenem Licht (Finca, Terrasse, Meer), kleine Sc
 | # | Abschnitt | Job | P0-Zeile |
 |---|---|---|---|
 | S01 | Hero | Persona-Zeile, Keyword, Angebot in einem Satz, Beweiszeile, Anker zu Orten | 1 Hero |
-| S02 | Das Seminar in Kürze | Direkt-Antwort in 3 bis 4 Sätzen, Fakten-Reihe, ein Unternehmer-Zitat (Röser) | 2 Beweis-Leiste |
+| S02 | Das Seminar in Kürze | Direkt-Antwort in 3 Sätzen, Fakten-Reihe, Zitat Röser, kleines echtes Foto Michael (Item 8) | 2 Beweis-Leiste |
 | S03 | Die Lage | 4 Situationen (Pitch, Beirat oder Board, Kundentermin, Medien), Weg hinaus | 3 Ist das etwas für mich? |
 | S04 | Die Methode | „Wirkung beginnt nicht bei der Technik.“, drei Schritte | 4 Leistungen (Haltung) |
 | S05 | Orte und Termine (`#orte`) | sechs Orte als breite Bildkarten, Daten als Überschriften, Stand-Zeile, freie Plätze im Gespräch | 9 Standort |
@@ -79,3 +79,19 @@ CTA: ein Button „Gespräch buchen“ im Inhalt (S11) plus Header-Button. Ziel 
 
 ## 5. Offene Punkte
 Aus `dataset.md` 8: du/Sie (K1), Seminarname, Person im Gespräch, Mallorca 2027, Sales-Checkliste (Übernachtung, Verpflegung), Seminarleitung, echte Ortsfotos, Unternehmerzitate mit Einwilligung, ProvenExpert-Gesamtnote, 1:1-Coaching und Medientraining, sameAs.
+
+## 6. Ziel-Score nach Copy-Plan (geplant, gemessen wird erst am Prototyp, Checkpoint 2)
+| # | geplant | Grund |
+|---|---|---|
+| 1, 2, 3 | 2 | Kicker mit Keyword, Copy-Deck-Zeile, Sub + Angebotssatz |
+| 4 | 2 | Header-Button „Gespräch buchen“ im ersten Bildschirm (Persona: kein Button im Hero-Inhalt) |
+| 5, 6 | 2 | „Gespräch buchen“ + „30 Minuten, kostenlos, per Video“ in S11 |
+| 7 | 2 | Beweiszeile Hero: ProvenExpert 227 von 250 + Rhetoriktrainer seit 1990 |
+| 8 | 2 | kleines echtes Foto Michael in S02, Qualifikation in der Beweiszeile |
+| 9 | 2 | S11 drei Schritte, Dauer, Kosten, Gesprächspartner |
+| 10, U3 | 2 | ein Button im Inhalt, eine CTA-Farbe |
+| 12, 13, 14 | 2 | offene Karten mit Überschrift, Beweis in S02, S05, S07, S09, S11 |
+| 15, U1, 17, 19, 20 | 2 | S03, S05, S10 (Preis ohne Zahl), S11, Aussagen-Überschriften |
+| 16 | 1 | Formate als ruhige Zeilen mit einem Link `/seminare`, keine Einzelkarten mit eigenem Link (Persona: wenige Elemente; Format-URLs fehlen) |
+| 21, U2 | 2 | wird am Prototyp gemessen |
+**Geplant: 43 von 44.** Prio A alle 2.

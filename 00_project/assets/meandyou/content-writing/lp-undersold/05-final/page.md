@@ -30,7 +30,7 @@ Michael Ehlers trainiert Menschen, deren Worte Gewicht haben. Drei Trainingstage
 <!-- /S01 -->
 
 <!-- S02 answer | element: answer -->
-<!-- design: helles Band, viel Raum. Links die Antwort, rechts vier Fakten als ruhige Zeilen, darunter ein Zitat. -->
+<!-- design: helles Band, viel Raum. Links die Antwort, rechts vier Fakten als ruhige Zeilen, darunter ein Zitat. Kleines echtes Foto von Michael neben den Fakten (Raster-Item 8: Gesicht und Qualifikation in Sektion 2; Qualifikation steht in der Beweiszeile des Heros). -->
 ## Das Seminar in Kürze
 
 Das Rhetorik-Seminar für Führungskräfte und Unternehmer mit Michael Ehlers ist ein Präsenztraining in kleiner Gruppe: drei Trainingstage plus ein Tag Get Together, mit höchstens 14 Menschen. Du trainierst freie Rede, Schlagfertigkeit oder Führung mit Sprache, mit drei Videoanalysen und VR-Training. Welches Seminar zu dir passt, klärst du in einem kostenlosen Gespräch von 30 Minuten.
