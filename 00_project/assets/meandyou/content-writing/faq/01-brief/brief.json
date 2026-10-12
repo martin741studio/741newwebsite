@@ -1,0 +1,247 @@
+{
+ "client": "me&you Communication (Michael Ehlers)",
+ "client_slug": "meandyou",
+ "language": "de",
+ "address": "du",
+ "speaker": "dritte",
+ "legal_mode": "none",
+ "voice_sheet": "00_project/assets/meandyou/voice.md",
+ "pool_item_ids": [],
+ "local_city": null,
+ "gate": "A0-full",
+ "require_answer_block": true,
+ "nap_file": "00_project/assets/meandyou/nap.json",
+ "schema_faq": false,
+ "page_slug": "faq",
+ "page_type": "faq",
+ "mode": "rewrite",
+ "sitetree_node": "FAQ",
+ "url_slug": "/faq",
+ "money_page": false,
+ "intent": "transactional-support",
+ "reader": "Besucher kurz vor der Buchung (Startseite, Seminarseite, Ads) mit einer konkreten Frage zu Ablauf, Ort, Kosten, Storno oder dem Gespräch; dazu Einsteiger mit Fragen zur Rhetorik. Sorgen: Preis unbekannt, Verkaufsgespräch, zu introvertiert, Schauspiel, Absage",
+ "keyword_primary": "Häufige Fragen zum Rhetorik-Seminar",
+ "keywords_cluster": [
+  {
+   "kw": "rhetorik seminar",
+   "volume": 880,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "was kostet ein rhetorik seminar",
+   "volume": null,
+   "scope": "national",
+   "source": "PAA + Autocomplete 2026-10-11",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "was ist ein rhetorik seminar",
+   "volume": null,
+   "scope": "national",
+   "source": "Autocomplete 2026-10-11",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "wer ist michael ehlers",
+   "volume": null,
+   "scope": "national",
+   "source": "Autocomplete 2026-10-11",
+   "date": "2026-10-11"
+  }
+ ],
+ "cta": {
+  "goal": "kostenloses Gespräch (30 Min, Video) buchen",
+  "channel": "booking",
+  "text": "Gespräch buchen",
+  "reassurance": "30 Minuten, kostenlos, per Video",
+  "secondary": "Fachseiten, Telefon, E-Mail"
+ },
+ "cta_text": "Gespräch buchen",
+ "cta_min": 5,
+ "bestand_words": 286,
+ "bestand_note": "Vorschau v2 faq.html, 10 Fragen, 286 Wörter; Live-Seite hat keine FAQ-Seite (13 Fragen auf der Startseite)",
+ "benchmark_median_words": 858,
+ "benchmark_sources": [
+  {
+   "url": "_work/bench-metrics.json",
+   "words": 858,
+   "date": "2026-10-12"
+  }
+ ],
+ "benchmark_note": "7 FAQ-Seiten von Rhetorik-Anbietern (4 Anbieter-FAQs 500 bis 860 Wörter, 3 Wissens-FAQs 3.500 bis 4.000)",
+ "word_range": [
+  1600,
+  2600
+ ],
+ "faq_min": 30,
+ "internal_links_min": 6,
+ "internal_link_targets": [
+  {
+   "url": "/",
+   "anchor": "Startseite",
+   "role": "home"
+  },
+  {
+   "url": "/seminare",
+   "anchor": "Seminare",
+   "role": "money-page"
+  },
+  {
+   "url": "/seminare#termine",
+   "anchor": "alle Termine",
+   "role": "money-page"
+  },
+  {
+   "url": "/michael",
+   "anchor": "Mehr über Michael",
+   "role": "person"
+  },
+  {
+   "url": "/rhetorik",
+   "anchor": "Was ist Rhetorik?",
+   "role": "sibling"
+  },
+  {
+   "url": "/stimmen",
+   "anchor": "Stimmen",
+   "role": "sibling"
+  },
+  {
+   "url": "/gespraech-buchen",
+   "anchor": "Gespräch buchen",
+   "role": "contact"
+  }
+ ],
+ "proof_assets": [
+  "ProvenExpert 250 Bewertungen, 227 mit 5 Sternen",
+  "über 8.000 Teilnehmer",
+  "seit 1990",
+  "ERFOLG Magazin Top 100",
+  "Zitate mit Name und Quelle"
+ ],
+ "forbidden_words": [
+  "garantiert",
+  "Intelligente",
+  "in 30 Tagen",
+  "angstfrei",
+  "ohne Zittern",
+  "zwölf Menschen",
+  "Gutschein"
+ ],
+ "own_phrases": [
+  "Häufige Fragen",
+  "Nicht anders werden, klarer werden.",
+  "Persönlichkeit. Kongruenz. Wirkung.",
+  "Der nächste Schritt ist ein Gespräch."
+ ],
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "Thema, Einleitung, Sprungnavigation, CTA + Rückversicherung",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Das Wichtigste in Kürze, Fakten, ein Zitat",
+   "cta": null
+  },
+  {
+   "id": "S03",
+   "element": "faq",
+   "job": "Seminar und Inhalte",
+   "cta": "primary"
+  },
+  {
+   "id": "S04",
+   "element": "faq",
+   "job": "Orte und Termine",
+   "cta": "primary"
+  },
+  {
+   "id": "S05",
+   "element": "faq",
+   "job": "Ablauf und Leistungen",
+   "cta": null
+  },
+  {
+   "id": "S06",
+   "element": "faq",
+   "job": "Kosten und Storno",
+   "cta": "primary"
+  },
+  {
+   "id": "S07",
+   "element": "faq",
+   "job": "Das Gespräch",
+   "cta": "primary"
+  },
+  {
+   "id": "S08",
+   "element": "faq",
+   "job": "Michael",
+   "cta": null
+  },
+  {
+   "id": "S09",
+   "element": "faq",
+   "job": "Rhetorik allgemein",
+   "cta": null
+  },
+  {
+   "id": "S10",
+   "element": "cta",
+   "job": "Frage fehlt? Kontakt, Gespräch",
+   "cta": "primary"
+  }
+ ],
+ "paa_questions": [
+  {
+   "q": "Was macht man in einem Rhetorik-Seminar?",
+   "source": "PAA 2026-10-11"
+  },
+  {
+   "q": "Was kostet ein Rhetorik-Seminar?",
+   "source": "PAA 2026-10-11"
+  },
+  {
+   "q": "Wie lerne ich am besten Rhetorik?",
+   "source": "PAA 2026-10-11"
+  },
+  {
+   "q": "Welche Übungen kann ich machen, um Rhetorik zu trainieren?",
+   "source": "PAA 2026-10-11"
+  },
+  {
+   "q": "Was sind die 5 Säulen der Rhetorik?",
+   "source": "PAA 2026-10-11"
+  },
+  {
+   "q": "Was sind die 3 Säulen der Rhetorik?",
+   "source": "PAA 2026-10-11"
+  },
+  {
+   "q": "Was ist ein Rhetorik-Seminar?",
+   "source": "Autocomplete 2026-10-11"
+  },
+  {
+   "q": "Wer ist Michael Ehlers?",
+   "source": "Autocomplete 2026-10-11"
+  }
+ ],
+ "placeholders_allowed": [
+  "Seminarname",
+  "Name und Rolle der Person im Gespräch",
+  "Termine und Ort Bundle",
+  "Verpflegung",
+  "Übernachtung",
+  "Begleitperson",
+  "Leitet Michael die Seminare selbst",
+  "Programm Get Together",
+  "Inhalt und Länge des Trainings"
+ ],
+ "blockers": []
+}
