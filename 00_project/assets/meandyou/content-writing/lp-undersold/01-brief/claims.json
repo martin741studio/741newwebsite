@@ -1,0 +1,518 @@
+{
+ "claims": [
+  {
+   "id": "C01",
+   "type": "number",
+   "text": "ProvenExpert: 250 veröffentlichte Bewertungen, davon 227 mit 5 Sternen (21x4, 2x3). Profil zeigt keine Gesamtnote",
+   "source": "provenexpert.com/de-de/michael-ehlers, Firecrawl 2026-10-11",
+   "numbers": [
+    "250",
+    "227",
+    "5"
+   ],
+   "must_appear": [
+    "250 Bewertungen"
+   ],
+   "required": true
+  },
+  {
+   "id": "C03",
+   "type": "number",
+   "text": "über 8.000 Teilnehmer",
+   "source": "meandyou.de 2026-10-11",
+   "numbers": [
+    "8.000",
+    "8.000+"
+   ],
+   "must_appear": [
+    "8.000"
+   ],
+   "required": false
+  },
+  {
+   "id": "C04",
+   "type": "number",
+   "text": "seit über 30 Jahren Rhetoriktrainer",
+   "source": "meandyou.de 2026-10-11 (Konflikt 25 Jahre, siehe OPEN-FLAGS)",
+   "numbers": [
+    "30",
+    "30+"
+   ],
+   "must_appear": [
+    "30 Jahre"
+   ],
+   "required": false
+  },
+  {
+   "id": "C05",
+   "type": "credential",
+   "text": "laut ERFOLG Magazin Top 100 Trainer im deutschsprachigen Raum und Top 10 Speaker",
+   "source": "meandyou.de 2026-10-11, Cover ERFOLG Heft 3/2017",
+   "numbers": [
+    "100",
+    "10"
+   ],
+   "must_appear": [
+    "ERFOLG Magazin"
+   ],
+   "required": false
+  },
+  {
+   "id": "C07",
+   "type": "fact",
+   "text": "3 Tage Intensivtraining + 1 Tag Get Together, 3 Videoanalysen mit Sofort-Feedback, VR-Training, Plätze 14/10/12",
+   "source": "PDF 2026 Michael Ehlers Kursinhalte R1-R3 4 Tage",
+   "numbers": [
+    "3",
+    "1",
+    "14",
+    "10",
+    "12"
+   ],
+   "must_appear": [
+    "Get Together"
+   ],
+   "required": true
+  },
+  {
+   "id": "C08",
+   "type": "fact",
+   "text": "Gespräch 30 Minuten, kostenlos, online",
+   "source": "Calendly Sichtbarkeit Neu (30 min), Copy Deck R3",
+   "numbers": [
+    "30"
+   ],
+   "must_appear": [
+    "30 Minuten"
+   ],
+   "required": true
+  },
+  {
+   "id": "C09",
+   "type": "fact",
+   "text": "Telefon Kontakt +49 15888367664",
+   "source": "meandyou.de Footer 2026-10-11",
+   "numbers": [
+    "49",
+    "15888367664"
+   ],
+   "must_appear": [
+    "15888367664"
+   ],
+   "required": false
+  },
+  {
+   "id": "C10",
+   "type": "fact",
+   "text": "Termine laut Live-Seite: Mallorca 03.-06.12.2026, 04.-07.03.2027, 29.04.-02.05.2027, 14.-17.10.2027; Dubai 10.-13.12.2026; Barcelona 15.-18.04.2027, 21.-24.10.2027; Frankfurt 17.-20.06.2027; Berlin 12.-15.08.2027; Zypern 07.-10.10.2027. Format je Ort laut Live-Seite: Mallorca und Deutschland Rhetorik 1 (Einstieg), Barcelona Rhetorik 2, Dubai 2026 und Zypern 2027 Rhetorik 3",
+   "source": "meandyou.de Terminliste 2026-10-11",
+   "numbers": [
+    "3",
+    "6",
+    "2026",
+    "4",
+    "7",
+    "2027",
+    "29",
+    "2",
+    "14",
+    "17",
+    "10",
+    "13",
+    "15",
+    "18",
+    "21",
+    "24",
+    "20",
+    "12"
+   ],
+   "required": true
+  },
+  {
+   "id": "C11",
+   "type": "fact",
+   "text": "Peter Escher, Moderator MDR: Trotz 40 Jahren Medienerfahrung ...",
+   "source": "meandyou.de Zitate 2026-10-11",
+   "numbers": [
+    "40"
+   ],
+   "must_appear": [
+    "Peter Escher"
+   ],
+   "required": false
+  },
+  {
+   "id": "C12",
+   "type": "fact",
+   "text": "Übernachtungen im offiziellen Seminarzeitraum enthalten (3 Nächte bei 4 Seminartagen), An- und Abreise nicht enthalten",
+   "source": "Sales-Checkliste des Kunden (Entwurf, Wortlaut-Freigabe offen), via build_v2.py FAQ",
+   "numbers": [
+    "3",
+    "4"
+   ],
+   "required": false
+  },
+  {
+   "id": "C13",
+   "type": "fact",
+   "text": "Seminarorte: Mallorca, Barcelona, Zypern, Dubai, Frankfurt, Berlin",
+   "source": "meandyou.de Terminliste 2026-10-11",
+   "numbers": [
+    "6"
+   ],
+   "must_appear": [
+    "Mallorca",
+    "Barcelona"
+   ],
+   "required": true
+  },
+  {
+   "id": "C15",
+   "type": "legal",
+   "text": "AGB: Stornierungen bis 8 Wochen vor Beginn gegen 30% Stornogebühr möglich. Danach ist der volle Preis fällig.",
+   "source": "meandyou.de/agb, Firecrawl 2026-10-11",
+   "numbers": [
+    "8",
+    "30"
+   ],
+   "must_appear": [
+    "8 Wochen"
+   ],
+   "required": false
+  },
+  {
+   "id": "C16",
+   "type": "fact",
+   "text": "Calendly schickt nach der Buchung eine Bestätigung per E-Mail; Setter erinnert per WhatsApp",
+   "source": "Calendly-Standard; Funnel-Check 06.10., No-Show-Plan 08.10.",
+   "numbers": [],
+   "required": false
+  },
+  {
+   "id": "S20",
+   "type": "fact",
+   "text": "Rhetorik I Inhalte: Sicher Auftreten, Rede Halten (in 2 Minuten ein starkes Statement), Struktur Lernen (mit klarer Formel jede Rede aufbauen), Echt Wirken (eigener Redestil), Sprache Nutzen (Kritik charmant und souverän), Körper Lesen (Gestik gezielt), Fragen Stellen (Gespräche lenken); 14 Plätze; Worksheets und Übungen",
+   "source": "PDF Kursinhalte R1-R3 (28.09.2026)",
+   "numbers": [
+    "2",
+    "7",
+    "14"
+   ],
+   "must_appear": [
+    "14 Plätze"
+   ],
+   "required": false
+  },
+  {
+   "id": "S21",
+   "type": "fact",
+   "text": "Rhetorik II Inhalte: Schlagfertigkeit (auf Angriffe schnell und präzise reagieren), Überzeugungspsychologie (Motive erkennen, Argumente platzieren), Angriffe abwehren (unfaire Methoden durchschauen und kontern), Körpersprache lesen, Meetings führen (Diskussionen leiten, Ergebnisse sichern); 10 Plätze; Strategien und Workbooks",
+   "source": "PDF Kursinhalte R1-R3",
+   "numbers": [
+    "10",
+    "5"
+   ],
+   "must_appear": [
+    "10 Plätze"
+   ],
+   "required": false
+  },
+  {
+   "id": "S22",
+   "type": "fact",
+   "text": "Rhetorik III Inhalte: DeepOcean (Persönlichkeit prägt deine Rhetorik), Führen lernen (Kritik klar und motivierend), Zuhören meistern (Kunden und Partner verstehen), Stegreifrede halten, Gruppen überzeugen (Methoden großer Redner im Alltag); 12 Plätze",
+   "source": "PDF Kursinhalte R1-R3",
+   "numbers": [
+    "12",
+    "5"
+   ],
+   "must_appear": [
+    "12 Plätze"
+   ],
+   "required": false
+  },
+  {
+   "id": "S23",
+   "type": "fact",
+   "text": "Rhetorik Bundle: Inhalte aus Rhetorik 1 und 2, 2-Tages-Seminar, für Führungskräfte, Entscheider, Unternehmer, Expertinnen und Experten aus Vertrieb, Marketing, Kommunikation; Bausteine Körpersprache und Wirkung, Sprache als Führungsinstrument, Storytelling, Elevator Pitches, Schlagfertigkeit, Auftrittscoaching mit Videoanalyse; Termine und Ort unbekannt",
+   "source": "PDF Rhetorik Bundle (28.09.2026)",
+   "numbers": [
+    "2",
+    "1"
+   ],
+   "must_appear": [
+    "Bundle"
+   ],
+   "required": false
+  },
+  {
+   "id": "S24",
+   "type": "fact",
+   "text": "Zuordnung Orte: Rhetorik 1 Mallorca, Frankfurt, Berlin; Rhetorik 2 Barcelona; Rhetorik 3 Dubai (2026) und Zypern (2027)",
+   "source": "meandyou.de Terminblöcke, Firecrawl 2026-10-12",
+   "numbers": [
+    "1",
+    "2",
+    "3",
+    "2026",
+    "2027"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "S25",
+   "type": "fact",
+   "text": "Verpflegung: Seminarverpflegung (Snacks, Getränke) und leichtes Frühstück im Seminar enthalten; Hotelfrühstück und Abendessen nicht",
+   "source": "Checkliste Sales MeandYou (Freigabe Kunde offen)",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "M01",
+   "type": "fact",
+   "text": "Beginn 1990, erstes Rhetorikseminar mit 18 Jahren",
+   "source": "institut-ehlers.de/michael-ehlers, Firecrawl 2026-10-12 (1990 bis heute); Amazon-Autorenseite (first rhetoric seminar at 18)",
+   "numbers": [
+    "1990",
+    "18"
+   ],
+   "must_appear": [
+    "1990"
+   ],
+   "required": false
+  },
+  {
+   "id": "M02",
+   "type": "credential",
+   "text": "Lehrbeauftragter an der Universität St. Gallen (Rhetorik und Kommunikation mit Studierenden); Expert Lead am SGMI Center for Rhetoric, SGMI Management Institut St. Gallen, getrennt vom Lehrauftrag",
+   "source": "institut-ehlers.de/michael-ehlers, Firecrawl 2026-10-12",
+   "numbers": [],
+   "must_appear": [
+    "St. Gallen"
+   ],
+   "required": false
+  },
+  {
+   "id": "M03",
+   "type": "fact",
+   "text": "Rhetorik-Analyst für ARTE und WELT TV; Einordnungen bei ARD, ZDF, RTL, n-tv, RP Online, FOCUS online; Autor bei FOCUS online",
+   "source": "institut-ehlers.de/michael-ehlers, Firecrawl 2026-10-12",
+   "numbers": [],
+   "must_appear": [
+    "ARTE"
+   ],
+   "required": false
+  },
+  {
+   "id": "M04",
+   "type": "number",
+   "text": "neun Bücher als Autor oder Herausgeber; Titel: Nie wieder sprachlos!, Rhetorik. Die Kunst der Rede im digitalen Zeitalter (2018), Die 5 Säulen der positiven Kommunikation, Sales Code 55, Social Audio, Herzlich willkommen im Datengefängnis, Kommunikationsrevolution Social Media, Rhetorik: Sales-up-Call, Der Fisch stinkt vom Kopf (2014, als Hein Hansen)",
+   "source": "institut-ehlers.de/michael-ehlers, Firecrawl 2026-10-12; Amazon B01EV5J4CO; institut-fuer-persoenlichkeit.de",
+   "numbers": [
+    "9",
+    "5",
+    "2018",
+    "2014",
+    "55"
+   ],
+   "must_appear": [
+    "neun Bücher"
+   ],
+   "required": false
+  },
+  {
+   "id": "M07",
+   "type": "fact",
+   "text": "arbeitet als Executive Coach mit Vorständen, Unternehmern, Menschen des öffentlichen Lebens; Berater für Krisenkommunikation; nennt keine Mandantennamen; Coachings für Vorstände persönlich; zwei von ihm ausgebildete und lizenzierte Trainer; Amazon-Bio: board members, politicians, professional athletes, founders",
+   "source": "institut-ehlers.de/michael-ehlers, Firecrawl 2026-10-12; institut-ehlers.de",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "M08",
+   "type": "fact",
+   "text": "Methode Persönlichkeit, Kongruenz, Wirkung; kein Schauspiel; direkte Rückmeldung",
+   "source": "Copy Deck R3; meandyou.de; institut-ehlers.de/michael-ehlers, Firecrawl 2026-10-12",
+   "numbers": [],
+   "must_appear": [
+    "Persönlichkeit. Kongruenz. Wirkung."
+   ],
+   "required": false
+  },
+  {
+   "id": "M09",
+   "type": "fact",
+   "text": "Institut in Hallstadt bei Bamberg; Sarna Röser (Bundesvorsitzende Die Jungen Unternehmer) Zitat: Ein begeisterndes Training mit einer anregenden und humorvollen Atmosphäre. Rundum gelungen.",
+   "source": "GBP; meandyou.de",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "R04",
+   "type": "fact",
+   "text": "Wirkung beginnt nicht bei der Technik. Die meisten Rhetoriktrainings starten bei Werkzeugen. Wir starten davor: bei Persönlichkeit, Selbstbild, Mustern und innerer Stabilität. Wer du bist, bevor du sprichst. Wenn Haltung und Worte dasselbe sagen. Was davon im Raum ankommt.",
+   "source": "Vorschau v2 rhetorik.html (Pauspapier, Copy Deck)",
+   "numbers": [],
+   "must_appear": [
+    "Wirkung beginnt nicht bei der Technik."
+   ],
+   "required": false
+  },
+  {
+   "id": "F01",
+   "type": "fact",
+   "text": "Alle elf künftigen Termine laut Live-Seite beginnen an einem Donnerstag und enden an einem Sonntag",
+   "source": "Termine meandyou.de 2026-10-11 (C10), Kalender geprüft 2026-10-12",
+   "numbers": [],
+   "must_appear": [
+    "Donnerstag"
+   ],
+   "required": false
+  },
+  {
+   "id": "F03",
+   "type": "fact",
+   "text": "Terminseite: Gesprächspartner ist ein Mitglied aus Michaels Team; Gespräch kostet nichts, keine Verpflichtung; Vorbereitung ruhiger Ort, Kamera an, Stift und Papier, eine konkrete Situation; Link zum Umbuchen in der Bestätigung",
+   "source": "prototype-v2/build_v2.py termin.html (741-Entwurf 08.10.), Calendly-Standard",
+   "numbers": [
+    "30",
+    "2"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "F08",
+   "type": "fact",
+   "text": "Stand der Termine: Oktober 2026",
+   "source": "Live-Seite Abruf 2026-10-11",
+   "numbers": [
+    "2026"
+   ],
+   "must_appear": [
+    "Stand"
+   ],
+   "required": false
+  },
+  {
+   "id": "U01",
+   "type": "fact",
+   "text": "Copy Deck R3 Page 06 Treatment 3 Undersold (Kunde freigegeben), du-Form auf der freigegebenen Startseite: Dein Unternehmen ist größer, als es nach außen wirkt.",
+   "source": "copydeck-r3.txt Z. 295 ff.; cro/04-copy/approved-copy.md Z. 63",
+   "numbers": [],
+   "must_appear": [
+    "Dein Unternehmen ist größer, als es nach außen wirkt."
+   ],
+   "required": true
+  },
+  {
+   "id": "U02",
+   "type": "fact",
+   "text": "Startseiten-Karte Undersold: Die Substanz stimmt. Der Auftritt bleibt darunter. Nach außen wirkt das Unternehmen kleiner, als es ist.",
+   "source": "cro/04-copy/approved-copy.md Z. 64",
+   "numbers": [],
+   "must_appear": [
+    "Die Substanz stimmt."
+   ],
+   "required": true
+  },
+  {
+   "id": "U03",
+   "type": "fact",
+   "text": "Adrian Bourcevet (Google G5, Mallorca, vier Tage): Statt höher, schneller, perfekter geht es um Authentizität, Substanz und das Vertrauen in die eigene Stimme.",
+   "source": "cro/02-data/reviews.md G5",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "U04",
+   "type": "fact",
+   "text": "V., Rhetorik 2 Barcelona Casa Fuster, ProvenExpert 02.05.2023: Dieses Training hat beruflich wie privat einiges in Bewegung gebracht. Ein intensiver Stretch der Komfortzone in wunderschönem Ambiente, mit effektiven Techniken, zielgerichtetem Training und einer großen Portion Humor.",
+   "source": "cro/02-data/reviews.md P7",
+   "numbers": [
+    "2",
+    "2023"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "U05",
+   "type": "fact",
+   "text": "Christian S., Rhetorik 1 Mallorca, ProvenExpert: Aufgrund der tollen Atmosphäre und einzigartigen Lage lernt es sich sehr entspannt.",
+   "source": "cro/02-data/reviews.md P1",
+   "numbers": [
+    "1"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "U06",
+   "type": "fact",
+   "text": "Christin R., Rhetorik 1 Mallorca, ProvenExpert: Ich fand es spannend, dass wir Teilnehmer ein Mix von Anfänger bis Profi waren und Michael uns alle, egal auf welchem Level, weiterbringen konnte.",
+   "source": "cro/02-data/reviews.md P4",
+   "numbers": [
+    "1"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "U07",
+   "type": "fact",
+   "text": "Michael: Mandantennamen nennt er nicht; arbeitet mit Vorständen, Unternehmerinnen und Unternehmern und Menschen, die in der Öffentlichkeit stehen; Seit drei Jahrzehnten bereitet Michael Ehlers Menschen auf Auftritte und Gespräche vor, bei denen jedes Wort geprüft wird.",
+   "source": "institut-ehlers.de/michael-ehlers 2026-10-12 (Michael-Dataset Q1, Q2)",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "U08",
+   "type": "fact",
+   "text": "Zielgruppe Seminare: Führungskräfte, Gründerinnen und Gründer, Beraterinnen und Berater (Seminare S09); Bundle: Führungskräfte, Unternehmer, Vertrieb, Marketing, Kommunikation",
+   "source": "seminare/04-copy/approved-copy.md S09; Rhetorik Bundle PDF",
+   "numbers": [],
+   "must_appear": [
+    "Führungskräfte"
+   ],
+   "required": true
+  },
+  {
+   "id": "U09",
+   "type": "fact",
+   "text": "Copy Deck Page 06: Button auf allen drei LPs Gespräch buchen; Persona-Regel: ein CTA weit unten, ohne Dringlichkeit; Orte und Daten als Überschriften",
+   "source": "copydeck-r3.txt; meandyou-design-richtlinien.html 02",
+   "numbers": [],
+   "must_appear": [
+    "Gespräch buchen"
+   ],
+   "required": true
+  },
+  {
+   "id": "U10",
+   "type": "fact",
+   "text": "Freie Plätze: Ob noch Plätze frei sind, erfährst du im Gespräch (Seminare S08, freigegeben)",
+   "source": "seminare/04-copy/approved-copy.md S08",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "U11",
+   "type": "fact",
+   "text": "Seminarname Arbeitstitel: Frei sprechen (Einstieg, Rhetorik I), Ruhig bleiben, wenn es eng wird (Rhetorik II), Mit Sprache führen (Rhetorik III); Formate bauen nicht aufeinander auf",
+   "source": "seminare/04-copy/approved-copy.md S03, S04",
+   "numbers": [],
+   "must_appear": [
+    "Frei sprechen"
+   ],
+   "required": false
+  }
+ ]
+}

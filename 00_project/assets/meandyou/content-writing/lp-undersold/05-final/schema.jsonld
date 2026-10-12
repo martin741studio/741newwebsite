@@ -1,0 +1,257 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://www.meandyou.de/lp-undersold#webpage",
+   "url": "https://www.meandyou.de/lp-undersold",
+   "name": "Rhetorik-Seminar für Führungskräfte | Michael Ehlers",
+   "description": "Rhetorik-Seminar für Unternehmer und Führungskräfte mit Michael Ehlers: drei Trainingstage in kleiner Gruppe, auf Mallorca, in Barcelona oder Zypern.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "https://www.meandyou.de/#website"
+   },
+   "breadcrumb": {
+    "@id": "https://www.meandyou.de/lp-undersold#breadcrumb"
+   },
+   "mainEntity": {
+    "@id": "https://www.meandyou.de/lp-undersold#service"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.meandyou.de/lp-undersold#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Startseite",
+     "item": "https://www.meandyou.de/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Seminare",
+     "item": "https://www.meandyou.de/seminare"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Rhetorik-Seminar für Führungskräfte",
+     "item": "https://www.meandyou.de/lp-undersold"
+    }
+   ]
+  },
+  {
+   "@type": "EducationalOrganization",
+   "@id": "https://www.meandyou.de/#organization",
+   "name": "Institut Michael Ehlers GmbH",
+   "url": "https://www.meandyou.de/",
+   "email": "management@meandyou.de",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Landsknechtstraße 50",
+    "postalCode": "96103",
+    "addressLocality": "Hallstadt",
+    "addressCountry": "DE"
+   },
+   "telephone": "+49 15888367664"
+  },
+  {
+   "@type": "Service",
+   "@id": "https://www.meandyou.de/lp-undersold#service",
+   "serviceType": "Rhetorik-Seminar für Führungskräfte",
+   "provider": {
+    "@id": "https://www.meandyou.de/#organization"
+   },
+   "url": "https://www.meandyou.de/lp-undersold"
+  },
+  {
+   "@type": "Course",
+   "@id": "https://www.meandyou.de/lp-undersold#course-1",
+   "name": "Frei sprechen",
+   "description": "Einstieg: sicher auftreten, in zwei Minuten ein starkes Statement setzen, Struktur, eigener Redestil. 14 Plätze.",
+   "inLanguage": "de",
+   "provider": {
+    "@id": "https://www.meandyou.de/#organization"
+   },
+   "hasCourseInstance": [
+    {
+     "@type": "CourseInstance",
+     "courseMode": "onsite",
+     "startDate": "2026-12-03",
+     "endDate": "2026-12-06",
+     "location": {
+      "@type": "Place",
+      "name": "Mallorca",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Mallorca"
+      }
+     }
+    },
+    {
+     "@type": "CourseInstance",
+     "courseMode": "onsite",
+     "startDate": "2027-03-04",
+     "endDate": "2027-03-07",
+     "location": {
+      "@type": "Place",
+      "name": "Mallorca",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Mallorca"
+      }
+     }
+    },
+    {
+     "@type": "CourseInstance",
+     "courseMode": "onsite",
+     "startDate": "2027-04-29",
+     "endDate": "2027-05-02",
+     "location": {
+      "@type": "Place",
+      "name": "Mallorca",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Mallorca"
+      }
+     }
+    },
+    {
+     "@type": "CourseInstance",
+     "courseMode": "onsite",
+     "startDate": "2027-06-17",
+     "endDate": "2027-06-20",
+     "location": {
+      "@type": "Place",
+      "name": "Frankfurt am Main",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Frankfurt am Main"
+      }
+     }
+    },
+    {
+     "@type": "CourseInstance",
+     "courseMode": "onsite",
+     "startDate": "2027-08-12",
+     "endDate": "2027-08-15",
+     "location": {
+      "@type": "Place",
+      "name": "Berlin",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Berlin"
+      }
+     }
+    },
+    {
+     "@type": "CourseInstance",
+     "courseMode": "onsite",
+     "startDate": "2027-10-14",
+     "endDate": "2027-10-17",
+     "location": {
+      "@type": "Place",
+      "name": "Mallorca",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Mallorca"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "@type": "Course",
+   "@id": "https://www.meandyou.de/lp-undersold#course-2",
+   "name": "Ruhig bleiben, wenn es eng wird",
+   "description": "Schlagfertigkeit, Überzeugungspsychologie, unfaire Methoden durchschauen, Körpersprache lesen, Meetings führen. 10 Plätze.",
+   "inLanguage": "de",
+   "provider": {
+    "@id": "https://www.meandyou.de/#organization"
+   },
+   "hasCourseInstance": [
+    {
+     "@type": "CourseInstance",
+     "courseMode": "onsite",
+     "startDate": "2027-04-15",
+     "endDate": "2027-04-18",
+     "location": {
+      "@type": "Place",
+      "name": "Barcelona",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Barcelona"
+      }
+     }
+    },
+    {
+     "@type": "CourseInstance",
+     "courseMode": "onsite",
+     "startDate": "2027-10-21",
+     "endDate": "2027-10-24",
+     "location": {
+      "@type": "Place",
+      "name": "Barcelona",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Barcelona"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "@type": "Course",
+   "@id": "https://www.meandyou.de/lp-undersold#course-3",
+   "name": "Mit Sprache führen",
+   "description": "Kritik klar formulieren, zuhören, Stegreifrede, Gruppen überzeugen. 12 Plätze.",
+   "inLanguage": "de",
+   "provider": {
+    "@id": "https://www.meandyou.de/#organization"
+   },
+   "hasCourseInstance": [
+    {
+     "@type": "CourseInstance",
+     "courseMode": "onsite",
+     "startDate": "2026-12-10",
+     "endDate": "2026-12-13",
+     "location": {
+      "@type": "Place",
+      "name": "Dubai",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Dubai"
+      }
+     }
+    },
+    {
+     "@type": "CourseInstance",
+     "courseMode": "onsite",
+     "startDate": "2027-10-07",
+     "endDate": "2027-10-10",
+     "location": {
+      "@type": "Place",
+      "name": "Zypern",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Zypern"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://www.meandyou.de/michael#person",
+   "name": "Michael Ehlers",
+   "jobTitle": "Rhetoriktrainer und Executive Coach",
+   "url": "https://www.meandyou.de/michael",
+   "worksFor": {
+    "@id": "https://www.meandyou.de/#organization"
+   }
+  }
+ ],
+ "_note": "Kein Preis, kein offers, kein FAQPage. instructor erst setzen, wenn der Kunde bestätigt, dass Michael die Seminare selbst leitet. sameAs leer bis Profile geprüft."
+}
