@@ -10,7 +10,7 @@ url_slug: /lp-undersold
 title: Rhetorik-Seminar für Führungskräfte | Michael Ehlers
 meta: Rhetorik-Seminar für Unternehmer und Führungskräfte mit Michael Ehlers: drei Trainingstage in kleiner Gruppe, auf Mallorca, in Barcelona oder Zypern.
 legal_mode: none
-status: Checkpoint 1 (Copy), Freigabe offen
+status: Final freigegeben
 date: 2026-10-12
 flags: see OPEN-FLAGS.md
 ---

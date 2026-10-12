@@ -7,4 +7,4 @@
 - [x] Step 5 Gates: G1 bis G6 PASS, Slop 5/5, Claim-Diff PASS
 - [x] Step 6 Reviewer 78 (14 Fixes) + SEO-Audit 77 (8 Fixes)
 - [x] Step 7 Paket 05-final (page.md, cms-blocks.txt, placeholders.md, schema.jsonld, measure-plan.md)
-- [ ] Checkpoint (CRO 1)
+- [x] Checkpoint (CRO 1): Martin „confirmed continue“ 2026-10-12
