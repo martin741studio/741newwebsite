@@ -10,7 +10,7 @@ url_slug: /faq
 title: Häufige Fragen zum Rhetorik-Seminar | Michael Ehlers
 meta: Antworten zu den Rhetorik-Seminaren mit Michael Ehlers: Inhalte, Orte und Termine, Ablauf, Kosten, Storno und das kostenlose Gespräch.
 legal_mode: none
-status: Checkpoint 1
+status: Final freigegeben
 date: 2026-10-12
 flags: see OPEN-FLAGS.md
 ---
