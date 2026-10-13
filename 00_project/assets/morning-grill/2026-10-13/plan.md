@@ -27,7 +27,7 @@
 - Portal flags: set after Martin sends the 5 replies → sent to the portal-replies session.
 - Command Center in the portal admin view (staging): starts when the Freigabe-Dashboard chat is idle.
 
-- QUEUED (Martin's own answers in the portal, 13.10.): Johni = restart now, open access GA4 / GBP / GSC, tracking exists. Kamil = reports not done, move the numbers into his client dashboard, add improvement recommendations (website, more income streams) explained in the decision style. Needs a start card (agent sessions).
+- STARTED 13.10. (Martin's go): Johni → Johni client chat, Kamil → Kamil client chat (drafts only). Source: Johni = restart now, open access GA4 / GBP / GSC, tracking exists. Kamil = reports not done, move the numbers into his client dashboard, add improvement recommendations (website, more income streams) explained in the decision style. Needs a start card (agent sessions).
 
 ## Waiting for
 - Abmahnung: lawyer's reply to Martin's letter (pay 0 €) — card parked until a reply arrives.
