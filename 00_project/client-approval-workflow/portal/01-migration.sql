@@ -1,5 +1,5 @@
 -- Kunden-Freigabe-Workflow · Migration für Supabase 741-portal (galjmtozcgxcwtzkzbpi)
--- Stand 2026-10-13 · Entwurf · NUR nach Martins Go anwenden.
+-- Stand 2026-10-13 · ANGEWENDET am 13.10.2026 nach Martins Go (Migrationen client_approval_workflow + client_approval_revoke_trigger_fns).
 -- Quelle der Regeln: 00_project/client-approval-workflow/brief.md + client-approval-library (01–04)
 --
 -- Inhalt:
@@ -276,6 +276,9 @@ grant execute on function public.approval_decide(uuid, text, text, text) to auth
 grant execute on function public.approval_undo(uuid)    to authenticated;
 grant execute on function public.approval_release(uuid) to authenticated;
 grant execute on function public.approval_go(uuid)      to authenticated;
+-- Trigger-Funktionen nie per API aufrufbar (Advisor-Hinweis, nachgezogen 13.10. als Migration client_approval_revoke_trigger_fns)
+revoke all on function public.approval_items_guard()  from public, anon, authenticated;
+revoke all on function public.approval_settings_log() from public, anon, authenticated;
 
 -- ---------------------------------------------------------------------------
 -- 6. RLS
