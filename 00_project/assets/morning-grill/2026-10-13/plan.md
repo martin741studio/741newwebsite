@@ -14,6 +14,7 @@
 - Portal replies (card 1): new session "✉️ Portal-Antworten 13.10." drafts replies for Suriya, Hüwel, Dumann (4), Brasse, Rabenmütter; Ich-Form, du/Sie as in the thread, text blocks, slop 5/5; nothing sent.
 - Bali Ads verification (card 3): message to the 🌺 Bali Healing chat: read-only check of the advertiser verification state + list of documents to upload.
 - Suriya listings (card 7): agent lists the 28 unhandled confirmation emails (this chat) → card in the next grill.
+- Bali result (cards 3+5): Ads account PAUSED since the 1 Oct deadline (agency check done 1 Oct, client documents for PT Amana still open; Martin uploads the NIB under Admin > Policy > Account > "Start task"); status reply finished with CRM numbers (149 requests, 38 accepted, 14 in conversation) and Ads data (IDR 571,785, 61 clicks, 14 WhatsApp), slop 5/5, ready for Martin to send.
 
 ## Waiting for
 - Abmahnung: lawyer's reply to Martin's letter (pay 0 €) — card parked until a reply arrives.
