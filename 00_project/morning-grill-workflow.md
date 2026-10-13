@@ -54,6 +54,7 @@ Done for one day means all of these are true:
 | D28 | Command Center home | Portal admin view on staging (answers saved in Supabase). Portal write order (Martin 13.10.): Freigabe-Dashboard → outreach numbers per client → Command Center. The local page stays in use until then. |
 | D29 | Admin panel build | Command Center as an admin-only tab on clients.741.studio, data from an admin-only Supabase snapshot table, clicks saved to `grill_answers`. Plan: `00_project/morning-grill-portal-plan.md` (not built). |
 | D30 | Admin tab on staging | Built and tested 13.10. (tables, RLS, tab, answer pull). Live upload and the snapshot write in the scheduled runs wait for separate gos. Log: `morning-grill-portal-plan.md` §8. |
+| D31 | Live + run write | Tab is LIVE since 13.10. (backup `index-2026-10-13-before-command-center.html`). The 06:13 and 17:00 runs pull answers first and publish one snapshot at the end (Martin's go 13.10.). |
 | D18 | Leads | In the daily 741 line. A lead gets a card only when a follow-up is due or older than 7 days. |
 
 ## 2. Daily rhythm
@@ -224,7 +225,7 @@ Side measures (logged, not gates): minutes from open to last card; cards per day
 
 ## 15. Hard rules
 
-1. Read only in the scan. Every write outside `00_project/assets/morning-grill/` needs a card or an approved plan line.
+1. Read only in the scan. Every write outside `00_project/assets/morning-grill/` needs a card or an approved plan line. Exception (Martin 2026-10-13): `publish_snapshot.py` inserts ONE row per run into the admin-only table `grill_snapshots`; `pull_answers.py` reads `grill_answers`.
 2. Never send a message, never publish, never spend. Message drafts in ```text blocks, slop-checked 5/5.
 3. Never mark a task "done". Never invent a number; `null` + define card instead.
 4. Failed source = "unreadable" in the brief.

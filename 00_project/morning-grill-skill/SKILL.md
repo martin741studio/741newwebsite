@@ -10,18 +10,19 @@ Spec: `00_project/morning-grill-workflow.md` (read §1, §5, §8 at the start of
 
 ## Critical
 - Open points never as a prose list: ask them as cards in the same grill (D19).
-- The scan is READ ONLY. Never send, publish, spend, or change a portal, site or table. Message drafts go in ```text blocks, slop-checked 5/5.
+- The scan is READ ONLY, with one exception approved 13.10.: `publish_snapshot.py` inserts ONE row into grill_snapshots; `pull_answers.py` only reads grill_answers. Never send, publish, spend, or change a portal, site or table. Message drafts go in ```text blocks, slop-checked 5/5.
 - Never mark a task "done". Never invent a number: `null` plus a define card.
 - A source that fails is "unreadable" in the brief, never "nothing new". Time zone is WITA (UTC+8).
 
 ## Mode A — Morning (06:00 task or "grill me")
 Copy this checklist and tick it off:
+- [ ] 0 Pull Martin's portal answers first: `python3 ~/.claude/skills/morning-grill/scripts/pull_answers.py` (read only; updates `state/cards.json`). Then continue.
 - [ ] 1 Run folder `00_project/assets/morning-grill/<YYYY-MM-DD>/`. Bookmark = `state/bookmarks.json` (first run: yesterday 06:00 WITA). If it is after 12:00, build the short brief (priority 1–2 cards only).
 - [ ] 2 Inputs for MCP sources: `list_sessions` → `inputs/sessions.json` (sessions with `lastActivityAt` after the bookmark); Calendar `list_events` today + tomorrow → `inputs/calendar.json`.
 - [ ] 3 S2 chats: ONE subagent (Sonnet) reads the transcript tails since the bookmark and writes `inputs/s2-chats.json` (prompt: `references/s2-subagent-prompt.md`).
 - [ ] 4 Run `python3 ~/.claude/skills/morning-grill/scripts/scan.py --date <d> --bookmark <iso> --out <run> --sessions … --chats … --calendar …`
 - [ ] 5 Judgment step: read `scan.json` (S2, S9) and the goal sheet. Write `judgment-cards.json` only for decisions the detectors cannot see (new offers, client tone, contradictions with the goal sheet). Format: `assets/decision-card.template.json`. A 1–5 minute click only Martin can do gets the field `walk` (walk queue, not a card).
-- [ ] 6 Run `build_cards.py --run <run>`, then `render_brief.py --run <run>`, then `status_report.py --run <run>`, then `render_command_center.py --run <run>` (writes `00_project/assets/morning-grill/command-center.html`, the one page Martin opens), then `validate_brief.py --run <run>` (all in `~/.claude/skills/morning-grill/scripts/`). Fix until it prints PASS.
+- [ ] 6 Run `build_cards.py --run <run>`, then `render_brief.py --run <run>`, then `status_report.py --run <run>`, then `render_command_center.py --run <run>` (writes `00_project/assets/morning-grill/command-center.html`, the one page Martin opens), then `validate_brief.py --run <run>`, then `publish_snapshot.py --run <run> --mode morning` (the ONLY write a scheduled run may do: one insert into the admin-only table grill_snapshots, so the page in the admin panel shows the new state) (all in `~/.claude/skills/morning-grill/scripts/`). Fix until it prints PASS.
 - [ ] 7 Grill in THREE parts (D24): **Part 1 status report** — paste `status-report.md` in chat (where each client is vs goal, what moved, what runs now, what is stuck + why + who waits; quiet clients one line) and the brief link. **Part 2 decisions** — the walk queue in one line, then the cards as AskUserQuestion (4 per round, max 2 rounds, recommended option first, labelled "(Recommended)"); each card says why the thing is not happening. After each round, restate in 3 lines. **Part 3 what happens now** — per decision: who does it, when Martin hears back, what stays waiting and for whom.
 - [ ] 8 Write answers to `decisions.md` and `state/cards.json` (park needs a reason) BEFORE acting. Re-run `render_command_center.py` so the page shows the decisions.
 - [ ] 9 Plan: write `plan.md` per client (Today, Agent starts, Waiting for, Message drafts) with the routing table in spec §8. Human task = portal task draft + WhatsApp line. Agent work = `start_session` (user_asked, use_worktree false) or SendMessage to the client chat.
