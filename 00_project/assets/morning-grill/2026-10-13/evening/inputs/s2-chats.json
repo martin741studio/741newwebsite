@@ -1,0 +1,325 @@
+{
+ "bookmark": "2026-10-13T11:30+08:00",
+ "read_at": "2026-10-13T17:05+08:00",
+ "files_read": 37,
+ "files_unreadable": [],
+ "clients": {
+  "Praxis Hüwel": {
+   "done": [
+    "[e8aede79] PR #5 merged (consent notice); data retention set to 14 months; Google Signals switched off in GA4",
+    "[e8aede79] Indexing requested in Search Console: Startseite, Frequenztherapie, Ondamed, Wartezeit-Vermeider (Kontakt last)",
+    "[e8aede79] Live test clicks (phone, email): GA4 realtime shows phone_click, email_click, page_view, session_start",
+    "[e8aede79] Approval card 'Datenschutz-Abschnitt zu Google Analytics' released to open; indexing task set done",
+    "[bac0e038] Portal reply e3777559 (updated GA4 text, no GTM needed) verified as posted by grill chat",
+    "[f239aac6] Cards E2,E3,E5,E6,E7,E8 released with deadline 20.10.; E4 deleted; E7 rebuilt (video in hero?)"
+   ],
+   "open": [
+    "[e8aede79] Mark key events phone_click and email_click in GA4 (portal task due 14.10.)",
+    "[e8aede79] generate_lead, whatsapp_click: mark at first real event",
+    "[f239aac6] Merge second page heilpraktiker-nürnberg.html into Startseite: needs Martin's go for the page change",
+    "[f239aac6] Message to Hüwel about the cards not yet drafted"
+   ],
+   "waiting_for": [
+    {
+     "who": "client",
+     "what": "Answer card A/B (keep GA4 measuring or switch off)",
+     "since": "2026-10-13"
+    },
+    {
+     "who": "client",
+     "what": "Answers to 7 open cards E1,E2,E3,E5,E6,E7,E8, deadline 20.10.",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "[f239aac6] Go for hero-video variant (E7) wording / Abmahnrisiko 'sehr effektiv' stays in card",
+    "[f239aac6] Confirm whether to draft message to Hüwel"
+   ],
+   "last_activity": "2026-10-13T05:03Z"
+  },
+  "Kamil (Physio Anatomie + Kraft)": {
+   "done": [
+    "[7d666ae6] Google Ads report Aug+Sep published live in Kamil's Reports tab (HTTP 200), backup first, rollback row noted",
+    "[7d666ae6] Kamil message draft (DE, slop 5/5) written, NOT sent",
+    "[610a8689] Audit of both Kamil sites started; physiotherapiekraft.de is hacked (fake 'Verify you are human' ClickFix)",
+    "[610a8689] physiotherapiekraft.de closed (403) since ~15:00 WITA; cleanup approved by Martin in the audit chat"
+   ],
+   "open": [
+    "[610a8689] Plugin comparison / cleanup still running (no result after ~35 min)",
+    "[610a8689] Full scan of Oberhausen homepage still open (homepage looks clean)",
+    "[e418e89f] Final Kamil message with hack facts not yet delivered",
+    "[610a8689] Martin's Mac got an infostealer (~13:49 WITA); password rotation in progress"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "Decide: Kraft Ads send paid clicks to the 403 page (pause or keep)",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "[e418e89f] Ads decision for physiotherapiekraft.de while site is offline",
+    "[7d666ae6] Go to send the 2-line Kamil report message"
+   ],
+   "last_activity": "2026-10-13T09:02Z"
+  },
+  "STÜRZL Steuerstrafrecht": {
+   "done": [
+    "[5a89f936] Search Console: reporting-bot added by Martin; siteFullUser confirmed on the property",
+    "[5a89f936] GSC export 480 days pulled: 300 queries, 63 pages, 35 opportunities (stuerzl/gsc/gsc-export-480d-2026-10-13.json)",
+    "[f239aac6] Stürzl approval cards stay drafts; E3 recommendation changed to B (38 vs 37 of 44)"
+   ],
+   "open": [
+    "[f239aac6] E3 decision A vs B in Stürzl round",
+    "[5a89f936] Martin sent a WhatsApp audio about her message; content not summarised in reply"
+   ],
+   "waiting_for": [],
+   "client_promises": [],
+   "needs_martin": [
+    "[f239aac6] Decide E3 A or B and release Stürzl cards one by one"
+   ],
+   "last_activity": "2026-10-13T08:56Z"
+  },
+  "Johni Jaya Motor": {
+   "done": [
+    "[701c3ead] GBP pass done (categories, services with prices, booking link); GA4 account and property renamed to Johni Jaya Motor",
+    "[701c3ead] Portal GBP task marked done, activity logged, client memory and plan updated"
+   ],
+   "open": [
+    "[247f25fe] Local Falcon baseline scan blocked: connector not in Claude Code (also in fresh session)",
+    "[701c3ead] Check connector is both 'connected' and 'enabled for Claude Code' in claude.ai, then run scan"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "Enable Local Falcon connector for Claude Code",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "[701c3ead] Reconnect Local Falcon (two switches)",
+    "[701c3ead] Draft message and task plan for restart: check plan file"
+   ],
+   "last_activity": "2026-10-13T05:17Z"
+  },
+  "Bali Healing": {
+   "done": [
+    "[adc36943] 'Status 13 October' section live on balihealing-seo-roadmap.html (HTTP 200); 7 requests with status",
+    "[adc36943] Short pointer message for the group drafted (slop 5/5), not sent; rule: dashboard leads",
+    "[f239aac6] Seitenbaum page corrected, acupuncture removed, backups saved, verified live",
+    "[e9c4af07] Status reply to Pintor/Pasha drafted (lint 5/5), only point 6 waits for Sep 30 screenshot",
+    "[e9c4af07] Google Ads advertiser verification started in Chrome (Organization, Indonesia), reached 'What you'll need'",
+    "[8abda0cf] English decision cards live (commit 7350ede); apGuide fixed; no item released",
+    "[76ee66f6] Wix: Beauty testimonial section copied from About page and pasted into Beauty Consultations page (in progress)"
+   ],
+   "open": [
+    "[76ee66f6] Similar Treatments + testimonial video on 10 Beauty pages, due Fri 16.10.",
+    "[e9c4af07] NIB request card on Bali dashboard (live, no WhatsApp) requested by grill chat, not confirmed done",
+    "[e9c4af07] Ads verification form: Martin must start verification, enter company data, upload NIB PDF and ID",
+    "[adc36943] Release the 7 Bali decision items by Martin"
+   ],
+   "waiting_for": [
+    {
+     "who": "client",
+     "what": "NIB PDF of PT Amana Events Indonesia (deadline 15.10.)",
+     "since": "2026-10-13"
+    },
+    {
+     "who": "google",
+     "what": "Advertiser verification 1 to 10 days after submit",
+     "since": ""
+    }
+   ],
+   "client_promises": [
+    "Martin: Beauty landing pages Similar Treatments + video testimonials by Fri 16.10."
+   ],
+   "needs_martin": [
+    "[e9c4af07] Send status message to Pintor/Pasha after Sep 30 screenshot for point 6",
+    "[e9c4af07] Complete Google Ads verification clicks"
+   ],
+   "last_activity": "2026-10-13T09:01Z"
+  },
+  "me&you / Pauspapier": {
+   "done": [
+    "[5c4f6ee6] Draft C live at clients.741.studio/meandyou/ with 10 pages (200 OK, images load)",
+    "[5c4f6ee6] 'Optionen ansehen' buttons now link to booking page on Pauspapier's wish; Optionen page offline (404)",
+    "[5c4f6ee6] Replayers page shows 44 USD per month; price clarified"
+   ],
+   "open": [
+    "[5c4f6ee6] Transfer pages to meandyou.de after go-live date is set",
+    "[5c4f6ee6] Checkpoint 2 reviews"
+   ],
+   "waiting_for": [
+    {
+     "who": "team",
+     "what": "Answer whether Replayers page may link to the community",
+     "since": "2026-10-13"
+    },
+    {
+     "who": "martin",
+     "what": "Record Loom and send ready message to the group",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "[5c4f6ee6] Record Loom and send message",
+    "[5c4f6ee6] Set go-live date for meandyou.de"
+   ],
+   "last_activity": "2026-10-13T08:35Z"
+  },
+  "Talkinfive": {
+   "done": [
+    "[687c567d] Region consent rule pushed live on 4 go.talkinfive.com pages after Martin's go; deploy ok",
+    "[687c567d] Live tests passed: outside Europe Pixel fires, opt-out stops Meta, Europe off until Accept",
+    "[687c567d] Billy message drafted (lint 5/5), unsent"
+   ],
+   "open": [
+    "[687c567d] Opt-out click sends one SubscribedButtonClick to Meta; fix = switch off automatic button events"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "Go to disable Meta automatic button-click events (live change)",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "[687c567d] Go for the Meta auto-event fix",
+    "[687c567d] Send Billy message"
+   ],
+   "last_activity": "2026-10-13T09:00Z"
+  },
+  "Taxi-Zentrale Nürnberg": {
+   "done": [
+    "[da3afad4] Taxi added to registry, goal sheet and Command Center (commit 4249020); findings in taxi-akeeba-findings.md",
+    "[da3afad4] Read-only check: Akeeba download key missing for Admin Tools Pro and Backup Pro"
+   ],
+   "open": [
+    "[da3afad4] Joomla admin login in agent Chrome missing",
+    "[da3afad4] Quarter goal for Taxi empty"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "Paste Akeeba key in Joomla; reply to Daniel",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "[da3afad4] Paste Akeeba key; send reply to Daniel; define Taxi goal"
+   ],
+   "last_activity": "2026-10-13T08:56Z"
+  },
+  "Daniela Dumann": {
+   "done": [
+    "[0d991c89] Dumann E3 recommends the same sentence everywhere; approvers set",
+    "[bac0e038] Portal reply 995b0017 verified posted by grill chat"
+   ],
+   "open": [
+    "[065572cb] Approval-card drafts, task list and Bali-style page in preparation (read only, no output yet)"
+   ],
+   "waiting_for": [],
+   "client_promises": [],
+   "needs_martin": [],
+   "last_activity": "2026-10-13T09:01Z"
+  },
+  "Maria Brasse": {
+   "done": [
+    "[0d991c89] Cards E2,E3,E4 release started (E1 held: question not decision)",
+    "[bac0e038] Portal reply 7d041abf verified posted",
+    "[f239aac6] Card session reports Maria's cards done"
+   ],
+   "open": [
+    "[0d991c89] E1 card needs answer to Martin's question; FAQ questions still missing on 4 pages"
+   ],
+   "waiting_for": [],
+   "client_promises": [],
+   "needs_martin": [
+    "[0d991c89] Answer question on Maria E1"
+   ],
+   "last_activity": "2026-10-13T09:01Z"
+  },
+  "Praxis Suriya": {
+   "done": [
+    "[bac0e038] Portal reply 005b0cc2 verified posted (draft did not claim GSC access)",
+    "[f239aac6] Suriya cards still running"
+   ],
+   "open": [
+    "[bac0e038] Portal row GSC access still 'erteilt' but access gone: card needed"
+   ],
+   "waiting_for": [
+    {
+     "who": "client",
+     "what": "GSC access back; Website role only viewer",
+     "since": "2026-10-12"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "[bac0e038] Decide on GSC portal status"
+   ],
+   "last_activity": "2026-10-13T07:57Z"
+  },
+  "Rabenmütter": {
+   "done": [
+    "[bac0e038] Portal reply 16913676 verified posted; domain access set to entfaellt"
+   ],
+   "open": [],
+   "waiting_for": [],
+   "client_promises": [],
+   "needs_martin": [],
+   "last_activity": "2026-10-13T07:57Z"
+  },
+  "Jan Gunkel (prospect)": {
+   "done": [
+    "[78fed42c] v2 crisis-deal-flow page live at 741.studio/review/jan-gunkel/ after Martin's go; old version backed up; no video"
+   ],
+   "open": [
+    "[78fed42c] Martin sends link in second message after the reply"
+   ],
+   "waiting_for": [],
+   "client_promises": [],
+   "needs_martin": [
+    "[76b92d80] Check page before sending reply"
+   ],
+   "last_activity": "2026-10-13T05:07Z"
+  },
+  "Claudia Maria Steifensand (prospect)": {
+   "done": [
+    "[76b92d80] Review page live at 741.studio/review/claudia-maria-steifensand/ (page and 6 images 200); Loom script written"
+   ],
+   "open": [
+    "[76b92d80] Loom recording and WhatsApp message"
+   ],
+   "waiting_for": [],
+   "client_promises": [],
+   "needs_martin": [],
+   "last_activity": "2026-10-13T05:05Z"
+  },
+  "741 internal": {
+   "done": [
+    "[395e0ce8] Command Center Tasks tab live (commits 7ba1246, 088f3e3); 43 rows",
+    "[da3afad4] Walk queue replaced by 20 decision cards",
+    "[8ccce35e] Dashboard refresh job built read-only (portal/feed), nothing live",
+    "[8abda0cf] Rule: decision cards and Kundenarbeit go straight to live (commit 1526040)",
+    "[c204d580] English decision labels built (518a4b2, a6c29c5)",
+    "[f203e46d] Mac swap 18.9 of 19.5 GB; restart advised, 5 chats running"
+   ],
+   "open": [
+    "[f203e46d] Reboot Mac after chats finish"
+   ],
+   "waiting_for": [],
+   "client_promises": [],
+   "needs_martin": [
+    "[f203e46d] Reboot Mac"
+   ],
+   "last_activity": "2026-10-13T09:00Z"
+  }
+ }
+}
