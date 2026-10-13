@@ -1,0 +1,70 @@
+commit 56bc2566123f9c9192e5d7faf3904126308c1574
+Author: Martin Drendel <martindrendel@Martins-MacBook-Pro-7.local>
+Date:   Wed Oct 14 07:19:00 2026 +0800
+
+    Install canary (Ausfall-Wächter) workflow: outage watch, alert, self-heal
+    
+    Built via /workflow-create, gates cp1/cp2 passed (scorecard 90.5%, 67/74).
+    
+    - .claude/skills/canary/: SKILL.md (3 modes: add check, handle alert,
+      daily status), scripts (registry.py, alert.py, allowlist.py, verify.py),
+      references (check catalogue, self-heal allow-list, runbooks, Zapier
+      Manager setup), incident-log template.
+    - 00_project/canary/canaries.json: registry, seeded with 5 checks for
+      Marcel Rosenbach's Gewinnspiel funnel (2 live, 3 planned/blocked).
+    - 00_project/workflow-builds/canary/: full design + decision record
+      (C1-C13), research notes, hand-run proof, trigger/functional tests,
+      baseline, scorecard.
+    - Research: 00_project/knowledge/ops-library/canary-{research,
+      architecture-state-of-art}-2026-10-14.md.
+    
+    Live proof on Marcel's real outage (10.-14.10.2026): built and published
+    2 Zapier Manager Zaps ("New Zap Error", "Zap Turned Off") in his Zapier
+    account, alerting Martin's new "741 Canary" Telegram bot. 3 real test
+    alerts sent, 1 confirmed received.
+    
+    Found and fixed during testing: disable-model-invocation: true blocked
+    natural-language triggering entirely (both a fresh trigger-test session
+    and a fresh functional-test session hit this independently). Fixed to
+    false, matching night-shift-v2's precedent — safety comes from the
+    per-action allow-list + Martin's go-cards, not from blocking invocation.
+    
+    Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+
+ .claude/skills/canary/SKILL.md                     |  58 ++++++
+ .../skills/canary/assets/incident-log.template.md  |  20 ++
+ .claude/skills/canary/references/allowlist.md      |  27 +++
+ .../skills/canary/references/check-catalogue.md    |  44 ++++
+ .claude/skills/canary/references/runbooks.md       |  28 +++
+ .../canary/references/zapier-manager-setup.md      |  42 ++++
+ .claude/skills/canary/scripts/alert.py             | 121 +++++++++++
+ .claude/skills/canary/scripts/allowlist.py         |  44 ++++
+ .claude/skills/canary/scripts/registry.py          | 149 ++++++++++++++
+ .claude/skills/canary/scripts/verify.py            |  71 +++++++
+ .../assets/marcel/canary/msg-marcel-read-keys.txt  |  12 ++
+ 00_project/canary/canaries.json                    | 105 ++++++++++
+ 00_project/canary/state/alerts.log                 |   1 +
+ .../canary-architecture-state-of-art-2026-10-14.md | 188 +++++++++++++++++
+ .../ops-library/canary-research-2026-10-14.md      | 225 ++++++++++++++++++++
+ 00_project/workflow-builds/canary/baseline.md      |  16 ++
+ 00_project/workflow-builds/canary/block-choice.md  |  16 ++
+ .../workflow-builds/canary/build-checklist.json    | 226 +++++++++++++++++++++
+ 00_project/workflow-builds/canary/coverage-map.md  |  55 +++++
+ 00_project/workflow-builds/canary/cp1-go.md        |   7 +
+ 00_project/workflow-builds/canary/cp2-go.md        |   7 +
+ 00_project/workflow-builds/canary/decisions.md     |  27 +++
+ 00_project/workflow-builds/canary/freedom.md       |  14 ++
+ 00_project/workflow-builds/canary/freshness.md     |  10 +
+ .../workflow-builds/canary/functional-test.md      |  17 ++
+ 00_project/workflow-builds/canary/hand-run.md      |  48 +++++
+ 00_project/workflow-builds/canary/house-rules.md   |  10 +
+ .../canary/incident-marcel-2026-10-13.md           |  50 +++++
+ .../workflow-builds/canary/library-search.md       |  41 ++++
+ 00_project/workflow-builds/canary/pipeline.md      |  53 +++++
+ 00_project/workflow-builds/canary/research-note.md |  20 ++
+ 00_project/workflow-builds/canary/scorecard.md     |  74 +++++++
+ .../workflow-builds/canary/test-scenarios.md       |  35 ++++
+ 00_project/workflow-builds/canary/trigger-tests.md |  13 ++
+ .../workflow-builds/canary/unattended-rules.md     |  16 ++
+ 00_project/workflow-builds/canary/use-cases.md     |  34 ++++
+ 36 files changed, 1924 insertions(+)

@@ -174,39 +174,41 @@
    "note": "Martin: Go, install it (Recommended)"
   },
   "5.2": {
-   "status": "todo",
+   "status": "done",
    "title": "Committed (project files) or path noted in memory (personal skill)",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "00_project/workflow-builds/canary/git-commit.txt",
+   "date": "2026-10-14",
+   "note": "commit 56bc256 'Install canary ... workflow', 36 files"
   },
   "5.3a": {
-   "status": "todo",
+   "status": "done",
    "title": "Registry entry (add-workflow) and _run.json per run",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "00_project/assets/marcel/canary/2026-10-14/_run.json",
+   "date": "2026-10-14",
+   "note": "add-workflow + sync ran, canary + Marcel's run visible in Workflow-Uebersicht.xlsx"
   },
   "5.3b": {
-   "status": "todo",
+   "status": "skipped",
    "title": "Martin guide where a client or prospect sees output",
    "evidence": "",
-   "date": "",
-   "note": ""
+   "date": "2026-10-14",
+   "note": "",
+   "reason": "no client or prospect ever sees canary output; alerts and the registry are 741-internal only (coverage-map.md, scorecard F7)"
   },
   "5.3": {
-   "status": "todo",
+   "status": "done",
    "title": "Memory file + MEMORY.md line",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/canary-workflow.md",
+   "date": "2026-10-14",
+   "note": "memory file + MEMORY.md line written"
   },
   "5.4": {
-   "status": "todo",
+   "status": "skipped",
    "title": "Scheduled run done once by hand and read, if scheduled",
    "evidence": "",
-   "date": "",
-   "note": ""
+   "date": "2026-10-14",
+   "note": "",
+   "reason": "no cron/routine schedule built yet (runner is the open Hetzner-server item, decision C4); the one unattended path live today, Zapier Manager push, is event-driven and was already run for real 3x with 1 confirmed receipt (hand-run.md)"
   }
  },
  "gate_log": [
@@ -221,6 +223,12 @@
    "passed": true,
    "missing": 0,
    "at": "2026-10-14T07:17"
+  },
+  {
+   "gate": "install",
+   "passed": false,
+   "missing": 1,
+   "at": "2026-10-14T07:20"
   }
  ]
 }
