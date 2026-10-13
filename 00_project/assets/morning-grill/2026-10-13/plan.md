@@ -19,6 +19,7 @@
 - Found: Hüwel website has NO measuring code since the move on 06.10. (adding it needs your go).
 
 - Bali audit + content pool: go 13.10. → sent to the Bali session.
+- DONE Bali audit + pool (go 13.10.): audit Go-B with 0 corrections (45/100, coverage 90 %, Ads field now verified: paused); English client page ready as draft, Go-C on hold until the status reply is out. Pool checkpoint 1 go (2 doors, adjacent items out, naturopathy removal after client OK), sitemap built (39 nodes, 0 errors) → waits for checkpoint 2. Drive upload open (Chrome timed out), files staged.
 - Hüwel GA4 with consent: prepare on a test branch → sent to the Hüwel chat.
 - Portal flags: set after Martin sends the 5 replies → sent to the portal-replies session.
 - Command Center in the portal admin view (staging): starts when the Freigabe-Dashboard chat is idle.
