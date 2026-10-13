@@ -3,7 +3,7 @@
 Status 13.10.2026 (evening):
 - Database: migration applied after Martin's go (`outreach_numbers_per_account`, `outreach_accounts_revoke_anon`). 8 accounts, 8 assignments (Rias: Peggy, Celine; Gayo: the other 6).
 - Staging: `clients.741.studio/staging/index.html` patched with [patch_portal.py](patch_portal.py). Backup before the patch: `clients.741.studio/backup/staging-2026-10-13-before-outreach-accounts.html`.
-- Live portal: NOT changed. The live form still saves the old way, which still works. A second go from Martin is necessary.
+- Live portal: patched 13.10.2026 after Martin's second go. Backup: `clients.741.studio/backup/index-2026-10-13-before-outreach-accounts.html`. Checked in Chrome: admin view, Rias form (2 accounts), Gayo form (6 accounts). Screenshot 6.
 
 ## Problem
 
@@ -65,8 +65,8 @@ The shared file `clients.741.studio/staging/index.html` is not touched. It holds
    - New manager card "LinkedIn accounts" (add, edit, deactivate, assign people).
    - Fallback: a person with no assigned account sees the old form, so nobody is blocked on day one.
 4. DONE (staging test 13.10.): admin view shows the period table per account and the account list. Assign on/off works. Rias's form renders 2 accounts × 6 fields and the totals line. A real `submit_daily_report` as Rias (31.12.2026, then deleted) gave 25 messages, 3 replies, {Peggy 40, Celine 20}, and the status line "Bali Healing, 01.12.–31.12. (Peggy LinkedIn): 40 connection requests sent, 9 accepted, 12 pitched, 3 follow-ups, 2 replies, 1 interested." Screenshots 4 and 5.
-5. OPEN (needs Martin's go): pull live fresh, back up, run `patch_portal.py` on it, `node --check`, upload to `clients.741.studio/index.html`.
-6. OPEN: send [gayo-brief.md](gayo-brief.md) to Gayo after live.
+5. DONE 13.10. (Martin's second go): pull live fresh, back up, run `patch_portal.py` on it, `node --check`, upload to `clients.741.studio/index.html`.
+6. OPEN: Martin sends [gayo-brief.md](gayo-brief.md) to Gayo.
 
 Note: other sessions also patch `staging/index.html`. If one of them uploads an older copy, my patch is gone from staging. Then run `patch_portal.py` again on a fresh pull.
 
