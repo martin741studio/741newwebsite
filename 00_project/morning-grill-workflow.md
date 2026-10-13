@@ -55,6 +55,7 @@ Done for one day means all of these are true:
 | D29 | Admin panel build | Command Center as an admin-only tab on clients.741.studio, data from an admin-only Supabase snapshot table, clicks saved to `grill_answers`. Plan: `00_project/morning-grill-portal-plan.md` (not built). |
 | D30 | Admin tab on staging | Built and tested 13.10. (tables, RLS, tab, answer pull). Live upload and the snapshot write in the scheduled runs wait for separate gos. Log: `morning-grill-portal-plan.md` §8. |
 | D31 | Live + run write | Tab is LIVE since 13.10. (backup `index-2026-10-13-before-command-center.html`). The 06:13 and 17:00 runs pull answers first and publish one snapshot at the end (Martin's go 13.10.). |
+| D32 | Own answer + change answer | Added 13.10. by the Freigabe chat after Martin's review: every card has "Write own answer" (grill_answers option `own`, text required, DB constraint `own_needs_text`) and decided cards can be reopened (latest answer wins). `pull_answers.py` turns `own` into the decision text. Verified by this chat: repo source reproduces live byte for byte, JS valid, constraint present. |
 | D18 | Leads | In the daily 741 line. A lead gets a card only when a follow-up is due or older than 7 days. |
 
 ## 2. Daily rhythm
