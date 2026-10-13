@@ -49,3 +49,5 @@
 - N29 Window from tomorrow: "17:30–22:45 WITA (Recommended)".
 - N30 Server move: "After 5 clean laptop nights (Recommended)".
 - N31 Check-ins in the laptop phase: "Only 21:30" (one check-in; needs the Command Center night section + 17:00 queue card).
+- N32 Queue card: "Morning-grill chat (Recommended)" — spec sent to the morning-grill chat 13.10. (needs Martin's go there).
+- N33 21:30 check-in: Martin's own answer: "Nah need on a chat here somewhere so i can access on my phone" → check-in happens in THIS chat (Night Shift chat) with Remote Control ON (set 13.10. ~19:40) so Martin opens it in the Claude app. Cards via AskUserQuestion here. No portal change.
