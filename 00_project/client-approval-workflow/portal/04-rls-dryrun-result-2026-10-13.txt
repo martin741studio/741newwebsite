@@ -1,0 +1,23 @@
+Probelauf 2026-10-13: 01-migration.sql + Seed + 04-rls-tests.sql in EINER Transaktion, am Ende Abbruch (Rollback).
+Danach geprüft: keine Tabelle, keine Funktion angelegt (to_regclass = null, 0 Funktionen).
+
+1 OK risk_class => must_active_yes :: E1,E5
+2 OK HWG gate blocks release :: HWG-Prüfung fehlt: Element bleibt Entwurf
+3 OK client sees only own released items (5) :: 5 / E1,E2,E3,E4,E5
+4 OK client sees own settings only :: 1
+5 OK client direct UPDATE blocked :: 0 rows
+6 OK client direct INSERT log blocked :: new row violates row-level security policy for table "approval_decisions"
+7 OK client cannot create items :: new row violates row-level security policy for table "approval_items"
+8 OK client approves E1 (A) :: ready A
+9 OK client approve_with_change E2 :: ready B Bitte ohne Gedankenstrich
+10 OK request_change needs note :: Bitte kurz beschreiben, was anders sein soll
+11 OK client cannot give Go :: Nur Admin gibt das Go
+12 OK client cannot decide other client item :: Element nicht gefunden
+13 OK client log shows own entries only :: 7 rows
+14 OK admin sees all items incl. draft/foreign (7) :: 7
+15 OK admin Go on E1 :: go by Martin
+16 OK Go only for ready items :: Go nur für Elemente in "bereit für live"
+17 OK edit after Go blocked :: Nach dem Go gesperrt. Eine spätere Änderung ist ein neues Element.
+18 OK content edit => new version, decision reset :: v2 open
+19 OK log append-only even for admin :: 0 upd / 0 del
+20 OK log kinds :: admin_go/go, admin/new_version, admin/released, client/approve, client/approve_with_change
