@@ -1,6 +1,6 @@
 -- 741 portal (Supabase 741-portal, galjmtozcgxcwtzkzbpi) · area B "Outreach & Sales"
 -- Outreach numbers per account (LinkedIn account the work comes from).
--- Status: DRAFT 13.10.2026. Do not apply without Martin's go.
+-- Status: APPLIED 13.10.2026 after Martin's go (migrations outreach_numbers_per_account + outreach_accounts_revoke_anon).
 -- Decisions (Martin, 13.10.2026): account list + child rows · accepted = daily count per account ·
 -- Gayo keeps the list · totals in daily_reports are auto-sums · 6 fields · plan targets per account.
 -- RLS model stays: manager (Gayo, admin) = all; staff = own rows only; no link to area A (clients).
@@ -204,5 +204,19 @@ insert into public.outreach_accounts (label, client_label, kind, sort) values
   ('741 Main LinkedIn',          '741 Studio',    '741',    60),
   ('741 Second LinkedIn',        '741 Studio',    '741',    70),
   ('741 Third LinkedIn',         '741 Studio',    '741',    80);
+
+-- 10) Start assignments (from the reports up to 12.10.2026: Rias took over Bali Healing and works Celine).
+--     Gayo corrects them in the portal.
+insert into public.outreach_account_members (account_id, member_id)
+select o.id, m.id from public.outreach_accounts o join public.team_members m
+  on (m.display_name = 'Rias' and o.label in ('Peggy LinkedIn','Celine LinkedIn'))
+  or (m.display_name = 'Gayo' and o.label not in ('Peggy LinkedIn','Celine LinkedIn'))
+where m.active;
+
+-- 11) Same as team_period: no anon access (second migration outreach_accounts_revoke_anon).
+revoke execute on function public.team_period_accounts(date, date) from public, anon;
+revoke execute on function public.submit_daily_report(date, jsonb, jsonb) from public, anon;
+revoke execute on function public.submit_daily_plan(date, text, jsonb) from public, anon;
+grant execute on function public.team_period_accounts(date, date) to authenticated;
 
 commit;

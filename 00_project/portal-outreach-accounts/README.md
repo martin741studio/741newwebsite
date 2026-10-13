@@ -1,6 +1,9 @@
 # Portal area B: outreach numbers per account
 
-Status 13.10.2026: design ready. No change applied to the database or to the live portal. Martin's go is necessary.
+Status 13.10.2026 (evening):
+- Database: migration applied after Martin's go (`outreach_numbers_per_account`, `outreach_accounts_revoke_anon`). 8 accounts, 8 assignments (Rias: Peggy, Celine; Gayo: the other 6).
+- Staging: `clients.741.studio/staging/index.html` patched with [patch_portal.py](patch_portal.py). Backup before the patch: `clients.741.studio/backup/staging-2026-10-13-before-outreach-accounts.html`.
+- Live portal: NOT changed. The live form still saves the old way, which still works. A second go from Martin is necessary.
 
 ## Problem
 
@@ -51,17 +54,20 @@ https://clients.741.studio/staging/outreach-accounts/ (static page, example numb
 
 The shared file `clients.741.studio/staging/index.html` is not touched. It holds other sessions' staging work.
 
-## Rollout after Martin's go
+## Rollout
 
-1. Apply `migration.sql` (one migration).
-2. Pull the live portal fresh, back it up to `clients.741.studio/backup/`.
-3. Patch the team area in `index.html`:
+1. DONE: apply `migration.sql`.
+2. DONE (staging): pull fresh, back up, `python3 patch_portal.py in.html out.html`, `node --check`, upload. The script stops if an anchor is missing or found twice.
+3. What the patch does in the team area:
    - `renderMyDay`: load `outreach_accounts` (RLS gives the assigned ones). Show the plan and report cards per account as in the mockup. Show the work card per account.
    - `saveDailyPlan` / `saveDailyReport`: call `submit_daily_plan` / `submit_daily_report`.
    - `renderPeriod`: add the per-account table and the "Status line" button below the person view (`team_period_accounts`).
    - New manager card "LinkedIn accounts" (add, edit, deactivate, assign people).
    - Fallback: a person with no assigned account sees the old form, so nobody is blocked on day one.
-4. `node --check`, upload to staging, test as Rias and as Gayo, then live after Martin's go.
-5. Send [gayo-brief.md](gayo-brief.md) to Gayo.
+4. DONE (staging test 13.10.): admin view shows the period table per account and the account list. Assign on/off works. Rias's form renders 2 accounts × 6 fields and the totals line. A real `submit_daily_report` as Rias (31.12.2026, then deleted) gave 25 messages, 3 replies, {Peggy 40, Celine 20}, and the status line "Bali Healing, 01.12.–31.12. (Peggy LinkedIn): 40 connection requests sent, 9 accepted, 12 pitched, 3 follow-ups, 2 replies, 1 interested." Screenshots 4 and 5.
+5. OPEN (needs Martin's go): pull live fresh, back up, run `patch_portal.py` on it, `node --check`, upload to `clients.741.studio/index.html`.
+6. OPEN: send [gayo-brief.md](gayo-brief.md) to Gayo after live.
+
+Note: other sessions also patch `staging/index.html`. If one of them uploads an older copy, my patch is gone from staging. Then run `patch_portal.py` again on a fresh pull.
 
 Old reports stay as they are. There is no backfill: the seat names "Main/Second/Third LinkedIn" do not tell which client account they were.
