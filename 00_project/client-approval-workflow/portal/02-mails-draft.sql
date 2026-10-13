@@ -5,6 +5,7 @@
 --   (b) client_approval_settings.digest_enabled = false ist (Standard).
 -- Versandregeln: Absender portal@741.studio, reply_to + BCC IMMER martin@741.studio, max. 1 Mail pro Kunde und Tag.
 -- Texte: mail-digest-text.txt und mail-reminder-text.txt (Slop-Check 5/5). Du-Form, Signatur nur "Martin".
+-- Englisch (13.10.): Kunden mit clients.lang <> 'de' bekommen mail-digest-text-en.txt / mail-reminder-text-en.txt (Slop-Check 5/5).
 -- OFFEN für Martin: Hard Rule "E-Mails nur über Airmailer" vs. automatischer Portal-Versand über Resend (wie die Wochenmail).
 
 begin;
@@ -44,10 +45,15 @@ create or replace function public.approval_build_mail(p_client uuid)
 returns jsonb language plpgsql stable security definer set search_path = public as $$
 declare s client_approval_settings; c clients; v_new int; v_rem int; v_li text; v_kind text; v_subject text; v_body text;
         v_first text; v_due text; v_url text := 'https://clients.741.studio/?view=decisions';
+        v_en boolean; v_fmt text;
 begin
   select * into s from client_approval_settings where client_id = p_client;
   select * into c from clients where id = p_client;
-  v_first := coalesce(split_part(coalesce(s.approver_name, c.contact_person), ' ', 1), '');
+  v_en := coalesce(c.lang, 'de') <> 'de';                        -- jede Sprache außer Deutsch → Englisch
+  v_fmt := case when v_en then 'FMDD Mon' else 'DD.MM.' end;     -- 20 Oct / 20.10.
+  -- Teamnamen ("Bali Healing Team") und Titel ("Dr. Test") bleiben ganz, sonst nur der Vorname (wie apFirst im Portal)
+  v_first := coalesce(case when coalesce(s.approver_name, c.contact_person) ~* '\mteam\M|^(Dr\.|Prof\.)' then coalesce(s.approver_name, c.contact_person)
+                           else split_part(coalesce(s.approver_name, c.contact_person), ' ', 1) end, '');
 
   select count(*) into v_new from approval_items
    where client_id = p_client and status = 'open' and released_at > coalesce(s.last_digest_at, '-infinity');
@@ -58,17 +64,31 @@ begin
 
   v_kind := case when v_new > 0 then 'digest' else 'reminder' end;
   select string_agg('<li style="margin:6px 0">' || title ||
-           case when must_active_yes then ' (hier brauche ich dein Ja)'
-                when v_kind = 'digest' then ' (bis ' || to_char(due_at at time zone 'Europe/Berlin', 'DD.MM.') || ')' else '' end ||
+           case when must_active_yes then case when v_en then ' (I need your yes here)' else ' (hier brauche ich dein Ja)' end
+                when v_kind = 'digest' then case when v_en then ' (by ' else ' (bis ' end || to_char(due_at at time zone 'Europe/Berlin', v_fmt) || ')' else '' end ||
            '</li>', '' order by must_active_yes desc, due_at),
-         to_char(min(due_at) filter (where not must_active_yes) at time zone 'Europe/Berlin', 'DD.MM.')
+         to_char(min(due_at) filter (where not must_active_yes) at time zone 'Europe/Berlin', v_fmt)
     into v_li, v_due
     from (select * from approval_items where client_id = p_client and status = 'open'
             and (v_kind = 'digest' and released_at > coalesce(s.last_digest_at, '-infinity')
               or v_kind = 'reminder' and remind_at <= now())
           order by must_active_yes desc, due_at limit 5) x;
 
-  if v_kind = 'digest' then
+  if v_en then
+    if v_kind = 'digest' then
+      v_subject := v_new || case when v_new = 1 then ' item is' else ' items are' end || ' waiting for your decision';
+      v_body := '<p>Hi ' || v_first || ',</p><p>there ' || case when v_new = 1 then 'is one new item' else 'are ' || v_new || ' new items' end ||
+        ' for your website and your Google profile in the portal:</p><ul>' || v_li || '</ul>' ||
+        '<p>For each item I marked what I recommend and why, so you do not have to search. One click is enough.</p>';
+    else
+      v_subject := 'Reminder: ' || v_rem || case when v_rem = 1 then ' item' else ' items' end || ' open' || coalesce(' until ' || v_due, '');
+      v_body := '<p>Hi ' || v_first || ',</p><p>' || case when v_rem = 1 then 'one item' else v_rem || ' items' end ||
+        ' in the portal ' || case when v_rem = 1 then 'is' else 'are' end || ' still waiting for you:</p><ul>' || v_li || '</ul>' ||
+        case when v_due is null then ''
+             when s.auto_approve_consent then '<p>The deadline is ' || v_due || '. After that my recommendation counts as approved, as we agreed in the contract. You can still change it until it goes live.</p>'
+             else '<p>The deadline is ' || v_due || '. Without your decision these items stay open, and we cannot continue with this part of the work until then.</p>' end;
+    end if;
+  elsif v_kind = 'digest' then
     v_subject := v_new || case when v_new = 1 then ' Punkt wartet' else ' Punkte warten' end || ' auf deine Entscheidung';
     v_body := '<p>Hallo ' || v_first || ',</p><p>im Portal liegen ' || v_new ||
       case when v_new = 1 then ' neuer Punkt' else ' neue Punkte' end || ' für deine Website und dein Google-Profil:</p><ul>' || v_li || '</ul>' ||
@@ -83,8 +103,9 @@ begin
            else '<p>Die Frist endet am ' || v_due || '. Ohne deine Entscheidung bleiben diese Punkte offen, und wir können an diesen Stellen erst einmal nicht weiterarbeiten.</p>' end;
   end if;
   v_body := '<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.55;max-width:560px;color:#252525">' || v_body ||
-    '<p><a href="' || v_url || '" style="display:inline-block;background:#252525;color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:9px">Jetzt entscheiden</a></p>' ||
-    '<p>Herzliche Grüße<br>Martin</p></div>';
+    '<p><a href="' || v_url || '" style="display:inline-block;background:#252525;color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:9px">' ||
+    case when v_en then 'Decide now' else 'Jetzt entscheiden' end || '</a></p>' ||
+    case when v_en then '<p>Best regards<br>Martin</p></div>' else '<p>Herzliche Grüße<br>Martin</p></div>' end;
   return jsonb_build_object('kind', v_kind, 'to', c.contact_email, 'subject', v_subject, 'html', v_body);
 end $$;
 

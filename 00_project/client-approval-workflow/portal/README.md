@@ -12,6 +12,7 @@ Workflow-Schritt 3: Einbau ins Portal `clients.741.studio`, nur auf Staging. Vor
 | `05-seed-suriya-drafts.sql` | Praxis Suriya: 5 Elemente als Entwurf, gegen Live-Website und HWG geprüft | angewendet 13.10., Coralie sieht nichts bis „An Kunde geben“ |
 | `04-rls-tests.sql` + `04-rls-dryrun-result-2026-10-13.txt` | 20 RLS- und Regel-Tests, alle OK | fertig |
 | `mail-digest-text.txt`, `mail-reminder-text.txt` | Mailtexte, Slop-Check 5/5 | Entwurf |
+| `mail-digest-text-en.txt`, `mail-reminder-text-en.txt` | englische Mailtexte (clients.lang ≠ de), Slop-Check 5/5 | Entwurf |
 | `src/ap.css`, `src/ap.js`, `src/build.py` | Portal-Modul und Bau-Skript | auf Staging |
 
 ## Portal-Bau
@@ -37,4 +38,10 @@ Ohne Tabellen bleibt der Tab unsichtbar. Das restliche Portal läuft normal (gep
 ## Nicht im Umfang
 
 - Formular zum Anlegen von Elementen im Portal. Elemente kommen per SQL aus den Workflows (Audit, Content-Pool, CRO, Seitenbaum, Google-Profil).
-- Englische und indonesische Oberfläche für den Tab (Pilot ist deutsch).
+## Sprache (seit 13.10.)
+
+- Die Kundenansicht folgt `clients.lang`: `de` → Deutsch, jede andere Sprache (`en`, `id`) → Englisch. Texte stehen in `AP_TX` in `src/ap.js`. Die Tab-Beschriftung kommt aus `apTabLabel(b)`.
+- Die 741-Ansicht (Admin) bleibt deutsch. Die Vorschau „Kundenansicht ansehen“ zeigt die Kundensprache.
+- `build.py` stellt im Update-Modus die alte deutsche Tab-Beschriftung einmalig auf `apTabLabel(b)` um.
+- Mail-Entwurf `02-mails-draft.sql`: englischer Zweig in `approval_build_mail` (Datum „20 Oct“). Getestet am 13.10. nur in einer Transaktion mit Rollback, nichts angewendet.
+- Tests: `screenshots/en-2026-10-13/` (EN Bali Healing, DE Testpraxis, Desktop und 390 px).

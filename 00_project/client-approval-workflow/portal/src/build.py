@@ -39,6 +39,13 @@ if 'apRenderClient' in h:
     else:                                                           # alte Fassung: endet nach apConsent()
         j1 = h.find('\n}\n', h.find('async function apConsent(on)', j0)) + 3
     h = h[:j0] + js + h[j1:]
+    # Tab-Beschriftung in Kundensprache (13.10.): alte deutsche Fassung im Tab-Code durch apTabLabel(b) ersetzen
+    OLD_TAB = "tab('decisions', 'Entscheidungen' + (apOpenCount(b) ? ' <span class=\"pill pill-yellow\" style=\"margin-left:4px;\">' + apOpenCount(b) + '</span>' : ''))"
+    if OLD_TAB in h:
+        assert h.count(OLD_TAB) == 1, 'Tab-Code mehrfach'
+        h = h.replace(OLD_TAB, "tab('decisions', apTabLabel(b))")
+        print('Tab-Beschriftung umgestellt')
+    assert "tab('decisions', apTabLabel(b))" in h, 'Tab-Code nicht gefunden'
     print('update-Modus: Modul getauscht')
     finish(h)
 
@@ -58,7 +65,7 @@ sub("  bundle = await fetchClientBundle(clientId);\n",
 sub("  if (currentView === null) currentView = (mode === 'reports') ? 'reports' : 'overview';\n",
     "  if (currentView === null) currentView = (new URLSearchParams(location.search).get('view') === 'decisions' && apOn(b)) ? 'decisions' : (mode === 'reports') ? 'reports' : 'overview';\n")
 sub("    ${tab('overview', C.overview)}\n",
-    "    ${tab('overview', C.overview)}\n    ${apOn(b) ? tab('decisions', 'Entscheidungen' + (apOpenCount(b) ? ' <span class=\"pill pill-yellow\" style=\"margin-left:4px;\">' + apOpenCount(b) + '</span>' : '')) : ''}\n")
+    "    ${tab('overview', C.overview)}\n    ${apOn(b) ? tab('decisions', apTabLabel(b)) : ''}\n")
 sub("  let body;\n  if (currentView === 'citations') {",
     "  let body;\n  if (currentView === 'decisions' && apOn(b)) {\n    body = apRenderClient(b, false);\n  } else if (currentView === 'citations') {")
 # 4. Admin: Knopf im Kundenkopf + Unteransicht
