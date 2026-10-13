@@ -28,3 +28,10 @@
 ## Checkpoint 1 (2026-10-13, ~18:40 WITA)
 - CP1 Design go: "Go, as designed (Recommended)" — build the server runner with the 6 bug fixes, guard and tests on a branch. Nothing armed or bought. Next go = checkpoint 2 (tests + scorecard).
 - N17 Cap week 1: "Keep 14 for week 1 (Recommended)" — after week 1 show runs used, passes, weekly-limit impact; then Martin decides.
+
+## Round 5 — server purchase prep (2026-10-13, ~19:20 WITA)
+- N18 Size: "CX43, EUR 16.49/mo (Recommended)" — 8 shared vCPU, 16 GB, 160 GB, Nuremberg (fallback Helsinki if sold out).
+- N19 Server: Martin's own answer: "There is no connection to a server. ... No, there's no other connection to a server." → new, separate Hetzner box. Note: the laptop's known_hosts lists a Hostinger VPS (srv1782758.hstgr.cloud) and two Google Cloud VMs (hub.741-studio.com, project studio-apis-503306) that Martin does not know about → check if they still bill (walk item, not part of this build).
+- N20 Browser: "Headless now, agent login later (Recommended)" — B1 headless Playwright now; B2 separate 741 agent account with read roles in phase 2; never Martin's main logins on the server.
+- N21 Untracked files: "Commit what the night needs (Recommended)" — agent lists untracked folders, Martin ticks what goes to GitHub.
+- N22 Commit groups: G1 only (workflow + knowledge text, ~60 MB). G2 client text, G3 media, G4 build output stay on the laptop for now. Commit + push = runbook step 0.3, after the laptop check (S0) and a secret scan.

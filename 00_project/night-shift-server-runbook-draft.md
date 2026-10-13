@@ -17,7 +17,7 @@ Order matters. Do not skip S0.
 | # | Who | Step |
 |---|---|---|
 | 1.1 | M | Hetzner Cloud account; create project "741-nightshift"; add payment method |
-| 1.2 | M | Create server: location Nuremberg, Ubuntu LTS, CPX22 class (≈ 4 GB RAM or more), add Martin's SSH public key, enable backups (optional) |
+| 1.2 | M | Create server: **CX43** (8 vCPU, 16 GB, 160 GB, EUR 16.49/mo excl. VAT), location Nuremberg (Helsinki if sold out), Ubuntu 24.04, add Martin's SSH public key, backups on (≈ 20 % extra). Data plan: `night-shift-server-data-transport.md` |
 | 1.3 | M | Tailscale account; install Tailscale on laptop + phone; join the server (`tailscale up` with an auth key Martin creates) |
 | 1.4 | M | GitHub: add a deploy key (write) for the repo; protect `main` (no direct pushes from that key) |
 | 1.5 | M | Supabase: create user `nightshift-bot@741.studio` (password into the server env file by Martin) |
@@ -29,7 +29,7 @@ Order matters. Do not skip S0.
 | # | Who | Step |
 |---|---|---|
 | 2.1 | A | Harden: close public SSH (Tailscale only), firewall default deny, unattended-upgrades, timezone `Asia/Makassar` |
-| 2.2 | A | Create user `nightshift` (no sudo); install node LTS, python3, git, Claude Code, Playwright + Chromium |
+| 2.2 | A | Create user `nightshift` (no sudo); install node LTS, python3, git, Claude Code, Playwright + Chromium (headless only, level B1; B2 agent login = phase 2) |
 | 2.3 | A | Clone the repo; install the `night-shift` v2 skill, runner, guard hook, settings (dontAsk + allowlist + deny rules), sandbox network allowlist |
 | 2.4 | A | Install read keys from Martin's env files (Martin places them; agent checks names only, never prints values) |
 | 2.5 | A | Command Center: night card section + stop flag (portal change → staging first, then Martin's go for live) |
