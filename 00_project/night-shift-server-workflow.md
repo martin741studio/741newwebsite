@@ -108,3 +108,7 @@ Unconfirmed queue at 17:30 → only research and public audit items run (N10).
 ## 13. Hard limits
 
 Never: send, message, publish, deploy, live site or portal writes (except the night card rows), ads, money, credit-spending scans, deletes outside the server's own run folder, push to `main`, bypass mode, root. Martin does all accounts, payments, logins and key entry.
+
+## 14. Phase 1 = laptop (decision N27–N31, 13.10. evening)
+
+Martin: prove the night shift on the laptop first, server after 5 clean nights. Runner v2 `reporting/night-shift-v2/run.py` (queue mode, script planner + reviewer, exact run counter, cost from `total_cost_usd`, deadline kill at 22:45 WITA, STOP file `reporting/night-shift/STOP`, write check via `git status`). Claude flags: `--permission-mode dontAsk --setting-sources user --strict-mcp-config`, Write/Edit only under `reporting/night-shift/**`, deny list for curl/ftp/scp/rsync/ssh/git push/rm. LaunchAgent `studio.741.night-shift-v2` Mon–Fri 17:30 + 20:30 (20:30 = resume slot); no queue file → no run. Old v1 agent stays unloaded. Open: 17:00 night-queue card (morning-grill chat), Command Center night section for the 21:30 check-in, mail ping. Known gap: `python3` is allowed for the agents and could write outside the folder; the git check logs it as a violation.

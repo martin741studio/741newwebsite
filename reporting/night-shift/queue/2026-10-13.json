@@ -1,0 +1,26 @@
+{
+ "date": "2026-10-13",
+ "confirmed_by": "Martin, grill card 'Night queue 13.10.' (all 4 ticked) + 'Quick-fixed run 20:30-22:45'",
+ "items": [
+  {"id": "bali-beauty-similar", "client": "Bali Healing", "class": "draft", "lang": "English",
+   "title": "Similar Treatments blocks for the 10 Beauty pages (due 16.10.)",
+   "brief": "Pasha's tracker asks for a 'Similar Treatments' block on each Beauty landing page of https://www.balihealing.com (due Fri 16.10.). Find the 10 Beauty treatment pages from the public site (sitemap / Beauty menu). For each page draft a 'Similar Treatments' block: heading, 3 linked related treatments that really exist on the site (exact URL + 1-line reason in the clinic's voice). Draft only, no live edit.",
+   "inputs": ["https://www.balihealing.com (public pages, sitemap)", "00_project/assets/balihealing/content-pool/05-sitetree/own-urls.txt", "00_project/assets/balihealing/content-pool/", "00_project/assets/balihealing/status-2026-10-13/"],
+   "done": "items/bali-beauty-similar/similar-treatments.md with one section per Beauty page (page URL, block heading, 3 related treatments with real URLs and one line each) + a table of all 10 pages."},
+  {"id": "brasse-faq", "client": "Maria Brasse", "class": "draft", "lang": "German",
+   "title": "FAQ drafts for the 4 page texts that have no FAQ",
+   "brief": "Maria Brasse (Feng Shui, shuiguru.de, Berlin). The page texts are in 00_project/maria-brasse-pages/maria-text-*.html. Find the texts WITHOUT an FAQ section (expected 4). For each, draft 4-6 FAQ questions + answers in Maria's voice (du/Sie as in the existing text), based on real 'People also ask' style questions and the facts already in her texts. No new facts about her services or prices; use [fehlt: ...] where a price or detail is needed.",
+   "inputs": ["00_project/maria-brasse-pages/", "00_project/maria-brasse-ci-steckbrief.md", "00_project/maria-brasse-pages/maria-faq-fragen-2026-10.html"],
+   "done": "items/brasse-faq/faq-entwuerfe.md with one section per page (file name, page topic, 4-6 Q&A in German) + a list which texts already had an FAQ."},
+  {"id": "stuerzl-gsc-chancen", "client": "STÜRZL Steuerstrafrecht", "class": "research", "lang": "German",
+   "title": "35 GSC opportunities: which page gets which fix",
+   "brief": "Analyse the 480-day Search Console export (keys: totals, queries, pages, query_page, chancen). For each of the opportunities in 'chancen' (expected 35): query, current page, position, impressions, clicks, and the concrete fix (title/meta, new section, FAQ, internal link, new page). Group by page. Rank by expected gain. Respect the client's facts (source of truth) and never mention RVG fees.",
+   "inputs": ["00_project/assets/stuerzl/gsc/gsc-export-480d-2026-10-13.json", "00_project/assets/stuerzl/source-of-truth-2026-10-11.md", "00_project/assets/stuerzl/slugs.json", "00_project/assets/stuerzl/voice.md"],
+   "done": "items/stuerzl-gsc-chancen/gsc-chancen.md: ranked table of all opportunities grouped by page with the fix per row, plus top-5 actions for this week in plain German."},
+  {"id": "kamil-oberhausen-audit", "client": "Kamil (Physio Anatomie + Kraft)", "class": "public_audit", "lang": "German",
+   "title": "Public read-only check of physiotherapieoberhausen.com after the Kraft hack",
+   "brief": "The sister site physiotherapiekraft.de was hacked (fake 'Verify you are human'). Check the PUBLIC pages of https://physiotherapieoberhausen.com read-only (WebFetch only, no login, no form submits): signs of compromise (injected scripts, odd redirects, spam links, fake captcha, unknown external script hosts), plus basic SEO health (title, meta, H1, broken links on main pages). The Kamil chat runs the server-side cleanup; this is only the outside view.",
+   "inputs": ["https://physiotherapieoberhausen.com (public pages)"],
+   "done": "items/kamil-oberhausen-audit/audit.md: findings table (page, finding, severity, evidence quote/URL), a clear verdict 'signs of compromise: yes/no/unclear', and SEO notes."}
+ ]
+}

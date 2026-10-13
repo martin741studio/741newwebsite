@@ -35,3 +35,17 @@
 - N20 Browser: "Headless now, agent login later (Recommended)" — B1 headless Playwright now; B2 separate 741 agent account with read roles in phase 2; never Martin's main logins on the server.
 - N21 Untracked files: "Commit what the night needs (Recommended)" — agent lists untracked folders, Martin ticks what goes to GitHub.
 - N22 Commit groups: G1 only (workflow + knowledge text, ~60 MB). G2 client text, G3 media, G4 build output stay on the laptop for now. Commit + push = runbook step 0.3, after the laptop check (S0) and a secret scan.
+
+## Round 6 — setup clicks (2026-10-13 evening)
+- N23 SSH key: "Agent makes it now" → `~/.ssh/id_ed25519_nightshift` (ED25519, SHA256:dtSuknhHK79tTNVE9eMJorCA2FX2XS0suK8oOnTkHVA), random passphrase stored only in the macOS keychain; `~/.ssh/config` host `nightshift-01` (HostName added when the IP is known). Public key copied to the clipboard.
+- N24 Server: "I buy it now" — Martin buys CX43 Nuremberg himself.
+- N25 Tailscale: "With the server setup".
+- N26 Hostinger VPS 187.127.103.222: Martin: "i dont use hostinger" → not his; left as is. Laptop history shows root SSH logins there with a now-stolen key → owner unknown; not part of this build.
+
+## Round 7 — laptop first (2026-10-13 evening)
+- N27 Martin's own answer (instead of buying Hetzner): "We do make runs only till 11 pm now, my time, on my laptop, so that can run. At 11 pm, the internet will shut off anyway, so we do it here. I don't want to do it on a server yet until we haven't figured out the night shift properly and whether it's even working properly."
+  → REVISES N1 (server now) and N14 (no runs until server): phase 1 = night shift v2 on the LAPTOP, window ends before 23:00 WITA (internet off at 23:00). Server (Hetzner CX43, plan unchanged) only after the night shift is proven. No Hetzner account created; tab closed.
+- N28 Tonight: "Quick-fixed run 20:30–22:45 (Recommended)" — v2 runner built (reporting/night-shift-v2/run.py, review.py, prompts/), queue reporting/night-shift/queue/2026-10-13.json (4 hand-test items), LaunchAgent studio.741.night-shift-v2 (Mon–Fri 17:30 + 20:30, caffeinate, runs only when a queue file exists, hard stop 22:45). Dry run OK (8 runs, exact counter). Permission test OK: curl denied, write outside reporting/night-shift/** denied, inside allowed (--setting-sources user, dontAsk, scoped Write/Edit, --strict-mcp-config).
+- N29 Window from tomorrow: "17:30–22:45 WITA (Recommended)".
+- N30 Server move: "After 5 clean laptop nights (Recommended)".
+- N31 Check-ins in the laptop phase: "Only 21:30" (one check-in; needs the Command Center night section + 17:00 queue card).
