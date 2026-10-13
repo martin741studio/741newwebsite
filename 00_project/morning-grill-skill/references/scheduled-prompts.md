@@ -1,5 +1,7 @@
 # Scheduled task prompts (Desktop scheduled tasks, WITA)
 
+**Updated 2026-10-13 (D24–D26):** the live prompts now end with Part 1 of the grill (the full `status-report.md`) instead of one line, and the evening run reports per client in the same style. The live text is in `~/.claude/scheduled-tasks/morning-grill-0600/SKILL.md` and `.../morning-grill-1700/SKILL.md`; the blocks below are the first version.
+
 Each run starts with no memory. The prompts are self-contained. Both runs are READ ONLY outside `00_project/assets/morning-grill/`.
 
 ## morning-grill-0600 (cron `0 6 * * *`)

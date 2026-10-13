@@ -108,7 +108,7 @@ def main():
         for x in fresh:
             c = client_of(x["client"], goals)
             if c:
-                add_line(c, "fixed", f"Run ready, approval open: {x['workflow']} ({x['last_run']})")
+                add_line(c, "watch", f"Waiting for your approval: {x['workflow']} result from {x['last_run']}")
         if old:
             by = {}
             for x in old:
@@ -122,7 +122,7 @@ def main():
                                   {"a": "workflow_registry.py approve per run", "b": "walk queue with links", "c": "rework task to the agent"}))
         for r in reg["runs_since_bookmark"]:
             c = client_of(r["client"], goals)
-            if c:
+            if c and not r["status"].startswith("fertig, Freigabe offen"):
                 add_line(c, "fixed", f"Run {r['workflow']}: {r['status']} ({r['last_run']})")
 
     # --- S6 night shift
@@ -227,8 +227,9 @@ def main():
             c = client_of(cl, goals)
             if not c:
                 continue
-            for d in v.get("done", [])[:4]:
-                add_line(c, "fixed", d)
+            for d in reversed(v.get("done", [])[:4]):   # chat work first: it is the real movement
+                if c in lines and d not in lines[c]["fixed"]:
+                    lines[c]["fixed"].insert(0, d)
             for w in v.get("waiting_for", [])[:3]:
                 add_line(c, "watch", f"Waiting for {w.get('who')}: {w.get('what')}")
             for o in v.get("open", [])[:3]:

@@ -47,6 +47,9 @@ Done for one day means all of these are true:
 | D21 | Schedule | Desktop tasks 06:00 / 17:00 only after the tests pass; the first 3 runs are opened and read. |
 | D22 | Portal tasks | One week as drafts in plan.md, then the agent writes portal tasks from the approved plan. |
 | D23 | Start dates | Decided client by client, one walk-queue item each (Suriya, Hüwel, Stürzl). |
+| D24 | Grill flow | Three parts in chat: 1 status report (where we are, what moved, what runs, what is stuck + why + who waits), 2 walk queue + decision cards, 3 what happens now (who, when Martin hears back). Martin 2026-10-13: "I get informed through the grill". |
+| D25 | Report depth | Clients with movement, a blocker or a card get 3–4 lines; quiet clients one line (`status_report.py`). |
+| D26 | Evening report | The 17:00 run also reports in chat in the same style, then one confirm card. |
 | D18 | Leads | In the daily 741 line. A lead gets a card only when a follow-up is due or older than 7 days. |
 
 ## 2. Daily rhythm

@@ -21,15 +21,15 @@ Copy this checklist and tick it off:
 - [ ] 3 S2 chats: ONE subagent (Sonnet) reads the transcript tails since the bookmark and writes `inputs/s2-chats.json` (prompt: `references/s2-subagent-prompt.md`).
 - [ ] 4 Run `python3 ~/.claude/skills/morning-grill/scripts/scan.py --date <d> --bookmark <iso> --out <run> --sessions … --chats … --calendar …`
 - [ ] 5 Judgment step: read `scan.json` (S2, S9) and the goal sheet. Write `judgment-cards.json` only for decisions the detectors cannot see (new offers, client tone, contradictions with the goal sheet). Format: `assets/decision-card.template.json`. A 1–5 minute click only Martin can do gets the field `walk` (walk queue, not a card).
-- [ ] 6 Run `build_cards.py --run <run>`, then `render_brief.py --run <run>`, then `validate_brief.py --run <run>` (all in `~/.claude/skills/morning-grill/scripts/`). Fix until it prints PASS.
-- [ ] 7 Grill: give Martin the brief link, then the walk queue in one line, then the cards as AskUserQuestion (4 per round, max 2 rounds, recommended option first, labelled "(Recommended)"). After each round, restate in 3 lines.
+- [ ] 6 Run `build_cards.py --run <run>`, then `render_brief.py --run <run>`, then `status_report.py --run <run>`, then `validate_brief.py --run <run>` (all in `~/.claude/skills/morning-grill/scripts/`). Fix until it prints PASS.
+- [ ] 7 Grill in THREE parts (D24): **Part 1 status report** — paste `status-report.md` in chat (where each client is vs goal, what moved, what runs now, what is stuck + why + who waits; quiet clients one line) and the brief link. **Part 2 decisions** — the walk queue in one line, then the cards as AskUserQuestion (4 per round, max 2 rounds, recommended option first, labelled "(Recommended)"); each card says why the thing is not happening. After each round, restate in 3 lines. **Part 3 what happens now** — per decision: who does it, when Martin hears back, what stays waiting and for whom.
 - [ ] 8 Write answers to `decisions.md` and `state/cards.json` (park needs a reason) BEFORE acting.
 - [ ] 9 Plan: write `plan.md` per client (Today, Agent starts, Waiting for, Message drafts) with the routing table in spec §8. Human task = portal task draft + WhatsApp line. Agent work = `start_session` (user_asked, use_worktree false) or SendMessage to the client chat.
 - [ ] 10 Write `_run.json` (`client` "741 Studio (intern)", `workflow` "morning"), one line in `state/pulse.log`, move bookmarks.
 
 ## Mode B — Evening (17:00 task or "log the day")
 - [ ] 1 Same sources since the morning bookmark (steps A2–A4 into `<run>/evening/`).
-- [ ] 2 Draft `evening-log.md` from `assets/evening-log.template.md`: per client Done (with link), Open (owner), Tomorrow (first action), Blockers.
+- [ ] 2 Draft `evening-log.md` from `assets/evening-log.template.md`: per client Done (with link), Open (owner), Tomorrow (first action), Blockers. Then report in chat the same way as Part 1 (`status_report.py --run <run>/evening --mode evening` when a brief.json exists): what got done, what still runs, what got stuck and why, what starts tomorrow (D26).
 - [ ] 3 One card to Martin: confirm / fix lines / add. Unconfirmed → first item of the next morning brief.
 - [ ] 4 Append one line per client to `00_project/assets/morning-grill/logs/<client-slug>.md`. Update `_run.json`.
 

@@ -1,0 +1,252 @@
+{
+ "bookmark": "2026-10-12T06:00+08:00",
+ "read_at": "2026-10-13T10:05+08:00",
+ "files_read": 52,
+ "files_unreadable": [],
+ "clients": {
+  "Praxis Suriya": {
+   "done": [
+    "Reply draft to Coralie (access return, load time, accessibility); not sent [b88add01]",
+    "Content-pool changes prepared in 07-umsetzung-2026-10-13.md, commit 46530fb; nothing live [fe3ee21a]",
+    "QR review card finished (A6 PDF, 4-up A4, PNG) [fe3ee21a]",
+    "Lockout case closed as approved: dossier, _run.json, Excel, memory updated; nothing sent [1aeb441f]",
+    "Lockout skill /client-access-lockout installed, 52/54 (via chat-base report) [395e0ce8]",
+    "Tracking tab prototype v2 got design go; 50 board cards with real data [530b8b78]",
+    "Martin's GSC ownership for suriya-praxis.de verified; reporting-bot still gets 403 [530b8b78]",
+    "Night shift: 3 FEEDBACK drafts (GBP hours, NAP domains, GBP description), all critic pass [5205bf83]"
+   ],
+   "open": [
+    "WP application password for novamira-suriya-praxis-de returns 401 after user re-created [fe3ee21a]",
+    "Redirect points 2 and 6 of the content-pool plan need Coralie's OK [fe3ee21a]",
+    "Priority work: load time and accessibility, with backup first, no image or URL changes [1aeb441f]",
+    "Add reporting-bot as GSC user (Full) so weekly pull works again [530b8b78]",
+    "Tracking tab: no table created, nothing installed yet [530b8b78]"
+   ],
+   "waiting_for": [
+    {
+     "who": "client",
+     "what": "WordPress access back (she re-created Martin's user)",
+     "since": "2026-10-13"
+    },
+    {
+     "who": "client",
+     "what": "OK for the two redirects (points 2 and 6)",
+     "since": "2026-10-13"
+    },
+    {
+     "who": "martin",
+     "what": "Go to add reporting-bot in Search Console",
+     "since": "2026-10-12"
+    }
+   ],
+   "client_promises": [
+    "Martin to Coralie: start work once WP access is back; send overview of done work"
+   ],
+   "needs_martin": [
+    "New WP application password in ~/.claude.json, then restart session",
+    "Ask Coralie: OK for 2 redirects? Her rule: no URL changes",
+    "Go to send the reply draft to Coralie",
+    "Clear yes to add reporting-bot in Search Console"
+   ],
+   "last_activity": "2026-10-13T08:21+08:00"
+  },
+  "Praxis Hüwel": {
+   "done": [
+    "Google 'Alternate page with proper canonical' fixed: 172 internal links in 28 pages now point to / [e8aede79]",
+    "4 old redirect pages now point to /; new check rule in scripts/check_repo.py [e8aede79]",
+    "Merge done; waiting for GitHub Pages to serve new links, then browser check [e8aede79]"
+   ],
+   "open": [
+    "Browser check of menu, logo and contact button after Pages deploy [e8aede79]"
+   ],
+   "waiting_for": [],
+   "client_promises": [],
+   "needs_martin": [],
+   "last_activity": "2026-10-12T13:41+08:00"
+  },
+  "STÜRZL Steuerstrafrecht": {
+   "done": [
+    "GSC data analysed and saved: 16 months, 7,040 clicks, 97,700 impressions, avg position 16.3 [5a89f936]",
+    "Finding: brand terms 3,871 clicks; all other top-100 terms 89 clicks from 36,761 impressions [5a89f936]",
+    "Finding: 'rechtsanwalt steuerstrafrecht' 4,985 impr, 0 clicks, pos 26.6; 'zollstrafrecht' new topic [5a89f936]"
+   ],
+   "open": [
+    "Permanent GSC access: tool blocked adding a user; needs Martin's one click [5a89f936]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "Click to grant permanent GSC access",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "One click: add permanent GSC user"
+   ],
+   "last_activity": "2026-10-13T08:03+08:00"
+  },
+  "Daniela Dumann": {
+   "done": [
+    "/behandlungen quote font reduced; /massage contact box fixed ('oder' no longer splits) in Wix editor [c02ee9da]",
+    "/ausbildung-vor-ort heading typo fixed to 'Hildegard von Bingen' in editor [c02ee9da]",
+    "Prepared reply to her feedback on the headline changes (explain why, no changes) [c02ee9da]"
+   ],
+   "open": [
+    "3 fixes saved in Wix editor but NOT published; tool blocked Publish [c02ee9da]",
+    "CRO run for Dumann: Martin asked to continue; chat only started planning [4207126f]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "Publish in Wix editor (or approve the publish prompt)",
+     "since": "2026-10-12"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Click Publish in Wix editor, or approve publish"
+   ],
+   "last_activity": "2026-10-13T09:47+08:00"
+  },
+  "Bali Healing": {
+   "done": [
+    "Drafted status message to Pintor and Pasha (8 points), lint 5/5; two [X]/[Y] brackets still open [e9c4af07]",
+    "Point 1 explains LinkedIn outreach is manual: 40-50 messages/day, 3 partners in conversation in Ubud [e9c4af07]",
+    "Added note: new content pool and AI-database website process, to discuss [e9c4af07]"
+   ],
+   "open": [
+    "Fill the brackets for messages sent and connections accepted in points 1 and 4 [e9c4af07]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "Real counts for [X] and [Y], then send",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [
+    "Draft: discuss website change process and new content pool with them"
+   ],
+   "needs_martin": [
+    "Give real numbers for the two brackets; send the message"
+   ],
+   "last_activity": "2026-10-13T07:34+08:00"
+  },
+  "Rabenmütter": {
+   "done": [
+    "Night shift: Etsy FEEDBACK reply (declines Etsy; TikTok Shop confirmed; Pinterest flagged), critic pass [fad9c907]",
+    "Night shift: Trauerkarten-Pillar FEEDBACK, critic pass [96e00855]",
+    "Night shift: shop-navigation AUDIT ended needs_martin after 2 tries [cb62b9e6]"
+   ],
+   "open": [
+    "Shop-navigation audit blocked: WebFetch 404 on rabenmuetter-verlag.de, no DataForSEO tool [6c70c1c3]"
+   ],
+   "waiting_for": [
+    {
+     "who": "client",
+     "what": "Confirm Pinterest Shop (she said 'hoffe ich')",
+     "since": "2026-10-12"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Decide how to run the shop-navigation audit (fetch blocked)"
+   ],
+   "last_activity": "2026-10-12T20:43+08:00"
+  },
+  "me&you / Pauspapier": {
+   "done": [
+    "New page 'Optionen ansehen' with 5 paths live on clients.741.studio/meandyou; 11 pages return 200 [5c4f6ee6]",
+    "Main button now 'Optionen ansehen' on all pages except Replayers [5c4f6ee6]",
+    "Loom message draft for Tajan's team, slop 5/5, in clipboard; [LOOM-LINK] still to fill [5c4f6ee6]",
+    "Replayers LP v2 sells community 'Talk to ME'; waits for Martin's review [ae14f12b]",
+    "Prototypes at Checkpoint 2: lp-overlooked 7cba57b, lp-undersold bbfcc05, Termin v1, FAQ v1 d4142, Stimmen [a3755fed]"
+   ],
+   "open": [
+    "Replayers: Skool text says 39 EUR/month, button shows $44/month; client must clarify [ae14f12b]",
+    "Checkpoint 2 reviews open: lp-overlooked, lp-undersold, Termin, FAQ, Stimmen [32d1be87]",
+    "FAQ visual check: 3 items open; Stimmen: 4 open [06faccea]"
+   ],
+   "waiting_for": [
+    {
+     "who": "client",
+     "what": "Price clarification: 39 EUR vs $44 for Talk to ME",
+     "since": "2026-10-12"
+    },
+    {
+     "who": "martin",
+     "what": "Checkpoint 2 go on the five prototypes",
+     "since": "2026-10-12"
+    },
+    {
+     "who": "martin",
+     "what": "Record Loom and send message to Tajan's team",
+     "since": "2026-10-12"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Review five Checkpoint 2 prototypes",
+    "Record Loom, fill [LOOM-LINK], send"
+   ],
+   "last_activity": "2026-10-13T07:56+08:00"
+  },
+  "741 internal": {
+   "done": [
+    "Hooks (slop gate, go-gate, go marker) written, 27 tests pass, commit 3f06c2f; NOT active [ee39160c]",
+    "Morning Grill skill installed, trigger tests pass; briefs 06:13 and log 17:00 scheduled [da3afad4]",
+    "Client approval portal module on staging, commit 0bd117e; RLS dry-run 20/20, migration not applied [8abda0cf]",
+    "Sidebar group 'Kunden' made with 14 client chats and emojis [f203e46d]",
+    "Review-page workflow now v2.1, skill local-seo-review-page [fea2ab3e]",
+    "Review-page scripts for prospects Stephan and Sabine in progress [eeff3029]",
+    "Citations module: 3 parallel chats; 2 diverging copies of backlink-workflow-dach.md and build_sheet.py [8c063566]"
+   ],
+   "open": [
+    "Hooks stay off until Martin gives go in the hooks session [1d0b2e51]",
+    "Portal migration needs Martin's go; then screenshots and click test [8abda0cf]",
+    "Merge decision for the two backlink-workflow-dach.md copies [8c063566]",
+    "Cold-email cease-and-desist (deadline 23.09.) flagged overdue in dry-run [b1316e20]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "Go to apply Supabase migration for client approval",
+     "since": "2026-10-13"
+    },
+    {
+     "who": "martin",
+     "what": "Go to activate hooks",
+     "since": "2026-10-12"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Go on migration",
+    "Go on hooks",
+    "Decide on cold-email legal letter"
+   ],
+   "last_activity": "2026-10-13T09:59+08:00"
+  },
+  "Prospect: Sabine": {
+   "done": [
+    "Loom video has no audio; not embedded on review page; WhatsApp message drafted in two versions [76b92d80]"
+   ],
+   "open": [
+    "Record new Loom with audio, embed, then send message [76b92d80]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "New Loom recording with sound",
+     "since": "2026-10-12"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Re-record Loom with microphone on"
+   ],
+   "last_activity": "2026-10-12T16:01+08:00"
+  }
+ }
+}

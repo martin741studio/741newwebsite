@@ -1,0 +1,511 @@
+[
+ {
+  "id": "2026-10-13-marcel-offer",
+  "client": "Marcel Rosenbach",
+  "priority": 2,
+  "type": "decide",
+  "headline": "Marcel wants to come to 741 fast: new website with monthly subscription plus Google Ads. Which offer goes out this week?",
+  "evidence": [
+   "Martin's grill answer 2026-10-13",
+   "memory marcel-rosenbach-client.md",
+   "memory 741studio-pricing.md"
+  ],
+  "options": {
+   "a": "Website build + monthly program, Hüwel site as proof, Ads as add-on",
+   "b": "Ads first, website after",
+   "c": "Call first, offer after the call"
+  },
+  "recommended": "a",
+  "why": "He asked for both; the Hüwel site (live since 06.10.) shows the result. Prices stay out of messages (memory 741studio-pricing).",
+  "deadline": "2026-10-15",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent drafts offer outline + WhatsApp message (no prices) for your send",
+   "b": "Ads setup brief",
+   "c": "message draft asking for a call slot"
+  },
+  "line": "New sales opportunity: website + monthly subscription + Ads (Martin 13.10.)",
+  "line_kind": "next",
+  "source": "judgment (grill answers 2026-10-13)"
+ },
+ {
+  "id": "2026-10-13-bali-push",
+  "client": "Bali Healing",
+  "priority": 2,
+  "type": "route",
+  "headline": "Bali Healing: onboarding 1/6, Ads blocked, and the 8-point status reply cannot go out: it still needs outreach counts and Ads spend.",
+  "evidence": [
+   "S5 standup: onboarding, 24 overdue",
+   "memory balihealing-google-ads-setup.md",
+   "inputs/s2-chats.json (S2)"
+  ],
+  "options": {
+   "a": "I give the numbers today; agent finishes the reply and the Ads checklist",
+   "b": "Send the reply without numbers, numbers on Monday",
+   "c": "Park until Peggy answers"
+  },
+  "recommended": "a",
+  "why": "Ads live within 2 weeks is the quarter goal; billing needs the client.",
+  "deadline": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "message draft (EN) + Ads checklist",
+   "b": "message draft to Izzy",
+   "c": "park reason"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (grill answers 2026-10-13)"
+ },
+ {
+  "id": "2026-10-13-johni-restart",
+  "client": "Johni Jaya Motor",
+  "priority": 3,
+  "type": "route",
+  "headline": "Johni restarts this week: 3 access items missing, 25 overdue tasks, no activity since 17.08. Who owns the restart?",
+  "evidence": [
+   "S5 standup",
+   "memory johnijayamotor-client.md"
+  ],
+  "options": {
+   "a": "Martin asks for GA4/GBP/GSC access today; agent re-plans the 25 tasks for Monday",
+   "b": "Dinakar owns the restart",
+   "c": "Park one more week"
+  },
+  "recommended": "a",
+  "why": "Access is the gate for everything else and needs the client.",
+  "deadline": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "access request draft + re-plan",
+   "b": "portal task + WhatsApp line for Dinakar",
+   "c": "park reason"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (grill answers 2026-10-13)"
+ },
+ {
+  "id": "2026-10-13-kamil-reports",
+  "client": "Kamil (Physio Anatomie + Kraft)",
+  "priority": 3,
+  "type": "route",
+  "headline": "Kamil's monthly reports stop in July. August and September are overdue.",
+  "evidence": [
+   "reporting/out/physio*-2026-07.html",
+   "memory kamil-physio-client.md"
+  ],
+  "options": {
+   "a": "Agent builds August + September drafts today with reporting/monthly-client-report.mjs; I check and send",
+   "b": "Send one combined Aug+Sep report",
+   "c": "Ask Kamil if he still wants reports"
+  },
+  "recommended": "a",
+  "why": "Reports are the deliverable he pays for; the script exists.",
+  "deadline": "2026-10-15",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent run, drafts into reporting/out (read-only data pulls)",
+   "b": "one draft",
+   "c": "message draft"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (grill answers 2026-10-13)"
+ },
+ {
+  "id": "2026-10-13-goal-numbers",
+  "client": "741 (goals)",
+  "priority": 5,
+  "type": "define",
+  "headline": "9 of 11 active clients have goal numbers without a confirmed target. Confirm the targets one client per morning?",
+  "evidence": [
+   "00_project/morning-grill-goals.json"
+  ],
+  "options": {
+   "a": "One confirm card per morning, starting with Suriya",
+   "b": "All in the Monday review",
+   "c": "Agent sets targets from the tracking set, I only veto"
+  },
+  "recommended": "a",
+  "why": "Keeps each grill under 10 minutes and finishes in about 2 weeks.",
+  "deadline": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "daily define card",
+   "b": "Monday card",
+   "c": "agent writes proposed targets"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (grill answers 2026-10-13)"
+ },
+ {
+  "id": "2026-10-13-registry-fixes",
+  "client": "741 (registry)",
+  "priority": 7,
+  "type": "approve",
+  "headline": "Registry is out of date: Bali Healing is a Kunde, Tacheles is done, Kamil, Rabenmütter, Johni and me&you are missing.",
+  "evidence": [
+   "00_project/workflow-registry/registry.json",
+   "grill answers 2026-10-13"
+  ],
+  "options": {
+   "a": "Agent fixes the registry now",
+   "b": "Fix later",
+   "c": "Only Bali + Tacheles"
+  },
+  "recommended": "a",
+  "why": "The overview Excel and the scan read the registry.",
+  "deadline": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "workflow_registry.py add/upsert",
+   "b": "park",
+   "c": "two upserts"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (grill answers 2026-10-13)"
+ },
+ {
+  "id": "2026-10-13-suriya-access",
+  "client": "Praxis Suriya",
+  "priority": 1,
+  "type": "decide",
+  "headline": "Suriya: 5 approved site changes are blocked. The WordPress app password fails (401) and Search Console access is gone. Reply draft to Coralie is ready.",
+  "evidence": [
+   "inputs/s2-chats.json (S2)",
+   "memory praxis-suriya-client.md"
+  ],
+  "options": {
+   "a": "Send the ready reply today and ask for both accesses; start with backup + speed work",
+   "b": "Wait for her to offer access herself",
+   "c": "Do only the speed work with the access that still works"
+  },
+  "recommended": "a",
+  "why": "She agreed to continue on 13.10.; access is the gate for every goal number.",
+  "deadline": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "message draft (du, Ich-Form, text block) + speed task for Dinakar",
+   "b": "park reason",
+   "c": "task for Dinakar"
+  },
+  "line": "Coralie agreed to continue after the PDF overview (13.10.)",
+  "line_kind": "fixed",
+  "source": "judgment (S2 chat summary)"
+ },
+ {
+  "id": "2026-10-13-stuerzl-send",
+  "client": "STÜRZL Steuerstrafrecht",
+  "priority": 2,
+  "type": "approve",
+  "headline": "Stürzl: the email with Loom and Entwurf links is ready but not sent, and the reporting bot needs 'Add user' in Search Console.",
+  "evidence": [
+   "inputs/s2-chats.json (S2)",
+   "memory anja-stuerzl-client.md",
+   "memory email-sending-airmailer.md"
+  ],
+  "options": {
+   "a": "Send now via Airmailer (BCC Martin) and add the Search Console user (5 minutes, walk queue)",
+   "b": "Edit the email first",
+   "c": "Wait for the start-date answer"
+  },
+  "recommended": "a",
+  "why": "Start date = rate-1 payment; the email moves the start.",
+  "deadline": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "walk queue: Airmailer send + Search Console click",
+   "b": "agent opens draft for edits",
+   "c": "park reason"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 chat summary)",
+  "walk": "Stürzl: send the email (Loom + Entwurf links) via Airmailer, BCC you, then 'Add user' for the reporting bot in Search Console (5 min)"
+ },
+ {
+  "id": "2026-10-13-drafts-sent",
+  "client": "741 (all clients)",
+  "priority": 3,
+  "type": "define",
+  "headline": "6 client message drafts from yesterday have no visible send status (Suriya 2, Dumann 1, Bali 1, me&you Loom, Ana Fredel). Which went out?",
+  "evidence": [
+   "inputs/s2-chats.json (S2)"
+  ],
+  "options": {
+   "a": "I tick the sent ones in a 1-minute checklist",
+   "b": "Treat all as not sent; agent re-queues them",
+   "c": "Skip; I remember"
+  },
+  "recommended": "a",
+  "why": "The evening log cannot see WhatsApp sends; promises to clients must not get lost.",
+  "deadline": "2026-10-13",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "checklist in plan.md",
+   "b": "re-queue",
+   "c": "note in decisions.md"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 chat summary)",
+  "walk": "Tick which of yesterday's 6 client drafts you sent: Suriya 2, Dumann 1, Bali 1, me&you Loom, Ana Fredel (1 min)"
+ },
+ {
+  "id": "2026-10-13-dumann-publish",
+  "client": "Daniela Dumann",
+  "priority": 3,
+  "type": "route",
+  "headline": "Dumann: 3 subpage fixes are saved in Wix but not published. The publish click was blocked for the agent.",
+  "evidence": [
+   "inputs/s2-chats.json (S2)"
+  ],
+  "options": {
+   "a": "I click Publish today (2 minutes, walk queue)",
+   "b": "Dinakar publishes",
+   "c": "Wait for the next batch"
+  },
+  "recommended": "a",
+  "why": "The fixes are done; Daniela already confirmed the headline.",
+  "deadline": "2026-10-13",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "walk queue with the Wix link",
+   "b": "portal task + WhatsApp line",
+   "c": "park"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 chat summary)",
+  "walk": "Dumann: click Publish in Wix for the 3 saved subpage fixes (2 min)"
+ },
+ {
+  "id": "2026-10-13-meandyou-live",
+  "client": "me&you / Pauspapier",
+  "priority": 3,
+  "type": "approve",
+  "headline": "me&you: 5 Checkpoint-2 prototypes wait for your review, and the Loom for the team message is not recorded. Go-live needs a real hero photo.",
+  "evidence": [
+   "inputs/s2-chats.json (S2)",
+   "memory pauspapier-michael-ehlers.md"
+  ],
+  "options": {
+   "a": "Not yet: first the real photo from Phil and Framer access",
+   "b": "Go live now with the AI photo",
+   "c": "Ask Tajan to decide"
+  },
+  "recommended": "a",
+  "why": "An AI face of a real person on a live page is a trust risk.",
+  "deadline": "2026-10-16",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "message draft to Tajan (photo + Framer access)",
+   "b": "go card for the swap",
+   "c": "message draft"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 chat summary)"
+ },
+ {
+  "id": "2026-10-13-prospects-walk",
+  "client": "741 (prospects)",
+  "priority": 6,
+  "type": "decide",
+  "headline": "Review pages: Sabine's Loom has no audio, Christian's message has 3 mismatches with the video, Claudia's page says 'blocked from abroad' 4 times, and the banner and /public_html wait for a go.",
+  "evidence": [
+   "inputs/s2-chats.json (S2)",
+   "00_project/prospects/"
+  ],
+  "options": {
+   "a": "15-minute walk queue today: re-record Sabine, agent fixes the text mismatches, go on the housekeeping",
+   "b": "Agent fixes texts now, Loom and housekeeping on Monday",
+   "c": "Park the prospects this week"
+  },
+  "recommended": "a",
+  "why": "Sabine was promised a video on 06.10.; Christian expects contact in the last week of October.",
+  "deadline": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "walk queue + agent fixes",
+   "b": "agent fixes",
+   "c": "park reason"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 chat summary)"
+ },
+ {
+  "id": "2026-10-13-suriya-goal",
+  "client": "Praxis Suriya",
+  "priority": 5,
+  "type": "define",
+  "headline": "Suriya's Maps scan already shows rank 1 at all 49 grid points for the scanned keyword. Is 'top 3 for 5 keywords' still the right goal?",
+  "evidence": [
+   "inputs/s2-chats.json (S2)",
+   "00_project/morning-grill-goals.json"
+  ],
+  "options": {
+   "a": "Keep top 3, but for all 5 keywords; agent lists which keywords are below",
+   "b": "Change the goal to requests per week",
+   "c": "Keep as is"
+  },
+  "recommended": "a",
+  "why": "One strong keyword hides the weak ones; the goal must move something.",
+  "deadline": "2026-10-16",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "goal sheet update + keyword list",
+   "b": "goal sheet update",
+   "c": "none"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 chat summary)"
+ },
+ {
+  "id": "2026-10-13-huewel-index",
+  "client": "Praxis Hüwel",
+  "priority": 7,
+  "type": "approve",
+  "headline": "Hüwel: request indexing for the six core pages in Search Console?",
+  "evidence": [
+   "inputs/s2-chats.json (S2)"
+  ],
+  "options": {
+   "a": "Yes, request indexing",
+   "b": "No, wait"
+  },
+  "recommended": "a",
+  "why": "The internal links are fixed and live.",
+  "deadline": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "walk queue (needs his Search Console)",
+   "b": "none"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 chat summary)",
+  "walk": "Hüwel: request indexing for the 6 core pages in Search Console (3 min)"
+ },
+ {
+  "id": "2026-10-13-hooks-go",
+  "client": "741 (workflows)",
+  "priority": 7,
+  "type": "approve",
+  "headline": "The proposed hooks (go marker, live-change gate, slop gate) are tested (27 tests) and committed, but not active.",
+  "evidence": [
+   "inputs/s2-chats.json (S2)",
+   "commit 3f06c2f"
+  ],
+  "options": {
+   "a": "Activate them",
+   "b": "Later"
+  },
+  "recommended": "b",
+  "why": "They change every chat's behaviour; activate on a quiet day and test in one chat first.",
+  "deadline": "2026-10-17",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "settings change (needs go)",
+   "b": "Monday card"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 chat summary)"
+ },
+ {
+  "id": "2026-10-13-portal-approval-go",
+  "client": "741 (portal)",
+  "priority": 7,
+  "type": "approve",
+  "headline": "The client approval module is on staging (RLS dry run 20/20). The migration, seed and mail drafts wait for your go.",
+  "evidence": [
+   "inputs/s2-chats.json (S2)",
+   "commit 0bd117e"
+  ],
+  "options": {
+   "a": "Go for the migration on staging only, pilot Suriya",
+   "b": "Show me the staging page first",
+   "c": "Park until Suriya access is back"
+  },
+  "recommended": "b",
+  "why": "A portal change is a launch; one look at staging takes 5 minutes and catches surprises.",
+  "deadline": "2026-10-16",
+  "created": "2026-10-13",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent applies migration on staging after your go",
+   "b": "staging link in the walk queue",
+   "c": "park reason"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 chat summary)"
+ },
+ {
+  "id": "2026-10-13-suriya-wp-password",
+  "client": "Praxis Suriya",
+  "priority": 1,
+  "type": "approve",
+  "headline": "Suriya: a new WordPress app password is needed in the session config before any of the 5 site changes can start.",
+  "evidence": [
+   "inputs/s2-chats.json (S2)"
+  ],
+  "options": {
+   "a": "Done",
+   "b": "Later"
+  },
+  "recommended": "a",
+  "why": "Only you can create it in WordPress.",
+  "deadline": "2026-10-14",
+  "created": "2026-10-13",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent restarts the Suriya session",
+   "b": "stays in walk queue"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 chat summary)",
+  "walk": "Suriya: create a new WordPress app password once Coralie gives access back, put it in the session config (3 min)"
+ }
+]
