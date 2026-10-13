@@ -76,14 +76,14 @@ function ccDecisions() {
   const eff = s.cards.map(c => ({ c, e: ccEff(c) }));
   const nOpen = eff.filter(x => x.e.status === 'open').length;
   const f = CC.filter;
-  const show = eff.filter(x => f === 'all' || (f === 'open' && x.e.status === 'open') || (f === 'decided' && x.e.status !== 'open') || (f === 'p1' && x.c.priority === 1) || (f === 'p2' && x.c.priority === 2) || (f === '741' && x.c.client.startsWith('741')) || (f === 'client' && !x.c.client.startsWith('741')));
-  const tiles = [[`${s.cards.length - nOpen}/${s.cards.length}`, 'decisions taken'], [String(s.walk.filter(w => !ccWalkDone(w)).length), 'walk-queue clicks open'], [String(s.clients.length), 'active clients'], [String(s.sources.filter(x => x.status !== 'ok').length), 'unreadable sources']];
-  const chips = [['all', 'All'], ['open', 'Open'], ['decided', 'Decided'], ['p1', 'Fire'], ['p2', 'Money / contract'], ['client', 'Client'], ['741', '741']].map(([k, l]) => `<button class="cc-chip${f === k ? ' on' : ''}" onclick="ccFilter('${k}')">${l}</button>`).join('');
+  const show = eff.filter(x => f === 'all' || (f === 'open' && x.e.status === 'open') || (f === 'decided' && x.e.status !== 'open') || (f === 'p1' && x.c.priority === 1) || (f === 'p2' && x.c.priority === 2) || (f === 'clicks' && x.c.type === 'Your click') || (f === '741' && x.c.client.startsWith('741')) || (f === 'client' && !x.c.client.startsWith('741')));
+  const tiles = [[`${s.cards.length - nOpen}/${s.cards.length}`, 'decisions taken'], [String(nOpen), 'cards open'], [String(s.clients.length), 'active clients'], [String(s.sources.filter(x => x.status !== 'ok').length), 'unreadable sources']];
+  const chips = [['all', 'All'], ['open', 'Open'], ['decided', 'Decided'], ['p1', 'Fire'], ['p2', 'Money / contract'], ['clicks', 'Your clicks'], ['client', 'Client'], ['741', '741']].map(([k, l]) => `<button class="cc-chip${f === k ? ' on' : ''}" onclick="ccFilter('${k}')">${l}</button>`).join('');
   const walk = s.walk.map(w => `<li class="${ccWalkDone(w) ? 'done' : ''}"><input type="checkbox" ${ccWalkDone(w) ? 'checked disabled' : ''} onchange="ccWalk('${esc(w.id)}')"><span>${esc(w.text)}</span></li>`).join('') || '<li>nothing open</li>';
   const later = s.later.map(x => `<li><b>${esc(x.client)}</b> — ${esc((x.headline || '').slice(0, 120))}</li>`).join('') || '<li>nothing</li>';
   return `<div class="cc-tiles">${tiles.map(t => `<div class="cc-tile"><b>${esc(t[0])}</b><span>${esc(t[1])}</span></div>`).join('')}</div>
 <div class="cc-chips">${chips}</div>${show.map(x => ccCard(x.c)).join('') || '<div class="muted">No card in this filter.</div>'}
-<div class="cc-grid2"><div class="cc-panel"><h4>Your walk queue (1–5 min clicks)</h4><ul class="cc-walk">${walk}</ul></div><div class="cc-panel"><h4>Later list (next grill or Monday)</h4><ul>${later}</ul></div></div>`;
+${s.walk.length ? `<div class="cc-panel" style="margin-bottom:14px"><h4>Your walk queue (1–5 min clicks)</h4><ul class="cc-walk">${walk}</ul></div>` : ''}<div class="cc-panel"><h4>Later list (next grill or Monday)</h4><ul>${later}</ul></div>`;
 }
 
 function ccClients() {

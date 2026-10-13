@@ -2,12 +2,13 @@
 
 ## Walk queue — Martin (1–5 min each)
 - [ ] Suriya: ask Coralie to raise your WordPress role to Administrator (text in send-pack.md, section 3). Tell her about Search Console yourself (your words 13.10.).
-- [ ] Bali: give the 2 numbers (LinkedIn outreach counts; Ads status/spend) in the Bali chat (card 5)
 - [ ] Stürzl: send the email via Airmailer (BCC you) + "Add user" in Search Console
 - [ ] Tick which of yesterday's 6 drafts you sent
 - [ ] Dumann: click Publish in Wix
 - [ ] Hüwel: request indexing for the 6 core pages
-- [ ] Start dates Suriya / Hüwel / Stürzl (one line each)
+- [ ] Suriya: Which program start date counts? 2026-09-03 (portal) / 2026-08-14 (memory)
+- [ ] Hüwel: Which program start date counts? 2026-08-25 (portal) / 2026-08-16 (paid, memory)
+- [ ] Stürzl: No program start date. Which trigger sets it?
 - [ ] Send the 5 portal reply drafts (ready: portal-reply-drafts.md; Suriya, Hüwel, Dumann, Brasse, Rabenmütter)
 - [ ] Bali: upload the NIB PDF of PT Amana in Google Ads (Admin > Policy > Account > Submit documents for your client) — ads are PAUSED since 01.10.
 - [ ] Bali: answer Pintor's 30.09. questions, then send the ready status reply (point 6 promises 'today')
@@ -25,6 +26,8 @@
 - Hüwel GA4 with consent: prepare on a test branch → sent to the Hüwel chat.
 - Portal flags: set after Martin sends the 5 replies → sent to the portal-replies session.
 - Command Center in the portal admin view (staging): starts when the Freigabe-Dashboard chat is idle.
+
+- QUEUED (Martin's own answers in the portal, 13.10.): Johni = restart now, open access GA4 / GBP / GSC, tracking exists. Kamil = reports not done, move the numbers into his client dashboard, add improvement recommendations (website, more income streams) explained in the decision style. Needs a start card (agent sessions).
 
 ## Waiting for
 - Abmahnung: lawyer's reply to Martin's letter (pay 0 €) — card parked until a reply arrives.

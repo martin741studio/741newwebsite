@@ -24,14 +24,19 @@ def main():
         return 0
     led = load(os.path.join(MG, "cards.json"), {"cards": []})
     byid = {c["id"]: c for c in led["cards"]}
-    walk = load(os.path.join(MG, "walk-done.json"), {})
+    # enrich new ledger entries (client, headline, option texts) from the latest published snapshot
+    snap_cards = {}
+    try:
+        latest = sb.request("GET", "grill_snapshots?order=id.desc&limit=1&select=data")
+        snap_cards = {c["id"]: c for c in (latest[0]["data"].get("cards", []) if latest else [])}
+    except Exception as e:
+        print("note: could not read the latest snapshot for enrichment:", e)
     for r in rows:
-        if r["card_id"].startswith("walk-"):
-            walk[r["card_id"]] = {"done": r["option"] == "done", "at": r["answered_at"]}
-            continue
         c = byid.get(r["card_id"])
         if not c:
-            c = {"id": r["card_id"], "client": "?", "created": r["run_date"], "options": {}}
+            sc = snap_cards.get(r["card_id"], {})
+            c = {"id": r["card_id"], "client": sc.get("client", "?"), "headline": sc.get("headline"), "created": r["run_date"],
+                 "options": sc.get("options", {}), "kind": "click" if r["card_id"].startswith("walk-") else "decision"}
             led["cards"].append(c); byid[c["id"]] = c
         c["status"] = "parked" if r["option"] == "park" else "decided"
         c["answer"] = r["option"]
@@ -44,7 +49,6 @@ def main():
         else:
             c["answer_text"] = (c.get("options", {}).get(r["option"]) or r["option"]) + (f" ({r['note']})" if r.get("note") else "")
     json.dump(led, open(os.path.join(MG, "cards.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    json.dump(walk, open(os.path.join(MG, "walk-done.json"), "w", encoding="utf-8"), indent=1)
     json.dump({"last_id": rows[-1]["id"]}, open(os.path.join(MG, "answers-cursor.json"), "w"))
     print("ledger updated")
     return 0

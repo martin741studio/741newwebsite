@@ -18,3 +18,5 @@ Added 2026-10-13 after the first real grill:
 - [ ] Bali: audit Go-B done (45/100); client page waits for Go-C after the status reply. Pool + sitemap approved; Drive files staged, Martin drags them in. Next: pool items for the 2 doors, 'naturopathy removal' needs client OK.
 - [x] Command Center on staging built + tested 13.10. (GO-DB + GO-PORTAL staging given). Open: live upload go; snapshot write + answer pull in the scheduled runs go. Two open cards (Johni restart, Kamil reports) can be answered in the page.
 - [x] Command Center LIVE in the admin panel (13.10.); runs pull answers + publish a snapshot. Check at the first scheduled run (tomorrow 06:13): pulse.log shows snapshot=<id>, the tab shows the new date.
+- [ ] Johni + Kamil: Martin answered in the portal (own answers, 13.10.). Start the agent work: Johni access list + re-plan; Kamil dashboard numbers + recommendations. See plan.md QUEUED.
+- [x] D33 live 13.10.: walk items are cards now (type 'Your click'); the 13 click cards of 13.10. are open in the page.

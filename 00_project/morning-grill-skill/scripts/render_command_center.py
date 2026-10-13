@@ -52,6 +52,39 @@ def plan_sections(path):
     return out
 
 
+def walk_card(text, day, client_names):
+    """Turn one walk-queue line into a decision card (D33, Martin 13.10.: no separate walk list, every click item is a card)."""
+    import hashlib
+    cid = "walk-" + hashlib.md5(text.encode()).hexdigest()[:8]
+    pre, _, rest = text.partition(":")
+    client = next((n for n in client_names if pre.strip().lower() in n.lower() and len(pre.strip()) > 2), None)
+    headline = rest.strip() if client else text.strip()
+    client = client or "741 (all clients)"
+    why = "Only you can do this (1 to 5 minutes). Mark it done, give it to an agent or the team, park it with a reason, or write your own answer."
+    opts = {"a": "Done", "b": "Agent or team does it"}
+    then = {"a": "Marked done; it leaves tomorrow's list", "b": "The next grill turns it into an agent task or a team task draft"}
+    low = headline.lower()
+    if low.startswith("which program start date counts"):
+        import re as _re
+        dates = _re.findall(r"(\d{4}-\d{2}-\d{2})(?: \(([^)]*)\))?", headline)
+        d1 = dates[0] if dates else ("?", "")
+        d2 = dates[1] if len(dates) > 1 else ("?", "")
+        opts = {"a": f"{d1[0]} counts ({d1[1] or 'portal'})", "b": f"{d2[0]} counts ({d2[1] or 'other source'})"}
+        then = {"a": "Agent fixes the other source (memory); portal stays", "b": "Agent lists the portal fix (needs GO-PORTAL)"}
+        why = "The start date sets the program week, the deadlines and the renewal. Only one date can be right."
+    elif low.startswith("no program start date"):
+        opts = {"a": "Start = day of the kickoff call", "b": "Start = day of the signed contract"}
+        then = {"a": "Agent enters it in the goal sheet; portal fix needs GO-PORTAL", "b": "Same, with the contract date"}
+        why = "Without a start date there is no program week and no deadline for the first Ads and page work. Pick the trigger, or write your own."
+    elif "go-c" in low:
+        opts = {"a": "Go-C: the English audit page may go to the client", "b": "Not yet: wait until the client reacted to the status reply"}
+        then = {"a": "Agent prepares the send text (you send it)", "b": "Card returns after the client's reaction"}
+        why = "Go-C releases the audit page to the client. It waits for the status reply."
+    return {"id": cid, "n": 0, "client": client, "priority": 8, "type": "Your click", "headline": headline[0].upper() + headline[1:],
+            "why": why, "options": opts, "recommended": "a", "then": then, "evidence": ["plan.md walk queue"], "deadline": day,
+            "status": "open", "answer": None, "answer_text": None}
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--run", required=True); a = ap.parse_args()
     b = load(os.path.join(a.run, "brief.json"))
@@ -137,7 +170,14 @@ def main():
     l741_h = "".join(f"<li>{e(x)}</li>" for x in b.get("line_741", [])) or "<li>nothing</li>"
 
     import hashlib
-    snap["walk"] = [{"id": "walk-" + hashlib.md5(x[4:].encode()).hexdigest()[:8], "text": x[4:], "done": False} for x in walk_open]
+    walk_cards = [walk_card(x[4:], b["date"], [g_["client"] for g_ in goals["clients"]]) for x in walk_open]
+    for wc in walk_cards:
+        wc["n"] = len(snap["cards"]) + 1
+        lc = led_by_id.get(wc["id"])
+        if lc and lc.get("status") in ("decided", "parked"):
+            wc["status"], wc["answer"], wc["answer_text"] = lc["status"], lc.get("answer"), lc.get("park_reason") or lc.get("answer_text")
+        snap["cards"].append(wc)
+    snap["walk"] = []   # D33: the walk queue is part of the cards now
     snap["later"] = [{"client": c["client"], "headline": c["headline"]} for c in b.get("below_the_line", [])]
     snap["agents"] = list(plan.get("Agent starts", []))
     snap["waiting"] = list(plan.get("Waiting for", []))
