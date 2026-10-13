@@ -25,7 +25,7 @@ Ohne Tabellen bleibt der Tab unsichtbar. Das restliche Portal läuft normal (gep
 
 ## Was der Einbau macht
 
-- Kunde: Tab „Entscheidungen“ mit Zähler, Filter, Varianten, „741 empfiehlt“, Warum-Zeile mit Quelle und Stand, SEO-Schloss, drei feste Knöpfe, „ändern“ bis zum Go. Deep-Link `?view=decisions`.
+- Kunde: Tab „Entscheidungen“ mit Zähler, Filter, Varianten, „741 empfiehlt“, Warum-Zeile mit Quelle und Stand, SEO-Schloss, zwei Knöpfe („Passt so“, „Ich möchte etwas ändern“ mit Textfeld, Martin 13.10.), „ändern“ bis zum Go. Deep-Link `?view=decisions`.
 - Martin-Figuren nur hier: hello oben, think beim ersten Punkt mit aktivem Ja, point beim ersten SEO-Schloss, celebrate wenn alles entschieden ist.
 - Nur der benannte Entscheider kann entscheiden. Andere Logins sehen alles nur zum Lesen.
 - Admin: Knopf „Entscheidungen · n offen · m bereit“ im Kundenkopf. Tabelle mit Status, „An Kunde geben“, „Go für live“ (zweiter Klick bestätigt), Einstellungen, Protokoll, Kundenansicht als Vorschau.

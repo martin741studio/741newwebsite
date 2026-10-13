@@ -17,7 +17,7 @@ let apArmed = null;    // Admin: zweiter Klick bestätigt das Go
 
 async function apLoad(b, clientId) {
   const [it, dec, set] = await Promise.all([
-    db.from('approval_items').select('*').eq('client_id', clientId).order('created_at'),
+    db.from('approval_items').select('*').eq('client_id', clientId).order('created_at').order('code').order('id'),  // feste Reihenfolge, springt nach Klicks nicht
     db.from('approval_decisions').select('*').eq('client_id', clientId).order('created_at', { ascending: false }).limit(300),
     db.from('client_approval_settings').select('*').eq('client_id', clientId).maybeSingle()
   ]);
@@ -92,7 +92,8 @@ function apItemHTML(b, i, used, preview) {
     acts = `<div class="ap-res${i.status === 'change' ? ' chg' : ''}">${what} <i style="color:#6b6862;font-style:normal">(${by})</i>${can ? `<button class="ap-undo" onclick="apUndo('${i.id}')">ändern</button>` : ''}</div>`;
   } else {
     const dis = can ? '' : ' disabled';
-    acts = `<div class="ap-acts"><button class="ap-btn ap-b1"${dis} onclick="apAct('${i.id}','approve',this)">Freigeben</button><button class="ap-btn ap-b2"${dis} onclick="apAct('${i.id}','approve_with_change',this)">Freigeben mit kleiner Änderung</button><button class="ap-btn ap-b3"${dis} onclick="apAct('${i.id}','request_change',this)">Änderung wünschen</button></div><textarea class="ap-ta" id="ap-ta-${i.id}" placeholder="Was soll anders sein?"></textarea>`;
+    // Zwei Knöpfe (Martin 13.10.): "Passt so" = gewählte Variante freigeben, "Ich möchte etwas ändern" = Wunsch mit Text
+    acts = `<div class="ap-acts"><button class="ap-btn ap-b1"${dis} onclick="apAct('${i.id}','approve',this)">Passt so</button><button class="ap-btn ap-b2"${dis} onclick="apAct('${i.id}','request_change',this)">Ich möchte etwas ändern</button></div><textarea class="ap-ta" id="ap-ta-${i.id}" placeholder="Was soll anders sein? Ein Satz reicht."></textarea>`;
   }
   return `<article class="ap-item${open ? '' : ' done'}" id="ap-${i.id}"><div class="ap-top"><span class="ap-type">${esc(i.type_label)}</span>${dl}</div>
     <h3>${esc(i.title)}</h3><div class="ap-why">Warum: ${apMd(i.why)}<span class="ap-src">Quelle: ${esc(i.why_source)} · Stand ${apD(i.why_date)}</span></div>
@@ -105,7 +106,7 @@ function apRenderClient(b, preview) {
   const lead = consent
     ? 'Hier siehst du, was wir für deine Website und dein Google-Profil vorbereitet haben. Du wählst aus 2 oder 3 Varianten, und die Variante, die wir dir raten, trägt das Zeichen „741 empfiehlt“. Entscheidest du bis zur Frist nicht, gilt die Empfehlung. Preise und Gesundheitsthemen brauchen immer dein Ja.'
     : 'Hier siehst du, was wir für deine Website und dein Google-Profil vorbereitet haben. Du wählst aus 2 oder 3 Varianten, und die Variante, die wir dir raten, trägt das Zeichen „741 empfiehlt“. Nichts geht live, bevor du entschieden hast.';
-  const hello = open ? apGuide('hello', `Hallo ${who}, hier entscheidest du mit. Bei jedem Punkt habe ich meine Empfehlung markiert, ein Klick auf „Freigeben“ reicht.`) : '';
+  const hello = open ? apGuide('hello', `Hallo ${who}, hier entscheidest du mit. Bei jedem Punkt habe ich meine Empfehlung markiert, ein Klick auf „Passt so“ reicht.`) : '';
   const done = !open && items.length ? apGuide('celebrate', `Danke, ${who}! Alles ist entschieden. Ich melde mich, sobald es live ist.`) : '';
   const notApprover = !preview && !apCanDecide(b)
     ? `<div class="ap-info">Entscheiden kann nur ${esc((b.apSettings && b.apSettings.approver_name) || 'die benannte Person')}. Du kannst alles ansehen und uns im Chat schreiben.</div>` : '';
@@ -130,7 +131,7 @@ async function apAct(id, action, btn) {
   if (action !== 'approve') {
     if (!ta.classList.contains('on') || ta.dataset.a !== action) {
       ta.classList.add('on'); ta.dataset.a = action; ta.focus();
-      btn.textContent = action === 'request_change' ? 'Wunsch senden' : 'Freigeben mit Notiz';
+      btn.textContent = 'Wunsch senden';
       return;
     }
     note = ta.value.trim();
