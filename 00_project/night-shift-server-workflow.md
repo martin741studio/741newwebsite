@@ -99,6 +99,7 @@ Unconfirmed queue at 17:30 → only research and public audit items run (N10).
 4. Rabenmütter blocker 10× → DataForSEO via script (no tool needed), site fetch via Playwright; 3× rule moves it out.
 5. Critic not called on attempt 2 → runner always pairs Executor + Critic.
 6. Nobody reads REVIEW.md → cards in the Command Center + 06:13 grill.
+7. v1 skill has no "Do NOT use" line and no verification step → v2 SKILL.md gets a negative trigger and an end check (`validate_night.py`: every item has a verdict, counters match the log, no guard violations).
 
 ## 12. Success after one week (N15)
 
