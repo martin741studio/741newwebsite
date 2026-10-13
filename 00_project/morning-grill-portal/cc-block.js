@@ -1,4 +1,4 @@
-const CC = { snap: null, snapId: null, created: null, mode: null, answers: {}, picks: {}, parking: null, owning: null, reopen: {}, tab: 'dec', filter: 'all' };
+const CC = { tfilter: 'all', snap: null, snapId: null, created: null, mode: null, answers: {}, picks: {}, parking: null, owning: null, reopen: {}, tab: 'dec', filter: 'all' };
 const CC_ICON = { dec: '✅', you: '👆', msg: '✉️', appr: '⏳', wait: '🕒', block: '⛔', later: '📋' };
 
 async function loadGrill() {
@@ -66,7 +66,7 @@ function ccCard(c) {
   const own = ef.answer === 'own' || ef.answer === 'other';
   const res = done ? `<div class="cc-res${ef.status === 'parked' ? ' park' : ''}">${ef.status === 'parked' ? 'Parked' : own ? 'Decided (own answer)' : 'Decided'}: ${esc(ef.text || ef.answer || '')} <button class="cc-link" onclick="ccReopen('${esc(c.id)}')">Change answer</button></div>` : '';
   const ev = (c.evidence || []).map(x => `<li>${esc(x)}</li>`).join('');
-  return `<article class="cc-item p${c.priority}${done ? ' done' : ''}"><div class="cc-itop"><span class="cc-type">${esc(c.type)}</span><b>${esc(c.client)}</b><span class="dl">card ${c.n} · by ${esc(c.deadline)}</span></div>
+  return `<article id="cc-card-${esc(c.id)}" class="cc-item p${c.priority}${done ? ' done' : ''}"><div class="cc-itop"><span class="cc-type">${esc(c.type)}</span><b>${esc(c.client)}</b><span class="dl">card ${c.n} · by ${esc(c.deadline)}</span></div>
 <h3>${esc(c.headline)}</h3><div class="cc-why"><b>Why:</b> ${esc(c.why)}</div><div class="cc-vars">${vars}</div>${acts}${res}
 <details class="cc-ev"><summary>Evidence (${(c.evidence || []).length})</summary><ul>${ev}</ul></details></article>`;
 }
@@ -111,10 +111,40 @@ function ccAgents() {
 <div class="cc-panel" style="margin-top:14px"><h4>741 line</h4><ul>${li(s.line_741)}</ul></div><div class="cc-panel" style="margin-top:14px"><h4>Sources of this snapshot</h4><ul>${src}</ul></div>`;
 }
 
+function ccTfilter(f) { CC.tfilter = f; ccRender(); }
+function ccGoCard(id) { CC.tab = 'dec'; CC.filter = 'all'; ccRender(); const el = document.getElementById('cc-card-' + id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+function ccTaskStatus(t) {
+  const c = t.card && CC.snap.cards.find(x => x.id === t.card);
+  if (c) {
+    const ef = ccEff(c);
+    if (ef.status === 'parked') return 'parked';
+    if (ef.status === 'decided') return (c.type === 'Your click' && ef.answer === 'a' && c.options.a === 'Done') ? 'done' : 'decided';
+  }
+  return t.status;
+}
+function ccTasks() {
+  const tasks = (CC.snap.tasks || []).map(t => ({ t, st: ccTaskStatus(t) }));
+  if (!tasks.length) return '<div class="cc-panel"><div class="muted">No tasks in this snapshot yet.</div></div>';
+  const owners = ['Martin', 'agent', 'Dinakar', 'Tantri', 'Gayo', 'external'];
+  const f = CC.tfilter;
+  const order = { open: 0, in_progress: 1, waiting: 2, drafted: 3, decided: 4, parked: 5, done: 6 };
+  const label = { open: 'open', in_progress: 'in progress', waiting: 'waiting', drafted: 'draft', decided: 'decided', parked: 'parked', done: 'done' };
+  const cnt = o => tasks.filter(x => x.t.owner === o && x.st !== 'done').length;
+  const chips = [['all', `All (${tasks.filter(x => x.st !== 'done').length} open)`], ...owners.map(o => [o, `${o} (${cnt(o)})`])].map(([k, l]) => `<button class="cc-chip${f === k ? ' on' : ''}" onclick="ccTfilter('${k}')">${esc(l)}</button>`).join('');
+  const rows = tasks.filter(x => f === 'all' || x.t.owner === f).sort((a, b) => (order[a.st] ?? 9) - (order[b.st] ?? 9) || a.t.owner.localeCompare(b.t.owner)).map(({ t, st }) => {
+    const src = t.card || t.source_card;
+    const link = src ? `<a href="#" onclick="ccGoCard('${esc(src)}');return false;">card</a>` : '';
+    const extra = [t.next ? esc(t.next) : '', t.link ? 'file: ' + esc(t.link) : '', t.session ? 'chat: ' + esc(t.session.slice(0, 14)) : ''].filter(Boolean).join(' · ');
+    return `<tr class="${esc(st)}"><td><span class="cc-st ${esc(st)}">${esc(label[st] || st)}</span></td><td><b>${esc(t.owner)}</b></td><td>${esc(t.client)}</td><td>${esc(t.title)}${extra ? `<div class="cc-sub">${extra}</div>` : ''}</td><td>${esc(t.due || '')}</td><td>${link}</td></tr>`;
+  }).join('');
+  return `<div class="cc-chips">${chips}</div><div class="cc-panel" style="overflow-x:auto"><table class="cc-tk"><tr><th>Status</th><th>Owner</th><th>Client</th><th>Task</th><th>Due</th><th>Source</th></tr>${rows}</table></div>
+<div class="cc-legend" style="margin-top:10px">Team tasks stay drafts for the first week (portal task + WhatsApp line in team-tasks-drafts.md). A click-card task is done when you answer its card 'Done'.</div>`;
+}
+
 function ccRender() {
   const s = CC.snap, el = $('grill');
-  const tabs = [['dec', 'Decisions'], ['cli', 'Clients'], ['ag', 'Agents & waiting']].map(([k, l]) => `<button class="cc-tab${CC.tab === k ? ' on' : ''}" onclick="ccTab('${k}')">${l}</button>`).join('');
-  const body = CC.tab === 'dec' ? ccDecisions() : CC.tab === 'cli' ? ccClients() : ccAgents();
+  const tabs = [['dec', 'Decisions'], ['tk', 'Tasks'], ['cli', 'Clients'], ['ag', 'Agents & waiting']].map(([k, l]) => `<button class="cc-tab${CC.tab === k ? ' on' : ''}" onclick="ccTab('${k}')">${l}</button>`).join('');
+  const body = CC.tab === 'dec' ? ccDecisions() : CC.tab === 'tk' ? ccTasks() : CC.tab === 'cli' ? ccClients() : ccAgents();
   el.innerHTML = `<span class="backlink" onclick="showApp('admin-home')">← Übersicht</span>
 <div class="cc-head"><h1>Command Center</h1><span class="cc-meta">${esc(s.date)} WITA · ${esc(CC.mode)} snapshot ${esc(CC.snapId)} · read ${esc(s.read_at)} · <a href="#" onclick="loadGrill();return false;">reload</a></span></div>
 <div class="cc-tabs">${tabs}</div>${body}`;

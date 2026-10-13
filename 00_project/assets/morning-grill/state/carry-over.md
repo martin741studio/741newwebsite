@@ -20,3 +20,4 @@ Added 2026-10-13 after the first real grill:
 - [x] Command Center LIVE in the admin panel (13.10.); runs pull answers + publish a snapshot. Check at the first scheduled run (tomorrow 06:13): pulse.log shows snapshot=<id>, the tab shows the new date.
 - [ ] Johni + Kamil: Martin answered in the portal (own answers, 13.10.). Start the agent work: Johni access list + re-plan; Kamil dashboard numbers + recommendations. See plan.md QUEUED.
 - [x] D33 live 13.10.: walk items are cards now (type 'Your click'); the 13 click cards of 13.10. are open in the page.
+- [ ] Tasks (D34): 23 tasks of 13.10. in 00_project/assets/morning-grill/2026-10-13/tasks.json. Tomorrow: carry the open ones over, update statuses, add new ones from today's answers. Team drafts: Dinakar (Suriya speed, waits for the WordPress role), Gayo (Bali CRM clean-up) in team-tasks-drafts.md; Martin forwards the WhatsApp lines.

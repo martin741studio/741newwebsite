@@ -177,6 +177,8 @@ def main():
         if lc and lc.get("status") in ("decided", "parked"):
             wc["status"], wc["answer"], wc["answer_text"] = lc["status"], lc.get("answer"), lc.get("park_reason") or lc.get("answer_text")
         snap["cards"].append(wc)
+    tk = load(os.path.join(a.run, "tasks.json"), [])
+    snap["tasks"] = tk   # D34: the tasks that result from the decisions (owner, status, source card, link)
     snap["walk"] = []   # D33: the walk queue is part of the cards now
     snap["later"] = [{"client": c["client"], "headline": c["headline"]} for c in b.get("below_the_line", [])]
     snap["agents"] = list(plan.get("Agent starts", []))
