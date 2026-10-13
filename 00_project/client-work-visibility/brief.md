@@ -72,3 +72,15 @@ Library: `00_project/knowledge/client-work-library/INDEX.md`. Rule numbers below
 | Team logins | Later, with step 2 (team). Until then, team tasks go out as a WhatsApp line. |
 | Client colour | **Fully automatic** from signals. No manual confirmation. The rule set must be fixed and visible: each colour shows its reason. |
 | Client-view pilot | **Bali Healing** (English client, `lang = en`). So the client view must also exist in English. |
+
+## Build step 1 (13.10.)
+- DB live: migrations `client_work_view_v1` and `client_work_view_health_labels_de`. Data: 21 actors, 63 phases, 9 goals, 23 grill tasks, 12 client todos (open access), 5 intake items (98 change requests), 1 approval item, 2 Suriya outcomes. Tests 22/22 on live data (rollback).
+- Colour live: Bali red (blocker), Johni, Brasse, Dumann, Hüwel, Suriya, Rabenmütter, Stürzl yellow, Kamil green.
+- Portal module "Kundenarbeit" on **staging only** (`portal/src/kw.css`, `kw.js`, `build.py`, marker blocks, update mode). The admin home has the button "→ Kundenarbeit (Heute)". The client header has the button "Kundenarbeit · <colour>".
+- Tested in Chrome as admin at 1440 and 390 px:
+  - "Geprüft → Erledigt" works.
+  - "Erledigt" without proof is refused, and with a link it works.
+  - The history shows "Martin · Geplant → Erledigt", and the colour changes automatically.
+  - The test items are deleted afterwards. No real task was changed.
+- Screenshots: `portal/screenshots/` (6).
+- Open: live upload (Martin's go), access check (agent running), Morning Grill writes into the model (schema sent), team logins (step 2), client view Bali EN (step 3).
