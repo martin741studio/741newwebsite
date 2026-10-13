@@ -25,6 +25,7 @@ const AP_TX = {
     done: (w) => `Danke, ${w}! Alles ist entschieden. Ich melde mich, sobald es live ist.`,
     notApprover: (n) => `Entscheiden kann nur ${n}. Du kannst alles ansehen und uns im Chat schreiben.`, namedPerson: 'die benannte Person',
     all: 'Alle', open: 'Offen', waiting: (n) => n + ' warten auf dich', allDone: 'Alles entschieden, danke!', empty: 'Hier ist gerade nichts offen.',
+    notePh: 'Bitte hier eintragen.', needFill: 'Bitte zuerst das Feld ausfüllen.',
     needNote: 'Bitte kurz schreiben, was anders sein soll.', sentChg: 'Danke, dein Wunsch ist bei uns.', saved: 'Danke, gespeichert.', err: 'Fehler: '
   },
   en: {
@@ -42,6 +43,7 @@ const AP_TX = {
     done: (w) => `Thank you, ${w}! Everything is decided. I will tell you when it is live.`,
     notApprover: (n) => `Only ${n} can decide. You can see everything and write to us in the chat.`, namedPerson: 'the named person',
     all: 'All', open: 'Open', waiting: (n) => n + ' waiting for you', allDone: 'All decided, thank you!', empty: 'Nothing is open at the moment.',
+    notePh: 'Please write it here.', needFill: 'Please fill in the field first.',
     needNote: 'Please write in a few words what should be different.', sentChg: 'Thank you. We have your request.', saved: 'Thank you. Saved.', err: 'Error: '
   }
 };
@@ -87,7 +89,7 @@ function apVarHTML(b, i, v, selKey, ro) {
   const sel = selKey === v.key ? ' sel' : '';
   const rec = v.key === i.recommended_key ? `<span class="ap-rec">${T.rec}</span>` : '';
   let val;
-  if (i.kind === 'price') val = `<div class="ap-big">${esc(v.value)}</div>`;
+  if (i.kind === 'price' && /\d/.test(v.value)) val = `<div class="ap-big">${esc(v.value)}</div>`;   // große Schrift nur für Zahlen (Martin 13.10.)
   else if (i.kind === 'text') val = `<div class="ap-val">${esc(v.value).replace('{kw}', `<span class="ap-lock">${AP_LOCK}${esc(i.keyword || '')}</span>`)}</div>`;
   else if (i.kind === 'design') {
     const head = v.design === 'head', c = i.context || {};
@@ -133,8 +135,11 @@ function apItemHTML(b, i, used, preview) {
     acts = `<div class="ap-res${i.status === 'change' ? ' chg' : ''}">${what} <i style="color:#6b6862;font-style:normal">(${by})</i>${can ? `<button class="ap-undo" onclick="apUndo('${i.id}')">${T.undo}</button>` : ''}</div>`;
   } else {
     const dis = can ? '' : ' disabled';
+    // Variante mit ask_note (Martin 13.10.): Feld unter „Passt so“, Pflicht, wird als approve_with_change gespeichert
+    const askNote = !!(apVar(i, selKey) || {}).ask_note;
+    const noteField = askNote ? `<textarea class="ap-ta on" id="ap-nt-${i.id}" placeholder="${T.notePh}"${dis}></textarea>` : '';
     // Zwei Knöpfe (Martin 13.10.): "Passt so" = gewählte Variante freigeben, "Ich möchte etwas ändern" = Wunsch mit Text
-    acts = `<div class="ap-acts"><button class="ap-btn ap-b1"${dis} onclick="apAct('${i.id}','approve',this)">${T.ok}</button><button class="ap-btn ap-b2"${dis} onclick="apAct('${i.id}','request_change',this)">${T.change}</button></div><textarea class="ap-ta" id="ap-ta-${i.id}" placeholder="${T.ph}"></textarea>`;
+    acts = `${noteField}<div class="ap-acts"><button class="ap-btn ap-b1"${dis} onclick="apAct('${i.id}','approve',this)">${T.ok}</button><button class="ap-btn ap-b2"${dis} onclick="apAct('${i.id}','request_change',this)">${T.change}</button></div><textarea class="ap-ta" id="ap-ta-${i.id}" placeholder="${T.ph}"></textarea>`;
   }
   const draft = i.status === 'draft' ? `<span class="ap-pill p-draft">${T.draft(esc(apFirst(b)))}</span>` : '';
   return `<article class="ap-item${open ? '' : ' done'}" id="ap-${i.id}"><div class="ap-top"><span class="ap-type">${esc(i.type_label)}</span>${draft}${dl}</div>
@@ -183,8 +188,15 @@ async function apAct(id, action, btn) {
     if (!note) { ta.focus(); toast(T.needNote); return; }
   }
   const i = bundle.apItems.find(x => x.id === id);
+  const key = apSel[id] || i.recommended_key;
+  if (action === 'approve' && (apVar(i, key) || {}).ask_note) {
+    const nt = $('ap-nt-' + id);
+    note = nt ? nt.value.trim() : '';
+    if (!note) { if (nt) nt.focus(); toast(T.needFill); return; }
+    action = 'approve_with_change';
+  }
   btn.disabled = true;
-  const { error } = await db.rpc('approval_decide', { p_item: id, p_action: action, p_variant: apSel[id] || i.recommended_key, p_note: note });
+  const { error } = await db.rpc('approval_decide', { p_item: id, p_action: action, p_variant: key, p_note: note });
   if (error) { btn.disabled = false; toast(T.err + error.message); return; }
   delete apSel[id];
   toast(action === 'request_change' ? T.sentChg : T.saved);

@@ -44,4 +44,6 @@ Ohne Tabellen bleibt der Tab unsichtbar. Das restliche Portal läuft normal (gep
 - Die 741-Ansicht (Admin) bleibt deutsch. Die Vorschau „Kundenansicht ansehen“ zeigt die Kundensprache.
 - `build.py` stellt im Update-Modus die alte deutsche Tab-Beschriftung einmalig auf `apTabLabel(b)` um.
 - Mail-Entwurf `02-mails-draft.sql`: englischer Zweig in `approval_build_mail` (Datum „20 Oct“). Getestet am 13.10. nur in einer Transaktion mit Rollback, nichts angewendet.
+- Varianten mit `"ask_note": true` zeigen ein Pflichtfeld über „Passt so“ / „Looks good“. Gespeichert wird `approve_with_change` mit Notiz (Martin 13.10.). Gesetzt bei Bali B2-A und B5-B.
+- Große Schrift bei `kind = price` nur, wenn die Variante eine Zahl enthält (Martin 13.10.).
 - Tests: `screenshots/en-2026-10-13/` (EN Bali Healing, DE Testpraxis, Desktop und 390 px).
