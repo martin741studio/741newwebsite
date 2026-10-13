@@ -125,21 +125,60 @@ def main():
             if c and not r["status"].startswith("fertig, Freigabe offen"):
                 add_line(c, "fixed", f"Run {r['workflow']}: {r['status']} ({r['last_run']})")
 
-    # --- S6 night shift
+    # --- S6 night shift (v2 results first, D37; v1 REVIEW.md cards only when there is no v2 state)
     if ok("S6_nightshift"):
         ns = S["S6_nightshift"]["data"]
-        open_items = [(cl, i["item"]) for cl, items in ns["items"].items() for i in items if not i["ticked"]]
-        if open_items:
-            cards.append(card(f"{day}-741-nightshift", "741 (night shift)", 4, "approve",
-                              f"The night shift redoes the same {len(open_items)} drafts every night: nobody approves them and its ledger has {ns['ledger_entries']} entries.",
-                              [ns["file"], "S6"] + [f"{cl}: {it}" for cl, it in open_items],
-                              {"a": "Approve the 'pass' drafts and write the ledger", "b": "Review them one by one (walk queue)", "c": "Pause the night shift until the grill shows its items"},
-                              "b", "They are client-facing texts (GBP, NAP); a short look is the real gate.", tomorrow,
-                              {"a": "agent writes processed-feedback.json (needs go, other chat's file)", "b": "walk queue with the 5 file links", "c": "LaunchAgent change needs go"}))
-            for cl, it in open_items:
-                c = client_of(cl, goals)
-                if c:
-                    add_line(c, "fixed", f"Night-shift draft ready: {it} (not approved)")
+        v2 = ns.get("v2")
+        if v2:
+            ev = [f"{v2['folder']}/state.json", "S6"]
+            if v2["violations"]:
+                cards.append(card(f"{day}-night-violations", "741 (night shift)", 1, "decide",
+                                  f"The night run broke its rules {len(v2['violations'])} time(s). Nothing from it may be released before you look.",
+                                  ev + [f"run {x.get('run')} role {x.get('role')} item {x.get('item')} paths {x.get('paths')}" for x in v2["violations"]][:6],
+                                  {"a": "Open the run folder with me and decide per item", "b": "Throw the whole night away", "c": "Park with a reason"}, "a",
+                                  "A rule break means the guard failed; results are not trusted until checked.", scan["date"],
+                                  {"a": "agent lists every violating path with the diff", "b": "agent marks all items skipped", "c": "park reason"}))
+            if v2["stopped_reason"] or any(i["status"] == "executed_no_critic" for i in v2["items"]):
+                nc = [i["title"] or i["id"] for i in v2["items"] if i["status"] == "executed_no_critic"]
+                cards.append(card(f"{day}-night-stopped", "741 (night shift)", 3, "decide",
+                                  f"The night run stopped early ({v2['stopped_reason'] or 'critic missing'}). {len(nc)} item(s) have no critic check.",
+                                  ev + nc[:6], {"a": "Re-run the unchecked items tonight", "b": "Check them by hand in the walk queue", "c": "Drop them"}, "a",
+                                  "Unchecked items must not be released.", tomorrow,
+                                  {"a": "agent puts them into tonight's night queue card", "b": "click cards with the file links", "c": "marked skipped"}))
+            for it in v2["items"]:
+                if it["status"] == "needs_martin":
+                    cl = it.get("client") or "741 (night shift)"
+                    cards.append(card(f"{day}-night-{it['id']}", cl, 3, "decide",
+                                      f"Night result needs you: {it['title']}. {it.get('one_line') or ''}".strip(),
+                                      ev + [it.get("summary_file") or ""] + [str(x) for x in it["fails"]][:5],
+                                      {"a": "Take the draft as is and send it to the day queue", "b": "Redo it with my answer (write your own answer)", "c": "Drop it"}, "b",
+                                      "The critic flagged: " + ("; ".join(str(x) for x in it["fails"][:3]) or "open questions"), tomorrow,
+                                      {"a": "walk card to release by day", "b": "agent redoes it, goes into the next night queue", "c": "marked skipped"}))
+            passed = [i for i in v2["items"] if i["status"] == "pass"]
+            if passed:
+                cards.append(card(f"{day}-night-pass", "741 (night shift)", 4, "approve",
+                                  f"{len(passed)} night result(s) passed the critic and wait for your release: " + "; ".join((i["title"] or i["id"])[:50] for i in passed[:5]) + ".",
+                                  ev + [i.get("summary_file") or i["id"] for i in passed][:8],
+                                  {"a": "I read the summaries: release them to the day queue", "b": "Open them one by one (click cards)", "c": "Park with a reason"}, "b",
+                                  "Drafts reach clients only after your release; a short look is the real gate.", tomorrow,
+                                  {"a": "agent moves them into plan.md as 'ready to release' click cards", "b": "one click card per result with the summary", "c": "park reason"}))
+                for it in passed:
+                    c2 = client_of(it.get("client") or "", goals)
+                    if c2:
+                        add_line(c2, "fixed", f"Night result ready: {it['title']} (critic passed, not released)")
+        else:
+            open_items = [(cl, i["item"]) for cl, items in ns["items"].items() for i in items if not i["ticked"]]
+            if open_items:
+                cards.append(card(f"{day}-741-nightshift", "741 (night shift)", 4, "approve",
+                                  f"The night shift redoes the same {len(open_items)} drafts every night: nobody approves them and its ledger has {ns['ledger_entries']} entries.",
+                                  [ns["file"] or "REVIEW.md", "S6"] + [f"{cl}: {it}" for cl, it in open_items],
+                                  {"a": "Approve the 'pass' drafts and write the ledger", "b": "Review them one by one (walk queue)", "c": "Pause the night shift until the grill shows its items"},
+                                  "b", "They are client-facing texts (GBP, NAP); a short look is the real gate.", tomorrow,
+                                  {"a": "agent writes processed-feedback.json (needs go, other chat's file)", "b": "walk queue with the file links", "c": "LaunchAgent change needs go"}))
+                for cl, it in open_items:
+                    c = client_of(cl, goals)
+                    if c:
+                        add_line(c, "fixed", f"Night-shift draft ready: {it} (not approved)")
 
     # --- S7 citations
     if ok("S7_citations"):

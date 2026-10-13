@@ -33,11 +33,18 @@ def load(p, d=None):
 
 
 def candidates(run):
+    """Two sources: (1) open agent tasks of today's tasks.json; (2) the roadmap of every active client from the goal sheet
+    (phase, next milestone, next workflow, blockers). Rank: due date first, then the client's roadmap step (spec section 3)."""
     tasks = load(os.path.join(run, "tasks.json"), [])
-    out = [{"task_id": t["id"], "client": t.get("client"), "title": t["title"], "status": t["status"], "next": t.get("next"), "link": t.get("link")}
-           for t in tasks if t.get("owner") == "agent" and t.get("status") in ("open", "waiting", "in_progress", "drafted")]
+    out = {"agent_tasks": [{"task_id": t["id"], "client": t.get("client"), "title": t["title"], "status": t["status"], "next": t.get("next"), "due": t.get("due"), "link": t.get("link")}
+                           for t in tasks if t.get("owner") == "agent" and t.get("status") in ("open", "waiting", "in_progress", "drafted")]}
+    goals = load(os.path.join(REPO, "00_project", "morning-grill-goals.json"), {"clients": []})
+    out["roadmap_steps"] = [{"client": c["client"], "phase": c.get("phase"), "next_milestone": c.get("next_milestone"), "next_workflow": c.get("next_workflow"),
+                             "blockers": c.get("blockers", [])[:4], "waiting_for": c.get("waiting_for", [])}
+                            for c in goals["clients"] if c.get("status") not in ("done", "paused", "lead") and (c.get("next_milestone") or c.get("next_workflow"))]
     print(json.dumps(out, ensure_ascii=False, indent=1))
-    print(f"# {len(out)} open agent tasks. Night-suitable only: research / draft / public audit / local build. Never: send, publish, deploy, login, money, credit scans.", file=sys.stderr)
+    print(f"# {len(out['agent_tasks'])} open agent tasks, {len(out['roadmap_steps'])} client roadmap steps. Build night items from both: the first night-suitable step of the roadmap "
+          "(research, draft, public audit, local build) when no agent task covers it. Skip steps that wait for a client, a login or a payment. Never: send, publish, deploy, login, money, credit scans.", file=sys.stderr)
 
 
 def validate(items):

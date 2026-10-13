@@ -85,22 +85,56 @@ def read_standup(day):
     return {"file": os.path.relpath(path, REPO), "clients": data}
 
 
-def read_nightshift():
-    dirs = sorted(d for d in glob.glob(os.path.join(REPO, "reporting", "night-shift", "20*")) if os.path.isdir(d))
+def read_nightshift(today=None):
+    """v1: REVIEW.md of the latest run folder. v2 (Night Shift v2 runner, D37): state.json + critic/<id>.json + items/<id>/summary.md
+    of the newest run folder of the last 2 days (format given by the Night Shift chat 13.10.)."""
+    base = os.path.join(REPO, "reporting", "night-shift")
+    dirs = sorted(d for d in glob.glob(os.path.join(base, "20*")) if os.path.isdir(d))
     if not dirs:
         raise FileNotFoundError("no night-shift run folder")
+    per, head, rev_rel = {}, "", None
     rev = os.path.join(dirs[-1], "REVIEW.md")
-    txt = open(rev, encoding="utf-8").read()
-    per, cur = {}, None
-    for line in txt.splitlines():
-        if line.startswith("## "):
-            cur = line[3:].strip()
-        m = re.match(r"- \[( |x)\] (\S+)\s+\*\*(.+?)\*\*.*— (\w+)", line)
-        if m and cur:
-            per.setdefault(cur, []).append({"ticked": m.group(1) == "x", "item": m.group(3), "result": m.group(4)})
-    head = txt.splitlines()[0] if txt else ""
-    ledger = load_json(os.path.join(REPO, "reporting", "night-shift", "processed-feedback.json"))
-    return {"file": os.path.relpath(rev, REPO), "headline": head, "items": per, "ledger_entries": len(ledger)}
+    if os.path.exists(rev):
+        txt = open(rev, encoding="utf-8").read()
+        cur = None
+        for line in txt.splitlines():
+            if line.startswith("## "):
+                cur = line[3:].strip()
+            m = re.match(r"- \[( |x)\] (\S+)\s+\*\*(.+?)\*\*.*— (\w+)", line)
+            if m and cur:
+                per.setdefault(cur, []).append({"ticked": m.group(1) == "x", "item": m.group(3), "result": m.group(4)})
+        head = txt.splitlines()[0] if txt else ""
+        rev_rel = os.path.relpath(rev, REPO)
+    ledger = load_json(os.path.join(base, "processed-feedback.json")) if os.path.exists(os.path.join(base, "processed-feedback.json")) else []
+    v2 = None
+    today = today or dt.date.today()
+    for d in reversed(dirs):
+        name = os.path.basename(d)
+        try:
+            age = (today - dt.date.fromisoformat(name)).days
+        except ValueError:
+            continue
+        if age > 2:
+            break
+        sp = os.path.join(d, "state.json")
+        if not os.path.exists(sp):
+            continue
+        st = load_json(sp)
+        items = []
+        for iid, it in (st.get("items") or {}).items():
+            crit = os.path.join(d, "critic", f"{iid}.json")
+            summ = os.path.join(d, "items", iid, "summary.md")
+            c = load_json(crit) if os.path.exists(crit) else {}
+            items.append({"id": iid, "title": it.get("title"), "client": it.get("client"), "status": it.get("status"), "attempts": it.get("attempts"),
+                          "why": it.get("why"), "fails": c.get("fails") or [], "one_line": c.get("one_line"),
+                          "summary": (open(summ, encoding="utf-8").read().strip().splitlines()[:6] if os.path.exists(summ) else []),
+                          "summary_file": os.path.relpath(summ, REPO) if os.path.exists(summ) else None})
+        v2 = {"date": st.get("date") or name, "folder": os.path.relpath(d, REPO), "runs": st.get("runs"), "usd": st.get("usd"),
+              "stopped_reason": st.get("stopped_reason"), "violations": st.get("violations") or [], "items": items}
+        break
+    pulse = os.path.join(base, "pulse.log")
+    last_pulse = open(pulse, encoding="utf-8").read().strip().splitlines()[-1] if os.path.exists(pulse) and os.path.getsize(pulse) else None
+    return {"file": rev_rel, "headline": head, "items": per, "ledger_entries": len(ledger), "v2": v2, "pulse": last_pulse}
 
 
 def read_memory(bm, goals):
@@ -251,7 +285,7 @@ def main():
     S["S3_registry"] = src(read_registry, bm, today)
     S["S4_git"] = src(read_git, bm)
     S["S5_standup"] = src(read_standup, a.date)
-    S["S6_nightshift"] = src(read_nightshift)
+    S["S6_nightshift"] = src(read_nightshift, today)
     S["S7_citations"] = src(read_citations, today)
     S["S8_tracking"] = {"status": "unreadable", "error": "tracking workflow not built yet"}
     S["S9_memory"] = src(read_memory, bm, goals)
