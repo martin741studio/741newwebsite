@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>741 Portal · Outreach per account (mockup)</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --yellow: #fac118;
+    --yellow-soft: rgba(250, 193, 24, 0.14);
+    --black: #252525;
+    --cream: #fffcf3;
+    --cream-2: #fef6dc;
+    --grey: #8c8c8c;
+    --grey-light: #f5f5f6;
+    --white: #fff;
+    --green: #2e9e5b;
+    --green-soft: #e7f6ed;
+    --amber-soft: #fdf3d7;
+    --red: #c0392b;
+    --radius: 14px;
+    --shadow: 0 2px 14px rgba(37,37,37,0.07);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--black);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  button { font-family: inherit; cursor: pointer; }
+
+  /* ---------- Login ---------- */
+  .login-wrap { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px;
+    background: linear-gradient(rgba(255,252,243,0.4), #fffcf3 40%, #fef6dc 80%, #fde9ae); }
+  .login-card { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:42px 38px; width:100%; max-width:400px; }
+  .brand img { display:block; height:40px; width:auto; }
+  .topbar .brand img { height:30px; }
+  .login-card h1 { font-size:19px; margin:18px 0 4px; }
+  .login-card p.sub { color:var(--grey); font-size:14px; margin-bottom:22px; }
+  label { display:block; font-size:13px; font-weight:600; margin:14px 0 5px; }
+  input, select, textarea { width:100%; padding:11px 13px; border:1.5px solid #e3e0d5; border-radius:9px; font-size:15px; font-family:inherit; background:var(--white); }
+  input:focus, select:focus, textarea:focus { outline:none; border-color:var(--yellow); }
+  .btn { display:inline-block; border:none; border-radius:10px; padding:12px 22px; font-size:15px; font-weight:700; }
+  .btn-primary { background:var(--black); color:var(--white); width:100%; margin-top:20px; transition: background .15s; }
+  .btn-primary:hover { background:#3a3a3a; }
+  .btn-yellow { background:var(--yellow); color:var(--black); }
+  .btn-small { padding:7px 13px; font-size:13px; border-radius:8px; }
+  .btn-ghost { background:transparent; border:1.5px solid #e3e0d5; }
+  .err { color:var(--red); font-size:13.5px; margin-top:12px; display:none; }
+
+  /* ---------- App shell ---------- */
+  .topbar { background:var(--white); border-bottom:1px solid #eee9da; padding:0 22px; display:flex; align-items:center; justify-content:space-between; height:60px; position:sticky; top:0; z-index:20; }
+  .topbar .who { font-size:13.5px; color:var(--grey); display:flex; align-items:center; gap:14px; }
+  .topbar .who b { color:var(--black); }
+  .container { max-width:1060px; margin:0 auto; padding:28px 20px 80px; }
+  .grid { display:grid; gap:18px; }
+  @media(min-width:880px){ .grid-2 { grid-template-columns: 1fr 1fr; } .grid-31 { grid-template-columns: 2fr 1fr; } }
+  .card { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:24px; }
+  .ptabs { display:flex; gap:6px; margin-bottom:20px; border-bottom:1.5px solid #eee7cf; }
+  .ptab { background:none; border:none; cursor:pointer; font-family:inherit; font-size:14.5px; font-weight:700; color:var(--grey);
+    padding:10px 16px; border-radius:10px 10px 0 0; border-bottom:2.5px solid transparent; margin-bottom:-1.5px; transition:.15s; }
+  .ptab:hover { color:var(--black); background:var(--yellow-soft); }
+  .ptab-active { color:var(--black); border-bottom-color:var(--yellow); }
+  .cit-row { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:7px 2px; border-top:1px solid #f4f1e6; font-size:13.5px; }
+  .cit-row:first-of-type { border-top:none; }
+  .cit-name { font-weight:600; }
+  .cit-cat { color:var(--grey); font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.3px; margin:14px 0 2px; }
+  .pill-red { background:#fbe4e0; color:#c0392b; }
+  .card h2 { font-size:16.5px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; }
+  .muted { color:var(--grey); font-size:13.5px; }
+  .pill { display:inline-block; font-size:12px; font-weight:700; border-radius:20px; padding:3px 11px; white-space:nowrap; }
+  .pill-grey { background:var(--grey-light); color:var(--grey); }
+  .pill-yellow { background:var(--yellow-soft); color:#8a6a00; }
+  .pill-green { background:var(--green-soft); color:var(--green); }
+  .pill-amber { background:var(--amber-soft); color:#9a7500; }
+
+  /* Progress */
+  .progress-outer { background:var(--grey-light); border-radius:20px; height:12px; overflow:hidden; margin:10px 0 6px; }
+  .progress-inner { background:var(--yellow); height:100%; border-radius:20px; transition: width .4s; }
+
+  /* Steps / lists */
+  .step { display:flex; gap:12px; padding:11px 0; border-bottom:1px solid #f4f1e6; align-items:flex-start; }
+  .step:last-child { border-bottom:none; }
+  .step .dot { width:26px; height:26px; min-width:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; background:var(--grey-light); color:var(--grey); margin-top:1px; }
+  .step.done .dot { background:var(--green); color:#fff; }
+  .step.active .dot { background:var(--yellow); color:var(--black); }
+  .step .t { font-size:14.5px; font-weight:600; }
+  .step .d { font-size:13px; color:var(--grey); margin-top:2px; }
+
+  /* Roadmap */
+  .weeks { display:grid; grid-template-columns:repeat(13, 1fr); gap:5px; margin-bottom:18px; }
+  .wk { text-align:center; font-size:11.5px; font-weight:700; padding:9px 0 7px; border-radius:8px; background:var(--grey-light); color:var(--grey); cursor:pointer; border:2px solid transparent; }
+  .wk.done { background:var(--green-soft); color:var(--green); }
+  .wk.current { background:var(--yellow); color:var(--black); }
+  .wk.sel { border-color:var(--black); }
+  .track-tag { font-size:10.5px; font-weight:800; border-radius:5px; padding:1px 6px; margin-right:7px; background:var(--cream-2); color:#8a6a00; }
+  .task { display:flex; align-items:flex-start; gap:10px; padding:9px 0; border-bottom:1px solid #f4f1e6; font-size:14px; }
+  .task:last-child { border-bottom:none; }
+  .task input[type=checkbox] { width:17px; height:17px; margin-top:2px; accent-color:var(--yellow); }
+  .task.mine { background:var(--yellow-soft); margin:0 -10px; padding:9px 10px; border-radius:8px; border-bottom:none; }
+  .task .owner { font-size:11px; font-weight:800; color:var(--grey); margin-left:auto; white-space:nowrap; }
+  .task.done-t .title { text-decoration:line-through; color:var(--grey); }
+
+  /* Feed */
+  .counter { font-size:34px; font-weight:800; }
+  .feed-item { display:flex; gap:10px; padding:9px 0; border-bottom:1px solid #f4f1e6; font-size:13.5px; }
+  .feed-item:last-child { border-bottom:none; }
+  .feed-item .date { color:var(--grey); font-size:12px; white-space:nowrap; margin-top:1px; }
+  .feed-item .metric { color:#8a6a00; font-weight:600; }
+
+  /* Access grants */
+  .grant { display:flex; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid #f4f1e6; font-size:14px; }
+  .grant:last-child { border-bottom:none; }
+  .grant .name { font-weight:600; }
+  .grant .method { font-size:12.5px; color:var(--grey); }
+  .grant .st { margin-left:auto; }
+
+  /* Admin */
+  .client-row { display:flex; align-items:center; gap:14px; padding:14px 0; border-bottom:1px solid #f4f1e6; cursor:pointer; }
+  .client-row:hover { background:var(--cream); margin:0 -12px; padding:14px 12px; border-radius:10px; border-bottom-color:transparent; }
+  .client-row .cname { font-weight:700; font-size:15px; }
+  .modal-bg { position:fixed; inset:0; background:rgba(37,37,37,0.45); display:none; align-items:flex-start; justify-content:center; z-index:50; padding:40px 16px; overflow-y:auto; }
+  .modal { background:var(--white); border-radius:var(--radius); max-width:520px; width:100%; padding:28px; }
+  .modal h3 { margin-bottom:6px; }
+  .row2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .hidden { display:none !important; }
+  .ct-chk { width:18px; height:18px; padding:0; margin:0; accent-color:#252525; cursor:pointer; flex:0 0 auto; }
+  .ct-sel { width:auto; padding:7px 9px; font-size:13px; border-radius:8px; }
+  .view { display:none; }
+  .view.on { display:block; }
+  .backlink { font-size:13.5px; color:var(--grey); cursor:pointer; margin-bottom:14px; display:inline-block; }
+  .section-title { font-size:13px; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:var(--grey); margin:26px 0 10px; }
+  .inline-form { display:flex; gap:8px; margin-top:12px; }
+  .inline-form input { flex:1; }
+  .toast { position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background:var(--black); color:#fff; padding:11px 20px; border-radius:10px; font-size:14px; display:none; z-index:99; }
+  .lang-switch { display:inline-flex; align-items:center; gap:2px; }
+  .lang-switch a { cursor:pointer; font-size:12px; font-weight:700; color:var(--grey); padding:3px 6px; border-radius:6px; user-select:none; }
+  .lang-switch a:hover { background:var(--yellow-soft); color:var(--black); }
+  .lang-switch a.on { color:var(--black); background:var(--yellow-soft); }
+  #lg-lang a { cursor:pointer; font-weight:700; padding:2px 5px; border-radius:5px; }
+  #lg-lang a.on { color:#252525; background:rgba(250,193,24,0.18); }
+</style>
+</head>
+<body>
+<style>
+  .mock-banner { background:var(--black); color:#fff; font-size:13px; padding:9px 20px; text-align:center; }
+  .mock-banner b { color:var(--yellow); }
+  .acct { border:1.5px solid #eee7cf; border-radius:12px; padding:14px 16px; margin-top:12px; }
+  .acct-head { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+  .acct-name { font-weight:800; font-size:14.5px; }
+  .acct-client { font-size:12px; font-weight:700; background:var(--yellow-soft); border-radius:6px; padding:2px 8px; }
+  .acct-client.k741 { background:var(--grey-light); }
+  .fgrid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px; margin-top:10px; }
+  @media(min-width:880px){ .fgrid.six { grid-template-columns:repeat(6, minmax(0,1fr)); } }
+  .fgrid .lbl { font-size:11.5px; color:var(--grey); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .fgrid input { padding:8px 10px; font-size:15px; }
+  .sumline { margin-top:14px; padding:10px 14px; background:var(--cream-2); border-radius:10px; font-size:13px; }
+  .hint { font-size:12px; color:var(--grey); margin-top:4px; }
+  .tbl { width:100%; border-collapse:collapse; font-size:13px; }
+  .tbl th { text-align:right; font-size:11px; text-transform:uppercase; color:var(--grey); font-weight:700; padding:6px 8px; border-bottom:1.5px solid #eee7cf; white-space:nowrap; }
+  .tbl th:first-child, .tbl td:first-child { text-align:left; }
+  .tbl td { text-align:right; padding:9px 8px; border-bottom:1px solid #f4f1e6; white-space:nowrap; }
+  .tbl tr.grp td { background:var(--cream); font-weight:800; font-size:12px; text-transform:uppercase; color:var(--grey); }
+  .tblwrap { overflow-x:auto; }
+  .chip { display:inline-block; font-size:12px; padding:3px 9px; border-radius:20px; border:1.5px solid #e3e0d5; margin:2px 4px 2px 0; cursor:pointer; user-select:none; }
+  .chip.on { background:var(--black); color:#fff; border-color:var(--black); }
+  .status { font-size:13px; background:var(--cream); border:1.5px dashed #e3d9b5; border-radius:10px; padding:10px 12px; margin-top:10px; }
+  .payload { white-space:pre-wrap; font-family:ui-monospace,Menlo,monospace; font-size:11.5px; background:#252525; color:#f3f3f3; border-radius:10px; padding:12px; margin-top:10px; max-height:260px; overflow:auto; display:none; }
+  .howto { font-size:13px; line-height:1.5; }
+  .howto b { font-weight:800; }
+  .howto div { margin:3px 0; }
+  .toast { position:fixed; bottom:22px; left:50%; transform:translateX(-50%); background:var(--black); color:#fff; padding:10px 18px; border-radius:10px; font-size:13.5px; display:none; z-index:50; }
+  @media(max-width:600px){ .container { padding:20px 16px 60px; } .card { padding:18px 16px; } }
+</style>
+
+<div class="mock-banner"><b>MOCKUP</b> · Outreach numbers per account · nothing on this page saves to the portal · example numbers only</div>
+<div class="topbar"><div class="brand"><img src="/assets/logo_black.png" alt="741" onerror="this.replaceWith(document.createTextNode('741 Studio'))"></div>
+  <div class="who">Outreach &amp; Sales · <b id="who">Rias</b></div></div>
+
+<div class="container">
+  <div class="ptabs">
+    <button class="ptab ptab-active" data-v="staff" onclick="view('staff')">1 · Staff day (Rias)</button>
+    <button class="ptab" data-v="period" onclick="view('period')">2 · Over the days (Gayo)</button>
+    <button class="ptab" data-v="accounts" onclick="view('accounts')">3 · Accounts (Gayo)</button>
+  </div>
+  <div id="app"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- example data (mockup only) ---------- */
+const PEOPLE = ['Gayo','Rias'];
+let ACCOUNTS = [
+  { id:'a1', label:'Martin Hüwel LinkedIn',    client:'Praxis Hüwel',    kind:'client', active:true, people:['Gayo'] },
+  { id:'a2', label:'Coralie LinkedIn',         client:'Praxis Suriya',   kind:'client', active:true, people:['Gayo'] },
+  { id:'a3', label:'Felix Meinhardt LinkedIn', client:'Felix Meinhardt', kind:'client', active:true, people:['Gayo'] },
+  { id:'a4', label:'Peggy LinkedIn',           client:'Bali Healing',    kind:'client', active:true, people:['Rias'] },
+  { id:'a5', label:'Celine LinkedIn',          client:'Celine',          kind:'client', active:true, people:['Rias'] },
+  { id:'a6', label:'741 Main LinkedIn',        client:'741 Studio',      kind:'741',    active:true, people:['Gayo'] },
+  { id:'a7', label:'741 Second LinkedIn',      client:'741 Studio',      kind:'741',    active:true, people:['Gayo'] },
+  { id:'a8', label:'741 Third LinkedIn',       client:'741 Studio',      kind:'741',    active:true, people:['Gayo'] },
+];
+const FIELDS = [
+  ['requests_sent','Requests sent','Connection requests you sent today'],
+  ['accepted','Accepted','New accepts today (My Network → Connections, or notifications)'],
+  ['pitched','Pitched','First message to a new connection'],
+  ['follow_ups','Follow-ups','Second or later message'],
+  ['replies','Replies','New replies today'],
+  ['interested','Interested','Replies that want to talk or get an offer'],
+];
+// example period numbers per account (1–13 Oct)
+const PERIOD = {
+  a4:{days:9, requests_sent:360, accepted:83, pitched:78, follow_ups:22, replies:14, interested:5, people:['Gayo','Rias']},
+  a5:{days:9, requests_sent:180, accepted:41, pitched:44, follow_ups:9,  replies:7,  interested:2, people:['Rias']},
+  a1:{days:8, requests_sent:160, accepted:52, pitched:47, follow_ups:15, replies:11, interested:4, people:['Gayo']},
+  a2:{days:8, requests_sent:120, accepted:30, pitched:28, follow_ups:8,  replies:5,  interested:2, people:['Gayo']},
+  a3:{days:6, requests_sent:90,  accepted:21, pitched:20, follow_ups:4,  replies:3,  interested:1, people:['Gayo']},
+  a6:{days:9, requests_sent:250, accepted:70, pitched:65, follow_ups:30, replies:12, interested:3, people:['Gayo']},
+  a7:{days:9, requests_sent:390, accepted:95, pitched:80, follow_ups:35, replies:15, interested:4, people:['Gayo']},
+  a8:{days:7, requests_sent:160, accepted:33, pitched:30, follow_ups:10, replies:4,  interested:1, people:['Gayo']},
+};
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const toast = m => { const t=$('toast'); t.textContent=m; t.style.display='block'; clearTimeout(t._h); t._h=setTimeout(()=>t.style.display='none',2200); };
+const pct = (a,b) => b ? Math.round(a/b*100)+'%' : '–';
+let cur = 'staff';
+function view(v){ cur=v; document.querySelectorAll('.ptab').forEach(b=>b.classList.toggle('ptab-active', b.dataset.v===v));
+  $('who').textContent = v==='staff' ? 'Rias' : 'Gayo (manager)'; render(); }
+const clientTag = a => `<span class="acct-client ${a.kind==='741'?'k741':''}">${esc(a.client||'—')}</span>`;
+const mine = who => ACCOUNTS.filter(a=>a.active && a.people.includes(who));
+
+/* ---------- 1 · staff day ---------- */
+let planSaved = null;
+function renderStaff(){
+  const acc = mine('Rias');
+  const planRows = acc.map(a=>`<div class="acct"><div class="acct-head"><span class="acct-name">${esc(a.label)}</span>${clientTag(a)}</div>
+      <div class="fgrid"><div><div class="lbl">Requests target</div><input type="number" min="0" placeholder="0" data-p="${a.id}:requests_target"></div>
+      <div><div class="lbl">Messages target</div><input type="number" min="0" placeholder="0" data-p="${a.id}:messages_target"></div></div></div>`).join('');
+  const repRows = acc.map(a=>`<div class="acct"><div class="acct-head"><span class="acct-name">${esc(a.label)}</span>${clientTag(a)}</div>
+      <div class="fgrid six">${FIELDS.map(([k,l,h])=>`<div title="${esc(h)}"><div class="lbl">${l}</div>
+        <input type="number" min="0" placeholder="0" data-r="${a.id}:${k}" oninput="sumUp()"></div>`).join('')}</div></div>`).join('');
+  const work = `<div class="card" style="border:1.5px solid #f0d9a0;"><h2>🎯 Your workspace</h2>
+      ${acc.map(a=>{ const t=(planSaved||{})[a.id]||{}; const d=reportDone(a.id);
+        const bar=(lab,dn,g)=> g?`<div style="margin-top:6px;"><div class="muted" style="font-size:12.5px;">${lab}: <b>${dn}</b> / ${g}</div><div class="progress"><div class="progress-inner" style="width:${Math.min(100,Math.round(dn/g*100))}%;"></div></div></div>`:'';
+        return `<div style="margin-top:12px;"><b style="font-size:13.5px;">${esc(a.label)}</b> ${clientTag(a)}
+          ${bar('Requests', d.requests_sent, t.requests_target)}${bar('Messages', d.pitched+d.follow_ups, t.messages_target)}
+          ${(!t.requests_target&&!t.messages_target)?'<div class="hint">Set targets in the morning plan.</div>':''}</div>`; }).join('')}
+    </div>`;
+  const plan = `<div class="card"><h2>☀️ Today's plan</h2>
+      <textarea rows="4" placeholder="One line per item — e.g.&#10;Check replies &amp; CRM&#10;Send 40 requests on Peggy&#10;Follow up Celine leads"></textarea>
+      <div class="muted" style="font-size:11.5px;font-weight:700;margin-top:14px;">Targets — per account</div>${planRows}
+      <button class="btn btn-small btn-yellow" style="margin-top:12px;" onclick="savePlan()">Save plan</button></div>`;
+  const rep = `<div class="card"><h2>🌙 Today's report</h2>
+      <div class="muted" style="font-size:12.5px;">Enter the numbers for each account you worked today. Leave an account empty if you did not work on it.</div>
+      ${repRows}
+      <div class="sumline" id="sumline"></div>
+      <div class="fgrid" style="grid-template-columns:minmax(0,160px);"><div><div class="lbl">Hours</div><input type="number" step="0.25" min="0" placeholder="0"></div></div>
+      <div class="muted" style="font-size:12px;margin-top:12px;">Progress</div><textarea rows="3" placeholder="One line per item — what moved forward today"></textarea>
+      <div class="muted" style="font-size:12px;margin-top:8px;">Blockers</div><textarea rows="2" placeholder="What is stopping you?"></textarea>
+      <div class="muted" style="font-size:12px;margin-top:8px;">Short plan to start</div><textarea rows="2" placeholder="One line per item"></textarea>
+      <button class="btn btn-small btn-yellow" style="margin-top:12px;" onclick="saveReport()">Save report</button>
+      <div class="payload" id="payload"></div></div>`;
+  const howto = `<div class="card"><h2>How to count</h2><div class="howto">
+      ${FIELDS.map(([k,l,h])=>`<div><b>${l}</b> — ${h}.</div>`).join('')}
+      <div style="margin-top:8px;">Count each account on its own. Do not add numbers from two accounts together.</div></div></div>`;
+  return `<div style="margin-bottom:18px;"><div style="font-size:21px;font-weight:800;">Hi, Rias</div>
+      <div class="muted">Plan in the morning, report in the evening — numbers per account</div></div>
+    <div class="grid grid-31"><div class="grid" style="align-content:start;">${work}${plan}${rep}</div>
+    <div class="grid" style="align-content:start;">${howto}</div></div>`;
+}
+function readReport(){ const o={}; document.querySelectorAll('[data-r]').forEach(i=>{ const [a,k]=i.dataset.r.split(':'); (o[a]=o[a]||{})[k]=parseInt(i.value)||0; }); return o; }
+function reportDone(id){ const r=(lastReport||{})[id]||{}; return { requests_sent:r.requests_sent||0, pitched:r.pitched||0, follow_ups:r.follow_ups||0 }; }
+let lastReport = null;
+function sumUp(){
+  const r=readReport(), t={requests_sent:0,accepted:0,pitched:0,follow_ups:0,replies:0,interested:0};
+  Object.values(r).forEach(v=>Object.keys(t).forEach(k=>t[k]+=v[k]||0));
+  $('sumline').innerHTML = `<b>Totals for the board</b> (filled in for you): ${t.pitched+t.follow_ups} messages (= ${t.pitched} pitched + ${t.follow_ups} follow-ups) · ${t.requests_sent} requests · ${t.accepted} accepted · ${t.replies} replies · ${t.interested} interested`;
+}
+function savePlan(){ const o={}; document.querySelectorAll('[data-p]').forEach(i=>{ const [a,k]=i.dataset.p.split(':'); (o[a]=o[a]||{})[k]=parseInt(i.value)||0; });
+  planSaved=o; toast('Mockup: plan not saved — targets now show in your workspace'); render(); }
+function saveReport(){
+  const r=readReport(); lastReport=r;
+  const rows=Object.entries(r).filter(([,v])=>Object.values(v).some(x=>x>0)).map(([id,v])=>({account:ACCOUNTS.find(a=>a.id===id).label, ...v}));
+  const p=$('payload'); p.style.display='block';
+  p.textContent = '// Mockup: this is what the portal would save (submit_daily_report)\n' + JSON.stringify({ day:new Date().toISOString().slice(0,10), accounts:rows }, null, 2);
+  toast('Mockup: nothing saved'); }
+
+/* ---------- 2 · period per account ---------- */
+function renderPeriod(){
+  const rows = ACCOUNTS.filter(a=>PERIOD[a.id]).map(a=>({a, p:PERIOD[a.id]}));
+  const groups = [['client','Client accounts'],['741','741 own seats']];
+  const line = ({a,p}) => `<tr><td><b>${esc(a.label)}</b><div class="muted" style="font-size:11.5px;">${esc(a.client)} · ${p.people.join(', ')}</div></td>
+      <td>${p.requests_sent}</td><td>${p.accepted} <span class="muted">(${pct(p.accepted,p.requests_sent)})</span></td><td>${p.pitched}</td>
+      <td>${p.follow_ups}</td><td>${p.replies} <span class="muted">(${pct(p.replies,p.pitched+p.follow_ups)})</span></td><td>${p.interested}</td>
+      <td><button class="btn btn-small btn-ghost" onclick="statusLine('${a.id}')">Status line</button></td></tr>`;
+  const body = groups.map(([k,l])=>{ const g=rows.filter(x=>x.a.kind===k); if(!g.length) return '';
+    const s=g.reduce((t,{p})=>{ ['requests_sent','accepted','pitched','follow_ups','replies','interested'].forEach(f=>t[f]=(t[f]||0)+p[f]); return t; },{});
+    return `<tr class="grp"><td colspan="8">${l}</td></tr>${g.map(line).join('')}
+      <tr><td class="muted">Sum</td><td><b>${s.requests_sent}</b></td><td><b>${s.accepted}</b></td><td><b>${s.pitched}</b></td><td><b>${s.follow_ups}</b></td><td><b>${s.replies}</b></td><td><b>${s.interested}</b></td><td></td></tr>`; }).join('');
+  return `<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
+      <div style="font-size:19px;font-weight:800;">Over the days — per account</div>
+      <button class="btn btn-small btn-ghost">Last 7 days</button><button class="btn btn-small btn-ghost">Last 30 days</button>
+      <span class="muted" style="font-size:12.5px;">From</span><input type="date" value="2026-10-01" style="width:auto;padding:4px 8px;font-size:12.5px;">
+      <span class="muted" style="font-size:12.5px;">To</span><input type="date" value="2026-10-13" style="width:auto;padding:4px 8px;font-size:12.5px;"></div>
+    <div class="card"><div class="tblwrap"><table class="tbl"><thead><tr><th>Account</th><th>Requests</th><th>Accepted</th><th>Pitched</th><th>Follow-ups</th><th>Replies</th><th>Interested</th><th></th></tr></thead>
+      <tbody>${body}</tbody></table></div>
+      <div id="status"></div>
+      <div class="hint" style="margin-top:10px;">This table sits below the existing person view ("Over the days"). Accepted % = accepted ÷ requests. Reply % = replies ÷ (pitched + follow-ups).</div></div>`;
+}
+function statusLine(id){ const a=ACCOUNTS.find(x=>x.id===id), p=PERIOD[id];
+  const txt=`${a.client}, 1–13 Oct (${a.label}): ${p.requests_sent} connection requests sent, ${p.accepted} accepted, ${p.pitched} pitched, ${p.follow_ups} follow-ups, ${p.replies} replies, ${p.interested} interested.`;
+  $('status').innerHTML = `<div class="status"><b>Ready for a client status:</b><br>${esc(txt)}<br><button class="btn btn-small btn-yellow" style="margin-top:8px;" onclick="navigator.clipboard&&navigator.clipboard.writeText(${esc(JSON.stringify(txt))});toast('Copied')">Copy</button></div>`; }
+
+/* ---------- 3 · account list ---------- */
+function renderAccounts(){
+  const row = a => `<div class="acct" style="${a.active?'':'opacity:.55;'}"><div class="acct-head">
+      <div><span class="acct-name">${esc(a.label)}</span> ${clientTag(a)}</div>
+      <div style="display:flex;gap:6px;"><button class="btn btn-small btn-ghost" onclick="renameAcc('${a.id}')">Edit</button>
+      <button class="btn btn-small btn-ghost" onclick="toggleAcc('${a.id}')">${a.active?'Deactivate':'Activate'}</button></div></div>
+      <div style="margin-top:8px;"><span class="muted" style="font-size:12px;margin-right:6px;">Who works it:</span>
+      ${PEOPLE.map(p=>`<span class="chip ${a.people.includes(p)?'on':''}" onclick="togglePerson('${a.id}','${p}')">${p}</span>`).join('')}</div></div>`;
+  return `<div class="grid grid-31"><div class="card"><h2>LinkedIn accounts</h2>
+      <div class="muted" style="font-size:12.5px;">One row per LinkedIn account. "Client" is a free label — it does not open any client data. People only see the accounts you give them.</div>
+      ${ACCOUNTS.map(row).join('')}
+      <div class="acct"><div class="acct-name" style="margin-bottom:8px;">Add account</div>
+        <div class="fgrid"><div><div class="lbl">Account name</div><input id="na-l" placeholder="e.g. Anja LinkedIn"></div>
+        <div><div class="lbl">Client / campaign</div><input id="na-c" placeholder="e.g. Stürzl"></div>
+        <div><div class="lbl">Type</div><select id="na-k"><option value="client">Client account</option><option value="741">741 seat</option></select></div></div>
+        <button class="btn btn-small btn-yellow" style="margin-top:10px;" onclick="addAcc()">Add</button></div></div>
+    <div class="card"><h2>Rules</h2><div class="howto">
+      <div>• Name the account after the LinkedIn profile, not after the person who works it.</div>
+      <div>• Deactivate an account when outreach stops. Old numbers stay.</div>
+      <div>• Do not rename an account to a new client. Add a new account instead.</div></div></div></div>`;
+}
+function togglePerson(id,p){ const a=ACCOUNTS.find(x=>x.id===id); a.people=a.people.includes(p)?a.people.filter(x=>x!==p):[...a.people,p]; render(); }
+function toggleAcc(id){ const a=ACCOUNTS.find(x=>x.id===id); a.active=!a.active; render(); }
+function renameAcc(id){ const a=ACCOUNTS.find(x=>x.id===id); const l=prompt('Account name', a.label); if(l===null) return; const c=prompt('Client / campaign', a.client); a.label=l.trim()||a.label; if(c!==null) a.client=c.trim(); render(); }
+function addAcc(){ const l=$('na-l').value.trim(); if(!l){ toast('Enter an account name'); return; }
+  ACCOUNTS.push({ id:'n'+Date.now(), label:l, client:$('na-c').value.trim(), kind:$('na-k').value, active:true, people:[] }); toast('Mockup: added on this page only'); render(); }
+
+function render(){ $('app').innerHTML = cur==='staff'?renderStaff():cur==='period'?renderPeriod():renderAccounts(); if(cur==='staff') sumUp(); }
+render();
+</script>
+
+</body>
+</html>
