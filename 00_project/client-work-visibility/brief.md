@@ -84,3 +84,9 @@ Library: `00_project/knowledge/client-work-library/INDEX.md`. Rule numbers below
   - The test items are deleted afterwards. No real task was changed.
 - Screenshots: `portal/screenshots/` (6).
 - Open: live upload (Martin's go), access check (agent running), Morning Grill writes into the model (schema sent), team logins (step 2), client view Bali EN (step 3).
+
+## Morning Grill writes into the model (13.10., report from the grill chat)
+- `publish_tasks.py` upserts its tasks into `work_items` on `(source='grill', source_id='<date>/tNN')`. Accountable is always Martin, and an agent "done" becomes `needs_check`. It writes `waiting` plus `waiting_on`, evidence from the link or session, and one `decision` event per card (key `grill:<id>:card`). It never touches done or dropped rows. Two runs in a row changed nothing.
+- t19 (Dinakar, Suriya speed) is now `waiting` / `client`, because it waits for Coralie's WordPress role.
+- The grill's "Tasks" tab reads `work_items` (43 rows). It can go away once "Heute" and the client page are live.
+- Scheduled runs do not write tasks yet (Martin has not approved it). Only the chat session writes.
