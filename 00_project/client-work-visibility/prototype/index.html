@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Kundenarbeit · Prototyp</title>
+<link rel="stylesheet" href="martin-guide/martin-guide.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#252525;--mut:#6b6862;--line:#e9e4d6;--bg:#fffcf3;--card:#fff;--y:#fac118;--ys:rgba(250,193,24,.16);--g:#16a34a;--gbg:#e8f6ed;--a:#b45309;--abg:#fdf3d7;--r:#c2410c;--rbg:#fdeee6;--b:#2563eb;--bbg:#e8effd;--gr:#8c8c8c;--grbg:#f1efe8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "DM Sans",system-ui,sans-serif}
+.proto{background:var(--ink);color:#fff;text-align:center;font-size:13.5px;padding:8px 16px}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.hd{max-width:1180px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:14px}
+.hd img{height:30px}.hd .who{margin-left:auto;font-size:13.5px;color:var(--mut)}
+.tabs{max-width:1180px;margin:0 auto;padding:0 20px;display:flex;gap:4px;overflow-x:auto}
+.tab{border:0;background:none;padding:11px 13px;font:700 14.5px "DM Sans";color:var(--mut);border-bottom:3px solid transparent;cursor:pointer;white-space:nowrap}
+.tab.on{color:var(--ink);border-color:var(--y)}
+main{max-width:1180px;margin:0 auto;padding:24px 20px 80px}
+h1{font-size:26px;margin:0 0 4px;font-weight:800}
+.lead{color:var(--mut);margin:0 0 18px;max-width:760px}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;cursor:pointer}
+.kpi b{display:block;font-size:28px;font-weight:800;line-height:1.1}
+.kpi span{font-size:13px;color:var(--mut)}
+.kpi.on{border-color:var(--ink);box-shadow:0 0 0 3px var(--ys)}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:18px;box-shadow:0 4px 16px rgba(22,21,15,.04)}
+.card h2{font-size:17px;margin:0 0 12px;display:flex;align-items:center;gap:10px}
+.card h2 .muted{font-weight:500}
+.muted{color:var(--mut);font-size:13.5px}
+.grid2{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;align-items:start}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{text-align:left;padding:9px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;color:var(--mut);font-weight:600}
+tr.click{cursor:pointer}tr.click:hover td{background:#fffaf0}
+.band{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:13px;border-radius:999px;padding:2px 10px;white-space:nowrap}
+.band::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.b-red{background:var(--rbg);color:var(--r)}.b-amb{background:var(--abg);color:var(--a)}.b-grn{background:var(--gbg);color:var(--g)}.b-gry{background:var(--grbg);color:var(--gr)}
+.who{display:inline-flex;align-items:center;gap:4px;font-size:12.5px;font-weight:700;border-radius:6px;padding:1px 7px;white-space:nowrap}
+.w-martin{background:var(--ys);color:#7a5a00}.w-team{background:var(--bbg);color:var(--b)}.w-agent{background:#efe9ff;color:#6d28d9}.w-client{background:var(--gbg);color:var(--g)}.w-ext{background:var(--grbg);color:var(--mut)}
+.st{font-size:12.5px;font-weight:700;border-radius:999px;padding:2px 9px;white-space:nowrap;display:inline-block}
+.s-planned{background:var(--grbg)}.s-in_progress{background:var(--bbg);color:var(--b)}.s-waiting{background:var(--abg);color:var(--a)}.s-needs_check{background:#efe9ff;color:#6d28d9}.s-done{background:var(--gbg);color:var(--g)}.s-intake{background:#fff;border:1px dashed #cfc9b8}
+.src{font-size:13px;color:var(--b);text-decoration:none;border-bottom:1px dotted var(--b);cursor:pointer;background:none;border-top:0;border-left:0;border-right:0;padding:0;font-family:inherit}
+.age{font-size:12.5px;color:var(--mut);white-space:nowrap}.age.old{color:var(--r);font-weight:700}
+.next{font-size:13.5px;color:var(--mut)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font:500 13.5px "DM Sans";cursor:pointer}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ok-line{background:var(--gbg);border-radius:12px;padding:10px 14px;font-size:14px;margin-top:4px;cursor:pointer}
+.phases{display:flex;gap:4px;margin:10px 0 4px}
+.ph{flex:1;text-align:center;font-size:12px;font-weight:700;padding:8px 2px;border-radius:8px;background:var(--grbg);color:var(--mut)}
+.ph.done{background:var(--gbg);color:var(--g)}.ph.cur{background:var(--y);color:var(--ink)}
+.ph small{display:block;font-weight:500;font-size:11px}
+.goal{display:flex;gap:16px;flex-wrap:wrap;align-items:baseline;margin:6px 0 2px}
+.goal b{font-size:16px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font:700 14px "DM Sans";cursor:pointer;min-height:40px}
+.b1{background:var(--ink);color:#fff}.b2{background:#fff;border:1.5px solid var(--ink)}.by{background:var(--y)}
+.row-acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+input.proof{border:1.5px solid var(--line);border-radius:9px;padding:8px 10px;font:14px "DM Sans";width:min(420px,100%)}
+.outc{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.outc .ct{font-weight:700;font-size:15px}
+.outc .meta{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--mut);margin-top:6px}
+.conf{font-size:12px;font-weight:700;border-radius:6px;padding:1px 7px}.c-ok{background:var(--gbg);color:var(--g)}.c-as{background:var(--abg);color:var(--a)}
+.feed div{padding:7px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.feed i{color:var(--mut);font-style:normal;font-size:12.5px}
+.drawer{position:fixed;right:0;top:0;bottom:0;width:min(440px,100%);background:#fff;box-shadow:-10px 0 30px rgba(0,0,0,.12);padding:20px;z-index:20;overflow:auto;display:none}
+.drawer.on{display:block}
+.drawer h3{margin:0 0 8px}.drawer .x{float:right;border:0;background:none;font-size:22px;cursor:pointer}
+.dl{display:grid;grid-template-columns:120px 1fr;gap:6px 10px;font-size:14px;margin:12px 0}
+.dl dt{color:var(--mut)}.dl dd{margin:0}
+.blocks{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.blk{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.blk h3{margin:0 0 8px;font-size:17px}
+.blk ul{margin:0;padding-left:18px}.blk li{margin:6px 0}
+.blk.need{border:2px solid var(--y)}
+.note{background:var(--abg);border:1px solid #f0d77a;border-radius:12px;padding:10px 14px;font-size:14px;margin:0 0 16px}
+.hide{display:none!important}
+@media(max-width:900px){.grid2>*{min-width:0}table,tbody,tr,td{display:block;width:100%}thead{display:none}tr{border-bottom:1px solid var(--line);padding:8px 0}td{border:0;padding:2px 0}.kpis{grid-template-columns:repeat(2,1fr)}.grid2,.blocks{grid-template-columns:1fr}.ph small{display:none}td.hm,th.hm{display:none}h1{font-size:23px}}
+</style>
+</head>
+<body>
+<div class="proto">Prototyp · nur lokal · echte Daten vom 13.10.2026 (Morning Grill, Portal) · nichts davon ist gebaut oder an Kunden gegangen</div>
+<header>
+  <div class="hd"><img src="logo_black.png" alt="741 Studio"><span class="who" id="who">Angemeldet als Martin (Admin)</span></div>
+  <div class="tabs">
+    <button class="tab on" data-v="today">Heute (Admin)</button>
+    <button class="tab" data-v="client">Kunde: Praxis Suriya</button>
+    <button class="tab" data-v="team">Meine Aufgaben (Team)</button>
+    <button class="tab" data-v="cview">Kundenansicht (Coralie)</button>
+  </div>
+</header>
+<main>
+<section id="today"></section>
+<section id="client" hidden></section>
+<section id="team" hidden></section>
+<section id="cview" hidden></section>
+</main>
+<aside class="drawer" id="drawer"></aside>
+<script>
+/* ---------- Daten: echte Stände vom 13.10.2026 ----------
+   Aufgaben: 00_project/assets/morning-grill/2026-10-13/tasks.json (t01–t23)
+   Portal: tasks, access_grants, report_feedback, client_citations, approval_items (Abfrage 13.10.) */
+const TODAY = new Date('2026-10-13');
+const PEOPLE = {Martin:'martin', Dinakar:'team', Tantri:'team', Gayo:'team', Agent:'agent', Kunde:'client', Google:'ext', Extern:'ext'};
+const CLIENTS = [
+ {id:'bali', name:'Bali Healing', band:'red', reason:'Google Ads pausiert seit 01.10., Konto-Verifizierung fehlt', owner:'Martin', next:'NIB-PDF von PT Amana in Google Ads hochladen', phase:'P4', last:'13.10. (Chat)', prog:'0/44'},
+ {id:'suriya', name:'Praxis Suriya', band:'amb', reason:'WordPress nur Leserolle, Search Console weg: freigegebene Änderungen blockiert', owner:'Martin', next:'Coralie um Admin-Rolle bitten', phase:'P4', last:'13.10. (Chat)', prog:'22/44'},
+ {id:'stuerzl', name:'STÜRZL Steuerstrafrecht', band:'amb', reason:'Kein Startdatum, 3 Pflicht-Zugänge offen', owner:'Martin', next:'Mail per Airmailer senden', phase:'P1', last:'keine Portal-Aktivität', prog:'0/52'},
+ {id:'johni', name:'Johni Jaya Motor', band:'amb', reason:'25 Aufgaben überfällig, Neustart läuft', owner:'Martin', doer:'Agent', next:'Neuplanung des Agenten prüfen', phase:'P4', last:'13.10.', prog:'12/37'},
+ {id:'kamil', name:'Kamil Böyük', band:'amb', reason:'Reports August und September überfällig', owner:'Martin', doer:'Agent', next:'Report-Entwurf prüfen', phase:'P6', last:'keine Portal-Aktivität', prog:'–'},
+ {id:'dumann', name:'Naturheilpraxis Daniela Dumann', band:'amb', reason:'3 Unterseiten-Fixes gespeichert, nicht veröffentlicht', owner:'Martin', next:'In Wix auf „Veröffentlichen“ klicken', phase:'P5', last:'09.10.', prog:'20/44'},
+ {id:'brasse', name:'Maria Brasse', band:'amb', reason:'45 Änderungswünsche aus Reports, Status unbekannt', owner:'Martin', next:'Änderungswünsche sichten (Intake)', phase:'P5', last:'07.10.', prog:'11/44'},
+ {id:'rabe', name:'Rabenmütter Shop', band:'gry', reason:'Keine Daten: keine Aktivität im Portal erfasst', owner:'Martin', next:'Stand eintragen oder Kunde prüfen', phase:'P4', last:'nie', prog:'11/30'},
+ {id:'huewel', name:'Praxis Hüwel', band:'grn', reason:'Im Plan: 30 von 44, 38 von 67 Einträgen live', owner:'Martin', next:'Indexierung für 6 Kernseiten anfordern', phase:'P5', last:'09.10.', prog:'30/44'}
+];
+const BAND = {red:['Rot','b-red'], amb:['Gelb','b-amb'], grn:['Grün','b-grn'], gry:['Keine Daten','b-gry']};
+const STW = {intake:'Neu', planned:'Geplant', in_progress:'In Arbeit', waiting:'Wartet', needs_check:'Prüfen', done:'Erledigt'};
+/* Aufgaben (Auszug, real). acc = verantwortlich (immer Mensch), doer = macht es */
+let ITEMS = [
+ {id:'t01', c:'suriya', title:'Coralie um WordPress-Admin-Rolle bitten, Search Console selbst ansprechen', acc:'Martin', doer:'Martin', st:'planned', due:'2026-10-13', since:'2026-10-13', next:'Text liegt bereit', src:[['send-pack.md, Abschnitt 3','file','used']], vis:'internal'},
+ {id:'t19', c:'suriya', title:'Backup, Bilder optimieren, Caching, CSS/JS aufräumen, Barrierefreiheit, Vorher/Nachher-Test', acc:'Martin', doer:'Dinakar', st:'waiting', wait:'Martin', blocked:'t01', since:'2026-10-13', next:'Startet, wenn die WordPress-Rolle da ist', src:[['team-tasks-drafts.md (D1)','file','used']], vis:'client', ctext:'Ladezeit und Barrierefreiheit deiner Website verbessern', defdone:'Vorher/Nachher-Test mit Messwerten, Backup vorhanden'},
+ {id:'t21', c:'suriya', title:'Verify-Links der Verzeichnisse öffnen, die noch nicht live sind', acc:'Martin', doer:'Tantri', st:'waiting', wait:'Martin', since:'2026-10-13', next:'Wartet auf deine Karte zu den 28 Mails', src:[['suriya-listing-emails.md','file','used']], vis:'client', ctext:'Verzeichniseinträge bestätigen'},
+ {id:'t18', c:'suriya', title:'28 unbearbeitete Verzeichnis-Mails gelistet', acc:'Martin', doer:'Agent', st:'needs_check', since:'2026-10-13', next:'Du prüfst die Liste und entscheidest, welche offen sind', src:[['suriya-listing-emails.md','file','produced'],['Morning-Grill-Karte 13.10.','run','used']], vis:'internal', time:'Agent · 6 Min.', cost:'nicht erfasst'},
+ {id:'a01', c:'suriya', title:'5 Entscheidungen an Coralie geben (Preis, Überschrift, Anruf-Knopf, Analyse, Ratgeber)', acc:'Martin', doer:'Martin', st:'planned', since:'2026-10-13', next:'Vorschau prüfen, dann „An Kunde geben“', src:[['Portal: Entscheidungen (5 Entwürfe)','page','used']], vis:'internal'},
+ {id:'k01', c:'suriya', type:'client_todo', title:'WordPress-Rolle auf Administrator erhöhen', acc:'Martin', doer:'Kunde', st:'waiting', wait:'Kunde', since:'2026-10-13', next:'Blockiert Dinakars Arbeit an der Ladezeit', src:[], vis:'client', ctext:'Bitte erhöhe unsere WordPress-Rolle auf „Administrator“.', effect:'Ohne die Rolle können wir die freigegebenen Änderungen nicht umsetzen.'},
+ {id:'k02', c:'suriya', type:'client_todo', title:'Search-Console-Zugang wieder erteilen', acc:'Martin', doer:'Kunde', st:'waiting', wait:'Kunde', since:'2026-10-12', next:'Martin spricht es selbst an', src:[], vis:'client', ctext:'Bitte lade uns in der Google Search Console wieder ein.', effect:'Ohne Zugang sehen wir nicht, wie deine Seiten bei Google laufen.'},
+ {id:'k03', c:'suriya', type:'client_todo', title:'Google-Tag-Manager-Zugang erteilen', acc:'Martin', doer:'Kunde', st:'waiting', wait:'Kunde', since:'2026-09-30', next:'Seit 2 Wochen offen', src:[], vis:'client', ctext:'Bitte gib uns Zugang zum Google Tag Manager.', effect:'Damit messen wir Anrufe und Anfragen von deiner Website.'},
+ {id:'i01', c:'suriya', type:'intake', title:'29 Änderungswünsche aus deinen Reports (ohne Erledigt-Status)', acc:'Martin', doer:'Agent', st:'intake', since:'2026-09-21', next:'Agent sortiert: erledigt / offen / doppelt', src:[['Portal: report_feedback (29 Zeilen)','report','used']], vis:'internal'},
+ /* andere Kunden (für Heute) */
+ {id:'t02', c:'bali', title:'NIB-PDF von PT Amana in Google Ads hochladen (Ads pausiert seit 01.10.)', acc:'Martin', doer:'Martin', st:'planned', due:'2026-10-13', since:'2026-10-01', next:'Danach prüft Google 1–10 Tage', src:[['send-pack.md, Abschnitt 1','file','used']]},
+ {id:'t03', c:'bali', title:'Pintors Fragen vom 30.09. beantworten, dann Status-Antwort senden', acc:'Martin', doer:'Martin', st:'planned', due:'2026-10-13', since:'2026-09-30', next:'Antwort-Entwurf liegt bereit', src:[['send-pack.md, Abschnitt 2','file','used']]},
+ {id:'t13', c:'bali', title:'Ads-Verifizierung geprüft und Status-Antwort entworfen', acc:'Martin', doer:'Agent', st:'needs_check', since:'2026-10-13', next:'Entwurf lesen und senden', src:[['send-pack.md','file','produced']]},
+ {id:'t04', c:'741', title:'5 Antwort-Entwürfe im Portal senden (Suriya, Hüwel, Dumann, Brasse, Rabenmütter)', acc:'Martin', doer:'Martin', st:'planned', due:'2026-10-13', since:'2026-10-13', next:'Entwürfe sind fertig (Slop 5/5)', src:[['portal-reply-drafts.md','file','used']]},
+ {id:'t05', c:'stuerzl', title:'Mail per Airmailer senden (BCC dich), Search-Console-Nutzer hinzufügen', acc:'Martin', doer:'Martin', st:'planned', due:'2026-10-14', since:'2026-10-13', next:'Text liegt bereit', src:[['send-pack.md, Abschnitt 5','file','used']]},
+ {id:'t06', c:'dumann', title:'In Wix „Veröffentlichen“ für 3 gespeicherte Unterseiten-Fixes klicken', acc:'Martin', doer:'Martin', st:'planned', due:'2026-10-13', since:'2026-10-09', next:'1 Klick', src:[]},
+ {id:'t07', c:'huewel', title:'Indexierung für die 6 Kernseiten in der Search Console anfordern', acc:'Martin', doer:'Martin', st:'planned', due:'2026-10-14', since:'2026-10-13', next:'6 URLs', src:[]},
+ {id:'t15', c:'huewel', title:'GA4 mit Consent Mode auf einem Testzweig (live nur mit deinem Go)', acc:'Martin', doer:'Agent', st:'in_progress', since:'2026-10-13', next:'Agent meldet sich zur Prüfung', src:[]},
+ {id:'t16', c:'johni', title:'Zugänge prüfen, Kunden-Nachricht entwerfen, 25 überfällige Aufgaben neu planen (nur Entwürfe)', acc:'Martin', doer:'Agent', st:'in_progress', since:'2026-10-13', next:'Ergebnis kommt als „Prüfen“', src:[]},
+ {id:'t17', c:'kamil', title:'Zahlen August + September, Empfehlungen, Dashboard-Vorschlag (nur Entwürfe)', acc:'Martin', doer:'Agent', st:'in_progress', since:'2026-10-13', next:'Ergebnis kommt als „Prüfen“', src:[]},
+ {id:'t20', c:'bali', title:'CRM-Tabs „Progress“ und „Reports“ bereinigen (enthalten Daten eines anderen Kunden)', acc:'Martin', doer:'Gayo', st:'planned', since:'2026-10-13', next:'Aufgabe ist Entwurf, noch nicht an Gayo', src:[['team-tasks-drafts.md (G1)','file','used']]},
+ {id:'t23', c:'bali', title:'Google prüft die Kunden-Verifizierung (1–10 Tage nach Upload)', acc:'Martin', doer:'Google', st:'waiting', wait:'Google', since:'2026-10-13', next:'Startet nach deinem Upload', src:[]},
+ {id:'t11', c:'741', title:'5 Portal-Antworten entworfen (Slop 5/5)', acc:'Martin', doer:'Agent', st:'needs_check', since:'2026-10-13', next:'Lesen und senden', src:[['portal-reply-drafts.md','file','produced']]},
+ {id:'t14', c:'bali', title:'Audit Go-B, Content-Pool und Seitenbaum freigegeben', acc:'Martin', doer:'Agent', st:'needs_check', since:'2026-10-11', next:'Nachweis fehlt: Link zur Freigabe', src:[['internal.html (Audit)','report','produced']]}
+];
+/* Ergebnisse Suriya (real, mit Quelle) */
+const OUTCOMES = [
+ {c:'suriya', text:'Dein Google-Profil zeigt jetzt 23 Leistungen und die Öffnungszeiten Montag bis Samstag von 07:30 bis 20:00 Uhr.', metric:'Google-Profil vollständig', before:'7 Leistungen', after:'23 Leistungen', conf:'confirmed', proof:['Google-Profil, live geprüft 24.08.','page'], date:'24.08.', time:'nicht erfasst', vis:'client'},
+ {c:'suriya', text:'31 von 56 geplanten Verzeichniseinträgen sind live.', metric:'Einträge live (Zielzahl, laufend)', before:'0', after:'31', conf:'confirmed', proof:['Portal: Verzeichnisse','page'], date:'13.10.', time:'Tantri, nicht erfasst', vis:'client'},
+ {c:'suriya', text:'Bewertungs-QR-Karte für deine Praxis ist fertig.', metric:'Bewertungsanfragen pro Woche (Zielzahl)', before:'–', after:'wird ab Einsatz gemessen', conf:'assumed', proof:['00_project/assets/suriya/bewertungen/','file'], date:'13.10.', time:'Agent, nicht erfasst', vis:'internal'}
+];
+const FEED = [
+ ['13.10. 11:02','Martin','5 Entscheidungs-Entwürfe für Coralie angelegt (Preis, Überschrift, Anruf-Knopf, Analyse, Ratgeber)','Portal'],
+ ['13.10. 10:01','Agent','28 Verzeichnis-Mails gelistet → Prüfen','Morning Grill'],
+ ['13.10. 09:40','Martin','Karte entschieden: WordPress-Rolle anfragen, Search Console selbst ansprechen','Command Center'],
+ ['12.10.','Agent','Search Console: Zugang weg (403) festgestellt','Tracking-Lauf'],
+ ['30.09.','Agent','Baseline eingefroren: ~2 Anfragen pro Woche','Tracking'],
+ ['24.08.','Martin','Google-Profil-Änderungen live geprüft','GBP']
+];
+const PH = [['P0','Prospect'],['P1','Onboarding'],['P2','Audit'],['P3','Un-Burning'],['P4','Aufbau'],['P5','Inhalte'],['P6','Nachweis + Quartal']];
+
+/* ---------- Helfer ---------- */
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const cname = id => id === '741' ? '741 (alle)' : (CLIENTS.find(c => c.id === id) || {}).name || id;
+const days = d => Math.max(0, Math.round((TODAY - new Date(d)) / 864e5));
+const ageTxt = d => { const n = days(d); return n === 0 ? 'heute' : n === 1 ? 'seit 1 Tag' : 'seit ' + n + ' Tagen'; };
+const who = n => `<span class="who w-${PEOPLE[n] || 'ext'}">${esc(n)}</span>`;
+const st = i => `<span class="st s-${i.st}">${STW[i.st]}${i.st === 'waiting' && i.wait ? ' auf ' + esc(i.wait) : ''}</span>`;
+const srcs = i => (i.src || []).map((s, k) => `<button class="src" onclick="openSrc('${i.id}',${k})">${esc(s[0])}</button>`).join(' · ') || '<span class="muted">keine Quelle</span>';
+let F = {kpi: null, owner: 'Alle', team: 'Dinakar'};
+
+function rowHTML(i, showClient) {
+  const dueTxt = i.due ? (i.due <= '2026-10-13' ? '<b>heute fällig</b>' : 'fällig ' + i.due.slice(8, 10) + '.' + i.due.slice(5, 7) + '.') : '';
+  const old = days(i.since) >= 7 && i.st !== 'done';
+  const blk = i.blocked ? `<div class="next">⛔ blockiert durch: ${esc(ITEMS.find(x => x.id === i.blocked).title.slice(0, 60))} …</div>` : '';
+  return `<tr class="click" onclick="openItem('${i.id}')">
+    ${showClient ? `<td><b>${esc(cname(i.c))}</b></td>` : ''}
+    <td>${esc(i.title)}${blk}<div class="next">→ ${esc(i.next || '')}</div></td>
+    <td>${who(i.acc)}${i.doer !== i.acc ? ' → ' + who(i.doer) : ''}</td>
+    <td>${st(i)}<div class="age${old ? ' old' : ''}">${dueTxt || ageTxt(i.since)}</div></td>
+    <td class="hm" onclick="event.stopPropagation()">${srcs(i)}</td></tr>`;
+}
+
+/* ---------- Ansicht 1: Heute (Admin) ---------- */
+function renderToday() {
+  const mine = ITEMS.filter(i => i.doer === 'Martin' && i.st !== 'done');
+  const check = ITEMS.filter(i => i.st === 'needs_check');
+  const waitTeam = ITEMS.filter(i => i.st === 'waiting' && i.wait === 'Martin');
+  const waitClient = ITEMS.filter(i => i.st === 'waiting' && (i.wait === 'Kunde' || i.wait === 'Google'));
+  const agents = ITEMS.filter(i => i.doer === 'Agent' && i.st === 'in_progress');
+  const K = [['mine','Wartet auf dich',mine],['check','Prüfen (Agent/Team fertig)',check],['blocked','Team wartet auf dich',waitTeam],['client','Wartet auf Kunde / Google',waitClient],['agents','Agenten arbeiten',agents]];
+  let list = F.kpi ? K.find(k => k[0] === F.kpi)[2] : [...mine.filter(i => i.due), ...check, ...waitTeam];
+  list = list.slice(0, 12);
+  const ex = CLIENTS.filter(c => c.band !== 'grn'), ok = CLIENTS.filter(c => c.band === 'grn');
+  $('today').innerHTML = `<h1>Heute · 13.10.</h1>
+  <p class="lead">Oben steht nur, was dich braucht. Jede Zeile hat eine verantwortliche Person, wer es macht, Status, Alter und die Quelle. Ein Klick öffnet die Details.</p>
+  <div class="kpis">${K.map(k => `<div class="kpi${F.kpi === k[0] ? ' on' : ''}" onclick="F.kpi=F.kpi==='${k[0]}'?null:'${k[0]}';renderToday()"><b>${k[2].length}</b><span>${k[1]}</span></div>`).join('')}</div>
+  <div class="grid2">
+   <div class="card"><h2>${F.kpi ? esc(K.find(k => k[0] === F.kpi)[1]) : 'Zuerst erledigen'} <span class="muted">max. 12 · ${F.kpi ? '<a href="#" onclick="F.kpi=null;renderToday();return false">alle zeigen</a>' : 'heute fällig, prüfen, Team wartet'}</span></h2>
+    <table><thead><tr><th>Kunde</th><th>Aufgabe · nächster Schritt</th><th>Verantwortlich → macht</th><th>Status</th><th class="hm">Quelle</th></tr></thead><tbody>${list.map(i => rowHTML(i, true)).join('')}</tbody></table></div>
+   <div class="card"><h2>Kunden <span class="muted">${ex.length} brauchen Aufmerksamkeit</span></h2>
+    <table><tbody>${ex.map(c => `<tr class="click" onclick="${c.id === 'suriya' ? "show('client')" : 'void 0'}"><td><b>${esc(c.name)}</b><div class="next">${esc(c.reason)}</div><div class="next">→ ${esc(c.next)} · ${who(c.doer || c.owner)}</div></td><td><span class="band ${BAND[c.band][1]}">${BAND[c.band][0]}</span><div class="age">${esc(c.phase)} · ${esc(c.last)}</div></td></tr>`).join('')}</tbody></table>
+    <div class="ok-line">✓ ${ok.length} im Plan: ${ok.map(c => esc(c.name)).join(', ')}</div>
+    <p class="muted" style="margin-top:10px">Farbe = Vorschlag aus Signalen (Blocker, Wartezeit, überfällig, keine Aktivität). Du bestätigst sie im wöchentlichen Check. „Keine Daten“ heißt: nichts erfasst, nicht „alles gut“.</p></div>
+  </div>`;
+}
+
+/* ---------- Ansicht 2: Kunde (Suriya) ---------- */
+function renderClient() {
+  const all = ITEMS.filter(i => i.c === 'suriya');
+  const owners = ['Alle','Martin','Team','Agent','Kunde'];
+  const pass = i => F.owner === 'Alle' || (F.owner === 'Team' ? PEOPLE[i.doer] === 'team' : i.doer === F.owner);
+  const tasks = all.filter(i => i.type !== 'client_todo' && pass(i));
+  const todos = all.filter(i => i.type === 'client_todo');
+  const cur = PH.findIndex(p => p[0] === 'P4');
+  $('client').innerHTML = `<span class="muted" style="cursor:pointer" onclick="show('today')">← Heute</span>
+  <h1 style="margin-top:6px">Praxis Suriya <span class="band b-amb" style="vertical-align:middle">Gelb</span></h1>
+  <div class="goal"><span class="muted">Quartalsziel</span><b>Top 3 im Maps-Raster für die 5 beobachteten Keywords</b><span class="muted">bis 01.12. · erster Scan ~19.10.</span></div>
+  <div class="goal"><span class="muted">Zielzahlen</span><span>Maps-Raster: Ausgangswert fehlt (Scan ~19.10.)</span><span>Anfragen pro Woche: ~2 (Basis 28.06.–23.09.)</span></div>
+  <div class="phases">${PH.map((p, k) => `<div class="ph${k < cur ? ' done' : k === cur ? ' cur' : ''}">${p[0]}<small>${esc(p[1])}</small></div>`).join('')}</div>
+  <p class="muted">Programm-Woche 6 von 13 · Wochenplan (alt): 22 von 44 abgehakt. Der Fortschritt kommt künftig aus den echten Aufgaben unten.</p>
+  <div class="grid2" style="margin-top:14px">
+   <div>
+    <div class="card"><h2>Aufgaben <span class="muted">eine Liste für alle</span></h2>
+     <div class="chips">${owners.map(o => `<button class="chip${F.owner === o ? ' on' : ''}" onclick="F.owner='${o}';renderClient()">${o}</button>`).join('')}</div>
+     <table><thead><tr><th>Aufgabe · nächster Schritt</th><th>Verantwortlich → macht</th><th>Status</th><th class="hm">Quelle</th></tr></thead><tbody>${tasks.map(i => rowHTML(i, false)).join('') || '<tr><td colspan="4" class="muted">Nichts in diesem Filter.</td></tr>'}</tbody></table></div>
+    <div class="card"><h2>Ergebnisse <span class="muted">was erarbeitet wurde, mit Nachweis</span></h2>${OUTCOMES.map(o => `<div class="outc"><div class="ct">${esc(o.text)}</div><div class="meta"><span>Zielzahl: ${esc(o.metric)}</span><span>vorher ${esc(o.before)} → nachher ${esc(o.after)}</span><span class="conf ${o.conf === 'confirmed' ? 'c-ok' : 'c-as'}">${o.conf === 'confirmed' ? 'bestätigt' : 'angenommen'}</span></div><div class="meta"><span>Nachweis: <button class="src">${esc(o.proof[0])}</button></span><span>${esc(o.date)}</span><span>Zeit/Kosten: ${esc(o.time)}</span><span>${o.vis === 'client' ? '👁 Kunde sieht es' : '🔒 intern'}</span></div></div>`).join('')}</div>
+   </div>
+   <div>
+    <div class="card"><h2>Wartet auf Coralie <span class="muted">${todos.length}</span></h2><table><tbody>${todos.map(i => `<tr class="click" onclick="openItem('${i.id}')"><td>${esc(i.title)}<div class="next">${esc(i.effect)}</div></td><td><span class="age${days(i.since) >= 7 ? ' old' : ''}">${ageTxt(i.since)}</span></td></tr>`).join('')}</tbody></table></div>
+    <div class="card"><h2>Entscheidungen <span class="muted">aus dem Tab „Entscheidungen“</span></h2><div class="next">5 Entwürfe, Coralie sieht noch nichts. E1 Preis, E4 Analyse und E5 Ratgeber brauchen ihr aktives Ja.</div></div>
+    <div class="card"><h2>Kunden-Regeln <span class="muted">gelten für alle Agenten</span></h2><ul class="next" style="margin:0;padding-left:18px"><li>Keine Backlink- oder Disavow-Arbeit</li><li>Keine große Änderung ohne Backup und ihr OK</li><li>Keine URL-Änderungen</li><li>Ayurveda-Massage-Seite unantastbar</li><li>Kontaktwege bleiben</li></ul></div>
+    <div class="card"><h2>Verlauf <span class="muted">eigener Bereich, nicht auf dem Startbildschirm</span></h2><div class="feed">${FEED.map(f => `<div>${esc(f[0])} · <b>${esc(f[1])}</b> · ${esc(f[2])}<br><i>Quelle: ${esc(f[3])}</i></div>`).join('')}</div></div>
+   </div>
+  </div>`;
+}
+
+/* ---------- Ansicht 3: Meine Aufgaben (Team) ---------- */
+function renderTeam() {
+  const ppl = ['Dinakar','Tantri','Gayo'];
+  const mine = ITEMS.filter(i => i.doer === F.team);
+  const order = {planned:1, in_progress:0, waiting:2, needs_check:3, done:4};
+  mine.sort((a, b) => order[a.st] - order[b.st]);
+  $('who').textContent = 'Angemeldet als ' + F.team + ' (Team)';
+  $('team').innerHTML = `<h1>Meine Aufgaben</h1>
+  <p class="lead">Jede Person sieht nur ihre eigenen Aufgaben, über alle Kunden. Erledigt geht nur mit einem Nachweis-Link. Martin prüft und setzt dann „Erledigt“.</p>
+  <div class="chips">${ppl.map(p => `<button class="chip${F.team === p ? ' on' : ''}" onclick="F.team='${p}';renderTeam()">${p}</button>`).join('')}</div>
+  ${mine.map(i => `<div class="card"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center"><b>${esc(cname(i.c))}</b>${st(i)}<span class="age">${ageTxt(i.since)}</span></div>
+   <div style="font-size:16px;font-weight:700;margin:6px 0">${esc(i.title)}</div>
+   ${i.blocked ? `<div class="next">⛔ Blockiert durch: ${esc(ITEMS.find(x => x.id === i.blocked).title)}</div>` : ''}
+   <dl class="dl"><dt>Übergabe</dt><dd>${esc(i.next || '–')}</dd><dt>Fertig heißt</dt><dd>${esc(i.defdone || 'Martin trägt das beim Übergeben ein')}</dd><dt>Unterlagen</dt><dd>${srcs(i)}</dd><dt>Verantwortlich</dt><dd>${who(i.acc)}</dd></dl>
+   ${i.st === 'needs_check' ? '<div class="next">✓ Gemeldet, Martin prüft.</div>' : `<div class="row-acts"><input class="proof" id="pf-${i.id}" placeholder="Nachweis-Link (URL, Screenshot, Drive)"><button class="btn b1" onclick="report('${i.id}')">Fertig melden</button><button class="btn b2" onclick="alert('Prototyp: Frage geht an Martin und erscheint bei ihm unter „Team wartet auf dich“.')">Frage an Martin</button></div>`}
+  </div>`).join('') || '<div class="card muted">Keine Aufgaben.</div>'}`;
+}
+function report(id) {
+  const v = ($('pf-' + id).value || '').trim();
+  if (!v) { alert('Bitte zuerst einen Nachweis-Link eintragen.'); return; }
+  const i = ITEMS.find(x => x.id === id); i.st = 'needs_check'; i.src = [...(i.src || []), [v, 'page', 'proves']];
+  renderTeam();
+}
+
+/* ---------- Ansicht 4: Kundenansicht (Coralie) ---------- */
+function renderCview() {
+  const todos = ITEMS.filter(i => i.c === 'suriya' && i.type === 'client_todo');
+  const next = ITEMS.filter(i => i.c === 'suriya' && i.vis === 'client' && i.type !== 'client_todo' && i.st !== 'done');
+  const res = OUTCOMES.filter(o => o.c === 'suriya' && o.vis === 'client');
+  $('cview').innerHTML = `<div class="note">Vorschau der Kundenansicht (Schritt 3). Sie liest dieselben Daten, zeigt aber nur freigegebene Zeilen. Keine internen Notizen, keine Agenten-Schritte, keine Stunden.</div>
+  <h1>Hallo Coralie</h1><p class="lead">Hier siehst du, wo wir stehen, was als Nächstes kommt und was wir von dir brauchen.</p>
+  <aside class="mg"><img class="mg__img" src="martin-guide/martin-hello.webp" alt="Martin von 741 winkt zur Begrüßung" width="112"><div class="mg__bubble"><span class="mg__name">Martin</span><p>Schön, dass du da bist. Ganz oben steht, was gerade von dir abhängt, alles andere erledigen wir.</p></div></aside>
+  <div class="blocks">
+   <div class="blk need"><h3>Was wir von dir brauchen</h3><ul>${todos.map(i => `<li><b>${esc(i.ctext)}</b><br><span class="next">${esc(i.effect)} · offen ${ageTxt(i.since)}</span></li>`).join('')}</ul>
+    <aside class="mg mg--small" style="margin:12px 0 0"><img class="mg__img" src="martin-guide/martin-point.webp" alt="Martin von 741 zeigt auf die Liste" width="72"><div class="mg__bubble"><span class="mg__name">Martin</span><p>Die Admin-Rolle in WordPress ist der wichtigste Punkt. Danach legen wir sofort los.</p></div></aside></div>
+   <div class="blk"><h3>Wo wir stehen</h3><p style="margin:0">Phase <b>Aufbau</b>, Woche 6 von 13.</p><p class="next">Ziel bis 01.12.: Top 3 bei Google Maps für deine 5 wichtigsten Suchbegriffe. Die erste Messung kommt um den 19.10., danach siehst du hier jede Woche, wie sich deine Plätze bei Google verändern.</p></div>
+   <div class="blk"><h3>Was als Nächstes kommt</h3><ul>${next.map(i => `<li>${esc(i.ctext)}</li>`).join('')}<li>5 Entscheidungen für dich im Bereich „Entscheidungen“</li></ul></div>
+   <div class="blk"><h3>Wen du fragst</h3><p style="margin:0">Martin, über den Chat hier im Portal oder per WhatsApp.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px"><h2>Was wir erreicht haben</h2>${res.map(o => `<div class="outc"><div class="ct">${esc(o.text)}</div><div class="meta"><span>Nachweis: <button class="src">${esc(o.proof[0])}</button></span><span>${esc(o.date)}</span></div></div>`).join('')}</div>`;
+}
+
+/* ---------- Detail-Schublade ---------- */
+function openItem(id) {
+  const i = ITEMS.find(x => x.id === id);
+  const d = $('drawer');
+  d.innerHTML = `<button class="x" onclick="$('drawer').classList.remove('on')">×</button><h3>${esc(i.title)}</h3>${st(i)}
+  <dl class="dl"><dt>Kunde</dt><dd>${esc(cname(i.c))}</dd><dt>Verantwortlich</dt><dd>${who(i.acc)} (immer ein Mensch)</dd><dt>Macht es</dt><dd>${who(i.doer)}</dd>
+  <dt>Nächster Schritt</dt><dd>${esc(i.next || '–')}</dd><dt>Alter</dt><dd>${ageTxt(i.since)}</dd>${i.due ? `<dt>Fällig</dt><dd>${esc(i.due)}</dd>` : ''}
+  <dt>Fertig heißt</dt><dd>${esc(i.defdone || '–')}</dd><dt>Quellen</dt><dd>${(i.src || []).map(s => `${esc(s[0])} <span class="muted">(${s[2] === 'produced' ? 'erzeugt' : s[2] === 'proves' ? 'Nachweis' : 'genutzt'})</span>`).join('<br>') || '–'}</dd>
+  <dt>Zeit / Kosten</dt><dd>${esc(i.time || 'nicht erfasst')}${i.cost ? ' · ' + esc(i.cost) : ''}</dd><dt>Sichtbar für</dt><dd>${i.vis === 'client' ? '👁 Kunde (als: „' + esc(i.ctext || i.title) + '“)' : '🔒 nur intern'}</dd></dl>
+  ${i.st === 'needs_check' ? `<div class="row-acts"><button class="btn by" onclick="verify('${i.id}')">Geprüft → Erledigt</button><button class="btn b2" onclick="back('${i.id}')">Zurück an ${esc(i.doer)}</button></div><p class="muted">Erledigt geht nur mit Nachweis. Ein Agent kann nie selbst „Erledigt“ setzen.</p>` : ''}
+  <h3 style="margin-top:18px;font-size:15px">Verlauf dieser Aufgabe</h3><div class="feed"><div>${ageTxt(i.since)} · angelegt von <b>Morning Grill</b><br><i>Quelle: tasks.json ${esc(i.id)}</i></div>${i.doer !== i.acc ? `<div>übergeben von <b>${esc(i.acc)}</b> an <b>${esc(i.doer)}</b></div>` : ''}</div>`;
+  d.classList.add('on');
+}
+function verify(id) { const i = ITEMS.find(x => x.id === id); if (!(i.src || []).some(s => s[2] === 'produced' || s[2] === 'proves')) { alert('Kein Nachweis verlinkt. Erst Nachweis ergänzen.'); return; } i.st = 'done'; $('drawer').classList.remove('on'); rerender(); }
+function back(id) { const i = ITEMS.find(x => x.id === id); i.st = 'in_progress'; $('drawer').classList.remove('on'); rerender(); }
+function openSrc(id, k) { const s = ITEMS.find(x => x.id === id).src[k]; alert('Prototyp: öffnet die Quelle\n' + s[0] + '\nArt: ' + s[1] + ' · ' + (s[2] === 'produced' ? 'vom Agenten erzeugt' : s[2] === 'proves' ? 'Nachweis' : 'genutzt')); }
+
+/* ---------- Navigation ---------- */
+let VIEW = 'today';
+function show(v) { VIEW = v; document.querySelectorAll('.tab').forEach(t => t.classList.toggle('on', t.dataset.v === v)); ['today','client','team','cview'].forEach(s => $(s).hidden = s !== v); if (v !== 'team') $('who').textContent = v === 'cview' ? 'Vorschau: so sieht es Coralie' : 'Angemeldet als Martin (Admin)'; rerender(); window.scrollTo(0, 0); }
+function rerender() { ({today: renderToday, client: renderClient, team: renderTeam, cview: renderCview})[VIEW](); }
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => show(t.dataset.v));
+rerender();
+</script>
+</body>
+</html>

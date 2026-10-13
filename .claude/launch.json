@@ -2,10 +2,144 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "dev",
+      "name": "kicms-proto",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8991",
+        "--directory",
+        "/Users/martindrendel/741website/00_project/assets/741studio/cro/ki-website/07-prototype"
+      ],
+      "port": 8991
+    },
+    {
+      "name": "approval-proto",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8987",
+        "--directory",
+        "/Users/martindrendel/741website/00_project/client-approval-workflow/prototype"
+      ],
+      "port": 8987
+    },
+    {
+      "name": "site-dev",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 3000
+    },
+    {
+      "name": "scratch-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8942",
+        "--directory",
+        "/private/tmp/claude-501/-Users-martindrendel-741website/5c4f6ee6-ba4e-47c4-8a82-ecf176ed92ea/scratchpad"
+      ],
+      "port": 8942
+    },
+    {
+      "name": "meandyou-proto",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8963",
+        "--directory",
+        "/Users/martindrendel/741website/00_project/assets/meandyou/prototype"
+      ],
+      "port": 8963
+    },
+    {
+      "name": "meandyou-proto-v2",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8964",
+        "--directory",
+        "/Users/martindrendel/741website/00_project/assets/meandyou/prototype-v2"
+      ],
+      "port": 8964
+    },
+    {
+      "name": "meandyou-proto-v3",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8965",
+        "--directory",
+        "/Users/martindrendel/741website/00_project/assets/meandyou/prototype-v3"
+      ],
+      "port": 8965
+    },
+    {
+      "name": "meandyou-figma",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8970",
+        "--directory",
+        "/Users/martindrendel/741website/00_project/assets/meandyou/figma-capture"
+      ],
+      "port": 8970
+    },
+    {
+      "name": "portal-v2",
+      "runtimeExecutable": "php",
+      "runtimeArgs": [
+        "-S",
+        "127.0.0.1:8931",
+        "-t",
+        "/private/tmp/claude-501/-Users-martindrendel-741website/f203e46d-0f60-4f47-8fd8-17f629b4c9c8/scratchpad/portal-v2"
+      ],
+      "port": 8931
+    },
+    {
+      "name": "dist-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8956",
+        "--directory",
+        "dist"
+      ],
+      "port": 8956
+    },
+    {
+      "name": "prospect-drafts",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8975",
+        "--directory",
+        "/Users/martindrendel/741website/00_project/prospects"
+      ],
+      "port": 8975
+    },
+    {
+      "name": "work-view-proto",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8988",
+        "--directory",
+        "/Users/martindrendel/741website/00_project/client-work-visibility/prototype"
+      ],
+      "port": 8988
     }
   ]
 }

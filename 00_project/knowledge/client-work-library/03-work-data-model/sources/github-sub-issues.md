@@ -9,6 +9,6 @@
 - Adding a sub-issue takes a sub_issue_id. An optional replace_parent flag moves it from its old parent.
 - A sub-issue must belong to the same owner as the parent.
 - A reprioritize endpoint sets the order of sub-issues with after_id or before_id. Order is relative, not a number.
-- Each issue carries parent_issue_url and a sub_issues_summary with total, completed and percent_completed.
+- Each issue carries parent_issue_url. It also carries a sub_issues_summary with child counts and a percent_completed value.
 - Progress is computed from the children. Nobody types the percent by hand.
 - Gaps / bias notes: The page states no limit for depth or count. It covers hierarchy only, not status or ownership.
