@@ -195,8 +195,23 @@ def main():
     if ok("S13_deadlines"):
         import re as _re
         money = _re.compile(r"(rechnung|invoice|\brate\b|zahlung|payment|bezahlt)", _re.I)
+        ledger = {}
+        lp = os.path.join(REPO, "00_project", "assets", "morning-grill", "state", "cards.json")
+        if os.path.exists(lp):
+            for lc in load(lp).get("cards", []):
+                if lc.get("stable_key"):
+                    ledger[lc["stable_key"]] = lc
         for h in S["S13_deadlines"]["data"]:
             if money.search(h["text"]):
+                continue
+            key = f"deadline|{h['file']}|{h['date']}"
+            lc = ledger.get(key)
+            if lc and (lc["status"] == "parked" or (lc["status"] == "decided"
+                       and (day - dt.date.fromisoformat(lc.get("created", scan["date"]))).days < 3)):
+                if h.get("client") in lines:
+                    lines[h["client"]]["watch"].append(f"{lc['status'].title()}: {lc.get('park_reason') or lc.get('answer_text')}")
+                else:
+                    scan.setdefault("_741_lines", []).append(f"{lc['status'].title()} ({h['date']}): {lc.get('park_reason') or lc.get('answer_text')}")
                 continue
             if h["urgent"] and h["overdue_days"] >= -3:
                 cards.append(card(f"{day}-deadline-{h['file'][:20]}", h.get("client") or "741", 1, "decide",
@@ -207,6 +222,7 @@ def main():
                                   "b" if h["overdue_days"] > 14 else "a",
                                   "A legal or account deadline must never stay silent; if it is resolved, the note stops the card.",
                                   scan["date"], {"a": "plan item", "b": "memory edit (done note with date)", "c": "park reason"}))
+                cards[-1]["stable_key"] = key
             else:
                 (lines[h["client"]]["watch"].append(f"Date in memory {h['date']}: {h['text'][:120]}")
                  if h.get("client") in lines else None)

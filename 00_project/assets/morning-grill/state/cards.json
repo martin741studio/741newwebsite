@@ -1,0 +1,232 @@
+{
+ "cards": [
+  {
+   "id": "2026-10-13-741-messages",
+   "client": "741 (all clients)",
+   "priority": 1,
+   "type": "decide",
+   "headline": "5 clients have unread portal messages or help requests. Who answers today?",
+   "evidence": [
+    "reporting/standup/2026-10-13.json",
+    "S5",
+    "Praxis Suriya (1 unread, 1 help)",
+    "Praxis Hüwel (0 unread, 1 help)",
+    "Daniela Dumann (0 unread, 4 help)",
+    "Maria Brasse (0 unread, 1 help)",
+    "Rabenmütter (0 unread, 1 help)"
+   ],
+   "options": {
+    "a": "Agent drafts every reply now; I send them",
+    "b": "I answer them myself today",
+    "c": "Dinakar answers the technical ones, I answer the rest"
+   },
+   "recommended": "a",
+   "why": "Unanswered client messages are priority 1; drafts take you 2 minutes to send.",
+   "deadline": "2026-10-13",
+   "status": "decided",
+   "answer": "a",
+   "park_reason": null,
+   "then": {
+    "a": "agent writes drafts per client into plan.md (```text, slop 5/5)",
+    "b": "walk queue item",
+    "c": "portal task drafts + WhatsApp line"
+   },
+   "answer_text": "Agent drafts every reply; Martin sends",
+   "created": "2026-10-13",
+   "decided_at": "2026-10-13T11:30+08:00"
+  },
+  {
+   "id": "2026-10-13-deadline-coldemail-sending-in",
+   "client": "741",
+   "priority": 1,
+   "type": "decide",
+   "headline": "Deadline 2026-09-23 from memory has no 'done' note (20 days overdue): Demand: sign strafbewehrte Unterlassungserklärung + pay 453,50 €, deadline 23.09.2026.",
+   "evidence": [
+    "memory coldemail-sending-infra.md",
+    "S13"
+   ],
+   "options": {
+    "a": "Still open: agent prepares the next step today",
+    "b": "Already resolved: agent adds a done note to the memory file",
+    "c": "Park with a reason"
+   },
+   "recommended": "b",
+   "why": "A legal or account deadline must never stay silent; if it is resolved, the note stops the card.",
+   "deadline": "2026-10-13",
+   "status": "parked",
+   "answer": "other",
+   "park_reason": "waiting for the lawyer's reply to Martin's letter (pay 0 €)",
+   "then": {
+    "a": "plan item",
+    "b": "memory edit (done note with date)",
+    "c": "park reason"
+   },
+   "answer_text": "Martin answered with his own letter (based on the agent's recommendation) demanding to pay 0 €; waiting for the lawyer's reply",
+   "created": "2026-10-13",
+   "decided_at": "2026-10-13T11:30+08:00",
+   "stable_key": "deadline|coldemail-sending-infra.md|2026-09-23"
+  },
+  {
+   "id": "2026-10-13-deadline-balihealing-google-a",
+   "client": "Bali Healing",
+   "priority": 1,
+   "type": "decide",
+   "headline": "Deadline 2026-10-01 from memory has no 'done' note (12 days overdue): **2026-09-07 ROOT CAUSE for blocked skin-tag publish found:** account banner \"Verify your identity – Some of your ads may be paused or limit",
+   "evidence": [
+    "memory balihealing-google-ads-setup.md",
+    "S13"
+   ],
+   "options": {
+    "a": "Still open: agent prepares the next step today",
+    "b": "Already resolved: agent adds a done note to the memory file",
+    "c": "Park with a reason"
+   },
+   "recommended": "a",
+   "why": "A legal or account deadline must never stay silent; if it is resolved, the note stops the card.",
+   "deadline": "2026-10-13",
+   "status": "decided",
+   "answer": "a",
+   "park_reason": null,
+   "then": {
+    "a": "plan item",
+    "b": "memory edit (done note with date)",
+    "c": "park reason"
+   },
+   "answer_text": "Still open: agent prepares next step today (read-only Ads check + document list)",
+   "created": "2026-10-13",
+   "decided_at": "2026-10-13T11:30+08:00",
+   "stable_key": "deadline|balihealing-google-ads-setup.md|2026-10-01"
+  },
+  {
+   "id": "2026-10-13-suriya-access",
+   "client": "Praxis Suriya",
+   "priority": 1,
+   "type": "decide",
+   "headline": "Suriya: 5 approved site changes are blocked. The WordPress app password fails (401) and Search Console access is gone. Reply draft to Coralie is ready.",
+   "evidence": [
+    "inputs/s2-chats.json (S2)",
+    "memory praxis-suriya-client.md"
+   ],
+   "options": {
+    "a": "Send the ready reply today and ask for both accesses; start with backup + speed work",
+    "b": "Wait for her to offer access herself",
+    "c": "Do only the speed work with the access that still works"
+   },
+   "recommended": "a",
+   "why": "She agreed to continue on 13.10.; access is the gate for every goal number.",
+   "deadline": "2026-10-14",
+   "status": "decided",
+   "answer": "a",
+   "park_reason": null,
+   "then": {
+    "a": "message draft (du, Ich-Form, text block) + speed task for Dinakar",
+    "b": "park reason",
+    "c": "task for Dinakar"
+   },
+   "line": "Coralie agreed to continue after the PDF overview (13.10.)",
+   "line_kind": "fixed",
+   "source": "judgment (S2 chat summary)",
+   "answer_text": "Martin sends the ready reply today and asks for both accesses; backup + speed first",
+   "created": "2026-10-13",
+   "decided_at": "2026-10-13T11:30+08:00"
+  },
+  {
+   "id": "2026-10-13-bali-push",
+   "client": "Bali Healing",
+   "priority": 2,
+   "type": "route",
+   "headline": "Bali Healing: onboarding 1/6, Ads blocked, and the 8-point status reply cannot go out: it still needs outreach counts and Ads spend.",
+   "evidence": [
+    "S5 standup: onboarding, 24 overdue",
+    "memory balihealing-google-ads-setup.md",
+    "inputs/s2-chats.json (S2)"
+   ],
+   "options": {
+    "a": "I give the numbers today; agent finishes the reply and the Ads checklist",
+    "b": "Send the reply without numbers, numbers on Monday",
+    "c": "Park until Peggy answers"
+   },
+   "recommended": "a",
+   "why": "Ads live within 2 weeks is the quarter goal; billing needs the client.",
+   "deadline": "2026-10-14",
+   "status": "decided",
+   "answer": "a",
+   "park_reason": null,
+   "then": {
+    "a": "message draft (EN) + Ads checklist",
+    "b": "message draft to Izzy",
+    "c": "park reason"
+   },
+   "line": null,
+   "line_kind": "watch",
+   "source": "judgment (grill answers 2026-10-13)",
+   "answer_text": "Martin gives the two numbers today; agent finishes the reply + Ads checklist",
+   "created": "2026-10-13",
+   "decided_at": "2026-10-13T11:30+08:00"
+  },
+  {
+   "id": "2026-10-13-marcel-offer",
+   "client": "Marcel Rosenbach",
+   "priority": 2,
+   "type": "decide",
+   "headline": "Marcel wants to come to 741 fast: new website with monthly subscription plus Google Ads. Which offer goes out this week?",
+   "evidence": [
+    "Martin's grill answer 2026-10-13",
+    "memory marcel-rosenbach-client.md",
+    "memory 741studio-pricing.md"
+   ],
+   "options": {
+    "a": "Website build + monthly program, Hüwel site as proof, Ads as add-on",
+    "b": "Ads first, website after",
+    "c": "Call first, offer after the call"
+   },
+   "recommended": "a",
+   "why": "He asked for both; the Hüwel site (live since 06.10.) shows the result. Prices stay out of messages (memory 741studio-pricing).",
+   "deadline": "2026-10-15",
+   "status": "decided",
+   "answer": "other",
+   "park_reason": null,
+   "then": {
+    "a": "agent drafts offer outline + WhatsApp message (no prices) for your send",
+    "b": "Ads setup brief",
+    "c": "message draft asking for a call slot"
+   },
+   "line": "New sales opportunity: website + monthly subscription + Ads (Martin 13.10.)",
+   "line_kind": "next",
+   "source": "judgment (grill answers 2026-10-13)",
+   "answer_text": "Sequence: landing page (in progress now) -> Martin's intro video -> prototype for Marcel -> Ads",
+   "created": "2026-10-13",
+   "decided_at": "2026-10-13T11:30+08:00"
+  },
+  {
+   "id": "2026-10-13-suriya-listing-mails",
+   "client": "Praxis Suriya",
+   "priority": 3,
+   "type": "route",
+   "headline": "Praxis Suriya: 28 directory confirmation emails are unhandled. Verify links can expire.",
+   "evidence": [
+    "Supabase listing_emails (handled = false)",
+    "S7"
+   ],
+   "options": {
+    "a": "Tantri clicks the verify links today (portal task + WhatsApp)",
+    "b": "Agent lists them first, I decide",
+    "c": "Park"
+   },
+   "recommended": "a",
+   "why": "Group A listings are 741's job; expired links mean a new submission.",
+   "deadline": "2026-10-13",
+   "status": "decided",
+   "answer": "b",
+   "park_reason": null,
+   "then": {
+    "a": "task draft for Tantri with the list",
+    "b": "agent writes list into plan.md",
+    "c": "park reason required"
+   },
+   "answer_text": "Agent lists the 28 emails first; Martin decides",
+   "created": "2026-10-13",
+   "decided_at": "2026-10-13T11:30+08:00"
+  }
+ ]
+}
