@@ -85,6 +85,79 @@ def walk_card(text, day, client_names):
             "status": "open", "answer": None, "answer_text": None}
 
 
+# ---- "Today" tab (Martin 13.10. evening): board per client + not delegated + waiting for + done today.
+# Off track = overdue portal tasks > 0 (Martin's card 13.10.). Not delegated = open task with no owner,
+# or owner Martin where the routing table (spec §8) names another doer. Patterns: EOS on/off track,
+# GTD waiting-for list, away-log (ops-library A02, A12, A13).
+ONLY_MARTIN = re.compile(r"\b(decide|decision|go\b|go-|answer|record|loom|send|reply|call|approve|release|paste|password|key\b|talk|convo|confirm|set the go-live|price|offer|money|invoice)", re.I)
+ROUTE = [(re.compile(r"\b(verify link|directory|directories|citation|listing|data entry)", re.I), "Tantri"),
+         (re.compile(r"\b(outreach|linkedin|follow-up|prospect list)", re.I), "Gayo"),
+         (re.compile(r"\b(publish|elementor|wordpress|wix|shopify|implement|upload|drag)", re.I), "Dinakar"),
+         (re.compile(r"\b(draft|scan|audit|report|check|mark|list|spec|research|index|clean)", re.I), "agent")]
+OPEN_ST = ("open", "in_progress")
+
+
+def route_hint(title):
+    for rx, who in ROUTE:
+        if rx.search(title or ""):
+            return who
+    return None
+
+
+def today_view(b, goals, standup, tasks, snap, run):
+    tasks = [t for t in (tasks or []) if t.get("status") not in ("dropped",)]
+    open_cards = [c for c in snap["cards"] if c.get("status") not in ("decided", "parked")]
+    rows = []
+    for g in goals["clients"]:
+        name = g["client"]
+        if g.get("status") == "done" or name not in b["clients"]:
+            continue
+        bc, su = b["clients"][name], standup.get(name, {})
+        cur = int((g.get("phase") or "P0")[1])
+        mine = [t for t in tasks if client_of(t.get("client"), goals) == name or t.get("client") == name]
+        done = [t["title"] for t in mine if t.get("status") == "done"]
+        done += [x for x in bc.get("fixed", []) if not x.startswith("Night-shift draft")]
+        overdue = su.get("ueberfaellig")
+        waiting = [t for t in mine if t.get("status") == "waiting"]
+        wait_txt = [f'{t.get("owner")}: {t["title"]}' for t in waiting] + [w for w in bc.get("watch", []) if w.lower().startswith("waiting for")]
+        nxt = (bc.get("next") or []) + (bc.get("today") or [])
+        rows.append({"name": name, "anchor": re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-"),
+                     "phase": g.get("phase"), "phase_label": PHASES[cur][1], "phase_n": cur, "phase_max": len(PHASES) - 1,
+                     "week": su.get("woche"), "overdue": overdue,
+                     "track": "unknown" if overdue is None else ("off" if overdue > 0 else "on"),
+                     "track_why": "no portal program" if overdue is None else (f"{overdue} overdue portal tasks" if overdue else "no overdue portal task"),
+                     "done": done[:8], "n_done": len(done),
+                     "open": [f'{t.get("owner")}: {t["title"]}' for t in mine if t.get("status") in OPEN_ST][:8],
+                     "n_open": sum(1 for t in mine if t.get("status") in OPEN_ST),
+                     "waiting": wait_txt[:6], "n_waiting": len(wait_txt),
+                     "decisions_open": sum(1 for c in open_cards if client_of(c.get("client"), goals) == name),
+                     "next": nxt[0] if nxt else None, "goal": g.get("quarter_goal")})
+    rows.sort(key=lambda r: ({"off": 0, "unknown": 1, "on": 2}[r["track"]], -(r["n_open"] + r["decisions_open"])))
+    nd = []
+    for t in tasks:
+        if t.get("status") not in OPEN_ST:
+            continue
+        own = t.get("owner")
+        hint = route_hint(t["title"])
+        if not own:
+            nd.append({**t, "give_to": hint or "decide owner", "why": "no owner"})
+        elif own == "Martin" and not ONLY_MARTIN.search(t["title"]) and hint:
+            nd.append({**t, "give_to": hint, "why": f"routing table: {hint} can do this"})
+    nd_ids = {t.get("id") for t in nd}
+    only_you = [t for t in tasks if t.get("status") in OPEN_ST and t.get("owner") == "Martin" and t.get("id") not in nd_ids]
+    waiting = [{"who": t.get("owner"), "client": t.get("client"), "title": t["title"], "since": t.get("due"), "note": t.get("note")} for t in tasks if t.get("status") == "waiting"]
+    done_all = [{"client": t.get("client"), "owner": t.get("owner"), "title": t["title"], "note": t.get("note")} for t in tasks if t.get("status") == "done"]
+    tiles = [{"value": len(open_cards), "label": "decisions open"},
+             {"value": sum(r["n_done"] for r in rows), "label": "items done today"},
+             {"value": sum(1 for t in tasks if t.get("status") in OPEN_ST), "label": "tasks open"},
+             {"value": len(nd), "label": "not delegated"},
+             {"value": len(waiting), "label": "waiting on others"},
+             {"value": sum(1 for r in rows if r["track"] == "off"), "label": "clients off track"}]
+    log = os.path.join(run, "..", "evening-log.md") if run.rstrip("/").endswith("evening") else os.path.join(run, "evening-log.md")
+    return {"tiles": tiles, "board": rows, "not_delegated": nd, "only_you": [{"client": t.get("client"), "title": t["title"], "due": t.get("due")} for t in only_you],
+            "waiting": waiting, "done": done_all, "log_status": ("draft" if os.path.exists(log) else "none")}
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--run", required=True); a = ap.parse_args()
     b = load(os.path.join(a.run, "brief.json"))
@@ -251,6 +324,7 @@ def main():
 <div class="cols3"><div><h4>Open now</h4><ul>{open_h}</ul></div>
 <div><h4>Next steps to the goal</h4><ul>{next_h}</ul><h4>Moved since last grill</h4><ul>{moved_h}</ul></div>
 <div><h4>Goal numbers</h4>{nums}<p class="goal" style="font-size:14px"><b>Milestone:</b> {e(g.get("next_milestone") or "not set")}</p></div></div></section>''')
+    snap["today"] = today_view(b, goals, standup, tk, snap, a.run)
     tpl = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "command-center-template.html"), encoding="utf-8").read()
     out = (tpl.replace("{{DATE}}", e(b["date"])).replace("{{READ_AT}}", e(b["read_at"])).replace("{{LOGO}}", logo)
            .replace("{{TILES}}", tiles_h).replace("{{N_OPEN}}", str(n_open)).replace("{{CARDS}}", "".join(cards_html))
