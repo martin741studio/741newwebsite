@@ -13,3 +13,4 @@ Added 2026-10-13 after the first real grill:
 - [ ] Check: portal reply drafts (session ✉️ Portal-Antworten 13.10.) sent by Martin?
 - [ ] Check: Bali Ads verification result + status reply sent?
 - [ ] Portal write order (Martin 13.10.): Freigabe-Dashboard → outreach numbers per client → Command Center on staging. One writer at a time. Before starting the Command Center build: check that both earlier chats say their portal work is done.
+- [ ] Command Center → admin panel (D29, plan 00_project/morning-grill-portal-plan.md): start when Freigabe + outreach chats report their portal work done; then cards for GO-DB, GO-PORTAL staging.
