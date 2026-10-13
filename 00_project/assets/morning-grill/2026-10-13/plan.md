@@ -11,7 +11,7 @@
 - [ ] Stürzl: No program start date. Which trigger sets it?
 - [ ] Send the 5 portal reply drafts (ready: portal-reply-drafts.md; Suriya, Hüwel, Dumann, Brasse, Rabenmütter)
 - [ ] Bali: upload the NIB PDF of PT Amana in Google Ads (Admin > Policy > Account > Submit documents for your client) — ads are PAUSED since 01.10.
-- [ ] Bali: answer Pintor's 30.09. questions, then send the ready status reply (point 6 promises 'today')
+- [x] ~~Bali: send the status reply~~ dropped (Martin 13.10.): Bali is led through the client dashboard (roadmap status section live, decisions in the portal). Pintor's 30.09. questions still need an answer
 - [ ] Bali: drag the staged content-pool files into the 'Content Pool' folder in Drive (Chrome upload timed out; files are in 00_project/assets/balihealing/content-pool/)
 - [ ] Bali: Go-C for the English client audit page after the status reply is out (page is ready as a draft)
 
