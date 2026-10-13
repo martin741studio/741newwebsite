@@ -1,7 +1,7 @@
 {
  "date": "2026-10-13",
  "bookmark": "2026-10-12T06:00+08:00",
- "read_at": "2026-10-13T08:20+08:00",
+ "read_at": "2026-10-13T09:57+08:00",
  "time_zone": "WITA (UTC+8)",
  "sources": {
   "S1_sessions": {
@@ -51,6 +51,10 @@
   "S12_prospects": {
    "status": "ok",
    "error": null
+  },
+  "S13_deadlines": {
+   "status": "ok",
+   "error": null
   }
  },
  "cards": [
@@ -84,6 +88,60 @@
     "a": "agent writes drafts per client into plan.md (```text, slop 5/5)",
     "b": "walk queue item",
     "c": "portal task drafts + WhatsApp line"
+   }
+  },
+  {
+   "id": "2026-10-13-deadline-coldemail-sending-in",
+   "client": "741",
+   "priority": 1,
+   "type": "decide",
+   "headline": "Deadline 2026-09-23 from memory has no 'done' note (20 days overdue): Demand: sign strafbewehrte Unterlassungserklärung + pay 453,50 €, deadline 23.09.2026.",
+   "evidence": [
+    "memory coldemail-sending-infra.md",
+    "S13"
+   ],
+   "options": {
+    "a": "Still open: agent prepares the next step today",
+    "b": "Already resolved: agent adds a done note to the memory file",
+    "c": "Park with a reason"
+   },
+   "recommended": "b",
+   "why": "A legal or account deadline must never stay silent; if it is resolved, the note stops the card.",
+   "deadline": "2026-10-13",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "plan item",
+    "b": "memory edit (done note with date)",
+    "c": "park reason"
+   }
+  },
+  {
+   "id": "2026-10-13-deadline-balihealing-google-a",
+   "client": "Bali Healing",
+   "priority": 1,
+   "type": "decide",
+   "headline": "Deadline 2026-10-01 from memory has no 'done' note (12 days overdue): **2026-09-07 ROOT CAUSE for blocked skin-tag publish found:** account banner \"Verify your identity – Some of your ads may be paused or limit",
+   "evidence": [
+    "memory balihealing-google-ads-setup.md",
+    "S13"
+   ],
+   "options": {
+    "a": "Still open: agent prepares the next step today",
+    "b": "Already resolved: agent adds a done note to the memory file",
+    "c": "Park with a reason"
+   },
+   "recommended": "a",
+   "why": "A legal or account deadline must never stay silent; if it is resolved, the note stops the card.",
+   "deadline": "2026-10-13",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "plan item",
+    "b": "memory edit (done note with date)",
+    "c": "park reason"
    }
   },
   {
@@ -148,36 +206,6 @@
    "source": "judgment (grill answers 2026-10-13)"
   },
   {
-   "id": "2026-10-13-741-start-dates",
-   "client": "741 (programs)",
-   "priority": 2,
-   "type": "define",
-   "headline": "Program start dates conflict or are missing. They set week numbers, deadlines and renewals.",
-   "evidence": [
-    "00_project/morning-grill-goals.json",
-    "portal programs",
-    "Praxis Suriya: 2026-09-03 (portal) / 2026-08-14 (memory): conflict",
-    "Praxis Hüwel: 2026-08-25 (portal) / paid 2026-08-16: conflict",
-    "STÜRZL Steuerstrafrecht: none"
-   ],
-   "options": {
-    "a": "Portal date wins for all; agent fixes memory",
-    "b": "Payment date wins; agent proposes portal fixes (needs GO-PORTAL)",
-    "c": "Decide client by client in the walk queue"
-   },
-   "recommended": "b",
-   "why": "Payment is what the client agreed; the portal date drifted later.",
-   "deadline": "2026-10-15",
-   "status": "open",
-   "answer": null,
-   "park_reason": null,
-   "then": {
-    "a": "memory edits",
-    "b": "portal fix list + go card",
-    "c": "walk queue"
-   }
-  },
-  {
    "id": "2026-10-13-marcel-offer",
    "client": "Marcel Rosenbach",
    "priority": 2,
@@ -234,7 +262,9 @@
     "b": "agent writes list into plan.md",
     "c": "park reason required"
    }
-  },
+  }
+ ],
+ "below_the_line": [
   {
    "id": "2026-10-13-johni-restart",
    "client": "Johni Jaya Motor",
@@ -264,9 +294,7 @@
    "line": null,
    "line_kind": "watch",
    "source": "judgment (grill answers 2026-10-13)"
-  }
- ],
- "below_the_line": [
+  },
   {
    "id": "2026-10-13-kamil-reports",
    "client": "Kamil (Physio Anatomie + Kraft)",
@@ -601,6 +629,24 @@
  ],
  "walk_queue": [
   {
+   "client": "Praxis Suriya",
+   "item": "Which program start date counts? 2026-09-03 (portal) / 2026-08-14 (memory): conflict",
+   "deadline": "2026-10-15",
+   "id": "2026-10-13-start-Praxis Suriy"
+  },
+  {
+   "client": "Praxis Hüwel",
+   "item": "Which program start date counts? 2026-08-25 (portal) / paid 2026-08-16: conflict",
+   "deadline": "2026-10-15",
+   "id": "2026-10-13-start-Praxis Hüwel"
+  },
+  {
+   "client": "STÜRZL Steuerstrafrecht",
+   "item": "No program start date. Set it (start = agreed trigger, e.g. contract or kickoff).",
+   "deadline": "2026-10-15",
+   "id": "2026-10-13-start-STÜRZL Steue"
+  },
+  {
    "client": "STÜRZL Steuerstrafrecht",
    "item": "Stürzl: send the email (Loom + Entwurf links) via Airmailer, BCC you, then 'Add user' for the reporting bot in Search Console (5 min)",
    "deadline": "2026-10-14",
@@ -653,6 +699,7 @@
     "Last portal activity 2026-09-21 (portal only; chat work does not show)",
     "Citations: 31 live, 0 submitted, 25 planned",
     "Waiting for client: GSC access back since 2026-10-12",
+    "Date in memory 2026-09-27: Baseline-Dateien: `00_project/assets/suriya/baseline/2026-09-30-gsc-baseline.md` und `.json` (Search Console, Property h",
     "Waiting for client: Coralie to give WordPress access back (Martin's WP user re-created 13.10); old app password dead",
     "Waiting for client: Coralie to re-add 741 in Search Console (or confirm stays removed); service-account read gives 403",
     "Waiting for client: Coralie decides single-session price 95 vs 85 EUR in dashboard; active yes needed (price)"
@@ -674,6 +721,7 @@
    ],
    "fixed": [
     "Run ready, approval open: pool (2026-10-11)",
+    "Run backlink: in Arbeit (2026-10-13)",
     "Explained Google Search Console notice: /index.html alternate page with proper canonical, harmless (file: e8aede79)",
     "Changed 172 internal links in 28 pages to '/', 4 redirect pages updated; PR merged, live check ok (file: e8aede79)",
     "Added check rule in scripts/check_repo.py that fails on links to index.html; documented in AGENTS.md (file: e8aede79)"
@@ -774,7 +822,8 @@
     "Access missing: Google Tag Manager",
     "15 overdue portal tasks",
     "Last portal activity 2026-10-07 (portal only; chat work does not show)",
-    "Citations: 1 live, 25 submitted, 31 planned"
+    "Citations: 1 live, 25 submitted, 31 planned",
+    "Date in memory 2026-09-22: Maria-Feedback bis 22.09. war bereits in den Texten."
    ],
    "next": [
     "Next workflow: citations live checks"

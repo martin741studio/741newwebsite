@@ -25,7 +25,7 @@ Done for one day means all of these are true:
 
 | # | Topic | Decision |
 |---|---|---|
-| D1 | Backlinks | Merge. Niche directories go to `citations`. Link measures O01–O16 go to the maps playbook (`phone`). Skill `backlink-dach` retires after the merge (needs its own go). |
+| D1 | Backlinks | **Revised 2026-10-13:** keep both workflows (different outcomes). Citations = consistent listings; Backlink DACH = authority links (pillars B–E), ≥ 8 new referring domains in 90 days. Border: niche directories (jameda, Doctolib, theralupa …) belong to `citations`. The maps playbook only tracks O01–O20. Backlink doc + link library copied from worktree `great-easley-4f6970` to `main`. |
 | D2 | Place and length | Desktop chat `⚙️🧭 Morning Grill`, 10 minutes. |
 | D3 | Shape | One ranked queue for all clients and 741. Target max 7 cards. |
 | D4 | First view | Martin's decisions only. Everything else is below. |
@@ -42,6 +42,11 @@ Done for one day means all of these are true:
 | D15 | Output | Chat + one-page HTML brief (side panel). Portal tab later. |
 | D16 | Success | "Nothing forgotten" (§14). |
 | D17 | Client status | Active: Suriya, Hüwel, Stürzl, Dumann, Brasse, Bali Healing (now Kunde), Rabenmütter, Johni Jaya Motor (restart), Kamil (reports overdue), me&you/Pauspapier, Marcel (new sales opportunity). Done: Tacheles. |
+| D19 | Grill's own open points | Every open point of a workflow becomes a card in the queue. Never a prose list at the end of a report (Martin 2026-10-13). |
+| D20 | Install | Skill install + trigger tests + baseline approved 2026-10-13. |
+| D21 | Schedule | Desktop tasks 06:00 / 17:00 only after the tests pass; the first 3 runs are opened and read. |
+| D22 | Portal tasks | One week as drafts in plan.md, then the agent writes portal tasks from the approved plan. |
+| D23 | Start dates | Decided client by client, one walk-queue item each (Suriya, Hüwel, Stürzl). |
 | D18 | Leads | In the daily 741 line. A lead gets a card only when a follow-up is due or older than 7 days. |
 
 ## 2. Daily rhythm
@@ -77,6 +82,7 @@ Rule: each source has a bookmark in `state/bookmarks.json` (R6.1 of the workflow
 | S9 | Memory | Client memory files changed since the bookmark | New rules, client facts | client rules |
 | S10 | Calendar | Google Calendar MCP, today and tomorrow | Calls and deadlines today | meetings |
 | S11 | Yesterday | `<yesterday>/evening-log.md`, `state/cards.json` | Carry-over, open and parked cards (R7) | commitments |
+| S13 | Deadline sweep | `scan.py read_deadlines()` over ALL memory files | Dated deadlines without a done note | open deadlines |
 | S12 | 741 level | `00_project/revenue-model-100k.md`, prospects `_run.json`, lead memory files | Pipeline line, follow-ups due | agency numbers |
 
 Not read in v1: Gmail and WhatsApp (no connector with read rights for WhatsApp; Gmail later, read only).
@@ -227,12 +233,14 @@ Run folder `00_project/assets/morning-grill/2026-10-13-dryrun/`. 11 of 12 source
 - L4 Suriya already ranks 1 at all 49 grid points for one keyword. A goal can be met on day 1; goals need all 5 keywords.
 - L5 Citations: Suriya 28 unhandled verify emails, Suriya 25 and Hüwel 29 planned > 14 days, Dumann 85 planned + 4 inconsistent. Nobody saw these before.
 - L6 Headless Chrome lays out at 500 px minimum; the mobile check renders the brief in a 375 px frame.
+- L7 Baseline (fresh session without the skill) found 3 old memory deadlines the scan missed (cold-email Abmahnung 23.09., Bali advertiser verification 01.10., Taxi .htaccess risk). New source **S13 deadline sweep**: all memory files, dated deadline phrases in [today−60, today+3] without a done note. Urgent ones (legal, verification) become priority-1 cards; invoice and payment hits are never shown unasked (memory `feedback-no-invoice-talk`).
+- L8 Trigger tests: plan mode blocks the Skill tool; test with `--allowedTools "Skill" "Read"`. `disable-model-invocation` removed so "Was steht heute an" works.
 
 ## 17. Open points
 
-- O1 GO-PORTAL: create portal tasks from `plan.md` (today: drafts only).
+- O1 GO-PORTAL: approved with a one-week draft period (D22).
 - O2 Start date conflicts: Suriya 14.08. vs 03.09.; Hüwel 16.08. vs 25.08.; Stürzl none.
-- O3 Registry fixes: Bali Healing type Kunde; Tacheles done; add Kamil, Rabenmütter, Johni, me&you.
-- O4 Backlink merge plan (D1) needs its own go and the backlink doc from worktree `great-easley-4f6970`.
+- O3 Registry fixes: DONE 2026-10-13 (Bali = Kunde; Tacheles, Kamil, Rabenmütter, Johni added).
+- O4 Backlink: no merge (D1 revised). Doc and library are on `main` now. Skill tests open (own chat).
 - O5 Standup: `letzte_aktivitaet` reads only the portal; the grill's evening log could write a portal activity line later (GO-PORTAL).
 - O6 Night shift: nobody reads REVIEW.md; the grill now shows it (Q11).

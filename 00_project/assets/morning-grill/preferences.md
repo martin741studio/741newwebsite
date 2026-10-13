@@ -32,5 +32,6 @@ Source: grill of 2026-10-13 (spec `00_project/morning-grill-workflow.md` §1).
 - Answer format: clickable cards in chat; short string "1a 2p 3b" also works. Park needs a reason.
 
 ## Not in the brief
+- Invoices, rates, payment status (memory feedback-no-invoice-talk), unless Martin asks.
 - The Martin guide character (internal brief).
 - Tool or vendor names in any client message draft.

@@ -13,7 +13,7 @@ A failed source is never reported as "nothing new".
 """
 import argparse, datetime as dt, glob, json, os, re, subprocess, sys
 
-REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+REPO = os.environ.get("MG_REPO", "/Users/martindrendel/741website")  # skill may live in ~/.claude/skills
 MEM = os.path.expanduser("~/.claude/projects/-Users-martindrendel-741website/memory")
 GOALS = os.path.join(REPO, "00_project", "morning-grill-goals.json")
 STATE = os.path.join(REPO, "00_project", "assets", "morning-grill", "state")
@@ -155,6 +155,52 @@ def read_citations(today):
     return {"per_client": per, "listing_emails_unhandled": unhandled}
 
 
+DEADLINE_WORDS = re.compile(r"(deadline|\bfrist\b|fristende|fällig|due (?:on|by)|läuft ab|expires?|\bby (?=20\d\d-|\d{1,2}\.)|\bbis (?:zum )?(?=20\d\d-|\d{1,2}\.)|abmahnung|\bmahnung|kündigungsfrist|don't miss)", re.I)
+URGENT_WORDS = re.compile(r"(abmahnung|anwalt|lawyer|gericht|unterlassung|mahnung|verification|verifizierung|frist|deadline)", re.I)
+DONE_WORDS = re.compile(r"(erledigt|done|resolved|gelöst|bezahlt|paid|✅|abgeschlossen|closed)", re.I)
+DATE_RX = re.compile(r"(20\d\d-\d\d-\d\d)|(\b\d{1,2}\.\d{1,2}\.(?:20\d\d)?)")
+
+
+def _parse_date(m, today):
+    if m.group(1):
+        return dt.date.fromisoformat(m.group(1))
+    d, mo, *y = m.group(2).strip(".").split(".")
+    year = int(y[0]) if y and y[0] else today.year
+    return dt.date(year, int(mo), int(d))
+
+
+def read_deadlines(today, goals, back=60, ahead=3):
+    """Sweep ALL memory files for dated deadlines in [today-back, today+ahead] without a done word (baseline lesson L7)."""
+    hits = []
+    for f in sorted(glob.glob(os.path.join(MEM, "*.md"))):
+        name = os.path.basename(f)
+        if name == "MEMORY.md":
+            continue
+        for line in open(f, encoding="utf-8"):
+            if re.match(r"\s*(name|description|type|metadata|originSessionId|modified):", line):
+                continue
+            for sent in re.split(r"(?<=[.;!?])\s+(?=[A-Z*])|;", line):
+                kw = DEADLINE_WORDS.search(sent)
+                if not kw or DONE_WORDS.search(sent):
+                    continue
+                for m in [m for m in DATE_RX.finditer(sent) if m.start() >= kw.start()][:1]:
+                    try:
+                        d = _parse_date(m, today)
+                    except ValueError:
+                        continue
+                    if today - dt.timedelta(days=back) <= d <= today + dt.timedelta(days=ahead):
+                        hits.append({"file": name, "date": d.isoformat(), "overdue_days": (today - d).days,
+                                     "urgent": bool(URGENT_WORDS.search(sent)), "client": match_client(name.replace("-", " "), goals),
+                                     "text": sent.strip()[:220]})
+                        break
+    seen, out = set(), []
+    for h in sorted(hits, key=lambda h: (not h["urgent"], h["date"])):
+        k = (h["file"], h["date"])
+        if k not in seen:
+            seen.add(k); out.append(h)
+    return out[:40]
+
+
 def read_prospects(bm):
     res = []
     for f in glob.glob(os.path.join(REPO, "00_project", "prospects", "*", "_run.json")):
@@ -212,6 +258,7 @@ def main():
     S["S10_calendar"] = src(load_json, a.calendar) if a.calendar else {"status": "unreadable", "error": "no calendar file passed"}
     S["S11_cards"] = src(read_cards)
     S["S12_prospects"] = src(read_prospects, bm)
+    S["S13_deadlines"] = src(read_deadlines, today, goals)
     scan["goal_gaps"] = goal_gaps(goals)
     os.makedirs(a.out, exist_ok=True)
     with open(os.path.join(a.out, "scan.json"), "w", encoding="utf-8") as f:

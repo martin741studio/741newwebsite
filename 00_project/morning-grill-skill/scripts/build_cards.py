@@ -12,7 +12,7 @@ Priorities (preferences.md): 1 fire, 2 money/contract, 3 client deadline <= 3 da
 import argparse, datetime as dt, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-REPO = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
+REPO = os.environ.get("MG_REPO", "/Users/martindrendel/741website")  # skill may live in ~/.claude/skills
 GOALS = os.path.join(REPO, "00_project", "morning-grill-goals.json")
 APPROVAL_DAYS = 3      # registry runs older than this become a card
 STALE_PLANNED = 20     # planned citations older than 14 days: card above this count
@@ -185,13 +185,31 @@ def main():
         if "conflict" in str(c.get("program_start") or ""):
             conflicts.append(f"{c['client']}: {c['program_start']}")
     stz = [c for c in active if c.get("program_start") is None and c.get("phase") in ("P1",)]
-    if conflicts or stz:
-        cards.append(card(f"{day}-741-start-dates", "741 (programs)", 2, "define",
-                          "Program start dates conflict or are missing. They set week numbers, deadlines and renewals.",
-                          ["00_project/morning-grill-goals.json", "portal programs"] + conflicts + [f"{c['client']}: none" for c in stz],
-                          {"a": "Portal date wins for all; agent fixes memory", "b": "Payment date wins; agent proposes portal fixes (needs GO-PORTAL)", "c": "Decide client by client in the walk queue"},
-                          "b", "Payment is what the client agreed; the portal date drifted later.", "2026-10-15",
-                          {"a": "memory edits", "b": "portal fix list + go card", "c": "walk queue"}))
+    # D23 (Martin 2026-10-13): start dates are decided client by client -> one walk item each, not a card
+    for x in conflicts:
+        walk_items.append({"client": x.split(":")[0], "item": f"Which program start date counts? {x.split(':', 1)[1].strip()}", "deadline": "2026-10-15", "id": f"{day}-start-{x[:12]}"})
+    for c in stz:
+        walk_items.append({"client": c["client"], "item": "No program start date. Set it (start = agreed trigger, e.g. contract or kickoff).", "deadline": "2026-10-15", "id": f"{day}-start-{c['client'][:12]}"})
+
+    # --- S13 deadlines in memory (baseline lesson L7); invoices never shown unasked (memory feedback-no-invoice-talk)
+    if ok("S13_deadlines"):
+        import re as _re
+        money = _re.compile(r"(rechnung|invoice|\brate\b|zahlung|payment|bezahlt)", _re.I)
+        for h in S["S13_deadlines"]["data"]:
+            if money.search(h["text"]):
+                continue
+            if h["urgent"] and h["overdue_days"] >= -3:
+                cards.append(card(f"{day}-deadline-{h['file'][:20]}", h.get("client") or "741", 1, "decide",
+                                  f"Deadline {h['date']} from memory has no 'done' note ({h['overdue_days']} days overdue): {h['text'][:140]}",
+                                  [f"memory {h['file']}", "S13"],
+                                  {"a": "Still open: agent prepares the next step today", "b": "Already resolved: agent adds a done note to the memory file",
+                                   "c": "Park with a reason"},
+                                  "b" if h["overdue_days"] > 14 else "a",
+                                  "A legal or account deadline must never stay silent; if it is resolved, the note stops the card.",
+                                  scan["date"], {"a": "plan item", "b": "memory edit (done note with date)", "c": "park reason"}))
+            else:
+                (lines[h["client"]]["watch"].append(f"Date in memory {h['date']}: {h['text'][:120]}")
+                 if h.get("client") in lines else None)
 
     # --- judgment cards from the agent (chat summaries, grill answers)
     jp = os.path.join(a.run, "judgment-cards.json")

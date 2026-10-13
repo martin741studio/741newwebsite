@@ -2,7 +2,7 @@
  "date": "2026-10-13",
  "bookmark": "2026-10-12T06:00+08:00",
  "time_zone": "WITA (UTC+8)",
- "read_at": "2026-10-13T08:20+08:00",
+ "read_at": "2026-10-13T09:57+08:00",
  "sources": {
   "S1_sessions": {
    "status": "ok",
@@ -564,6 +564,12 @@
     ],
     "runs_since_bookmark": [
      {
+      "client": "Praxis Hüwel",
+      "workflow": "backlink",
+      "status": "in Arbeit",
+      "last_run": "2026-10-13"
+     },
+     {
       "client": "Daniela Dumann",
       "workflow": "cro_b",
       "status": "freigegeben",
@@ -682,6 +688,12 @@
       "workflow": "lockout",
       "status": "freigegeben",
       "last_run": "2026-10-13"
+     },
+     {
+      "client": "741 Studio (intern)",
+      "workflow": "morning",
+      "status": "Trockenlauf",
+      "last_run": "2026-10-13"
      }
     ]
    }
@@ -692,6 +704,21 @@
     {
      "worktree": "741website",
      "commits": [
+      [
+       "0bd117e",
+       "2026-10-13 09:54:19 +0800",
+       "Client approval: portal module (Entscheidungen tab + admin view) on staging, migration/seed/mail drafts awaiting go, RLS dry-run 20/20"
+      ],
+      [
+       "bec7f22",
+       "2026-10-13 08:22:53 +0800",
+       "Morning Grill workflow: research library, coverage + architecture map, spec, goal sheet, skill draft, dry run 2026-10-13"
+      ],
+      [
+       "46530fb",
+       "2026-10-13 08:21:28 +0800",
+       "Suriya: Umsetzungsplan Punkte 2/5/6/7 (wartet auf WP-Zugang + Go), QR-Bewertungskarte fertig"
+      ],
       [
        "3f06c2f",
        "2026-10-13 06:55:11 +0800",
@@ -733,8 +760,8 @@
        "me&you FAQ page: CRO run to Checkpoint 1 (dataset, diagnosis, copy, gates, open flags)"
       ]
      ],
-     "n_commits": 8,
-     "uncommitted": 1137
+     "n_commits": 11,
+     "uncommitted": 1160
     },
     {
      "worktree": "admiring-nightingale-f0f882",
@@ -1146,17 +1173,47 @@
    "status": "ok",
    "data": [
     {
+     "file": "headline-copy-framework.md",
+     "modified": "2026-10-13T09:57+08:00",
+     "client": null
+    },
+    {
+     "file": "MEMORY.md",
+     "modified": "2026-10-13T09:57+08:00",
+     "client": null
+    },
+    {
+     "file": "questions-as-grill-me.md",
+     "modified": "2026-10-13T09:54+08:00",
+     "client": null
+    },
+    {
+     "file": "backlink-dach-workflow.md",
+     "modified": "2026-10-13T09:44+08:00",
+     "client": null
+    },
+    {
+     "file": "open-questions-as-grill-cards.md",
+     "modified": "2026-10-13T09:44+08:00",
+     "client": null
+    },
+    {
+     "file": "morning-grill-workflow.md",
+     "modified": "2026-10-13T09:44+08:00",
+     "client": null
+    },
+    {
+     "file": "client-approval-workflow.md",
+     "modified": "2026-10-13T08:22+08:00",
+     "client": null
+    },
+    {
      "file": "anja-stuerzl-client.md",
      "modified": "2026-10-13T07:52+08:00",
      "client": "STÜRZL Steuerstrafrecht"
     },
     {
      "file": "sidebar-client-emoji-convention.md",
-     "modified": "2026-10-13T07:41+08:00",
-     "client": null
-    },
-    {
-     "file": "MEMORY.md",
      "modified": "2026-10-13T07:41+08:00",
      "client": null
     },
@@ -1168,11 +1225,6 @@
     {
      "file": "start-chats-directly-no-offer-card.md",
      "modified": "2026-10-13T07:36+08:00",
-     "client": null
-    },
-    {
-     "file": "client-approval-workflow.md",
-     "modified": "2026-10-13T07:25+08:00",
      "client": null
     },
     {
@@ -1354,6 +1406,51 @@
      "client": "Christian Ruether",
      "status": "fertig, Freigabe offen",
      "last_run": "2026-10-12"
+    }
+   ]
+  },
+  "S13_deadlines": {
+   "status": "ok",
+   "data": [
+    {
+     "file": "coldemail-sending-infra.md",
+     "date": "2026-09-23",
+     "overdue_days": 20,
+     "urgent": true,
+     "client": null,
+     "text": "Demand: sign strafbewehrte Unterlassungserklärung + pay 453,50 €, deadline 23.09.2026."
+    },
+    {
+     "file": "balihealing-google-ads-setup.md",
+     "date": "2026-10-01",
+     "overdue_days": 12,
+     "urgent": true,
+     "client": "Bali Healing",
+     "text": "**2026-09-07 ROOT CAUSE for blocked skin-tag publish found:** account banner \"Verify your identity – Some of your ads may be paused or limited… complete advertiser verification by 2026-10-01\"."
+    },
+    {
+     "file": "maria-brasse-client.md",
+     "date": "2026-09-22",
+     "overdue_days": 21,
+     "urgent": false,
+     "client": "Maria Brasse",
+     "text": "Maria-Feedback bis 22.09. war bereits in den Texten."
+    },
+    {
+     "file": "suriya-baseline-tracking.md",
+     "date": "2026-09-27",
+     "overdue_days": 16,
+     "urgent": false,
+     "client": "Praxis Suriya",
+     "text": "Baseline-Dateien: `00_project/assets/suriya/baseline/2026-09-30-gsc-baseline.md` und `.json` (Search Console, Property https://suriya-praxis.de/, Konto 741studio18, Daten bis 27.09.2026"
+    },
+    {
+     "file": "anja-stuerzl-client.md",
+     "date": "2026-10-05",
+     "overdue_days": 8,
+     "urgent": false,
+     "client": "STÜRZL Steuerstrafrecht",
+     "text": "Rate 1 = Rechnung **741/280926** (datiert Mo 28.09.2026, fällig 05.10.,"
     }
    ]
   }

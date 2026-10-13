@@ -33,7 +33,7 @@ Status words: **installed** = skill in `~/.claude/skills/` or `.claude/skills/`.
 | 4 | Un-Burning | P3 | `unburning` | "Starte Un-Burning für <client>", red audit fields | Audit fields, harm checks | `harm-register.json`, bedrock light A–E, client report | Agent finds. Dinakar / Tantri fix. Client does logins | draft (design go 2026-10-11) | ⚙️🧯 Un-Burning workflow |
 | 5 | Citations DACH module | P4 | `citations` | "Prüfe den Citation-Status für <client>" | Canonical NAP (`client_locations`), 44 directories | `client_citations` status, BrightLocal order, self-service tab "Sichtbarkeit", submission runbook | Agent prepares. Martin buys. Client does group B. Tantri / Dinakar do group A | live module (portal), no skill, no run folder | ⚙️🖇️ Build DACH citations module + Coralie BrightLocal order (moved into the ⚙️🏗️ group 2026-10-13) |
 | 6 | Maps playbook ("Get the phone to ring") | P4 | `phone` | "Maps-Playbook für <client>" | Audit fields, harm register, pool items | Measure matrix (77 measures), task list with phase `d1-30` / `m2+` / `later` | Agent plans. Team executes | draft (design go 2026-10-11) | ⚙️📞 Get the phone to ring check |
-| 7 | Backlink DACH | P4 | `backlink` | `/backlink-dach <client>, <city>, <budget>` | Competitors (min. 8), link library, budget | Google Sheet target list with approval boxes; outreach batch; buy path | Agent researches. Martin approves rows and buys. Gayo can do outreach | installed, 47.8 % (not ship-ready). **Keep or retire: open question to Martin (2026-10-13)** | ⚖️ Stürzl — Backlink-Workflow (client run, no ⚙️ chat) |
+| 7 | Backlink DACH | P4 | `backlink` | `/backlink-dach <client>, <city>, <budget>` | Competitors (min. 8), link library, budget | Google Sheet target list with approval boxes; outreach batch; buy path | Agent researches. Martin approves rows and buys. Gayo can do outreach | installed, 47.8 % (not ship-ready). **Kept as own workflow (Martin 2026-10-13)** | ⚖️ Stürzl — Backlink-Workflow (client run, no ⚙️ chat) |
 | 8 | CRO Homepage Track A | P4 | `cro` | `/cro-homepage <name>, <URL>, <GBP>, <channel>` | Site scrape, pool, GBP | Desktop prototype, GPT mockup, handoff, Drive folder | Agent builds. Dinakar implements in the CMS | installed, 43/54 (fix first) | ⚙️🏠 CRO Homepage workflow setup |
 | 9 | CRO Track B (design-intense) | P4 / P0 pitch | `cro_b` | "Track B für <client>" | B0 questionnaire, element pool | Showpiece prototype | Agent + Martin | spec, no skill | none |
 | 10 | Content pool | P5 | `pool` | "Content-Pool für <client>" | Competitors, demand data (DataForSEO, GSC), client form | Ranked pool, sitetree, xlsx report | Agent. Martin approves pool and sitetree | draft, not installed | ⚙️🗂️ Content pool workflow |
@@ -75,12 +75,12 @@ Martin asked to put both into the architecture. Today both lack a run folder, so
 
 ### 4.2 Backlink DACH (`backlink`)
 
-Martin (2026-10-13): not sure the backlink skill is still needed. Decision is open: keep and finish, merge into citations (niche directories) and maps playbook (O01–O16), or retire. The table below applies only if Martin keeps it.
+Martin (2026-10-13): keep both workflows; they have different outcomes. Citations = the same NAP data live on Google, Apple, Bing and ~90 DACH directories. Backlink DACH = authority links from associations, chambers, press, sponsors, suppliers, PR and a strict buy path (≥ 8 new referring domains in 90 days). Border: free niche directories (jameda, Doctolib, theralupa …) belong to citations. The maps playbook only tracks O01–O20.
 
 
 | Item | Today | Proposal |
 |---|---|---|
-| Spec | `00_project/backlink-workflow-dach.md` exists only in worktree `great-easley-4f6970`. The installed skill reads it from `main`, so the path breaks on `main` | Bring the doc and `00_project/knowledge/link-library/` to `main` (needs go, other chat's files) |
+| Spec | Was only in worktree `great-easley-4f6970` | DONE 2026-10-13: doc and `00_project/knowledge/link-library/` copied to `main` (unchanged) |
 | Skill | installed, 47.8 % | Finish trigger tests and baseline; rescore to ≥ 80 % |
 | Run folder | Google Sheet only | `00_project/assets/<client>/backlink/<YYYY-MM-DD>/_run.json` with the sheet link in `result` and approved / live counts in `note` |
 | Chat | ⚖️ Stürzl — Backlink-Workflow | new ⚙️🔗 Backlink DACH workflow chat for the workflow itself; client runs stay in client chats |
@@ -89,7 +89,7 @@ Martin (2026-10-13): not sure the backlink skill is still needed. Decision is op
 
 ## 5. Gaps found while mapping
 
-1. Backlink doc and link library are not on `main` (see 4.2).
+1. ~~Backlink doc and link library are not on `main`~~ fixed 2026-10-13.
 2. Citations and backlinks write no `_run.json`, so the Excel cannot see their progress.
 3. Audit has no skill. Pool, Un-Burning, Maps playbook, tracking and automation are drafts. Only 6 workflows are installed.
 4. The 90-day program file is outside the repo (`~/Downloads/741-studio-portal-90-tage-programm.md`). The maps playbook spec says "file is missing".

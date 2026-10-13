@@ -14,7 +14,7 @@ Usage: python3 validate_brief.py --run <run dir> [--max 7]
 import argparse, datetime as dt, html, json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-REPO = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
+REPO = os.environ.get("MG_REPO", "/Users/martindrendel/741website")  # skill may live in ~/.claude/skills
 GOALS = os.path.join(REPO, "00_project", "morning-grill-goals.json")
 STATE = os.path.join(REPO, "00_project", "assets", "morning-grill", "state", "cards.json")
 SECRET = re.compile(r"(eyJ[a-zA-Z0-9_-]{20,}|sk-[A-Za-z0-9]{20,}|PASSWORD=|apikey[:=]\s*\S{20,})")
