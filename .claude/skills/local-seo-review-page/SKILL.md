@@ -1,64 +1,52 @@
 ---
 name: local-seo-review-page
 description: >
-  Build a prospect Local-SEO review/audit deliverable end-to-end — research → Local Falcon
-  Maps scan → Drive analysis sheet → personalised review landing page (German "du" style with
-  Maps-grid + Loom video) → deploy. Use for any new LOCAL business prospect (physical location /
-  Google Business Profile), e.g. a practice, Treuhand, clinic, salon. Trigger on "review page for
-  <name>", "audit page", "make the review page", or when Martin drops a LinkedIn/contact card of a
-  prospect. For ONLINE / no-GBP / English prospects use the organic variant at the bottom.
+  Build a 741 prospect review page (personal Google-visibility analysis at 741.studio/review/<slug>/)
+  with the installed workflow v2.1 (Martin, 2026-10-12): intake.py, parallel agents A-G, ONE Chrome
+  operator with a job queue, standing G1 scan go, draft_prospect.py skeleton, factcheck.py, build +
+  validate, deploy, Loom script, Loom transcript, WhatsApp message with the email ask. Use for every
+  LOCAL prospect (practice, firm, consultant with a Google entry), in every chat and in batches.
+  Trigger on "review page for <name>", "audit page", "make the review page", "Review-Page", a
+  LinkedIn/contact card or a prospect URL, a Loom URL for a review page ("video for X"), or
+  "LI Review-Pages Batch". For ONLINE / no-Google-entry / English prospects use the variant at the end.
 ---
 
-# Local-SEO Review Page — repeatable SOP
+# 741 Review Page: installed workflow v2.1 (standard since 2026-10-12)
 
-**This is a fast (~2–3 min once data is in hand), multiple-times-per-week process. Follow it in order; do not re-derive.** Two source memories back this: `local-seo-sheet-workflow` and `review-page-fast-workflow`.
+Martin (2026-10-12): "This is the workflow that needs to be the installed workflow." Every review-page request in any chat (also the LI Review-Pages batch) runs these steps. Reference run: Christian Rüther, `00_project/prospects/christian-ruether-v2/` (19 minutes, live at https://741.studio/review/christian-ruether-v2/).
 
-## Inputs (grab from the LinkedIn/contact card)
-Business name · contact **first name** (for "Hallo <Vorname>,") · city/region · website (or email domain) · LinkedIn URL. **Never** put personal data (mobile, birthday) on the page or in the sheet.
+Read first, every time: `00_project/prospect-mini-workflow.md` (sections 1, 1b, 1c, steps 0–13) and `00_project/prospect-mini/agent-briefs.md`. Working folder: `/Users/martindrendel/741website/00_project`. Prospect folder: `prospects/<slug>/`. Images: `../04_site/public/review-assets/<slug>/`.
 
-## Step 1 — Research & VERIFY (never let the generator invent metrics)
-- `searchForLocalFalconBusinessLocation {term, proximity:"<city>, <country>"}` → confirms the **GBP** and returns `place_id, lat, lng, rating, reviews, categories, phone, address`. **No GBP found → switch to the organic variant (bottom).**
-- Verify the site with one curl (try http AND https — old sites often fail SSL):
-  ```bash
-  html=$(curl -sSL <url>); \
-  printf '%s' "$html" | grep -oiE "<title>[^<]*</title>"; \
-  printf '%s' "$html" | grep -oiE '<meta[^>]+name="description"[^>]*>'; \
-  echo "H1:$(printf '%s' "$html"|grep -ociE '<h1') schema:$(printf '%s' "$html"|grep -ociE 'ld\+json') viewport:$(printf '%s' "$html"|grep -ociE 'name=.viewport')"; \
-  printf '%s' "$html" | grep -oE "G-[A-Z0-9]{10}|GTM-[A-Z0-9]{6,}|UA-[0-9-]+"; \
-  printf '%s' "$html" | grep -oiE 'jimdo|wix|wordpress|squarespace|webflow|generator" content="[^"]*"'
-  ```
-  Check HTTPS validity (`curl -sSI https://…`), TTFB (`curl -w "%{time_starttransfer}"`), sitemap, favicon. Record **only verified** facts. Common real findings: no H1, no schema, dead UA / no GA4, no HTTPS, default favicon, old CMS (Jimdo `---.html` URLs = Jimdo).
-- `WebSearch "<name> <city>"` for competitors + context.
+## Run (orchestrator = this chat)
 
-## Step 2 — Local Falcon Maps scan (CONFIRM credits with Martin first)
-- Save the business: `saveLocalFalconBusinessLocationToAccount` (must be saved before a scan).
-- **Ask Martin to OK the scan + confirm the keyword** (e.g. "Treuhänder <Stadt>", "Steuerberater <Region>"). Then `runLocalFalconScan {placeId, keyword, lat, lng, gridSize:"9", radius:2, measurement:"km", platform:"google"}`. It returns "submitted" → **poll** `listLocalFalconScanReports {placeId}` (do NOT re-run — that burns credits).
-- `getLocalFalconReport {reportKey, fieldmask:"report_key,keyword,arp,atrp,solv,found_in,unique_competitors,image,heatmap,insights.solv_competitors.total,rankings.by_solv"}` → grab `arp/solv`, top competitors, and the grid **image**.
-- Download the grid image → convert to WebP → save at `04_site/public/review-assets/<slug>/scan.webp` for the page's `.maps-vs-section`.
+1. **Intake (30 s):** `python3 prospect-mini/scripts/intake.py "<name>" <website> [maps-link] --business "<name on Google>" --city <city> --linkedin <url>`. A Maps link with a place_id costs 0 credits; without it ONE place search runs (2 Local Falcon credits per hit). If an old page exists (gate G4), build a new slug with `--slug <slug>-v2` and keep the old page online.
+2. **Start O, A, B, C, D in ONE message** (agent briefs file). Only agent O uses Claude in Chrome (never the built-in browser); the others queue jobs in `browser-queue.jsonl`. A, B, D, O on the cheaper model. Every agent writes start and end time into `run-state.json`.
+3. **G1 standing go:** when D reports a Google entry, 0 usable scans and a keyword that passes the gap rule, tell D to run the scan (49 credits) at once. Ask Martin only when the rule does not pass.
+4. **Writer E** right after A, D and O (do not wait for B and C): `python3 prospect-mini/scripts/draft_prospect.py <slug>` builds the skeleton (all numbers, tables, calc on slider steps, sources); E replaces every TODO, adds the map texts when the Falcon report arrives.
+5. **Build + check:** `python3 prospect-mini/scripts/build_page.py prospects/<slug>` → `validate.py` (0 errors; it fails on TODO, jargon and a hero longer than 14/28/35 words) → `factcheck.py <slug>` (fix every WRONG and MISMATCH).
+6. **F (fresh fact check) and G (visual check) at the same time.** F checks only the list in `evidence/factcheck-auto.md` plus the map image. G: desktop headless 1500 px + 375 px mobile in Chrome. Fix, rebuild, validate.
+7. **Show Martin the page** in his Chrome (http://localhost:3000/review/<slug>/) and send a screenshot file. Never end a run without showing the page.
+8. **Deploy (G3):** `npm run build`, then `node 00_project/prospect-mini/scripts/upload_only.mjs review/<slug> review-assets/<slug>` (+ any new shared asset), then curl every URL (200 + size). Do not leave a link that Martin may already have sent in a 404 state.
+9. **Loom script:** write `prospects/<slug>/loom-script.md` from `prospect-mini/loom-video-leitfaden.md` (about 5 minutes, page order, 3 messages, what to show and say; at the end Martin, 10+ Jahre, 250+ Unternehmen, Gewinnspiel only for Heilberufler/Praxen, 741 Circle).
+10. **When Martin sends the Loom URL:** read the transcript (Loom share page → Transcript tab in Claude in Chrome), save `evidence/loom-transcript.md` with a check against the page, list every statement in the video that the page does not support, set `loom_url` (`https://www.loom.com/embed/<id>`), rebuild, validate, deploy, curl.
+11. **Message:** ready for WhatsApp, in the prospect's language and form of address, plain text, `https://` link to the page, no booking link, 1–2 real findings from both page and video. It always ends with the email ask: „Ich schicke dir die Analyse auch gern per E-Mail, dann hast du alles an einem Ort. Magst du mir deine E-Mail-Adresse geben? Das wäre super.“ Never frame it as a process (no „Das gehört bei uns zum Ablauf“, „Workflow“, „Prozess“).
+12. When Martin approves a page: `python3 workflow-registry/workflow_registry.py approve --client "<Name>" --workflow prospect`.
 
-## Step 3 — Drive analysis sheet (Chrome UI only — no Sheets API here)
-- Create prospect folder: `create_file {mimeType:'application/vnd.google-apps.folder', parentId:'1WS-FQ-W0D_CeYN0tpM2Va1Jl_U0ynoxi', title:'<Name>'}`.
-- Copy blanko master into it: `copy_file {fileId:'1WTsonTvVZKcnxCVgnGIMxrGG5QSPxC1Ra-WPq06Bk5M', parentId:<folder>, title:'Local SEO Analyse – <Name>'}`.
-- Open the copy at `#gid=1653072650` (Analyse tab) in claude-in-chrome (Martin = martin.stylectric@googlemail.com).
-- Layout: meta C4/E4,C5/E5,C6/E6 · §1 r10-16 · §2 GBP r20-39 · §3 Website/Technik r43-64 · §4 Citations r68-75 · §5 Keywords r79-84 · §6 Competitors r88-90 (+r91 Ads) · §7 Maßnahmen r95-100 (C=Priorität Hoch/Mittel/Niedrig). Status dropdown OK/Fehlt/Teilweise/n/a; **leave blank = "live prüfen"** (only verified findings get a status).
-- **Sheet-fill gotchas (deadly):** ① after opening, wait ≥5s, screenshot, click the "You're signed in as…" **OK** popup (it silently eats keystrokes), then type ONE cell + screenshot-verify before batching. ② Navigate with the **Name box** (click ~[50,127], type ref, Enter) — **never arrow keys** (they concatenate). ③ `Enter` moves down only AFTER a typed value; never Enter-skip a blank cell (Name-box-jump instead). ④ **No blank lines in a typed block** (`\n\n` is swallowed → whole column desyncs) — split into contiguous Name-box-anchored blocks. ⑤ Autocomplete extends a typed prefix that matches an existing column entry — type a distinct full string. ⑥ Leading `+` → `#ERROR!` formula (write phone as `0xx …`). ⑦ `Ø` / em-dash break; regular umlauts + en-dash `–` are fine.
+## Page standard (built into template.html, build_page.py, case-library.json)
 
-## Step 4 — Review page (the FAST part)
-- **ALWAYS `cp 04_site/review/claudia-hauser/index.html` as the base.** It is the canonical, mobile-perfect skeleton. **NEVER base it on `praxis-suriya`/`gusborn` (older — they lack the `.maps-vs-section`) and NEVER hand-roll the maps-vs section, the target grid, the scorecard, or the wording — copying a wrong base + inventing sections is exactly what makes it look off and burns Martin's time (learned the hard way 2026-07-30, Bechtel).**
-- claudia-hauser is **data-driven**: `window.PROSPECT_DATA = {…}` holds companyName, contactName, city, branch, loomUrl, loomDuration, mapsRankDesktop, focusKeyword, currentReviewsCount, currentRating, mobileSpeedScore, personalMessageGreeting, authorName, positives[], opportunities[], criticalIssues[], gbpAudit/websiteAudit/citationAudit [{title,status:good|warning|critical,desc}], competitors[{name,rank,reviews,category,advantage}], keywords[{keyword,region,volume,currentRank}], quickWins[{title,desc}], growthMetrics{currentRank,targetRank,callsIncrease,routesIncrease,leadsIncrease,trustLabel}, roadmap[{step,action,priority,effort}]. A render script `.map()`s these into element IDs. **To swap: read the file, replace the whole object (brace-count to `};\n  </script>`) via `json.dumps(dict, ensure_ascii=False, indent=2)`, then `json.loads`-validate.** (Barbara-Brunner lesson: never string-`.replace()` inside PROSPECT_DATA.)
-- Then fix the **hardcoded** bits (NOT in PROSPECT_DATA): the static H1 fallback ("Hallo <Vorname>,<br>wir haben…" — crawlers run no JS), hero subheadline city, the hero Maps-card `href` (query + query_place_id) & website-card `href`+badge, the `.maps-vs-section` (date, N Messpunkte, radius, keyword, left `<img src="/review-assets/<slug>/scan-grid.webp">` + caption "X von Y Punkten…", right target SVG, impact chips), the Loom `<iframe>`, and the 3 static `<p>` in `.letter-body`. Keep `{{> header_de}}/footer_de/consent}}`. German "du" throughout.
-- **Maps scan section is EXACTLY claudia's:** light `#f7f6f2` bg, LEFT card badge "● Heute – echter Scan" + the real scan WebP, RIGHT card badge "● Das Ziel – so kann es aussehen" + a numbered green target SVG whose grid density matches the scan (49→7×7, 81→9×9 — generate circles programmatically, colors #136c2e/#2e8b34/#4d9a3f/#7aa83f, center highlighted w/ lemon stroke, label "Ziel-Szenario (Simulation)"). Save the LF grid PNG→WebP as `review-assets/<slug>/scan-grid.webp`.
-- **Loom:** if Martin gave `…/share/<id>`, embed `https://www.loom.com/embed/<id>` in the video-responsive iframe. If not, placeholder + TODO — **never invent a video**.
-- **Client-proof wall (social proof — standard since 2026-07-30, Martin "very important, as proof"):** the claudia-hauser skeleton now carries a `<section class="section-proof">` right before the Final CTA — our real client roster as `.wc` cards (avatar/initials + green rank-change line "▲ Platz 17 → 4 · „keyword""), heading "Ist der Sprung in die Top 3 realistisch? Für diese Betriebe war er es." So `cp claudia-hauser` includes it automatically. CSS is **self-contained + scoped under `.section-proof`** (explicit hex, no dependency on page tokens) so it drops into any page. Cards are lifted verbatim from `pages/growth-plan-de.html`'s `<div class="wall">`; avatars live at `/review-assets/people/*.jpg`, proof screenshots at `/review-assets/proof/*.jpg` (already deployed). To retrofit pages: DE cards come from `pages/growth-plan-de.html`'s `<div class="wall">`; the **EN version is the one already on the Bali Google-Ads LPs** — `pages/bali-local-seo.html` `<div class="wall">` (heading "The businesses we have worked with", "▲ Rank 17 → 2 · …"). Injection scripts: `/tmp/build_proof.py` (DE) and `/tmp/build_proof_en.py` (EN, extracts the Bali wall) — both inject CSS before `</style>` + section before the Final-CTA/footer marker. English review pages (e.g. house-of-eluma) get the EN wall; German pages the DE wall.
-- **OG tags** in `<head>` (og:type/title/description/url + twitter:card; og:image = the scan WebP).
-- **Verify at 375px before deploy (hard rule):** `document.documentElement.scrollWidth === innerWidth` (no h-overflow), headline visibly bigger than subheadline, navbar not overlapping hero.
+- Hero: H1 max 40 px, subline and paragraph 17 px, button in the first screen at 1440×757, Loom video in the hero.
+- Map scan today vs. goal, then "Ist der Sprung realistisch?": case cards with the real "Nachher" map on hover, Vorher/Nachher images in the open cases, the block "Wer dahintersteht" (Martin, 10+ Jahre, 250+ Unternehmen).
+- Three levers (search topics, Google entry, homepage today vs. draft), calculator, website check, quick wins, 8-week plan.
+- "Deine Ausgangslage auf einen Blick", then the workflow video "Was Agenturen verstecken" (YouTube dQ9OE8GSolw), then the final CTA.
+- Plain language for non-technical owners, "du", every number from `evidence/`, no healing or result promises, no method sources.
 
-## Step 5 — Deploy & verify
-`npm run build` then `npm run deploy` (incremental FTP). Confirm live: `curl -sSL https://741.studio/review/<slug>/ | grep -E "<h1|<title>|og:url"` → 1 H1 with the real first name, correct title/OG.
+## Batch (several prospects)
 
-## Step 6 — (optional) Mail
-Send the prospect their page link (Ich-form, Martin's voice) or notify `mdrendel@icloud.com` per the run's instruction.
+Run intake.py for all prospects first, then one operator, one demand agent and one scan agent serve all of them (workflow section 4 and proposal 31). Each prospect gets its own folder, queue file and run-state.
 
----
 ## VARIANT — online / no-GBP / English prospect (e.g. House of Eluma)
 `searchForLocalFalconBusinessLocation` returns nothing for them → pivot to an **English organic/website audit**: in the SHEET mark §2 GBP + §4 local-citation rows `n/a`; core = §3 Website/Technik + §5 keywords + §6 ORGANIC competitors. On the PAGE `cp praxis-suriya`, swap `{{> header_de}}`→`{{> header}}` & `footer_de`→`footer`, English "Hi <Name>," style, **drop the Maps-scan** (there is none), reframe the 4 audit tabs to Website·On-Page·Analytics·Authority. Example: `04_site/review/house-of-eluma/`.
+
+## Martin guide (2026-10-12)
+
+The 741 character Martin points out the one thing per section the reader must not miss. Rules, poses, markup and the inline helper: `00_project/assets/brand/martin-guide/README.md`. In this workflow: hello in the hero, point at the grid scan result, insight at the biggest lever, think at open data, celebrate at proof. Use the hosted files `/review-assets/martin-guide/` (CSS, JS, poses). Max 1 callout per section, bubble text in first person and plain language, every number with source and date, check desktop and mobile with a screenshot.

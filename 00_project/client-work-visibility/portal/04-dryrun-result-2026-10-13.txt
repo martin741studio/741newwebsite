@@ -1,0 +1,28 @@
+Dry run 2026-10-13: 01-migration.sql + 02-seed.sql + 03-tests.sql in ONE transaction, aborted at the end (rollback).
+22/22 OK. Version before the "since" column and the red calibration. Both changes come after this run and are tested again after the apply.
+
+1 OK seed: actors :: 21
+2 OK seed: phases (7 per client) :: 63
+3 OK seed: grill tasks :: 23
+4 OK seed: client todos from access :: 12
+5 OK seed: intake from report feedback :: 29 | 45 | 12 | 10 | 2 change requests
+6 OK seed: no agent-done item is done :: 0
+7 OK history: created events :: 41
+8 OK R1 agent cannot be accountable
+9 OK waiting needs waiting_on
+10 OK R2 done needs verified_by
+11 OK R2 agent cannot verify
+12 OK R2 done needs proof
+13 OK R2 done with proof + person works :: done completed
+14 OK R2 insert as done without proof (deferred check)
+15 OK history: status event written
+16 OK R3 repeated producer write = no duplicate
+17 OK R5 health bands (before calibration: only Bali red, Suriya yellow, rest green, because all ages were "today")
+18 OK R5 Bali red (blocker): NIB-PDF upload, ads paused since 01.10.
+19 OK RLS client sees no work items (step 1)
+20 OK RLS client sees no health data
+21 OK RLS admin sees all items :: 41
+22 OK R4 history append-only (admin) :: 0 upd / 0 del
+
+Expected bands after "since" + calibration (from live data 13.10.):
+Bali red (blocker) · Johni, Brasse, Dumann, Hüwel, Suriya, Stürzl yellow (old open access, max 62 days) · Rabenmütter yellow (change requests unsorted for 44 days) · Kamil green.

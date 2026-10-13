@@ -64,3 +64,11 @@ Library: `00_project/knowledge/client-work-library/INDEX.md`. Rule numbers below
   - **Kundenansicht (Coralie):** 4 blocks, results with proof, max. 2 Martin figures (hello, point). Slop check 5/5.
 - Tested in Chrome at 1440 px and 390 px (no horizontal scroll). Rules tested: "done" without proof is blocked, and the team cannot report done without a link.
 - Screenshots: `prototype/screenshots/` (8).
+
+## Design check (Martin, 2026-10-13)
+| Topic | Decision |
+| --- | --- |
+| Design | **Go.** Next: migration (dry run with rollback, then Martin's go), admin views "Heute" and the client page in the portal admin area on staging. The Morning Grill writes its tasks into the new model. |
+| Team logins | Later, with step 2 (team). Until then, team tasks go out as a WhatsApp line. |
+| Client colour | **Fully automatic** from signals. No manual confirmation. The rule set must be fixed and visible: each colour shows its reason. |
+| Client-view pilot | **Bali Healing** (English client, `lang = en`). So the client view must also exist in English. |
