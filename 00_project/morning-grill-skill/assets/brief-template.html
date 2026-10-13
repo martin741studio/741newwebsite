@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Brief {{DATE}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f5f2;--panel:#fff;--ink:#16161a;--mute:#6b6b74;--line:#e4e2dc;--accent:#ff5a1f;--ok:#1f8a4c;--bad:#c2410c;--p1:#c2410c;--p2:#b45309;--p3:#a16207;--p4:#2563eb;--p5:#6b7280;--rec:#fff2eb}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111114;--panel:#1b1b20;--ink:#f1f0ec;--mute:#a0a0aa;--line:#2c2c33;--rec:#2a1b14}}
+:root[data-theme="dark"]{--bg:#111114;--panel:#1b1b20;--ink:#f1f0ec;--mute:#a0a0aa;--line:#2c2c33;--rec:#2a1b14}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Plus Jakarta Sans",system-ui,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 64px}
+.top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;border-bottom:2px solid var(--ink);padding-bottom:12px}
+.top h1{margin:0;font-size:28px;font-weight:800;letter-spacing:-.02em}
+.top .meta{color:var(--mute);font-size:13px}
+.srcs{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 4px}
+.src{font-size:11px;padding:2px 8px;border-radius:99px;border:1px solid var(--line);background:var(--panel)}
+.src.ok::before{content:"● ";color:var(--ok)}.src.bad::before{content:"● ";color:var(--bad)}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);margin:28px 0 10px}
+h2 b{color:var(--accent)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--p5);border-radius:10px;padding:14px 16px}
+.card.p1{border-left-color:var(--p1)}.card.p2{border-left-color:var(--p2)}.card.p3{border-left-color:var(--p3)}.card.p4{border-left-color:var(--p4)}
+.card header{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:12px;color:var(--mute)}
+.card .num{background:var(--ink);color:var(--panel);font-weight:800;border-radius:6px;padding:0 7px}
+.card .cl{font-weight:700;color:var(--ink)}.card .due{margin-left:auto}
+.card h3{font-size:16px;line-height:1.35;margin:8px 0}
+.opts{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.opt{padding:6px 8px;border-radius:6px;border:1px solid var(--line);font-size:14px}
+.opt.rec{background:var(--rec);border-color:var(--accent)}
+.tag{font-size:11px;color:var(--accent);font-weight:700}
+.why{font-size:13px;color:var(--mute);margin:8px 0 4px}
+details{font-size:12px;color:var(--mute)} .ev{margin:4px 0 0;padding-left:18px;word-break:break-word}
+.list{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 16px 10px 32px;margin:0}
+.list li{margin:3px 0}.due{color:var(--mute);font-size:12px}
+section.client{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+section.client header{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+section.client h3{margin:0;font-size:17px}
+.chip{font-size:11px;border:1px solid var(--line);border-radius:99px;padding:1px 8px;color:var(--mute)}
+.chip.st-restart{border-color:var(--p2);color:var(--p2)}
+.goal{font-size:13px;margin:6px 0 8px}
+.cols{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.col h4{margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.col.t h4{color:var(--accent)}.col.f h4{color:var(--ok)}.col.w h4{color:var(--p2)}.col.n h4{color:var(--p4)}
+.col ul{margin:0;padding-left:16px;font-size:13px}.col li{margin:2px 0}
+.none,.more{color:var(--mute);font-size:12px}
+.warn{border-left:5px solid var(--bad)}
+.walk{list-style:none;padding-left:16px}.walk input{accent-color:var(--accent)}
+@media (max-width:820px){.cols{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.cols{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.top h1{font-size:22px}}
+</style>
+</head>
+<body><div class="wrap">
+<div class="top"><h1>Morning Brief · {{DATE}}</h1><span class="meta">WITA · scan since {{BOOKMARK}} · read {{READ_AT}} · {{GOAL_GAPS}} goal fields not confirmed</span></div>
+<div class="srcs">{{SOURCES}}</div>
+<h2>Your decisions <b>{{N_CARDS}}</b></h2>
+<div class="cards">{{CARDS}}</div>
+<h2>Walk queue <b>{{N_WALK}}</b> — only you can click these, each 1–5 minutes</h2>
+<ul class="list walk">{{WALK}}</ul>
+<h2>741</h2>
+<ul class="list">{{L741}}</ul>
+<h2>Below the line ({{N_BELOW}}) — next grill or Monday review</h2>
+<ul class="list">{{BELOW}}</ul>
+<h2>Clients</h2>
+{{CLIENTS}}
+<h2>Unreadable sources</h2>
+<ul class="list warn">{{UNREADABLE}}</ul>
+</div></body></html>
