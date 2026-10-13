@@ -1,15 +1,15 @@
 # Carry-over for the next grill (written 2026-10-13)
 
 Walk queue (start dates, D23, one item per client):
-- [ ] Praxis Suriya: which start date counts, 14.08. (memory) or 03.09. (portal)? Program end 01.12. depends on it.
-- [ ] Praxis Hüwel: paid 16.08., portal start 25.08. Which counts?
+- [x] Praxis Suriya: start = 03.09. (portal). DECIDED by Martin several times, last 13.10. 14:45. Goal sheet + memory fixed; never ask again.
+- [x] Praxis Hüwel: start = 25.08. (portal). The '16.08.' was the Only Inside CMS invoice to Hüwel, not a 741 date: false conflict, fixed 13.10. 14:50.
 - [ ] STÜRZL: no start date. Start = rate-1 payment; has it been paid?
 
 Cards from the dry run 2026-10-13 that were not answered (re-check facts before showing them):
 - see 00_project/assets/morning-grill/2026-10-13-dryrun/brief.md (7 cards, 4 walk items, 11 below the line)
 
 Added 2026-10-13 after the first real grill:
-- [ ] Card for next grill: Suriya listing emails (00_project/assets/morning-grill/2026-10-13/suriya-listing-emails.md): 28 emails from 13 senders, most from 26.08.; 31 citations are already live. Check which senders are NOT live in client_citations, then mark the rest handled (needs a go: write to listing_emails).
+- [x] (13.10. 14:45: Martin chose 'agent only lists them' — no portal write; per-sender decision later) Card for next grill: Suriya listing emails (00_project/assets/morning-grill/2026-10-13/suriya-listing-emails.md): 28 emails from 13 senders, most from 26.08.; 31 citations are already live. Check which senders are NOT live in client_citations, then mark the rest handled (needs a go: write to listing_emails).
 - [ ] Check: portal reply drafts (session ✉️ Portal-Antworten 13.10.) sent by Martin?
 - [ ] Check: Bali Ads verification result + status reply sent?
 - [ ] Portal write order (Martin 13.10.): Freigabe-Dashboard → outreach numbers per client → Command Center on staging. One writer at a time. Before starting the Command Center build: check that both earlier chats say their portal work is done.
@@ -23,3 +23,4 @@ Added 2026-10-13 after the first real grill:
 - [ ] Tasks (D34): 23 tasks of 13.10. in 00_project/assets/morning-grill/2026-10-13/tasks.json. Tomorrow: carry the open ones over, update statuses, add new ones from today's answers. Team drafts: Dinakar (Suriya speed, waits for the WordPress role), Gayo (Bali CRM clean-up) in team-tasks-drafts.md; Martin forwards the WhatsApp lines.
 - [ ] Waiting for the Freigabe chat's task-model schema (D35). Do not create task tables. When it arrives: map tasks.json fields to it, switch publish + Tasks tab, ask Martin for GO-DB at that time.
 - [ ] Task writes in the scheduled runs are NOT approved (Martin dismissed the card 13.10.). Until he says go, run publish_tasks.py only inside the chat grill. Tasks tab reads work_items; check it shows the new date after a grill.
+- [ ] Taxi Nürnberg (Daniel, 13.10.): Akeeba download key missing + 900 spam mails. Findings in 00_project/assets/morning-grill/2026-10-13/taxi-akeeba-findings.md. Needs Martin: Akeeba account check + key in Joomla (own login), sample spam mails from Daniel, go for captcha changes.
