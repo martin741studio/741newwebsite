@@ -96,9 +96,17 @@ def main():
     led_by_id = {c["id"]: c for c in ledger.get("cards", [])}
     TYPE = {1: "Fire", 2: "Money / contract", 3: "Client deadline", 4: "Approval", 5: "Goal gap", 6: "Pipeline", 7: "741"}
     cards_html, n_open = [], 0
+    snap = {"date": b["date"], "read_at": b["read_at"], "bookmark": b.get("bookmark"), "cards": [], "clients": []}
     for n, c in enumerate(b["cards"], 1):
         lc = led_by_id.get(c["id"])
         done = bool(lc and lc.get("status") in ("decided", "parked"))
+        snap["cards"].append({"id": c["id"], "n": n, "client": c["client"], "priority": c["priority"], "type": TYPE.get(c["priority"], ""),
+                              "headline": c["headline"], "why": c.get("why"), "options": c["options"], "recommended": c.get("recommended"),
+                              "then": c.get("then") if isinstance(c.get("then"), dict) else {}, "evidence": c.get("evidence", []),
+                              "deadline": c.get("deadline"),
+                              "status": (lc or {}).get("status", "open") if done else "open",
+                              "answer": (lc or {}).get("answer") if done else None,
+                              "answer_text": ((lc or {}).get("park_reason") or (lc or {}).get("answer_text")) if done else None})
         n_open += 0 if done else 1
         tags = ["decided" if done else "open", f"p{c['priority']}", "741" if c["client"].startswith("741") else "client"]
         vars_h = ""
@@ -127,6 +135,15 @@ def main():
     agent_h = "".join(f"<li>{e(x)}</li>" for x in plan.get("Agent starts", [])) or "<li>nothing started</li>"
     wait_h = "".join(f"<li>{e(x)}</li>" for x in plan.get("Waiting for", [])) or "<li>nothing</li>"
     l741_h = "".join(f"<li>{e(x)}</li>" for x in b.get("line_741", [])) or "<li>nothing</li>"
+
+    import hashlib
+    snap["walk"] = [{"id": "walk-" + hashlib.md5(x[4:].encode()).hexdigest()[:8], "text": x[4:], "done": False} for x in walk_open]
+    snap["later"] = [{"client": c["client"], "headline": c["headline"]} for c in b.get("below_the_line", [])]
+    snap["agents"] = list(plan.get("Agent starts", []))
+    snap["waiting"] = list(plan.get("Waiting for", []))
+    snap["line_741"] = list(b.get("line_741", []))
+    snap["sources"] = [{"id": k, "status": v["status"], "error": v.get("error")} for k, v in b["sources"].items()]
+    snap["tiles"] = [{"value": v, "label": l} for v, l in tiles]
 
     # ---- clients
     order = sorted(goals["clients"], key=lambda c: (c.get("status") == "done", -(len(walk_by.get(c["client"], [])) + len(by_client_dec.get(c["client"], [])) * 2 + len(later_by.get(c["client"], [])))))
@@ -174,6 +191,17 @@ def main():
         nxt = [*(bc["next"] or []), *(bc["today"][:3] or [])]
         next_h = "".join(f'<li><span class="ic">➜</span><span>{e(x)}</span></li>' for x in nxt[:6]) or "<li>no next step set → define card</li>"
         moved_h = "".join(f'<li class="moved"><span class="ic">✓</span><span>{e(x)}</span></li>' for x in bc["fixed"][:4]) or "<li>nothing since the last grill</li>"
+        road = []
+        for i, (pid, plabel, wfs) in enumerate(PHASES):
+            items = [{"label": WF_LABEL[w], "cls": wf[(name, w)]["cls"], "title": f'{wf[(name, w)]["label"]} · {wf[(name, w)]["date"]}'} for w in wfs if (name, w) in wf]
+            if pid == "P1" and su.get("ob_gesamt"):
+                items.insert(0, {"label": f'Onboarding {su.get("ob_fertig")}/{su.get("ob_gesamt")}', "cls": "done" if su.get("ob_fertig") == su.get("ob_gesamt") else "run", "title": "portal onboarding"})
+            road.append({"id": pid, "label": plabel, "state": "past" if i < cur else ("now" if i == cur else "next"), "wfs": items})
+        snap["clients"].append({"name": name, "anchor": anchor, "status": g.get("status"), "phase": g.get("phase"), "phase_label": PHASES[cur][1],
+                                "goal": g.get("quarter_goal"), "week": week, "ob_done": su.get("ob_fertig"), "ob_total": su.get("ob_gesamt"),
+                                "roadmap": road, "open": [{"kind": k, "text": t} for k, t in openl[:12]], "next": nxt[:6], "moved": bc["fixed"][:4],
+                                "numbers": [{"metric": n_["metric"], "baseline": n_.get("baseline"), "target": n_.get("target"), "due": n_.get("due"), "status": n_.get("status")} for n_ in g.get("goal_numbers", [])],
+                                "milestone": g.get("next_milestone")})
         cards_h.append(f'''<section class="cl" id="{anchor}"><div class="clh"><h2>{e(name)}</h2><span class="pill {e(g.get("status"))}">{e(g.get("status"))}</span>
 <span class="pill">{e(g.get("phase"))} · {e(PHASES[cur][1])}</span></div>
 <p class="goal"><b>Goal:</b> {e(g.get("quarter_goal") or "missing")}</p>{wk}
@@ -189,6 +217,7 @@ def main():
     dst = os.path.join(MG, "command-center.html")
     open(dst, "w", encoding="utf-8").write(out)
     shutil.copy(dst, os.path.join(a.run, "command-center.html"))
+    json.dump(snap, open(os.path.join(a.run, "snapshot.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"command-center.html · {len(cards_h)} clients · {len(decided)} decisions today · {len(walk_open)} walk items open")
 
 

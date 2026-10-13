@@ -223,9 +223,7 @@ def main():
                                   "A legal or account deadline must never stay silent; if it is resolved, the note stops the card.",
                                   scan["date"], {"a": "plan item", "b": "memory edit (done note with date)", "c": "park reason"}))
                 cards[-1]["stable_key"] = key
-            else:
-                (lines[h["client"]]["watch"].append(f"Date in memory {h['date']}: {h['text'][:120]}")
-                 if h.get("client") in lines else None)
+            # non-urgent date hits are noise (file dates, baselines): kept in scan.json only
 
     # --- judgment cards from the agent (chat summaries, grill answers)
     jp = os.path.join(a.run, "judgment-cards.json")

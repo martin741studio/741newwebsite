@@ -53,6 +53,7 @@ Done for one day means all of these are true:
 | D27 | Command Center page | One page `00_project/assets/morning-grill/command-center.html`, rebuilt after every scan, grill answer and evening log. Tabs: Decisions (cards in the client-approval style, 741 recommends, click → answer line), Clients (goal, program week, roadmap P0–P6 with registry workflow status, open now, next steps, goal numbers), Agents & waiting. Martin 2026-10-13: "I have no idea where we are" from chat alone. |
 | D28 | Command Center home | Portal admin view on staging (answers saved in Supabase). Portal write order (Martin 13.10.): Freigabe-Dashboard → outreach numbers per client → Command Center. The local page stays in use until then. |
 | D29 | Admin panel build | Command Center as an admin-only tab on clients.741.studio, data from an admin-only Supabase snapshot table, clicks saved to `grill_answers`. Plan: `00_project/morning-grill-portal-plan.md` (not built). |
+| D30 | Admin tab on staging | Built and tested 13.10. (tables, RLS, tab, answer pull). Live upload and the snapshot write in the scheduled runs wait for separate gos. Log: `morning-grill-portal-plan.md` §8. |
 | D18 | Leads | In the daily 741 line. A lead gets a card only when a follow-up is due or older than 7 days. |
 
 ## 2. Daily rhythm

@@ -77,7 +77,7 @@ Goal: Restart: 3 missing access done, overdue list cleared or re-planned, then t
 Goal: Top 3 in the Maps grid for the 5 tracked keywords (Martin 2026-10-13)
 - **Today:** Program task (week 6): 30-Tage-Zwischenmessung + Vorher/Nachher-Grid an Kunden; Open from chat: WP application password for novamira-suriya-praxis-de returns 401 after user re-created [fe3ee21a]; Open from chat: Redirect points 2 and 6 of the content-pool plan need Coralie's OK [fe3ee21a]; Open from chat: Priority work: load time and accessibility, with backup first, no image or URL changes [1aeb441f]
 - **Fixed:** Reply draft to Coralie (access return, load time, accessibility); not sent [b88add01]; Content-pool changes prepared in 07-umsetzung-2026-10-13.md, commit 46530fb; nothing live [fe3ee21a]; QR review card finished (A6 PDF, 4-up A4, PNG) [fe3ee21a]; Lockout case closed as approved: dossier, _run.json, Excel, memory updated; nothing sent [1aeb441f]; Run tracking: Trockenlauf (2026-10-12); Run lockout: freigegeben (2026-10-13); Night-shift draft ready: GBP Öffnungszeiten (not approved); Night-shift draft ready: NAP / Domains (not approved); Night-shift draft ready: GBP Beschreibung (not approved); Coralie agreed to continue after the PDF overview (13.10.)
-- **Watch:** Portal: 1 unread messages, 1 help requests; Access missing: Google Tag Manager; 5 overdue portal tasks; Last portal activity 2026-09-21 (portal only; chat work does not show); Waiting for your approval: pool result from 2026-10-11; Citations: 31 live, 0 submitted, 25 planned; Waiting for client: GSC access back since 2026-10-12; Date in memory 2026-09-27: Baseline-Dateien: `00_project/assets/suriya/baseline/2026-09-30-gsc-baseline.md` und `.json` (Search Console, Property h; Waiting for client: WordPress access back (she re-created Martin's user); Waiting for client: OK for the two redirects (points 2 and 6); Waiting for martin: Go to add reporting-bot in Search Console
+- **Watch:** Portal: 1 unread messages, 1 help requests; Access missing: Google Tag Manager; 5 overdue portal tasks; Last portal activity 2026-09-21 (portal only; chat work does not show); Waiting for your approval: pool result from 2026-10-11; Citations: 31 live, 0 submitted, 25 planned; Waiting for client: GSC access back since 2026-10-12; Waiting for client: WordPress access back (she re-created Martin's user); Waiting for client: OK for the two redirects (points 2 and 6); Waiting for martin: Go to add reporting-bot in Search Console
 - **Next:** First Falcon scan after cycle reset ~19.10.; Next workflow: tracking (first scan), phone
 
 ## STÜRZL Steuerstrafrecht (active, P1)
@@ -101,19 +101,19 @@ Goal: First measurable patient leads from Maps and the website (Martin 2026-10-1
 - **Watch:** Portal: 0 unread messages, 1 help requests; Access missing: Google Tag Manager; 2 overdue portal tasks; Last portal activity 2026-10-09 (portal only; chat work does not show); Waiting for your approval: pool result from 2026-10-11; Citations: 38 live, 0 submitted, 29 planned
 - **Next:** GBP round 2 (FAQ, review replies, ~19 services); Next workflow: phone, citations
 
-## Maria Brasse (active, P4)
-Goal: Top 3 in Maps for Feng Shui Berlin keywords and more requests than the 30.09. baseline (Martin 2026-10-13)
-- **Today:** Program task (week 5): Gastartikel 1 platziert
-- **Fixed:** nothing
-- **Watch:** Portal: 0 unread messages, 1 help requests; Access missing: Google Tag Manager; 15 overdue portal tasks; Last portal activity 2026-10-07 (portal only; chat work does not show); Citations: 1 live, 25 submitted, 31 planned; Date in memory 2026-09-22: Maria-Feedback bis 22.09. war bereits in den Texten.
-- **Next:** Next workflow: citations live checks
-
 ## Bali Healing (active, P1)
 Goal: Onboarding 6/6 and Google Ads live within 2 weeks, then bookings from Ads and Maps (Martin 2026-10-13)
 - **Today:** Program task (week 5): Hub page + first 4-6 spoke pages (prioritised by booking value); Program task (week 5): Guest article 1 placed; Open from chat: Fill the brackets for messages sent and connections accepted in points 1 and 4 [e9c4af07]
 - **Fixed:** Drafted status message to Pintor and Pasha (8 points), lint 5/5; two [X]/[Y] brackets still open [e9c4af07]; Point 1 explains LinkedIn outreach is manual: 40-50 messages/day, 3 partners in conversation in Ubud [e9c4af07]; Added note: new content pool and AI-database website process, to discuss [e9c4af07]
 - **Watch:** 24 overdue portal tasks; Onboarding 1/6, next: Grant access; Last portal activity 2026-08-19 (portal only; chat work does not show); Waiting for your approval: audit result from 2026-10-11; Decided: Still open: agent prepares next step today (read-only Ads check + document list); Waiting for martin: Real counts for [X] and [Y], then send
 - **Next:** Next workflow: audit follow-up, pool
+
+## Maria Brasse (active, P4)
+Goal: Top 3 in Maps for Feng Shui Berlin keywords and more requests than the 30.09. baseline (Martin 2026-10-13)
+- **Today:** Program task (week 5): Gastartikel 1 platziert
+- **Fixed:** nothing
+- **Watch:** Portal: 0 unread messages, 1 help requests; Access missing: Google Tag Manager; 15 overdue portal tasks; Last portal activity 2026-10-07 (portal only; chat work does not show); Citations: 1 live, 25 submitted, 31 planned
+- **Next:** Next workflow: citations live checks
 
 ## Rabenmütter (active, P4)
 Goal: The 'Baseline -> Ziel' values of the Rabenmütter report page (Martin 2026-10-13); agent copies them here, Martin confirms

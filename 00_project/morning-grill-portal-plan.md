@@ -1,6 +1,6 @@
 # Morning Grill → Command Center in the admin panel (plan, not built)
 
-Version 0.1 · 2026-10-13 · Decision D29 (Martin): "Admin tab + admin-only table". Status: PLAN. No table created, no portal change.
+Version 0.2 · 2026-10-13 · Decision D29 (Martin): "Admin tab + admin-only table". Status: BUILT ON STAGING and tested; live upload waits for Martin's go.
 Order of portal writers (D28): Freigabe-Dashboard → outreach numbers per client → this build. Start only when both earlier chats report their portal work is done.
 
 ## 1. Goal
@@ -60,3 +60,16 @@ A park answer without a note is rejected in the tab (park needs a reason, R12).
 
 ## 7. Gos needed (asked as cards when the build starts)
 GO-DB (two tables + RLS) · GO-PORTAL staging · GO-PORTAL live · go to add the snapshot write to the scheduled runs.
+
+## 8. Build log 2026-10-13
+- GO-DB (Martin): migration `grill_snapshots_and_answers` applied. Tables `grill_snapshots`, `grill_answers`, RLS admin-only, park needs a reason (check constraint).
+- RLS test: admin read+write OK; client sees 0 rows (even when a row exists); client insert refused; delivery sees 0; park with blank reason refused. Test rows rolled back, 0 rows left.
+- GO-PORTAL staging (Martin): patched `clients.741.studio/staging/index.html` with `00_project/morning-grill-portal/patch_portal.py` (anchor-based, idempotent, never touches the Freigabe block). Backup: `clients.741.studio/backup/staging-2026-10-13-before-command-center.html`. Live unchanged (380,700 bytes).
+- Tab test as admin (Martin's Chrome, 1440 px): button '→ Command Center' visible, snapshot rendered, cards from the database, client roadmaps. 390 px: measured in a 390 px frame, no overflow, 1-column options and open items.
+- Write path test: one answer saved as Martin's user, `pull_answers.py` brought it into the ledger, test row deleted, ledger restored.
+- Scripts: `scripts/sb.py`, `publish_snapshot.py` (one insert into grill_snapshots), `pull_answers.py` (reads grill_answers). Snapshot ids 4 and 5 are real snapshots of 13.10.
+- Found while testing: Chrome was logged in as the client account 'Coralie Suriyapperuma' on staging (left by another chat's test). Martin switched to admin.
+
+## 9. Still needs Martin's go
+1. Live upload of the tab (same patch on a fresh pull of live; backup first).
+2. Add `publish_snapshot.py` and `pull_answers.py` to the 06:13 / 17:00 runs (the only write the scheduled runs may do).
