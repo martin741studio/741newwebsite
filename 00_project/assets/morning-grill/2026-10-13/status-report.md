@@ -1,11 +1,11 @@
-**Status since the last grill** (2026-10-13, WITA). 11 clients with movement or blockers, 0 quiet.
+**Status since the last grill** (2026-10-13, WITA). 12 clients with movement or blockers, 0 quiet.
 Unreadable sources: S8_tracking. Facts from them are missing below.
 
 **Praxis Suriya** (P4, active) — goal: Top 3 in the Maps grid for the 5 tracked keywords (Martin 2026-10-13)
 • Moved: Reply draft to Coralie (access return, load time, accessibility); not sent [b88add01]; Content-pool changes prepared in 07-umsetzung-2026-10-13.md, commit 46530fb; nothing live [fe3ee21a]
 • Runs / next today: Program task (week 6): 30-Tage-Zwischenmessung + Vorher/Nachher-Grid an Kunden; Open from chat: WP application password for novamira-suriya-praxis-de returns 401 after user re-created [fe3ee21a]
 • Stuck: Portal: 1 unread messages, 1 help requests; Access missing: Google Tag Manager
-• Your part: card 2, 5, 2 walk item(s), 1 item(s) on the later list
+• Your part: card 2, 5, 1 walk item(s), 1 item(s) on the later list
 
 **Bali Healing** (P1, active) — goal: Onboarding 6/6 and Google Ads live within 2 weeks, then bookings from Ads and Maps (Marti…
 • Moved: Drafted status message to Pintor and Pasha (8 points), lint 5/5; two [X]/[Y] brackets still open [e9c4af07]; Point 1 explains LinkedIn outreach is manual: 40-50 messages/day, 3 partners in conversation in Ubud [e9c4af07]
@@ -40,7 +40,7 @@ Unreadable sources: S8_tracking. Facts from them are missing below.
 • Moved: Google 'Alternate page with proper canonical' fixed: 172 internal links in 28 pages now point to / [e8aede79]; 4 old redirect pages now point to /; new check rule in scripts/check_repo.py [e8aede79]
 • Runs / next today: Program task (week 8): GBP-Engagement-Takt (Fotos, Angebote, Q&A); Program task (week 8): PR-Pipeline weiterführen
 • Stuck: Portal: 0 unread messages, 1 help requests; Access missing: Google Tag Manager
-• Your part: 2 walk item(s)
+• Your part: 1 walk item(s)
 
 **Maria Brasse** (P4, active) — goal: Top 3 in Maps for Feng Shui Berlin keywords and more requests than the 30.09. baseline (M…
 • Runs / next today: Program task (week 5): Gastartikel 1 platziert
@@ -57,6 +57,9 @@ Unreadable sources: S8_tracking. Facts from them are missing below.
 • Stuck: Waiting for client: Price clarification: 39 EUR vs $44 for Talk to ME; Waiting for martin: Checkpoint 2 go on the five prototypes
 • Your part: 1 item(s) on the later list
 
+**Taxi-Zentrale Nürnberg** (P4, active) — goal: no quarter goal yet
+• Stuck: Waiting for martin: log in to Joomla + paste the key; sample spam mails from Daniel since 2026-10-13
+
 
 **741**
 • Calendar: Jour Fixe Martin with Werbeagentur Bamberger (dl@, bb@) at 2026-10-14 16:00 WITA (needsAction (not accepted yet))
@@ -65,4 +68,4 @@ Unreadable sources: S8_tracking. Facts from them are missing below.
 • Lead follow-up: Eri Trostl (overdue (> 7 days))
 • Agency cards: 1
 
-Next: 8 walk items (1–5 min clicks), then 7 decision cards.
+Next: 6 walk items (1–5 min clicks), then 7 decision cards.

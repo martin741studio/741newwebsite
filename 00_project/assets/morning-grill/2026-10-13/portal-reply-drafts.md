@@ -42,19 +42,19 @@ Falls du Fragen hast oder den Messcode lieber nicht möchtest: Schreib mir kurz.
 
 **Fakten:**
 • Memory `huewel-client`: GTM hatte er nie, 741 richtet ihn ein. GA4 und Search Console sind erteilt.
-• Prüfung der Live-Seite `https://www.praxis-huewel.de/` am 13.10.: kein GTM- und kein gtag-Code im HTML der Startseite. Der Container ist also noch nicht angelegt oder nicht eingebaut. Der Entwurf behauptet deshalb nichts Fertiges.
+• Aktualisiert am 13.10. (Nachmittag): GA4 `G-4FP95Y92XY` läuft jetzt über `assets/js/consent.js` auf der Live-Seite, mit Consent Mode (erst nach Zustimmung). Es gibt keinen Tag Manager. Der Entwurf sagt deshalb: nicht nötig, das Messen läuft direkt.
 
 **Entwurf:**
 
 ```text
 Hallo Martin,
 
-zum Google Tag Manager: Du musst dafür nichts tun. Du hast keinen, und das ist in Ordnung.
+zum Google Tag Manager: Du musst dafür nichts tun. Du hast keinen, und du brauchst auch keinen.
 
-Ich lege den Container selbst an. Ich baue ihn auf deiner neuen Website ein und gebe dir Bescheid, sobald er läuft.
+Das Messen läuft seit Kurzem direkt über Google Analytics auf deiner neuen Website. Es startet erst, wenn ein Besucher im Cookie-Banner zustimmt.
 ```
 
-**Hinweis für Martin:** Die neue Seite läuft seit 06.10. ohne Messcode (GA4 `G-1HNCRNLJD4` / `G-4FP95Y92XY` sind im Startseiten-HTML nicht zu finden). Das ist eine Lücke in der Messung seit dem Umzug. Das Einbauen ist eine Website-Änderung und braucht dein Go.
+**Hinweis für Martin:** Die frühere Messlücke ist geschlossen. GA4 läuft live über `consent.js`.
 
 ## 3. Naturheilpraxis Daniela Dumann
 

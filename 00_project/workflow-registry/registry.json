@@ -387,6 +387,20 @@
    "drive": "",
    "local": "",
    "note": "abgeschlossen laut Martin 13.10. (White-Label-Rebuild Denise)"
+  },
+  {
+   "name": "Claudia Maria Steifensand",
+   "type": "Lead",
+   "drive": "",
+   "local": "",
+   "note": "automatisch angelegt (Ordner 00_project/prospects/claudia-maria-steifensand/_run.json), bitte prüfen"
+  },
+  {
+   "name": "Taxi-Zentrale Nürnberg",
+   "type": "Kunde",
+   "drive": "",
+   "local": "",
+   "note": "Joomla-Site taxi-nuernberg.de, Preisrechner, Wartung über Werbeagentur Bamberger (Daniel Leibold). Chat: 👥🚕 Taxi Nürnberg — Zentrale Setup (Grill 13.10.)"
   }
  ],
  "runs": [
@@ -614,9 +628,9 @@
   {
    "client": "Bali Healing",
    "workflow": "pool",
-   "status": "fertig, Freigabe offen",
-   "approved": false,
-   "approved_date": "",
+   "status": "freigegeben",
+   "approved": true,
+   "approved_date": "2026-10-13",
    "mode": "Echt",
    "last_run": "2026-10-13",
    "drive": "",
@@ -970,7 +984,7 @@
    "drive": "",
    "local": "00_project/assets/morning-grill/2026-10-13",
    "result": "00_project/assets/morning-grill/2026-10-13/brief.html",
-   "note": "Command Center page approved by Martin 13.10. (good to go)"
+   "note": "Scheduled run 06:00 task (started 09:59 WITA). 12/13 sources, 7 cards, 8 walk items, 12 below the line, validate PASS. No evening log for 2026-10-12 exists (evening task starts 13.10.). Card rounds not started; bookmark not moved."
   },
   {
    "client": "741 Studio (Eigen-Audit)",
@@ -1011,6 +1025,19 @@
    "local": "00_project/assets/741studio/cro/ki-website",
    "result": "",
    "note": "KI-Website Landingpage, Checkpoint 1 freigegeben 13.10."
+  },
+  {
+   "client": "Claudia Maria Steifensand",
+   "workflow": "prospect",
+   "status": "fertig, Freigabe offen",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Echt",
+   "last_run": "2026-10-13",
+   "drive": "",
+   "local": "00_project/prospects/claudia-maria-steifensand",
+   "result": "https://741.studio/review/claudia-maria-steifensand/",
+   "note": "validate: 0 Fehler, 1 Hinweise, Loom fehlt. Noch nicht live: Deploy nach Go."
   }
  ],
  "commands": [

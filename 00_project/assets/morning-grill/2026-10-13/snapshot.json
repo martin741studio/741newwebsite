@@ -457,33 +457,8 @@
    "answer_text": null
   },
   {
-   "id": "walk-5cdea1c6",
-   "n": 18,
-   "client": "Bali Healing",
-   "priority": 8,
-   "type": "Your click",
-   "headline": "Answer Pintor's 30.09. questions, then send the ready status reply (point 6 promises 'today')",
-   "why": "Only you can do this (1 to 5 minutes). Mark it done, give it to an agent or the team, park it with a reason, or write your own answer.",
-   "options": {
-    "a": "Done",
-    "b": "Agent or team does it"
-   },
-   "recommended": "a",
-   "then": {
-    "a": "Marked done; it leaves tomorrow's list",
-    "b": "The next grill turns it into an agent task or a team task draft"
-   },
-   "evidence": [
-    "plan.md walk queue"
-   ],
-   "deadline": "2026-10-13",
-   "status": "open",
-   "answer": null,
-   "answer_text": null
-  },
-  {
    "id": "walk-3ef7004f",
-   "n": 19,
+   "n": 18,
    "client": "Bali Healing",
    "priority": 8,
    "type": "Your click",
@@ -508,7 +483,7 @@
   },
   {
    "id": "walk-fb201e47",
-   "n": 20,
+   "n": 19,
    "client": "Bali Healing",
    "priority": 8,
    "type": "Your click",
@@ -522,6 +497,81 @@
    "then": {
     "a": "Agent prepares the send text (you send it)",
     "b": "Card returns after the client's reaction"
+   },
+   "evidence": [
+    "plan.md walk queue"
+   ],
+   "deadline": "2026-10-13",
+   "status": "open",
+   "answer": null,
+   "answer_text": null
+  },
+  {
+   "id": "walk-1172d79a",
+   "n": 20,
+   "client": "Johni Jaya Motor",
+   "priority": 8,
+   "type": "Your click",
+   "headline": "Check claude.ai → Connectors → Local Falcon shows connected AND enabled for Claude Code (reconnect alone did not fix it)",
+   "why": "Only you can do this (1 to 5 minutes). Mark it done, give it to an agent or the team, park it with a reason, or write your own answer.",
+   "options": {
+    "a": "Done",
+    "b": "Agent or team does it"
+   },
+   "recommended": "a",
+   "then": {
+    "a": "Marked done; it leaves tomorrow's list",
+    "b": "The next grill turns it into an agent task or a team task draft"
+   },
+   "evidence": [
+    "plan.md walk queue"
+   ],
+   "deadline": "2026-10-13",
+   "status": "open",
+   "answer": null,
+   "answer_text": null
+  },
+  {
+   "id": "walk-a12cad50",
+   "n": 21,
+   "client": "Taxi-Zentrale Nürnberg",
+   "priority": 8,
+   "type": "Your click",
+   "headline": "Paste the Akeeba Download Key in Joomla (System > Update Sites, both Pro entries) in your own Chrome, after you copied it from your akeeba.com account",
+   "why": "Only you can do this (1 to 5 minutes). Mark it done, give it to an agent or the team, park it with a reason, or write your own answer.",
+   "options": {
+    "a": "Done",
+    "b": "Agent or team does it"
+   },
+   "recommended": "a",
+   "then": {
+    "a": "Marked done; it leaves tomorrow's list",
+    "b": "The next grill turns it into an agent task or a team task draft"
+   },
+   "evidence": [
+    "plan.md walk queue"
+   ],
+   "deadline": "2026-10-13",
+   "status": "open",
+   "answer": null,
+   "answer_text": null
+  },
+  {
+   "id": "walk-e3450239",
+   "n": 22,
+   "client": "Taxi-Zentrale Nürnberg",
+   "priority": 8,
+   "type": "Your click",
+   "headline": "Send the reply to Daniel (change 'ich trage den Key ein' to 'wir tragen den Key ein') and ask him for 2 or 3 spam mails with full headers",
+   "why": "Only you can do this (1 to 5 minutes). Mark it done, give it to an agent or the team, park it with a reason, or write your own answer.",
+   "options": {
+    "a": "Done",
+    "b": "Agent or team does it"
+   },
+   "recommended": "a",
+   "then": {
+    "a": "Marked done; it leaves tomorrow's list",
+    "b": "The next grill turns it into an agent task or a team task draft"
    },
    "evidence": [
     "plan.md walk queue"
@@ -638,10 +688,6 @@
     },
     {
      "kind": "you",
-     "text": "Your click: Which program start date counts? 2026-09-03 (portal) / 2026-08-14 (memory): conflict"
-    },
-    {
-     "kind": "you",
      "text": "Your click: Suriya: create a new WordPress app password once Coralie gives access back, put it in the session config (3 min)"
     },
     {
@@ -675,6 +721,10 @@
     {
      "kind": "wait",
      "text": "Waiting for client: WordPress access back (she re-created Martin's user)"
+    },
+    {
+     "kind": "wait",
+     "text": "Waiting for client: OK for the two redirects (points 2 and 6)"
     }
    ],
    "next": [
@@ -848,145 +898,6 @@
    "milestone": null
   },
   {
-   "name": "Praxis Hüwel",
-   "anchor": "praxis-h-wel",
-   "status": "active",
-   "phase": "P4",
-   "phase_label": "Build-up",
-   "goal": "First measurable patient leads from Maps and the website (Martin 2026-10-13)",
-   "week": 8,
-   "ob_done": 6,
-   "ob_total": 6,
-   "roadmap": [
-    {
-     "id": "P0",
-     "label": "Prospect",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P1",
-     "label": "Onboarding",
-     "state": "past",
-     "wfs": [
-      {
-       "label": "Onboarding 6/6",
-       "cls": "done",
-       "title": "portal onboarding"
-      }
-     ]
-    },
-    {
-     "id": "P2",
-     "label": "Audit",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P3",
-     "label": "Un-Burning",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P4",
-     "label": "Build-up",
-     "state": "now",
-     "wfs": [
-      {
-       "label": "Citations",
-       "cls": "run",
-       "title": "in progress · 2026-08-31"
-      },
-      {
-       "label": "Backlinks",
-       "cls": "run",
-       "title": "in progress · 2026-10-13"
-      }
-     ]
-    },
-    {
-     "id": "P5",
-     "label": "Content",
-     "state": "next",
-     "wfs": [
-      {
-       "label": "Content pool",
-       "cls": "wait",
-       "title": "waits for your approval · 2026-10-11"
-      }
-     ]
-    },
-    {
-     "id": "P6",
-     "label": "Proof + Quarter",
-     "state": "next",
-     "wfs": []
-    }
-   ],
-   "open": [
-    {
-     "kind": "dec",
-     "text": "Decided today: Yes, prepare on a test branch; live change needs a per-change go"
-    },
-    {
-     "kind": "you",
-     "text": "Your click: Which program start date counts? 2026-08-25 (portal) / paid 2026-08-16: conflict"
-    },
-    {
-     "kind": "you",
-     "text": "Your click: Hüwel: request indexing for the 6 core pages in Search Console (3 min)"
-    },
-    {
-     "kind": "msg",
-     "text": "Portal: 0 unread messages, 1 help requests"
-    },
-    {
-     "kind": "block",
-     "text": "Access missing: Google Tag Manager"
-    },
-    {
-     "kind": "block",
-     "text": "2 overdue portal tasks"
-    },
-    {
-     "kind": "block",
-     "text": "Last portal activity 2026-10-09 (portal only; chat work does not show)"
-    },
-    {
-     "kind": "appr",
-     "text": "Waiting for your approval: pool result from 2026-10-11"
-    },
-    {
-     "kind": "block",
-     "text": "Citations: 38 live, 0 submitted, 29 planned"
-    }
-   ],
-   "next": [
-    "GBP round 2 (FAQ, review replies, ~19 services)",
-    "Next workflow: phone, citations",
-    "Program task (week 8): GBP-Engagement-Takt (Fotos, Angebote, Q&A)",
-    "Program task (week 8): PR-Pipeline weiterführen",
-    "Open from chat: Browser check of menu, logo and contact button after Pages deploy [e8aede79]"
-   ],
-   "moved": [
-    "Google 'Alternate page with proper canonical' fixed: 172 internal links in 28 pages now point to / [e8aede79]",
-    "4 old redirect pages now point to /; new check rule in scripts/check_repo.py [e8aede79]",
-    "Merge done; waiting for GitHub Pages to serve new links, then browser check [e8aede79]",
-    "Run backlink: in Arbeit (2026-10-13)"
-   ],
-   "numbers": [
-    {
-     "metric": "requests per month from GBP + site",
-     "baseline": null,
-     "target": null,
-     "due": null,
-     "status": "proposed"
-    }
-   ],
-   "milestone": "GBP round 2 (FAQ, review replies, ~19 services)"
-  },
-  {
    "name": "STÜRZL Steuerstrafrecht",
    "anchor": "st-rzl-steuerstrafrecht",
    "status": "active",
@@ -1076,6 +987,10 @@
    ],
    "open": [
     {
+     "kind": "dec",
+     "text": "Decided today: Put the 7 cards live now (with backup)"
+    },
+    {
      "kind": "you",
      "text": "Your click: No program start date. Set it (start = agreed trigger, e.g. contract or kickoff)."
     },
@@ -1145,6 +1060,227 @@
     }
    ],
    "milestone": "Rate-1 payment = start date"
+  },
+  {
+   "name": "Kamil (Physio Anatomie + Kraft)",
+   "anchor": "kamil-physio-anatomie-kraft",
+   "status": "active",
+   "phase": "P6",
+   "phase_label": "Proof + Quarter",
+   "goal": "Monthly reports current (August, September) and cost per lead held or lowered (Martin 2026-10-13)",
+   "week": null,
+   "ob_done": 0,
+   "ob_total": 0,
+   "roadmap": [
+    {
+     "id": "P0",
+     "label": "Prospect",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P1",
+     "label": "Onboarding",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P2",
+     "label": "Audit",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P3",
+     "label": "Un-Burning",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P4",
+     "label": "Build-up",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P5",
+     "label": "Content",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P6",
+     "label": "Proof + Quarter",
+     "state": "now",
+     "wfs": []
+    }
+   ],
+   "open": [
+    {
+     "kind": "dec",
+     "text": "Decided today: We haven't done that yet. Internally, I gave him just easy numbers in an email. Most probably, we need to and should do this in his client dashboard in our accounts for the client.\n\nWe really need to figure out: this is running, but we should really improve month by month and build up more income streams, right? We can increase his income, and we increase our billing to him if that's the case.\n\nWhat I'm saying is we check over it, and then we need to check with them: there are definitely improvements on the website. Can we recommend some points to him? Are there other points we can recommend? I can see that listed in all my GrillMe sessions, and I know that we can put that into his client dashboard and maybe into his own decision tree. We can explain to him why we want to do what we do in this kind of way."
+    },
+    {
+     "kind": "dec",
+     "text": "Decided today: Into his dashboard (Reports tab); agent drafts 2-line message"
+    }
+   ],
+   "next": [
+    "Move the monthly numbers into his client dashboard and prepare improvement recommendations (website, income streams)"
+   ],
+   "moved": [],
+   "numbers": [
+    {
+     "metric": "reports sent on time",
+     "baseline": "last: July",
+     "target": "monthly",
+     "due": "2026-10-20 for Aug+Sep",
+     "status": "proposed"
+    },
+    {
+     "metric": "cost per lead (Ads)",
+     "baseline": null,
+     "target": "<= baseline",
+     "due": null,
+     "status": "proposed"
+    }
+   ],
+   "milestone": "Move the monthly numbers into his client dashboard and prepare improvement recommendations (website, income streams)"
+  },
+  {
+   "name": "Praxis Hüwel",
+   "anchor": "praxis-h-wel",
+   "status": "active",
+   "phase": "P4",
+   "phase_label": "Build-up",
+   "goal": "First measurable patient leads from Maps and the website (Martin 2026-10-13)",
+   "week": 8,
+   "ob_done": 6,
+   "ob_total": 6,
+   "roadmap": [
+    {
+     "id": "P0",
+     "label": "Prospect",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P1",
+     "label": "Onboarding",
+     "state": "past",
+     "wfs": [
+      {
+       "label": "Onboarding 6/6",
+       "cls": "done",
+       "title": "portal onboarding"
+      }
+     ]
+    },
+    {
+     "id": "P2",
+     "label": "Audit",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P3",
+     "label": "Un-Burning",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P4",
+     "label": "Build-up",
+     "state": "now",
+     "wfs": [
+      {
+       "label": "Citations",
+       "cls": "run",
+       "title": "in progress · 2026-08-31"
+      },
+      {
+       "label": "Backlinks",
+       "cls": "run",
+       "title": "in progress · 2026-10-13"
+      }
+     ]
+    },
+    {
+     "id": "P5",
+     "label": "Content",
+     "state": "next",
+     "wfs": [
+      {
+       "label": "Content pool",
+       "cls": "wait",
+       "title": "waits for your approval · 2026-10-11"
+      }
+     ]
+    },
+    {
+     "id": "P6",
+     "label": "Proof + Quarter",
+     "state": "next",
+     "wfs": []
+    }
+   ],
+   "open": [
+    {
+     "kind": "dec",
+     "text": "Decided today: Yes, prepare on a test branch; live change needs a per-change go"
+    },
+    {
+     "kind": "you",
+     "text": "Your click: Hüwel: request indexing for the 6 core pages in Search Console (3 min)"
+    },
+    {
+     "kind": "msg",
+     "text": "Portal: 0 unread messages, 1 help requests"
+    },
+    {
+     "kind": "block",
+     "text": "Access missing: Google Tag Manager"
+    },
+    {
+     "kind": "block",
+     "text": "2 overdue portal tasks"
+    },
+    {
+     "kind": "block",
+     "text": "Last portal activity 2026-10-09 (portal only; chat work does not show)"
+    },
+    {
+     "kind": "appr",
+     "text": "Waiting for your approval: pool result from 2026-10-11"
+    },
+    {
+     "kind": "block",
+     "text": "Citations: 38 live, 0 submitted, 29 planned"
+    }
+   ],
+   "next": [
+    "GBP round 2 (FAQ, review replies, ~19 services)",
+    "Next workflow: phone, citations",
+    "Program task (week 8): GBP-Engagement-Takt (Fotos, Angebote, Q&A)",
+    "Program task (week 8): PR-Pipeline weiterführen",
+    "Open from chat: Browser check of menu, logo and contact button after Pages deploy [e8aede79]"
+   ],
+   "moved": [
+    "Google 'Alternate page with proper canonical' fixed: 172 internal links in 28 pages now point to / [e8aede79]",
+    "4 old redirect pages now point to /; new check rule in scripts/check_repo.py [e8aede79]",
+    "Merge done; waiting for GitHub Pages to serve new links, then browser check [e8aede79]",
+    "Run backlink: in Arbeit (2026-10-13)"
+   ],
+   "numbers": [
+    {
+     "metric": "requests per month from GBP + site",
+     "baseline": null,
+     "target": null,
+     "due": null,
+     "status": "proposed"
+    }
+   ],
+   "milestone": "GBP round 2 (FAQ, review replies, ~19 services)"
   },
   {
    "name": "Johni Jaya Motor",
@@ -1229,6 +1365,7 @@
     }
    ],
    "next": [
+    "Access: GA4, Google Business Profile, GSC (Martin 13.10.: tracking already exists, GBP setup is what is left; he will double-check the rest)",
     "Program task (week 9): CTR optimisation of titles/snippets",
     "Program task (week 9): Interaction loop (calls, directions)"
    ],
@@ -1250,86 +1387,6 @@
     }
    ],
    "milestone": "Access: GA4, Google Business Profile, GSC (Martin 13.10.: tracking already exists, GBP setup is what is left; he will double-check the rest)"
-  },
-  {
-   "name": "Kamil (Physio Anatomie + Kraft)",
-   "anchor": "kamil-physio-anatomie-kraft",
-   "status": "active",
-   "phase": "P6",
-   "phase_label": "Proof + Quarter",
-   "goal": "Monthly reports current (August, September) and cost per lead held or lowered (Martin 2026-10-13)",
-   "week": null,
-   "ob_done": 0,
-   "ob_total": 0,
-   "roadmap": [
-    {
-     "id": "P0",
-     "label": "Prospect",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P1",
-     "label": "Onboarding",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P2",
-     "label": "Audit",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P3",
-     "label": "Un-Burning",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P4",
-     "label": "Build-up",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P5",
-     "label": "Content",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P6",
-     "label": "Proof + Quarter",
-     "state": "now",
-     "wfs": []
-    }
-   ],
-   "open": [
-    {
-     "kind": "dec",
-     "text": "Decided today: We haven't done that yet. Internally, I gave him just easy numbers in an email. Most probably, we need to and should do this in his client dashboard in our accounts for the client.\n\nWe really need to figure out: this is running, but we should really improve month by month and build up more income streams, right? We can increase his income, and we increase our billing to him if that's the case.\n\nWhat I'm saying is we check over it, and then we need to check with them: there are definitely improvements on the website. Can we recommend some points to him? Are there other points we can recommend? I can see that listed in all my GrillMe sessions, and I know that we can put that into his client dashboard and maybe into his own decision tree. We can explain to him why we want to do what we do in this kind of way."
-    }
-   ],
-   "next": [],
-   "moved": [],
-   "numbers": [
-    {
-     "metric": "reports sent on time",
-     "baseline": "last: July",
-     "target": "monthly",
-     "due": "2026-10-20 for Aug+Sep",
-     "status": "proposed"
-    },
-    {
-     "metric": "cost per lead (Ads)",
-     "baseline": null,
-     "target": "<= baseline",
-     "due": null,
-     "status": "proposed"
-    }
-   ],
-   "milestone": "Move the monthly numbers into his client dashboard and prepare improvement recommendations (website, income streams)"
   },
   {
    "name": "Marcel Rosenbach",
@@ -1683,7 +1740,13 @@
      "id": "P0",
      "label": "Prospect",
      "state": "past",
-     "wfs": []
+     "wfs": [
+      {
+       "label": "Review page",
+       "cls": "wait",
+       "title": "waits for your approval · 2026-10-13"
+      }
+     ]
     },
     {
      "id": "P1",
@@ -1868,18 +1931,86 @@
    ],
    "numbers": [],
    "milestone": null
+  },
+  {
+   "name": "Taxi-Zentrale Nürnberg",
+   "anchor": "taxi-zentrale-n-rnberg",
+   "status": "active",
+   "phase": "P4",
+   "phase_label": "Build-up",
+   "goal": null,
+   "week": null,
+   "ob_done": null,
+   "ob_total": null,
+   "roadmap": [
+    {
+     "id": "P0",
+     "label": "Prospect",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P1",
+     "label": "Onboarding",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P2",
+     "label": "Audit",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P3",
+     "label": "Un-Burning",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P4",
+     "label": "Build-up",
+     "state": "now",
+     "wfs": []
+    },
+    {
+     "id": "P5",
+     "label": "Content",
+     "state": "next",
+     "wfs": []
+    },
+    {
+     "id": "P6",
+     "label": "Proof + Quarter",
+     "state": "next",
+     "wfs": []
+    }
+   ],
+   "open": [
+    {
+     "kind": "wait",
+     "text": "Waiting for martin: log in to Joomla + paste the key; sample spam mails from Daniel since 2026-10-13"
+    }
+   ],
+   "next": [
+    "Akeeba download key saved in Joomla, updates installed, spam source found and closed (Daniel 13.10.)"
+   ],
+   "moved": [],
+   "numbers": [],
+   "milestone": "Akeeba download key saved in Joomla, updates installed, spam source found and closed (Daniel 13.10.)"
   }
  ],
  "tasks": [
   {
    "id": "t01",
    "owner": "Martin",
-   "status": "open",
+   "status": "done",
    "client": "Praxis Suriya",
    "title": "Ask Coralie to raise the WordPress role to Administrator; tell her about Search Console",
    "card": "walk-bdaead53",
    "link": "send-pack.md (section 3)",
-   "due": "2026-10-13"
+   "due": "2026-10-13",
+   "note": "Asked (Martin 13.10. 14:40); waiting for Coralie"
   },
   {
    "id": "t02",
@@ -1889,7 +2020,8 @@
    "title": "Upload the NIB PDF of PT Amana in Google Ads (ads are paused since 01.10.)",
    "card": "walk-ea33fa77",
    "link": "send-pack.md (section 1)",
-   "due": "2026-10-13"
+   "due": "2026-10-13",
+   "note": "Open Chrome tab: Advertiser Identity; needs NIB + personal ID of submitter; Google deadline 31.10."
   },
   {
    "id": "t03",
@@ -1899,36 +2031,40 @@
    "title": "Answer Pintor's 30.09. questions, then send the status reply",
    "card": "walk-5cdea1c6",
    "link": "send-pack.md (section 2)",
-   "due": "2026-10-13"
+   "due": "2026-10-13",
+   "note": "Group pointer to roadmap sent (Martin 13.10. 14:40); long status reply dropped"
   },
   {
    "id": "t04",
-   "owner": "Martin",
-   "status": "open",
+   "owner": "agent",
+   "status": "done",
    "client": "741 (all clients)",
    "title": "Send the 5 portal reply drafts",
    "card": "walk-6b0236c2",
    "link": "portal-reply-drafts.md",
-   "due": "2026-10-13"
+   "due": "2026-10-13",
+   "note": "Posted 13.10. ~16:00 on Martin go"
   },
   {
    "id": "t05",
    "owner": "Martin",
-   "status": "open",
+   "status": "done",
    "client": "STÜRZL Steuerstrafrecht",
    "title": "Send the email via Airmailer (BCC you), then add the Search Console user for the reporting bot",
    "card": "walk-a85af491",
    "link": "send-pack.md (section 5)",
-   "due": "2026-10-14"
+   "due": "2026-10-14",
+   "note": "Email sent (Martin 13.10. 14:40); GSC user still open"
   },
   {
    "id": "t06",
    "owner": "Martin",
-   "status": "open",
+   "status": "done",
    "client": "Daniela Dumann",
    "title": "Click Publish in Wix for the 3 saved subpage fixes",
    "card": "walk-7fcd74ed",
-   "due": "2026-10-13"
+   "due": "2026-10-13",
+   "note": "Martin 13.10. 14:40"
   },
   {
    "id": "t07",
@@ -1978,7 +2114,7 @@
   {
    "id": "t12",
    "owner": "agent",
-   "status": "waiting",
+   "status": "done",
    "client": "741 (all clients)",
    "title": "Set the stale portal access flags after Martin sent the replies",
    "session": "local_0d8b6037-6931-4ec6-8652-dd710d513670",
@@ -2055,10 +2191,11 @@
   {
    "id": "t20",
    "owner": "Gayo",
-   "status": "drafted",
+   "status": "dropped",
    "client": "Bali Healing",
    "title": "Clean the CRM sheet tabs 'Progress' and 'Reports' (they hold another client's data)",
-   "link": "team-tasks-drafts.md (G1)"
+   "link": "team-tasks-drafts.md (G1)",
+   "note": "Tabs are unused template copies; portal holds per-account numbers (13.10. 14:45)"
   },
   {
    "id": "t21",
@@ -2086,6 +2223,53 @@
    "client": "Bali Healing",
    "title": "Google reviews the client verification (1 to 10 days after the NIB upload)",
    "next": "Starts after Martin's upload"
+  },
+  {
+   "id": "t24",
+   "owner": "agent",
+   "status": "in_progress",
+   "client": "Bali Healing",
+   "title": "Pasha's tracker: video testimonials + Similar Treatments on each landing page, blog SEO support; due Fri 16.10.",
+   "link": "https://docs.google.com/spreadsheets/d/1VPAIQcEthy2-uAD-9NBShkqWCRgG3xi0SohSaZ0-9QA (routed to Bali client chat 13.10. 15:10)"
+  },
+  {
+   "id": "t25",
+   "owner": "Martin",
+   "status": "open",
+   "client": "Taxi-Zentrale Nürnberg",
+   "title": "Paste the Akeeba Download Key in Joomla (both Pro entries) in your own Chrome",
+   "card": "walk-a12cad50",
+   "link": "taxi-akeeba-findings.md",
+   "due": "2026-10-14"
+  },
+  {
+   "id": "t26",
+   "owner": "Martin",
+   "status": "open",
+   "client": "Taxi-Zentrale Nürnberg",
+   "title": "Send the reply to Daniel and ask for 2 or 3 spam mails with full headers",
+   "card": "walk-e3450239",
+   "link": "taxi-akeeba-findings.md",
+   "due": "2026-10-13"
+  },
+  {
+   "id": "t27",
+   "owner": "agent",
+   "status": "waiting",
+   "client": "Taxi-Zentrale Nürnberg",
+   "title": "Read-only check of the Joomla admin: update sites, versions, captcha setting, form settings",
+   "waiting_on": "martin",
+   "next": "Waits for Martin's Joomla login in the Chrome window of this session",
+   "link": "taxi-akeeba-findings.md"
+  },
+  {
+   "id": "t28",
+   "owner": "external",
+   "status": "waiting",
+   "client": "Taxi-Zentrale Nürnberg",
+   "title": "Daniel forwards sample spam mails (full headers)",
+   "waiting_on": "external",
+   "next": "Needed to find which form sends the 900 mails"
   }
  ],
  "walk": [],
@@ -2147,7 +2331,10 @@
   "DONE Johni client message draft (EN, slop 5/5): asks only for the three missing accesses (GBP manager, GA4 admin, GSC full) for 741studio18@gmail.com. Draft is in the Johni chat. Waits for Martin's recipient/language card. Nothing sent.",
   "DONE Johni task triage APPLIED (Martin's card go 13.10.): 3 marked done (internal linking, content cluster, cluster expansion — shipped 08.08.), 7 template/merged tasks removed, 15 re-planned to weeks 9-11. Portal now: 25 open (w9: 7, w10: 8, w11: 6, w12-13: 4), 12 done, activity logged.",
   "Johni message: PARKED per Martin's card answer. First an internal admin task for Martin: check in the browser which of GBP / GA4 / GSC the account 741studio18@gmail.com really has, then add reporting-bot@studio-apis-503306.iam.gserviceaccount.com as viewer to the GA4 property (G-XZCKK6Z6BJ) and to Search Console. The API robot sees neither today; that is what blocks reports.",
-  "Johni Falcon baseline: Martin's go is there, but the Local Falcon connector is DISCONNECTED (reconnect in claude.ai connector settings). Scan parked: keyword 'bengkel mobil jakarta utara', place ChIJVTn_QBEfai4Rr99q5L_baiY, grid 7, radius 3 km."
+  "DONE Johni access chain (13.10. evening): 741-owned GA4 live (G-XVWBX0VCMM, tag on site, robot viewer), GSC verified via API (robot siteOwner + 741studio18 owner, property listed), portal grants GA4/GSC/GBP = erteilt. NEW reusable: GSC verification fully via API (memory gsc-api-verification-workflow). Open: GBP dashboard pass (needs Chrome), Dinakar history ask, GTM.",
+  "Johni Falcon baseline: Martin's go is there, but the Local Falcon connector is DISCONNECTED (reconnect in claude.ai connector settings). Scan parked: keyword 'bengkel mobil jakarta utara', place ChIJVTn_QBEfai4Rr99q5L_baiY, grid 7, radius 3 km.",
+  "DONE Johni GBP pass (13.10. late): 9 secondary categories, new description, 8 standard + 6 custom services (prices from the website), WhatsApp booking link — all saved, pending Google review ≤1 day. GA renames done: account \"Johni Jaya Motor\", property \"johnijayamotor.com\". Portal task w9 set erledigt. Password rotation done (Martin). Client message updated: now asks only GTM access + old-GA4 history (parked, not sent).",
+  "Johni Falcon baseline STILL BLOCKED (13.10. evening): Martin's reconnect in claude.ai did not reach Claude Code — a fresh session also found no Local Falcon tools. Walk-queue item for tomorrow: check claude.ai → Connectors → Local Falcon is both connected AND enabled for Claude Code (two separate toggles). Scan parked: keyword 'bengkel mobil jakarta utara', place ChIJVTn_QBEfai4Rr99q5L_baiY, grid 7, radius 3 km."
  ],
  "waiting": [
   "Abmahnung: lawyer's reply to Martin's letter (pay 0 €) — card parked until a reply arrives.",
@@ -2228,16 +2415,16 @@
  ],
  "tiles": [
   {
-   "value": "13/7",
+   "value": "15/7",
    "label": "decisions taken today"
   },
   {
-   "value": "13",
+   "value": "15",
    "label": "walk-queue clicks open"
   },
   {
    "value": "9",
-   "label": "of 11 clients need your part"
+   "label": "of 12 clients need your part"
   },
   {
    "value": "1",

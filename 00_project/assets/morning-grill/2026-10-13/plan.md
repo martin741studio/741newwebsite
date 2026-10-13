@@ -14,6 +14,10 @@
 - [x] ~~Bali: send the status reply~~ dropped (Martin 13.10.): Bali is led through the client dashboard (roadmap status section live, decisions in the portal). Pintor's 30.09. questions still need an answer
 - [ ] Bali: drag the staged content-pool files into the 'Content Pool' folder in Drive (Chrome upload timed out; files are in 00_project/assets/balihealing/content-pool/)
 - [ ] Bali: Go-C for the English client audit page after the status reply is out (page is ready as a draft)
+- [ ] Johni: check claude.ai → Connectors → Local Falcon shows connected AND enabled for Claude Code (reconnect alone did not fix it)
+
+- [ ] Taxi: Paste the Akeeba Download Key in Joomla (System > Update Sites, both Pro entries) in your own Chrome, after you copied it from your akeeba.com account
+- [ ] Taxi: Send the reply to Daniel (change 'ich trage den Key ein' to 'wir tragen den Key ein') and ask him for 2 or 3 spam mails with full headers
 
 ## Agent starts
 - DONE Portal replies (card 1): 5 drafts ready in portal-reply-drafts.md (all 'du', slop 5/5). 4 of 5 'help requests' are only a Hilfe click on an access item. Stale portal flags wait for GO-PORTAL.
@@ -33,7 +37,10 @@
 - DONE Johni client message draft (EN, slop 5/5): asks only for the three missing accesses (GBP manager, GA4 admin, GSC full) for 741studio18@gmail.com. Draft is in the Johni chat. Waits for Martin's recipient/language card. Nothing sent.
 - DONE Johni task triage APPLIED (Martin's card go 13.10.): 3 marked done (internal linking, content cluster, cluster expansion — shipped 08.08.), 7 template/merged tasks removed, 15 re-planned to weeks 9-11. Portal now: 25 open (w9: 7, w10: 8, w11: 6, w12-13: 4), 12 done, activity logged.
 - Johni message: PARKED per Martin's card answer. First an internal admin task for Martin: check in the browser which of GBP / GA4 / GSC the account 741studio18@gmail.com really has, then add reporting-bot@studio-apis-503306.iam.gserviceaccount.com as viewer to the GA4 property (G-XZCKK6Z6BJ) and to Search Console. The API robot sees neither today; that is what blocks reports.
+- DONE Johni access chain (13.10. evening): 741-owned GA4 live (G-XVWBX0VCMM, tag on site, robot viewer), GSC verified via API (robot siteOwner + 741studio18 owner, property listed), portal grants GA4/GSC/GBP = erteilt. NEW reusable: GSC verification fully via API (memory gsc-api-verification-workflow). Open: GBP dashboard pass (needs Chrome), Dinakar history ask, GTM.
 - Johni Falcon baseline: Martin's go is there, but the Local Falcon connector is DISCONNECTED (reconnect in claude.ai connector settings). Scan parked: keyword 'bengkel mobil jakarta utara', place ChIJVTn_QBEfai4Rr99q5L_baiY, grid 7, radius 3 km.
+- DONE Johni GBP pass (13.10. late): 9 secondary categories, new description, 8 standard + 6 custom services (prices from the website), WhatsApp booking link — all saved, pending Google review ≤1 day. GA renames done: account "Johni Jaya Motor", property "johnijayamotor.com". Portal task w9 set erledigt. Password rotation done (Martin). Client message updated: now asks only GTM access + old-GA4 history (parked, not sent).
+- Johni Falcon baseline STILL BLOCKED (13.10. evening): Martin's reconnect in claude.ai did not reach Claude Code — a fresh session also found no Local Falcon tools. Walk-queue item for tomorrow: check claude.ai → Connectors → Local Falcon is both connected AND enabled for Claude Code (two separate toggles). Scan parked: keyword 'bengkel mobil jakarta utara', place ChIJVTn_QBEfai4Rr99q5L_baiY, grid 7, radius 3 km.
 
 ## Waiting for
 - Abmahnung: lawyer's reply to Martin's letter (pay 0 €) — card parked until a reply arrives.

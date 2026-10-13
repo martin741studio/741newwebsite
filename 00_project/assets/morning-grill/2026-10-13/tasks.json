@@ -2,12 +2,13 @@
  {
   "id": "t01",
   "owner": "Martin",
-  "status": "open",
+  "status": "done",
   "client": "Praxis Suriya",
   "title": "Ask Coralie to raise the WordPress role to Administrator; tell her about Search Console",
   "card": "walk-bdaead53",
   "link": "send-pack.md (section 3)",
-  "due": "2026-10-13"
+  "due": "2026-10-13",
+  "note": "Asked (Martin 13.10. 14:40); waiting for Coralie"
  },
  {
   "id": "t02",
@@ -17,7 +18,8 @@
   "title": "Upload the NIB PDF of PT Amana in Google Ads (ads are paused since 01.10.)",
   "card": "walk-ea33fa77",
   "link": "send-pack.md (section 1)",
-  "due": "2026-10-13"
+  "due": "2026-10-13",
+  "note": "Open Chrome tab: Advertiser Identity; needs NIB + personal ID of submitter; Google deadline 31.10."
  },
  {
   "id": "t03",
@@ -27,36 +29,40 @@
   "title": "Answer Pintor's 30.09. questions, then send the status reply",
   "card": "walk-5cdea1c6",
   "link": "send-pack.md (section 2)",
-  "due": "2026-10-13"
+  "due": "2026-10-13",
+  "note": "Group pointer to roadmap sent (Martin 13.10. 14:40); long status reply dropped"
  },
  {
   "id": "t04",
-  "owner": "Martin",
-  "status": "open",
+  "owner": "agent",
+  "status": "done",
   "client": "741 (all clients)",
   "title": "Send the 5 portal reply drafts",
   "card": "walk-6b0236c2",
   "link": "portal-reply-drafts.md",
-  "due": "2026-10-13"
+  "due": "2026-10-13",
+  "note": "Posted 13.10. ~16:00 on Martin go"
  },
  {
   "id": "t05",
   "owner": "Martin",
-  "status": "open",
+  "status": "done",
   "client": "STÜRZL Steuerstrafrecht",
   "title": "Send the email via Airmailer (BCC you), then add the Search Console user for the reporting bot",
   "card": "walk-a85af491",
   "link": "send-pack.md (section 5)",
-  "due": "2026-10-14"
+  "due": "2026-10-14",
+  "note": "Email sent (Martin 13.10. 14:40); GSC user still open"
  },
  {
   "id": "t06",
   "owner": "Martin",
-  "status": "open",
+  "status": "done",
   "client": "Daniela Dumann",
   "title": "Click Publish in Wix for the 3 saved subpage fixes",
   "card": "walk-7fcd74ed",
-  "due": "2026-10-13"
+  "due": "2026-10-13",
+  "note": "Martin 13.10. 14:40"
  },
  {
   "id": "t07",
@@ -106,7 +112,7 @@
  {
   "id": "t12",
   "owner": "agent",
-  "status": "waiting",
+  "status": "done",
   "client": "741 (all clients)",
   "title": "Set the stale portal access flags after Martin sent the replies",
   "session": "local_0d8b6037-6931-4ec6-8652-dd710d513670",
@@ -183,10 +189,11 @@
  {
   "id": "t20",
   "owner": "Gayo",
-  "status": "drafted",
+  "status": "dropped",
   "client": "Bali Healing",
   "title": "Clean the CRM sheet tabs 'Progress' and 'Reports' (they hold another client's data)",
-  "link": "team-tasks-drafts.md (G1)"
+  "link": "team-tasks-drafts.md (G1)",
+  "note": "Tabs are unused template copies; portal holds per-account numbers (13.10. 14:45)"
  },
  {
   "id": "t21",
@@ -214,5 +221,52 @@
   "client": "Bali Healing",
   "title": "Google reviews the client verification (1 to 10 days after the NIB upload)",
   "next": "Starts after Martin's upload"
+ },
+ {
+  "id": "t24",
+  "owner": "agent",
+  "status": "in_progress",
+  "client": "Bali Healing",
+  "title": "Pasha's tracker: video testimonials + Similar Treatments on each landing page, blog SEO support; due Fri 16.10.",
+  "link": "https://docs.google.com/spreadsheets/d/1VPAIQcEthy2-uAD-9NBShkqWCRgG3xi0SohSaZ0-9QA (routed to Bali client chat 13.10. 15:10)"
+ },
+ {
+  "id": "t25",
+  "owner": "Martin",
+  "status": "open",
+  "client": "Taxi-Zentrale Nürnberg",
+  "title": "Paste the Akeeba Download Key in Joomla (both Pro entries) in your own Chrome",
+  "card": "walk-a12cad50",
+  "link": "taxi-akeeba-findings.md",
+  "due": "2026-10-14"
+ },
+ {
+  "id": "t26",
+  "owner": "Martin",
+  "status": "open",
+  "client": "Taxi-Zentrale Nürnberg",
+  "title": "Send the reply to Daniel and ask for 2 or 3 spam mails with full headers",
+  "card": "walk-e3450239",
+  "link": "taxi-akeeba-findings.md",
+  "due": "2026-10-13"
+ },
+ {
+  "id": "t27",
+  "owner": "agent",
+  "status": "waiting",
+  "client": "Taxi-Zentrale Nürnberg",
+  "title": "Read-only check of the Joomla admin: update sites, versions, captcha setting, form settings",
+  "waiting_on": "martin",
+  "next": "Waits for Martin's Joomla login in the Chrome window of this session",
+  "link": "taxi-akeeba-findings.md"
+ },
+ {
+  "id": "t28",
+  "owner": "external",
+  "status": "waiting",
+  "client": "Taxi-Zentrale Nürnberg",
+  "title": "Daniel forwards sample spam mails (full headers)",
+  "waiting_on": "external",
+  "next": "Needed to find which form sends the 900 mails"
  }
 ]

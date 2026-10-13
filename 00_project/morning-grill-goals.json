@@ -7,7 +7,7 @@
    "status": "active",
    "grill": "daily",
    "phase": "P4",
-   "program_start": "2026-09-03 (portal) / 2026-08-14 (memory): conflict",
+   "program_start": "2026-09-03",
    "program_end": "2026-12-01",
    "quarter_goal": "Top 3 in the Maps grid for the 5 tracked keywords (Martin 2026-10-13)",
    "goal_numbers": [
@@ -85,7 +85,7 @@
    "status": "active",
    "grill": "daily",
    "phase": "P4",
-   "program_start": "2026-08-25 (portal) / paid 2026-08-16: conflict",
+   "program_start": "2026-08-25",
    "program_end": null,
    "quarter_goal": "First measurable patient leads from Maps and the website (Martin 2026-10-13)",
    "goal_numbers": [
@@ -637,6 +637,51 @@
    "aliases": [
     "tacheles"
    ]
+  },
+  {
+   "client": "Taxi-Zentrale Nürnberg",
+   "registry_name": "Taxi-Zentrale Nürnberg",
+   "status": "active",
+   "grill": "daily",
+   "phase": "P4",
+   "program_start": null,
+   "program_end": null,
+   "quarter_goal": null,
+   "goal_numbers": [],
+   "leading": [
+    {
+     "metric": "open site issues (key, spam, updates)",
+     "weekly_threshold": null,
+     "owner": "agent+Martin"
+    }
+   ],
+   "next_milestone": "Akeeba download key saved in Joomla, updates installed, spam source found and closed (Daniel 13.10.)",
+   "blockers": [
+    "Akeeba Download Key missing (Admin Tools Pro, Akeeba Backup Pro)",
+    "900 spam mails in one night; several forms have no captcha",
+    "Cloudflare blocks automated Joomla admin saves; Preisrechner depends on a hand-patched .htaccess (memory taxi-nuernberg-preisrechner)"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "log in to Joomla + paste the key; sample spam mails from Daniel",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_rules": [
+    "Per-change go for every live change",
+    "Joomla admin saves only in Martin's real Chrome (Cloudflare)",
+    "Never enter the licence key by agent"
+   ],
+   "chat": "local_bde9ddab-3b39-4191-bb54-66f209c53d2b",
+   "next_workflow": null,
+   "aliases": [
+    "taxi",
+    "taxi-zentrale",
+    "taxi nürnberg",
+    "taxi-nuernberg"
+   ],
+   "notes": "Added 13.10.: Martin said Taxi is a client and was missing in the Command Center. Quarter goal not defined yet -> define card. Phase to confirm."
   }
  ],
  "leads": [

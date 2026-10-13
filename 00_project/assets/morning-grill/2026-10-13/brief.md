@@ -39,8 +39,6 @@ Scan since 2026-10-12T06:00+08:00, read 2026-10-13T10:01+08:00.
    - Why: Reports are the deliverable he pays for; the script exists.
 
 ## Walk queue (your own short checks)
-- [ ] Praxis Suriya: Which program start date counts? 2026-09-03 (portal) / 2026-08-14 (memory): conflict (by 2026-10-15)
-- [ ] Praxis Hüwel: Which program start date counts? 2026-08-25 (portal) / paid 2026-08-16: conflict (by 2026-10-15)
 - [ ] STÜRZL Steuerstrafrecht: No program start date. Set it (start = agreed trigger, e.g. contract or kickoff). (by 2026-10-15)
 - [ ] STÜRZL Steuerstrafrecht: Stürzl: send the email (Loom + Entwurf links) via Airmailer, BCC you, then 'Add user' for the reporting bot in Search Console (5 min) (by 2026-10-14)
 - [ ] 741 (all clients): Tick which of yesterday's 6 client drafts you sent: Suriya 2, Dumann 1, Bali 1, me&you Loom, Ana Fredel (1 min) (by 2026-10-13)
@@ -71,7 +69,7 @@ Goal: Restart: 3 missing access done, overdue list cleared or re-planned, then t
 - **Today:** Program task (week 9): CTR optimisation of titles/snippets; Program task (week 9): Interaction loop (calls, directions)
 - **Fixed:** nothing
 - **Watch:** Access missing: Google Analytics (GA4), Google Business Profile, Google Search Console; 25 overdue portal tasks; Onboarding 3/6, next: Upload material; Last portal activity 2026-08-17 (portal only; chat work does not show)
-- **Next:** nothing
+- **Next:** Access: GA4, Google Business Profile, GSC (Martin 13.10.: tracking already exists, GBP setup is what is left; he will double-check the rest)
 
 ## Praxis Suriya (active, P4)
 Goal: Top 3 in the Maps grid for the 5 tracked keywords (Martin 2026-10-13)
@@ -129,12 +127,19 @@ Goal: Both landing pages live and the no-show rate measured and lowered (Martin 
 - **Watch:** Waiting for client: Price clarification: 39 EUR vs $44 for Talk to ME; Waiting for martin: Checkpoint 2 go on the five prototypes; Waiting for martin: Record Loom and send message to Tajan's team
 - **Next:** Next workflow: cro checkpoint 3
 
+## Taxi-Zentrale Nürnberg (active, P4)
+Goal: None
+- **Today:** nothing
+- **Fixed:** nothing
+- **Watch:** Waiting for martin: log in to Joomla + paste the key; sample spam mails from Daniel since 2026-10-13
+- **Next:** Akeeba download key saved in Joomla, updates installed, spam source found and closed (Daniel 13.10.)
+
 ## Kamil (Physio Anatomie + Kraft) (active, P6)
 Goal: Monthly reports current (August, September) and cost per lead held or lowered (Martin 2026-10-13)
 - **Today:** nothing
 - **Fixed:** nothing
 - **Watch:** nothing
-- **Next:** nothing
+- **Next:** Move the monthly numbers into his client dashboard and prepare improvement recommendations (website, income streams)
 
 ## Marcel Rosenbach (active, P0)
 Goal: Close a new website build with a monthly subscription, plus Google Ads as soon as possible; show Hüwel as proof (Martin 2026-10-13)
