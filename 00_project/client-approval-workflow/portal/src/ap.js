@@ -25,7 +25,7 @@ const AP_TX = {
     done: (w) => `Danke, ${w}! Alles ist entschieden. Ich melde mich, sobald es live ist.`,
     notApprover: (n) => `Entscheiden kann nur ${n}. Du kannst alles ansehen und uns im Chat schreiben.`, namedPerson: 'die benannte Person',
     all: 'Alle', open: 'Offen', waiting: (n) => n + ' warten auf dich', allDone: 'Alles entschieden, danke!', empty: 'Hier ist gerade nichts offen.',
-    notePh: 'Bitte hier eintragen.', needFill: 'Bitte zuerst das Feld ausfüllen.',
+    preview: 'Vorschau ansehen →', imgAlt: 'Ansicht', notePh: 'Bitte hier eintragen.', needFill: 'Bitte zuerst das Feld ausfüllen.',
     needNote: 'Bitte kurz schreiben, was anders sein soll.', sentChg: 'Danke, dein Wunsch ist bei uns.', saved: 'Danke, gespeichert.', err: 'Fehler: '
   },
   en: {
@@ -43,7 +43,7 @@ const AP_TX = {
     done: (w) => `Thank you, ${w}! Everything is decided. I will tell you when it is live.`,
     notApprover: (n) => `Only ${n} can decide. You can see everything and write to us in the chat.`, namedPerson: 'the named person',
     all: 'All', open: 'Open', waiting: (n) => n + ' waiting for you', allDone: 'All decided, thank you!', empty: 'Nothing is open at the moment.',
-    notePh: 'Please write it here.', needFill: 'Please fill in the field first.',
+    preview: 'Open the preview →', imgAlt: 'View', notePh: 'Please write it here.', needFill: 'Please fill in the field first.',
     needNote: 'Please write in a few words what should be different.', sentChg: 'Thank you. We have your request.', saved: 'Thank you. Saved.', err: 'Error: '
   }
 };
@@ -144,9 +144,13 @@ function apItemHTML(b, i, used, preview) {
     acts = `${noteField}<div class="ap-acts"><button class="ap-btn ap-b1"${dis} onclick="apAct('${i.id}','approve',this)">${T.ok}</button><button class="ap-btn ap-b2"${dis} onclick="apAct('${i.id}','request_change',this)">${T.change}</button></div><textarea class="ap-ta" id="ap-ta-${i.id}" placeholder="${T.ph}"></textarea>`;
   }
   const draft = i.status === 'draft' ? `<span class="ap-pill p-draft">${T.draft(esc(apFirst(b)))}</span>` : '';
+  // Optional (13.10., Dumann-Karten): context.image (Bild) und context.preview_url (Link zur Vorschau). Nur https-Adressen.
+  const ctx = i.context || {}, okUrl = (u) => typeof u === 'string' && /^https:\/\//.test(u);
+  const media = (okUrl(ctx.image) ? `<img class="ap-img" src="${esc(ctx.image)}" alt="${esc(T.imgAlt + ': ' + i.title)}" loading="lazy">` : '')
+    + (okUrl(ctx.preview_url) ? `<a class="ap-prev" href="${esc(ctx.preview_url)}" target="_blank" rel="noopener">${T.preview}</a>` : '');
   return `<article class="ap-item${open ? '' : ' done'}" id="ap-${i.id}"><div class="ap-top"><span class="ap-type">${esc(i.type_label)}</span>${draft}${dl}</div>
     <h3>${esc(i.title)}</h3><div class="ap-why">${T.why}${apMd(i.why)}<span class="ap-src">${T.src}${esc(i.why_source)} · ${T.asOf}${D(i.why_date)}</span></div>
-    ${mg}${body}${i.note ? `<div class="ap-note">${esc(i.note)}</div>` : ''}${lockNote}${acts}</article>`;
+    ${mg}${media}${body}${i.note ? `<div class="ap-note">${esc(i.note)}</div>` : ''}${lockNote}${acts}</article>`;
 }
 function apRenderClient(b, preview) {
   // Admin-Vorschau zeigt auch Entwürfe, damit Martin sie vor "An Kunde geben" prüfen kann

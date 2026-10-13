@@ -47,3 +47,9 @@ Ohne Tabellen bleibt der Tab unsichtbar. Das restliche Portal läuft normal (gep
 - Varianten mit `"ask_note": true` zeigen ein Pflichtfeld über „Passt so“ / „Looks good“. Gespeichert wird `approve_with_change` mit Notiz (Martin 13.10.). Gesetzt bei Bali B2-A und B5-B.
 - Große Schrift bei `kind = price` nur, wenn die Variante eine Zahl enthält (Martin 13.10.).
 - Tests: `screenshots/en-2026-10-13/` (EN Bali Healing, DE Testpraxis, Desktop und 390 px).
+
+## Vorschau-Link, Bild, Zeilenumbrüche (13.10., für die Dumann-Karten)
+- `context.preview_url` (nur https) zeigt den Link „Vorschau ansehen →“ / „Open the preview →“ über den Varianten. Er öffnet in einem neuen Tab, weil das Portal selbst kein iframe ist.
+- `context.image` (nur https) zeigt ein Bild über den Varianten.
+- `.ap-val` hat `white-space: pre-line`, also werden Zeilenumbrüche (`\n`) im Variantentext angezeigt. Das Trennzeichen „ ▪ “ ist nicht mehr nötig.
+- Direkt live am 13.10. um 17:13 (Backup `index-20261013-1713-before-ap-preview-link.html`). Live geprüft, nur lesend: Link, neuer Tab und pre-line funktionieren, die Konsole zeigt keine Fehler. Dashboard (neu), Kundenarbeit und Command Center sind unverändert.
