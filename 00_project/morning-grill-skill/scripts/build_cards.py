@@ -9,7 +9,7 @@ Usage: python3 build_cards.py --run <run dir> [--max 7]
 Priorities (preferences.md): 1 fire, 2 money/contract, 3 client deadline <= 3 days, 4 approval > 3 days,
 5 goal gap, 6 pipeline follow-up, 7 internal.
 """
-import argparse, datetime as dt, json, os, sys
+import argparse, datetime as dt, json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.environ.get("MG_REPO", "/Users/martindrendel/741website")  # skill may live in ~/.claude/skills
@@ -215,7 +215,7 @@ def main():
                 continue
             if h["urgent"] and h["overdue_days"] >= -3:
                 cards.append(card(f"{day}-deadline-{h['file'][:20]}", h.get("client") or "741", 1, "decide",
-                                  f"Deadline {h['date']} from memory has no 'done' note ({h['overdue_days']} days overdue): {h['text'][:140]}",
+                                  f"Deadline {h['date']} from memory has no 'done' note ({h['overdue_days']} days overdue): " + re.sub(r"[*`]+", "", h['text'])[:150],
                                   [f"memory {h['file']}", "S13"],
                                   {"a": "Still open: agent prepares the next step today", "b": "Already resolved: agent adds a done note to the memory file",
                                    "c": "Park with a reason"},

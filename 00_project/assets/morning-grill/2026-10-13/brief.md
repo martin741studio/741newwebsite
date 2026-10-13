@@ -7,36 +7,36 @@ Scan since 2026-10-12T06:00+08:00, read 2026-10-13T10:01+08:00.
    - b: I answer them myself today
    - c: Dinakar answers the technical ones, I answer the rest
    - Why: Unanswered client messages are priority 1; drafts take you 2 minutes to send.
-2. **741** — Deadline 2026-09-23 from memory has no 'done' note (20 days overdue): Demand: sign strafbewehrte Unterlassungserklärung + pay 453,50 €, deadline 23.09.2026. (by 2026-10-13)
-   - a: Still open: agent prepares the next step today
-   - b (recommended): Already resolved: agent adds a done note to the memory file
-   - c: Park with a reason
-   - Why: A legal or account deadline must never stay silent; if it is resolved, the note stops the card.
-3. **Bali Healing** — Deadline 2026-10-01 from memory has no 'done' note (12 days overdue): **2026-09-07 ROOT CAUSE for blocked skin-tag publish found:** account banner "Verify your identity – Some of your ads may be paused or limit (by 2026-10-13)
-   - a (recommended): Still open: agent prepares the next step today
-   - b: Already resolved: agent adds a done note to the memory file
-   - c: Park with a reason
-   - Why: A legal or account deadline must never stay silent; if it is resolved, the note stops the card.
-4. **Praxis Suriya** — Suriya: 5 approved site changes are blocked. The WordPress app password fails (401) and Search Console access is gone. Reply draft to Coralie is ready. (by 2026-10-14)
+2. **Praxis Suriya** — Suriya: 5 approved site changes are blocked. The WordPress app password fails (401) and Search Console access is gone. Reply draft to Coralie is ready. (by 2026-10-14)
    - a (recommended): Send the ready reply today and ask for both accesses; start with backup + speed work
    - b: Wait for her to offer access herself
    - c: Do only the speed work with the access that still works
    - Why: She agreed to continue on 13.10.; access is the gate for every goal number.
-5. **Bali Healing** — Bali Healing: onboarding 1/6, Ads blocked, and the 8-point status reply cannot go out: it still needs outreach counts and Ads spend. (by 2026-10-14)
+3. **Bali Healing** — Bali Healing: onboarding 1/6, Ads blocked, and the 8-point status reply cannot go out: it still needs outreach counts and Ads spend. (by 2026-10-14)
    - a (recommended): I give the numbers today; agent finishes the reply and the Ads checklist
    - b: Send the reply without numbers, numbers on Monday
    - c: Park until Peggy answers
    - Why: Ads live within 2 weeks is the quarter goal; billing needs the client.
-6. **Marcel Rosenbach** — Marcel wants to come to 741 fast: new website with monthly subscription plus Google Ads. Which offer goes out this week? (by 2026-10-15)
+4. **Marcel Rosenbach** — Marcel wants to come to 741 fast: new website with monthly subscription plus Google Ads. Which offer goes out this week? (by 2026-10-15)
    - a (recommended): Website build + monthly program, Hüwel site as proof, Ads as add-on
    - b: Ads first, website after
    - c: Call first, offer after the call
    - Why: He asked for both; the Hüwel site (live since 06.10.) shows the result. Prices stay out of messages (memory 741studio-pricing).
-7. **Praxis Suriya** — Praxis Suriya: 28 directory confirmation emails are unhandled. Verify links can expire. (by 2026-10-13)
+5. **Praxis Suriya** — Praxis Suriya: 28 directory confirmation emails are unhandled. Verify links can expire. (by 2026-10-13)
    - a (recommended): Tantri clicks the verify links today (portal task + WhatsApp)
    - b: Agent lists them first, I decide
    - c: Park
    - Why: Group A listings are 741's job; expired links mean a new submission.
+6. **Johni Jaya Motor** — Johni restarts this week: 3 access items missing, 25 overdue tasks, no activity since 17.08. Who owns the restart? (by 2026-10-14)
+   - a (recommended): Martin asks for GA4/GBP/GSC access today; agent re-plans the 25 tasks for Monday
+   - b: Dinakar owns the restart
+   - c: Park one more week
+   - Why: Access is the gate for everything else and needs the client.
+7. **Kamil (Physio Anatomie + Kraft)** — Kamil's monthly reports stop in July. August and September are overdue. (by 2026-10-15)
+   - a (recommended): Agent builds August + September drafts today with reporting/monthly-client-report.mjs; I check and send
+   - b: Send one combined Aug+Sep report
+   - c: Ask Kamil if he still wants reports
+   - Why: Reports are the deliverable he pays for; the script exists.
 
 ## Walk queue (your own short checks)
 - [ ] Praxis Suriya: Which program start date counts? 2026-09-03 (portal) / 2026-08-14 (memory): conflict (by 2026-10-15)
@@ -50,12 +50,11 @@ Scan since 2026-10-12T06:00+08:00, read 2026-10-13T10:01+08:00.
 
 ## 741
 - Calendar: Jour Fixe Martin with Werbeagentur Bamberger (dl@, bb@) at 2026-10-14 16:00 WITA (needsAction (not accepted yet))
+- Parked (2026-09-23): waiting for the lawyer's reply to Martin's letter (pay 0 €)
 - Review pages ready, not sent: Claudia Tiemann, Ana Violeta Fredel, Stephan Meyer, Sabine Schwarz, Catja Grieshaber, Christian Ruether
 - Lead follow-up: Eri Trostl (overdue (> 7 days))
 
 ## Below the line
-- Johni Jaya Motor: Johni restarts this week: 3 access items missing, 25 overdue tasks, no activity since 17.08. Who owns the restart?
-- Kamil (Physio Anatomie + Kraft): Kamil's monthly reports stop in July. August and September are overdue.
 - me&you / Pauspapier: me&you: 5 Checkpoint-2 prototypes wait for your review, and the Loom for the team message is not recorded. Go-live needs a real hero photo.
 - 741 (night shift): The night shift redoes the same 5 drafts every night: nobody approves them and its ledger has 0 entries.
 - 741 (all clients): 81 portal tasks are overdue across 7 clients. Many may be done in chats but not ticked.
@@ -113,7 +112,7 @@ Goal: Top 3 in Maps for Feng Shui Berlin keywords and more requests than the 30.
 Goal: Onboarding 6/6 and Google Ads live within 2 weeks, then bookings from Ads and Maps (Martin 2026-10-13)
 - **Today:** Program task (week 5): Hub page + first 4-6 spoke pages (prioritised by booking value); Program task (week 5): Guest article 1 placed; Open from chat: Fill the brackets for messages sent and connections accepted in points 1 and 4 [e9c4af07]
 - **Fixed:** Drafted status message to Pintor and Pasha (8 points), lint 5/5; two [X]/[Y] brackets still open [e9c4af07]; Point 1 explains LinkedIn outreach is manual: 40-50 messages/day, 3 partners in conversation in Ubud [e9c4af07]; Added note: new content pool and AI-database website process, to discuss [e9c4af07]
-- **Watch:** 24 overdue portal tasks; Onboarding 1/6, next: Grant access; Last portal activity 2026-08-19 (portal only; chat work does not show); Waiting for your approval: audit result from 2026-10-11; Waiting for martin: Real counts for [X] and [Y], then send
+- **Watch:** 24 overdue portal tasks; Onboarding 1/6, next: Grant access; Last portal activity 2026-08-19 (portal only; chat work does not show); Waiting for your approval: audit result from 2026-10-11; Decided: Still open: agent prepares next step today (read-only Ads check + document list); Waiting for martin: Real counts for [X] and [Y], then send
 - **Next:** Next workflow: audit follow-up, pool
 
 ## Rabenmütter (active, P4)
@@ -142,7 +141,7 @@ Goal: Close a new website build with a monthly subscription, plus Google Ads as 
 - **Today:** nothing
 - **Fixed:** nothing
 - **Watch:** nothing
-- **Next:** Offer with Hüwel case as proof; Next workflow: offer, then cro / automation; New sales opportunity: website + monthly subscription + Ads (Martin 13.10.)
+- **Next:** Landing page (in progress 13.10.) -> Martin's intro video -> prototype for Marcel -> Ads; Next workflow: offer, then cro / automation; New sales opportunity: website + monthly subscription + Ads (Martin 13.10.)
 
 ## Unreadable sources
 - S8_tracking: tracking workflow not built yet

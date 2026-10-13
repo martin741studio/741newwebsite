@@ -50,6 +50,7 @@ Done for one day means all of these are true:
 | D24 | Grill flow | Three parts in chat: 1 status report (where we are, what moved, what runs, what is stuck + why + who waits), 2 walk queue + decision cards, 3 what happens now (who, when Martin hears back). Martin 2026-10-13: "I get informed through the grill". |
 | D25 | Report depth | Clients with movement, a blocker or a card get 3–4 lines; quiet clients one line (`status_report.py`). |
 | D26 | Evening report | The 17:00 run also reports in chat in the same style, then one confirm card. |
+| D27 | Command Center page | One page `00_project/assets/morning-grill/command-center.html`, rebuilt after every scan, grill answer and evening log. Tabs: Decisions (cards in the client-approval style, 741 recommends, click → answer line), Clients (goal, program week, roadmap P0–P6 with registry workflow status, open now, next steps, goal numbers), Agents & waiting. Martin 2026-10-13: "I have no idea where we are" from chat alone. |
 | D18 | Leads | In the daily 741 line. A lead gets a card only when a follow-up is due or older than 7 days. |
 
 ## 2. Daily rhythm
