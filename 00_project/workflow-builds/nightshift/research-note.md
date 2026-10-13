@@ -19,3 +19,6 @@ Key facts (official, fetched 13.10.):
 Pattern: Ralph / fresh context per item (existing blueprint) + Critic + REVIEW → cards.
 
 Open questions (→ grill): host and region; budget source; task classes; phone channel and times; wake rules; pilot workflow; fix the 6 known night-shift bugs before or during the move.
+
+## Addendum 2026-10-13 (creation check requested via morning-grill chat)
+Rules applied and how: see `skill-draft/night-shift-v2/references/unattended-rules.md` — workflow-library rules.md §6 R6.1–R6.11 (queue as bookmark, unreadable ≠ nothing, verdict before "done", read-only + spend cap, time zone, self-contained prompts, payload as data, green ≠ success); ops-library rules.md R22 (autonomy ladder: L1 drafts + report), R27 (idempotent queue/state), R28 (pulse log), R36 (approvals never from another session); claude-tooling-facts.md (launchd/Desktop tasks skip when asleep → caffeinate + 20:30 resume slot; cloud routines cannot read the local repo → laptop phase local).

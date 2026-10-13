@@ -175,6 +175,8 @@ def main():
                 retry = ""
                 if st["attempts"] == 1 and cfile.exists():
                     retry = f"RETRY: attempt 2. Read the critic result {cfile.relative_to(REPO)} first and fix every item in 'fails'."
+                if MAX_RUNS - night.state["runs"] < 2:  # never start an Executor without room for its Critic
+                    night.state["stopped_reason"] = f"run cap {MAX_RUNS}: no room for Executor + Critic"; break
                 ok, txt = night.run("EXECUTOR", iid, fill(ex_tpl, RETRY_NOTE=retry, **common))
                 if txt.startswith("BREAKER") or night.state["stopped_reason"]: break
                 st["attempts"] += 1; st["status"] = "executed"; night.save()

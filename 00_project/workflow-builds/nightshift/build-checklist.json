@@ -82,60 +82,60 @@
    "note": "Martin: Go, as designed (13.10.); cap 14 kept for week 1"
   },
   "3.1": {
-   "status": "todo",
+   "status": "done",
    "title": "Folder from the 741 template (patterns.md section 5)",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "00_project/workflow-builds/nightshift/skill-draft/night-shift-v2/SKILL.md",
+   "date": "2026-10-13",
+   "note": "skill draft night-shift-v2 (SKILL.md + references/), runner in reporting/night-shift-v2/"
   },
   "3.2": {
-   "status": "todo",
+   "status": "done",
    "title": "Frontmatter: WHAT + WHEN + negative trigger",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "00_project/workflow-builds/nightshift/skill-draft/night-shift-v2/SKILL.md",
+   "date": "2026-10-13",
+   "note": "description WHAT + WHEN + Do NOT use"
   },
   "3.3": {
-   "status": "todo",
+   "status": "done",
    "title": "Body as checklist with gates; critical rules on top",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "00_project/workflow-builds/nightshift/skill-draft/night-shift-v2/SKILL.md",
+   "date": "2026-10-13",
+   "note": "Critical on top, mode checklists A/B/C"
   },
   "3.4": {
-   "status": "todo",
+   "status": "done",
    "title": "References one level deep; body under 500 lines",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "00_project/workflow-builds/nightshift/skill-draft/night-shift-v2/SKILL.md",
+   "date": "2026-10-13",
+   "note": "43 lines, references one level"
   },
   "3.5": {
-   "status": "todo",
+   "status": "done",
    "title": "Verification step with evidence at the end of the body",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "reporting/night-shift-v2/validate_night.py",
+   "date": "2026-10-13",
+   "note": "verification: validate_night.py must print PASS"
   },
   "3.6": {
-   "status": "todo",
+   "status": "done",
    "title": "741 house rules applied",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "00_project/workflow-builds/nightshift/skill-draft/night-shift-v2/SKILL.md",
+   "date": "2026-10-13",
+   "note": "STE, no sends/live writes, cards for Martin, Martin's click = done"
   },
   "3.7": {
-   "status": "todo",
+   "status": "done",
    "title": "Unattended rules (rules.md section 6), if it runs unattended",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "00_project/workflow-builds/nightshift/skill-draft/night-shift-v2/references/unattended-rules.md",
+   "date": "2026-10-13",
+   "note": "R6.1-R6.11 + ops R22/27/28/36 mapped"
   },
   "4.1": {
-   "status": "todo",
+   "status": "done",
    "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "00_project/workflow-builds/nightshift/trigger-tests.md",
+   "date": "2026-10-13",
+   "note": "skill 4/4, runner 6/6, permissions 3/3"
   },
   "4.2": {
    "status": "todo",
@@ -226,6 +226,12 @@
    "passed": true,
    "missing": 0,
    "at": "2026-10-13T18:11"
+  },
+  {
+   "gate": "install",
+   "passed": false,
+   "missing": 18,
+   "at": "2026-10-13T19:47"
   }
  ]
 }

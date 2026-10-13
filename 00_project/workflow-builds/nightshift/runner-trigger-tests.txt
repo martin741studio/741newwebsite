@@ -1,0 +1,24 @@
+# Runner trigger tests 2026-10-13 19:47 (deterministic, no LLM calls)
+## R1 no queue file for the day -> no run
+no confirmed queue /Users/martindrendel/741website/reporting/night-shift/queue/2099-01-01.json; nothing to do
+## R2 outside window (start 05:00, deadline 05:30) -> no run
+outside window 05:00-05:30; not starting
+## R3 STOP file present -> no run
+STOP file present; not starting
+ls: reporting/night-shift/STOP: No such file or directory
+## R4 lock held by another run -> no run
+another v2 run holds the lock
+## R5 run cap 3 -> stops at 3 runs (dry, separate day)
+[2026-10-13 19:47:49] v2 run 1/3 EXECUTOR bali-beauty-similar (budget left $10.00)
+[2026-10-13 19:47:49] v2 run 2/3 CRITIC bali-beauty-similar (budget left $10.00)
+[2026-10-13 19:47:49] v2 run 3/3 EXECUTOR brasse-faq (budget left $10.00)
+[2026-10-13 19:47:49] v2 stop: run cap 3 reached
+REVIEW → /Users/martindrendel/741website/reporting/night-shift/2099-01-02/REVIEW.md
+[2026-10-13 19:47:49] v2 === night v2 2099-01-02 end · runs 3 · $0.00 · stop=run cap 3 reached ===
+## R6 unconfirmed item -> skipped
+{'bali-beauty-similar': 'skipped', 'brasse-faq': 'pass', 'stuerzl-gsc-chancen': 'pass', 'kamil-oberhausen-audit': 'pass'}
+[2026-10-13 19:48:00] v2 run 1/3 EXECUTOR bali-beauty-similar (budget left $10.00)
+[2026-10-13 19:48:00] v2 run 2/3 CRITIC bali-beauty-similar (budget left $10.00)
+[2026-10-13 19:48:00] v2 stop: run cap 3: no room for Executor + Critic
+REVIEW → /Users/martindrendel/741website/reporting/night-shift/2099-01-02/REVIEW.md
+[2026-10-13 19:48:00] v2 === night v2 2099-01-02 end · runs 2 · $0.00 · stop=run cap 3: no room for Executor + Critic ===
