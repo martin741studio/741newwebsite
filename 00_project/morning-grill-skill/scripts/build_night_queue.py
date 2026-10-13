@@ -42,8 +42,10 @@ def candidates(run):
     out["roadmap_steps"] = [{"client": c["client"], "phase": c.get("phase"), "next_milestone": c.get("next_milestone"), "next_workflow": c.get("next_workflow"),
                              "blockers": c.get("blockers", [])[:4], "waiting_for": c.get("waiting_for", [])}
                             for c in goals["clients"] if c.get("status") not in ("done", "paused", "lead") and (c.get("next_milestone") or c.get("next_workflow"))]
+    pend = os.path.join(REPO, "00_project", "assets", "morning-grill", "state", "night-pending.json")
+    out["pending_items"] = load(pend, []) if os.path.exists(pend) else []   # ready-made items offered by other chats; still need Martin's tick
     print(json.dumps(out, ensure_ascii=False, indent=1))
-    print(f"# {len(out['agent_tasks'])} open agent tasks, {len(out['roadmap_steps'])} client roadmap steps. Build night items from both: the first night-suitable step of the roadmap "
+    print(f"# {len(out['pending_items'])} pending ready-made item(s): offer them on the card as they are. {len(out['agent_tasks'])} open agent tasks, {len(out['roadmap_steps'])} client roadmap steps. Build night items from both: the first night-suitable step of the roadmap "
           "(research, draft, public audit, local build) when no agent task covers it. Skip steps that wait for a client, a login or a payment. Never: send, publish, deploy, login, money, credit scans.", file=sys.stderr)
 
 
@@ -111,6 +113,10 @@ def main():
         print(f"DRY OK: {len(items)} items would be written to {path}"); return 0
     os.makedirs(QUEUE_DIR, exist_ok=True)
     json.dump(doc, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    pend = os.path.join(REPO, "00_project", "assets", "morning-grill", "state", "night-pending.json")
+    if os.path.exists(pend):   # a pending item that was written is no longer pending
+        left = [x for x in load(pend, []) if x.get("id") not in {i["id"] for i in items}]
+        json.dump(left, open(pend, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"written {path} · {len(items)} items · confirmed_by recorded")
     return 0
 

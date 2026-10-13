@@ -1,0 +1,17 @@
+[
+ {
+  "id": "brasse-faq-live-check",
+  "client": "Maria Brasse",
+  "class": "public_audit",
+  "lang": "German",
+  "title": "Which live shuiguru.de pages lack the FAQ block",
+  "brief": "All 12 page texts in 00_project/maria-brasse-pages/ have an FAQ, but the evening log said 4 pages lack one. Check the LIVE pages on https://shuiguru.de (public, no login) against the 12 texts: which live page shows no FAQ block or an older FAQ. No drafts.",
+  "inputs": [
+   "https://shuiguru.de",
+   "00_project/maria-brasse-pages/",
+   "reporting/night-shift/2026-10-13/items/brasse-faq/faq-entwuerfe.md"
+  ],
+  "done": "items/brasse-faq-live-check/live-faq-check.md with a table: page, live URL, FAQ on live page yes/no/older, matching repo text file.",
+  "_note": "Offered by the Night Shift chat 13.10.; Martin chose it at the 21:30 check-in ('Check the live pages'). Still goes through tomorrow's 17:00 card."
+ }
+]

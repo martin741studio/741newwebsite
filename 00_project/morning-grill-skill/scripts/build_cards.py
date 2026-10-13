@@ -130,6 +130,13 @@ def main():
         ns = S["S6_nightshift"]["data"]
         v2 = ns.get("v2")
         if v2:
+            routed = (load(os.path.join(REPO, "00_project", "assets", "morning-grill", "state", "night-routed.json")) if os.path.exists(os.path.join(REPO, "00_project", "assets", "morning-grill", "state", "night-routed.json")) else {}).get(v2["date"], {})
+            for it_ in v2["items"]:
+                if it_["id"] in routed:
+                    c_ = client_of(it_.get("client") or "", goals)
+                    if c_:
+                        add_line(c_, "fixed", f"Night result handled: {it_['title']} ({routed[it_['id']]})")
+            v2 = dict(v2, items=[i for i in v2["items"] if i["id"] not in routed])
             ev = [f"{v2['folder']}/state.json", "S6"]
             if v2["violations"]:
                 cards.append(card(f"{day}-night-violations", "741 (night shift)", 1, "decide",
