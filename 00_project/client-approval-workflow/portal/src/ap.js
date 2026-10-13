@@ -79,6 +79,8 @@ function apFirst(b) {
   return /^(Dr\.|Prof\.)/.test(n) || /\bteam\b/i.test(n) ? n : n.split(' ')[0];
 }
 function apGuide(b, pose, text, small) {
+  // Abwärtskompatibel: das Modul "Dashboard (neu)" ruft apGuide(pose, text, small) ohne b auf
+  if (typeof b === 'string') { small = text; text = pose; pose = b; b = (typeof bundle !== 'undefined') ? bundle : null; }
   const T = apT(b);
   return `<aside class="mg${small ? ' mg--small' : ''}"><img class="mg__img" ${AP_MG[pose]} alt="${T.altPre}${T.alt[pose]}" width="${small ? 72 : 112}"><div class="mg__bubble"><span class="mg__name">Martin</span><p>${esc(text)}</p></div></aside>`;
 }
