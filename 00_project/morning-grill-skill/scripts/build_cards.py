@@ -247,17 +247,22 @@ def main():
             for lc in load(lp).get("cards", []):
                 if lc.get("stable_key"):
                     ledger[lc["stable_key"]] = lc
+        reported_files = set()
         for h in S["S13_deadlines"]["data"]:
             if money.search(h["text"]):
                 continue
             key = f"deadline|{h['file']}|{h['date']}"
-            lc = ledger.get(key)
+            by_file = {k.split("|")[1]: v for k, v in ledger.items() if k.count("|") == 2}   # a parked/decided deadline card silences the whole memory file (a status note I wrote there is not a new deadline)
+            lc = ledger.get(key) or by_file.get(h["file"])
+            if lc and h["file"] in reported_files:
+                continue
             if lc and (lc["status"] == "parked" or (lc["status"] == "decided"
                        and (day - dt.date.fromisoformat(lc.get("created", scan["date"]))).days < 3)):
                 if h.get("client") in lines:
                     lines[h["client"]]["watch"].append(f"{lc['status'].title()}: {lc.get('park_reason') or lc.get('answer_text')}")
                 else:
                     scan.setdefault("_741_lines", []).append(f"{lc['status'].title()} ({h['date']}): {lc.get('park_reason') or lc.get('answer_text')}")
+                reported_files.add(h["file"])
                 continue
             if h["urgent"] and h["overdue_days"] >= -3:
                 cards.append(card(f"{day}-deadline-{h['file'][:20]}", h.get("client") or "741", 1, "decide",

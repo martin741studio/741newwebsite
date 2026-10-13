@@ -1,0 +1,394 @@
+{
+ "bookmark": "2026-10-13T11:30+08:00",
+ "read_at": "2026-10-14T05:50+08:00",
+ "files_read": 50,
+ "files_unreadable": [],
+ "clients": {
+  "Kamil (Physio Anatomie + Kraft)": {
+   "done": [
+    "Ads report Aug+Sep published in Kamil's Reports tab, HTTP 200, backup first [7d666ae6]",
+    "Kraft site: spam block and hidden element removed, 'all pages 0 spam hits' [610a8689]",
+    "Kraft homepage broke after cleanup (Elementor data); restored from 17.09. revision, CSS 142KB, live ok [610a8689]",
+    "Oberhausen footer: 2 spam links (TikTok, foreign Instagram) removed, readback + live checked [e418e89f]",
+    "Hack message to Kamil drafted in full (lint 5/5), not sent [e418e89f]",
+    "Website audit + Local-SEO add-on proposal started as draft; Cloudflare check on Kraft not passed [610a8689]"
+   ],
+   "open": [
+    "Report message to Kamil (2 lines) drafted, not sent [7d666ae6]",
+    "Hack/security message to Kamil not sent [e418e89f]",
+    "Sep Ads data gaps (clicks, Kraft budget/calls) marked 'folgt' in report [7d666ae6]",
+    "4 Kamil decision cards still draft [0d991c89]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "go to send report message and hack message",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Send or adjust Kamil report message",
+    "Send hack message to Kamil",
+    "Release Kamil cards (draft)"
+   ],
+   "last_activity": "2026-10-13T21:01+08:00"
+  },
+  "Praxis Suriya": {
+   "done": [
+    "Search Console + Website access rows set to 'angefragt' in portal; reply posted as 741 [bac0e038]",
+    "Portal reply to Suriya posted (id 005b0cc2); drafts in portal-reply-drafts.md [bac0e038]",
+    "Suriya decision cards fully released (earlier in chat) [0d991c89]"
+   ],
+   "open": [
+    "Portal row for Search Console still shows 'erteilt' vs real state; card question pending [bac0e038]"
+   ],
+   "waiting_for": [
+    {
+     "who": "client",
+     "what": "GSC access back (role only viewer in WordPress too)",
+     "since": "2026-10-12"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Decide on portal access row for Search Console",
+    "Tell Coralie about GSC access himself"
+   ],
+   "last_activity": "2026-10-13T17:48+08:00"
+  },
+  "Praxis Hüwel": {
+   "done": [
+    "Decision card 'Datenschutz-Abschnitt zu Google Analytics' released (open) [e8aede79]",
+    "GA4 test clicks on live site: phone_click, email_click, page_view, session_start arrive [e8aede79]",
+    "7 cards released (E1,E2,E3,E5,E6,E7,E8), E4 deleted, due 20.10. [0d991c89][f239aac6]",
+    "Indexing requests sent in Search Console for 4 pages (Frequenz, Ondamed, Wartezeit, Kontakt) [e8aede79]",
+    "Portal reply to Hüwel posted: no GTM needed, GA4 runs direct (id e3777559) [bac0e038]"
+   ],
+   "open": [
+    "Mark phone_click and email_click as key events in GA4 (portal task due 14.10.) [e8aede79]"
+   ],
+   "waiting_for": [
+    {
+     "who": "client",
+     "what": "Answer to GA4 privacy card A/B and other cards, due 20.10.",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Key-event marking needs events listed (24h delay)"
+   ],
+   "last_activity": "2026-10-13T13:03+08:00"
+  },
+  "STÜRZL Steuerstrafrecht": {
+   "done": [
+    "Portal login created and set as approver, intro video off for her view [0d991c89][f203e46d]",
+    "Cards E1 to E6 released; E7 released, due 20.10. [0d991c89][5a89f936]",
+    "Search Console: service account now siteFullUser; 480-day export pulled, 35 opportunities [5a89f936]",
+    "Export file: 00_project/assets/stuerzl/gsc/gsc-export-480d-2026-10-13.json [5a89f936]",
+    "Login email corrected to the company-domain address in DB [f239aac6]"
+   ],
+   "open": [
+    "Welcome mail and password or invite link not sent [f239aac6]",
+    "Reset mail points to localhost (Supabase site URL) [f203e46d]",
+    "Card E5 price text may be outdated vs 11.10. cost text [5a89f936]",
+    "Alt-text for photo goes on Joomla list [5a89f936]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "go for tech items (sitemap, 404, dead links, alt text)",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Welcome mail / invite for Anja",
+    "Check E5 price vs newer cost text"
+   ],
+   "last_activity": "2026-10-13T21:40+08:00"
+  },
+  "Daniela Dumann": {
+   "done": [
+    "13 cards open (E1-E11, E22, E23); 14 set back to draft with 'withdrawn' log rows [065572cb]",
+    "Card system extended: preview link and image on cards, line breaks kept (live, commit 8fd4cdf) [8abda0cf]",
+    "E22 card carries Track B preview link [8abda0cf]"
+   ],
+   "open": [
+    "Status page 'Dein SEO-Fahrplan' and portal message not published [065572cb]",
+    "Dashboard to be switched to German like Bali [da3afad4]",
+    "Releasing sends no email; she sees cards after next login [065572cb]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "go to publish SEO-Fahrplan page and portal message",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Publish status page and message for Dumann"
+   ],
+   "last_activity": "2026-10-13T17:27+08:00"
+  },
+  "Maria Brasse": {
+   "done": [
+    "Reply mail to Maria sent from martin@741.studio; sent twice by mistake, same timestamp 18:43 [24666031]",
+    "Portal reply to Brasse posted (id 7d041abf) [bac0e038]",
+    "Cards released earlier [0d991c89]",
+    "Night run: brasse-faq needs Martin; follow-up 'check live pages' (shuiguru.de FAQ) stored for 17:00 card [da3afad4]"
+   ],
+   "open": [
+    "Live FAQ check on shuiguru.de only if ticked on 17:00 card [da3afad4]"
+   ],
+   "waiting_for": [],
+   "client_promises": [],
+   "needs_martin": [
+    "Tick Brasse live check on the 17:00 night card"
+   ],
+   "last_activity": "2026-10-13T19:54+08:00"
+  },
+  "Bali Healing": {
+   "done": [
+    "SEO roadmap in dashboard, pointer message for Pintor/Pasha/Peggy drafted [adc36943]",
+    "Martin: no WhatsApp status messages; status and open points stay in dashboard [e9c4af07]",
+    "Ads: ozone paused, skin tag campaign live on Martin's go; Sep 30 screenshot still open [e9c4af07]",
+    "Beauty LPs: 'Similar treatments' section published on page 6 of 10 (CellreJet), live checked [76ee66f6]",
+    "English labels for decision module built (518a4b2, a6c29c5), test copy only, 7 Bali drafts hidden [c204d580]",
+    "Dashboard feed job built and checked (WhatsApp 124 vs 123); read-only, not live [8ccce35e]"
+   ],
+   "open": [
+    "Beauty LPs: pages 7 to 10 of 10 still to do [76ee66f6]",
+    "English UI to staging: waits for 'staging now' [c204d580]",
+    "Pintor's questions: need Sep 30 message screenshot [adc36943]",
+    "Card B10 pending [0d991c89]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "'staging now' for English decision labels",
+     "since": "2026-10-13"
+    },
+    {
+     "who": "martin",
+     "what": "Sep 30 screenshot for Pintor's questions",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [
+    "Weekly update of the roadmap in the dashboard (promised in pointer message)"
+   ],
+   "needs_martin": [
+    "Say 'staging now' for EN labels",
+    "Send Sep 30 screenshot"
+   ],
+   "last_activity": "2026-10-13T20:37+08:00"
+  },
+  "Johni Jaya Motor": {
+   "done": [
+    "Full GBP pass (categories, services, booking link) and GA4/GSC access done [701c3ead]",
+    "Plan file and memory updated; Falcon scan parked with parameters saved [701c3ead]"
+   ],
+   "open": [
+    "Baseline Local Falcon scan blocked: connector not in Claude Code (fresh session too) [247f25fe]",
+    "Johni cards (7) still draft, approver set [0d991c89]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "Enable Local Falcon connector for Claude Code in claude.ai (2 switches)",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Check Falcon connector connected + enabled for Claude Code"
+   ],
+   "last_activity": "2026-10-13T13:17+08:00"
+  },
+  "Rabenmütter": {
+   "done": [
+    "Portal reply to Rabenmütter posted (id 16913676); domain access row 'entfaellt' [bac0e038]"
+   ],
+   "open": [
+    "7 cards still draft, approver set [0d991c89]"
+   ],
+   "waiting_for": [],
+   "client_promises": [],
+   "needs_martin": [
+    "Grill and release Rabenmütter cards"
+   ],
+   "last_activity": "2026-10-13T15:57+08:00"
+  },
+  "Marcel Rosenbach": {
+   "done": [],
+   "open": [
+    "Marcel reports the Zap was switched off; checking Zapier draft editor and tag [c4cdeb06]"
+   ],
+   "waiting_for": [],
+   "client_promises": [],
+   "needs_martin": [],
+   "last_activity": "2026-10-14T05:42+08:00"
+  },
+  "me&you / Pauspapier": {
+   "done": [
+    "Draft C live at clients.741.studio/meandyou/, 11 approved pages incl. 3 persona pages [5c4f6ee6]",
+    "'Optionen ansehen' buttons now all lead to booking page (partner agency rule); options page offline (404) [5c4f6ee6]",
+    "All 10 pages return 200, images load [5c4f6ee6]",
+    "Replayers page shows 44 USD per month, price clarified [5c4f6ee6]"
+   ],
+   "open": [
+    "Go-live date for meandyou.de not set; pages stay on clients.741.studio [5c4f6ee6]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "Record Loom and send ready message to the group",
+     "since": "2026-10-13"
+    },
+    {
+     "who": "client",
+     "what": "Team answer: may Replayers page lead to community",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Record Loom and send message"
+   ],
+   "last_activity": "2026-10-13T19:54+08:00"
+  },
+  "Taxi-Zentrale Nürnberg": {
+   "done": [
+    "Akeeba Backup Pro 10.4.0 and Admin Tools Pro 7.9.3 installed, Download ID saved, backup #53 first [c072bfc1]",
+    "Site, price calculator, /taxi-rechner/ redirect and admin tested ok [c072bfc1]",
+    "Message for Daniel drafted (not sent) [c072bfc1]"
+   ],
+   "open": [
+    "Updates GDPR 2.25 to 2.27 and RSForm! Pro wait for go [c072bfc1]",
+    "Captcha on forms without one needs go [c072bfc1]",
+    "Spam source unproven (~900 mails); form not identified [c072bfc1]"
+   ],
+   "waiting_for": [
+    {
+     "who": "client",
+     "what": "Daniel sends 2 or 3 spam mails with full headers",
+     "since": "2026-10-13"
+    },
+    {
+     "who": "martin",
+     "what": "go for GDPR/RSForm updates and captcha",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Go for pending plugin updates and captcha",
+    "Send message to Daniel"
+   ],
+   "last_activity": "2026-10-13T19:53+08:00"
+  },
+  "Talkinfive (Celine)": {
+   "done": [
+    "Region rule live on 4 pages (go.talkinfive.com/growth/ and 3 more); deploy ok [687c567d]",
+    "Live tests: outside EU pixel fires, Opt out stops Meta; EU waits for Accept [687c567d]"
+   ],
+   "open": [
+    "Opt out click sends one SubscribedButtonClick to Meta: fix waits for go [687c567d]",
+    "Growth page needs real case studies [687c567d]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "go for opt-out leak fix; Billy message unsent",
+     "since": "2026-10-13"
+    },
+    {
+     "who": "client",
+     "what": "Celine sets Calendly redirect to go.talkinfive.com/thank-you/",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Go for opt-out leak fix",
+    "Send Billy message"
+   ],
+   "last_activity": "2026-10-13T17:02+08:00"
+  },
+  "Sabine Schwarz (prospect)": {
+   "done": [
+    "Loom video live in hero of 741.studio/review/sabine-schwarz/, HTTP 200 [76b92d80]",
+    "WhatsApp message drafted (lint 5/5) [76b92d80]",
+    "Transcript saved; 4 video claims not on page (incl. a ranking guarantee) [76b92d80]"
+   ],
+   "open": [
+    "Message not sent; Martin to decide on the 4 off-page claims [76b92d80]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "send WhatsApp message",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Send message; check video claims"
+   ],
+   "last_activity": "2026-10-13T20:26+08:00"
+  },
+  "Jan Gunkel / Dominik (prospect)": {
+   "done": [
+    "Review page v2 live at 741.studio/review/jan-gunkel/ after Martin's go; old version backed up [78fed42c]",
+    "Page: crisis cases only, no video [78fed42c]"
+   ],
+   "open": [
+    "Reply draft to Dominik stays; link goes in a second message [78fed42c]"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "send reply to Dominik, then link",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Send reply and link"
+   ],
+   "last_activity": "2026-10-13T13:07+08:00"
+  },
+  "741 internal": {
+   "done": [
+    "Night Shift v2 installed: gates cp1, cp2, install passed, scorecard 89.1 %; v1 retired [06e79636][395e0ce8]",
+    "First v2 night: 3 of 4 items passed, 10 runs, USD 4.23 [da3afad4]",
+    "Laptop security check: clean enough for new server keys; stealer data in /tmp/39494 moved to quarantine [035ae64f]",
+    "Outreach reports split per LinkedIn account with client label; brief for Gayo ready [f203e46d]",
+    "Decision cards and Kundenarbeit go straight to live (commit 1526040) [8abda0cf]",
+    "Portal reply drafts: 5 replies verified in portal, GET only [bac0e038]",
+    "Several night-shift executor/critic and permission-test sessions skipped as scheduled"
+   ],
+   "open": [
+    "Gayo and Rias not yet told about new outreach form [f203e46d]",
+    "Registry row nightshift approval status [395e0ce8]",
+    "4 clients lack a next milestone; later grill asks [395e0ce8]",
+    "Hetzner cards return after 5 clean laptop nights [06e79636]"
+   ],
+   "waiting_for": [
+    {
+     "who": "team",
+     "what": "Gayo and Rias: first attributed outreach report",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_promises": [],
+   "needs_martin": [
+    "Brief Gayo and Rias on new form"
+   ],
+   "last_activity": "2026-10-14T05:42+08:00"
+  }
+ }
+}

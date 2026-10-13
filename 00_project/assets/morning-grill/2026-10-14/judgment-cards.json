@@ -1,0 +1,244 @@
+[
+ {
+  "id": "2026-10-14-bali-topup",
+  "client": "Bali Healing",
+  "priority": 2,
+  "type": "decide",
+  "headline": "Bali Google Ads balance is IDR 103,892, about 5 days left. The skin tag campaign is live and in Learning. Top up now?",
+  "evidence": [
+   "carry-over 13.10.",
+   "Bali chat 13.10."
+  ],
+  "options": {
+   "a": "Top up IDR 500,000 now (GoPay)",
+   "b": "Top up a different amount",
+   "c": "Not yet"
+  },
+  "recommended": "a",
+  "why": "Learning phase needs steady spend; a gap now resets it.",
+  "deadline": "2026-10-14",
+  "created": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent confirms the top-up went through",
+   "b": "agent tops up the amount you give",
+   "c": "card returns tomorrow"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 + carry-over)"
+ },
+ {
+  "id": "2026-10-14-kamil-messages",
+  "client": "Kamil (Physio Anatomie + Kraft)",
+  "priority": 1,
+  "type": "approve",
+  "headline": "Kamil: the Aug+Sep report message AND the hack message are both drafted and not sent. His site physiotherapiekraft.de was hacked and is closed (403).",
+  "evidence": [
+   "S2 Kamil",
+   "2026-10-13 decisions.md"
+  ],
+  "options": {
+   "a": "Send both now (report pointer + hack notice)",
+   "b": "Combine into one message",
+   "c": "Show me the drafts first"
+  },
+  "recommended": "c",
+  "why": "A hacked site is a fire-priority topic; the wording needs your eyes before it goes to a client.",
+  "deadline": "2026-10-14",
+  "created": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent sends via portal/WhatsApp as drafted",
+   "b": "agent merges and re-checks slop",
+   "c": "agent pastes both drafts here"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 + carry-over)"
+ },
+ {
+  "id": "2026-10-14-suriya-gsc-row",
+  "client": "Praxis Suriya",
+  "priority": 2,
+  "type": "define",
+  "headline": "Suriya's portal row for Search Console still needs a decision: it is 'angefragt' since 12.10. Tell Coralie yourself or let the agent?",
+  "evidence": [
+   "S2 Suriya",
+   "13.10. access flags fix"
+  ],
+  "options": {
+   "a": "Agent drafts the ask, you send",
+   "b": "You tell her yourself, no draft needed",
+   "c": "Wait for her WordPress-role answer first"
+  },
+  "recommended": "a",
+  "why": "One short message covers both access points at once.",
+  "deadline": "2026-10-15",
+  "created": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent drafts message in Suriya chat",
+   "b": "no agent action",
+   "c": "park reason"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 + carry-over)"
+ },
+ {
+  "id": "2026-10-14-stuerzl-welcome",
+  "client": "STÜRZL Steuerstrafrecht",
+  "priority": 2,
+  "type": "approve",
+  "headline": "Anja's portal login exists (stuerzl@stuerzl-steuerstrafrecht.de) but she has never signed in. The welcome mail is not sent.",
+  "evidence": [
+   "13.10. decisions.md"
+  ],
+  "options": {
+   "a": "Send the welcome mail with password reset today",
+   "b": "Wait"
+  },
+  "recommended": "a",
+  "why": "Her 6 cards are due 20.10.; she cannot see them until she logs in.",
+  "deadline": "2026-10-15",
+  "created": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "walk queue: send via Airmailer",
+   "b": "card returns tomorrow"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 + carry-over)",
+  "walk": "Stürzl: send the welcome mail (Airmailer, password reset) to stuerzl@stuerzl-steuerstrafrecht.de"
+ },
+ {
+  "id": "2026-10-14-dumann-publish",
+  "client": "Daniela Dumann",
+  "priority": 2,
+  "type": "approve",
+  "headline": "Dumann's SEO-Fahrplan status page and 20 draft cards are ready since 13.10. but not published. 5 mismatches were found first (see carry-over).",
+  "evidence": [
+   "carry-over 13.10.",
+   "00_project/assets/dumann/status-2026-10-13/"
+  ],
+  "options": {
+   "a": "Publish the page and release cards in waves",
+   "b": "Show me the 5 mismatches first",
+   "c": "Wait"
+  },
+  "recommended": "b",
+  "why": "Two mismatches touch live claims (reviews count, design-approval date); worth one look before her cards go out.",
+  "deadline": "2026-10-15",
+  "created": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent publishes + releases wave 1",
+   "b": "agent lists the 5 mismatches here",
+   "c": "card returns tomorrow"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 + carry-over)"
+ },
+ {
+  "id": "2026-10-14-talkinfive-leak",
+  "client": "Talkinfive (Celine)",
+  "priority": 2,
+  "type": "approve",
+  "headline": "Talkinfive: an opt-out leak fix is ready (region rule tested 17/17, live-tested with Opt out). Push it and tell Billy?",
+  "evidence": [
+   "13.10. Talkinfive chat"
+  ],
+  "options": {
+   "a": "Push the fix, then send the Billy message",
+   "b": "Push only, hold the message",
+   "c": "Not yet"
+  },
+  "recommended": "a",
+  "why": "The change is tested; the message is only true once it is live.",
+  "deadline": "2026-10-15",
+  "created": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent deploys + sends via the chat's channel",
+   "b": "agent deploys only",
+   "c": "park reason"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 + carry-over)"
+ },
+ {
+  "id": "2026-10-14-taxi-plugins",
+  "client": "Taxi-Zentrale Nürnberg",
+  "priority": 3,
+  "type": "approve",
+  "headline": "Taxi Nürnberg: pending plugin updates and a captcha change wait for your go. 900 spam mails and a missing Akeeba key were found 13.10.",
+  "evidence": [
+   "carry-over 13.10.",
+   "00_project/assets/morning-grill/2026-10-13/taxi-akeeba-findings.md"
+  ],
+  "options": {
+   "a": "Go for the plugin updates and the captcha change",
+   "b": "Updates only, no captcha yet",
+   "c": "Wait"
+  },
+  "recommended": "a",
+  "why": "Open plugin versions are the more likely entry point; captcha stops the spam at the form.",
+  "deadline": "2026-10-16",
+  "created": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent updates + adds captcha",
+   "b": "agent updates only",
+   "c": "park reason"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 + carry-over)"
+ },
+ {
+  "id": "2026-10-14-falcon-connector",
+  "client": "Johni Jaya Motor",
+  "priority": 5,
+  "type": "approve",
+  "headline": "Local Falcon is still not enabled as a connector for Claude Code. Johni's first ranking scan has waited since 12.10.",
+  "evidence": [
+   "carry-over 13.10."
+  ],
+  "options": {
+   "a": "I enable it now in claude.ai",
+   "b": "Not today"
+  },
+  "recommended": "a",
+  "why": "One toggle unblocks the scan that is otherwise ready to run.",
+  "deadline": "2026-10-16",
+  "created": "2026-10-14",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent runs the baseline scan once enabled",
+   "b": "card returns tomorrow"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 + carry-over)"
+ }
+]
