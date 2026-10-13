@@ -1,0 +1,108 @@
+# Laptop check after the infostealer incident (2026-10-13)
+
+- Device: MacBook Pro M1 Pro (MacBookPro18,3), macOS 15.7.7 (24G720), user `martindrendel`
+- Incident: 2026-10-13, 13:49 WITA. A fake Cloudflare "verify" page made Martin paste a command into Terminal. The command ran a macOS infostealer (AMOS family).
+- Check done: 2026-10-13, 18:10 to 18:40 WITA, read-only. It is a second, independent check.
+- Changes made during this check (each with Martin's go):
+  1. Removed the stale "Atomic BI" login item.
+  2. Moved `/tmp/39494` to `~/QUARANTINE-malware-2026-10-13/staging-tmp-39494` and set mode 000. Nothing deleted.
+- No secret values are in this file. It lists names only.
+
+## Verdict
+
+**Laptop clean enough to create new server keys and a new setup-token: YES.**
+
+Both conditions are met (18:22 WITA):
+1. The stealer staging folder `/tmp/39494` is moved into the quarantine and locked (mode 000).
+2. Martin confirmed that he installed TeamViewer himself on 2026-10-08.
+
+Reasons:
+- No malware process runs. No connection to the attacker address 178.62.247.40 exists.
+- No persistence: no new LaunchAgent, LaunchDaemon, login item, cron job, profile, shell-file change, browser extension or system extension since the incident.
+- All launch items and new apps have valid Developer ID or App Store signatures.
+- SIP, Gatekeeper and FileVault are on. XProtect is current (5366, 2026-10-07).
+
+The stolen data is a different problem. The laptop is clean, but the stolen credentials stay valid until Martin rotates them. See "Credentials to rotate".
+
+## Earlier knowledge (session "Kamil Website-Audit + Local-SEO Add-on")
+
+- 13:49: stealer binary ran from `/tmp/.hk3ug2dm`. It packed data into a zip and uploaded it to `178.62.247.40` for about 2 minutes.
+- 13:53: the session killed the stealer (PID 13294) and the upload processes. It moved the binary and the archive to `~/QUARANTINE-malware-2026-10-13/`.
+- 14:27: a live check found no malware process, no attacker connection and no persistence.
+- Gap in that check: it searched `/tmp` only for `.hk3` and `87B3o`. It did not find the staging folder `/tmp/39494`.
+
+## Findings
+
+Status: **clean** = no risk found. **suspicious** = needs Martin's answer or a hygiene fix. **malicious** = malware or malware output.
+
+| # | Item | Status | Evidence | Command |
+|---|------|--------|----------|---------|
+| M1 | Stealer staging folder `/tmp/39494` (created 13:49:46–13:49:55, 320 files, 325 MB). Holds plain copies of: Chrome and Brave `Cookies`, `Login Data`, `History`, `Web Data` (24 profiles); `login.keychain-db`; SSH keys; `gcloud/credentials.db`; Discord token store; `zsh_history`, `zshrc`, `bash_history`; Safari history. No program files inside. | **malicious** (malware output, not malware) | `ls -laTR /private/tmp/39494`; `find /private/tmp/39494 -type f -perm -u+x` → 0 | `ls`, `find`, `du` |
+| M2 | Quarantine `~/QUARANTINE-malware-2026-10-13/`: `hk3ug2dm.bin` (mode 000), `stolen-archive.zip` (132 MB, mode 400) | **malicious**, contained | Binary cannot run (mode 000). Archive list read with `unzip -l`, not extracted. | `ls -la`, `unzip -l` |
+| C1 | User LaunchAgents: 4 × `studio.741.*`, Elgato CameraHub, GoogleUpdater, Google Keystone (2 empty plists), Steam `steamclean`, Homebrew MariaDB | **clean** | All programs signed (Corsair, Google, Valve) or known 741 scripts. CameraHub plist rewritten 12:30, before the incident, by the signed Elgato app. | `ls -laT ~/Library/LaunchAgents`; `plutil`; `codesign -dv`; `spctl -a -vv` |
+| C2 | 741 jobs | **clean** | Loaded: `studio.741.standup`, `studio.741.listings-poller`, `studio.741.night-shift-sleep`. `studio.741.night-shift` is not loaded, as intended (unloaded 13.10. 18:10). | `launchctl list \| grep studio.741` |
+| C3 | `/Library/LaunchAgents` + `/Library/LaunchDaemons` + `/Library/PrivilegedHelperTools`: Epson, TeamViewer (4), Zoom (3), Microsoft Teams updater, Wireshark ChmodBPF | **clean** (TeamViewer see S2) | All signed: TeamViewer Germany GmbH (H7UGFBUGV6), Zoom, Microsoft, Wireshark Foundation, Seiko Epson. No AMOS backdoor files (`~/.helper`, `~/.agent`, `~/.pass`, `~/.username`, `com.finder.helper.plist`). | `ls -laT`; `codesign -dv`; `ls ~/.helper …` |
+| C4 | Background task database | **clean** | Only known vendors. Stale entry "Atomic BI" pointed to an app that is no longer in the Trash. | `sfltool dumpbtm` |
+| C5 | Login items (before): Atomic BI, Claude, Loom, Google Chrome, Fathom, Notion | **clean** | "Atomic BI" (bundle `bi.atomic.companion-app`, team TT5SR2JM9L) is a BI app, not the AMOS stealer. **Removed on Martin's go.** "Fathom" points to a missing app (stale, harmless). | `osascript … login item` |
+| C6 | Cron | **clean** | 2 known jobs: `run-forex-events.sh` (Sunday 23:00), watch-face health export (21:30). No `at` jobs, no emond rules. | `crontab -l`; `atq` |
+| C7 | Shell startup files | **clean** (no tampering) | `.zshrc` last changed 2026-05-29, `.zprofile` 2024-10-23. No `.zshenv`, `.zlogin`, `.bash_profile`. `/etc/zshrc`, `/etc/profile` from 2026-04-30 (OS install). `/etc/hosts` default. `/etc/sudoers.d` empty. | `ls -laT`; masked read |
+| C8 | Configuration profiles | **clean** | 2 user profiles from 2025 (Screen Time "ManagedSettings", date-time). No MDM, no DEP. | `profiles list`; `profiles status -type enrollment` |
+| C9 | Processes | **clean** | No process from `/tmp`, `/Users/Shared` or a hidden folder. All processes started after 13:40 are Terminal shells, Claude Code sessions, the Kraft clean-up script and Apple services. | `ps -axo pid,ppid,user,lstart,command` |
+| C10 | Network (established) | **clean** | 0 connections to 178.62.x.x. Connections go to Anthropic, Google, OpenAI, Notion, WhatsApp, Wispr, and to 185.2.31.101 (741.studio host: Airmail + Kraft clean-up script). | `lsof -nP -iTCP -sTCP:ESTABLISHED`; `lsof -nP -i @178.62.247.40` |
+| C11 | New executables/scripts since 2026-10-13 12:00 in `~/Library`, `/tmp`, `/private/var/folders`, `~/Downloads`, `/Users/Shared` | **clean** | Only app preference files, Claude "Services" workflows (from 2026-09-11), signed Notion native host, Codex launcher script. | `find … -newermt '2026-10-13 12:00'` |
+| C12 | `~/Downloads` newest files | **clean** | Akeeba/Admin Tools zips (17:23, Taxi job), images, PDFs, a WhatsApp audio. No `.dmg`, `.pkg`, `.app` or script. | `ls -laTt ~/Downloads` |
+| C13 | Browser extensions: 36 in Chrome (22 profiles) and Brave | **clean** | All from the Chrome Web Store. None unpacked. None installed or updated after 2026-10-09. | `ext_list.py` (reads `manifest.json` + Preferences) |
+| C14 | System extensions, kexts, Safari extensions | **clean** | Elgato camera extension, OBS camera extension. No third-party kext. No Safari extension. | `systemextensionsctl list`; `kmutil showloaded`; `pluginkit` |
+| C15 | Apps added or updated since 2026-10-01 | **clean** | 13 apps. All signed (Developer ID or App Store). | `find /Applications -newermt`; `spctl -a -vv` |
+| C16 | SIP, Gatekeeper, FileVault, XProtect | **clean** | SIP on, Gatekeeper on, FileVault on, XProtect 5366. No XProtect detection log after 13:00. No unified-log line names `hk3ug2dm` or `178.62`. | `csrutil status`; `spctl --status`; `fdesetup status`; `log show` |
+| S1 | Staging folder `/tmp/39494` | **contained** (was suspicious) | Newest write inside: 13:49:55. No activity after the stealer run. Moved to `~/QUARANTINE-malware-2026-10-13/staging-tmp-39494`, mode 000, on Martin's go (18:22). | `find … stat`; `mv`; `chmod 000` |
+| S2 | TeamViewer installed 2026-10-08, full module, starts at boot, runs now (PID 1653) | **clean** (Martin confirmed he installed it) | Signed and notarised. Installed before the incident, so not from the stealer. Remote-access tools are a common second step after a stealer. | `ls -laT /Applications/TeamViewer.app`; `sfltool dumpbtm` |
+| S3 | macOS firewall off; MariaDB listens on `*:3306`; Vite dev server on `0.0.0.0:3000`; a prototype web server on `*:8992`; ARDAgent (Remote Management) active | **suspicious** (hygiene) | Other devices on the same Wi-Fi can reach these ports. Not malware. | `socketfilterfw --getglobalstate`; `lsof -iTCP -sTCP:LISTEN` |
+| S4 | `.secrets/apify.env`, `meta-741.env`, `telegram-741.env` are mode 644 (other users can read) | **suspicious** (hygiene) | Others in `.secrets` are 600. | `ls -laT ~/741website/.secrets` |
+| S5 | SSH keys not rotated yet | **suspicious** (open task) | `id_ed25519` (2026-01-25), `id_rsa` (2026-02-19), `google_compute_engine` (2026-02-11) are still the stolen keys. | `ls -laT ~/.ssh` |
+
+## What the attacker has (from `unzip -l` of the archive and the staging folder)
+
+Stolen:
+- Chrome: `Login Data` + `Cookies` from 24 profiles. Saved passwords per profile: Default 200, Profile 59: 182, Profile 55: 75, Profile 65: 14, Profile 53: 11, Profile 64: 9, Profile 67: 8, Profile 66: 7, Profile 36: 5.
+- Brave Default: 29 saved passwords + cookies.
+- Extension vault data: MetaMask (Default, Profile 1, Profile 67), LastPass (Default, Profile 1, Profile 67), 1Password (Default, Profile 71).
+- `login.keychain-db` (offline copy). Chrome passwords and cookies are encrypted with a key in this keychain. The keychain opens with the Mac login password. The archive holds no password file, so the attacker must crack that password offline.
+- SSH keys: `id_ed25519`, `id_rsa`, `google_compute_engine` (+ `known_hosts`).
+- `gcloud/credentials.db` (Google Cloud CLI login).
+- Discord token store (`leveldb`, 12 files).
+- `zshrc`, `zsh_history` (1,780 lines), `bash_history`. These hold API keys and passwords as plain text.
+- Safari history, system info, user name.
+
+Not stolen (folders exist but are empty): Telegram, Binance, TonKeeper, Bitwarden, AWS, Docker, FileZilla.
+Not in the archive: `~/741website/.secrets/*`, `~/.claude.json`.
+
+## Credentials to rotate (names only)
+
+### A. Stolen. Rotate now.
+1. **SSH keys** `id_ed25519`, `id_rsa`, `google_compute_engine`. Make new keys. Remove the old public keys from all hosts below.
+   - Hosts in `known_hosts` and history: `187.127.103.222` (root login, a VPS), `github.com`, `hub.741-studio.com`, `56863247.ssh.w1.strato.hosting`, `access1013340746.webspace-data.io`, `s103.cyon.net`, `[128.127.111.40]:6121`, `34.122.73.91`, `35.193.14.30` (Google Cloud), `185.2.31.101` (741.studio).
+   - **Check 187.127.103.222 for intrusion before more use.** The history shows root SSH logins there, so the attacker knows the address and has a matching key.
+2. **Google Cloud CLI login** (`gcloud/credentials.db`). Revoke the gcloud sessions and remove the old Compute Engine key from project metadata.
+3. **API keys in `.zshrc`**: `BRAVE_API_KEY`, `GEMINI_API_KEY`, `OPENAI_API_KEY`, `CLAWDBOT_GATEWAY_TOKEN`.
+4. **Keys in `zsh_history`**: 3 OpenAI keys (`sk-…`), 2 Google API keys (`AIza…`), `GEMINI_API_KEY`.
+5. **WordPress application passwords in `zsh_history`**: `shuiguru.de` (user "741 Studio - Martin", `WP_API_PASSWORD`) and `leichsenring.wab-dev.de`. Also update the copies in `~/.claude.json` (Novamira MCP entries).
+6. **FTP account `agent_deploy@741.studio`** (`ftp.741.studio` / 185.2.31.101). 22 history lines hold its password.
+7. **Mac login password.** The keychain copy is offline. A new Mac password protects the next keychain, not the stolen copy.
+8. **All passwords saved in Chrome and Brave** (about 540 entries). Start with Google accounts, hosting, registrars, banking, Meta/Ads, client CMS logins. Then sign out all sessions (cookies are stolen).
+9. **Password managers**: LastPass master password (session destroy was done earlier), 1Password master password.
+10. **MetaMask**: move funds to a new wallet with a new seed phrase. The stolen vault can be cracked offline.
+11. **Discord**: change password (this logs out stolen tokens).
+
+### B. Not stolen, but rotate before they go to the new server
+Martin's rule: only keys rotated after a clean check go to the server. Files in `~/741website/.secrets/`:
+- `standup.env` (`STANDUP_PASSWORD`, used by the night shift)
+- any other file the server will use: `apify.env`, `cpanel.env`, `dataforseo.env`, `ga-sc-reporting-bot.json`, `listings-imap.env`, `meta-741.env`, `telegram-741.env`, `youtube-api.env`, `stuerzl-artfiles.env`
+- `kraft-ftp.env`: the Kraft FTP password was also pasted into a chat. Rotate it after the Kraft clean-up.
+
+## Open decisions for Martin
+
+1. Done: `/tmp/39494` moved into the quarantine. Martin can delete `~/QUARANTINE-malware-2026-10-13/` himself when he no longer needs the evidence.
+2. Done: TeamViewer confirmed.
+3. Atomic BI Chrome extension (Default profile): Martin can remove it at `chrome://extensions`.
+4. Hygiene (S3, S4): firewall on, MariaDB bound to `127.0.0.1`, `.secrets` files to mode 600. These are settings changes for Martin.
