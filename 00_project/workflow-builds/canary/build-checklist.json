@@ -1,0 +1,226 @@
+{
+ "workflow_id": "canary",
+ "name": "Canary (Ausfall-Wächter)",
+ "created": "2026-10-14",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/canary/block-choice.md",
+   "date": "2026-10-14",
+   "note": "Hybrid: deterministic off-laptop checks + /canary agent skill (alert triage via routine API trigger)"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/canary/library-search.md",
+   "date": "2026-10-14",
+   "note": "0 hits canary/uptime; routines.md alert-triage pattern found"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/canary/freshness.md",
+   "date": "2026-10-14",
+   "note": "INDEX 2026-10-11 ok; topic gap filled with 2 fresh ops-library files"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/canary/coverage-map.md",
+   "date": "2026-10-14",
+   "note": "No uptime monitoring exists; canary = missing L6 monitor half of Automation Build; reuse grill S8, Telegram, Resend plan, registry"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/canary/research-note.md",
+   "date": "2026-10-14",
+   "note": "block, 3 rules, pattern, time budget, open questions"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/canary/use-cases.md",
+   "date": "2026-10-14",
+   "note": "UC1 add, UC2 incident, UC3 daily watch"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/canary/test-scenarios.md",
+   "date": "2026-10-14",
+   "note": "T1 obvious, T2 German paraphrase, T3+T4 must-not, T5 incident functional"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/canary/hand-run.md",
+   "date": "2026-10-14",
+   "note": "Marcel funnel mapped, Zap history read, alert path built+live+tested (2 Zapier Manager Zaps), Tally browser read unreadable (finding)"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/canary/pipeline.md",
+   "date": "2026-10-14",
+   "note": "4 layers, interim vs server, gos G1-G3"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/canary/freedom.md",
+   "date": "2026-10-14",
+   "note": "scripts for checks/alerts/registry/allowlist; heuristics for diagnosis"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/canary/cp1-go.md",
+   "date": "2026-10-14",
+   "note": "Martin: Go, build it (Recommended)"
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": ".claude/skills/canary/",
+   "date": "2026-10-14",
+   "note": "folder: SKILL.md, scripts/{registry,alert,allowlist,verify}.py, references/{check-catalogue,allowlist,runbooks,zapier-manager-setup}.md, assets/incident-log.template.md"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": ".claude/skills/canary/SKILL.md",
+   "date": "2026-10-14",
+   "note": "frontmatter: WHAT+WHEN+negative trigger, disable-model-invocation true, narrow allowed-tools"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": ".claude/skills/canary/SKILL.md",
+   "date": "2026-10-14",
+   "note": "3 mode checklists (add/incident/status) with gates, Critical on top"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": ".claude/skills/canary/references/",
+   "date": "2026-10-14",
+   "note": "4 reference files one level deep; SKILL.md 90 lines (verify.py check)"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": ".claude/skills/canary/scripts/verify.py",
+   "date": "2026-10-14",
+   "note": "14/14 checks pass, ALL CHECKS PASSED"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": "00_project/workflow-builds/canary/house-rules.md",
+   "date": "2026-10-14",
+   "note": "house rules mapped to skill sections"
+  },
+  "3.7": {
+   "status": "done",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "00_project/workflow-builds/canary/unattended-rules.md",
+   "date": "2026-10-14",
+   "note": "R6.1-R6.12 applied, E checks already unattended today"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/canary/trigger-tests.md",
+   "date": "2026-10-14",
+   "note": "found+fixed disable-model-invocation bug; re-run 4/4 PASS"
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/canary/functional-test.md",
+   "date": "2026-10-14",
+   "note": "Claude B: correct stop at the known Tally/Pipedrive key blocker, no skill gap"
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/canary/baseline.md",
+   "date": "2026-10-14",
+   "note": "with-skill: -21% tokens, 8 vs ~17 tool calls, 0 vs 3 corrections"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-14",
+   "note": "",
+   "reason": "project skill, not a plugin; no /doctor prompt-audit equivalent applies here, covered instead by the trigger+functional tests and verify.py"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/canary/scorecard.md",
+   "date": "2026-10-14",
+   "note": "67/74 = 90.5%, no blocking zero in A or D"
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/canary/cp2-go.md",
+   "date": "2026-10-14",
+   "note": "Martin: Go, install it (Recommended)"
+  },
+  "5.2": {
+   "status": "todo",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3a": {
+   "status": "todo",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3b": {
+   "status": "todo",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3": {
+   "status": "todo",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.4": {
+   "status": "todo",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-14T07:04"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-14T07:17"
+  }
+ ]
+}
