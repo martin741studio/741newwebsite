@@ -1,7 +1,7 @@
 # Plan 2026-10-13 (WITA)
 
 ## Walk queue — Martin (1–5 min each)
-- [ ] Suriya: send the reply to Coralie (new text in send-pack.md, asks for WordPress + Search Console) (card 4)
+- [ ] Suriya: ask Coralie to raise your WordPress role to Administrator (text in send-pack.md, section 3). Tell her about Search Console yourself (your words 13.10.).
 - [ ] Bali: give the 2 numbers (LinkedIn outreach counts; Ads status/spend) in the Bali chat (card 5)
 - [ ] Stürzl: send the email via Airmailer (BCC you) + "Add user" in Search Console
 - [ ] Tick which of yesterday's 6 drafts you sent

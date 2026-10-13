@@ -53,34 +53,18 @@ From now on I send a short status in this group every Monday, so nothing hangs.
 
 ```
 
-## 3. Suriya: reply to Coralie (German, du)
-NEW text, changed from the 12.10. draft:
-• Added: the ask to re-add you in Search Console (your card 4 decision: ask for both accesses). The 12.10. draft asked only for WordPress.
-• Removed: the line about the attached PDF and the backlink paragraph. The PDF went to her on 13.10., and she agreed to continue. Put the backlink paragraph back if you want it (it is in the Suriya chat, message of 12.10. 08:54).
-• Removed: the Google test numbers of that day (66 / 46 / 90), because they are one day old.
-Check before you send: the exact Search Console user she should add (the Suriya chat says "741studio18"). The portal-reply draft for Suriya (Facebook link) is a separate short message. Send it first or merge both.
-
+## 3. Suriya: WordPress role is too small (German, du)
+Update 13.10. (Martin, in the review of the pack): Coralie already sent the WordPress invitation again with a new password setup. Martin sees that the role is only a viewer role. So the old ask for WordPress access is obsolete; the new ask is a bigger role.
+Search Console: Martin tells Coralie himself that he must be added again. No text for that in this pack.
+Check before you send: the exact name of the role you see (not named in the text on purpose).
 ```text
 Hallo Coralie,
 
-danke dir, dass du mich wieder in WordPress einrichtest. Sobald der Zugang da ist, lege ich los.
+danke, die Einladung zu WordPress ist bei mir angekommen. Die Rolle ist leider zu klein: Ich kann damit nur ansehen und nichts ändern. Kannst du mich bitte als Administrator eintragen? Diese Rolle brauche ich für das Backup, die Ladezeit und die Barrierefreiheit.
 
-Eine Bitte noch: Magst du mich auch in der Search Console wieder als Nutzer eintragen? Dann kann ich messen, ob die Änderungen wirken, und dir vorher und nachher zeigen.
-
-Ich sehe es wie du, jetzt geht es zuerst um Ladezeit und Barrierefreiheit. Deine Werte nehme ich ernst. Man muss sie aber einordnen: Googles Test simuliert für das Handy ein langsames Gerät mit schwacher Verbindung, und die Werte schwanken von Messung zu Messung. Es gibt trotzdem echte Stellschrauben, und die gehe ich an.
-
-So gehe ich vor:
-• Vorher ein vollständiges Backup der Website.
-• Bilder: Ich optimiere nur die vorhandenen Bilder, also Dateigröße, Format und Abmessungen. Ich tausche keine Motive aus.
-• Zwischenspeicher und Komprimierung einstellen.
-• CSS und JavaScript: Unnötiges entfernen und den Rest später laden lassen.
-• Barrierefreiheit: Farbkontraste, zu kleine Tippflächen und die angezeigten Fehler beheben.
-• Danach messe ich mit demselben Google-Test und schicke dir vorher und nachher.
-
-Seitenadressen ändere ich nicht. Ich lösche und entwerte nichts, ohne es vorher mit dir abzusprechen.
+Danach starte ich mit dem Backup. Seitenadressen ändere ich nicht, und ich lösche und entwerte nichts, ohne es vorher mit dir abzusprechen.
 
 Martin
-
 ```
 
 ## 4. Portal replies (5 drafts, German, du)
