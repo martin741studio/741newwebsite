@@ -90,3 +90,8 @@ Library: `00_project/knowledge/client-work-library/INDEX.md`. Rule numbers below
 - t19 (Dinakar, Suriya speed) is now `waiting` / `client`, because it waits for Coralie's WordPress role.
 - The grill's "Tasks" tab reads `work_items` (43 rows). It can go away once "Heute" and the client page are live.
 - Scheduled runs do not write tasks yet (Martin has not approved it). Only the chat session writes.
+
+## Live + access check (13.10., Martin's go)
+- **"Kundenarbeit" is live** (12:34, backup `clients.741.studio/backup/index-20261013-1234-before-kundenarbeit-live.html`). The build used a fresh live file and changed only 2 anchor lines plus its own blocks. All 4 modules are in it (Entscheidungen, Command Center, Outreach, Kundenarbeit). `node --check` OK, and curl confirms that live equals the build. The Chrome check of live is still open: the Chrome extension was not connected.
+- **Access check** (`research/06-access-check-2026-10-13.md`): 8 accesses are ticked (`erteilt`), and their tasks are done with the check file as proof. 3 GTM requests are `entfaellt` (Brasse, Dumann, Hüwel), and their tasks are dropped. Still open: Stürzl Google Ads. Johni turned green automatically.
+- The Hüwel finding (no GA4/GTM tag since the move on 06.10.) went to the Hüwel chat. Live only with Martin's go.
