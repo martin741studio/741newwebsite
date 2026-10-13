@@ -8,13 +8,20 @@
 - [ ] Dumann: click Publish in Wix
 - [ ] Hüwel: request indexing for the 6 core pages
 - [ ] Start dates Suriya / Hüwel / Stürzl (one line each)
-- [ ] Send the portal reply drafts when they are ready (card 1)
+- [ ] Send the 5 portal reply drafts (ready: portal-reply-drafts.md; Suriya, Hüwel, Dumann, Brasse, Rabenmütter)
+- [ ] Bali: upload the NIB PDF of PT Amana in Google Ads (Admin > Policy > Account > Submit documents for your client) — ads are PAUSED since 01.10.
+- [ ] Bali: answer Pintor's 30.09. questions, then send the ready status reply (point 6 promises 'today')
 
 ## Agent starts
-- Portal replies (card 1): new session "✉️ Portal-Antworten 13.10." drafts replies for Suriya, Hüwel, Dumann (4), Brasse, Rabenmütter; Ich-Form, du/Sie as in the thread, text blocks, slop 5/5; nothing sent.
-- Bali Ads verification (card 3): message to the 🌺 Bali Healing chat: read-only check of the advertiser verification state + list of documents to upload.
-- Suriya listings (card 7): agent lists the 28 unhandled confirmation emails (this chat) → card in the next grill.
-- Bali result (cards 3+5): Ads account PAUSED since the 1 Oct deadline (agency check done 1 Oct, client documents for PT Amana still open; Martin uploads the NIB under Admin > Policy > Account > "Start task"); status reply finished with CRM numbers (149 requests, 38 accepted, 14 in conversation) and Ads data (IDR 571,785, 61 clicks, 14 WhatsApp), slop 5/5, ready for Martin to send.
+- DONE Portal replies (card 1): 5 drafts ready in portal-reply-drafts.md (all 'du', slop 5/5). 4 of 5 'help requests' are only a Hilfe click on an access item. Stale portal flags wait for GO-PORTAL.
+- DONE Bali (cards 3+5): Ads account PAUSED (verification deadline passed); agency part verified, client part not uploaded. Status reply ready with real CRM numbers (149 requests, 38 messaged, 14 in conversation, 0 links live). Audit + content pool wait for your go since 11.10.
+- DONE Suriya listings (card 7): 28 emails from 13 senders listed (suriya-listing-emails.md) → card next grill.
+- Found: Hüwel website has NO measuring code since the move on 06.10. (adding it needs your go).
+
+- Bali audit + content pool: go 13.10. → sent to the Bali session.
+- Hüwel GA4 with consent: prepare on a test branch → sent to the Hüwel chat.
+- Portal flags: set after Martin sends the 5 replies → sent to the portal-replies session.
+- Command Center in the portal admin view (staging): starts when the Freigabe-Dashboard chat is idle.
 
 ## Waiting for
 - Abmahnung: lawyer's reply to Martin's letter (pay 0 €) — card parked until a reply arrives.

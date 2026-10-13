@@ -14,3 +14,9 @@
    → other: Sequence: landing page (in progress now) -> Martin's intro video -> prototype for Marcel -> Ads
 7. **Praxis Suriya** — Praxis Suriya: 28 directory confirmation emails are unhandled. Verify links can expire.
    → b: Agent lists the 28 emails first; Martin decides
+
+## Round 3 (after the Command Center, 12:40)
+- **741 (workflows)** — Where should the Command Center live? → Portal admin view on staging, after the Freigabe-Dashboard chat finishes (one writer per portal file)
+- **741 (all clients)** — Set stale portal flags after the replies are sent? → Yes, after Martin sent the 5 replies
+- **Bali Healing** — Continue Bali audit + content pool? → Go for both
+- **Praxis Hüwel** — Add GA4 (with consent) to the Hüwel website? → Yes, prepare on a test branch; live change needs a per-change go
