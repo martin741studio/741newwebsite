@@ -22,3 +22,4 @@ Added 2026-10-13 after the first real grill:
 - [x] D33 live 13.10.: walk items are cards now (type 'Your click'); the 13 click cards of 13.10. are open in the page.
 - [ ] Tasks (D34): 23 tasks of 13.10. in 00_project/assets/morning-grill/2026-10-13/tasks.json. Tomorrow: carry the open ones over, update statuses, add new ones from today's answers. Team drafts: Dinakar (Suriya speed, waits for the WordPress role), Gayo (Bali CRM clean-up) in team-tasks-drafts.md; Martin forwards the WhatsApp lines.
 - [ ] Waiting for the Freigabe chat's task-model schema (D35). Do not create task tables. When it arrives: map tasks.json fields to it, switch publish + Tasks tab, ask Martin for GO-DB at that time.
+- [ ] Task writes in the scheduled runs are NOT approved (Martin dismissed the card 13.10.). Until he says go, run publish_tasks.py only inside the chat grill. Tasks tab reads work_items; check it shows the new date after a grill.

@@ -15,6 +15,21 @@ async function loadGrill() {
   ccRender();
 }
 
+async function ccLoadWork() {
+  try {
+    const [a, b, c] = await Promise.all([
+      db.from('work_items').select('id,title,status,waiting_on,due_on,next_action,status_reason,source,source_id,client_id,doer_id').neq('status', 'dropped').order('updated_at', { ascending: false }).limit(500),
+      db.from('work_actors').select('id,kind,name'),
+      db.from('clients').select('id,name')]);
+    const err = a.error || b.error || c.error;
+    if (err) throw new Error(err.message);
+    const act = {}; (b.data || []).forEach(x => { act[x.id] = x; });
+    const cli = {}; (c.data || []).forEach(x => { cli[x.id] = x.name; });
+    CC.work = (a.data || []).map(w => { const d = act[w.doer_id] || {}; return { id: w.id, title: w.title, status: w.status, waiting_on: w.waiting_on, due: w.due_on, next: w.next_action, reason: w.status_reason, source: w.source, source_id: w.source_id, client: cli[w.client_id] || '', owner: d.kind === 'agent' ? 'agent' : (d.kind === 'external' ? 'external' : (d.kind === 'client' ? 'client' : (d.name || '?'))) }; });
+    CC.workErr = null;
+  } catch (e) { CC.work = null; CC.workErr = e.message; }
+}
+
 function ccEff(c) {
   const a = CC.answers[c.id];
   if (CC.reopen[c.id]) return { status: 'open', answer: null, text: null };   // "Change answer" (Martin 13.10.)
@@ -123,22 +138,35 @@ function ccTaskStatus(t) {
   return t.status;
 }
 function ccTasks() {
-  const tasks = (CC.snap.tasks || []).map(t => ({ t, st: ccTaskStatus(t) }));
-  if (!tasks.length) return '<div class="cc-panel"><div class="muted">No tasks in this snapshot yet.</div></div>';
-  const owners = ['Martin', 'agent', 'Dinakar', 'Tantri', 'Gayo', 'external'];
+  const snapMap = {}; (CC.snap.tasks || []).forEach(t => { snapMap[CC.snap.date + '/' + t.id] = t; });
+  let rows0;
+  if (CC.work && CC.work.length) {
+    rows0 = CC.work.map(w => {
+      const sn = snapMap[w.source_id];
+      let st = w.status === 'planned' || w.status === 'intake' ? 'open' : w.status;
+      if (sn && sn.card) { const o = ccTaskStatus(sn); if (o === 'done' || o === 'parked' || o === 'decided') st = o; }
+      return { t: { owner: w.owner, client: w.client || '741', title: w.title, due: w.due, next: w.next || w.reason, link: sn && sn.link, session: sn && sn.session, card: sn && sn.card, source_card: sn && sn.source_card, src: w.source }, st };
+    });
+  } else {
+    rows0 = (CC.snap.tasks || []).map(t => ({ t: { ...t, src: 'snapshot' }, st: ccTaskStatus(t) }));
+  }
+  if (!rows0.length) return '<div class="cc-panel"><div class="muted">No tasks yet.</div></div>';
+  const owners = ['Martin', 'agent', 'Dinakar', 'Tantri', 'Gayo', 'external', 'client'];
   const f = CC.tfilter;
-  const order = { open: 0, in_progress: 1, waiting: 2, drafted: 3, decided: 4, parked: 5, done: 6 };
-  const label = { open: 'open', in_progress: 'in progress', waiting: 'waiting', drafted: 'draft', decided: 'decided', parked: 'parked', done: 'done' };
-  const cnt = o => tasks.filter(x => x.t.owner === o && x.st !== 'done').length;
-  const chips = [['all', `All (${tasks.filter(x => x.st !== 'done').length} open)`], ...owners.map(o => [o, `${o} (${cnt(o)})`])].map(([k, l]) => `<button class="cc-chip${f === k ? ' on' : ''}" onclick="ccTfilter('${k}')">${esc(l)}</button>`).join('');
-  const rows = tasks.filter(x => f === 'all' || x.t.owner === f).sort((a, b) => (order[a.st] ?? 9) - (order[b.st] ?? 9) || a.t.owner.localeCompare(b.t.owner)).map(({ t, st }) => {
+  const order = { open: 0, in_progress: 1, waiting: 2, needs_check: 3, decided: 4, parked: 5, done: 6 };
+  const label = { open: 'open', in_progress: 'in progress', waiting: 'waiting', needs_check: 'needs check', decided: 'decided', parked: 'parked', done: 'done' };
+  const live = rows0.filter(x => x.st !== 'done');
+  const cnt = o => live.filter(x => x.t.owner === o).length;
+  const chips = [['all', `All (${live.length} open)`], ...owners.map(o => [o, `${o} (${cnt(o)})`])].map(([k, l]) => `<button class="cc-chip${f === k ? ' on' : ''}" onclick="ccTfilter('${k}')">${esc(l)}</button>`).join('');
+  const rows = rows0.filter(x => f === 'all' || x.t.owner === f).sort((a, b) => (order[a.st] ?? 9) - (order[b.st] ?? 9) || a.t.owner.localeCompare(b.t.owner)).slice(0, 200).map(({ t, st }) => {
     const src = t.card || t.source_card;
     const link = src ? `<a href="#" onclick="ccGoCard('${esc(src)}');return false;">card</a>` : '';
-    const extra = [t.next ? esc(t.next) : '', t.link ? 'file: ' + esc(t.link) : '', t.session ? 'chat: ' + esc(t.session.slice(0, 14)) : ''].filter(Boolean).join(' · ');
+    const extra = [t.next ? esc(t.next) : '', t.link ? 'file: ' + esc(t.link) : '', t.session ? 'chat: ' + esc(String(t.session).slice(0, 14)) : ''].filter(Boolean).join(' · ');
     return `<tr class="${esc(st)}"><td><span class="cc-st ${esc(st)}">${esc(label[st] || st)}</span></td><td><b>${esc(t.owner)}</b></td><td>${esc(t.client)}</td><td>${esc(t.title)}${extra ? `<div class="cc-sub">${extra}</div>` : ''}</td><td>${esc(t.due || '')}</td><td>${link}</td></tr>`;
   }).join('');
+  const srcNote = CC.work && CC.work.length ? `Source: task model (work_items), ${CC.work.length} rows.` : `Source: snapshot (task model not readable${CC.workErr ? ': ' + esc(CC.workErr) : ''}).`;
   return `<div class="cc-chips">${chips}</div><div class="cc-panel" style="overflow-x:auto"><table class="cc-tk"><tr><th>Status</th><th>Owner</th><th>Client</th><th>Task</th><th>Due</th><th>Source</th></tr>${rows}</table></div>
-<div class="cc-legend" style="margin-top:10px">Team tasks stay drafts for the first week (portal task + WhatsApp line in team-tasks-drafts.md). A click-card task is done when you answer its card 'Done'.</div>`;
+<div class="cc-legend" style="margin-top:10px">${srcNote} Only a person sets 'done', with proof. An agent 'done' shows as 'needs check'. A click-card task shows 'done' as soon as you answer its card 'Done'.</div>`;
 }
 
 function ccRender() {

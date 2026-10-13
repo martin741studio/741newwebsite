@@ -82,7 +82,8 @@
   "status": "waiting",
   "client": "Bali Healing",
   "title": "Go-C for the English audit page (after the status reply is out)",
-  "card": "walk-fb201e47"
+  "card": "walk-fb201e47",
+  "waiting_on": "martin"
  },
  {
   "id": "t10",
@@ -109,7 +110,8 @@
   "client": "741 (all clients)",
   "title": "Set the stale portal access flags after Martin sent the replies",
   "session": "local_0d8b6037-6931-4ec6-8652-dd710d513670",
-  "next": "Waits for Martin: tell the session 'sent'"
+  "next": "Waits for Martin: tell the session 'sent'",
+  "waiting_on": "martin"
  },
  {
   "id": "t13",
@@ -170,12 +172,13 @@
  {
   "id": "t19",
   "owner": "Dinakar",
-  "status": "drafted",
+  "status": "waiting",
   "client": "Praxis Suriya",
   "title": "Backup, image optimisation (existing images only), caching, CSS/JS cleanup, accessibility fixes, before/after test",
   "link": "team-tasks-drafts.md (D1)",
-  "next": "Starts when Coralie has raised the WordPress role",
-  "source_card": "2026-10-13-suriya-access"
+  "next": "Draft ready (team-tasks-drafts.md D1). Starts when Coralie has raised the WordPress role",
+  "source_card": "2026-10-13-suriya-access",
+  "waiting_on": "client"
  },
  {
   "id": "t20",
@@ -193,7 +196,8 @@
   "title": "Open the verify links of the directories that are not live yet",
   "link": "suriya-listing-emails.md",
   "next": "Waits for Martin's card on the 28 emails",
-  "source_card": "2026-10-13-suriya-listing-mails"
+  "source_card": "2026-10-13-suriya-listing-mails",
+  "waiting_on": "martin"
  },
  {
   "id": "t22",

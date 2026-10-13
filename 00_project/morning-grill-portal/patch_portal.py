@@ -54,9 +54,11 @@ def main():
         needle = "onclick=\"showApp('newsletter');loadNewsletter()\">→ Newsletter</button>"
         once(s, needle, "newsletter button")
         s = s.replace(needle, needle + "\n      <button id=\"btn-grill\" class=\"btn btn-small btn-yellow\" style=\"margin-left:8px;display:none;\" onclick=\"showApp('grill');loadGrill()\">→ Command Center</button>")
-    if "'newsletter','grill']" not in s:
-        once(s, "'metaads','newsletter']", "showApp list")
-        s = s.replace("'metaads','newsletter']", "'metaads','newsletter','grill']")
+    m = re.search(r"function showApp\(id\) \{ \[([^\]]*)\]", s)
+    if not m:
+        die("anchor 'showApp list' not found")
+    if "'grill'" not in m.group(1):
+        s = s[:m.end(1)] + ",'grill'" + s[m.end(1):]
     if "const gb = $('btn-grill')" not in s:
         needle = "async function loadAdminHome() {"
         once(s, needle, "loadAdminHome")

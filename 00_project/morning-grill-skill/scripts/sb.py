@@ -14,13 +14,19 @@ def _env():
     return env
 
 
+_CACHE = {}
+
+
 def login():
+    if "t" in _CACHE:
+        return _CACHE["t"]
     env = _env()
     body = json.dumps({"email": env["STANDUP_EMAIL"], "password": env["STANDUP_PASSWORD"]}).encode()
     req = urllib.request.Request(f"{env['SUPABASE_URL']}/auth/v1/token?grant_type=password", data=body,
                                  headers={"apikey": env["SUPABASE_ANON"], "Content-Type": "application/json"})
     token = json.load(urllib.request.urlopen(req, timeout=30))["access_token"]
-    return env["SUPABASE_URL"], env["SUPABASE_ANON"], token
+    _CACHE["t"] = (env["SUPABASE_URL"], env["SUPABASE_ANON"], token)
+    return _CACHE["t"]
 
 
 def request(method, path, payload=None, prefer=None):
