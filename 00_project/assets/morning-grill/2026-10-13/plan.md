@@ -11,6 +11,8 @@
 - [ ] Send the 5 portal reply drafts (ready: portal-reply-drafts.md; Suriya, Hüwel, Dumann, Brasse, Rabenmütter)
 - [ ] Bali: upload the NIB PDF of PT Amana in Google Ads (Admin > Policy > Account > Submit documents for your client) — ads are PAUSED since 01.10.
 - [ ] Bali: answer Pintor's 30.09. questions, then send the ready status reply (point 6 promises 'today')
+- [ ] Bali: drag the staged content-pool files into the 'Content Pool' folder in Drive (Chrome upload timed out; files are in 00_project/assets/balihealing/content-pool/)
+- [ ] Bali: Go-C for the English client audit page after the status reply is out (page is ready as a draft)
 
 ## Agent starts
 - DONE Portal replies (card 1): 5 drafts ready in portal-reply-drafts.md (all 'du', slop 5/5). 4 of 5 'help requests' are only a Hilfe click on an access item. Stale portal flags wait for GO-PORTAL.
