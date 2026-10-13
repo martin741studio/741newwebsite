@@ -6,7 +6,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 LIVE = json.load(open(os.path.join(HERE, 'data/live-crawl-2026-10-13.json'), encoding='utf-8'))
 CLIENT = 'd01f4236-8674-45fe-a347-0751fa7b24de'
 SRC = 'Google-Suchdaten (90 Tage bis 11.10.) und Abgleich deiner Website'
-SEP = ' ▪ '
+SEP = '\n'
 
 def clean(s): return re.sub(r'\s+', ' ', (s or '').replace('\xa0', ' ')).strip()
 def before(page):
@@ -44,9 +44,9 @@ card(code='E8', title='Seite „Behandlungen“: Auftritt bei Google und Übersc
 
 card(code='E9', title='Seite „Behandlungen“: drei Formulierungen zu Salbe, Test und Beschwerden', wave=1, risk_class='health',
      why='Auf der Seite stehen **drei Stellen, die Heilwirkung oder eine Krebs-Vorstufe nennen**: die Amethystsalbe bei Neurodermitis, der „Präkanzerose Test“ und eine Liste mit Magen-Darm-Erkrankungen.',
-     why_source='Abgleich deiner Website', before_value='Amethystsalbe: „… die bei Neurodermitis und auch bei Warzen und Altersflecken hervorragende Dienste leistet.“ ▪ Test: „Präkanzerose Test (Untersuchung auf Vorstufen einer Krebserkrankung)“ ▪ Liste: „… meine Schwerpunkte bei der Behandlung von Magen-Darm-Erkrankungen (chronische) Durchfälle, (chronische) Verstopfung, Blähungen …“',
+     why_source='Abgleich deiner Website', before_value='Amethystsalbe: „… die bei Neurodermitis und auch bei Warzen und Altersflecken hervorragende Dienste leistet.“\nTest: „Präkanzerose Test (Untersuchung auf Vorstufen einer Krebserkrankung)“\nListe: „… meine Schwerpunkte bei der Behandlung von Magen-Darm-Erkrankungen (chronische) Durchfälle, (chronische) Verstopfung, Blähungen …“',
      variants=[
-       {'key': 'A', 'label': 'die Angebote bleiben, die Aussagen werden neutral', 'value': 'Amethystsalbe: „Eine Salbe mit Amethyst, die ich in meiner Praxis entwickelt habe. Sie kann unterstützend angewendet werden.“ ▪ Test: „Urintest (Morgenurin), 48 €“ ▪ Liste: „Themenfelder, bei denen ich Sie begleite: Verdauung, Bauchbeschwerden und Nahrungsmittelunverträglichkeiten.“'},
+       {'key': 'A', 'label': 'die Angebote bleiben, die Aussagen werden neutral', 'value': 'Amethystsalbe: „Eine Salbe mit Amethyst, die ich in meiner Praxis entwickelt habe. Sie kann unterstützend angewendet werden.“\nTest: „Urintest (Morgenurin), 48 €“\nListe: „Themenfelder, bei denen ich Sie begleite: Verdauung, Bauchbeschwerden und Nahrungsmittelunverträglichkeiten.“'},
        {'key': 'B', 'label': 'die drei Stellen verschwinden von der Seite', 'value': 'Die drei Absätze entfallen. Die Preisliste und alle anderen Angebote bleiben.'}],
      recommended_key='A', context={'page': '/behandlungen'},
      note='Der neue Wortlaut wird vor dem Einbau noch einmal auf das Heilmittelwerbegesetz geprüft. Wie der Test künftig heißen soll, kannst du im Kommentarfeld schreiben.',
@@ -84,14 +84,14 @@ card(code='E12', title='Seite „Darmsanierung“: Auftritt bei Google und Über
      guide_text='Auf dieser Seite fehlt oft nur ein klarer Titel, um auf Seite 1 zu kommen.')
 
 card(code='E13', title='Seite „Kräuterheilkunde“: Auftritt bei Google und Überschrift', wave=2, risk_class='health',
-     why='**„hildegard von bingen kräuter“ wird 320-mal im Monat gesucht.** Deine Seite steht im Schnitt auf Platz 49. Der Google-Text beginnt mit einer Aufzählung von Heilmitteln gegen bestimmte Beschwerden.',
+     why='**„hildegard von bingen kräuter“ wird 320-mal im Monat gesucht.** Deine Seite steht im Schnitt auf Platz 49 und bekam in 90 Tagen nur 1 Klick. Der Google-Text beginnt mit einer Aufzählung von Heilmitteln gegen bestimmte Beschwerden.',
      before_value=before('kräuterheilkunde'),
      variants=[
        {'key': 'A', 'label': 'nennt die Kräuter statt der Heilmittel-Zahlen', 'value': pack('Kräuterheilkunde nach Hildegard von Bingen in Berlin', 'Kräuterheilkunde nach Hildegard von Bingen in Berlin-Charlottenburg: Galgant, Bertram, Quendel und überlieferte Rezepturen. Praxis und Kräutersalon.', 'Kräuterheilkunde nach Hildegard von Bingen')},
        KEEP()],
      recommended_key='A', keyword='Kräuterheilkunde', seo_lock=True, lock_note='„Kräuterheilkunde“ bleibt, weil danach gesucht wird. Die Formulierung wählst du.',
      context={'page': '/kräuterheilkunde'}, note='Die Aufzählung „Herzmittel, Rheumamittel, Hautmittel“ steht auch im Text der Seite. Sie wird vor dem Einbau auf das Heilmittelwerbegesetz geprüft.',
-     guide_text='Zahlen zu Heilmitteln für bestimmte Krankheiten sind riskant. Die Kräuter selbst sind sicher.')
+     guide_text='Zahlen zu Heilmitteln für bestimmte Krankheiten sind riskant, weil sie wie ein Heilversprechen wirken. Die Kräuter selbst sind sicher.')
 
 card(code='E14', title='Seite „Aderlass-Therapie“: Auftritt bei Google und eine Aussage zur Wirkung', wave=2, risk_class='health',
      why='Der Google-Text und die Seite nennen den Aderlass „das wichtigste Mittel zur Behandlung aller chronischen Erkrankungen“. Das ist eine **Heilaussage ohne Beleg**.',
@@ -163,9 +163,9 @@ card(code='E20', title='Seite „Lebenslauf“ wird zur Behandlerseite: Auftritt
 
 card(code='E21', title='Vier weitere Seiten: Oligoscan, Homöopathie, Massage, Kurse & Seminare', wave=3,
      why='Diese vier Seiten haben **Titel mit fremdem Namen, zu lange Google-Texte oder keine Hauptüberschrift**. Die Seite „Kurse & Seminare“ ist mit 53 Klicks deine Nummer 2.',
-     before_value='Oligoscan: Titel „Orthomolekulare Medizin Berlin - Oligoscan & Mikronährstoffe | hildegardbingen“ ▪ Homöopathie: Titel „Homöopathie Berlin | Hildegard von Bingen Naturheilkunde | Berlin“ ▪ Massage: Titel „Massage | Hildegard von Bingen Naturheilkunde | Berlin“ ▪ Kurse & Seminare: Titel „Kurse & Seminare | Ausbildung Hildegard von Bingen Daniela Dumann | Berlin hildegardbingen“, Google-Text 432 Zeichen',
+     before_value='Oligoscan: Titel „Orthomolekulare Medizin Berlin - Oligoscan & Mikronährstoffe | hildegardbingen“\nHomöopathie: Titel „Homöopathie Berlin | Hildegard von Bingen Naturheilkunde | Berlin“\nMassage: Titel „Massage | Hildegard von Bingen Naturheilkunde | Berlin“\nKurse & Seminare: Titel „Kurse & Seminare | Ausbildung Hildegard von Bingen Daniela Dumann | Berlin hildegardbingen“, Google-Text 432 Zeichen',
      variants=[
-       {'key': 'A', 'label': 'kurze, klare Titel und Texte für alle vier', 'value': 'Oligoscan: „Oligoscan & Mikronährstoffe in Berlin | Daniela Dumann“ ▪ Homöopathie: „Homöopathie in Berlin-Charlottenburg | Daniela Dumann“ ▪ Massage: „Massagen & Schröpfen nach Hildegard in Berlin | Daniela Dumann“ ▪ Kurse & Seminare: „Kurse & Seminare nach Hildegard von Bingen | Daniela Dumann“ mit der Überschrift „Kurse, Seminare & Ausbildungen nach Hildegard von Bingen“'},
+       {'key': 'A', 'label': 'kurze, klare Titel und Texte für alle vier', 'value': 'Oligoscan: „Oligoscan & Mikronährstoffe in Berlin | Daniela Dumann“\nHomöopathie: „Homöopathie in Berlin-Charlottenburg | Daniela Dumann“\nMassage: „Massagen & Schröpfen nach Hildegard in Berlin | Daniela Dumann“\nKurse & Seminare: „Kurse & Seminare nach Hildegard von Bingen | Daniela Dumann“ mit der Überschrift „Kurse, Seminare & Ausbildungen nach Hildegard von Bingen“'},
        KEEP('Bei allen vier Seiten')],
      recommended_key='A', context={'page': 'mehrere'}, note='Die vollständigen Google-Texte stehen im SEO-Arbeitsplan. ' + NAMENS_HINWEIS)
 
@@ -177,7 +177,7 @@ card(code='E22', kind='other', type_label='Neues Design', title='Neues Design de
        {'key': 'A', 'label': 'das Design wie in der Vorschau, mit der wachsenden Ranke', 'value': 'Neue Startseite komplett: Ranke, fünf Themen, sechs Leistungen, Ablauf, Bewertungen'},
        {'key': 'B', 'label': 'dieselbe Seite ohne Bewegung, ruhig und schnell', 'value': 'Neue Startseite ohne Ranke und ohne Animationen'},
        {'key': 'C', 'label': 'die Optik bleibt wie heute, nur die Texte aus deinen Freigaben kommen rein', 'value': 'Optik wie heute, neue Texte'}],
-     recommended_key='A', context={'page': '/'},
+     recommended_key='A', context={'page': '/', 'preview_url': 'https://clients.741.studio/r/58f0e3689022/v3/index.html'},
      note='Nichts wird ohne dein Ja umgebaut. Die Kachelbilder sind noch Entwürfe und werden durch deine echten Fotos ersetzt. Für Praxisraum, Garten, Hände bei einer Anwendung und Heilpflanzen brauche ich später Fotos von dir.',
      guide_text='Schau dir die Vorschau in Ruhe an. Variante A ist das Design, das ich empfehle.')
 
@@ -196,19 +196,19 @@ card(code='E23', title='Hauptüberschrift der neuen Startseite', wave=1, risk_cl
 card(code='E24', title='Seite „Über mich“: deine drei Ergänzungen vom 17.09.', wave=2, risk_class='legal',
      why='Du hast am 17.09. drei Ergänzungen für deine Vorstellung gewünscht: **Ausbildung, Berufsverband und die Gründung von Viriditas**. Sie sind noch nicht auf der Seite.',
      why_source='Dein Kommentar im Portal vom 17.09. und dein Briefing vom 09.09.', why_date='2026-09-17',
-     before_value='Ausbildung: Hildegard-Heilkunde bei Gudrun und Peter Germann (Phytaro, Dortmund) ▪ Mitgliedschaften: Internationale Gesellschaft Hildegard von Bingen, Medizinischer Arbeitskreis Engelberg, Fachverband Freie Heilpraktiker, FET, MeGeMit ▪ Viriditas: Schule seit 2021',
+     before_value='Ausbildung: Hildegard-Heilkunde bei Gudrun und Peter Germann (Phytaro, Dortmund)\nMitgliedschaften: Internationale Gesellschaft Hildegard von Bingen, Medizinischer Arbeitskreis Engelberg, Fachverband Freie Heilpraktiker, FET, MeGeMit\nViriditas: Schule seit 2021',
      variants=[
-       {'key': 'A', 'label': 'mit den Namen aus deinem Kommentar', 'value': 'Ausbildung: „unter anderem bei Dr. Wighard Strehlow sowie Gudrun und Peter Germann (Phytaro, Dortmund)“ ▪ Mitgliedschaften: zusätzlich „Lachesis, Berufsverband für Heilpraktikerinnen und Frauengesundheit“ ▪ Viriditas: „Gründerin der Schule Viriditas Grünkraft (2021)“', 'ask_note': True},
-       {'key': 'B', 'label': 'nur „unter anderem“, ohne Namen', 'value': 'Ausbildung: „unter anderem Hildegard-Heilkunde und Homöopathie“ ▪ Mitgliedschaften wie bisher ▪ Viriditas: „Gründerin der Schule Viriditas (2021)“'}],
+       {'key': 'A', 'label': 'mit den Namen aus deinem Kommentar', 'value': 'Ausbildung: „unter anderem bei Dr. Wighard Strehlow sowie Gudrun und Peter Germann (Phytaro, Dortmund)“\nMitgliedschaften: zusätzlich „Lachesis, Berufsverband für Heilpraktikerinnen und Frauengesundheit“\nViriditas: „Gründerin der Schule Viriditas Grünkraft (2021)“', 'ask_note': True},
+       {'key': 'B', 'label': 'nur „unter anderem“, ohne Namen', 'value': 'Ausbildung: „unter anderem Hildegard-Heilkunde und Homöopathie“\nMitgliedschaften wie bisher\nViriditas: „Gründerin der Schule Viriditas (2021)“'}],
      recommended_key='A', context={'page': '/lebenslauf'},
-     note='Bitte prüfe Namen, Schreibweise und das Jahr deiner Mitgliedschaft im Lachesis-Verband. Ich nehme nur Angaben, die du bestätigst. [von Daniela zu bestätigen]',
-     guide_text='Hier brauche ich dein Ja zu Namen und Jahren. Titel und Mitgliedschaften müssen stimmen.')
+     note='Bitte prüfe Namen, Schreibweise und das Jahr deiner Mitgliedschaft im Lachesis-Verband, denn ich nehme nur Angaben, die du bestätigst. [von Daniela zu bestätigen]',
+     guide_text='Hier brauche ich dein Ja. Titel und Mitgliedschaften müssen genau stimmen.')
 
 card(code='E25', title='Seite „Ernährungsberatung“: drei neue Fragen mit Antworten', wave=2, risk_class='price',
      why='Die meistgestellten Fragen bei Google zu diesem Thema drehen sich um **Kosten, Krankenkasse und Ablauf**. Die Seite beantwortet sie heute nicht.',
      why_source='Google-Suchdaten und Abgleich deiner Website', why_date='2026-09-13', before_value='Keine Antworten zu Kosten, Krankenkasse und Verordnung auf der Seite',
      variants=[
-       {'key': 'A', 'label': 'drei Fragen mit kurzen Antworten, ohne Heilaussage', 'value': 'Wie viel kostet eine Ernährungsberatung in Berlin? „In meiner Praxis kostet die Erstanamnese (60 Minuten) 220 €, Folgetermine 150 € je angefangene Stunde, abgerechnet nach der Gebührenordnung für Heilpraktiker.“ ▪ Welche Krankenkasse bezahlt Ernährungsberatung? „Gesetzliche Krankenkassen übernehmen die Kosten für die Beratung bei einer Heilpraktikerin in der Regel nicht. Private Krankenversicherungen, Beihilfe und Zusatzversicherungen erstatten teilweise, je nach Tarif.“ ▪ Brauche ich eine ärztliche Verordnung? „Bei mir als Heilpraktikerin ist keine Verordnung nötig. Sie können direkt einen Termin anfragen.“'},
+       {'key': 'A', 'label': 'drei Fragen mit kurzen Antworten, ohne Heilaussage', 'value': 'Wie viel kostet eine Ernährungsberatung in Berlin? „In meiner Praxis kostet die Erstanamnese (60 Minuten) 220 €, Folgetermine 150 € je angefangene Stunde, abgerechnet nach der Gebührenordnung für Heilpraktiker.“\nWelche Krankenkasse bezahlt Ernährungsberatung? „Gesetzliche Krankenkassen übernehmen die Kosten für die Beratung bei einer Heilpraktikerin in der Regel nicht. Private Krankenversicherungen, Beihilfe und Zusatzversicherungen erstatten teilweise, je nach Tarif.“\nBrauche ich eine ärztliche Verordnung? „Bei mir als Heilpraktikerin ist keine Verordnung nötig. Sie können direkt einen Termin anfragen.“'},
        {'key': 'B', 'label': 'nur die Frage zu den Kosten', 'value': 'Wie viel kostet eine Ernährungsberatung in Berlin? „In meiner Praxis kostet die Erstanamnese (60 Minuten) 220 €, Folgetermine 150 € je angefangene Stunde, abgerechnet nach der Gebührenordnung für Heilpraktiker.“'}],
      recommended_key='A', context={'page': '/ernährungsberatung'}, note='Die Antworten stammen aus dem Textentwurf vom 16.09. und enthalten nur Angaben von deiner Seite. Die Aussage zu den Kassen prüfst du bitte auf Richtigkeit.',
      guide_text='Hier brauche ich dein Ja zu den Preisen und zur Aussage über die Kassen.')
@@ -217,18 +217,18 @@ card(code='E26', title='Seite „Hildegard-Fasten“: drei neue Fragen mit Antwo
      why='Die Seite bekam in 90 Tagen **980 Anzeigen und 3 Klicks**. Wer „fasten nach hildegard von bingen“ sucht, findet auf der Seite heute keine Antwort auf die ersten Fragen.',
      before_value='Keine Fragen und Antworten auf der Seite',
      variants=[
-       {'key': 'A', 'label': 'ohne Entgiftungs-Aussage, mit Hinweis auf ein Vorgespräch', 'value': 'Wie fastet man nach Hildegard von Bingen? „Gemäßigt, mit Dinkel oder glutenfrei. Der Körper bekommt weiterhin alle nötigen Dinge in ausreichendem Maß, ergänzt durch Hildegards Gewürze.“ ▪ Was bringt Fasten nach Hildegard von Bingen? „Viele erleben die Fastenwoche als Zeit der Ruhe. Die Erfahrung ist bei jedem Menschen anders.“ ▪ Kann ich ohne Vorerfahrung teilnehmen? „Ja. Wir besprechen zu Beginn kurz Ihre gesundheitliche Ausgangslage. Bei Vorerkrankungen empfehle ich vorab ein Einzelgespräch.“'},
+       {'key': 'A', 'label': 'ohne Entgiftungs-Aussage, mit Hinweis auf ein Vorgespräch', 'value': 'Wie fastet man nach Hildegard von Bingen? „Gemäßigt, mit Dinkel oder glutenfrei. Der Körper bekommt weiterhin alle nötigen Dinge in ausreichendem Maß, ergänzt durch Hildegards Gewürze.“\nWas bringt Fasten nach Hildegard von Bingen? „Viele erleben die Fastenwoche als Zeit der Ruhe. Die Erfahrung ist bei jedem Menschen anders.“\nKann ich ohne Vorerfahrung teilnehmen? „Ja. Wir besprechen zu Beginn kurz Ihre gesundheitliche Ausgangslage. Bei Vorerkrankungen empfehle ich vorab ein Einzelgespräch.“'},
        {'key': 'B', 'label': 'wie im Entwurf vom 16.09., mit „Entgiftung und Entschlackung“', 'value': 'Wie A, nur die zweite Antwort lautet: „Es soll bei der Entgiftung und Entschlackung des Körpers unterstützen und Raum für Ruhe und Lebensfreude schaffen, individuell verschieden.“'}],
      recommended_key='A', context={'page': '/hildegard-fasten'}, note='Variante B bleibt ein Risiko: Entgiftung und Entschlackung sind Wirkversprechen, die sich nicht belegen lassen. Die Texte stammen aus dem Entwurf vom 16.09. und werden vor dem Einbau noch einmal geprüft.',
      guide_text='Hier brauche ich dein Ja. Die neutrale Antwort ist rechtlich sicherer, die Wirkung bleibt für dich beschreibbar.')
 
 card(code='E27', title='Seite „Behandlungen“: vier Abschnitte statt einer langen Seite', wave=3,
-     why='Die Seite „Behandlungen“ ist eine deiner längsten Seiten. **Vier klare Abschnitte** helfen Besuchern und Google, die Themen zu finden.',
+     why='Die Seite „Behandlungen“ ist eine deiner längsten Seiten. **Vier klare Abschnitte** helfen Besuchern und Google, die Themen zu finden, ohne dass sich ein Wort an deinen Texten ändert.',
      before_value='Eine durchgehende Seite ohne Zwischenüberschriften zu den Schwerpunkten. Die Preisliste bleibt unverändert.',
      variants=[
-       {'key': 'A', 'label': 'vier Abschnitte, deine Texte bleiben', 'value': 'Zwischenüberschriften: „Ernährung und Fasten“ ▪ „Aderlass, Schröpfen und Darmsanierung“ ▪ „Kräuter und Rezepturen“ ▪ „Diagnostik: Oligoscan, Labor und Schilddrüse“'},
+       {'key': 'A', 'label': 'vier Abschnitte, deine Texte bleiben', 'value': 'Zwischenüberschriften: „Ernährung und Fasten“\n„Aderlass, Schröpfen und Darmsanierung“\n„Kräuter und Rezepturen“\n„Diagnostik: Oligoscan, Labor und Schilddrüse“'},
        {'key': 'B', 'label': 'die Seite bleibt wie sie ist', 'value': 'Keine neuen Zwischenüberschriften'}],
-     recommended_key='A', context={'page': '/behandlungen'}, note='Es ändert sich nur die Gliederung, kein Wortlaut. Die Preisliste bleibt unverändert.')
+     recommended_key='A', context={'page': '/behandlungen'}, note='Es ändert sich nur die Gliederung. Die Preisliste bleibt unverändert.', guide_text='Das ist eine kleine Änderung ohne Risiko.')
 
 CARDS.sort(key=lambda c: int(c['code'][1:]))
 
