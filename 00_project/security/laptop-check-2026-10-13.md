@@ -125,3 +125,21 @@ Martin asked for one more check. I compared everything with the state of 2026-10
 | Apps, Downloads, new executables in `~/Library` and `/private/var/folders` | **clean** | Nothing new since 18:20. |
 | SIP, Gatekeeper, XProtect | **clean** | On, on, 5366. No XProtect detection since 2026-10-13 18:00. |
 | Hygiene (firewall off, MariaDB `*:3306`, Vite `*:3000`, `*:8992`, ARDAgent) | **suspicious** (hygiene, unchanged) | Same as S3. |
+
+## Server 187.127.103.222 (2026-10-14, 06:45 WITA, no login)
+
+| Item | Finding | Command |
+|------|---------|---------|
+| Owner | Hostinger VPS, reverse DNS `srv1782758.hstgr.cloud` | `dig -x` |
+| History | An Antigravity agent set up "VPS Night flow" on this server on 2026-03-20 to 2026-03-25 (root SSH, `repo_init.sh`, `dashboard/backend`). Local copy: `~/Desktop/VPS Night flow/`. | `grep` in Antigravity logs, Desktop |
+| **Host keys** | **All 3 host keys (ED25519, RSA, ECDSA) differ from the keys in `known_hosts`.** The machine was reinstalled, or the address now belongs to another machine. | `ssh-keyscan` + `ssh-keygen -F` |
+| Now runs | Ubuntu 24.04 (OpenSSH 9.6p1), Caddy web server. Open ports: 22, 80, 443. Port 80 redirects to HTTPS. No certificate for the bare IP. | `nc`, `curl -I`, `openssl s_client` |
+| Login | **Not done.** SSH stopped at the host-key warning. I did not override it. If the machine belongs to another person now, a login is access to a third-party system. | `ssh -o BatchMode=yes` |
+| Hostinger account | Chrome (Default profile) has 1 saved Hostinger login, last used 2026-05-04. It was in the stolen `Login Data`. | `sqlite3` on `Login Data` (URL only) |
+
+Status: **suspicious / unknown.** Only the Hostinger account (hPanel) can show if VPS `srv1782758` is still Martin's.
+- Not in the account → the server is not Martin's any more. No action on the server. Rotate the old SSH keys (done list A1).
+- In the account → someone reinstalled it. Change the Hostinger password, turn on 2FA, check the account log, then decide: delete or rebuild.
+
+## Atomic BI Chrome extension
+Martin gave the go to remove it (Default profile, "Person 1"). Claude in Chrome cannot open `chrome://extensions`, so I could not remove it. Martin removes it himself.
