@@ -1,0 +1,18 @@
+{
+  "id": "stuerzl-gsc-chancen",
+  "verdict": "pass",
+  "checks": {
+    "C1": {"pass": true, "why": "gsc-chancen.md exists, covers all 35 opportunities grouped into 6 pages with a Fix column per row, plus a Top-5-Aktionen section in plain German."},
+    "C2": {"pass": true, "why": "Spot-checked 6+ rows (totals 3.972/36.264, 'steuerstrafrecht', 'anwalt steuerstrafrecht frankfurt', 'zollstrafrecht', 'steuerstrafrecht münchen', 'rechtsanwalt euler', 'maria bruckmaier', 'steuerstrafrecht kanzlei') directly against gsc-export-480d-2026-10-13.json — all match exactly. The Z33 audit citation ('Title Startseite \"– Home\", H1 \"Kanzlei\"') matches source-of-truth-2026-10-11.md line 120 verbatim."},
+    "C3": {"pass": true, "why": "Three unverifiable team-membership facts (Cedric Euler, Maria Bruckmeier, Dr. Philipp Kellner) are explicitly marked '[fehlt: ...]' instead of being asserted or filled in."},
+    "C4": {"pass": true, "why": "All client-facing text is German, and tone is appropriately cautious for a law-firm client (no ranking/outcome promises, 'kein Versprechen' disclaimer, BRAO/UWG-aware framing from voice.md)."},
+    "C5": {"pass": true, "why": "git status --porcelain shows only the two new item/critic folders as untracked; all other untracked stuerzl-* paths (assets, review pages, content-writing files) have mtimes from Oct 11–13 16:56, before this item's files (20:41+) — not touched by this task. No live-action language in the doc."},
+    "C6": {"pass": true, "why": "Ranked, page-grouped table with concrete fixes (title/meta, new page, internal link, FAQ) and a 5-item weekly action list Martin can act on with at most small edits; correctly routes the 3 uncertain team-member pages to a client question instead of deciding unilaterally."},
+    "C7": {"pass": false, "why": "deslop_de.py on gsc-chancen.md scored 3/5 (not 5/5): 32 em/en-dash occurrences flagged, plus one 'invented proof' flag on 'fast 2.000 Impressionen' — that number is in fact sourced (1.962 impressions, same table one row above), so this is a linter false positive, not a real data issue, but the dash-punctuation findings are real and the file misses the 5/5 bar."}
+  },
+  "fails": [
+    "Run gsc-chancen.md through a dash-cleanup pass (deslop_de.py flagged 27 em-dashes + 5 en-dashes) to hit 5/5 before any client-facing version is drafted from it.",
+    "Minor citation nit: sources.md attributes the team-member list (Lea Wimmer, Florentine Jilg) to 'Tab 00 Übersicht', but that list actually lives in Tab 02 Audit Z45 / Tab 00 Z5 and scattered call notes — fine for Martin's internal use, but fix the tab label if this doc is reused as a source elsewhere."
+  ],
+  "one_line": "Solid, fully-sourced opportunity table with real numbers and honest gaps — ships as-is for Martin's internal use, just needs a dash cleanup if any part becomes client-facing copy."
+}

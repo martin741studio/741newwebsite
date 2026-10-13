@@ -29,9 +29,12 @@ if s.get("violations"):
 (out / "REVIEW.md").write_text("\n".join(lines) + "\n")
 with open(out.parent / "LOG.md", "a") as f:
     f.write(f"{s['date']} · v2 · {len(items)} queued/{cnt['pass']} pass/{cnt['needs_martin']} needs_martin · runs {s['runs']} · ${s['usd']:.2f} · stop: {s.get('stopped_reason') or 'queue done'} · violations {len(s.get('violations', []))}\n")
-(out / "_run.json").write_text(json.dumps({"client": "741", "workflow": "nightshift", "status": "fertig, Freigabe offen" if cnt["pass"] else "in Arbeit",
+run_json = json.dumps({"client": "741", "workflow": "nightshift", "status": "fertig, Freigabe offen" if cnt["pass"] else "in Arbeit",
     "mode": "Echt", "last_run": s["date"], "result": str((out / "REVIEW.md").relative_to(repo)), "drive": "",
-    "note": f"{cnt['pass']}/{len(items)} pass, runs {s['runs']}, ${s['usd']:.2f}"}, ensure_ascii=False, indent=1))
+    "note": f"{cnt['pass']}/{len(items)} pass, runs {s['runs']}, ${s['usd']:.2f}"}, ensure_ascii=False, indent=1)
+(out / "_run.json").write_text(run_json)
+reg = repo / "00_project" / "assets" / "night-shift" / s["date"]  # registry sync scans 00_project/assets/**/_run.json
+reg.mkdir(parents=True, exist_ok=True); (reg / "_run.json").write_text(run_json)
 with open(out.parent / "pulse.log", "a") as f:
     f.write(f"{dt.datetime.now().isoformat(timespec='seconds')} night-v2 {'ok' if not s.get('violations') else 'violation'} items={len(items)} pass={cnt['pass']} runs={s['runs']} usd={s['usd']:.2f} stop={s.get('stopped_reason') or 'done'}\n")
 print(f"REVIEW → {out / 'REVIEW.md'}")

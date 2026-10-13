@@ -138,32 +138,33 @@
    "note": "skill 4/4, runner 6/6, permissions 3/3"
   },
   "4.2": {
-   "status": "todo",
+   "status": "done",
    "title": "Functional test in a fresh session (real task)",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "00_project/workflow-builds/nightshift/functional-test.md",
+   "date": "2026-10-13",
+   "note": "real night 13.10.: 3/4 pass, 10 runs, $4.23, validate PASS"
   },
   "4.3": {
-   "status": "todo",
+   "status": "done",
    "title": "Baseline with vs without (corrections, tool calls, tokens)",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "00_project/workflow-builds/nightshift/baseline.md",
+   "date": "2026-10-13",
+   "note": "v1 20 nights vs v2: exact counter, no repeats, cost visible, 0 violations"
   },
   "4.4": {
-   "status": "todo",
+   "status": "skipped",
    "title": "Plugin eval or /doctor prompt-audit, if it applies",
    "evidence": "",
-   "date": "",
-   "note": ""
+   "date": "2026-10-13",
+   "note": "",
+   "reason": "not a plugin; no instruction file audit needed"
   },
   "4.5": {
-   "status": "todo",
+   "status": "done",
    "title": "Scorecard >= 80 %, no zero in A or D",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "00_project/workflow-builds/nightshift/scorecard.md",
+   "date": "2026-10-13",
+   "note": "89.1 %, no zero in A or D"
   },
   "5.1": {
    "status": "todo",
@@ -232,6 +233,12 @@
    "passed": false,
    "missing": 18,
    "at": "2026-10-13T19:47"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-13T21:37"
   }
  ]
 }

@@ -1,0 +1,15 @@
+{
+  "id": "kamil-oberhausen-audit",
+  "verdict": "pass",
+  "checks": {
+    "C1": {"pass": true, "why": "audit.md has findings table (page/finding/severity/evidence), a clear verdict line, and a SEO notes section; scope matches the brief"},
+    "C2": {"pass": true, "why": "spot-checked robots.txt sitemap directive, homepage TikTok (@physiotherapie_kraft) and Instagram (@alovedan_muenster) footer links, and sitemap_index.xml sub-sitemap via live WebFetch — all 3 match audit.md and are listed in sources.md"},
+    "C3": {"pass": true, "why": "missing meta description and missing blog publish date are marked with [fehlt: ...], not filled in as filler"},
+    "C4": {"pass": true, "why": "no client-facing German copy in this item (internal English audit for Martin); no health claims made, so HWG not implicated"},
+    "C5": {"pass": true, "why": "git status --porcelain shows only the untracked reporting/night-shift/2026-10-13/ folder, no files changed outside it; text explicitly states read-only, no login, no changes made"},
+    "C6": {"pass": true, "why": "verdict, findings, and a concrete next action (ask Kamil about the TikTok/Instagram footer links, consider a malware scan) are all actionable tomorrow with no edits needed"},
+    "C7": {"pass": true, "why": "not applicable — item contains no German client-facing copy, only an internal English audit/summary"}
+  },
+  "fails": [],
+  "one_line": "Clean, sourced, read-only audit of the Oberhausen site — no compromise found, one real lead (TikTok link pointing to the hacked sister brand's account) worth asking Kamil about; ready to use as-is."
+}

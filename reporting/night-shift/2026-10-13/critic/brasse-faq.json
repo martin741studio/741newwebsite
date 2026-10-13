@@ -1,0 +1,39 @@
+{
+  "id": "brasse-faq",
+  "verdict": "retry",
+  "checks": {
+    "C1": {
+      "pass": true,
+      "why": "faq-entwuerfe.md checks the actual full scope (all 12 maria-text-*.html files, verified twice via grep) and the required already-has-FAQ list is complete; no drafts were needed because the task's premise (4 pages without FAQ) was false for the current files."
+    },
+    "C2": {
+      "pass": true,
+      "why": "Spot-checked 3 of 12 claims directly against source files: startseite (claimed 6 Q&A, file has exactly 6 at lines 204-210), philosophie (claimed 2, file has exactly 2), kosten (claimed 3, file has exactly 3) — all match verbatim."
+    },
+    "C3": {
+      "pass": false,
+      "why": "The one real gap found (maria-faq-fragen-2026-10.html PAA questions waiting on Maria's own answers) is described in prose under 'Zusätzlich gefunden' instead of using the required [fehlt: ...] marker convention."
+    },
+    "C4": {
+      "pass": true,
+      "why": "All client-facing text is in German; Maria Brasse is a Feng-Shui consultant, not a regulated health practitioner, so HWG does not apply here."
+    },
+    "C5": {
+      "pass": true,
+      "why": "git status --porcelain shows only pre-existing untracked files (maria-brasse-pages/*, dated Sept 14-Oct 8, predate this run) plus the 3 files this item was supposed to write inside items/brasse-faq/; nothing else touched and no live-action claims in the text."
+    },
+    "C6": {
+      "pass": true,
+      "why": "Even without new FAQ text, Martin gets a clear, immediately actionable escalation: confirm whether the brief meant an older file version or a different page set, or close the task as obsolete — he can decide tomorrow with no further digging."
+    },
+    "C7": {
+      "pass": false,
+      "why": "deslop_de.py on faq-entwuerfe.md scores 4/5 ('braucht Umschreiben und Cleanse'), below the required 5/5. Top finding: dash overuse (Gedankenstrich — x7, – x1)."
+    }
+  },
+  "fails": [
+    "Mark the open PAA-questions gap (maria-faq-fragen-2026-10.html) with the [fehlt: ...] convention instead of prose under 'Zusätzlich gefunden'.",
+    "Run a cleanse pass on faq-entwuerfe.md to cut the em-dash/en-dash overuse (7x em-dash, 1x en-dash) until deslop_de.py scores 5/5."
+  ],
+  "one_line": "Good catch (all 12 pages already have FAQs, triple-checked against sources) but two polish items block a pass: the one real gap isn't marked with [fehlt: ...], and the write-up scores 4/5 on the copy-quality check due to dash overuse."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "bali-beauty-similar",
+  "verdict": "pass",
+  "checks": {
+    "C1": {"pass": true, "why": "similar-treatments.md exists with one section per all 10 Beauty pages plus the required table of all 10 pages."},
+    "C2": {"pass": true, "why": "Spot-checked the 10-page list against sitetree.json (ST-21, ST-211, ST-22, ST-23, ST-231, ST-232, ST-24, ST-25, ST-26, ST-27 match exactly) and spot-checked all 24 related-treatment URLs against own-urls.txt — every URL used is a real, live listed URL."},
+    "C3": {"pass": true, "why": "Two real gaps marked as [fehlt: ...] (gyneco-aesthetic/acid-peeling link needs clinic confirmation; whether the hub page should also get a block) instead of being filled with invented filler."},
+    "C4": {"pass": true, "why": "English, consultation-first clinic voice throughout; no cure claims, no guarantees, no fear language — HWG-safe for a health client."},
+    "C5": {"pass": true, "why": "File states draft only, no live edit; git status shows only night-shift runner bookkeeping files (state.json, .run*.json, logs) touched outside the item folder, no content/live changes."},
+    "C6": {"pass": true, "why": "Ready to hand to whoever builds the blocks live tomorrow, needs only Martin's confirmation on the two flagged gaps."},
+    "C7": {"pass": true, "why": "No German copy in this item; ran slopmonster deslop.py on the English copy sample anyway — score 5/5 CLEAN."}
+  },
+  "fails": [],
+  "one_line": "Pass — all 10 Beauty-page blocks are done with real, verified URLs and the two open questions are properly flagged, not glossed over."
+}
