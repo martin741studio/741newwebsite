@@ -1,5 +1,5 @@
 -- Client work view · Migration v1 for Supabase 741-portal (galjmtozcgxcwtzkzbpi)
--- Status 2026-10-13: draft. Apply ONLY after Martin's go. Basis: ../data-model.md, ../brief.md (design go 13.10.)
+-- Status 2026-10-13: APPLIED after Martin's go (migrations client_work_view_v1 + client_work_view_health_labels_de). Basis: ../data-model.md, ../brief.md (design go 13.10.)
 -- Step 1 = admin views. Team policies (step 2) and the client view (step 3, pilot Bali Healing EN) come with their builds.
 --
 -- Rules enforced in the database:
@@ -265,7 +265,7 @@ with open_items as (
          else 1 end as score,
     case when o.priority = 'blocker' then 'Blocker'
          when o.due_on is not null and o.due_on < current_date then 'Überfällig seit ' || (current_date - o.due_on) || ' Tagen'
-         when o.status = 'waiting' then 'Wartet auf ' || o.waiting_on || ' seit ' || coalesce(o.wait_days, 0) || ' Tagen'
+         when o.status = 'waiting' then 'Wartet auf ' || case o.waiting_on when 'client' then 'Kunde' when 'martin' then 'Martin' when 'team' then 'Team' when 'google' then 'Google' else 'Extern' end || ' seit ' || coalesce(o.wait_days, 0) || ' Tagen'
          when o.status = 'needs_check' then 'Wartet auf Prüfung'
          when o.status = 'intake' then 'Ungesichtet seit ' || coalesce(o.wait_days, 0) || ' Tagen'
          else 'Im Plan' end as signal

@@ -26,3 +26,7 @@ Dry run 2026-10-13: 01-migration.sql + 02-seed.sql + 03-tests.sql in ONE transac
 
 Expected bands after "since" + calibration (from live data 13.10.):
 Bali red (blocker) · Johni, Brasse, Dumann, Hüwel, Suriya, Stürzl yellow (old open access, max 62 days) · Rabenmütter yellow (change requests unsorted for 44 days) · Kamil green.
+
+--- APPLIED 2026-10-13 (Martin's go). Re-test on live data in a rollback transaction: 22/22 OK ---
+R5 bands live: Bali red (Blocker: NIB-PDF) · Johni, Brasse, Dumann, Hüwel, Suriya, Rabenmütter, Stürzl yellow · Kamil green.
+Labels German: "Wartet auf Kunde seit 55 Tagen: Zugang: Google Tag Manager" (Hüwel).
