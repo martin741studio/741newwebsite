@@ -5,6 +5,8 @@ Stand: 2026-10-13 · Owner: Martin · Runner: Claude Code (this repo)
 **Border (Martin, 2026-10-13):** Backlink DACH stays its own workflow. It is not merged into the Citations module. All of pillar A belongs to the Citations module, also the free niche directories (jameda, Doctolib, theralupa …). This workflow owns pillars B–E. Section 3.0 has the hand-over rule.
 Pattern: same shape as `cro-homepage-workflow.md`. Draft for the priming session. Open points are in section 7.
 
+Contents: 0 Purpose · 0.1 Use cases · 1 Operating rules · 2 Storage (2.4 run file) · 3 Pillars (3.0 hand-over to Citations) · 4 Link library · 5 The run (Steps 0–5, Checkpoints 1–4) · 6 Templates · 7 Open points · 9 Pilot readiness · 8 First use
+
 ---
 
 ## 0. Purpose and outcome
@@ -22,6 +24,14 @@ The output per client is a **target list**, an **outreach run**, a **buy shortli
 5. At least 8 new referring domains are live after 90 days. At least 5 of them are DACH domains with DR 20 or higher.
 6. Zero links from link farms, PBNs, or sites outside the client's language and region.
 7. The monthly report shows new links, lost links, DR trend, and the next 10 targets.
+
+### 0.1 Use cases
+
+| # | Trigger | Steps | Tools | Result |
+| --- | --- | --- | --- | --- |
+| 1 | New client: `/backlink-dach <Kunde>, Budget <€>` | Step 0 gate → Step 1 baseline → Checkpoint 1 → Step 2 Sheet → Checkpoint 2 | DataForSEO (`gap-analysis.mjs`), Firecrawl, Supabase read, Drive, Chrome | Sheet with Quelle + Kontakt per row, hand-over list for the Citations module, `_run.json` |
+| 2 | Resume a run: "wo stehen wir bei den Backlinks für <Kunde>" | read `00-client-info.md` + `_status.md` → name the checkpoint → next step | Read only | checkpoint report in the fixed format (skill), open `[FEHLT]` list, decisions for Martin |
+| 3 | Buy path: budget > 0 after month 1 | Step 4 shortlist per section 3.2 → Checkpoint 4 | DataForSEO, Firecrawl | `04-buy/shortlist.md` with `[KENNZEICHNUNG]`; Martin pays |
 
 ---
 
@@ -206,7 +216,7 @@ Max 10. Work targets with 7+ first.
 
 **Update rule:** after each monthly report, the agent appends a "Learnings" entry to `rules.md`. A target type that fails on 2 or more clients gets reviewed.
 
-**Zeitnotiz 11.10.2026 — Sheet-Export Drive-Falle:** `build_sheet.py` (Step 2/4 Sheet-Export) nutzt openpyxl. Google Drive bricht die xlsx→Sheets-Konvertierung mit „Invalid conversion requested" ab, sobald Styling drin ist (Fills, Data-Validation, Freeze-Panes, Merges) — eine stylingfreie openpyxl-Datei lädt sofort hoch, das ist aber nur Diagnose, nicht die Lösung. Die Regel stand schon in Memory `well-designed-sheets.md` (28.08.2026): **XlsxWriter, nie openpyxl**, für jedes Drive-Upload-Sheet. Vor dem nächsten Lauf `build_sheet.py` auf XlsxWriter umstellen.
+**Zeitnotiz 11.10.2026, erledigt 13.10.2026 — Sheet-Export Drive-Falle:** openpyxl mit Styling bricht die xlsx→Sheets-Konvertierung in Drive. `build_sheet.py` nutzt seit 2026-10-13 XlsxWriter (Start: `uv run --with xlsxwriter python3 build_sheet.py …`). Regel in Memory `well-designed-sheets.md`.
 
 ---
 
