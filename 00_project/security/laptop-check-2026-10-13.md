@@ -51,7 +51,7 @@ Status: **clean** = no risk found. **suspicious** = needs Martin's answer or a h
 | C10 | Network (established) | **clean** | 0 connections to 178.62.x.x. Connections go to Anthropic, Google, OpenAI, Notion, WhatsApp, Wispr, and to 185.2.31.101 (741.studio host: Airmail + Kraft clean-up script). | `lsof -nP -iTCP -sTCP:ESTABLISHED`; `lsof -nP -i @178.62.247.40` |
 | C11 | New executables/scripts since 2026-10-13 12:00 in `~/Library`, `/tmp`, `/private/var/folders`, `~/Downloads`, `/Users/Shared` | **clean** | Only app preference files, Claude "Services" workflows (from 2026-09-11), signed Notion native host, Codex launcher script. | `find … -newermt '2026-10-13 12:00'` |
 | C12 | `~/Downloads` newest files | **clean** | Akeeba/Admin Tools zips (17:23, Taxi job), images, PDFs, a WhatsApp audio. No `.dmg`, `.pkg`, `.app` or script. | `ls -laTt ~/Downloads` |
-| C13 | Browser extensions: 36 in Chrome (22 profiles) and Brave | **clean** | All from the Chrome Web Store. None unpacked. None installed or updated after 2026-10-09. | `ext_list.py` (reads `manifest.json` + Preferences) |
+| C13 | Browser extensions: 37 in Chrome (22 profiles) and Brave | **clean** | All from the Chrome Web Store. None unpacked. None installed or updated after 2026-10-09. | `ext_list.py` (reads `manifest.json` + Preferences) |
 | C14 | System extensions, kexts, Safari extensions | **clean** | Elgato camera extension, OBS camera extension. No third-party kext. No Safari extension. | `systemextensionsctl list`; `kmutil showloaded`; `pluginkit` |
 | C15 | Apps added or updated since 2026-10-01 | **clean** | 13 apps. All signed (Developer ID or App Store). | `find /Applications -newermt`; `spctl -a -vv` |
 | C16 | SIP, Gatekeeper, FileVault, XProtect | **clean** | SIP on, Gatekeeper on, FileVault on, XProtect 5366. No XProtect detection log after 13:00. No unified-log line names `hk3ug2dm` or `178.62`. | `csrutil status`; `spctl --status`; `fdesetup status`; `log show` |
@@ -106,3 +106,22 @@ Martin's rule: only keys rotated after a clean check go to the server. Files in 
 2. Done: TeamViewer confirmed.
 3. Atomic BI Chrome extension (Default profile): Martin can remove it at `chrome://extensions`.
 4. Hygiene (S3, S4): firewall on, MariaDB bound to `127.0.0.1`, `.secrets` files to mode 600. These are settings changes for Martin.
+
+## Third check (2026-10-14, 06:25 WITA, read-only)
+
+Martin asked for one more check. I compared everything with the state of 2026-10-13, 18:20. **Result: still clean. Verdict unchanged: YES.**
+
+| Item | Status | Evidence |
+|------|--------|----------|
+| New LaunchAgent `studio.741.night-shift-v2` (2026-10-13 19:30) | **clean** | Runs `caffeinate -i python3 ~/741website/reporting/night-shift-v2/run.py` Mon–Fri 17:30 and 20:30. Built by the night-shift v2 sessions (commits `c2308d7`, `49f3a9a`). |
+| `~/.ssh` changed (2026-10-13 18:41) | **clean** | New `id_ed25519_nightshift` + `config` (Host `nightshift-01`, User root). Made after the clean verdict, by the night-shift sessions. The old stolen keys are still there and still need rotation. |
+| Other launch items, AMOS backdoor paths, cron, profiles, shell files, `/etc/hosts`, `sudoers.d` | **clean** | No change. No `~/.helper`, `~/.agent`, `~/.pass`. |
+| Login items | **clean** | Claude, Loom, Google Chrome, Fathom, Notion. "Atomic BI" stays removed. |
+| Quarantine | **clean** (contained) | Binary mode 000, staging folder mode 000, archive mode 400. |
+| New files in `/tmp` | **clean** | HTML, JSON, text, WAV and `mcp-call*.py` files from Claude sessions (WordPress calls to shuiguru.de). No binaries. |
+| Processes started since 18:20 | **clean** | None outside Claude Code, Node, known apps and Apple services. |
+| Network | **clean** | 0 connections to 178.62.x.x. New remote groups: Telegram API (149.154.167.99, from Claude Code) and Hetzner (213.133.105.29, 213.239.246.x, from Chrome). Both expected. |
+| Browser extensions | **clean** | 37 in total, none new or updated since 2026-10-09. The Atomic BI extension is still installed. |
+| Apps, Downloads, new executables in `~/Library` and `/private/var/folders` | **clean** | Nothing new since 18:20. |
+| SIP, Gatekeeper, XProtect | **clean** | On, on, 5366. No XProtect detection since 2026-10-13 18:00. |
+| Hygiene (firewall off, MariaDB `*:3306`, Vite `*:3000`, `*:8992`, ARDAgent) | **suspicious** (hygiene, unchanged) | Same as S3. |
