@@ -1,0 +1,225 @@
+{
+ "workflow_id": "nightshift",
+ "name": "Night Shift + Server",
+ "created": "2026-10-13",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/nightshift/block-choice.md",
+   "date": "2026-10-13",
+   "note": "provisional: night-shift skill + runner + hook guards on self-hosted box; host final at cp1"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/nightshift/library-search.md",
+   "date": "2026-10-13",
+   "note": "workflow-library + ops-library read; gaps sent to 2 research agents"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/nightshift/library-search.md",
+   "date": "2026-10-13",
+   "note": "INDEX 2026-10-11 and 2026-10-13, both fresh"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/night-shift-server-coverage-map.md",
+   "date": "2026-10-13",
+   "note": "coverage map: night shift armed since 15.09., bugs, tools laptop vs server, hard constraints"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/nightshift/research-note.md",
+   "date": "2026-10-13",
+   "note": "research note: facts, 3 rules, pattern, open questions"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/nightshift/use-cases.md",
+   "date": "2026-10-13",
+   "note": "UC1 scheduled night, UC2 phone check-in, UC3 ad-hoc item"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/nightshift/test-scenarios.md",
+   "date": "2026-10-13",
+   "note": "T1 obvious, T2 paraphrase, T3/T4 must-not-trigger, T5-T8 safety/limits/kill"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/nightshift/hand-run.md",
+   "date": "2026-10-13",
+   "note": "real 13.10. evening log -> night queue card; Martin ticked 4/4; 8 context points"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/nightshift/pipeline.md",
+   "date": "2026-10-13",
+   "note": "17:00 queue -> 17:30 start -> batches -> 19:30/21:30 check-ins -> 05:00 stop -> 06:13 grill; CP-A..D"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/nightshift/pipeline.md",
+   "date": "2026-10-13",
+   "note": "freedom table: scripts for gates/plan/report, heuristics for Executor"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/nightshift/decisions.md",
+   "date": "2026-10-13",
+   "note": "Martin: Go, as designed (13.10.); cap 14 kept for week 1"
+  },
+  "3.1": {
+   "status": "todo",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "3.2": {
+   "status": "todo",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "3.3": {
+   "status": "todo",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "3.4": {
+   "status": "todo",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "3.5": {
+   "status": "todo",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "3.6": {
+   "status": "todo",
+   "title": "741 house rules applied",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "3.7": {
+   "status": "todo",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "4.1": {
+   "status": "todo",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "4.2": {
+   "status": "todo",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "4.3": {
+   "status": "todo",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "4.4": {
+   "status": "todo",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "4.5": {
+   "status": "todo",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.1": {
+   "status": "todo",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.2": {
+   "status": "todo",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3a": {
+   "status": "todo",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3b": {
+   "status": "todo",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3": {
+   "status": "todo",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.4": {
+   "status": "todo",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": false,
+   "missing": 9,
+   "at": "2026-10-13T17:41"
+  },
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-13T18:08"
+  }
+ ]
+}
