@@ -1,12 +1,7 @@
 ---
 name: night-shift
 description: >
-  Autonomous overnight run for the 741 local-SEO program. Reads the open content tasks of
-  running client programs from the portal, produces page content specs (CREATE) and page audits
-  (AUDIT) with the seo-page-optimizer standard, verifies each result with a Critic, and stages
-  everything as Markdown drafts for the morning review. NEVER publishes, never emails, never
-  writes to a client website or CMS. Use when invoked by reporting/night-shift.sh or when Martin
-  says "run the night shift", "Nachtschicht", "overnight page specs".
+  RETIRED 2026-10-13 (v1 page-spec night shift, LaunchAgent unloaded). Kept for reference only. Do NOT use; use the night-shift-v2 skill for anything about the night shift or "Nachtschicht".
 ---
 
 # 741 Night Shift — Page Specs + Audits

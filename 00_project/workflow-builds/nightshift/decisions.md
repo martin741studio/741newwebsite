@@ -52,3 +52,6 @@
 - N32 Queue card: "Morning-grill chat (Recommended)" — spec sent to the morning-grill chat 13.10. (needs Martin's go there).
 - N33 21:30 check-in: Martin's own answer: "Nah need on a chat here somewhere so i can access on my phone" → check-in happens in THIS chat (Night Shift chat) with Remote Control ON (set 13.10. ~19:40) so Martin opens it in the Claude app. Cards via AskUserQuestion here. No portal change.
 - N34 (via morning-grill chat, Martin's card there): no answer to the 17:00 queue card = no queue file = no night run. Replaces the N10 fallback. Queue writer: 00_project/morning-grill-skill/scripts/build_night_queue.py (first gate: classes, ids, inputs, forbidden actions, confirmed_by).
+
+## Checkpoint 2 (2026-10-13 ~21:40 WITA)
+- CP2: "Go, keep it running (Recommended)" — v2 stays armed Mon–Fri (17:30 + 20:30 resume, stop 22:45), runs only with a ticked 17:00 queue card; install the skill; count 5 clean nights toward the server (N30).
