@@ -20,8 +20,8 @@ Workflow-Schritt 3: Einbau ins Portal `clients.741.studio`, nur auf Staging. Vor
 1. Live-Datei frisch holen: `curl -s https://clients.741.studio/index.html -o live.html`
 2. `python3 src/build.py live.html portal.html`. Erste Fassung: setzt Tab und Admin-Ansicht ein. Ist das Modul schon in der Live-Datei (seit 13.10. live), tauscht das Skript nur die eigenen Blöcke zwischen den Markern `Entscheidungen (Kunden-Freigabe)` und `Ende Entscheidungen`. Änderungen anderer Chats bleiben so erhalten. Die Martin-Figuren bettet `inline.py` ein.
 3. Skript-Teil mit `node --check` prüfen
-4. Backup nach `clients.741.studio/backup/`, Upload NUR nach `clients.741.studio/staging/index.html`
-5. Live nur nach Martins ausdrücklichem Go
+4. Backup nach `clients.741.studio/backup/`.
+5. **Seit 13.10. (Martin): direkt live, kein Staging-Schritt für dieses Modul.** Upload nach `clients.741.studio/index.html`, danach live prüfen (nur lesen, wenn Chrome als Kunde angemeldet ist). Karten bleiben Entwürfe, bis Martin sie pro Element im Chat freigibt. Memory: `decisions-work-tasks-live-only.md`.
 
 Stand 13.10.: Tab live seit 10:50 (Bali-Zeit). Kunden ohne freigegebene Elemente sehen keinen neuen Tab.
 

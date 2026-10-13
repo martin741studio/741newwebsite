@@ -95,3 +95,6 @@ Library: `00_project/knowledge/client-work-library/INDEX.md`. Rule numbers below
 - **"Kundenarbeit" is live** (12:34, backup `clients.741.studio/backup/index-20261013-1234-before-kundenarbeit-live.html`). The build used a fresh live file and changed only 2 anchor lines plus its own blocks. All 4 modules are in it (Entscheidungen, Command Center, Outreach, Kundenarbeit). `node --check` OK, and curl confirms that live equals the build. The Chrome check of live is still open: the Chrome extension was not connected.
 - **Access check** (`research/06-access-check-2026-10-13.md`): 8 accesses are ticked (`erteilt`), and their tasks are done with the check file as proof. 3 GTM requests are `entfaellt` (Brasse, Dumann, Hüwel), and their tasks are dropped. Still open: Stürzl Google Ads. Johni turned green automatically.
 - The Hüwel finding (no GA4/GTM tag since the move on 06.10.) went to the Hüwel chat. Live only with Martin's go.
+
+## Release rule (Martin, 13.10.)
+The Kundenarbeit module and the decision cards go **directly live**, without a staging step. Steps: pull fresh, back up, swap only the own marker block (`portal/src/build.py`, update mode), run `node --check`, upload live, check live. Memory: `decisions-work-tasks-live-only.md`.
