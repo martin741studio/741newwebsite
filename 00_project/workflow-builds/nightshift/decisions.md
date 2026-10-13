@@ -55,3 +55,13 @@
 
 ## Checkpoint 2 (2026-10-13 ~21:40 WITA)
 - CP2: "Go, keep it running (Recommended)" — v2 stays armed Mon–Fri (17:30 + 20:30 resume, stop 22:45), runs only with a ticked 17:00 queue card; install the skill; count 5 clean nights toward the server (N30).
+
+## Server bought (2026-10-14)
+- N35 Martin: "Alone [also] for canaries, I think we need one" → server now (revises N30 "after 5 clean nights"); one box for night shift + canary checks.
+- N36 Bought by Martin: 741-agents-01 · CAX31 (8 Arm vCPU, 16 GB, 160 GB) · Falkenstein · 162.55.46.13 · SSH key 741-nightshift · about EUR 25.57/mo incl. VAT (+ backups 20 % if ticked). CX43 was sold out in NBG/FSN/HEL; CAX31 not in NBG. Image came up as Ubuntu 26.04.1 LTS (aarch64), not 24.04. Login test OK (root, key auth, 15 GiB RAM, 143 GB free, TZ UTC). Agent did not add the key (auto-mode classifier blocked it); Martin clicked.
+
+## Scope change (2026-10-14)
+- N37 Martin: "we're not only doing it for the nightshift... we're doing it so that this whole setup that we have in here can run on the server (the whole Claude setup), because I don't want to always use my laptop and use a lot of the CPU power for it, so the task can run easily and steadily."
+  → 741-agents-01 is NOT a night-shift-only box. It is the general-purpose server for Claude Code work (headless agent runs, canary checks, and over time other chats' heavy/steady tasks), freeing the laptop from CPU load. Night shift v2 is the FIRST tenant, not the only one. Implication: server setup (phase 2) should stay general (users, repo layout, resource limits per tenant) rather than night-shift-specific; naming already reflects this (741-agents-01, not nightshift-01).
+- N38 Rebuild: skipped. "Skip the rebuild, use 26.04 (Recommended)" — server stays on Ubuntu 26.04.1 LTS as delivered. Setup proceeds on 26.04; fix issues if tools (Playwright/Chromium) need workarounds there.
+- N39 Base setup DONE (14.10., 07:10 WITA, script `reporting/night-shift-v2/server/setup-phase2.sh`, fixed for Ubuntu 26.04's socket-activated ssh.service): firewall (22/tcp only), unattended-upgrades active, fail2ban active, SSH password auth off, swap 4G, user `nightshift` (no sudo), TZ Asia/Makassar, Node v22.23.3, Python 3.14.4, Claude Code 2.1.296, Chromium+ffmpeg for Playwright — all for user `nightshift`. Server is general-purpose per N37, not night-shift-specific.
