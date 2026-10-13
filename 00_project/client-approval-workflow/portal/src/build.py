@@ -8,10 +8,39 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 INLINE = os.path.join(HERE, '..', '..', '..', 'assets', 'brand', 'martin-guide', 'inline.py')
 src, dst = sys.argv[1], sys.argv[2]
 h = open(src, encoding='utf-8').read()
-if 'apRenderClient' in h:
-    sys.exit('Datei enthält den Tab schon (apRenderClient) – nichts zu tun')
 css = open(os.path.join(HERE, 'ap.css'), encoding='utf-8').read()
 js = open(os.path.join(HERE, 'ap.js'), encoding='utf-8').read()
+CSS_START = '  /* ---------- Entscheidungen (Kunden-Freigabe)'
+JS_START = '/* ---------- Entscheidungen (Kunden-Freigabe) · 2026-10-13 ----------\n'   # CSS-Marker endet mit ' */', JS-Marker mit Zeilenumbruch
+END_CSS = '  /* ---------- Ende Entscheidungen ---------- */\n'
+END_JS = '/* ---------- Ende Entscheidungen ---------- */\n'
+
+def finish(h):
+    tmp = dst + '.tmp.html'
+    open(tmp, 'w', encoding='utf-8').write(h)
+    subprocess.run(['python3', INLINE, tmp, dst], check=True)
+    os.remove(tmp)
+    out = open(dst, encoding='utf-8').read()
+    assert 'martin-guide/martin-' not in out, 'Pose nicht eingebettet'
+    assert 'martin-guide.css' not in out, 'CSS nicht eingebettet'
+    assert out.count('function apRenderClient') == 1, 'Modul doppelt oder fehlt'
+    print('ok', dst, len(out) // 1024, 'KB')
+    sys.exit(0)
+
+if 'apRenderClient' in h:
+    # UPDATE-Modus: Live enthält das Modul schon (andere Chats bauen darauf auf) -> nur die eigenen Blöcke tauschen
+    c0 = h.find(CSS_START); assert c0 > 0, 'CSS-Block nicht gefunden'
+    c1 = h.find(END_CSS, c0)
+    c1 = c1 + len(END_CSS) if c1 > 0 else h.find('</style>', c0)   # alte Fassung ohne End-Marker
+    h = h[:c0] + css + h[c1:]
+    j0 = h.find(JS_START); assert j0 > 0, 'JS-Block nicht gefunden'
+    j1 = h.find(END_JS, j0)
+    if j1 > 0: j1 += len(END_JS)
+    else:                                                           # alte Fassung: endet nach apConsent()
+        j1 = h.find('\n}\n', h.find('async function apConsent(on)', j0)) + 3
+    h = h[:j0] + js + h[j1:]
+    print('update-Modus: Modul getauscht')
+    finish(h)
 
 def sub(old, new, count=1):
     global h
@@ -41,11 +70,4 @@ sub("  if (isAdmin && adminSub === 'leads' && ldOn(b)) {",
 i = h.rfind('</script>')
 h = h[:i] + js + '\n' + h[i:]
 
-tmp = dst + '.tmp.html'
-open(tmp, 'w', encoding='utf-8').write(h)
-subprocess.run(['python3', INLINE, tmp, dst], check=True)
-os.remove(tmp)
-out = open(dst, encoding='utf-8').read()
-assert 'martin-guide/martin-' not in out, 'Pose nicht eingebettet'
-assert 'martin-guide.css' not in out, 'CSS nicht eingebettet'
-print('ok', dst, len(out) // 1024, 'KB')
+finish(h)

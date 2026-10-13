@@ -63,9 +63,9 @@ function apLastDecision(b, i) {
 }
 function apItemHTML(b, i, used, preview) {
   const can = apCanDecide(b) && !preview;
-  const open = i.status === 'open';
+  const open = i.status === 'open' || (preview && i.status === 'draft');
   const consent = !!(b.apSettings && b.apSettings.auto_approve_consent);
-  const dl = !open ? '' : i.must_active_yes ? '<span class="ap-dl must">Braucht dein aktives Ja</span>'
+  const dl = !open ? '' : i.must_active_yes ? '<span class="ap-dl must">Braucht dein aktives Ja</span>' : i.status === 'draft' ? '<span class="ap-dl">Frist: 7 Tage ab Freigabe</span>'
     : consent ? `<span class="ap-dl">Frist ${apD(i.due_at)} · danach gilt „741 empfiehlt“</span>`
     : `<span class="ap-dl">Bitte bis ${apD(i.due_at)} entscheiden</span>`;
   const selKey = open ? (apSel[i.id] || i.recommended_key) : i.chosen_key;
@@ -95,12 +95,15 @@ function apItemHTML(b, i, used, preview) {
     // Zwei Knöpfe (Martin 13.10.): "Passt so" = gewählte Variante freigeben, "Ich möchte etwas ändern" = Wunsch mit Text
     acts = `<div class="ap-acts"><button class="ap-btn ap-b1"${dis} onclick="apAct('${i.id}','approve',this)">Passt so</button><button class="ap-btn ap-b2"${dis} onclick="apAct('${i.id}','request_change',this)">Ich möchte etwas ändern</button></div><textarea class="ap-ta" id="ap-ta-${i.id}" placeholder="Was soll anders sein? Ein Satz reicht."></textarea>`;
   }
-  return `<article class="ap-item${open ? '' : ' done'}" id="ap-${i.id}"><div class="ap-top"><span class="ap-type">${esc(i.type_label)}</span>${dl}</div>
+  const draft = i.status === 'draft' ? `<span class="ap-pill p-draft">Entwurf · ${esc(apFirst(b))} sieht das noch nicht</span>` : '';
+  return `<article class="ap-item${open ? '' : ' done'}" id="ap-${i.id}"><div class="ap-top"><span class="ap-type">${esc(i.type_label)}</span>${draft}${dl}</div>
     <h3>${esc(i.title)}</h3><div class="ap-why">Warum: ${apMd(i.why)}<span class="ap-src">Quelle: ${esc(i.why_source)} · Stand ${apD(i.why_date)}</span></div>
     ${mg}${body}${i.note ? `<div class="ap-note">${esc(i.note)}</div>` : ''}${lockNote}${acts}</article>`;
 }
 function apRenderClient(b, preview) {
-  const items = apVisible(b), open = apOpenCount(b), who = apFirst(b);
+  // Admin-Vorschau zeigt auch Entwürfe, damit Martin sie vor "An Kunde geben" prüfen kann
+  const items = preview ? (b.apItems || []).filter(i => i.status !== 'withdrawn') : apVisible(b), who = apFirst(b);
+  const open = items.filter(i => i.status === 'open' || i.status === 'draft').length;
   const consent = !!(b.apSettings && b.apSettings.auto_approve_consent);
   const used = { think: false, point: false };
   const lead = consent
@@ -112,7 +115,7 @@ function apRenderClient(b, preview) {
     ? `<div class="ap-info">Entscheiden kann nur ${esc((b.apSettings && b.apSettings.approver_name) || 'die benannte Person')}. Du kannst alles ansehen und uns im Chat schreiben.</div>` : '';
   const types = ['Alle', 'Offen', ...new Set(items.map(i => i.type_label))];
   if (!types.includes(apFilter)) apFilter = 'Alle';
-  const list = items.filter(i => apFilter === 'Alle' || (apFilter === 'Offen' ? i.status === 'open' : i.type_label === apFilter));
+  const list = items.filter(i => apFilter === 'Alle' || (apFilter === 'Offen' ? (i.status === 'open' || i.status === 'draft') : i.type_label === apFilter));
   return `<div style="max-width:980px;"><div class="ap-h1">Deine Entscheidungen</div><p class="ap-lead">${lead}</p>${hello}
     <span class="ap-count">${open ? open + ' warten auf dich' : 'Alles entschieden, danke!'}</span>${done}${notApprover}
     <div class="ap-filters">${types.map(t => `<button class="ap-chip${t === apFilter ? ' on' : ''}" onclick="apSetFilter('${esc(t)}')">${esc(t)}</button>`).join('')}</div>
@@ -198,7 +201,7 @@ function apRenderAdmin(b) {
     const chosen = i.status === 'change' ? esc(i.chosen_note || '') : (i.chosen_key ? esc(apVal(i, i.chosen_key)) + (i.chosen_note ? '<br><span class="muted">Notiz: ' + esc(i.chosen_note) + '</span>' : '') : '—');
     let act = '';
     if (isA && i.status === 'ready') act = `<button class="ap-go" onclick="apGo('${i.id}')">${apArmed === i.id ? 'Wirklich Go?' : 'Go für live'}</button>`;
-    if (isA && i.status === 'draft') act = `<button class="ap-go" style="background:#fff;border:1.5px solid #252525" onclick="apRelease('${i.id}')">An Kunde geben</button>`;
+    if (isA && i.status === 'draft') act = `<button class="ap-go" style="background:#fff;border:1.5px solid #252525" onclick="apRelease('${i.id}')">${apArmed === 'rel:' + i.id ? 'Wirklich?' : 'An Kunde geben'}</button>`;
     const flags = [i.must_active_yes ? 'aktives Ja' : '', i.seo_lock ? 'SEO-Schloss' : '', i.hwg_checked ? 'HWG geprüft' : ''].filter(Boolean).join(' · ');
     return `<tr><td><b>${esc(i.code || '')} ${esc(i.type_label)}</b> <span class="muted">v${i.version}</span><br>${esc(i.title)}${flags ? '<br><span class="muted">' + flags + '</span>' : ''}</td>
       <td><span class="ap-pill ${cls}">${st}</span></td><td>${chosen}</td><td>${act}</td></tr>`;
@@ -228,6 +231,9 @@ async function apGo(id) {
   apReload();
 }
 async function apRelease(id) {
+  const k = 'rel:' + id;
+  if (apArmed !== k) { apArmed = k; rerender(); setTimeout(() => { if (apArmed === k) { apArmed = null; rerender(); } }, 6000); return; }
+  apArmed = null;
   const { error } = await db.rpc('approval_release', { p_item: id });
   if (error) { toast('Fehler: ' + error.message); return; }
   toast('Element ist jetzt beim Kunden. Frist: 7 Tage.');
@@ -240,3 +246,4 @@ async function apConsent(on) {
   if (error) { toast('Fehler: ' + error.message); return; }
   apReload();
 }
+/* ---------- Ende Entscheidungen ---------- */
