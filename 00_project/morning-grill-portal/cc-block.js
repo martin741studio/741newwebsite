@@ -1,4 +1,4 @@
-const CC = { snap: null, snapId: null, created: null, mode: null, answers: {}, picks: {}, parking: null, tab: 'dec', filter: 'all' };
+const CC = { snap: null, snapId: null, created: null, mode: null, answers: {}, picks: {}, parking: null, owning: null, reopen: {}, tab: 'dec', filter: 'all' };
 const CC_ICON = { dec: '✅', you: '👆', msg: '✉️', appr: '⏳', wait: '🕒', block: '⛔', later: '📋' };
 
 async function loadGrill() {
@@ -17,7 +17,8 @@ async function loadGrill() {
 
 function ccEff(c) {
   const a = CC.answers[c.id];
-  if (a) return { status: a.option === 'park' ? 'parked' : 'decided', answer: a.option, text: a.option === 'park' ? a.note : ((c.options[a.option] || a.option) + (a.note ? ' (' + a.note + ')' : '')) };
+  if (CC.reopen[c.id]) return { status: 'open', answer: null, text: null };   // "Change answer" (Martin 13.10.)
+  if (a) return { status: a.option === 'park' ? 'parked' : 'decided', answer: a.option, text: (a.option === 'park' || a.option === 'own') ? a.note : ((c.options[a.option] || a.option) + (a.note ? ' (' + a.note + ')' : '')) };
   if (c.status === 'decided' || c.status === 'parked') return { status: c.status, answer: c.answer, text: c.answer_text };
   return { status: 'open', answer: null, text: null };
 }
@@ -25,13 +26,20 @@ function ccWalkDone(w) { return !!CC.answers[w.id]; }
 
 function ccTab(t) { CC.tab = t; ccRender(); }
 function ccFilter(f) { CC.filter = f; ccRender(); }
-function ccPick(id, k) { CC.picks[id] = k; CC.parking = null; ccRender(); }
-function ccParkOpen(id) { CC.parking = id; CC.picks[id] = null; ccRender(); }
+function ccPick(id, k) { CC.picks[id] = k; CC.parking = null; CC.owning = null; ccRender(); }
+function ccParkOpen(id) { CC.parking = id; CC.owning = null; CC.picks[id] = null; ccRender(); }
+function ccOwnOpen(id) { CC.owning = id; CC.parking = null; CC.picks[id] = null; ccRender(); const ta = $('cc-own-' + id); if (ta) ta.focus(); }
+function ccReopen(id) { CC.reopen[id] = true; CC.picks[id] = null; ccRender(); }
+function ccSaveOwn(id) {
+  const t = ($('cc-own-' + id).value || '').trim();
+  if (!t) { alert('Please write your answer first.'); return; }
+  ccSave(id, 'own', t);
+}
 async function ccSave(id, option, note) {
   const { error } = await db.from('grill_answers').insert({ card_id: id, run_date: CC.snap.date, option, note: note || null });
   if (error) { alert(error.message); return; }
   CC.answers[id] = { card_id: id, option, note: note || null, answered_at: new Date().toISOString() };
-  delete CC.picks[id]; CC.parking = null; ccRender();
+  delete CC.picks[id]; delete CC.reopen[id]; CC.parking = null; CC.owning = null; ccRender();
 }
 function ccSavePick(id) { if (CC.picks[id]) ccSave(id, CC.picks[id], null); }
 function ccSavePark(id) {
@@ -51,10 +59,12 @@ function ccCard(c) {
   }).join('');
   let acts = '';
   if (!done) {
-    acts = `<div class="cc-acts"><button class="btn btn-yellow" ${CC.picks[c.id] ? '' : 'disabled style="opacity:.5"'} onclick="ccSavePick('${esc(c.id)}')">Save answer</button><button class="cc-link" onclick="ccParkOpen('${esc(c.id)}')">Park with reason</button></div>`;
+    acts = `<div class="cc-acts"><button class="btn btn-yellow" ${CC.picks[c.id] ? '' : 'disabled style="opacity:.5"'} onclick="ccSavePick('${esc(c.id)}')">Save answer</button><button class="cc-link" onclick="ccOwnOpen('${esc(c.id)}')">Write own answer</button><button class="cc-link" onclick="ccParkOpen('${esc(c.id)}')">Park with reason</button>${CC.reopen[c.id] ? `<button class="cc-link" onclick="delete CC.reopen['${esc(c.id)}'];ccRender()">Cancel</button>` : ''}</div>`;
+    if (CC.owning === c.id) acts += `<textarea class="cc-ta" id="cc-own-${esc(c.id)}" placeholder="Your answer in your own words. The agent works with exactly this."></textarea><div class="cc-acts"><button class="btn btn-yellow" onclick="ccSaveOwn('${esc(c.id)}')">Save own answer</button></div>`;
     if (CC.parking === c.id) acts += `<textarea class="cc-ta" id="cc-ta-${esc(c.id)}" placeholder="Why do you park this? The card returns only when the reason changes."></textarea><div class="cc-acts"><button class="btn btn-yellow" onclick="ccSavePark('${esc(c.id)}')">Park</button></div>`;
   }
-  const res = done ? `<div class="cc-res${ef.status === 'parked' ? ' park' : ''}">${ef.status === 'parked' ? 'Parked' : 'Decided'}: ${esc(ef.text || ef.answer || '')}</div>` : '';
+  const own = ef.answer === 'own' || ef.answer === 'other';
+  const res = done ? `<div class="cc-res${ef.status === 'parked' ? ' park' : ''}">${ef.status === 'parked' ? 'Parked' : own ? 'Decided (own answer)' : 'Decided'}: ${esc(ef.text || ef.answer || '')} <button class="cc-link" onclick="ccReopen('${esc(c.id)}')">Change answer</button></div>` : '';
   const ev = (c.evidence || []).map(x => `<li>${esc(x)}</li>`).join('');
   return `<article class="cc-item p${c.priority}${done ? ' done' : ''}"><div class="cc-itop"><span class="cc-type">${esc(c.type)}</span><b>${esc(c.client)}</b><span class="dl">card ${c.n} · by ${esc(c.deadline)}</span></div>
 <h3>${esc(c.headline)}</h3><div class="cc-why"><b>Why:</b> ${esc(c.why)}</div><div class="cc-vars">${vars}</div>${acts}${res}

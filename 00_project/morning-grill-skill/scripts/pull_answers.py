@@ -39,6 +39,8 @@ def main():
         c["source_of_answer"] = "portal"
         if r["option"] == "park":
             c["park_reason"] = r["note"]
+        elif r["option"] == "own":   # Martin's own words in the portal (13.10.): the note IS the decision
+            c["answer_text"] = r["note"]
         else:
             c["answer_text"] = (c.get("options", {}).get(r["option"]) or r["option"]) + (f" ({r['note']})" if r.get("note") else "")
     json.dump(led, open(os.path.join(MG, "cards.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
