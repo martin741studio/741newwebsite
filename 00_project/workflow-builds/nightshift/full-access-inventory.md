@@ -34,7 +34,7 @@ Compiled 2026-10-14 from every client memory file, workflow skill, and `.secrets
 | **LinkedIn** | Outreach pipeline / LinkedIn CRM | Martin's own login; claude-in-chrome hard-blocks linkedin.com navigation | Browser-login-only, constrained |
 | **BrightLocal** | Citation-builder submissions (Coralie, Dumann, more planned) | Martin's own account, paid personally | Browser-login-only |
 | **DataForSEO** | SERP/keyword/backlink data, almost every workflow | `.secrets/dataforseo.env`, IP-whitelist required | **API key exists** |
-| **Zapmail** | 30 sending mailboxes, 10 domains, cold outreach | `app.zapmail.ai`, login `martin@741.studio` | Browser-login-only |
+| ~~Zapmail~~ | RETIRED (Martin 14.10.: "we are not even using anymore") | n/a | n/a |
 | **Smartlead** | Cold-email sending/warmup | user_id 14511 + API key | **API key exists** (needs a User-Agent workaround) |
 | **Porkbun** | Domain registrar, 12 cold-email domains | Martin's account | Dedicated MCP connector, API available |
 | **Zapier** | Several client automations | Zapier-MCP, OAuth | **MCP/OAuth** once authorized |
