@@ -238,6 +238,91 @@
    "view": "",
    "install": "",
    "short": ""
+  },
+  {
+   "id": "nightshift",
+   "label": "Night Shift",
+   "alias": "",
+   "maturity": "neu",
+   "approved": "offen",
+   "doc": "",
+   "skill": "",
+   "note": "",
+   "slash": "",
+   "slash_status": "",
+   "chat": "",
+   "resume": "",
+   "view": "",
+   "install": "",
+   "short": ""
+  },
+  {
+   "id": "canary",
+   "label": "Canary (Ausfall-Wächter)",
+   "alias": "",
+   "maturity": "scorecard 90.5%, live: Marcel Zap-Error/Zap-Off -> Telegram",
+   "approved": "offen",
+   "doc": "",
+   "skill": "",
+   "note": "",
+   "slash": "",
+   "slash_status": "",
+   "chat": "",
+   "resume": "",
+   "view": "",
+   "install": "",
+   "short": ""
+  },
+  {
+   "id": "booking-sequence",
+   "label": "Booking-Sequenz (WhatsApp nach Call-Buchung)",
+   "alias": "",
+   "maturity": "installiert 14.10., scorecard 95.9%, Pilot Korinna Heintze",
+   "approved": "offen",
+   "doc": "00_project/prospect-mini-workflow.md (Step 14)",
+   "skill": ".claude/skills/booking-sequence/SKILL.md",
+   "note": "M1 24 h vorher, M2 08:00 ihrer Zeit am Termintag, M3 30 Min vorher; wa.me-Link je Nachricht; Claude sendet nie",
+   "slash": "",
+   "slash_status": "",
+   "chat": "",
+   "resume": "",
+   "view": "",
+   "install": "2026-10-14",
+   "short": "cal.com-Buchung einfügen"
+  },
+  {
+   "id": "evening",
+   "label": "evening",
+   "alias": "",
+   "maturity": "neu, automatisch angelegt, bitte Eintrag ergänzen",
+   "approved": "offen",
+   "doc": "",
+   "skill": "",
+   "note": "",
+   "slash": "",
+   "slash_status": "",
+   "chat": "",
+   "resume": "",
+   "view": "",
+   "install": "",
+   "short": ""
+  },
+  {
+   "id": "sales-call-prep",
+   "label": "Sales Call Prep",
+   "alias": "",
+   "maturity": "live, on-request only",
+   "approved": "ja",
+   "doc": "00_project/workflow-builds/sales-call-prep/scorecard.md",
+   "skill": ".claude/skills/sales-call-prep/SKILL.md",
+   "note": "Martins eigene Call-Vorbereitung je Prospect; nie an den Prospect geschickt; cp1+cp2 Go 15.10.2026",
+   "slash": "",
+   "slash_status": "",
+   "chat": "",
+   "resume": "",
+   "view": "",
+   "install": "",
+   "short": ""
   }
  ],
  "clients": [
@@ -401,6 +486,20 @@
    "drive": "",
    "local": "",
    "note": "Joomla-Site taxi-nuernberg.de, Preisrechner, Wartung über Werbeagentur Bamberger (Daniel Leibold). Chat: 👥🚕 Taxi Nürnberg — Zentrale Setup (Grill 13.10.)"
+  },
+  {
+   "name": "Manuela Stetter",
+   "type": "Lead",
+   "drive": "",
+   "local": "",
+   "note": "automatisch angelegt (Ordner 00_project/prospects/manuela-stetter/_run.json), bitte prüfen"
+  },
+  {
+   "name": "Korinna Heintze",
+   "type": "Lead",
+   "drive": "",
+   "local": "",
+   "note": "automatisch angelegt (Ordner 00_project/prospects/korinna-heintze/booking/_run.json), bitte prüfen"
   }
  ],
  "runs": [
@@ -654,15 +753,15 @@
   {
    "client": "Marcel Rosenbach",
    "workflow": "automation",
-   "status": "Trockenlauf",
+   "status": "in Arbeit",
    "approved": false,
    "approved_date": "",
-   "mode": "Trockenlauf",
-   "last_run": "2026-10-11",
+   "mode": "Echt",
+   "last_run": "2026-10-14",
    "drive": "",
-   "local": "00_project/assets/marcel/automation/skool-funnel",
-   "result": "00_project/assets/marcel/automation/skool-funnel",
-   "note": "Automation Build: skool-funnel"
+   "local": "00_project/assets/marcel/automation/gewinnspiel",
+   "result": "00_project/assets/marcel/automation/gewinnspiel",
+   "note": "Automation Build: gewinnspiel"
   },
   {
    "client": "741 Studio (Eigen-Audit)",
@@ -941,11 +1040,11 @@
    "approved": false,
    "approved_date": "",
    "mode": "Echt",
-   "last_run": "2026-10-12",
+   "last_run": "2026-10-13",
    "drive": "",
    "local": "00_project/prospects/sabine-schwarz",
    "result": "https://741.studio/review/sabine-schwarz/",
-   "note": "validate: 0 Fehler, 1 Hinweise, Loom fehlt. LIVE (Prüfung 2026-10-12); neue lokale Änderungen brauchen ein Deploy nach Go."
+   "note": "validate: 0 Fehler, 0 Hinweise. LIVE (Prüfung 2026-10-13); neue lokale Änderungen brauchen ein Deploy nach Go."
   },
   {
    "client": "Stephan Meyer",
@@ -954,11 +1053,11 @@
    "approved": false,
    "approved_date": "",
    "mode": "Echt",
-   "last_run": "2026-10-12",
+   "last_run": "2026-10-14",
    "drive": "",
    "local": "00_project/prospects/stephan-meyer-v2",
    "result": "https://741.studio/review/stephan-meyer-v2/",
-   "note": "validate: 0 Fehler, 2 Hinweise, Loom fehlt. Noch nicht live: Deploy nach Go."
+   "note": "validate: 0 Fehler, 1 Hinweise. LIVE (Prüfung 2026-10-14); neue lokale Änderungen brauchen ein Deploy nach Go."
   },
   {
    "client": "Praxis Suriya",
@@ -980,11 +1079,11 @@
    "approved": true,
    "approved_date": "2026-10-13",
    "mode": "Echt",
-   "last_run": "2026-10-13",
+   "last_run": "2026-10-15",
    "drive": "",
-   "local": "00_project/assets/morning-grill/2026-10-13",
-   "result": "00_project/assets/morning-grill/2026-10-13/brief.html",
-   "note": "Scheduled run 06:00 task (started 09:59 WITA). 12/13 sources, 7 cards, 8 walk items, 12 below the line, validate PASS. No evening log for 2026-10-12 exists (evening task starts 13.10.). Card rounds not started; bookmark not moved."
+   "local": "00_project/assets/morning-grill/2026-10-15",
+   "result": "00_project/assets/morning-grill/command-center.html",
+   "note": "Pulled forward by Martin ~05:55 WITA. Security walk-queue answered (MariaDB locked to localhost, verified); 3 workflow builds dispatched (Marcel automation, sales-call-prep, server-autonomy — sales-call-prep reached checkpoint 1, not yet shipped); goal-sheet gaps resolved for Suriya/Dumann/Kamil/Hüwel/Stürzl/Taxi; Taxi set to done (stale active status fixed); Coralie reply correction (was never sent); Dumann password-message correction (already sent); Hüwel PR #7 preview sent, not merged; Kamil waiting on team cleanup before password rotation; 3 items archived per Martin's go."
   },
   {
    "client": "741 Studio (Eigen-Audit)",
@@ -1037,7 +1136,124 @@
    "drive": "",
    "local": "00_project/prospects/claudia-maria-steifensand",
    "result": "https://741.studio/review/claudia-maria-steifensand/",
-   "note": "validate: 0 Fehler, 1 Hinweise, Loom fehlt. Noch nicht live: Deploy nach Go."
+   "note": "validate: 0 Fehler, 0 Hinweise. LIVE (Prüfung 2026-10-13); neue lokale Änderungen brauchen ein Deploy nach Go."
+  },
+  {
+   "client": "741 Studio (Eigen-Audit)",
+   "workflow": "nightshift",
+   "status": "freigegeben",
+   "approved": true,
+   "approved_date": "2026-10-13",
+   "mode": "Echt",
+   "last_run": "2026-10-14",
+   "drive": "",
+   "local": "00_project/assets/night-shift/2026-10-14",
+   "result": "reporting/night-shift/2026-10-14/REVIEW.md",
+   "note": "6/7 pass, runs 15, $7.38"
+  },
+  {
+   "client": "Marcel Rosenbach",
+   "workflow": "canary",
+   "status": "in Arbeit",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Echt",
+   "last_run": "2026-10-14",
+   "drive": "",
+   "local": "00_project/assets/marcel/canary/2026-10-14",
+   "result": "00_project/workflow-builds/canary/hand-run.md",
+   "note": "2 Zapier Manager Zaps live (Zap-Fehler, Zap-AUS) -> Telegram 741 Canary. L/R checks planned: pending UptimeRobot + Tally/Pipedrive keys."
+  },
+  {
+   "client": "Praxis Suriya",
+   "workflow": "backlink",
+   "status": "in Arbeit",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Echt",
+   "last_run": "2026-10-14",
+   "drive": "",
+   "local": ".claude/worktrees/admiring-nightingale-f0f882/00_project/assets/suriya/backlinks",
+   "result": ".claude/worktrees/admiring-nightingale-f0f882/00_project/assets/suriya/backlinks/01-baseline/",
+   "note": "Checkpoint 1 teilweise: Step 1.1-1.3 blockiert (DataForSEO-IP-Whitelist), Bewertungen schwach"
+  },
+  {
+   "client": "Manuela Stetter",
+   "workflow": "prospect",
+   "status": "fertig, Freigabe offen",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Echt",
+   "last_run": "2026-10-14",
+   "drive": "",
+   "local": "00_project/prospects/manuela-stetter",
+   "result": "https://741.studio/review/manuela-stetter/",
+   "note": "validate: 0 Fehler, 0 Hinweise. LIVE (Prüfung 2026-10-14); neue lokale Änderungen brauchen ein Deploy nach Go."
+  },
+  {
+   "client": "Korinna Heintze",
+   "workflow": "booking-sequence",
+   "status": "fertig, Freigabe offen",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Echt",
+   "last_run": "2026-10-14",
+   "drive": "",
+   "local": "00_project/prospects/korinna-heintze/booking",
+   "result": "00_project/prospects/korinna-heintze/whatsapp-sequence.md",
+   "note": "Call Mo 26.10.2026, 16:30 WITA (Montag, den 26.10. um 9:30 Uhr); m1 So 25.10.2026, 16:30 WITA, m2 Mo 26.10.2026, 15:00 WITA, m3 Mo 26.10.2026, 16:00 WITA; Kosten 0.098 USD"
+  },
+  {
+   "client": "Sabine Schwarz",
+   "workflow": "booking-sequence",
+   "status": "Trockenlauf",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Trockenlauf",
+   "last_run": "2026-10-14",
+   "drive": "",
+   "local": "00_project/prospects/sabine-schwarz/booking-dryrun-2026-10-14",
+   "result": "00_project/prospects/sabine-schwarz/booking-dryrun-2026-10-14/whatsapp-sequence.md",
+   "note": "Funktionstest booking-sequence (Testbuchung, kein echter Call). Call Do 22.10.2026, 16:00 WITA (Donnerstag, den 22.10. um 10:00 Uhr); m1 an Martin, m2 Mi 21.10.2026, 16:00 WITA, m3 Do 22.10.2026, 15:30 WITA; Kosten 0.106 USD"
+  },
+  {
+   "client": "Manuela Stetter",
+   "workflow": "booking-sequence",
+   "status": "Trockenlauf",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Trockenlauf",
+   "last_run": "2026-10-14",
+   "drive": "",
+   "local": "00_project/prospects/manuela-stetter/booking-dryrun-2026-10-14b",
+   "result": "00_project/prospects/manuela-stetter/booking-dryrun-2026-10-14b/whatsapp-sequence.md",
+   "note": "Call Mo 02.11.2026, 16:00 WITA (Montag, den 2.11. um 9:00 Uhr); m1 So 01.11.2026, 16:00 WITA, m3 Mo 02.11.2026, 15:30 WITA; Kosten 0.098 USD"
+  },
+  {
+   "client": "741 Studio (intern)",
+   "workflow": "evening",
+   "status": "fertig, Freigabe offen",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Echt",
+   "last_run": "2026-10-14",
+   "drive": "",
+   "local": "00_project/assets/morning-grill/2026-10-14",
+   "result": "00_project/assets/morning-grill/command-center.html",
+   "note": "Scheduled 17:00 task (read-only scan, evening-log draft, snapshot id=21) followed by a live round with Martin once he replied with a voice note from the admin Kundenarbeit view. AskUserQuestion became available mid-turn; ran 2 rounds (6 questions). Resolved live: (1) Coralie/Suriya scare-tactic reply confirmed NOT sent (matches what Martin told the Suriya chat 18:58 WITA) — work_item a05a1de0 set dropped/canceled; (2) Stuerzl 'program start not set' card was stale — goals.json already had program_start=2026-10-07, blocker just never cleared; fixed goals.json (removed 'No start date' blocker, new next_milestone) and dropped work_item 1aeebce5; (3) Taxi-Zentrale: Akeeba-key task (t13) was already dropped live as duplicate, Daniel-reply task (t14/work_item 72a0429a) dropped per Martin's 'park it'; (4) Nachweis-Link UX gap documented in 00_project/client-work-visibility/data-model.md (DB already allows label-only evidence, admin UI still forces a URL) per Martin's 'exempt decision tasks' call; (5) Hueweal 'Magnetfelder' = his decision card E5 (Variante A), already built on a test branch (work_item f1b3fa29, status needs_check), just awaiting Martin's live-go, no further action; (6) portal per-card-actions idea captured as admin-only backlog note (memory kundenarbeit-admin-card-actions.md), per Martin's scope ('only for me as admin'). Synced evening/tasks.json and tasks.json locally (t14/t32/t42 -> dropped) and evening-log.md. Also compacted MEMORY.md 20.3KB->17.6KB per a hook size warning. Night queue (2b) not run: AskUserQuestion was unavailable during the unattended portion, so no card/no queue per the workflow's own rule; could still be run now that AskUserQuestion is available, if Martin wants it tonight."
+  },
+  {
+   "client": "Korinna Heintze",
+   "workflow": "sales-call-prep",
+   "status": "fertig, Freigabe offen",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Echt",
+   "last_run": "2026-10-15",
+   "drive": "",
+   "local": "00_project/prospects/korinna-heintze",
+   "result": "",
+   "note": ""
   }
  ],
  "commands": [

@@ -1,0 +1,229 @@
+{
+ "workflow_id": "sales-call-prep",
+ "name": "Sales Call Prep",
+ "created": "2026-10-15",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/sales-call-prep/research-note.md",
+   "date": "2026-10-15",
+   "note": "Skill, per-prospect trigger; patterns.md sec 3 step 3; no disable-model-invocation (no send/live-site change)"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/sales-call-prep/research-note.md",
+   "date": "2026-10-15",
+   "note": "Grepped hormozi-library (109 sources) + workflow-library; found 072-sales-masterclass + 009-closing + house file sales-einwandbehandlung.md"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/sales-call-prep/research-note.md",
+   "date": "2026-10-15",
+   "note": "workflow-library INDEX.md last refresh 2026-10-11, next due 2026-11-22 -> inside 6-week window, no re-fetch needed"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/sales-call-prep/research-note.md",
+   "date": "2026-10-15",
+   "note": "booking-sequence skill checked: WhatsApp reminders to prospect only, no call-prep brief for Martin exists yet; no overlap"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/sales-call-prep/research-note.md",
+   "date": "2026-10-15",
+   "note": "research note written"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/sales-call-prep/use-cases.md",
+   "date": "2026-10-15",
+   "note": "3 use cases: direct ask (Korinna), chained after booking-sequence, thin case with no review-page history"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/sales-call-prep/test-scenarios.md",
+   "date": "2026-10-15",
+   "note": "obvious / paraphrase / must-not-trigger (booking-sequence's WhatsApp job) with expected output each"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/sales-call-prep/hand-run.md",
+   "date": "2026-10-15",
+   "note": "real booked call Korinna Heintze (26.10.2026, found via calendar search), brief at hand-run-output-korinna-heintze.md, deslop_de 5/5 CLEAN with --claims"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/sales-call-prep/pipeline.md",
+   "date": "2026-10-15",
+   "note": "shape 4.1 + 4.3; booking-sequence/sales-call-prep boundary stated explicitly"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/sales-call-prep/decisions.md",
+   "date": "2026-10-15",
+   "note": "freedom table per step; low for lookup/context-order/verify, high for picks, medium for draft"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/sales-call-prep/decisions.md",
+   "date": "2026-10-15",
+   "note": "Martin's go 15.10.: A/A/A (on-request only, Korinna real case, model-invocable)"
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": ".claude/skills/sales-call-prep/SKILL.md",
+   "date": "2026-10-15",
+   "note": "project skill folder created: SKILL.md, scripts/, references/, assets/"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": ".claude/skills/sales-call-prep/SKILL.md",
+   "date": "2026-10-15",
+   "note": "frontmatter: WHAT+WHEN triggers (DE/EN) + 2 negative triggers (booking-sequence, running-client work); no disable-model-invocation per Martin's go; context: fork"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": ".claude/skills/sales-call-prep/SKILL.md",
+   "date": "2026-10-15",
+   "note": "body is a checklist with 1 hard gate (step 5); Critical section on top with 3 rules"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": ".claude/skills/sales-call-prep/SKILL.md",
+   "date": "2026-10-15",
+   "note": "body 108 lines; detail in references/picks.md + references/template.md, one level deep"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": ".claude/skills/sales-call-prep/SKILL.md",
+   "date": "2026-10-15",
+   "note": "verify_brief.py loop at end of body (step 5), fix-until-passes stated"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": ".claude/skills/sales-call-prep/SKILL.md",
+   "date": "2026-10-15",
+   "note": "house rules: never contacts prospect, no outside method names, STE for prose, verified-numbers-only via claims.json"
+  },
+  "3.7": {
+   "status": "skipped",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "",
+   "date": "2026-10-15",
+   "note": "",
+   "reason": "on-request only (Martin's go, Q1=A), never scheduled/unattended - rules.md section 6 does not apply"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/sales-call-prep/trigger-tests.md",
+   "date": "2026-10-15",
+   "note": "3 fresh subagents, frontmatter-only judging; scenario1 YES, scenario2 YES, scenario3 booking-sequence only - all match expected"
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/sales-call-prep/functional-test.md",
+   "date": "2026-10-15",
+   "note": "fresh subagent ran skill for real on Korinna; real deliverable written + verified PASS; caught+fixed stale-example risk in template.md"
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/sales-call-prep/baseline.md",
+   "date": "2026-10-15",
+   "note": "without skill: 3 corrections, 2 failed verify runs; with skill: 0 corrections, 1 verify run PASS, 9 tool calls"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-15",
+   "note": "",
+   "reason": "project skill, not a plugin (no claude plugin eval); /doctor prompt-audit is an interactive slash command this build agent cannot invoke - covered instead by the fresh-subagent trigger + functional tests (4.1/4.2), which serve the same audit purpose"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/sales-call-prep/scorecard.md",
+   "date": "2026-10-15",
+   "note": "59/60 = 98%, no zero in A or D -> ship"
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/sales-call-prep/decisions.md",
+   "date": "2026-10-15",
+   "note": "Martin's go 15.10.: 'ship it' on scorecard 98% + real Korinna brief"
+  },
+  "5.2": {
+   "status": "todo",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3a": {
+   "status": "done",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": ".claude/skills/sales-call-prep/SKILL.md",
+   "date": "2026-10-15",
+   "note": "add-workflow failed 'exists' (Stop-hook sync had auto-created it); filled label/maturity/doc/skill/note directly in registry.json, fixed _run.json status vocab ('fertig'->'fertig, Freigabe offen', also fixed one unrelated pre-existing bad status that was blocking build()), ran build -> Excel written: 25 Kunden, 71 Läufe, 19 Workflows; list confirms sales-call-prep/Korinna row"
+  },
+  "5.3b": {
+   "status": "skipped",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "2026-10-15",
+   "note": "",
+   "reason": "never client- or prospect-facing (Martin reads it before the call; the prospect never sees it) - Martin guide placement does not apply"
+  },
+  "5.3": {
+   "status": "done",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/sales-call-prep-workflow.md",
+   "date": "2026-10-15",
+   "note": "memory file written + MEMORY.md line added under Workflows section"
+  },
+  "5.4": {
+   "status": "skipped",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "2026-10-15",
+   "note": "",
+   "reason": "on-request only, never scheduled (Martin's go Q1=A) - no routine/Cowork task to run by hand"
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-15T06:05"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-15T06:18"
+  }
+ ]
+}
