@@ -5,7 +5,7 @@ Walk the client's lead path (page → form → automation → CRM/ESP → Ads) a
 ## L — Liveness (HTTP + keyword)
 What: a page or endpoint answers 200 and contains an expected marker (e.g. the form embed URL).
 When: every public page in the lead path (landing page, booking page, form page).
-Interval: 1–5 min once on a runner; today verified by hand with curl (see hand-run.md), added to UptimeRobot once the account exists (decision C12).
+Interval: 1–5 min on UptimeRobot (live since 2026-10-14, account martin741studio). Alert channel: e-mail to martin@741.studio by Martin's choice (decision C16) — UptimeRobot's free plan has no Telegram option.
 Threshold: 2 consecutive failures, or a 2nd location disagreeing — never alert on one failed check (canary-research rule 1).
 Example: `marcel-gewinnspiel-page`, `marcel-gewinnspiel-form` in canaries.json.
 

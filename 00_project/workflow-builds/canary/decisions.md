@@ -30,3 +30,6 @@
 - C14 Build the Dinakar group now: **"Yes, build it now (Recommended)"** — Martin created the Telegram group "741 Canary" (chat id -5487070427) himself, added the canary bot and Dinakar (@DhoniMSD516, provided by Martin directly, no memory file had it).
 - C15 How to add Dinakar: **"I'll type his @username or phone here"** — @DhoniMSD516.
 - `alert.py` upgraded: on no-ack within `--escalate-after-min`, auto-posts to the group with an @-mention, exit code 4 (ESCALATED). Tested live with a 6-second window — real send, real no-ack, real escalation post confirmed in the group. No real page sent for a fictional incident otherwise.
+
+## Round 7 (2026-10-14, ~08:35 WITA, via the morning grill)
+- C16 UptimeRobot notification channel: Martin, live in the grill chat: "use email alerts as the default notification method going forward, not an app" — the iOS app route tried for Marcel's incident didn't work well for him. Settled, not an open gap: UptimeRobot's free plan has no Telegram option anyway (only app push, Pushover, Discord, Google Chat, e-mail). Email stays the channel for UptimeRobot checks; Telegram stays the channel for the Zapier Manager pushes and alert.py escalation. Applied to canaries.json notes for all 3 UptimeRobot-runner checks.
