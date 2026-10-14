@@ -115,3 +115,18 @@
 ## Full access inventory delivered (14.10.)
 - N51 Martin rejected the quick 3-item list, demanded the real thing derived from actual client files, not a guess. Ran a dedicated research pass across all 18 active client memory files + workflow skills + .secrets/.env filenames. Result: 00_project/workflow-builds/nightshift/full-access-inventory.md — 18 clients (platform, GBP account, other logins, access method each), ~23 shared/internal tools, and the existing API-key inventory for cross-reference.
 - Found along the way, not previously known: Novamira connection for Praxis Suriya is currently "Connection Failed"; Novamira for Physiotherapie Kraft (Kamil's 2nd site) was never set up at all; Bali Healing's GA4 service-account has no access (only sees an orphaned old property); a plaintext FTP password for Taxi-Zentrale Nürnberg sits outside .secrets/ in a script path (security finding, independent of the server work).
+
+## Autonomous prep round (14.10., after N51)
+Martin: "prepare everything... so I don't have to do 'yeah okay keep going'... get your help where you need it." Did everything self-serviceable without asking; batched what's left.
+
+Done, no input needed:
+- Copied the full `.secrets/` (12 files) + `.env` to the server, `chmod 600`, owned by nightshift.
+- DataForSEO: verified working live from the server (`status: Ok`).
+- Local Falcon: tried wiring via `claude mcp add --transport http` with the key in the URL — does NOT work that way; Claude Code's HTTP MCP transport wants a claude.ai-level OAuth connector authorization, the key-in-URL pattern from memory `localfalcon-mcp-access.md` only applies to raw JSON-RPC calls, not this path. Removed the broken entry. Needs Martin (see below).
+- cPanel API token: tested, got an HTML response not JSON — auth header format needs checking, not yet confirmed working. Low priority, flagged not fixed.
+- Google API Python libs not installed/used anywhere in the repo's scripts (laptop doesn't use google-api-python-client either) — GSC/GA4 service account file is on the server but unverified by a real call; low priority.
+
+Needs Martin (batched into one place, not asked one at a time):
+1. **claude.ai connector settings** (browser, not noVNC — this is Claude's own account page): authorize Local Falcon and re-check Novamira's "Insufficient scope" error there.
+2. **noVNC browser logins** (http://100.124.61.26:6080/vnc.html): Google Workspace `741studio18@gmail.com` (covers 10+ clients' GBP/GA4/Ads), ChatGPT, LinkedIn, BrightLocal, Zapmail (`app.zapmail.ai`), LastPass (Marcel Rosenbach's stack).
+3. Per the access inventory: Suriya's Novamira reconnect, Kamil-Kraft's Novamira setup, Maria Brasse's WP handover — these belong in their own client chats, not here.
