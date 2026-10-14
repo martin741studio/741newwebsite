@@ -144,3 +144,7 @@ Needs Martin (batched into one place, not asked one at a time):
 - Martin: server setup "noch nicht so wirklich eingerichtet ist, dass es wirklich autonom laufen kann" → full /workflow-create rework of nightshift, focused on autonomous-operation quality: self-healing, patch cadence, credential handling without live login, crash/reboot recovery discipline, logging/alerting tied to canary.
 - Library checked: workflow-library fresh (built 2026-10-11, next refresh due 2026-11-22, no refresh needed). Launched targeted live research for the 6 gap areas the chat-base specified; existing v2 evidence (systemd Restart=on-failure, real reboot test, unattended-upgrades, Tailscale-only, 600-mode secrets) stands as partial coverage already.
 - Checkpoint 1 readiness will be reported back to the chat-base session once research + design updates are ready for Martin's go.
+
+## v3 checkpoint 1 (15.10.)
+- CP1-v3: "Build all 4, in the ranked order (Recommended)" — heartbeat→canary, watchdog+respawn-budget, mandatory smoke test after CLI updates, scheduled kill/reboot drill with written criteria.
+- Hygiene: "Switch to --permission-prompts none (Recommended)" + "Note Node 24 migration on the roadmap (Recommended)" — both yes.
