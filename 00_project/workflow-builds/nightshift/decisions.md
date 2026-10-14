@@ -104,3 +104,10 @@
 - claude-remote-control.service deliberately does NOT set CLAUDE_CODE_OAUTH_TOKEN (would block Remote Control, same bug as before); `--spawn=same-dir` flag passed explicitly so no interactive prompt on restart; confirmed the "Enable Remote Control?" consent is remembered, no re-prompt.
 - Actually rebooted the server (not just trusted the config) — all 6 services, CDP port 9222, and noVNC port 6080 confirmed back up automatically, unprompted, within ~25s of the server returning.
 - Full stack now reboot-proof: display + Chrome + Remote Control all self-start.
+
+## Full loop proven (14.10.)
+- Playwright MCP wired via `claude mcp add --scope user browser -- npx -y @playwright/mcp@latest --cdp-endpoint http://127.0.0.1:9222` (connects to the EXISTING persistent-profile Chrome, doesn't launch a separate hidden one).
+- Finding: the full `claude auth login` also pulled in Martin's account-level claude.ai connectors (user:mcp_servers scope) — Google Drive, Gmail, Calendar, Supabase, Notion, Zapier, HubSpot, Ahrefs, Firecrawl, Wix, Miro all show Connected on the server already, no extra setup. Novamira (WordPress) connector failed — "Insufficient scope: required mcp" (per-connector auth, not covered by this login). Local Falcon still needs its own auth (as expected, separate service).
+- This likely makes the Drive service-account build (N50) unnecessary for basic upload/read — the account-level Drive MCP connector may already do the job. Needs a real test with a binary file before fully retiring that plan; not yet tested.
+- End-to-end test: an agent (`claude -p` with the batch token, mcp__browser__* tools) navigated to example.com — confirmed visually in the SAME noVNC window Martin was just looking at ("Example Domain" tab present). Proves: agent-driven and human-visible are the same browser, same session, same logins, as designed.
+- Status: browser layer fully built and proven (display, Chrome, systemd reboot-survival, Playwright MCP wiring, visual confirmation). NOT yet done: any actual service logins (Google/ChatGPT/LinkedIn) into the Chrome profile — that's Martin's next step via the noVNC link, nothing more to build before that.
