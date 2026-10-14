@@ -143,3 +143,15 @@ Status: **suspicious / unknown.** Only the Hostinger account (hPanel) can show i
 
 ## Atomic BI Chrome extension
 Martin gave the go to remove it (Default profile, "Person 1"). Claude in Chrome cannot open `chrome://extensions`, so I could not remove it. Martin removes it himself.
+
+## Closed (2026-10-14, ~07:00 WITA)
+
+Martin, in the Morning Grill chat: "Laptop malware is done." The investigation is closed. The hPanel check is dropped.
+
+Server 187.127.103.222: last use 2026-03-25 (Antigravity logs). All host keys changed after that date. The SSH package on it was published 2026-09-03. Most likely the Hostinger VPS expired and the address went to a new customer. Not verified in hPanel.
+
+Still open (not part of the malware check):
+- Rotate the stolen credentials in list A, starting with the SSH keys `id_ed25519`, `id_rsa`, `google_compute_engine`.
+- Change the Hostinger password. It was in the stolen Chrome data.
+- Remove the Atomic BI Chrome extension (Default profile) at `chrome://extensions`.
+- Delete `~/QUARANTINE-malware-2026-10-13/` when the evidence is no longer needed (Martin himself).
