@@ -1,0 +1,241 @@
+{
+ "_note": "Overlay for morning-grill-goals.json (generated file, do not hand-edit that one). This file holds only what Supabase does not model: non-portal entities in full, and per-portal-client fields with no Supabase column (aliases, chat, client_rules, blockers, waiting_for, next_workflow, next_milestone, notes, grill, leading, status_override). Edit THIS file by hand. Decision 2026-10-15 (Martin via orchestrator): aliases/client_rules stay here, no Supabase schema change for now.",
+ "portal_overlay": {
+  "Praxis Suriya": {
+   "aliases": ["suriya", "coralie"],
+   "grill": "daily",
+   "leading": [
+    {"metric": "741 tasks done per week", "weekly_threshold": null, "owner": "agent+team"},
+    {"metric": "pages live (cumulative)", "weekly_threshold": null, "owner": "Dinakar"},
+    {"metric": "citations live (cumulative)", "weekly_threshold": null, "owner": "Tantri"},
+    {"metric": "review asks sent per week", "weekly_threshold": null, "owner": "client"}
+   ],
+   "next_milestone": "First Falcon scan after cycle reset ~19.10.",
+   "blockers": ["GTM access open", "Google Ads paused", "WordPress: invitation sent again by Coralie but role is only viewer (13.10.)", "Search Console access still gone: Martin tells her himself"],
+   "waiting_for": [{"who": "client", "what": "GSC access back", "since": "2026-10-12"}],
+   "client_rules": ["No backlink or disavow work", "No big change without backup and her OK", "No URL changes", "Ayurveda-Massage page untouchable", "Contact paths must stay"],
+   "chat": "local_3702122f-abe4-4a49-9c58-2ab484fd1086",
+   "next_workflow": "tracking (first scan), phone",
+   "notes": null
+  },
+  "Praxis Hüwel": {
+   "aliases": ["hüwel", "huewel"],
+   "grill": "daily",
+   "leading": [
+    {"metric": "741 tasks done per week", "weekly_threshold": null, "owner": "agent+team"},
+    {"metric": "pages live (cumulative)", "weekly_threshold": null, "owner": "Dinakar"},
+    {"metric": "citations live (cumulative)", "weekly_threshold": null, "owner": "Tantri"},
+    {"metric": "review asks sent per week", "weekly_threshold": null, "owner": "client"}
+   ],
+   "next_milestone": "GBP round 2 (FAQ, review replies, ~19 services)",
+   "blockers": ["Root domain 404", "AVV for forms", "GTM access", "B2B pivot open"],
+   "waiting_for": [],
+   "client_rules": [],
+   "chat": "local_78a6b59d-dc6b-486c-a4fc-55c99656b50e",
+   "next_workflow": "phone, citations",
+   "notes": null
+  },
+  "STÜRZL Steuerstrafrecht": {
+   "aliases": ["stürzl", "stuerzl", "sturzl"],
+   "grill": "daily",
+   "leading": [
+    {"metric": "copy runs approved per week", "weekly_threshold": null, "owner": "Martin"},
+    {"metric": "pages live (cumulative)", "weekly_threshold": null, "owner": "741"}
+   ],
+   "next_milestone": "Google Ads live within 2 weeks of start (due ~2026-10-21)",
+   "blockers": ["Google Ads access", "GBP München owner unknown", "~30 copy runs waiting for approval", "Backlog: no implement (09.10.)"],
+   "waiting_for": [],
+   "client_rules": ["Lists name no people: 'von euch' / '741'", "Kosten-Fakten, never RVG"],
+   "chat": "local_4d2052e4-d986-4cc4-a03c-d4d8d7b79bdb",
+   "next_workflow": "copy approvals, cro",
+   "notes": null
+  },
+  "Daniela Dumann": {
+   "supabase_name": "Naturheilpraxis Daniela Dumann",
+   "aliases": ["dumann"],
+   "grill": "daily",
+   "leading": [
+    {"metric": "741 tasks done per week", "weekly_threshold": null, "owner": "agent+team"},
+    {"metric": "pages live (cumulative)", "weekly_threshold": null, "owner": "Dinakar"},
+    {"metric": "citations live (cumulative)", "weekly_threshold": null, "owner": "Tantri"},
+    {"metric": "review asks sent per week", "weekly_threshold": null, "owner": "client"}
+   ],
+   "next_milestone": null,
+   "blockers": ["Portal shows 3 missing access (maybe stale)", "4 help requests"],
+   "waiting_for": [],
+   "client_rules": [],
+   "chat": "local_03cdcb69-f227-4162-98d2-430bfd51b959",
+   "next_workflow": "pool -> sitetree, copy",
+   "notes": "13.10.: status page + 20 draft approval cards built (00_project/assets/dumann/status-2026-10-13/); waits for Martin's per-card release."
+  },
+  "Maria Brasse": {
+   "aliases": ["brasse", "shuiguru", "maria"],
+   "grill": "daily",
+   "leading": [
+    {"metric": "741 tasks done per week", "weekly_threshold": null, "owner": "agent+team"},
+    {"metric": "pages live (cumulative)", "weekly_threshold": null, "owner": "Dinakar"},
+    {"metric": "citations live (cumulative)", "weekly_threshold": null, "owner": "Tantri"},
+    {"metric": "review asks sent per week", "weekly_threshold": null, "owner": "client"}
+   ],
+   "next_milestone": null,
+   "blockers": ["[Maria: ergänzen] placeholders", "15 overdue tasks", "GTM access"],
+   "waiting_for": [],
+   "client_rules": [],
+   "chat": "local_a6311a65-fd78-4230-bc86-c427aa7cb0dc",
+   "next_workflow": "citations live checks",
+   "notes": null
+  },
+  "Bali Healing": {
+   "aliases": ["bali healing", "balihealing"],
+   "grill": "daily",
+   "leading": [
+    {"metric": "onboarding steps done", "weekly_threshold": null, "owner": "client + Martin"},
+    {"metric": "741 tasks done per week", "weekly_threshold": null, "owner": "agent+team"}
+   ],
+   "next_milestone": null,
+   "blockers": ["Ads billing / tracking incomplete", "24 overdue tasks", "Registry type says Lead (fix to Kunde)"],
+   "waiting_for": [],
+   "client_rules": [],
+   "chat": "local_f85771e6-dfcb-403a-a238-ed0fbccbb030",
+   "next_workflow": "audit follow-up, pool",
+   "notes": null
+  },
+  "Rabenmütter": {
+   "supabase_name": "Rabenmütter Shop",
+   "aliases": ["rabenmütter", "rabenmuetter", "franziska"],
+   "grill": "daily",
+   "leading": [
+    {"metric": "741 tasks done per week", "weekly_threshold": null, "owner": "agent+team"},
+    {"metric": "pages live (cumulative)", "weekly_threshold": null, "owner": "Dinakar"},
+    {"metric": "citations live (cumulative)", "weekly_threshold": null, "owner": "Tantri"},
+    {"metric": "review asks sent per week", "weekly_threshold": null, "owner": "client"}
+   ],
+   "next_milestone": null,
+   "blockers": ["Night-shift item blocked 10x (site fetch 404)", "Merchant Center", "Pensaki outreach waits for go"],
+   "waiting_for": [],
+   "client_rules": [],
+   "chat": "local_efe1b833-106f-4276-9bda-026856b03025",
+   "next_workflow": null,
+   "notes": "Display name kept as 'Rabenmütter' (Drive/chat/registry convention); supabase_name maps to the Supabase clients.name 'Rabenmütter Shop'."
+  },
+  "Johni Jaya Motor": {
+   "aliases": ["johni"],
+   "grill": "daily",
+   "status_override": "restart",
+   "leading": [{"metric": "overdue tasks cleared per week", "weekly_threshold": null, "owner": "741"}],
+   "next_milestone": "Access: GA4, Google Business Profile, GSC (Martin 13.10.: tracking already exists, GBP setup is what is left; he will double-check the rest)",
+   "blockers": ["No activity since 17.08.", "Owner was a planned content hire"],
+   "waiting_for": [],
+   "client_rules": [],
+   "chat": "local_03e24cbe-ddb1-49e4-ba31-59f3ea5d57b4",
+   "next_workflow": null,
+   "notes": "Martin 13.10. (portal card, own answer): restart now; many tasks left; open access = GA4, GBP, GSC. status_override='restart' because Supabase clients.status only has active/onboarding, no restart state."
+  },
+  "Kamil (Physio Anatomie + Kraft)": {
+   "supabase_name": "Kamil Böyük",
+   "aliases": ["kamil", "physio"],
+   "grill": "daily",
+   "leading": [{"metric": "report sent by day 5 of month", "weekly_threshold": null, "owner": "agent + Martin"}],
+   "next_milestone": "Move the monthly numbers into his client dashboard and prepare improvement recommendations (website, income streams)",
+   "blockers": [],
+   "waiting_for": [],
+   "client_rules": [],
+   "chat": "local_6681ef9f-5848-4b28-9073-25e5cacaf787",
+   "next_workflow": null,
+   "notes": "Martin 13.10. (portal card, own answer): reports not done yet; he got only easy numbers by email; wants dashboard + decision-tree style explanations; goal: improve month by month and grow his income and our billing."
+  }
+ },
+ "non_portal_clients": [
+  {
+   "client": "Taxi-Zentrale Nürnberg",
+   "registry_name": "Taxi-Zentrale Nürnberg",
+   "status": "done",
+   "grill": "daily",
+   "phase": "P4",
+   "program_start": null,
+   "program_end": null,
+   "quarter_goal": "Scope ended 14.10.2026: Werbeagentur Bamberger/Daniel took Joomla back over. 741 does no plugin/update/captcha work here any more.",
+   "goal_numbers": [],
+   "leading": [{"metric": "open site issues (key, spam, updates)", "weekly_threshold": null, "owner": "agent+Martin"}],
+   "next_milestone": "Akeeba download key saved in Joomla, updates installed, spam source found and closed (Daniel 13.10.)",
+   "blockers": ["Akeeba Download Key missing (Admin Tools Pro, Akeeba Backup Pro)", "900 spam mails in one night; several forms have no captcha", "Cloudflare blocks automated Joomla admin saves; Preisrechner depends on a hand-patched .htaccess (memory taxi-nuernberg-preisrechner)"],
+   "waiting_for": [{"who": "martin", "what": "log in to Joomla + paste the key; sample spam mails from Daniel", "since": "2026-10-13"}],
+   "client_rules": ["Per-change go for every live change", "Joomla admin saves only in Martin's real Chrome (Cloudflare)", "Never enter the licence key by agent"],
+   "chat": "local_bde9ddab-3b39-4191-bb54-66f209c53d2b",
+   "next_workflow": null,
+   "aliases": ["taxi", "taxi-zentrale", "taxi nürnberg", "taxi-nuernberg"],
+   "notes": "Added 13.10.: Martin said Taxi is a client and was missing in the Command Center. Not in Supabase clients table (never onboarded to the portal) — this is why it needs the overlay, not a Supabase row."
+  },
+  {
+   "client": "Marcel Rosenbach",
+   "registry_name": "Marcel Rosenbach",
+   "status": "active",
+   "grill": "daily",
+   "phase": "P0",
+   "program_start": null,
+   "program_end": null,
+   "quarter_goal": "Close a new website build with a monthly subscription, plus Google Ads as soon as possible; show Hüwel as proof (Martin 2026-10-13)",
+   "goal_numbers": [
+    {"metric": "offer sent", "baseline": "no", "target": "sent", "due": "2026-10-17", "source": "Martin 2026-10-13: 'he wants to come asap'", "status": "proposed"}
+   ],
+   "leading": [{"metric": "sales steps done (offer, call, signature)", "weekly_threshold": null, "owner": "Martin"}],
+   "next_milestone": "Landing page (in progress 13.10.) -> Martin's intro video -> prototype for Marcel -> Ads",
+   "blockers": ["Funnel automation still dry run"],
+   "waiting_for": [],
+   "client_rules": [],
+   "chat": "local_61b8f208-18a7-4a11-981d-0fb3170dad82",
+   "next_workflow": "offer, then cro / automation",
+   "aliases": ["marcel"],
+   "notes": "Martin 13.10.: the prototype will convince him; also base for the Ads. Sales prospect, not a portal client."
+  },
+  {
+   "client": "me&you / Pauspapier",
+   "registry_name": "Meandyou",
+   "status": "active",
+   "grill": "daily",
+   "phase": "P4",
+   "program_start": null,
+   "program_end": null,
+   "quarter_goal": "Both landing pages live and the no-show rate measured and lowered (Martin 2026-10-13)",
+   "goal_numbers": [
+    {"metric": "landing pages live", "baseline": 0, "target": 2, "due": null, "source": "cro runs at Checkpoint 2 (12.10.)", "status": "proposed"},
+    {"metric": "no-show rate", "baseline": null, "target": null, "due": null, "source": "KPIs must be set with Tajan", "status": "proposed"}
+   ],
+   "leading": [{"metric": "CRO checkpoints passed", "weekly_threshold": null, "owner": "agent + Martin"}],
+   "next_milestone": null,
+   "blockers": ["Framer access", "Photos (Phil)", "Setter person unknown"],
+   "waiting_for": [],
+   "client_rules": [],
+   "chat": null,
+   "next_workflow": "cro checkpoint 3",
+   "aliases": ["meandyou", "me&you", "pauspapier", "ehlers"],
+   "notes": "Partner engagement (Pauspapier/Tajan + end-customer me&you), not a portal client."
+  },
+  {
+   "client": "Tacheles",
+   "registry_name": null,
+   "status": "done",
+   "grill": "none",
+   "phase": null,
+   "program_start": null,
+   "program_end": null,
+   "quarter_goal": null,
+   "goal_numbers": [],
+   "leading": [],
+   "next_milestone": null,
+   "blockers": [],
+   "waiting_for": [],
+   "client_rules": [],
+   "chat": null,
+   "next_workflow": null,
+   "aliases": ["tacheles"],
+   "notes": "Done per Martin 2026-10-13. White-label, never a portal client."
+  }
+ ],
+ "leads": [
+  {"lead": "Aydan Adel", "next": "sales step after CRO prototype", "follow_up_due": null},
+  {"lead": "Meerblick / Klaus-Dieter Sachs", "next": "none recorded since 07.10.", "follow_up_due": null},
+  {"lead": "Eri Trostl", "next": "follow-up after PDF 29.09.", "follow_up_due": "overdue (> 7 days)"},
+  {"lead": "Review-page prospects (Schwarz, Meyer, Ruether, Fredel, Grieshaber, Tiemann)", "next": "Loom + WhatsApp per prospect workflow", "follow_up_due": null}
+ ]
+}

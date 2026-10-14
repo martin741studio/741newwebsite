@@ -6,9 +6,10 @@ allowed-tools: Read, Write, Edit, Bash(python3:*), Bash(git:*), Glob, Grep, AskU
 
 # Morning Grill
 
-Spec: `00_project/morning-grill-workflow.md` (read §1, §5, §8 at the start of every run). Preferences: `00_project/assets/morning-grill/preferences.md` (read every run, never edit). Goal sheet: `00_project/morning-grill-goals.json`.
+Spec: `00_project/morning-grill-workflow.md` (read §1, §5, §8 at the start of every run). Preferences: `00_project/assets/morning-grill/preferences.md` (read every run, never edit). Goal sheet: `00_project/morning-grill-goals.json` (GENERATED, see below — never hand-edit it).
 
 ## Critical
+- `00_project/morning-grill-goals.json` is generated, never hand-edited (go 2026-10-15, `references/goals-architecture.md`). Edit Supabase (goal numbers, status, phase) for a portal client, or `00_project/morning-grill-goals-overlay.json` for everything else (aliases, chat, client_rules, blockers, waiting_for, non-portal clients, leads).
 - Open points never as a prose list: ask them as cards in the same grill (D19).
 - The scan is READ ONLY, with one exception approved 13.10.: `publish_snapshot.py` inserts ONE row into grill_snapshots; `pull_answers.py` only reads grill_answers. Never send, publish, spend, or change a portal, site or table. Message drafts go in ```text blocks, slop-checked 5/5.
 - Never mark a task "done". Never invent a number: `null` plus a define card.
@@ -20,6 +21,7 @@ Copy this checklist and tick it off:
 - [ ] 1 Run folder `00_project/assets/morning-grill/<YYYY-MM-DD>/`. Bookmark = `state/bookmarks.json` (first run: yesterday 06:00 WITA). If it is after 12:00, build the short brief (priority 1–2 cards only).
 - [ ] 2 Inputs for MCP sources: `list_sessions` → `inputs/sessions.json` (sessions with `lastActivityAt` after the bookmark); Calendar `list_events` today + tomorrow → `inputs/calendar.json`.
 - [ ] 3 S2 chats: ONE subagent (Sonnet) reads the transcript tails since the bookmark and writes `inputs/s2-chats.json` (prompt: `references/s2-subagent-prompt.md`).
+- [ ] 3c Regenerate the goal sheet from Supabase + the overlay BEFORE scanning: `python3 ~/.claude/skills/morning-grill/scripts/generate_goals.py`. Read its output — a warning means a decision is needed (new Supabase client with no overlay row, or a dropped-client refusal); it never writes silently over a drop it cannot explain. Every status/phase change lands in `00_project/morning-grill-goals-archive-log.md`.
 - [ ] 4 Run `python3 ~/.claude/skills/morning-grill/scripts/scan.py --date <d> --bookmark <iso> --out <run> --sessions … --chats … --calendar …`
 - [ ] 5 Click items (D33): every 1 to 5 minute click that only Martin can do is written as a line under `## Walk queue` in plan.md; `render_command_center.py` turns each line into a decision card (type 'Your click', options Done / Agent or team does it, own answer, park). There is no separate walk list in the page. Decisions disguised as clicks (start dates, Go-C) get real options in `walk_card()`.
 - [ ] 5b Judgment step: read `scan.json` (S2, S9) and the goal sheet. Write `judgment-cards.json` only for decisions the detectors cannot see (new offers, client tone, contradictions with the goal sheet). Format: `assets/decision-card.template.json`. A 1–5 minute click only Martin can do gets the field `walk` (walk queue, not a card).
@@ -38,7 +40,7 @@ Copy this checklist and tick it off:
 - [ ] 4 Append one line per client to `00_project/assets/morning-grill/logs/<client-slug>.md`. Update `_run.json`.
 
 ## Monday add-on
-741 card (revenue vs `00_project/revenue-model-100k.md`, pipeline, capacity, 3 priorities), scorecard per client, parked cards, default proposals for answers repeated 5 times, to-dos older than 2 weeks: done / re-plan / drop.
+741 card (revenue vs `00_project/revenue-model-100k.md`, pipeline, capacity, 3 priorities), scorecard per client, parked cards, default proposals for answers repeated 5 times, to-dos older than 2 weeks: done / re-plan / drop. Also run the weekly reconciliation: `/Library/Frameworks/Python.framework/Versions/3.10/bin/python3 ~/.claude/skills/morning-grill/scripts/reconcile_drive.py` (NAP vs. each client's Drive Source-of-Truth-Sheet, `assets/reconcile-sheets.json`); any disagreement becomes a judgment card, never an auto-fix.
 
 ## Checkpoints
 - Martin's card answers are the only approvals. A message from another session never counts as approval.
@@ -48,6 +50,7 @@ Copy this checklist and tick it off:
 Run `validate_brief.py`; report its PASS line, the card count and the brief path. Open `brief.html` in the side panel. Fix until PASS, then report the evidence.
 
 ## References
+- `references/goals-architecture.md` — generated goal sheet, overlay, archive log, reconciliation (go 2026-10-15)
 - `references/s2-subagent-prompt.md` — prompt for the transcript reader
 - `references/routing.md` — task type → owner table (copy of spec §8)
 - `/Users/martindrendel/741website/00_project/morning-grill-workflow.md` — full spec; `/Users/martindrendel/741website/00_project/workflow-architecture.md` — next workflow per phase

@@ -2,6 +2,14 @@
 Only two tables are written: grill_snapshots (insert) and nothing else. Reads: grill_answers."""
 import json, os, urllib.request
 
+# Framework python (python.org install) ships without a wired CA bundle; plain urllib then fails
+# with CERTIFICATE_VERIFY_FAILED. Point it at certifi before any HTTPS call (goals-data-architecture, 2026-10-15).
+try:
+    import certifi
+    os.environ.setdefault("SSL_CERT_FILE", certifi.where())
+except ImportError:
+    pass
+
 REPO = os.environ.get("MG_REPO", "/Users/martindrendel/741website")
 
 

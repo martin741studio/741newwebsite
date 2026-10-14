@@ -1,5 +1,5 @@
 {
- "_note": "Morning-grill goal sheet v0.1, 2026-10-13. Goals from Martin's grill answers. Numbers marked 'proposed' need one confirm card each. null = no verified source yet.",
+ "_note": "GENERATED 2026-10-15T07:15 from Supabase (portal clients: status/phase/program dates/work_goals) + morning-grill-goals-overlay.json (everything else). Do not hand-edit this file — edit Supabase or the overlay. Generator: 00_project/morning-grill-skill/scripts/generate_goals.py (goals-data-architecture, 2026-10-15).",
  "clients": [
   {
    "client": "Praxis Suriya",
@@ -13,7 +13,7 @@
    "goal_numbers": [
     {
      "metric": "Maps grid: avg rank, 5 keywords",
-     "baseline": null,
+     "baseline": "rank 1-9 depending on keyword (Local Falcon 15./16.08.: ayurveda 95.9% SoLV, akupunktur 91.8%, heilpraktiker 77.6%, migräne 30.6%, schmerztherapie/vagusnerv/naturheilpraxis 0%)",
      "target": "top 3",
      "due": "2026-12-01",
      "source": "Local Falcon scan (first scan after ~19.10.)",
@@ -86,7 +86,7 @@
    "grill": "daily",
    "phase": "P4",
    "program_start": "2026-08-25",
-   "program_end": null,
+   "program_end": "2026-11-23",
    "quarter_goal": "First measurable patient leads from Maps and the website (Martin 2026-10-13)",
    "goal_numbers": [
     {
@@ -143,22 +143,22 @@
    "status": "active",
    "grill": "daily",
    "phase": "P1",
-   "program_start": null,
-   "program_end": null,
+   "program_start": "2026-10-07",
+   "program_end": "2027-01-05",
    "quarter_goal": "Start date fixed, Google Ads live within 2 weeks after start, approved money pages live (Martin 2026-10-13)",
    "goal_numbers": [
     {
      "metric": "Ads live",
      "baseline": "no",
      "target": "live",
-     "due": "start + 14 days",
-     "source": "contract: Ads <= 2 weeks after start",
+     "due": "2026-10-21",
+     "source": "contract: Ads <= 2 weeks after start (program start 07.10.2026 + 14 days)",
      "status": "proposed"
     },
     {
      "metric": "approved money pages live",
-     "baseline": 0,
-     "target": null,
+     "baseline": "0",
+     "target": "all pages in the approved site restructure (count TBD once the sitemap is approved)",
      "due": null,
      "source": "copy runs (~30 waiting for approval)",
      "status": "proposed"
@@ -176,9 +176,8 @@
      "owner": "741"
     }
    ],
-   "next_milestone": "Rate-1 payment = start date",
+   "next_milestone": "Google Ads live within 2 weeks of start (due ~2026-10-21)",
    "blockers": [
-    "No start date",
     "Google Ads access",
     "GBP München owner unknown",
     "~30 copy runs waiting for approval",
@@ -200,27 +199,27 @@
   },
   {
    "client": "Daniela Dumann",
-   "registry_name": "Daniela Dumann",
+   "registry_name": "Naturheilpraxis Daniela Dumann",
    "status": "active",
    "grill": "daily",
    "phase": "P4",
    "program_start": "2026-09-14",
-   "program_end": null,
+   "program_end": "2026-12-13",
    "quarter_goal": "53 Google reviews by day 90 and top 3 in Maps for the main keywords (Martin 2026-10-13)",
    "goal_numbers": [
     {
      "metric": "Google reviews",
-     "baseline": 9,
-     "target": 53,
-     "due": "day 90 (~2026-12-13)",
+     "baseline": "9",
+     "target": "53",
+     "due": "2026-12-13",
      "source": "Google Maps read by the Dumann status session 13.10. (9 reviews, 5.0 stars); memory had 15 as the start of the milestone line",
      "status": "confirmed"
     },
     {
      "metric": "Maps grid: avg rank, main keywords",
-     "baseline": null,
+     "baseline": "0% top-3 share, 5 of 49 grid points (01.10. scan, heilpraktiker charlottenburg)",
      "target": "top 3",
-     "due": "day 90",
+     "due": "2026-12-13",
      "source": "needs scan",
      "status": "proposed"
     }
@@ -256,7 +255,7 @@
    "client_rules": [],
    "chat": "local_03cdcb69-f227-4162-98d2-430bfd51b959",
    "next_workflow": "pool -> sitetree, copy",
-   "notes": " 13.10.: status page + 20 draft approval cards built (00_project/assets/dumann/status-2026-10-13/); waits for Martin's per-card release.",
+   "notes": "13.10.: status page + 20 draft approval cards built (00_project/assets/dumann/status-2026-10-13/); waits for Martin's per-card release.",
    "aliases": [
     "dumann"
    ]
@@ -268,14 +267,14 @@
    "grill": "daily",
    "phase": "P4",
    "program_start": "2026-09-14",
-   "program_end": null,
+   "program_end": "2026-12-13",
    "quarter_goal": "Top 3 in Maps for Feng Shui Berlin keywords and more requests than the 30.09. baseline (Martin 2026-10-13)",
    "goal_numbers": [
     {
      "metric": "Maps grid: avg rank",
      "baseline": null,
      "target": "top 3",
-     "due": "day 90",
+     "due": "2026-12-13",
      "source": "assets/maria/falcon",
      "status": "proposed"
     },
@@ -283,7 +282,7 @@
      "metric": "requests per month",
      "baseline": "baseline 30.09. (to read)",
      "target": null,
-     "due": "day 90",
+     "due": "2026-12-13",
      "source": "GA4 tracking live 30.09.",
      "status": "proposed"
     }
@@ -334,7 +333,7 @@
    "grill": "daily",
    "phase": "P1",
    "program_start": "2026-09-14",
-   "program_end": null,
+   "program_end": "2026-12-13",
    "quarter_goal": "Onboarding 6/6 and Google Ads live within 2 weeks, then bookings from Ads and Maps (Martin 2026-10-13)",
    "goal_numbers": [
     {
@@ -384,12 +383,12 @@
   },
   {
    "client": "Rabenmütter",
-   "registry_name": null,
+   "registry_name": "Rabenmütter Shop",
    "status": "active",
    "grill": "daily",
    "phase": "P4",
    "program_start": "2026-09-14",
-   "program_end": null,
+   "program_end": "2026-12-13",
    "quarter_goal": "The 'Baseline -> Ziel' values of the Rabenmütter report page (Martin 2026-10-13); agent copies them here, Martin confirms",
    "goal_numbers": [],
    "leading": [
@@ -424,7 +423,7 @@
    "client_rules": [],
    "chat": "local_efe1b833-106f-4276-9bda-026856b03025",
    "next_workflow": null,
-   "notes": "Not in registry yet",
+   "notes": "Display name kept as 'Rabenmütter' (Drive/chat/registry convention); supabase_name maps to the Supabase clients.name 'Rabenmütter Shop'.",
    "aliases": [
     "rabenmütter",
     "rabenmuetter",
@@ -433,26 +432,26 @@
   },
   {
    "client": "Johni Jaya Motor",
-   "registry_name": null,
+   "registry_name": "Johni Jaya Motor",
    "status": "restart",
    "grill": "daily",
    "phase": "P1",
    "program_start": "2026-08-17",
-   "program_end": null,
+   "program_end": "2026-11-15",
    "quarter_goal": "Restart: 3 missing access done, overdue list cleared or re-planned, then the normal Maps goal (Martin 2026-10-13)",
    "goal_numbers": [
     {
      "metric": "missing access",
-     "baseline": 3,
-     "target": 0,
+     "baseline": "3",
+     "target": "0",
      "due": "2026-10-20",
      "source": "portal standup",
      "status": "proposed"
     },
     {
      "metric": "overdue tasks",
-     "baseline": 25,
-     "target": 0,
+     "baseline": "25",
+     "target": "0",
      "due": "2026-10-27",
      "source": "portal standup",
      "status": "proposed"
@@ -474,14 +473,14 @@
    "client_rules": [],
    "chat": "local_03e24cbe-ddb1-49e4-ba31-59f3ea5d57b4",
    "next_workflow": null,
-   "notes": "Martin 13.10. (portal card, own answer): restart now; many tasks left; open access = GA4, GBP, GSC.",
+   "notes": "Martin 13.10. (portal card, own answer): restart now; many tasks left; open access = GA4, GBP, GSC. status_override='restart' because Supabase clients.status only has active/onboarding, no restart state.",
    "aliases": [
     "johni"
    ]
   },
   {
    "client": "Kamil (Physio Anatomie + Kraft)",
-   "registry_name": null,
+   "registry_name": "Kamil Böyük",
    "status": "active",
    "grill": "daily",
    "phase": "P6",
@@ -493,13 +492,13 @@
      "metric": "reports sent on time",
      "baseline": "last: July",
      "target": "monthly",
-     "due": "2026-10-20 for Aug+Sep",
-     "source": "reporting/out/physio*-2026-07.html",
+     "due": "2026-10-20",
+     "source": "reporting/out/physio*-2026-07.html (due = Aug+Sep reports)",
      "status": "proposed"
     },
     {
      "metric": "cost per lead (Ads)",
-     "baseline": null,
+     "baseline": "Aug+Sep Ads report built 14.10.: both campaigns budget-limited (Kraft 40€/day, Anatomie 38€/day)",
      "target": "<= baseline",
      "due": null,
      "source": "Google Ads",
@@ -524,6 +523,51 @@
     "kamil",
     "physio"
    ]
+  },
+  {
+   "client": "Taxi-Zentrale Nürnberg",
+   "registry_name": "Taxi-Zentrale Nürnberg",
+   "status": "done",
+   "grill": "daily",
+   "phase": "P4",
+   "program_start": null,
+   "program_end": null,
+   "quarter_goal": "Scope ended 14.10.2026: Werbeagentur Bamberger/Daniel took Joomla back over. 741 does no plugin/update/captcha work here any more.",
+   "goal_numbers": [],
+   "leading": [
+    {
+     "metric": "open site issues (key, spam, updates)",
+     "weekly_threshold": null,
+     "owner": "agent+Martin"
+    }
+   ],
+   "next_milestone": "Akeeba download key saved in Joomla, updates installed, spam source found and closed (Daniel 13.10.)",
+   "blockers": [
+    "Akeeba Download Key missing (Admin Tools Pro, Akeeba Backup Pro)",
+    "900 spam mails in one night; several forms have no captcha",
+    "Cloudflare blocks automated Joomla admin saves; Preisrechner depends on a hand-patched .htaccess (memory taxi-nuernberg-preisrechner)"
+   ],
+   "waiting_for": [
+    {
+     "who": "martin",
+     "what": "log in to Joomla + paste the key; sample spam mails from Daniel",
+     "since": "2026-10-13"
+    }
+   ],
+   "client_rules": [
+    "Per-change go for every live change",
+    "Joomla admin saves only in Martin's real Chrome (Cloudflare)",
+    "Never enter the licence key by agent"
+   ],
+   "chat": "local_bde9ddab-3b39-4191-bb54-66f209c53d2b",
+   "next_workflow": null,
+   "aliases": [
+    "taxi",
+    "taxi-zentrale",
+    "taxi nürnberg",
+    "taxi-nuernberg"
+   ],
+   "notes": "Added 13.10.: Martin said Taxi is a client and was missing in the Command Center. Not in Supabase clients table (never onboarded to the portal) — this is why it needs the overlay, not a Supabase row."
   },
   {
    "client": "Marcel Rosenbach",
@@ -559,10 +603,10 @@
    "client_rules": [],
    "chat": "local_61b8f208-18a7-4a11-981d-0fb3170dad82",
    "next_workflow": "offer, then cro / automation",
-   "notes": "Martin 13.10.: the prototype will convince him; also base for the Ads",
    "aliases": [
     "marcel"
-   ]
+   ],
+   "notes": "Martin 13.10.: the prototype will convince him; also base for the Ads. Sales prospect, not a portal client."
   },
   {
    "client": "me&you / Pauspapier",
@@ -608,13 +652,13 @@
    "client_rules": [],
    "chat": null,
    "next_workflow": "cro checkpoint 3",
-   "notes": null,
    "aliases": [
     "meandyou",
     "me&you",
     "pauspapier",
     "ehlers"
-   ]
+   ],
+   "notes": "Partner engagement (Pauspapier/Tajan + end-customer me&you), not a portal client."
   },
   {
    "client": "Tacheles",
@@ -633,55 +677,10 @@
    "client_rules": [],
    "chat": null,
    "next_workflow": null,
-   "notes": "Done per Martin 2026-10-13",
    "aliases": [
     "tacheles"
-   ]
-  },
-  {
-   "client": "Taxi-Zentrale Nürnberg",
-   "registry_name": "Taxi-Zentrale Nürnberg",
-   "status": "active",
-   "grill": "daily",
-   "phase": "P4",
-   "program_start": null,
-   "program_end": null,
-   "quarter_goal": null,
-   "goal_numbers": [],
-   "leading": [
-    {
-     "metric": "open site issues (key, spam, updates)",
-     "weekly_threshold": null,
-     "owner": "agent+Martin"
-    }
    ],
-   "next_milestone": "Akeeba download key saved in Joomla, updates installed, spam source found and closed (Daniel 13.10.)",
-   "blockers": [
-    "Akeeba Download Key missing (Admin Tools Pro, Akeeba Backup Pro)",
-    "900 spam mails in one night; several forms have no captcha",
-    "Cloudflare blocks automated Joomla admin saves; Preisrechner depends on a hand-patched .htaccess (memory taxi-nuernberg-preisrechner)"
-   ],
-   "waiting_for": [
-    {
-     "who": "martin",
-     "what": "log in to Joomla + paste the key; sample spam mails from Daniel",
-     "since": "2026-10-13"
-    }
-   ],
-   "client_rules": [
-    "Per-change go for every live change",
-    "Joomla admin saves only in Martin's real Chrome (Cloudflare)",
-    "Never enter the licence key by agent"
-   ],
-   "chat": "local_bde9ddab-3b39-4191-bb54-66f209c53d2b",
-   "next_workflow": null,
-   "aliases": [
-    "taxi",
-    "taxi-zentrale",
-    "taxi nürnberg",
-    "taxi-nuernberg"
-   ],
-   "notes": "Added 13.10.: Martin said Taxi is a client and was missing in the Command Center. Quarter goal not defined yet -> define card. Phase to confirm."
+   "notes": "Done per Martin 2026-10-13. White-label, never a portal client."
   }
  ],
  "leads": [

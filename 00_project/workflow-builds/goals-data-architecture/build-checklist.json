@@ -1,0 +1,227 @@
+{
+ "workflow_id": "goals-data-architecture",
+ "name": "Goals Data Architecture",
+ "created": "2026-10-15",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/research-note.md",
+   "date": "2026-10-15",
+   "note": "Block: script inside existing morning-grill skill, extends workflow_registry.py sync pattern"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/research-note.md",
+   "date": "2026-10-15",
+   "note": "Grepped workflow-library for source-of-truth/materialized-view/data-architecture terms; 4 hits (best-practices.md, claude-projects.md, changelog, V020); none cover this exact case, used as pattern precedent instead"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/research-note.md",
+   "date": "2026-10-15",
+   "note": "INDEX.md last refresh 2026-10-11, today 2026-10-15, under 6 weeks, no re-fetch needed"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/research-note.md",
+   "date": "2026-10-15",
+   "note": "No existing skill does this; workflow_registry.py sync is the reused precedent; morning-grill skill is the sole consumer (7 scripts read goals.json)"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/research-note.md",
+   "date": "2026-10-15",
+   "note": "Research note written, 10-20 lines plus the folded-in reconciliation finding (Stuerzl NAP 3-way mismatch, verified live)"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/use-cases.md",
+   "date": "2026-10-15",
+   "note": "4 use cases: generate from Supabase, capture a verbal goal number, non-portal overlay, reconciliation pass"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/test-scenarios.md",
+   "date": "2026-10-15",
+   "note": "5 scenarios incl. 2 must-not-trigger (S3, S5)"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/hand-run.md",
+   "date": "2026-10-15",
+   "note": "Hand-regenerated Suriya+Taxi-Zentrale from Supabase; hand-traced Stuerzl NAP across Supabase/Drive/GBP/memory, found live 2-way mismatch"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/pipeline.md",
+   "date": "2026-10-15",
+   "note": "3 phases (generate, capture, reconcile) with checkpoints"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/pipeline.md",
+   "date": "2026-10-15",
+   "note": "freedom table at end of pipeline.md"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/decisions.md",
+   "date": "2026-10-15",
+   "note": "Martin go via orchestrator 2026-10-15: design approved, backfill approved, aliases/client_rules stay in overlay"
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/build-evidence.md",
+   "date": "2026-10-15",
+   "note": "Extended existing morning-grill skill folder, new files in both repo source and installed copy"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/build-evidence.md",
+   "date": "2026-10-15",
+   "note": "Frontmatter reviewed, no change needed, trigger surface unchanged"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": "00_project/morning-grill-skill/SKILL.md",
+   "date": "2026-10-15",
+   "note": "Critical bullet + step 3c + Monday line added"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": "00_project/morning-grill-skill/references/goals-architecture.md",
+   "date": "2026-10-15",
+   "note": "Reference doc, one level deep, under 100 lines"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/build-evidence.md",
+   "date": "2026-10-15",
+   "note": "generate_goals.py diff+warn+refuse-on-drop; reconcile_drive.py never writes"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/build-evidence.md",
+   "date": "2026-10-15",
+   "note": "House rules reviewed: no live/client changes, backfill was the approved data write, STE throughout"
+  },
+  "3.7": {
+   "status": "done",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/build-evidence.md",
+   "date": "2026-10-15",
+   "note": "Unattended rules applied: read-only in scheduled run, judgment writes always attended"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/trigger-tests.md",
+   "date": "2026-10-15",
+   "note": "5 scenarios, 2 must-not-trigger, run fresh"
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/functional-test.md",
+   "date": "2026-10-15",
+   "note": "Both scripts run for real, 2 real bugs found and fixed"
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/baseline.md",
+   "date": "2026-10-15",
+   "note": "With vs without, using real incidents"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-15",
+   "note": "",
+   "reason": "Not a plugin, not an instruction-only file; claude plugin eval / doctor prompt-audit do not apply"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/scorecard.md",
+   "date": "2026-10-15",
+   "note": "95.9%, 0 blocking zeros"
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/decisions.md",
+   "date": "2026-10-15",
+   "note": "cp2 go relayed by orchestrator: ship it"
+  },
+  "5.2": {
+   "status": "todo",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3a": {
+   "status": "done",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "00_project/workflow-registry/registry.json",
+   "date": "2026-10-15",
+   "note": "add-workflow goals-data-architecture done; id in registry.json"
+  },
+  "5.3b": {
+   "status": "skipped",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "2026-10-15",
+   "note": "",
+   "reason": "System- und Datenarchitektur-Fix: kein Kunde und kein Interessent sieht diesen Output (Martin-Brief 15.10.2026)"
+  },
+  "5.3": {
+   "status": "done",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/goals-data-architecture.md",
+   "date": "2026-10-15",
+   "note": "memory file + MEMORY.md line"
+  },
+  "5.4": {
+   "status": "done",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "00_project/workflow-builds/goals-data-architecture/scheduled-run-by-hand.md",
+   "date": "2026-10-15",
+   "note": "generator + reconcile run by hand after sb.py SSL fix; both exit 0; full 06:13 run read next morning"
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-15T06:48"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-15T07:08"
+  }
+ ]
+}
