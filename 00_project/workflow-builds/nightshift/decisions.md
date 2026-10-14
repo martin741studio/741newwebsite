@@ -139,3 +139,8 @@ Needs Martin (batched into one place, not asked one at a time):
 ## Logins pre-staged (14.10.)
 - Martin: "nothing is prepared in there" — right, browser was empty. Opened 6 tabs, one per pending login, nothing filled: Google sign-in (741studio18), ChatGPT, LinkedIn, BrightLocal, Zapmail (fixed wrong URL mid-way, correct is app.zapmail.ai), LastPass. Confirmed visually via noVNC screenshot.
 - Also diagnosed Martin's "same link doesn't work" report: it DID work — he was looking at a cluttered Chrome window with leftover test tabs + a stray Chrome omnibox popup from my earlier typing, which looked broken. Cleaned up (closed stray tabs, dismissed popup) before re-staging the 6 login tabs.
+
+## v3 rework started (15.10., relayed from chat-base after morning grill)
+- Martin: server setup "noch nicht so wirklich eingerichtet ist, dass es wirklich autonom laufen kann" → full /workflow-create rework of nightshift, focused on autonomous-operation quality: self-healing, patch cadence, credential handling without live login, crash/reboot recovery discipline, logging/alerting tied to canary.
+- Library checked: workflow-library fresh (built 2026-10-11, next refresh due 2026-11-22, no refresh needed). Launched targeted live research for the 6 gap areas the chat-base specified; existing v2 evidence (systemd Restart=on-failure, real reboot test, unattended-upgrades, Tailscale-only, 600-mode secrets) stands as partial coverage already.
+- Checkpoint 1 readiness will be reported back to the chat-base session once research + design updates are ready for Martin's go.
