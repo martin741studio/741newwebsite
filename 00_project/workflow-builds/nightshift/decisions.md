@@ -135,3 +135,7 @@ Needs Martin (batched into one place, not asked one at a time):
 - Real test: mcp__claude_ai_Google_Drive__search_files found actual Drive content (741 Playbook doc, House of Eluma sheet, etc.) — proves read works, not a guess.
 - Real test: create_file made server-test-14-10.txt; search_files did NOT find it immediately (Drive search index lag, not a fake file) — confirmed real via get_file_metadata by id: name/mimeType/size/owner (741studio18@gmail.com)/createdTime all correct. Proves write works. File trashed after (cleanup).
 - N50 (Drive service account) is RETIRED — unnecessary. The account-level Drive connector from the full `claude auth login` already does read + write. drive-service-account-steps.md stays as a reference but Martin does not need to do it.
+
+## Logins pre-staged (14.10.)
+- Martin: "nothing is prepared in there" — right, browser was empty. Opened 6 tabs, one per pending login, nothing filled: Google sign-in (741studio18), ChatGPT, LinkedIn, BrightLocal, Zapmail (fixed wrong URL mid-way, correct is app.zapmail.ai), LastPass. Confirmed visually via noVNC screenshot.
+- Also diagnosed Martin's "same link doesn't work" report: it DID work — he was looking at a cluttered Chrome window with leftover test tabs + a stray Chrome omnibox popup from my earlier typing, which looked broken. Cleaned up (closed stray tabs, dismissed popup) before re-staging the 6 login tabs.
