@@ -1,4 +1,6 @@
 [Unit]
+StartLimitIntervalSec=300
+StartLimitBurst=4
 Description=741 window manager for virtual display
 After=browser-xvfb.service
 Requires=browser-xvfb.service

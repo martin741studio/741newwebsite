@@ -1,4 +1,6 @@
 [Unit]
+StartLimitIntervalSec=300
+StartLimitBurst=4
 Description=741 Claude Code Remote Control (interactive session, phone/laptop app)
 After=network-online.target
 Wants=network-online.target

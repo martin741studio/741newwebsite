@@ -1,4 +1,6 @@
 [Unit]
+StartLimitIntervalSec=300
+StartLimitBurst=4
 Description=741 noVNC web bridge (port 6080; firewall restricts this to Tailscale)
 After=browser-x11vnc.service
 Requires=browser-x11vnc.service

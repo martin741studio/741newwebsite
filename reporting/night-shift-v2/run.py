@@ -93,7 +93,7 @@ class Night:
         if self.dry:
             self.log(f"  dry-run: prompt {len(prompt)} chars, not executed"); return True, "DRY"
         cmd = [CLAUDE, "-p", prompt, "--model", MODEL, "--max-turns", str(MAX_TURNS),
-               "--output-format", "json", "--permission-mode", "dontAsk",
+               "--output-format", "json", "--permission-mode", "dontAsk", "--permission-prompts", "none",
                "--allowedTools", ALLOWED, "--disallowedTools", DENIED,
                "--strict-mcp-config", "--setting-sources", "user", "--max-budget-usd", f"{remaining:.2f}"]
         raw = self.out / f".run{n}.json"

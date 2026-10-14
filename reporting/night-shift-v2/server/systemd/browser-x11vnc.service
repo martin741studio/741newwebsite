@@ -1,4 +1,6 @@
 [Unit]
+StartLimitIntervalSec=300
+StartLimitBurst=4
 Description=741 VNC server (localhost only; reach it via noVNC/websockify)
 After=browser-xvfb.service
 Requires=browser-xvfb.service

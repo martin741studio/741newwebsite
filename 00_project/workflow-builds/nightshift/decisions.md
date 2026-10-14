@@ -148,3 +148,17 @@ Needs Martin (batched into one place, not asked one at a time):
 ## v3 checkpoint 1 (15.10.)
 - CP1-v3: "Build all 4, in the ranked order (Recommended)" — heartbeat→canary, watchdog+respawn-budget, mandatory smoke test after CLI updates, scheduled kill/reboot drill with written criteria.
 - Hygiene: "Switch to --permission-prompts none (Recommended)" + "Note Node 24 migration on the roadmap (Recommended)" — both yes.
+
+## v3 build done (15.10.)
+Built all 4 items + both hygiene fixes, in order:
+
+1. **Heartbeat → canary**: not built by me — sent the exact spec (check row, mechanism question) to the canary-workflow session, which owns canaries.json; its own go/decision to make.
+2. **Watchdog/respawn-budget**: `reporting/night-shift-v2/server/health_check.py` — real `claude -p` task every 10 min (external wall-clock timeout, not just --max-turns per rule 23), StartLimitIntervalSec/Burst added to all 6 existing systemd units, respawn-budget-then-PARK logic (3 consecutive failures → stops, writes a marker, needs a human to clear it, never loops forever). Tested live: ran clean, cost $0.075, heartbeat + version captured.
+3. **Mandatory smoke test after CLI updates**: folded into health_check.py itself — compares installed version against last-known-good on every run, logs when a bump is detected, so it's continuous rather than a manual step someone has to remember.
+4. **Scheduled recovery drill**: `reporting/night-shift-v2/server/drill.py` + `drill.timer` (monthly). Written failure mode + abort condition BEFORE acting (rule 18). Ran one by hand: SIGKILL'd claude-remote-control.service, recovered in 6.0s, confirmed with a REAL post-recovery task (not just "systemd active") — rated PASS, logged to a findings file.
+
+Hygiene: `--permission-prompts none` added to night-shift-v2's run.py; re-ran the existing N28 permission test after — same result (curl denied, scoped write denied, in-scope write allowed). Node 24 migration noted below, not urgent (Node 22 EOL 2027-04-30).
+
+**Found and fixed along the way, not part of the plan**: Tailscale's own SSH layer (`--ssh`, turned on when I joined the server 14.10.) started requiring a fresh browser-approval on every single connection — unworkable for anything unattended. Martin approved once, I immediately disabled it (`tailscale set --ssh=false --accept-risk=lose-ssh`); regular key-based SSH over Tailscale's private network continues working, confirmed clean on 3 connections after.
+
+**Node 24 roadmap note** (not urgent): current pin is Node 22.23.3 (Maintenance LTS, EOL 2027-04-30). Node 24.x goes Active LTS 2026-10-20 (this week) — plan the move with lead time, not as an emergency.

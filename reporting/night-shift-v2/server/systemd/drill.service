@@ -1,0 +1,8 @@
+[Unit]
+Description=741 monthly recovery drill (kill + measure real recovery, not just systemd status)
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/nightshift
+Environment=HOME=/home/nightshift
+ExecStart=/usr/bin/python3 /home/nightshift/drill.py

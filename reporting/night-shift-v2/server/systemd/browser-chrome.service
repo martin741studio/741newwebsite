@@ -1,4 +1,6 @@
 [Unit]
+StartLimitIntervalSec=300
+StartLimitBurst=4
 Description=741 persistent-profile Chrome (CDP on 9222 for Playwright; visible via VNC)
 After=browser-fluxbox.service
 Requires=browser-fluxbox.service

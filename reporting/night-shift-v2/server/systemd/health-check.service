@@ -1,0 +1,8 @@
+[Unit]
+Description=741 server health check (real task + respawn budget + park on exhaustion)
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/nightshift
+Environment=HOME=/home/nightshift
+ExecStart=/usr/bin/python3 /home/nightshift/health_check.py
