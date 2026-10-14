@@ -65,7 +65,7 @@
       "runner": "uptimerobot",
       "created": "2026-10-14",
       "source_incident": "incident-marcel-2026-10-13.md",
-      "note": "LIVE 2026-10-14 in UptimeRobot (account martin741studio, monitor 804264338): Keyword 'tally.so/r/2EMGve' must exist on /gewinne-jetzt/, 5 min, alert by e-mail to martin@741.studio. Alert channel: e-mail to martin@741.studio (Martin's decision 2026-10-14 (C16): stay on e-mail, not the UptimeRobot app — the app route tried for Marcel's incident did not work well for him; Telegram is not offered on UptimeRobot's free plan). Alert test 2026-10-14: incident raised in ~2 min, e-mail to martin@741.studio arrived (Martin confirmed). Telegram integration is NOT available on the UptimeRobot free plan ('Upgrade to access'); free options: iOS/Android app push, Pushover, Discord, Google Chat, e-mail."
+      "note": "LIVE 2026-10-14 in UptimeRobot (account martin741studio, monitor 804264338): Keyword 'tally.so/r/2EMGve' must exist on /gewinne-jetzt/, 5 min, alert by e-mail to martin@741.studio. Alert channel: e-mail to martin@741.studio (Martin's decision 2026-10-14 (C16): stay on e-mail, not the UptimeRobot app — the app route tried for Marcel's incident did not work well for him; Telegram is not offered on UptimeRobot's free plan). Alert test 2026-10-14: incident raised in ~2 min, e-mail to martin@741.studio arrived (Martin confirmed). Telegram integration is NOT available on the UptimeRobot free plan ('Upgrade to access'); free options: iOS/Android app push, Pushover, Discord, Google Chat, e-mail. Martin 2026-10-14: UptimeRobot iPhone app dropped, e-mail only (read back: e-mail martin@741.studio checked, push/SMS/voice off)."
     },
     {
       "id": "marcel-gewinnspiel-form",
@@ -82,7 +82,7 @@
       "runner": "uptimerobot",
       "created": "2026-10-14",
       "source_incident": "incident-marcel-2026-10-13.md",
-      "note": "LIVE 2026-10-14 in UptimeRobot (monitor 804264341): keyword monitor on https://tally.so/r/2EMGve, 5 min. Same monitor also carries the redirect check (see marcel-gewinnspiel-redirect). Alert channel: e-mail to martin@741.studio (Martin's decision 2026-10-14 (C16): stay on e-mail, not the UptimeRobot app — the app route tried for Marcel's incident did not work well for him; Telegram is not offered on UptimeRobot's free plan). Alert test 2026-10-14: incident raised in ~2 min, e-mail to martin@741.studio arrived (Martin confirmed). Telegram integration is NOT available on the UptimeRobot free plan ('Upgrade to access'); free options: iOS/Android app push, Pushover, Discord, Google Chat, e-mail."
+      "note": "LIVE 2026-10-14 in UptimeRobot (monitor 804264341): keyword monitor on https://tally.so/r/2EMGve, 5 min. Same monitor also carries the redirect check (see marcel-gewinnspiel-redirect). Alert channel: e-mail to martin@741.studio (Martin's decision 2026-10-14 (C16): stay on e-mail, not the UptimeRobot app — the app route tried for Marcel's incident did not work well for him; Telegram is not offered on UptimeRobot's free plan). Alert test 2026-10-14: incident raised in ~2 min, e-mail to martin@741.studio arrived (Martin confirmed). Telegram integration is NOT available on the UptimeRobot free plan ('Upgrade to access'); free options: iOS/Android app push, Pushover, Discord, Google Chat, e-mail. Martin 2026-10-14: UptimeRobot iPhone app dropped, e-mail only (read back: e-mail martin@741.studio checked, push/SMS/voice off)."
     },
     {
       "id": "marcel-gewinnspiel-reconciliation",
@@ -116,7 +116,24 @@
       "runner": "uptimerobot",
       "created": "2026-10-14",
       "source_incident": "incident-marcel-2026-10-13.md",
-      "note": "LIVE 2026-10-14 via UptimeRobot monitor 804264341: keyword 'deep-nlp.com/fast-gewonnen' must exist in the public Tally HTML (redirectOnCompletion). Alert if missing. Redirect flipped back to OFF once on 2026-10-14 (cause unknown), this check catches a repeat. Alert test 2026-10-14: incident raised in ~2 min, e-mail to martin@741.studio arrived (Martin confirmed). Telegram integration is NOT available on the UptimeRobot free plan ('Upgrade to access'); free options: iOS/Android app push, Pushover, Discord, Google Chat, e-mail."
+      "note": "LIVE 2026-10-14 via UptimeRobot monitor 804264341: keyword 'deep-nlp.com/fast-gewonnen' must exist in the public Tally HTML (redirectOnCompletion). Alert if missing. Redirect flipped back to OFF once on 2026-10-14 (cause unknown), this check catches a repeat. Alert test 2026-10-14: incident raised in ~2 min, e-mail to martin@741.studio arrived (Martin confirmed). Telegram integration is NOT available on the UptimeRobot free plan ('Upgrade to access'); free options: iOS/Android app push, Pushover, Discord, Google Chat, e-mail. Martin 2026-10-14: UptimeRobot iPhone app dropped, e-mail only (read back: e-mail martin@741.studio checked, push/SMS/voice off)."
+    },
+    {
+      "id": "741-server-heartbeat",
+      "client": "741 Studio (Eigen-Audit)",
+      "system": "741-agents-01 (Hetzner) + night-shift-v2 runner + claude-remote-control.service",
+      "type": "R",
+      "interval_minutes": 60,
+      "threshold": "no ping received within period (60 min) + grace (15 min)",
+      "severity": "SEV2",
+      "self_heal": null,
+      "escalation": "Martin only (no Dinakar backup, no client group — internal infra, not a client incident)",
+      "owner": "Martin",
+      "status": "planned",
+      "runner": "healthchecks_io",
+      "created": "2026-10-15",
+      "source_incident": null,
+      "note": "Meta-monitoring: 'who watches the watcher when the server itself is down' (decision C6). Design (C17): Healthchecks.io free tier (20 checks), NOT routed through our own alert.py/Telegram — the watcher of the watcher must be an independent service that keeps working even if 741-agents-01 or our own scripts are down. Sending side (night-shift-v2 / claude-remote-control.service, built by the Night Shift session): `curl -fsS -m 10 --retry 3 https://hc-ping.com/<uuid>` on a fixed schedule (NOT only 'after a real unit of work' - an idle-but-alive server must still ping, to prove the machine+scheduler are alive, separate from whether a specific task succeeded). Alert channel: Healthchecks.io's own email integration to martin@741.studio (matches C16 - no new channel type). BLOCKED: needs Martin to create the Healthchecks.io account (I cannot create accounts); UUID to follow once the check exists."
     }
   ]
 }

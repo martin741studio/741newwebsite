@@ -31,6 +31,9 @@ How: read-only API key per system (Tally, Pipedrive, KlickTipp, …). Never a br
 Threshold: any gap in the window.
 Example: `marcel-gewinnspiel-reconciliation` (blocked on keys, see note in canaries.json).
 
+### R for meta-monitoring: watching the watcher
+When 741's own infra (a server, an agent runner) is the thing that can go silent, the "source vs target" reconciliation becomes a heartbeat: the server pings an external service on a fixed schedule, and that service alerts if a ping is missed. The external service must be independent of the thing it watches — never route this alert through our own scripts or servers, or a real outage silences its own alarm. Tool: Healthchecks.io (free, 20 checks) — exactly built for this. Example: `741-server-heartbeat` (decision C17, canaries.json).
+
 ## A — Ads (read-only)
 What: campaign stopped, zero spend, disapproved ad, empty balance, conversion tracking stale.
 When: any client with a live Google Ads account.

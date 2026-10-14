@@ -55,5 +55,5 @@ Full design, decisions (C1–C13) and the hand-run proof on Marcel Rosenbach's r
 
 ## Open items (not yet built — tell Martin when they become relevant)
 - Tally + Pipedrive read-only API keys for reconciliation (decision C10) — message drafted at `00_project/assets/marcel/canary/msg-marcel-read-keys.txt`, waiting on Marcel.
-- Hetzner server as the always-on runner (decision C4) — does not exist yet (see night-shift-server-workflow memory); checks run by hand or via the interim free tools (UptimeRobot, live since 2026-10-14) until then. No outside watcher for the runner itself (decision C6) — revisit after the first real server outage.
+- 741-agents-01 (the night-shift Hetzner server) now exists. Its own heartbeat check is designed (`741-server-heartbeat`, decision C17, Healthchecks.io) but BLOCKED on Martin creating the Healthchecks.io account — nobody but Martin may create that account.
 - Escalation group ("741 Canary", chat id in `.secrets/canary-telegram.env` TELEGRAM_CHAT_ID_GROUP) and Dinakar's handle are live and tested (auto-escalation on no-ack, exit code 4). If Dinakar ever needs to be swapped or a second backup added, update TELEGRAM_DINAKAR_HANDLE and the group membership, not the script.
