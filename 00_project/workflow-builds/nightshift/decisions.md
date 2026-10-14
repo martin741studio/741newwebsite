@@ -130,3 +130,8 @@ Needs Martin (batched into one place, not asked one at a time):
 1. **claude.ai connector settings** (browser, not noVNC — this is Claude's own account page): authorize Local Falcon and re-check Novamira's "Insufficient scope" error there.
 2. **noVNC browser logins** (http://100.124.61.26:6080/vnc.html): Google Workspace `741studio18@gmail.com` (covers 10+ clients' GBP/GA4/Ads), ChatGPT, LinkedIn, BrightLocal, Zapmail (`app.zapmail.ai`), LastPass (Marcel Rosenbach's stack).
 3. Per the access inventory: Suriya's Novamira reconnect, Kamil-Kraft's Novamira setup, Maria Brasse's WP handover — these belong in their own client chats, not here.
+
+## Drive verified working, service-account plan retired (14.10.)
+- Real test: mcp__claude_ai_Google_Drive__search_files found actual Drive content (741 Playbook doc, House of Eluma sheet, etc.) — proves read works, not a guess.
+- Real test: create_file made server-test-14-10.txt; search_files did NOT find it immediately (Drive search index lag, not a fake file) — confirmed real via get_file_metadata by id: name/mimeType/size/owner (741studio18@gmail.com)/createdTime all correct. Proves write works. File trashed after (cleanup).
+- N50 (Drive service account) is RETIRED — unnecessary. The account-level Drive connector from the full `claude auth login` already does read + write. drive-service-account-steps.md stays as a reference but Martin does not need to do it.
