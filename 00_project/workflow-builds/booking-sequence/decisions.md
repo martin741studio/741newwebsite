@@ -1,0 +1,14 @@
+# Decisions — booking-sequence
+
+| # | Date | Decision | Martin's words / source |
+|---|---|---|---|
+| D1 | 2026-10-14 | Every call booking from a review page / Loom gets 3 WhatsApp messages: 1 right after the booking (new insight + traffic chance with real volume + 39-min workflow video), 2 = 24 h before (one more insight + matching success story), 3 = before the call (meeting link + "big screen, I share my screen"). | Voice brief in chat "Build 10-minute scripts" 14.10.: "show her that we invested more time … this is the traffic that's there, but you're not showing up for that yet" · "24 hours before is great … a success story that kind of correlates" · "15 minutes before the call, with the link … bigger screen" |
+| D2 | 2026-10-14 | Reminders for messages 2 and 3 = scheduled one-time tasks that show the ready message. Claude never sends. | Card "Reminder": "Scheduled reminder (Recommended)" |
+| D3 | 2026-10-14 | The sequence becomes its own installed workflow. | Card "Workflow": "Yes, own workflow chat (Recommended)" |
+| D4 | 2026-10-14 | **Message 3 goes out 30 minutes before the call, not 15.** | Chat in this build session: "Actually, the last one, the 50 minutes before, make it 30 minutes before. Not that it's too short a lead to the event." (voice-to-text: "50" = 15) |
+| D5 | 2026-10-14 | Late booking (< ~26 h): m2 merges into m1 (both insights + story), only the m3 reminder is set. | Card "Late booking": "Merge into message 1 (Recommended)" |
+| D6 | 2026-10-14 | Korinna's m3 moves to 30 min before (Mo 26.10., 16:00 WITA / 9:00 Uhr DE). | Card "Korinna m3": "Yes, move to 30 min (Recommended)" |
+| D7 | 2026-10-14 | **New timing (replaces D1 timing, D4 stays):** nothing goes out right after the booking. M1 (new insight + 5 % example + video) = 24 h before the call. M2 (insight + success story) = morning of the call day. M3 (link + laptop tip) = 30 min before. | Martin in this build chat: "The first of three messages comes 24 hours before, then the second comes on the morning of her day, and the third comes 30 minutes before the call." + card "Timing": "24 h / morning / 30 min" |
+| D8 | 2026-10-14 | "Morning" = 08:00 in her zone. If the call starts before 09:30 her time, M2 merges into M3 (no 2 messages within 1 hour). | Card "Morning": "08:00 her time (Recommended)" |
+| D9 | 2026-10-14 | Every message gets a wa.me link (WhatsApp opens with the text ready, Martin presses send). Every message gets a reminder (now 3 per booking). Claude still sends nothing. | Card "Fix gap": "Yes, both (Recommended)" — with D7 the "send message 1 now" reminder becomes the 24 h reminder for M1 |
+| D5' | 2026-10-14 | D5 (late booking → merge m2 into m1) is replaced: a slot that is already past when the run happens → that message is "send now" (Martin sends it from the chat); if M1 is "send now" and the M2 slot is also past, M2 merges into M1. | follows from D7 |

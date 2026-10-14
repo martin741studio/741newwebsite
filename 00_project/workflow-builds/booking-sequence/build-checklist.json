@@ -1,0 +1,227 @@
+{
+ "workflow_id": "booking-sequence",
+ "name": "Booking sequence (WhatsApp after a call booking)",
+ "created": "2026-10-14",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/booking-sequence/block-choice.md",
+   "date": "2026-10-14",
+   "note": "project skill + 2 scripts + one-time reminders"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/booking-sequence/library-search.md",
+   "date": "2026-10-14",
+   "note": "whatsapp/fireAt/reminder grep"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/booking-sequence/freshness.md",
+   "date": "2026-10-14",
+   "note": "INDEX 2026-10-11, fresh"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/booking-sequence/coverage-map.md",
+   "date": "2026-10-14",
+   "note": "reuse dfs.py, case-library, deslop, Korinna"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/booking-sequence/research-note.md",
+   "date": "2026-10-14",
+   "note": "note written"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/booking-sequence/use-cases.md",
+   "date": "2026-10-14",
+   "note": "UC1 booking, UC2 late/no page, UC3 moved/cancelled"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/booking-sequence/test-scenarios.md",
+   "date": "2026-10-14",
+   "note": "T1-T5, T3/T4 must not trigger"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/booking-sequence/hand-run.md",
+   "date": "2026-10-14",
+   "note": "Korinna 14.10."
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/booking-sequence/pipeline.md",
+   "date": "2026-10-14",
+   "note": "S1-S8"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/booking-sequence/freedom.md",
+   "date": "2026-10-14",
+   "note": "scripts for time/find/check"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/booking-sequence/cp1-go.md",
+   "date": "2026-10-14",
+   "note": "Martin go 14.10."
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": "00_project/workflow-builds/booking-sequence/skill-tree.md",
+   "date": "2026-10-14",
+   "note": "folder from template"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": ".claude/skills/booking-sequence/SKILL.md",
+   "date": "2026-10-14",
+   "note": "WHAT+WHEN+NOT, 923 chars, no disable-model-invocation (paste trigger, sends nothing)"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": ".claude/skills/booking-sequence/SKILL.md",
+   "date": "2026-10-14",
+   "note": "8-step checklist, Critical on top"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": "00_project/workflow-builds/booking-sequence/structure-check.md",
+   "date": "2026-10-14",
+   "note": "125 lines, refs one level"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": "00_project/workflow-builds/booking-sequence/script-tests.md",
+   "date": "2026-10-14",
+   "note": "Verification section + script tests incl. negative"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": "00_project/workflow-builds/booking-sequence/house-rules.md",
+   "date": "2026-10-14",
+   "note": "19 rules mapped"
+  },
+  "3.7": {
+   "status": "done",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "00_project/workflow-builds/booking-sequence/unattended-rules.md",
+   "date": "2026-10-14",
+   "note": "late guard in reminders"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/booking-sequence/trigger-tests.md",
+   "date": "2026-10-14",
+   "note": "4/4 pass, fresh agent"
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/booking-sequence/functional-test.md",
+   "date": "2026-10-14",
+   "note": "2 fresh dry runs (Sabine old timing, Manuela new timing + merge), 23 gaps fixed"
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/booking-sequence/baseline.md",
+   "date": "2026-10-14",
+   "note": "no speed gain; correctness + completeness gain"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-14",
+   "note": "",
+   "reason": "project skill, not a plugin; /doctor prompt-audit is an interactive terminal command not available in this app session; covered by trigger tests, functional test, script tests incl. a negative test, and check_sequence.py"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/booking-sequence/scorecard.md",
+   "date": "2026-10-14",
+   "note": "95,9 %, 0 blocking zeros"
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/booking-sequence/cp2-go.md",
+   "date": "2026-10-14",
+   "note": "Martin go 14.10."
+  },
+  "5.2": {
+   "status": "todo",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3a": {
+   "status": "done",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "00_project/workflow-registry/registry.json",
+   "date": "2026-10-14",
+   "note": "entry filled; runs via booking/_run.json (Korinna Echt, 2 Trockenlauf)"
+  },
+  "5.3b": {
+   "status": "skipped",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "2026-10-14",
+   "note": "",
+   "reason": "the deliverable is plain WhatsApp text that Martin sends; no visual page or document the prospect sees, so no place for the Martin guide character"
+  },
+  "5.3": {
+   "status": "done",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/booking-sequence-workflow.md",
+   "date": "2026-10-14",
+   "note": "memory + MEMORY.md line"
+  },
+  "5.4": {
+   "status": "done",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "00_project/workflow-builds/booking-sequence/reminder-run-test.md",
+   "date": "2026-10-14",
+   "note": "on-time + late reminder runs read"
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-14T14:31"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-14T16:29"
+  }
+ ]
+}
