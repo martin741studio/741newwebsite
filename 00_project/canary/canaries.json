@@ -129,11 +129,11 @@
       "self_heal": null,
       "escalation": "Martin only (no Dinakar backup, no client group — internal infra, not a client incident)",
       "owner": "Martin",
-      "status": "planned",
+      "status": "live",
       "runner": "healthchecks_io",
       "created": "2026-10-15",
       "source_incident": null,
-      "note": "Meta-monitoring: 'who watches the watcher when the server itself is down' (decision C6). Design (C17): Healthchecks.io free tier (20 checks), NOT routed through our own alert.py/Telegram — the watcher of the watcher must be an independent service that keeps working even if 741-agents-01 or our own scripts are down. Sending side (night-shift-v2 / claude-remote-control.service, built by the Night Shift session): `curl -fsS -m 10 --retry 3 https://hc-ping.com/<uuid>` on a fixed schedule (NOT only 'after a real unit of work' - an idle-but-alive server must still ping, to prove the machine+scheduler are alive, separate from whether a specific task succeeded). Alert channel: Healthchecks.io's own email integration to martin@741.studio (matches C16 - no new channel type). BLOCKED: needs Martin to create the Healthchecks.io account (I cannot create accounts); UUID to follow once the check exists."
+      "note": "LIVE 2026-10-15: Healthchecks.io check created by Martin, ping URL confirmed (HTTP 200, stored in .secrets/canary-healthchecks.env, mode 600). Period 60 min / grace 15 min, email alert to martin@741.studio (matches C16). Sending side: Night Shift session wires `curl -fsS -m 10 --retry 3 <ping-url>` into night-shift-v2 + claude-remote-control.service on a fixed schedule. BLOCKED on them wiring the real send; this row is live on the receiving side only until their first real ping lands."
     }
   ]
 }
