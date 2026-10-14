@@ -67,7 +67,12 @@ def read_supabase_nap(client_name):
 
 
 def normalize(addr):
-    return re.sub(r"\s+", " ", (addr or "").strip().lower().replace("straße", "str."))
+    """Compare street + postcode only. City suffixes differ between sources ('Frankfurt' vs
+    'Frankfurt am Main'); a street or postcode difference is the real disagreement."""
+    a = (addr or "").strip().lower().replace("straße", "str.")
+    street = a.split(",")[0].strip()
+    zip_m = re.search(r"\b(\d{5})\b", a)
+    return (re.sub(r"\s+", " ", street), zip_m.group(1) if zip_m else "")
 
 
 def reconcile(client_name, cfg):
