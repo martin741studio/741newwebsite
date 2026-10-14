@@ -2,18 +2,21 @@
 """Send a canary alert to Telegram with an acknowledge button, then wait and escalate.
 
 Channel: Telegram bot "741 Canary" (@canary741_alerts_bot), token in
-.secrets/canary-telegram.env (TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID_MARTIN).
+.secrets/canary-telegram.env (TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID_MARTIN,
+TELEGRAM_CHAT_ID_GROUP, TELEGRAM_DINAKAR_HANDLE).
 Built and proven in the hand-run 2026-10-14 (workflow-builds/canary/hand-run.md).
 
 Usage:
   python3 alert.py send --severity SEV1 --client "Marcel Rosenbach" \
       --what "Zap-Fehler" --since "2026-10-14 06:31" --impact "..." \
       --fix "..." [--check-id marcel-gewinnspiel-zaperror] \
-      [--escalate-after-min 10] [--group-chat-id <id>]
+      [--escalate-after-min 10] [--no-escalate]
 
-Prints the sent timestamp and message_id. Logs to 00_project/canary/state/alerts.log.
-Exits 0 once acknowledged, 3 if the escalate-after window passed with no ack (caller
-decides what to do next — this script does not loop forever).
+Always sends to Martin's private chat first. Prints the sent timestamp and
+message_id. Logs to 00_project/canary/state/alerts.log.
+Exit codes: 0 acknowledged by Martin. 3 no ack, no escalation target configured
+or --no-escalate given (caller decides what to do next). 4 escalated to the
+741 Canary group (@Dinakar) after the window passed with no ack.
 """
 import argparse, json, time, sys, datetime, urllib.request, urllib.parse
 from pathlib import Path
@@ -50,7 +53,7 @@ def log_line(line):
 def send(args):
     e = env()
     token = e["TELEGRAM_BOT_TOKEN"]
-    chat = args.group_chat_id or e["TELEGRAM_CHAT_ID_MARTIN"]
+    chat = e["TELEGRAM_CHAT_ID_MARTIN"]
     header = f"🔴 CANARY {args.severity} · {args.client} · {args.what}"
     text = (f"{header}\n"
             f"Seit: {args.since}\n"
@@ -94,9 +97,29 @@ def send(args):
                 log_line(f"{ack_iso} ACK check={args.check_id} after_s={dt:.0f}")
                 return 0
     esc_iso = datetime.datetime.now(WITA).isoformat(timespec="seconds")
-    print(f"NO_ACK within {args.escalate_after_min} min (as of {esc_iso}) — caller should escalate")
     log_line(f"{esc_iso} NO_ACK check={args.check_id} window_min={args.escalate_after_min}")
-    return 3
+
+    group = e.get("TELEGRAM_CHAT_ID_GROUP")
+    handle = e.get("TELEGRAM_DINAKAR_HANDLE", "")
+    if args.no_escalate or not group:
+        print(f"NO_ACK within {args.escalate_after_min} min (as of {esc_iso}) — "
+              f"no escalation target configured, caller should escalate")
+        return 3
+
+    esc_text = (f"{header}\n"
+                f"Seit: {args.since}\n"
+                f"Wirkung: {args.impact}\n"
+                f"Agent: {args.fix}\n\n"
+                f"{handle} Martin hat innerhalb von {args.escalate_after_min} Min. nicht bestätigt. "
+                f"Bitte übernehmen.")
+    esc_sent = call(token, "sendMessage", chat_id=group, text=esc_text)
+    if esc_sent.get("ok"):
+        print(f"ESCALATED {esc_iso} to group {group} ({handle})")
+        log_line(f"{esc_iso} ESCALATED check={args.check_id} group={group}")
+    else:
+        print(f"FAIL escalation send: {esc_sent}")
+        log_line(f"{esc_iso} ESCALATION_FAILED check={args.check_id} error={esc_sent}")
+    return 4
 
 
 def main():
@@ -110,9 +133,11 @@ def main():
     s.add_argument("--impact", required=True)
     s.add_argument("--fix", required=True, help="what the agent tried or proposes")
     s.add_argument("--check-id")
-    s.add_argument("--group-chat-id", help="escalation target (741 Canary group); default is Martin's private chat")
-    s.add_argument("--escalate-after-min", type=int, default=10)
+    s.add_argument("--escalate-after-min", type=float, default=10,
+                    help="minutes to wait for Martin's ack before escalating to the group")
     s.add_argument("--no-wait", action="store_true", help="send and exit, do not wait for an ack")
+    s.add_argument("--no-escalate", action="store_true",
+                    help="do not auto-escalate to the group on no-ack; just report NO_ACK")
     args = p.parse_args()
     sys.exit(send(args))
 

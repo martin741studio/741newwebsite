@@ -61,11 +61,11 @@
       "self_heal": null,
       "escalation": "Martin -> Dinakar after 10 min",
       "owner": "Martin",
-      "status": "planned",
+      "status": "live",
       "runner": "uptimerobot",
       "created": "2026-10-14",
       "source_incident": "incident-marcel-2026-10-13.md",
-      "note": "Verified by hand 2026-10-14 (200, 2.05s, keyword present). Add to UptimeRobot once the account exists (C12)."
+      "note": "LIVE 2026-10-14 in UptimeRobot (account martin741studio, monitor 804264338): Keyword 'tally.so/r/2EMGve' must exist on /gewinne-jetzt/, 5 min, alert by e-mail to martin@741.studio. Telegram not yet connected in UptimeRobot."
     },
     {
       "id": "marcel-gewinnspiel-form",
@@ -78,11 +78,11 @@
       "self_heal": null,
       "escalation": "Martin -> Dinakar after 10 min",
       "owner": "Martin",
-      "status": "planned",
+      "status": "live",
       "runner": "uptimerobot",
       "created": "2026-10-14",
       "source_incident": "incident-marcel-2026-10-13.md",
-      "note": "Verified by hand 2026-10-14 (200, 0.58s). Add to UptimeRobot once the account exists (C12)."
+      "note": "LIVE 2026-10-14 in UptimeRobot (monitor 804264341): keyword monitor on https://tally.so/r/2EMGve, 5 min. Same monitor also carries the redirect check (see marcel-gewinnspiel-redirect). E-mail alert only until Telegram is connected."
     },
     {
       "id": "marcel-gewinnspiel-reconciliation",
@@ -100,6 +100,23 @@
       "created": "2026-10-14",
       "source_incident": "incident-marcel-2026-10-13.md",
       "note": "BLOCKED: Tally submissions page was unreadable via browser (hand-run.md). Needs a read-only Tally API key + Pipedrive API token (message drafted: 00_project/assets/marcel/canary/msg-marcel-read-keys.txt)."
+    },
+    {
+      "id": "marcel-gewinnspiel-redirect",
+      "client": "Marcel Rosenbach",
+      "system": "Tally 2EMGve redirect to https://deep-nlp.com/fast-gewonnen/ (Danke-Seite)",
+      "type": "L",
+      "interval_minutes": 5,
+      "threshold": "2 consecutive: public HTML lacks redirectOnCompletion = https://deep-nlp.com/fast-gewonnen/",
+      "severity": "SEV1",
+      "self_heal": null,
+      "escalation": "Martin -> Dinakar after 10 min",
+      "owner": "Martin",
+      "status": "live",
+      "runner": "uptimerobot",
+      "created": "2026-10-14",
+      "source_incident": "incident-marcel-2026-10-13.md",
+      "note": "LIVE 2026-10-14 via UptimeRobot monitor 804264341: keyword 'deep-nlp.com/fast-gewonnen' must exist in the public Tally HTML (redirectOnCompletion). Alert if missing. Redirect flipped back to OFF once on 2026-10-14 (cause unknown), this check catches a repeat."
     }
   ]
 }

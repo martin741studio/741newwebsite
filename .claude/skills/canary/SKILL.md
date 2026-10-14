@@ -8,6 +8,8 @@ allowed-tools: Read, Glob, Grep, Bash(python3:*), Bash(curl:*)
 # Canary (Ausfall-Wächter)
 
 ## Critical
+
+- **Pre-send sweep (Martin, 5th repeat 2026-10-14):** before the final reply, every item that waits on Martin (open points, go, his own steps, a message to send, a login, a delete) is an AskUserQuestion card, never a prose list.
 - This skill triggers on natural language (an outage report needs a fast response, not a remembered slash command). That is safe only because every write is gated below — never loosen those gates to compensate for easier triggering.
 - Canaries read and alert. They never change a client's website, Google Ads (budget/bids/campaigns/conversions), or send a message to a client. Any write into a client system (Zapier replay, re-enabling a Zap, creating a tag) needs `allowlist.py check <action>` to say "needs Martin's go" AND Martin's go on that specific incident.
 - Never type a password, API key or token into any field. Credentials come from Martin (or his go to another session), saved by a script into a 600-mode file under `.secrets/`.
@@ -38,7 +40,7 @@ Full design, decisions (C1–C13) and the hand-run proof on Marcel Rosenbach's r
    - Allowed, no go needed → do it once, then verify with the external check (not the fix call's own success).
    - Allowed, needs go → ask Martin on one card (what broke, since when, impact, proposed fix); on yes, do it once and verify.
 5. If the fix worked (external check confirms): log the incident (step 7) and tell Martin it's resolved, with the evidence.
-6. If it didn't work, isn't allowed, or there is no fix: escalate. `python3 scripts/alert.py send --severity SEV1 ...` already pages Martin; if 10 minutes pass with no ack (`NO_ACK` exit code 3), post the same information to the "741 Canary" Telegram group with @Dinakar (group not yet built — see Open items below; until then, tell Martin directly that the window passed).
+6. If it didn't work, isn't allowed, or there is no fix: escalate. `python3 scripts/alert.py send --severity SEV1 ...` pages Martin first; if he doesn't ack within `--escalate-after-min` (default 10), it auto-posts the same information to the "741 Canary" Telegram group with @Dinakar and exits 4 (`ESCALATED`). Exit 3 (`NO_ACK`) means no escalation target was configured or `--no-escalate` was passed — that should not happen in normal use.
 7. Write the incident: copy `assets/incident-log.template.md` to `00_project/canary/incidents/<date>-<check-id>.md`, fill in detect/alert/ack/restore times and whether the 1-hour goal held.
 8. Post-incident: propose one new or changed check ("every outage becomes a canary") — a new row via Mode A, or a note on why the existing check didn't catch it sooner.
 
@@ -52,7 +54,6 @@ Full design, decisions (C1–C13) and the hand-run proof on Marcel Rosenbach's r
 `python3 scripts/verify.py` must print `ALL CHECKS PASSED` before you report anything as done. Fix failures, re-run, never report "done" on a FAIL line.
 
 ## Open items (not yet built — tell Martin when they become relevant)
-- "741 Canary" Telegram group for the Dinakar backup escalation (decision C11) — not created yet; today Martin is the only page target.
-- UptimeRobot account (decision C12) — not created yet; L-type checks for Marcel are `status: planned` until it exists, verified by hand in the meantime.
 - Tally + Pipedrive read-only API keys for reconciliation (decision C10) — message drafted at `00_project/assets/marcel/canary/msg-marcel-read-keys.txt`, waiting on Marcel.
-- Hetzner server as the always-on runner (decision C4) — does not exist yet (see night-shift-server-workflow memory); checks run by hand or via the interim free tools until then. No outside watcher for the runner itself (decision C6) — revisit after the first real server outage.
+- Hetzner server as the always-on runner (decision C4) — does not exist yet (see night-shift-server-workflow memory); checks run by hand or via the interim free tools (UptimeRobot, live since 2026-10-14) until then. No outside watcher for the runner itself (decision C6) — revisit after the first real server outage.
+- Escalation group ("741 Canary", chat id in `.secrets/canary-telegram.env` TELEGRAM_CHAT_ID_GROUP) and Dinakar's handle are live and tested (auto-escalation on no-ack, exit code 4). If Dinakar ever needs to be swapped or a second backup added, update TELEGRAM_DINAKAR_HANDLE and the group membership, not the script.

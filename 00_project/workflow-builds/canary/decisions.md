@@ -25,3 +25,8 @@
 ## Round 5 (2026-10-14, ~07:05 WITA) — hand-run result
 - Both Zapier Manager alert Zaps for Marcel are LIVE (G1 executed): "New Zap Error" and "Zap Turned Off" → Martin's Telegram ("741 Canary" bot, private chat). Test messages sent and the first one confirmed received by Martin.
 - Bot token handling: Martin created the bot and pasted the token into Zapier himself (I never touch client-facing credential fields); I only read and stored the token locally after that, in a 600-mode file, and read the chat ID via the Bot API.
+
+## Round 6 (2026-10-14, ~13:50 WITA) — Dinakar escalation built
+- C14 Build the Dinakar group now: **"Yes, build it now (Recommended)"** — Martin created the Telegram group "741 Canary" (chat id -5487070427) himself, added the canary bot and Dinakar (@DhoniMSD516, provided by Martin directly, no memory file had it).
+- C15 How to add Dinakar: **"I'll type his @username or phone here"** — @DhoniMSD516.
+- `alert.py` upgraded: on no-ack within `--escalate-after-min`, auto-posts to the group with an @-mention, exit code 4 (ESCALATED). Tested live with a 6-second window — real send, real no-ack, real escalation post confirmed in the group. No real page sent for a fictional incident otherwise.

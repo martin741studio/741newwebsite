@@ -48,3 +48,11 @@ Landing page deep-nlp.com/gewinne-jetzt → Tally form 2EMGve → Zap 382522671 
 - Safe without go: re-read config, refresh tag lists, replay failed Zap runs AFTER the root cause is fixed (Zapier "Replay"), re-check.
 - Needs go / human: create a tag in the client's KlickTipp, edit and republish a Zap, any login. The agent never enters credentials.
 - Prevention: read-only API keys / agent account for KlickTipp, Pipedrive, Zapier so a check does not depend on Martin's browser session.
+
+
+## Update 14.10. ~07:40 WITA (Automation-Prüf-Lauf, Details: assets/marcel/automation/gewinnspiel/findings-2026-10-14.md)
+- Echte Verluste gezählt: Tally hat 27 Antworten, davon 23 echte Teilnehmer (13.10. 20:24 bis 14.10. 04:00). Keiner ist in KlickTipp.
+- 7 haben Zapier-Fehlläufe (Pipedrive Person + Deal da, KlickTipp fehlt). 16 haben keinen Lauf, weil der Zap ab 13.10. ~20:55 aus war (weder KlickTipp noch Pipedrive).
+- Zusätzliche Ursache gefunden: Das KlickTipp-Objekt mit ID 100456 war ein Label, kein Tag. Echtes Tag 15229620 angelegt, Zap v2 live, 2 Tests grün.
+- Zweite Ursache: Tally 'Redirect on completion' war aus. Teilnehmer sahen nie die Danke-Seite. Heute auf /fast-gewonnen/ gestellt (Go A1).
+- Neuer Canary-Kandidat: L-Check auf redirectOnCompletion im öffentlichen Tally-HTML.
