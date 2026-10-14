@@ -86,3 +86,8 @@
 - Full account login done via `claude auth login` (separate from setup-token), approved by Martin in Chrome after a Tailscale hiccup (his Mac's Tailscale had logged itself out mid-task; relogin fixed via tailscale.com browser approval).
 - Remote Control running in tmux window `main:remote` on 741-agents-01, spawn mode same-dir, repo 741website on main, capacity 1/32. Connected and confirmed via `claude remote-control --help` + live tmux capture showing "Connected · 741newwebsite · main". Martin asked to verify from phone app / claude.ai/code.
 - OPEN: make this survive a server reboot (systemd service or tmux auto-start), and make the OAUTH_TOKEN-unset permanent/scoped so it doesn't block future remote-control (re)starts — not done yet, next step.
+
+## Browser-blocker build started (14.10.)
+- N49 Martin pushed back on "finish on laptop" framing: "that's what we literally try to avoid" → building the real fix now, not a laptop-fallback workaround. Mechanism: Playwright (not Claude-in-Chrome, which is Desktop-app-paired and can't run against a remote server) driving a real Chrome in a virtual display (Xvfb) on 741-agents-01, visible to Martin over noVNC (web link, Tailscale-only). One-time logins per service (Google, ChatGPT, LinkedIn), then agents automate without him present; he reconnects via noVNC only for logins/2FA/CAPTCHA.
+- N50 Drive fix: "Yes, set it up (Recommended)" — Drive service account instead of the risky browser-click upload method. Removes Drive from the "needs Chrome" list permanently.
+- Wrote 00_project/workflow-builds/nightshift/server-access-inventory.md (sections A done / B easy-API / C hard-browser) per Martin's ask to front-load the whole access list in one sitting.
