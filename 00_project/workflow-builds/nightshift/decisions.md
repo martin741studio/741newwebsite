@@ -162,3 +162,7 @@ Hygiene: `--permission-prompts none` added to night-shift-v2's run.py; re-ran th
 **Found and fixed along the way, not part of the plan**: Tailscale's own SSH layer (`--ssh`, turned on when I joined the server 14.10.) started requiring a fresh browser-approval on every single connection — unworkable for anything unattended. Martin approved once, I immediately disabled it (`tailscale set --ssh=false --accept-risk=lose-ssh`); regular key-based SSH over Tailscale's private network continues working, confirmed clean on 3 connections after.
 
 **Node 24 roadmap note** (not urgent): current pin is Node 22.23.3 (Maintenance LTS, EOL 2027-04-30). Node 24.x goes Active LTS 2026-10-20 (this week) — plan the move with lead time, not as an emergency.
+
+## Heartbeat wired, first ping confirmed (15.10.)
+- canary-workflow sent the real Healthchecks.io UUID (f3ccca05-...), Martin created the account. Stored in .secrets/healthchecks-uuid.txt (gitignored, 600), copied to server at 741website/.secrets/ same as other secrets.
+- heartbeat_ping.sh + heartbeat.timer (every 30 min — safety margin under canary's 60min period/15min grace = 75min window). First real ping fired by hand: result "OK", confirmed live.

@@ -1,0 +1,10 @@
+[Unit]
+Description=741 heartbeat ping every 30 min (safety margin under the 75 min period+grace window)
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=30min
+Persistent=true
+
+[Install]
+WantedBy=timers.target
