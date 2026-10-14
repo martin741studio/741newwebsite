@@ -1,0 +1,18 @@
+[Unit]
+Description=741 Claude Code Remote Control (interactive session, phone/laptop app)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/nightshift/741website
+Environment=HOME=/home/nightshift
+# CLAUDE_CODE_OAUTH_TOKEN is deliberately NOT set here: Remote Control needs the
+# full-scope login done via `claude auth login`, the inference-only batch token
+# blocks it. The batch token stays scoped to night-shift-v2's own `claude -p` calls.
+ExecStart=/home/nightshift/.local/bin/claude remote-control --name 741-agents-01 --spawn=same-dir --permission-mode default
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=741 VNC server (localhost only; reach it via noVNC/websockify)
+After=browser-xvfb.service
+Requires=browser-xvfb.service
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sleep 1
+ExecStart=/usr/bin/x11vnc -display :1 -forever -shared -nopw -rfbport 5901 -localhost
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target

@@ -98,3 +98,9 @@
 - Verified end-to-end from the Mac: http://100.124.61.26:6080/vnc.html reachable directly over Tailscale, confirmed visually — live Chrome window on the server, "Connected (unencrypted) to 741-agents-01:1".
 - Security: noVNC/x11vnc reachable only via tailscale0 (ufw default-deny covers the public interface already); no VNC password set (-nopw), matches the existing Tailscale-is-the-perimeter trust model. noVNC connection itself is unencrypted (plain websocket) — acceptable since it never leaves the Tailscale tunnel, but flagged as a minor hardening item (could add TLS or a VNC password later).
 - NOT yet done: systemd/reboot-survival for this stack (currently plain background processes, lost on reboot); Playwright MCP wired to CDP port 9222 so agents can actually drive it; first login (Google/ChatGPT/LinkedIn) into the persistent profile.
+
+## Reboot-survival proven (14.10.)
+- 6 systemd --user units (browser-xvfb, browser-fluxbox, browser-x11vnc, browser-novnc, browser-chrome, claude-remote-control) at reporting/night-shift-v2/server/systemd/. Fixed claude binary path bug before deploy (/opt/homebrew is Mac-only; server uses /home/nightshift/.local/bin/claude). `loginctl enable-linger nightshift` so the user bus starts at boot without a login session.
+- claude-remote-control.service deliberately does NOT set CLAUDE_CODE_OAUTH_TOKEN (would block Remote Control, same bug as before); `--spawn=same-dir` flag passed explicitly so no interactive prompt on restart; confirmed the "Enable Remote Control?" consent is remembered, no re-prompt.
+- Actually rebooted the server (not just trusted the config) — all 6 services, CDP port 9222, and noVNC port 6080 confirmed back up automatically, unprompted, within ~25s of the server returning.
+- Full stack now reboot-proof: display + Chrome + Remote Control all self-start.

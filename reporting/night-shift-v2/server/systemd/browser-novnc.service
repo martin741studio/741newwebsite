@@ -1,0 +1,14 @@
+[Unit]
+Description=741 noVNC web bridge (port 6080; firewall restricts this to Tailscale)
+After=browser-x11vnc.service
+Requires=browser-x11vnc.service
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sleep 1
+ExecStart=/usr/bin/websockify --web=/usr/share/novnc 6080 localhost:5901
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
