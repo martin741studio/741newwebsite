@@ -155,3 +155,24 @@ Still open (not part of the malware check):
 - Change the Hostinger password. It was in the stolen Chrome data.
 - Remove the Atomic BI Chrome extension (Default profile) at `chrome://extensions`.
 - Delete `~/QUARANTINE-malware-2026-10-13/` when the evidence is no longer needed (Martin himself).
+
+## REOPENED: website infection wave (2026-10-15)
+
+Martin reports: sites get infected one after another. So far: Tacheles, Kraft Physiotherapie, Katharina Kisser.
+
+### Confirmed facts (2026-10-15, ~14:40 WITA, read-only)
+1. **All 3 infected sites had saved logins in the stolen Chrome data** (checked against the quarantined copy, names only): tacheles-beratung.de (1), physiotherapiekraft.de (2 + SharePoint), katharinakisser.at (1).
+2. **katharinakisser.at is actively infected now.** robots.txt lists 20 planted sitemaps. sitemap.xml holds spam entries with lastmod 2026-10-15 (today), thousands of fake `/item/<id>/detail` URLs. All normal pages return HTTP 500. Same pattern as Kraft.
+3. **The infected non-Strato sites sit on the 741 server 185.2.31.101** (mail.741.studio): katharinakisser.at, physiotherapiekraft.de, physiotherapieoberhausen.com, 741.studio. Tacheles sits at Strato (w02.rzone.de).
+4. **The stolen data holds server-level logins:** `741.studio:2087` (WHM = whole server), `physiotherapieoberhausen.com:2096` (cPanel webmail), 741.studio `/wp-login.php`, `clients.741-studio.com`, `hub.741-studio.com/setup`, plus hosting accounts: IONOS (5 entries, users kam…/phy…/964…/inf…/616…), Strato (www + webmail), Hetzner, Hostinger, GoDaddy-NS domains. Also stolen earlier: FTP `agent_deploy@741.studio` (password in zsh_history) and WP app passwords shuiguru.de + leichsenring.wab-dev.de.
+5. Surface scan of 20 client sites (homepage + robots.txt): no spam signatures on the others right now. tacheles-beratung.de homepage is clean again; its `/wp-login.php` returns 503. physiotherapiekraft.de is live again (HTTP 200).
+
+### Conclusion
+This is a credential-driven campaign from the 2026-10-13 infostealer theft. Site cleanups alone fail while the attacker keeps server passwords (Kraft reinfection on 14.10. proves it). Rotation of hosting and server credentials must come first.
+
+### Response plan (order matters)
+1. **Lock the 741 server (185.2.31.101):** change WHM root password, then every cPanel account password, then FTP `agent_deploy`, end all active WHM/cPanel sessions, check for attacker-created accounts, SSH keys, and cron jobs.
+2. **Rotate hosting accounts:** Strato (Tacheles), IONOS (both accounts), Hetzner, Hostinger, GoDaddy/registrar. Turn on 2FA everywhere.
+3. **Then clean katharinakisser.at** (same runbook as Kraft: backup, remove droppers/planted files, clean core, new salts, check robots/sitemaps, Search Console removal).
+4. Then rotate WP admin passwords on all client sites and force logouts.
+5. Keep the full list-A rotation from this report running (browser passwords, API keys, SSH keys).
