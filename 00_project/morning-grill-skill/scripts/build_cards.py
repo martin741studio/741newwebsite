@@ -305,7 +305,7 @@ def main():
     top, below = cards[:a.max], cards[a.max:]
     l741 = scan.get("_741_lines", [])
     if ok("S12_prospects"):
-        pend = [p["client"] for p in S["S12_prospects"]["data"] if (p.get("status") or "").startswith("fertig")]
+        pend = [str(p.get("client") or p.get("slug") or "prospect") for p in S["S12_prospects"]["data"] if (p.get("status") or "").startswith("fertig")]
         if pend:
             l741.append(f"Review pages ready, not sent: {', '.join(pend)}")
     lead_due = [l for l in goals.get("leads", []) if l.get("follow_up_due")]
