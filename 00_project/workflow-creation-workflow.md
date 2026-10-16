@@ -83,13 +83,13 @@ A brief from chat only adds context, topics, and limits. It never replaces or sk
 
 ### Layer 1: Ingestion & Boundary Filter (Steps 0–1)
 
-#### 0. Inputs Martin Gives (Mandatory Interactive Grill-Me Interview)
+#### 0.0 Inputs Martin Gives (Mandatory Interactive Grill-Me Interview)
 The agent must validate the 4 core inputs before creating any files or directories. If Martin gives a raw objective or brief, the agent is strictly forbidden from silently writing files; it must initiate an interactive grill interview:
 - **The Job:** 1–2 sentences on what enters, what transforms, and who uses the output.
 - **Runtime Surface:** Terminal (Claude Code), Desktop IDE, Cowork, Cloud routine, or Project.
-- **Frequency:** On demand, per client, daily, or weekly.
+- **Frequency / Cadence:** On demand, per client, daily, or weekly.
 - **Hard Limits:** What must NEVER happen (e.g. no billable API credit burn, no live client overwrite without Go, no local model daemons).
-*The agent must use the grill protocol to confirm all 4 parameters before proceeding to Step 1.*
+*The agent must use the grill protocol to confirm all 4 parameters and write them to `00_project/workflow-builds/<id>/inputs-grill.md`. Gate CP1 in `check_build.py` enforces this step before design approval.*
 
 #### 1. Read-Only Research (No files written yet)
 * **1.1 Building Block:** Read `_derived/rules.md` §0–1 and `_derived/patterns.md` §3. Select the building block (Skill, Subagent, Hook, Routine, or Managed Agent). Record the choice in one line.

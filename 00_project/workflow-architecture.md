@@ -47,6 +47,10 @@ Every 741 workflow operates as a **recursive regulation loop** across five struc
 6. **Error Telemetry:** Universal `_run.json` emitted at every stage; Morning Grill surfaces lagging indicators.
 7. **Coupling:** High modularity. The agent (Claude/Antigravity/Human) is decoupled from data storage (Postgres) and delivery (Vite/Excel).
 
+### Strict Decoupling: Meta-Architecture vs. Client-Level Operations
+- **The Meta-Architecture (Governing System):** How 741 Studio creates, validates, gates, installs, and recalibrates workflows (`workflow-creation-workflow.md`, `check_build.py`, 3-gate pipeline). It sets the immutable cybernetic structure.
+- **Client Data Gathering (Downstream Applications):** GTM containers, call tracking, GBP conversion actions, Google Ads reporting scripts, and Supabase client performance tables belong strictly inside execution workflows (specifically $P_2$ Audit and $P_6$ Tracking). They are client-level data inputs and must never dilute or divert the meta-system.
+
 ---
 
 ## 1. The Client Journey in 8 Phases
@@ -80,7 +84,7 @@ Status words: **installed** = skill active in `~/.claude/skills/` or `.claude/sk
 | 4 | Un-Burning | P3 | `unburning` | "Starte Un-Burning für <client>" | Audit findings, harm checks | `harm-register.json`, bedrock light A–E, client report | Agent + Team | installed (`.claude/skills/un-burning`) |
 | 5 | Citations DACH | P4 | `citations` | "Prüfe Citations für <client>" | Canonical NAP (`client_locations`), directories | `client_citations` status, BrightLocal order, `_run.json` | Agent + Martin | installed (`.claude/skills/citations-dach`) |
 | 6 | Maps playbook ("Ring Phone") | P4 | `phone` | "Maps-Playbook für <client>" | Audit fields, harm register, pool items | 77-measure matrix, task list (`d1-30`, `m2+`, `later`) | Agent + Team | installed (`.claude/skills/maps-playbook`) |
-| 7 | Backlink DACH | P4 | `backlink` | `/backlink-dach <client>, <city>` | Competitors, DataForSEO backlink API, budget | Target sheet with approval boxes; outreach batch; `_run.json` | Agent + Martin + Gayo | installed (telemetry enforced) |
+| 7 | Backlink DACH | P4 | `backlink` | `/backlink-dach <client>, <city>` | Competitors, DataForSEO backlink API, budget | Target sheet with approval boxes; outreach batch; `_run.json` | Agent + Martin + Gayo | installed (.claude/skills/backlink-dach) |
 | 8 | CRO Homepage Track A | P4 | `cro` | `/cro-homepage <name>, <URL>` | Site scrape, content pool, GBP | Desktop prototype, handoff pack, Drive folder | Agent + Dinakar | installed |
 | 9 | CRO Track B (Design-Intense) | P4 / P0 | `cro_b` | "Track B für <client>" | B0 questionnaire, element pool | Showpiece interactive prototype | Agent + Martin | spec |
 | 10 | Content pool | P5 | `pool` | "Content-Pool für <client>" | Competitors, DataForSEO demand, GSC queries | Ranked keyword pool, sitetree, xlsx export | Agent + Martin | installed (`.claude/skills/content-pool`) |
