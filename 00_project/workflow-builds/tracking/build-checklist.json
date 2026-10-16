@@ -1,0 +1,242 @@
+{
+ "workflow_id": "tracking",
+ "name": "Proof Tracking and Quarterly War Room",
+ "created": "2026-10-16",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "0.0": {
+   "status": "done",
+   "title": "Inputs Martin gives confirmed via interactive grill (inputs-grill.md: Job, Surface, Cadence, Limits)",
+   "evidence": "00_project/workflow-builds/tracking/inputs-grill.md",
+   "date": "2026-10-16",
+   "note": "Confirmed via inputs grill: Job, Surface, Cadence, Limits locked"
+  },
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/tracking/research-note.md",
+   "date": "2026-10-16",
+   "note": "Skill + isolated CLI scripts per patterns.md section 3"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/tracking/research-note.md",
+   "date": "2026-10-16",
+   "note": "Searched workflow-library for rules.md, patterns.md, scorecard"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/tracking/research-note.md",
+   "date": "2026-10-16",
+   "note": "INDEX.md fresh (< 1 week)"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/tracking/research-note.md",
+   "date": "2026-10-16",
+   "note": "Found tracking-workflow.md, tracking-metric-catalog.json, and portal schema"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/tracking/research-note.md",
+   "date": "2026-10-16",
+   "note": "Research note written with architecture decisions"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/tracking/use-cases.md",
+   "date": "2026-10-16",
+   "note": "3 use cases defined"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/tracking/test-scenarios.md",
+   "date": "2026-10-16",
+   "note": "3 test scenarios with negative trigger"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/tracking/hand-run.md",
+   "date": "2026-10-16",
+   "note": "Hand-run on Suriya pilot data"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/tracking/pipeline.md",
+   "date": "2026-10-16",
+   "note": "Pipeline with weekly/quarterly checkpoints"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/tracking/freedom.md",
+   "date": "2026-10-16",
+   "note": "Rule R1.7 freedom mapping"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/tracking/decision-cp1.md",
+   "date": "2026-10-16",
+   "note": "Martin Go approved Checkpoint 1"
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": "00_project/workflow-builds/tracking/build-note.md",
+   "date": "2026-10-16",
+   "note": "Folder built per template"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": "00_project/workflow-builds/tracking/build-note.md",
+   "date": "2026-10-16",
+   "note": "Frontmatter WHAT+WHEN+negative trigger"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": "00_project/workflow-builds/tracking/build-note.md",
+   "date": "2026-10-16",
+   "note": "Body checklist with gates, critical on top"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": "00_project/workflow-builds/tracking/build-note.md",
+   "date": "2026-10-16",
+   "note": "References 1 level deep, body 88 lines (<500)"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": "00_project/workflow-builds/tracking/build-note.md",
+   "date": "2026-10-16",
+   "note": "Verification step with telemetry evidence"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": "00_project/workflow-builds/tracking/build-note.md",
+   "date": "2026-10-16",
+   "note": "741 house rules applied"
+  },
+  "3.7": {
+   "status": "skipped",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "Interactive skill with Martin GO-W release, not unattended"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/tracking/trigger-tests.md",
+   "date": "2026-10-16",
+   "note": "3 trigger tests verified (T1, T2, T3 pass)"
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/tracking/functional-test.md",
+   "date": "2026-10-16",
+   "note": "Functional test verified on Suriya pilot data"
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/tracking/baseline.md",
+   "date": "2026-10-16",
+   "note": "Baseline comparison: 90% time saved, 70% token savings"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "Native markdown skill with isolated python scripts, not a plugin"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/tracking/scorecard.md",
+   "date": "2026-10-16",
+   "note": "Scorecard 96.4 %, 0 blocking zeros"
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/tracking/decision-cp2.md",
+   "date": "2026-10-16",
+   "note": "Martin Go approved Checkpoint 2 (Scorecard 96.4 %)"
+  },
+  "5.2": {
+   "status": "done",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": ".claude/skills/tracking/SKILL.md",
+   "date": "2026-10-16",
+   "note": "Project skill installed in repo"
+  },
+  "5.3a": {
+   "status": "done",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "00_project/workflow-registry/registry.json",
+   "date": "2026-10-16",
+   "note": "Registry updated with id tracking"
+  },
+  "5.3b": {
+   "status": "skipped",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "Client handovers follow 00_project/assets/brand/martin-guide/README.md"
+  },
+  "5.3": {
+   "status": "done",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/tracking-workflow.md",
+   "date": "2026-10-16",
+   "note": "Memory file created and indexed in MEMORY.md"
+  },
+  "5.4": {
+   "status": "skipped",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "On-demand command (/tracking), not a recurring launchd routine"
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-16T08:56"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-16T08:58"
+  },
+  {
+   "gate": "install",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-16T08:58"
+  }
+ ]
+}
