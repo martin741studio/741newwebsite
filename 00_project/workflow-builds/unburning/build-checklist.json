@@ -1,0 +1,246 @@
+{
+ "workflow_id": "unburning",
+ "name": "Un-Burning Harm Remediation",
+ "created": "2026-10-16",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/unburning/research-note.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/unburning/research-note.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/unburning/research-note.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/unburning/research-note.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/unburning/research-note.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/unburning/design-note.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/unburning/test-scenarios.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/unburning/design-note.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/unburning/design-note.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/unburning/design-note.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/unburning/decision-cp1.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": ".claude/skills/un-burning/SKILL.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": ".claude/skills/un-burning/SKILL.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": ".claude/skills/un-burning/SKILL.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": ".claude/skills/un-burning/SKILL.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": ".claude/skills/un-burning/SKILL.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": ".claude/skills/un-burning/SKILL.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "3.7": {
+   "status": "skipped",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "Interactive skill with Martin GO-1, GO-2, GO-3 approvals"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/unburning/trigger-tests.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/unburning/functional-test.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/unburning/baseline.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "Native Claude Code markdown skill, not a plugin"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/unburning/scorecard.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/unburning/decision-cp2.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "5.2": {
+   "status": "done",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": ".claude/skills/un-burning/SKILL.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "5.3a": {
+   "status": "done",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "00_project/workflow-registry/registry.json",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "5.3b": {
+   "status": "done",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "00_project/assets/brand/martin-guide/README.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "5.3": {
+   "status": "done",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/un-burning-workflow.md",
+   "date": "2026-10-16",
+   "note": ""
+  },
+  "5.4": {
+   "status": "skipped",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "On-demand client onboarding/incident remediation workflow, not scheduled"
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": false,
+   "missing": 10,
+   "at": "2026-10-16T08:19"
+  },
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-16T08:20"
+  },
+  {
+   "gate": "cp2",
+   "passed": false,
+   "missing": 12,
+   "at": "2026-10-16T08:24"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-16T08:25"
+  },
+  {
+   "gate": "install",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-16T08:26"
+  }
+ ]
+}
