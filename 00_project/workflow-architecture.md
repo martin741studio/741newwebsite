@@ -40,12 +40,12 @@ Every 741 workflow operates as a **recursive regulation loop** across five struc
 
 ### The 7 Implementation Parameters
 1. **Membrane Contract:** Explicit input schema. Only validated data enters. Unstructured noise fails fast.
-2. **State vs. Ephemeral Flow:** Supabase (`741-portal`) and Git are permanent records. Chats and scratchpads are transient.
+2. **State vs. Ephemeral Flow (Dual-Storage Substrate):** **Supabase (`741-portal`) is the primary Source of Truth** for structured records, canonical NAPs, metric rollups, and system pointers. **Google Drive (`741studio18@gmail.com` under `741 Clients/<Client Name>/`) is the extended secondary operational database** for working Google Docs, Sheets, PDF proposals, and asset handoffs. Chats and scratchpads are strictly transient.
 3. **Idempotence:** Every script run on the same client and date updates cleanly without duplicate rows.
-4. **Single Source of Truth:** `registry.json` for workflow states; Supabase for performance metrics; `_derived/rules.md` for prompt guidelines.
+4. **Single Source of Truth:** `registry.json` for workflow states; Supabase for all canonical client records, performance targets, and pointers to Google Drive folders/sheets; `_derived/rules.md` for prompt guidelines.
 5. **Definition of Done:** Mandatory checkpoint gates with evidence files before downstream consumption.
 6. **Error Telemetry:** Universal `_run.json` emitted at every stage; Morning Grill surfaces lagging indicators.
-7. **Coupling:** High modularity. The agent (Claude/Antigravity/Human) is decoupled from data storage (Postgres) and delivery (Vite/Excel).
+7. **Coupling & Multi-Model Portability:** High modularity. The data layer is decoupled from any single compute agent. Any LLM provider or automation platform (Claude Code, Antigravity IDE, ChatGPT/OpenAI, Gemini, Cursor, n8n) queries Supabase (`public.clients` and `public.client_drive_assets`) to instantly discover the client's working Drive folder, master docs, and sheets.
 
 ### Strict Decoupling: Meta-Architecture vs. Client-Level Operations
 - **The Meta-Architecture (Governing System):** How 741 Studio creates, validates, gates, installs, and recalibrates workflows (`workflow-creation-workflow.md`, `check_build.py`, 3-gate pipeline). It sets the immutable cybernetic structure.
@@ -175,6 +175,54 @@ CREATE TABLE IF NOT EXISTS public.client_goals (
 3. **Goal Tracking Defined (Gap 6):** `public.client_goals` established as the invariant schema for discrepancy calculations.
 4. **Phase Progression Gated:** Programmatic gate rules defined to prevent premature execution of growth measures on damaged clients.
 
-### Maintenance Protocol:
-- Update this document whenever a workflow advances status (e.g. from draft to installed).
-- The Morning Grill flags any client whose latest `_run.json` status is `failed` or whose metric $\Delta$ exceeds the `warning_threshold`.
+---
+
+## 7. The Dual-Storage Substrate: Supabase & Google Drive
+
+To support multi-model, multi-agent, and human-in-the-loop workflows, 741 Studio operates a **Dual-Storage Substrate**:
+
+```
+ ┌────────────────────────────────────────────────────────┐
+ │           PRIMARY SOURCE OF TRUTH: SUPABASE            │
+ │  • Structured Entities (clients, client_locations)     │
+ │  • Performance Telemetry (_run.json, client_goals)     │
+ │  • System Pointers (drive_folder_url, stammdaten_url)  │
+ └───────────────────────────┬────────────────────────────┘
+                             │ Authority Pointers
+                             ▼
+ ┌────────────────────────────────────────────────────────┐
+ │   EXTENDED SECONDARY DATABASE: GOOGLE DRIVE ("741")    │
+ │  • Account: 741studio18@gmail.com                      │
+ │  • Root Directory: "741 Clients / <Client Name> /"     │
+ │  • Google Docs: Briefings, Tone Sheets, Copy Drafts    │
+ │  • Google Sheets: Stammdaten Master, Keyword Pools     │
+ │  • PDF Deliverables: Proposals, Audits, Contracts      │
+ └────────────────────────────────────────────────────────┘
+```
+
+### 1. Architectural Roles
+1. **Supabase (`galjmtozcgxcwtzkzbpi`):** The authoritative anchor. Stores immutable client IDs, relational mappings, canonical NAPs, metric rollups, and the primary URL/ID pointers to external Google Drive assets.
+2. **Google Drive:** The collaborative operational working layer. Google Docs and Sheets allow real-time human editing, client reviews, and direct file manipulation.
+
+### 2. Multi-Model & Cross-Platform Discovery
+Because Supabase exposes standardized REST and SQL interfaces, any AI provider or compute agent (Claude Code, Antigravity IDE, OpenAI/ChatGPT, Gemini, Cursor, n8n automations, or background bash workers) can immediately locate a client's working assets:
+
+```sql
+-- Retrieve the operational workspace for any client
+SELECT 
+    c.name,
+    c.client_stack->>'drive_root_folder' AS gdrive_folder_name,
+    c.client_stack->>'drive_folder_url' AS gdrive_url,
+    c.stammdaten_sheet_url,
+    COUNT(a.id) AS total_cataloged_assets
+FROM public.clients c
+LEFT JOIN public.client_drive_assets a ON c.id = a.client_id
+WHERE c.name ILIKE '%stuerzl%'
+GROUP BY c.name, c.client_stack, c.stammdaten_sheet_url;
+```
+
+### 3. Cataloging & Checksums (`public.client_drive_assets`)
+- **Asset Indexing:** Run `node scripts/import-drive-assets.mjs --apply` to crawl client `_drive/` folders and catalog files with SHA256 checksums, MIME types, and categories (`sheet`, `doc`, `cro_asset`, `offer_pdf`, `content_export`).
+- **Root Sync:** Run `node scripts/sync-gdrive-clients.mjs --apply` to ensure every client's Google Drive root folder pointer is synchronized between Google Drive and Supabase.
+- **Migration:** Staged in `scripts/migrations/003_gdrive_secondary_database_and_client_links.sql`.
+
