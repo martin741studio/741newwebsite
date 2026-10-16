@@ -1,0 +1,235 @@
+{
+ "workflow_id": "audit",
+ "name": "Maps Audit (Maps-Readiness)",
+ "created": "2026-10-16",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/audit-workflow/design-note.md",
+   "date": "2026-10-16",
+   "note": "Building block chosen per patterns.md"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/audit-workflow/research-note.md",
+   "date": "2026-10-16",
+   "note": "Library searched for audit patterns"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/knowledge/workflow-library/INDEX.md",
+   "date": "2026-10-16",
+   "note": "Library freshness checked"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/audit-workflow-spec.md",
+   "date": "2026-10-16",
+   "note": "Existing assets mapped"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/audit-workflow/research-note.md",
+   "date": "2026-10-16",
+   "note": "Research note written"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/audit-workflow/design-note.md",
+   "date": "2026-10-16",
+   "note": "Use cases written"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/audit/test-scenarios.md",
+   "date": "2026-10-16",
+   "note": "Three test scenarios with negative trigger"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/audit-workflow/design-note.md",
+   "date": "2026-10-16",
+   "note": "Hand-solved task on Stuerzl dry data"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/audit-workflow/design-note.md",
+   "date": "2026-10-16",
+   "note": "Pipeline with checkpoints"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/audit-workflow/design-note.md",
+   "date": "2026-10-16",
+   "note": "Degrees of freedom per step"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/audit/decision-cp1.md",
+   "date": "2026-10-16",
+   "note": "Martin Go on CP1 design"
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": ".claude/skills/maps-audit/SKILL.md",
+   "date": "2026-10-16",
+   "note": "Skill template folder with scripts, references, assets"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": ".claude/skills/maps-audit/SKILL.md",
+   "date": "2026-10-16",
+   "note": "Frontmatter with WHAT, WHEN, negative trigger, disable-model-invocation"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": ".claude/skills/maps-audit/SKILL.md",
+   "date": "2026-10-16",
+   "note": "Body checklist with 4 phases and critical rules on top"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": ".claude/skills/maps-audit/SKILL.md",
+   "date": "2026-10-16",
+   "note": "Body under 500 lines (94 lines), references separated"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": ".claude/skills/maps-audit/SKILL.md",
+   "date": "2026-10-16",
+   "note": "Verification step with validate_run.py script"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": ".claude/skills/maps-audit/SKILL.md",
+   "date": "2026-10-16",
+   "note": "741 house rules: existing data first, zero paid spend without go, harm separation"
+  },
+  "3.7": {
+   "status": "skipped",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "Attended workflow only (never runs unattended)"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/audit/trigger-tests.md",
+   "date": "2026-10-16",
+   "note": "Trigger tests passed for 3 scenarios"
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/audit/functional-test.md",
+   "date": "2026-10-16",
+   "note": "Functional test on existing Stuerzl data passed"
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/audit/baseline.md",
+   "date": "2026-10-16",
+   "note": "Baseline comparison: -92% tokens saved"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "Standard skill, plugin eval not applicable"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/audit/scorecard.md",
+   "date": "2026-10-16",
+   "note": "Scorecard passed at 95.8% with 0 blocking zeros"
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/audit/decision-cp2.md",
+   "date": "2026-10-16",
+   "note": "Martin Go on CP2 to ship"
+  },
+  "5.2": {
+   "status": "done",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": ".claude/skills/maps-audit/SKILL.md",
+   "date": "2026-10-16",
+   "note": "Committed to project repository"
+  },
+  "5.3a": {
+   "status": "done",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "00_project/workflow-registry/registry.json",
+   "date": "2026-10-16",
+   "note": "Workflow id audit exists in registry.json"
+  },
+  "5.3b": {
+   "status": "skipped",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "Martin guide not on internal audit report"
+  },
+  "5.3": {
+   "status": "done",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/maps-audit-workflow.md",
+   "date": "2026-10-16",
+   "note": "Memory file indexed in MEMORY.md"
+  },
+  "5.4": {
+   "status": "skipped",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "Attended workflow, not scheduled"
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-16T07:59"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-16T08:00"
+  },
+  {
+   "gate": "install",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-16T08:01"
+  }
+ ]
+}
