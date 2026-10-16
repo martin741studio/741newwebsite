@@ -157,19 +157,19 @@
   {
    "id": "automation",
    "label": "Automation Build",
-   "alias": "",
-   "maturity": "neu",
-   "approved": "offen",
-   "doc": "",
-   "skill": "",
-   "note": "",
-   "slash": "",
-   "slash_status": "",
-   "chat": "",
-   "resume": "",
-   "view": "",
-   "install": "",
-   "short": ""
+   "alias": "automation-build, Zapier/Make/n8n/KlickTipp Funnels",
+   "maturity": "installiert und verifiziert (Scorecard 91.1 %, 101/101 Tests bestanden)",
+   "approved": "Design ja, 2026-10-11 / Ship ja, 2026-10-16 (Checkpoint 2 Martin Go)",
+   "doc": "00_project/automation-workflow.md",
+   "skill": "/Users/martindrendel/.claude/skills/automation-build/SKILL.md",
+   "note": "Scorecard 91.1 %, 0 Sperr-Nullen. Hooks in ~/.claude/settings.json aktiv. L0-L6 Sicherheitsstufen.",
+   "slash": "/automation-build <Kunde> <Automation>",
+   "slash_status": "installiert (~/.claude/skills/automation-build/)",
+   "chat": "Automation für <Kunde> <Name>",
+   "resume": "Mach den Automation-Build für <Kunde> weiter",
+   "view": "Blatt Links: Ordner lokal, Datei _run.json und runbook-de.md. Oder: Zeig mir den Automation-Stand von <Kunde>",
+   "install": "installiert (~/.claude/skills/automation-build/) mit Hooks in ~/.claude/settings.json",
+   "short": "/automation-build <Kunde> <Automation>"
   },
   {
    "id": "tracking",
@@ -517,6 +517,13 @@
    "drive": "",
    "local": "",
    "note": "automatisch angelegt (Ordner 00_project/prospects/korinna-heintze/booking/_run.json), bitte prüfen"
+  },
+  {
+   "name": "Ulrike Röth",
+   "type": "Lead",
+   "drive": "",
+   "local": "",
+   "note": "automatisch angelegt (Ordner 00_project/prospects/ulrike-roeth/booking/_run.json), bitte prüfen"
   }
  ],
  "runs": [
@@ -1271,6 +1278,19 @@
    "local": "00_project/prospects/korinna-heintze",
    "result": "",
    "note": ""
+  },
+  {
+   "client": "Ulrike Röth",
+   "workflow": "booking-sequence",
+   "status": "fertig, Freigabe offen",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Echt",
+   "last_run": "2026-10-15",
+   "drive": "",
+   "local": "00_project/prospects/ulrike-roeth/booking",
+   "result": "00_project/prospects/ulrike-roeth/whatsapp-sequence.md",
+   "note": "Call Di 20.10.2026, 16:00 WITA (Dienstag, den 20.10. um 10:00 Uhr); m1 Mo 19.10.2026, 16:00 WITA, m2 Di 20.10.2026, 14:00 WITA, m3 Di 20.10.2026, 15:30 WITA; Kosten 0.000 USD"
   }
  ],
  "commands": [

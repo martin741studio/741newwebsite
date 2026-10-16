@@ -152,7 +152,8 @@ if __name__ == '__main__':
     elif a[0] == 'status':
         d = load(a[1])
         for sid, t in STEPS:
-            s = d['steps'][sid]; print(f"{s['status']:8} {sid:5} {t[:62]:62} {s.get('evidence') or s.get('reason', '')}")
+            s = d['steps'].get(sid, {'status': 'legacy', 'evidence': ''})
+            print(f"{s['status']:8} {sid:5} {t[:62]:62} {s.get('evidence') or s.get('reason', '')}")
     elif a[0] == 'check':
         cmd_check(a[1], a[a.index('--gate') + 1] if '--gate' in a else 'cp1')
     else: sys.exit(__doc__)

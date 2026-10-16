@@ -90,7 +90,7 @@ Status words: **installed** = skill active in `~/.claude/skills/` or `.claude/sk
 | 10 | Content pool | P5 | `pool` | "Content-Pool für <client>" | Competitors, DataForSEO demand, GSC queries | Ranked keyword pool, sitetree, xlsx export | Agent + Martin | installed (`.claude/skills/content-pool`) |
 | 11 | Content writing | P5 | `copy` | `/content-write <client> <page>` | Pool items, tone guide, brief | Page text, portal node entry, slop gate 5/5 | Agent + Dinakar | installed |
 | 12 | Proof tracking + quarter | P6 | `tracking` | Weekly trigger / Quarter end | Local Falcon grid, GSC weekly rollups, reviews | Portal "Ergebnisse" tab, early warning flags, war-room pack | Agent + Martin | spec + prototype |
-| 13 | Automation build | P7 | `automation` | `/automation-build` | Spec, test plan, credentials | Verified script/cron, runbook, test logs | Agent + Martin | draft |
+| 13 | Automation build | P7 | `automation` | `/automation-build` | Spec, test plan, credentials | Verified script/cron, runbook, test logs | Agent + Martin | installed (`~/.claude/skills/automation-build/`) |
 | 14 | Night shift | P7 | none | `reporting/night-shift.sh` (03:00) | Open tasks, GSC/Google Ads APIs | Fresh Supabase tables, daily page specs | Agent (unattended) | installed (`.claude/skills/night-shift`) |
 | 15 | Daily client standup | P7 | none | LaunchAgent weekdays 08:05 | Supabase standup function | Admin standup board | Agent (unattended) | live |
 | 16 | Morning grill + evening log | P7 | `morning` | Morning: "Grill me" / Evening: "Log" | Master map, registry, Supabase goals, git | Daily brief, decision queue, error signals | Agent + Martin | live procedure |
