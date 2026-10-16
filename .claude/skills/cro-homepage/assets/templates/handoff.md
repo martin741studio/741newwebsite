@@ -1,0 +1,10 @@
+# Handoff — <Seite> <Name> (Prototyp <vN>, Desktop)
+## 1. Pfade (Prototyp, Prüfdateien, Mockup, Bilder, Text, Diagnose, Daten, Screenshots)
+## 2. Text und Meta (Title ≤ 60, Meta ≤ 155, H1, Schema, noindex-Hinweis)
+## 3. Marke (Logo-Lage, Farben, Schrift)
+## 4. Bilder und Shoot-Liste (jedes KI-Bild von Person oder Raum)
+## 5. Tracking-Spezifikation (whatsapp_click / booking_click / phone_click, Parameter section, Vorbelegungen je Sektion)
+## 6. [FEHLT]-Liste (was Martin bei der Kundin klären muss, nummeriert)
+## 7. Hinweise für den Rebuild (CMS, Rankings erhalten, Redirects, Sprachversionen, Korrekturen auf der Live-Seite)
+## 8. Vorher und Nachher (Score)
+## 9. Learnings → Eintrag in rules.md Abschnitt 16

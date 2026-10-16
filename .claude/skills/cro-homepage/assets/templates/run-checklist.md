@@ -1,0 +1,13 @@
+Run checklist (copy into the reply, tick each line with its evidence file; stop only at a failed gate or a checkpoint)
+- [ ] 0 Intake answered or defaulted (channel, URL, GBP, address form)
+- [ ] 1 Data: dataset.md, brand.md, 01-input/INVENTORY.md (logo + photos downloaded)
+- [ ] 2 Diagnosis: 22 scores with evidence, P0 coverage 10/10
+- [ ] 3 Copy: copy.md + approved-copy.md, industry check passed  → Checkpoint 1
+- [ ] 4 Design doc: one prompt, `scripts/check_prompt.py` passes
+- [ ] 5 Mockup: full-page-v1-final.png downloaded and viewed
+- [ ] 5b Slots: SLOTS.md + every image file
+- [ ] 6 Prototype: index.html, motion.md if exceptions, `scripts/shot.sh` screenshots
+- [ ] 6b Visual check in Chrome: `scripts/measure.js` + `scripts/verify.py` pass, visual-check.md with the report line
+- [ ] 6c Self-check: self-check.md ≥ 36/44  → (optional) fresh reviewer, `assets/reviewer-prompt.md`  → Checkpoint 2
+- [ ] 7 Handoff, registry entry + build.py, learnings in rules.md, run line in run-metrics.md
+- [ ] 7b Drive: `scripts/stage_drive.py`, browser upload, `scripts/check_drive.py`, final report with link + screenshot
