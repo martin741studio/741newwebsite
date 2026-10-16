@@ -61,7 +61,7 @@ Cross-cutting:  P7 Operations = morning grill, evening log, night shift, daily s
 
 ### Rules of the Sequence
 - The audit is the diagnosis. Un-Burning repairs harm. The maps playbook adds growth. **Harm repairs come before growth measures** (`maps-playbook-workflow.md` §2).
-- Growth measures that touch a harm item must wait until Un-Burning clears that item.
+- **Channel-Decoupled Gate:** Only growth measures that directly touch an active harm item are blocked (e.g. if a client has a GBP address suspension, halt citations and GBP edits, but allow content pool keyword research and sitetree drafting to proceed in parallel).
 - The content pool determines target topics. Content writing creates the text. The CRO workflow builds the page.
 - Tracking proves results and feeds the quarterly 90-day war room.
 - Data channels: We standardize on **GSC**, **Local Falcon**, **Google Ads**, **BrightLocal**, and **DataForSEO**. Ahrefs is deprecated; Meta Ads is currently paused.
@@ -102,7 +102,7 @@ Clients advance to the next phase only when the gate conditions evaluate to true
 | **P0 → P1** | Signed offer received, first payment confirmed, client created in Supabase `clients`. | Financial/Admin confirmation | Martin |
 | **P1 → P2** | Full access confirmed (GBP manager, GSC, site CMS); Canonical NAP locked in `client_locations`. | `reporting/verify-access.mjs` | Agent + Martin |
 | **P2 → P3** | Maps audit complete; score 0–100 calculated; distinct Harm vs. Gap separation filed. | `00_project/assets/<client>/audit/report.md` | Agent |
-| **P3 → P4** | **Bedrock light is GREEN.** All red items in `harm-register.json` cleared for areas touched by growth. | `scripts/check_phase.py <client> p3-to-p4` | Programmatic Gate |
+| **P3 → P4** | **Channel Bedrock Light GREEN.** All red items in `harm-register.json` cleared for channels touched by growth (unaffected channels may advance). | `scripts/check_phase.py <client> p3-to-p4` | Programmatic Gate |
 | **P4 → P5** | Sitetree approved by Martin; Citations Group A submitted; prototype reviewed. | Checkpoint approval log | Martin |
 | **P5 → P6** | Target pages live on client domain; baseline search metrics logged in Supabase. | URL 200 HTTP check + DB scan | Agent |
 | **P6 → Next** | 90-day war room completed; client goals vs actual performance audited; new targets set. | War room executive summary | Martin + Client |
@@ -132,7 +132,9 @@ Every workflow execution must emit a standardized telemetry record at each check
 }
 ```
 
-* **Storage Path:** `00_project/assets/<client>/<workflow_id>/<YYYY-MM-DD>/_run.json`
+* **Storage Paths:**
+  - **Client Workflows ($P_0 \to P_6$):** `00_project/assets/<client>/<workflow_id>/<YYYY-MM-DD>/_run.json`
+  - **Internal / Operations Workflows ($P_7$):** `00_project/workflow-registry/runs/<workflow_id>/<YYYY-MM-DD>/_run.json`
 * **Auto-Sync:** The repository Stop hook executes `workflow_registry.py sync`, updating `~/Desktop/Workflow-Uebersicht.xlsx` automatically without manual data entry.
 
 ---

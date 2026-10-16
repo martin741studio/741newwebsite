@@ -83,13 +83,13 @@ A brief from chat only adds context, topics, and limits. It never replaces or sk
 
 ### Layer 1: Ingestion & Boundary Filter (Steps 0–1)
 
-#### 0. Inputs Martin Gives
-The agent must validate the 4 core inputs before creating files:
+#### 0. Inputs Martin Gives (Mandatory Interactive Grill-Me Interview)
+The agent must validate the 4 core inputs before creating any files or directories. If Martin gives a raw objective or brief, the agent is strictly forbidden from silently writing files; it must initiate an interactive grill interview:
 - **The Job:** 1–2 sentences on what enters, what transforms, and who uses the output.
 - **Runtime Surface:** Terminal (Claude Code), Desktop IDE, Cowork, Cloud routine, or Project.
 - **Frequency:** On demand, per client, daily, or weekly.
-- **Hard Limits:** What must NEVER happen.
-*If an input is ambiguous, grill Martin once via decision cards before proceeding.*
+- **Hard Limits:** What must NEVER happen (e.g. no billable API credit burn, no live client overwrite without Go, no local model daemons).
+*The agent must use the grill protocol to confirm all 4 parameters before proceeding to Step 1.*
 
 #### 1. Read-Only Research (No files written yet)
 * **1.1 Building Block:** Read `_derived/rules.md` §0–1 and `_derived/patterns.md` §3. Select the building block (Skill, Subagent, Hook, Routine, or Managed Agent). Record the choice in one line.
@@ -112,7 +112,7 @@ The agent must validate the 4 core inputs before creating files:
   1. Obvious trigger.
   2. Paraphrased trigger.
   3. Negative trigger (must NOT trigger) (Rule R1.2).
-* **2.3 Simulation by Hand:** Solve ONE real client task by hand in chat with Martin. Record every piece of context needed. That context forms the skill body (Rule R1.3).
+* **2.3 Simulation by Hand (Live Chat Simulation):** Solve ONE real client task live in chat with Martin BEFORE drafting the skill body. Walk through each prompt and tool call step-by-step; record every piece of context, friction point, and edge case that arises. That exact verified context forms the skill body and scripts (Rule R1.3).
 * **2.4 Pipeline Map:** Draw the pipeline using `patterns.md` §4 shapes. Mark checkpoints where Martin gives approval.
 * **2.5 Degrees of Freedom (Rule R1.7):**
   - **Fragile / Deterministic Step:** Data math, API parsing, file moving, database writes $\to$ isolated script in `scripts/`.
@@ -168,8 +168,8 @@ The agent must validate the 4 core inputs before creating files:
 * **5.4 Scheduled Setup:** If scheduled, create the routine or LaunchAgent, run it once by hand, inspect the log output (Rule R6.10).
 * **5.5 Install Gate:** Run `check_build.py check <id> --gate install`. Verify final clean status.
 
-#### 6. Homeostatic Maintenance (Closed-Loop Improvement)
-* **Correction Loop:** A repeated correction in chat is immediately converted into a skill edit, never left as a one-off prompt patch.
+#### 6. Homeostatic Maintenance (Closed-Loop Self-Regulation)
+* **Strict Immediate Skill/Script Patch Rule:** Every time Martin corrects an output or identifies a flaw in chat during any workflow execution, the agent is strictly forbidden from merely apologizing and re-running with a one-off prompt patch. The agent **MUST immediately patch the underlying `SKILL.md` or script in `scripts/`** to make the correction permanent.
 * **Recalibration:** Re-score the workflow against `scorecard.md` after every 5 real client runs.
 * **Upstream Updates:** When Claude Code or model APIs ship relevant upgrades, review `official-docs/whats-new/` and eliminate obsolete workarounds.
 
