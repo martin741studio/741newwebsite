@@ -83,7 +83,7 @@ Status words: **installed** = skill active in `~/.claude/skills/` or `.claude/sk
 | 7 | Backlink DACH | P4 | `backlink` | `/backlink-dach <client>, <city>` | Competitors, DataForSEO backlink API, budget | Target sheet with approval boxes; outreach batch; `_run.json` | Agent + Martin + Gayo | installed (telemetry enforced) |
 | 8 | CRO Homepage Track A | P4 | `cro` | `/cro-homepage <name>, <URL>` | Site scrape, content pool, GBP | Desktop prototype, handoff pack, Drive folder | Agent + Dinakar | installed |
 | 9 | CRO Track B (Design-Intense) | P4 / P0 | `cro_b` | "Track B für <client>" | B0 questionnaire, element pool | Showpiece interactive prototype | Agent + Martin | spec |
-| 10 | Content pool | P5 | `pool` | "Content-Pool für <client>" | Competitors, DataForSEO demand, GSC queries | Ranked keyword pool, sitetree, xlsx export | Agent + Martin | draft |
+| 10 | Content pool | P5 | `pool` | "Content-Pool für <client>" | Competitors, DataForSEO demand, GSC queries | Ranked keyword pool, sitetree, xlsx export | Agent + Martin | installed (`.claude/skills/content-pool`) |
 | 11 | Content writing | P5 | `copy` | `/content-write <client> <page>` | Pool items, tone guide, brief | Page text, portal node entry, slop gate 5/5 | Agent + Dinakar | installed |
 | 12 | Proof tracking + quarter | P6 | `tracking` | Weekly trigger / Quarter end | Local Falcon grid, GSC weekly rollups, reviews | Portal "Ergebnisse" tab, early warning flags, war-room pack | Agent + Martin | spec + prototype |
 | 13 | Automation build | P7 | `automation` | `/automation-build` | Spec, test plan, credentials | Verified script/cron, runbook, test logs | Agent + Martin | draft |

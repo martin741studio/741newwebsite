@@ -1,0 +1,43 @@
+{
+  "title": "Content Pool: Naturheilpraxis Daniela Dumann",
+  "subtitle": "Homepage first. Existing site. Health client, HWG mode.",
+  "findings": [
+    {
+      "text": "The site is found for training searches, not for patient searches. 0 of 63 known rankings is a patient search such as 'heilpraktiker berlin' (dataset.md 1.6). The rankings are for courses, training, herb lexicon pages and single method terms. The homepage must speak to patients. The Viriditas school moves to its own area.",
+      "items": ["CP-BRD-004", "CP-BRD-005"]
+    },
+    {
+      "text": "The homepage has {bench.own} words. The floor from gate A0 is {bench.floor} words (70 % of the median {bench.median} words of {bench.n} competitor homepages). The page is below the floor.",
+      "items": ["CP-SVC-001", "CP-SVC-002", "CP-SVC-003"]
+    },
+    {
+      "text": "Hildegard-Heilkunde in Charlottenburg is open ground in the readable set: 0 of 9 local practice sites name Hildegard in title, heading or URL. Caveat: the site naturheilpraxis-berlin-westend.de ranks #2 for this search and blocks all readers. Check it by hand before this claim goes to the client.",
+      "items": ["CP-BRD-001", "CP-SVC-018"]
+    },
+    {
+      "text": "The big competitor keywords are a trap. Colon-Hydro-Therapie (6,600 searches), HPU and Blutegel (5,400) belong to services the client does not offer. The fit test cuts them.",
+      "items": ["CP-SVC-020"]
+    },
+    {
+      "text": "Proof is the weak point. Google shows 5.0 with 9 reviews. Competitors in the Local Pack have 13 to 51 reviews. All visible reviews are about courses, not about patient visits. Patient quotes with consent do not exist yet.",
+      "items": ["CP-AUT-003", "CP-AUT-004", "CP-AUT-005"]
+    },
+    {
+      "text": "Visitors expect prices, a first-visit block and an FAQ. {CP-SVC-003.cov} local sites show prices or costs. The client has verified prices (220 EUR, 150 EUR per hour). Use them.",
+      "items": ["CP-SVC-002", "CP-SVC-003", "CP-SVC-004"]
+    }
+  ],
+  "pillars": {
+    "location": "Hero with city and district, a full location block, places named in text only. Place pages for Wilmersdorf and Westend fail the proof rule and are cut. Open: catchment, parking, one brand name across website and Google profile.",
+    "service": "Eight real services, each with a card and later its own page. Questions and costs sit around real services only. Condition-based Hildegard searches wait for the client and the HWG check. Seasonal note: fasting interest peaks in February.",
+    "brand": "Hildegard-Heilkunde as the clear difference. Method in three sentences, story of the practitioner. Two audiences are split: patients on the homepage, trainees in the Viriditas area.",
+    "authority": "Qualifications and the vice-president role are verified and unique. Reviews, patient quotes and the garden need client input. Directory listings go to the backlink workflow."
+  },
+  "decisions": [
+    "Confirm the split: homepage for patients, Viriditas as its own area (CP-BRD-004, CP-BRD-005).",
+    "Adjacent topic CP-SVC-019 (Hildegard by complaint): keep out of the homepage until the client and the HWG check say yes.",
+    "Check naturheilpraxis-berlin-westend.de by hand (blocked for all readers).",
+    "Send the client form (13 open facts) before copy starts. Items with status needs_client stay drafts until then.",
+    "Massage (CP-SVC-016) and Pflanzenheilkunde (CP-SVC-017) are minor. Decide if they stay on the homepage."
+  ]
+}
