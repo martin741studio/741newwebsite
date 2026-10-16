@@ -362,6 +362,20 @@ For legal clients under the Federal Lawyers' Act (*Bundesrechtsanwaltsordnung*):
 - **Hard Rule:** CRO prototypes and test sites stay strictly on local machines.
 - **Enforcement Hook:** `scripts/guard_upload.py` intercepts any shell command attempting to run `rsync`, `scp`, `curl -T`, or `sftp` to remote servers without explicit written confirmation from Martin.
 
+### Visual Confirmation Gate (Novamira & CMS Updates)
+- **Hard Rule:** Every live website modification—whether performed via Novamira, WordPress REST API, Elementor, or direct code—**MUST** capture visual confirmation screenshots (both desktop and mobile viewports).
+- **Corporate Identity Check:** Visuals must be strictly inspected against the client's approved Corporate Identity (typography hierarchy, colors, button styles, padding, whitespace, no broken wrapping).
+- **Evidence Storage:** Screenshots are saved in `00_project/assets/<client>/visual-verification/` and linked to `public.work_evidence` (`relation: 'proves'`).
+- **Human Sign-off:** Martin or the designated delivery lead must visually verify the screenshots before a task is closed.
+
+### End-of-Day Client Summary & Daily Update Email
+- **Daily Work Accumulation:** As tasks and modifications progress over the course of the day, all live changes are tracked in the client's daily ledger.
+- **Portal Synchronization:** At the close of each workday, the portal dashboard feed and `client_reports` are refreshed so clients see live progress in their portal overview.
+- **Client Daily Digest Email:** An end-of-day summary email is dispatched to the client (always with Martin in CC: `martin@741.studio`) summarizing:
+  1. What was completed and deployed live today (with direct page links and visual highlights).
+  2. The current status of ongoing initiatives.
+  3. Action items or decisions needed from the client for tomorrow (if any).
+
 ---
 
 ## 8. Developer Cheat-Sheet & Daily Routines
