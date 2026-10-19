@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Element-Pool 741.studio Portfolio</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Newsreader:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#17160f;--cream:#faf6ea;--lemon:#fac118;--lemon-d:#e0ac0a;--mut:#6c6a5c;--line:#e7e1cd;--dark:#1c2622;--green:#16a34a;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:150px}
+body{margin:0;background:#fff;color:var(--ink);font:400 16px/1.6 'Plus Jakarta Sans',system-ui,sans-serif}
+h1,h2,h3,h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:800;margin:0;color:var(--ink);letter-spacing:-.01em}
+img{max-width:100%;display:block}
+.bar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 28px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.bar h1{font-size:21px;margin-right:auto}.bar small{display:block;font:400 13px/1.3 'Plus Jakarta Sans';color:var(--mut)}
+.bar .cnt{font:700 14px 'Plus Jakarta Sans';color:var(--ink)}
+.btn{font:700 14px 'Plus Jakarta Sans';border-radius:999px;padding:9px 16px;border:1.5px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;transition:.18s var(--ease)}
+.btn:hover{background:var(--ink);color:#fff}.btn.solid{background:var(--lemon);border-color:var(--lemon);color:var(--ink)}.btn.solid:hover{filter:brightness(.95);background:var(--lemon);color:var(--ink)}
+.rm-t{font:600 13px 'Plus Jakarta Sans';display:flex;gap:6px;align-items:center;color:var(--mut)}
+.filters{position:sticky;top:61px;z-index:40;background:#fff;border-bottom:1px solid var(--line);padding:8px 28px;display:flex;gap:8px;flex-wrap:wrap}
+.chip{font:600 13px 'Plus Jakarta Sans';border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:#fff;color:var(--mut);cursor:pointer}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+main{max-width:1380px;margin:0 auto;padding:30px 28px 120px}
+.intro{max-width:880px;margin:0 0 30px;color:var(--mut)}
+.group{margin:44px 0 18px;padding-top:10px;border-top:2px solid var(--ink)}
+.group h2{font-size:28px}.group p{margin:4px 0 0;color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.card.v-ja{box-shadow:0 0 0 2px var(--green)}.card.v-nein{opacity:.55}.card.v-vielleicht{box-shadow:0 0 0 2px var(--lemon-d)}
+.card header{padding:14px 18px 8px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.card h3{font-size:19px}.id{font:700 12px 'Plus Jakarta Sans';color:var(--ink);background:var(--lemon);border-radius:6px;padding:2px 7px}
+.tag{font:600 12px 'Plus Jakarta Sans';color:var(--mut);margin-left:auto}
+.stage{position:relative;background:var(--cream);height:340px;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stage.tall{height:440px}.stage.darkbg{background:var(--dark)}.stage .sc{position:absolute;inset:0;overflow-y:auto;scrollbar-width:thin}
+.meta{padding:12px 18px 4px;font-size:14px}.meta small{display:block;color:var(--mut);font-size:12.5px;margin-top:5px;line-height:1.45}
+.vote{margin-top:auto;padding:10px 18px 16px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.vote button.v{font:700 13px 'Plus Jakarta Sans';border-radius:999px;padding:7px 14px;border:1.5px solid var(--line);background:#fff;cursor:pointer;color:var(--ink)}
+.vote button.v[data-v=ja].on{background:var(--green);border-color:var(--green);color:#fff}.vote button.v[data-v=vielleicht].on{background:var(--lemon);border-color:var(--lemon-d)}.vote button.v[data-v=nein].on{background:#9a1c1c;border-color:#9a1c1c;color:#fff}
+.vote input{flex:1;min-width:120px;border:1px solid var(--line);border-radius:999px;padding:7px 12px;font:400 13px 'Plus Jakarta Sans'}
+.replay{font:700 13px 'Plus Jakarta Sans';background:none;border:none;color:var(--ink);cursor:pointer;padding:4px 8px}
+.foot{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);color:#fff;padding:10px 28px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.foot span{margin-right:auto;font-size:14px}.foot .btn{border-color:#fff;color:#fff;background:transparent}.foot .btn:hover{background:#fff;color:var(--ink)}
+.rm *{animation:none!important;transition:none!important}
+.pad{padding:26px 28px}.big{font:800 32px/1.12 'Plus Jakarta Sans';color:var(--ink);letter-spacing:-.015em}
+.accent{font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:400;color:var(--ink)}
+.fehlt{font:700 11px 'Plus Jakarta Sans';color:#946a00;border:1px dashed #946a00;border-radius:5px;padding:2px 6px}
+.pill{display:inline-flex;align-items:center;gap:6px;background:var(--lemon);color:var(--ink);font:700 13px 'Plus Jakarta Sans';border-radius:999px;padding:7px 14px}
+.stars{display:inline-flex;gap:2px}.stars svg{width:15px;height:15px}
+.breathe{animation:br 4.5s ease-in-out infinite}@keyframes br{50%{transform:scale(1.035)}}
+.fi{opacity:0;transform:translateY(20px);transition:opacity .6s var(--ease),transform .6s var(--ease)}.fi.on{opacity:1;transform:none}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style></head><body>
+<div class="bar"><div><h1>Element-Pool: 741.studio Portfolio-Seite, Track B</h1><small>Jedes Element läuft live, mit echten Zahlen und echten Bildern. Klicke <b>Ja</b>, <b>Vielleicht</b> oder <b>Nein</b>. "↻ Nochmal" zeigt die Bewegung erneut.</small></div>
+<span class="cnt" id="cnt"></span><label class="rm-t"><input type="checkbox" id="rm"> Bewegung reduzieren (Test)</label>
+<button class="btn" id="copy">Ergebnis kopieren</button><button class="btn solid" id="save">Als Datei speichern</button></div>
+<div class="filters" id="filters"></div>
+<main><p class="intro">Alle Elemente sind in den Farben und Schriften von 741.studio gebaut (Creme, Anthrazit, Zitronengelb als einziger Akzent, Plus Jakarta Sans). Zahlen, Fotos und Logos sind echt: die SEO-Zahlen stammen aus den vier freigegebenen Case Studies, die Website-Bilder sind echte Kundenprojekte.</p><div id="root"></div></main>
+<div class="foot"><span id="foot">0 von 0 bewertet</span><button class="btn" id="reset">Alles zurücksetzen</button></div>
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const RM=()=>document.body.classList.contains('rm');
+const NS='http://www.w3.org/2000/svg';
+function autoScroll(sc,ms=7500){sc.scrollTop=0;const max=sc.scrollHeight-sc.clientHeight,t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/ms);sc.scrollTop=max*(p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2);if(p<1)requestAnimationFrame(f)})(t0)}
+const mk=(tag,attrs={},parent)=>{const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);parent&&parent.appendChild(e);return e};
+const draw=(path,ms=1100)=>{path.style.transition='none';path.style.strokeDasharray=1;path.style.strokeDashoffset=RM()?0:1;path.getBoundingClientRect();if(!RM()){path.style.transition=`stroke-dashoffset ${ms}ms cubic-bezier(.22,1,.36,1)`;path.style.strokeDashoffset=0}};
+const fade=(els,gap=120)=>{els.forEach(e=>{e.classList.remove('on')});void document.body.offsetWidth;els.forEach((e,i)=>setTimeout(()=>e.classList.add('on'),RM()?0:80+i*gap))};
+const STAR='<svg viewBox="0 0 24 24"><path fill="#fac118" d="M12 2.5l3 6.4 7 .9-5.1 4.8 1.4 7-6.3-3.5-6.3 3.5 1.4-7-5.1-4.8 7-.9z"/></svg>';
+const countTo=(el,to,ms=1200,prefix='',suffix='')=>{if(RM()){el.textContent=prefix+to+suffix;return}const t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/ms);el.textContent=prefix+Math.round(to*(1-Math.pow(1-p,3)))+suffix;if(p<1)requestAnimationFrame(f)})(t0)};
+
+// ---- real data (from 02-data/dataset.md, do not change numbers here without checking the source) ----
+const SEO=[
+ {name:'Astrid Lengauer',branch:'Interior Design · Wien',from:'#18',to:'#1',label:'Google-Maps-Position',sub:'~100 lokale Backlinks aufgebaut',img:null},
+ {name:'Bernd Laserstein',branch:'Heilpraktiker · Freiburg',from:'Pos. 6',to:'91 %',label:'Business Visibility',sub:'Platz 1 für „Körperpsychotherapie"',img:'assets/seo-bernd-after.jpg'},
+ {name:'Maria Abel',branch:'Familienberatung · Raum Stuttgart',from:'0 %',to:'100 %',label:'Top-3-Abdeckung',sub:'in 8 Wochen, Ø Rang 1,8',img:'assets/seo-maria-after.jpg'},
+ {name:'Veronika Schlirf',branch:'Naturheilpraxis · Regensburg',from:'#85',to:'#1',label:'Maps-Position „Heilpraktikerin"',sub:'0 → 5,0 ★ Bewertungen',img:'assets/seo-veronika-after.jpg'},
+];
+const WEB=[
+ {t:'Single Fin',tag:'Beachclub · Uluwatu',img:'assets/web-singlefin.webp'},
+ {t:'Avli Uluwatu',tag:'Restaurant · Uluwatu',img:'assets/web-avli.webp'},
+ {t:'Tacheles',tag:'Lifestyle-Marke',img:'assets/web-tacheles.webp'},
+ {t:'Marugame Udon',tag:'Gastronomie · Japan',img:'assets/web-marugame.webp'},
+ {t:'Villa Ventures',tag:'Immobilien',img:'assets/web-villaventures.webp'},
+ {t:'Talkinfive',tag:'Technischer Partner',img:'assets/web-talkinfive.webp'},
+];
+
+const G=[
+ ['Signature Idea: Wie treffen die zwei Bänder aufeinander?','Martins Entscheidung aus dem Chat: zwei Bänder, SEO-Erfolge und Website-Projekte, klar getrennt, nicht nur ein Badge. Hier geht es um die Ausführung.'],
+ ['SEO-Band: eine Erfolgs-Karte','Vorbild aus dem Referenz-Board: Ramotion (Zahl im Fließtext) und Intellibright (Diagramm + große Prozentzahl). Alle Zahlen stammen aus den 4 freigegebenen Case Studies.'],
+ ['Website-Band: eine Projekt-Karte','Vorbild: Clay und basement.studio — Bild trägt, Text minimal.'],
+ ['Übergang zwischen den Bändern','Wo ein Band endet und das andere beginnt.'],
+ ['Kopf- und Statusleiste','Die ersten Sekunden: Überschrift, Gesamtzahlen, Filter.'],
+ ['Abschluss / Übergang zur Analyse','Der bestehende Quiz-CTA (Sichtbarkeits-Analyse), kein neues Pop-up.'],
+];
+
+const E=[
+ // G0 — signature idea
+ {g:0,id:'E01',t:'Umschalter-Pille gleitet zwischen den Bändern',w:'Ein Schalter oben ("SEO-Erfolge" / "Website-Projekte") gleitet seitlich, der Hintergrund blendet weich zwischen den beiden Inhalten um.',s:'eigene Idee, Ausführung A',e:'M',h:'keins',d:'switchPill',tall:1},
+ {g:0,id:'E02',t:'Beide Bänder immer sichtbar, zwei Spalten',w:'Kein Umschalten: links SEO-Erfolge, rechts Website-Projekte, durchgehend nebeneinander. Besucher scrollen beide gleichzeitig.',s:'eigene Idee, Ausführung B',e:'M',h:'keins',d:'splitCols',tall:1},
+ {g:0,id:'E03',t:'Ein Band nach dem anderen, Trennlinie zählt mit',w:'Erst alle SEO-Erfolge, dann eine Trennsektion, dann alle Website-Projekte. Eine dünne Linie oben zeigt den Fortschritt durch die Seite.',s:'eigene Idee, Ausführung C',e:'S',h:'keins',d:'oneAfterOther'},
+ // G1 — SEO card
+ {g:1,id:'E04',t:'Zahl zählt von Start- zu Zielwert hoch',w:'Die große Zahl zählt sichtbar vom Ausgangswert zum Ergebnis hoch (z. B. 0 % → 100 % bei Maria Abel).',s:'Intellibright (große Prozentzahl)',e:'S',h:'nur die 4 echten, belegten Werte',d:'seoCount',tall:1},
+ {g:1,id:'E05',t:'Balken wächst von Start- zu Zielwert',w:'Ein grauer Balken (Ausgangslage) wird zu einem gelben Balken (Ergebnis), mit Beschriftung an beiden Enden.',s:'eigene Idee, Diagramm-Variante',e:'S',h:'nur echte Werte',d:'seoBar',tall:1},
+ {g:1,id:'E06',t:'Echtes Beweis-Bild mit Lichtstreifen',w:'Der echte Local-Falcon-Screenshot der Case Study wird unverzerrt gezeigt, ein sanfter Lichtstreifen läuft einmal darüber.',s:'eigene Idee, Vorbild Startseiten-Pool',e:'S',h:'echtes Bild, unverändert',d:'seoWipe',tall:1},
+ {g:1,id:'E07',t:'Kleine Kurve zeichnet sich, wie ein Mini-Diagramm',w:'Eine aufsteigende Linie zeichnet sich neben der Zahl, als Mini-Diagramm des Fortschritts.',s:'Intellibright (Liniendiagramm)',e:'S',h:'keins, reine Illustration ohne Zwischenwerte',d:'seoSpark'},
+ {g:1,id:'E08',t:'Branchen- und Orts-Pille unter dem Titel',w:'Eine kleine Pille zeigt Branche und Ort ("Heilpraktiker · Freiburg"), ohne Bewegung.',s:'14islands (Tag im Bildtitel)',e:'S',h:'keins',d:'seoTag'},
+ // G2 — website card
+ {g:2,id:'E09',t:'Bild kippt leicht mit dem Mauszeiger',w:'Das echte Projekt-Mockup neigt sich minimal in Richtung Mauszeiger.',s:'Branchenüblich (Tilt-Karten)',e:'M',h:'echtes Bild',d:'webTilt'},
+ {g:2,id:'E10',t:'Ruhiges Bild, Titel blendet erst beim Hover ein',w:'Nur das Bild ist sichtbar. Titel und Branche erscheinen erst, wenn die Maus darüber ist.',s:'Clay, basement.studio',e:'S',h:'echtes Bild',d:'webHoverReveal',tall:1},
+ {g:2,id:'E11',t:'Titel und Branche immer sichtbar, unter dem Bild',w:'Bild oben, Titel und Branche direkt darunter, ohne Hover-Pflicht.',s:'14islands',e:'S',h:'echtes Bild',d:'webAlwaysOn',tall:1},
+ {g:2,id:'E12',t:'Bild füllt die ganze Karte, Rand abgeschnitten',w:'Das Mockup füllt die Karte randlos, wirkt großformatiger und ruhiger.',s:'basement.studio',e:'S',h:'echtes Bild',d:'webFullBleed'},
+ // G3 — transition
+ {g:3,id:'E13',t:'Große Zwischenüberschrift zählt die Projekte',w:'"18 Website-Projekte" — die Zahl zählt beim Erscheinen hoch, als ruhiger Übergang zwischen den Bändern.',s:'eigene Idee',e:'S',h:'echte Zahl (18 Projekte im Datensatz)',d:'transCount'},
+ {g:3,id:'E14',t:'Dünne Linie verbindet SEO-Zahlen und Website-Bilder',w:'Eine Linie zeichnet sich von den vier SEO-Karten zu den ersten Website-Bildern, als visuelle Klammer der zwei Bänder.',s:'eigene Idee',e:'M',h:'keins',d:'transLine',tall:1},
+ // G4 — header / status
+ {g:4,id:'E15',t:'Riesige, ruhige Headline',w:'Sehr große, fette Headline auf Creme-Grund, nur sanftes Einblenden, keine weitere Bewegung.',s:'Clay, 741-Live-Seite',e:'S',h:'keins',d:'heroType'},
+ {g:4,id:'E16',t:'Gesamtzahlen-Streifen zählt hoch',w:'Ein schmaler Streifen oben zeigt "4 Case Studies · 18 Website-Projekte", beide Zahlen zählen beim Laden hoch.',s:'eigene Idee',e:'S',h:'echte Zahlen',d:'statStrip'},
+ {g:4,id:'E17',t:'Filter-Chips mit wachsender Linie',w:'Drei Chips ("Alle", "SEO-Erfolge", "Website-Projekte"), eine gelbe Linie wächst unter dem aktiven Chip.',s:'Branchenüblich',e:'S',h:'keins',d:'filterChips'},
+ {g:4,id:'E18',t:'Kopf schrumpft beim Scrollen',w:'Der Kopf wird beim Scrollen flacher und bekommt einen Schlagschatten.',s:'Branchenüblich',e:'S',h:'keins',d:'stickyshrink',tall:1},
+ // G5 — closing CTA
+ {g:5,id:'E19',t:'Quiz-CTA-Pille atmet',w:'Die bestehende Sichtbarkeits-Analyse als atmende Pille, wie der heutige Haupt-Button.',s:'eigene Live-Seite (Quiz, data-qz)',e:'S',h:'keins, kein neues Pop-up',d:'pillBreathe'},
+ {g:5,id:'E20',t:'Laufband mit Projekt-Namen',w:'Ein schmales Band mit den Namen aller Website-Projekte läuft langsam durch, pausiert beim Darüberfahren.',s:'eigene Partner-Leiste, Vorbild Startseiten-Pool',e:'S',h:'echte Projektnamen',d:'marquee'},
+ {g:5,id:'E21',t:'Direktlink mit wachsendem Pfeil',w:'"Zur kostenlosen Sichtbarkeits-Analyse" mit einem Pfeil, der beim Hover nach rechts wandert.',s:'Branchenüblich',e:'S',h:'keins',d:'arrowLink'},
+];
+
+const D={};
+// ---- G0 signature idea ----
+D.switchPill=st=>{st.innerHTML=`<div class="pad" style="height:100%;display:grid;align-content:center;gap:14px"><div style="display:inline-flex;border:1.5px solid var(--ink);border-radius:999px;padding:4px;position:relative;width:300px"><div class="thumb" style="position:absolute;top:4px;bottom:4px;left:4px;width:146px;background:var(--ink);border-radius:999px;transition:transform .5s var(--ease)"></div><span class="sp1" style="flex:1;text-align:center;padding:8px 0;font:700 13px 'Plus Jakarta Sans';position:relative;color:#fff;z-index:1">SEO-Erfolge</span><span class="sp2" style="flex:1;text-align:center;padding:8px 0;font:700 13px 'Plus Jakarta Sans';position:relative;z-index:1">Website-Projekte</span></div><div class="cont" style="font-size:14px;color:var(--mut)">zeigt die 4 SEO-Erfolge …</div></div>`;const th=$('.thumb',st),c=$('.cont',st);let on=0;return{play(){th.style.transform='translateX(0)';c.textContent='zeigt die 4 SEO-Erfolge …';on=0;setTimeout(()=>{if(RM())return;th.style.transform='translateX(146px)';c.textContent='zeigt die 18 Website-Projekte …'},1200)}}};
+D.splitCols=st=>{st.innerHTML=`<div class="pad" style="height:100%;display:grid;grid-template-columns:1fr 1fr;gap:16px"><div><div style="font:700 13px 'Plus Jakarta Sans';color:var(--mut);margin-bottom:8px">SEO-ERFOLGE</div>${SEO.slice(0,2).map(s=>`<div class="fi" style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px"><b style="font-size:13px">${s.name}</b><div style="font:800 20px 'Plus Jakarta Sans';color:var(--green)">${s.from} → ${s.to}</div></div>`).join('')}</div><div><div style="font:700 13px 'Plus Jakarta Sans';color:var(--mut);margin-bottom:8px">WEBSITE-PROJEKTE</div>${WEB.slice(0,2).map(w=>`<div class="fi" style="background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:8px"><img src="${w.img}" style="width:100%;height:70px;object-fit:cover"><div style="padding:6px 10px;font:700 13px 'Plus Jakarta Sans'">${w.t}</div></div>`).join('')}</div></div>`;const e=$$('.fi',st);return{play(){fade(e,150)}}};
+D.oneAfterOther=st=>{st.innerHTML=`<div class="sc"><div style="padding:22px 24px"><div style="font:700 12px 'Plus Jakarta Sans';color:var(--mut)">1 · SEO-ERFOLGE</div><div class="big" style="font-size:22px;margin:4px 0 14px">4 Case Studies</div>${SEO.map(s=>`<div style="padding:8px 0;border-top:1px solid var(--line);font-size:14px">${s.name} — ${s.from} → <b>${s.to}</b></div>`).join('')}<div style="height:1px;background:var(--line);margin:22px 0;position:relative"><div class="tl" style="position:absolute;left:0;top:0;bottom:0;width:0;background:var(--lemon-d)"></div></div><div style="font:700 12px 'Plus Jakarta Sans';color:var(--mut)">2 · WEBSITE-PROJEKTE</div><div class="big" style="font-size:22px;margin:4px 0 14px">18 Projekte</div><div style="height:260px"></div></div></div>`;const sc=$('.sc',st),tl=$('.tl',st);const upd=()=>{const max=sc.scrollHeight-sc.clientHeight,p=max?sc.scrollTop/max:0;tl.style.width=(p*100)+'%'};sc.addEventListener('scroll',upd);return{play(){if(RM()){sc.scrollTop=200;upd();return}autoScroll(sc,3200)}}};
+// ---- G1 SEO card ----
+D.seoCount=st=>{const s=SEO[2];st.innerHTML=`<div class="pad" style="height:100%;display:grid;align-content:center;gap:6px"><div style="font:700 13px 'Plus Jakarta Sans';color:var(--mut)">${s.branch}</div><div class="big" style="font-size:42px"><span class="fv">${s.from}</span> → <span class="tv" style="color:var(--green)">${s.from}</span></div><div style="font-size:13.5px;color:var(--mut)">${s.label} · ${s.sub}</div></div>`;const tv=$('.tv',st);return{play(){tv.textContent=s.from;if(RM()){tv.textContent=s.to;return}setTimeout(()=>{let n=0;const t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/1100);tv.textContent=Math.round(p*100)+' %';if(p<1)requestAnimationFrame(f);else tv.textContent=s.to})(t0)},300)}}};
+D.seoBar=st=>{const s=SEO[1];st.innerHTML=`<div class="pad" style="height:100%;display:grid;align-content:center;gap:10px"><div style="font:700 13px 'Plus Jakarta Sans';color:var(--mut)">${s.branch} · ${s.label}</div><div style="display:flex;align-items:flex-end;gap:16px;height:120px"><div style="text-align:center"><div class="b1" style="width:46px;background:#cfc9b4;border-radius:8px 8px 0 0;height:30%;transition:height 1s var(--ease)"></div><small>${s.from}</small></div><div style="text-align:center"><div class="b2" style="width:46px;background:var(--lemon);border-radius:8px 8px 0 0;height:0%;transition:height 1s var(--ease) .2s"></div><small>${s.to}</small></div></div></div>`;const b2=$('.b2',st);return{play(){b2.style.transition='none';b2.style.height='0%';b2.getBoundingClientRect();if(RM()){b2.style.height='95%';return}b2.style.transition='height 1s var(--ease)';b2.style.height='95%'}}};
+D.seoWipe=st=>{const s=SEO[3];st.innerHTML=`<div class="wp" style="position:relative;height:100%;overflow:hidden;background:#f1ede0;display:grid;place-items:center"><img src="${s.img}" style="max-width:88%;max-height:88%;width:auto;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 14px 30px -18px rgba(0,0,0,.35)"><div class="sweep" style="position:absolute;top:0;bottom:0;width:36%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:translateX(-160%);pointer-events:none"></div></div>`;const sw=$('.sweep',st);return{play(){sw.style.transition='none';sw.style.transform='translateX(-160%)';sw.getBoundingClientRect();if(RM()){sw.style.opacity=0;return}sw.style.opacity=1;sw.style.transition='transform 1.3s var(--ease)';sw.style.transform='translateX(260%)'}}};
+D.seoSpark=st=>{const s=SEO[0];st.innerHTML=`<div class="pad" style="height:100%;display:grid;align-content:center;gap:8px"><div style="font:700 13px 'Plus Jakarta Sans';color:var(--mut)">${s.branch}</div><svg viewBox="0 0 200 60" style="width:100%;max-width:220px;height:60px"><path class="sp" d="M4 52 C40 50 70 20 120 16 S180 8 196 6" fill="none" stroke="var(--lemon-d)" stroke-width="2.4" pathLength="1" stroke-linecap="round"/></svg><div class="big" style="font-size:28px">${s.from} → ${s.to}</div><div style="font-size:12.5px;color:var(--mut)">${s.label}</div></div>`;const p=$('.sp',st);return{play(){draw(p,1300)}}};
+D.seoTag=st=>{const s=SEO[1];st.innerHTML=`<div class="pad" style="height:100%;display:grid;align-content:center;gap:10px"><div class="big" style="font-size:26px">${s.name}</div><span class="pill" style="background:var(--cream);border:1px solid var(--line);color:var(--ink)">${s.branch}</span><div style="font:800 30px 'Plus Jakarta Sans';color:var(--green)">${s.from} → ${s.to}</div></div>`;return{play(){}}};
+// ---- G2 website card ----
+D.webTilt=st=>{const w=WEB[0];st.innerHTML=`<div style="height:100%;display:grid;place-items:center;perspective:700px"><div class="tc" style="width:220px;border-radius:14px;overflow:hidden;box-shadow:0 20px 40px -22px rgba(0,0,0,.3);transition:transform .15s var(--ease)"><img src="${w.img}" style="width:100%;display:block"></div></div>`;const c=$('.tc',st),s=st;s.addEventListener('mousemove',e=>{const b=s.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;c.style.transform=`rotateY(${x*14}deg) rotateX(${-y*14}deg)`});s.addEventListener('mouseleave',()=>c.style.transform='none');return{play(){}}};
+D.webHoverReveal=st=>{const w=WEB[1];st.innerHTML=`<div class="hv" style="position:relative;height:100%;cursor:default"><img src="${w.img}" style="width:100%;height:100%;object-fit:cover"><div class="ov" style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(23,22,15,.72),transparent 55%);display:flex;align-items:flex-end;padding:16px;opacity:0;transition:opacity .3s"><div style="color:#fff"><b style="font-size:17px">${w.t}</b><div style="font-size:13px;opacity:.85">${w.tag}</div></div></div></div>`;const h=$('.hv',st),ov=$('.ov',st);h.addEventListener('mouseenter',()=>ov.style.opacity=1);h.addEventListener('mouseleave',()=>ov.style.opacity=0);return{play(){if(RM())ov.style.opacity=1}}};
+D.webAlwaysOn=st=>{const w=WEB[2];st.innerHTML=`<div style="height:100%;display:flex;flex-direction:column"><img src="${w.img}" style="width:100%;flex:1;object-fit:cover"><div style="padding:12px 16px;background:#fff"><b style="font-size:16px">${w.t}</b><div style="font-size:13px;color:var(--mut)">${w.tag}</div></div></div>`;return{play(){}}};
+D.webFullBleed=st=>{const w=WEB[3];st.innerHTML=`<img src="${w.img}" style="width:100%;height:100%;object-fit:cover">`;return{play(){}}};
+// ---- G3 transition ----
+D.transCount=st=>{st.innerHTML=`<div class="pad" style="height:100%;display:grid;place-items:center"><div class="big" style="font-size:40px"><span class="n">0</span> Website-Projekte</div></div>`;const n=$('.n',st);return{play(){countTo(n,18,1100)}}};
+D.transLine=st=>{st.innerHTML=`<div class="pad" style="height:100%;display:grid;align-content:center;gap:10px"><div style="display:flex;justify-content:space-between;font:700 13px 'Plus Jakarta Sans'"><span>4 SEO-Erfolge</span><span>18 Website-Projekte</span></div><svg viewBox="0 0 560 50" style="width:100%;height:50px"><path class="fl" d="M20 25 C180 25 200 25 280 25 S400 25 540 25" fill="none" stroke="var(--lemon-d)" stroke-width="2.4" pathLength="1" stroke-linecap="round"/></svg></div>`;const p=$('.fl',st);return{play(){draw(p,1300)}}};
+// ---- G4 header/status ----
+D.heroType=st=>{st.innerHTML=`<div class="pad" style="height:100%;display:grid;align-content:center"><div class="fi big" style="font-size:42px">Was wir für<br>Kunden <span class="accent">erreicht</span> haben.</div></div>`;const e=$$('.fi',st);return{play(){fade(e)}}};
+D.statStrip=st=>{st.innerHTML=`<div class="pad" style="height:100%;display:flex;align-items:center;gap:28px;justify-content:center"><div style="text-align:center"><div class="big n1" style="font-size:34px;color:var(--green)">0</div><div style="font-size:12.5px;color:var(--mut)">Case Studies</div></div><div style="width:1px;height:40px;background:var(--line)"></div><div style="text-align:center"><div class="big n2" style="font-size:34px;color:var(--green)">0</div><div style="font-size:12.5px;color:var(--mut)">Website-Projekte</div></div></div>`;const n1=$('.n1',st),n2=$('.n2',st);return{play(){countTo(n1,4,900);countTo(n2,18,1100)}}};
+D.filterChips=st=>{st.innerHTML=`<div style="height:100%;display:grid;place-items:center"><div style="display:flex;gap:10px">${['Alle','SEO-Erfolge','Website-Projekte'].map((t,i)=>`<span class="fc${i===1?' on':''}" style="font:700 13px 'Plus Jakarta Sans';padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);position:relative;cursor:default">${t}<i style="position:absolute;left:14px;right:14px;bottom:3px;height:2px;background:var(--lemon-d);transform-origin:left;transform:scaleX(${i===1?1:0});transition:transform .4s var(--ease)"></i></span>`).join('')}</div></div>`;return{play(){}}};
+D.stickyshrink=st=>{st.innerHTML=`<div class="sc"><div class="hd" style="position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);padding:22px 24px;display:flex;align-items:center;justify-content:space-between;transition:padding .35s var(--ease),box-shadow .35s"><img src="assets/logo_black.png" style="height:28px;transition:height .35s"><span class="pill">Alle Projekte</span></div><div style="padding:24px;height:900px;color:var(--mut)">Scrolle, um den Kopf schrumpfen zu sehen.<div style="height:800px"></div></div></div>`;const sc=$('.sc',st),hd=$('.hd',st),lg=$('img',hd);const upd=()=>{const s=sc.scrollTop>40;hd.style.padding=s?'10px 24px':'22px 24px';hd.style.boxShadow=s?'0 8px 20px -16px rgba(0,0,0,.3)':'none';lg.style.height=s?'20px':'28px'};sc.addEventListener('scroll',upd);return{play(){if(RM()){sc.scrollTop=200;upd();return}autoScroll(sc,2600)}}};
+// ---- G5 closing ----
+D.pillBreathe=st=>{st.innerHTML=`<div style="height:100%;display:grid;place-items:center"><span class="pill breathe">KOSTENLOSE SICHTBARKEITS-ANALYSE</span></div>`;return{play(){}}};
+D.marquee=st=>{const names=[...SEO.map(s=>s.name),...WEB.map(w=>w.t)];const row=names.map(n=>`<span style="font:700 15px 'Plus Jakarta Sans';margin:0 22px;color:var(--mut);white-space:nowrap">${n}</span>`).join('');st.innerHTML=`<div style="height:100%;display:grid;align-content:center"><div style="overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0"><div class="mq" style="display:inline-flex;align-items:center;animation:mq741 36s linear infinite">${row}${row}</div></div></div><style>@keyframes mq741{to{transform:translateX(-50%)}}.mq:hover{animation-play-state:paused}</style>`;return{play(){}}};
+D.arrowLink=st=>{st.innerHTML=`<div style="height:100%;display:grid;place-items:center"><a class="al" style="display:inline-flex;gap:10px;align-items:center;font:700 17px 'Plus Jakarta Sans';color:var(--ink);text-decoration:none;cursor:default">Zur kostenlosen Sichtbarkeits-Analyse<span class="ar" style="transition:transform .25s var(--ease)">→</span></a></div>`;const a=$('.al',st),ar=$('.ar',st);a.addEventListener('mouseenter',()=>ar.style.transform='translateX(6px)');a.addEventListener('mouseleave',()=>ar.style.transform='none');return{play(){}}};
+
+const KEY='741studio-portfolio-pool-votes-v1';let V={};try{V=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+const root=$('#root');const players={};
+const label={ja:'Ja',vielleicht:'Vielleicht',nein:'Nein'};
+G.forEach((g,gi)=>{const sec=document.createElement('section');sec.id='g'+gi;sec.innerHTML=`<div class="group"><h2>${g[0]}</h2><p>${g[1]}</p></div><div class="grid"></div>`;root.appendChild(sec);const grid=$('.grid',sec);
+ E.filter(e=>e.g===gi).forEach(e=>{const c=document.createElement('article');c.className='card';c.dataset.id=e.id;
+  c.innerHTML=`<header><span class="id">${e.id}</span><h3>${e.t}</h3><span class="tag">${g[0].split(':')[0].split('(')[0].trim()}</span></header><div class="stage${e.tall?' tall':''}"></div><div class="meta">${e.w}<small>Quelle: ${e.s} · Aufwand ${e.e} · Risiko: ${e.h}</small></div><div class="vote"><button class="v" data-v="ja">Ja</button><button class="v" data-v="vielleicht">Vielleicht</button><button class="v" data-v="nein">Nein</button><input placeholder="Notiz (optional)"><button class="replay">↻ Nochmal</button></div>`;
+  grid.appendChild(c);const st=$('.stage',c);const dm=D[e.d](st);players[e.id]=dm;
+  const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){dm.play();io.disconnect()}},{threshold:.6});io.observe(st);
+  $('.replay',c).onclick=()=>dm.play();
+  const inp=$('input',c);inp.value=(V[e.id]&&V[e.id].note)||'';
+  $$('.v',c).forEach(b=>b.onclick=()=>{const cur=V[e.id]||{};cur.v=cur.v===b.dataset.v?null:b.dataset.v;V[e.id]=cur;paint(c);persist()});
+  inp.oninput=()=>{const cur=V[e.id]||{};cur.note=inp.value;V[e.id]=cur;persist()};paint(c)})});
+function paint(c){const id=c.dataset.id,v=(V[id]||{}).v;c.classList.remove('v-ja','v-vielleicht','v-nein');if(v)c.classList.add('v-'+v);$$('.v',c).forEach(b=>b.classList.toggle('on',b.dataset.v===v));cnt()}
+function payload(){return{gespeichert:new Date().toISOString(),stimmen:E.map(e=>({id:e.id,titel:e.t,sektion:G[e.g][0],stimme:(V[e.id]||{}).v||null,notiz:(V[e.id]||{}).note||''}))}}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(V))}catch(e){}if(location.protocol.startsWith('http')){fetch('save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload())}).catch(()=>{})}cnt()}
+function cnt(){const n=E.filter(e=>(V[e.id]||{}).v).length;$('#cnt').textContent=n+' von '+E.length+' bewertet';$('#foot').textContent=n+' von '+E.length+' bewertet · Ja '+E.filter(e=>(V[e.id]||{}).v==='ja').length+' · Vielleicht '+E.filter(e=>(V[e.id]||{}).v==='vielleicht').length+' · Nein '+E.filter(e=>(V[e.id]||{}).v==='nein').length}
+function md(){const p=payload();let t='# Element-Abstimmung 741.studio Portfolio ('+p.gespeichert.slice(0,10)+')\n';['ja','vielleicht','nein',null].forEach(k=>{const l=p.stimmen.filter(s=>s.stimme===k);t+='\n## '+(k?label[k]:'Nicht bewertet')+' ('+l.length+')\n';l.forEach(s=>t+='- '+s.id+' '+s.titel+(s.notiz?' — '+s.notiz:'')+'\n')});return t}
+$('#copy').onclick=async()=>{try{await navigator.clipboard.writeText(md());$('#copy').textContent='Kopiert ✓'}catch(e){prompt('Kopiere den Text:',md())}setTimeout(()=>$('#copy').textContent='Ergebnis kopieren',1800)};
+$('#save').onclick=()=>{const b=new Blob([JSON.stringify(payload(),null,1)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='element-votes-'+new Date().toISOString().slice(0,10)+'.json';a.click()};
+$('#reset').onclick=()=>{const b=$('#reset');if(b.dataset.armed!=='1'){b.dataset.armed='1';b.textContent='Wirklich? Nochmal klicken';setTimeout(()=>{b.dataset.armed='0';b.textContent='Alles zurücksetzen'},3000);return}b.dataset.armed='0';b.textContent='Alles zurücksetzen';V={};$$('.card').forEach(c=>{$('input',c).value='';paint(c)});persist()};
+$('#rm').onchange=e=>{document.body.classList.toggle('rm',e.target.checked);Object.values(players).forEach(p=>p.play())};
+const F=$('#filters');[['alle','Alle'],['offen','Noch offen'],['ja','Ja'],['vielleicht','Vielleicht'],['nein','Nein']].forEach(([k,l],i)=>{const b=document.createElement('button');b.className='chip'+(i?'':' on');b.textContent=l;b.onclick=()=>{$$('#filters .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');$$('.card').forEach(c=>{const v=(V[c.dataset.id]||{}).v||'';c.style.display=(k==='alle'||(k==='offen'&&!v)||v===k)?'':'none'})};F.appendChild(b)});
+G.forEach((g,i)=>{const a=document.createElement('a');a.className='chip';a.href='#g'+i;a.style.textDecoration='none';a.textContent='G'+i+' '+g[0].split(':')[0].split('(')[0].trim().slice(0,16);F.appendChild(a)});
+cnt();
+</script>
+</body></html>

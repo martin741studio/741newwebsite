@@ -541,7 +541,7 @@
       Hallo Physiotherapie Muster,<br>wir haben eine persönliche Analyse Ihrer <span style="color:var(--brand--lemon);">Google-Präsenz</span> erstellt.
     </h1>
     <p class="audit-subheadline" id="heroSubheadline">
-      Vielen Dank, dass Sie sich die Zeit nehmen. Als kleine Aufmerksamkeit haben wir eine individuelle Analyse erstellt, in der wir zeigen, welche Chancen wir für Ihre Sichtbarkeit bei Google Maps und in der lokalen Suche sehen.
+      Vielen Dank, dass Sie sich die Zeit nehmen. Als kleine Aufmerksamkeit habe ich eine individuelle Analyse erstellt, in der ich zeige, welche Chancen ich für Ihre Sichtbarkeit bei Google Maps und in der lokalen Suche sehen.
     </p>
 
     <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
@@ -578,29 +578,6 @@
   </section>
 
   <!-- Personal Message Section -->
-  <section class="section-letter">
-    <div class="letter-card">
-      <div class="letter-author-head">
-        <div class="author-img">741</div>
-        <div>
-          <h4 style="font-weight:800; font-size:1.1rem; margin:0;" id="authorName">Martin Drendel & das 741 Studio Team</h4>
-          <p style="font-size:0.85rem; color:#777; margin:0;" id="authorRole">Senior Local SEO & Growth Consultancy</p>
-        </div>
-      </div>
-      <div class="letter-body" id="personalMessageBody">
-        <p id="personalGreeting">Hallo Herr Müller,</p>
-        <p>vielen Dank, dass Sie sich unser persönliches Video anschauen.</p>
-        <p>Wir wollten Ihnen nicht einfach irgendeine Standard-Mail schicken.</p>
-        <p>Deshalb haben wir uns Ihre Website, Ihr Google-Unternehmensprofil und Ihre lokale Sichtbarkeit angesehen und die wichtigsten Punkte in einem kurzen Video zusammengefasst.</p>
-        <p>Wir hoffen, dass Sie daraus bereits einige hilfreiche Ideen mitnehmen können.</p>
-      </div>
-      <div style="border-top:1px solid #eee; padding-top:16px; margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
-        <strong style="color:var(--brand--lemon); font-size:1.1rem;" id="authorSignName">Martin Drendel</strong>
-        <span style="font-size:0.85rem; color:#888;">741.Studio • Results Driven</span>
-      </div>
-    </div>
-  </section>
-
   <!-- Embedded Loom Video Section -->
   <section class="section-video" id="loom-video">
     <div style="max-width:760px; margin:0 auto 3rem;">
@@ -800,7 +777,7 @@
       <p style="color:#aaa; font-size:1.1rem; margin-bottom:32px;">Buchen Sie jetzt ein kurzes, kostenfreies Beratungsgespräch. Wir besprechen unverbindlich die Umsetzung der gezeigten Potenziale.</p>
       
       <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
-        <a href="https://calendly.com/martin-233/15-minute-meeting?back=1" target="_blank" class="btn-741-main">📅 Kostenloses Gespräch buchen</a>
+        <a href="https://cal.com/741-studio-simjzw/30min" target="_blank" class="btn-741-main">📅 Kostenloses Gespräch buchen</a>
         <a href="https://wa.me/491711745089?text=Hallo%20741%20Studio,%20ich%20habe%20die%20Video-Analyse%20gesehen" target="_blank" class="btn-741-dark" style="background:#25D366; color:#000;">💬 WhatsApp schreiben</a>
         <a href="mailto:martin@741.studio?subject=Anfrage%20Google%20Analyse" class="btn-741-dark">✉️ E-Mail senden</a>
       </div>
@@ -826,7 +803,7 @@
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-      const calendlyUrl = 'https://calendly.com/martin-233/15-minute-meeting?back=1';
+      const calendlyUrl = 'https://cal.com/741-studio-simjzw/30min';
       document.querySelectorAll('a').forEach(a => {
         const text = a.textContent.toLowerCase();
         const href = a.getAttribute('href') || '';
@@ -851,7 +828,7 @@
         document.getElementById('cardLoomTime').innerText = data.loomDuration.toUpperCase() + ' PLAY';
         document.getElementById('videoMetaDuration').innerText = data.loomDuration;
       }
-      if (data.loomUrl) document.getElementById('loomIframe').src = data.loomUrl;
+      var _lf = document.getElementById('loomIframe'); if (data.loomUrl && _lf) _lf.src = data.loomUrl;
 
       if (data.mapsRankDesktop) {
         document.getElementById('cardMapsRankSub').innerText = data.mapsRankDesktop + ' in der Region';

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Kleine Kollaborations-Idee | 741.Studio</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<script>
+/* DE/EN: URL ?lang=de|en > gespeicherte Wahl > erste Browsersprache Deutsch > Zeitzone DACH > sonst Englisch */
+(function () {
+  var DACH_TZ = ['Europe/Berlin', 'Europe/Vienna', 'Europe/Zurich', 'Europe/Vaduz', 'Europe/Busingen'];
+  var TITLES = {
+    de: 'Kleine Kollaborations-Idee | 741.Studio',
+    en: 'A small collaboration idea | 741.Studio'
+  };
+  function detect() {
+    var q = '';
+    try { q = new URLSearchParams(location.search).get('lang') || ''; } catch (e) {}
+    if (q === 'de' || q === 'en') return q;
+    var s = '';
+    try { s = localStorage.getItem('741lang') || ''; } catch (e) {}
+    if (s === 'de' || s === 'en') return s;
+    var langs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
+    if (/^de(-|$)/i.test(langs[0] || '')) return 'de';
+    try {
+      var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (DACH_TZ.indexOf(tz) > -1) return 'de';
+    } catch (e) {}
+    return 'en';
+  }
+  function apply(l, persist) {
+    document.documentElement.lang = l;
+    document.title = TITLES[l];
+    if (persist) { try { localStorage.setItem('741lang', l); } catch (e) {} }
+    var b = document.querySelectorAll('.langsw button');
+    for (var i = 0; i < b.length; i++) b[i].setAttribute('aria-pressed', b[i].getAttribute('data-l') === l ? 'true' : 'false');
+    var v = document.querySelector('.hero-vid');
+    if (v) {
+      var id = v.getAttribute('data-' + l) || v.getAttribute('data-de');
+      var f = v.querySelector('iframe');
+      var src = 'https://www.loom.com/embed/' + id;
+      if (f && f.getAttribute('src') !== src) f.setAttribute('src', src);
+    }
+  }
+  apply(detect(), false);
+  document.addEventListener('DOMContentLoaded', function () {
+    apply(document.documentElement.lang, false);
+    var b = document.querySelectorAll('.langsw button');
+    for (var i = 0; i < b.length; i++) b[i].addEventListener('click', function () { apply(this.getAttribute('data-l'), true); });
+  });
+})();
+</script>
+<style>
+  :root {
+    --yellow: #fac118;
+    --yellow-soft: rgba(250, 193, 24, 0.14);
+    --black: #252525;
+    --cream: #fffcf3;
+    --cream-2: #fef6dc;
+    --grey: #8c8c8c;
+    --grey-light: #f5f5f6;
+    --white: #fff;
+    --green: #2e9e5b;
+    --green-soft: #e7f6ed;
+    --amber-soft: #fdf3d7;
+    --radius: 14px;
+    --shadow: 0 2px 14px rgba(37,37,37,0.07);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--black);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  html[lang="de"] .en, html[lang="en"] .de { display:none !important; }
+
+  .topbar { background:var(--white); border-bottom:1px solid #eee9da; padding:0 22px; display:flex; align-items:center; justify-content:space-between; height:60px; position:sticky; top:0; z-index:20; }
+  .topbar .brand img { display:block; height:30px; width:auto; }
+  .langsw { display:flex; gap:4px; background:var(--grey-light); border-radius:20px; padding:3px; }
+  .langsw button { font-family:inherit; font-size:12px; font-weight:800; border:none; background:transparent; color:var(--grey); border-radius:16px; padding:5px 12px; cursor:pointer; transition:.15s; }
+  .langsw button:hover { color:var(--black); }
+  .langsw button[aria-pressed="true"] { background:var(--yellow); color:var(--black); }
+
+  .container { max-width:900px; margin:0 auto; padding:34px 20px 80px; }
+
+  .card { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:26px; }
+  .card + .card { margin-top:18px; }
+  .card h2 { font-size:16.5px; margin-bottom:6px; }
+  .card .kicker { font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.5px; color:#8a6a00; margin-bottom:4px; }
+  .card .lead { color:var(--grey); font-size:14px; margin-top:6px; }
+
+  .hero-grid { display:grid; grid-template-columns:1.15fr 1fr; gap:28px; align-items:center; padding:10px 0 8px; }
+  @media(max-width:760px){ .hero-grid { grid-template-columns:1fr; } }
+  .hero .kicker { font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#8a6a00; }
+  .hero h1 { font-size:clamp(24px,4vw,32px); font-weight:800; letter-spacing:-.4px; margin:10px 0 12px; line-height:1.25; }
+  .hero h1 span.hl { background:var(--yellow-soft); border-radius:6px; padding:0 6px; }
+  .hero p { color:var(--grey); font-size:15px; }
+  .hero-vid { aspect-ratio:16/9; border-radius:var(--radius); background:var(--white); box-shadow:var(--shadow); overflow:hidden; }
+  .hero-vid iframe { width:100%; height:100%; border:0; display:block; }
+
+  .angles { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:16px; }
+  .angle { background:var(--grey-light); border-radius:12px; padding:20px; }
+  .angle .num { display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; border-radius:50%; background:var(--yellow); color:var(--black); font-weight:800; font-size:13px; margin-bottom:10px; }
+  .angle h3 { font-size:15px; margin-bottom:8px; }
+  .angle p { font-size:13.5px; color:var(--grey); }
+  .angle .fitfor { display:block; margin-top:10px; font-size:11.5px; font-weight:700; color:#8a6a00; }
+
+  ul.plain { list-style:none; margin-top:12px; }
+  ul.plain li { padding:6px 0 6px 22px; position:relative; font-size:14.5px; }
+  ul.plain li::before { content:"✓"; position:absolute; left:0; color:var(--green); font-weight:800; }
+
+  .step { display:flex; gap:12px; padding:11px 0; border-bottom:1px solid #f4f1e6; align-items:flex-start; }
+  .step:last-child { border-bottom:none; }
+  .step .dot { width:26px; height:26px; min-width:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; background:var(--yellow); color:var(--black); margin-top:1px; }
+  .step .t { font-size:14.5px; font-weight:700; }
+  .step .d { font-size:13.5px; color:var(--grey); margin-top:2px; }
+
+  .cta { text-align:center; background:var(--black); color:var(--white); border-radius:var(--radius); padding:30px 26px; }
+  .cta h2 { color:var(--yellow); font-size:19px; margin-bottom:8px; }
+  .cta p { color:#d8d5c8; font-size:14.5px; max-width:480px; margin:0 auto; }
+
+  footer.f { text-align:center; color:var(--grey); font-size:12.5px; padding:20px 0 10px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><img src="/assets/logo_black-DWbLQD0x.png" alt="741 Studio"></div>
+  <div class="langsw" role="group" aria-label="Sprache / Language">
+    <button type="button" data-l="de" aria-pressed="true">DE</button>
+    <button type="button" data-l="en" aria-pressed="false">EN</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="hero-grid">
+    <div class="hero">
+      <div class="kicker"><span class="de">Kurze Idee für euch</span><span class="en">A quick idea for you</span></div>
+      <h1>
+        <span class="de">Wir hätten eine kleine <span class="hl">Kollaborations-Idee</span> für euch</span>
+        <span class="en">We have a small <span class="hl">collaboration idea</span> for you</span>
+      </h1>
+      <p class="de">Kein Verkaufsgespräch, keine Verpflichtung — nur ein konkreter Vorschlag, von dem beide Seiten etwas haben.</p>
+      <p class="en">No sales pitch, no obligation — just one concrete proposal that works for both sides.</p>
+    </div>
+    <!-- Loom-ID je Sprache: data-en später durch ein englisches Video ersetzen -->
+    <div class="hero-vid" data-de="c8960c37dcab4b33a5680ec7ac9c3933" data-en="c8960c37dcab4b33a5680ec7ac9c3933"><iframe src="https://www.loom.com/embed/c8960c37dcab4b33a5680ec7ac9c3933" allow="fullscreen" allowfullscreen></iframe></div>
+  </div>
+
+  <div class="card">
+    <div class="kicker"><span class="de">Der Gedanke</span><span class="en">The idea</span></div>
+    <h2><span class="de">Ihr erreicht die gleichen Menschen wie wir — nur mit einem anderen Angebot</span><span class="en">You reach the same people we do — just with a different offer</span></h2>
+    <p class="lead de">Wir arbeiten mit einem lokalen Unternehmen zusammen, das eure Kundschaft ebenfalls anspricht — aber kein Wettbewerber ist. Statt getrennt nebeneinander herzuarbeiten, schlagen wir eine kleine, unkomplizierte Kollaboration vor.</p>
+    <p class="lead en">We work with a local business that also speaks to your customers — but is not a competitor. Instead of working side by side without connecting, we suggest a small, uncomplicated collaboration.</p>
+  </div>
+
+  <div class="card">
+    <div class="kicker"><span class="de">Was wir vorschlagen</span><span class="en">What we suggest</span></div>
+    <h2><span class="de">Drei konkrete Wege — ihr sucht euch aus, was passt</span><span class="en">Three concrete options — you pick what fits</span></h2>
+    <div class="angles de">
+      <div class="angle">
+        <div class="num">1</div>
+        <h3>Experten-Artikel für euren Blog</h3>
+        <p>Wir schreiben euch — komplett kostenlos — einen praxisnahen, hilfreichen Artikel für eure Website. Recherche, Text und Grafiken übernehmen wir. Ihr müsst nichts selbst schreiben.</p>
+        <span class="fitfor">Passt gut für: Studios, Cafés, Praxen, Hotels mit eigenem Blog/Ratgeber-Bereich</span>
+      </div>
+      <div class="angle">
+        <div class="num">2</div>
+        <h3>Empfehlung &amp; Partner-Feature</h3>
+        <p>Ein kurzes, echtes Zitat oder eine Mini-Fallstudie für eure „Partner"- oder „Referenzen"-Seite — wie gut ihr in der Praxis funktioniert, aus erster Hand.</p>
+        <span class="fitfor">Passt gut für: Lieferanten, Ausstatter, Tools, Dienstleister</span>
+      </div>
+      <div class="angle">
+        <div class="num">3</div>
+        <h3>Gemeinsamer Lokal-Guide</h3>
+        <p>Wir bauen einen kuratierten regionalen Guide mit 5–6 empfehlenswerten Adressen und nehmen euch als einen davon auf.</p>
+        <span class="fitfor">Passt gut für: Hotels, Coworking, Lifestyle-/Stadt-Blogs</span>
+      </div>
+    </div>
+    <div class="angles en">
+      <div class="angle">
+        <div class="num">1</div>
+        <h3>Expert article for your blog</h3>
+        <p>We write a practical, genuinely helpful article for your website — completely free of charge. We handle the research, the text and the graphics, so there is nothing for you to write.</p>
+        <span class="fitfor">Works well for: studios, cafés, practices, hotels with their own blog or resource section</span>
+      </div>
+      <div class="angle">
+        <div class="num">2</div>
+        <h3>Testimonial &amp; partner feature</h3>
+        <p>A short, genuine quote or mini case study for your “Partners” or “Client stories” page — showing first-hand how well you work in practice.</p>
+        <span class="fitfor">Works well for: suppliers, equipment providers, tools, service providers</span>
+      </div>
+      <div class="angle">
+        <div class="num">3</div>
+        <h3>Co-branded local guide</h3>
+        <p>We put together a curated regional guide with 5–6 recommended local spots and include you as one of them.</p>
+        <span class="fitfor">Works well for: hotels, coworking spaces, lifestyle and city blogs</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="kicker"><span class="de">Was ihr davon habt</span><span class="en">What you get</span></div>
+    <h2><span class="de">Aufwand fast bei null</span><span class="en">Almost no effort on your side</span></h2>
+    <ul class="plain de">
+      <li>Kostenloser, fertiger Inhalt für eure Seite — wir übernehmen Recherche, Text und Grafik</li>
+      <li>Sichtbarkeit bei einer Zielgruppe, die zu euch passt</li>
+      <li>Ein echter Backlink von unserer Seite zu eurer</li>
+      <li>Kein Aufwand außer einem kurzen Ja und dem Einfügen des fertigen Inhalts</li>
+    </ul>
+    <ul class="plain en">
+      <li>Free, ready-made content for your site — we handle research, writing and graphics</li>
+      <li>Visibility with an audience that fits your business</li>
+      <li>A genuine backlink from our site to yours</li>
+      <li>No effort beyond a quick yes and pasting in the finished content</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="kicker"><span class="de">So einfach läuft es</span><span class="en">How simple it is</span></div>
+    <h2><span class="de">Drei Schritte</span><span class="en">Three steps</span></h2>
+    <div class="step de"><div class="dot">1</div><div><div class="t">Wir schicken einen Entwurf</div><div class="d">Fertig geschrieben, mit Bildern, zur reinen Durchsicht — nichts, was ihr selbst erstellen müsst.</div></div></div>
+    <div class="step de"><div class="dot">2</div><div><div class="t">Ihr gebt kurz Feedback</div><div class="d">Passt so, oder ihr wünscht euch ein anderes Thema — beides ist völlig in Ordnung.</div></div></div>
+    <div class="step de"><div class="dot">3</div><div><div class="t">Ihr veröffentlicht</div><div class="d">Der Link ist bereits natürlich eingebaut — fertig zum Einfügen auf eurer Seite.</div></div></div>
+    <div class="step en"><div class="dot">1</div><div><div class="t">We send you a draft</div><div class="d">Fully written, with images, just for you to review — nothing you have to create yourself.</div></div></div>
+    <div class="step en"><div class="dot">2</div><div><div class="t">You give quick feedback</div><div class="d">Either it works as it is, or you prefer another topic — both are completely fine.</div></div></div>
+    <div class="step en"><div class="dot">3</div><div><div class="t">You publish</div><div class="d">The link is already woven in naturally — ready to paste onto your site.</div></div></div>
+  </div>
+
+  <div class="cta">
+    <h2><span class="de">Klingt das interessant?</span><span class="en">Sounds interesting?</span></h2>
+    <p class="de">Meldet euch einfach kurz zurück — dann schicken wir direkt einen ersten Entwurf oder fragen, welches Thema für eure Community am hilfreichsten wäre.</p>
+    <p class="en">Just reply with a short note — we then send a first draft right away, or ask which topic would be most helpful for your community.</p>
+  </div>
+
+  <footer class="f">741.studio</footer>
+
+</div>
+
+</body>
+</html>

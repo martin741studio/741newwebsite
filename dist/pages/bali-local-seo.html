@@ -2,6 +2,12 @@
 <html data-wf-domain="www.weavy.ai" data-wf-page="681b040781d5b5e278a6999f" data-wf-site="681b040781d5b5e278a69989">
 
 <head>
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <title>Local SEO in Bali &ndash; Get Found on Google Maps | 741.Studio</title>
     <meta content="Local SEO for businesses in Bali. Free visibility audit with a personal video: where you rank on Google Maps across your area, who outranks you, and the 3 actions that matter most." name="description" />
@@ -954,6 +960,27 @@
 <body>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1028202146617964&amp;ev=PageView&amp;noscript=1" alt="" /></noscript>
 
+    <!-- Anchor-scroll offset: .navbar_main's banner + nav row are position:fixed and float over
+         the page at all breakpoints, so any in-page anchor jump (href="#some-section") lands that
+         section's top edge under the fixed overlay unless the viewport compensates. This rule is
+         the one global fix for that, valid for every current and future #id target on every page
+         that includes this partial — do NOT re-solve this per-page with a local padding-top hack. -->
+    <style>
+      html { scroll-padding-top: 150px; }
+      @media screen and (max-width: 991px) { html { scroll-padding-top: 100px; } }
+    </style>
+    <!-- Page preloader: masks the brief unstyled-HTML flash (FOUC) on first paint, fades out when the page is ready. Self-contained (inline styles + SMIL SVG) so it needs no external CSS. -->
+    <div id="p741-preload" style="position:fixed;inset:0;z-index:2147483647;background:#ffffff;display:flex;align-items:center;justify-content:center;transition:opacity .5s ease;">
+    <svg width="46" height="46" viewBox="0 0 48 48" fill="none" role="img" aria-label="Wird geladen">
+    <circle cx="24" cy="24" r="20" stroke="#ececec" stroke-width="4"></circle>
+    <path d="M24 4a20 20 0 0 1 20 20" stroke="#fac118" stroke-width="4" stroke-linecap="round">
+    <animateTransform attributeName="transform" type="rotate" from="0 24 24" to="360 24 24" dur="0.8s" repeatCount="indefinite"></animateTransform>
+    </path>
+    </svg>
+    </div>
+    <script>
+    (function(){var o=document.getElementById('p741-preload');if(!o)return;var done=false;function hide(){if(done)return;done=true;o.style.opacity='0';o.style.pointerEvents='none';setTimeout(function(){if(o&&o.parentNode)o.parentNode.removeChild(o);},550);}if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){requestAnimationFrame(hide);});}window.addEventListener('load',hide);setTimeout(hide,1800);})();
+    </script>
     <script>
       (function () {
         // Auto-deliver German to visitors in DE/AT/CH; everyone else stays English.
@@ -961,6 +988,8 @@
         if (sessionStorage.getItem('lang_override')) return;
         // Defensive: never run on the German side (this partial is EN-only anyway).
         if (window.location.pathname.indexOf('/de/') === 0) return;
+        // Review pages exist only once (no /de/ twin): never redirect them (2026-10-12, /de/review/... gave 404 for DACH visitors).
+        if (window.location.pathname.indexOf('/review/') === 0) return;
     
         var DACH = ['DE', 'AT', 'CH'];
     
@@ -969,8 +998,11 @@
           if (cc && DACH.indexOf(String(cc).toUpperCase()) !== -1) {
             sessionStorage.setItem('lang_override', 'de');
             var path = window.location.pathname;
+            // Prefer an explicit German alternate (slugs can differ, e.g. the giveaway page)
+            // over the naive /de-prefix, which would 404 when the DE slug isn't identical.
+            var alt = document.querySelector('link[rel=alternate][hreflang=de]');
             // replace() so the English page isn't left in the Back-button history.
-            window.location.replace(path === '/' ? '/de/' : '/de' + path);
+            window.location.replace(alt ? alt.getAttribute('href') : (path === '/' ? '/de/' : '/de' + path));
           }
         }
     
@@ -1054,14 +1086,21 @@
             <a href="/pages/blog.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
               Blog
             </a>
+            <a href="/pages/741-circle.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+              Community
+            </a>
+    
+            <a href="/pages/visibility-grant.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 nav_giveaway-link" style="font-weight:700;">
+              🎁 Giveaway
+            </a>
     
             <div class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" style="display:inline-flex; gap: 8px; align-items:center;">
               <span style="opacity: 0.5; cursor: default;">EN</span>
               <span>|</span>
-              <a href="javascript:void(0)" style="color: inherit; text-decoration: none;" onclick="sessionStorage.setItem('lang_override', 'de'); window.location.href = window.location.pathname === '/' ? '/de/' : '/de' + window.location.pathname;">DE</a>
+              <a href="javascript:void(0)" style="color: inherit; text-decoration: none;" onclick="if (window.location.pathname.indexOf('/review/') === 0) return; sessionStorage.setItem('lang_override', 'de'); var a=document.querySelector('link[rel=alternate][hreflang=de]'); window.location.href = a ? a.getAttribute('href') : (window.location.pathname === '/' ? '/de/' : '/de' + window.location.pathname);">DE</a>
             </div>
     
-            <a href="http://clients.741-studio.com/" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+            <a href="https://clients.741.studio/" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
               Sign In
             </a>
           </div>
@@ -1084,7 +1123,7 @@
           <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
       </button>
-      <a id="try_now_top" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro"
+      <a id="try_now_top" href="https://wa.me/6287860430975" target="_blank" rel="noopener"
         class="huge_nav-button is-real w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 w-inline-block">
         <div class="nav-button-spacer">
         </div>
@@ -1098,7 +1137,13 @@
           display: none;
         }
     
-        @media screen and (max-width: 768px) {
+        /* FIX: .navbar-left is a fixed 50%-wide z-999 box (weavy.css) that overlays the
+           leftmost nav links (Home/Portfolio) and swallows their clicks once the logo loads.
+           Let the empty container pass clicks through; keep the logo link itself clickable. */
+        .navbar-left { pointer-events: none !important; }
+        .navbar-left .brand, .navbar-left .brand * { pointer-events: auto !important; }
+    
+        @media screen and (max-width: 991px) {
     
           /* ROW 1: Black Notification Bar */
           .navbar_main .banner_component {
@@ -1192,7 +1237,7 @@
           }
     
           .navbar_main .huge_nav-button.is-real .nav-link-text-block-large {
-            font-size: 2.77778rem !important;
+            font-size: 18.75px !important;
             /* Restore exactly to original */
             font-weight: 400 !important;
             text-align: center !important;
@@ -1232,7 +1277,7 @@
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
-            transition: opacity 0.3s ease, visibility 0.3s ease !important;
+            transition: opacity 0.3s ease !important; /* visibility flips instantly — transitioning it can leave the menu stuck hidden */
             z-index: 99999 !important;
             /* Top overlay */
             transform: none !important;
@@ -1244,10 +1289,18 @@
             pointer-events: auto !important;
           }
     
+          .nav-links-wrapper.is-open .nav_text-link,
+          .nav-links-wrapper.is-open .nav_dropdown,
+          .nav-links-wrapper.is-open .nav_dropdown-toggle,
+          .nav-links-wrapper.is-open .nav_dropdown-link {
+            visibility: visible !important;
+            opacity: 1 !important;
+          }
+    
           .nav-links-wrapper .nav_text-link {
             color: #fff !important;
-            font-size: 2rem !important;
-            padding: 1.5rem 0 !important;
+            font-size: 13.5px !important; /* px = root-independent so menu is identical on every page */
+            padding: 10px 0 !important;
             margin: 0 !important;
             text-align: center !important;
             width: 100% !important;
@@ -1344,11 +1397,11 @@
             color: #000 !important;
           }
     
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 991px) {
             .nav_dropdown {
               width: 100%;
               text-align: center;
-              margin: 1rem 0;
+              margin: 8px 0;
             }
             
             .nav_dropdown-toggle {
@@ -1377,10 +1430,14 @@
             .nav_dropdown.is-open .nav_dropdown-list {
               max-height: 250px;
             }
+            .nav_dropdown.is-open .nav_dropdown-list { transform: none !important; left: auto !important; width: 100% !important; }
             
+            /* mobile: hide the caret so "Services" is pure centered text like the other links */
+            .nav_dropdown-arrow { display: none !important; }
+    
             .nav_dropdown-link {
-              font-size: 1.6rem !important;
-              padding: 0.8rem 0 !important;
+              font-size: 11px !important;
+              padding: 5px 0 !important;
               text-align: center !important;
               color: rgba(255, 255, 255, 0.7) !important;
             }
@@ -1420,7 +1477,7 @@
           // Mobile Menu Logic
           const mobileMenuBtn = document.getElementById('mobile-menu-btn');
           const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-          const navLinks = document.querySelectorAll('.nav-links-wrapper .nav_text-link');
+          const navLinks = document.querySelectorAll('.nav-links-wrapper .nav_text-link:not(.nav_dropdown-toggle)');
     
           if (mobileMenuBtn && navLinksWrapper) {
             // Break out of Webflow's navbar CSS by moving the overlay directly to the body!
@@ -1429,24 +1486,25 @@
               document.body.appendChild(navLinksWrapper);
             }
     
+            // Lock body scroll while the overlay is open — without this, iOS momentum/bounce
+            // scroll events fired the old "close on scroll" handler and shut the menu
+            // before a tap could land on a link.
+            const setMenuOpen = (open) => {
+              navLinksWrapper.classList.toggle('is-open', open);
+              document.body.style.overflow = open ? 'hidden' : '';
+            };
+    
             mobileMenuBtn.addEventListener('click', (e) => {
               e.preventDefault();
-              navLinksWrapper.classList.toggle('is-open');
+              setMenuOpen(!navLinksWrapper.classList.contains('is-open'));
             });
     
             // Close menu when a link is clicked
             navLinks.forEach(link => {
               link.addEventListener('click', () => {
-                navLinksWrapper.classList.remove('is-open');
+                setMenuOpen(false);
               });
             });
-    
-            // Close menu on scroll if it is open
-            window.addEventListener('scroll', () => {
-              if (navLinksWrapper.classList.contains('is-open')) {
-                navLinksWrapper.classList.remove('is-open');
-              }
-            }, { passive: true });
     
             // Dropdown toggle logic (desktop & mobile)
             const dropdown = document.querySelector('.nav_dropdown');
@@ -1718,14 +1776,13 @@
       <div class="wc"><img class="avimg" src="/review-assets/people/bernd-laserstein.jpg" alt="Bernd Laserstein" loading="lazy"><div><b>Bernd Laserstein</b><small>Health Practice</small><em class="res"><a href="/review-assets/proof/bernd-laserstein-nachher.jpg" target="_blank">▲ Rank 9 → 1 · “Body Psychotherapy”</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/sabine-brenneisen.jpg" alt="Sabine Brenneisen" loading="lazy"><div><b>Sabine Brenneisen</b><small>Health Practice</small><em class="res"><a href="#">▲ Rank 11 → 2 · “Nutrition Advice”</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/sven-boehme.jpg" alt="Sven Böhme" loading="lazy"><div><b>Sven Böhme</b><small>Naturopath · Stuttgart</small><em class="res"><a href="/review-assets/proof/boehme-nachher.jpg" target="_blank">▲ Rank 17 → 4 · “Naturopath Stuttgart”</a></em></div></div>
-      <div class="wc"><span class="av">VS</span><div><b>Veronika Schlirf</b><small>Naturopath · Regensburg</small><em class="res"><a href="/review-assets/proof/veronika-schlirf-nachher.jpg" target="_blank">▲ Rank 15 → 1 · “Naturopath”</a></em></div></div>
       <div class="wc"><span class="av">MG</span><div><b>Martina Gross</b><small>Physiotherapy · Herzogenaurach</small><em class="res"><a href="/review-assets/proof/martina-gross-nachher.jpg" target="_blank">▲ Rank 1 · “Physiotherapy”</a></em></div></div>
       <div class="wc"><span class="av">JF</span><div><b>Janina Felix</b><small>Practice Client</small><em class="res"><a href="#">▲ Rank 7 → 1 · “Osteopathy &amp; Children”</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/justine-felix.jpg" alt="Justine Felix" loading="lazy"><div><b>Justine Felix</b><small>Practice Client</small><em class="res"><a href="#">▲ Rank 12 → 2 · “Naturopath for Women”</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/jeffrey-krautz.jpg" alt="Jeffrey Krautz · Mediwe" loading="lazy"><div><b>Jeffrey Krautz · Mediwe</b><small>Medical Sector</small><em class="res"><a href="#">▲ Rank 33 → 3 · “Medical Product Distribution”</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/marita-biel.jpg" alt="Freude am Lernen · Marita Biel" loading="lazy"><div><b>Freude am Lernen · Marita Biel</b><small>Learning Coach</small><em class="res"><a href="#">▲ Rank 8 → 1 · “Learning Coach”</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/sabine-verges.jpg" alt="Sabine Verges" loading="lazy"><div><b>Sabine Verges</b><small>Local Business</small><em class="res"><a href="#">▲ Rank 14 → 2 · “Naturopathy”</a></em></div></div>
-      <div class="wc"><img class="avimg" src="/review-assets/people/astrid-lengauer.jpg" alt="Astrid Lengauer" loading="lazy"><div><b>Astrid Lengauer</b><small>Local Business</small><em class="res"><a href="#">▲ Rank 18 → 1 · “Craniosacral Therapy”</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/astrid-lengauer.jpg" alt="Astrid Lengauer" loading="lazy"><div><b>Astrid Lengauer</b><small>Local Business</small><em class="res"><a href="#">▲ Rank 18 → 1 · “Interior Design”</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/angelina-everitt.jpg" alt="Angelina Everitt" loading="lazy"><div><b>Angelina Everitt</b><small>Local Business</small><em class="res"><a href="#">▲ Rank 21 → 3 · “Hypnotherapy Stuttgart”</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/martin-altherr.jpg" alt="Martin Altherr" loading="lazy"><div><b>Martin Altherr</b><small>Local Business</small><em class="res"><a href="#">▲ Rank 15 → 1 · “Rolfing &amp; Fascia”</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/karoline-hengst.svg" alt="Karoline Hengst" loading="lazy"><div><b>Karoline Hengst</b><small>Local Business</small><em class="res"><a href="/review-assets/proof/karoline-hengst-nachher.jpg" target="_blank">▲ Rank 28 → 2 · “Homeopathy”</a></em></div></div>
@@ -1881,6 +1938,31 @@
                 </div>
             </div>
         </section>
+        
+<style>
+  .rel-wrap{max-width:1100px;margin:0 auto;}
+  .rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;margin-top:2rem;}
+  .rel-card{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;
+    background:#f8f8f8;border:1px solid #eee;border-radius:1.2rem;padding:1.5rem 1.7rem;
+    text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;}
+  .rel-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.08);border-color:var(--brand--lemon,#fac118);}
+  .rel-card .rc-t{font-size:1.08rem;font-weight:600;line-height:1.3;}
+  .rel-card .rc-a{flex-shrink:0;color:var(--brand--lemon,#fac118);font-size:1.5rem;font-weight:800;line-height:1;}
+  .seo_section.is--dark .rel-card{background:#1a1a1a;border-color:#333;}
+</style>
+<section class="seo_section" style="border-top:1px solid #eee;">
+  <div class="rel-wrap reveal-up">
+    <div class="seo_tagline">Guides &amp; resources</div>
+    <h2 class="heading-style-l" style="margin-top:.2rem;">Learn more before you decide</h2>
+    <div class="rel-grid reveal-stagger-group">
+      <a class="rel-card reveal-item" href="/pages/blog/best-local-seo-bali.html"><span class="rc-t">Best Local SEO in Bali: rank #1 in the local pack</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/pages/blog/seo-agency-bali.html"><span class="rc-t">What an SEO agency actually does</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/pages/blog/seo-retainer-price-bali.html"><span class="rc-t">SEO retainer pricing in Bali</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/pages/blog/reputation-management-bali.html"><span class="rc-t">Reputation management &amp; review removal</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/pages/bali-web-design.html"><span class="rc-t">Web design service in Bali</span><span class="rc-a">&rarr;</span></a>
+    </div>
+  </div>
+</section>
     </main>
 
     <footer data-wf--footer--variant="base" class="footer">
@@ -1950,7 +2032,7 @@
                 local SEO, and performance marketing.</span></p>
           </div>
           <div id="w-node-_31432034-0b36-b686-cc06-99afd84341fc-d84341ea" class="mobile_footer-ctas"><a
-              href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" target="_blank"
+              href="https://wa.me/6287860430975" target="_blank"
               class="button_mobile-primary w-inline-block">
               <div>START NOW</div>
             </a></div>
@@ -1962,7 +2044,8 @@
                 id="w-node-_5c8da43b-2729-091f-d468-120075b6c1da-d84341ea" href="/pages/portfolio_full.html"
                 class="text-link-xsmall is-allcaps">Portfolio</a><a href="/pages/local-seo.html"
                 class="text-link-xsmall is-allcaps">Local SEO</a><a href="/pages/about.html"
-                class="text-link-xsmall is-allcaps">About</a>
+                class="text-link-xsmall is-allcaps">About</a><a href="/pages/741-circle.html"
+                class="text-link-xsmall is-allcaps">741 Circle</a>
             </div>
             <div class="footer_ending-links-column">
               <div class="text-link-xsmall is-footer-column-title">Company</div><a
@@ -2038,7 +2121,7 @@
              All
             rights reserved.</p>
         </div>
-      </div><a id="try_now_bottom" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro"
+      </div><a id="try_now_bottom" href="https://wa.me/6287860430975" target="_blank" rel="noopener"
         class="footer_cta-button-desktop w-inline-block">
         <div> Start Now</div><img
           src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/682232b5585964c7515fba3b_nore-dot.svg"
@@ -2238,13 +2321,13 @@
         allLinks.forEach(a => {
           const text = (a.innerText || a.textContent).trim().toLowerCase();
           const href = a.getAttribute('href') || '';
-          const isTargetHREF = href.includes('VmiA3c6t') || href.includes('app.weavy.ai/signin');
+          const isTargetHREF = href.includes('app.weavy.ai/signin');
           const isTargetText = [
             'start now', 'let\'s talk', 'contact us', 'work with us',
             'request a demo', 'start free', 'start a project',
             'free consultation', 'start locally', 'optimize my site', 'i want these results'
           ].includes(text);
-          if (isTargetHREF || isTargetText || a.id === 'try_now_top' || a.id === 'try_now_bottom') {
+          if (isTargetHREF || isTargetText || a.id === 'try_now_top' || a.id === 'try_now_bottom' || a.classList.contains('js-modal-trigger')) {
             if (!a.classList.contains('contact-modal-option')) {
               triggers.push(a);
             }
@@ -2732,12 +2815,93 @@
           }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
           window.fbq("init", "1028202146617964");
           window.fbq("track", "PageView");
+          window.__wireLeadMirror();
     
           /* ---- FirstPromoter (affiliate / referral attribution) ---- */
           (function (w) { w.fpr = w.fpr || function () { w.fpr.q = w.fpr.q || []; w.fpr.q[arguments[0] == "set" ? "unshift" : "push"](arguments); }; })(window);
           window.fpr("init", { cid: "vzajpas8" });
           window.fpr("click");
         };
+    
+        /* ─────────────────────────────────────────────────────────────
+           741 CONVERSION TRACKING  (central — applies to every page)
+           Fires GA4 events for the things that actually matter:
+             · generate_lead  — any form submission (all Supabase forms)
+             · booking_click  — cal.com / Calendly clicks
+           Mark both as Key Events in GA4 to turn them into conversions.
+           ───────────────────────────────────────────────────────────── */
+        window.track741 = function (name, params) {
+          try {
+            var p = params || {};
+            p.page_location = location.href;
+            p.page_path = location.pathname;
+            if (window.gtag) window.gtag("event", name, p);
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push(Object.assign({ event: name }, p));
+            if (window.posthog && window.posthog.capture) window.posthog.capture(name, p);
+          } catch (e) {}
+        };
+    
+        // Derive a readable form name from the page so leads are attributable.
+        window.__formType = function () {
+          var p = location.pathname;
+          if (/741-circle/.test(p)) return "community";
+          if (/apply-seo/.test(p)) return "seo_application";
+          if (/sichtbarkeits-foerderung|visibility-grant/.test(p)) return "giveaway";
+          if (/sichtbarkeits-analyse|visibility-audit/.test(p)) return "visibility_audit";
+          if (/google-ads|meta-ads|advertorial|warum-google/.test(p)) return "ads_landingpage";
+          if (/\/review\//.test(p)) return "review_page";
+          return "website";
+        };
+    
+        /* Mirror the Meta 'Lead' events that already exist across the site into GA4,
+           so we don't have to touch 100+ pages. Works in both consent states:
+           - marketing granted  → real fbq exists, we wrap it
+           - marketing denied   → we install a mirror-only stub so GA4 still learns
+                                  about the lead (no data goes to Meta)            */
+        window.__wireLeadMirror = function () {
+          var mirror = function (evName, evParams) {
+            if (evName === "Lead" || evName === "CompleteRegistration") {
+              window.track741("generate_lead", {
+                form_type: (evParams && evParams.form_type) || window.__formType(),
+                value: 1, currency: "EUR"
+              });
+            } else if (evName === "Schedule") {
+              window.track741("booking_click", { provider: "unknown" });
+            }
+          };
+          if (window.fbq && !window.fbq.__mirrored) {
+            var real = window.fbq;
+            window.fbq = function () {
+              try { if (arguments[0] === "track") mirror(arguments[1], arguments[2]); } catch (e) {}
+              return real.apply(this, arguments);
+            };
+            for (var k in real) { try { window.fbq[k] = real[k]; } catch (e) {} }
+            window.fbq.__mirrored = true;
+          } else if (!window.fbq) {
+            window.fbq = function () {
+              try { if (arguments[0] === "track") mirror(arguments[1], arguments[2]); } catch (e) {}
+            };
+            window.fbq.__mirrored = true;
+            window.fbq.__stubOnly = true;
+          }
+        };
+    
+        // Booking clicks (cal.com / Calendly) — delegated, so it covers every page.
+        document.addEventListener("click", function (e) {
+          try {
+            var a = e.target && e.target.closest && e.target.closest("a[href]");
+            if (!a) return;
+            var href = a.getAttribute("href") || "";
+            if (/cal\.com|calendly\.com/i.test(href)) {
+              window.track741("booking_click", {
+                provider: /calendly/i.test(href) ? "calendly" : "cal.com",
+                link_text: (a.textContent || "").trim().slice(0, 60)
+              });
+              if (window.fbq && !window.fbq.__stubOnly) window.fbq("track", "Schedule");
+            }
+          } catch (err) {}
+        }, true);
     
         // Fires only after ANALYTICS consent.
         window.loadAnalyticsScripts = function loadAnalyticsScripts() {
@@ -2835,8 +2999,13 @@
         /* ---------- Decisions ---------- */
         function decide(analytics, marketing) {
           applyConsent(saveConsent(analytics, marketing));
+          // make sure lead events still reach GA4 when marketing was declined
+          setTimeout(function () { if (window.__wireLeadMirror) window.__wireLeadMirror(); }, 400);
           if (modalOpen()) closeSettings(); else hideBanner();
         }
+    
+        // returning visitors: consent already stored, no click happens -> wire it anyway
+        setTimeout(function () { if (window.__wireLeadMirror) window.__wireLeadMirror(); }, 1200);
     
         /* ---------- Wire events ---------- */
         root.addEventListener("click", function (e) {

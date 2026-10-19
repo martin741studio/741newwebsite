@@ -9,6 +9,9 @@
     content="Nicht in den Top 3 bei Google Maps? Ich zeige Ihnen im Fix-in-60 Kurs, wie Sie Ihr Google-Profil in unter 60 Minuten selbst in die Top 3 bringen — für 10 €, ohne Agentur und ohne teure Anzeigen." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <style>
@@ -344,18 +347,6 @@
         erfundenen Zahlen.</p>
       <div class="video-grid">
         <div class="video-item">
-          <div class="video-card"><iframe src="https://www.youtube.com/embed/zorMMzm7pf4" title="Kundenfeedback" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-          <div class="video-cap">Maria Abel · Local SEO</div>
-        </div>
-        <div class="video-item">
-          <div class="video-card"><iframe src="https://www.youtube.com/embed/fU_mDQmLA0Y" title="Kundenfeedback" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-          <div class="video-cap">Daniel L. · Online-Marketing</div>
-        </div>
-        <div class="video-item">
-          <div class="video-card"><iframe src="https://www.youtube.com/embed/-3mOyczmvMw" title="Kundenfeedback" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-          <div class="video-cap">Veronika S. · Heilpraktikerin, Regensburg</div>
-        </div>
-        <div class="video-item">
           <div class="video-card"><iframe src="https://www.youtube.com/embed/aYnEI0HNFdg" title="Kundenfeedback" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
           <div class="video-cap">Bastian G. · Talerbox</div>
         </div>
@@ -364,7 +355,7 @@
           <div class="video-cap">Astrid L. · Interior Design</div>
         </div>
       </div>
-      <!-- TODO: Namen ergänzen — Maria Abel, Veronika S. (Heilpraxis), Astrid (Interior) ... den passenden Videos zuordnen -->
+      <!-- TODO: Namen ergänzen — Maria Abel, Astrid (Interior) ... den passenden Videos zuordnen -->
     </div>
   </section>
 
@@ -458,7 +449,29 @@
   </section>
 
   <!-- FOOTER (Impressum/Datenschutz required in Germany) -->
-  <footer class="ft">
+  
+<style>
+  .rel-wrap{max-width:1100px;margin:0 auto;}
+  .rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;margin-top:2rem;}
+  .rel-card{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;
+    background:#f8f8f8;border:1px solid #eee;border-radius:1.2rem;padding:1.5rem 1.7rem;
+    text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;}
+  .rel-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.08);border-color:var(--brand--lemon,#fac118);}
+  .rel-card .rc-t{font-size:1.08rem;font-weight:600;line-height:1.3;}
+  .rel-card .rc-a{flex-shrink:0;color:var(--brand--lemon,#fac118);font-size:1.5rem;font-weight:800;line-height:1;}
+  .seo_section.is--dark .rel-card{background:#1a1a1a;border-color:#333;}
+</style>
+<section class="seo_section" style="border-top:1px solid #eee;">
+  <div class="rel-wrap reveal-up">
+    <div class="seo_tagline">Mehr erfahren</div>
+    <h2 class="heading-style-l" style="margin-top:.2rem;">Mehr von 741.Studio</h2>
+    <div class="rel-grid reveal-stagger-group">
+      <a class="rel-card reveal-item" href="/de/pages/local-seo.html"><span class="rc-t">Lokale SEO & Google Maps (Service)</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/pages/sichtbarkeits-analyse.html"><span class="rc-t">Kostenlose Sichtbarkeits-Analyse</span><span class="rc-a">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+            <footer class="ft">
     <div class="wrap">
       <div>© 2026 741.Studio</div>
       <nav>

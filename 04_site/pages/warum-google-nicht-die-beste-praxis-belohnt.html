@@ -1074,14 +1074,19 @@ var QZ_CONFIG = {
       seite: location.href,
       branche: answers.branche||'', akquise: answers.akquise||'', bewertungen: answers.bewertungen||'',
       stadt: answers.stadt||'', domain: answers.domain||'', praxisname: answers.praxisname||'',
-      name: answers.name||'', email: answers.email||'', telefon: answers.telefon||''
+      name: answers.name||'', email: answers.email||'', telefon: answers.telefon||'',
+      fbclid:(function(){try{return new URLSearchParams(location.search).get('fbclid')||'';}catch(e){return '';}})(),
+      fbc:(function(){try{var m=document.cookie.match(/_fbc=([^;]+)/);if(m)return decodeURIComponent(m[1]);var f=new URLSearchParams(location.search).get('fbclid');return f?('fb.1.'+Date.now()+'.'+f):'';}catch(e){return '';}})(),
+      fbp:(function(){try{var m=document.cookie.match(/_fbp=([^;]+)/);return m?decodeURIComponent(m[1]):'';}catch(e){return '';}})(),
+      event_id:(function(){try{return (window.crypto&&crypto.randomUUID)?crypto.randomUUID():('ld-'+Date.now()+'-'+Math.random().toString(16).slice(2));}catch(e){return 'ld-'+Date.now();}})(),
+      user_agent:(function(){try{return navigator.userAgent||'';}catch(e){return '';}})()
     };
   }
 
   function submit(){
     btnNext.disabled = true; btnNext.textContent = 'Wird gesendet …';
     var p = payload();
-    var done = function(){ try{fbq('track','Lead');}catch(e){} success(); };
+    var done = function(){ try{fbq('track','Lead',{},{eventID:p.event_id});}catch(e){} success(); };
     var fallback = function(){
       var b = Object.keys(p).map(function(k){return k+': '+p[k];}).join('%0D%0A');
       window.open('mailto:'+QZ_CONFIG.FALLBACK_EMAIL+'?cc='+QZ_CONFIG.FALLBACK_CC+'&subject=Neue%20Sichtbarkeits-Analyse%20Anfrage&body='+b,'_blank');

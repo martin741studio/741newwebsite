@@ -236,10 +236,51 @@ html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
   
+<style>
+.qz-overlay{position:fixed;inset:0;background:rgba(20,20,20,.55);backdrop-filter:blur(3px);z-index:1000;display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 12px;}
+.qz-overlay.open{display:flex;}
+.qz{background:#fff;border-radius:18px;max-width:560px;width:100%;padding:34px 30px 28px;position:relative;margin:auto 0;}
+.qz-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:26px;color:var(--ash);cursor:pointer;line-height:1;}
+.qz-progress{height:6px;background:var(--eggshell);border-radius:99px;overflow:hidden;margin-bottom:10px;}
+.qz-progress i{display:block;height:100%;background:var(--yellow);border-radius:99px;transition:width .25s;}
+.qz-step-label{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--ash);margin-bottom:14px;}
+.qz h3{font-size:23px;line-height:1.25;margin-bottom:8px;}
+.qz-sub{font-size:14.5px;color:var(--stone);margin-bottom:18px;}
+.qz-opts{display:flex;flex-direction:column;gap:10px;}
+.qz-opt{text-align:left;background:var(--cream);border:1.5px solid var(--eggshell);border-radius:12px;padding:15px 16px;font-size:16px;font-weight:600;color:var(--ink);cursor:pointer;transition:border-color .12s, transform .12s;font-family:inherit;}
+.qz-opt:hover{border-color:var(--yellow);transform:translateY(-1px);}
+.qz label{display:block;font-size:13.5px;font-weight:700;margin:14px 0 6px;}
+.qz input[type=text],.qz input[type=email],.qz input[type=tel]{width:100%;padding:13px 14px;border:1.5px solid var(--eggshell);border-radius:10px;font-size:16px;font-family:inherit;}
+.qz input:focus{outline:none;border-color:var(--yellow);}
+.qz-consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--stone);margin-top:14px;line-height:1.45;}
+.qz-consent input{margin-top:3px;}
+.qz-err{display:none;background:#fdeaea;color:#b3402e;font-size:13.5px;border-radius:8px;padding:9px 12px;margin-top:12px;}
+.qz-err.show{display:block;}
+.qz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:10px;}
+.qz-back{background:none;border:none;color:var(--ash);font-size:14px;cursor:pointer;font-family:inherit;}
+.qz-next{background:var(--yellow);color:var(--ink);border:none;font-weight:800;font-size:16px;padding:13px 22px;border-radius:10px;cursor:pointer;font-family:inherit;transition:transform .12s;}
+.qz-next:hover{transform:translateY(-1px);}
+.qz-next:disabled{opacity:.6;cursor:wait;transform:none;}
+.qz-trust{display:flex;gap:14px;margin-top:18px;padding-top:14px;border-top:1px solid var(--eggshell);font-size:12.5px;color:var(--ash);flex-wrap:wrap;}
+.qz-success{text-align:center;padding:8px 0 4px;}
+.qz-success svg{margin-bottom:14px;}
+.qz-success h3{margin-bottom:12px;}
+.qz-success p{font-size:14.5px;color:var(--stone);margin-bottom:10px;text-align:left;}
+.qz-timer{display:inline-block;background:#fdf7d8;border:1.5px solid #f0d97a;border-radius:999px;padding:8px 18px;font-weight:700;font-size:14.5px;margin-bottom:14px;}
+
+@media(max-width:820px){
+  .cards,.steps{grid-template-columns:1fr;}
+  .hero{padding:40px 0 36px;}
+  .proof{flex-direction:column;text-align:center;}
+}
+</style>
   <link rel="stylesheet" crossorigin href="/assets/weavy-CxATN43c.css">
 </head>
 <body>
@@ -270,6 +311,27 @@ html
 </div>
 <div class="page-wrapper">
 <div class="main-wrapper">
+            <!-- Anchor-scroll offset: .navbar_main's banner + nav row are position:fixed and float over
+                 the page at all breakpoints, so any in-page anchor jump (href="#some-section") lands that
+                 section's top edge under the fixed overlay unless the viewport compensates. This rule is
+                 the one global fix for that, valid for every current and future #id target on every page
+                 that includes this partial — do NOT re-solve this per-page with a local padding-top hack. -->
+            <style>
+              html { scroll-padding-top: 150px; }
+              @media screen and (max-width: 991px) { html { scroll-padding-top: 100px; } }
+            </style>
+            <!-- Page preloader: masks the brief unstyled-HTML flash (FOUC) on first paint, fades out when the page is ready. Self-contained (inline styles + SMIL SVG) so it needs no external CSS. -->
+            <div id="p741-preload" style="position:fixed;inset:0;z-index:2147483647;background:#ffffff;display:flex;align-items:center;justify-content:center;transition:opacity .5s ease;">
+            <svg width="46" height="46" viewBox="0 0 48 48" fill="none" role="img" aria-label="Wird geladen">
+            <circle cx="24" cy="24" r="20" stroke="#ececec" stroke-width="4"></circle>
+            <path d="M24 4a20 20 0 0 1 20 20" stroke="#fac118" stroke-width="4" stroke-linecap="round">
+            <animateTransform attributeName="transform" type="rotate" from="0 24 24" to="360 24 24" dur="0.8s" repeatCount="indefinite"></animateTransform>
+            </path>
+            </svg>
+            </div>
+            <script>
+            (function(){var o=document.getElementById('p741-preload');if(!o)return;var done=false;function hide(){if(done)return;done=true;o.style.opacity='0';o.style.pointerEvents='none';setTimeout(function(){if(o&&o.parentNode)o.parentNode.removeChild(o);},550);}if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){requestAnimationFrame(hide);});}window.addEventListener('load',hide);setTimeout(hide,1800);})();
+            </script>
             <div class="navbar_main" data-wf--navbar--variant="with-banner---black">
             <section class="banner_component w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
             <div class="padding-global is-stretch-banner w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
@@ -319,12 +381,18 @@ html
             <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" href="/de/pages/blog.html">
                       Blog
                     </a>
+            <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" href="/de/pages/741-circle.html">
+                      Community
+                    </a>
+            <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 nav_giveaway-link" href="/de/pages/sichtbarkeits-foerderung.html" style="font-weight:700;">
+                      🎁 Gewinnspiel
+                    </a>
             <div class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" style="display:inline-flex; gap: 8px; align-items:center;">
-            <a href="javascript:void(0)" onclick="sessionStorage.setItem('lang_override', 'en'); window.location.href = window.location.pathname.replace(/^\/de/, '') || '/';" style="color: inherit; text-decoration: none;">EN</a>
+            <a href="javascript:void(0)" onclick="sessionStorage.setItem('lang_override', 'en'); var a=document.querySelector('link[rel=alternate][hreflang=en]'); window.location.href = a ? a.getAttribute('href') : (window.location.pathname.replace(/^\/de/, '') || '/');" style="color: inherit; text-decoration: none;">EN</a>
             <span>|</span>
             <span style="opacity: 0.5; cursor: default;">DE</span>
             </div>
-            <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" href="http://clients.741-studio.com/">
+            <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" href="https://clients.741.studio/">
                       Anmelden
                     </a>
             </div>
@@ -346,7 +414,7 @@ html
             <line x1="3" x2="21" y1="18" y2="18"></line>
             </svg>
             </button>
-            <a class="huge_nav-button is-real w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 w-inline-block" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" id="try_now_top">
+            <a class="huge_nav-button is-real w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 w-inline-block" href="https://wa.me/6287860430975" id="try_now_top" target="_blank" rel="noopener">
             <div class="nav-button-spacer">
             </div>
             <div class="nav-link-text-block-large nav-normal-case">
@@ -358,7 +426,13 @@ html
                   display: none;
                 }
             
-                @media screen and (max-width: 768px) {
+                /* FIX: .navbar-left is a fixed 50%-wide z-999 box (weavy.css) that overlays the
+                   leftmost nav links (Home/Portfolio) and swallows their clicks once the logo loads.
+                   Let the empty container pass clicks through; keep the logo link itself clickable. */
+                .navbar-left { pointer-events: none !important; }
+                .navbar-left .brand, .navbar-left .brand * { pointer-events: auto !important; }
+            
+                @media screen and (max-width: 991px) {
             
                   /* ROW 1: Black Notification Bar */
                   .navbar_main .banner_component {
@@ -452,7 +526,7 @@ html
                   }
             
                   .navbar_main .huge_nav-button.is-real .nav-link-text-block-large {
-                    font-size: 2.77778rem !important;
+                    font-size: 18.75px !important;
                     /* Restore exactly to original */
                     font-weight: 400 !important;
                     text-align: center !important;
@@ -492,7 +566,7 @@ html
                     opacity: 0;
                     visibility: hidden;
                     pointer-events: none;
-                    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+                    transition: opacity 0.3s ease !important; /* visibility flips instantly — transitioning it can leave the menu stuck hidden */
                     z-index: 99999 !important;
                     /* Top overlay */
                     transform: none !important;
@@ -504,10 +578,18 @@ html
                     pointer-events: auto !important;
                   }
             
+                  .nav-links-wrapper.is-open .nav_text-link,
+                  .nav-links-wrapper.is-open .nav_dropdown,
+                  .nav-links-wrapper.is-open .nav_dropdown-toggle,
+                  .nav-links-wrapper.is-open .nav_dropdown-link {
+                    visibility: visible !important;
+                    opacity: 1 !important;
+                  }
+            
                   .nav-links-wrapper .nav_text-link {
                     color: #fff !important;
-                    font-size: 2rem !important;
-                    padding: 1.5rem 0 !important;
+                    font-size: 13.5px !important; /* px = root-independent so menu is identical on every page */
+                    padding: 10px 0 !important;
                     margin: 0 !important;
                     text-align: center !important;
                     width: 100% !important;
@@ -604,11 +686,11 @@ html
                     color: #000 !important;
                   }
             
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 991px) {
                     .nav_dropdown {
                       width: 100%;
                       text-align: center;
-                      margin: 1rem 0;
+                      margin: 8px 0;
                     }
                     
                     .nav_dropdown-toggle {
@@ -637,10 +719,14 @@ html
                     .nav_dropdown.is-open .nav_dropdown-list {
                       max-height: 250px;
                     }
+                    .nav_dropdown.is-open .nav_dropdown-list { transform: none !important; left: auto !important; width: 100% !important; }
                     
+                    /* mobile: hide the caret so "Services" is pure centered text like the other links */
+                    .nav_dropdown-arrow { display: none !important; }
+            
                     .nav_dropdown-link {
-                      font-size: 1.6rem !important;
-                      padding: 0.8rem 0 !important;
+                      font-size: 11px !important;
+                      padding: 5px 0 !important;
                       text-align: center !important;
                       color: rgba(255, 255, 255, 0.7) !important;
                     }
@@ -680,7 +766,7 @@ html
                   // Mobile Menu Logic
                   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
                   const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-                  const navLinks = document.querySelectorAll('.nav-links-wrapper .nav_text-link');
+                  const navLinks = document.querySelectorAll('.nav-links-wrapper .nav_text-link:not(.nav_dropdown-toggle)');
             
                   if (mobileMenuBtn && navLinksWrapper) {
                     // Break out of Webflow's navbar CSS by moving the overlay directly to the body!
@@ -689,24 +775,25 @@ html
                       document.body.appendChild(navLinksWrapper);
                     }
             
+                    // Lock body scroll while the overlay is open — without this, iOS momentum/bounce
+                    // scroll events fired the old "close on scroll" handler and shut the menu
+                    // before a tap could land on a link.
+                    const setMenuOpen = (open) => {
+                      navLinksWrapper.classList.toggle('is-open', open);
+                      document.body.style.overflow = open ? 'hidden' : '';
+                    };
+            
                     mobileMenuBtn.addEventListener('click', (e) => {
                       e.preventDefault();
-                      navLinksWrapper.classList.toggle('is-open');
+                      setMenuOpen(!navLinksWrapper.classList.contains('is-open'));
                     });
             
                     // Close menu when a link is clicked
                     navLinks.forEach(link => {
                       link.addEventListener('click', () => {
-                        navLinksWrapper.classList.remove('is-open');
+                        setMenuOpen(false);
                       });
                     });
-            
-                    // Close menu on scroll if it is open
-                    window.addEventListener('scroll', () => {
-                      if (navLinksWrapper.classList.contains('is-open')) {
-                        navLinksWrapper.classList.remove('is-open');
-                      }
-                    }, { passive: true });
             
                     // Dropdown toggle logic (desktop & mobile)
                     const dropdown = document.querySelector('.nav_dropdown');
@@ -740,7 +827,7 @@ html
 <p class="text-size-large reveal-up" style="font-size: 1.8rem; line-height: 1.4; color: #333;">
                                 Kämpfen Sie mit steigenden Kosten für Suchanzeigen und ungenauen Attributionsdaten, die eine Skalierung unmöglich machen? Wir sind das einzige serverseitig getrackte Google-Suchsystem, das darauf ausgelegt ist, Reibungsverluste bei Leads zu vermeiden – und saubere Daten, niedrigere Akquisekosten sowie gebuchte Termine in weniger als 14 Tagen nach der Anmeldung zu garantieren.
                             </p>
-<a class="seo_btn reveal-up" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" id="cta-hero">Fordern Sie eine kostenlose Bewertung der Werbeausgaben an</a>
+<a class="seo_btn reveal-up" href="https://741.studio/pages/sichtbarkeits-analyse.html" data-qz id="cta-hero">Fordern Sie eine kostenlose Bewertung der Werbeausgaben an</a>
 </div>
 </div>
 </div>
@@ -759,7 +846,7 @@ html
 <p class="text-size-medium" style="font-size: 1.2rem; line-height: 1.6;">
                             Wir entwickeln dedizierte, leistungsstarke Landingpages, die mit erweitertem serverseitigem Tracking synchronisiert sind. Durch die Umgehung von Werbeblockern und die Optimierung für echte Conversions helfen wir Ihnen, die Verschwendung von Werbeausgaben zu reduzieren und nur hochwertige Gelegenheiten zu kaufen.
                         </p>
-<a class="seo_btn" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" id="cta-pain">Fordern Sie Ihr kostenloses Audit an</a>
+<a class="seo_btn" href="https://741.studio/pages/sichtbarkeits-analyse.html" data-qz id="cta-pain">Fordern Sie Ihr kostenloses Audit an</a>
 </div>
 <div class="seo_card reveal-up">
 <h3 class="heading-style-m" style="font-size: 1.8rem; margin-bottom: 1.5rem;">Passiert das in Ihren Kampagnen?</h3>
@@ -977,14 +1064,14 @@ html
 </div>
 </div>
 <div style="text-align: center; margin-top: 4rem;">
-<a class="seo_btn" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" id="cta-value">Stellen Sie Ihre Lead Engine bereit</a>
+<a class="seo_btn" href="https://741.studio/pages/sichtbarkeits-analyse.html" data-qz id="cta-value">Stellen Sie Ihre Lead Engine bereit</a>
 </div>
 </section>
 <!-- FOUNDER SECTION -->
 <section class="section_founder" id="founder">
 <div class="founder_grid">
 <div class="founder_image_wrapper reveal-up">
-<img alt="Martin Drendel" class="founder_image" loading="lazy" src="/assets/founder_martin-CZBTUF-S.png"/>
+<img alt="Martin Drendel" class="founder_image" loading="lazy" src="/assets/founder_martin-CD_dHIL7.png"/>
 <div class="founder_name_overlay">
 <h3>MARTIN DRENDEL</h3>
 <span class="founder_title">CEO &amp; Gründer</span>
@@ -999,11 +1086,35 @@ html
 <p class="text-size-medium" style="margin-bottom: 2.5rem; font-size: 1.2rem; line-height: 1.6;">
                             Wir bauen serverseitig integrierte Hochgeschwindigkeitstrichter, die perfekt zur Suchabsicht passen. Wir richten unsere Kampagnen an Ihrer tatsächlichen Einheitsökonomie, CAC und LTV aus. Keine langen Vertragsbindungen – unsere Leistung ist unsere Bindungsstrategie.
                         </p>
-<a class="seo_btn" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" id="cta-founder">Arbeiten Sie mit uns</a>
+<a class="seo_btn" href="https://741.studio/pages/sichtbarkeits-analyse.html" data-qz id="cta-founder">Arbeiten Sie mit uns</a>
 </div>
 </div>
 </section>
 <!-- FOOTER -->
+            
+<style>
+  .rel-wrap{max-width:1100px;margin:0 auto;}
+  .rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;margin-top:2rem;}
+  .rel-card{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;
+    background:#f8f8f8;border:1px solid #eee;border-radius:1.2rem;padding:1.5rem 1.7rem;
+    text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;}
+  .rel-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.08);border-color:var(--brand--lemon,#fac118);}
+  .rel-card .rc-t{font-size:1.08rem;font-weight:600;line-height:1.3;}
+  .rel-card .rc-a{flex-shrink:0;color:var(--brand--lemon,#fac118);font-size:1.5rem;font-weight:800;line-height:1;}
+  .seo_section.is--dark .rel-card{background:#1a1a1a;border-color:#333;}
+</style>
+<section class="seo_section" style="border-top:1px solid #eee;">
+  <div class="rel-wrap reveal-up">
+    <div class="seo_tagline">Mehr erfahren</div>
+    <h2 class="heading-style-l" style="margin-top:.2rem;">Weitere Wachstumshebel</h2>
+    <div class="rel-grid reveal-stagger-group">
+      <a class="rel-card reveal-item" href="/de/pages/google-ads-1.html"><span class="rc-t">Google Ads-Agentur</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/de/pages/google-ads-3.html"><span class="rc-t">Google-Suchanzeigen</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/de/pages/meta-ads-1.html"><span class="rc-t">Meta-Anzeigen</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/de/pages/local-seo.html"><span class="rc-t">Lokale SEO & Google Maps</span><span class="rc-a">&rarr;</span></a>
+    </div>
+  </div>
+</section>
             <footer class="footer" data-wf--footer--variant="base">
             <!-- Akira Dog Track: Anchored strictly to the DOM flow border above the gray box -->
             <div style="position: relative; width: 100%; z-index: 10;">
@@ -1056,14 +1167,14 @@ html
                         Digitales Wachstumsstudio, das Unternehmen hilft, Sichtbarkeit, Traffic und Leads durch moderne Websites zu steigern,
                         lokales SEO und Performance-Marketing.</span></p>
             </div>
-            <div class="mobile_footer-ctas" id="w-node-_31432034-0b36-b686-cc06-99afd84341fc-d84341ea"><a class="button_mobile-primary w-inline-block" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" target="_blank">
+            <div class="mobile_footer-ctas" id="w-node-_31432034-0b36-b686-cc06-99afd84341fc-d84341ea"><a class="button_mobile-primary w-inline-block" href="https://wa.me/6287860430975" target="_blank">
             <div>JETZT STARTEN</div>
             </a></div>
             </div>
             <div class="footer-middle-content">
             <div class="footer_links-columns" id="w-node-_9645d895-1ade-57f6-422c-5c408ed50524-d84341ea">
             <div class="footer_ending-links-column">
-            <div class="text-link-xsmall is-footer-column-title">Legen Sie los</div><a class="text-link-xsmall is-allcaps" href="/de/pages/portfolio_full.html" id="w-node-_5c8da43b-2729-091f-d468-120075b6c1da-d84341ea">Portfolio</a><a class="text-link-xsmall is-allcaps" href="/de/pages/local-seo.html">Local SEO</a><a class="text-link-xsmall is-allcaps" href="/de/pages/about.html">Über uns</a>
+            <div class="text-link-xsmall is-footer-column-title">Legen Sie los</div><a class="text-link-xsmall is-allcaps" href="/de/pages/portfolio_full.html" id="w-node-_5c8da43b-2729-091f-d468-120075b6c1da-d84341ea">Portfolio</a><a class="text-link-xsmall is-allcaps" href="/de/pages/local-seo.html">Local SEO</a><a class="text-link-xsmall is-allcaps" href="/de/pages/about.html">Über uns</a><a class="text-link-xsmall is-allcaps" href="/de/pages/741-circle.html">741 Circle</a>
             </div>
             <div class="footer_ending-links-column">
             <div class="text-link-xsmall is-footer-column-title">Unternehmen</div><a class="text-link-xsmall is-allcaps" href="/de/pages/about.html" id="w-node-_25ca80f3-474c-feed-dd38-c97db7cfc30d-d84341ea">Über uns</a><a class="text-link-xsmall is-allcaps" href="https://www.linkedin.com/company/741-studio" target="_blank">Karriere</a><a class="text-link-xsmall is-allcaps" href="/de/pages/impressum.html">Impressum</a><a class="text-link-xsmall is-allcaps" href="/de/pages/datenschutz.html">Datenschutz</a><a class="text-link-xsmall is-allcaps" href="#" onclick="openCookieSettings();return false;">Cookie-Einstellungen</a>
@@ -1115,7 +1226,7 @@ html
                      Alle
                     Rechte vorbehalten.</p>
             </div>
-            </div><a class="footer_cta-button-desktop w-inline-block" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" id="try_now_bottom">
+            </div><a class="footer_cta-button-desktop w-inline-block" href="https://wa.me/6287860430975" id="try_now_bottom" target="_blank" rel="noopener">
             <div> Start Now</div><img alt="" class="image_footer-cta-node" loading="lazy" src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/682232b5585964c7515fba3b_nore-dot.svg"/>
             </a>
             <div class="header_hide-ix-trigger" data-w-id="31432034-0b36-b686-cc06-99afd8434219"></div>
@@ -1386,13 +1497,13 @@ html
                 allLinks.forEach(a => {
                   const text = (a.innerText || a.textContent).trim().toLowerCase();
                   const href = a.getAttribute('href') || '';
-                  const isTargetHREF = href.includes('VmiA3c6t');
+                  const isTargetHREF = false;
                   const isTargetText = [
                     'start now', 'let\'s talk', 'contact us', 'work with us',
                     'request a demo', 'start free', 'start a project',
                     'free consultation', 'start locally', 'optimize my site', 'i want these results'
                   ].includes(text);
-                  if (isTargetHREF || isTargetText || a.id === 'try_now_top' || a.id === 'try_now_bottom') {
+                  if (isTargetHREF || isTargetText || a.id === 'try_now_top' || a.id === 'try_now_bottom' || a.classList.contains('js-modal-trigger')) {
                     if (!a.classList.contains('contact-modal-option')) {
                       triggers.push(a);
                     }
@@ -1958,12 +2069,93 @@ html
         }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
         window.fbq("init", "1028202146617964");
         window.fbq("track", "PageView");
+        window.__wireLeadMirror();
   
         /* ---- FirstPromoter (affiliate / referral attribution) ---- */
         (function (w) { w.fpr = w.fpr || function () { w.fpr.q = w.fpr.q || []; w.fpr.q[arguments[0] == "set" ? "unshift" : "push"](arguments); }; })(window);
         window.fpr("init", { cid: "vzajpas8" });
         window.fpr("click");
       };
+  
+      /* ─────────────────────────────────────────────────────────────
+         741 CONVERSION TRACKING  (central — applies to every page)
+         Fires GA4 events for the things that actually matter:
+           · generate_lead  — any form submission (all Supabase forms)
+           · booking_click  — cal.com / Calendly clicks
+         Mark both as Key Events in GA4 to turn them into conversions.
+         ───────────────────────────────────────────────────────────── */
+      window.track741 = function (name, params) {
+        try {
+          var p = params || {};
+          p.page_location = location.href;
+          p.page_path = location.pathname;
+          if (window.gtag) window.gtag("event", name, p);
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(Object.assign({ event: name }, p));
+          if (window.posthog && window.posthog.capture) window.posthog.capture(name, p);
+        } catch (e) {}
+      };
+  
+      // Derive a readable form name from the page so leads are attributable.
+      window.__formType = function () {
+        var p = location.pathname;
+        if (/741-circle/.test(p)) return "community";
+        if (/apply-seo/.test(p)) return "seo_application";
+        if (/sichtbarkeits-foerderung|visibility-grant/.test(p)) return "giveaway";
+        if (/sichtbarkeits-analyse|visibility-audit/.test(p)) return "visibility_audit";
+        if (/google-ads|meta-ads|advertorial|warum-google/.test(p)) return "ads_landingpage";
+        if (/\/review\//.test(p)) return "review_page";
+        return "website";
+      };
+  
+      /* Mirror the Meta 'Lead' events that already exist across the site into GA4,
+         so we don't have to touch 100+ pages. Works in both consent states:
+         - marketing granted  → real fbq exists, we wrap it
+         - marketing denied   → we install a mirror-only stub so GA4 still learns
+                                about the lead (no data goes to Meta)            */
+      window.__wireLeadMirror = function () {
+        var mirror = function (evName, evParams) {
+          if (evName === "Lead" || evName === "CompleteRegistration") {
+            window.track741("generate_lead", {
+              form_type: (evParams && evParams.form_type) || window.__formType(),
+              value: 1, currency: "EUR"
+            });
+          } else if (evName === "Schedule") {
+            window.track741("booking_click", { provider: "unknown" });
+          }
+        };
+        if (window.fbq && !window.fbq.__mirrored) {
+          var real = window.fbq;
+          window.fbq = function () {
+            try { if (arguments[0] === "track") mirror(arguments[1], arguments[2]); } catch (e) {}
+            return real.apply(this, arguments);
+          };
+          for (var k in real) { try { window.fbq[k] = real[k]; } catch (e) {} }
+          window.fbq.__mirrored = true;
+        } else if (!window.fbq) {
+          window.fbq = function () {
+            try { if (arguments[0] === "track") mirror(arguments[1], arguments[2]); } catch (e) {}
+          };
+          window.fbq.__mirrored = true;
+          window.fbq.__stubOnly = true;
+        }
+      };
+  
+      // Booking clicks (cal.com / Calendly) — delegated, so it covers every page.
+      document.addEventListener("click", function (e) {
+        try {
+          var a = e.target && e.target.closest && e.target.closest("a[href]");
+          if (!a) return;
+          var href = a.getAttribute("href") || "";
+          if (/cal\.com|calendly\.com/i.test(href)) {
+            window.track741("booking_click", {
+              provider: /calendly/i.test(href) ? "calendly" : "cal.com",
+              link_text: (a.textContent || "").trim().slice(0, 60)
+            });
+            if (window.fbq && !window.fbq.__stubOnly) window.fbq("track", "Schedule");
+          }
+        } catch (err) {}
+      }, true);
   
       // Fires only after ANALYTICS consent.
       window.loadAnalyticsScripts = function loadAnalyticsScripts() {
@@ -2061,8 +2253,13 @@ html
       /* ---------- Decisions ---------- */
       function decide(analytics, marketing) {
         applyConsent(saveConsent(analytics, marketing));
+        // make sure lead events still reach GA4 when marketing was declined
+        setTimeout(function () { if (window.__wireLeadMirror) window.__wireLeadMirror(); }, 400);
         if (modalOpen()) closeSettings(); else hideBanner();
       }
+  
+      // returning visitors: consent already stored, no click happens -> wire it anyway
+      setTimeout(function () { if (window.__wireLeadMirror) window.__wireLeadMirror(); }, 1200);
   
       /* ---------- Wire events ---------- */
       root.addEventListener("click", function (e) {
@@ -2087,5 +2284,225 @@ html
       else { showBanner(); }                        // first visit: ask
     })();
   </script>
+<div class="qz-overlay" id="qzOverlay" role="dialog" aria-modal="true">
+  <div class="qz">
+    <button class="qz-close" id="qzClose" aria-label="Schließen">×</button>
+    <div class="qz-progress"><i id="qzBar" style="width:16%"></i></div>
+    <div class="qz-step-label" id="qzStepLabel">Schritt 1 von 6</div>
+    <div id="qzBody"></div>
+    <div class="qz-err" id="qzErr"></div>
+    <div class="qz-nav" id="qzNav">
+      <button class="qz-back" id="qzBack" style="visibility:hidden">← Zurück</button>
+      <button class="qz-next" id="qzNext" style="display:none">Weiter →</button>
+    </div>
+    <div class="qz-trust">
+      <span>🔒 DSGVO-konform</span><span>⏱ Analyse in ca. 2 Stunden</span><span>🎥 Individuelles Video</span><span>💬 Zustellung per WhatsApp &amp; E-Mail</span>
+    </div>
+  </div>
+</div>
+<script>
+var QZ_CONFIG = {
+  SUPABASE_URL: "https://bgiljrygqvlgwsrjvhnp.supabase.co",
+  SUPABASE_KEY: "sb_publishable_Yuu6gXfuXNQdgWkdIqfU9Q_hmNyX3kH",
+  WEBHOOK_URL: "",
+  FALLBACK_EMAIL: "hello@741.studio",
+  FALLBACK_CC: "martin@741.studio"
+};
+
+(function(){
+  var steps = [
+    { key:'branche', type:'options',
+      q:'Welche Art von Unternehmen führen Sie?',
+      sub:'Damit die Analyse auf Ihren Markt zugeschnitten ist.',
+      opts:[
+        {v:'Praxis / Gesundheitswesen', t:'Praxis / Gesundheitswesen'},
+        {v:'Handwerk / Bau', t:'Handwerk / Bau'},
+        {v:'Gastronomie / Hotellerie', t:'Gastronomie / Hotellerie'},
+        {v:'Dienstleistung', t:'Dienstleistung (Kanzlei, Studio, Kosmetik …)'},
+        {v:'Anderes lokales Unternehmen', t:'Anderes lokales Unternehmen'}
+      ]},
+    { key:'akquise', type:'options',
+      q:'Wie gewinnen Sie aktuell hauptsächlich neue Kunden?',
+      sub:'Ehrliche Antwort – es gibt kein Richtig oder Falsch.',
+      opts:[
+        {v:'Empfehlungen', t:'Empfehlungen & Stammkunden'},
+        {v:'Google Ads', t:'Google Ads / bezahlte Werbung'},
+        {v:'Social Media', t:'Social Media'},
+        {v:'Kaum aktive Gewinnung', t:'Kaum aktive Neukundengewinnung'}
+      ]},
+    { key:'bewertungen', type:'options',
+      q:'Wie viele Google-Bewertungen hat Ihr Unternehmen aktuell?',
+      sub:'Einer der stärksten lokalen Rankingfaktoren.',
+      opts:[
+        {v:'unter 20', t:'Unter 20'},
+        {v:'20 bis 100', t:'20 – 100'},
+        {v:'über 100', t:'Über 100'},
+        {v:'weiß nicht', t:'Weiß ich nicht genau'}
+      ]},
+    { key:'standort', type:'input',
+      q:'In welcher Stadt / Region sind Sie tätig?',
+      sub:'Für das straßengenaue Sichtbarkeits-Raster Ihres Einzugsgebiets.',
+      fields:[{name:'stadt', label:'Stadt / Region', ph:'z. B. Nürnberg', type:'text', required:true}]},
+    { key:'domain', type:'input',
+      q:'Wie lautet Ihre Website?',
+      sub:'Wir prüfen Website und Google-Profil im Wettbewerbsvergleich.',
+      fields:[{name:'domain', label:'Website / Domain', ph:'z. B. www.ihr-betrieb.de', type:'text', required:true},
+              {name:'praxisname', label:'Name des Unternehmens (wie bei Google)', ph:'z. B. Malerbetrieb Muster', type:'text', required:false}]},
+    { key:'kontakt', type:'contact',
+      q:'Wohin dürfen wir Ihre Video-Analyse senden?',
+      sub:'Ihre Analyse wird manuell erstellt – als individuelles Video, zugestellt per WhatsApp und E-Mail.',
+      fields:[{name:'name', label:'Ihr Name', ph:'Vor- und Nachname', type:'text', required:true},
+              {name:'email', label:'E-Mail-Adresse', ph:'name@firma.de', type:'email', required:true},
+              {name:'telefon', label:'Mobilnummer (für WhatsApp-Zustellung)', ph:'+49 …', type:'tel', required:true}]}
+  ];
+
+  var answers = {};
+  var idx = 0;
+  var overlay = document.getElementById('qzOverlay');
+  var body = document.getElementById('qzBody');
+  var bar = document.getElementById('qzBar');
+  var stepLabel = document.getElementById('qzStepLabel');
+  var nav = document.getElementById('qzNav');
+  var btnBack = document.getElementById('qzBack');
+  var btnNext = document.getElementById('qzNext');
+  var errBox = document.getElementById('qzErr');
+
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+
+  function render(){
+    var s = steps[idx];
+    errBox.className='qz-err';
+    bar.style.width = Math.round(((idx+1)/steps.length)*100)+'%';
+    stepLabel.textContent = 'Schritt '+(idx+1)+' von '+steps.length;
+    btnBack.style.visibility = idx===0 ? 'hidden':'visible';
+    var h = '<h3>'+esc(s.q)+'</h3><p class="qz-sub">'+esc(s.sub)+'</p>';
+    if(s.type==='options'){
+      btnNext.style.display='none';
+      h += '<div class="qz-opts">';
+      s.opts.forEach(function(o){ h += '<button type="button" class="qz-opt" data-v="'+esc(o.v)+'">'+esc(o.t)+'</button>'; });
+      h += '</div>';
+    } else {
+      btnNext.style.display='inline-block';
+      btnNext.textContent = (s.type==='contact') ? 'Kostenlose Analyse anfordern →' : 'Weiter →';
+      s.fields.forEach(function(f){
+        h += '<label for="qzf_'+f.name+'">'+esc(f.label)+(f.required?'':' <span style="font-weight:400;color:var(--ash)">(optional)</span>')+'</label>';
+        h += '<input id="qzf_'+f.name+'" name="'+f.name+'" type="'+f.type+'" placeholder="'+esc(f.ph)+'" value="'+esc(answers[f.name]||'')+'">';
+      });
+      if(s.type==='contact'){
+        h += '<div class="qz-consent"><input type="checkbox" id="qzConsent"><label for="qzConsent" style="margin:0;font-weight:400;">Ich stimme zu, dass meine Angaben zur Erstellung und Zusendung der Sichtbarkeits-Analyse (per E-Mail/WhatsApp) verarbeitet werden. <a href="https://741.studio/de/pages/datenschutz.html" target="_blank" rel="noopener">Datenschutz</a></label></div>';
+      }
+    }
+    body.innerHTML = h;
+    if(s.type==='options'){
+      body.querySelectorAll('.qz-opt').forEach(function(b){
+        b.addEventListener('click', function(){
+          answers[s.key] = b.getAttribute('data-v');
+          next();
+        });
+      });
+    }
+    var first = body.querySelector('input[type=text],input[type=email],input[type=tel]');
+    if(first) first.focus();
+  }
+
+  function showErr(m){ errBox.textContent=m; errBox.className='qz-err show'; }
+
+  function validate(){
+    var s = steps[idx];
+    if(s.type==='options') return true;
+    var ok = true;
+    s.fields.forEach(function(f){
+      var el = document.getElementById('qzf_'+f.name);
+      var v = el ? el.value.trim() : '';
+      answers[f.name] = v;
+      if(f.required && !v) ok = false;
+      if(f.type==='email' && v && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) ok = false;
+      if(f.type==='tel' && v && v.replace(/[^0-9]/g,'').length < 7) ok = false;
+    });
+    if(!ok){ showErr('Bitte füllen Sie alle Pflichtfelder korrekt aus.'); return false; }
+    if(s.type==='contact'){
+      var c = document.getElementById('qzConsent');
+      if(!c || !c.checked){ showErr('Bitte bestätigen Sie die Datenschutz-Einwilligung.'); return false; }
+    }
+    return true;
+  }
+
+  function next(){
+    errBox.className='qz-err';
+    if(idx < steps.length-1){ idx++; render(); }
+    else { submit(); }
+  }
+
+  function payload(){
+    return {
+      quelle:'Google Ads LP – Sichtbarkeits-Analyse (DE)',
+      seite: location.href,
+      branche: answers.branche||'', akquise: answers.akquise||'', bewertungen: answers.bewertungen||'',
+      stadt: answers.stadt||'', domain: answers.domain||'', praxisname: answers.praxisname||'',
+      name: answers.name||'', email: answers.email||'', telefon: answers.telefon||'',
+      fbclid:(function(){try{return new URLSearchParams(location.search).get('fbclid')||'';}catch(e){return '';}})(),
+      fbc:(function(){try{var m=document.cookie.match(/_fbc=([^;]+)/);if(m)return decodeURIComponent(m[1]);var f=new URLSearchParams(location.search).get('fbclid');return f?('fb.1.'+Date.now()+'.'+f):'';}catch(e){return '';}})(),
+      fbp:(function(){try{var m=document.cookie.match(/_fbp=([^;]+)/);return m?decodeURIComponent(m[1]):'';}catch(e){return '';}})(),
+      event_id:(function(){try{return (window.crypto&&crypto.randomUUID)?crypto.randomUUID():('ld-'+Date.now()+'-'+Math.random().toString(16).slice(2));}catch(e){return 'ld-'+Date.now();}})(),
+      user_agent:(function(){try{return navigator.userAgent||'';}catch(e){return '';}})()
+    };
+  }
+
+  function submit(){
+    btnNext.disabled = true; btnNext.textContent = 'Wird gesendet …';
+    var p = payload();
+    var done = function(){ try{fbq('track','Lead',{},{eventID:p.event_id});}catch(e){} /* Google Ads Conversion hier ergänzen */ success(); };
+    var fallback = function(){
+      var b = Object.keys(p).map(function(k){return k+': '+p[k];}).join('%0D%0A');
+      window.open('mailto:'+QZ_CONFIG.FALLBACK_EMAIL+'?cc='+QZ_CONFIG.FALLBACK_CC+'&subject=Neue%20Sichtbarkeits-Analyse%20Anfrage&body='+b,'_blank');
+      success();
+    };
+    var viaWebhook = function(){
+      if(!QZ_CONFIG.WEBHOOK_URL){ fallback(); return; }
+      fetch(QZ_CONFIG.WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)})
+        .then(function(r){ if(r.ok){done();} else {fallback();} })
+        .catch(fallback);
+    };
+    if(QZ_CONFIG.SUPABASE_URL && QZ_CONFIG.SUPABASE_KEY){
+      fetch(QZ_CONFIG.SUPABASE_URL+'/rest/v1/advertorial_leads',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','apikey':QZ_CONFIG.SUPABASE_KEY,'Prefer':'return=minimal'},
+        body:JSON.stringify(p)
+      }).then(function(r){ if(r.ok){done();} else {viaWebhook();} })
+        .catch(viaWebhook);
+    } else {
+      viaWebhook();
+    }
+  }
+
+  function success(){
+    errBox.className='qz-err';
+    bar.style.width='100%';
+    stepLabel.textContent='Fertig';
+    nav.style.display='none';
+    body.innerHTML =
+      '<div class="qz-success">'+
+      '<svg width="72" height="72" viewBox="0 0 72 72"><circle cx="36" cy="36" r="34" fill="#fac118"/><path d="M21 37 L32 48 L52 26" fill="none" stroke="#252525" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>'+
+      '<h3>Vielen Dank, '+esc((answers.name||'').split(' ')[0])+'! Ihre Analyse ist in Arbeit.</h3>'+
+      '<div class="qz-timer">⏱ Zustellung innerhalb der nächsten 2 Stunden*</div>'+
+      '<p>Wir erstellen Ihre Sichtbarkeits-Analyse jetzt <b>manuell</b> – inklusive einem <b>individuellen Video</b>, in dem wir Schritt für Schritt zeigen, wo Sie aktuell stehen, welcher Wettbewerber Sie verdrängt und welche drei Maßnahmen den größten Hebel haben.</p>'+
+      '<p>Sie erhalten das Video per <b>WhatsApp</b> an '+esc(answers.telefon||'')+' und per <b>E-Mail</b> an '+esc(answers.email||'')+'.</p>'+
+      '<p style="font-size:12.5px;color:var(--ash)">*Anfragen werktags zwischen 9 und 18 Uhr. Außerhalb dieser Zeiten erhalten Sie Ihre Analyse am nächsten Werktag bis 11 Uhr.</p>'+
+      '</div>';
+  }
+
+  function open(){ idx=0; nav.style.display='flex'; btnNext.disabled=false; overlay.classList.add('open'); document.body.style.overflow='hidden'; try{fbq('trackCustom','QuizOpened');}catch(e){} render(); }
+  function close(){ overlay.classList.remove('open'); document.body.style.overflow=''; }
+
+  document.getElementById('qzClose').addEventListener('click', close);
+  overlay.addEventListener('click', function(e){ if(e.target===overlay) close(); });
+  btnBack.addEventListener('click', function(){ if(idx>0){ idx--; render(); } });
+  btnNext.addEventListener('click', function(){ if(validate()) next(); });
+
+  document.querySelectorAll('[data-qz]').forEach(function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); open(); });
+  });
+})();
+</script>
 </body>
 </html>

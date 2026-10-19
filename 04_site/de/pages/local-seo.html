@@ -402,6 +402,9 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
     </style>
 <script type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -435,6 +438,45 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 <script async="" finsweet="components" siteid="681b040781d5b5e278a69989" src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989%2F6544eda5f000985a163a8687%2F6830de8fbc3ef49c91c3f557%2Ffinsweetcomponentsconfig-1.0.0.js" type="module"></script>
 <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.2/dist/css/splide-core.min.css" rel="stylesheet"/>
+<style>
+:root{--ink:#252525;--stone:#5c5c5c;--ash:#8a8a8a;--yellow:#fac118;--cream:#faf8f2;--eggshell:#eceadf;}
+.qz-overlay{position:fixed;inset:0;background:rgba(20,20,20,.55);backdrop-filter:blur(3px);z-index:1000;display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 12px;}
+.qz-overlay.open{display:flex;}
+.qz{background:#fff;border-radius:18px;max-width:560px;width:100%;padding:34px 30px 28px;position:relative;margin:auto 0;}
+.qz-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:26px;color:var(--ash);cursor:pointer;line-height:1;}
+.qz-progress{height:6px;background:var(--eggshell);border-radius:99px;overflow:hidden;margin-bottom:10px;}
+.qz-progress i{display:block;height:100%;background:var(--yellow);border-radius:99px;transition:width .25s;}
+.qz-step-label{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--ash);margin-bottom:14px;}
+.qz h3{font-size:23px;line-height:1.25;margin-bottom:8px;}
+.qz-sub{font-size:14.5px;color:var(--stone);margin-bottom:18px;}
+.qz-opts{display:flex;flex-direction:column;gap:10px;}
+.qz-opt{text-align:left;background:var(--cream);border:1.5px solid var(--eggshell);border-radius:12px;padding:15px 16px;font-size:16px;font-weight:600;color:var(--ink);cursor:pointer;transition:border-color .12s, transform .12s;font-family:inherit;}
+.qz-opt:hover{border-color:var(--yellow);transform:translateY(-1px);}
+.qz label{display:block;font-size:13.5px;font-weight:700;margin:14px 0 6px;}
+.qz input[type=text],.qz input[type=email],.qz input[type=tel]{width:100%;padding:13px 14px;border:1.5px solid var(--eggshell);border-radius:10px;font-size:16px;font-family:inherit;}
+.qz input:focus{outline:none;border-color:var(--yellow);}
+.qz-consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--stone);margin-top:14px;line-height:1.45;}
+.qz-consent input{margin-top:3px;}
+.qz-err{display:none;background:#fdeaea;color:#b3402e;font-size:13.5px;border-radius:8px;padding:9px 12px;margin-top:12px;}
+.qz-err.show{display:block;}
+.qz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:10px;}
+.qz-back{background:none;border:none;color:var(--ash);font-size:14px;cursor:pointer;font-family:inherit;}
+.qz-next{background:var(--yellow);color:var(--ink);border:none;font-weight:800;font-size:16px;padding:13px 22px;border-radius:10px;cursor:pointer;font-family:inherit;transition:transform .12s;}
+.qz-next:hover{transform:translateY(-1px);}
+.qz-next:disabled{opacity:.6;cursor:wait;transform:none;}
+.qz-trust{display:flex;gap:14px;margin-top:18px;padding-top:14px;border-top:1px solid var(--eggshell);font-size:12.5px;color:var(--ash);flex-wrap:wrap;}
+.qz-success{text-align:center;padding:8px 0 4px;}
+.qz-success svg{margin-bottom:14px;}
+.qz-success h3{margin-bottom:12px;}
+.qz-success p{font-size:14.5px;color:var(--stone);margin-bottom:10px;text-align:left;}
+.qz-timer{display:inline-block;background:#fdf7d8;border:1.5px solid #f0d97a;border-radius:999px;padding:8px 18px;font-weight:700;font-size:14.5px;margin-bottom:14px;}
+
+@media(max-width:820px){
+  .cards,.steps{grid-template-columns:1fr;}
+  .hero{padding:40px 0 36px;}
+  .proof{flex-direction:column;text-align:center;}
+}
+</style>
 </head>
 <body>
 
@@ -467,27 +509,17 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
             {{> header_de }}
 
             <!-- HERO SECTION -->
-<section class="section-hero">
-<div class="grid-container is-hero is-banner-top">
-<div class="vertical-wrapp" id="w-node-_5134b68b-08f8-d177-ea63-19167ba1aa94-78a6999f" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%; grid-column: 1 / -1 !important; padding-top: 4rem;">
-<div class="seo_tagline">Google Maps und lokale Suche</div>
-<div class="h1-wrapper extra-bot-pad" style="padding-bottom: 0.5rem; padding-top: 5px;">
-<h1 class="heading_h1-hero reveal-up">
-                                Lokale SEO-Agentur: Werden Sie zum <span class="seo_highlight">Marktführer</span> in Ihrer
-                                Region
-                            </h1>
-</div>
-<div class="paragraph-wrapper" style="max-width: 700px; margin: 0 auto;">
-<p class="text-size-large reveal-up">
-                                Lokales SEO von 741.Studio für Dienstleister, die regional dominieren wollen –
-                                statt nur lokal sichtbar zu sein.
-                            </p>
-<a class="seo_btn reveal-up" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro">Kostenlose
-                                Potenzialanalyse</a>
-</div>
-</div>
-</div>
-</section>
+<!-- HERO: homepage split hero slider -->
+{{> hero-slider_de }}
+<script>
+/* local-seo only: hero CTAs open the visibility quiz (data-qz), NOT the shared
+   contact modal. Runs before the footer's DOMContentLoaded hijack so the Typeform
+   href no longer matches it. */
+document.querySelectorAll('.hero2-btn').forEach(function(a){
+  a.setAttribute('href','https://741.studio/pages/sichtbarkeits-analyse.html');
+  a.setAttribute('data-qz','');
+});
+</script>
 <!-- INTRO SECTION -->
 <section class="seo_section">
 <div class="seo_grid">
@@ -505,12 +537,12 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
                             Ihre Region. Vom perfekten Google Business-Profil bis zur lokalen Sichtbarkeit auf allen Geräten: wir
                             machen Sie zur ersten Wahl in Ihrer Nachbarschaft.
                         </p>
-<a class="seo_btn" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro">Lokal starten
+<a class="seo_btn" href="https://741.studio/pages/sichtbarkeits-analyse.html" data-qz>Lokal starten
                             Jetzt</a>
 </div>
 <div class="seo_card reveal-up">
 <div class="video-container" style="margin-bottom: 2rem; border-radius: 1rem; overflow: hidden; position: relative; padding-bottom: 56.25%; height: 0;">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/pb4RlvJGziw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" title="Lokale SEO-Einführung">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/dQ9OE8GSolw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" title="Lokale SEO-Einführung">
 </iframe>
 </div>
 <h3 class="heading-style-m">Warum lokales SEO wichtig ist</h3>
@@ -550,7 +582,7 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
 <span style="color: var(--brand--lemon);">✔</span> Lokaler Linkaufbau
                             </li>
 </ul>
-<a class="seo_btn" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro">Optimieren Sie meine
+<a class="seo_btn" href="https://741.studio/pages/sichtbarkeits-analyse.html" data-qz>Optimieren Sie meine
                             Google-Profil</a>
 </div>
 </div>
@@ -614,7 +646,7 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
 </div>
 </div>
 <div style="text-align: center; margin-top: 4rem;">
-<a class="seo_btn" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro">Ich will diese
+<a class="seo_btn" href="https://741.studio/pages/sichtbarkeits-analyse.html" data-qz>Ich will diese
                         Ergebnisse</a>
 </div>
 </section>
@@ -643,6 +675,140 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
 </div>
 </section>
 <!-- FOUNDER SECTION -->
+<style>
+/* ===== 741 example comparison + growth + proof (local-seo) ===== */
+.maps-vs-section{padding:64px 5%;background:#f7f6f2;text-align:center;}
+.maps-vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1060px;margin:36px auto 0;}
+.maps-vs-card{background:#fff;border-radius:18px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,0.07);text-align:left;}
+.maps-vs-badge{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin-bottom:14px;}
+.maps-vs-card img,.maps-vs-card svg{width:100%;height:auto;border-radius:12px;display:block;}
+.maps-vs-caption{font-size:14.4px;color:#555;line-height:1.55;margin-top:14px;}
+.maps-vs-impact{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;max-width:1060px;margin:28px auto 0;}
+.maps-vs-chip{background:#fff;border:1.5px solid #eceadf;border-radius:999px;padding:11px 20px;font-size:14.4px;font-weight:700;color:#252525;}
+.lsx-gw{background:#111;color:#fff;border-radius:24px;padding:48px;text-align:center;border:1px solid rgba(250,193,24,.4);max-width:1140px;margin:0 auto;}
+.lsx-gw .ey{color:#fac118;font-weight:800;text-transform:uppercase;font-size:12.8px;}
+.lsx-gw h2{font-size:35.2px;font-weight:800;margin:6px 0 0;color:#fff;}
+.lsx-gwgrid{display:grid;grid-template-columns:1fr auto 1fr;gap:30px;align-items:center;margin:30px 0;}
+.lsx-gwbox{background:#1c1c1c;border-radius:16px;padding:24px;border:1px solid #333;}
+.lsx-gwbox.t{border-color:#fac118;background:rgba(250,193,24,.05);}
+.lsx-gwarr{font-size:32px;color:#fac118;}
+.lsx-imp{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;border-top:1px solid #333;padding-top:24px;}
+.section-proof { background:#f7f6f2; padding:88px 24px; }
+.section-proof .proof-inner { max-width:1140px; margin:0 auto; }
+.section-proof h2 { font-size:34px; font-weight:900; color:#1a1a1a; margin-bottom:12px; line-height:1.15; }
+.section-proof .proof-lead { color:#6b6b6b; font-size:17px; max-width:700px; margin-bottom:4px; }
+.section-proof .wall { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:12px; margin-top:34px; }
+.section-proof .wc { display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #ece9e0; border-radius:12px; padding:12px 14px; }
+.section-proof .av { width:44px; height:44px; min-width:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:15px; color:#fff; letter-spacing:.5px; }
+.section-proof .wc:nth-child(6n+1) .av { background:#575136; }
+.section-proof .wc:nth-child(6n+2) .av { background:#8a7d3a; }
+.section-proof .wc:nth-child(6n+3) .av { background:#1e7a46; }
+.section-proof .wc:nth-child(6n+4) .av { background:#2f5d8a; }
+.section-proof .wc:nth-child(6n+5) .av { background:#a05c2c; }
+.section-proof .wc:nth-child(6n) .av { background:#6b4a7e; }
+.section-proof .wc b { display:block; font-size:14.5px; line-height:1.25; color:#1a1a1a; }
+.section-proof .wc small { color:#6b6b6b; font-size:12px; }
+.section-proof .wc.hl { border-color:#fac118; background:#fffaf0; }
+.section-proof .avimg { width:44px; height:44px; min-width:44px; border-radius:50%; object-fit:cover; border:1px solid #ece9e0; background:#fff; }
+.section-proof .wc .res { display:block; font-style:normal; font-size:12px; font-weight:700; color:#1e7a46; margin-top:2px; }
+.section-proof .wc .res a { color:inherit; text-decoration:none; border-bottom:1px dotted rgba(30,122,70,.5); }
+.section-proof .wallnote { margin-top:14px; font-size:13px; color:#6b6b6b; }
+@media(max-width:768px){.maps-vs-grid{grid-template-columns:1fr;}.maps-vs-section{padding:48px 5%;}.lsx-gw{padding:22px 16px;}.lsx-gwgrid{grid-template-columns:1fr;gap:14px;}.lsx-gwarr{transform:rotate(90deg);}.lsx-imp{grid-template-columns:repeat(2,1fr);gap:12px;}.lsx-gwbox div:nth-child(2){font-size:18px !important;line-height:1.25;margin:6px 0;}.lsx-imp div div:first-child{font-size:20px !important;}.section-proof{padding:56px 18px;}.section-proof h2{font-size:25px;}}
+</style>
+<!-- 741 example: intro -->
+<section class="seo_section" style="text-align:center;">
+  <div style="max-width:840px;margin:0 auto;">
+    <div class="seo_tagline">Echtes Kunden-Beispiel</div>
+    <h2 class="heading-style-l">So sieht eine <span class="seo_highlight">741-Analyse</span> aus</h2>
+    <p class="text-size-medium">Ein realer Google-Maps-Sichtbarkeits-Scan aus dem Landkreis Fürstenfeldbruck – 81 Messpunkte, Suchbegriff „heilpraktiker". Genau diese Analyse erstellen wir kostenlos für Ihr Unternehmen.</p>
+  </div>
+</section>
+<!-- 741 example: maps scan vs target -->
+<section class="maps-vs-section">
+  <div class="maps-vs-grid">
+    <div class="maps-vs-card">
+      <span class="maps-vs-badge" style="background:rgba(239,68,68,0.12); color:#dc2626;">● Heute – echter Scan</span>
+      <img src="/review-assets/agnes-speidel/scan-grid.webp" alt="Google Maps Ranking Scan Beispiel – Naturheilpraxis Olching" loading="lazy" width="1000" height="1000">
+      <p class="maps-vs-caption"><b>Rund um ihre Praxis in Olching steht die Kundin auf Platz 1–2.</b> Aber schon Richtung Fürstenfeldbruck, Germering und Puchheim taucht sie gar nicht mehr auf (20+) – im Schnitt Position 10, Top-3-Sichtbarkeit nur 9 %.</p>
+    </div>
+    <div class="maps-vs-card">
+      <span class="maps-vs-badge" style="background:rgba(34,150,60,0.12); color:#15803d;">● Das Ziel – so kann es aussehen</span>
+      <svg viewBox="0 0 720 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ziel-Szenario: Top-3-Sichtbarkeit im gesamten Einzugsgebiet (Simulation)"><rect width="720" height="720" fill="#eef4ee"/><path d="M0 150 L720 130 M0 340 L720 360 M0 560 L720 540 M190 0 L175 720 M430 0 L450 720 M600 0 L585 720" stroke="#dbe6db" stroke-width="10" fill="none"/><g font-family="Arial, sans-serif" font-weight="bold" font-size="22" text-anchor="middle"><circle cx="62" cy="62" r="25" fill="#7aa83f"/><text x="62" y="70" fill="#fff">4</text><circle cx="136" cy="62" r="25" fill="#7aa83f"/><text x="136" y="70" fill="#fff">4</text><circle cx="211" cy="62" r="25" fill="#7aa83f"/><text x="211" y="70" fill="#fff">4</text><circle cx="286" cy="62" r="25" fill="#7aa83f"/><text x="286" y="70" fill="#fff">4</text><circle cx="360" cy="62" r="25" fill="#7aa83f"/><text x="360" y="70" fill="#fff">4</text><circle cx="434" cy="62" r="25" fill="#7aa83f"/><text x="434" y="70" fill="#fff">4</text><circle cx="509" cy="62" r="25" fill="#7aa83f"/><text x="509" y="70" fill="#fff">4</text><circle cx="584" cy="62" r="25" fill="#7aa83f"/><text x="584" y="70" fill="#fff">4</text><circle cx="658" cy="62" r="25" fill="#7aa83f"/><text x="658" y="70" fill="#fff">4</text><circle cx="62" cy="136" r="25" fill="#7aa83f"/><text x="62" y="144" fill="#fff">4</text><circle cx="136" cy="136" r="25" fill="#4d9a3f"/><text x="136" y="144" fill="#fff">3</text><circle cx="211" cy="136" r="25" fill="#4d9a3f"/><text x="211" y="144" fill="#fff">3</text><circle cx="286" cy="136" r="25" fill="#4d9a3f"/><text x="286" y="144" fill="#fff">3</text><circle cx="360" cy="136" r="25" fill="#4d9a3f"/><text x="360" y="144" fill="#fff">3</text><circle cx="434" cy="136" r="25" fill="#4d9a3f"/><text x="434" y="144" fill="#fff">3</text><circle cx="509" cy="136" r="25" fill="#4d9a3f"/><text x="509" y="144" fill="#fff">3</text><circle cx="584" cy="136" r="25" fill="#4d9a3f"/><text x="584" y="144" fill="#fff">3</text><circle cx="658" cy="136" r="25" fill="#7aa83f"/><text x="658" y="144" fill="#fff">4</text><circle cx="62" cy="211" r="25" fill="#7aa83f"/><text x="62" y="219" fill="#fff">4</text><circle cx="136" cy="211" r="25" fill="#4d9a3f"/><text x="136" y="219" fill="#fff">3</text><circle cx="211" cy="211" r="25" fill="#2e8b34"/><text x="211" y="219" fill="#fff">2</text><circle cx="286" cy="211" r="25" fill="#2e8b34"/><text x="286" y="219" fill="#fff">2</text><circle cx="360" cy="211" r="25" fill="#2e8b34"/><text x="360" y="219" fill="#fff">2</text><circle cx="434" cy="211" r="25" fill="#2e8b34"/><text x="434" y="219" fill="#fff">2</text><circle cx="509" cy="211" r="25" fill="#2e8b34"/><text x="509" y="219" fill="#fff">2</text><circle cx="584" cy="211" r="25" fill="#4d9a3f"/><text x="584" y="219" fill="#fff">3</text><circle cx="658" cy="211" r="25" fill="#7aa83f"/><text x="658" y="219" fill="#fff">4</text><circle cx="62" cy="286" r="25" fill="#7aa83f"/><text x="62" y="294" fill="#fff">4</text><circle cx="136" cy="286" r="25" fill="#4d9a3f"/><text x="136" y="294" fill="#fff">3</text><circle cx="211" cy="286" r="25" fill="#2e8b34"/><text x="211" y="294" fill="#fff">2</text><circle cx="286" cy="286" r="25" fill="#136c2e"/><text x="286" y="294" fill="#fff">1</text><circle cx="360" cy="286" r="25" fill="#136c2e"/><text x="360" y="294" fill="#fff">1</text><circle cx="434" cy="286" r="25" fill="#136c2e"/><text x="434" y="294" fill="#fff">1</text><circle cx="509" cy="286" r="25" fill="#2e8b34"/><text x="509" y="294" fill="#fff">2</text><circle cx="584" cy="286" r="25" fill="#4d9a3f"/><text x="584" y="294" fill="#fff">3</text><circle cx="658" cy="286" r="25" fill="#7aa83f"/><text x="658" y="294" fill="#fff">4</text><circle cx="62" cy="360" r="25" fill="#7aa83f"/><text x="62" y="368" fill="#fff">4</text><circle cx="136" cy="360" r="25" fill="#4d9a3f"/><text x="136" y="368" fill="#fff">3</text><circle cx="211" cy="360" r="25" fill="#2e8b34"/><text x="211" y="368" fill="#fff">2</text><circle cx="286" cy="360" r="25" fill="#136c2e"/><text x="286" y="368" fill="#fff">1</text><circle cx="360" cy="360" r="28" fill="#136c2e" stroke="#fac118" stroke-width="5"/><text x="360" y="368" fill="#fff">1</text><circle cx="434" cy="360" r="25" fill="#136c2e"/><text x="434" y="368" fill="#fff">1</text><circle cx="509" cy="360" r="25" fill="#2e8b34"/><text x="509" y="368" fill="#fff">2</text><circle cx="584" cy="360" r="25" fill="#4d9a3f"/><text x="584" y="368" fill="#fff">3</text><circle cx="658" cy="360" r="25" fill="#7aa83f"/><text x="658" y="368" fill="#fff">4</text><circle cx="62" cy="434" r="25" fill="#7aa83f"/><text x="62" y="442" fill="#fff">4</text><circle cx="136" cy="434" r="25" fill="#4d9a3f"/><text x="136" y="442" fill="#fff">3</text><circle cx="211" cy="434" r="25" fill="#2e8b34"/><text x="211" y="442" fill="#fff">2</text><circle cx="286" cy="434" r="25" fill="#136c2e"/><text x="286" y="442" fill="#fff">1</text><circle cx="360" cy="434" r="25" fill="#136c2e"/><text x="360" y="442" fill="#fff">1</text><circle cx="434" cy="434" r="25" fill="#136c2e"/><text x="434" y="442" fill="#fff">1</text><circle cx="509" cy="434" r="25" fill="#2e8b34"/><text x="509" y="442" fill="#fff">2</text><circle cx="584" cy="434" r="25" fill="#4d9a3f"/><text x="584" y="442" fill="#fff">3</text><circle cx="658" cy="434" r="25" fill="#7aa83f"/><text x="658" y="442" fill="#fff">4</text><circle cx="62" cy="509" r="25" fill="#7aa83f"/><text x="62" y="517" fill="#fff">4</text><circle cx="136" cy="509" r="25" fill="#4d9a3f"/><text x="136" y="517" fill="#fff">3</text><circle cx="211" cy="509" r="25" fill="#2e8b34"/><text x="211" y="517" fill="#fff">2</text><circle cx="286" cy="509" r="25" fill="#2e8b34"/><text x="286" y="517" fill="#fff">2</text><circle cx="360" cy="509" r="25" fill="#2e8b34"/><text x="360" y="517" fill="#fff">2</text><circle cx="434" cy="509" r="25" fill="#2e8b34"/><text x="434" y="517" fill="#fff">2</text><circle cx="509" cy="509" r="25" fill="#2e8b34"/><text x="509" y="517" fill="#fff">2</text><circle cx="584" cy="509" r="25" fill="#4d9a3f"/><text x="584" y="517" fill="#fff">3</text><circle cx="658" cy="509" r="25" fill="#7aa83f"/><text x="658" y="517" fill="#fff">4</text><circle cx="62" cy="584" r="25" fill="#7aa83f"/><text x="62" y="592" fill="#fff">4</text><circle cx="136" cy="584" r="25" fill="#4d9a3f"/><text x="136" y="592" fill="#fff">3</text><circle cx="211" cy="584" r="25" fill="#4d9a3f"/><text x="211" y="592" fill="#fff">3</text><circle cx="286" cy="584" r="25" fill="#4d9a3f"/><text x="286" y="592" fill="#fff">3</text><circle cx="360" cy="584" r="25" fill="#4d9a3f"/><text x="360" y="592" fill="#fff">3</text><circle cx="434" cy="584" r="25" fill="#4d9a3f"/><text x="434" y="592" fill="#fff">3</text><circle cx="509" cy="584" r="25" fill="#4d9a3f"/><text x="509" y="592" fill="#fff">3</text><circle cx="584" cy="584" r="25" fill="#4d9a3f"/><text x="584" y="592" fill="#fff">3</text><circle cx="658" cy="584" r="25" fill="#7aa83f"/><text x="658" y="592" fill="#fff">4</text><circle cx="62" cy="658" r="25" fill="#7aa83f"/><text x="62" y="666" fill="#fff">4</text><circle cx="136" cy="658" r="25" fill="#7aa83f"/><text x="136" y="666" fill="#fff">4</text><circle cx="211" cy="658" r="25" fill="#7aa83f"/><text x="211" y="666" fill="#fff">4</text><circle cx="286" cy="658" r="25" fill="#7aa83f"/><text x="286" y="666" fill="#fff">4</text><circle cx="360" cy="658" r="25" fill="#7aa83f"/><text x="360" y="666" fill="#fff">4</text><circle cx="434" cy="658" r="25" fill="#7aa83f"/><text x="434" y="666" fill="#fff">4</text><circle cx="509" cy="658" r="25" fill="#7aa83f"/><text x="509" y="666" fill="#fff">4</text><circle cx="584" cy="658" r="25" fill="#7aa83f"/><text x="584" y="666" fill="#fff">4</text><circle cx="658" cy="658" r="25" fill="#7aa83f"/><text x="658" y="666" fill="#fff">4</text></g><g font-family="Arial, sans-serif"><rect x="435" y="675" width="270" height="34" rx="17" fill="#252525" opacity="0.85"/><text x="570" y="697" fill="#fff" font-size="17" text-anchor="middle" font-weight="bold">Ziel-Szenario (Simulation)</text></g></svg>
+      <p class="maps-vs-caption"><b>Top-3-Sichtbarkeit im gesamten Landkreis.</b> Der Marktführer (Thomas Loch, Fürstenfeldbruck) deckt 41 % ab – mit 46 Bewertungen. Die Kundin hatte nur eine. Genau hier liegt der größte Hebel.</p>
+    </div>
+  </div>
+  <div class="maps-vs-impact">
+    <span class="maps-vs-chip">📞 Mehr Anrufe direkt aus Google Maps</span>
+    <span class="maps-vs-chip">🧭 Mehr Routen-Anfragen zum Standort</span>
+    <span class="maps-vs-chip">👥 Kund:innen aus dem gesamten Umland</span>
+  </div>
+  <p style="color:#888; font-size:13px; max-width:640px; margin:18px auto 0;">Wer bei Google Maps in den Top 3 („Local Pack") steht, bekommt den Großteil aller Klicks, Anrufe und Routen – Positionen ab 10 gehen im Alltag leer aus.</p>
+</section>
+<!-- 741 example: growth potential -->
+<section style="padding:64px 5%; background:#fafafa;">
+  <div class="lsx-gw">
+    <span class="ey">Wachstums-Potenzial</span>
+    <h2>Das Potenzial im direkten Vergleich</h2>
+    <div class="lsx-gwgrid">
+      <div class="lsx-gwbox">
+        <div style="font-size:12.8px;text-transform:uppercase;color:#888;font-weight:800;">Aktueller Stand</div>
+        <div style="font-size:32px;font-weight:900;color:#aaa;margin:8px 0;">Ø Position 10 · Top-3 nur 9 %</div>
+        <div style="font-size:13.6px;color:#888;">Versteckt in den weiteren Ergebnissen. Kaum organische Anrufe.</div>
+      </div>
+      <div class="lsx-gwarr">➔</div>
+      <div class="lsx-gwbox t">
+        <div style="font-size:12.8px;text-transform:uppercase;color:#fac118;font-weight:800;">Ziel-Potenzial</div>
+        <div style="font-size:32px;font-weight:900;color:#fac118;margin:8px 0;">Top 3 – im Landkreis</div>
+        <div style="font-size:13.6px;color:#bbb;">Dominante Platzierung direkt im Sichtfeld moderner Kunden & Patienten.</div>
+      </div>
+    </div>
+    <div class="lsx-imp">
+      <div><div style="font-size:28.8px;font-weight:900;color:#fac118;">+190%</div><div style="font-size:13.6px;color:#aaa;">Mehr Anrufe</div></div>
+      <div><div style="font-size:28.8px;font-weight:900;color:#fac118;">+240%</div><div style="font-size:13.6px;color:#aaa;">Mehr Routenplaner</div></div>
+      <div><div style="font-size:28.8px;font-weight:900;color:#fac118;">+160%</div><div style="font-size:13.6px;color:#aaa;">Mehr Anfragen</div></div>
+      <div><div style="font-size:22.4px;font-weight:900;color:#fac118;">Top 3 lokal</div><div style="font-size:13.6px;color:#aaa;">Regionale Autorität</div></div>
+    </div>
+    <p style="font-size:12px;color:#777;margin-top:16px;">Illustrative Potenzialwerte auf Basis typischer lokaler Sichtbarkeits-Projekte.</p>
+  </div>
+</section>
+<section class="section-proof">
+    <div class="proof-inner">
+    <h2>Ist der Sprung in die Top 3 realistisch? Für diese Betriebe war er es.</h2>
+    <p class="proof-lead">Jeder Name hier ist echte, geleistete Arbeit — mit dem tatsächlichen Ranking-Sprung, den wir für lokale Betriebe erreicht haben.</p>
+    <div class="wall">
+      <div class="wc hl"><img class="avimg" src="/review-assets/people/bali-healing.jpg" alt="Bali Healing, Canggu" loading="lazy"><div><b>Bali Healing, Canggu</b><small>Holistic Health Center</small><em class="res"><a href="#">▲ Platz 5 → 1 · „Holistic Health Center“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/physio-anatomie.jpg" alt="Physio Anatomie GmbH" loading="lazy"><div><b>Physio Anatomie GmbH</b><small>Physiotherapie</small><em class="res"><a href="#">▲ Platz 12 → 2 · „Physiotherapie Stuttgart“</a></em></div></div>
+      <div class="wc"><span class="av">PK</span><div><b>Physiotherapie Kraft</b><small>Physiotherapie</small><em class="res"><a href="/review-assets/proof/physio-kraft-nachher.jpg" target="_blank">▲ Platz 8 → 1 · „Krankengymnastik“</a></em></div></div>
+      <div class="wc"><span class="av">TM</span><div><b>Torsten Menge</b><small>Psychotherapie</small><em class="res"><a href="/review-assets/proof/torsten-menge-nachher.jpg" target="_blank">▲ Platz 117 → 3 · „Onkologie-Psychologie“</a></em></div></div>
+      <div class="wc"><span class="av">EW</span><div><b>Eva Maria Weber</b><small>Massagepraxis</small><em class="res"><a href="#">▲ Platz 14 → 2 · „Massagepraxis“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/karin-lorenz.jpg" alt="Karin Lorenz" loading="lazy"><div><b>Karin Lorenz</b><small>TCM-Praxis</small><em class="res"><a href="#">▲ Platz 19 → 1 · „Akupunktur & TCM“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/maria-abel.jpg" alt="Maria Abel" loading="lazy"><div><b>Maria Abel</b><small>Elternberatung &amp; Coaching</small><em class="res"><a href="/review-assets/proof/maria-abel-100prozent.jpg" target="_blank">▲ 0 → 100 % Top-3-Abdeckung</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/reset-stuttgart.jpg" alt="Reset Stuttgart" loading="lazy"><div><b>Reset Stuttgart</b><small>Bodywork &amp; Gesundheit</small><em class="res"><a href="#">▲ Platz 8 → 1 · „Bodywork &amp; Faszientherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/britta-salz.jpg" alt="Britta Salz" loading="lazy"><div><b>Britta Salz</b><small>Gesundheitspraxis</small><em class="res"><a href="#">▲ Platz 15 → 2 · „Gesundheitscoaching“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/bernd-laserstein.jpg" alt="Bernd Laserstein" loading="lazy"><div><b>Bernd Laserstein</b><small>Gesundheitspraxis</small><em class="res"><a href="/review-assets/proof/bernd-laserstein-nachher.jpg" target="_blank">▲ Platz 9 → 1 · „Körperpsychotherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/sabine-brenneisen.jpg" alt="Sabine Brenneisen" loading="lazy"><div><b>Sabine Brenneisen</b><small>Gesundheitspraxis</small><em class="res"><a href="#">▲ Platz 11 → 2 · „Ernährungsberatung“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/sven-boehme.jpg" alt="Sven Böhme" loading="lazy"><div><b>Sven Böhme</b><small>Heilpraktiker · Stuttgart</small><em class="res"><a href="/review-assets/proof/boehme-nachher.jpg" target="_blank">▲ Platz 17 → 4 · „Heilpraktiker Stuttgart“</a></em></div></div>
+      <div class="wc"><span class="av">MG</span><div><b>Martina Gross</b><small>Physiotherapie · Herzogenaurach</small><em class="res"><a href="/review-assets/proof/martina-gross-nachher.jpg" target="_blank">▲ Platz 1 · „Physiotherapie“</a></em></div></div>
+      <div class="wc"><span class="av">JF</span><div><b>Janina Felix</b><small>Praxis-Kundin</small><em class="res"><a href="#">▲ Platz 7 → 1 · „Osteopathie &amp; Kinder“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/justine-felix.jpg" alt="Justine Felix" loading="lazy"><div><b>Justine Felix</b><small>Praxis-Kundin</small><em class="res"><a href="#">▲ Platz 12 → 2 · „Heilpraktikerin für Frauen“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/jeffrey-krautz.jpg" alt="Jeffrey Krautz · Mediwe" loading="lazy"><div><b>Jeffrey Krautz · Mediwe</b><small>Medizin-Sektor</small><em class="res"><a href="#">▲ Platz 33 → 3 · „Medizinprodukte Vertrieb“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/marita-biel.jpg" alt="Freude am Lernen · Marita Biel" loading="lazy"><div><b>Freude am Lernen · Marita Biel</b><small>Lerncoaching</small><em class="res"><a href="#">▲ Platz 8 → 1 · „Lerncoaching Stuttgart“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/sabine-verges.jpg" alt="Sabine Verges" loading="lazy"><div><b>Sabine Verges</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 14 → 2 · „Naturheilverfahren“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/astrid-lengauer.jpg" alt="Astrid Lengauer" loading="lazy"><div><b>Astrid Lengauer</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 18 → 1 · „Innenarchitektur“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/angelina-everitt.jpg" alt="Angelina Everitt" loading="lazy"><div><b>Angelina Everitt</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 21 → 3 · „Hypnosetherapie Stuttgart“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/martin-altherr.jpg" alt="Martin Altherr" loading="lazy"><div><b>Martin Altherr</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 15 → 1 · „Rolfing &amp; Faszientherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/karoline-hengst.svg" alt="Karoline Hengst" loading="lazy"><div><b>Karoline Hengst</b><small>Lokaler Betrieb</small><em class="res"><a href="/review-assets/proof/karoline-hengst-nachher.jpg" target="_blank">▲ Platz 28 → 2 · „Homöopathie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/claudia-irmscher.jpg" alt="Claudia Irmscher" loading="lazy"><div><b>Claudia Irmscher</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 11 → 2 · „Heilpraktikerin Psychotherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/michael-kuch.jpg" alt="Michael Kuch" loading="lazy"><div><b>Michael Kuch</b><small>Lokaler Betrieb</small><em class="res"><a href="/review-assets/proof/michael-kuch-nachher.jpg" target="_blank">▲ Platz 23 → 3 · „Physiotherapeut“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/hotel-alpi.jpg" alt="Hotel Alpi · Franz Watschinger" loading="lazy"><div><b>Hotel Alpi · Franz Watschinger</b><small>Hotel</small><em class="res"><a href="#">▲ Platz 5 → 1 · „Wellnesshotel Südtirol“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/boris-bamberger.jpg" alt="Werbeagentur Bamberger" loading="lazy"><div><b>Werbeagentur Bamberger</b><small>Agentur · Nürnberg</small><em class="res"><a href="#">▲ Platz 12 → 2 · „Werbeagentur Nürnberg“</a></em></div></div>
+      <div class="wc"><span class="av">DM</span><div><b>Die Mediaberater</b><small>Werbeagentur · Nürnberg</small><em class="res"><a href="/review-assets/proof/mediaberater-nachher.jpg" target="_blank">▲ Platz 14 → 3 · „Online-Marketing-Agentur“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/dieter-noras.jpg" alt="Dieter Noras" loading="lazy"><div><b>Dieter Noras</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 9 → 1 · „Ergotherapie &amp; Handtherapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/dennis-doerfler.jpg" alt="Dennis Dörfler" loading="lazy"><div><b>Dennis Dörfler</b><small>Rechtsanwaltskanzlei · Frankfurt</small><em class="res"><a href="/review-assets/proof/dennis-doerfler-nachher.jpg" target="_blank">▲ Platz 17 → 7 · „Fachanwalt Arbeitsrecht“</a></em></div></div>
+    </div>
+    <p class="wallnote">Eine Auswahl unserer Local-SEO- und Sichtbarkeits-Projekte aus Gesundheit, Gastgewerbe, Recht und Dienstleistung.</p>
+    </div>
+  </section>
 <section class="section_founder">
 <div class="founder_grid">
 <div class="founder_image_wrapper reveal-up">
@@ -664,12 +830,37 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
                             Kunden oder Kunden, wir haben unseren Job nicht gemacht. Deshalb glauben wir nicht an Langfristigkeit
                             Lock-in-Verträge. Unsere Ergebnisse sind unsere Bindungsstrategie.
                         </p>
-<a class="seo_btn" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro">Arbeiten Sie mit
+<a class="seo_btn" href="https://741.studio/pages/sichtbarkeits-analyse.html" data-qz>Arbeiten Sie mit
                             uns</a>
 </div>
 </div>
 </section>
 <!-- FOOTER -->
+            
+<style>
+  .rel-wrap{max-width:1100px;margin:0 auto;}
+  .rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;margin-top:2rem;}
+  .rel-card{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;
+    background:#f8f8f8;border:1px solid #eee;border-radius:1.2rem;padding:1.5rem 1.7rem;
+    text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;}
+  .rel-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.08);border-color:var(--brand--lemon,#fac118);}
+  .rel-card .rc-t{font-size:1.08rem;font-weight:600;line-height:1.3;}
+  .rel-card .rc-a{flex-shrink:0;color:var(--brand--lemon,#fac118);font-size:1.5rem;font-weight:800;line-height:1;}
+  .seo_section.is--dark .rel-card{background:#1a1a1a;border-color:#333;}
+</style>
+<section class="seo_section" style="border-top:1px solid #eee;">
+  <div class="rel-wrap reveal-up">
+    <div class="seo_tagline">Mehr erfahren</div>
+    <h2 class="heading-style-l" style="margin-top:.2rem;">Mehr zum Thema lokale Sichtbarkeit</h2>
+    <div class="rel-grid reveal-stagger-group">
+      <a class="rel-card reveal-item" href="/de/pages/google-maps-fix.html"><span class="rc-t">Google-Maps-Ranking reparieren</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/de/pages/website-design.html"><span class="rc-t">Website, die gefunden wird</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/case-studies/astrid-lengauer/"><span class="rc-t">Fallstudie: Astrid Lengauer</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="https://741.studio/pages/sichtbarkeits-analyse.html" data-qz><span class="rc-t">Kostenlose Sichtbarkeits-Analyse</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/pages/growth-plan-de.html"><span class="rc-t">Das 90-Tage-Programm</span><span class="rc-a">&rarr;</span></a>
+    </div>
+  </div>
+</section>
             {{> footer_de }}
         </div>
 </div>
@@ -830,5 +1021,225 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
         });
     </script>
   {{> consent }}
+<div class="qz-overlay" id="qzOverlay" role="dialog" aria-modal="true">
+  <div class="qz">
+    <button class="qz-close" id="qzClose" aria-label="Schließen">×</button>
+    <div class="qz-progress"><i id="qzBar" style="width:16%"></i></div>
+    <div class="qz-step-label" id="qzStepLabel">Schritt 1 von 6</div>
+    <div id="qzBody"></div>
+    <div class="qz-err" id="qzErr"></div>
+    <div class="qz-nav" id="qzNav">
+      <button class="qz-back" id="qzBack" style="visibility:hidden">← Zurück</button>
+      <button class="qz-next" id="qzNext" style="display:none">Weiter →</button>
+    </div>
+    <div class="qz-trust">
+      <span>🔒 DSGVO-konform</span><span>⏱ Analyse in ca. 2 Stunden</span><span>🎥 Individuelles Video</span><span>💬 Zustellung per WhatsApp &amp; E-Mail</span>
+    </div>
+  </div>
+</div>
+<script>
+var QZ_CONFIG = {
+  SUPABASE_URL: "https://bgiljrygqvlgwsrjvhnp.supabase.co",
+  SUPABASE_KEY: "sb_publishable_Yuu6gXfuXNQdgWkdIqfU9Q_hmNyX3kH",
+  WEBHOOK_URL: "",
+  FALLBACK_EMAIL: "hello@741.studio",
+  FALLBACK_CC: "martin@741.studio"
+};
+
+(function(){
+  var steps = [
+    { key:'branche', type:'options',
+      q:'Welche Art von Unternehmen führen Sie?',
+      sub:'Damit die Analyse auf Ihren Markt zugeschnitten ist.',
+      opts:[
+        {v:'Praxis / Gesundheitswesen', t:'Praxis / Gesundheitswesen'},
+        {v:'Handwerk / Bau', t:'Handwerk / Bau'},
+        {v:'Gastronomie / Hotellerie', t:'Gastronomie / Hotellerie'},
+        {v:'Dienstleistung', t:'Dienstleistung (Kanzlei, Studio, Kosmetik …)'},
+        {v:'Anderes lokales Unternehmen', t:'Anderes lokales Unternehmen'}
+      ]},
+    { key:'akquise', type:'options',
+      q:'Wie gewinnen Sie aktuell hauptsächlich neue Kunden?',
+      sub:'Ehrliche Antwort – es gibt kein Richtig oder Falsch.',
+      opts:[
+        {v:'Empfehlungen', t:'Empfehlungen & Stammkunden'},
+        {v:'Google Ads', t:'Google Ads / bezahlte Werbung'},
+        {v:'Social Media', t:'Social Media'},
+        {v:'Kaum aktive Gewinnung', t:'Kaum aktive Neukundengewinnung'}
+      ]},
+    { key:'bewertungen', type:'options',
+      q:'Wie viele Google-Bewertungen hat Ihr Unternehmen aktuell?',
+      sub:'Einer der stärksten lokalen Rankingfaktoren.',
+      opts:[
+        {v:'unter 20', t:'Unter 20'},
+        {v:'20 bis 100', t:'20 – 100'},
+        {v:'über 100', t:'Über 100'},
+        {v:'weiß nicht', t:'Weiß ich nicht genau'}
+      ]},
+    { key:'standort', type:'input',
+      q:'In welcher Stadt / Region sind Sie tätig?',
+      sub:'Für das straßengenaue Sichtbarkeits-Raster Ihres Einzugsgebiets.',
+      fields:[{name:'stadt', label:'Stadt / Region', ph:'z. B. Nürnberg', type:'text', required:true}]},
+    { key:'domain', type:'input',
+      q:'Wie lautet Ihre Website?',
+      sub:'Wir prüfen Website und Google-Profil im Wettbewerbsvergleich.',
+      fields:[{name:'domain', label:'Website / Domain', ph:'z. B. www.ihr-betrieb.de', type:'text', required:true},
+              {name:'praxisname', label:'Name des Unternehmens (wie bei Google)', ph:'z. B. Malerbetrieb Muster', type:'text', required:false}]},
+    { key:'kontakt', type:'contact',
+      q:'Wohin dürfen wir Ihre Video-Analyse senden?',
+      sub:'Ihre Analyse wird manuell erstellt – als individuelles Video, zugestellt per WhatsApp und E-Mail.',
+      fields:[{name:'name', label:'Ihr Name', ph:'Vor- und Nachname', type:'text', required:true},
+              {name:'email', label:'E-Mail-Adresse', ph:'name@firma.de', type:'email', required:true},
+              {name:'telefon', label:'Mobilnummer (für WhatsApp-Zustellung)', ph:'+49 …', type:'tel', required:true}]}
+  ];
+
+  var answers = {};
+  var idx = 0;
+  var overlay = document.getElementById('qzOverlay');
+  var body = document.getElementById('qzBody');
+  var bar = document.getElementById('qzBar');
+  var stepLabel = document.getElementById('qzStepLabel');
+  var nav = document.getElementById('qzNav');
+  var btnBack = document.getElementById('qzBack');
+  var btnNext = document.getElementById('qzNext');
+  var errBox = document.getElementById('qzErr');
+
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+
+  function render(){
+    var s = steps[idx];
+    errBox.className='qz-err';
+    bar.style.width = Math.round(((idx+1)/steps.length)*100)+'%';
+    stepLabel.textContent = 'Schritt '+(idx+1)+' von '+steps.length;
+    btnBack.style.visibility = idx===0 ? 'hidden':'visible';
+    var h = '<h3>'+esc(s.q)+'</h3><p class="qz-sub">'+esc(s.sub)+'</p>';
+    if(s.type==='options'){
+      btnNext.style.display='none';
+      h += '<div class="qz-opts">';
+      s.opts.forEach(function(o){ h += '<button type="button" class="qz-opt" data-v="'+esc(o.v)+'">'+esc(o.t)+'</button>'; });
+      h += '</div>';
+    } else {
+      btnNext.style.display='inline-block';
+      btnNext.textContent = (s.type==='contact') ? 'Kostenlose Analyse anfordern →' : 'Weiter →';
+      s.fields.forEach(function(f){
+        h += '<label for="qzf_'+f.name+'">'+esc(f.label)+(f.required?'':' <span style="font-weight:400;color:var(--ash)">(optional)</span>')+'</label>';
+        h += '<input id="qzf_'+f.name+'" name="'+f.name+'" type="'+f.type+'" placeholder="'+esc(f.ph)+'" value="'+esc(answers[f.name]||'')+'">';
+      });
+      if(s.type==='contact'){
+        h += '<div class="qz-consent"><input type="checkbox" id="qzConsent"><label for="qzConsent" style="margin:0;font-weight:400;">Ich stimme zu, dass meine Angaben zur Erstellung und Zusendung der Sichtbarkeits-Analyse (per E-Mail/WhatsApp) verarbeitet werden. <a href="https://741.studio/de/pages/datenschutz.html" target="_blank" rel="noopener">Datenschutz</a></label></div>';
+      }
+    }
+    body.innerHTML = h;
+    if(s.type==='options'){
+      body.querySelectorAll('.qz-opt').forEach(function(b){
+        b.addEventListener('click', function(){
+          answers[s.key] = b.getAttribute('data-v');
+          next();
+        });
+      });
+    }
+    var first = body.querySelector('input[type=text],input[type=email],input[type=tel]');
+    if(first) first.focus();
+  }
+
+  function showErr(m){ errBox.textContent=m; errBox.className='qz-err show'; }
+
+  function validate(){
+    var s = steps[idx];
+    if(s.type==='options') return true;
+    var ok = true;
+    s.fields.forEach(function(f){
+      var el = document.getElementById('qzf_'+f.name);
+      var v = el ? el.value.trim() : '';
+      answers[f.name] = v;
+      if(f.required && !v) ok = false;
+      if(f.type==='email' && v && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) ok = false;
+      if(f.type==='tel' && v && v.replace(/[^0-9]/g,'').length < 7) ok = false;
+    });
+    if(!ok){ showErr('Bitte füllen Sie alle Pflichtfelder korrekt aus.'); return false; }
+    if(s.type==='contact'){
+      var c = document.getElementById('qzConsent');
+      if(!c || !c.checked){ showErr('Bitte bestätigen Sie die Datenschutz-Einwilligung.'); return false; }
+    }
+    return true;
+  }
+
+  function next(){
+    errBox.className='qz-err';
+    if(idx < steps.length-1){ idx++; render(); }
+    else { submit(); }
+  }
+
+  function payload(){
+    return {
+      quelle:(function(){try{var p=new URLSearchParams(location.search);var s=(p.get('utm_source')||'').toLowerCase(),m=(p.get('utm_medium')||'').toLowerCase(),c=p.get('utm_campaign')||p.get('utm_id')||'';if(s){var net=(s==='ig'||s==='instagram'||s==='fb'||s==='facebook'||s==='msg'||s==='an')?'Meta Ads ('+s+')':(s==='google'||s==='g'||s==='adwords')?'Google Ads':(m==='paid'?'Paid '+s:s);return net+(c?' · '+c:'')+' – Sichtbarkeits-Analyse (DE)';}}catch(e){}return 'Direkt/Organisch – Sichtbarkeits-Analyse (DE)';})(),
+      seite: location.href,
+      branche: answers.branche||'', akquise: answers.akquise||'', bewertungen: answers.bewertungen||'',
+      stadt: answers.stadt||'', domain: answers.domain||'', praxisname: answers.praxisname||'',
+      name: answers.name||'', email: answers.email||'', telefon: answers.telefon||'',
+      fbclid:(function(){try{return new URLSearchParams(location.search).get('fbclid')||'';}catch(e){return '';}})(),
+      fbc:(function(){try{var m=document.cookie.match(/_fbc=([^;]+)/);if(m)return decodeURIComponent(m[1]);var f=new URLSearchParams(location.search).get('fbclid');return f?('fb.1.'+Date.now()+'.'+f):'';}catch(e){return '';}})(),
+      fbp:(function(){try{var m=document.cookie.match(/_fbp=([^;]+)/);return m?decodeURIComponent(m[1]):'';}catch(e){return '';}})(),
+      event_id:(function(){try{return (window.crypto&&crypto.randomUUID)?crypto.randomUUID():('ld-'+Date.now()+'-'+Math.random().toString(16).slice(2));}catch(e){return 'ld-'+Date.now();}})(),
+      user_agent:(function(){try{return navigator.userAgent||'';}catch(e){return '';}})()
+    };
+  }
+
+  function submit(){
+    btnNext.disabled = true; btnNext.textContent = 'Wird gesendet …';
+    var p = payload();
+    var done = function(){ try{fbq('track','Lead',{},{eventID:p.event_id});}catch(e){} /* Google Ads Conversion hier ergänzen */ success(); };
+    var fallback = function(){
+      var b = Object.keys(p).map(function(k){return k+': '+p[k];}).join('%0D%0A');
+      window.open('mailto:'+QZ_CONFIG.FALLBACK_EMAIL+'?cc='+QZ_CONFIG.FALLBACK_CC+'&subject=Neue%20Sichtbarkeits-Analyse%20Anfrage&body='+b,'_blank');
+      success();
+    };
+    var viaWebhook = function(){
+      if(!QZ_CONFIG.WEBHOOK_URL){ fallback(); return; }
+      fetch(QZ_CONFIG.WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)})
+        .then(function(r){ if(r.ok){done();} else {fallback();} })
+        .catch(fallback);
+    };
+    if(QZ_CONFIG.SUPABASE_URL && QZ_CONFIG.SUPABASE_KEY){
+      fetch(QZ_CONFIG.SUPABASE_URL+'/rest/v1/advertorial_leads',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','apikey':QZ_CONFIG.SUPABASE_KEY,'Prefer':'return=minimal'},
+        body:JSON.stringify(p)
+      }).then(function(r){ if(r.ok){done();} else {viaWebhook();} })
+        .catch(viaWebhook);
+    } else {
+      viaWebhook();
+    }
+  }
+
+  function success(){
+    errBox.className='qz-err';
+    bar.style.width='100%';
+    stepLabel.textContent='Fertig';
+    nav.style.display='none';
+    body.innerHTML =
+      '<div class="qz-success">'+
+      '<svg width="72" height="72" viewBox="0 0 72 72"><circle cx="36" cy="36" r="34" fill="#fac118"/><path d="M21 37 L32 48 L52 26" fill="none" stroke="#252525" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>'+
+      '<h3>Vielen Dank, '+esc((answers.name||'').split(' ')[0])+'! Ihre Analyse ist in Arbeit.</h3>'+
+      '<div class="qz-timer">⏱ Zustellung innerhalb der nächsten 2 Stunden*</div>'+
+      '<p>Wir erstellen Ihre Sichtbarkeits-Analyse jetzt <b>manuell</b> – inklusive einem <b>individuellen Video</b>, in dem wir Schritt für Schritt zeigen, wo Sie aktuell stehen, welcher Wettbewerber Sie verdrängt und welche drei Maßnahmen den größten Hebel haben.</p>'+
+      '<p>Sie erhalten das Video per <b>WhatsApp</b> an '+esc(answers.telefon||'')+' und per <b>E-Mail</b> an '+esc(answers.email||'')+'.</p>'+
+      '<p style="font-size:12.5px;color:var(--ash)">*Anfragen werktags zwischen 9 und 18 Uhr. Außerhalb dieser Zeiten erhalten Sie Ihre Analyse am nächsten Werktag bis 11 Uhr.</p>'+
+      '</div>';
+  }
+
+  function open(){ idx=0; nav.style.display='flex'; btnNext.disabled=false; overlay.classList.add('open'); document.body.style.overflow='hidden'; try{fbq('trackCustom','QuizOpened');}catch(e){} render(); }
+  function close(){ overlay.classList.remove('open'); document.body.style.overflow=''; }
+
+  document.getElementById('qzClose').addEventListener('click', close);
+  overlay.addEventListener('click', function(e){ if(e.target===overlay) close(); });
+  btnBack.addEventListener('click', function(){ if(idx>0){ idx--; render(); } });
+  btnNext.addEventListener('click', function(){ if(validate()) next(); });
+
+  document.querySelectorAll('[data-qz]').forEach(function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); e.stopImmediatePropagation(); open(); }, true);
+  });
+})();
+</script>
 </body>
 </html>

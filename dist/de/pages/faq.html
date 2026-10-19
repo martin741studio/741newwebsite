@@ -61,6 +61,9 @@ html
     </style>
 <script type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -98,6 +101,27 @@ html
 </div>
 <div class="page-wrapper">
 <div class="main-wrapper">
+            <!-- Anchor-scroll offset: .navbar_main's banner + nav row are position:fixed and float over
+                 the page at all breakpoints, so any in-page anchor jump (href="#some-section") lands that
+                 section's top edge under the fixed overlay unless the viewport compensates. This rule is
+                 the one global fix for that, valid for every current and future #id target on every page
+                 that includes this partial — do NOT re-solve this per-page with a local padding-top hack. -->
+            <style>
+              html { scroll-padding-top: 150px; }
+              @media screen and (max-width: 991px) { html { scroll-padding-top: 100px; } }
+            </style>
+            <!-- Page preloader: masks the brief unstyled-HTML flash (FOUC) on first paint, fades out when the page is ready. Self-contained (inline styles + SMIL SVG) so it needs no external CSS. -->
+            <div id="p741-preload" style="position:fixed;inset:0;z-index:2147483647;background:#ffffff;display:flex;align-items:center;justify-content:center;transition:opacity .5s ease;">
+            <svg width="46" height="46" viewBox="0 0 48 48" fill="none" role="img" aria-label="Wird geladen">
+            <circle cx="24" cy="24" r="20" stroke="#ececec" stroke-width="4"></circle>
+            <path d="M24 4a20 20 0 0 1 20 20" stroke="#fac118" stroke-width="4" stroke-linecap="round">
+            <animateTransform attributeName="transform" type="rotate" from="0 24 24" to="360 24 24" dur="0.8s" repeatCount="indefinite"></animateTransform>
+            </path>
+            </svg>
+            </div>
+            <script>
+            (function(){var o=document.getElementById('p741-preload');if(!o)return;var done=false;function hide(){if(done)return;done=true;o.style.opacity='0';o.style.pointerEvents='none';setTimeout(function(){if(o&&o.parentNode)o.parentNode.removeChild(o);},550);}if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){requestAnimationFrame(hide);});}window.addEventListener('load',hide);setTimeout(hide,1800);})();
+            </script>
             <div class="navbar_main" data-wf--navbar--variant="with-banner---black">
             <section class="banner_component w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
             <div class="padding-global is-stretch-banner w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
@@ -147,12 +171,18 @@ html
             <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" href="/de/pages/blog.html">
                       Blog
                     </a>
+            <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" href="/de/pages/741-circle.html">
+                      Community
+                    </a>
+            <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 nav_giveaway-link" href="/de/pages/sichtbarkeits-foerderung.html" style="font-weight:700;">
+                      🎁 Gewinnspiel
+                    </a>
             <div class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" style="display:inline-flex; gap: 8px; align-items:center;">
-            <a href="javascript:void(0)" onclick="sessionStorage.setItem('lang_override', 'en'); window.location.href = window.location.pathname.replace(/^\/de/, '') || '/';" style="color: inherit; text-decoration: none;">EN</a>
+            <a href="javascript:void(0)" onclick="sessionStorage.setItem('lang_override', 'en'); var a=document.querySelector('link[rel=alternate][hreflang=en]'); window.location.href = a ? a.getAttribute('href') : (window.location.pathname.replace(/^\/de/, '') || '/');" style="color: inherit; text-decoration: none;">EN</a>
             <span>|</span>
             <span style="opacity: 0.5; cursor: default;">DE</span>
             </div>
-            <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" href="http://clients.741-studio.com/">
+            <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" href="https://clients.741.studio/">
                       Anmelden
                     </a>
             </div>
@@ -174,7 +204,7 @@ html
             <line x1="3" x2="21" y1="18" y2="18"></line>
             </svg>
             </button>
-            <a class="huge_nav-button is-real w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 w-inline-block" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" id="try_now_top">
+            <a class="huge_nav-button is-real w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 w-inline-block" href="https://wa.me/6287860430975" id="try_now_top" target="_blank" rel="noopener">
             <div class="nav-button-spacer">
             </div>
             <div class="nav-link-text-block-large nav-normal-case">
@@ -186,7 +216,13 @@ html
                   display: none;
                 }
             
-                @media screen and (max-width: 768px) {
+                /* FIX: .navbar-left is a fixed 50%-wide z-999 box (weavy.css) that overlays the
+                   leftmost nav links (Home/Portfolio) and swallows their clicks once the logo loads.
+                   Let the empty container pass clicks through; keep the logo link itself clickable. */
+                .navbar-left { pointer-events: none !important; }
+                .navbar-left .brand, .navbar-left .brand * { pointer-events: auto !important; }
+            
+                @media screen and (max-width: 991px) {
             
                   /* ROW 1: Black Notification Bar */
                   .navbar_main .banner_component {
@@ -280,7 +316,7 @@ html
                   }
             
                   .navbar_main .huge_nav-button.is-real .nav-link-text-block-large {
-                    font-size: 2.77778rem !important;
+                    font-size: 18.75px !important;
                     /* Restore exactly to original */
                     font-weight: 400 !important;
                     text-align: center !important;
@@ -320,7 +356,7 @@ html
                     opacity: 0;
                     visibility: hidden;
                     pointer-events: none;
-                    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+                    transition: opacity 0.3s ease !important; /* visibility flips instantly — transitioning it can leave the menu stuck hidden */
                     z-index: 99999 !important;
                     /* Top overlay */
                     transform: none !important;
@@ -332,10 +368,18 @@ html
                     pointer-events: auto !important;
                   }
             
+                  .nav-links-wrapper.is-open .nav_text-link,
+                  .nav-links-wrapper.is-open .nav_dropdown,
+                  .nav-links-wrapper.is-open .nav_dropdown-toggle,
+                  .nav-links-wrapper.is-open .nav_dropdown-link {
+                    visibility: visible !important;
+                    opacity: 1 !important;
+                  }
+            
                   .nav-links-wrapper .nav_text-link {
                     color: #fff !important;
-                    font-size: 2rem !important;
-                    padding: 1.5rem 0 !important;
+                    font-size: 13.5px !important; /* px = root-independent so menu is identical on every page */
+                    padding: 10px 0 !important;
                     margin: 0 !important;
                     text-align: center !important;
                     width: 100% !important;
@@ -432,11 +476,11 @@ html
                     color: #000 !important;
                   }
             
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 991px) {
                     .nav_dropdown {
                       width: 100%;
                       text-align: center;
-                      margin: 1rem 0;
+                      margin: 8px 0;
                     }
                     
                     .nav_dropdown-toggle {
@@ -465,10 +509,14 @@ html
                     .nav_dropdown.is-open .nav_dropdown-list {
                       max-height: 250px;
                     }
+                    .nav_dropdown.is-open .nav_dropdown-list { transform: none !important; left: auto !important; width: 100% !important; }
                     
+                    /* mobile: hide the caret so "Services" is pure centered text like the other links */
+                    .nav_dropdown-arrow { display: none !important; }
+            
                     .nav_dropdown-link {
-                      font-size: 1.6rem !important;
-                      padding: 0.8rem 0 !important;
+                      font-size: 11px !important;
+                      padding: 5px 0 !important;
                       text-align: center !important;
                       color: rgba(255, 255, 255, 0.7) !important;
                     }
@@ -508,7 +556,7 @@ html
                   // Mobile Menu Logic
                   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
                   const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-                  const navLinks = document.querySelectorAll('.nav-links-wrapper .nav_text-link');
+                  const navLinks = document.querySelectorAll('.nav-links-wrapper .nav_text-link:not(.nav_dropdown-toggle)');
             
                   if (mobileMenuBtn && navLinksWrapper) {
                     // Break out of Webflow's navbar CSS by moving the overlay directly to the body!
@@ -517,24 +565,25 @@ html
                       document.body.appendChild(navLinksWrapper);
                     }
             
+                    // Lock body scroll while the overlay is open — without this, iOS momentum/bounce
+                    // scroll events fired the old "close on scroll" handler and shut the menu
+                    // before a tap could land on a link.
+                    const setMenuOpen = (open) => {
+                      navLinksWrapper.classList.toggle('is-open', open);
+                      document.body.style.overflow = open ? 'hidden' : '';
+                    };
+            
                     mobileMenuBtn.addEventListener('click', (e) => {
                       e.preventDefault();
-                      navLinksWrapper.classList.toggle('is-open');
+                      setMenuOpen(!navLinksWrapper.classList.contains('is-open'));
                     });
             
                     // Close menu when a link is clicked
                     navLinks.forEach(link => {
                       link.addEventListener('click', () => {
-                        navLinksWrapper.classList.remove('is-open');
+                        setMenuOpen(false);
                       });
                     });
-            
-                    // Close menu on scroll if it is open
-                    window.addEventListener('scroll', () => {
-                      if (navLinksWrapper.classList.contains('is-open')) {
-                        navLinksWrapper.classList.remove('is-open');
-                      }
-                    }, { passive: true });
             
                     // Dropdown toggle logic (desktop & mobile)
                     const dropdown = document.querySelector('.nav_dropdown');
@@ -555,6 +604,30 @@ html
               </script>
             </div>            <section class="section-faq-hero">
 <h1 class="faq-headline">Häufig gestellte Fragen</h1>
+</section>
+            
+<style>
+  .rel-wrap{max-width:1100px;margin:0 auto;}
+  .rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;margin-top:2rem;}
+  .rel-card{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;
+    background:#f8f8f8;border:1px solid #eee;border-radius:1.2rem;padding:1.5rem 1.7rem;
+    text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;}
+  .rel-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.08);border-color:var(--brand--lemon,#fac118);}
+  .rel-card .rc-t{font-size:1.08rem;font-weight:600;line-height:1.3;}
+  .rel-card .rc-a{flex-shrink:0;color:var(--brand--lemon,#fac118);font-size:1.5rem;font-weight:800;line-height:1;}
+  .seo_section.is--dark .rel-card{background:#1a1a1a;border-color:#333;}
+</style>
+<section class="seo_section" style="border-top:1px solid #eee;">
+  <div class="rel-wrap reveal-up">
+    <div class="seo_tagline">Mehr erfahren</div>
+    <h2 class="heading-style-l" style="margin-top:.2rem;">Passend dazu</h2>
+    <div class="rel-grid reveal-stagger-group">
+      <a class="rel-card reveal-item" href="/de/pages/local-seo.html"><span class="rc-t">Lokale SEO & Google Maps</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/de/pages/website-design.html"><span class="rc-t">Website-Design</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/pages/growth-plan-de.html"><span class="rc-t">Das 90-Tage-Programm</span><span class="rc-a">&rarr;</span></a>
+      <a class="rel-card reveal-item" href="/pages/sichtbarkeits-analyse.html"><span class="rc-t">Kostenlose Sichtbarkeits-Analyse</span><span class="rc-a">&rarr;</span></a>
+    </div>
+  </div>
 </section>
             <footer class="footer" data-wf--footer--variant="base">
             <!-- Akira Dog Track: Anchored strictly to the DOM flow border above the gray box -->
@@ -608,14 +681,14 @@ html
                         Digitales Wachstumsstudio, das Unternehmen hilft, Sichtbarkeit, Traffic und Leads durch moderne Websites zu steigern,
                         lokales SEO und Performance-Marketing.</span></p>
             </div>
-            <div class="mobile_footer-ctas" id="w-node-_31432034-0b36-b686-cc06-99afd84341fc-d84341ea"><a class="button_mobile-primary w-inline-block" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" target="_blank">
+            <div class="mobile_footer-ctas" id="w-node-_31432034-0b36-b686-cc06-99afd84341fc-d84341ea"><a class="button_mobile-primary w-inline-block" href="https://wa.me/6287860430975" target="_blank">
             <div>JETZT STARTEN</div>
             </a></div>
             </div>
             <div class="footer-middle-content">
             <div class="footer_links-columns" id="w-node-_9645d895-1ade-57f6-422c-5c408ed50524-d84341ea">
             <div class="footer_ending-links-column">
-            <div class="text-link-xsmall is-footer-column-title">Legen Sie los</div><a class="text-link-xsmall is-allcaps" href="/de/pages/portfolio_full.html" id="w-node-_5c8da43b-2729-091f-d468-120075b6c1da-d84341ea">Portfolio</a><a class="text-link-xsmall is-allcaps" href="/de/pages/local-seo.html">Local SEO</a><a class="text-link-xsmall is-allcaps" href="/de/pages/about.html">Über uns</a>
+            <div class="text-link-xsmall is-footer-column-title">Legen Sie los</div><a class="text-link-xsmall is-allcaps" href="/de/pages/portfolio_full.html" id="w-node-_5c8da43b-2729-091f-d468-120075b6c1da-d84341ea">Portfolio</a><a class="text-link-xsmall is-allcaps" href="/de/pages/local-seo.html">Local SEO</a><a class="text-link-xsmall is-allcaps" href="/de/pages/about.html">Über uns</a><a class="text-link-xsmall is-allcaps" href="/de/pages/741-circle.html">741 Circle</a>
             </div>
             <div class="footer_ending-links-column">
             <div class="text-link-xsmall is-footer-column-title">Unternehmen</div><a class="text-link-xsmall is-allcaps" href="/de/pages/about.html" id="w-node-_25ca80f3-474c-feed-dd38-c97db7cfc30d-d84341ea">Über uns</a><a class="text-link-xsmall is-allcaps" href="https://www.linkedin.com/company/741-studio" target="_blank">Karriere</a><a class="text-link-xsmall is-allcaps" href="/de/pages/impressum.html">Impressum</a><a class="text-link-xsmall is-allcaps" href="/de/pages/datenschutz.html">Datenschutz</a><a class="text-link-xsmall is-allcaps" href="#" onclick="openCookieSettings();return false;">Cookie-Einstellungen</a>
@@ -667,7 +740,7 @@ html
                      Alle
                     Rechte vorbehalten.</p>
             </div>
-            </div><a class="footer_cta-button-desktop w-inline-block" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" id="try_now_bottom">
+            </div><a class="footer_cta-button-desktop w-inline-block" href="https://wa.me/6287860430975" id="try_now_bottom" target="_blank" rel="noopener">
             <div> Start Now</div><img alt="" class="image_footer-cta-node" loading="lazy" src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/682232b5585964c7515fba3b_nore-dot.svg"/>
             </a>
             <div class="header_hide-ix-trigger" data-w-id="31432034-0b36-b686-cc06-99afd8434219"></div>
@@ -938,13 +1011,13 @@ html
                 allLinks.forEach(a => {
                   const text = (a.innerText || a.textContent).trim().toLowerCase();
                   const href = a.getAttribute('href') || '';
-                  const isTargetHREF = href.includes('VmiA3c6t');
+                  const isTargetHREF = false;
                   const isTargetText = [
                     'start now', 'let\'s talk', 'contact us', 'work with us',
                     'request a demo', 'start free', 'start a project',
                     'free consultation', 'start locally', 'optimize my site', 'i want these results'
                   ].includes(text);
-                  if (isTargetHREF || isTargetText || a.id === 'try_now_top' || a.id === 'try_now_bottom') {
+                  if (isTargetHREF || isTargetText || a.id === 'try_now_top' || a.id === 'try_now_bottom' || a.classList.contains('js-modal-trigger')) {
                     if (!a.classList.contains('contact-modal-option')) {
                       triggers.push(a);
                     }
@@ -1494,12 +1567,93 @@ html
         }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
         window.fbq("init", "1028202146617964");
         window.fbq("track", "PageView");
+        window.__wireLeadMirror();
   
         /* ---- FirstPromoter (affiliate / referral attribution) ---- */
         (function (w) { w.fpr = w.fpr || function () { w.fpr.q = w.fpr.q || []; w.fpr.q[arguments[0] == "set" ? "unshift" : "push"](arguments); }; })(window);
         window.fpr("init", { cid: "vzajpas8" });
         window.fpr("click");
       };
+  
+      /* ─────────────────────────────────────────────────────────────
+         741 CONVERSION TRACKING  (central — applies to every page)
+         Fires GA4 events for the things that actually matter:
+           · generate_lead  — any form submission (all Supabase forms)
+           · booking_click  — cal.com / Calendly clicks
+         Mark both as Key Events in GA4 to turn them into conversions.
+         ───────────────────────────────────────────────────────────── */
+      window.track741 = function (name, params) {
+        try {
+          var p = params || {};
+          p.page_location = location.href;
+          p.page_path = location.pathname;
+          if (window.gtag) window.gtag("event", name, p);
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(Object.assign({ event: name }, p));
+          if (window.posthog && window.posthog.capture) window.posthog.capture(name, p);
+        } catch (e) {}
+      };
+  
+      // Derive a readable form name from the page so leads are attributable.
+      window.__formType = function () {
+        var p = location.pathname;
+        if (/741-circle/.test(p)) return "community";
+        if (/apply-seo/.test(p)) return "seo_application";
+        if (/sichtbarkeits-foerderung|visibility-grant/.test(p)) return "giveaway";
+        if (/sichtbarkeits-analyse|visibility-audit/.test(p)) return "visibility_audit";
+        if (/google-ads|meta-ads|advertorial|warum-google/.test(p)) return "ads_landingpage";
+        if (/\/review\//.test(p)) return "review_page";
+        return "website";
+      };
+  
+      /* Mirror the Meta 'Lead' events that already exist across the site into GA4,
+         so we don't have to touch 100+ pages. Works in both consent states:
+         - marketing granted  → real fbq exists, we wrap it
+         - marketing denied   → we install a mirror-only stub so GA4 still learns
+                                about the lead (no data goes to Meta)            */
+      window.__wireLeadMirror = function () {
+        var mirror = function (evName, evParams) {
+          if (evName === "Lead" || evName === "CompleteRegistration") {
+            window.track741("generate_lead", {
+              form_type: (evParams && evParams.form_type) || window.__formType(),
+              value: 1, currency: "EUR"
+            });
+          } else if (evName === "Schedule") {
+            window.track741("booking_click", { provider: "unknown" });
+          }
+        };
+        if (window.fbq && !window.fbq.__mirrored) {
+          var real = window.fbq;
+          window.fbq = function () {
+            try { if (arguments[0] === "track") mirror(arguments[1], arguments[2]); } catch (e) {}
+            return real.apply(this, arguments);
+          };
+          for (var k in real) { try { window.fbq[k] = real[k]; } catch (e) {} }
+          window.fbq.__mirrored = true;
+        } else if (!window.fbq) {
+          window.fbq = function () {
+            try { if (arguments[0] === "track") mirror(arguments[1], arguments[2]); } catch (e) {}
+          };
+          window.fbq.__mirrored = true;
+          window.fbq.__stubOnly = true;
+        }
+      };
+  
+      // Booking clicks (cal.com / Calendly) — delegated, so it covers every page.
+      document.addEventListener("click", function (e) {
+        try {
+          var a = e.target && e.target.closest && e.target.closest("a[href]");
+          if (!a) return;
+          var href = a.getAttribute("href") || "";
+          if (/cal\.com|calendly\.com/i.test(href)) {
+            window.track741("booking_click", {
+              provider: /calendly/i.test(href) ? "calendly" : "cal.com",
+              link_text: (a.textContent || "").trim().slice(0, 60)
+            });
+            if (window.fbq && !window.fbq.__stubOnly) window.fbq("track", "Schedule");
+          }
+        } catch (err) {}
+      }, true);
   
       // Fires only after ANALYTICS consent.
       window.loadAnalyticsScripts = function loadAnalyticsScripts() {
@@ -1597,8 +1751,13 @@ html
       /* ---------- Decisions ---------- */
       function decide(analytics, marketing) {
         applyConsent(saveConsent(analytics, marketing));
+        // make sure lead events still reach GA4 when marketing was declined
+        setTimeout(function () { if (window.__wireLeadMirror) window.__wireLeadMirror(); }, 400);
         if (modalOpen()) closeSettings(); else hideBanner();
       }
+  
+      // returning visitors: consent already stored, no click happens -> wire it anyway
+      setTimeout(function () { if (window.__wireLeadMirror) window.__wireLeadMirror(); }, 1200);
   
       /* ---------- Wire events ---------- */
       root.addEventListener("click", function (e) {

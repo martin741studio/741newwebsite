@@ -138,6 +138,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -179,6 +182,27 @@
 
     <div class="page-wrapper">
         <div class="main-wrapper">
+            <!-- Anchor-scroll offset: .navbar_main's banner + nav row are position:fixed and float over
+                 the page at all breakpoints, so any in-page anchor jump (href="#some-section") lands that
+                 section's top edge under the fixed overlay unless the viewport compensates. This rule is
+                 the one global fix for that, valid for every current and future #id target on every page
+                 that includes this partial — do NOT re-solve this per-page with a local padding-top hack. -->
+            <style>
+              html { scroll-padding-top: 150px; }
+              @media screen and (max-width: 991px) { html { scroll-padding-top: 100px; } }
+            </style>
+            <!-- Page preloader: masks the brief unstyled-HTML flash (FOUC) on first paint, fades out when the page is ready. Self-contained (inline styles + SMIL SVG) so it needs no external CSS. -->
+            <div id="p741-preload" style="position:fixed;inset:0;z-index:2147483647;background:#ffffff;display:flex;align-items:center;justify-content:center;transition:opacity .5s ease;">
+            <svg width="46" height="46" viewBox="0 0 48 48" fill="none" role="img" aria-label="Wird geladen">
+            <circle cx="24" cy="24" r="20" stroke="#ececec" stroke-width="4"></circle>
+            <path d="M24 4a20 20 0 0 1 20 20" stroke="#fac118" stroke-width="4" stroke-linecap="round">
+            <animateTransform attributeName="transform" type="rotate" from="0 24 24" to="360 24 24" dur="0.8s" repeatCount="indefinite"></animateTransform>
+            </path>
+            </svg>
+            </div>
+            <script>
+            (function(){var o=document.getElementById('p741-preload');if(!o)return;var done=false;function hide(){if(done)return;done=true;o.style.opacity='0';o.style.pointerEvents='none';setTimeout(function(){if(o&&o.parentNode)o.parentNode.removeChild(o);},550);}if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){requestAnimationFrame(hide);});}window.addEventListener('load',hide);setTimeout(hide,1800);})();
+            </script>
             <script>
               (function () {
                 // Auto-deliver German to visitors in DE/AT/CH; everyone else stays English.
@@ -186,6 +210,8 @@
                 if (sessionStorage.getItem('lang_override')) return;
                 // Defensive: never run on the German side (this partial is EN-only anyway).
                 if (window.location.pathname.indexOf('/de/') === 0) return;
+                // Review pages exist only once (no /de/ twin): never redirect them (2026-10-12, /de/review/... gave 404 for DACH visitors).
+                if (window.location.pathname.indexOf('/review/') === 0) return;
             
                 var DACH = ['DE', 'AT', 'CH'];
             
@@ -194,8 +220,11 @@
                   if (cc && DACH.indexOf(String(cc).toUpperCase()) !== -1) {
                     sessionStorage.setItem('lang_override', 'de');
                     var path = window.location.pathname;
+                    // Prefer an explicit German alternate (slugs can differ, e.g. the giveaway page)
+                    // over the naive /de-prefix, which would 404 when the DE slug isn't identical.
+                    var alt = document.querySelector('link[rel=alternate][hreflang=de]');
                     // replace() so the English page isn't left in the Back-button history.
-                    window.location.replace(path === '/' ? '/de/' : '/de' + path);
+                    window.location.replace(alt ? alt.getAttribute('href') : (path === '/' ? '/de/' : '/de' + path));
                   }
                 }
             
@@ -279,14 +308,21 @@
                     <a href="/pages/blog.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
                       Blog
                     </a>
+                    <a href="/pages/741-circle.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+                      Community
+                    </a>
+            
+                    <a href="/pages/visibility-grant.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 nav_giveaway-link" style="font-weight:700;">
+                      🎁 Giveaway
+                    </a>
             
                     <div class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" style="display:inline-flex; gap: 8px; align-items:center;">
                       <span style="opacity: 0.5; cursor: default;">EN</span>
                       <span>|</span>
-                      <a href="javascript:void(0)" style="color: inherit; text-decoration: none;" onclick="sessionStorage.setItem('lang_override', 'de'); window.location.href = window.location.pathname === '/' ? '/de/' : '/de' + window.location.pathname;">DE</a>
+                      <a href="javascript:void(0)" style="color: inherit; text-decoration: none;" onclick="if (window.location.pathname.indexOf('/review/') === 0) return; sessionStorage.setItem('lang_override', 'de'); var a=document.querySelector('link[rel=alternate][hreflang=de]'); window.location.href = a ? a.getAttribute('href') : (window.location.pathname === '/' ? '/de/' : '/de' + window.location.pathname);">DE</a>
                     </div>
             
-                    <a href="http://clients.741-studio.com/" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+                    <a href="https://clients.741.studio/" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
                       Sign In
                     </a>
                   </div>
@@ -309,7 +345,7 @@
                   <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
               </button>
-              <a id="try_now_top" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro"
+              <a id="try_now_top" href="https://wa.me/6287860430975" target="_blank" rel="noopener"
                 class="huge_nav-button is-real w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 w-inline-block">
                 <div class="nav-button-spacer">
                 </div>
@@ -323,7 +359,13 @@
                   display: none;
                 }
             
-                @media screen and (max-width: 768px) {
+                /* FIX: .navbar-left is a fixed 50%-wide z-999 box (weavy.css) that overlays the
+                   leftmost nav links (Home/Portfolio) and swallows their clicks once the logo loads.
+                   Let the empty container pass clicks through; keep the logo link itself clickable. */
+                .navbar-left { pointer-events: none !important; }
+                .navbar-left .brand, .navbar-left .brand * { pointer-events: auto !important; }
+            
+                @media screen and (max-width: 991px) {
             
                   /* ROW 1: Black Notification Bar */
                   .navbar_main .banner_component {
@@ -417,7 +459,7 @@
                   }
             
                   .navbar_main .huge_nav-button.is-real .nav-link-text-block-large {
-                    font-size: 2.77778rem !important;
+                    font-size: 18.75px !important;
                     /* Restore exactly to original */
                     font-weight: 400 !important;
                     text-align: center !important;
@@ -457,7 +499,7 @@
                     opacity: 0;
                     visibility: hidden;
                     pointer-events: none;
-                    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+                    transition: opacity 0.3s ease !important; /* visibility flips instantly — transitioning it can leave the menu stuck hidden */
                     z-index: 99999 !important;
                     /* Top overlay */
                     transform: none !important;
@@ -469,10 +511,18 @@
                     pointer-events: auto !important;
                   }
             
+                  .nav-links-wrapper.is-open .nav_text-link,
+                  .nav-links-wrapper.is-open .nav_dropdown,
+                  .nav-links-wrapper.is-open .nav_dropdown-toggle,
+                  .nav-links-wrapper.is-open .nav_dropdown-link {
+                    visibility: visible !important;
+                    opacity: 1 !important;
+                  }
+            
                   .nav-links-wrapper .nav_text-link {
                     color: #fff !important;
-                    font-size: 2rem !important;
-                    padding: 1.5rem 0 !important;
+                    font-size: 13.5px !important; /* px = root-independent so menu is identical on every page */
+                    padding: 10px 0 !important;
                     margin: 0 !important;
                     text-align: center !important;
                     width: 100% !important;
@@ -569,11 +619,11 @@
                     color: #000 !important;
                   }
             
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 991px) {
                     .nav_dropdown {
                       width: 100%;
                       text-align: center;
-                      margin: 1rem 0;
+                      margin: 8px 0;
                     }
                     
                     .nav_dropdown-toggle {
@@ -602,10 +652,14 @@
                     .nav_dropdown.is-open .nav_dropdown-list {
                       max-height: 250px;
                     }
+                    .nav_dropdown.is-open .nav_dropdown-list { transform: none !important; left: auto !important; width: 100% !important; }
                     
+                    /* mobile: hide the caret so "Services" is pure centered text like the other links */
+                    .nav_dropdown-arrow { display: none !important; }
+            
                     .nav_dropdown-link {
-                      font-size: 1.6rem !important;
-                      padding: 0.8rem 0 !important;
+                      font-size: 11px !important;
+                      padding: 5px 0 !important;
                       text-align: center !important;
                       color: rgba(255, 255, 255, 0.7) !important;
                     }
@@ -645,7 +699,7 @@
                   // Mobile Menu Logic
                   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
                   const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-                  const navLinks = document.querySelectorAll('.nav-links-wrapper .nav_text-link');
+                  const navLinks = document.querySelectorAll('.nav-links-wrapper .nav_text-link:not(.nav_dropdown-toggle)');
             
                   if (mobileMenuBtn && navLinksWrapper) {
                     // Break out of Webflow's navbar CSS by moving the overlay directly to the body!
@@ -654,24 +708,25 @@
                       document.body.appendChild(navLinksWrapper);
                     }
             
+                    // Lock body scroll while the overlay is open — without this, iOS momentum/bounce
+                    // scroll events fired the old "close on scroll" handler and shut the menu
+                    // before a tap could land on a link.
+                    const setMenuOpen = (open) => {
+                      navLinksWrapper.classList.toggle('is-open', open);
+                      document.body.style.overflow = open ? 'hidden' : '';
+                    };
+            
                     mobileMenuBtn.addEventListener('click', (e) => {
                       e.preventDefault();
-                      navLinksWrapper.classList.toggle('is-open');
+                      setMenuOpen(!navLinksWrapper.classList.contains('is-open'));
                     });
             
                     // Close menu when a link is clicked
                     navLinks.forEach(link => {
                       link.addEventListener('click', () => {
-                        navLinksWrapper.classList.remove('is-open');
+                        setMenuOpen(false);
                       });
                     });
-            
-                    // Close menu on scroll if it is open
-                    window.addEventListener('scroll', () => {
-                      if (navLinksWrapper.classList.contains('is-open')) {
-                        navLinksWrapper.classList.remove('is-open');
-                      }
-                    }, { passive: true });
             
                     // Dropdown toggle logic (desktop & mobile)
                     const dropdown = document.querySelector('.nav_dropdown');
@@ -769,6 +824,8 @@
                         That said, decentralized infrastructure introduces its own trade-offs around performance tuning, cryptocurrency payments, and node selection. Getting it right requires a deliberate security strategy, not just a downloaded app.
                     </p>
 
+                    <h2 id="related-guides">Related guides</h2>
+                    <p>This is one piece of a bigger shift — see how to build a <a href="/pages/blog/serverless-p2p-digital-life.html">serverless, resilient digital life</a>. Round it out by learning to <a href="/pages/blog/scrub-photo-metadata.html">scrub photo metadata</a> and <a href="/pages/blog/secure-data-wiping.html">securely wipe files</a>.</p>
                     <div style="text-align: center; margin-top: 3rem; border-top: 1px solid #eee; padding-top: 2rem;">
                         <h3 style="margin-top: 0;">Need resilient, uncensorable access for your team?</h3>
                         <p style="font-size: 1.1rem; color: #555;">Let us assess your privacy and network security needs and design a decentralized access strategy built for your operating environment.</p>
@@ -845,7 +902,7 @@
                         local SEO, and performance marketing.</span></p>
                   </div>
                   <div id="w-node-_31432034-0b36-b686-cc06-99afd84341fc-d84341ea" class="mobile_footer-ctas"><a
-                      href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" target="_blank"
+                      href="https://wa.me/6287860430975" target="_blank"
                       class="button_mobile-primary w-inline-block">
                       <div>START NOW</div>
                     </a></div>
@@ -857,7 +914,8 @@
                         id="w-node-_5c8da43b-2729-091f-d468-120075b6c1da-d84341ea" href="/pages/portfolio_full.html"
                         class="text-link-xsmall is-allcaps">Portfolio</a><a href="/pages/local-seo.html"
                         class="text-link-xsmall is-allcaps">Local SEO</a><a href="/pages/about.html"
-                        class="text-link-xsmall is-allcaps">About</a>
+                        class="text-link-xsmall is-allcaps">About</a><a href="/pages/741-circle.html"
+                        class="text-link-xsmall is-allcaps">741 Circle</a>
                     </div>
                     <div class="footer_ending-links-column">
                       <div class="text-link-xsmall is-footer-column-title">Company</div><a
@@ -933,7 +991,7 @@
                      All
                     rights reserved.</p>
                 </div>
-              </div><a id="try_now_bottom" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro"
+              </div><a id="try_now_bottom" href="https://wa.me/6287860430975" target="_blank" rel="noopener"
                 class="footer_cta-button-desktop w-inline-block">
                 <div> Start Now</div><img
                   src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/682232b5585964c7515fba3b_nore-dot.svg"
@@ -1133,13 +1191,13 @@
                 allLinks.forEach(a => {
                   const text = (a.innerText || a.textContent).trim().toLowerCase();
                   const href = a.getAttribute('href') || '';
-                  const isTargetHREF = href.includes('VmiA3c6t') || href.includes('app.weavy.ai/signin');
+                  const isTargetHREF = href.includes('app.weavy.ai/signin');
                   const isTargetText = [
                     'start now', 'let\'s talk', 'contact us', 'work with us',
                     'request a demo', 'start free', 'start a project',
                     'free consultation', 'start locally', 'optimize my site', 'i want these results'
                   ].includes(text);
-                  if (isTargetHREF || isTargetText || a.id === 'try_now_top' || a.id === 'try_now_bottom') {
+                  if (isTargetHREF || isTargetText || a.id === 'try_now_top' || a.id === 'try_now_bottom' || a.classList.contains('js-modal-trigger')) {
                     if (!a.classList.contains('contact-modal-option')) {
                       triggers.push(a);
                     }
@@ -1656,12 +1714,93 @@
         }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
         window.fbq("init", "1028202146617964");
         window.fbq("track", "PageView");
+        window.__wireLeadMirror();
   
         /* ---- FirstPromoter (affiliate / referral attribution) ---- */
         (function (w) { w.fpr = w.fpr || function () { w.fpr.q = w.fpr.q || []; w.fpr.q[arguments[0] == "set" ? "unshift" : "push"](arguments); }; })(window);
         window.fpr("init", { cid: "vzajpas8" });
         window.fpr("click");
       };
+  
+      /* ─────────────────────────────────────────────────────────────
+         741 CONVERSION TRACKING  (central — applies to every page)
+         Fires GA4 events for the things that actually matter:
+           · generate_lead  — any form submission (all Supabase forms)
+           · booking_click  — cal.com / Calendly clicks
+         Mark both as Key Events in GA4 to turn them into conversions.
+         ───────────────────────────────────────────────────────────── */
+      window.track741 = function (name, params) {
+        try {
+          var p = params || {};
+          p.page_location = location.href;
+          p.page_path = location.pathname;
+          if (window.gtag) window.gtag("event", name, p);
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(Object.assign({ event: name }, p));
+          if (window.posthog && window.posthog.capture) window.posthog.capture(name, p);
+        } catch (e) {}
+      };
+  
+      // Derive a readable form name from the page so leads are attributable.
+      window.__formType = function () {
+        var p = location.pathname;
+        if (/741-circle/.test(p)) return "community";
+        if (/apply-seo/.test(p)) return "seo_application";
+        if (/sichtbarkeits-foerderung|visibility-grant/.test(p)) return "giveaway";
+        if (/sichtbarkeits-analyse|visibility-audit/.test(p)) return "visibility_audit";
+        if (/google-ads|meta-ads|advertorial|warum-google/.test(p)) return "ads_landingpage";
+        if (/\/review\//.test(p)) return "review_page";
+        return "website";
+      };
+  
+      /* Mirror the Meta 'Lead' events that already exist across the site into GA4,
+         so we don't have to touch 100+ pages. Works in both consent states:
+         - marketing granted  → real fbq exists, we wrap it
+         - marketing denied   → we install a mirror-only stub so GA4 still learns
+                                about the lead (no data goes to Meta)            */
+      window.__wireLeadMirror = function () {
+        var mirror = function (evName, evParams) {
+          if (evName === "Lead" || evName === "CompleteRegistration") {
+            window.track741("generate_lead", {
+              form_type: (evParams && evParams.form_type) || window.__formType(),
+              value: 1, currency: "EUR"
+            });
+          } else if (evName === "Schedule") {
+            window.track741("booking_click", { provider: "unknown" });
+          }
+        };
+        if (window.fbq && !window.fbq.__mirrored) {
+          var real = window.fbq;
+          window.fbq = function () {
+            try { if (arguments[0] === "track") mirror(arguments[1], arguments[2]); } catch (e) {}
+            return real.apply(this, arguments);
+          };
+          for (var k in real) { try { window.fbq[k] = real[k]; } catch (e) {} }
+          window.fbq.__mirrored = true;
+        } else if (!window.fbq) {
+          window.fbq = function () {
+            try { if (arguments[0] === "track") mirror(arguments[1], arguments[2]); } catch (e) {}
+          };
+          window.fbq.__mirrored = true;
+          window.fbq.__stubOnly = true;
+        }
+      };
+  
+      // Booking clicks (cal.com / Calendly) — delegated, so it covers every page.
+      document.addEventListener("click", function (e) {
+        try {
+          var a = e.target && e.target.closest && e.target.closest("a[href]");
+          if (!a) return;
+          var href = a.getAttribute("href") || "";
+          if (/cal\.com|calendly\.com/i.test(href)) {
+            window.track741("booking_click", {
+              provider: /calendly/i.test(href) ? "calendly" : "cal.com",
+              link_text: (a.textContent || "").trim().slice(0, 60)
+            });
+            if (window.fbq && !window.fbq.__stubOnly) window.fbq("track", "Schedule");
+          }
+        } catch (err) {}
+      }, true);
   
       // Fires only after ANALYTICS consent.
       window.loadAnalyticsScripts = function loadAnalyticsScripts() {
@@ -1759,8 +1898,13 @@
       /* ---------- Decisions ---------- */
       function decide(analytics, marketing) {
         applyConsent(saveConsent(analytics, marketing));
+        // make sure lead events still reach GA4 when marketing was declined
+        setTimeout(function () { if (window.__wireLeadMirror) window.__wireLeadMirror(); }, 400);
         if (modalOpen()) closeSettings(); else hideBanner();
       }
+  
+      // returning visitors: consent already stored, no click happens -> wire it anyway
+      setTimeout(function () { if (window.__wireLeadMirror) window.__wireLeadMirror(); }, 1200);
   
       /* ---------- Wire events ---------- */
       root.addEventListener("click", function (e) {

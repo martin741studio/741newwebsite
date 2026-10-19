@@ -708,6 +708,27 @@
 <body>
 
   <!-- Official 741.Studio Header -->
+  <!-- Anchor-scroll offset: .navbar_main's banner + nav row are position:fixed and float over
+       the page at all breakpoints, so any in-page anchor jump (href="#some-section") lands that
+       section's top edge under the fixed overlay unless the viewport compensates. This rule is
+       the one global fix for that, valid for every current and future #id target on every page
+       that includes this partial — do NOT re-solve this per-page with a local padding-top hack. -->
+  <style>
+    html { scroll-padding-top: 150px; }
+    @media screen and (max-width: 991px) { html { scroll-padding-top: 100px; } }
+  </style>
+  <!-- Page preloader: masks the brief unstyled-HTML flash (FOUC) on first paint, fades out when the page is ready. Self-contained (inline styles + SMIL SVG) so it needs no external CSS. -->
+  <div id="p741-preload" style="position:fixed;inset:0;z-index:2147483647;background:#ffffff;display:flex;align-items:center;justify-content:center;transition:opacity .5s ease;">
+  <svg width="46" height="46" viewBox="0 0 48 48" fill="none" role="img" aria-label="Wird geladen">
+  <circle cx="24" cy="24" r="20" stroke="#ececec" stroke-width="4"></circle>
+  <path d="M24 4a20 20 0 0 1 20 20" stroke="#fac118" stroke-width="4" stroke-linecap="round">
+  <animateTransform attributeName="transform" type="rotate" from="0 24 24" to="360 24 24" dur="0.8s" repeatCount="indefinite"></animateTransform>
+  </path>
+  </svg>
+  </div>
+  <script>
+  (function(){var o=document.getElementById('p741-preload');if(!o)return;var done=false;function hide(){if(done)return;done=true;o.style.opacity='0';o.style.pointerEvents='none';setTimeout(function(){if(o&&o.parentNode)o.parentNode.removeChild(o);},550);}if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){requestAnimationFrame(hide);});}window.addEventListener('load',hide);setTimeout(hide,1800);})();
+  </script>
   <div class="navbar_main" data-wf--navbar--variant="with-banner---black">
   <section class="banner_component w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
   <div class="padding-global is-stretch-banner w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
@@ -757,12 +778,18 @@
   <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" href="/de/pages/blog.html">
             Blog
           </a>
+  <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" href="/de/pages/741-circle.html">
+            Community
+          </a>
+  <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 nav_giveaway-link" href="/de/pages/sichtbarkeits-foerderung.html" style="font-weight:700;">
+            🎁 Gewinnspiel
+          </a>
   <div class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" style="display:inline-flex; gap: 8px; align-items:center;">
-  <a href="javascript:void(0)" onclick="sessionStorage.setItem('lang_override', 'en'); window.location.href = window.location.pathname.replace(/^\/de/, '') || '/';" style="color: inherit; text-decoration: none;">EN</a>
+  <a href="javascript:void(0)" onclick="sessionStorage.setItem('lang_override', 'en'); var a=document.querySelector('link[rel=alternate][hreflang=en]'); window.location.href = a ? a.getAttribute('href') : (window.location.pathname.replace(/^\/de/, '') || '/');" style="color: inherit; text-decoration: none;">EN</a>
   <span>|</span>
   <span style="opacity: 0.5; cursor: default;">DE</span>
   </div>
-  <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" href="http://clients.741-studio.com/">
+  <a class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" href="https://clients.741.studio/">
             Anmelden
           </a>
   </div>
@@ -784,7 +811,7 @@
   <line x1="3" x2="21" y1="18" y2="18"></line>
   </svg>
   </button>
-  <a class="huge_nav-button is-real w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 w-inline-block" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" id="try_now_top">
+  <a class="huge_nav-button is-real w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 w-inline-block" href="https://wa.me/6287860430975" id="try_now_top" target="_blank" rel="noopener">
   <div class="nav-button-spacer">
   </div>
   <div class="nav-link-text-block-large nav-normal-case">
@@ -796,7 +823,13 @@
         display: none;
       }
   
-      @media screen and (max-width: 768px) {
+      /* FIX: .navbar-left is a fixed 50%-wide z-999 box (weavy.css) that overlays the
+         leftmost nav links (Home/Portfolio) and swallows their clicks once the logo loads.
+         Let the empty container pass clicks through; keep the logo link itself clickable. */
+      .navbar-left { pointer-events: none !important; }
+      .navbar-left .brand, .navbar-left .brand * { pointer-events: auto !important; }
+  
+      @media screen and (max-width: 991px) {
   
         /* ROW 1: Black Notification Bar */
         .navbar_main .banner_component {
@@ -890,7 +923,7 @@
         }
   
         .navbar_main .huge_nav-button.is-real .nav-link-text-block-large {
-          font-size: 2.77778rem !important;
+          font-size: 18.75px !important;
           /* Restore exactly to original */
           font-weight: 400 !important;
           text-align: center !important;
@@ -930,7 +963,7 @@
           opacity: 0;
           visibility: hidden;
           pointer-events: none;
-          transition: opacity 0.3s ease, visibility 0.3s ease !important;
+          transition: opacity 0.3s ease !important; /* visibility flips instantly — transitioning it can leave the menu stuck hidden */
           z-index: 99999 !important;
           /* Top overlay */
           transform: none !important;
@@ -942,10 +975,18 @@
           pointer-events: auto !important;
         }
   
+        .nav-links-wrapper.is-open .nav_text-link,
+        .nav-links-wrapper.is-open .nav_dropdown,
+        .nav-links-wrapper.is-open .nav_dropdown-toggle,
+        .nav-links-wrapper.is-open .nav_dropdown-link {
+          visibility: visible !important;
+          opacity: 1 !important;
+        }
+  
         .nav-links-wrapper .nav_text-link {
           color: #fff !important;
-          font-size: 2rem !important;
-          padding: 1.5rem 0 !important;
+          font-size: 13.5px !important; /* px = root-independent so menu is identical on every page */
+          padding: 10px 0 !important;
           margin: 0 !important;
           text-align: center !important;
           width: 100% !important;
@@ -1042,11 +1083,11 @@
           color: #000 !important;
         }
   
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 991px) {
           .nav_dropdown {
             width: 100%;
             text-align: center;
-            margin: 1rem 0;
+            margin: 8px 0;
           }
           
           .nav_dropdown-toggle {
@@ -1075,10 +1116,14 @@
           .nav_dropdown.is-open .nav_dropdown-list {
             max-height: 250px;
           }
+          .nav_dropdown.is-open .nav_dropdown-list { transform: none !important; left: auto !important; width: 100% !important; }
           
+          /* mobile: hide the caret so "Services" is pure centered text like the other links */
+          .nav_dropdown-arrow { display: none !important; }
+  
           .nav_dropdown-link {
-            font-size: 1.6rem !important;
-            padding: 0.8rem 0 !important;
+            font-size: 11px !important;
+            padding: 5px 0 !important;
             text-align: center !important;
             color: rgba(255, 255, 255, 0.7) !important;
           }
@@ -1118,7 +1163,7 @@
         // Mobile Menu Logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-        const navLinks = document.querySelectorAll('.nav-links-wrapper .nav_text-link');
+        const navLinks = document.querySelectorAll('.nav-links-wrapper .nav_text-link:not(.nav_dropdown-toggle)');
   
         if (mobileMenuBtn && navLinksWrapper) {
           // Break out of Webflow's navbar CSS by moving the overlay directly to the body!
@@ -1127,24 +1172,25 @@
             document.body.appendChild(navLinksWrapper);
           }
   
+          // Lock body scroll while the overlay is open — without this, iOS momentum/bounce
+          // scroll events fired the old "close on scroll" handler and shut the menu
+          // before a tap could land on a link.
+          const setMenuOpen = (open) => {
+            navLinksWrapper.classList.toggle('is-open', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+          };
+  
           mobileMenuBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            navLinksWrapper.classList.toggle('is-open');
+            setMenuOpen(!navLinksWrapper.classList.contains('is-open'));
           });
   
           // Close menu when a link is clicked
           navLinks.forEach(link => {
             link.addEventListener('click', () => {
-              navLinksWrapper.classList.remove('is-open');
+              setMenuOpen(false);
             });
           });
-  
-          // Close menu on scroll if it is open
-          window.addEventListener('scroll', () => {
-            if (navLinksWrapper.classList.contains('is-open')) {
-              navLinksWrapper.classList.remove('is-open');
-            }
-          }, { passive: true });
   
           // Dropdown toggle logic (desktop & mobile)
           const dropdown = document.querySelector('.nav_dropdown');
@@ -1168,15 +1214,15 @@
   <section class="section-hero-audit">
     <div class="audit-eyebrow">🔒 INDIVIDUELLE GOOGLE MAPS ANALYSE</div>
     <h1 class="audit-headline">
-      Hallo Daniela,<br>wir haben eine persönliche Analyse deiner <span style="color:var(--brand--lemon);">Naturheilpraxis</span> erstellt.
+      Hallo Daniela,<br>ich habe eine persönliche Analyse deiner <span style="color:var(--brand--lemon);">Naturheilpraxis</span> erstellt.
     </h1>
     <p class="audit-subheadline">
-      Vielen Dank, dass du dir die Zeit nimmst. Als kleine Aufmerksamkeit haben wir eine individuelle Analyse erstellt, in der wir zeigen, welche Chancen wir für deine Sichtbarkeit bei Google Maps und in Berlin-Charlottenburg sehen.
+      Vielen Dank, dass du dir die Zeit nimmst. Als kleine Aufmerksamkeit habe ich eine individuelle Analyse erstellt, in der ich zeige, welche Chancen ich für deine Sichtbarkeit bei Google Maps und in Berlin-Charlottenburg sehen.
     </p>
 
     <div class="hero-cta-group">
       <a href="#loom-video" class="btn-741-main">▶ Video ansehen (3–4 Min)</a>
-      <a href="https://calendly.com/martin-233/15-minute-meeting?back=1" target="_blank" class="btn-741-dark">📅 Termin vereinbaren</a>
+      <a href="https://cal.com/741-studio-simjzw/30min" target="_blank" class="btn-741-dark">📅 Termin vereinbaren</a>
     </div>
 
     <div class="hero-cards-grid">
@@ -1210,28 +1256,6 @@
   </section>
 
   <!-- Personal Message Section -->
-  <section class="section-letter">
-    <div class="letter-card">
-      <div class="letter-author-head">
-        <div class="author-img" style="background:#000; display:flex; align-items:center; justify-content:center;"><img src="/assets/logo_white-B6hD-sVy.png" alt="741 Studio" style="height:16px; width:auto;"></div>
-        <div>
-          <h4 style="font-weight:800; font-size:17.6px; margin:0;">Martin Drendel & das 741 Studio Team</h4>
-          <p style="font-size:13.6px; color:#777; margin:0;">Senior Local SEO & Growth Consultancy</p>
-        </div>
-      </div>
-      <div class="letter-body">
-        <p>Hallo Daniela,</p>
-        <p>vielen Dank, dass du dir unser persönliches Video für deine Naturheilpraxis anschaust.</p>
-        <p>Deine Praxis hat bereits echte Stärken – eine perfekte 5,0-Sterne-Bewertung und eine klar differenzierte Nische rund um die Heilkunde nach Hildegard von Bingen, für die kaum jemand in Berlin so authentisch steht wie du.</p>
-        <p>In dieser Analyse zeigen wir dir die konkreten Hebel, mit denen du diese Stärke auch bei Google Maps und in der lokalen Suche in Berlin-Charlottenburg sichtbar machst.</p>
-      </div>
-      <div style="border-top:1px solid #eee; padding-top:16px; margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
-        <strong style="color:var(--brand--lemon); font-size:17.6px;">Martin Drendel</strong>
-        <span style="font-size:13.6px; color:#888;">741.Studio • Results Driven</span>
-      </div>
-    </div>
-  </section>
-
   <!-- Embedded Loom Video Section -->
   <section class="section-video" id="loom-video">
     <div style="max-width:760px; margin:0 auto 48px;">
@@ -1247,7 +1271,7 @@
       <div class="video-bar">
         <div class="video-pill">⏱️ Dauer: <strong>3–4 Minuten</strong></div>
         <div class="video-pill">🎯 Persönlich aufgenommen für: <strong>Naturheilpraxis Daniela Dumann</strong></div>
-        <a href="https://calendly.com/martin-233/15-minute-meeting?back=1" target="_blank" class="btn-741-main" style="padding:8px 18px; font-size:13.6px;">Gespräch vereinbaren</a>
+        <a href="https://cal.com/741-studio-simjzw/30min" target="_blank" class="btn-741-main" style="padding:8px 18px; font-size:13.6px;">Gespräch vereinbaren</a>
       </div>
     </div>
   </section>
@@ -1675,7 +1699,7 @@
   <section style="padding: 64px 5%; background:#fff; text-align:center;">
     <div style="max-width:760px; margin:0 auto 40px;">
       <span style="color:var(--brand--lemon); font-weight:800; text-transform:uppercase; font-size:12.8px;">Priorisierter Fahrplan</span>
-      <h2 style="font-size:35.2px; font-weight:800; margin-top:6px;">Das ist unser strukturierter Fahrplan</h2>
+      <h2 style="font-size:35.2px; font-weight:800; margin-top:6px;">Das ist mein strukturierter Fahrplan</h2>
       <p style="color:#666;">Schritt-für-Schritt zu mehr lokaler Sichtbarkeit für Daniela & deine Naturheilpraxis.</p>
     </div>
 
@@ -1762,14 +1786,13 @@
       <div class="wc"><img class="avimg" src="/review-assets/people/bernd-laserstein.jpg" alt="Bernd Laserstein" loading="lazy"><div><b>Bernd Laserstein</b><small>Gesundheitspraxis</small><em class="res"><a href="/review-assets/proof/bernd-laserstein-nachher.jpg" target="_blank">▲ Platz 9 → 1 · „Körperpsychotherapie“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/sabine-brenneisen.jpg" alt="Sabine Brenneisen" loading="lazy"><div><b>Sabine Brenneisen</b><small>Gesundheitspraxis</small><em class="res"><a href="#">▲ Platz 11 → 2 · „Ernährungsberatung“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/sven-boehme.jpg" alt="Sven Böhme" loading="lazy"><div><b>Sven Böhme</b><small>Heilpraktiker · Stuttgart</small><em class="res"><a href="/review-assets/proof/boehme-nachher.jpg" target="_blank">▲ Platz 17 → 4 · „Heilpraktiker Stuttgart“</a></em></div></div>
-      <div class="wc"><span class="av">VS</span><div><b>Veronika Schlirf</b><small>Heilpraktikerin · Regensburg</small><em class="res"><a href="/review-assets/proof/veronika-schlirf-nachher.jpg" target="_blank">▲ Platz 15 → 1 · „Heilpraktikerin“</a></em></div></div>
       <div class="wc"><span class="av">MG</span><div><b>Martina Gross</b><small>Physiotherapie · Herzogenaurach</small><em class="res"><a href="/review-assets/proof/martina-gross-nachher.jpg" target="_blank">▲ Platz 1 · „Physiotherapie“</a></em></div></div>
       <div class="wc"><span class="av">JF</span><div><b>Janina Felix</b><small>Praxis-Kundin</small><em class="res"><a href="#">▲ Platz 7 → 1 · „Osteopathie &amp; Kinder“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/justine-felix.jpg" alt="Justine Felix" loading="lazy"><div><b>Justine Felix</b><small>Praxis-Kundin</small><em class="res"><a href="#">▲ Platz 12 → 2 · „Heilpraktikerin für Frauen“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/jeffrey-krautz.jpg" alt="Jeffrey Krautz · Mediwe" loading="lazy"><div><b>Jeffrey Krautz · Mediwe</b><small>Medizin-Sektor</small><em class="res"><a href="#">▲ Platz 33 → 3 · „Medizinprodukte Vertrieb“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/marita-biel.jpg" alt="Freude am Lernen · Marita Biel" loading="lazy"><div><b>Freude am Lernen · Marita Biel</b><small>Lerncoaching</small><em class="res"><a href="#">▲ Platz 8 → 1 · „Lerncoaching Stuttgart“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/sabine-verges.jpg" alt="Sabine Verges" loading="lazy"><div><b>Sabine Verges</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 14 → 2 · „Naturheilverfahren“</a></em></div></div>
-      <div class="wc"><img class="avimg" src="/review-assets/people/astrid-lengauer.jpg" alt="Astrid Lengauer" loading="lazy"><div><b>Astrid Lengauer</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 18 → 1 · „Craniosacral Therapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/astrid-lengauer.jpg" alt="Astrid Lengauer" loading="lazy"><div><b>Astrid Lengauer</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 18 → 1 · „Innenarchitektur“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/angelina-everitt.jpg" alt="Angelina Everitt" loading="lazy"><div><b>Angelina Everitt</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 21 → 3 · „Hypnosetherapie Stuttgart“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/martin-altherr.jpg" alt="Martin Altherr" loading="lazy"><div><b>Martin Altherr</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 15 → 1 · „Rolfing &amp; Faszientherapie“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/karoline-hengst.svg" alt="Karoline Hengst" loading="lazy"><div><b>Karoline Hengst</b><small>Lokaler Betrieb</small><em class="res"><a href="/review-assets/proof/karoline-hengst-nachher.jpg" target="_blank">▲ Platz 28 → 2 · „Homöopathie“</a></em></div></div>
@@ -1792,7 +1815,7 @@
       <p style="color:#aaa; font-size:17.6px; margin-bottom:32px;">Buch dir jetzt ein kurzes, kostenfreies Beratungsgespräch. Wir besprechen unverbindlich die Umsetzung der gezeigten Potenziale.</p>
       
       <div class="final-cta-group">
-        <a href="https://calendly.com/martin-233/15-minute-meeting?back=1" target="_blank" class="btn-741-main">📅 Kostenloses Gespräch buchen</a>
+        <a href="https://cal.com/741-studio-simjzw/30min" target="_blank" class="btn-741-main">📅 Kostenloses Gespräch buchen</a>
         <a href="https://wa.me/491711745089?text=Hallo%20741%20Studio,%20ich%20habe%20die%20Video-Analyse%20f%C3%BCr%20die%20Naturheilpraxis%20Daniela%20Dumann%20gesehen" target="_blank" class="btn-741-dark" style="background:#25D366; color:#000;">💬 WhatsApp schreiben</a>
         <a href="mailto:martin@741.studio?subject=Anfrage%20Google%20Analyse%20Naturheilpraxis%20Daniela%20Dumann" class="btn-741-dark">✉️ E-Mail senden</a>
       </div>
@@ -1852,14 +1875,14 @@
               Digitales Wachstumsstudio, das Unternehmen hilft, Sichtbarkeit, Traffic und Leads durch moderne Websites zu steigern,
               lokales SEO und Performance-Marketing.</span></p>
   </div>
-  <div class="mobile_footer-ctas" id="w-node-_31432034-0b36-b686-cc06-99afd84341fc-d84341ea"><a class="button_mobile-primary w-inline-block" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" target="_blank">
+  <div class="mobile_footer-ctas" id="w-node-_31432034-0b36-b686-cc06-99afd84341fc-d84341ea"><a class="button_mobile-primary w-inline-block" href="https://wa.me/6287860430975" target="_blank">
   <div>JETZT STARTEN</div>
   </a></div>
   </div>
   <div class="footer-middle-content">
   <div class="footer_links-columns" id="w-node-_9645d895-1ade-57f6-422c-5c408ed50524-d84341ea">
   <div class="footer_ending-links-column">
-  <div class="text-link-xsmall is-footer-column-title">Legen Sie los</div><a class="text-link-xsmall is-allcaps" href="/de/pages/portfolio_full.html" id="w-node-_5c8da43b-2729-091f-d468-120075b6c1da-d84341ea">Portfolio</a><a class="text-link-xsmall is-allcaps" href="/de/pages/local-seo.html">Local SEO</a><a class="text-link-xsmall is-allcaps" href="/de/pages/about.html">Über uns</a>
+  <div class="text-link-xsmall is-footer-column-title">Legen Sie los</div><a class="text-link-xsmall is-allcaps" href="/de/pages/portfolio_full.html" id="w-node-_5c8da43b-2729-091f-d468-120075b6c1da-d84341ea">Portfolio</a><a class="text-link-xsmall is-allcaps" href="/de/pages/local-seo.html">Local SEO</a><a class="text-link-xsmall is-allcaps" href="/de/pages/about.html">Über uns</a><a class="text-link-xsmall is-allcaps" href="/de/pages/741-circle.html">741 Circle</a>
   </div>
   <div class="footer_ending-links-column">
   <div class="text-link-xsmall is-footer-column-title">Unternehmen</div><a class="text-link-xsmall is-allcaps" href="/de/pages/about.html" id="w-node-_25ca80f3-474c-feed-dd38-c97db7cfc30d-d84341ea">Über uns</a><a class="text-link-xsmall is-allcaps" href="https://www.linkedin.com/company/741-studio" target="_blank">Karriere</a><a class="text-link-xsmall is-allcaps" href="/de/pages/impressum.html">Impressum</a><a class="text-link-xsmall is-allcaps" href="/de/pages/datenschutz.html">Datenschutz</a><a class="text-link-xsmall is-allcaps" href="#" onclick="openCookieSettings();return false;">Cookie-Einstellungen</a>
@@ -1911,7 +1934,7 @@
            Alle
           Rechte vorbehalten.</p>
   </div>
-  </div><a class="footer_cta-button-desktop w-inline-block" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" id="try_now_bottom">
+  </div><a class="footer_cta-button-desktop w-inline-block" href="https://wa.me/6287860430975" id="try_now_bottom" target="_blank" rel="noopener">
   <div> Start Now</div><img alt="" class="image_footer-cta-node" loading="lazy" src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/682232b5585964c7515fba3b_nore-dot.svg"/>
   </a>
   <div class="header_hide-ix-trigger" data-w-id="31432034-0b36-b686-cc06-99afd8434219"></div>
@@ -2182,13 +2205,13 @@
       allLinks.forEach(a => {
         const text = (a.innerText || a.textContent).trim().toLowerCase();
         const href = a.getAttribute('href') || '';
-        const isTargetHREF = href.includes('VmiA3c6t');
+        const isTargetHREF = false;
         const isTargetText = [
           'start now', 'let\'s talk', 'contact us', 'work with us',
           'request a demo', 'start free', 'start a project',
           'free consultation', 'start locally', 'optimize my site', 'i want these results'
         ].includes(text);
-        if (isTargetHREF || isTargetText || a.id === 'try_now_top' || a.id === 'try_now_bottom') {
+        if (isTargetHREF || isTargetText || a.id === 'try_now_top' || a.id === 'try_now_bottom' || a.classList.contains('js-modal-trigger')) {
           if (!a.classList.contains('contact-modal-option')) {
             triggers.push(a);
           }
@@ -2665,12 +2688,93 @@
         }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
         window.fbq("init", "1028202146617964");
         window.fbq("track", "PageView");
+        window.__wireLeadMirror();
   
         /* ---- FirstPromoter (affiliate / referral attribution) ---- */
         (function (w) { w.fpr = w.fpr || function () { w.fpr.q = w.fpr.q || []; w.fpr.q[arguments[0] == "set" ? "unshift" : "push"](arguments); }; })(window);
         window.fpr("init", { cid: "vzajpas8" });
         window.fpr("click");
       };
+  
+      /* ─────────────────────────────────────────────────────────────
+         741 CONVERSION TRACKING  (central — applies to every page)
+         Fires GA4 events for the things that actually matter:
+           · generate_lead  — any form submission (all Supabase forms)
+           · booking_click  — cal.com / Calendly clicks
+         Mark both as Key Events in GA4 to turn them into conversions.
+         ───────────────────────────────────────────────────────────── */
+      window.track741 = function (name, params) {
+        try {
+          var p = params || {};
+          p.page_location = location.href;
+          p.page_path = location.pathname;
+          if (window.gtag) window.gtag("event", name, p);
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(Object.assign({ event: name }, p));
+          if (window.posthog && window.posthog.capture) window.posthog.capture(name, p);
+        } catch (e) {}
+      };
+  
+      // Derive a readable form name from the page so leads are attributable.
+      window.__formType = function () {
+        var p = location.pathname;
+        if (/741-circle/.test(p)) return "community";
+        if (/apply-seo/.test(p)) return "seo_application";
+        if (/sichtbarkeits-foerderung|visibility-grant/.test(p)) return "giveaway";
+        if (/sichtbarkeits-analyse|visibility-audit/.test(p)) return "visibility_audit";
+        if (/google-ads|meta-ads|advertorial|warum-google/.test(p)) return "ads_landingpage";
+        if (/\/review\//.test(p)) return "review_page";
+        return "website";
+      };
+  
+      /* Mirror the Meta 'Lead' events that already exist across the site into GA4,
+         so we don't have to touch 100+ pages. Works in both consent states:
+         - marketing granted  → real fbq exists, we wrap it
+         - marketing denied   → we install a mirror-only stub so GA4 still learns
+                                about the lead (no data goes to Meta)            */
+      window.__wireLeadMirror = function () {
+        var mirror = function (evName, evParams) {
+          if (evName === "Lead" || evName === "CompleteRegistration") {
+            window.track741("generate_lead", {
+              form_type: (evParams && evParams.form_type) || window.__formType(),
+              value: 1, currency: "EUR"
+            });
+          } else if (evName === "Schedule") {
+            window.track741("booking_click", { provider: "unknown" });
+          }
+        };
+        if (window.fbq && !window.fbq.__mirrored) {
+          var real = window.fbq;
+          window.fbq = function () {
+            try { if (arguments[0] === "track") mirror(arguments[1], arguments[2]); } catch (e) {}
+            return real.apply(this, arguments);
+          };
+          for (var k in real) { try { window.fbq[k] = real[k]; } catch (e) {} }
+          window.fbq.__mirrored = true;
+        } else if (!window.fbq) {
+          window.fbq = function () {
+            try { if (arguments[0] === "track") mirror(arguments[1], arguments[2]); } catch (e) {}
+          };
+          window.fbq.__mirrored = true;
+          window.fbq.__stubOnly = true;
+        }
+      };
+  
+      // Booking clicks (cal.com / Calendly) — delegated, so it covers every page.
+      document.addEventListener("click", function (e) {
+        try {
+          var a = e.target && e.target.closest && e.target.closest("a[href]");
+          if (!a) return;
+          var href = a.getAttribute("href") || "";
+          if (/cal\.com|calendly\.com/i.test(href)) {
+            window.track741("booking_click", {
+              provider: /calendly/i.test(href) ? "calendly" : "cal.com",
+              link_text: (a.textContent || "").trim().slice(0, 60)
+            });
+            if (window.fbq && !window.fbq.__stubOnly) window.fbq("track", "Schedule");
+          }
+        } catch (err) {}
+      }, true);
   
       // Fires only after ANALYTICS consent.
       window.loadAnalyticsScripts = function loadAnalyticsScripts() {
@@ -2768,8 +2872,13 @@
       /* ---------- Decisions ---------- */
       function decide(analytics, marketing) {
         applyConsent(saveConsent(analytics, marketing));
+        // make sure lead events still reach GA4 when marketing was declined
+        setTimeout(function () { if (window.__wireLeadMirror) window.__wireLeadMirror(); }, 400);
         if (modalOpen()) closeSettings(); else hideBanner();
       }
+  
+      // returning visitors: consent already stored, no click happens -> wire it anyway
+      setTimeout(function () { if (window.__wireLeadMirror) window.__wireLeadMirror(); }, 1200);
   
       /* ---------- Wire events ---------- */
       root.addEventListener("click", function (e) {
@@ -2873,7 +2982,7 @@
 
     // Force ALL booking and top header buttons to open Calendly
     window.addEventListener('DOMContentLoaded', () => {
-      const calendlyUrl = 'https://calendly.com/martin-233/15-minute-meeting?back=1';
+      const calendlyUrl = 'https://cal.com/741-studio-simjzw/30min';
       document.querySelectorAll('a').forEach(a => {
         const text = a.textContent.toLowerCase();
         const href = a.getAttribute('href') || '';

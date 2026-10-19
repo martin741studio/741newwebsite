@@ -65,7 +65,7 @@
             local SEO, and performance marketing.</span></p>
       </div>
       <div id="w-node-_31432034-0b36-b686-cc06-99afd84341fc-d84341ea" class="mobile_footer-ctas"><a
-          href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro" target="_blank"
+          href="https://wa.me/6287860430975" target="_blank"
           class="button_mobile-primary w-inline-block">
           <div>START NOW</div>
         </a></div>
@@ -77,7 +77,8 @@
             id="w-node-_5c8da43b-2729-091f-d468-120075b6c1da-d84341ea" href="/pages/portfolio_full.html"
             class="text-link-xsmall is-allcaps">Portfolio</a><a href="/pages/local-seo.html"
             class="text-link-xsmall is-allcaps">Local SEO</a><a href="/pages/about.html"
-            class="text-link-xsmall is-allcaps">About</a>
+            class="text-link-xsmall is-allcaps">About</a><a href="/pages/741-circle.html"
+            class="text-link-xsmall is-allcaps">741 Circle</a>
         </div>
         <div class="footer_ending-links-column">
           <div class="text-link-xsmall is-footer-column-title">Company</div><a
@@ -153,7 +154,7 @@
          All
         rights reserved.</p>
     </div>
-  </div><a id="try_now_bottom" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro"
+  </div><a id="try_now_bottom" href="https://wa.me/6287860430975" target="_blank" rel="noopener"
     class="footer_cta-button-desktop w-inline-block">
     <div> Start Now</div><img
       src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/682232b5585964c7515fba3b_nore-dot.svg"
@@ -353,13 +354,13 @@
     allLinks.forEach(a => {
       const text = (a.innerText || a.textContent).trim().toLowerCase();
       const href = a.getAttribute('href') || '';
-      const isTargetHREF = href.includes('VmiA3c6t') || href.includes('app.weavy.ai/signin');
+      const isTargetHREF = href.includes('app.weavy.ai/signin');
       const isTargetText = [
         'start now', 'let\'s talk', 'contact us', 'work with us',
         'request a demo', 'start free', 'start a project',
         'free consultation', 'start locally', 'optimize my site', 'i want these results'
       ].includes(text);
-      if (isTargetHREF || isTargetText || a.id === 'try_now_top' || a.id === 'try_now_bottom') {
+      if (isTargetHREF || isTargetText || a.id === 'try_now_top' || a.id === 'try_now_bottom' || a.classList.contains('js-modal-trigger')) {
         if (!a.classList.contains('contact-modal-option')) {
           triggers.push(a);
         }

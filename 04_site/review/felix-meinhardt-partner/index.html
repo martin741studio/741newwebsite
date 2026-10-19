@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Felix × 741 – Pilot &amp; Fahrplan</title>
+<style>
+  :root { --y:#fac118; --gold:#b48500; --ink:#141414; --mut:#6b6b6b; --line:#ececec; --bg:#f7f6f2; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Helvetica Neue',Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+  .wrap { max-width:960px; margin:0 auto; padding:48px 28px 80px; }
+  header.top { display:flex; align-items:center; justify-content:space-between; border-bottom:3px solid var(--y); padding-bottom:16px; margin-bottom:40px; }
+  header.top img { height:30px; }
+  header.top .tag { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#999; font-weight:700; }
+  .sec { color:var(--gold); font-weight:800; text-transform:uppercase; font-size:12px; letter-spacing:.15em; margin:0 0 8px; }
+  h1 { font-size:clamp(28px,4.5vw,40px); font-weight:800; line-height:1.12; margin-bottom:12px; }
+  h2 { font-size:clamp(20px,3vw,26px); font-weight:800; margin:0 0 14px; }
+  p { margin-bottom:12px; }
+  .lead { font-size:18px; color:#333; max-width:46em; }
+  section.block { background:#fff; border:1.5px solid var(--line); border-radius:18px; padding:30px 32px; margin-bottom:26px; }
+  .pillars { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin:18px 0 6px; }
+  .pillar { border:1.5px solid var(--line); border-radius:14px; padding:18px; background:#fcfcfa; }
+  .pillar .n { width:30px; height:30px; border-radius:50%; background:var(--y); color:#111; font-weight:800; display:flex; align-items:center; justify-content:center; margin-bottom:10px; }
+  .pillar h3 { font-size:15.5px; font-weight:800; margin-bottom:6px; }
+  .pillar p { font-size:13.5px; color:#555; margin:0; }
+  .models { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:16px; }
+  .model { border:2px solid var(--line); border-radius:16px; padding:22px 20px; background:#fff; position:relative; }
+  .model.reco { border-color:var(--y); background:#fffdf3; }
+  .model .badge { position:absolute; top:-12px; left:18px; background:var(--y); color:#111; font-size:10.5px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; padding:4px 12px; border-radius:99px; }
+  .model h3 { font-size:16px; font-weight:800; margin-bottom:4px; }
+  .model .price { font-size:24px; font-weight:800; margin:8px 0 2px; }
+  .model .per { font-size:11.5px; color:#888; margin-bottom:12px; }
+  .model ul { margin-left:17px; }
+  .model li { font-size:13.2px; margin-bottom:6px; }
+  table { width:100%; border-collapse:collapse; margin:14px 0 6px; font-size:14px; }
+  th { background:#141414; color:#fff; text-align:left; padding:10px 12px; font-size:12.5px; letter-spacing:.03em; }
+  td { padding:10px 12px; border-bottom:1px solid var(--line); }
+  tr:nth-child(even) td { background:#fafaf8; }
+  td.num { font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .hint { font-size:12.5px; color:#888; margin-top:8px; }
+  .dark { background:#111; color:#fff; border-radius:18px; padding:28px 32px; margin-bottom:26px; }
+  .dark .sec { color:var(--y); }
+  .dark p, .dark li { color:#ddd; }
+  .dark ul { margin-left:18px; }
+  .dark li { margin-bottom:8px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin:16px 0; }
+  .kpi { border:1.5px solid var(--line); border-radius:14px; padding:16px 12px; text-align:center; background:#fcfcfa; }
+  .kpi .v { font-size:26px; font-weight:800; color:var(--gold); }
+  .kpi .l { font-size:11.5px; color:#666; margin-top:4px; line-height:1.4; }
+  .check { list-style:none; margin:12px 0 0; }
+  .check li { padding:10px 0 10px 34px; border-bottom:1px solid var(--line); position:relative; font-size:14.5px; }
+  .check li:last-child { border-bottom:0; }
+  .check li::before { content:"→"; position:absolute; left:4px; color:var(--gold); font-weight:800; }
+  .qgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; margin-top:14px; }
+  .q { border-left:4px solid var(--y); background:#fdf8ea; border-radius:0 10px 10px 0; padding:12px 16px; font-size:14px; }
+  .q b { display:block; margin-bottom:2px; }
+  footer { text-align:center; font-size:12px; color:#999; margin-top:40px; }
+  @media (max-width:600px){ section.block{padding:22px 18px;} .dark{padding:22px 18px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <img src="/assets/logo_black-DWbLQD0x.png" alt="741">
+  <span class="tag">Felix Meinhardt × 741.Studio · 18.09.2026</span>
+</header>
+
+<section class="block" style="padding:22px 22px 18px;">
+  <div class="sec">Dein Video</div>
+  <h2 style="margin-bottom:12px;">Felix, schau hier zuerst rein 🎥</h2>
+  <div style="position:relative; padding-bottom:56.25%; height:0; border-radius:12px; overflow:hidden; background:#000;">
+    <iframe src="https://www.loom.com/embed/2e7f4d212d484ec6abb51583053e0b34" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+  </div>
+  <p class="hint" style="margin-top:10px;">Am besten am Laptop ansehen — darunter findest du alles Besprochene zum Nachlesen.</p>
+</section>
+
+<div class="sec">Der Vorschlag</div>
+<h1>Kopf und Kalender frei für die großen Projekte.<br>Den Rest übernimmt ein System.</h1>
+<p class="lead">Ein klar abgegrenzter 90-Tage-Pilot: 741 baut die bestehende Outreach- und Vertriebsmaschine auf deine Pipeline auf — unter deiner Marke, ohne Fixkosten, bezahlt nur am Ergebnis.</p>
+
+<section class="block">
+  <div class="sec">01 · Der 90-Tage-Pilot</div>
+  <h2>Drei Bausteine, nur Firmenkunden-Geschäft</h2>
+  <div class="pillars">
+    <div class="pillar"><div class="n">1</div><h3>Reaktivierung &amp; Nachfassen</h3><p>Offene Anfragen und ältere Kontakte werden systematisch nachgefasst — CRM-Pipeline und Sequenzen in deinem Namen. Der schnellste Umsatz liegt bereits in deinem Postfach.</p></div>
+    <div class="pillar"><div class="n">2</div><h3>Qualifizierung &amp; Termine</h3><p>Jede Anfrage wird vorqualifiziert, bevor sie Zeit kostet. Du bekommst fertige Kalender-Termine mit ernsthaften Interessenten — und führst nur die Gespräche, die zählen.</p></div>
+    <div class="pillar"><div class="n">3</div><h3>Angebots- &amp; Übergabeprozess</h3><p>Standardisierte Angebote und ein sauberes Briefing an dein Produktionsteam — die „Integrator"-Schnittstelle, die bisher fehlt, läuft ohne dich.</p></div>
+  </div>
+  <p style="margin-top:14px;"><b>Außen: deine Marke.</b> 741 arbeitet im Hintergrund als operative Schnittstelle. Wöchentlicher 15-Minuten-Status, volle Pipeline-Transparenz.</p>
+</section>
+
+<section class="block">
+  <div class="sec">02 · Die Modelle</div>
+  <h2>Null Fixkosten — Vergütung am Ergebnis</h2>
+  <div class="models">
+    <div class="model reco">
+      <span class="badge">Empfehlung zum Start</span>
+      <h3>Termine-Modell</h3>
+      <div class="price">10 %</div>
+      <div class="per">vom Netto-Auftragswert · keine Fixkosten</div>
+      <ul>
+        <li>741 liefert: Reaktivierung, Sequenzen, Qualifizierung, fertige Termine</li>
+        <li>Du führst die Verkaufsgespräche selbst</li>
+        <li>Angebots- &amp; Übergabeprozess inklusive</li>
+      </ul>
+    </div>
+    <div class="model">
+      <h3>Full-Sales-Modell</h3>
+      <div class="price">15 %</div>
+      <div class="per">vom Netto-Auftragswert · keine Fixkosten</div>
+      <ul>
+        <li>Alles aus dem Termine-Modell</li>
+        <li>741 führt zusätzlich Erstgespräch, Verhandlung und Angebot</li>
+        <li>Du kommst nur bei wichtigen Kunden und Pitches dazu</li>
+      </ul>
+    </div>
+  </div>
+  <p class="hint">Beide Modelle pro Deal wählbar — kleinere Projekte über Termine-Modell, große Pitches gemeinsam. Zählweise: Jeder Kontakt, den die Sequenzen angefasst haben, zählt zum Piloten — egal, über welchen Weg er abschließt.</p>
+</section>
+
+<section class="block">
+  <div class="sec">03 · Was der Markt hergibt</div>
+  <h2>Phase 2: Google Ads — echte Zahlen statt Bauchgefühl</h2>
+  <p>Sobald der Backlog durchgearbeitet ist, schütten wir oben frisches Volumen nach. Die Nachfrage ist messbar da — echte Google-Daten (Deutschland, Suchen pro Monat &amp; Klickpreise):</p>
+  <table>
+    <tr><th>Suchbegriff</th><th>Suchen/Monat</th><th>Ø Klickpreis</th><th>Einordnung</th></tr>
+    <tr><td>filmproduktion münchen</td><td class="num">480</td><td class="num">5,18 €</td><td>Volumen-Bringer, moderater Preis</td></tr>
+    <tr><td>videoproduktion münchen</td><td class="num">390</td><td class="num">5,57 €</td><td>Volumen-Bringer, moderater Preis</td></tr>
+    <tr><td>imagefilm produktion</td><td class="num">320</td><td class="num">25,66 €</td><td>Teuer — hier zahlen Agenturen um Kunden</td></tr>
+    <tr><td>imagefilm kosten</td><td class="num">320</td><td class="num">15,55 €</td><td>Kauf-Recherche kurz vor Anfrage</td></tr>
+    <tr><td>imagefilm agentur</td><td class="num">260</td><td class="num">11,20 €</td><td>Klare Beauftragungs-Absicht</td></tr>
+    <tr><td>videograf münchen</td><td class="num">170</td><td class="num">6,02 €</td><td>Hoher Wettbewerb, kleinere Budgets</td></tr>
+    <tr><td>imagefilm münchen</td><td class="num">140</td><td class="num">23,35 €</td><td>Bis zu 30 € Top-Gebot — härtestes Pflaster</td></tr>
+    <tr><td>unternehmensfilm</td><td class="num">140</td><td class="num">11,58 €</td><td>National, generisch</td></tr>
+  </table>
+  <p class="hint">Quelle: Google-Ads-Daten (DataForSEO), Stand 18.09.2026. Wettbewerber werben aktiv — u.&nbsp;a. mit „Imagefilme ab 8.000 €" direkt im Anzeigentitel.</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">1.000 €</div><div class="l">Monatsbudget<br>(Startphase)</div></div>
+    <div class="kpi"><div class="v">~90–160</div><div class="l">Klicks/Monat bei klugem Mix<br>(Fokus 5–12-€-Keywords)</div></div>
+    <div class="kpi"><div class="v">~3–6</div><div class="l">qualifizierte Anfragen/Monat<br>(Annahme 3–5 % Conversion)</div></div>
+    <div class="kpi"><div class="v">1 Deal</div><div class="l">ab 7.500 € zahlt mehrere<br>Monate Ads komplett</div></div>
+  </div>
+  <p><b>Die Strategie:</b> Nicht auf das 23-€-Keyword einsteigen, auf dem sich alle prügeln — sondern die 5–12-€-Begriffe mit echter Beauftragungs-Absicht besetzen und die Anfragen durch dieselbe Qualifizierungs-Maschine wie im Piloten laufen lassen. Konditionen: 500 € Management/Monat + Werbebudget; eine Landing Page im Setup enthalten. Klick-zu-Anfrage-Werte sind Planungsannahmen und werden im ersten Monat mit echten Daten kalibriert.</p>
+</section>
+
+<section class="block">
+  <div class="sec">03b · Der unterschätzte Hebel</div>
+  <h2>Retargeting: Deine warme Reichweite arbeitet noch nicht</h2>
+  <p>Du hast über Jahre Reichweite aufgebaut — Follower auf Instagram und LinkedIn, Besucher auf deiner Website, Zuschauer deiner Filme. Diese Menschen kennen dich bereits. Genau sie sind die günstigste Zielgruppe, die es gibt: <b>Retargeting-Klicks kosten typischerweise einen Bruchteil der Kalt-Klicks</b>, und die Abschlussquote ist um ein Vielfaches höher, weil Vertrauen schon da ist.</p>
+  <div class="pillars">
+    <div class="pillar"><div class="n">A</div><h3>Bestandsaufnahme</h3><p>Was ist auffahrbar? Follower-Zahlen Instagram &amp; LinkedIn, Website-Traffic, E-Mail-Liste, Video-Zuschauer. Erst zählen, dann zielen.</p></div>
+    <div class="pillar"><div class="n">B</div><h3>Pixel &amp; Zielgruppen setzen</h3><p>Meta-Pixel + LinkedIn Insight Tag auf die Website, Zielgruppen aus Profil-Interaktionen und Video-Views aufbauen. Ab dann sammelt jeder Besucher und jeder Post für dich.</p></div>
+    <div class="pillar"><div class="n">C</div><h3>Bespielen mit dem, was da ist</h3><p>Dein Vorteil: Du sitzt auf fertigem Weltklasse-Material. Deine eigenen Filme sind die Anzeigen — null Produktionskosten für Creatives, die andere Agenturen teuer einkaufen müssten.</p></div>
+  </div>
+  <p style="margin-top:14px;"><b>Warum das vor dem Kalt-Traffic kommt:</b> Wer erst den Pixel setzt und die warme Reichweite bespielt, fängt die Interessenten auf, die es schon gibt — und jede spätere Google-Kampagne wird doppelt verwertet, weil Besucher, die nicht sofort anfragen, im Retargeting bleiben statt zu verschwinden.</p>
+</section>
+
+<section class="dark">
+  <div class="sec">04 · Was es zum Start braucht</div>
+  <h2 style="color:#fff;">Deine To-dos — einmalig, danach läuft es</h2>
+  <ul class="check" style="margin-top:6px;">
+    <li style="border-color:#2a2a2a;"><b>Kontakt-Inventur (48 h):</b> offene Anfragen, ältere Kunden &amp; Interessenten (12–24 Monate), LinkedIn-Netzwerk, E-Mail-Verteiler — egal in welchem Format</li>
+    <li style="border-color:#2a2a2a;"><b>E-Mail-Adresse unter deiner Domain</b> + Freigabe, in deinem Namen zu kommunizieren</li>
+    <li style="border-color:#2a2a2a;"><b>Preisliste / Paketlogik,</b> damit Angebote ohne Rückfrage entstehen — inkl. Deal-Größe, ab der du final freigibst</li>
+    <li style="border-color:#2a2a2a;"><b>Feste Ansprechperson im Produktionsteam</b> + Beispiel eines sauberen Projekt-Briefings</li>
+    <li style="border-color:#2a2a2a;"><b>Zugänge für die Retargeting-Basis:</b> Website (Pixel-Einbau), Meta Business Manager &amp; LinkedIn-Unternehmensseite — einmal verbunden, sammelt es von selbst</li>
+  </ul>
+</section>
+
+<section class="block">
+  <div class="sec">05 · Gemeinsam festlegen</div>
+  <h2>Offene Punkte für heute</h2>
+  <div class="qgrid">
+    <div class="q"><b>Erfolgskriterium des Piloten</b>Woran messen wir nach 90 Tagen „hat funktioniert"? Vorschlag: X qualifizierte Gespräche + mindestens 1 Abschluss.</div>
+    <div class="q"><b>Umfang des Backlogs</b>Wie viele offene und ältere Anfragen liegen realistisch vor? Das bestimmt das Tempo der ersten Wochen.</div>
+    <div class="q"><b>Freigabegrenze</b>Bis zu welcher Deal-Größe gehen Angebote ohne deine Freigabe raus?</div>
+    <div class="q"><b>Warme Reichweite beziffern</b>Wie viele Follower auf Instagram und LinkedIn, wie viel Website-Traffic, gibt es eine E-Mail-Liste? Davon hängt ab, wie schnell Retargeting trägt.</div>
+    <div class="q"><b>Startdatum</b>Konkreter erster Schritt: Kontakt-Liste binnen 48 h, System-Setup in Woche 1, erste Sequenzen in Woche 2.</div>
+  </div>
+</section>
+
+<footer>741.Studio · Results Driven · Martin Drendel</footer>
+</div>
+</body>
+</html>

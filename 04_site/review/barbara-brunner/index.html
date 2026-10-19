@@ -716,10 +716,10 @@
   <section class="section-hero-audit">
     <div class="audit-eyebrow">🔒 INDIVIDUELLE GOOGLE MAPS ANALYSE</div>
     <h1 class="audit-headline" id="companyHeadline">
-      Hallo Barbara,<br>wir haben eine persönliche Analyse deiner <span style="color:var(--brand--lemon);">Google-Präsenz</span> erstellt.
+      Hallo Barbara,<br>ich habe eine persönliche Analyse deiner <span style="color:var(--brand--lemon);">Google-Präsenz</span> erstellt.
     </h1>
     <p class="audit-subheadline" id="heroSubheadline">
-      Vielen Dank, dass du dir die Zeit nimmst. Als kleine Aufmerksamkeit haben wir eine individuelle Analyse erstellt, in der wir zeigen, welche Chancen wir für deine Sichtbarkeit bei Google Maps in Roth und Umgebung sehen.
+      Vielen Dank, dass du dir die Zeit nimmst. Als kleine Aufmerksamkeit habe ich eine individuelle Analyse erstellt, in der ich zeige, welche Chancen ich für deine Sichtbarkeit bei Google Maps in Roth und Umgebung sehen.
     </p>
 
     <div class="hero-cta-group" style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
@@ -861,29 +861,6 @@
   </section>
 
   <!-- Personal Message Section -->
-  <section class="section-letter">
-    <div class="letter-card">
-      <div class="letter-author-head">
-        <div class="author-img">741</div>
-        <div>
-          <h4 style="font-weight:800; font-size:17.6px; margin:0;" id="authorName">Martin Drendel & das 741 Studio Team</h4>
-          <p style="font-size:13.6px; color:#777; margin:0;" id="authorRole">Senior Local SEO & Growth Consultancy</p>
-        </div>
-      </div>
-      <div class="letter-body" id="personalMessageBody">
-        <p id="personalGreeting">Hallo Barbara,</p>
-        <p>vielen Dank, dass du dir unser persönliches Video für deine Praxis anschaust.</p>
-        <p>Deine Praxis hat eine echte Stärke: 5.0 Sterne und ein klares Profil als Naturheilpraxis / Heilpraktikerin in Roth.</p>
-        <p>Bei „heilpraktiker roth“ stehst du im Umkreis schon gut da (Ø Position 4.0) – aber zwischen dir und der vollen Marktabdeckung liegt noch echtes Potenzial, und Wettbewerber wie Heilpraktikerin Claudia Langohr sind dir dicht auf den Fersen. Wir haben uns deine Website, dein Google-Profil und deine lokale Sichtbarkeit angesehen und die wichtigsten Hebel zusammengefasst.</p>
-        <p>Wir hoffen, du kannst daraus schon ein paar hilfreiche Ideen mitnehmen.</p>
-      </div>
-      <div style="border-top:1px solid #eee; padding-top:16px; margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
-        <strong style="color:var(--brand--lemon); font-size:17.6px;" id="authorSignName">Martin Drendel</strong>
-        <span style="font-size:13.6px; color:#888;">741.Studio • Results Driven</span>
-      </div>
-    </div>
-  </section>
-
   <!-- Embedded Loom Video Section -->
   <section class="section-video" id="loom-video">
     <div style="max-width:760px; margin:0 auto 48px;">
@@ -894,7 +871,7 @@
 
     <div class="video-frame-wrap">
       <div class="video-responsive">
-        <iframe src="https://www.loom.com/embed/4abaf848061a48a19aa2fb772603800c" allowfullscreen></iframe>
+        <iframe id="loomIframe" src="https://www.loom.com/embed/4abaf848061a48a19aa2fb772603800c" allowfullscreen></iframe>
       </div>
       <div class="video-bar">
         <div class="video-pill">⏱️ Dauer: <strong id="videoMetaDuration">5 Minuten</strong></div>
@@ -1021,13 +998,13 @@
       <div class="growth-grid">
         <div class="growth-box-item">
           <div style="font-size:12.8px; text-transform:uppercase; color:#888; font-weight:800;">Aktueller Stand</div>
-          <div style="font-size:40px; font-weight:900; color:#aaa; margin:8px 0;" id="growthCurrentRank">Rang #8</div>
+          <div style="font-size:clamp(18px,3vw,26px); line-height:1.2; word-break:break-word; overflow-wrap:anywhere; font-weight:900; color:#aaa; margin:8px 0;" id="growthCurrentRank">Rang #8</div>
           <p style="font-size:13.6px; color:#888;">Versteckt in den weiteren Ergebnissen. Kaum organische Anrufe.</p>
         </div>
         <div class="growth-arrow-desktop" style="font-size:32px; color:var(--brand--lemon);">➔</div><div class="growth-arrow-vertical">↓</div>
         <div class="growth-box-item target">
           <div style="font-size:12.8px; text-transform:uppercase; color:var(--brand--lemon); font-weight:800;">Ziel-Potenzial</div>
-          <div style="font-size:40px; font-weight:900; color:var(--brand--lemon); margin:8px 0;" id="growthTargetRank">Top 3 Pack</div>
+          <div style="font-size:clamp(18px,3vw,26px); line-height:1.2; word-break:break-word; overflow-wrap:anywhere; font-weight:900; color:var(--brand--lemon); margin:8px 0;" id="growthTargetRank">Top 3 Pack</div>
           <p style="font-size:13.6px; color:#bbb;">Dominante Platzierung direkt im Sichtfeld moderner Kunden & Patienten.</p>
         </div>
       </div>
@@ -1095,14 +1072,13 @@
       <div class="wc"><img class="avimg" src="/review-assets/people/bernd-laserstein.jpg" alt="Bernd Laserstein" loading="lazy"><div><b>Bernd Laserstein</b><small>Gesundheitspraxis</small><em class="res"><a href="/review-assets/proof/bernd-laserstein-nachher.jpg" target="_blank">▲ Platz 9 → 1 · „Körperpsychotherapie“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/sabine-brenneisen.jpg" alt="Sabine Brenneisen" loading="lazy"><div><b>Sabine Brenneisen</b><small>Gesundheitspraxis</small><em class="res"><a href="#">▲ Platz 11 → 2 · „Ernährungsberatung“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/sven-boehme.jpg" alt="Sven Böhme" loading="lazy"><div><b>Sven Böhme</b><small>Heilpraktiker · Stuttgart</small><em class="res"><a href="/review-assets/proof/boehme-nachher.jpg" target="_blank">▲ Platz 17 → 4 · „Heilpraktiker Stuttgart“</a></em></div></div>
-      <div class="wc"><span class="av">VS</span><div><b>Veronika Schlirf</b><small>Heilpraktikerin · Regensburg</small><em class="res"><a href="/review-assets/proof/veronika-schlirf-nachher.jpg" target="_blank">▲ Platz 15 → 1 · „Heilpraktikerin“</a></em></div></div>
       <div class="wc"><span class="av">MG</span><div><b>Martina Gross</b><small>Physiotherapie · Herzogenaurach</small><em class="res"><a href="/review-assets/proof/martina-gross-nachher.jpg" target="_blank">▲ Platz 1 · „Physiotherapie“</a></em></div></div>
       <div class="wc"><span class="av">JF</span><div><b>Janina Felix</b><small>Praxis-Kundin</small><em class="res"><a href="#">▲ Platz 7 → 1 · „Osteopathie &amp; Kinder“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/justine-felix.jpg" alt="Justine Felix" loading="lazy"><div><b>Justine Felix</b><small>Praxis-Kundin</small><em class="res"><a href="#">▲ Platz 12 → 2 · „Heilpraktikerin für Frauen“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/jeffrey-krautz.jpg" alt="Jeffrey Krautz · Mediwe" loading="lazy"><div><b>Jeffrey Krautz · Mediwe</b><small>Medizin-Sektor</small><em class="res"><a href="#">▲ Platz 33 → 3 · „Medizinprodukte Vertrieb“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/marita-biel.jpg" alt="Freude am Lernen · Marita Biel" loading="lazy"><div><b>Freude am Lernen · Marita Biel</b><small>Lerncoaching</small><em class="res"><a href="#">▲ Platz 8 → 1 · „Lerncoaching Stuttgart“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/sabine-verges.jpg" alt="Sabine Verges" loading="lazy"><div><b>Sabine Verges</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 14 → 2 · „Naturheilverfahren“</a></em></div></div>
-      <div class="wc"><img class="avimg" src="/review-assets/people/astrid-lengauer.jpg" alt="Astrid Lengauer" loading="lazy"><div><b>Astrid Lengauer</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 18 → 1 · „Craniosacral Therapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/astrid-lengauer.jpg" alt="Astrid Lengauer" loading="lazy"><div><b>Astrid Lengauer</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 18 → 1 · „Innenarchitektur“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/angelina-everitt.jpg" alt="Angelina Everitt" loading="lazy"><div><b>Angelina Everitt</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 21 → 3 · „Hypnosetherapie Stuttgart“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/martin-altherr.jpg" alt="Martin Altherr" loading="lazy"><div><b>Martin Altherr</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 15 → 1 · „Rolfing &amp; Faszientherapie“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/karoline-hengst.svg" alt="Karoline Hengst" loading="lazy"><div><b>Karoline Hengst</b><small>Lokaler Betrieb</small><em class="res"><a href="/review-assets/proof/karoline-hengst-nachher.jpg" target="_blank">▲ Platz 28 → 2 · „Homöopathie“</a></em></div></div>
@@ -1125,7 +1101,7 @@
       <p style="color:#aaa; font-size:17.6px; margin-bottom:32px;">Buch dir jetzt ein kurzes, kostenfreies Beratungsgespräch. Wir besprechen unverbindlich die Umsetzung der gezeigten Potenziale.</p>
       
       <div class="final-cta-group" style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
-        <a href="https://calendly.com/martin-233/15-minute-meeting?back=1" target="_blank" class="btn-741-main">📅 Kostenloses Gespräch buchen</a>
+        <a href="https://cal.com/741-studio-simjzw/30min" target="_blank" class="btn-741-main">📅 Kostenloses Gespräch buchen</a>
         <a href="https://wa.me/491711745089?text=Hallo%20741%20Studio,%20ich%20habe%20die%20Video-Analyse%20gesehen" target="_blank" class="btn-741-dark" style="background:#25D366; color:#000;">💬 WhatsApp schreiben</a>
         <a href="mailto:martin@741.studio?subject=Anfrage%20Google%20Analyse" class="btn-741-dark">✉️ E-Mail senden</a>
       </div>
@@ -1466,7 +1442,7 @@
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-      const calendlyUrl = 'https://calendly.com/martin-233/15-minute-meeting?back=1';
+      const calendlyUrl = 'https://cal.com/741-studio-simjzw/30min';
       document.querySelectorAll('a').forEach(a => {
         const text = a.textContent.toLowerCase();
         const href = a.getAttribute('href') || '';
@@ -1480,7 +1456,7 @@
       if (!data) return;
 
       if (data.companyName) {
-        document.getElementById('companyHeadline').innerHTML = `Hallo ${data.contactName || data.companyName},<br>wir haben eine persönliche Analyse deiner <span style="color:var(--brand--lemon);">Google-Präsenz</span> erstellt.`;
+        document.getElementById('companyHeadline').innerHTML = `Hallo ${data.contactName || data.companyName},<br>ich habe eine persönliche Analyse deiner <span style="color:var(--brand--lemon);">Google-Präsenz</span> erstellt.`;
         document.getElementById('cardCompanyName').innerText = data.companyName;
         document.getElementById('videoMetaCompany').innerText = data.companyName;
       }
@@ -1491,7 +1467,7 @@
         document.getElementById('cardLoomTime').innerText = data.loomDuration.toUpperCase() + ' PLAY';
         document.getElementById('videoMetaDuration').innerText = data.loomDuration;
       }
-      if (data.loomUrl) document.getElementById('loomIframe').src = data.loomUrl;
+      var _lf = document.getElementById('loomIframe'); if (data.loomUrl && _lf) _lf.src = data.loomUrl;
 
       if (data.mapsRankDesktop) {
         document.getElementById('cardMapsRankSub').innerText = data.mapsRankDesktop + ' in der Region';

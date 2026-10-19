@@ -1,0 +1,50 @@
+<!-- ===== Giveaway promo (replaces workflows-slider): current giveaway + floating button ===== -->
+<style>
+  .gv-sec{background:#252525;color:#fff;padding:96px 5%;position:relative;overflow:hidden;} /* matches footer --brand--rich-black for a seamless junction */
+  .gv-inner{max-width:1080px;margin:0 auto;text-align:center;position:relative;z-index:1;}
+  .gv-badge{display:inline-flex;align-items:center;gap:8px;background:#fac118;color:#111;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:22px;}
+  .gv-h2{font-size:clamp(28px,4.6vw,46px);line-height:1.12;font-weight:900;letter-spacing:-.5px;color:#fff;margin:0 auto;max-width:840px;}
+  .gv-h2 .hl{color:#fac118;}
+  .gv-sub{font-size:clamp(16px,2.2vw,19px);color:#c9c9c9;max-width:660px;margin:18px auto 0;line-height:1.55;}
+  .gv-stats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:34px auto 0;}
+  .gv-stat{background:#1c1c1c;border:1px solid #2e2e2e;border-radius:14px;padding:18px 26px;min-width:170px;}
+  .gv-stat .n{font-size:26px;font-weight:900;color:#fac118;line-height:1.1;}
+  .gv-stat .l{font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:#8a8a8a;margin-top:6px;}
+  .gv-cta{display:inline-block;background:#fac118;color:#111;font-weight:900;font-size:17px;padding:16px 32px;border-radius:12px;text-decoration:none;box-shadow:0 12px 30px rgba(250,193,24,.35);transition:transform .15s;margin-top:34px;}
+  .gv-cta:hover{transform:translateY(-2px);}
+  .gv-note{font-size:13px;color:#8a8a8a;margin-top:14px;}
+  /* Floating button (page) */
+  .gv-fab{position:fixed;right:18px;bottom:18px;z-index:9990;display:flex;align-items:center;gap:9px;background:#111;color:#fac118;border:1.5px solid #fac118;font-weight:800;font-size:14.5px;padding:12px 18px;border-radius:999px;text-decoration:none;box-shadow:0 14px 34px rgba(0,0,0,.35);transition:transform .15s;}
+  .gv-fab:hover{transform:translateY(-2px);}
+  .gv-fab .dot{width:9px;height:9px;border-radius:50%;background:#fac118;animation:gvPulse 1.6s infinite;}
+  @keyframes gvPulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.45;transform:scale(.75);}}
+  .gv-fab-close{background:none;border:none;color:#8a8a8a;font-size:15px;cursor:pointer;padding:0 0 0 2px;line-height:1;}
+  @media(max-width:600px){.gv-fab{right:12px;bottom:12px;font-size:13px;padding:10px 15px;}.gv-sec{padding:70px 6%;}.gv-stat{min-width:140px;padding:14px 18px;}}
+</style>
+
+<section class="gv-sec" id="giveaway">
+  <div class="gv-inner">
+    <span class="gv-badge">🎁 Current giveaway</span>
+    <h2 class="gv-h2">The 741 Visibility Grant: we make one practice the <span class="hl">most visible in its city.</span></h2>
+    <p class="gv-sub">Completely free for the winning practice – website, Google profile, local SEO and 90 days of implementation. Entry takes 60 seconds, no catch.</p>
+    <div class="gv-stats">
+      <div class="gv-stat"><div class="n">€5,000</div><div class="l">Package value</div></div>
+      <div class="gv-stat"><div class="n">1 practice</div><div class="l">will be drawn</div></div>
+      <div class="gv-stat"><div class="n">Oct 5–9</div><div class="l">Draw 2026</div></div>
+    </div>
+    <a class="gv-cta" href="/pages/visibility-grant.html">View the giveaway →</a>
+    <p class="gv-note">Free to enter · documented random draw · for health practitioners &amp; practices</p>
+  </div>
+</section>
+
+<a class="gv-fab" id="gvFab" href="/pages/visibility-grant.html" aria-label="View the current giveaway">
+  <span class="dot" aria-hidden="true"></span> 🎁 Giveaway live
+  <button class="gv-fab-close" id="gvFabClose" aria-label="Dismiss" title="Hide">✕</button>
+</a>
+<script>
+(function(){
+  var fab=document.getElementById('gvFab'), x=document.getElementById('gvFabClose');
+  try{ if(sessionStorage.getItem('gv_fab_hidden')==='1' && fab){ fab.style.display='none'; } }catch(e){}
+  if(x){ x.addEventListener('click', function(ev){ ev.preventDefault(); ev.stopPropagation(); if(fab){fab.style.display='none';} try{sessionStorage.setItem('gv_fab_hidden','1');}catch(e){} }); }
+})();
+</script>

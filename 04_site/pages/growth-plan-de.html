@@ -162,6 +162,10 @@
     .price li::before { content:"✓"; position:absolute; left:0; color:var(--good); font-weight:700; }
     .price.mid li { color:#e6e3d5; } .price.mid li::before { color:var(--gold); }
     .ribbon { position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--ink); font-size:11.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; border-radius:99px; padding:5px 16px; white-space:nowrap; }
+    .amount .was { font-size:16px; font-weight:600; color:var(--ash); text-decoration:line-through; letter-spacing:0; margin-right:8px; }
+    .price.mid .amount .was { color:#8f8c7e; }
+    .dbadge { display:inline-block; background:rgba(250,193,24,.16); border:1px solid rgba(250,193,24,.55); color:#8a6d00; font-size:11px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; border-radius:99px; padding:4px 12px; margin-top:10px; }
+    .price.mid .dbadge { color:var(--gold); background:rgba(250,193,24,.12); }
     .guarantee { margin-top:14px; background:rgba(250,193,24,.12); border:1px solid rgba(250,193,24,.4); border-radius:10px; padding:10px 14px; font-size:13px; color:#f4e9c8; }
     .pricenote { margin-top:16px; font-size:13px; color:var(--ash); }
     details.pricereveal > summary { list-style:none; cursor:pointer; display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:var(--gold); font-weight:700; font-size:15px; border-radius:12px; padding:14px 26px; margin-top:22px; user-select:none; }
@@ -174,6 +178,37 @@
     .cta h2 { color:#fff; } .cta p { color:#c9c6b8; max-width:640px; margin:10px auto 0; }
     .cta .quote { margin-top:22px; font-size:17px; color:#f4e9c8; font-style:italic; max-width:720px; margin-left:auto; margin-right:auto; }
     footer { text-align:center; padding:26px 0 40px; color:var(--ash); font-size:13px; }
+    /* ── Themen-Autorität (Slide-Sektion) ─────────────────────────── */
+    .ta-slide { background:var(--ink); color:#fff; border-radius:20px; padding:34px; margin-top:26px; }
+    .ta-slide h3 { font-size:22px; letter-spacing:-.2px; } .ta-slide h3 span { color:var(--gold); }
+    .ta-sub { color:#c9c6b8; font-size:15px; max-width:740px; margin-top:6px; }
+    .ta-cols { display:grid; grid-template-columns:1.05fr 1fr; gap:26px; align-items:center; margin-top:22px; }
+    .ta-pts { list-style:none; display:flex; flex-direction:column; gap:12px; }
+    .ta-pts li { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:13px 16px; font-size:14.5px; color:#e6e3d5; display:flex; gap:12px; align-items:flex-start; }
+    .ta-pts .ico { color:var(--gold); font-size:16px; line-height:1.45; }
+    .ta-panel { background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:16px; }
+    .ta-panel .pl { font-size:11px; letter-spacing:1.6px; text-transform:uppercase; color:#8f8c7e; text-align:center; margin-bottom:8px; }
+    .ta-svg { width:100%; height:auto; display:block; }
+    .ta-grid2 { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:22px; }
+    .ta-grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:22px; }
+    .ta-card { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.13); border-radius:14px; padding:20px; }
+    .ta-card.win { border:1.5px solid var(--gold); background:rgba(250,193,24,.07); box-shadow:0 0 28px rgba(250,193,24,.13); }
+    .ta-card h4 { font-size:16.5px; margin-bottom:10px; color:#fff; } .ta-card.win h4 { color:var(--gold); }
+    .ta-card ul { list-style:none; } .ta-card li { padding:6px 0 6px 20px; position:relative; font-size:13.8px; color:#d8d5c8; }
+    .ta-card li::before { content:"–"; position:absolute; left:2px; color:#8f8c7e; }
+    .ta-card.win li::before { content:"✓"; color:var(--gold); font-weight:700; }
+    .ta-fazit { margin-top:12px; border-top:1px dashed rgba(255,255,255,.18); padding-top:10px; font-size:13.5px; color:#c9c6b8; }
+    .ta-fazit b { color:#fff; } .ta-card.win .ta-fazit b { color:var(--gold); }
+    .ta-icon { width:44px; height:44px; border-radius:12px; background:rgba(250,193,24,.12); border:1px solid rgba(250,193,24,.4); display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:12px; }
+    .ta-chips { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:16px; }
+    .ta-chip { border:1px solid rgba(250,193,24,.45); background:rgba(250,193,24,.06); border-radius:12px; padding:13px 15px; font-size:13.5px; color:#d8d5c8; }
+    .ta-chip b { display:block; color:var(--gold); font-size:14px; margin-bottom:3px; }
+    .ta-note { margin-top:18px; background:rgba(250,193,24,.1); border:1px solid rgba(250,193,24,.4); border-radius:12px; padding:12px 16px; font-size:13.5px; color:#f4e9c8; }
+    .ta-eeat { display:grid; grid-template-columns:1fr auto 1fr; gap:16px; align-items:center; margin-top:22px; }
+    .ta-eeat .col { display:flex; flex-direction:column; gap:12px; }
+    .ta-eeat .q { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:13px 16px; font-size:13.5px; color:#d8d5c8; }
+    .ta-eeat .q b { display:block; color:#fff; font-size:14px; margin-bottom:2px; }
+    @media (max-width:760px){ .ta-cols, .ta-grid2, .ta-grid3, .ta-chips { grid-template-columns:1fr; } .ta-eeat { grid-template-columns:1fr; } .ta-eeat .shieldwrap { order:-1; margin:0 auto; } .ta-slide { padding:26px 20px; } }
     @media (max-width:760px){ .case, .shift { grid-template-columns:1fr; } .pbody ul, .ai ul { columns:1; } .pbody { padding-left:22px; } .pgoal{display:none;} .price.mid{transform:none;} }
   </style>
 </head>
@@ -193,7 +228,7 @@
   <div class="proofbar">
     <div class="chip"><b>2.500+</b><small>analysierte lokale Betriebe</small></div>
     <div class="chip"><b>100+</b><small>aktive Tracking-Setups</small></div>
-    <div class="chip"><b>30+</b><small>lokale Sichtbarkeits-Projekte</small></div>
+    <div class="chip"><b>100+</b><small>lokale Sichtbarkeits-Projekte</small></div>
     <div class="chip"><b>2</b><small>Wachstumsmotoren, ein Team</small></div>
   </div>
 </div>
@@ -258,14 +293,13 @@
       <div class="wc"><img class="avimg" src="/review-assets/people/bernd-laserstein.jpg" alt="Bernd Laserstein" loading="lazy"><div><b>Bernd Laserstein</b><small>Gesundheitspraxis</small><em class="res"><a href="/review-assets/proof/bernd-laserstein-nachher.jpg" target="_blank">▲ Platz 9 → 1 · „Körperpsychotherapie“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/sabine-brenneisen.jpg" alt="Sabine Brenneisen" loading="lazy"><div><b>Sabine Brenneisen</b><small>Gesundheitspraxis</small><em class="res"><a href="#">▲ Platz 11 → 2 · „Ernährungsberatung“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/sven-boehme.jpg" alt="Sven Böhme" loading="lazy"><div><b>Sven Böhme</b><small>Heilpraktiker · Stuttgart</small><em class="res"><a href="/review-assets/proof/boehme-nachher.jpg" target="_blank">▲ Platz 17 → 4 · „Heilpraktiker Stuttgart“</a></em></div></div>
-      <div class="wc"><span class="av">VS</span><div><b>Veronika Schlirf</b><small>Heilpraktikerin · Regensburg</small><em class="res"><a href="/review-assets/proof/veronika-schlirf-nachher.jpg" target="_blank">▲ Platz 15 → 1 · „Heilpraktikerin“</a></em></div></div>
       <div class="wc"><span class="av">MG</span><div><b>Martina Gross</b><small>Physiotherapie · Herzogenaurach</small><em class="res"><a href="/review-assets/proof/martina-gross-nachher.jpg" target="_blank">▲ Platz 1 · „Physiotherapie“</a></em></div></div>
       <div class="wc"><span class="av">JF</span><div><b>Janina Felix</b><small>Praxis-Kundin</small><em class="res"><a href="#">▲ Platz 7 → 1 · „Osteopathie &amp; Kinder“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/justine-felix.jpg" alt="Justine Felix" loading="lazy"><div><b>Justine Felix</b><small>Praxis-Kundin</small><em class="res"><a href="#">▲ Platz 12 → 2 · „Heilpraktikerin für Frauen“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/jeffrey-krautz.jpg" alt="Jeffrey Krautz · Mediwe" loading="lazy"><div><b>Jeffrey Krautz · Mediwe</b><small>Medizin-Sektor</small><em class="res"><a href="#">▲ Platz 33 → 3 · „Medizinprodukte Vertrieb“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/marita-biel.jpg" alt="Freude am Lernen · Marita Biel" loading="lazy"><div><b>Freude am Lernen · Marita Biel</b><small>Lerncoaching</small><em class="res"><a href="#">▲ Platz 8 → 1 · „Lerncoaching Stuttgart“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/sabine-verges.jpg" alt="Sabine Verges" loading="lazy"><div><b>Sabine Verges</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 14 → 2 · „Naturheilverfahren“</a></em></div></div>
-      <div class="wc"><img class="avimg" src="/review-assets/people/astrid-lengauer.jpg" alt="Astrid Lengauer" loading="lazy"><div><b>Astrid Lengauer</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 18 → 1 · „Craniosacral Therapie“</a></em></div></div>
+      <div class="wc"><img class="avimg" src="/review-assets/people/astrid-lengauer.jpg" alt="Astrid Lengauer" loading="lazy"><div><b>Astrid Lengauer</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 18 → 1 · „Innenarchitektur“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/angelina-everitt.jpg" alt="Angelina Everitt" loading="lazy"><div><b>Angelina Everitt</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 21 → 3 · „Hypnosetherapie Stuttgart“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/martin-altherr.jpg" alt="Martin Altherr" loading="lazy"><div><b>Martin Altherr</b><small>Lokaler Betrieb</small><em class="res"><a href="#">▲ Platz 15 → 1 · „Rolfing &amp; Faszientherapie“</a></em></div></div>
       <div class="wc"><img class="avimg" src="/review-assets/people/karoline-hengst.svg" alt="Karoline Hengst" loading="lazy"><div><b>Karoline Hengst</b><small>Lokaler Betrieb</small><em class="res"><a href="/review-assets/proof/karoline-hengst-nachher.jpg" target="_blank">▲ Platz 28 → 2 · „Homöopathie“</a></em></div></div>
@@ -496,6 +530,254 @@
   </div>
 </section>
 
+<!-- ═══════════ THEMEN-AUTORITÄT (Topical Authority) ═══════════ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">Die Content-Strategie dahinter</div>
+    <h2>Themen-Autorität: Warum die Tiefe gewinnt.</h2>
+    <p class="lead">KI-gesteuerte Suche hat die Spielregeln geändert. Hier ist das System, mit dem deine Website zur zitierten Experten-Quelle wird — statt in den Antworten zu verschwinden.</p>
+
+    <!-- Slide 1: Warum flache Websites verschwinden -->
+    <div class="ta-slide">
+      <h3>Warum flache Websites aus <span>KI-Antworten</span> verschwinden</h3>
+      <p class="ta-sub">KI-gesteuerte Suchmaschinen (Google AI Overviews, ChatGPT) lesen keine Seiten — sie extrahieren Antworten von Experten.</p>
+      <div class="ta-cols">
+        <ul class="ta-pts">
+          <li><span class="ico">🌐</span><span>KI sucht nach <b>Konsistenz</b>, nicht nach Keywords.</span></li>
+          <li><span class="ico">🔍</span><span>Ein einziger guter Artikel <b>reicht nicht mehr aus</b>.</span></li>
+          <li><span class="ico">📣</span><span>Nur wer ein Thema <b>lückenlos abdeckt</b>, wird zitiert.</span></li>
+        </ul>
+        <div class="ta-panel">
+          <div class="pl">Das unstrukturierte Web</div>
+          <svg class="ta-svg" viewBox="0 0 340 250" role="img" aria-label="Filter-Trichter: Thementiefe und E-E-A-T-Signale führen zu KI-Zitierungen">
+            <g fill="#8f8c7e">
+              <circle cx="60" cy="26" r="4"/><circle cx="102" cy="16" r="4"/><circle cx="146" cy="30" r="4"/><circle cx="190" cy="14" r="4"/><circle cx="236" cy="28" r="4"/><circle cx="278" cy="18" r="4"/>
+              <circle cx="82" cy="48" r="4"/><circle cx="128" cy="54" r="4"/><circle cx="172" cy="44" r="4"/><circle cx="216" cy="52" r="4"/><circle cx="258" cy="46" r="4"/>
+            </g>
+            <path d="M40 66 L300 66 L212 150 L212 196 L128 196 L128 150 Z" fill="none" stroke="#4a493f" stroke-width="2.5"/>
+            <rect x="52" y="104" width="236" height="5" rx="2.5" fill="#fac118"/>
+            <g>
+              <rect x="222" y="88" width="112" height="38" rx="8" fill="#fac118"/>
+              <text x="278" y="103" font-size="10.5" font-weight="800" fill="#111514" text-anchor="middle">Thementiefe &amp;</text>
+              <text x="278" y="117" font-size="10.5" font-weight="800" fill="#111514" text-anchor="middle">E-E-A-T Signale</text>
+            </g>
+            <g stroke="#fac118" stroke-width="2" fill="#111514">
+              <circle cx="170" cy="176" r="26" fill="rgba(250,193,24,.14)" stroke="none"/>
+              <polygon points="170,160 179,165 179,175 170,180 161,175 161,165" />
+              <polygon points="152,178 161,183 161,193 152,198 143,193 143,183" />
+              <polygon points="188,178 197,183 197,193 188,198 179,193 179,183" />
+            </g>
+            <text x="170" y="234" font-size="11.5" font-weight="700" fill="#c9c6b8" text-anchor="middle">KI-Zitierungen &amp; Zero-Click-Ergebnisse</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: Topical vs Domain Authority -->
+    <div class="ta-slide">
+      <h3>Topical Authority <span>schlägt</span> Domain Authority</h3>
+      <div class="ta-grid2">
+        <div class="ta-card">
+          <div class="ta-icon">🏢</div>
+          <h4>Hohe Domain Authority, geringe Tiefe</h4>
+          <ul>
+            <li>Hunderte Backlinks, aber oberflächliche Inhalte.</li>
+            <li>Rankt kurzfristig, verliert bei Algorithmus-Updates.</li>
+            <li>Lässt Folgefragen der Nutzer unbeantwortet.</li>
+          </ul>
+          <div class="ta-fazit"><b>Fazit:</b> Autoritäts-Links garantieren keine echte Expertise.</div>
+        </div>
+        <div class="ta-card win">
+          <div class="ta-icon">🕸️</div>
+          <h4>Geringere Domain Authority, hohe Topical Authority</h4>
+          <ul>
+            <li>Weniger Backlinks, aber lückenlose Themenabdeckung.</li>
+            <li>Kleine Websites überholen große Marken durch strukturiertes Wissen.</li>
+            <li>Google vertraut der Website als ultimative Informationsquelle.</li>
+          </ul>
+          <div class="ta-fazit"><b>Fazit:</b> Tiefe gewinnt gegen Breite.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: Fundament -->
+    <div class="ta-slide">
+      <h3>Das Fundament der <span>Themen-Autorität</span></h3>
+      <div class="ta-grid3">
+        <div class="ta-card">
+          <div class="ta-icon">📚</div>
+          <h4>Content-Tiefe</h4>
+          <ul>
+            <li>Beantwortet nicht nur eine Frage, sondern den gesamten Kontext.</li>
+            <li>Erklärt Definitionen, Vergleiche, Probleme und Lösungen.</li>
+          </ul>
+        </div>
+        <div class="ta-card">
+          <div class="ta-icon">🔗</div>
+          <h4>Interne Verlinkung</h4>
+          <ul>
+            <li>Verbindet verwandte Seiten zu einem logischen Netzwerk.</li>
+            <li>Leitet Crawler und verteilt Relevanz-Signale.</li>
+          </ul>
+        </div>
+        <div class="ta-card">
+          <div class="ta-icon">🏛️</div>
+          <h4>Konsistenz</h4>
+          <ul>
+            <li>Signalisiert langfristiges Engagement für ein Thema.</li>
+            <li>Jede neue Seite stärkt das bestehende Netzwerk, statt es zu verwässern.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: Blueprint Topic Clusters -->
+    <div class="ta-slide">
+      <h3>Der Blueprint: <span>Topic Clusters &amp; Topical Maps</span></h3>
+      <div class="ta-cols">
+        <div>
+          <p class="ta-sub" style="margin-top:0;">Eine Topical Map ist der <b style="color:#fff;">architektonische Bauplan</b> deiner Sichtbarkeit. Crawler sehen kein Chaos mehr, sondern ein strukturiertes Experten-Netzwerk.</p>
+          <div class="ta-grid2" style="margin-top:18px; gap:12px;">
+            <div class="ta-card" style="padding:16px;">
+              <h4 style="font-size:15px;">Die Pillar-Seite</h4>
+              <ul>
+                <li><b>Funktion:</b> der umfassende Überblick.</li>
+                <li><b>Ziel:</b> Kern-Keywords &amp; hohe Autorität.</li>
+                <li><b>Inhalt:</b> deckt das Kernthema ab und verlinkt auf alle Detail-Seiten.</li>
+              </ul>
+            </div>
+            <div class="ta-card win" style="padding:16px;">
+              <h4 style="font-size:15px;">Die Cluster-Seiten</h4>
+              <ul>
+                <li><b>Funktion:</b> die absolute Detailtiefe.</li>
+                <li><b>Ziel:</b> Long-Tail-Suchen &amp; spezifische Intention.</li>
+                <li><b>Inhalt:</b> löst konkrete Probleme, beantwortet FAQs, verlinkt zurück zur Pillar-Seite.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ta-note">Struktur erhöht die Crawl-Effizienz: Google versteht Hierarchien schneller — und rankt neue Inhalte sofort.</div>
+        </div>
+        <div class="ta-panel">
+          <div class="pl">Topical Map</div>
+          <svg class="ta-svg" viewBox="0 0 340 320" role="img" aria-label="Topic-Cluster-Diagramm: Pillar-Seite im Zentrum, fünf Cluster-Seiten verlinkt">
+            <g stroke="#4a493f" stroke-width="1.6" stroke-dasharray="4 4">
+              <line x1="170" y1="160" x2="170" y2="52"/><line x1="170" y1="160" x2="62" y2="112"/><line x1="170" y1="160" x2="278" y2="112"/><line x1="170" y1="160" x2="82" y2="248"/><line x1="170" y1="160" x2="258" y2="248"/>
+            </g>
+            <g stroke="#fac118" stroke-width="2">
+              <line x1="170" y1="126" x2="170" y2="86"/><line x1="140" y1="146" x2="94" y2="124"/><line x1="200" y1="146" x2="246" y2="124"/><line x1="150" y1="186" x2="106" y2="226"/><line x1="190" y1="186" x2="234" y2="226"/>
+            </g>
+            <g>
+              <polygon points="170,118 206,138 206,182 170,202 134,182 134,138" fill="#fac118"/>
+              <text x="170" y="155" font-size="11" font-weight="800" fill="#111514" text-anchor="middle">Pillar Page</text>
+              <text x="170" y="169" font-size="9.5" font-weight="600" fill="#111514" text-anchor="middle">(Kernthema)</text>
+            </g>
+            <g fill="#f5f4ef">
+              <polygon points="170,16 196,31 196,61 170,76 144,61 144,31"/>
+              <polygon points="62,76 88,91 88,121 62,136 36,121 36,91"/>
+              <polygon points="278,76 304,91 304,121 278,136 252,121 252,91"/>
+              <polygon points="82,212 108,227 108,257 82,272 56,257 56,227"/>
+              <polygon points="258,212 284,227 284,257 258,272 232,257 232,227"/>
+            </g>
+            <g font-size="8.6" font-weight="700" fill="#111514" text-anchor="middle">
+              <text x="170" y="44">Cluster Page</text><text x="170" y="55">Detail &amp; Long-Tail</text>
+              <text x="62" y="104">Cluster Page</text><text x="62" y="115">Detail &amp; Long-Tail</text>
+              <text x="278" y="104">Cluster Page</text><text x="278" y="115">Detail &amp; Long-Tail</text>
+              <text x="82" y="240">Cluster Page</text><text x="82" y="251">Detail &amp; Long-Tail</text>
+              <text x="258" y="240">Cluster Page</text><text x="258" y="251">Detail &amp; Long-Tail</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="ta-chips" style="margin-top:20px;">
+        <div class="ta-chip"><b>Siloing</b>Relevanz bleibt innerhalb des Themen-Clusters.</div>
+        <div class="ta-chip"><b>Anchor-Text</b>Beschreibende Linktexte statt generischer („Hier klicken").</div>
+        <div class="ta-chip"><b>Signal-Verteilung</b>Ein starker Beitrag hebt das gesamte Cluster an.</div>
+      </div>
+    </div>
+
+    <!-- Slide 5: Erfolgsmessung -->
+    <div class="ta-slide">
+      <h3>Erfolgsmessung im Jahr <span>2026</span></h3>
+      <p class="ta-sub">Wir messen keine isolierten Keyword-Spikes mehr. Wir messen das systematische Wachstum eines ganzen Themen-Clusters.</p>
+      <div class="ta-panel" style="margin-top:18px;">
+        <div class="pl">Command Center</div>
+        <svg class="ta-svg" viewBox="0 0 680 160" role="img" aria-label="Wachstumskurve: einzelne Keyword-Spitzen vs. stabiles Cluster-Wachstum">
+          <polyline points="10,110 40,70 70,120 100,60 130,105 160,50 190,115 220,75 250,120 280,65 310,100 340,55 370,110 400,70 430,115 460,80 490,105 520,60 550,95 580,70 610,90 640,75 670,85" fill="none" stroke="#4a493f" stroke-width="1.6"/>
+          <path d="M10 140 C 180 138, 320 120, 450 82 C 540 56, 610 38, 672 26" fill="none" stroke="#fac118" stroke-width="5" stroke-linecap="round"/>
+          <path d="M10 140 C 180 138, 320 120, 450 82 C 540 56, 610 38, 672 26 L 672 155 L 10 155 Z" fill="rgba(250,193,24,.10)" stroke="none"/>
+        </svg>
+      </div>
+      <div class="ta-chips">
+        <div class="ta-chip"><b>Stabilität der Rankings</b>Weniger Einbrüche bei Google Core-Updates.</div>
+        <div class="ta-chip"><b>Gruppen-Sichtbarkeit</b>Impressionen steigen über das gesamte Themen-Cluster.</div>
+        <div class="ta-chip"><b>Indexierungs-Geschwindigkeit</b>Google crawlt &amp; rankt neue Seiten im Cluster deutlich schneller.</div>
+      </div>
+    </div>
+
+    <!-- Slide 6: E-E-A-T -->
+    <div class="ta-slide">
+      <h3>E-E-A-T: <span>Vertrauen muss erarbeitet werden</span></h3>
+      <p class="ta-sub">Autorität ist kein Titel, den man sich selbst gibt. Sie wird durch kontinuierliche, werthaltige Expertise bewiesen.</p>
+      <div class="ta-eeat">
+        <div class="col">
+          <div class="q"><b>Experience (Erfahrung)</b>Echte Fallstudien und praktische Anwendung, nicht nur Theorie.</div>
+          <div class="q"><b>Authoritativeness (Autorität)</b>Konsistente Problemlösung innerhalb einer Nische.</div>
+        </div>
+        <div class="shieldwrap">
+          <svg width="150" height="170" viewBox="0 0 150 170" role="img" aria-label="E-E-A-T-Schild">
+            <path d="M75 6 L138 26 V88 C138 128 110 152 75 164 C40 152 12 128 12 88 V26 Z" fill="#111514" stroke="#fac118" stroke-width="3"/>
+            <line x1="75" y1="12" x2="75" y2="158" stroke="#fac118" stroke-width="1.6"/>
+            <line x1="16" y1="85" x2="134" y2="85" stroke="#fac118" stroke-width="1.6"/>
+            <circle cx="75" cy="85" r="7" fill="#fac118"/>
+            <g font-size="26" font-weight="800" fill="#f5f4ef" text-anchor="middle">
+              <text x="46" y="60">E</text><text x="104" y="60">E</text><text x="46" y="128">A</text><text x="104" y="128">T</text>
+            </g>
+          </svg>
+        </div>
+        <div class="col">
+          <div class="q"><b>Expertise (Fachwissen)</b>Tiefe Einblicke, die über generische KI-Texte hinausgehen.</div>
+          <div class="q"><b>Trust (Vertrauen)</b>Transparenz, Aktualität und nachweisbare Fakten.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 7: Flywheel -->
+    <div class="ta-slide">
+      <h3>Das <span>Flywheel</span> der Autorität</h3>
+      <p class="ta-sub">Themen-Autorität ist kein einmaliges Projekt. Es ist ein System, das sich mit jedem Schritt selbst verstärkt.</p>
+      <div class="ta-cols">
+        <div class="ta-panel" style="display:flex; align-items:center; justify-content:center;">
+          <svg width="230" height="230" viewBox="0 0 230 230" role="img" aria-label="Flywheel: Publizieren, Verlinken, Stabilität – im Kreis">
+            <g fill="none" stroke-width="17" stroke-linecap="round">
+              <path d="M115 26 A89 89 0 0 1 197 90" stroke="#fac118"/>
+              <path d="M204 138 A89 89 0 0 1 118 204" stroke="#f5f4ef"/>
+              <path d="M62 190 A89 89 0 0 1 27 96" stroke="#f5f4ef"/>
+            </g>
+            <g fill="#fac118"><polygon points="197,78 212,96 190,102"/></g>
+            <g fill="#f5f4ef"><polygon points="132,203 108,216 112,193"/><polygon points="27,110 18,88 41,92"/></g>
+            <g font-size="15" font-weight="800" fill="#fac118" text-anchor="middle">
+              <text x="176" y="52">1</text>
+            </g>
+            <g font-size="15" font-weight="800" fill="#f5f4ef" text-anchor="middle">
+              <text x="172" y="196">2</text><text x="40" y="180">3</text>
+            </g>
+            <circle cx="115" cy="115" r="52" fill="rgba(250,193,24,.1)" stroke="#fac118" stroke-width="1.4"/>
+            <g font-size="9.4" font-weight="600" fill="#f4e9c8" text-anchor="middle">
+              <text x="115" y="103">Erst wenn ein</text><text x="115" y="115">Kern-Thema dominiert,</text><text x="115" y="127">expandieren wir in</text><text x="115" y="139">angrenzende Themen.</text>
+            </g>
+          </svg>
+        </div>
+        <ul class="ta-pts">
+          <li><span class="ico" style="font-weight:800;">1</span><span><b>Fokussiert publizieren</b> — Lücken im Cluster schließen.</span></li>
+          <li><span class="ico" style="font-weight:800;">2</span><span><b>Strategisch verlinken</b> — Relevanz und Kontext weitergeben.</span></li>
+          <li><span class="ico" style="font-weight:800;">3</span><span><b>Stabilität erreichen</b> — Rankings festigen sich, Vertrauen wächst.</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <div class="kicker">Prioritäten</div>
@@ -582,7 +864,8 @@
       <div class="price">
         <div class="plabel">Starter</div>
         <h3>Foundation Setup</h3>
-        <div class="amount">1.999 € <small>einmalig</small></div>
+        <div class="amount"><span class="was">2.199 €</span>1.979 € <small>einmalig</small></div>
+        <div class="dbadge">−10 % Kennenlern-Rabatt</div>
         <div class="psub">Das Fundament — für Praxen, die danach selbst umsetzen wollen.</div>
         <ul>
           <li>Komplettes Setup &amp; technische Basics</li>
@@ -596,7 +879,8 @@
         <div class="ribbon">Meistgewählt</div>
         <div class="plabel">90-Tage-Erfolgspaket</div>
         <h3>Local-SEO-Dominanz</h3>
-        <div class="amount">3.699 € <small>90-Tage-Programm</small></div>
+        <div class="amount"><span class="was">4.099 €</span>3.689 € <small>90-Tage-Programm</small></div>
+        <div class="dbadge">−10 % Kennenlern-Rabatt</div>
         <div class="psub">Das komplette 10-Phasen-System, für dich umgesetzt — mit unserer Ergebnis-Garantie.</div>
         <ul>
           <li>Alles aus Starter</li>
@@ -611,7 +895,8 @@
       <div class="price">
         <div class="plabel">Power Engine</div>
         <h3>SEO + Paid-Ads-Beschleuniger</h3>
-        <div class="amount">7.999 € <small>+ monatl. Ads-Management</small></div>
+        <div class="amount"><span class="was">8.799 €</span>7.919 € <small>+ monatl. Ads-Management</small></div>
+        <div class="dbadge">−10 % Kennenlern-Rabatt</div>
         <div class="psub">Für den Launch neuer Leistungen — und den schnellstmöglich gefüllten Kalender.</div>
         <ul>
           <li>Alles aus dem 90-Tage-Paket</li>
@@ -623,7 +908,7 @@
         <a class="paybtn" href="#" data-stripe="power">Engine starten →</a>
       </div>
     </div>
-    <p class="pricenote">Alle Pakete starten mit einem gemeinsamen Kick-off und enden mit Zahlen auf dem Tisch — Rankings, Anrufe, Buchungen. Werbebudget ist im Management-Honorar nicht enthalten.</p>
+    <p class="pricenote">Die angezeigten Preise enthalten bereits den −10 % Kennenlern-Rabatt auf den regulären Listenpreis. Alle Pakete starten mit einem gemeinsamen Kick-off und enden mit Zahlen auf dem Tisch — Rankings, Anrufe, Buchungen. Werbebudget ist im Management-Honorar nicht enthalten.</p>
     </details>
     <script>/* Stripe Payment Links: Link-URL in die hrefs der Buttons eintragen. Buttons bleiben versteckt, bis ein echter Link gesetzt ist. */
     document.querySelectorAll('.paybtn[href="#"]').forEach(function(b){ b.style.display='none'; });</script>

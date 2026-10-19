@@ -1,3 +1,24 @@
+<!-- Anchor-scroll offset: .navbar_main's banner + nav row are position:fixed and float over
+     the page at all breakpoints, so any in-page anchor jump (href="#some-section") lands that
+     section's top edge under the fixed overlay unless the viewport compensates. This rule is
+     the one global fix for that, valid for every current and future #id target on every page
+     that includes this partial — do NOT re-solve this per-page with a local padding-top hack. -->
+<style>
+  html { scroll-padding-top: 150px; }
+  @media screen and (max-width: 991px) { html { scroll-padding-top: 100px; } }
+</style>
+<!-- Page preloader: masks the brief unstyled-HTML flash (FOUC) on first paint, fades out when the page is ready. Self-contained (inline styles + SMIL SVG) so it needs no external CSS. -->
+<div id="p741-preload" style="position:fixed;inset:0;z-index:2147483647;background:#ffffff;display:flex;align-items:center;justify-content:center;transition:opacity .5s ease;">
+<svg width="46" height="46" viewBox="0 0 48 48" fill="none" role="img" aria-label="Wird geladen">
+<circle cx="24" cy="24" r="20" stroke="#ececec" stroke-width="4"></circle>
+<path d="M24 4a20 20 0 0 1 20 20" stroke="#fac118" stroke-width="4" stroke-linecap="round">
+<animateTransform attributeName="transform" type="rotate" from="0 24 24" to="360 24 24" dur="0.8s" repeatCount="indefinite"></animateTransform>
+</path>
+</svg>
+</div>
+<script>
+(function(){var o=document.getElementById('p741-preload');if(!o)return;var done=false;function hide(){if(done)return;done=true;o.style.opacity='0';o.style.pointerEvents='none';setTimeout(function(){if(o&&o.parentNode)o.parentNode.removeChild(o);},550);}if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){requestAnimationFrame(hide);});}window.addEventListener('load',hide);setTimeout(hide,1800);})();
+</script>
 <script>
   (function () {
     // Auto-deliver German to visitors in DE/AT/CH; everyone else stays English.
@@ -5,6 +26,8 @@
     if (sessionStorage.getItem('lang_override')) return;
     // Defensive: never run on the German side (this partial is EN-only anyway).
     if (window.location.pathname.indexOf('/de/') === 0) return;
+    // Review pages exist only once (no /de/ twin): never redirect them (2026-10-12, /de/review/... gave 404 for DACH visitors).
+    if (window.location.pathname.indexOf('/review/') === 0) return;
 
     var DACH = ['DE', 'AT', 'CH'];
 
@@ -13,8 +36,11 @@
       if (cc && DACH.indexOf(String(cc).toUpperCase()) !== -1) {
         sessionStorage.setItem('lang_override', 'de');
         var path = window.location.pathname;
+        // Prefer an explicit German alternate (slugs can differ, e.g. the giveaway page)
+        // over the naive /de-prefix, which would 404 when the DE slug isn't identical.
+        var alt = document.querySelector('link[rel=alternate][hreflang=de]');
         // replace() so the English page isn't left in the Back-button history.
-        window.location.replace(path === '/' ? '/de/' : '/de' + path);
+        window.location.replace(alt ? alt.getAttribute('href') : (path === '/' ? '/de/' : '/de' + path));
       }
     }
 
@@ -98,14 +124,21 @@
         <a href="/pages/blog.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
           Blog
         </a>
+        <a href="/pages/741-circle.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+          Community
+        </a>
+
+        <a href="/pages/visibility-grant.html" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 nav_giveaway-link" style="font-weight:700;">
+          🎁 Giveaway
+        </a>
 
         <div class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04" style="display:inline-flex; gap: 8px; align-items:center;">
           <span style="opacity: 0.5; cursor: default;">EN</span>
           <span>|</span>
-          <a href="javascript:void(0)" style="color: inherit; text-decoration: none;" onclick="sessionStorage.setItem('lang_override', 'de'); window.location.href = window.location.pathname === '/' ? '/de/' : '/de' + window.location.pathname;">DE</a>
+          <a href="javascript:void(0)" style="color: inherit; text-decoration: none;" onclick="if (window.location.pathname.indexOf('/review/') === 0) return; sessionStorage.setItem('lang_override', 'de'); var a=document.querySelector('link[rel=alternate][hreflang=de]'); window.location.href = a ? a.getAttribute('href') : (window.location.pathname === '/' ? '/de/' : '/de' + window.location.pathname);">DE</a>
         </div>
 
-        <a href="http://clients.741-studio.com/" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
+        <a href="https://clients.741.studio/" class="nav_text-link w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04">
           Sign In
         </a>
       </div>
@@ -128,7 +161,7 @@
       <line x1="3" y1="18" x2="21" y2="18"></line>
     </svg>
   </button>
-  <a id="try_now_top" href="https://form.typeform.com/to/VmiA3c6t?startpoint=intro"
+  <a id="try_now_top" href="https://wa.me/6287860430975" target="_blank" rel="noopener"
     class="huge_nav-button is-real w-variant-138f51c6-a923-3c01-fe1a-d27a5c95ed04 w-inline-block">
     <div class="nav-button-spacer">
     </div>
@@ -142,7 +175,13 @@
       display: none;
     }
 
-    @media screen and (max-width: 768px) {
+    /* FIX: .navbar-left is a fixed 50%-wide z-999 box (weavy.css) that overlays the
+       leftmost nav links (Home/Portfolio) and swallows their clicks once the logo loads.
+       Let the empty container pass clicks through; keep the logo link itself clickable. */
+    .navbar-left { pointer-events: none !important; }
+    .navbar-left .brand, .navbar-left .brand * { pointer-events: auto !important; }
+
+    @media screen and (max-width: 991px) {
 
       /* ROW 1: Black Notification Bar */
       .navbar_main .banner_component {
@@ -236,7 +275,7 @@
       }
 
       .navbar_main .huge_nav-button.is-real .nav-link-text-block-large {
-        font-size: 2.77778rem !important;
+        font-size: 18.75px !important;
         /* Restore exactly to original */
         font-weight: 400 !important;
         text-align: center !important;
@@ -276,7 +315,7 @@
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-        transition: opacity 0.3s ease, visibility 0.3s ease !important;
+        transition: opacity 0.3s ease !important; /* visibility flips instantly — transitioning it can leave the menu stuck hidden */
         z-index: 99999 !important;
         /* Top overlay */
         transform: none !important;
@@ -288,10 +327,18 @@
         pointer-events: auto !important;
       }
 
+      .nav-links-wrapper.is-open .nav_text-link,
+      .nav-links-wrapper.is-open .nav_dropdown,
+      .nav-links-wrapper.is-open .nav_dropdown-toggle,
+      .nav-links-wrapper.is-open .nav_dropdown-link {
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+
       .nav-links-wrapper .nav_text-link {
         color: #fff !important;
-        font-size: 2rem !important;
-        padding: 1.5rem 0 !important;
+        font-size: 13.5px !important; /* px = root-independent so menu is identical on every page */
+        padding: 10px 0 !important;
         margin: 0 !important;
         text-align: center !important;
         width: 100% !important;
@@ -388,11 +435,11 @@
         color: #000 !important;
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 991px) {
         .nav_dropdown {
           width: 100%;
           text-align: center;
-          margin: 1rem 0;
+          margin: 8px 0;
         }
         
         .nav_dropdown-toggle {
@@ -421,10 +468,14 @@
         .nav_dropdown.is-open .nav_dropdown-list {
           max-height: 250px;
         }
+        .nav_dropdown.is-open .nav_dropdown-list { transform: none !important; left: auto !important; width: 100% !important; }
         
+        /* mobile: hide the caret so "Services" is pure centered text like the other links */
+        .nav_dropdown-arrow { display: none !important; }
+
         .nav_dropdown-link {
-          font-size: 1.6rem !important;
-          padding: 0.8rem 0 !important;
+          font-size: 11px !important;
+          padding: 5px 0 !important;
           text-align: center !important;
           color: rgba(255, 255, 255, 0.7) !important;
         }
@@ -464,7 +515,7 @@
       // Mobile Menu Logic
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-      const navLinks = document.querySelectorAll('.nav-links-wrapper .nav_text-link');
+      const navLinks = document.querySelectorAll('.nav-links-wrapper .nav_text-link:not(.nav_dropdown-toggle)');
 
       if (mobileMenuBtn && navLinksWrapper) {
         // Break out of Webflow's navbar CSS by moving the overlay directly to the body!
@@ -473,24 +524,25 @@
           document.body.appendChild(navLinksWrapper);
         }
 
+        // Lock body scroll while the overlay is open — without this, iOS momentum/bounce
+        // scroll events fired the old "close on scroll" handler and shut the menu
+        // before a tap could land on a link.
+        const setMenuOpen = (open) => {
+          navLinksWrapper.classList.toggle('is-open', open);
+          document.body.style.overflow = open ? 'hidden' : '';
+        };
+
         mobileMenuBtn.addEventListener('click', (e) => {
           e.preventDefault();
-          navLinksWrapper.classList.toggle('is-open');
+          setMenuOpen(!navLinksWrapper.classList.contains('is-open'));
         });
 
         // Close menu when a link is clicked
         navLinks.forEach(link => {
           link.addEventListener('click', () => {
-            navLinksWrapper.classList.remove('is-open');
+            setMenuOpen(false);
           });
         });
-
-        // Close menu on scroll if it is open
-        window.addEventListener('scroll', () => {
-          if (navLinksWrapper.classList.contains('is-open')) {
-            navLinksWrapper.classList.remove('is-open');
-          }
-        }, { passive: true });
 
         // Dropdown toggle logic (desktop & mobile)
         const dropdown = document.querySelector('.nav_dropdown');

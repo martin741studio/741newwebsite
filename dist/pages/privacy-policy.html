@@ -8,6 +8,9 @@
   <meta name="robots" content="noindex" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
@@ -420,12 +423,93 @@
         }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
         window.fbq("init", "1028202146617964");
         window.fbq("track", "PageView");
+        window.__wireLeadMirror();
   
         /* ---- FirstPromoter (affiliate / referral attribution) ---- */
         (function (w) { w.fpr = w.fpr || function () { w.fpr.q = w.fpr.q || []; w.fpr.q[arguments[0] == "set" ? "unshift" : "push"](arguments); }; })(window);
         window.fpr("init", { cid: "vzajpas8" });
         window.fpr("click");
       };
+  
+      /* ─────────────────────────────────────────────────────────────
+         741 CONVERSION TRACKING  (central — applies to every page)
+         Fires GA4 events for the things that actually matter:
+           · generate_lead  — any form submission (all Supabase forms)
+           · booking_click  — cal.com / Calendly clicks
+         Mark both as Key Events in GA4 to turn them into conversions.
+         ───────────────────────────────────────────────────────────── */
+      window.track741 = function (name, params) {
+        try {
+          var p = params || {};
+          p.page_location = location.href;
+          p.page_path = location.pathname;
+          if (window.gtag) window.gtag("event", name, p);
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(Object.assign({ event: name }, p));
+          if (window.posthog && window.posthog.capture) window.posthog.capture(name, p);
+        } catch (e) {}
+      };
+  
+      // Derive a readable form name from the page so leads are attributable.
+      window.__formType = function () {
+        var p = location.pathname;
+        if (/741-circle/.test(p)) return "community";
+        if (/apply-seo/.test(p)) return "seo_application";
+        if (/sichtbarkeits-foerderung|visibility-grant/.test(p)) return "giveaway";
+        if (/sichtbarkeits-analyse|visibility-audit/.test(p)) return "visibility_audit";
+        if (/google-ads|meta-ads|advertorial|warum-google/.test(p)) return "ads_landingpage";
+        if (/\/review\//.test(p)) return "review_page";
+        return "website";
+      };
+  
+      /* Mirror the Meta 'Lead' events that already exist across the site into GA4,
+         so we don't have to touch 100+ pages. Works in both consent states:
+         - marketing granted  → real fbq exists, we wrap it
+         - marketing denied   → we install a mirror-only stub so GA4 still learns
+                                about the lead (no data goes to Meta)            */
+      window.__wireLeadMirror = function () {
+        var mirror = function (evName, evParams) {
+          if (evName === "Lead" || evName === "CompleteRegistration") {
+            window.track741("generate_lead", {
+              form_type: (evParams && evParams.form_type) || window.__formType(),
+              value: 1, currency: "EUR"
+            });
+          } else if (evName === "Schedule") {
+            window.track741("booking_click", { provider: "unknown" });
+          }
+        };
+        if (window.fbq && !window.fbq.__mirrored) {
+          var real = window.fbq;
+          window.fbq = function () {
+            try { if (arguments[0] === "track") mirror(arguments[1], arguments[2]); } catch (e) {}
+            return real.apply(this, arguments);
+          };
+          for (var k in real) { try { window.fbq[k] = real[k]; } catch (e) {} }
+          window.fbq.__mirrored = true;
+        } else if (!window.fbq) {
+          window.fbq = function () {
+            try { if (arguments[0] === "track") mirror(arguments[1], arguments[2]); } catch (e) {}
+          };
+          window.fbq.__mirrored = true;
+          window.fbq.__stubOnly = true;
+        }
+      };
+  
+      // Booking clicks (cal.com / Calendly) — delegated, so it covers every page.
+      document.addEventListener("click", function (e) {
+        try {
+          var a = e.target && e.target.closest && e.target.closest("a[href]");
+          if (!a) return;
+          var href = a.getAttribute("href") || "";
+          if (/cal\.com|calendly\.com/i.test(href)) {
+            window.track741("booking_click", {
+              provider: /calendly/i.test(href) ? "calendly" : "cal.com",
+              link_text: (a.textContent || "").trim().slice(0, 60)
+            });
+            if (window.fbq && !window.fbq.__stubOnly) window.fbq("track", "Schedule");
+          }
+        } catch (err) {}
+      }, true);
   
       // Fires only after ANALYTICS consent.
       window.loadAnalyticsScripts = function loadAnalyticsScripts() {
@@ -523,8 +607,13 @@
       /* ---------- Decisions ---------- */
       function decide(analytics, marketing) {
         applyConsent(saveConsent(analytics, marketing));
+        // make sure lead events still reach GA4 when marketing was declined
+        setTimeout(function () { if (window.__wireLeadMirror) window.__wireLeadMirror(); }, 400);
         if (modalOpen()) closeSettings(); else hideBanner();
       }
+  
+      // returning visitors: consent already stored, no click happens -> wire it anyway
+      setTimeout(function () { if (window.__wireLeadMirror) window.__wireLeadMirror(); }, 1200);
   
       /* ---------- Wire events ---------- */
       root.addEventListener("click", function (e) {

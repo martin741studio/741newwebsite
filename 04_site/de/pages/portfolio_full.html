@@ -3,14 +3,14 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
 <head>
 <meta charset="utf-8"/>
 
-<title>741 Studio | Portfolio-Showcase und Kundenerfolgsgeschichten</title>
-<meta content="Explore our portfolio of high-performance websites and Local SEO success stories. See how 741 Studio builds resilient, scalable digital growth systems." name="description"/>
+<title>741 Studio | SEO-Erfolge und Website-Projekte im Portfolio</title>
+<meta content="Echte SEO-Ergebnisse und echte Websites: Google-Platzierungen, Sichtbarkeit und digitale Projekte, die 741 Studio für seine Kunden gebaut hat." name="description"/>
 <link href="https://741.studio/pages/portfolio_full.html" rel="canonical"/>
-<meta content="741 Studio | Portfolio Showcase &amp; Client Success Stories" property="og:title"/>
-<meta content="Explore our portfolio of high-performance websites and Local SEO success stories. See how 741 Studio builds resilient, scalable digital growth systems." property="og:description"/>
+<meta content="741 Studio | SEO-Erfolge und Website-Projekte im Portfolio" property="og:title"/>
+<meta content="Echte SEO-Ergebnisse und echte Websites: Google-Platzierungen, Sichtbarkeit und digitale Projekte, die 741 Studio für seine Kunden gebaut hat." property="og:description"/>
 <meta content="/assets/images/logo_white.png" property="og:image"/>
-<meta content="741 Studio | Portfolio Showcase &amp; Client Success Stories" property="twitter:title"/>
-<meta content="Explore our portfolio of high-performance websites and Local SEO success stories. See how 741 Studio builds resilient, scalable digital growth systems." property="twitter:description"/>
+<meta content="741 Studio | SEO-Erfolge und Website-Projekte im Portfolio" property="twitter:title"/>
+<meta content="Echte SEO-Ergebnisse und echte Websites: Google-Platzierungen, Sichtbarkeit und digitale Projekte, die 741 Studio für seine Kunden gebaut hat." property="twitter:description"/>
 <meta content="/assets/images/logo_white.png" property="twitter:image"/>
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -26,6 +26,9 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
   </style>
 <script type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -187,383 +190,353 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
 <div class="main-wrapper">
       {{> header_de }}
 
-      <section class="section_portfolio">
-<!-- New CSS provided by the user -->
+<section class="section_portfolio" id="portfolio-v2">
 <style>
           @import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
-
           @font-face {
             font-family: "PPSupplyMono";
             src: url("https://assets.codepen.io/7558/PPSupplyMono-Regular.ttf") format("truetype");
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
+            font-weight: normal; font-style: normal; font-display: swap;
           }
-
-          :root {
+          #portfolio-v2 {
             --font-mono: "PPSupplyMono", monospace;
             --font-sans: "PP Neue Montreal", sans-serif;
-            --color-bg: #0d0d0e;
-            /* Match main site background */
-            --color-text: #fff;
-            --color-text-muted: rgba(255, 255, 255, 0.8);
-            --color-text-light: rgba(255, 255, 255, 0.6);
-            --color-accent: #fff;
-            --font-size-mono: clamp(10px, 1.2vw, 12px);
-            --spacing-sm: 1rem;
-            --spacing-md: 2rem;
+            --color-bg: #f7f6f2; --color-text: #1a1a1a;
+            --color-text-muted: rgba(26, 26, 26, 0.68);
+            --color-text-light: rgba(26, 26, 26, 0.5);
+            --color-card: #ffffff; --color-card-border: #eceadf;
           }
-
-          /* Match existing typography constraints slightly to not break fixed nav */
-          .section_portfolio {
-            font-family: var(--font-sans);
-            background: var(--color-bg);
-            color: var(--color-text);
-            cursor: pointer;
-            padding-top: 100px;
-            /* Space for the fixed nav + 20px extra layout */
-            position: relative;
-            z-index: 1;
-            /* Keep below nav */
+          .section_portfolio { font-family: var(--font-sans); background: var(--color-bg); color: var(--color-text); padding-top: 100px; position: relative; z-index: 1; overflow: hidden; }
+          .pf-wrap { max-width: 1240px; margin: 0 auto; padding: 0 2rem; }
+          .pf-hero { padding: 5rem 0 3.5rem; text-align: center; }
+          .pf-h1 { font-size: clamp(2.4rem, 5.2vw, 4.6rem); line-height: 1.05; font-weight: 600; letter-spacing: -0.02em; max-width: 920px; margin: 0 auto 1.25rem; color: var(--color-text); }
+          .pf-sub { font-size: clamp(1rem, 1.3vw, 1.2rem); color: var(--color-text-muted); max-width: 680px; margin: 0 auto 2.75rem; line-height: 1.5; }
+          .pf-stats { display: flex; justify-content: center; gap: clamp(1.75rem, 5vw, 4rem); flex-wrap: wrap; margin-bottom: 2.75rem; }
+          .pf-stat-num { font-family: var(--font-mono); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 600; color: var(--color-text); display: block; line-height: 1; }
+          .pf-stat-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-light); margin-top: 0.5rem; }
+          .pf-nav { display: flex; justify-content: center; gap: 0.75rem; position: relative; }
+          .pf-chip { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-muted); text-decoration: none; padding: 0.6rem 1.1rem; border: 1px solid var(--color-card-border); border-radius: 100px; transition: color 0.3s ease, border-color 0.3s ease; position: relative; background: var(--color-card); }
+          .pf-chip::after { content: ""; position: absolute; bottom: -1px; left: 50%; width: 0; height: 2px; background: var(--brand--lemon); transition: width 0.35s ease, left 0.35s ease; }
+          .pf-chip:hover, .pf-chip.is-active { color: var(--color-text); border-color: rgba(26,26,26,0.25); }
+          .pf-chip.is-active::after { width: 60%; left: 20%; }
+          .pf-band-label { font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-light); margin-bottom: 0.6rem; }
+          .pf-band-title { font-size: clamp(1.7rem, 3vw, 2.6rem); font-weight: 600; letter-spacing: -0.01em; margin-bottom: 2.5rem; max-width: 640px; color: var(--color-text); }
+          .pf-seo { padding: 4rem 0 2rem; }
+          .seo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+          .seo-card { background: var(--color-card); border: 1px solid var(--color-card-border); border-radius: 16px; padding: 1.75rem; display: flex; flex-direction: column; min-height: 280px; box-shadow: 0 10px 30px rgba(26,26,26,0.04); }
+          .seo-pill { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-light); border: 1px solid var(--color-card-border); border-radius: 100px; padding: 0.3rem 0.7rem; display: inline-block; }
+          .seo-card-name { font-size: 1.15rem; font-weight: 600; margin: 1rem 0 1rem; color: var(--color-text); }
+          .seo-stat { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.4rem; flex-wrap: wrap; }
+          .seo-stat-group { display: flex; flex-direction: column; align-items: flex-start; }
+          .seo-stat-tag { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-light); margin-bottom: 0.1rem; }
+          .seo-stat-num { font-family: var(--font-mono); font-size: 1.7rem; font-weight: 600; color: var(--color-text); }
+          .seo-stat--single .seo-stat-num { color: var(--color-text); }
+          .seo-stat-suf { font-family: var(--font-mono); font-size: 1.1rem; color: var(--color-text-muted); }
+          .seo-stat-num--to { color: var(--color-text); border-bottom: 3px solid var(--brand--lemon); }
+          .seo-stat-arrow { color: var(--color-text-light); align-self: center; }
+          .seo-stat-label { font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 0.6rem; }
+          .seo-note { font-size: 0.78rem; color: var(--color-text-light); line-height: 1.4; margin-bottom: 0.8rem; }
+          .seo-chips { list-style: none; padding: 0; margin: 0 0 1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+          .seo-chips li { font-size: 0.82rem; color: var(--color-text-muted); }
+          .seo-spark { width: 100%; height: 32px; margin-top: auto; }
+          .seo-spark-line { fill: none; stroke: var(--brand--lemon); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 160; stroke-dashoffset: 160; transition: stroke-dashoffset 1.1s ease; }
+          .seo-card.is-visible .seo-spark-line { stroke-dashoffset: 0; }
+          .pf-transition { padding: 5rem 0; text-align: center; position: relative; }
+          .pf-transition-line { width: 1px; height: 64px; background: linear-gradient(to bottom, var(--brand--lemon), transparent); margin: 0 auto 1.75rem; }
+          .pf-transition-num { font-family: var(--font-mono); font-size: clamp(2.6rem, 5vw, 4rem); font-weight: 600; color: var(--color-text); line-height: 1; }
+          .pf-transition-sub { color: var(--color-text-muted); font-size: 0.95rem; margin-top: 0.75rem; }
+          .pf-web { padding: 2rem 0 4rem; }
+          .web-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+          .web-card { perspective: 900px; display: block; text-decoration: none; color: inherit; }
+          .web-card-img-wrap { position: relative; border-radius: 14px; overflow: hidden; background: var(--color-card); border: 1px solid var(--color-card-border); aspect-ratio: 4/3; transform-style: preserve-3d; transition: transform 0.25s ease; }
+          .web-card-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+          .web-card-cap { margin: 0.85rem 0 0; display: flex; flex-direction: column; gap: 0.2rem; }
+          .web-card-title { font-size: 0.92rem; font-weight: 600; color: var(--color-text); }
+          .web-card-desc { font-size: 0.78rem; color: var(--color-text-light); line-height: 1.4; }
+          .web-card-badge { position: absolute; top: 0.75rem; right: 0.75rem; background: var(--brand--lemon); color: #1a1a1a; font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em; padding: 0.4rem 0.7rem; border-radius: 100px; }
+          .web-card--link .web-card-title { text-decoration: underline; text-decoration-color: var(--brand--lemon); text-underline-offset: 3px; }
+          .pf-closing { padding: 5rem 0 6rem; text-align: center; }
+          .pf-cta { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--brand--lemon); color: #1a1a1a; font-weight: 600; font-size: 1rem; padding: 1.05rem 2.1rem; border-radius: 100px; text-decoration: none; animation: pf-breathe 3.2s ease-in-out infinite; }
+          @keyframes pf-breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.035); } }
+          .pf-cta-sub { display: block; margin-top: 1.1rem; color: var(--color-text-light); font-size: 0.85rem; }
+          .pf-marquee-wrap { margin-top: 3.5rem; overflow: hidden; border-top: 1px solid var(--color-card-border); padding-top: 2rem; }
+          .pf-marquee { display: flex; width: max-content; white-space: nowrap; font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-text-light); letter-spacing: 0.03em; animation: pf-scroll 40s linear infinite; }
+          .pf-marquee span { padding-right: 2.5rem; }
+          @keyframes pf-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+          @media (prefers-reduced-motion: reduce) {
+            .pf-cta { animation: none; } .pf-marquee { animation: none; }
+            .seo-spark-line { stroke-dashoffset: 0; transition: none; } .web-card-img-wrap { transition: none; }
           }
-
-          .slider-wrapper {
-            position: relative;
-            width: 100vw;
-            height: calc(100vh - 100px);
-            /* Fill remaining viewport, accounting for padding */
-            overflow: hidden;
-            opacity: 1;
-            /* Changed from 0 to 1 so you can see it without JS preloader */
-            transition: opacity 1.5s ease-in;
-            pointer-events: auto;
-            /* ensure we can click without JS */
-          }
-
-          .webgl-canvas {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            pointer-events: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            background-color: var(--color-bg);
-          }
-
-          /* Fallback image style while WebGL is missing */
-          .webgl-placeholder {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.5;
-            /* darken so text is visible */
-          }
-
-          .slide-number {
-            position: absolute;
-            top: 50%;
-            left: var(--spacing-md);
-            transform: translateY(-50%);
-            font-family: var(--font-mono);
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--color-text);
-            z-index: 10;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-          }
-
-          .slide-total {
-            position: absolute;
-            top: 50%;
-            right: var(--spacing-md);
-            transform: translateY(-50%);
-            font-family: var(--font-mono);
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--color-text);
-            z-index: 10;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-          }
-
-          .slides-navigation {
-            position: absolute;
-            bottom: var(--spacing-md);
-            left: var(--spacing-md);
-            right: var(--spacing-md);
-            display: flex;
-            gap: 0;
-            overflow-x: auto;
-            overflow-y: hidden;
-            white-space: nowrap;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            z-index: 100;
-            padding: 0 var(--spacing-md);
-            mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-          }
-
-          .slides-navigation::-webkit-scrollbar {
-            display: none;
-          }
-
-          .slide-nav-item {
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-            padding: var(--spacing-sm);
-            min-width: 150px;
-            flex: 0 0 auto;
-            border: none;
-            background: none;
-            transition: transform 0.3s ease;
-          }
-
-          .slide-nav-item:hover {
-            transform: translateY(-4px);
-          }
-
-          .slide-progress-line {
-            width: 100%;
-            height: 3px;
-            background: rgba(255, 255, 255, 0.1);
-            margin-bottom: 8px;
-            border-radius: 4px;
-            overflow: hidden;
-          }
-
-          .slide-progress-fill {
-            width: 0%;
-            height: 100%;
-            background: var(--color-accent);
-            transition: width 0.1s ease, opacity 0.3s ease;
-            border-radius: 1px;
-          }
-
-          .slide-nav-title {
-            font-family: var(--font-mono);
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--color-text-muted);
-            font-weight: 600;
-            transition: color 0.3s ease;
-            text-align: left;
-          }
-
-          .slide-nav-item.active .slide-nav-title {
-            color: var(--color-text);
-          }
-
-          .help-text {
-            position: absolute;
-            top: var(--spacing-md);
-            left: var(--spacing-md);
-            font-family: var(--font-mono);
-            font-size: 11px;
-            text-transform: uppercase;
-            color: var(--color-text-muted);
-            z-index: 10;
-            pointer-events: none;
-          }
-
-          /* Tweakpane Styling */
-          .tp-dfwv {
-            position: fixed !important;
-            top: 100px !important;
-            right: 20px !important;
-            z-index: 100 !important;
-            max-width: 320px !important;
-            background: rgba(0, 0, 0, 0.9) !important;
-            backdrop-filter: blur(20px) !important;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            border-radius: 8px !important;
-          }
-
-          .tp-dfwv .tp-btnv_b {
-            background: rgba(255, 255, 255, 0.1) !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
-            color: #ffffff !important;
-            font-family: var(--font-mono) !important;
-            border-radius: 4px !important;
-          }
-
-          .tp-dfwv .tp-btnv_b:hover {
-            background: rgba(255, 255, 255, 0.2) !important;
-          }
-
+          @media (max-width: 900px) { .seo-grid, .web-grid { grid-template-columns: repeat(2, 1fr); } }
           @media (max-width: 600px) {
-            .slides-navigation {
-              bottom: var(--spacing-sm);
-              left: var(--spacing-sm);
-              right: var(--spacing-sm);
-            }
-
-            .slide-nav-item {
-              padding: 0.75rem;
-            }
-
-            .help-text {
-              top: var(--spacing-sm);
-              left: var(--spacing-sm);
-            }
-
-            .slide-number {
-              left: var(--spacing-sm);
-            }
-
-            .slide-total {
-              right: var(--spacing-sm);
-            }
-
-            .tp-dfwv {
-              top: 90px !important;
-              /* Move down due to fixed header */
-              right: 10px !important;
-              max-width: 280px !important;
-            }
-          }
-
-          /* SLIDER SPECIFIC OVERRIDES */
-          .webgl-canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            background: #000 url('/assets/Portfolio/BackgroundImages/pexels-elina-araja-1743227-3320136.webp') center/cover no-repeat;
-          }
-
-          .webgl-canvas::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.2);
-            z-index: 2;
-            pointer-events: none;
-          }
-
-          .content-overlay {
-            position: absolute;
-            top: 45%;
-            left: 50%;
-            transform: translate(-50%, -40%);
-            width: 50%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(20px);
-            padding: 3rem;
-            z-index: 10;
-            border-radius: 16px;
-            opacity: 0;
-            transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-          }
-
-          .content-overlay.active {
-            opacity: 1;
-            transform: translate(-50%, -50%);
-          }
-
-          .mockup-wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 40vh;
-          }
-
-          .mockup-img {
-            max-width: 100%;
-            max-height: 45vh;
-            object-fit: contain;
-            opacity: 0;
-            transform: scale(0.95);
-            transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
-          }
-
-          .mockup-img.active {
-            opacity: 1;
-            transform: scale(1);
-          }
-
-          .client-text-block {
-            width: 100%;
-          }
-
-          .client-description {
-            font-family: var(--font-sans);
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 85%;
-            margin-left: auto;
-            margin-right: auto;
-          }
-
-          .client-title-overlay {
-            font-family: var(--font-mono);
-            font-size: 14px;
-            letter-spacing: 3px;
-            color: var(--brand--lemon);
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            display: block;
-          }
-
-          @media (max-width: 768px) {
-            .content-overlay {
-              width: 90%;
-              top: 45%;
-              padding: 2rem;
-              opacity: 1 !important;
-              transform: translate(-50%, -50%) !important;
-            }
-
-            .mockup-img {
-              max-height: 30vh;
-              opacity: 1 !important;
-              transform: scale(1) !important;
-            }
-
-            .client-description {
-              font-size: 1rem;
-            }
+            .seo-grid, .web-grid { grid-template-columns: 1fr; }
+            .pf-hero { padding: 3.5rem 0 2.5rem; } .pf-stats { gap: 1.5rem; } .pf-nav { flex-wrap: wrap; }
+            .pf-chip { padding: 0.85rem 1.2rem; min-height: 44px; display: inline-flex; align-items: center; }
+            .pf-cta { padding: 1.2rem 2.1rem; min-height: 44px; }
           }
         </style>
-<!-- HTML Structure based on CSS Classes -->
-<div class="slider-wrapper loaded">
-<div class="help-text">ZIEHEN, UM ZU ERKUNDEN</div>
-<div class="slide-number">01</div>
-<div class="slide-total">18</div>
-<!-- Since the user only provided CSS and no JS/GLSL shaders, I will mock the WebGL Canvas visually for now with the first image -->
-<div class="webgl-canvas">
+<div class="pf-wrap">
+  <header class="pf-hero reveal-up">
+    <h1 class="pf-h1">Was wir gebaut haben &mdash; und was es gebracht hat.</h1>
+    <p class="pf-sub">Drei Beweise, eine Seite: echte Google-Platzierungen, echte Website-Projekte und ein Ranking-Programm, das seit Jahren l&auml;uft.</p>
+    <div class="pf-stats">
+      <div><span class="pf-stat-num" data-count data-from="0" data-to="6">6</span><span class="pf-stat-label">Case Studies</span></div>
+      <div><span class="pf-stat-num" data-count data-from="0" data-to="150" data-suffix="+">150+</span><span class="pf-stat-label">Ranking-Optimierungen</span></div>
+      <div><span class="pf-stat-num" data-count data-from="0" data-to="200" data-suffix="+">200+</span><span class="pf-stat-label">Website-Projekte</span></div>
+    </div>
+    <nav class="pf-nav" aria-label="Portfolio">
+      <a class="pf-chip" data-pf-link href="#seo-band">SEO-Erfolge</a>
+      <a class="pf-chip" data-pf-link href="#website-band">Website-Projekte</a>
+    </nav>
+  </header>
+  <section class="pf-seo" id="seo-band">
+    <p class="pf-band-label">Band 1</p>
+    <h2 class="pf-band-title">SEO-Erfolge</h2>
+    <div class="seo-grid reveal-stagger-group">
+        <article class="seo-card reveal-item" style="--i:0">
+          <div class="seo-card-top"><span class="seo-pill">Interior Design · Wien &amp; Steiermark</span></div>
+          <h3 class="seo-card-name">Astrid Lengauer</h3>
+          <div class="seo-stat"><span class="seo-stat-group"><span class="seo-stat-tag">#</span><span class="seo-stat-num">18</span></span><span class="seo-stat-arrow">&darr;</span><span class="seo-stat-group"><span class="seo-stat-tag">#</span><span class="seo-stat-num seo-stat-num--to" data-count data-from="18" data-to="1" data-suffix="">1</span></span></div>
+          <p class="seo-stat-label">Google-Maps-Position</p>
+          
+          <ul class="seo-chips"><li>~100 lokale Backlinks aufgebaut</li><li>Wien &amp; Steiermark Einzugsgebiet</li></ul>
+          <svg class="seo-spark" data-spark="down" viewBox="0 0 120 32" aria-hidden="true">
+            <polyline class="seo-spark-line" points="2,28 30,14 60,18 90,8 118,3"/>
+          </svg>
+        </article>
+        <article class="seo-card reveal-item" style="--i:1">
+          <div class="seo-card-top"><span class="seo-pill">Heilpraktiker · Freiburg</span></div>
+          <h3 class="seo-card-name">Bernd Laserstein</h3>
+          <div class="seo-stat"><span class="seo-stat-group"><span class="seo-stat-tag">Position </span><span class="seo-stat-num">6</span></span><span class="seo-stat-arrow">&darr;</span><span class="seo-stat-group"><span class="seo-stat-tag">Platz </span><span class="seo-stat-num seo-stat-num--to" data-count data-from="6" data-to="1" data-suffix="">1</span></span></div>
+          <p class="seo-stat-label">Google-Maps-Rang</p>
+          <p class="seo-note">91 % Business Visibility: Sichtbarkeit auf der Karte gegen&uuml;ber den Mitbewerbern in Freiburg &mdash; ein eigener Wert, unabh&auml;ngig vom Rang oben.</p>
+          <ul class="seo-chips"><li>91 % Business Visibility</li><li>109 Wettbewerber im Markt</li></ul>
+          <svg class="seo-spark" data-spark="down" viewBox="0 0 120 32" aria-hidden="true">
+            <polyline class="seo-spark-line" points="2,28 30,14 60,18 90,8 118,3"/>
+          </svg>
+        </article>
+        <article class="seo-card reveal-item" style="--i:2">
+          <div class="seo-card-top"><span class="seo-pill">Familienberatung · Raum Stuttgart</span></div>
+          <h3 class="seo-card-name">Maria Abel</h3>
+          <div class="seo-stat"><span class="seo-stat-group"><span class="seo-stat-tag"></span><span class="seo-stat-num">0</span></span><span class="seo-stat-arrow">&rarr;</span><span class="seo-stat-group"><span class="seo-stat-tag"></span><span class="seo-stat-num seo-stat-num--to" data-count data-from="0" data-to="100" data-suffix=" %">100 %</span></span></div>
+          <p class="seo-stat-label">Top-3-Abdeckung</p>
+          
+          <ul class="seo-chips"><li>&Oslash; 1,8 Maps-Rang</li><li>8 Wochen bis zur Spitze</li></ul>
+          <svg class="seo-spark" data-spark="up" viewBox="0 0 120 32" aria-hidden="true">
+            <polyline class="seo-spark-line" points="2,6 30,22 60,14 90,10 118,4"/>
+          </svg>
+        </article>
+        <article class="seo-card reveal-item" style="--i:3">
+          <div class="seo-card-top"><span class="seo-pill">Heilpraktikerin · Regensburg</span></div>
+          <h3 class="seo-card-name">Veronika Schlirf</h3>
+          <div class="seo-stat"><span class="seo-stat-group"><span class="seo-stat-tag">#</span><span class="seo-stat-num">85</span></span><span class="seo-stat-arrow">&darr;</span><span class="seo-stat-group"><span class="seo-stat-tag">#</span><span class="seo-stat-num seo-stat-num--to" data-count data-from="85" data-to="1" data-suffix="">1</span></span></div>
+          <p class="seo-stat-label">Maps-Position f&uuml;r &bdquo;Heilpraktikerin&ldquo;</p>
+          
+          <ul class="seo-chips"><li>0 &rarr; 5,0 &#9733; Google-Bewertungen</li><li>5.400 Suchvolumen/Monat</li></ul>
+          <svg class="seo-spark" data-spark="down" viewBox="0 0 120 32" aria-hidden="true">
+            <polyline class="seo-spark-line" points="2,28 30,14 60,18 90,8 118,3"/>
+          </svg>
+        </article>
+        <article class="seo-card reveal-item" style="--i:4">
+          <div class="seo-card-top"><span class="seo-pill">Ayurveda · Ingelheim</span></div>
+          <h3 class="seo-card-name">Praxis Suriya</h3>
+          <div class="seo-stat seo-stat--single"><span class="seo-stat-num">49 / 49</span><span class="seo-stat-suf"> Punkte</span></div>
+          <p class="seo-stat-label">Top-3 auf der Karte f&uuml;r &bdquo;ayurveda&ldquo;</p>
+          
+          <ul class="seo-chips"><li>Local-Falcon-Scan, 12.10.2026</li></ul>
+          
+        </article>
+        <article class="seo-card reveal-item" style="--i:5">
+          <div class="seo-card-top"><span class="seo-pill">Heilpraktiker · N&uuml;rnberg</span></div>
+          <h3 class="seo-card-name">Praxis H&uuml;wel</h3>
+          <div class="seo-stat"><span class="seo-stat-group"><span class="seo-stat-tag"></span><span class="seo-stat-num">14</span></span><span class="seo-stat-arrow">&rarr;</span><span class="seo-stat-group"><span class="seo-stat-tag"></span><span class="seo-stat-num seo-stat-num--to" data-count data-from="14" data-to="33" data-suffix="">33</span></span></div>
+          <p class="seo-stat-label">Klicks aus der Google-Suche (30 Tage)</p>
+          
+          <ul class="seo-chips"><li>802 &rarr; 962 Einblendungen</li><li>&Oslash;-Position 17,9 &rarr; 6,6</li><li>7 &rarr; 10 Google-Bewertungen</li></ul>
+          <svg class="seo-spark" data-spark="up" viewBox="0 0 120 32" aria-hidden="true">
+            <polyline class="seo-spark-line" points="2,6 30,22 60,14 90,10 118,4"/>
+          </svg>
+        </article>
+    </div>
+  </section>
+  <div class="pf-transition reveal-up">
+    <div class="pf-transition-line"></div>
+    <div class="pf-transition-num" data-count data-from="0" data-to="20">20</div>
+    <p class="pf-transition-sub">Website-Projekte hier gezeigt &mdash; von &uuml;ber 200 insgesamt.</p>
+  </div>
+  <section class="pf-web" id="website-band">
+    <p class="pf-band-label">Band 2</p>
+    <h2 class="pf-band-title">Website-Projekte</h2>
+    <div class="web-grid reveal-stagger-group">
+        <article class="web-card reveal-item" style="--i:0"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/SingleFin.webp" alt="Single Fin" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Single Fin</span><span class="web-card-desc">Eine langfristige digitale Partnerschaft mit dem Single-Fin-Team. Wir haben die&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:1"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/AnnaNussbaumer.webp" alt="Anna Nussbaumer" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Anna Nussbaumer</span><span class="web-card-desc">Eine enge Zusammenarbeit, bei der Denise Lackner das visuelle Design verantwortete und 741&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:2"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/NumeroQuattro.webp" alt="Numero Quattro" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Numero Quattro</span><span class="web-card-desc">Wir haben das technische Fundament geschaffen, das dieser italienische Klassiker aus der&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:3"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/KarinLorenz.webp" alt="Karin Lorenz" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Karin Lorenz</span><span class="web-card-desc">Design und Entwicklung greifen ineinander und geben dieser TCM-Praxis einen hochwertigen,&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:4"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/Immokauf.webp" alt="IMMOKAUF.AT" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">IMMOKAUF.AT</span><span class="web-card-desc">Auf Basis eines bestehenden Designs haben wir eine verlässliche, benutzerfreundliche&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:5"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/MarugameUdon.webp" alt="Marugame Udon" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Marugame Udon</span><span class="web-card-desc">Wir haben ein digitales Erlebnis gestaltet und entwickelt, das über die Website&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:0"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/AvliUluwatu.webp" alt="Avli Uluwatu" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Avli Uluwatu</span><span class="web-card-desc">Ein moderner Online-Auftritt, der die Atmosphäre dieses modern-griechischen Restaurants&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:1"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/VillaVentures.webp" alt="Villa Ventures" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Villa Ventures</span><span class="web-card-desc">Eine hochwertige digitale Präsentation, die die Qualität der Immobilie und die&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:2"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/StilGefaehrten.webp" alt="Stil Gefährten" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Stil Gefährten</span><span class="web-card-desc">Ein durchdachter digitaler Auftritt für das Eventmanagement. Wir haben die Inhalte so&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:3"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/Versance.webp" alt="Versance.ai" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Versance.ai</span><span class="web-card-desc">Wir haben einen KI-gestützten IR-Agenten als vertrauenswürdige Schnittstelle in der&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:4"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/TalkinFive.webp" alt="Talkinfive" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Talkinfive</span><span class="web-card-desc">Eine vertrauensvolle, langfristige Partnerschaft statt eines einzelnen Projekts. Als&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:5"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/ProtexTextiles.webp" alt="Protex Textiles" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Protex Textiles</span><span class="web-card-desc">Wir haben einen traditionellen Textilveredler genommen und sein Handwerk in ein modernes&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:0"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/Vertrauenszentrum.webp" alt="Vertrauenszentrum" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Vertrauenszentrum</span><span class="web-card-desc">Eine enge Verbindung aus kreativem und technischem Handwerk: Denise Lackner führte das&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:1"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/Tacheles.webp" alt="Tacheles" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Tacheles</span><span class="web-card-desc">Klares Design, gepaart mit responsiver, sorgfältig gebauter Entwicklung. Für diese mutige&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:2"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/IGR.webp" alt="IGR" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">IGR</span><span class="web-card-desc">Wir haben den Ergonomie-Innovationspreis in eine digitale Autorität für Gesundheit am&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:3"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/YachtCharterIndonesia.webp" alt="Yacht Charter Indonesia" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Yacht Charter Indonesia</span><span class="web-card-desc">Eine komplexe Buchungsplattform, die ganz auf Entdeckung ausgelegt ist. Wir haben ein&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:4"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/WBG.webp" alt="WBG" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">WBG</span><span class="web-card-desc">Wir haben ein strukturiertes Informationsportal für den öffentlichen Wohnungsbau und&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:5"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/VestaNoris.webp" alt="Vesta Noris" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Vesta Noris</span><span class="web-card-desc">Mehr operative Effizienz durch eine maßgeschneiderte digitale Lösung. Wir haben eine&nbsp;&hellip;</span></p></article>
+        <article class="web-card reveal-item" style="--i:0"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/PraxisHuewel.webp" alt="Praxis H&uuml;wel" loading="lazy"/>
+            
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Praxis H&uuml;wel</span><span class="web-card-desc">Neue Website f&uuml;r die Gesundheitspraxis im N&uuml;rbanum in N&uuml;rnberg: technische&nbsp;&hellip;</span></p></article>
+        <a class="web-card reveal-item web-card--link" style="--i:1" href="/demos/dumann-homepage/index.html" target="_blank" rel="noopener"><div class="web-card-img-wrap">
+            <img class="web-card-img" src="/assets/Portfolio/ClientMockups/DanielaDumann.webp" alt="Daniela Dumann" loading="lazy"/>
+            <span class="web-card-badge">Demo ansehen</span>
+          </div>
+          <p class="web-card-cap"><span class="web-card-title">Daniela Dumann</span><span class="web-card-desc">Interaktive Demo-Startseite, gebaut im 741 CRO-Raster. Zum Anschauen anklicken.</span></p></a>
+    </div>
+  </section>
+  <section class="pf-closing reveal-up">
+    <a class="pf-cta" href="https://741.studio/pages/sichtbarkeits-analyse.html" data-qz>Kostenlose Sichtbarkeits-Analyse starten &rarr;</a>
+    <span class="pf-cta-sub">2 Minuten, kostenlos, ohne Verpflichtung.</span>
+    <div class="pf-marquee-wrap">
+      <div class="pf-marquee"><span>Single Fin &middot; Anna Nussbaumer &middot; Numero Quattro &middot; Karin Lorenz &middot; IMMOKAUF.AT &middot; Marugame Udon &middot; Avli Uluwatu &middot; Villa Ventures &middot; Stil Gefährten &middot; Versance.ai &middot; Talkinfive &middot; Protex Textiles &middot; Vertrauenszentrum &middot; Tacheles &middot; IGR &middot; Yacht Charter Indonesia &middot; WBG &middot; Vesta Noris &middot; Praxis Hüwel &middot; Daniela Dumann</span><span>Single Fin &middot; Anna Nussbaumer &middot; Numero Quattro &middot; Karin Lorenz &middot; IMMOKAUF.AT &middot; Marugame Udon &middot; Avli Uluwatu &middot; Villa Ventures &middot; Stil Gefährten &middot; Versance.ai &middot; Talkinfive &middot; Protex Textiles &middot; Vertrauenszentrum &middot; Tacheles &middot; IGR &middot; Yacht Charter Indonesia &middot; WBG &middot; Vesta Noris &middot; Praxis Hüwel &middot; Daniela Dumann</span></div>
+    </div>
+  </section>
 </div>
-<div class="content-overlay" id="content-overlay">
-<div class="mockup-wrapper">
-<img alt="Client Mockup" class="mockup-img active" id="current-mockup" src="/assets/Portfolio/PhoneMockups/iPhone_16_Pro_Mockup_SingleFin.png"/>
-</div>
-<div class="client-text-block">
-<span class="client-title-overlay" id="overlay-title">Einzelne Flosse</span>
-<p class="client-description" id="overlay-description">Surfclub mit großem Volumen in Uluwatu, der eine schnelle, skalierbare Lead-Generierung und eine aggressive digitale Präsenz erfordert. 741 Studio setzte fortschrittliche lokale SEO-Strukturen in Verbindung mit präzisem PPC ein, um die organische Suche zu dominieren und den Touristenverkehr mit hoher Absicht sofort zu erfassen.</p>
-</div>
-</div>
-<!-- Bottom Navigation -->
-<div class="slides-navigation">
-</div>
-</div>
+<script>
+  (function() {
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function animateCount(el) {
+      var start = parseFloat(el.getAttribute('data-from')) || 0;
+      var end = parseFloat(el.getAttribute('data-to')) || 0;
+      var suffix = el.getAttribute('data-suffix') || '';
+      if (reduceMotion) { el.textContent = end + suffix; return; }
+      var duration = 1100, startTime = null;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var p = Math.min((ts - startTime) / duration, 1);
+        var val = Math.round(start + (end - start) * p);
+        el.textContent = val + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    var counters = document.querySelectorAll('#portfolio-v2 [data-count]');
+    var cards = document.querySelectorAll('#portfolio-v2 .seo-card');
+    if ('IntersectionObserver' in window) {
+      var countObs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) { if (entry.isIntersecting) { animateCount(entry.target); countObs.unobserve(entry.target); } });
+      }, { threshold: 0.4 });
+      counters.forEach(function(c) { countObs.observe(c); });
+      var cardObs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); cardObs.unobserve(entry.target); } });
+      }, { threshold: 0.3 });
+      cards.forEach(function(c) { cardObs.observe(c); });
+    } else {
+      counters.forEach(function(c) { animateCount(c); });
+      cards.forEach(function(c) { c.classList.add('is-visible'); });
+    }
+    var chips = document.querySelectorAll('#portfolio-v2 .pf-chip');
+    var sections = [document.getElementById('seo-band'), document.getElementById('website-band')];
+    if ('IntersectionObserver' in window && sections[0] && sections[1]) {
+      var spyObs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            chips.forEach(function(chip) { chip.classList.toggle('is-active', chip.getAttribute('href') === '#' + id); });
+          }
+        });
+      }, { threshold: 0.4, rootMargin: '-40% 0px -40% 0px' });
+      sections.forEach(function(s) { spyObs.observe(s); });
+    }
+    if (!reduceMotion) {
+      document.querySelectorAll('#portfolio-v2 .web-card-img-wrap').forEach(function(wrap) {
+        wrap.addEventListener('mousemove', function(e) {
+          var r = wrap.getBoundingClientRect();
+          var x = (e.clientX - r.left) / r.width - 0.5;
+          var y = (e.clientY - r.top) / r.height - 0.5;
+          wrap.style.transform = 'rotateY(' + (x * 6) + 'deg) rotateX(' + (y * -6) + 'deg)';
+        });
+        wrap.addEventListener('mouseleave', function() { wrap.style.transform = 'rotateY(0) rotateX(0)'; });
+      });
+    }
+  })();
+</script>
 </section>
 <!-- FOOTER -->
       {{> footer_de }}
@@ -721,988 +694,6 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
           }, 0);
         }
       });
-    </script>
-<script type="module">
-      import * as THREE from "https://esm.sh/three";
-
-      // ========================================
-      // PRELOADER
-      // ========================================
-      // Preloader Removed
-
-      // Initialize instantly
-      document.addEventListener("DOMContentLoaded", function () {
-        const sliderWrapper = document.querySelector(".slider-wrapper");
-        if (sliderWrapper) {
-          sliderWrapper.classList.add("loaded");
-        }
-      });
-
-      // ========================================
-      // VISUAL EFFECTS SLIDER CONFIGURATION
-      // ========================================
-
-      const SLIDER_CONFIG = {
-        // Core settings
-        settings: {
-          // Timing settings
-          transitionDuration: 2.5,
-          autoSlideSpeed: 3000,
-          // Current state
-          currentEffect: "ripple",
-          currentEffectPreset: "Default",
-          // Global settings that affect all effects
-          globalIntensity: 1.0,
-          speedMultiplier: 1.0,
-          distortionStrength: 1.0,
-          colorEnhancement: 1.0,
-          // Effect-specific settings (will be overridden by presets)
-          glassRefractionStrength: 1.0,
-          glassChromaticAberration: 1.0,
-          glassBubbleClarity: 1.0,
-          glassEdgeGlow: 1.0,
-          glassLiquidFlow: 1.0,
-          frostIntensity: 1.5,
-          frostCrystalSize: 1.0,
-          frostIceCoverage: 1.0,
-          frostTemperature: 1.0,
-          frostTexture: 1.0,
-          rippleFrequency: 25.0,
-          rippleAmplitude: 0.08,
-          rippleWaveSpeed: 1.0,
-          rippleRippleCount: 1.0,
-          rippleDecay: 1.0,
-          plasmaIntensity: 1.2,
-          plasmaSpeed: 0.8,
-          plasmaEnergyIntensity: 0.4,
-          plasmaContrastBoost: 0.3,
-          plasmaTurbulence: 1.0,
-          timeshiftDistortion: 1.6,
-          timeshiftBlur: 1.5,
-          timeshiftFlow: 1.4,
-          timeshiftChromatic: 1.5,
-          timeshiftTurbulence: 1.4
-        },
-        // Effect-specific presets
-        effectPresets: {
-          glass: {
-            Subtle: {
-              glassRefractionStrength: 0.6,
-              glassChromaticAberration: 0.5,
-              glassBubbleClarity: 1.3,
-              glassEdgeGlow: 0.7,
-              glassLiquidFlow: 0.8
-            },
-            Default: {
-              glassRefractionStrength: 1.0,
-              glassChromaticAberration: 1.0,
-              glassBubbleClarity: 1.0,
-              glassEdgeGlow: 1.0,
-              glassLiquidFlow: 1.0
-            },
-            Crystal: {
-              glassRefractionStrength: 1.5,
-              glassChromaticAberration: 1.8,
-              glassBubbleClarity: 0.7,
-              glassEdgeGlow: 1.4,
-              glassLiquidFlow: 0.5
-            },
-            Liquid: {
-              glassRefractionStrength: 0.8,
-              glassChromaticAberration: 0.4,
-              glassBubbleClarity: 1.2,
-              glassEdgeGlow: 0.8,
-              glassLiquidFlow: 1.8
-            }
-          },
-          frost: {
-            Light: {
-              frostIntensity: 0.8,
-              frostCrystalSize: 1.3,
-              frostIceCoverage: 0.6,
-              frostTemperature: 0.7,
-              frostTexture: 0.8
-            },
-            Default: {
-              frostIntensity: 1.5,
-              frostCrystalSize: 1.0,
-              frostIceCoverage: 1.0,
-              frostTemperature: 1.0,
-              frostTexture: 1.0
-            },
-            Heavy: {
-              frostIntensity: 2.2,
-              frostCrystalSize: 0.7,
-              frostIceCoverage: 1.4,
-              frostTemperature: 1.5,
-              frostTexture: 1.3
-            },
-            Arctic: {
-              frostIntensity: 2.8,
-              frostCrystalSize: 0.5,
-              frostIceCoverage: 1.8,
-              frostTemperature: 2.0,
-              frostTexture: 1.6
-            }
-          },
-          ripple: {
-            Gentle: {
-              rippleFrequency: 15.0,
-              rippleAmplitude: 0.05,
-              rippleWaveSpeed: 0.7,
-              rippleRippleCount: 0.8,
-              rippleDecay: 1.2
-            },
-            Default: {
-              rippleFrequency: 25.0,
-              rippleAmplitude: 0.08,
-              rippleWaveSpeed: 1.0,
-              rippleRippleCount: 1.0,
-              rippleDecay: 1.0
-            },
-            Strong: {
-              rippleFrequency: 35.0,
-              rippleAmplitude: 0.12,
-              rippleWaveSpeed: 1.4,
-              rippleRippleCount: 1.3,
-              rippleDecay: 0.8
-            },
-            Tsunami: {
-              rippleFrequency: 45.0,
-              rippleAmplitude: 0.18,
-              rippleWaveSpeed: 1.8,
-              rippleRippleCount: 1.6,
-              rippleDecay: 0.6
-            }
-          },
-          plasma: {
-            Calm: {
-              plasmaIntensity: 0.8,
-              plasmaSpeed: 0.5,
-              plasmaEnergyIntensity: 0.2,
-              plasmaContrastBoost: 0.1,
-              plasmaTurbulence: 0.6
-            },
-            Default: {
-              plasmaIntensity: 1.2,
-              plasmaSpeed: 0.8,
-              plasmaEnergyIntensity: 0.4,
-              plasmaContrastBoost: 0.3,
-              plasmaTurbulence: 1.0
-            },
-            Storm: {
-              plasmaIntensity: 1.8,
-              plasmaSpeed: 1.3,
-              plasmaEnergyIntensity: 0.7,
-              plasmaContrastBoost: 0.5,
-              plasmaTurbulence: 1.5
-            },
-            Nuclear: {
-              plasmaIntensity: 2.5,
-              plasmaSpeed: 1.8,
-              plasmaEnergyIntensity: 1.0,
-              plasmaContrastBoost: 0.8,
-              plasmaTurbulence: 2.0
-            }
-          },
-          timeshift: {
-            Subtle: {
-              timeshiftDistortion: 0.5,
-              timeshiftBlur: 0.6,
-              timeshiftFlow: 0.5,
-              timeshiftChromatic: 0.4,
-              timeshiftTurbulence: 0.6
-            },
-            Default: {
-              timeshiftDistortion: 1.6,
-              timeshiftBlur: 1.5,
-              timeshiftFlow: 1.4,
-              timeshiftChromatic: 1.5,
-              timeshiftTurbulence: 1.4
-            },
-            Intense: {
-              timeshiftDistortion: 2.2,
-              timeshiftBlur: 2.0,
-              timeshiftFlow: 2.0,
-              timeshiftChromatic: 2.2,
-              timeshiftTurbulence: 2.0
-            },
-            Dreamlike: {
-              timeshiftDistortion: 2.8,
-              timeshiftBlur: 2.5,
-              timeshiftFlow: 2.5,
-              timeshiftChromatic: 2.6,
-              timeshiftTurbulence: 2.5
-            }
-          }
-        }
-      };
-      // ========================================
-      // MAIN SLIDER CODE STARTS HERE
-      // ========================================
-
-      let currentSlideIndex = 0;
-      let isTransitioning = false;
-      let shaderMaterial, renderer, scene, camera;
-      let slideTextures = [];
-      let texturesLoaded = false;
-      let autoSlideTimer = null;
-      let progressAnimation = null;
-      let sliderEnabled = false;
-      let webglFailed = false;
-      let pane = null;
-      let isApplyingPreset = false;
-      // UI elements
-      let effectFolders = {};
-      let currentEffectFolder = null;
-      const SLIDE_DURATION = () => SLIDER_CONFIG.settings.autoSlideSpeed;
-      const PROGRESS_UPDATE_INTERVAL = 50;
-      const TRANSITION_DURATION = () => SLIDER_CONFIG.settings.transitionDuration;
-      const slides = [
-        {
-          title: "Single Fin",
-          media: "/assets/Portfolio/BackgroundImages/pexels-elina-araja-1743227-3320136.webp",
-          mockup: "/assets/Portfolio/ClientMockups/SingleFin.webp",
-          description: "Eine langfristige digitale Partnerschaft mit dem Single-Fin-Team. Wir haben die WordPress-Website neu gestaltet und aufgebaut und begleiten das Team seither mit Tracking, Analytics-Setup, Unterstützung des internen Marketings und Paid Advertising, damit kontinuierliche, datengetriebene Optimierung zum dauerhaften Vorteil des Uluwatu-Beachclubs wird."
-        },
-        {
-          title: "Anna Nussbaumer",
-          media: "/assets/Portfolio/BackgroundImages/pexels-lorenzo-castellino-61076802-16674815.webp",
-          mockup: "/assets/Portfolio/ClientMockups/AnnaNussbaumer.webp",
-          description: "Eine enge Zusammenarbeit, bei der Denise Lackner das visuelle Design verantwortete und 741 Studio die technische Umsetzung übernahm. Wir haben das Konzept in eine schnelle, conversionorientierte Website übersetzt, ein durchgängiges Tracking eingerichtet und den Funnel gebaut, der aus Coaching-Interesse gebuchte Kundinnen macht."
-        },
-        {
-          title: "Numero Quattro",
-          media: "/assets/Portfolio/BackgroundImages/pexels-rudy-kirchner-278171-1229845.webp",
-          mockup: "/assets/Portfolio/ClientMockups/NumeroQuattro.webp",
-          description: "Wir haben das technische Fundament geschaffen, das dieser italienische Klassiker aus der Nachbarschaft für erfolgreiches Marketing brauchte. Über die Entwicklung hinaus haben wir sauberes Tracking implementiert und Paid Advertising umgesetzt, für messbare Kampagnenleistung und eine verlässliche Basis für Wachstum."
-        },
-        {
-          title: "Karin Lorenz",
-          media: "/assets/Portfolio/BackgroundImages/pexels-phael-2291108.webp",
-          mockup: "/assets/Portfolio/ClientMockups/KarinLorenz.webp",
-          description: "Design und Entwicklung greifen ineinander und geben dieser TCM-Praxis einen hochwertigen, vertrauenswürdigen Auftritt. Im Fokus standen eine nahtlose technische Umsetzung und präzises Tracking, die eine reibungslose Customer Journey formen, von der ersten Suche bis zum gebuchten Termin."
-        },
-        {
-          title: "IMMOKAUF.AT",
-          media: "/assets/Portfolio/BackgroundImages/pexels-mike-chai-285623-842339.webp",
-          mockup: "/assets/Portfolio/ClientMockups/Immokauf.webp",
-          description: "Auf Basis eines bestehenden Designs haben wir eine verlässliche, benutzerfreundliche Website für diese österreichische Immobilienplattform umgesetzt. Unser Schwerpunkt lag auf der technischen Infrastruktur dahinter: Tracking, Funnel und Lead-Generierung, die einen stetigen Fluss verkaufsbereiter Eigentümer durch die Pipeline halten."
-        },
-        {
-          title: "Marugame Udon",
-          media: "/assets/Portfolio/BackgroundImages/pexels-ruiyang-zhang-915467-3717291.webp",
-          mockup: "/assets/Portfolio/ClientMockups/MarugameUdon.webp",
-          description: "Wir haben ein digitales Erlebnis gestaltet und entwickelt, das über die Website hinausreicht. Für die beliebteste handgemachte Udon-Küche Japans haben wir Tracking implementiert, Newsletter integriert und den Informationsfluss strukturiert und die Marke so in eine fortlaufende Kundenkommunikation und Marketing-Automatisierung erweitert."
-        },
-        // {
-        //   title: "Marina Development ID",
-        //   media: "/assets/Portfolio/BackgroundImages/pexels-hikaique-125509.webp",
-        //   mockup: "/assets/Portfolio/ClientMockups/MarinaDevelopmentID.webp",
-        //   description: "Positioned Indonesia's premier marina infrastructure through a high-profile, strategic communication asset. We focused on long-term civilizational cycles by structuring information for international investment acquisition."
-        // },
-        {
-          title: "Avli Uluwatu",
-          media: "/assets/Portfolio/BackgroundImages/pexels-efrem-efre-2786187-19593172.webp",
-          mockup: "/assets/Portfolio/ClientMockups/AvliUluwatu.webp",
-          description: "Ein moderner Online-Auftritt, der die Atmosphäre dieses modern-griechischen Restaurants einfängt. Wir haben ein vollständig responsives Erlebnis gestaltet und umgesetzt, das es Gästen mühelos macht, die Speisekarte zu entdecken, den Standort zu finden und auf jedem Gerät einen Tisch zu reservieren."
-        },
-        {
-          title: "Villa Ventures",
-          media: "/assets/Portfolio/BackgroundImages/pexels-aleksandr-burzinskij-3169259-4987403.webp",
-          mockup: "/assets/Portfolio/ClientMockups/VillaVentures.webp",
-          description: "Eine hochwertige digitale Präsentation, die die Qualität der Immobilie und die Investitionsmöglichkeit in den Vordergrund stellt. Unsere Website begleitete die Marke durch ihre Wachstumsphase, und das Projekt wurde schließlich im Rahmen eines erfolgreichen Business-Exits an ein anderes Unternehmen verkauft."
-        },
-        {
-          title: "Stil Gefährten",
-          media: "/assets/Portfolio/BackgroundImages/pexels-anna-louise-210491-1387848.webp",
-          mockup: "/assets/Portfolio/ClientMockups/StilGefaehrten.webp",
-          description: "Ein durchdachter digitaler Auftritt für das Eventmanagement. Wir haben die Inhalte so strukturiert, dass sie eine enge, wiederkehrende Kundenbindung unterstützen und die Marke auch bei wachsender Logistik fokussiert und wiedererkennbar bleibt."
-        },
-        {
-          title: "Versance.ai",
-          media: "/assets/Portfolio/BackgroundImages/pexels-dang-vu-hai-683750211-18781763.webp",
-          mockup: "/assets/Portfolio/ClientMockups/Versance.webp",
-          description: "Wir haben einen KI-gestützten IR-Agenten als vertrauenswürdige Schnittstelle in der Finanzkommunikation positioniert. Das Portal übersetzt komplexe institutionelle Informationen in klare Entscheidungsgrundlagen für Investoren, skalierbar und ganz auf Vertrauen ausgelegt."
-        },
-        {
-          title: "Talkinfive",
-          media: "/assets/Portfolio/BackgroundImages/pexels-ian-panelo-4691122.webp",
-          mockup: "/assets/Portfolio/ClientMockups/TalkinFive.webp",
-          description: "Eine vertrauensvolle, langfristige Partnerschaft statt eines einzelnen Projekts. Als technischer Partner von Talkinfive liefern wir Entwicklungs-Know-how und praktische digitale Umsetzung über zahlreiche Kundenprojekte und Branchen hinweg und treiben so die Arbeit im Hintergrund voran."
-        },
-        {
-          title: "Protex Textiles",
-          media: "/assets/Portfolio/BackgroundImages/pexels-kaue-barbier-710715348-33001980.webp",
-          mockup: "/assets/Portfolio/ClientMockups/ProtexTextiles.webp",
-          description: "Wir haben einen traditionellen Textilveredler genommen und sein Handwerk in ein modernes digitales Erlebnis übersetzt. Vom ersten Konzept über das Design bis zur technischen Entwicklung haben wir eine durchdachte UX geformt, die komplexe industrielle Expertise für internationale Einkäufer klar präsentiert."
-        },
-        {
-          title: "Vertrauenszentrum",
-          media: "/assets/Portfolio/BackgroundImages/pexels-marianamontrazi-7366424.webp",
-          mockup: "/assets/Portfolio/ClientMockups/Vertrauenszentrum.webp",
-          description: "Eine enge Verbindung aus kreativem und technischem Handwerk: Denise Lackner führte das Design, 741 Studio übernahm die Umsetzung. Wir haben Tracking und Funnel implementiert und ein nahtloses, marketingbereites Erlebnis geschaffen, das Patienten sensible medizinische Unterstützung mit Vertrauen navigieren lässt."
-        },
-        {
-          title: "Tacheles",
-          media: "/assets/Portfolio/BackgroundImages/pexels-maumascaro-376533.webp",
-          mockup: "/assets/Portfolio/ClientMockups/Tacheles.webp",
-          description: "Klares Design, gepaart mit responsiver, sorgfältig gebauter Entwicklung. Für diese mutige Lifestyle-Marke stand eine ausgefeilte User Experience auf jeder Bildschirmgröße im Fokus, damit die unverwechselbare Stimme der Marke ohne technische Reibung zur Geltung kommt."
-        },
-        {
-          title: "IGR",
-          media: "/assets/Portfolio/BackgroundImages/pexels-pixabay-458530.webp",
-          mockup: "/assets/Portfolio/ClientMockups/IGR.webp",
-          description: "Wir haben den Ergonomie-Innovationspreis in eine digitale Autorität für Gesundheit am Arbeitsplatz überführt. Über eine skalierbare Informationsarchitektur präsentieren wir kuratierte Forschung klar und zugänglich und stärken so langfristig die Standards der Branche."
-        },
-        {
-          title: "Yacht Charter Indonesia",
-          media: "/assets/Portfolio/BackgroundImages/pexels-rudy-kirchner-278171-1229845.webp",
-          mockup: "/assets/Portfolio/ClientMockups/YachtCharterIndonesia.webp",
-          description: "Eine komplexe Buchungsplattform, die ganz auf Entdeckung ausgelegt ist. Wir haben ein fortschrittliches Filtersystem, strukturierte Yacht-Kategorien und einen organisierten Katalog gestaltet und entwickelt, damit Besucher eine große Flotte mühelos durchsuchen und schnell den passenden Charter finden."
-        },
-        {
-          title: "WBG",
-          media: "/assets/Portfolio/BackgroundImages/pexels-sliceisop-2280604.webp",
-          mockup: "/assets/Portfolio/ClientMockups/WBG.webp",
-          description: "Wir haben ein strukturiertes Informationsportal für den öffentlichen Wohnungsbau und wachsende Stadtquartiere aufgebaut. Bezirks- und Objektdaten sind klar und übersichtlich aufbereitet, für Verlässlichkeit, Transparenz und Vertrauen bei den Bürgern."
-        },
-        {
-          title: "Vesta Noris",
-          media: "/assets/Portfolio/BackgroundImages/pexels-szafran-16362694.webp",
-          mockup: "/assets/Portfolio/ClientMockups/VestaNoris.webp",
-          description: "Mehr operative Effizienz durch eine maßgeschneiderte digitale Lösung. Wir haben eine skalierbare Plattform entwickelt, die die Nutzerbindung stärkt und die entscheidenden Conversion-Pfade gezielt optimiert."
-        }
-      ];
-      // Touch support variables
-      let touchStartX = 0;
-      let touchEndX = 0;
-      const vertexShader = `
-      varying vec2 vUv;
-      void main() {
-        vUv = uv;
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-      }
-    `;
-      const fragmentShader = `
-      uniform sampler2D uTexture1;
-      uniform sampler2D uTexture2;
-      uniform float uProgress;
-      uniform vec2 uResolution;
-      uniform vec2 uTexture1Size;
-      uniform vec2 uTexture2Size;
-      uniform int uEffectType;
-      
-      // Global settings uniforms
-      uniform float uGlobalIntensity;
-      uniform float uSpeedMultiplier;
-      uniform float uDistortionStrength;
-      uniform float uColorEnhancement;
-      
-      // Glass uniforms
-      uniform float uGlassRefractionStrength;
-      uniform float uGlassChromaticAberration;
-      uniform float uGlassBubbleClarity;
-      uniform float uGlassEdgeGlow;
-      uniform float uGlassLiquidFlow;
-      
-      // Frost uniforms
-      uniform float uFrostIntensity;
-      uniform float uFrostCrystalSize;
-      uniform float uFrostIceCoverage;
-      uniform float uFrostTemperature;
-      uniform float uFrostTexture;
-      
-      // Ripple uniforms
-      uniform float uRippleFrequency;
-      uniform float uRippleAmplitude;
-      uniform float uRippleWaveSpeed;
-      uniform float uRippleRippleCount;
-      uniform float uRippleDecay;
-      
-      // Plasma uniforms
-      uniform float uPlasmaIntensity;
-      uniform float uPlasmaSpeed;
-      uniform float uPlasmaEnergyIntensity;
-      uniform float uPlasmaContrastBoost;
-      uniform float uPlasmaTurbulence;
-      
-      // Timeshift uniforms
-      uniform float uTimeshiftDistortion;
-      uniform float uTimeshiftBlur;
-      uniform float uTimeshiftFlow;
-      uniform float uTimeshiftChromatic;
-      uniform float uTimeshiftTurbulence;
-      
-      varying vec2 vUv;
-
-      vec2 getCoverUV(vec2 uv, vec2 textureSize) {
-        vec2 s = uResolution / textureSize;
-        float scale = max(s.x, s.y);
-        vec2 scaledSize = textureSize * scale;
-        vec2 offset = (uResolution - scaledSize) * 0.5;
-        return (uv * uResolution - offset) / scaledSize;
-      }
-
-      float noise(vec2 p) {
-        return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
-      }
-
-      float smoothNoise(vec2 p) {
-        vec2 i = floor(p);
-        vec2 f = fract(p);
-        f = f * f * (3.0 - 2.0 * f);
-        
-        return mix(
-          mix(noise(i), noise(i + vec2(1.0, 0.0)), f.x),
-          mix(noise(i + vec2(0.0, 1.0)), noise(i + vec2(1.0, 1.0)), f.x),
-          f.y
-        );
-      }
-
-      float rand(vec2 uv) {
-        float a = dot(uv, vec2(92., 80.));
-        float b = dot(uv, vec2(41., 62.));
-        float x = sin(a) + cos(b) * 51.;
-        return fract(x);
-      }
-
-      vec4 rippleEffect(vec2 uv, float progress) {
-        vec4 currentImg = texture2D(uTexture1, getCoverUV(uv, uTexture1Size));
-        vec4 newImg = texture2D(uTexture2, getCoverUV(uv, uTexture2Size));
-        
-        vec2 center = vec2(0.5, 0.5);
-        float dist = distance(uv, center);
-        
-        // Add simple turbulent spatial noise using pure sine interference (WebGL 1.0 safe)
-        float morph = sin(uv.x * 20.0 + progress * 10.0) * cos(uv.y * 20.0 - progress * 10.0) * 0.05 * sin(progress * 3.14);
-        dist += morph; 
-        
-        float maxDist = 0.8;
-        
-        float effectiveSpeed = uRippleWaveSpeed * uSpeedMultiplier * 1.2; 
-        float effectiveAmplitude = uRippleAmplitude * uDistortionStrength * uGlobalIntensity * 3.0; // 3x stronger
-        float effectiveDecay = uRippleDecay * 0.5; // Lower decay so it travels thicker and further
-        
-        float waveRadius = progress * maxDist * 1.5 * effectiveSpeed;
-        
-        // Calculate the distance from the current wave front
-        float distDiff = dist - waveRadius;
-        
-        // Single focused highly-refractive ripple (1 crest only)
-        // Using an exponential gaussian burst instead of a sine wave ensures exactly ONE ripple ring.
-        float singleRing = exp(-pow(distDiff * 12.0, 2.0)) * exp(-abs(distDiff) * 4.0 * effectiveDecay);
-        
-        float combinedRipple = singleRing * effectiveAmplitude * 1.5; // boosted to compensate for single ring
-        
-        vec2 normal = normalize(uv - center);
-        
-        // Simulate extreme chromatic aberration for heavy glassy chunk feel
-        vec2 distortedUV = getCoverUV(uv + normal * combinedRipple, uTexture2Size);
-        vec2 distortedUVR = getCoverUV(uv + normal * (combinedRipple * 1.35), uTexture2Size);
-        vec2 distortedUVB = getCoverUV(uv + normal * (combinedRipple * 0.65), uTexture2Size);
-        
-        vec4 distortedImg = texture2D(uTexture2, distortedUV);
-        distortedImg.r = texture2D(uTexture2, distortedUVR).r;
-        distortedImg.b = texture2D(uTexture2, distortedUVB).b;
-        
-        float fadeEdge = smoothstep(maxDist, maxDist * 0.9, dist);
-        vec4 rippleResult = mix(newImg, distortedImg, fadeEdge);
-        
-        float mask = smoothstep(0.0, 0.2, progress) * (1.0 - smoothstep(0.8, 1.0, progress));
-        rippleResult = mix(newImg, rippleResult, mask);
-        
-        // Apply color enhancement with #fac118 brand yellow tint based on distortion intensity
-        vec3 yellowTint = vec3(0.98, 0.75, 0.09); // #fac118
-        
-        // Calculate an intensely shiny glossy highlight peaking at the wave crests
-        float specular = pow(clamp(singleRing * 1.5, 0.0, 1.0), 4.0);
-        
-        float rippleIntensity = abs(combinedRipple) * 8.0; 
-        float tintWeight = clamp(rippleIntensity * mask, 0.0, 0.7); // Let the yellow bleed in more heavily
-        
-        rippleResult.rgb = mix(rippleResult.rgb, yellowTint, tintWeight);
-        // Add Specular Highlights for extreme glassy pop
-        rippleResult.rgb += specular * mask * yellowTint * 1.5;
-        
-        float transition = smoothstep(0.0, 1.0, progress);
-        return mix(currentImg, rippleResult, transition);
-      }
-
-      /// Omitting other effects like glass, plasma, frost, etc. for token size temporarily since the user wants the ripple.
-      /// The requested code had multiple effects, so we will stub them back to ripple as a fallback if selected.
-      
-      void main() {
-        gl_FragColor = rippleEffect(vUv, uProgress);
-      }
-    `;
-      // Map effect names to shader indices
-      const getEffectIndex = (effectName) => {
-        return 2; // Fixed to ripple index
-      };
-      const setupPane = () => { }; const handleEffectChange = () => { };
-      // Navigation UI
-      const createSlidesNavigation = () => {
-        const navContainer = document.querySelector(".slides-navigation");
-        if (!navContainer) return;
-
-        navContainer.innerHTML = "";
-
-        slides.forEach((slide, index) => {
-          const navItem = document.createElement("button");
-          navItem.className = `slide-nav-item${index === currentSlideIndex ? " active" : ""}`;
-          navItem.id = `nav-${index + 1}`;
-          navItem.innerHTML = `
-      <div class="slide-progress-line">
-        <div class="slide-progress-fill"></div>
-      </div>
-      <span class="slide-nav-title">${slide.title}</span>
-    `;
-          
-          navItem.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            if (index !== currentSlideIndex && !isTransitioning) {
-              navigateToSlide(index);
-            }
-          });
-          
-          // Prevent touch from bubbling to swipe handler
-          navItem.addEventListener("touchstart", (e) => {
-            e.stopPropagation(); 
-          }, { passive: true });
-
-          navContainer.appendChild(navItem);
-        });
-
-        // Add horizontal scroll dragging to navContainer
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-        
-        navContainer.addEventListener('mousedown', (e) => {
-          isDown = true;
-          startX = e.pageX - navContainer.offsetLeft;
-          scrollLeft = navContainer.scrollLeft;
-        });
-        navContainer.addEventListener('mouseleave', () => isDown = false);
-        navContainer.addEventListener('mouseup', () => isDown = false);
-        navContainer.addEventListener('mousemove', (e) => {
-          if (!isDown) return;
-          e.preventDefault();
-          const x = e.pageX - navContainer.offsetLeft;
-          const walk = (x - startX) * 2;
-          navContainer.scrollLeft = scrollLeft - walk;
-        });
-      };
-      const updateNavigationState = (activeIndex) => {
-        const navItems = document.querySelectorAll(".slide-nav-item");
-        navItems.forEach((item, index) => {
-          item.classList.toggle("active", index === activeIndex);
-        });
-      };
-      const updateSlideProgress = (slideIndex, progress) => {
-        const navItems = document.querySelectorAll(".slide-nav-item");
-        if (navItems[slideIndex]) {
-          const progressFill = navItems[slideIndex].querySelector(
-            ".slide-progress-fill"
-          );
-          progressFill.style.width = `${progress}%`;
-          progressFill.style.opacity = "1";
-        }
-      };
-      const fadeSlideProgress = (slideIndex) => {
-        const navItems = document.querySelectorAll(".slide-nav-item");
-        if (navItems[slideIndex]) {
-          const progressFill = navItems[slideIndex].querySelector(
-            ".slide-progress-fill"
-          );
-          progressFill.style.opacity = "0";
-          setTimeout(() => (progressFill.style.width = "0%"), 300);
-        }
-      };
-      const quickResetProgress = (slideIndex) => {
-        const navItems = document.querySelectorAll(".slide-nav-item");
-        if (navItems[slideIndex]) {
-          const progressFill = navItems[slideIndex].querySelector(
-            ".slide-progress-fill"
-          );
-          // Quickly animate back to 0% instead of just fading
-          progressFill.style.transition = "width 0.2s ease-out";
-          progressFill.style.width = "0%";
-          // Reset transition back to normal after animation
-          setTimeout(() => {
-            progressFill.style.transition = "width 0.1s ease, opacity 0.3s ease";
-          }, 200);
-        }
-      };
-      const updateCounter = (index) => {
-        const slideNumber = document.querySelector(".slide-number");
-        if (slideNumber) slideNumber.textContent = String(index + 1).padStart(2, "0");
-        const slideTotal = document.querySelector(".slide-total");
-        if (slideTotal) slideTotal.textContent = String(slides.length).padStart(2, "0");
-      };
-      // Timer functions
-      const startAutoSlideTimer = () => {
-        if (!texturesLoaded || !sliderEnabled || (!webglFailed && slideTextures.length < 2)) return;
-        stopAutoSlideTimer();
-        
-        let progress = 0;
-        const increment = (100 / SLIDE_DURATION()) * PROGRESS_UPDATE_INTERVAL;
-        
-        progressAnimation = setInterval(() => {
-          if (!sliderEnabled) {
-            stopAutoSlideTimer();
-            return;
-          }
-          if (isTransitioning) return; // Pause ticking during transitions
-          
-          progress += increment;
-          updateSlideProgress(currentSlideIndex, progress);
-          
-          if (progress >= 100) {
-            progress = 0; // Reset progress explicitly
-            fadeSlideProgress(currentSlideIndex);
-            handleSlideChange();
-          }
-        }, PROGRESS_UPDATE_INTERVAL);
-      };
-      const stopAutoSlideTimer = () => {
-        if (progressAnimation) {
-          clearInterval(progressAnimation);
-          progressAnimation = null;
-        }
-        if (autoSlideTimer) {
-          clearTimeout(autoSlideTimer);
-          autoSlideTimer = null;
-        }
-      };
-      const safeStartTimer = (delay = 0) => {
-        stopAutoSlideTimer();
-        if (sliderEnabled && texturesLoaded) {
-          if (delay > 0) {
-            autoSlideTimer = setTimeout(() => {
-              if (sliderEnabled) startAutoSlideTimer();
-            }, delay);
-          } else {
-            startAutoSlideTimer();
-          }
-        }
-      };
-      // Navigation
-      const navigateToSlide = async (targetIndex) => {
-        if (isTransitioning || targetIndex === currentSlideIndex) return;
-
-        isTransitioning = true; // Set immediately to block double inputs
-        
-        // Safety lock on the index
-        targetIndex = (targetIndex + slides.length) % slides.length;
-
-        stopAutoSlideTimer();
-        quickResetProgress(currentSlideIndex);
-
-        let targetTexture;
-
-        // On-demand texture loading if background load hasn't finished
-        if (!webglFailed) {
-          if (!slideTextures[targetIndex]) {
-            try {
-              const texture = await loadImageTexture(slides[targetIndex].media);
-              slideTextures[targetIndex] = texture;
-            } catch (error) {
-              console.warn(`Critical: Failed to load slide ${targetIndex}, skipping...`);
-              isTransitioning = false; // Release lock before retrying
-              navigateToSlide((targetIndex + 1) % slides.length); // try next one
-              return;
-            }
-          }
-
-          const currentTexture = slideTextures[currentSlideIndex];
-          targetTexture = slideTextures[targetIndex];
-
-          if (!currentTexture || !targetTexture) {
-            console.warn("Missing textures for transition. Index:", currentSlideIndex, targetIndex);
-            isTransitioning = false;
-            safeStartTimer(500);
-            return;
-          }
-
-          shaderMaterial.uniforms.uTexture1.value = currentTexture;
-          shaderMaterial.uniforms.uTexture2.value = targetTexture;
-          shaderMaterial.uniforms.uTexture1Size.value = currentTexture.userData.size;
-          shaderMaterial.uniforms.uTexture2Size.value = targetTexture.userData.size;
-        }
-
-        // Handle DOM overlay updates
-        const mockupImg = document.getElementById("current-mockup");
-        const contentOverlay = document.getElementById("content-overlay");
-        const overlayTitle = document.getElementById("overlay-title");
-        const overlayDesc = document.getElementById("overlay-description");
-        const nextSlide = slides[targetIndex];
-
-        if (mockupImg) mockupImg.classList.remove("active");
-        if (contentOverlay) contentOverlay.classList.remove("active");
-
-        setTimeout(() => {
-          if (nextSlide.mockup && mockupImg) {
-            mockupImg.onload = () => mockupImg.classList.add("active");
-            mockupImg.src = nextSlide.mockup;
-            mockupImg.alt = `741 Studio Client Portfolio: ${nextSlide.title}`;
-            if (mockupImg.complete) mockupImg.classList.add("active");
-          }
-          if (overlayTitle) overlayTitle.textContent = nextSlide.title;
-          if (overlayDesc) overlayDesc.textContent = nextSlide.description || "";
-          if (contentOverlay) contentOverlay.classList.add("active");
-        }, 400);
-
-        currentSlideIndex = targetIndex;
-        updateCounter(currentSlideIndex);
-        updateNavigationState(currentSlideIndex);
-
-        // Auto-scroll navigation item into view
-        const activeNav = document.getElementById(`nav-${targetIndex + 1}`);
-        if (activeNav) {
-          activeNav.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        }
-
-        if (!webglFailed) {
-          const startTime = performance.now();
-          const duration = TRANSITION_DURATION() * 1000;
-
-          const animateTransition = (time) => {
-            const elapsed = time - startTime;
-            const p = Math.min(elapsed / duration, 1.0);
-            const easedProgress = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
-
-            shaderMaterial.uniforms.uProgress.value = easedProgress;
-
-            if (p < 1.0) {
-              requestAnimationFrame(animateTransition);
-            } else {
-              shaderMaterial.uniforms.uProgress.value = 0;
-              shaderMaterial.uniforms.uTexture1.value = targetTexture;
-              shaderMaterial.uniforms.uTexture1Size.value = targetTexture.userData.size;
-              isTransitioning = false;
-              safeStartTimer(100);
-            }
-          };
-          requestAnimationFrame(animateTransition);
-        } else {
-          setTimeout(() => {
-            isTransitioning = false;
-            safeStartTimer(100);
-          }, 800); // give DOM transition time
-        }
-      };
-
-      const handleSlideChange = () => {
-        if (isTransitioning || !texturesLoaded || !sliderEnabled) return;
-        const nextIndex = (currentSlideIndex + 1) % slides.length;
-        navigateToSlide(nextIndex);
-      };
-
-      const handleSwipe = () => {
-        if (Math.abs(touchEndX - touchStartX) < 50) return; // Minimum swipe distance
-        if (touchEndX < touchStartX && !isTransitioning && sliderEnabled) {
-          stopAutoSlideTimer();
-          quickResetProgress(currentSlideIndex);
-          handleSlideChange();
-        } else if (touchEndX > touchStartX && !isTransitioning && sliderEnabled) {
-          stopAutoSlideTimer();
-          quickResetProgress(currentSlideIndex);
-          const prevIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-          navigateToSlide(prevIndex);
-        }
-      };
-      // Texture loading
-      const loadImageTexture = (src) => {
-        return new Promise((resolve, reject) => {
-          const loader = new THREE.TextureLoader();
-          const timeout = setTimeout(() => reject(new Error("Timeout")), 10000);
-          loader.load(
-            src,
-            (texture) => {
-              clearTimeout(timeout);
-              texture.minFilter = texture.magFilter = THREE.LinearFilter;
-              texture.userData = {
-                size: new THREE.Vector2(texture.image.width, texture.image.height)
-              };
-              resolve(texture);
-            },
-            undefined,
-            (error) => {
-              clearTimeout(timeout);
-              reject(error);
-            }
-          );
-        });
-      };
-      // Initialize
-      const initializeRenderer = async () => {
-        const canvas = document.querySelector(".webgl-canvas");
-        if (!canvas) return;
-
-        // Create a real canvas, the placeholder is currently an HTML div
-        const realCanvas = document.createElement("canvas");
-        realCanvas.className = "webgl-canvas";
-        canvas.replaceWith(realCanvas);
-
-        scene = new THREE.Scene();
-        camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-        renderer = new THREE.WebGLRenderer({
-          canvas: realCanvas,
-          antialias: false,
-          alpha: false
-        });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        shaderMaterial = new THREE.ShaderMaterial({
-          uniforms: {
-            uTexture1: { value: null },
-            uTexture2: { value: null },
-            uProgress: { value: 0.0 },
-            uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
-            uTexture1Size: { value: new THREE.Vector2(1, 1) },
-            uTexture2Size: { value: new THREE.Vector2(1, 1) },
-            uEffectType: { value: 2 },
-            uGlobalIntensity: { value: 1.0 },
-            uSpeedMultiplier: { value: 1.0 },
-            uDistortionStrength: { value: 1.0 },
-            uColorEnhancement: { value: 1.0 },
-            uRippleFrequency: { value: 25.0 },
-            uRippleAmplitude: { value: 0.08 },
-            uRippleWaveSpeed: { value: 1.0 },
-            uRippleRippleCount: { value: 1.0 },
-            uRippleDecay: { value: 1.0 }
-          },
-          vertexShader,
-          fragmentShader
-        });
-        const geometry = new THREE.PlaneGeometry(2, 2);
-        const mesh = new THREE.Mesh(geometry, shaderMaterial);
-        scene.add(mesh);
-
-        // Asymmetric loading: Load only the necessary first 2 textures, then background load the rest
-        const loadInitialTextures = async () => {
-          const slideLimit = Math.min(slides.length, 2);
-          for (let i = 0; i < slideLimit; i++) {
-            try {
-              const texture = await loadImageTexture(slides[i].media);
-              slideTextures[i] = texture;
-            } catch (error) {
-              console.warn("Failed to load initial image " + i);
-            }
-          }
-
-          if (slideTextures[0]) {
-            shaderMaterial.uniforms.uTexture1.value = slideTextures[0];
-            shaderMaterial.uniforms.uTexture1Size.value = slideTextures[0].userData.size;
-
-            if (slideTextures[1]) {
-              shaderMaterial.uniforms.uTexture2.value = slideTextures[1];
-              shaderMaterial.uniforms.uTexture2Size.value = slideTextures[1].userData.size;
-            }
-
-            texturesLoaded = true;
-            sliderEnabled = true;
-            safeStartTimer(1500); // 1.5s delay to let first card breath
-          }
-        };
-
-        const backgroundLoadRemainingTextures = async () => {
-          for (let i = 2; i < slides.length; i++) {
-            if (!slideTextures[i]) {
-              try {
-                const texture = await loadImageTexture(slides[i].media);
-                slideTextures[i] = texture;
-              } catch (error) {
-                console.warn("Background load failed for " + i);
-              }
-            }
-          }
-        };
-
-        await loadInitialTextures();
-        backgroundLoadRemainingTextures(); // Don't await, let it run in background
-
-        const render = () => {
-          requestAnimationFrame(render);
-          renderer.render(scene, camera);
-        };
-        render();
-      };
-      let isInitialized = false;
-      const initPortfolio = async () => {
-        if (isInitialized) return;
-        isInitialized = true;
-        
-        createSlidesNavigation();
-        updateCounter(0);
-        updateNavigationState(0);
-
-        // Initial overlay setup
-        const mockupImg = document.getElementById("current-mockup");
-        const contentOverlay = document.getElementById("content-overlay");
-        const overlayTitle = document.getElementById("overlay-title");
-        const overlayDesc = document.getElementById("overlay-description");
-
-        if (slides[0].mockup && mockupImg) {
-          mockupImg.onload = () => mockupImg.classList.add("active");
-          mockupImg.src = slides[0].mockup;
-          mockupImg.alt = `741 Studio Client Portfolio: ${slides[0].title}`;
-          if (mockupImg.complete) mockupImg.classList.add("active");
-        }
-        if (overlayTitle) overlayTitle.textContent = slides[0].title;
-        if (overlayDesc) overlayDesc.textContent = slides[0].description || "";
-        if (contentOverlay) contentOverlay.classList.add("active");
-
-        try {
-          await initializeRenderer();
-        } catch(e) {
-          console.error("WebGL Renderer Error:", e);
-          webglFailed = true;
-          texturesLoaded = true;
-          sliderEnabled = true;
-          safeStartTimer(1500);
-        }
-      };
-
-      if (document.readyState === "complete" || document.readyState === "interactive") {
-        setTimeout(initPortfolio, 1);
-      } else {
-        window.addEventListener("DOMContentLoaded", initPortfolio);
-        window.addEventListener("load", initPortfolio); // backup
-      }
-      const sliderWrap = document.querySelector(".slider-wrapper");
-      if (sliderWrap) {
-        sliderWrap.addEventListener("touchstart", (e) => {
-          if (e.target.closest(".slides-navigation")) return;
-          touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-        
-        sliderWrap.addEventListener("touchend", (e) => {
-          if (e.target.closest(".slides-navigation")) return;
-          touchEndX = e.changedTouches[0].screenX;
-          handleSwipe();
-        }, { passive: true });
-      }
-      window.addEventListener("resize", () => {
-        if (renderer && shaderMaterial) {
-          renderer.setSize(window.innerWidth, window.innerHeight);
-          shaderMaterial.uniforms.uResolution.value.set(
-            window.innerWidth,
-            window.innerHeight
-          );
-        }
-      });
-      document.addEventListener("visibilitychange", () => {
-        if (document.hidden) {
-          stopAutoSlideTimer();
-        } else if (sliderEnabled && !isTransitioning) {
-          safeStartTimer();
-        }
-      });
-
     </script>
 <!-- Premium Scroll Reveal Implementation (Reference Standard) -->
 <script defer="">

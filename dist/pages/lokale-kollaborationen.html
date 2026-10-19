@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Regionale Sichtbarkeit durch Kollaborationen | 741.Studio</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<script>
+/* DE/EN: URL ?lang=de|en > gespeicherte Wahl > erste Browsersprache Deutsch > Zeitzone DACH > sonst Englisch */
+(function () {
+  var DACH_TZ = ['Europe/Berlin', 'Europe/Vienna', 'Europe/Zurich', 'Europe/Vaduz', 'Europe/Busingen'];
+  var TITLES = {
+    de: 'Regionale Sichtbarkeit durch Kollaborationen | 741.Studio',
+    en: 'Regional visibility through collaborations | 741.Studio'
+  };
+  function detect() {
+    var q = '';
+    try { q = new URLSearchParams(location.search).get('lang') || ''; } catch (e) {}
+    if (q === 'de' || q === 'en') return q;
+    var s = '';
+    try { s = localStorage.getItem('741lang') || ''; } catch (e) {}
+    if (s === 'de' || s === 'en') return s;
+    var langs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
+    if (/^de(-|$)/i.test(langs[0] || '')) return 'de';
+    try {
+      var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (DACH_TZ.indexOf(tz) > -1) return 'de';
+    } catch (e) {}
+    return 'en';
+  }
+  function apply(l, persist) {
+    document.documentElement.lang = l;
+    document.title = TITLES[l];
+    if (persist) { try { localStorage.setItem('741lang', l); } catch (e) {} }
+    var b = document.querySelectorAll('.langsw button');
+    for (var i = 0; i < b.length; i++) b[i].setAttribute('aria-pressed', b[i].getAttribute('data-l') === l ? 'true' : 'false');
+    var v = document.querySelector('.hero-vid');
+    if (v) {
+      var id = v.getAttribute('data-' + l) || v.getAttribute('data-de');
+      var f = v.querySelector('iframe');
+      var src = 'https://www.loom.com/embed/' + id;
+      if (f && f.getAttribute('src') !== src) f.setAttribute('src', src);
+    }
+    var a = document.querySelectorAll('[data-href-de]');
+    for (var j = 0; j < a.length; j++) a[j].setAttribute('href', a[j].getAttribute('data-href-' + l) || a[j].getAttribute('data-href-de'));
+  }
+  apply(detect(), false);
+  document.addEventListener('DOMContentLoaded', function () {
+    apply(document.documentElement.lang, false);
+    var b = document.querySelectorAll('.langsw button');
+    for (var i = 0; i < b.length; i++) b[i].addEventListener('click', function () { apply(this.getAttribute('data-l'), true); });
+  });
+})();
+</script>
+<style>
+  :root {
+    --yellow: #fac118;
+    --yellow-soft: rgba(250, 193, 24, 0.14);
+    --black: #252525;
+    --cream: #fffcf3;
+    --cream-2: #fef6dc;
+    --grey: #8c8c8c;
+    --grey-light: #f5f5f6;
+    --white: #fff;
+    --green: #2e9e5b;
+    --green-soft: #e7f6ed;
+    --amber-soft: #fdf3d7;
+    --red: #c0392b;
+    --radius: 14px;
+    --shadow: 0 2px 14px rgba(37,37,37,0.07);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--black);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  html[lang="de"] .en, html[lang="en"] .de { display:none !important; }
+
+  .topbar { background:var(--white); border-bottom:1px solid #eee9da; padding:0 22px; display:flex; align-items:center; justify-content:space-between; height:60px; position:sticky; top:0; z-index:20; }
+  .topbar .brand img { display:block; height:30px; width:auto; }
+  .langsw { display:flex; gap:4px; background:var(--grey-light); border-radius:20px; padding:3px; }
+  .langsw button { font-family:inherit; font-size:12px; font-weight:800; border:none; background:transparent; color:var(--grey); border-radius:16px; padding:5px 12px; cursor:pointer; transition:.15s; }
+  .langsw button:hover { color:var(--black); }
+  .langsw button[aria-pressed="true"] { background:var(--yellow); color:var(--black); }
+
+  .container { max-width:900px; margin:0 auto; padding:34px 20px 80px; }
+
+  .card { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:26px; }
+  .card + .card { margin-top:18px; }
+  .card h2 { font-size:16.5px; margin-bottom:6px; }
+  .card .kicker { font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.5px; color:#8a6a00; margin-bottom:4px; }
+  .card .lead { color:var(--grey); font-size:14px; margin-top:6px; }
+
+  .hero-grid { display:grid; grid-template-columns:1.15fr 1fr; gap:28px; align-items:center; padding:10px 0 8px; }
+  @media(max-width:760px){ .hero-grid { grid-template-columns:1fr; } }
+  .hero .kicker { font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#8a6a00; }
+  .hero h1 { font-size:clamp(24px,4vw,34px); font-weight:800; letter-spacing:-.4px; margin:10px 0 12px; line-height:1.2; }
+  .hero h1 span.hl { background:var(--yellow-soft); border-radius:6px; padding:0 6px; }
+  .hero p { color:var(--grey); font-size:15px; }
+  .hero-vid { aspect-ratio:16/9; border-radius:var(--radius); background:var(--white); box-shadow:var(--shadow); overflow:hidden; }
+  .hero-vid iframe { width:100%; height:100%; border:0; display:block; }
+
+  .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px; }
+  .stat { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px 10px; text-align:center; }
+  .stat b { display:block; font-size:22px; font-weight:800; }
+  .stat small { color:var(--grey); font-size:11px; text-transform:uppercase; letter-spacing:.3px; }
+  @media(max-width:640px){ .stats { grid-template-columns:repeat(2,1fr); } }
+
+  .pill { display:inline-block; font-size:11.5px; font-weight:700; border-radius:20px; padding:3px 11px; white-space:nowrap; }
+  .pill-yellow { background:var(--yellow-soft); color:#8a6a00; }
+  .pill-green { background:var(--green-soft); color:var(--green); }
+
+  ul.plain { list-style:none; margin-top:12px; }
+  ul.plain li { padding:6px 0 6px 22px; position:relative; font-size:14.5px; }
+  ul.plain li::before { content:"•"; position:absolute; left:2px; color:var(--yellow); font-weight:900; }
+
+  .step { display:flex; gap:12px; padding:11px 0; border-bottom:1px solid #f4f1e6; align-items:flex-start; }
+  .step:last-child { border-bottom:none; }
+  .step .dot { width:26px; height:26px; min-width:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; background:var(--yellow); color:var(--black); margin-top:1px; }
+  .step .t { font-size:14.5px; font-weight:700; }
+  .step .d { font-size:13.5px; color:var(--grey); margin-top:2px; }
+
+  table.pairs { width:100%; border-collapse:collapse; margin-top:14px; font-size:13.5px; }
+  table.pairs th { text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.3px; color:var(--grey); padding:6px 8px; border-bottom:1.5px solid #eee7cf; }
+  table.pairs td { padding:9px 8px; border-bottom:1px solid #f4f1e6; vertical-align:top; }
+  table.pairs td:first-child { font-weight:700; }
+  .src { font-size:11.5px; color:var(--grey); margin-top:10px; }
+
+  .calc-row { display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #f4f1e6; font-size:14px; }
+  .calc-row:last-of-type { border-bottom:none; }
+  .calc-row b { font-weight:800; }
+  .calc-result { margin-top:12px; background:var(--black); color:var(--white); border-radius:10px; padding:14px 18px; display:flex; justify-content:space-between; align-items:center; }
+  .calc-result b { color:var(--yellow); font-size:19px; }
+
+  .progress-outer { background:var(--grey-light); border-radius:20px; height:12px; overflow:hidden; margin:10px 0 4px; }
+  .progress-inner { background:var(--yellow); height:100%; border-radius:20px; }
+
+  .success { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:14px; }
+  .scard { display:block; text-decoration:none; background:var(--grey-light); border:1px solid #eee7cf; border-radius:10px; padding:16px; color:var(--grey); font-size:13px; transition:.15s; }
+  .scard:hover { background:var(--yellow-soft); border-color:var(--yellow); }
+  .scard b { display:block; color:var(--black); font-size:14px; margin-bottom:6px; }
+
+  .winwin { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:14px; }
+  .wcol h3 { font-size:14.5px; margin-bottom:10px; }
+  .wcol ul { list-style:none; }
+  .wcol li { padding:5px 0 5px 20px; position:relative; font-size:13.5px; }
+  .wcol li::before { content:"✓"; position:absolute; left:0; color:var(--green); font-weight:800; }
+  @media(max-width:640px){ .winwin { grid-template-columns:1fr; } }
+
+  footer.f { text-align:center; color:var(--grey); font-size:12.5px; padding:20px 0 10px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><img src="/assets/logo_black-DWbLQD0x.png" alt="741 Studio"></div>
+  <div class="langsw" role="group" aria-label="Sprache / Language">
+    <button type="button" data-l="de" aria-pressed="true">DE</button>
+    <button type="button" data-l="en" aria-pressed="false">EN</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="hero-grid">
+    <div class="hero">
+      <div class="kicker"><span class="de">Regionale Sichtbarkeit</span><span class="en">Regional visibility</span></div>
+      <h1>
+        <span class="de">Ich baue dir <span class="hl">~50 echte regionale Kollaborationen</span> auf</span>
+        <span class="en">I'm building <span class="hl">~50 real regional collaborations</span> for you</span>
+      </h1>
+      <p class="de">Backlinks und Erwähnungen von aktiven Unternehmen aus deiner Region — nicht deine Konkurrenz, sondern Betriebe, die dieselbe Zielgruppe erreichen.</p>
+      <p class="en">Backlinks and mentions from active businesses in your region — not your competitors, but companies that reach the same audience.</p>
+    </div>
+    <!-- Loom-ID je Sprache: data-en später durch ein englisches Video ersetzen -->
+    <div class="hero-vid" data-de="d49b12a3c3bd4d7daa039622021f5bcf" data-en="d49b12a3c3bd4d7daa039622021f5bcf"><iframe src="https://www.loom.com/embed/d49b12a3c3bd4d7daa039622021f5bcf" allow="fullscreen" allowfullscreen></iframe></div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>~50</b><small class="de">Ziel-Kollaborationen</small><small class="en">Target collaborations</small></div>
+    <div class="stat"><b class="de">~2 Mo</b><b class="en">~2 mo</b><small class="de">Laufzeit</small><small class="en">Duration</small></div>
+    <div class="stat"><b>0</b><small class="de">Konkurrenten dabei</small><small class="en">Competitors involved</small></div>
+  </div>
+
+  <div class="card">
+    <div class="kicker"><span class="de">Das Ziel</span><span class="en">The goal</span></div>
+    <h2><span class="de">Über die nächsten ~2 Monate</span><span class="en">Over the next ~2 months</span></h2>
+    <p class="lead de">Ich baue dir rund 50 hochwertige regionale Backlinks und Erwähnungen auf — auf deiner Seite, in lokalen Zeitungen und bei anderen aktiven Unternehmen aus deiner Region.</p>
+    <p class="lead en">I'm building you around 50 high-quality regional backlinks and mentions — on your own site, in local newspapers and on the sites of other active businesses in your region.</p>
+  </div>
+
+  <div class="card">
+    <div class="kicker"><span class="de">Warum das wirkt</span><span class="en">Why it works</span></div>
+    <h2><span class="de">Der Kern ist Inhalt + Platzierung</span><span class="en">The core is content + placement</span></h2>
+    <ul class="plain de">
+      <li>Inhalte auf deiner eigenen Seite</li>
+      <li>Erwähnungen in lokalen Zeitungen/Publikationen</li>
+      <li>Listungen und Gastartikel auf ~50 anderen aktiven regionalen Seiten</li>
+    </ul>
+    <ul class="plain en">
+      <li>Content on your own website</li>
+      <li>Mentions in local newspapers and publications</li>
+      <li>Listings and guest articles on ~50 other active regional sites</li>
+    </ul>
+    <p class="lead de" style="margin-top:12px;">Allein diese Signale sind für Googles Algorithmus extrem stark: Wer regional auf vielen guten, aktiven Seiten auftaucht, wird für lokale Suchen weiter oben ausgespielt. Reine Verzeichnis-Einträge sind nach den aktuellen Updates entwertet — echte Kollaborationen mit aktiven Partnern nicht.</p>
+    <p class="lead en" style="margin-top:12px;">These signals alone are extremely strong for Google's algorithm: a business that appears regionally on many good, active sites ranks higher in local searches. Plain directory listings have lost value after the recent updates — real collaborations with active partners have not.</p>
+  </div>
+
+  <div class="card">
+    <div class="kicker"><span class="de">Wen ich anspreche</span><span class="en">Who I reach out to</span></div>
+    <h2><span class="de">Überschneidende Zielgruppe, keine Konkurrenz</span><span class="en">Overlapping audience, no competition</span></h2>
+    <p class="lead de">Ich erstelle eine Liste von Unternehmen aus deinem Umfeld — Firmen, deren Kunden auch deine Kunden sein könnten. Solche Paarungen sind in der lokalen Marktforschung gut belegt:</p>
+    <p class="lead en">I build a list of businesses from your surroundings — companies whose customers could also be your customers. Such pairings are well documented in local market research:</p>
+    <table class="pairs de">
+      <tr><th>Deine Branche</th><th>Passende Kollaborationspartner (real, keine Konkurrenz)</th></tr>
+      <tr><td>Heilpraktiker / Naturheilkunde</td><td>Yoga-/Pilates-Studios, Bio-/Reformhäuser, Ernährungsberatung, Physiotherapie-Praxen, Apotheken</td></tr>
+      <tr><td>Handwerk / Bau</td><td>Baumärkte, Architekturbüros, Immobilienmakler, Möbelhäuser, Malerbetriebe</td></tr>
+      <tr><td>Einzelhandel / Shop</td><td>Komplementäre Nischen-Shops, lokale Influencer/Blogger, Geschenkboutiquen, Eventlocations</td></tr>
+      <tr><td>Beauty / Wellness</td><td>Fitnessstudios, Friseure, Nagelstudios, Wellness-Hotels, Kosmetikschulen</td></tr>
+    </table>
+    <table class="pairs en">
+      <tr><th>Your industry</th><th>Matching collaboration partners (real, non-competing)</th></tr>
+      <tr><td>Naturopaths / holistic health</td><td>Yoga &amp; Pilates studios, health-food stores, nutrition coaches, physiotherapy practices, pharmacies</td></tr>
+      <tr><td>Trades / construction</td><td>Hardware stores, architecture firms, real-estate agents, furniture stores, painting contractors</td></tr>
+      <tr><td>Retail / shop</td><td>Complementary niche shops, local influencers/bloggers, gift boutiques, event venues</td></tr>
+      <tr><td>Beauty / wellness</td><td>Gyms, hair salons, nail studios, wellness hotels, cosmetics schools</td></tr>
+    </table>
+    <p class="src de">Grundlage: öffentlich dokumentierte Cross-Promotion-Muster zwischen nicht-konkurrierenden, zielgruppengleichen Lokalbetrieben. Für deinen Fall ersetze ich die Zeile durch konkrete, real recherchierte Betriebe aus deiner Region.</p>
+    <p class="src en">Basis: publicly documented cross-promotion patterns between non-competing local businesses that share the same audience. For your case, I replace the row with specific, properly researched businesses from your region.</p>
+  </div>
+
+  <div class="card">
+    <div class="kicker"><span class="de">Wie es abläuft</span><span class="en">How it works</span></div>
+    <h2><span class="de">Die Sequenz</span><span class="en">The sequence</span></h2>
+    <div class="step de"><div class="dot">1</div><div><div class="t">Abstimmen</div><div class="d">Ich stimme Skript und Nachricht vorher mit dir ab — es geht nichts raus, was du nicht freigegeben hast.</div></div></div>
+    <div class="step de"><div class="dot">2</div><div><div class="t">Ansprechen</div><div class="d">Ich spreche die Unternehmen über LinkedIn an (in Deutschland ist Kalt-Mail/Anruf nicht erlaubt — LinkedIn schon).</div></div></div>
+    <div class="step de"><div class="dot">3</div><div><div class="t">Aufnehmen</div><div class="d">Wer zusagt, wird in den Regions-Leitfaden aufgenommen: Inhalt auf deiner Seite, Platzierung in Zeitung + Partnerseiten.</div></div></div>
+    <div class="step de"><div class="dot">4</div><div><div class="t">Backlink steht</div><div class="d">Für dich und für den Partner — beidseitig, dauerhaft.</div></div></div>
+    <div class="step en"><div class="dot">1</div><div><div class="t">Align</div><div class="d">I agree the script and message with you first — nothing goes out that you have not approved.</div></div></div>
+    <div class="step en"><div class="dot">2</div><div><div class="t">Reach out</div><div class="d">I contact the businesses through LinkedIn — personal and direct.</div></div></div>
+    <div class="step en"><div class="dot">3</div><div><div class="t">Include</div><div class="d">Everyone who agrees is added to the regional guide: content on your site, placement in a newspaper and on partner sites.</div></div></div>
+    <div class="step en"><div class="dot">4</div><div><div class="t">The backlink is live</div><div class="d">For you and for the partner — mutual and lasting.</div></div></div>
+  </div>
+
+  <div class="card">
+    <div class="kicker"><span class="de">Das Rechenbeispiel</span><span class="en">The calculation</span></div>
+    <h2><span class="de">Wie 50 Platzierungen entstehen</span><span class="en">How 50 placements come about</span></h2>
+    <div class="calc-row"><span class="de">Gezielte Kontaktaufnahmen pro Werktag</span><span class="en">Targeted outreach messages per working day</span><b>~20</b></div>
+    <div class="calc-row"><span class="de">Pro Woche</span><span class="en">Per week</span><b>~100</b></div>
+    <div class="calc-row"><span class="de">Über 2 Monate</span><span class="en">Over 2 months</span><b class="de">≈ 800 Ansprachen</b><b class="en">≈ 800 messages</b></div>
+    <div class="calc-row"><span class="de">Erfahrungswert: angenommen</span><span class="en">Typical rate: request accepted</span><b>~35 %</b></div>
+    <div class="calc-row"><span class="de">davon antworten</span><span class="en">of those reply</span><b>~40 %</b></div>
+    <div class="calc-row"><span class="de">davon sagen zu</span><span class="en">of those say yes</span><b>~45 %</b></div>
+    <div class="calc-result"><span class="de">Ergebnis</span><span class="en">Result</span><b class="de">≈ 50 Platzierungen / Backlinks</b><b class="en">≈ 50 placements / backlinks</b></div>
+    <div class="progress-outer"><div class="progress-inner" style="width:100%"></div></div>
+  </div>
+
+  <div class="card">
+    <div class="kicker"><span class="de">In der Praxis</span><span class="en">In practice</span></div>
+    <h2><span class="de">Kunden, mit denen wir das schon gemacht haben</span><span class="en">Clients we have already done this with</span></h2>
+    <p class="lead de">Echte 741-Fallstudien — live und öffentlich einsehbar.</p>
+    <p class="lead en">Real 741 case studies — live and publicly viewable.</p>
+    <div class="success">
+      <a class="scard" href="/case-studies/astrid-lengauer/" data-href-de="/case-studies/astrid-lengauer/" data-href-en="/case-studies/astrid-lengauer-en/" target="_blank" rel="noopener">
+        <b class="de">Astrid Lengauer — Interior Design, Wien</b><b class="en">Astrid Lengauer — Interior Design, Vienna</b>
+        <span class="de">#18 → #1 Maps-Position, ~100 lokale Backlinks, Einzugsgebiet Wien &amp; Steiermark</span>
+        <span class="en">#18 → #1 Maps position, ~100 local backlinks, service area Vienna &amp; Styria</span>
+      </a>
+      <a class="scard" href="/case-studies/veronika-schlirf/" data-href-de="/case-studies/veronika-schlirf/" data-href-en="/case-studies/veronika-schlirf/" target="_blank" rel="noopener">
+        <b class="de">Veronika Schlirf — Naturheilpraxis</b><b class="en">Veronika Schlirf — Naturopathic practice</b>
+        <span class="de">#85 → #1 Maps-Position, 0 → 5,0 ★ Bewertungen, Top 3 im gesamten Einzugsgebiet</span>
+        <span class="en">#85 → #1 Maps position, 0 → 5.0 ★ reviews, top 3 across the entire service area</span>
+      </a>
+      <a class="scard" href="/case-studies/maria-abel/" data-href-de="/case-studies/maria-abel/" data-href-en="/case-studies/maria-abel-en/" target="_blank" rel="noopener">
+        <b>Maria Abel</b>
+        <span class="de">0 → 100 % Top-3-Abdeckung, Ø Rang 1,8 im gesamten Gebiet</span>
+        <span class="en">0 → 100% top-3 coverage, average rank 1.8 across the entire area</span>
+      </a>
+      <a class="scard" href="/case-studies/bernd-laserstein/" data-href-de="/case-studies/bernd-laserstein/" data-href-en="/case-studies/bernd-laserstein-en/" target="_blank" rel="noopener">
+        <b class="de">Bernd Laserstein — Heilpraktiker, Freiburg</b><b class="en">Bernd Laserstein — Naturopath, Freiburg</b>
+        <span class="de">~#6 → Platz 1 Maps-Position, 91 % Business Visibility</span>
+        <span class="en">~#6 → #1 Maps position, 91% business visibility</span>
+      </a>
+    </div>
+    <p class="src de">Ergebnisse aus dem gesamten 741-Programm (Local SEO + Kollaborationen), nicht isoliert nur durch Backlinks. Nach den ersten abgeschlossenen Kollaborations-Kampagnen ergänze ich hier die spezifischen Zahlen.</p>
+    <p class="src en">Results from the full 741 program (local SEO + collaborations), not from backlinks alone. Once the first collaboration campaigns are complete, I add the specific numbers here.</p>
+  </div>
+
+  <div class="card">
+    <div class="kicker"><span class="de">Was du davon hast</span><span class="en">What you get</span></div>
+    <h2><span class="de">Win-win — für dich und den Partner</span><span class="en">Win-win — for you and the partner</span></h2>
+    <div class="winwin de">
+      <div class="wcol">
+        <h3><span class="pill pill-yellow">Für dich</span></h3>
+        <ul>
+          <li>Starke Ranking-Signale durch Inhalte auf deiner Seite, in Zeitungen und auf Partnerseiten</li>
+          <li>Ein echtes regionales Netzwerk</li>
+          <li>Neue Kunden über Empfehlungen</li>
+          <li>Laufende Kollaborationen, die fast von selbst entstehen</li>
+        </ul>
+      </div>
+      <div class="wcol">
+        <h3><span class="pill pill-green">Für den Partner</span></h3>
+        <ul>
+          <li>Ein wertvoller Backlink für sein eigenes Geschäft</li>
+          <li>Sichtbarkeit bei deiner Zielgruppe</li>
+          <li>Ein echter, seriöser Kontakt — keine Kaltakquise ins Leere</li>
+        </ul>
+      </div>
+    </div>
+    <div class="winwin en">
+      <div class="wcol">
+        <h3><span class="pill pill-yellow">For you</span></h3>
+        <ul>
+          <li>Strong ranking signals from content on your site, in newspapers and on partner sites</li>
+          <li>A real regional network</li>
+          <li>New customers through referrals</li>
+          <li>Ongoing collaborations that almost start on their own</li>
+        </ul>
+      </div>
+      <div class="wcol">
+        <h3><span class="pill pill-green">For the partner</span></h3>
+        <ul>
+          <li>A valuable backlink for their own business</li>
+          <li>Visibility with your audience</li>
+          <li>A genuine, trustworthy contact — not cold outreach into the void</li>
+        </ul>
+      </div>
+    </div>
+    <p class="lead de" style="margin-top:16px;">Aus diesen Gesprächen entwickeln sich oft weitere Möglichkeiten — das liegt dann im Ermessen der beteiligten Personen, nicht in unserem Skript.</p>
+    <p class="lead en" style="margin-top:16px;">These conversations often lead to further opportunities — what happens next is up to the people involved, not part of our script.</p>
+  </div>
+
+  <div class="card">
+    <div class="kicker"><span class="de">Was ich von dir brauche</span><span class="en">What I need from you</span></div>
+    <ul class="plain de">
+      <li>Zugang zu deinem LinkedIn-Account für die Ansprache</li>
+      <li>Deine Freigabe für Skript und Nachricht — die stimme ich vorher mit dir ab</li>
+    </ul>
+    <ul class="plain en">
+      <li>Access to your LinkedIn account for the outreach</li>
+      <li>Your approval of the script and message — I agree both with you beforehand</li>
+    </ul>
+  </div>
+
+  <footer class="f">741.studio</footer>
+
+</div>
+
+</body>
+</html>

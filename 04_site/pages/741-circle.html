@@ -1,0 +1,792 @@
+<!DOCTYPE html><!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="www.weavy.ai" data-wf-page="681b040781d5b5e278a6999f" data-wf-site="681b040781d5b5e278a69989">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>741 Circle | The free community for visible practices | 741.Studio</title>
+    <meta content="741 Circle – a free, invite-only community for practices &amp; practitioners: exchange, strategies, education and guest speakers around Google visibility. Request access now." name="description"/>
+    <link rel="canonical" href="https://741.studio/pages/local-seo.html" />
+    <meta content="Local SEO Agency | 741.Studio | Dominate Your Region" property="og:title" />
+    <meta
+        content="Become the market leader in your region. 741.Studio delivers high-impact Local SEO services to put your business at the top of Google Maps and local search."
+        property="og:description" />
+    <meta content="Local SEO Agency | 741.Studio | Dominate Your Region" property="twitter:title" />
+    <meta
+        content="Become the market leader in your region. 741.Studio delivers high-impact Local SEO services to put your business at the top of Google Maps and local search."
+        property="twitter:description" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="/assets/weavy.css"
+        rel="stylesheet" type="text/css"
+         />
+    <!-- Brand Guidelines Color Overrides -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        /* Partner Logos Marquee */
+        .section_partner-logos {
+            padding: 4rem 0;
+            background: #fff;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            overflow: hidden;
+        }
+
+        .marquee-wrapper {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            cursor: grab;
+        }
+
+        .marquee-wrapper:active {
+            cursor: grabbing;
+        }
+
+        .marquee-content {
+            display: flex;
+            gap: 4rem;
+            flex-shrink: 0;
+            padding: 0 2rem;
+            will-change: transform;
+        }
+
+        .logo-item {
+            flex-shrink: 0;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-item img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(1) opacity(0.5);
+            transition: all 0.4s ease;
+        }
+
+        .logo-item:hover img {
+            filter: grayscale(0) opacity(1);
+            transform: scale(1.1);
+        }
+
+        /* Akira Footer Dog Interaction */
+        #akira-traveler {
+            position: absolute;
+            bottom: 0px;
+            animation: runX 30s linear infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+
+        #akira-flipper {
+            animation: flipX 30s step-end infinite;
+        }
+
+        .akira-sprite {
+            width: 96px;
+            height: 96px;
+            position: relative;
+        }
+
+        .akira-frame {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+        .akira-frame-1 {
+            animation: spriteCycle 0.6s step-end infinite;
+            animation-delay: 0s;
+        }
+
+        .akira-frame-2 {
+            animation: spriteCycle 0.6s step-end infinite;
+            animation-delay: 0.15s;
+        }
+
+        .akira-frame-3 {
+            animation: spriteCycle 0.6s step-end infinite;
+            animation-delay: 0.3s;
+        }
+
+        .akira-frame-4 {
+            animation: spriteCycle 0.6s step-end infinite;
+            animation-delay: 0.45s;
+        }
+
+        @keyframes spriteCycle {
+            0% {
+                opacity: 1;
+            }
+
+            25%,
+            50%,
+            75%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes flipX {
+
+            0%,
+            49.99%,
+            100% {
+                transform: scaleX(1);
+            }
+
+            50%,
+            99.99% {
+                transform: scaleX(-1);
+            }
+        }
+
+        /* Global Background Tint Overrides (Replacing Turquoise with Brand Yellow) */
+        .section-hero {
+            background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 34%, rgba(250, 193, 24, 0.35) 71%), url("https://cdn.prod.website-files.com/681b040781d5b5e278a69989/681ccdbeb607e939f7db68fa_BG%20NET%20Hero.avif") !important;
+        }
+
+        /* Local SEO Specific Styles */
+        .seo_section {
+            padding: 6rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .seo_section.is--dark {
+            background-color: #111;
+            color: #fff;
+        }
+
+        .seo_grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 991px) {
+            .seo_grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .seo_highlight {
+            color: var(--brand--lemon);
+            font-weight: 700;
+        }
+
+        .seo_card {
+            background-color: #f8f8f8;
+            padding: 3rem;
+            border-radius: 2rem;
+            border: 1px solid #eee;
+            height: 100%;
+        }
+
+        .seo_card.is--dark {
+            background-color: #1a1a1a;
+            border-color: #333;
+        }
+
+        .seo_step_num {
+            font-family: 'Press Start 2P', cursive;
+            color: var(--brand--lemon);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .seo_map_comparison {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .seo_map_item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .seo_map_item img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .seo_tagline {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--brand--lemon);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .seo_btn {
+            background-color: var(--brand--lemon);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        .seo_btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(250, 193, 24, 0.3);
+        }
+
+        /* Founder Section Styles */
+        .section_founder {
+            background-color: #fcfcfc;
+            padding: 8rem 5%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .founder_grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .founder_grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            p.text-size-medium {
+                font-size: 2.2rem !important;
+                /* scales correctly against 1.8vw root bounds for ~16px mobile text */
+                line-height: 1.4 !important;
+                margin-top: 1rem;
+            }
+        }
+
+        .founder_image_wrapper {
+            position: relative;
+            background: #fff;
+            padding: 1rem;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            transform: rotate(-2deg);
+        }
+
+        .founder_image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .founder_name_overlay {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--brand--lemon);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: rotate(2deg);
+        }
+
+        .founder_name_overlay h3 {
+            margin: 0;
+            font-family: monospace;
+            font-weight: 900;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+            color: #111;
+        }
+
+        .founder_title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #555;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* Video Testimonials Grid */
+        .testimonial_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto;
+        }
+
+        .testimonial_card {
+            background: #000;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            cursor: pointer;
+            border: 1px solid #333;
+        }
+
+        /* Mobile overrides to standardize with homepage */
+        @media (max-width: 767px) {
+            .grid-container.is-hero.is-banner-top {
+                padding-top: 12rem !important;
+            }
+
+            .seo_section p,
+            .seo_section p.text-size-medium {
+                font-size: 2.2rem !important;
+                /* scales correctly against 1.8vw root bounds for ~16px mobile text */
+                line-height: 1.4 !important;
+            }
+
+            .vertical-wrapp {
+                padding-left: 0 !important;
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+
+            .heading_h1-hero {
+                text-align: center !important;
+                margin-top: 20px !important;
+                width: 100% !important;
+                align-self: center !important;
+            }
+
+            .h1-wrapper.extra-bot-pad {
+                margin-bottom: 2rem !important;
+            }
+
+            .paragraph-wrapper {
+                text-align: center !important;
+            }
+
+            .text-size-large {
+                font-size: 2.5rem !important;
+                line-height: 1.15 !important;
+            }
+
+            .seo_btn {
+                font-size: 2.5rem !important;
+                /* equates to 18-20px given html 1.8vw base constraint */
+                padding: 18px 40px !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                margin: 40px auto 0 auto !important;
+                width: max-content !important;
+            }
+
+            .seo_tagline {
+                display: none !important;
+            }
+        }
+    </style>
+    <script
+        type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -o-font-smoothing: antialiased;
+        }
+
+        html,
+        body {
+            overscroll-behavior-y: none;
+        }
+
+        html.lenis {
+            height: auto !important;
+        }
+
+        body.lenis {
+            height: auto !important;
+        }
+    </style>
+    <!-- Nav button forced styling -->
+    <style>
+        .huge_nav-button {
+            mix-blend-mode: normal !important;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script
+        src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989%2F6544eda5f000985a163a8687%2F6830de8fbc3ef49c91c3f557%2Ffinsweetcomponentsconfig-1.0.0.js"
+        type="module" async="" siteId="681b040781d5b5e278a69989" finsweet="components"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.2/dist/css/splide-core.min.css">
+
+<style>
+  .cc-form{max-width:640px;margin:0 auto;background:#fff;border:1px solid #eee;border-radius:2rem;padding:3rem;}
+  .cc-form.is--dark{background:#1a1a1a;border-color:#333;}
+  .cc-field{margin-bottom:1.1rem;text-align:left;}
+  .cc-field label{display:block;font-size:.9rem;font-weight:700;margin-bottom:.4rem;}
+  .cc-form.is--dark .cc-field label{color:#eee;}
+  .cc-field input,.cc-field textarea{width:100%;padding:.85rem 1rem;border:1.5px solid #e2e2d8;border-radius:.7rem;font-size:1rem;font-family:inherit;background:#fafafa;}
+  .cc-field textarea{min-height:96px;resize:vertical;}
+  .cc-field input:focus,.cc-field textarea:focus{outline:none;border-color:var(--brand--lemon,#fac118);background:#fff;}
+  .cc-check{display:flex;gap:.7rem;align-items:flex-start;font-size:.86rem;color:#bbb;margin-bottom:.8rem;text-align:left;line-height:1.45;}
+  .cc-check input{margin-top:.2rem;width:auto;}
+  .cc-err{display:none;background:#3a1512;color:#ffb3a7;border-radius:.6rem;padding:.7rem 1rem;font-size:.9rem;margin:.6rem 0;}
+  .cc-err.show{display:block;}
+  .cc-success{display:none;text-align:center;}
+  .cc-success.show{display:block;}
+  /* CBUM-style value stack */
+  .cc-checks{display:flex;flex-direction:column;gap:12px;max-width:780px;margin:0 auto;}
+  .cc-ck{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #ececec;border-radius:14px;padding:16px 20px;font-size:1.02rem;line-height:1.5;color:#333;box-shadow:0 4px 14px rgba(0,0,0,.04);}
+  .cc-ck .cc-ico{flex-shrink:0;font-size:1.1rem;line-height:1.4;}
+  .cc-ck b{color:#111;}
+  .cc-offer{max-width:780px;margin:28px auto 0;background:#fff7d6;border:1.5px solid #f0d97a;border-radius:16px;padding:18px 24px;text-align:center;font-size:1.05rem;color:#5a4a00;line-height:1.5;}
+  .cc-offer b{color:#7a5c00;}
+  .cc-offer .pill{display:inline-block;background:#111;color:#fac118;font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:8px;}
+  .cc-herooffer{display:inline-block;margin-top:14px;font-size:.92rem;color:#fac118;font-weight:700;}
+  /* clear the fixed mobile header so hero content isn't hidden behind it */
+  @media (max-width:991px){ .cc-hero{ padding-top:140px !important; } }
+</style>
+
+</head>
+
+<body>
+
+    <div class="code_responsive-dom w-embed">
+        <style>
+            html,
+            body {
+                font-size: 1vw;
+            }
+
+            @media screen and (min-width: 1440px) {
+
+                html,
+                body {
+                    font-size: 14.4px;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+
+                html,
+                body {
+                    font-size: 1.8vw;
+                }
+            }
+        </style>
+    </div>
+    <div class="page-wrapper">
+        <div class="main-wrapper">
+            {{> header }}
+
+<!-- HERO -->
+<section class="seo_section is--dark cc-hero" style="padding-top:9rem;">
+<div class="seo_grid">
+<div class="reveal-up">
+<div class="seo_tagline">741 Circle · Invite-only · Free for 3 months</div>
+<h1 class="heading-style-l" style="color:#fff;margin-bottom:1.5rem;">The community for <span class="seo_highlight">visible practices</span>.</h1>
+<p class="text-size-medium">Practice owners, practitioners, coaches and therapists share how they get found on Google &amp; Maps – with real strategies, education and guest speakers.</p>
+<a class="seo_btn" href="#apply">Join free now</a>
+<div class="cc-herooffer">🔓 Join now and your access stays free for good – a small fee applies after 3 months.</div>
+</div>
+<div class="seo_card is--dark reveal-up">
+<h3 class="heading-style-m">Why this room exists</h3>
+<p>You learn visibility fastest from practices that already cracked it. Instead of figuring it out alone, you see what actually works in your niche – and pass your own wins forward.</p>
+<ul style="list-style:none;padding:0;margin-top:1.5rem;">
+<li style="margin-bottom:.9rem;display:flex;gap:1rem;"><span style="color:var(--brand--lemon)">✔</span> Honest exchange, not marketing fluff</li>
+<li style="margin-bottom:.9rem;display:flex;gap:1rem;"><span style="color:var(--brand--lemon)">✔</span> New tactics the moment they work</li>
+<li style="display:flex;gap:1rem;"><span style="color:var(--brand--lemon)">✔</span> Practices &amp; practitioners only – no agency zoo</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="seo_section">
+<div class="reveal-up" style="text-align:center;margin-bottom:3rem;">
+<span class="seo_tagline">What you get when you join ⬇️</span>
+<h2 class="heading-style-l">Everything included – <span class="seo_highlight">from day 1</span></h2>
+</div>
+<div class="cc-checks reveal-up">
+<div class="cc-ck"><span class="cc-ico">✅</span><div><b>Our 4-Phase System</b> – guarantees every key SEO aspect for your visibility.</div></div>
+<div class="cc-ck"><span class="cc-ico">✅</span><div><b>Site check &amp; content research</b> – how to audit your site on every aspect and find the right topics for new content.</div></div>
+<div class="cc-ck"><span class="cc-ico">✅</span><div><b>Goal-oriented marketing classes</b> – actually get things done, together with others in marketing.</div></div>
+<div class="cc-ck"><span class="cc-ico">✅</span><div><b>Direct access to pro trainings</b> – trainings &amp; classes from the professionals.</div></div>
+<div class="cc-ck"><span class="cc-ico">✅</span><div><b>Weekly calls</b> – we review your presence live: website &amp; Google Business Profile.</div></div>
+</div>
+<div class="cc-offer">
+<span class="pill">Right now only</span><br>
+🔒 Join in the <b>next 3 months and your access stays free for good.</b> After that, joining costs a small fee.<br>Lock in your free-for-life spot now.
+</div>
+<div style="text-align:center;"><a class="seo_btn" href="#apply">Join free now</a></div>
+</section>
+
+<section class="seo_section is--dark">
+<div class="reveal-up" style="text-align:center;margin-bottom:4rem;">
+<h2 class="heading-style-l">How you get <span class="seo_highlight">in</span></h2>
+<p class="text-size-medium">Three steps – the invitation comes personally.</p>
+</div>
+<div class="reveal-stagger-group" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;max-width:1000px;margin:0 auto;">
+<div class="seo_card is--dark reveal-item"><div class="seo_step_num">1</div><h3 class="heading-style-s">Apply</h3><p>Fill in a short form – 60 seconds. Tell us who you are and what you're hoping for.</p></div>
+<div class="seo_card is--dark reveal-item"><div class="seo_step_num">2</div><h3 class="heading-style-s">We review</h3><p>We review every application personally – so the community stays high-quality and relevant.</p></div>
+<div class="seo_card is--dark reveal-item"><div class="seo_step_num">3</div><h3 class="heading-style-s">Personal invite</h3><p>If it's a fit, you get your personal invitation by email – with your access link.</p></div>
+</div>
+<div style="text-align:center;"><a class="seo_btn" href="#apply">Request access now</a></div>
+</section>
+
+<section class="seo_section is--dark" id="apply">
+  <div style="max-width:640px;margin:0 auto 2.5rem;text-align:center;">
+    <span class="seo_tagline">Request access</span>
+    <h2 class="heading-style-l" style="color:#fff;">Apply for your seat in 741 Circle</h2>
+    <p class="text-size-medium" style="color:#bbb;">Free, but invite-only – we review every application personally so the room stays high-quality.</p>
+  </div>
+  <form class="cc-form is--dark" id="ccForm" novalidate>
+    <div id="ccBody">
+      <div class="cc-field"><label>Your name *</label><input id="c_name" type="text" autocomplete="name"></div>
+      <div class="cc-field"><label>Email *</label><input id="c_email" type="email" autocomplete="email"></div>
+      <div class="cc-field"><label>Practice / business *</label><input id="c_business" type="text"></div>
+      <div class="cc-field"><label>Your role (e.g. owner, practitioner)</label><input id="c_role" type="text"></div>
+      <div class="cc-field"><label>Website or Google profile (optional)</label><input id="c_web" type="text"></div>
+      <div class="cc-field"><label>What do you want to get out of the community?</label><textarea id="c_motivation"></textarea></div>
+      <label class="cc-check"><input id="c_terms" type="checkbox"><span>I accept the <a href="/pages/privacy.html" target="_blank" style="color:var(--brand--lemon,#fac118)">privacy policy</a>. *</span></label>
+      <label class="cc-check"><input id="c_news" type="checkbox"><span>Send me occasional tips & community updates by email (optional).</span></label>
+      <div class="cc-err" id="ccErr"></div>
+      <button class="seo_btn" id="ccSubmit" type="submit" style="width:100%;margin-top:.6rem;">Request access</button>
+    </div>
+    <div class="cc-success" id="ccSuccess">
+      <div style="font-size:2.4rem;margin-bottom:.6rem;">🎉</div>
+      <h3 class="heading-style-m" style="color:var(--brand--lemon,#fac118);">Application received! 🤝</h3>
+      <p style="color:#ccc;">Thanks – we review every application personally and you'll receive your personal invitation by email shortly.</p>
+    </div>
+  </form>
+</section>
+<script>
+(function(){
+  var SUPABASE_URL="https://bgiljrygqvlgwsrjvhnp.supabase.co", SUPABASE_KEY="sb_publishable_Yuu6gXfuXNQdgWkdIqfU9Q_hmNyX3kH", LANG="en";
+  var FALLBACK="hello@741.studio", FALLBACK_CC="martin@741.studio";
+  var form=document.getElementById('ccForm'), errBox=document.getElementById('ccErr'), btn=document.getElementById('ccSubmit');
+  function v(id){var e=document.getElementById(id);return e?e.value.trim():'';}
+  function showErr(m){errBox.textContent=m;errBox.className='cc-err show';}
+  function ok(){document.getElementById('ccBody').style.display='none';var s=document.getElementById('ccSuccess');s.className='cc-success show';s.scrollIntoView({behavior:'smooth',block:'center'});try{if(window.fbq)fbq('track','Lead');if(window.dataLayer)dataLayer.push({event:'community_apply'});}catch(e){}}
+  function collect(){return{
+    name:v('c_name'),email:v('c_email'),business:v('c_business'),role:v('c_role'),
+    website:v('c_web'),motivation:v('c_motivation'),
+    consent_terms:document.getElementById('c_terms').checked,
+    consent_newsletter:document.getElementById('c_news').checked,
+    lang:LANG,seite:location.href,quelle:'741 Circle',
+    event_id:(function(){try{return (crypto&&crypto.randomUUID)?crypto.randomUUID():('cc-'+Date.now());}catch(e){return 'cc-'+Date.now();}})(),
+    user_agent:(function(){try{return navigator.userAgent||'';}catch(e){return '';}})()
+  };}
+  function submit(p){
+    btn.disabled=true;btn.textContent=(LANG==='de'?'Wird gesendet …':'Sending …');
+    var fb=function(){var b=Object.keys(p).map(function(k){return k+': '+p[k];}).join('%0D%0A');window.open('mailto:'+FALLBACK+'?cc='+FALLBACK_CC+'&subject=741%20Circle%20Bewerbung&body='+b,'_blank');ok();};
+    fetch(SUPABASE_URL+'/rest/v1/community_applications',{method:'POST',headers:{'Content-Type':'application/json','apikey':SUPABASE_KEY,'Prefer':'return=minimal'},body:JSON.stringify(p)})
+      .then(function(r){r.ok?ok():fb();}).catch(fb);
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();errBox.className='cc-err';
+    var p=collect();
+    if(!p.name||!p.email||!p.business){showErr(LANG==='de'?'Bitte fülle alle Pflichtfelder aus.':'Please fill in all required fields.');return;}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(p.email)){showErr(LANG==='de'?'Bitte gib eine gültige E-Mail an.':'Please enter a valid email.');return;}
+    if(!document.getElementById('c_terms').checked){showErr(LANG==='de'?'Bitte akzeptiere den Datenschutz.':'Please accept the privacy policy.');return;}
+    submit(p);
+  });
+})();
+</script>
+
+            {{> footer }}
+        </div>
+    </div>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=681b040781d5b5e278a69989"
+        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+  <script src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/js/webflow.schunk.e0c428ff9737f919.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/js/webflow.schunk.dde2c6d4ef1627b8.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/681b040781d5b5e278a69989/js/webflow.3a34c156.6bb9f3ec92cc8a2c.js" type="text/javascript"></script>
+
+            
+    <!-- Lenis JS -->
+    <script defer src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lenis = new Lenis({
+                lerp: 0.1,
+                wheelMultiplier: 0.9,
+            });
+
+            lenis.on('scroll', ScrollTrigger.update);
+
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+
+            gsap.ticker.lagSmoothing(0);
+
+            // --- Draggable Infinite Marquee Implementation ---
+            (function () {
+                const wrapper = document.querySelector('.marquee-wrapper');
+                const content = document.querySelector('.marquee-content');
+                if (!wrapper || !content) return;
+
+                let x = 0;
+                let isDragging = false;
+                let startX = 0;
+                const speed = 0.6;
+
+                function animate() {
+                    if (!isDragging) {
+                        x -= speed;
+                        const width = content.offsetWidth / 2;
+                        if (x <= -width) x += width;
+                        content.style.transform = `translateX(${x}px)`;
+                    }
+                    requestAnimationFrame(animate);
+                }
+                animate();
+
+                wrapper.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    startX = e.pageX - x;
+                });
+                window.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+                    x = e.pageX - startX;
+                    const width = content.offsetWidth / 2;
+                    if (x <= -width) x += width;
+                    if (x > 0) x -= width;
+                    content.style.transform = `translateX(${x}px)`;
+                });
+                window.addEventListener('mouseup', () => isDragging = false);
+            })();
+        });
+    </script>
+    <!-- Nav button shrink and grow (EDGAR) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const navLinks = document.querySelectorAll(".nav-link-text-block-large");
+
+            // Detect screen width (landscape and down: 767px and below)
+            const isMobileOrTablet = window.matchMedia("(max-width: 767px)").matches;
+
+            if (!isMobileOrTablet) {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "body",
+                        start: "top top",
+                        end: "150px",
+                        scrub: true,
+                        onUpdate: (self) => {
+                            navLinks.forEach(el => {
+                                if (self.progress > 0.5) {
+                                    el.classList.remove("nav-normal-case");
+                                } else {
+                                    el.classList.add("nav-normal-case");
+                                }
+                            });
+                        }
+                    }
+                });
+
+                tl.to(".nav-link-text-block-large", {
+                    fontSize: "12px",
+                    letterSpacing: "0.15px",
+                    ease: "power2.out"
+                }, 0);
+
+                tl.to(".nav-button-spacer", {
+                    height: "0rem",
+                    ease: "power2.out"
+                }, 0);
+            }
+        });
+    </script>
+    <!-- Premium Scroll Reveal Implementation (Reference Standard) -->
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Single Elements: Gentle fade in and slide up
+            const revealElements = document.querySelectorAll('.reveal-up');
+            revealElements.forEach((el) => {
+                gsap.fromTo(el,
+                    {
+                        y: 30,
+                        opacity: 0
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 85%", // Trigger when element's top hits 85% of screen
+                            once: true // Play only once for premium feel
+                        }
+                    }
+                );
+            });
+
+            // Grouped Elements (Cards, Lists, Grids): Staggered gentle fade in and slide up
+            const staggerGroups = document.querySelectorAll('.reveal-stagger-group');
+            staggerGroups.forEach((group) => {
+                const items = group.querySelectorAll('.reveal-item');
+                if (items.length > 0) {
+                    gsap.fromTo(items,
+                        {
+                            y: 30,
+                            opacity: 0
+                        },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.8,
+                            stagger: 0.15, // 150ms delay between each item
+                            ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: group,
+                                start: "top 85%",
+                                once: true
+                            }
+                        }
+                    );
+                }
+            });
+        });
+    </script>
+  {{> consent }}
+</body>
+
+</html>
