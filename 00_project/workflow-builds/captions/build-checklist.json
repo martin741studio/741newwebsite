@@ -1,0 +1,236 @@
+{
+ "workflow_id": "captions",
+ "name": "Captions for video",
+ "created": "2026-10-19",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "0.0": {
+   "status": "done",
+   "title": "Inputs Martin gives confirmed via interactive grill (inputs-grill.md: Job, Surface, Cadence, Limits)",
+   "evidence": "00_project/workflow-builds/captions/inputs-grill.md",
+   "date": "2026-10-19",
+   "note": "grill 2 rounds, 8 cards, 2026-10-19"
+  },
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/captions/block-choice.md",
+   "date": "2026-10-19",
+   "note": "Skill, side effect = Drive copy"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/captions/library-search.md",
+   "date": "2026-10-19",
+   "note": "7 terms, no subtitle workflow in library"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/captions/freshness.md",
+   "date": "2026-10-19",
+   "note": "INDEX 8 days old"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/captions/coverage-map.md",
+   "date": "2026-10-19",
+   "note": "reuse Drive MCP, slopmonster, run.json, registry"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/captions/research-note.md",
+   "date": "2026-10-19",
+   "note": "13 lines"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/captions/use-cases.md",
+   "date": "2026-10-19",
+   "note": "3 use cases"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/captions/test-scenarios.md",
+   "date": "2026-10-19",
+   "note": "3 + 1 scenarios, must-not = Hüwel subtitles"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/captions/hand-run.md",
+   "date": "2026-10-19",
+   "note": "sample dump (no real one yet), 19 blocks, 12 friction points"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/captions/pipeline.md",
+   "date": "2026-10-19",
+   "note": "7 steps, 1 checkpoint"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/captions/freedom.md",
+   "date": "2026-10-19",
+   "note": "3 scripts, 3 heuristics"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/captions/decisions.md",
+   "date": "2026-10-19",
+   "note": "Martin go 2026-10-19 (card)"
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": ".claude/skills/captions/SKILL.md",
+   "date": "2026-10-19",
+   "note": "folder: SKILL.md, scripts/2, references/3, assets/1"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": ".claude/skills/captions/SKILL.md",
+   "date": "2026-10-19",
+   "note": "description WHAT+WHEN+7 triggers+5 NOT"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": ".claude/skills/captions/SKILL.md",
+   "date": "2026-10-19",
+   "note": "8-step checklist, 4 Critical rules"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": ".claude/skills/captions/references/story-rules.md",
+   "date": "2026-10-19",
+   "note": "body 105 lines, references 26-64 lines"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": ".claude/skills/captions/scripts/validate_captions.py",
+   "date": "2026-10-19",
+   "note": "validator + slop + Verification section"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": "00_project/workflow-builds/captions/house-rules.md",
+   "date": "2026-10-19",
+   "note": "10 rules"
+  },
+  "3.7": {
+   "status": "skipped",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "",
+   "date": "2026-10-19",
+   "note": "",
+   "reason": "runs attended only, Martin triggers it and gives the go card; no schedule, no unattended run"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/captions/trigger-tests.md",
+   "date": "2026-10-19",
+   "note": "4/4 passed first run"
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/captions/functional-test.md",
+   "date": "2026-10-19",
+   "note": "24 blocks, PASS 1 round, 5/5, 6 findings patched"
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/captions/baseline.md",
+   "date": "2026-10-19",
+   "note": "0 vs 3 invented facts, 0 vs 2 format violations"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-19",
+   "note": "",
+   "reason": "no plugin; /doctor prompt-audit is an interactive terminal dialog, not available in this session; description tested by 4 trigger tests instead"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/captions/scorecard.md",
+   "date": "2026-10-19",
+   "note": "98.3 %, 0 blocking zeros"
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/captions/decisions.md",
+   "date": "2026-10-19",
+   "note": "Martin go 2026-10-19 (card)"
+  },
+  "5.2": {
+   "status": "todo",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3a": {
+   "status": "done",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "00_project/workflow-registry/registry.json",
+   "date": "2026-10-19",
+   "note": "add-workflow captions; _run.json by intake.py"
+  },
+  "5.3b": {
+   "status": "skipped",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "2026-10-19",
+   "note": "",
+   "reason": "not client-facing: Martin and Celine's own vlog, no client or prospect sees the output"
+  },
+  "5.3": {
+   "status": "done",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/captions-workflow.md",
+   "date": "2026-10-19",
+   "note": "memory file + MEMORY.md line"
+  },
+  "5.4": {
+   "status": "skipped",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "2026-10-19",
+   "note": "",
+   "reason": "not scheduled: Martin triggers each run by hand"
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-19T11:52"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-19T14:48"
+  }
+ ]
+}
