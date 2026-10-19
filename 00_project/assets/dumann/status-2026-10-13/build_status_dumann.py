@@ -47,10 +47,10 @@ cfg = dict(
             ['Überschrift der Startseite', 'Live seit dem 9. Oktober, am 12. Oktober auf „Heilkunde“ angepasst'],
             ['Einleitungsabsatz unter dem Titelbild der Startseite', 'Live seit dem 9. Oktober'],
             ['Fußzeile: „Termine nach Vereinbarung“', 'Live, die Zeile zu Hausbesuchen ist weg'],
-            ['Google-Titel und Google-Text der Startseite', 'Noch nicht: Die Werte vom 9. Oktober wurden beim letzten Veröffentlichen zurückgesetzt. Ich setze sie neu, sobald du bei den ersten Karten zustimmst'],
+            ['Google-Titel und Google-Text der Startseite', 'Noch nicht live. Die Werte vom 9. Oktober stehen aktuell nicht auf der Seite. Ich setze sie neu, sobald du bei den ersten Karten zustimmst'],
         ]},
         {'kind': 'table', 'h': 'Was wir im Hintergrund für dich gebaut haben', 'head': ['Baustein', 'Was er dir bringt'], 'rows': [
-            ['Google-Profil', 'Sieben Kategorien und 40 Leistungen sind gesetzt. Das doppelte Profil ist bereinigt, jetzt läuft alles auf einem Profil'],
+            ['Google-Profil', 'Sieben Kategorien und 40 Leistungen sind gesetzt. Du hast zwei Google-Einträge, beide sind offen. Wir prüfen gerade den besten Weg, sie sauber zu einem zu machen'],
             ['Messung', 'Analytics und Search Console sind seit dem 30. September neu eingerichtet. Dazu ein Sichtbarkeits-Report und eine erste Messung der KI-Sichtbarkeit'],
             ['SEO-Arbeitsplan für die Website', '16 Seiten mit Ist und Soll für Google-Titel, Google-Text und Überschrift. Jede Änderung zeige ich dir vorher und nachher'],
             ['Seitentexte', 'Für die Startseite und drei weitere Seiten (Ernährungsberatung, Behandlungen, Hildegard-Fasten) liegen Entwürfe im Seitenbaum. Du kannst sie lesen und freigeben'],
