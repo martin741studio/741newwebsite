@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Local SEO Agency | 741.Studio | Dominate Your Region</title>
+    <title>741.Studio | Local SEO Agency | Visibility That Drives Revenue</title>
     <meta
         content="Become the market leader in your region. 741.Studio delivers high-impact Local SEO services to put your business at the top of Google Maps and local search."
         name="description" />
     <link rel="canonical" href="https://741.studio/pages/local-seo.html" />
-    <meta content="Local SEO Agency | 741.Studio | Dominate Your Region" property="og:title" />
+    <meta content="741.Studio | Local SEO Agency | Visibility That Drives Revenue" property="og:title" />
     <meta
         content="Become the market leader in your region. 741.Studio delivers high-impact Local SEO services to put your business at the top of Google Maps and local search."
         property="og:description" />
-    <meta content="Local SEO Agency | 741.Studio | Dominate Your Region" property="twitter:title" />
+    <meta content="741.Studio | Local SEO Agency | Visibility That Drives Revenue" property="twitter:title" />
     <meta
         content="Become the market leader in your region. 741.Studio delivers high-impact Local SEO services to put your business at the top of Google Maps and local search."
         property="twitter:description" />
@@ -518,241 +518,499 @@
         <div class="main-wrapper">
             {{> header }}
 
-            <!-- HERO SECTION -->
-            <!-- HERO: homepage split hero slider -->
-{{> hero-slider }}
+<section class="ls2" id="ls2">
+<style>
+          @import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
+          @font-face {
+            font-family: "PPSupplyMono";
+            src: url("https://assets.codepen.io/7558/PPSupplyMono-Regular.ttf") format("truetype");
+            font-weight: normal; font-style: normal; font-display: swap;
+          }
+          #ls2 {
+            --font-mono: "PPSupplyMono", monospace;
+            --font-sans: "PP Neue Montreal", sans-serif;
+            --color-bg: #f7f6f2; --color-text: #1a1a1a;
+            --color-text-muted: rgba(26,26,26,.68); --color-text-light: rgba(26,26,26,.5);
+            --color-card: #fff; --color-card-border: #eceadf; --green: #16a34a; --red: #dc2626;
+          }
+          .ls2 { font-family: var(--font-sans); background: var(--color-bg); color: var(--color-text); padding-top: 100px; overflow: hidden; }
+          .ls2-wrap { max-width: 1240px; margin: 0 auto; padding: 0 2rem; }
+          .ls2 h2 { color: var(--color-text); }
+          .ls2-section-label { font-family: var(--font-mono); font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--color-text-light); margin-bottom: .6rem; }
+          .ls2-section-title { font-size: clamp(1.7rem,3vw,2.6rem); font-weight: 600; letter-spacing: -.01em; margin-bottom: 1rem; max-width: 680px; }
+          .ls2-section-sub { color: var(--color-text-muted); max-width: 680px; font-size: 1.02rem; line-height: 1.5; margin-bottom: 2.5rem; }
+          /* hero */
+          .ls2-hero { padding: 4rem 0 4.5rem; }
+          .ls2-hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: center; }
+          .ls2-h1 { font-size: clamp(2.2rem,4.6vw,3.6rem); line-height: 1.07; font-weight: 600; letter-spacing: -.02em; margin-bottom: 1.1rem; }
+          .ls2-sub { font-size: 1.1rem; color: var(--color-text-muted); line-height: 1.55; margin-bottom: 1.75rem; max-width: 560px; }
+          .ls2-cta { display: inline-flex; align-items: center; gap: .6rem; background: var(--brand--lemon); color: #1a1a1a; font-weight: 600; font-size: 1rem; padding: 1.05rem 2.1rem; border-radius: 100px; text-decoration: none; animation: ls2-breathe 3.2s ease-in-out infinite; }
+          @keyframes ls2-breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.035); } }
+          .ls2-cta-sub { display: block; margin-top: .9rem; font-size: .82rem; color: var(--color-text-light); }
+          .ls2-hero-stat { margin-top: 1.5rem; font-family: var(--font-mono); font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; color: var(--color-text-light); }
+          .ls2-hero-video { border-radius: 16px; overflow: hidden; border: 1px solid var(--color-card-border); aspect-ratio: 16/9; box-shadow: 0 20px 50px rgba(26,26,26,.08); }
+          .ls2-hero-video iframe { width: 100%; height: 100%; border: 0; }
+          /* process */
+          .ls2-process { padding: 3rem 0; }
+          .timeline { position: relative; max-width: 760px; }
+          .timeline::before { content: ""; position: absolute; left: 29px; top: 10px; bottom: 10px; width: 2px; background: var(--color-card-border); }
+          .timeline-fill { position: absolute; left: 29px; top: 10px; width: 2px; height: 0; background: var(--brand--lemon); transition: height 1.6s cubic-bezier(.22,1,.36,1); }
+          .step { display: flex; gap: 1.5rem; margin-bottom: 2.4rem; position: relative; }
+          .step-dot { width: 60px; height: 60px; border-radius: 50%; background: var(--color-text); color: #fff; display: grid; place-items: center; flex: 0 0 auto; z-index: 1; }
+          .step-num { font-family: var(--font-mono); font-weight: 700; font-size: 1.1rem; }
+          .step-body h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: .4rem; }
+          .step-body p { color: var(--color-text-muted); font-size: .95rem; line-height: 1.5; margin: 0; }
+          /* maps example */
+          .ls2-maps { padding: 3rem 0; }
+          .maps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.75rem; }
+          .maps-card { background: var(--color-card); border: 1px solid var(--color-card-border); border-radius: 18px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(26,26,26,.04); }
+          .maps-badge { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: .45rem .9rem; border-radius: 100px; margin-bottom: .9rem; }
+          .maps-badge--today { background: rgba(220,38,38,.1); color: var(--red); }
+          .maps-badge--target { background: rgba(22,163,74,.1); color: var(--green); }
+          .maps-card img, .maps-card svg { width: 100%; height: auto; border-radius: 12px; display: block; }
+          .maps-caption { font-size: .92rem; color: var(--color-text-muted); line-height: 1.55; margin-top: .9rem; }
+          .maps-chips { display: flex; gap: .7rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1rem; }
+          .maps-chip { background: var(--color-card); border: 1px solid var(--color-card-border); border-radius: 100px; padding: .65rem 1.1rem; font-size: .88rem; font-weight: 600; }
+          .maps-footnote { text-align: center; color: var(--color-text-light); font-size: .82rem; max-width: 620px; margin: 0 auto; }
+          /* proof */
+          .ls2-proof { padding: 3rem 0; }
+          .proof-scroll-wrap { position: relative; }
+          .proof-scroll { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x proximity; padding: .5rem 0 1.25rem; scrollbar-width: thin; }
+          .proof-card { flex: 0 0 200px; scroll-snap-align: start; background: var(--color-card); border: 1px solid var(--color-card-border); border-radius: 14px; padding: 1.1rem; }
+          .proof-card--hl { border-color: var(--brand--lemon); background: #fffaf0; }
+          .pc-av { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; display: block; }
+          .pc-av-ini { background: var(--color-text); color: #fff; display: grid; place-items: center; font-family: var(--font-mono); font-weight: 700; font-size: .78rem; }
+          .pc-name { font-weight: 600; font-size: .9rem; margin-top: .7rem; }
+          .pc-role { font-size: .76rem; color: var(--color-text-light); margin-top: .1rem; }
+          .pc-res, .pc-res-link { font-size: .8rem; font-weight: 700; color: var(--green); margin-top: .5rem; display: block; text-decoration: none; }
+          .proof-arrows { display: flex; gap: .6rem; justify-content: flex-end; margin-top: -.5rem; margin-bottom: 1rem; }
+          .proof-arrow { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--color-card-border); background: var(--color-card); cursor: pointer; font-size: 1rem; }
+          .proof-note { font-size: .82rem; color: var(--color-text-light); margin-top: .5rem; }
+          /* testimonials */
+          .ls2-testi { padding: 3rem 0; }
+          .testi-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 1rem; }
+          .testi-card { border-radius: 12px; overflow: hidden; aspect-ratio: 9/16; border: 1px solid var(--color-card-border); }
+          .testi-card iframe { width: 100%; height: 100%; border: 0; }
+          /* growth */
+          .ls2-growth { padding: 3rem 0; }
+          .gw-box { background: var(--color-card); border: 1px solid var(--color-card-border); border-radius: 22px; padding: 2.5rem; max-width: 1000px; margin: 0 auto; box-shadow: 0 10px 30px rgba(26,26,26,.04); }
+          .gw-eyebrow { font-family: var(--font-mono); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--color-text-light); }
+          .gw-title { font-size: 1.6rem; font-weight: 600; margin: .3rem 0 1.5rem; }
+          .gw-compare { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: center; margin-bottom: 1.75rem; }
+          .gw-col { background: var(--color-bg); border-radius: 14px; padding: 1.3rem; }
+          .gw-col--target { border: 1.5px solid var(--brand--lemon); background: #fffaf0; }
+          .gw-col-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--color-text-light); font-weight: 700; }
+          .gw-col-val { font-size: 1.35rem; font-weight: 700; margin: .5rem 0; }
+          .gw-col-sub { font-size: .82rem; color: var(--color-text-muted); }
+          .gw-arrow { font-size: 1.6rem; color: var(--brand--lemon); text-align: center; }
+          .gw-chips { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; border-top: 1px solid var(--color-card-border); padding-top: 1.5rem; }
+          .gw-chip-num { font-size: 1.4rem; font-weight: 700; color: var(--brand--lemon); }
+          .gw-chip-lbl { font-size: .78rem; color: var(--color-text-muted); margin-top: .2rem; }
+          .gw-footnote { font-size: .74rem; color: var(--color-text-light); margin-top: 1.1rem; }
+          /* founder */
+          .ls2-founder { padding: 4rem 0; }
+          .founder-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 3rem; align-items: center; max-width: 1000px; margin: 0 auto; }
+          .founder-img-wrap { position: relative; background: #fff; padding: .8rem; box-shadow: 0 20px 50px rgba(26,26,26,.08); transform: rotate(-2deg); border-radius: 10px; }
+          .founder-img-wrap img { width: 100%; border-radius: 6px; display: block; }
+          .founder-name-overlay { position: absolute; left: 1.4rem; bottom: 1.4rem; color: #fff; }
+          .founder-name-overlay h3 { font-size: 1.1rem; margin: 0; }
+          .founder-name-overlay span { font-size: .78rem; opacity: .85; }
+          .founder-quote { font-size: 1.05rem; line-height: 1.6; color: var(--color-text-muted); margin-bottom: 1.3rem; }
+          /* related */
+          .ls2-related { padding: 3rem 0 2rem; border-top: 1px solid var(--color-card-border); }
+          .rel-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1rem; margin-top: 1.5rem; }
+          .rel-card { display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: var(--color-card); border: 1px solid var(--color-card-border); border-radius: 16px; padding: 1.3rem 1.5rem; text-decoration: none; color: inherit; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+          .rel-card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(26,26,26,.08); border-color: var(--brand--lemon); }
+          .rc-t { font-size: 1rem; font-weight: 600; }
+          .rc-a { flex-shrink: 0; color: var(--brand--lemon); font-size: 1.3rem; font-weight: 800; }
+          /* closing */
+          .ls2-closing { padding: 4rem 0 5rem; text-align: center; }
+          .ls2-closing-title { font-size: clamp(1.5rem,2.8vw,2.1rem); font-weight: 600; margin-bottom: 1.75rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+          /* sticky bar */
+          .ls2-sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; background: #1a1a1a; color: #fff; padding: .9rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; transform: translateY(100%); transition: transform .4s cubic-bezier(.22,1,.36,1); font-family: var(--font-sans); }
+          .ls2-sticky.is-visible { transform: translateY(0); }
+          .ls2-sticky span { font-size: .92rem; font-weight: 600; }
+          .ls2-sticky a { background: var(--brand--lemon); color: #1a1a1a; font-weight: 700; font-size: .85rem; padding: .65rem 1.3rem; border-radius: 100px; text-decoration: none; white-space: nowrap; }
+          @media (prefers-reduced-motion: reduce) {
+            .ls2-cta { animation: none; } .timeline-fill { transition: none; } .ls2-sticky { transition: none; }
+          }
+          @media (max-width: 900px) {
+            .ls2-hero-grid { grid-template-columns: 1fr; }
+            .maps-grid { grid-template-columns: 1fr; }
+            .gw-compare { grid-template-columns: 1fr; } .gw-arrow { transform: rotate(90deg); }
+            .gw-chips { grid-template-columns: repeat(2,1fr); }
+            .founder-grid { grid-template-columns: 1fr; text-align: center; }
+            .testi-grid { grid-template-columns: repeat(2,1fr); }
+          }
+          @media (max-width: 600px) {
+            .ls2 { padding-top: 80px; }
+            .ls2-cta { min-height: 44px; }
+            .testi-grid { grid-template-columns: 1fr 1fr; }
+            .ls2-sticky { padding: .8rem 1rem; }
+          }
+        </style>
+
+<div class="ls2-wrap">
+  <header class="ls2-hero">
+    <div class="ls2-hero-grid">
+      <div class="reveal-up">
+        <h1 class="ls2-h1">Become the first choice in your region.</h1>
+        <p class="ls2-sub">Free visibility audit: we show you in a personal video exactly where you stand today &mdash; and the three biggest levers for more calls and customers.</p>
+        <a class="ls2-cta" href="https://741.studio/pages/visibility-audit.html" data-qz>Start my free audit &rarr;</a>
+        <span class="ls2-cta-sub">Delivered in 2 hours &middot; via WhatsApp &amp; email &middot; GDPR-compliant</span>
+        <p class="ls2-hero-stat">29 real wins &middot; 3-step process</p>
+      </div>
+      <div class="ls2-hero-video reveal-up">
+        <iframe src="https://www.youtube.com/embed/dQ9OE8GSolw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </header>
+
+  <section class="ls2-process">
+    <p class="ls2-section-label">Process</p>
+    <h2 class="ls2-section-title">How we work</h2>
+    <p class="ls2-section-sub">No voodoo, just local SEO strategy. A clear plan to more calls and leads.</p>
+    <div class="timeline reveal-stagger-group">
+      <div class="timeline-fill"></div>
+      <div class="step reveal-item">
+            <div class="step-dot"><span class="step-num" data-count data-to="01">00</span></div>
+            <div class="step-body"><h3>Status-Quo Analysis</h3><p>We check your listings, your website, and your review profile inside out. Where are you leaving potential on the table?</p></div>
+          </div>
+          <div class="step reveal-item">
+            <div class="step-dot"><span class="step-num" data-count data-to="02">00</span></div>
+            <div class="step-body"><h3>Building Visibility</h3><p>We optimize your Google Business Profile, clean up incorrect company data on the web, and create content that attracts local customers.</p></div>
+          </div>
+          <div class="step reveal-item">
+            <div class="step-dot"><span class="step-num" data-count data-to="03">00</span></div>
+            <div class="step-body"><h3>Reviews &amp; Citations</h3><p>We help you systematically collect 5-star reviews and monitor your rankings in Google Maps so you stay at the top permanently.</p></div>
+          </div>
+    </div>
+  </section>
+
+  <section class="ls2-maps">
+    <p class="ls2-section-label">Real Client Example</p>
+    <h2 class="ls2-section-title">What a 741 audit looks like</h2>
+    <p class="ls2-section-sub">A real Google Maps visibility scan from the Fürstenfeldbruck district &mdash; 81 data points, search term &bdquo;heilpraktiker&ldquo;. We create this exact audit for your business, free of charge.</p>
+    <div class="maps-grid reveal-stagger-group">
+      <div class="maps-card reveal-item">
+        <span class="maps-badge maps-badge--today">&#9679; Today &mdash; real scan</span>
+        <img src="/review-assets/agnes-speidel/scan-grid.webp" alt="Google Maps Ranking Scan Beispiel" loading="lazy" width="1000" height="1000">
+        <p class="maps-caption"><b>Around her practice in Olching, the client ranks #1&ndash;2.</b> But just toward Fürstenfeldbruck, Germering, and Puchheim she doesn't appear at all (20+) &mdash; average position 10, only 9% top-3 visibility.</p>
+      </div>
+      <div class="maps-card reveal-item">
+        <span class="maps-badge maps-badge--target">&#9679; The goal &mdash; what it can look like</span>
+        <svg viewBox="0 0 720 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Target scenario: top-3 visibility across the whole service area (simulation)"><rect width="720" height="720" fill="#eef4ee"/><path d="M0 150 L720 130 M0 340 L720 360 M0 560 L720 540 M190 0 L175 720 M430 0 L450 720 M600 0 L585 720" stroke="#dbe6db" stroke-width="10" fill="none"/><g font-family="Arial, sans-serif" font-weight="bold" font-size="22" text-anchor="middle"><circle cx="62" cy="62" r="25" fill="#7aa83f"/><text x="62" y="70" fill="#fff">4</text><circle cx="136" cy="62" r="25" fill="#7aa83f"/><text x="136" y="70" fill="#fff">4</text><circle cx="211" cy="62" r="25" fill="#7aa83f"/><text x="211" y="70" fill="#fff">4</text><circle cx="286" cy="62" r="25" fill="#7aa83f"/><text x="286" y="70" fill="#fff">4</text><circle cx="360" cy="62" r="25" fill="#7aa83f"/><text x="360" y="70" fill="#fff">4</text><circle cx="434" cy="62" r="25" fill="#7aa83f"/><text x="434" y="70" fill="#fff">4</text><circle cx="509" cy="62" r="25" fill="#7aa83f"/><text x="509" y="70" fill="#fff">4</text><circle cx="584" cy="62" r="25" fill="#7aa83f"/><text x="584" y="70" fill="#fff">4</text><circle cx="658" cy="62" r="25" fill="#7aa83f"/><text x="658" y="70" fill="#fff">4</text><circle cx="62" cy="136" r="25" fill="#7aa83f"/><text x="62" y="144" fill="#fff">4</text><circle cx="136" cy="136" r="25" fill="#4d9a3f"/><text x="136" y="144" fill="#fff">3</text><circle cx="211" cy="136" r="25" fill="#4d9a3f"/><text x="211" y="144" fill="#fff">3</text><circle cx="286" cy="136" r="25" fill="#4d9a3f"/><text x="286" y="144" fill="#fff">3</text><circle cx="360" cy="136" r="25" fill="#4d9a3f"/><text x="360" y="144" fill="#fff">3</text><circle cx="434" cy="136" r="25" fill="#4d9a3f"/><text x="434" y="144" fill="#fff">3</text><circle cx="509" cy="136" r="25" fill="#4d9a3f"/><text x="509" y="144" fill="#fff">3</text><circle cx="584" cy="136" r="25" fill="#4d9a3f"/><text x="584" y="144" fill="#fff">3</text><circle cx="658" cy="136" r="25" fill="#7aa83f"/><text x="658" y="144" fill="#fff">4</text><circle cx="62" cy="211" r="25" fill="#7aa83f"/><text x="62" y="219" fill="#fff">4</text><circle cx="136" cy="211" r="25" fill="#4d9a3f"/><text x="136" y="219" fill="#fff">3</text><circle cx="211" cy="211" r="25" fill="#2e8b34"/><text x="211" y="219" fill="#fff">2</text><circle cx="286" cy="211" r="25" fill="#2e8b34"/><text x="286" y="219" fill="#fff">2</text><circle cx="360" cy="211" r="25" fill="#2e8b34"/><text x="360" y="219" fill="#fff">2</text><circle cx="434" cy="211" r="25" fill="#2e8b34"/><text x="434" y="219" fill="#fff">2</text><circle cx="509" cy="211" r="25" fill="#2e8b34"/><text x="509" y="219" fill="#fff">2</text><circle cx="584" cy="211" r="25" fill="#4d9a3f"/><text x="584" y="219" fill="#fff">3</text><circle cx="658" cy="211" r="25" fill="#7aa83f"/><text x="658" y="219" fill="#fff">4</text><circle cx="62" cy="286" r="25" fill="#7aa83f"/><text x="62" y="294" fill="#fff">4</text><circle cx="136" cy="286" r="25" fill="#4d9a3f"/><text x="136" y="294" fill="#fff">3</text><circle cx="211" cy="286" r="25" fill="#2e8b34"/><text x="211" y="294" fill="#fff">2</text><circle cx="286" cy="286" r="25" fill="#136c2e"/><text x="286" y="294" fill="#fff">1</text><circle cx="360" cy="286" r="25" fill="#136c2e"/><text x="360" y="294" fill="#fff">1</text><circle cx="434" cy="286" r="25" fill="#136c2e"/><text x="434" y="294" fill="#fff">1</text><circle cx="509" cy="286" r="25" fill="#2e8b34"/><text x="509" y="294" fill="#fff">2</text><circle cx="584" cy="286" r="25" fill="#4d9a3f"/><text x="584" y="294" fill="#fff">3</text><circle cx="658" cy="286" r="25" fill="#7aa83f"/><text x="658" y="294" fill="#fff">4</text><circle cx="62" cy="360" r="25" fill="#7aa83f"/><text x="62" y="368" fill="#fff">4</text><circle cx="136" cy="360" r="25" fill="#4d9a3f"/><text x="136" y="368" fill="#fff">3</text><circle cx="211" cy="360" r="25" fill="#2e8b34"/><text x="211" y="368" fill="#fff">2</text><circle cx="286" cy="360" r="25" fill="#136c2e"/><text x="286" y="368" fill="#fff">1</text><circle cx="360" cy="360" r="28" fill="#136c2e" stroke="#fac118" stroke-width="5"/><text x="360" y="368" fill="#fff">1</text><circle cx="434" cy="360" r="25" fill="#136c2e"/><text x="434" y="368" fill="#fff">1</text><circle cx="509" cy="360" r="25" fill="#2e8b34"/><text x="509" y="368" fill="#fff">2</text><circle cx="584" cy="360" r="25" fill="#4d9a3f"/><text x="584" y="368" fill="#fff">3</text><circle cx="658" cy="360" r="25" fill="#7aa83f"/><text x="658" y="368" fill="#fff">4</text><circle cx="62" cy="434" r="25" fill="#7aa83f"/><text x="62" y="442" fill="#fff">4</text><circle cx="136" cy="434" r="25" fill="#4d9a3f"/><text x="136" y="442" fill="#fff">3</text><circle cx="211" cy="434" r="25" fill="#2e8b34"/><text x="211" y="442" fill="#fff">2</text><circle cx="286" cy="434" r="25" fill="#136c2e"/><text x="286" y="442" fill="#fff">1</text><circle cx="360" cy="434" r="25" fill="#136c2e"/><text x="360" y="442" fill="#fff">1</text><circle cx="434" cy="434" r="25" fill="#136c2e"/><text x="434" y="442" fill="#fff">1</text><circle cx="509" cy="434" r="25" fill="#2e8b34"/><text x="509" y="442" fill="#fff">2</text><circle cx="584" cy="434" r="25" fill="#4d9a3f"/><text x="584" y="442" fill="#fff">3</text><circle cx="658" cy="434" r="25" fill="#7aa83f"/><text x="658" y="442" fill="#fff">4</text><circle cx="62" cy="509" r="25" fill="#7aa83f"/><text x="62" y="517" fill="#fff">4</text><circle cx="136" cy="509" r="25" fill="#4d9a3f"/><text x="136" y="517" fill="#fff">3</text><circle cx="211" cy="509" r="25" fill="#2e8b34"/><text x="211" y="517" fill="#fff">2</text><circle cx="286" cy="509" r="25" fill="#2e8b34"/><text x="286" y="517" fill="#fff">2</text><circle cx="360" cy="509" r="25" fill="#2e8b34"/><text x="360" y="517" fill="#fff">2</text><circle cx="434" cy="509" r="25" fill="#2e8b34"/><text x="434" y="517" fill="#fff">2</text><circle cx="509" cy="509" r="25" fill="#2e8b34"/><text x="509" y="517" fill="#fff">2</text><circle cx="584" cy="509" r="25" fill="#4d9a3f"/><text x="584" y="517" fill="#fff">3</text><circle cx="658" cy="509" r="25" fill="#7aa83f"/><text x="658" y="517" fill="#fff">4</text><circle cx="62" cy="584" r="25" fill="#7aa83f"/><text x="62" y="592" fill="#fff">4</text><circle cx="136" cy="584" r="25" fill="#4d9a3f"/><text x="136" y="592" fill="#fff">3</text><circle cx="211" cy="584" r="25" fill="#4d9a3f"/><text x="211" y="592" fill="#fff">3</text><circle cx="286" cy="584" r="25" fill="#4d9a3f"/><text x="286" y="592" fill="#fff">3</text><circle cx="360" cy="584" r="25" fill="#4d9a3f"/><text x="360" y="592" fill="#fff">3</text><circle cx="434" cy="584" r="25" fill="#4d9a3f"/><text x="434" y="592" fill="#fff">3</text><circle cx="509" cy="584" r="25" fill="#4d9a3f"/><text x="509" y="592" fill="#fff">3</text><circle cx="584" cy="584" r="25" fill="#4d9a3f"/><text x="584" y="592" fill="#fff">3</text><circle cx="658" cy="584" r="25" fill="#7aa83f"/><text x="658" y="592" fill="#fff">4</text><circle cx="62" cy="658" r="25" fill="#7aa83f"/><text x="62" y="666" fill="#fff">4</text><circle cx="136" cy="658" r="25" fill="#7aa83f"/><text x="136" y="666" fill="#fff">4</text><circle cx="211" cy="658" r="25" fill="#7aa83f"/><text x="211" y="666" fill="#fff">4</text><circle cx="286" cy="658" r="25" fill="#7aa83f"/><text x="286" y="666" fill="#fff">4</text><circle cx="360" cy="658" r="25" fill="#7aa83f"/><text x="360" y="666" fill="#fff">4</text><circle cx="434" cy="658" r="25" fill="#7aa83f"/><text x="434" y="666" fill="#fff">4</text><circle cx="509" cy="658" r="25" fill="#7aa83f"/><text x="509" y="666" fill="#fff">4</text><circle cx="584" cy="658" r="25" fill="#7aa83f"/><text x="584" y="666" fill="#fff">4</text><circle cx="658" cy="658" r="25" fill="#7aa83f"/><text x="658" y="666" fill="#fff">4</text></g><g font-family="Arial, sans-serif"><rect x="435" y="675" width="270" height="34" rx="17" fill="#252525" opacity="0.85"/><text x="570" y="697" fill="#fff" font-size="17" text-anchor="middle" font-weight="bold">Target Scenario (Simulation)</text></g></svg>
+        <p class="maps-caption"><b>Top-3 visibility across the whole district.</b> The market leader (Thomas Loch, Fürstenfeldbruck) covers 41% &mdash; with 46 reviews. The client had just one. This is exactly where the biggest lever is.</p>
+      </div>
+    </div>
+    <div class="maps-chips"><span class="maps-chip">&#128222; More calls straight from Google Maps</span><span class="maps-chip">&#129517; More directions requests to the location</span><span class="maps-chip">&#128101; Customers from the whole surrounding area</span></div>
+    <p class="maps-footnote">Businesses in the Google Maps top 3 (the &bdquo;local pack&ldquo;) get the majority of all clicks, calls, and directions requests &mdash; positions below 10 go largely unnoticed.</p>
+  </section>
+
+  <section class="ls2-proof">
+    <p class="ls2-section-label">Proof</p>
+    <h2 class="ls2-section-title">Is the jump to the top 3 realistic? For these businesses, it was.</h2>
+    <p class="ls2-section-sub">Every name here is real, delivered work &mdash; with the actual ranking jump we achieved.</p>
+    <div class="proof-arrows"><button class="proof-arrow" data-dir="-1" aria-label="zurück" type="button">&larr;</button><button class="proof-arrow" data-dir="1" aria-label="weiter" type="button">&rarr;</button></div>
+    <div class="proof-scroll-wrap">
+      <div class="proof-scroll reveal-stagger-group" id="proofScroll">
+        <article class="proof-card pc--hl reveal-item" style="--i:0">
+          <img class="pc-av" src="/review-assets/people/bali-healing.jpg" alt="Bali Healing, Canggu" loading="lazy">
+          <div class="pc-name">Bali Healing, Canggu</div>
+          <div class="pc-role">Holistic Health Center</div>
+          <div class="pc-res" data-count>▲ Rank 5 → 1 · „Holistic Health Center“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:1">
+          <img class="pc-av" src="/review-assets/people/physio-anatomie.jpg" alt="Physio Anatomie GmbH" loading="lazy">
+          <div class="pc-name">Physio Anatomie GmbH</div>
+          <div class="pc-role">Physiotherapy</div>
+          <div class="pc-res" data-count>▲ Rank 12 → 2 · „Physiotherapie Stuttgart“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:2">
+          <span class="pc-av pc-av-ini">PK</span>
+          <div class="pc-name">Physiotherapie Kraft</div>
+          <div class="pc-role">Physiotherapy</div>
+          <a href="/review-assets/proof/physio-kraft-nachher.jpg" target="_blank" rel="noopener" class="pc-res-link"><div class="pc-res" data-count>▲ Rank 8 → 1 · „Krankengymnastik“</div></a>
+        </article>
+        <article class="proof-card reveal-item" style="--i:3">
+          <span class="pc-av pc-av-ini">TM</span>
+          <div class="pc-name">Torsten Menge</div>
+          <div class="pc-role">Psychotherapy</div>
+          <a href="/review-assets/proof/torsten-menge-nachher.jpg" target="_blank" rel="noopener" class="pc-res-link"><div class="pc-res" data-count>▲ Rank 117 → 3 · „Onkologie-Psychologie“</div></a>
+        </article>
+        <article class="proof-card reveal-item" style="--i:4">
+          <span class="pc-av pc-av-ini">EW</span>
+          <div class="pc-name">Eva Maria Weber</div>
+          <div class="pc-role">Massage Practice</div>
+          <div class="pc-res" data-count>▲ Rank 14 → 2 · „Massagepraxis“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:5">
+          <img class="pc-av" src="/review-assets/people/karin-lorenz.jpg" alt="Karin Lorenz" loading="lazy">
+          <div class="pc-name">Karin Lorenz</div>
+          <div class="pc-role">TCM Practice</div>
+          <div class="pc-res" data-count>▲ Rank 19 → 1 · „Akupunktur & TCM“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:0">
+          <img class="pc-av" src="/review-assets/people/maria-abel.jpg" alt="Maria Abel" loading="lazy">
+          <div class="pc-name">Maria Abel</div>
+          <div class="pc-role">Parent Coaching</div>
+          <a href="/review-assets/proof/maria-abel-100prozent.jpg" target="_blank" rel="noopener" class="pc-res-link"><div class="pc-res" data-count>▲ 0 → 100 % Top-3-Abdeckung</div></a>
+        </article>
+        <article class="proof-card reveal-item" style="--i:1">
+          <img class="pc-av" src="/review-assets/people/reset-stuttgart.jpg" alt="Reset Stuttgart" loading="lazy">
+          <div class="pc-name">Reset Stuttgart</div>
+          <div class="pc-role">Bodywork & Health</div>
+          <div class="pc-res" data-count>▲ Rank 8 → 1 · „Bodywork &amp; Faszientherapie“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:2">
+          <img class="pc-av" src="/review-assets/people/britta-salz.jpg" alt="Britta Salz" loading="lazy">
+          <div class="pc-name">Britta Salz</div>
+          <div class="pc-role">Health Practice</div>
+          <div class="pc-res" data-count>▲ Rank 15 → 2 · „Gesundheitscoaching“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:3">
+          <img class="pc-av" src="/review-assets/people/bernd-laserstein.jpg" alt="Bernd Laserstein" loading="lazy">
+          <div class="pc-name">Bernd Laserstein</div>
+          <div class="pc-role">Health Practice</div>
+          <a href="/review-assets/proof/bernd-laserstein-nachher.jpg" target="_blank" rel="noopener" class="pc-res-link"><div class="pc-res" data-count>▲ Rank 9 → 1 · „Körperpsychotherapie“</div></a>
+        </article>
+        <article class="proof-card reveal-item" style="--i:4">
+          <img class="pc-av" src="/review-assets/people/sabine-brenneisen.jpg" alt="Sabine Brenneisen" loading="lazy">
+          <div class="pc-name">Sabine Brenneisen</div>
+          <div class="pc-role">Health Practice</div>
+          <div class="pc-res" data-count>▲ Rank 11 → 2 · „Ernährungsberatung“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:5">
+          <img class="pc-av" src="/review-assets/people/sven-boehme.jpg" alt="Sven Böhme" loading="lazy">
+          <div class="pc-name">Sven Böhme</div>
+          <div class="pc-role">Naturopath · Stuttgart</div>
+          <a href="/review-assets/proof/boehme-nachher.jpg" target="_blank" rel="noopener" class="pc-res-link"><div class="pc-res" data-count>▲ Rank 17 → 4 · „Heilpraktiker Stuttgart“</div></a>
+        </article>
+        <article class="proof-card reveal-item" style="--i:0">
+          <span class="pc-av pc-av-ini">MG</span>
+          <div class="pc-name">Martina Gross</div>
+          <div class="pc-role">Physiotherapy · Herzogenaurach</div>
+          <a href="/review-assets/proof/martina-gross-nachher.jpg" target="_blank" rel="noopener" class="pc-res-link"><div class="pc-res" data-count>▲ Rank 1 · „Physiotherapie“</div></a>
+        </article>
+        <article class="proof-card reveal-item" style="--i:1">
+          <span class="pc-av pc-av-ini">JF</span>
+          <div class="pc-name">Janina Felix</div>
+          <div class="pc-role">Practice Client</div>
+          <div class="pc-res" data-count>▲ Rank 7 → 1 · „Osteopathie &amp; Kinder“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:2">
+          <img class="pc-av" src="/review-assets/people/justine-felix.jpg" alt="Justine Felix" loading="lazy">
+          <div class="pc-name">Justine Felix</div>
+          <div class="pc-role">Practice Client</div>
+          <div class="pc-res" data-count>▲ Rank 12 → 2 · „Heilpraktikerin für Frauen“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:3">
+          <img class="pc-av" src="/review-assets/people/jeffrey-krautz.jpg" alt="Jeffrey Krautz · Mediwe" loading="lazy">
+          <div class="pc-name">Jeffrey Krautz · Mediwe</div>
+          <div class="pc-role">Medical Sector</div>
+          <div class="pc-res" data-count>▲ Rank 33 → 3 · „Medizinprodukte Vertrieb“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:4">
+          <img class="pc-av" src="/review-assets/people/marita-biel.jpg" alt="Freude am Lernen · Marita Biel" loading="lazy">
+          <div class="pc-name">Freude am Lernen · Marita Biel</div>
+          <div class="pc-role">Learning Coaching</div>
+          <div class="pc-res" data-count>▲ Rank 8 → 1 · „Lerncoaching Stuttgart“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:5">
+          <img class="pc-av" src="/review-assets/people/sabine-verges.jpg" alt="Sabine Verges" loading="lazy">
+          <div class="pc-name">Sabine Verges</div>
+          <div class="pc-role">Local Business</div>
+          <div class="pc-res" data-count>▲ Rank 14 → 2 · „Naturheilverfahren“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:0">
+          <img class="pc-av" src="/review-assets/people/astrid-lengauer.jpg" alt="Astrid Lengauer" loading="lazy">
+          <div class="pc-name">Astrid Lengauer</div>
+          <div class="pc-role">Local Business</div>
+          <div class="pc-res" data-count>▲ Rank 18 → 1 · „Innenarchitektur“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:1">
+          <img class="pc-av" src="/review-assets/people/angelina-everitt.jpg" alt="Angelina Everitt" loading="lazy">
+          <div class="pc-name">Angelina Everitt</div>
+          <div class="pc-role">Local Business</div>
+          <div class="pc-res" data-count>▲ Rank 21 → 3 · „Hypnosetherapie Stuttgart“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:2">
+          <img class="pc-av" src="/review-assets/people/martin-altherr.jpg" alt="Martin Altherr" loading="lazy">
+          <div class="pc-name">Martin Altherr</div>
+          <div class="pc-role">Local Business</div>
+          <div class="pc-res" data-count>▲ Rank 15 → 1 · „Rolfing &amp; Faszientherapie“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:3">
+          <img class="pc-av" src="/review-assets/people/karoline-hengst.svg" alt="Karoline Hengst" loading="lazy">
+          <div class="pc-name">Karoline Hengst</div>
+          <div class="pc-role">Local Business</div>
+          <a href="/review-assets/proof/karoline-hengst-nachher.jpg" target="_blank" rel="noopener" class="pc-res-link"><div class="pc-res" data-count>▲ Rank 28 → 2 · „Homöopathie“</div></a>
+        </article>
+        <article class="proof-card reveal-item" style="--i:4">
+          <img class="pc-av" src="/review-assets/people/claudia-irmscher.jpg" alt="Claudia Irmscher" loading="lazy">
+          <div class="pc-name">Claudia Irmscher</div>
+          <div class="pc-role">Local Business</div>
+          <div class="pc-res" data-count>▲ Rank 11 → 2 · „Heilpraktikerin Psychotherapie“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:5">
+          <img class="pc-av" src="/review-assets/people/michael-kuch.jpg" alt="Michael Kuch" loading="lazy">
+          <div class="pc-name">Michael Kuch</div>
+          <div class="pc-role">Local Business</div>
+          <a href="/review-assets/proof/michael-kuch-nachher.jpg" target="_blank" rel="noopener" class="pc-res-link"><div class="pc-res" data-count>▲ Rank 23 → 3 · „Physiotherapeut“</div></a>
+        </article>
+        <article class="proof-card reveal-item" style="--i:0">
+          <img class="pc-av" src="/review-assets/people/hotel-alpi.jpg" alt="Hotel Alpi · Franz Watschinger" loading="lazy">
+          <div class="pc-name">Hotel Alpi · Franz Watschinger</div>
+          <div class="pc-role">Hotel</div>
+          <div class="pc-res" data-count>▲ Rank 5 → 1 · „Wellnesshotel Südtirol“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:1">
+          <img class="pc-av" src="/review-assets/people/boris-bamberger.jpg" alt="Werbeagentur Bamberger" loading="lazy">
+          <div class="pc-name">Werbeagentur Bamberger</div>
+          <div class="pc-role">Agency · Nuremberg</div>
+          <div class="pc-res" data-count>▲ Rank 12 → 2 · „Werbeagentur Nürnberg“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:2">
+          <span class="pc-av pc-av-ini">DM</span>
+          <div class="pc-name">Die Mediaberater</div>
+          <div class="pc-role">Advertising Agency · Nuremberg</div>
+          <a href="/review-assets/proof/mediaberater-nachher.jpg" target="_blank" rel="noopener" class="pc-res-link"><div class="pc-res" data-count>▲ Rank 14 → 3 · „Online-Marketing-Agentur“</div></a>
+        </article>
+        <article class="proof-card reveal-item" style="--i:3">
+          <img class="pc-av" src="/review-assets/people/dieter-noras.jpg" alt="Dieter Noras" loading="lazy">
+          <div class="pc-name">Dieter Noras</div>
+          <div class="pc-role">Local Business</div>
+          <div class="pc-res" data-count>▲ Rank 9 → 1 · „Ergotherapie &amp; Handtherapie“</div>
+        </article>
+        <article class="proof-card reveal-item" style="--i:4">
+          <img class="pc-av" src="/review-assets/people/dennis-doerfler.jpg" alt="Dennis Dörfler" loading="lazy">
+          <div class="pc-name">Dennis Dörfler</div>
+          <div class="pc-role">Law Firm · Frankfurt</div>
+          <a href="/review-assets/proof/dennis-doerfler-nachher.jpg" target="_blank" rel="noopener" class="pc-res-link"><div class="pc-res" data-count>▲ Rank 17 → 7 · „Fachanwalt Arbeitsrecht“</div></a>
+        </article>
+      </div>
+    </div>
+    <p class="proof-note">A selection of our local SEO and visibility projects across health, hospitality, law, and services.</p>
+  </section>
+
+  <section class="ls2-testi">
+    <p class="ls2-section-label">Success Stories</p>
+    <h2 class="ls2-section-title">What our partners say</h2>
+    <div class="testi-grid reveal-stagger-group">
+      <div class="testi-card reveal-item"><iframe src="https://www.youtube.com/embed/zorMMzm7pf4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="testi-card reveal-item"><iframe src="https://www.youtube.com/embed/fU_mDQmLA0Y" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="testi-card reveal-item"><iframe src="https://www.youtube.com/embed/-3mOyczmvMw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="testi-card reveal-item"><iframe src="https://www.youtube.com/embed/aYnEI0HNFdg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="testi-card reveal-item"><iframe src="https://www.youtube.com/embed/AuAOc1_1VG0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+    </div>
+  </section>
+
+  <section class="ls2-growth">
+    <div class="gw-box reveal-up">
+      <p class="gw-eyebrow">Growth Potential</p>
+      <h2 class="gw-title">The potential, side by side</h2>
+      <div class="gw-compare">
+        <div class="gw-col"><div class="gw-col-label">Current State</div><div class="gw-col-val">Avg. position 10 &middot; top-3 only 9%</div><div class="gw-col-sub">Hidden deep in the results. Hardly any organic calls.</div></div>
+        <div class="gw-arrow">&#10132;</div>
+        <div class="gw-col gw-col--target"><div class="gw-col-label">Target Potential</div><div class="gw-col-val">Top 3 &ndash; district-wide</div><div class="gw-col-sub">A dominant position, right in view of today's customers and patients.</div></div>
+      </div>
+      <div class="gw-chips"><div class="gw-chip"><div class="gw-chip-num">+190%</div><div class="gw-chip-lbl">More calls</div></div><div class="gw-chip"><div class="gw-chip-num">+240%</div><div class="gw-chip-lbl">More direction requests</div></div><div class="gw-chip"><div class="gw-chip-num">+160%</div><div class="gw-chip-lbl">More inquiries</div></div><div class="gw-chip"><div class="gw-chip-num">Top 3 local</div><div class="gw-chip-lbl">Regional authority</div></div></div>
+      <p class="gw-footnote">Illustrative potential figures based on typical local visibility projects.</p>
+    </div>
+  </section>
+
+  <section class="ls2-founder">
+    <div class="founder-grid">
+      <div class="founder-img-wrap reveal-up">
+        <img src="/assets/local-seo/images/founder_martin.png" alt="Martin Drendel" loading="lazy">
+        <div class="founder-name-overlay"><h3>MARTIN DRENDEL</h3><span>CEO &amp; Founder</span></div>
+      </div>
+      <div class="reveal-up">
+        <p class="founder-quote">&bdquo;At 741.Studio, we believe local SEO isn&rsquo;t just about being &lsquo;on the map&rsquo; &mdash; it&rsquo;s about owning your territory. We&rsquo;ve spent years perfecting a system that doesn&rsquo;t just generate clicks, but builds local authority that compounds over time.&ldquo;</p>
+        <p class="founder-quote">&bdquo;Our approach is built on your unit economics. If our SEO doesn&rsquo;t lead to more patients, clients, or customers, we haven&rsquo;t done our job. That&rsquo;s why we don&rsquo;t believe in long-term lock-in contracts. Our results are our retention strategy.&ldquo;</p>
+        <a class="ls2-cta" href="https://741.studio/pages/visibility-audit.html" data-qz>Start my free audit &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ls2-related">
+    <p class="ls2-section-label">Learn More</p>
+    <h2 class="ls2-section-title">More on local visibility</h2>
+    <div class="rel-grid reveal-stagger-group">
+        <a class="rel-card reveal-item" href="/pages/google-maps-fix.html"><span class="rc-t">Fix your Google Maps ranking</span><span class="rc-a">&rarr;</span></a>
+        <a class="rel-card reveal-item" href="/pages/website-design.html"><span class="rc-t">A website that gets found</span><span class="rc-a">&rarr;</span></a>
+        <a class="rel-card reveal-item" href="/case-studies/astrid-lengauer-en/"><span class="rc-t">Case study: Astrid Lengauer</span><span class="rc-a">&rarr;</span></a>
+        <a class="rel-card reveal-item" href="https://741.studio/pages/visibility-audit.html" data-qz><span class="rc-t">Free visibility audit</span><span class="rc-a">&rarr;</span></a>
+        <a class="rel-card reveal-item" href="/pages/growth-plan.html"><span class="rc-t">The 90-day program</span><span class="rc-a">&rarr;</span></a>
+    </div>
+  </section>
+
+  <section class="ls2-closing reveal-up">
+    <h2 class="ls2-closing-title">Ready to become the first choice in your region?</h2>
+    <a class="ls2-cta" href="https://741.studio/pages/visibility-audit.html" data-qz>Start my free audit &rarr;</a>
+    <span class="ls2-cta-sub">Delivered in 2 hours &middot; via WhatsApp &amp; email &middot; GDPR-compliant</span>
+  </section>
+</div>
+
+<div class="ls2-sticky" id="ls2Sticky">
+  <span>Ready for more visibility?</span>
+  <a href="https://741.studio/pages/visibility-audit.html" data-qz>Start my audit &rarr;</a>
+</div>
+
 <script>
-/* local-seo only: hero CTAs open the visibility quiz (data-qz), NOT the shared contact modal */
-document.querySelectorAll('.hero2-btn').forEach(function(a){
-  a.setAttribute('href','https://741.studio/pages/visibility-audit.html');
-  a.setAttribute('data-qz','');
-});
+  (function() {
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function animateCount(el, to) {
+      if (reduceMotion) { el.textContent = String(to).padStart(2,'0'); return; }
+      var start = 0, duration = 700, t0 = null;
+      function step(ts) {
+        if (!t0) t0 = ts;
+        var p = Math.min((ts - t0) / duration, 1);
+        var val = Math.round(start + (to - start) * p);
+        el.textContent = String(val).padStart(2,'0');
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    document.querySelectorAll('#ls2 .step-num').forEach(function(el) {
+      var to = parseInt(el.getAttribute('data-to'), 10) || 0;
+      if ('IntersectionObserver' in window) {
+        var obs = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) { if (entry.isIntersecting) { animateCount(el, to); obs.unobserve(entry.target); } });
+        }, { threshold: 0.6 });
+        obs.observe(el);
+      } else { animateCount(el, to); }
+    });
+    var fill = document.querySelector('#ls2 .timeline-fill');
+    if (fill && 'IntersectionObserver' in window) {
+      var tlObs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            fill.style.height = reduceMotion ? '100%' : '0%';
+            requestAnimationFrame(function() { fill.style.height = '100%'; });
+            tlObs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      tlObs.observe(document.querySelector('#ls2 .timeline'));
+    }
+    var proofScroll = document.getElementById('proofScroll');
+    document.querySelectorAll('#ls2 .proof-arrow').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        if (!proofScroll) return;
+        var dir = parseInt(btn.getAttribute('data-dir'), 10);
+        proofScroll.scrollBy({ left: dir * 420, behavior: reduceMotion ? 'auto' : 'smooth' });
+      });
+    });
+    var sticky = document.getElementById('ls2Sticky');
+    if (sticky) {
+      window.addEventListener('scroll', function() {
+        sticky.classList.toggle('is-visible', window.scrollY > 900);
+      }, { passive: true });
+    }
+  })();
 </script>
-
-            <!-- INTRO SECTION -->
-            <section class="seo_section">
-                <div class="seo_grid">
-                    <div class="reveal-up">
-                        <h2 class="heading-style-l">Your Team for <span class="seo_highlight">Regional Dominance</span>
-                        </h2>
-                        <p class="text-size-medium">
-                            Your customers are no longer searching in the phone book — they are searching on Google and
-                            Google Maps. And they decide in seconds. If your company doesn't shine in the top positions
-                            there, the revenue goes to the competitor two streets away.
-                        </p>
-                        <p class="text-size-medium">
-                            As local SEO experts, we optimize your Google Business Profile and your local online
-                            presence. We optimize for top rankings in search engines and for real customer growth in
-                            your region. From a perfect Google Business Profile to local visibility on all devices: we
-                            make you the first choice in your neighborhood.
-                        </p>
-                        <a href="/pages/visibility-audit.html" class="seo_btn" data-qz>Start Locally
-                            Now</a>
-                    </div>
-                    <div class="seo_card reveal-up">
-                        <div class="video-container"
-                            style="margin-bottom: 2rem; border-radius: 1rem; overflow: hidden; position: relative; padding-bottom: 56.25%; height: 0;">
-                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                                src="https://www.youtube.com/embed/dQ9OE8GSolw" title="Was Agenturen verstecken: von Anfang bis Ende, nichts versteckt"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <h3 class="heading-style-m">Why Local SEO Matters</h3>
-                        <p>Over 50% of all Google users automatically supplement their search with a location. If you
-                            aren't in the "Local Pack" (the top 3), you don't exist for them.</p>
-                    </div>
-                </div>
-            </section>
-
-            {{> partner-logos }}
-            <!-- GOOGLE BUSINESS PROFILE SECTION -->
-            <section class="seo_section is--dark">
-                <div class="seo_grid">
-                    <div class="seo_card is--dark reveal-up">
-                        <div
-                            style="position: relative; padding-bottom: 62.5%; height: 0; margin-bottom: 2rem; border-radius: 1rem; overflow: hidden;">
-                            <iframe
-                                src="https://www.loom.com/embed/0643224ee99e43298d7d41c9ae06fc0a?hide_owner=true&hide_share=true&hide_title=true&hide_embed_top_bar=true"
-                                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
-                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            </iframe>
-                        </div>
-                        <div class="seo_tagline">Your Digital Shop Window</div>
-                        <h3 class="heading-style-m">Google Business Profile</h3>
-                        <p>An entry in Google Maps is mandatory today — but only optimized profiles win. We transform
-                            your standard entry into a customer magnet.</p>
-                    </div>
-                    <div class="reveal-up">
-                        <h2 class="heading-style-l">Dominate the <span class="seo_highlight">Local Pack</span></h2>
-                        <p class="text-size-medium">
-                            We bring your Google Profile into the "Local Pack" (the coveted top 3 results) into the top
-                            positions. With perfect data (NAP consistency), local citations, and review management, you
-                            become the first choice in your region and location.
-                        </p>
-                        <ul style="list-style-type: none; padding: 0;">
-                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
-                                <span style="color: var(--brand--lemon);">✔</span> NAP Consistency Check
-                            </li>
-                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
-                                <span style="color: var(--brand--lemon);">✔</span> Review Management Strategy
-                            </li>
-                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
-                                <span style="color: var(--brand--lemon);">✔</span> Local Link Building
-                            </li>
-                        </ul>
-                        <a href="/pages/visibility-audit.html" class="seo_btn" data-qz>Optimize My
-                            Google Profile</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- STRATEGY ROADMAP SECTION -->
-            <section class="seo_section">
-                <div style="text-align: center; margin-bottom: 4rem;" class="reveal-up">
-                    <h2 class="heading-style-l">Our Roadmap for Your <span class="seo_highlight">Location</span></h2>
-                    <p class="text-size-medium">No voodoo, just local SEO strategy. We follow a clear plan to get you
-                        calls and leads.</p>
-                </div>
-                <div class="reveal-stagger-group"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
-                    <div class="seo_card reveal-item">
-                        <div class="seo_step_num">01</div>
-                        <h3 class="heading-style-s">Status-Quo Analysis</h3>
-                        <p>We check your listings, your website, and your review profile inside out. Where are you
-                            leaving potential on the table?</p>
-                    </div>
-                    <div class="seo_card reveal-item">
-                        <div class="seo_step_num">02</div>
-                        <h3 class="heading-style-s">Building Visibility</h3>
-                        <p>We optimize your Google Business Profile, clean up incorrect company data on the web, and
-                            create content that attracts local customers.</p>
-                    </div>
-                    <div class="seo_card reveal-item">
-                        <div class="seo_step_num">03</div>
-                        <h3 class="heading-style-s">Reviews and Leads</h3>
-                        <p>We help you systematically collect 5-star reviews and monitor your rankings in Google Maps so
-                            you stay at the top permanently.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- RESULTS / COMPARISON SECTION -->
-            <section class="seo_section is--dark">
-                <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem;" class="reveal-up">
-                    <h2 class="heading-style-l">Real Success: <span class="seo_highlight">Before & After</span></h2>
-                    <p>How local SEO works can be read for a long time. You can only really understand it when you see
-                        it. Here are the results after just a few weeks of optimization.</p>
-                </div>
-                <div class="reveal-stagger-group"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
-                    <div class="seo_map_item reveal-item">
-                        <img src="/assets/local-seo/images/analytics_1.webp" loading="lazy" alt="Growth Analytics 1"
-                            style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-                    </div>
-                    <div class="seo_map_item reveal-item">
-                        <img src="/assets/local-seo/images/analytics_2.webp" loading="lazy" alt="Growth Analytics 2"
-                            style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-                    </div>
-                    <div class="seo_map_item reveal-item">
-                        <img src="/assets/local-seo/images/analytics_3.webp" loading="lazy" alt="Growth Analytics 3"
-                            style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-                    </div>
-                    <div class="seo_map_item reveal-item">
-                        <img src="/assets/local-seo/images/analytics_4.webp" loading="lazy" alt="Growth Analytics 4"
-                            style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-                    </div>
-                    <div class="seo_map_item reveal-item">
-                        <img src="/assets/local-seo/images/analytics_5.webp" loading="lazy" alt="Growth Analytics 5"
-                            style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-                    </div>
-                    <div class="seo_map_item reveal-item">
-                        <img src="/assets/local-seo/images/analytics_6.webp" loading="lazy" alt="Growth Analytics 6"
-                            style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-                    </div>
-                    <div class="seo_map_item reveal-item">
-                        <img src="/assets/local-seo/images/analytics_7.webp" loading="lazy" alt="Growth Analytics 7"
-                            style="width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-                    </div>
-                </div>
-                <div style="text-align: center; margin-top: 4rem;">
-                    <a href="/pages/visibility-audit.html" class="seo_btn" data-qz>I Want These
-                        Results</a>
-                </div>
-            </section>
-
-            <!-- VIDEO TESTIMONIALS SECTION -->
-            <section class="seo_section is--dark">
-                <div style="text-align: center; margin-bottom: 4rem;" class="reveal-up">
-                    <div class="seo_tagline">Success Stories</div>
-                    <h2 class="heading-style-l">What Our <span class="seo_highlight">Partners</span> Say</h2>
-                </div>
-
-                <div class="testimonial_grid reveal-stagger-group">
-                    <div class="testimonial_card reveal-item">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zorMMzm7pf4"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="testimonial_card reveal-item">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/fU_mDQmLA0Y"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="testimonial_card reveal-item">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-3mOyczmvMw"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="testimonial_card reveal-item">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aYnEI0HNFdg"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="testimonial_card reveal-item">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AuAOc1_1VG0"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FOUNDER SECTION -->
-            <section class="section_founder">
-                <div class="founder_grid">
-                    <div class="founder_image_wrapper reveal-up">
-                        <img src="/assets/local-seo/images/founder_martin.png" loading="lazy" alt="Martin Drendel"
-                            class="founder_image">
-                        <div class="founder_name_overlay">
-                            <h3>MARTIN DRENDEL</h3>
-                            <span class="founder_title">CEO & Founder</span>
-                        </div>
-                    </div>
-                    <div class="reveal-up">
-                        <h2 class="heading-style-l" style="margin-bottom: 2rem;">A Personal Word from our <span
-                                class="seo_highlight">Founder</span></h2>
-                        <p class="text-size-medium" style="margin-bottom: 1.5rem;">
-                            "At 741.Studio, we believe that Local SEO is not about just being 'on the map'. It's about
-                            owning your territory. We've spent years perfecting a system that doesn't just generate
-                            clicks, but builds local authority that compounds over time."
-                        </p>
-                        <p class="text-size-medium" style="margin-bottom: 2.5rem;">
-                            Our approach is built around your unit economics. If our SEO doesn't lead to more patients,
-                            clients, or customers, we haven't done our job. That's why we don't believe in long-term
-                            lock-in contracts. Our results are our retention strategy.
-                        </p>
-                        <a href="/pages/visibility-audit.html" class="seo_btn" data-qz>Work with
-                            us</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FOOTER -->
+</section>
             {{> footer }}
         </div>
     </div>

@@ -2,6 +2,16 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "localseo-pool",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "00_project/assets/741studio/cro-b-local-seo/00-element-pool/serve_pool.py",
+        "8819",
+        "00_project/assets/741studio/cro-b-local-seo/00-element-pool"
+      ],
+      "port": 8819
+    },
+    {
       "name": "kicms-proto",
       "runtimeExecutable": "python3",
       "runtimeArgs": [
@@ -140,6 +150,27 @@
         "/Users/martindrendel/741website/00_project/client-work-visibility/prototype"
       ],
       "port": 8988
+    },
+    {
+      "name": "dash-proto",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8992",
+        "--directory",
+        "/Users/martindrendel/741website/00_project/client-dashboard-redesign/prototype"
+      ],
+      "port": 8992
+    },
+    {
+      "name": "portfolio-pool",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "00_project/assets/741studio/cro-b-portfolio/00-element-pool/serve_pool.py",
+        "8818"
+      ],
+      "port": 8818
     }
   ]
 }
