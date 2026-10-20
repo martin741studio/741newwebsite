@@ -36,15 +36,15 @@
 **Status:** open
 
 ## Card 6: STÜRZL — 4 workflow results waiting for approval > 3 days
-**Martin's answer:** a — These are open tasks for the client; send Email-Reminder about portal process
-**Action:** Agent sends reminder email to STÜRZL about open portal tasks
-**Owner:** Agent
-**Due:** 2026-10-21
-**Status:** open
+**CORRECTED 2026-10-20 (re-check):** Original answer was wrong. Verified against registry.json: audit, cro, pool, cro_b are all AGENT-completed deliverables (status "fertig, Freigabe offen"), local files in the repo, waiting for Martin's own review — not client portal tasks. No reminder email to STÜRZL.
+**Martin reviewed walk queue 2026-10-20:** audit (Score 32/100) — approved. cro (Variante A, 37/44) — approved. pool (54 items, Drive uploaded) — approved. cro_b (Variante B, 38/44) — approved.
+**Action:** All 4 marked "freigegeben" in registry.json.
+**Owner:** Martin (done)
+**Status:** done
 
 ## Card 7: Hüwel — 1 workflow result waiting for approval > 3 days
-**Martin's answer:** a — These are open tasks for the client; send Email-Reminder about portal process
-**Action:** Agent sends reminder email to Hüwel about open portal tasks + offers help
-**Owner:** Agent
-**Due:** 2026-10-21
-**Status:** open
+**CORRECTED 2026-10-20 (re-check):** Original answer was wrong. Verified against registry.json: "pool" is an AGENT-completed content-pool report (status "fertig, Freigabe offen"), local file in the repo, waiting for Martin's own review — not a client portal task. No reminder email to Hüwel.
+**Martin reviewed walk queue 2026-10-20:** Parked — Martin wants to look at the content-pool report himself before approving.
+**Action:** None yet; registry.json status unchanged ("fertig, Freigabe offen").
+**Owner:** Martin
+**Status:** parked

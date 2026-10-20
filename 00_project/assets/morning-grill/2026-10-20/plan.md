@@ -65,7 +65,7 @@ Hallo Ulrike,
 
 wegen eines wichtigen internen Termins muss ich leider unseren 16:00-Termin heute absagen.
 
-Unser Termin morgen um 14:00 WITA bleibt bestehen — freue mich auf das Gespräch dann.
+Mein Termin mit dir morgen um 14:00 WITA bleibt bestehen — freue mich auf das Gespräch dann.
 
 Viele Grüße
 Martin
@@ -76,29 +76,29 @@ Martin
 ```text
 Hallo STÜRZL-Team,
 
-bei uns im Portal liegen 4 Aufgaben auf euch, die längere Zeit auf eine Entscheidung warten:
+im Portal liegen bei mir 4 Aufgaben auf euch, die längere Zeit auf eine Entscheidung warten:
 • audit (seit 17.10.)
 • cro (seit 16.10.)
 • pool (seit 15.10.)
 • cro_b (seit 14.10.)
 
-Könnt ihr ein Feedback geben, ob alles klar ist? Falls Fragen oder Hilfe nötig ist, gebt Bescheid.
+Könnt ihr mir ein Feedback geben, ob alles klar ist? Falls ihr Fragen habt oder Hilfe braucht, ruft mich an.
 
 Viele Grüße
-741 Studio
+Martin
 ```
 **Status:** Draft, ready to send (Card 6)
 
 ### Card 7: Hüwel — Reminder email with help offer
 ```text
-Hallo Hüwel-Team,
+Hallo Hüwel,
 
-im Portal wartet noch 1 Aufgabe auf eure Entscheidung (pool, seit 14.10.).
+im Portal wartet noch 1 Aufgabe auf dich, die längere Zeit offen ist (pool, seit 14.10.).
 
-Wenn ihr Fragen habt oder Hilfe braucht, können wir gerne kurz telefonieren — schreibt uns Bescheid.
+Wenn du Fragen hast oder Hilfe brauchst, ruf mich an — ich helfe gerne.
 
 Viele Grüße
-741 Studio
+Martin
 ```
 **Status:** Draft, ready to send (Card 7)
 
