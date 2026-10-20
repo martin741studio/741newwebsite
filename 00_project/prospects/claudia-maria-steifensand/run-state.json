@@ -1,0 +1,127 @@
+{
+ "slug": "claudia-maria-steifensand",
+ "steps": {
+  "intake": {
+   "agent": "orchestrator",
+   "status": "done",
+   "at": "2026-10-13T12:44",
+   "outputs": [
+    "intake.md",
+    "intake.json",
+    "browser-queue.jsonl"
+   ],
+   "blockers": []
+  },
+  "demand": {
+   "agent": "A",
+   "status": "done",
+   "at": "2026-10-13T12:47",
+   "outputs": [
+    "demand.md",
+    "evidence/dfs-volumes-ads.json",
+    "evidence/dfs-serp-1.json",
+    "evidence/dfs-serp-2.json",
+    "evidence/dfs-serp-name.json",
+    "evidence/dfs-serp-name2.json",
+    "evidence/dfs-backlinks-summary.json",
+    "evidence/dfs-refdomains-spam.json"
+   ],
+   "cost_usd": 0.1501,
+   "blockers": [
+    "No gap keyword passes the rule: she is organic top 20 for bestatter riesa (5) and bestattungsinstitut riesa (12); town volumes are 20 or no number; second volume call with town+service terms proposed (about 0.09 USD)"
+   ]
+  },
+  "site": {
+   "agent": "B",
+   "status": "done",
+   "at": "2026-10-13T12:49",
+   "outputs": [
+    "site-findings.md",
+    "evidence/site.json",
+    "evidence/site-pages.json",
+    "evidence/comp-pages.json"
+   ],
+   "blockers": []
+  },
+  "homepage": {
+   "agent": "C",
+   "status": "done",
+   "at": "2026-10-13T12:50",
+   "started": "2026-10-13T12:45",
+   "outputs": [
+    "draft/index.html",
+    "draft/haus.jpg",
+    "draft/trauerhalle.jpg",
+    "evidence/home-draft-1440.jpg",
+    "evidence/scorecard-today.md",
+    "homepage.md",
+    "../../../04_site/public/review-assets/claudia-maria-steifensand/startseite-entwurf.webp",
+    "../../../04_site/public/review-assets/claudia-maria-steifensand/startseite-heute.webp",
+    "../../../04_site/public/review-assets/claudia-maria-steifensand/foto-1.webp",
+    "../../../04_site/public/review-assets/claudia-maria-steifensand/foto-2.webp",
+    "../../../04_site/public/review-assets/claudia-maria-steifensand/foto-3.webp"
+   ],
+   "score_today": "13/44",
+   "draft_home_secs": 7.9,
+   "blockers": [],
+   "notes": [
+    "Claudia Maria Steifensand not named on the site; imprint Inhaberin Conny Pinkert-Stockert",
+    "evidence/home-images.txt missing (not needed, images from curl)",
+    "2 Google entries, same phone"
+   ]
+  },
+  "scan": {
+   "agent": "D",
+   "status": "done",
+   "at": "2026-10-13T12:53",
+   "outputs": [
+    "scan-search.md",
+    "competitors.md",
+    "evidence/falcon-report-3767da8e53c5506.json",
+    "evidence/scan-grid.png",
+    "../../04_site/public/review-assets/claudia-maria-steifensand/scan-grid.webp"
+   ],
+   "blockers": []
+  },
+  "operator": {
+   "agent": "O",
+   "status": "done",
+   "at": "2026-10-13T12:49",
+   "started": "12:45:14",
+   "outputs": [
+    "evidence/google-panel-2026-10-13.md",
+    "evidence/google-panel-2-2026-10-13.md",
+    "evidence/home-today-1440.jpg",
+    "evidence/home-today-1440-headless-with-cookie-banner.jpg",
+    "evidence/home-images.txt",
+    "../_replies/jan-dominik-gunkel-2026-10-13.md"
+   ],
+   "blockers": [
+    "chat: needs SECOND, active is Martin Drendel (main)",
+    "reply-schwarz: needs SECOND, active is Martin Drendel (main)"
+   ]
+  },
+  "writer": {
+   "agent": "E",
+   "status": "done",
+   "at": "2026-10-13T12:57",
+   "started": "12:50:09",
+   "outputs": [
+    "prospect.json",
+    "prospect.skeleton2.json",
+    "../../../04_site/review/claudia-maria-steifensand/index.html",
+    "evidence/factcheck-auto.md",
+    "_run.json"
+   ],
+   "todo_replaced": 92,
+   "validate": "0 errors, 1 warning (no loom_url)",
+   "factcheck": "0 WRONG, 0 MISMATCH; 2 not found = calc.val 1500 (labelled assumption)",
+   "slop": "5/5 (hero+headlines+guide); 5/5 all visible strings with claims list",
+   "blockers": [
+    "Template text in build_page.py says 'deine Website', 'deinem Google-Eintrag', 'einen Betrieb wie deinen' and 'Mehrumsatz / Jahr': implies Claudia owns the business; needs a template change or Martin's OK",
+    "foto-3.webp = allich9.jpg (urn arrangement, surname in the original file name); check if Martin wants a family arrangement photo on the page",
+    "Claudia's role at Pinkert und Partner is unknown (LinkedIn chat not read); page avoids owner wording"
+   ]
+  }
+ }
+}

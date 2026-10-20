@@ -320,6 +320,7 @@ When Martin sends the Loom URL:
    - it delivers the promise from the chat ("wie versprochen …") and names 1–2 real findings from the video,
    - **it always ends with the email ask** (Martin, 2026-10-12): Martin wants to send the analysis by email as well and asks for the email address. German model: „Ich schicke dir die Analyse auch gern per E-Mail, dann hast du alles an einem Ort. Magst du mir deine E-Mail-Adresse geben? Das wäre super.“
    - **When the prospect gives the email address and Martin has sent the analysis by email** (Martin, 2026-10-13): add the person to the in-house newsletter list (Supabase 741-leads, table `newsletter_contacts`) with `status` = `subscribed` (Martin's decision 13.10.2026), `consent_at` = now, tags `erst-analyse` + `stadt:<city>` + `branche:<branch>`, `source` = `review-page`, and `meta` = review URL, send date, channel, `status_set_by`. First contact: Ana Fredel, 13.10.2026.
+   - **Add what the video left out** (Martin, 2026-10-14): from the transcript check, take 1–2 strong page findings that Martin did not mention in the video and add them as a short block („Zwei Punkte, die im Video nicht vorkommen, aber auf der Seite stehen:“ with • bullets), only when they add value.
    - **Never say it is part of a process** (Martin, 2026-10-12): no „Das gehört bei uns zum Ablauf“, no „Workflow“, „Prozess“ or „Standard“ in the message. The ask is a personal offer, nothing more.
 
 When Martin says the page is approved, run `workflow_registry.py approve --client "<Name>" --workflow prospect`.

@@ -62,6 +62,7 @@ Done for one day means all of these are true:
 | D36 | Task model | The Freigabe chat built the task model (tables `work_*`: work_items, work_actors, work_evidence, work_events, work_client_health …, RLS admin all / delivery read) on 13.10. with Martin's go; my 23 tasks were imported (source 'grill', source_id '<date>/tNN'). The Tasks tab now reads `work_items` (fallback: snapshot). `publish_tasks.py` writes my tasks idempotently (rules in the SKILL). Scheduled runs do NOT write tasks until Martin says go (the card was dismissed 13.10.); only the one snapshot row stays approved. |
 | D37 | Night queue | Requested by the Night Shift chat (spec 00_project/night-shift-server-workflow.md §3, §14); Martin's go 13.10.: the 17:00 run adds the card 'Night queue <date>' (≤ 8 night-suitable agent tasks), writes only his ticked items to `reporting/night-shift/queue/<date>.json` with `build_night_queue.py` (validates classes, limits, inputs, confirmed_by). NO ANSWER = NO FILE = no night run (the 17:30 read-only fallback of the spec is NOT used). The 06:13 run shows `REVIEW.md` results as release cards (S6). |
 | D18 | Leads | In the daily 741 line. A lead gets a card only when a follow-up is due or older than 7 days. |
+| D38 | WhatsApp + email scan | Martin 14.10.: the grill reads his local WhatsApp (Mac app) and Airmail (all accounts, unified inbox) for a summary, prepared answers and prepared actions, routed to the right chat. WhatsApp: business chats only (clients, team, prospects), no personal/family chats. No connector exists for either, so access is via computer-use (one-time grant per app), reading the screen. Voice notes are transcribed only if the audio file can be found on disk (`whisper --model small`); screen-reading alone gives no audio. Runs ONLY in the interactive grill with Martin present — never in the 06:00/17:00 scheduled task. See S14, S15. |
 
 ## 2. Daily rhythm
 
@@ -98,8 +99,10 @@ Rule: each source has a bookmark in `state/bookmarks.json` (R6.1 of the workflow
 | S11 | Yesterday | `<yesterday>/evening-log.md`, `state/cards.json` | Carry-over, open and parked cards (R7) | commitments |
 | S13 | Deadline sweep | `scan.py read_deadlines()` over ALL memory files | Dated deadlines without a done note | open deadlines |
 | S12 | 741 level | `00_project/revenue-model-100k.md`, prospects `_run.json`, lead memory files | Pipeline line, follow-ups due | agency numbers |
+| S14 | WhatsApp (Mac app) | **Interactive grill only, Martin present.** computer-use opens WhatsApp.app (one-time access grant), reads business chats only (clients, team, prospects — no personal/family chats). Voice notes: locate the media file on disk and transcribe with `whisper --model small` (memory `audio-transcription-fast`); screen-reading alone cannot transcribe audio. | Summary per chat, prepared answers (drafts), prepared actions, routed to the client's chat or team drafts | client/team WhatsApp messages |
+| S15 | Email (Airmail, all accounts, unified inbox) | **Interactive grill only, Martin present.** computer-use opens Airmail's unified inbox (all connected accounts). Business-relevant mail; same drafting and routing rules as S14. | Summary, prepared answers, prepared actions | email |
 
-Not read in v1: Gmail and WhatsApp (no connector with read rights for WhatsApp; Gmail later, read only).
+Decided 2026-10-14 (D38, see decisions table): S14/S15 never run in the unattended 06:00/17:00 scheduled task — personal data, no one watching. They run only when Martin says "grill me" (or asks directly) and are present in the chat.
 
 ## 4. Morning scan (M0)
 

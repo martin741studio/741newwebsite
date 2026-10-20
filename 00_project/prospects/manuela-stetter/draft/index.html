@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entwurf erster Bildschirm – Naturheilpraxis Manuela Stetter</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--acc:#2C7E94;--acc-d:#1f5f70;--head:#1f4f5c;--ink:#2d2f31;--cream:#f4ede6;--gold:#c9a227;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;width:100%;height:100vh;overflow:hidden}
+  .bar{background:var(--acc-d);color:#fff;font-size:15px;text-align:center;padding:10px}
+  .bar b{font-weight:700}
+  header{display:flex;align-items:center;justify-content:space-between;padding:12px 120px;border-bottom:1px solid #eee}
+  header img{height:58px;max-width:300px;object-fit:contain}
+  nav{display:flex;gap:28px;font-size:16px;font-weight:500;color:#44494c}
+  .btn{display:inline-block;background:var(--acc);color:#fff;font-weight:700;border-radius:999px;padding:14px 26px;font-size:16px}
+  .btn.big{padding:17px 34px;font-size:18px;box-shadow:0 8px 22px rgba(44,126,148,.35)}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:46px 120px 34px;background:linear-gradient(180deg,#fff,var(--cream))}
+  .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:700}
+  h1{font-family:Fraunces,serif;font-weight:600;font-size:48px;line-height:1.08;margin:14px 0 18px;color:var(--head)}
+  h1 span{color:var(--acc)}
+  .sub{font-size:19px;line-height:1.55;color:#4c5154;max-width:600px}
+  .stars{display:flex;align-items:center;gap:10px;margin:20px 0 22px;font-size:15.5px;color:#4c5154}
+  .stars i{color:#f2b01e;font-style:normal;letter-spacing:2px;font-size:18px}
+  .ctas{display:flex;gap:14px;align-items:center;margin-top:22px}
+  .stars + .ctas{margin-top:0}
+  .ghost{border:1.5px solid #cfd6d8;border-radius:999px;padding:15px 22px;font-size:16px;font-weight:600;color:var(--ink)}
+  .note{font-size:14px;color:#6c7275;margin-top:12px}
+  .pic{position:relative;border-radius:22px;overflow:hidden;height:470px;box-shadow:0 20px 50px rgba(0,0,0,.12);background:var(--cream)}
+  .pic img.main{width:100%;height:100%;object-fit:cover;object-position:40% 30%}
+  .me{position:absolute;left:18px;bottom:18px;display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;padding:10px 16px 10px 10px;box-shadow:0 6px 20px rgba(0,0,0,.14);font-size:14.5px}
+  .me img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 30%}
+  .me b{display:block;font-size:15.5px}
+  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0 120px}
+  .trust div{background:#fff;border:1px solid #e3d8cc;border-radius:14px;padding:14px 16px;font-size:14.5px;color:#4c5154}
+  .trust b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
+</style>
+</head>
+<body>
+  <div class="bar">Termin buchen: <b>0176 520 999 85</b> · Ludwig-Wiethaler-Str. 14, 84051 Mirskofen/Essenbach</div>
+  <header>
+    <img src="logo.png" alt="Manuela Stetter Naturheilpraxis">
+    <nav><span>Naturheilkunde</span><span>Coaching</span><span>Leistungen</span><span>Kurse</span><span>Referenzen</span><span>Manuela</span></nav>
+    <span class="btn">Termin buchen</span>
+  </header>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Naturheilpraxis · Hormone · Coaching</div>
+      <h1>Deine Heilpraktikerin <span>in Essenbach bei Landshut.</span></h1>
+      <p class="sub">Zyklus, Hormone, Wechseljahre? Ich schaue auf dich als ganze Frau, mit Naturheilkunde und Coaching, in meiner Praxis in Mirskofen oder online.</p>
+      <div class="stars"><i>★★★★★</i> 5,0 bei Google · 39 Bewertungen</div>
+      <div class="ctas"><span class="btn big">Termin buchen</span><span class="ghost">Leistungen ansehen →</span></div>
+      <p class="note">Zuerst sprechen wir 15 Minuten, kostenlos.</p>
+    </div>
+    <div class="pic"><img class="main" src="praxis.jpg" alt="Manuela Stetter"><div class="me"><img src="portrait.jpg" alt="Manuela Stetter"><div><b>Manuela Stetter</b>Heilpraktikerin in Essenbach</div></div></div>
+  </section>
+  <div class="trust">
+    <div><b>Seit 10 Jahren</b>eigene Praxis in Mirskofen</div><div><b>5,0 ★ bei Google</b>39 Bewertungen</div><div><b>Kennenlernen</b>kostenlos, 15 Minuten</div><div><b>Vor Ort oder online</b>per Buchungsportal oder WhatsApp</div>
+  </div>
+</body>
+</html>

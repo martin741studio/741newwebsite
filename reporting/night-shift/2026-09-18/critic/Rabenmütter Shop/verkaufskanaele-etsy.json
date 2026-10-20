@@ -1,0 +1,57 @@
+{
+  "plan_index": 3,
+  "client": "Rabenmütter Shop",
+  "slug": "verkaufskanaele-etsy",
+  "feedback_id": "66478f5c-02a4-4076-b1c3-ad9d211e3533",
+  "mode": "FEEDBACK",
+  "pass": true,
+  "checked_at": "2026-09-18",
+  "attempt": 2,
+  "output_file": "feedback/Rabenmütter Shop/66478f5c-02a4-4076-b1c3-ad9d211e3533.md",
+  "hard_checks": {
+    "no_fehlt_placeholder_in_required_fields": "pass — n/a element set (FEEDBACK mode has no Title/Meta/H1/NAP block/JSON-LD to check); the two [fehlt: ...] tags present are inside the Vorschlag body, correctly flagging unconfirmed facts (Pinterest/TikTok catalog sync status) instead of inventing them — required by hard rule 2, not a violation of this check.",
+    "nap_matches_locked_record": "n/a — no NAP block in a FEEDBACK output; Rabenmütter Shop has no nap_locked record in context.json either.",
+    "json_ld_valid": "n/a — FEEDBACK item, no JSON-LD expected or present.",
+    "language_matches_market": "pass — entire output (Kunde sagt / Vorschlag / Diff-Hinweis) is in German, matching Rabenmütter Shop's DACH market_lang.",
+    "hwg_scan": "n/a — Rabenmütter Shop is an e-commerce client (Trauerkarten), not a health/YMYL client; no HWG-relevant claims in the copy.",
+    "deslop_check": "n/a-not-blocking — the Vorschlag is an internal recommendation to Martin (streichen/aufnehmen/nächste Schritte instructions), not client-facing prose meant to ship as-is (e.g. not a GBP description rewrite). Per skill wording this is explicitly excluded from the de-slop hard check."
+  },
+  "feedback_addressed_check": {
+    "method": "sentence-for-sentence against Kunde sagt (client comment, 30.08.2026)",
+    "sentences": [
+      {
+        "client_sentence": "Etsy als Verkaufskanal habe ich auch schon überlegt, bin da allerdings raus.",
+        "addressed": true,
+        "where": "Vorschlag opening line: 'Etsy aus dem Abschnitt streichen.'"
+      },
+      {
+        "client_sentence": "Warum: ... auf Etsy verkaufen Menschen ... gruselige Karten, handgemacht, Künstler usw. ... da passen wir irgendwie auch gar nicht rein.",
+        "addressed": true,
+        "where": "'Grund für den Verzicht: Markenpassung — das Etsy-Sortiment im Trauerkarten-Bereich ist überwiegend handgemacht und künstlerisch geprägt, das passt nicht zur Marke Rabenmütter Shop.'"
+      },
+      {
+        "client_sentence": "Wir haben (hoffe ich) über Pinterest ein Businesskonto mit Shop,",
+        "addressed": true,
+        "where": "Bullet 'Pinterest Businesskonto mit Shop — laut Kundin bereits eingerichtet', with the client's own uncertainty ('hoffe ich') correctly carried forward as an open [fehlt: ...] confirmation item rather than stated as fact."
+      },
+      {
+        "client_sentence": "ich habe über TikTok einen Shop eingerichtet,",
+        "addressed": true,
+        "where": "Bullet 'TikTok Shop — laut Kundin bereits eingerichtet'."
+      },
+      {
+        "client_sentence": "Etsy fände ich jetzt einfach zuviel.",
+        "addressed": true,
+        "where": "Covered by the removal decision and its stated reason (Markenpassung); no re-litigation of Etsy in the Vorschlag."
+      }
+    ],
+    "verdict": "all client sentences addressed; no instruction from the client's comment was skipped or misread as a command to the agent itself"
+  },
+  "compliance_notes": [
+    "No invented facts: both open items (Pinterest/TikTok catalog↔product-feed sync status) are correctly marked [fehlt: ... vom Kunden zu bestätigen] instead of assumed.",
+    "'Nächster Schritt (braucht Martin)' correctly keeps this as a draft for human action — no autonomous edit to any live report or client_locations, consistent with the human-in-the-loop gates.",
+    "Status-Hinweis section transparently explains the attempt-1 process gap (no Executor output) and that this attempt-2 content is unchanged from the 2026-09-16 version that already passed — consistent, not a new content risk."
+  ],
+  "fails": [],
+  "note": "Passes on re-run (attempt 2). Content is unchanged from the 2026-09-16 version that already passed Critic; attempt 1 today failed only because the Executor step was skipped (process gap, logged separately), not a content defect. No third attempt needed."
+}

@@ -1,0 +1,180 @@
+{
+ "client": "STÜRZL Steuerstrafrecht",
+ "client_slug": "stuerzl",
+ "page_slug": "kontakt",
+ "page_type": "contact",
+ "mode": "rewrite",
+ "language": "de",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "voice_sheet": "00_project/assets/stuerzl/voice.md",
+ "pool_item_ids": [
+  "CP-LOC-002",
+  "CP-LOC-003",
+  "CP-SVC-020",
+  "CP-LOC-006"
+ ],
+ "sitetree_node": "ST-40",
+ "url_slug": "/kontakt/",
+ "keyword_primary": "kontakt",
+ "keywords_cluster": [],
+ "intent": "navigational",
+ "reader": "Mandant oder Interessent, der die Kanzlei erreichen will: Telefon, Adresse, Anfahrt, Zeiten, Erstkontakt. Oft ein Akutfall (Durchsuchung) oder jemand, der vor der ersten Anfrage wissen will, ob sein Anliegen vertraulich bleibt und was er angeben muss.",
+ "local_city": null,
+ "cta": {
+  "goal": "Vertrauliche Anfrage über das Formular (nur Thema, keine Falldaten)",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nennen Sie uns nur Ihr Thema, keine Einzelheiten. Ihre Angaben unterliegen unserer gesetzlichen Verschwiegenheit.",
+  "secondary": "Anrufen: Frankfurt +49 69 298028870, München +49 89 72444170"
+ },
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "H1 Kontakt und Anfahrt, ein Weg: vertraulich anfragen, nur Thema",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Direkt-Antwort: wie erreiche ich die Kanzlei, was muss ich sagen"
+  },
+  {
+   "id": "S03",
+   "element": "el-grid",
+   "job": "Zwei Standortkarten: Anschrift, Telefon, E-Mail, Zeiten, Anfahrt, Ansprechpartnerinnen"
+  },
+  {
+   "id": "S04",
+   "element": "el-grid",
+   "job": "Unsere Leistungen: eine neutrale Liste, gleich auf ST-40, ST-41 und ST-42 (Zuordnung je Büro offen)"
+  },
+  {
+   "id": "S05",
+   "element": "notice",
+   "job": "Akutfall: Durchsuchung läuft gerade. Notfallnummern als Fakt, keine Besetzungszeiten.",
+   "cta": "secondary"
+  },
+  {
+   "id": "S06",
+   "element": "text",
+   "job": "So läuft der erste Kontakt ab: nur Thema, Kanäle, Gespräch, bundesweit, Erstberatung üblicherweise gegen Pauschale",
+   "cta": "secondary"
+  },
+  {
+   "id": "S07",
+   "element": "faq",
+   "job": "5 Fragen zum Erstkontakt, Rechtsstand-Zeile"
+  },
+  {
+   "id": "S08",
+   "element": "cta",
+   "job": "Abschluss mit Vertrauenszeile, Formularfeldern, Einwilligungs-Platzhalter und Adressblock",
+   "cta": "primary"
+  }
+ ],
+ "dropped_sections": [
+  {
+   "id": "Beweis",
+   "reason": "Bewertungs- und Auszeichnungsfreigabe offen (CP-AUT-002 needs_client). Die Kontaktseite braucht keinen Beweisblock."
+  }
+ ],
+ "gate": "A0-C",
+ "money_page": false,
+ "bestand_words": 255,
+ "benchmark_median_words": null,
+ "benchmark_sources": "Typ C (Kontaktseite): kein Wortziel. Kontaktseiten von 12 Wettbewerbern gemessen nur für den Überschriften-Vergleich in G6 (_work/bench-metrics.json, 2026-10-11). Bestand und Kundentexte: 01-brief/gate-a0.md",
+ "word_range": [
+  500,
+  900
+ ],
+ "require_answer_block": true,
+ "faq_min": 3,
+ "internal_links_min": 3,
+ "internal_link_targets": [
+  {
+   "url": "/steuerfahndung-durchsuchung/",
+   "anchor": "Steuerfahndung und Durchsuchung",
+   "role": "sibling"
+  },
+  {
+   "url": "/kosten/",
+   "anchor": "Kosten und Honorar",
+   "role": "money-page"
+  },
+  {
+   "url": "/standort-frankfurt/",
+   "anchor": "Standort Frankfurt",
+   "role": "child"
+  },
+  {
+   "url": "/standort-muenchen/",
+   "anchor": "Standort München",
+   "role": "child"
+  },
+  {
+   "url": "/dr-anja-stuerzl/",
+   "anchor": "Dr. Anja Stürzl",
+   "role": "person"
+  },
+  {
+   "url": "/steuerstrafrecht/",
+   "anchor": "Steuerstrafrecht",
+   "role": "service"
+  },
+  {
+   "url": "/selbstanzeige/",
+   "anchor": "Selbstanzeige und steuerliche Korrekturen",
+   "role": "service"
+  },
+  {
+   "url": "/sonstiges-wirtschaftsstrafrecht/",
+   "anchor": "Wirtschaftsstrafrecht und Zoll",
+   "role": "service"
+  },
+  {
+   "url": "/unternehmensvertretung/",
+   "anchor": "Unternehmensvertretung",
+   "role": "service"
+  },
+  {
+   "url": "/steuerstrafrecht/gutachten-risikobewertung/",
+   "anchor": "Gutachten und Risikobewertung",
+   "role": "service"
+  }
+ ],
+ "cta_min": 3,
+ "cta_text": "Vertraulich anfragen",
+ "proof_assets": [],
+ "forbidden_words": [
+  "spezialisiert",
+  "Spezialist",
+  "Experte",
+  "Expertin",
+  "Expertise",
+  "führend",
+  "Exzellenz",
+  "kostenlos",
+  "Festpreis",
+  "WhatsApp",
+  "Wiesenhüttenstraße",
+  "Albtraum",
+  "Ruin",
+  "Haft droht"
+ ],
+ "own_phrases": [
+  "Wir stehen Ihnen zur Seite",
+  "Fehler passieren",
+  "Das Mandanteninteresse steht für uns immer im Vordergrund",
+  "persönliche Erreichbarkeit auch außerhalb der klassischen Bürozeiten"
+ ],
+ "placeholders_allowed": [
+  "Einwilligungstext Formular"
+ ],
+ "blockers": [],
+ "nap_file": "00_project/assets/stuerzl/nap.json",
+ "paa_questions": [],
+ "schema_faq": false
+}

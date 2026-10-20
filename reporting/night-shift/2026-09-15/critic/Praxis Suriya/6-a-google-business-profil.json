@@ -1,0 +1,49 @@
+{
+  "pass": true,
+  "mode": "FEEDBACK",
+  "client": "Praxis Suriya",
+  "slug": "6-a-google-business-profil",
+  "feedback_id": "7fd15e89-27b8-426c-a28a-d88998ef37b1",
+  "thread_feedback_ids": [
+    "5bea6cb2-688d-4c24-b436-1a576e7ade75",
+    "61abce05-2b04-49b4-b4ab-420ab4374080",
+    "7fd15e89-27b8-426c-a28a-d88998ef37b1"
+  ],
+  "rubric_skipped": true,
+  "checks": {
+    "addresses_client_comment_sentence_for_sentence": {
+      "result": "pass",
+      "detail": [
+        "Di-Do 7:30-18:00 Uhr, Fr 7:30-12:00 Uhr -> Vorschlag trägt diese Zeiten wortgleich in den GBP-Öffnungszeiten-Block ein.",
+        "Telefonische Terminvereinbarung Mo 12:00-14:00 Uhr -> Vorschlag setzt dies als eigenen Hinweis im Sonderzeiten-/Beschreibungsfeld, nicht vermischt mit den Standard-Öffnungszeiten.",
+        "Kein Termin-Button, nur Buchungsformular -> Vorschlag nutzt den Buchungsformular-Link als Haupt-CTA und rät ausdrücklich davon ab, den Google-eigenen Termin-Button zu aktivieren.",
+        "Barrierefrei, aber nicht die Toilette -> Vorschlag aktiviert nur das Attribut 'Rollstuhlgerechter Zugang' und hält 'Rollstuhlgerechte Toilette' ausdrücklich deaktiviert.",
+        "'Öffnungszeiten kannst DU ändern wie du möchtest' -> Umsetzung-Abschnitt liest dies korrekt als Freigabe für die Eintragung der drei bereits gelieferten Fakten, ohne neue Fakten zu erfinden."
+      ]
+    },
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "n/a",
+      "detail": "FEEDBACK-Entwurf ist eine GBP-Feld-Empfehlung, kein Page-Spec; kein Title/Meta/H1/JSON-LD vorhanden. Das einzige [fehlt: ...]-Tag steht im Diff-Hinweis und markiert korrekt fehlenden Original-Reporttext für einen Vorher/Nachher-Vergleich (Regel 2: fehlende Daten markieren, nicht erfinden) - kein Platzhalter in einem Pflichtfeld."
+    },
+    "nap_matches_locked_record": {
+      "result": "n/a",
+      "detail": "context.json.nap_locked ist in diesem Lauf nicht verfügbar (Postgres-Fehler 42703, siehe planner_notes). Dieser Abschnitt betrifft Öffnungszeiten/CTA/Barrierefreiheit, kein Name/Adresse/Telefon-Feld, daher kein NAP-Abgleich nötig."
+    },
+    "jsonld_valid": {
+      "result": "n/a",
+      "detail": "Kein JSON-LD in einem FEEDBACK-Entwurf dieser Art."
+    },
+    "language_matches_market": {
+      "result": "pass",
+      "detail": "DACH-Praxis, market_lang=de. Entwurf durchgehend auf Deutsch."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "detail": "Abschnitt behandelt nur Öffnungszeiten, CTA und Barrierefreiheit, keine Behandlungs- oder Erfolgsaussagen. Keine Begriffe wie 'heilt', 'garantiert', '100 %' oder 'Heilung'."
+    }
+  },
+  "notes": [
+    "Kleinigkeit: Vorschlag setzt Montag/Samstag/Sonntag als 'geschlossen' im GBP-Öffnungszeiten-Block. Die Kundin hat nur Di-Fr-Zeiten plus ein Montags-Telefonfenster genannt, nicht explizit gesagt, dass die Praxis an den übrigen Tagen komplett geschlossen ist. Das ist die einzige Stelle, an der der Entwurf über den wörtlichen Kommentar hinausgeht. Strukturell notwendig, da jedes GBP-Öffnungszeiten-Feld einen Wert braucht, und das Montags-Telefonfenster bleibt separat erhalten. Kein Fail, aber Martin sollte diesen Punkt vor der Eintragung ins GBP kurz prüfen."
+  ],
+  "fails": []
+}

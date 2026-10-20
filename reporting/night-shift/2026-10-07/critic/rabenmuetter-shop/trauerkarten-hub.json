@@ -1,0 +1,48 @@
+{
+  "plan_index": 5,
+  "client": "Rabenmütter Shop",
+  "slug": "trauerkarten-hub",
+  "mode": "CREATE",
+  "executor_file": "specs/rabenmuetter-shop/trauerkarten-kollektion-hub.md",
+  "pass": false,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "fail",
+      "evidence": "Title/Meta/H1 themselves contain no [fehlt:] marker and are within length limits. But the JSON-LD section is entirely a [fehlt:] placeholder: '[fehlt: kein JSON-LD-Entwurf in dieser Datei.]' (line 146). JSON-LD is one of the five fields this check explicitly covers, so the doc fails this check as written — a required field has no content at all, only a [fehlt:] marker."
+    },
+    "nap_block_matches_locked_record": {
+      "result": "n/a",
+      "evidence": "Client has no nap_locked record (bundesweiter Online-Shop, no stationary location) — Executor confirmed this against all three existing nap_locked entries. Correctly marked 'nicht zutreffend', not invented."
+    },
+    "jsonld_valid": {
+      "result": "fail",
+      "evidence": "No JSON-LD present to validate — same gap as above. Executor's stated reason (no real category URLs / FAQ questions yet, so a drafted schema would be empty or invented) is honest and correct per 'real data only', but the hard check still requires valid JSON-LD to be present, and it is not."
+    },
+    "language_matches_market_lang": {
+      "result": "pass",
+      "evidence": "market_lang=de; entire doc (Title, Meta, H1, outline, GEO-layer copy) is German throughout."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "evidence": "No 'heilt'/'garantiert'/'100%'/'Heilung' claims anywhere in the doc. Client is an e-commerce card shop, not a health/YMYL case, so HWG is not materially at risk here either way."
+    },
+    "rubric_all_dimensions_ge_80": {
+      "result": "fail",
+      "evidence": "Executor's own self-check table (lines 171-183) scores: Dim 2 Topical depth = 'nicht geprüft' (competitor subtopics missing), Dim 3 GEO-extractability = FAQ komplett fehlt (direct-answer + definition present but no FAQ block — not ≥80), Dim 4 E-E-A-T = 'schwach — keine Ansprechperson bekannt', Dim 7 Schema = 'nicht vorhanden'. Four of eight dimensions are explicitly below 80 by the Executor's own honest assessment. Dim 5 (Local signals) is correctly n/a for a nationwide shop with no physical location."
+    },
+    "deslop_hard_check": {
+      "result": "skipped — correctly",
+      "reason": "The only finished prose is the 3-sentence direct-answer draft (lines 121-124), explicitly flagged by the Executor as too short a sample to run deslop.py on meaningfully, deferred to when full body copy is written. No other client-facing body copy exists yet to run deslop on — correct to skip, not a hidden failure."
+    },
+    "real_data_only": {
+      "result": "pass",
+      "evidence": "Verified line-by-line: every keyword volume/difficulty, SERP competitor, PAA question, final category name, and price/delivery fact is marked [fehlt: ...] with a stated reason (no DataForSEO MCP tool in this session's tool set; WebFetch on rabenmuetter-verlag.de failed with a tool-internal 'API Error: 404, model: claude-3-5-haiku-20241022' before any content loaded). The three cluster-volume numbers cited (90.500/Mo, 49.500/Mo, 165.000/Mo) are sourced to existing roadmap task titles, not invented, and explicitly labeled 'nicht neu verifiziert'. Nothing in this spec is a guess dressed up as a fact."
+    }
+  },
+  "fails": [
+    "JSON-LD field required by the hard check is entirely missing (only a [fehlt:] placeholder) — hard check 1 and hard check 3 (jsonld_valid) both fail on this.",
+    "Rubric dimensions 2 (Topical depth), 3 (GEO-extractability/FAQ), 4 (E-E-A-T), and 7 (Schema) are all below the required 80, by the Executor's own self-check."
+  ],
+  "verdict": "retry",
+  "note": "This is attempt 1 of max 2 for plan index 5. The Executor's blocker is real and independently plausible (no DataForSEO-capable MCP tool present, WebFetch failing with a session-level tool error) and is documented as the 7th consecutive night this exact plan item hits the same wall (2026-09-16, 2026-09-22, 2026-09-28 x2, 2026-10-06 x2, now 2026-10-07). The Executor behaved correctly under the rules: it did not invent keyword data, competitor subtopics, PAA questions, category names, or a JSON-LD schema it couldn't ground in real data — marking every gap with [fehlt: ...] instead. But per SKILL.md the Critic's hard checks and 80-point rubric are mechanical gates, not a judgment call on whether the Executor tried hard enough: Title/Meta/H1/NAP/JSON-LD must have no [fehlt:] markers, and every rubric dimension must score ≥80. This spec fails both as written. Per the retry rule, this page gets one re-run with this fail list; if attempt 2 hits the identical tool-availability blocker (as six prior nights already did), the only honest outcome is 'needs_martin' — the fix here is not in the Executor's prompt, it is DataForSEO/WebFetch tool access, which Martin needs to resolve before this page can ever pass. Recommend to Martin: escalate the DataForSEO/WebFetch access gap directly rather than spending a 2nd attempt expecting a different result from an unchanged environment."
+}

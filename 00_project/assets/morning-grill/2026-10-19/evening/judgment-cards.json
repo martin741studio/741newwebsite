@@ -1,0 +1,172 @@
+[
+ {
+  "id": "2026-10-19-bali-ads-balance",
+  "client": "Bali Healing",
+  "priority": 2,
+  "type": "decide",
+  "headline": "Bali Google Ads balance is IDR 0 and the skin tag campaign has stopped. Only you can add funds (account 239-394-2913).",
+  "evidence": [
+   "s2 e9c4af07",
+   "tasks t26/t31 (open since 13.10.)"
+  ],
+  "options": {
+   "a": "Top up IDR 500,000 now (Admin > Policy > Account, Add funds)",
+   "b": "Top up a different amount",
+   "c": "Keep Ads off for now (reason)"
+  },
+  "recommended": "a",
+  "why": "The identity verification is done since 13.10.; the only thing that stops the ads is the balance.",
+  "deadline": "2026-10-20",
+  "created": "2026-10-19",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent checks the campaign status next morning",
+   "b": "agent notes the amount",
+   "c": "goal sheet: Ads live = paused with reason"
+  },
+  "walk": "Google Ads: Add funds IDR 500,000 (3 min)"
+ },
+ {
+  "id": "2026-10-19-roeth-call-time",
+  "client": "Ulrike Röth (prospect)",
+  "priority": 3,
+  "type": "decide",
+  "headline": "Call with Ulrike Röth tomorrow: calendar (cal.com) and the reminder tasks say 16:00 WITA = 10:00 CEST; booking.json says 22:00 WITA = 16:00 CEST. WhatsApp 1 is drafted, not sent.",
+  "evidence": [
+   "calendar 2026-10-20T16:00+08:00 (cal.com, her note 'jetzt ist es der korrekte Termin')",
+   "00_project/prospects/ulrike-roeth/booking/booking.json times.call",
+   "s2 46fd7ef6"
+  ],
+  "options": {
+   "a": "Calendar is right (16:00 WITA / 10:00 CEST): agent fixes booking.json, you send WhatsApp 1 now",
+   "b": "booking.json is right (22:00 WITA / 16:00 CEST): agent re-times the 2 remaining reminders",
+   "c": "Ask Ulrike which time she booked"
+  },
+  "recommended": "a",
+  "why": "The calendar entry comes from cal.com and carries her note 'jetzt ist es der korrekte Termin'.",
+  "deadline": "2026-10-20",
+  "created": "2026-10-19",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent corrects booking.json + the 2 reminder times",
+   "b": "agent corrects the calendar draft for you",
+   "c": "agent drafts the question"
+  },
+  "walk": "Send WhatsApp 1 to Ulrike Röth (wa.me link in prospects/ulrike-roeth/whatsapp-sequence.md, 1 min)"
+ },
+ {
+  "id": "2026-10-19-dumann-update-send",
+  "client": "Daniela Dumann",
+  "priority": 3,
+  "type": "approve",
+  "headline": "Daniela's update (WhatsApp + email: listings not merged, mobile fixes) is drafted at 5/5 after your feedback rounds. Send it?",
+  "evidence": [
+   "s2 c02ee9da",
+   "commit 309d4bb5"
+  ],
+  "options": {
+   "a": "Send as drafted",
+   "b": "One more change (say what)",
+   "c": "Not today (reason)"
+  },
+  "recommended": "a",
+  "why": "The status page and feed were corrected live today; she should hear it from you, not find it.",
+  "deadline": "2026-10-20",
+  "created": "2026-10-19",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "walk: send WhatsApp + email",
+   "b": "agent edits the draft",
+   "c": "carry over"
+  },
+  "walk": "Send Daniela's WhatsApp + email update (2 min)"
+ },
+ {
+  "id": "2026-10-19-suriya-ayurveda-path",
+  "client": "Praxis Suriya",
+  "priority": 5,
+  "type": "decide",
+  "headline": "Ayurveda Ingelheim page: the Antigravity run changed the live menu and 3-card hub. Path A (clean the 3-card section) or B (roll back and rebuild)?",
+  "evidence": [
+   "s2 f203e46d",
+   "s2 b88add01"
+  ],
+  "options": {
+   "a": "A: keep the live changes, clean the 3-card section, better GPT image",
+   "b": "B: roll back the live edits, rebuild via CRO Track A",
+   "c": "Review the live edits first (agent lists every change)"
+  },
+  "recommended": "c",
+  "why": "An agent edited the live site with .env credentials; a change list protects the Ayurveda page (memory: untouchable).",
+  "deadline": "2026-10-21",
+  "created": "2026-10-19",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "CRO Track A continues, needs the GBP link",
+   "b": "agent prepares the rollback list, Dinakar executes after go",
+   "c": "agent writes the change list into the Suriya chat"
+  }
+ },
+ {
+  "id": "2026-10-19-meta-objective",
+  "client": "741 (Meta Hook-Test)",
+  "priority": 7,
+  "type": "decide",
+  "headline": "Meta Hook-Test Phase 1: 50 ad sets and 50 ads built, objective is Traffic, not Leads. Batch 02 design: keep Traffic or switch to Leads?",
+  "evidence": [
+   "s2 6262bfe8"
+  ],
+  "options": {
+   "a": "Keep Traffic for Phase 1 (hook test), Leads in Phase 2",
+   "b": "Switch to Leads now",
+   "c": "Pause the build until the pixel Lead event is verified"
+  },
+  "recommended": "a",
+  "why": "Phase 1 measures hooks (ThruPlay), not conversions; the pixel check runs in parallel.",
+  "deadline": "2026-10-21",
+  "created": "2026-10-19",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent finishes verification, reports spend before any launch",
+   "b": "agent rebuilds the campaign objective (needs a go for spend)",
+   "c": "agent waits"
+  }
+ },
+ {
+  "id": "2026-10-19-gayo-kbli",
+  "client": "741 (team)",
+  "priority": 7,
+  "type": "approve",
+  "headline": "Gayo contract: Bahasa v7 draft v2 is in Drive. The KBLI question to Ibu Made is not asked yet. May the agent draft it for you to send?",
+  "evidence": [
+   "s2 72125a55"
+  ],
+  "options": {
+   "a": "Draft the KBLI question, I send it",
+   "b": "I ask Ibu Made myself",
+   "c": "Not needed (reason)"
+  },
+  "recommended": "a",
+  "why": "Signing waits on the KBLI answer and a Bahasa-law review.",
+  "deadline": "2026-10-22",
+  "created": "2026-10-19",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "draft in ```text, slop 5/5, in the contract chat",
+   "b": "walk item",
+   "c": "note in the contract chat"
+  }
+ }
+]

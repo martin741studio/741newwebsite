@@ -1,0 +1,56 @@
+{
+  "plan_index": 5,
+  "client": "Rabenmütter Shop",
+  "slug": "trauerkarten-hub",
+  "mode": "CREATE",
+  "executor_file": "specs/rabenmuetter-shop/trauerkarten-kollektion-hub.md",
+  "pass": false,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "fail",
+      "evidence": "Title, Meta, and H1 are complete, no [fehlt:]. NAP is correctly n/a (no local presence, no nap_locked record for this client). But the JSON-LD block itself is entirely missing and is explicitly marked '[fehlt: kein JSON-LD-Entwurf in dieser Datei.]' (spec line 148). JSON-LD is one of the five fields this check names, so one [fehlt:] in a named field is a fail regardless of how well-reasoned the omission is."
+    },
+    "nap_block_matches_locked_record": {
+      "result": "n/a",
+      "evidence": "No nap_locked entry exists for client_id fbcc70d1-4c56-437c-b5fb-8056e48d3f62 (online shop, no stationary location). Spec correctly states 'nicht zutreffend' rather than inventing or omitting silently."
+    },
+    "jsonld_valid": {
+      "result": "fail",
+      "evidence": "No JSON-LD present to parse. Spec line 148-152 explains why (no real category URLs or real FAQ questions yet) rather than inventing one, which is the right call under 'real data only' — but the hard check itself requires a valid CollectionPage/ItemList + FAQPage JSON-LD to exist, and none does."
+    },
+    "language_matches_market_lang": {
+      "result": "pass",
+      "evidence": "All copy (Title, Meta, H1, Direkt-Antwort, Definitionsbox) is German; market_lang=de confirmed in context.json/Planner."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "evidence": "Non-health client (grief-card e-commerce). No cure/guarantee/fear language anywhere in the draft; check is not materially applicable but finds no violations."
+    },
+    "rubric_all_dims_ge_80": {
+      "result": "fail",
+      "scores": {
+        "1_search_intent_match": { "score": 70, "reason": "Collection-page type matches transactional intent, but final category names (Anlass/Motiv) are still [fehlt:], so the page type isn't fully confirmed against real site structure yet." },
+        "2_topical_depth": { "score": 15, "reason": "Spec explicitly states competitor subtopics are '[fehlt: SERP-Daten nicht abrufbar]' — no comparison to top-ranking pages exists at all, self-assessed 'nicht geprüft' in the spec's own table." },
+        "3_geo_extractability": { "score": 40, "reason": "A direct-answer block and one definition exist, but the FAQ block is completely absent ('[fehlt: echte PAA-Fragen nicht abrufbar]') and no concrete extractable facts (price, delivery time, formats) are present — all marked [fehlt:]." },
+        "4_eeat": { "score": 20, "reason": "No named practitioner/author or 'Über uns' paragraph; spec flags this itself as '[fehlt: keine Ansprechperson/Impressum-Daten]'." },
+        "5_local_signals": { "score": null, "reason": "n/a — nationwide online shop, no local case, correctly excluded by the spec rather than scored." },
+        "6_technical_onpage": { "score": 90, "reason": "Title (44 chars) and Meta (135 chars) are within limits with the keyword front-loaded; single H1; logical H2 outline present." },
+        "7_schema": { "score": 0, "reason": "No JSON-LD exists in the spec at all; explicitly deferred, matches the jsonld_valid fail above." },
+        "8_internal_links": { "score": 55, "reason": "Cross-links to the two sibling cluster guide pages are real and named (task IDs cited), but the upward link to the pillar/hierarchy above 'Trauerkarten' is '[fehlt:]' and the per-product linking (task ce794633) can't be done without product URLs." }
+      },
+      "dims_below_80": [1, 2, 3, 4, 7, 8],
+      "note": "Matches the spec's own honest self-check table (lines 173-186) almost exactly; no sandbagging or inflation found on review."
+    },
+    "deslop_hard_check": {
+      "result": "not applicable this attempt",
+      "evidence": "Only finished prose is the 3-sentence Direkt-Antwort draft; spec explicitly defers a deslop.py run until full body copy is written (line 190-192). No body copy to run the tool against yet."
+    }
+  },
+  "fails": [
+    "JSON-LD field contains [fehlt:] / is entirely absent — fails the named-field no-[fehlt] check and the jsonld_valid check.",
+    "Rubric dimensions 2 (topical depth), 3 (GEO-extractability), 4 (E-E-A-T), and 7 (schema) are all far below 80; dimensions 1 and 8 are also below 80. Six of seven scored dimensions fail the ≥80 bar."
+  ],
+  "root_cause": "Not a quality problem with what was written — it is an environmental blocker (no DataForSEO MCP tool reachable, WebFetch to rabenmuetter-verlag.de failing with a tool-level 404 before any page content loads), independently reproduced for the 4th time across 2026-09-16, 2026-09-22, 2026-09-28, and tonight for this exact plan item. The Executor correctly refused to invent competitor subtopics, FAQ questions, category names, or JSON-LD rather than fabricate data.",
+  "verdict": "retry",
+  "verdict_reasoning": "Per SKILL.md the Critic only ever outputs pass or retry; needs_martin is the runner's own escalation after a second failed attempt, not a Critic-level verdict. This is attempt 1 of max 2 for this page, and the hard checks fail on real, checkable grounds (missing JSON-LD field, 6 of 7 rubric dimensions below 80) — so the correct output here is retry, not pass. Note for the Executor's second attempt: the blocking cause (no DataForSEO tool, WebFetch 404) has not changed within this same run and is unlikely to resolve on a same-night retry; if attempt 2 hits the identical tool-availability blocker, the run should mark this page needs_martin per the 'never a third attempt' rule rather than loop further."
+}

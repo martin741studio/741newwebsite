@@ -1,0 +1,59 @@
+{
+ "claims": [
+  {
+   "text": "Google sieht im Quelltext der Startseite nur 9 Wörter",
+   "numbers": [
+    "9"
+   ],
+   "source": "booking/site-check.json"
+  },
+  {
+   "text": "nicht unter den ersten 50 Treffern für führungskräfte coaching",
+   "numbers": [
+    "50"
+   ],
+   "source": "evidence/dfs-serp-fk-coaching.json"
+  },
+  {
+   "text": "rund 2.900 Suchen im Monat (coaching für führungskräfte)",
+   "numbers": [
+    "2.900"
+   ],
+   "source": "evidence/dfs-volumes-ads.json"
+  },
+  {
+   "text": "5 Prozent von 2.900 = rund 145 Besucher (Rechenbeispiel)",
+   "numbers": [
+    "5",
+    "145"
+   ],
+   "source": "evidence/dfs-volumes-ads.json",
+   "derived": "2900 * 0.05 = 145"
+  },
+  {
+   "text": "business coach leipzig rund 70, führungskräfte coaching leipzig rund 30 Suchen im Monat",
+   "numbers": [
+    "70",
+    "30"
+   ],
+   "source": "evidence/dfs-volumes-ads.json"
+  },
+  {
+   "text": "Maria Abel: nach 8 Wochen im ganzen Gebiet unter den ersten drei",
+   "numbers": [
+    "8"
+   ],
+   "source": "00_project/prospect-mini/case-library.json"
+  },
+  {
+   "text": "Titel nennt jetzt Executive Sparring, Beschreibung nennt Erfurt und Leipzig",
+   "quote": "Executive Sparring",
+   "source": "booking/evidence/home.html"
+  },
+  {
+   "text": "Beschreibung nennt Erfurt und Leipzig",
+   "quote": "in Erfurt, Leipzig und online",
+   "source": "booking/evidence/home.html"
+  }
+ ]
+}

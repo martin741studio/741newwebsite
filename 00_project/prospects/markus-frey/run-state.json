@@ -1,0 +1,94 @@
+{
+ "slug": "markus-frey",
+ "steps": {
+  "intake": {
+   "agent": "orchestrator",
+   "status": "done",
+   "at": "2026-10-15T15:30",
+   "outputs": [
+    "intake.md",
+    "intake.json",
+    "browser-queue.jsonl"
+   ],
+   "blockers": []
+  },
+  "demand": {
+   "agent": "orchestrator(main session)",
+   "status": "done",
+   "at": "2026-10-16T13:29",
+   "outputs": [
+    "demand.md",
+    "evidence/dfs-volumes-ads.json",
+    "evidence/dfs-serp-*.json",
+    "evidence/dfs-backlinks-summary.json",
+    "evidence/dfs-refdomains-spam.json",
+    "cost_ledger.jsonl"
+   ],
+   "gap_keyword": "life coach köln",
+   "gap_volume": 210,
+   "gate_g1": "pass",
+   "note": "DataForSEO run from main whitelisted session; sandbox IP 179.65.207.101 was the only thing blocked."
+  },
+  "site": {
+   "agent": "B",
+   "status": "done",
+   "at": "2026-10-15T15:53",
+   "outputs": [
+    "site-findings.md",
+    "evidence/site-curl-checks.txt",
+    "evidence/site-visible-text.txt",
+    "evidence/site.json",
+    "evidence/site-pages.json",
+    "evidence/site-urls.json",
+    "evidence/site-page-urls.txt"
+   ],
+   "blockers": [
+    "Step 5 competitor page metrics not run: demand.md has no competitor URLs (DataForSEO 40207, IP 179.65.207.101 not whitelisted; Martin must allow the IP)",
+    "Step 4 health-claims check skipped per brief (not a health practice)"
+   ],
+   "cost": "0 USD, 0 credits"
+  },
+  "homepage": {
+   "agent": "C",
+   "status": "done",
+   "at": "2026-10-15T15:52",
+   "outputs": [
+    "homepage.md",
+    "draft/index.html",
+    "draft/logo.png",
+    "draft/portrait.jpg",
+    "draft/hero.jpg",
+    "evidence/scorecard-today.md",
+    "evidence/home-draft-1440.jpg",
+    "evidence/home-raw.html",
+    "../../04_site/public/review-assets/markus-frey/startseite-heute.webp",
+    "../../04_site/public/review-assets/markus-frey/startseite-entwurf.webp",
+    "../../04_site/public/review-assets/markus-frey/foto-hero.webp",
+    "../../04_site/public/review-assets/markus-frey/foto-portrait.webp"
+   ],
+   "score": "13/42 (items 1-21; item 22 n/a, branch service); Prio A 1 of 11 at 2; gate 34/42 not met",
+   "cost": "0 EUR (no paid API calls)",
+   "blockers": [
+    "Decision for Martin: Google rating is 5,0 from 1 review; decide whether the stars line stays",
+    "Decision for Martin: H1 city claim Köln (site is mainly online coaching)",
+    "Decision for Martin: HWG status of stressfrey.de (Burnout prevention promise on live site; branch service)",
+    "Open: draft CTA has no booking URL yet (etermin.net from panel)"
+   ]
+  },
+  "scan": {
+   "agent": "D",
+   "status": "done",
+   "at": "2026-10-16T13:41:20.475025",
+   "keyword": "life coach köln",
+   "report_key": "5bd7097be1b0e31",
+   "solv": 10.2,
+   "found_in": 9,
+   "credits": 49,
+   "outputs": [
+    "evidence/falcon-report-5bd7097be1b0e31.json",
+    "../../04_site/public/review-assets/markus-frey/scan-grid.webp",
+    "competitors.md"
+   ]
+  }
+ }
+}

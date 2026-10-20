@@ -1,0 +1,65 @@
+{
+ "date": "2026-10-11",
+ "page": "st-29-verteidigung-privatpersonen/05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G2 legal": {
+   "mode": "brao",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "info": {
+    "words": 1703,
+    "placeholders": 1
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "5 Sätze über 28 Wörter (zum Beispiel: Das Zeugnis verweigern dürfen der Verlobte, der Ehegatte und der Leben...)"
+   ],
+   "counts": {
+    "du": 0,
+    "sie": 85,
+    "ich": 0,
+    "wir": 35
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1703,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "[Hinweis] 1 von 2 Themen-Begriffen der Wettbewerber-Überschriften fehlen im Text: rechtsa* (9/22, z. B. \"Mandatieren Sie mich als Rechtsanwalt im Steuerstr\")",
+    "[Hinweis] Begriffs-Abdeckung 80 % (21 Begriffe aus mindestens 50 % der Seiten). Fehlen: rechtsanwälte, steuerhinterziehung, steuerberater, steuern. Pflicht nur, wenn die Suchabsicht den Begriff braucht."
+   ]
+  }
+ }
+}

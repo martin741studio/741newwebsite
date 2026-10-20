@@ -1,0 +1,415 @@
+<title>Outlier Method Map</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #EEF0F2;
+    --surface: #FFFFFF;
+    --surface-2: #E4E7EA;
+    --ink: #1B1F27;
+    --muted: #5B6472;
+    --line: #D3D8DC;
+    --accent: #2F5D62;
+    --accent-soft: #DCE8E7;
+    --good: #3F8F5F;
+    --good-soft: #E3F1E8;
+    --bad: #B8433A;
+    --bad-soft: #F6E5E3;
+    --watch: #A8781F;
+    --watch-soft: #F2E8D6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171C; --surface: #1B1F26; --surface-2: #242932;
+      --ink: #E7E9ED; --muted: #94A0AC; --line: #333A44;
+      --accent: #7FC2C4; --accent-soft: #21343A;
+      --good: #6FCB94; --good-soft: #1D3327;
+      --bad: #E28479; --bad-soft: #3A2320;
+      --watch: #E3B564; --watch-soft: #3A2F1A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171C; --surface: #1B1F26; --surface-2: #242932;
+    --ink: #E7E9ED; --muted: #94A0AC; --line: #333A44;
+    --accent: #7FC2C4; --accent-soft: #21343A;
+    --good: #6FCB94; --good-soft: #1D3327;
+    --bad: #E28479; --bad-soft: #3A2320;
+    --watch: #E3B564; --watch-soft: #3A2F1A;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.55; font-size: 15px;
+  }
+  .num { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+  .page { max-width: 920px; margin: 0 auto; padding: 48px 24px 96px; }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  header.masthead { border-bottom: 3px solid var(--ink); padding-bottom: 22px; margin-bottom: 28px; }
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: .09em;
+    text-transform: uppercase; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 10px;
+  }
+  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: clamp(32px, 5vw, 46px); line-height: 1.05; margin: 0 0 12px; text-wrap: balance; }
+  .dek { font-size: 17px; color: var(--muted); max-width: 64ch; margin: 0; }
+
+  /* pipeline strip */
+  .strip {
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin: 0 0 40px;
+  }
+  @media (max-width: 720px) { .strip { grid-template-columns: repeat(3, 1fr); } }
+  .strip a {
+    display: block; text-decoration: none; color: var(--ink);
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 12px 10px;
+    border-top: 4px solid var(--line);
+  }
+  .strip a.done { border-top-color: var(--good); }
+  .strip a.draft { border-top-color: var(--watch); }
+  .strip a.todo { border-top-color: var(--line); }
+  .strip .ph { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .06em; color: var(--muted); text-transform: uppercase; }
+  .strip .nm { font-weight: 600; font-size: 13.5px; line-height: 1.25; margin: 3px 0 6px; }
+  .pill {
+    display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .05em;
+    text-transform: uppercase; padding: 2px 7px; border-radius: 4px;
+  }
+  .pill.done { background: var(--good-soft); color: var(--good); }
+  .pill.draft { background: var(--watch-soft); color: var(--watch); }
+  .pill.todo { background: var(--surface-2); color: var(--muted); }
+
+  /* funnel */
+  .funnel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; margin-bottom: 44px; }
+  .funnel svg { width: 100%; height: auto; display: block; }
+  .funnel .cap { color: var(--muted); font-size: 13.5px; margin: 10px 0 0; max-width: 70ch; }
+
+  h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 24px; margin: 0 0 4px; scroll-margin-top: 20px; }
+  .h2row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+  .phase-label { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  .one-liner { color: var(--muted); font-size: 15px; margin: 0 0 18px; max-width: 68ch; }
+
+  section.phase { margin-bottom: 52px; padding-top: 8px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 700px) { .grid2 { grid-template-columns: 1fr; } }
+  .block { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px 14px; }
+  .block.found { background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+  .block.open { background: var(--watch-soft); border-color: color-mix(in srgb, var(--watch) 35%, var(--line)); }
+  .bt { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .07em; text-transform: uppercase; font-weight: 600; color: var(--muted); margin-bottom: 8px; }
+  .block.found .bt { color: var(--accent); }
+  .block.open .bt { color: var(--watch); }
+  .block p { margin: 0 0 8px; font-size: 14px; }
+  .block p:last-child { margin-bottom: 0; }
+  .block ul { margin: 0; padding-left: 18px; }
+  .block li { font-size: 13.5px; margin-bottom: 7px; }
+  .block li:last-child { margin-bottom: 0; }
+  .ev { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .full { grid-column: 1 / -1; }
+
+  /* mini bar chart inside a block */
+  .bars { display: grid; gap: 7px; margin-top: 6px; }
+  .bar { display: grid; grid-template-columns: 1fr 120px 52px; gap: 10px; align-items: center; font-size: 12.5px; }
+  .bar .t { line-height: 1.25; }
+  .bar .t .w { display: block; color: var(--muted); font-size: 11px; }
+  .track { height: 12px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+  .fill { height: 100%; background: var(--accent); border-radius: 3px; }
+  .bar .x { text-align: right; font-weight: 600; color: var(--accent); font-size: 12.5px; }
+
+  /* glossary */
+  dl.gloss { display: grid; grid-template-columns: 170px 1fr; gap: 10px 18px; margin: 0; }
+  @media (max-width: 600px) { dl.gloss { grid-template-columns: 1fr; gap: 4px; } dl.gloss dd { margin-bottom: 12px; } }
+  dl.gloss dt { font-weight: 600; font-size: 14px; }
+  dl.gloss dd { margin: 0; font-size: 14px; color: var(--muted); }
+
+  /* need-from-you */
+  .need { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 8px; padding: 20px 22px; }
+  .need ol { margin: 8px 0 0; padding-left: 20px; }
+  .need li { margin-bottom: 8px; font-size: 14.5px; }
+  .need li:last-child { margin-bottom: 0; }
+  .need .why { display: block; color: var(--muted); font-size: 12.5px; }
+
+  .foot { color: var(--muted); font-size: 12.5px; margin-top: 40px; border-top: 1px solid var(--line); padding-top: 14px; }
+</style>
+
+<div class="page">
+
+  <header class="masthead">
+    <div class="eyebrow">
+      <span>741 · YouTube channel</span>
+      <span>Method + status</span>
+      <span>Updated 2026-09-17</span>
+    </div>
+    <h1>The outlier method, mapped to your channel</h1>
+    <p class="dek">Six phases. Each one is explained in plain words, then followed by what we actually found for your case and what is still open. Green = done with real data. Amber = drafted, not yet tested. Grey = cannot start yet.</p>
+  </header>
+
+  <nav class="strip" aria-label="Phases">
+    <a href="#p1" class="done"><div class="ph">Phase 1</div><div class="nm">Find proven demand</div><span class="pill done">Done</span></a>
+    <a href="#p2" class="draft"><div class="ph">Phase 2</div><div class="nm">Bridge your method to their goal</div><span class="pill draft">Drafted</span></a>
+    <a href="#p3" class="draft"><div class="ph">Phase 3</div><div class="nm">Title + thumbnail</div><span class="pill draft">Drafted</span></a>
+    <a href="#p4" class="draft"><div class="ph">Phase 4</div><div class="nm">First 45 seconds</div><span class="pill draft">Framework</span></a>
+    <a href="#p5" class="draft"><div class="ph">Phase 5</div><div class="nm">Viewer → lead</div><span class="pill draft">Drafted</span></a>
+    <a href="#p6" class="todo"><div class="ph">Phase 6</div><div class="nm">Diagnose after publish</div><span class="pill todo">Waiting</span></a>
+  </nav>
+
+  <div class="funnel">
+    <svg viewBox="0 0 860 150" role="img" aria-label="Funnel: views to leads to calls to customers to revenue">
+      <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 z" fill="var(--muted)"/>
+        </marker>
+      </defs>
+      <g font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="var(--ink)" text-anchor="middle">
+        <rect x="10" y="40" width="140" height="56" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"/>
+        <text x="80" y="74">Views</text>
+        <rect x="190" y="40" width="140" height="56" rx="8" fill="var(--surface-2)" stroke="var(--line)"/>
+        <text x="260" y="74">Leads</text>
+        <rect x="370" y="40" width="140" height="56" rx="8" fill="var(--surface-2)" stroke="var(--line)"/>
+        <text x="440" y="74">Booked calls</text>
+        <rect x="550" y="40" width="140" height="56" rx="8" fill="var(--surface-2)" stroke="var(--line)"/>
+        <text x="620" y="74">Customers</text>
+        <rect x="730" y="40" width="120" height="56" rx="8" fill="var(--surface-2)" stroke="var(--line)"/>
+        <text x="790" y="74">Revenue</text>
+      </g>
+      <g stroke="var(--muted)" stroke-width="2" fill="none" marker-end="url(#arr)">
+        <line x1="150" y1="68" x2="186" y2="68"/>
+        <line x1="330" y1="68" x2="366" y2="68"/>
+        <line x1="510" y1="68" x2="546" y2="68"/>
+        <line x1="690" y1="68" x2="726" y2="68"/>
+      </g>
+      <g font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--muted)" text-anchor="middle">
+        <text x="80" y="122">Phases 1–3</text>
+        <text x="260" y="122">Phase 4–5</text>
+        <text x="440" y="122">Phase 5</text>
+        <text x="620" y="122">Sales</text>
+        <text x="790" y="122">Phase 6 checks all</text>
+      </g>
+    </svg>
+    <p class="cap">This is why the method exists. A YouTube channel is not a collection of videos; it is one funnel. Each phase feeds one stage. Phase 6 looks at the whole line and asks: where does it leak?</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <section class="phase" id="p1">
+    <div class="h2row"><span class="phase-label">Phase 1</span><span class="pill done">Done, real data</span></div>
+    <h2>Find proven demand before you record anything</h2>
+    <p class="one-liner">Never guess what your audience wants. Find videos they are already choosing to watch far more than expected, and copy the demand — not the video.</p>
+    <div class="grid2">
+      <div class="block">
+        <div class="bt">What it is</div>
+        <p>You search YouTube with the words your audience would type. You do not look for the biggest videos. You look for <strong>outliers</strong>: a video that got many times more views than its own channel usually gets.</p>
+        <p>A 20,000-view video on a channel that averages 500 views is a stronger signal than a 2-million-view video on a 3-million-subscriber channel. The first one proves the <em>topic</em> pulled people in, not the channel's existing fame.</p>
+      </div>
+      <div class="block">
+        <div class="bt">Why it matters</div>
+        <p>Most channels fail because the creator films what they find interesting. Outliers show what the <em>market</em> finds interesting, with proof already attached.</p>
+        <p>The method also looks at the losers on the same channel. Same creator, same production, but one video died — that gap tells you the exact mistake to avoid.</p>
+      </div>
+      <div class="block found full">
+        <div class="bt">What we found for you</div>
+        <p>We ran 8 seed searches for your avatar (creative agency owners who hate the technical backend), pulled 108 videos, then opened the 7 strongest channels and read their full upload history. Each bar below is one video's views ÷ that channel's own average.</p>
+        <div class="bars">
+          <div class="bar"><div class="t">I Built a $10k SaaS Website in 1 Hour using AI<span class="w">Rafael Rabl</span></div><div class="track"><div class="fill" style="width:100%"></div></div><div class="x num">16.5×</div></div>
+          <div class="bar"><div class="t">94.9% Margins Selling GoHighLevel — Why Most Never See Them<span class="w">GHL Experts</span></div><div class="track"><div class="fill" style="width:96%"></div></div><div class="x num">15.8×</div></div>
+          <div class="bar"><div class="t">Scaling Up: How To Run A Successful Creative Agency<span class="w">The Futur · 2.8M subs · 1.8M views</span></div><div class="track"><div class="fill" style="width:78%"></div></div><div class="x num">12.8×</div></div>
+          <div class="bar"><div class="t">He Makes $509K/mo Selling GoHighLevel AI Websites<span class="w">ItsKeaton</span></div><div class="track"><div class="fill" style="width:71%"></div></div><div class="x num">11.7×</div></div>
+        </div>
+        <ul style="margin-top:14px">
+          <li><strong>"Automate client onboarding" is an outlier on 6 separate channels.</strong> That is the single most repeated demand signal found. It is also exactly the service you sell.</li>
+          <li><strong>A specific number in the title wins on 4 separate channels.</strong> $300k/mo, $509K/mo, 94.9% margins, "$10k in 1 hour". Not a curiosity hook — a verifiable claim.</li>
+          <li><strong>A client name alone does not win.</strong> OpsKings' named-client testimonial got 74 views, one of their worst. Their winners state the result without a name: "We've automated an entire department" (3.2×).</li>
+          <li><strong>What died on the same channels:</strong> "Email Marketing 101" (10 views), "6 email campaigns every business should run" (21 views), a vague tease with no number ("The REAL GoHighLevel bill nobody shows you", 8 views) — beside 2,000–100,000-view winners.</li>
+          <li><strong>A trap, seen on 3 channels across two niches:</strong> personal/lifestyle content sometimes out-views the tactical content on the same channel (The Futur's top video is about therapy, not marketing). Chasing that pulls the wrong audience. Stay on topic.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHASE 2 -->
+  <section class="phase" id="p2">
+    <div class="h2row"><span class="phase-label">Phase 2</span><span class="pill draft">Drafted, not tested</span></div>
+    <h2>Bridge your method to a goal they already want</h2>
+    <p class="one-liner">Nobody searches for "backend automation". Everybody searches for "scale my agency". The title has to connect the two.</p>
+    <div class="grid2">
+      <div class="block">
+        <div class="bt">What it is</div>
+        <p>Your audience knows their <strong>desired outcome</strong> (more clients, more money, fewer hours). They do not know your <strong>mechanism</strong> (Zapier flows, CRM routing, tracking setup). The bridge title puts both in one sentence so the outcome earns the click and the mechanism makes it yours.</p>
+        <p>The formula from the method: <em>"If you don't understand [mechanism], you don't understand [outcome]."</em></p>
+      </div>
+      <div class="block">
+        <div class="bt">Why it matters</div>
+        <p>The outcome gives you reach — many people want it. The mechanism gives you a reason to be different from every other "how to scale" video. Without the mechanism, you compete with everyone. Without the outcome, nobody clicks.</p>
+      </div>
+      <div class="block found">
+        <div class="bt">Drafted for you</div>
+        <ul>
+          <li>"How I automated client onboarding for a design agency and got them 6 hours back a week"</li>
+          <li>"If you don't understand your tech stack, you don't understand why your agency can't scale past $[X]k/mo"</li>
+          <li>"The backend automation that let a creative agency take on 3× the clients with the same team"</li>
+        </ul>
+        <p style="margin-top:10px;font-size:13px;color:var(--muted)">All three follow the Phase 1 rule: a specific number, a stated transformation. Numbers in brackets are placeholders until you confirm a real one.</p>
+      </div>
+      <div class="block open">
+        <div class="bt">Open — needs you</div>
+        <ul>
+          <li>One real number from a real client engagement (hours saved, clients added, revenue). Without it, these titles stay hypotheses.</li>
+          <li>Whether Tacheles can be the named example, or must stay anonymous.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHASE 3 -->
+  <section class="phase" id="p3">
+    <div class="h2row"><span class="phase-label">Phase 3</span><span class="pill draft">Direction set, nothing designed</span></div>
+    <h2>Title and thumbnail: win the two-second glance</h2>
+    <p class="one-liner">Demand exists whether you show up or not. Packaging decides how much of it you capture against the 20 other videos in the feed.</p>
+    <div class="grid2">
+      <div class="block">
+        <div class="bt">What it is</div>
+        <p>The viewer glances twice. <strong>Glance 1, the thumbnail:</strong> high-contrast text, a visible result, an authority cue (a real dashboard, a real screen). <strong>Glance 2, the title:</strong> names the exact problem and promise.</p>
+        <p>The method's test: put your thumbnail next to the real competitors in a mock feed. Does it stand out in three seconds?</p>
+      </div>
+      <div class="block">
+        <div class="bt">Why it matters</div>
+        <p>YouTube is winner-take-all per feed slot. Two videos with the same content and different packaging can differ by 10× in views. Phase 1 already showed this: same channel, same topic, one title got 15.8× and the vague version got 8 views.</p>
+      </div>
+      <div class="block found">
+        <div class="bt">Direction for you</div>
+        <ul>
+          <li><strong>Thumbnail:</strong> the real automation flow or a real before/after dashboard on screen. Red block behind the real number. Your actual workspace, not stock.</li>
+          <li><strong>Title:</strong> specific number + stated transformation. See Phase 2 drafts.</li>
+          <li><strong>Avoid:</strong> listicles, "101", "secret" teases with no number, a client name with no result, year stamps. Each of these died on a real channel in your niche.</li>
+        </ul>
+      </div>
+      <div class="block open">
+        <div class="bt">Open — needs you</div>
+        <ul>
+          <li>Pick which real screen we can show (Zapier canvas, GoHighLevel, n8n, your own dashboard).</li>
+          <li>Then I design 2–3 thumbnail candidates and run the mock-feed test against the outlier videos above.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHASE 4 -->
+  <section class="phase" id="p4">
+    <div class="h2row"><span class="phase-label">Phase 4</span><span class="pill draft">Framework only, no script yet</span></div>
+    <h2>The first 45 seconds: Promise, Proof, Plan</h2>
+    <p class="one-liner">After the click, the question changes from "which video?" to "should I keep watching this one?" The opening answers it or loses them.</p>
+    <div class="grid2">
+      <div class="block">
+        <div class="bt">What it is</div>
+        <p><strong>Promise (0:00–0:10):</strong> confirm in one sentence that they get what the title said.</p>
+        <p><strong>Proof (0:10–0:25):</strong> one specific reason you can deliver it — a named result, a real number. Not "I'm an expert".</p>
+        <p><strong>Plan (0:25–0:45):</strong> say the steps out loud, in order. The viewer commits to the whole video because they know where it goes.</p>
+      </div>
+      <div class="block">
+        <div class="bt">Why it matters</div>
+        <p>Most drop-off happens in the first 30 seconds, and the usual cause is a broken promise: the title said one thing, the intro rambles about another. The method optimises for <em>viewer satisfaction</em>, not jump cuts — give them more than the title promised, remove every second that does not clarify or prove.</p>
+      </div>
+      <div class="block found">
+        <div class="bt">Applied to your video 1</div>
+        <p><strong>Promise:</strong> "I'm going to show you the exact onboarding automation we built for a design agency, and the number it changed."</p>
+        <p><strong>Proof:</strong> the real client + real number from Phase 2 (still open).</p>
+        <p><strong>Plan:</strong> "Three parts: what was broken, the flow we built, and what it did to their week."</p>
+      </div>
+      <div class="block open">
+        <div class="bt">Open — needs you</div>
+        <ul>
+          <li>Script format: full word-for-word (talking head) or a structured outline (screen share)? The method says: outline for screen shares.</li>
+          <li>Once the Phase 2 number is confirmed, I write the full script.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHASE 5 -->
+  <section class="phase" id="p5">
+    <div class="h2row"><span class="phase-label">Phase 5</span><span class="pill draft">Drafted, not built</span></div>
+    <h2>Turn a viewer into a lead without a pitch</h2>
+    <p class="one-liner">Views do not pay. The call to action must feel like the most useful next step of the video, not a commercial break.</p>
+    <div class="grid2">
+      <div class="block">
+        <div class="bt">What it is</div>
+        <p>Replace "book a call" with a <strong>give</strong>: a resource that extends the lesson (a template, a checklist, a scorecard). The viewer opts in to get it. The opt-in page then leads to your booking link.</p>
+        <p>The method's test: <em>would an unbiased expert still recommend this resource?</em> If yes, it belongs in the video. If it only exists to sell, cut it.</p>
+      </div>
+      <div class="block">
+        <div class="bt">Why it matters</div>
+        <p>A hard pitch breaks trust and retention at once. A useful give keeps both, and it filters: only people with the actual problem download an onboarding template.</p>
+      </div>
+      <div class="block found">
+        <div class="bt">Drafted for you</div>
+        <ul>
+          <li><strong>The onboarding automation template</strong> (Zapier/GoHighLevel). It mirrors the strongest demand signal in Phase 1, so the give and the video match exactly.</li>
+          <li><strong>A free agency tech-stack audit</strong> — mirrors the "agency tech stack" keyword directly.</li>
+          <li>Flow: video → opt-in → booking link (Calendly for EN, per your existing convention).</li>
+        </ul>
+      </div>
+      <div class="block open">
+        <div class="bt">Open — needs you</div>
+        <ul>
+          <li>Pick one give for video 1. Template is the stronger match.</li>
+          <li>Where the opt-in lives: your existing Supabase lead system, or a new page?</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHASE 6 -->
+  <section class="phase" id="p6">
+    <div class="h2row"><span class="phase-label">Phase 6</span><span class="pill todo">Cannot start until a video is live</span></div>
+    <h2>After publishing: find the leak, fix that stage only</h2>
+    <p class="one-liner">Treat the channel as one campaign. When a video underperforms, the numbers tell you which phase failed.</p>
+    <div class="grid2">
+      <div class="block full">
+        <div class="bt">The diagnostic table you will use</div>
+        <ul>
+          <li><strong>High impressions, low clicks</strong> → packaging failed → back to Phase 3 (re-do thumbnail/title).</li>
+          <li><strong>Clicks, but drop-off in the first 30 s</strong> → broken promise → back to Phase 4 (re-script the opening).</li>
+          <li><strong>Watched to the end, but no opt-ins</strong> → CTA felt like a pitch → back to Phase 5 (swap in a real give).</li>
+          <li><strong>Opt-ins, but unqualified calls</strong> → opt-in page needs a filter question; video needs to name the avatar more precisely.</li>
+        </ul>
+        <p style="margin-top:12px;color:var(--muted);font-size:13.5px">Also from the method: do not chase a one-off viral video outside your niche. Off-topic viewers ruin the channel's audience signal for every later video.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOSSARY -->
+  <section class="phase">
+    <h2>Words used above</h2>
+    <p class="one-liner">So you can read the research files without me.</p>
+    <div class="block">
+      <dl class="gloss">
+        <dt>Outlier</dt><dd>A video that got far more views than its own channel's average. Proof that the topic, not the channel, pulled people in.</dd>
+        <dt>Multiplier (×)</dt><dd>That video's views divided by the channel's average views per video. 10× = ten times normal.</dd>
+        <dt>Channel average</dt><dd>Total channel views ÷ number of videos. We computed it live from the YouTube API for every channel checked.</dd>
+        <dt>Negative evidence</dt><dd>Videos that died on a channel that also has winners. The difference between them is the lesson.</dd>
+        <dt>Mechanism</dt><dd>Your specific method (backend automation). Unknown to the audience.</dd>
+        <dt>Desired outcome</dt><dd>What the audience already wants and searches for (scale the agency, fewer hours).</dd>
+        <dt>Packaging</dt><dd>Title + thumbnail. Decides the click.</dd>
+        <dt>PPP</dt><dd>Promise, Proof, Plan — the first 45 seconds.</dd>
+        <dt>Give / lead magnet</dt><dd>A useful resource offered instead of a pitch. The viewer opts in; the opt-in leads to your booking page.</dd>
+        <dt>Seed keywords</dt><dd>The 8 search phrases we started from: white label web development, automation for graphic designers, agency tech stack, zapier client onboarding workflow, how brand designers scale, creative agency backend systems, freelance designer scale agency, website speed for creative agencies.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- NEED FROM YOU -->
+  <section class="phase">
+    <h2>What I need from you to move to filming</h2>
+    <div class="need">
+      <ol>
+        <li>Can Tacheles be named in video 1, with a real number? Or must it stay anonymous?<span class="why">Unblocks Phase 2 titles and the Phase 4 proof line.</span></li>
+        <li>One real, verifiable result number from that engagement (hours saved per week, clients added, or revenue).<span class="why">Every winning title in Phase 1 had one. Without it we publish a hypothesis.</span></li>
+        <li>Which real screen can appear in the thumbnail and the video (Zapier, GoHighLevel, n8n, your own dashboard)?<span class="why">Unblocks Phase 3 thumbnail design.</span></li>
+        <li>Script format for video 1: word-for-word, or structured outline for a screen share?<span class="why">Unblocks Phase 4 script.</span></li>
+        <li>Which give for video 1: onboarding template, or tech-stack audit?<span class="why">Unblocks Phase 5 build.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <p class="foot">Data sources: YouTube Data API v3, live pulls on 2026-09-16 (108 search results, 7 channels × up to 50 uploads each). Scripts: <span class="num">scripts/youtube-outlier-research.mjs</span>, <span class="num">scripts/youtube-channel-deepdive.mjs</span>. Full notes: <span class="num">00_project/youtube-content-research-creative-agencies.md</span>. The earlier health-practitioner scan is kept in <span class="num">00_project/youtube-content-research-health-practitioners.md</span> for reference.</p>
+
+</div>

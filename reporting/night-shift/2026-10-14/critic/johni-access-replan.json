@@ -1,0 +1,15 @@
+{
+  "id": "johni-access-replan",
+  "verdict": "pass",
+  "checks": {
+    "C1": {"pass": true, "why": "replan-note.md exists and covers the full scope: sorts the 25 overdue tasks into done-but-unticked, genuinely open, and unconfirmed buckets with a net re-plan."},
+    "C2": {"pass": true, "why": "Spot-checked 4 facts: live site hours/WhatsApp/no-FAQ (WebFetch confirmed verbatim), scan.json line 1634 '25 overdue tasks' figure, 02-seed.sql goal text for client b84427b9, and cross-chat-open-decisions.md line 71 quote — all match sources.md and the cited files exactly."},
+    "C3": {"pass": true, "why": "Missing data (raw 25-row portal task export) is marked with an explicit [fehlt: ...] block, not filled in as filler."},
+    "C4": {"pass": true, "why": "Internal English note for Martin throughout, no client-facing text; Johni Jaya Motor is not a health client so HWG does not apply."},
+    "C5": {"pass": true, "why": "git status / mtime check shows only replan-note.md, sources.md, summary.md inside the item folder were written by this item; no send/publish/live-change claims in the text."},
+    "C6": {"pass": true, "why": "Gives Martin a concrete 3-bucket action plan (tick ~4 items, keep 7 real, check the rest in the portal) he can act on tomorrow with no further research."},
+    "C7": {"pass": true, "why": "Not applicable — no German client-facing copy in this item."}
+  },
+  "fails": [],
+  "one_line": "Pass — the re-plan correctly sorts the 25 overdue tasks into done/open/unconfirmed, and every spot-checked fact traces to a real source."
+}

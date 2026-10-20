@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-11",
+ "page": "st-20-wirtschaftsstrafrecht/05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G2 legal": {
+   "mode": "brao",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "info": {
+    "words": 1453,
+    "placeholders": 0
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "3 Sätze über 28 Wörter (zum Beispiel: Handelt jemand als vertretungsberechtigtes Organ einer juristischen Pe...)"
+   ],
+   "counts": {
+    "du": 0,
+    "sie": 50,
+    "ich": 1,
+    "wir": 40
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1453,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "[Hinweis] Begriffs-Abdeckung 76 % (17 Begriffe aus mindestens 50 % der Seiten). Fehlen: strafrecht, deutschland, expertise, strafverteidigung. Pflicht nur, wenn die Suchabsicht den Begriff braucht."
+   ]
+  }
+ }
+}

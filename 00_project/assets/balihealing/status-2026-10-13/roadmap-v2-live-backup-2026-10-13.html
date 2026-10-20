@@ -1,0 +1,623 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEO &amp; Content Roadmap — Bali Healing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap">
+<style>
+:root{
+  --ground:#fffcf3; --panel:#ffffff; --ink:#252525; --ink-soft:#5f5f5f;
+  --grey:#8c8c8c; --line:#efeadb; --line-2:#e6dfca;
+  --accent:#fac118; --accent-ink:#5a4600;
+  --keep:#2e9e5b; --keep-bg:#e7f5ec; --keep-ln:#bfe4cc;
+  --rev:#c98a1e; --rev-bg:#fdf3d7; --rev-ln:#efdca6;
+  --new:#252525; --new-bg:#fff6d6; --new-ln:#f3d873;
+  --dead:#c0392b; --dead-bg:#fdecea; --dead-ln:#f3c9c3;
+  --pend:#8c8c8c; --pend-bg:#f2f0e8; --pend-ln:#d9d3bf;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ground:#1a1814; --panel:#232019; --ink:#f4efe2;
+    --ink-soft:#c3bba7; --grey:#948c78; --line:#332f26; --line-2:#3d382c;
+    --accent:#fac118; --accent-ink:#fac118;
+    --keep:#5cc98a; --keep-bg:#182a20; --keep-ln:#2b4a37;
+    --rev:#e0a63a; --rev-bg:#2c2413; --rev-ln:#4a3d1c;
+    --new:#fac118; --new-bg:#2a2412; --new-ln:#54471d;
+    --dead:#e57565; --dead-bg:#2c1a17; --dead-ln:#4a2b26;
+    --pend:#948c78; --pend-bg:#26231b; --pend-ln:#3d382c;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#1a1814; --panel:#232019; --ink:#f4efe2; --ink-soft:#c3bba7;
+  --grey:#948c78; --line:#332f26; --line-2:#3d382c;
+  --accent:#fac118; --accent-ink:#fac118;
+  --keep:#5cc98a; --keep-bg:#182a20; --keep-ln:#2b4a37;
+  --rev:#e0a63a; --rev-bg:#2c2413; --rev-ln:#4a3d1c;
+  --new:#fac118; --new-bg:#2a2412; --new-ln:#54471d;
+  --dead:#e57565; --dead-bg:#2c1a17; --dead-ln:#4a2b26;
+  --pend:#948c78; --pend-bg:#26231b; --pend-ln:#3d382c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ground);color:var(--ink);font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1140px;margin:0 auto;padding:38px 24px 90px}
+.top{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:2px solid var(--line);padding-bottom:22px;margin-bottom:26px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .logo{height:40px;width:auto;display:block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand .logo{filter:invert(1)}}
+:root[data-theme="dark"] .brand .logo{filter:invert(1)}
+.brand .sub{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--grey)}
+.top .meta{text-align:right;font-size:12.5px;color:var(--grey);line-height:1.7}
+h1{font-family:"Anton",sans-serif;font-weight:400;font-size:clamp(30px,4.6vw,50px);line-height:.98;letter-spacing:.3px;text-wrap:balance;margin:8px 0 6px}
+h1 em{font-style:normal;color:var(--accent);-webkit-text-stroke:0}
+.lead{font-size:15.5px;color:var(--ink-soft);max-width:72ch;margin-bottom:26px}
+.lead b{color:var(--ink)}
+.backlink{display:inline-block;margin:0 0 14px;font-size:12.5px;font-weight:800;text-decoration:none;color:#5a4600;background:rgba(250,193,24,.18);padding:7px 13px;border-radius:20px}
+.backlink:hover{background:rgba(250,193,24,.32)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;position:relative;overflow:hidden}
+.kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--kc,var(--accent))}
+.kpi.k-keep{--kc:var(--keep)} .kpi.k-rev{--kc:var(--rev)} .kpi.k-new{--kc:var(--accent)} .kpi.k-pend{--kc:var(--pend)}
+.kpi .n{font-family:"Anton",sans-serif;font-size:34px;line-height:1;letter-spacing:.5px;font-variant-numeric:tabular-nums;margin:2px 0 4px}
+.kpi .l{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--grey)}
+.kpi .d{font-size:12.5px;color:var(--ink-soft);margin-top:3px}
+.sect{font-family:"Anton",sans-serif;font-weight:400;font-size:22px;letter-spacing:.4px;margin:40px 0 4px;display:flex;align-items:center;gap:12px}
+.sect::after{content:"";flex:1;height:2px;background:var(--line)}
+.sect-lead{font-size:13.5px;color:var(--ink-soft);max-width:82ch;margin-bottom:20px}
+.track{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 20px 20px;margin-bottom:16px;box-shadow:0 1px 0 var(--line-2)}
+.track .th{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.track .idx{font-family:"Anton",sans-serif;font-size:15px;color:var(--accent-ink);background:var(--accent);width:26px;height:26px;border-radius:7px;display:grid;place-items:center;flex:0 0 auto}
+.track h3{font-size:15.5px;font-weight:800;letter-spacing:.2px}
+.track .status{margin-left:auto;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;padding:3px 9px;border-radius:20px;flex:0 0 auto}
+.status.ready{color:var(--keep);background:var(--keep-bg);border:1px solid var(--keep-ln)}
+.status.pending{color:var(--pend);background:var(--pend-bg);border:1px solid var(--pend-ln)}
+.status.progress{color:var(--rev);background:var(--rev-bg);border:1px solid var(--rev-ln)}
+.status.done{color:var(--keep);background:var(--keep-bg);border:1px solid var(--keep-ln)}
+.status.na{color:var(--grey);background:var(--panel);border:1px solid var(--line-2)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:10px}
+.grid4 .g{font-size:12px}
+.grid4 .g b{display:block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:var(--grey);margin-bottom:4px}
+.grid4 .g span{color:var(--ink-soft)}
+.findings{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line-2)}
+.findings > b{display:block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:var(--grey);margin-bottom:6px}
+.findings p{font-size:13px;color:var(--ink-soft)}
+.findings .todo{color:var(--pend);font-style:italic}
+.findings .live{background:var(--keep-bg);border:1px solid var(--keep-ln);border-radius:10px;padding:10px 12px;color:var(--ink);font-style:normal}
+.findings .blocked{background:var(--dead-bg);border:1px solid var(--dead-ln);border-radius:10px;padding:10px 12px;color:var(--ink);font-style:normal}
+@media (max-width:760px){.grid4{grid-template-columns:1fr 1fr}}
+.alert{background:var(--pend-bg);border:1px solid var(--pend-ln);border-left:5px solid var(--pend);border-radius:14px;padding:16px 20px;margin:22px 0}
+.alert h3{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--pend);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.alert p{font-size:13.5px;color:var(--ink-soft);max-width:82ch}
+.alert.warn{background:var(--dead-bg);border-color:var(--dead-ln);border-left-color:var(--dead)}
+.alert.warn h3{color:var(--dead)}
+.mtable{width:100%;border-collapse:collapse;margin-top:10px;font-size:12.5px}
+.mtable th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:var(--grey);padding:6px 10px;border-bottom:2px solid var(--line)}
+.mtable td{padding:8px 10px;border-bottom:1px solid var(--line);color:var(--ink-soft)}
+.mtable td:first-child{color:var(--ink);font-weight:700}
+.mtable tr:last-child td{border-bottom:none}
+.gridcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:20px;margin-top:14px}
+.gcard{background:var(--ground);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
+.gcard img{width:100%;height:auto;border-radius:10px;display:block;background:#eee}
+.gc-t{font-size:16px;font-weight:800;margin-top:12px}
+.gc-m{font-size:13px;color:var(--ink-soft);margin-top:4px;line-height:1.5}
+.gc-m .pos{display:inline-block;font-weight:800;color:var(--dead);margin-right:4px;font-size:14px}
+.gc-m .pos.pos-top{color:var(--keep)}
+.bigsect{background:var(--panel);border:2px solid var(--accent);border-radius:20px;padding:24px 26px 28px;margin:44px 0}
+.bigsect-h{font-family:"Anton",sans-serif;font-weight:400;font-size:26px;letter-spacing:.3px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.bigsect-h .badge2{font-family:"DM Sans",sans-serif;font-size:11px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:var(--accent-ink);background:var(--accent);padding:3px 10px;border-radius:20px}
+.bigsect-lead{font-size:13.5px;color:var(--ink-soft);max-width:82ch;margin:8px 0 20px}
+.subh{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--grey);margin:22px 0 4px;padding-top:16px;border-top:1px solid var(--line)}
+.subh:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.gtoggle{margin:10px 0}
+.gtoggle summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;color:var(--ink);background:var(--ground);border:1px solid var(--line-2);border-radius:10px;padding:9px 14px;user-select:none}
+.gtoggle summary::-webkit-details-marker{display:none}
+.gtoggle summary::before{content:"▸";display:inline-block;font-size:11px;color:var(--accent-ink);transition:transform .15s ease}
+.gtoggle[open] summary::before{transform:rotate(90deg)}
+.gtoggle summary:hover{border-color:var(--accent)}
+.gtoggle .gridcards{margin-top:12px}
+.foot{margin-top:34px;padding-top:18px;border-top:2px solid var(--line);font-size:12.5px;color:var(--grey);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:520px){.top{align-items:flex-start}.top .meta{text-align:left} .grid4{grid-template-columns:1fr}}
+</style>
+</head><body>
+
+<div class="wrap">
+  <a class="backlink" href="https://clients.741.studio/" target="_top">← Back to Dashboard</a>
+  <header class="top">
+    <div class="brand">
+      <img class="logo" src="data:image/png;base64,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" alt="741 Studio">
+      <span class="sub">Content &amp;<br>SEO Program</span>
+    </div>
+    <div class="meta">
+      Bali Healing Natural Health Center · Canggu, Bali<br>
+      balihealing.com · roadmap updated 23 Sep 2026 · v2 — reviewed with Martin
+    </div>
+  </header>
+
+  <h1>SEO &amp; Content <em>Roadmap</em></h1>
+  <p class="lead">Updated after your review — Chamber of Commerce dropped, on-site H1/H2 rebuild dropped (site confirmed fine as-is), on-page BLUF dropped. Backlink deep-dive, competitor benchmark, GBP re-audit and the magazine/directory research are now run with real data below. GBP name is already changed live.</p>
+
+  <!-- TRACK 1 -->
+  <div class="sect">1 · Backlinks &amp; Off-Page Authority</div>
+  <p class="sect-lead">Reciprocal collaborations, editorial press, and real business-directory citations.</p>
+
+  <div class="track">
+    <div class="th"><span class="idx">1</span><h3>LinkedIn collaboration outreach (Peggy's account)</h3></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Reciprocal articles + link back = a real backlink from an active, credible local business, not a link farm</span></div>
+      <div class="g"><b>Expected outcome</b><span>5–10 collaborations from the first batch of 10–15 sent, each = 1 backlink + cross-audience exposure</span></div>
+      <div class="g"><b>Timing</b><span>Batch 1 sending now, first replies in 1–2 weeks</span></div>
+      <div class="g"><b>Owner</b><span>Peggy (send), 741 (drafts + tracking)</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Pending reply data.</p></div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">2</span><h3>Bali magazine feature, every 2 months</h3></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>A magazine's domain carries far more authority than a local business blog — your highest-DA backlink source</span></div>
+      <div class="g"><b>Expected outcome</b><span>1 high-DA backlink + press mention every 2 months, ~6/year</span></div>
+      <div class="g"><b>Timing</b><span>First placement ~Nov 22, 2026</span></div>
+      <div class="g"><b>Owner</b><span>741 (pitch + article), Bali Healing (pick from list below)</span></div>
+    </div>
+    <div class="findings">
+      <b>Findings — approved, checked via DataForSEO</b>
+      <table class="mtable">
+        <tr><th>Magazine</th><th>Rank</th><th>Backlinks</th><th>Ref. domains</th><th>Fit</th></tr>
+        <tr><td>Coconuts Bali</td><td>395</td><td>221,942</td><td>25,843</td><td>Highest authority, general SE-Asia news</td></tr>
+        <tr><td>The Honeycombers Bali</td><td>392</td><td>58,276</td><td>11,294</td><td>Lifestyle/wellness-focused, strong fit</td></tr>
+        <tr><td>NOW! Bali</td><td>367</td><td>19,249</td><td>1,988</td><td>Bali print+digital, regularly covers wellness</td></tr>
+        <tr><td>Bali Discovery</td><td>320</td><td>18,548</td><td>2,244</td><td>Travel/tourism newsletter, decent reach</td></tr>
+        <tr><td>The Bali Bible</td><td>270</td><td>5,951</td><td>1,367</td><td>Bali lifestyle guide, has wellness/beauty section</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">3</span><h3>Local business directories — company details listed</h3></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Real, on-topic Bali directories a wellness business can actually be listed in — replaces the generic "Chamber of Commerce" idea, which doesn't map to Bali</span></div>
+      <div class="g"><b>Expected outcome</b><span>Consistent NAP citations + a few extra low-effort backlinks</span></div>
+      <div class="g"><b>Timing</b><span>Submissions can start once you confirm the list</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings">
+      <b>Findings — 5 real, on-topic directories found</b>
+      <table class="mtable">
+        <tr><th>Directory</th><th>Why it fits</th></tr>
+        <tr><td>Bali Business Directory (bali.business)</td><td>Has a Health &amp; Wellness category, targets expats/digital nomads</td></tr>
+        <tr><td>Bali Authority Wellness Directory (baliauthority.com/wellness-directory)</td><td>Wellness-specific directory</td></tr>
+        <tr><td>Bali-Wellness-Guide (baliwellnessguide.com)</td><td>Open spa/wellness directory, free registration</td></tr>
+        <tr><td>BaliBusinessBase (balibusinessbase.com)</td><td>Features Canggu-based businesses specifically</td></tr>
+        <tr><td>LocalBizNetwork Bali (localbiznetwork.com)</td><td>Includes healthcare providers</td></tr>
+      </table>
+      <p style="margin-top:8px">Checked real domain authority for all 5 once the IP was whitelisted — <b>only 2 are actually worth using:</b></p>
+      <table class="mtable">
+        <tr><th>Directory</th><th>Rank</th><th>Backlinks</th><th>Ref. domains</th><th>Spam score</th><th>Verdict</th></tr>
+        <tr><td>LocalBizNetwork</td><td>308</td><td>5,265</td><td>1,140</td><td>15 (clean)</td><td>Solid — submit</td></tr>
+        <tr><td>Bali-Wellness-Guide</td><td>300</td><td>2,033</td><td>78</td><td>39</td><td>Decent — submit</td></tr>
+        <tr><td>bali.business</td><td>0</td><td>26</td><td>24</td><td>52 (high)</td><td>Near-empty, skip for now</td></tr>
+        <tr><td>BaliBusinessBase</td><td>0</td><td>11</td><td>11</td><td>62 (high)</td><td>Near-empty, skip for now</td></tr>
+        <tr><td>Bali Authority</td><td>0</td><td>9</td><td>9</td><td>63 (high)</td><td>Near-empty, skip for now</td></tr>
+      </table>
+      <p style="margin-top:8px">Direct submission links: <a href="https://www.localbiznetwork.com/add-biz.php" target="_blank">localbiznetwork.com/add-biz.php</a> and <a href="https://baliwellnessguide.com/submit-your-spa/" target="_blank">baliwellnessguide.com/submit-your-spa</a>.</p>
+    </div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">4</span><h3>Backlink deep-dive</h3></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Know exactly which broken links to reclaim and which referring domains are actually worth pursuing — feeds Tracks 1–3 above</span></div>
+      <div class="g"><b>Expected outcome</b><span>A prioritized action list, not just a summary count</span></div>
+      <div class="g"><b>Timing</b><span>Done</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings">
+      <b>Findings — real numbers, refreshed</b>
+      <p class="live">Current: <b>73 backlinks, 50 referring domains, 25 broken (34%)</b>, spam score 26/100. Domain rank 104 (DataForSEO's own scale).</p>
+      <p style="margin-top:10px"><b>Real reclaim targets</b> (genuine sites, broken link, worth a fix request): <code>thepunchcommunity.com/about</code> (editorial mention, rank 2), <code>balidoneright.com</code> (Bali travel site), <code>provenexpert.com</code> (review platform), <code>moonsweptyoga.com</code>, <code>namastenetwork.org</code>, <code>brownmemoriallibrary.org</code>.</p>
+      <p style="margin-top:8px"><b>One genuinely valuable referring domain:</b> janeapp.com (rank 88, 10 dofollow backlinks) — from the booking-software integration, real and clean.</p>
+      <p class="blocked" style="margin-top:8px"><b>Toxic-link pattern found in anchor text:</b> the top anchor text pointing at balihealing.com is literally <i>"High Quality Dofollow Backlinks DA 50 PA 40 Premium PBN Network Service balihealing.com Rank First Page Google Fast SEO Link Building Buy Backlinks Online Cheap"</i> — 11 backlinks across 11 domains. Referring domains include obvious PBN/link-farm sites (boost-traffic.com, backlinkmaker.link, backlinkwizards.link, youseotools.link, 1seoservices.com, backlinksboost.info, mediaboooster.com, anchorurl.cloud). This looks like the URL got scraped onto spam-SEO-tool demo/example pages, not something anyone at Bali Healing did. Isolated instances like this are usually ignored by Google rather than penalized, but if it keeps growing it's worth a disavow file. Flagging now, not proposing action yet.</p>
+      <p class="live" style="margin-top:8px"><b>Reclaim outreach:</b> emails drafted for all 6 targets. No public contact address found for any of the 6 via crawl — Martin to send via each site's own contact form.</p>
+    </div>
+  </div>
+
+  <!-- TRACK 2 -->
+  <div class="sect">2 · On-Site Architecture &amp; GBP</div>
+  <p class="sect-lead">GBP name, categories, and services — the site's H1/H2 structure itself is confirmed fine as-is, no rebuild needed.</p>
+
+
+
+  <div class="track">
+    <div class="th"><span class="idx">8</span><h3>GBP completeness re-audit</h3></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Confirm services, descriptions and categories are complete — not assumed</span></div>
+      <div class="g"><b>Expected outcome</b><span>Clean pass/fail vs the 741 blueprint (20–50 services, 40–60 map-keywords)</span></div>
+      <div class="g"><b>Timing</b><span>Done for Natural Health Center; Beauty Clinic still to check</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="live">Pulled the live profile directly from Google. <b>Opening date confirmed: May 20, 2006</b> — backs up the "since 2006" claim used on Peggy's LinkedIn. 23 service items already listed (Acupuncture, Naturopathy, Osteopathy, Reiki, Theta Healing, Breathwork, Women's Health, Medical Spa, TCM, Ozone Therapy, IV Infusion Therapy, Detox, Homeopathy, Pathology/Live Blood Analysis, Neural Therapy, Nutritionist, Physiotherapy, Prenatal/Postnatal Physio, Psychology, Herbal Supplements, Supplements, Tinctures, Dermatology) — this is healthy density, not a gap. The one real issue is the Acupuncture conflict flagged above. Bali Healing Beauty Clinic (the second GBP) not yet re-checked this pass.</p></div>
+  </div>
+
+  <!-- TRACK 3 -->
+  <div class="sect">3 · Hyper-Local Geo Content &amp; Grid Tracking</div>
+  <p class="sect-lead">Landmark-tied content folds into the blog build already planned in the sitetree. Grid data itself becomes its own recurring report.</p>
+
+  <div class="track">
+    <div class="th"><span class="idx">7</span><h3>Recommended content / blog structure</h3></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Grid data shows several real services (craniosacral, prolozone, naet allergy) rank well but have thin or no dedicated content — the gap is content, not ranking ability</span></div>
+      <div class="g"><b>Expected outcome</b><span>6 new pages, each tied to a service already confirmed to have real search/grid demand</span></div>
+      <div class="g"><b>Timing</b><span>Ready to write once approved</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings">
+      <b>Findings — recommended pages, grounded in this session's real data</b>
+      <table class="mtable">
+        <tr><th>Page</th><th>Why this one</th></tr>
+        <tr><td>Craniosacral Therapy: what it is &amp; who it's for</td><td>51.02% SoLV already, thin content — supports an already-strong grid position</td></tr>
+        <tr><td>Prolozone Injection explained</td><td>73.47% SoLV, one of the strongest results in the whole Wellness batch, minimal content today</td></tr>
+        <tr><td>NAET Allergy Treatment: how it works</td><td>100% SoLV (#1), zero dedicated content — pure upside</td></tr>
+        <tr><td>Reiki in Canggu: session guide</td><td>26.53% SoLV, real room to grow, service already has a page but no supporting content</td></tr>
+        <tr><td>Ozone Insufflation vs Autohemotherapy: the difference</td><td>Insufflation at 16.33% SoLV, both autohemotherapy variants at 0% despite live pages — a comparison page can pull search intent that's currently split across three separate pages</td></tr>
+        <tr><td>"Bali Healing Therapy" — what people are actually searching</td><td>Real GSC finding: this exact query gets 205 impressions but only 4 clicks (2% CTR) over 28 days — the page ranks but isn't converting the click, worth a dedicated landing treatment</td></tr>
+      </table>
+      <p style="margin-top:10px">Acupuncture intentionally left off this list.</p>
+    </div>
+  </div>
+
+  <div class="bigsect">
+    <div class="bigsect-h">🩺 Wellness — Full Grid Report <span class="badge2">Bali Healing Natural Health Center</span></div>
+    <p class="bigsect-lead">Every Wellness-side keyword grid-scanned to date, one Google Business Profile only (Natural Health Center — <b>not</b> Beauty Clinic, that's its own separate report below once we run it). Kept apart from the roadmap tracks above so it doesn't get mixed up with planning items.</p>
+
+    <div class="subh">Already tracked (7)</div>
+    <details class="gtoggle">
+      <summary>Show grid images (7)</summary>
+      <div class="gridcards">
+        <div class="gcard">
+          <img src="https://lf-static-v2.localfalcon.com/image/17f404087637806" alt="ozone therapy grid" loading="lazy">
+          <div class="gc-t">ozone therapy</div>
+          <div class="gc-m"><span class="pos">#3</span> SoLV 57.14% · ARP 3.17 · 21 Sep 2026</div>
+        </div>
+        <div class="gcard">
+          <img src="https://lf-static-v2.localfalcon.com/image/0154762c5bf281a" alt="naturopath grid" loading="lazy">
+          <div class="gc-t">naturopath</div>
+          <div class="gc-m"><span class="pos pos-top">#1</span> SoLV 93.88% · ARP 1.80 · 23 Aug 2026</div>
+        </div>
+        <div class="gcard">
+          <img src="https://lf-static-v2.localfalcon.com/image/c13eb2f57efbed7" alt="theta healing grid" loading="lazy">
+          <div class="gc-t">theta healing</div>
+          <div class="gc-m"><span class="pos pos-top">#1</span> SoLV 97.96% · ARP 2.04 · 19 May 2026</div>
+        </div>
+        <div class="gcard">
+          <img src="https://lf-static-v2.localfalcon.com/image/42cd5347dfdb331" alt="physiotherapy bali grid" loading="lazy">
+          <div class="gc-t">physiotherapy bali</div>
+          <div class="gc-m"><span class="pos">low</span> SoLV 2.04% · ARP 13.30 · 22 Sep 2026</div>
+        </div>
+        <div class="gcard">
+          <img src="https://lf-static-v2.localfalcon.com/image/798c2fe091100b0" alt="traditional chinese medicine bali grid" loading="lazy">
+          <div class="gc-t">traditional chinese medicine bali</div>
+          <div class="gc-m"><span class="pos">low</span> SoLV 2.04% · ARP 8.59 · 22 Sep 2026</div>
+        </div>
+        <div class="gcard">
+          <img src="https://lf-static-v2.localfalcon.com/image/cdfc97a18047ec0" alt="iv drip therapy bali grid" loading="lazy">
+          <div class="gc-t">iv drip therapy bali</div>
+          <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 12.00 · 22 Sep 2026</div>
+        </div>
+        <div class="gcard">
+          <img src="https://lf-static-v2.localfalcon.com/image/2f0862a287ba1d8" alt="best acupuncture canggu grid" loading="lazy">
+          <div class="gc-t">best acupuncture canggu</div>
+          <div class="gc-m"><span class="pos">low</span> SoLV 12.24% · ARP 6.06 · 18 May 2026 <i>(service dropped, kept for reference)</i></div>
+        </div>
+      </div>
+    </details>
+
+    <div class="subh">New — first scan, 23 Sep 2026 (11)</div>
+    <details class="gtoggle">
+      <summary>Show grid images (11)</summary>
+      <div class="gridcards">
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/02ece4f39daf487" alt="naet allergy treatment bali grid" loading="lazy">
+        <div class="gc-t">naet allergy treatment bali</div>
+        <div class="gc-m"><span class="pos pos-top">#1</span> SoLV 100.00% · ARP 1.76 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/af612b79d722027" alt="prolozone injection bali grid" loading="lazy">
+        <div class="gc-t">prolozone injection bali</div>
+        <div class="gc-m"><span class="pos pos-top">strong</span> SoLV 73.47% · ARP 3.61 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/07796fc0b6e8fb7" alt="access bars therapy bali grid" loading="lazy">
+        <div class="gc-t">access bars therapy bali</div>
+        <div class="gc-m"><span class="pos pos-top">strong</span> SoLV 65.31% · ARP 2.63 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/a127798a716cfc1" alt="osteopathy bali grid" loading="lazy">
+        <div class="gc-t">osteopathy bali</div>
+        <div class="gc-m"><span class="pos">mid</span> SoLV 51.02% · ARP 3.78 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/01921fd0940920f" alt="craniosacral therapy bali grid" loading="lazy">
+        <div class="gc-t">craniosacral therapy bali</div>
+        <div class="gc-m"><span class="pos">mid</span> SoLV 51.02% · ARP 3.39 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/fe5592d6a8616af" alt="neural therapy bali grid" loading="lazy">
+        <div class="gc-t">neural therapy bali</div>
+        <div class="gc-m"><span class="pos">mid</span> SoLV 51.02% · ARP 4.64 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/4be4491c6c581d6" alt="reiki bali grid" loading="lazy">
+        <div class="gc-t">reiki bali</div>
+        <div class="gc-m"><span class="pos">weak</span> SoLV 26.53% · ARP 7.06 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/656c22298e63c8f" alt="ozone insufflation bali grid" loading="lazy">
+        <div class="gc-t">ozone insufflation bali</div>
+        <div class="gc-m"><span class="pos">weak</span> SoLV 16.33% · ARP 5.20 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/34de750f9e7de66" alt="clinical hypnotherapy bali grid" loading="lazy">
+        <div class="gc-t">clinical hypnotherapy bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 2.04% · ARP 11.16 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/f6ad204b62d84ed" alt="ozone hyperbaric major autohemotherapy bali grid" loading="lazy">
+        <div class="gc-t">ozone hyperbaric major autohemotherapy bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 5.49 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/2570cac32cda701" alt="ozone minor autohemotherapy bali grid" loading="lazy">
+        <div class="gc-t">ozone minor autohemotherapy bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 5.00 · 23 Sep 2026</div>
+      </div>
+      </div>
+    </details>
+
+    <p style="margin-top:18px;font-size:13.5px;color:var(--ink-soft)"><b>Read on this:</b> the specific, less-obvious services (naet allergy, prolozone, access bars, craniosacral, neural therapy, osteopathy) rank surprisingly well — 51–100% SoLV, several with little to no dedicated content. The exact-name-match terms (both ozone autohemotherapy variants) rank at 0% despite live pages existing — worth checking those two pages' on-page optimization specifically. Reiki and clinical hypnotherapy sit in the middle, real room to grow.</p>
+  </div>
+
+  <div class="bigsect">
+    <div class="bigsect-h">💅 Beauty — Full Grid Report <span class="badge2">Bali Healing Beauty Clinic</span></div>
+    <p class="bigsect-lead">A completely separate Google Business Profile from Wellness above — different listing, different reviews, different categories. Its own box on purpose, so it's never mistaken for Wellness data.</p>
+
+    <div class="subh">First scan, 23 Sep 2026 (14 of 15 — one still processing)</div>
+    <details class="gtoggle">
+      <summary>Show grid images (14)</summary>
+      <div class="gridcards">
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/cc28d4808f9b7b0" alt="basic facial bali grid" loading="lazy">
+        <div class="gc-t">basic facial bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 21.00 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/5f738c11f4387cf" alt="dermatoscopy bali grid" loading="lazy">
+        <div class="gc-t">dermatoscopy bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 21.00 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/0b9213ff5b1cad6" alt="dmae mesotherapy bali grid" loading="lazy">
+        <div class="gc-t">dmae mesotherapy bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 21.00 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/dfb3293d6edc2b9" alt="gyneco aesthetic bali grid" loading="lazy">
+        <div class="gc-t">gyneco aesthetic bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 21.00 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/c5a5abf388873bd" alt="intramuscular shots bali grid" loading="lazy">
+        <div class="gc-t">intramuscular shots bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 21.00 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/f36e264003484f5" alt="hydraglo facial bali grid" loading="lazy">
+        <div class="gc-t">hydraglo facial bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 2.04% · ARP 13.50 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/c64c7843c50cdd6" alt="microneedling bali grid" loading="lazy">
+        <div class="gc-t">microneedling bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 21.00 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/fc6444f649bd365" alt="platelet rich plasma face bali grid" loading="lazy">
+        <div class="gc-t">platelet rich plasma face bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 21.00 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/92d134936d4cdfa" alt="platelet rich plasma hair bali grid" loading="lazy">
+        <div class="gc-t">platelet rich plasma hair bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 21.00 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/8ede3472113f2d4" alt="ppc fat reduction bali grid" loading="lazy">
+        <div class="gc-t">ppc fat reduction bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 21.00 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/5abfdbb9628babd" alt="acid peeling treatment bali grid" loading="lazy">
+        <div class="gc-t">acid peeling treatment bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 21.00 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/0e5aafe25d06f46" alt="cell reject treatment bali grid" loading="lazy">
+        <div class="gc-t">cell reject treatment bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 21.00 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/7c6e579a8cdb893" alt="advanced facial rejuvenation bali grid" loading="lazy">
+        <div class="gc-t">advanced facial rejuvenation bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 21.00 · 23 Sep 2026</div>
+      </div>
+      <div class="gcard">
+        <img src="https://lf-static-v2.localfalcon.com/image/dedb302e558c185" alt="nucleofill pdrn injection bali grid" loading="lazy">
+        <div class="gc-t">nucleofill pdrn injection bali</div>
+        <div class="gc-m"><span class="pos">low</span> SoLV 0.00% · ARP 21.00 · 23 Sep 2026</div>
+      </div>
+      </div>
+    </details>
+    <p class="todo" style="margin-top:12px">🔲 hyaluronic acid injections bali — scan submitted, still processing. Will add once it lands.</p>
+
+    <p style="margin-top:14px;font-size:13.5px;color:var(--ink-soft)"><b>Read on this — this one's serious:</b> 13 of the 14 scanned Beauty services show <b>0.00% SoLV</b> — completely invisible on Google Maps for their own core treatments. Only hydraglo facial shows any life at all (2.04%). This matches the older 2 June campaign data (also near-total invisibility) — nothing has improved since. Beauty Clinic has just 10 reviews and 1 GBP category (Medical Center), against Wellness's 6 categories and 97 reviews. This is the real gap in the whole account, bigger than anything on the Wellness side.</p>
+
+  </div>
+
+  <div class="bigsect">
+    <div class="bigsect-h">📞 Customer Contact Tracking — 6-Month Trend <span class="badge2">GBP + WhatsApp</span></div>
+    <p class="bigsect-lead">The two channels that actually matter — someone calling you from Google, or messaging on WhatsApp from the site. Pulled directly from Google's own GBP performance data and GA4, not estimated.</p>
+
+    <table class="mtable">
+      <tr><th>Month</th><th>GBP phone calls</th><th>GBP website clicks</th><th>GBP direction requests</th><th>WhatsApp clicks (site, GA4)</th></tr>
+      <tr><td>April 2026</td><td>19</td><td>260</td><td>295</td><td class="todo">not tracked yet</td></tr>
+      <tr><td>May 2026</td><td>16</td><td>301</td><td>297</td><td class="todo">not tracked yet</td></tr>
+      <tr><td>June 2026</td><td>13</td><td>225</td><td>286</td><td class="todo">not tracked yet</td></tr>
+      <tr><td>July 2026</td><td>9</td><td>260</td><td>311</td><td class="todo">not tracked yet</td></tr>
+      <tr><td>August 2026</td><td>23</td><td>254</td><td>258</td><td><b>321</b></td></tr>
+      <tr><td>September 2026 (1–23, partial + flatline)</td><td>9</td><td>104</td><td>158</td><td>234</td></tr>
+    </table>
+
+    <p style="margin-top:14px;font-size:13.5px;color:var(--ink-soft)"><b>What this actually says:</b></p>
+    <ul style="margin:8px 0 0 20px;font-size:13.5px;color:var(--ink-soft);line-height:1.8">
+      <li><b>WhatsApp click tracking has data from Aug 2026 onward only.</b> Everything before that shows "not tracked," not zero — those clicks happened, we just weren't counting them. So there's no real 6-month WhatsApp trend yet, only ~7 weeks of real data: 321 in August, 234 so far in a 23-day September.</li>
+      <li><b>GBP phone calls have real 6-month history</b> (Google tracks this on its own): peaked at 23 in August, sitting at 9 for September so far — but September isn't over and has the flatline below dragging it down.</li>
+      <li><b>The September flatline is the story here.</b> From 15–23 September, GBP website clicks are exactly 0 for 9 straight days, and calls are also near-zero — while direction requests kept coming in normally the whole time. That's not a slow month, that's a specific break in the Search-facing side of the listing. Same anomaly as Track 9 above. Cause not established from this data alone.</li>
+    </ul>
+  </div>
+
+
+  <!-- TRACK 4 -->
+  <div class="sect">4 · AI Agent Visibility (GEO/AEO)</div>
+  <p class="sect-lead">Getting cited by ChatGPT, Gemini, Grok and Google's AI mode — checked directly, not assumed.</p>
+
+  <div class="track">
+    <div class="th"><span class="idx">AI</span><h3>Where we stand today</h3></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Before building an AI-visibility plan, confirm whether any baseline exists</span></div>
+      <div class="g"><b>Expected outcome</b><span>A real starting number instead of an assumption</span></div>
+      <div class="g"><b>Timing</b><span>Done for 16 Wellness keywords</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings">
+      <b>Findings — real SAIV (Share of AI Voice), not estimated</b>
+      <table class="mtable" style="margin-top:10px">
+        <tr><th>Keyword</th><th>ChatGPT</th><th>Gemini</th><th>Google AI Mode</th></tr>
+        <tr><td>naet allergy treatment bali</td><td><b>100.00%</b> <span class="pos pos-top">strong</span></td><td><b>100.00%</b> <span class="pos pos-top">strong</span></td><td>0.00% <span class="pos">weak</span></td></tr>
+        <tr><td>naturopath bali</td><td><b>100.00%</b> <span class="pos pos-top">strong</span></td><td>66.67% <span class="pos">mid</span></td><td>0.00% <span class="pos">weak</span></td></tr>
+        <tr><td>osteopathy bali</td><td>88.89% <span class="pos pos-top">strong</span></td><td>55.56% <span class="pos">mid</span></td><td>0.00% <span class="pos">weak</span></td></tr>
+        <tr><td>craniosacral therapy bali</td><td>88.89% <span class="pos pos-top">strong</span></td><td>11.11% <span class="pos">weak</span></td><td>55.56% <span class="pos">mid</span></td></tr>
+        <tr><td>prolozone injection bali</td><td>88.89% <span class="pos pos-top">strong</span></td><td>33.33% <span class="pos">mid</span></td><td>0.00% <span class="pos">weak</span></td></tr>
+        <tr><td>access bars therapy bali</td><td>11.11% <span class="pos">weak</span></td><td>0.00% <span class="pos">weak</span></td><td>88.89% <span class="pos pos-top">strong</span></td></tr>
+        <tr><td>ozone hyperbaric major autohemotherapy bali</td><td>77.78% <span class="pos pos-top">strong</span></td><td>0.00% <span class="pos">weak</span></td><td>55.56% <span class="pos">mid</span></td></tr>
+        <tr><td>iv drip therapy bali</td><td>11.11% <span class="pos">weak</span></td><td>33.33% <span class="pos">mid</span></td><td>77.78% <span class="pos pos-top">strong</span></td></tr>
+        <tr><td>ozone minor autohemotherapy bali</td><td>44.44% <span class="pos">mid</span></td><td>0.00% <span class="pos">weak</span></td><td><b>100.00%</b> <span class="pos pos-top">strong</span></td></tr>
+        <tr><td>ozone therapy bali</td><td>55.56% <span class="pos">mid</span></td><td>12.50% <span class="pos">weak</span></td><td><b>100.00%</b> <span class="pos pos-top">strong</span></td></tr>
+        <tr><td>neural therapy bali</td><td>44.44% <span class="pos">mid</span></td><td>66.67% <span class="pos">mid</span></td><td>55.56% <span class="pos">mid</span></td></tr>
+        <tr><td>reiki bali</td><td>66.67% <span class="pos">mid</span></td><td>0.00% <span class="pos">weak</span></td><td>33.33% <span class="pos">mid</span></td></tr>
+        <tr><td>ozone insufflation bali</td><td>55.56% <span class="pos">mid</span></td><td>0.00% <span class="pos">weak</span></td><td>11.11% <span class="pos">weak</span></td></tr>
+        <tr><td>clinical hypnotherapy bali</td><td>22.22% <span class="pos">weak</span></td><td>44.44% <span class="pos">mid</span></td><td>11.11% <span class="pos">weak</span></td></tr>
+        <tr><td>traditional chinese medicine bali</td><td>22.22% <span class="pos">weak</span></td><td>0.00% <span class="pos">weak</span></td><td>0.00% <span class="pos">weak</span></td></tr>
+        <tr><td>physiotherapy bali</td><td>11.11% <span class="pos">weak</span></td><td>0.00% <span class="pos">weak</span></td><td>0.00% <span class="pos">weak</span></td></tr>
+      </table>
+      <p style="margin-top:12px">Platform averages across all 16 keywords: <b>ChatGPT 55.6%</b> (clearly strongest — the platform most worth prioritizing for content/citations), <b>Google AI Mode 36.8%</b> (volatile, swings between 0% and 100% per keyword, no middle ground), <b>Gemini 26.5%</b> (weakest and most consistently at 0%). Physiotherapy and TCM are weak or zero across all three platforms — real content gaps. Naet allergy, osteopathy, craniosacral and prolozone all score 88%+ on ChatGPT specifically.</p>
+    </div>
+  </div>
+
+
+  <div class="track">
+    <div class="th"><span class="idx">C</span><h3>Short YouTube clips for core pages</h3></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Gemini is trained natively on video and favors businesses with video assets tied to pages</span></div>
+      <div class="g"><b>Expected outcome</b><span>Better Gemini/AI Overview citation odds</span></div>
+      <div class="g"><b>Timing</b><span>Open — needs a decision on who films</span></div>
+      <div class="g"><b>Owner</b><span>Bali Healing (film), 741 (publish/embed)</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Not a research gap — a resourcing question for Pasha/Peggy</p></div>
+  </div>
+
+  <!-- TRACK 5 -->
+  <div class="sect">5 · Reviews Engine</div>
+  <p class="sect-lead">Reviews arrive in bursts with long gaps in between, on both GBPs — confirmed, needs fixing.</p>
+
+  <div class="track">
+    <div class="th"><span class="idx">11</span><h3>Standing review-request process on both GBPs</h3></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>A steady trickle, not bursts, is the trust signal Google and AI agents both read; naming the service reinforces the entity mapping in Track 2</span></div>
+      <div class="g"><b>Expected outcome</b><span>Target 2x the local leader (~240 reviews on Natural Health Center), arriving steadily</span></div>
+      <div class="g"><b>Timing</b><span>Needs Pasha/Peggy to commit staff to asking after every visit</span></div>
+      <div class="g"><b>Owner</b><span>Bali Healing staff (ask), 741 (WhatsApp templates + QR flow)</span></div>
+    </div>
+    <div class="findings">
+      <b>Findings</b>
+      <p class="live">Natural Health Center review count frozen at 97 for 7+ weeks despite ~179 WhatsApp enquiries in that window — velocity zero. Competitor Blood Ozone Bali sits at 125 reviews now (climbed from 118) and still moving. Bali Healing Beauty Clinic is thinner still, at 10 reviews. <span class="todo">🔲 Pending: WhatsApp template + QR flow (same system as Hüwel) still to be built and handed over.</span></p>
+    </div>
+  </div>
+
+  <!-- TRACK 6 -->
+  <div class="sect">6 · Technical / Schema, Tracking &amp; Competitors</div>
+  <p class="sect-lead">What Google and AI engines can read as fact, whether we can measure any of this, and who's actually beating us where.</p>
+
+  <div class="track">
+    <div class="th"><span class="idx">12</span><h3>Sitewide LocalBusiness schema</h3></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Schema is how Google and AI engines confirm entity facts instead of guessing from body text</span></div>
+      <div class="g"><b>Expected outcome</b><span>Stronger entity confirmation for Maps + AI Overviews</span></div>
+      <div class="g"><b>Timing</b><span>Done</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings">
+      <b>Findings</b>
+      <p class="live"><code>MedicalBusiness</code> schema (name, address, phone, geo, hours, rating) live sitewide — fixed. <code>Service</code> schema per page and FAQ blocks: not done.</p>
+    </div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">9</span><h3>Tracking infrastructure: GSC, GA4, GBP calls/clicks, keyword-level rank tracking</h3></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Without this, every other track is unmeasurable — GSC shows real queries, GA4 needs the live property, GBP tracks calls/clicks natively once we can read it</span></div>
+      <div class="g"><b>Expected outcome</b><span>A working measurement layer before any "improvement" number gets reported</span></div>
+      <div class="g"><b>Timing</b><span>All three now readable</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings">
+      <b>Findings — real data pulled</b>
+      <p class="live"><b>GSC:</b> "bali healing" 82 clicks/705 impressions (pos 3.2), "bali healing center" 25/100, top page is the homepage (360 clicks/7,945 impressions/28 days).</p>
+      <p class="live" style="margin-top:8px"><b>GA4:</b> live property 428850764. 30-day pull: 3,016 page views, 312 <code>contact_whatsapp</code> events.</p>
+      <p class="live" style="margin-top:8px"><b>GBP calls/clicks/directions:</b> Google tracks this natively. 30-day totals: 15 phone calls, 170 website clicks, 201 direction requests. Native GBP chat/messaging: 0 (WhatsApp is the real channel, already covered above).</p>
+    </div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">10</span><h3>Internal linking re-verification</h3></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Confirm the Sept 7 audit findings (homepage 0 content links, 46 pages with 0–1 inbound links) still hold before building anything new on top</span></div>
+      <div class="g"><b>Expected outcome</b><span>Confirmed current state, not an assumption last month's fixes are intact</span></div>
+      <div class="g"><b>Timing</b><span>Done</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="live">Real improvement: pages with 0–1 inbound internal links down from 46 to 14 (excluding homepage, which is expected). Homepage content links up from 0 to 10. Remaining low-link pages are mostly the legacy/duplicate URLs already flagged: about-acid-peeling, about-clinicalhypnotherapy, about-physiotherapy, about-traditional-chinesemedicine, about-osteopathy, gynecoaesthetic, infusions, microneedling, prptreatment, plus access-bars-therapy, reiki-sessions, dermatoscopy, intramuscularshots, thetahealing-treatment.</p></div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">C1</span><h3>Competitor benchmark</h3></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>See exactly why competitors outrank or trail Bali Healing per service — not a guess</span></div>
+      <div class="g"><b>Expected outcome</b><span>A ranked, evidence-based list of what to close per service</span></div>
+      <div class="g"><b>Timing</b><span>Ozone + naturopath done now; IV drip, skin tag, TCM still need a scan first</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings">
+      <b>Findings</b>
+      <table class="mtable">
+        <tr><th>Keyword</th><th>#1 competitor</th><th>Their SoLV / reviews</th><th>Bali Healing SoLV / reviews</th></tr>
+        <tr><td>ozone therapy</td><td>Blood Ozone Bali Therapy</td><td>97.96% / 125 reviews, 4.9★</td><td>57.14% / 97 reviews, 4.6★ (#3)</td></tr>
+        <tr><td>naturopath</td><td>Bali Healing (you)</td><td>—</td><td><b>93.88% / 97 reviews — #1</b></td></tr>
+      </table>
+      <p style="margin-top:8px">On ozone, the gap to #1 is almost entirely review count and velocity (125 vs 97, and still climbing) — not content or category. On naturopath, you already dominate.</p>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <span>741 Studio · Content &amp; SEO Program · Bali Healing · v2, reviewed 23 Sep 2026</span>
+    <span>GBP name live · 2 open decisions flagged above · 4 items blocked on external access</span>
+  </footer>
+</div>
+</body></html>

@@ -1,0 +1,15 @@
+{
+  "id": "brasse-faq-live-check",
+  "verdict": "pass",
+  "checks": {
+    "C1": {"pass": true, "why": "live-faq-check.md exists with the required table (page, live URL, FAQ yes/no/older, matching repo text file) and covers all 12 planned pages."},
+    "C2": {"pass": true, "why": "Spot-checked 4 claims independently: repo files confirm 6/3/2 Q&A for startseite/hoefe/philosophie as stated, and live WebFetch confirms hoefe page has exactly the 3 stated FAQ questions and the Grundriss URL is a real 404 — all traced to sources.md."},
+    "C3": {"pass": true, "why": "The one real gap (Grundriss page never published) is marked with '[fehlt: ...]', not papered over."},
+    "C4": {"pass": true, "why": "All client/internal-facing text is in German; topic is Feng Shui (not a health claim domain), no HWG issue."},
+    "C5": {"pass": true, "why": "git status shows only reporting/night-shift/2026-10-14/items/brasse-faq-live-check/ as new; sources.md documents read-only WebFetch checks with no logins, no publish/send actions claimed."},
+    "C6": {"pass": true, "why": "Clear table plus a direct decision point (publish Grundriss page or not) Martin can act on tomorrow with no further digging."},
+    "C7": {"pass": true, "why": "Not applicable — this is an internal audit report for Martin, not client-facing copy to be sent out."}
+  },
+  "fails": [],
+  "one_line": "Live-Check stimmt: 11 von 12 Seiten live mit korrekter FAQ, 1 Seite (Grundriss) fehlt noch ganz — Fakten stichprobenartig live nachgeprüft, alles sauber dokumentiert."
+}

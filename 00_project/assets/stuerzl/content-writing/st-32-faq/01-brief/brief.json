@@ -1,0 +1,264 @@
+{
+ "client": "STÜRZL Steuerstrafrecht",
+ "client_slug": "stuerzl",
+ "page_slug": "faq",
+ "page_type": "faq",
+ "mode": "rewrite",
+ "language": "de",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "voice_sheet": "00_project/assets/stuerzl/voice.md",
+ "pool_item_ids": [
+  "CP-SVC-004",
+  "CP-SVC-024"
+ ],
+ "sitetree_node": "ST-32",
+ "url_slug": "/faq/",
+ "keyword_primary": "steuerstrafverfahren ablauf",
+ "keywords_cluster": [
+  {
+   "kw": "steuerstrafverfahren",
+   "volume": 260,
+   "scope": "national",
+   "source": "DataForSEO (03-demand/volume.json), gehört ST-12",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "steuerstrafverfahren ablauf",
+   "volume": 20,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "steuerstrafverfahren einstellung",
+   "volume": 20,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  }
+ ],
+ "intent": "informational",
+ "reader": "Betroffener oder Angehöriger, der ein Steuerstrafverfahren, eine Durchsuchung oder eine Selbstanzeige verstehen will. PAA: Welche Strafen gibt es bei Steuerhinterziehung? Was macht das Finanzamt bei Verdacht? Was passiert bei 3000 Euro? Darf das Finanzamt meine Wohnung durchsuchen?",
+ "local_city": null,
+ "cta": {
+  "goal": "Vertrauliche Anfrage über das Formular (nur Thema, keine Falldaten)",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nennen Sie uns nur Ihr Thema, keine Einzelheiten. Ihre Angaben unterliegen unserer gesetzlichen Verschwiegenheit.",
+  "secondary": "Anrufen: Frankfurt +49 69 298028870, München +49 89 72444170"
+ },
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "H1, Einleitung, ein Weg",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Direkt-Antwort: Ablauf des Steuerstrafverfahrens"
+  },
+  {
+   "id": "S03",
+   "element": "faq",
+   "job": "Gruppe Strafverfahren (5 Fragen)"
+  },
+  {
+   "id": "S04",
+   "element": "faq",
+   "job": "Gruppe Behörden (6 Fragen)"
+  },
+  {
+   "id": "S05",
+   "element": "faq",
+   "job": "Gruppe Durchsuchung und Haftbefehl (4 Fragen)"
+  },
+  {
+   "id": "S06",
+   "element": "faq",
+   "job": "Gruppe Strafen und Nebenfolgen (8 Fragen)"
+  },
+  {
+   "id": "S07",
+   "element": "faq",
+   "job": "Gruppe Selbstanzeige (3 Fragen)"
+  },
+  {
+   "id": "S08",
+   "element": "faq",
+   "job": "Gruppe A bis Z (6 Fragen)"
+  },
+  {
+   "id": "S09",
+   "element": "faq",
+   "job": "Gruppe Mythen (5 Fragen)"
+  },
+  {
+   "id": "S10",
+   "element": "faq",
+   "job": "Gruppe Kosten und Vertraulichkeit (3 Fragen). Kostenteil nur als Verweis."
+  },
+  {
+   "id": "S11",
+   "element": "cta",
+   "job": "Abschluss",
+   "cta": "primary"
+  }
+ ],
+ "gate": "A0-light",
+ "money_page": false,
+ "bestand_words": 1807,
+ "benchmark_median_words": 1218,
+ "benchmark_sources": "siehe 01-brief/gate-a0.md (12 Seiten, gelesen 2026-10-11)",
+ "word_range": [
+  1900,
+  3700
+ ],
+ "require_answer_block": true,
+ "faq_min": 30,
+ "internal_links_min": 6,
+ "internal_link_targets": [
+  {
+   "url": "/steuerfahndung-durchsuchung/",
+   "anchor": "Steuerfahndung und Durchsuchung",
+   "role": "sibling"
+  },
+  {
+   "url": "/selbstanzeige/",
+   "anchor": "Selbstanzeige",
+   "role": "sibling"
+  },
+  {
+   "url": "/steuerstrafrecht/gutachten-risikobewertung/",
+   "anchor": "Gutachten und Risikobewertung",
+   "role": "sibling"
+  },
+  {
+   "url": "/kosten/",
+   "anchor": "Kosten und Honorar",
+   "role": "money-page"
+  },
+  {
+   "url": "/leistungen/",
+   "anchor": "Leistungen",
+   "role": "pillar"
+  },
+  {
+   "url": "/steuerstrafrecht/",
+   "anchor": "Steuerstrafrecht",
+   "role": "pillar"
+  }
+ ],
+ "cta_min": 2,
+ "cta_text": "Vertraulich anfragen",
+ "proof_assets": [
+  "Fachanwältin für Steuerrecht seit 2021 (Lebenslauf)",
+  "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022 (Lebenslauf)"
+ ],
+ "forbidden_words": [
+  "spezialisiert",
+  "Spezialist",
+  "Experte",
+  "Expertin",
+  "Expertise",
+  "führend",
+  "Exzellenz",
+  "kostenlos",
+  "Festpreis",
+  "WhatsApp",
+  "Wiesenhüttenstraße",
+  "Albtraum",
+  "Ruin",
+  "Haft droht"
+ ],
+ "own_phrases": [
+  "Sie haben glücklicherweise keine Erfahrung mit Strafverfahren",
+  "Die größten Mythen im Steuerstrafrecht",
+  "Das Mandanteninteresse steht für uns immer im Vordergrund"
+ ],
+ "placeholders_allowed": [],
+ "blockers": [],
+ "paa_questions": [
+  {
+   "q": "Welche Strafen gibt es bei Steuerhinterziehung?",
+   "status": "answered"
+  },
+  {
+   "q": "Was macht das Finanzamt bei Verdacht auf Steuerhinterziehung?",
+   "status": "answered"
+  },
+  {
+   "q": "Was passiert bei 3000 Euro Steuerhinterziehung?",
+   "status": "answered"
+  },
+  {
+   "q": "Welche Strafen drohen bei Fehlern in der Steuererklärung?",
+   "status": "answered"
+  },
+  {
+   "q": "Wann muss man bei Steuerhinterziehung in den Knast?",
+   "status": "answered"
+  },
+  {
+   "q": "Welche Straftat ist die Steuerhinterziehung nach § 369 und 370 AO?",
+   "status": "answered"
+  },
+  {
+   "q": "Wann fängt Steuerhinterziehung an?",
+   "status": "answered"
+  },
+  {
+   "q": "Darf das Finanzamt meine Wohnung durchsuchen?",
+   "status": "answered"
+  },
+  {
+   "q": "Wie hoch sind die Kosten für einen Anwalt im Steuerstrafverfahren?",
+   "status": "answered"
+  },
+  {
+   "q": "Ist eine Selbstanzeige straffrei?",
+   "status": "answered"
+  },
+  {
+   "q": "Wie lange dauert ein Strafverfahren wegen Steuerhinterziehung?",
+   "status": "dropped",
+   "reason": "Eine allgemeine Dauer lässt sich nicht seriös nennen; sie hängt vom Einzelfall ab.",
+   "reason_code": "nicht rechtssicher"
+  },
+  {
+   "q": "Wie hoch sind die Kosten für ein Strafverfahren?",
+   "status": "dropped",
+   "reason": "Die Anwaltskosten stehen in der eigenen Frage; Gerichtskosten sind nicht Teil des Angebots.",
+   "reason_code": "Duplikat"
+  },
+  {
+   "q": "Wann durchsucht die Steuerfahndung?",
+   "status": "dropped",
+   "reason": "Beantwortet auf der Akutseite /steuerfahndung-durchsuchung/ (ST-18).",
+   "reason_code": "Duplikat"
+  },
+  {
+   "q": "Was passiert, wenn die Steuerfahndung vor der Tür steht?",
+   "status": "dropped",
+   "reason": "Beantwortet auf der Akutseite /steuerfahndung-durchsuchung/ (ST-18).",
+   "reason_code": "Duplikat"
+  },
+  {
+   "q": "Wann verjährt die Steuerhinterziehung?",
+   "status": "answered"
+  }
+ ],
+ "nap_file": "00_project/assets/stuerzl/nap.json",
+ "schema_faq": false,
+ "keyword_note": "Sitetree nennt 'steuerstrafverfahren' (260) für ST-12 und ST-32 (S6 Kannibalisierung). ST-12 behält 'steuerstrafverfahren'. Die FAQ nimmt die Frage-Variante 'steuerstrafverfahren ablauf' (20), die zu einer FAQ-Seite passt. Martin entscheidet, siehe OPEN-FLAGS B3.",
+ "dropped_sections": [
+  {
+   "id": "Kostenteil II der alten FAQ",
+   "reason": "Wunsch der Kanzlei (Mail 09.10.). Der Kostentext steht auf /kosten/ (ST-31). Hier nur ein Verweis."
+  }
+ ],
+ "bestand_note": "Live-FAQ 2555 Wörter (page_metrics.py) minus Kostenteil II 748 Wörter (gezählt in _work/live/faq.txt) = 1807. Der Kostenteil entfällt auf Wunsch der Kanzlei."
+}

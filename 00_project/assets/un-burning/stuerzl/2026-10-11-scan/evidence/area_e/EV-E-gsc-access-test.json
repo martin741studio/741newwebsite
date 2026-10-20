@@ -1,0 +1,130 @@
+{
+ "collected_at": "2026-10-11T03:19:58.008Z",
+ "service_account": "reporting-bot@studio-apis-503306.iam.gserviceaccount.com",
+ "steps": [
+  {
+   "step": "token",
+   "ok": true
+  },
+  {
+   "step": "sites.list",
+   "http_status": 200,
+   "sites": [
+    {
+     "siteUrl": "https://www.danieladumann.de/",
+     "permissionLevel": "siteFullUser"
+    },
+    {
+     "siteUrl": "https://suriya-praxis.de/",
+     "permissionLevel": "siteFullUser"
+    },
+    {
+     "siteUrl": "https://rabenmuetter-shop.com/",
+     "permissionLevel": "siteFullUser"
+    },
+    {
+     "siteUrl": "https://741.studio/",
+     "permissionLevel": "siteFullUser"
+    },
+    {
+     "siteUrl": "https://www.balihealing.com/",
+     "permissionLevel": "siteFullUser"
+    }
+   ],
+   "error": null
+  },
+  {
+   "step": "searchAnalytics.query",
+   "property": "sc-domain:stuerzl-steuerstrafrecht.de",
+   "http_status": 403,
+   "error": "User does not have sufficient permission for site 'sc-domain:stuerzl-steuerstrafrecht.de'. See also: https://support.google.com/webmasters/answer/2451999.",
+   "rows": null
+  },
+  {
+   "step": "searchAnalytics.query",
+   "property": "https://stuerzl-steuerstrafrecht.de/",
+   "http_status": 403,
+   "error": "User does not have sufficient permission for site 'https://stuerzl-steuerstrafrecht.de/'. See also: https://support.google.com/webmasters/answer/2451999.",
+   "rows": null
+  },
+  {
+   "step": "searchAnalytics.query",
+   "property": "https://www.stuerzl-steuerstrafrecht.de/",
+   "http_status": 403,
+   "error": "User does not have sufficient permission for site 'https://www.stuerzl-steuerstrafrecht.de/'. See also: https://support.google.com/webmasters/answer/2451999.",
+   "rows": null
+  },
+  {
+   "step": "urlInspection.inspect",
+   "property": "sc-domain:stuerzl-steuerstrafrecht.de",
+   "url": "https://www.stuerzl-steuerstrafrecht.de/",
+   "http_status": 403,
+   "error": "You do not own this site, or the inspected URL is not part of this property.",
+   "coverageState": null
+  },
+  {
+   "step": "urlInspection.inspect",
+   "property": "sc-domain:stuerzl-steuerstrafrecht.de",
+   "url": "https://www.stuerzl-steuerstrafrecht.de/index.php/steuerstrafrecht",
+   "http_status": 403,
+   "error": "You do not own this site, or the inspected URL is not part of this property.",
+   "coverageState": null
+  },
+  {
+   "step": "urlInspection.inspect",
+   "property": "sc-domain:stuerzl-steuerstrafrecht.de",
+   "url": "https://www.stuerzl-steuerstrafrecht.de/index.php/selbstanzeigen-steuerliche-korrekturen",
+   "http_status": 403,
+   "error": "You do not own this site, or the inspected URL is not part of this property.",
+   "coverageState": null
+  },
+  {
+   "step": "urlInspection.inspect",
+   "property": "https://stuerzl-steuerstrafrecht.de/",
+   "url": "https://www.stuerzl-steuerstrafrecht.de/",
+   "http_status": 403,
+   "error": "You do not own this site, or the inspected URL is not part of this property.",
+   "coverageState": null
+  },
+  {
+   "step": "urlInspection.inspect",
+   "property": "https://stuerzl-steuerstrafrecht.de/",
+   "url": "https://www.stuerzl-steuerstrafrecht.de/index.php/steuerstrafrecht",
+   "http_status": 403,
+   "error": "You do not own this site, or the inspected URL is not part of this property.",
+   "coverageState": null
+  },
+  {
+   "step": "urlInspection.inspect",
+   "property": "https://stuerzl-steuerstrafrecht.de/",
+   "url": "https://www.stuerzl-steuerstrafrecht.de/index.php/selbstanzeigen-steuerliche-korrekturen",
+   "http_status": 403,
+   "error": "You do not own this site, or the inspected URL is not part of this property.",
+   "coverageState": null
+  },
+  {
+   "step": "urlInspection.inspect",
+   "property": "https://www.stuerzl-steuerstrafrecht.de/",
+   "url": "https://www.stuerzl-steuerstrafrecht.de/",
+   "http_status": 403,
+   "error": "You do not own this site, or the inspected URL is not part of this property.",
+   "coverageState": null
+  },
+  {
+   "step": "urlInspection.inspect",
+   "property": "https://www.stuerzl-steuerstrafrecht.de/",
+   "url": "https://www.stuerzl-steuerstrafrecht.de/index.php/steuerstrafrecht",
+   "http_status": 403,
+   "error": "You do not own this site, or the inspected URL is not part of this property.",
+   "coverageState": null
+  },
+  {
+   "step": "urlInspection.inspect",
+   "property": "https://www.stuerzl-steuerstrafrecht.de/",
+   "url": "https://www.stuerzl-steuerstrafrecht.de/index.php/selbstanzeigen-steuerliche-korrekturen",
+   "http_status": 403,
+   "error": "You do not own this site, or the inspected URL is not part of this property.",
+   "coverageState": null
+  }
+ ]
+}

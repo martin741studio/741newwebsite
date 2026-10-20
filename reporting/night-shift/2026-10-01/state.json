@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-01",
+  "started": "01:30",
+  "model": "claude-sonnet-5",
+  "budget": {
+    "pages_max": 6,
+    "invocations_max": 14,
+    "invocations_used": 2
+  },
+  "plan": [
+    {
+      "client": "Praxis Suriya",
+      "client_id": "3f71ef33-8c74-4ea1-b2d3-0273c2e99649",
+      "mode": "FEEDBACK",
+      "page": "GBP Öffnungszeiten & Termin-Button",
+      "market_lang": "de",
+      "feedback_id": "5bea6cb2-688d-4c24-b436-1a576e7ade75",
+      "report_slug": "suriya-woche1-2026-08",
+      "section_key": "6 · A · Google Business Profil"
+    },
+    {
+      "client": "Praxis Suriya",
+      "client_id": "3f71ef33-8c74-4ea1-b2d3-0273c2e99649",
+      "mode": "FEEDBACK",
+      "page": "GBP Öffnungszeiten & Barrierefreiheit (erweitert)",
+      "market_lang": "de",
+      "feedback_id": "61abce05-2b04-49b4-b4ab-420ab4374080",
+      "report_slug": "suriya-woche1-2026-08",
+      "section_key": "6 · A · Google Business Profil"
+    },
+    {
+      "client": "Praxis Suriya",
+      "client_id": "3f71ef33-8c74-4ea1-b2d3-0273c2e99649",
+      "mode": "FEEDBACK",
+      "page": "NAP / Citations / Domains — Ayurveda Domains",
+      "market_lang": "de",
+      "feedback_id": "d1c58471-eafc-4ef9-8418-1611a2345445",
+      "report_slug": "suriya-woche1-2026-08",
+      "section_key": "8 · C · NAP / Citations / Domains"
+    },
+    {
+      "client": "Praxis Hüwel",
+      "client_id": "f0a6730f-8f56-4c61-8085-1955f3bb285a",
+      "mode": "FEEDBACK",
+      "page": "Blog/Wissen — Homöopathie in den Wechseljahren",
+      "market_lang": "de",
+      "feedback_id": "9c65b15f-fac9-40a3-9b0a-0eafd41b1655",
+      "report_slug": "huewel-seitenbaum-2026-08",
+      "section_key": "10 · Blog / Wissen"
+    },
+    {
+      "client": "Praxis Hüwel",
+      "client_id": "f0a6730f-8f56-4c61-8085-1955f3bb285a",
+      "mode": "FEEDBACK",
+      "page": "Einstieg & Angebot — Kontaktformular statt Weiterleitung",
+      "market_lang": "de",
+      "feedback_id": "44804cf6-c791-4a6a-b37d-836ec647aeb1",
+      "report_slug": "huewel-seitenbaum-2026-08",
+      "section_key": "7 · Einstieg & Angebot"
+    },
+    {
+      "client": "Praxis Hüwel",
+      "client_id": "f0a6730f-8f56-4c61-8085-1955f3bb285a",
+      "mode": "FEEDBACK",
+      "page": "Nachbarorte — tatsächliches Patienten-Einzugsgebiet",
+      "market_lang": "de",
+      "feedback_id": "8c34ca68-c80e-4425-b32c-12f57a4953a0",
+      "report_slug": "huewel-seitenbaum-2026-08",
+      "section_key": "8 · Nachbarorte"
+    }
+  ],
+  "pages": {
+    "praxis-suriya/5bea6cb2": { "mode": "FEEDBACK", "attempts": 1, "status": "pass", "critic": "critic/praxis-suriya/5bea6cb2.json", "output": "feedback/praxis-suriya/5bea6cb2-688d-4c24-b436-1a576e7ade75.md" },
+    "praxis-suriya/61abce05": { "mode": "FEEDBACK", "attempts": 1, "status": "pass", "critic": "critic/praxis-suriya/61abce05.json", "output": "feedback/praxis-suriya/61abce05-2b04-49b4-b4ab-420ab4374080.md" },
+    "praxis-suriya/d1c58471": { "mode": "FEEDBACK", "attempts": 1, "status": "pass", "critic": "critic/praxis-suriya/d1c58471.json", "output": "feedback/praxis-suriya/d1c58471-eafc-4ef9-8418-1611a2345445.md" },
+    "praxis-huewel/9c65b15f": { "mode": "FEEDBACK", "attempts": 1, "status": "pass", "critic": "critic/praxis-huewel/9c65b15f.json", "output": "feedback/praxis-huewel/9c65b15f-fac9-40a3-9b0a-0eafd41b1655.md" },
+    "praxis-huewel/44804cf6": { "mode": "FEEDBACK", "attempts": 1, "status": "pass", "critic": "critic/praxis-huewel/44804cf6.json", "output": "feedback/praxis-huewel/44804cf6-c791-4a6a-b37d-836ec647aeb1.md" },
+    "praxis-huewel/8c34ca68": { "mode": "FEEDBACK", "attempts": 0, "status": "planned", "critic": null }
+  },
+  "stopped_reason": null
+}

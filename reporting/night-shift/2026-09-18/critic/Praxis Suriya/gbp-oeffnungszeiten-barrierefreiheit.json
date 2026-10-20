@@ -1,0 +1,19 @@
+{
+  "client": "Praxis Suriya",
+  "slug": "gbp-oeffnungszeiten-barrierefreiheit",
+  "mode": "FEEDBACK",
+  "feedback_id": "61abce05-2b04-49b4-b4ab-420ab4374080",
+  "executor_file": "feedback/Praxis Suriya/61abce05-2b04-49b4-b4ab-420ab4374080.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": "n/a (FEEDBACK item has no title/meta/H1/NAP/JSON-LD fields; the two [fehlt: ...] notes present are outside any required core field — one flags missing client sign-off to publish, one flags the unreachable original report text — both correct uses of the placeholder, not a fail)",
+    "nap_block_matches_locked_record": "n/a (no NAP block in this item)",
+    "jsonld_valid": "n/a (no JSON-LD in this item)",
+    "language_matches_market_lang": "pass (all copy in German, market_lang=de)",
+    "hwg_scan": "pass (no heilt/garantiert/100%/Heilung or similar claim found; content is GBP hours/CTA/accessibility logistics only)",
+    "feedback_addresses_comment_sentence_for_sentence": "pass — all sentences in Kunde-sagt are accounted for: (1) Öffnungszeiten Di-Do 7:30-18:00 / Fr 7:30-12:00, (2) telefonische Terminvereinbarung Mo 12:00-14:00, (3) 'Termin Button habe ich nicht, nur Buchungsformular' — these three repeat the 07:42 comment (feedback_id 5bea6cb2) verbatim, and the Vorschlag correctly cross-references that sibling file instead of duplicating identical field values (matches Planner's explicit note in plan.json index 1 to treat both comments as one continuous ask); (4) the new fact 'barrier frei aber nicht Toilette' is addressed directly and concretely — separate GBP accessibility attributes for Eingang vs. Toilette, with a correct rationale (a blanket 'barrierefrei' attribute would misinform wheelchair users about the toilet). Nothing is invented; the two genuine unknowns (client sign-off, original live-report text) are correctly flagged with [fehlt: ...] instead of guessed.",
+    "deslop_hard_check": "not required as blocker — the Vorschlag body (GBP attribute values for Eingang/Toilette + implementation rationale) is an internal recommendation to Martin, not new client-facing prose meant to ship as-is; no ship-text snippet is present here (unlike the sibling item's one CTA sentence), so there is no body copy in scope for de-slop scoring."
+  },
+  "fails": [],
+  "notes": "Correctly scoped as the second half of one continuous client comment (opening hours / phone window / Termin-Button are cross-referenced to plan index 0 rather than re-answered), with the single new fact (Toilette not barrier-free) resolved concretely via two separate GBP accessibility attributes. The 'Status-Hinweis' claim (this feedback already passed Critic on 2026-09-16 and remains queued only because processed-feedback.json is still an empty ledger) was independently verified against real files: reporting/night-shift/2026-09-16/critic/Praxis Suriya/61abce05-2b04-49b4-b4ab-420ab4374080.json shows pass:true, and reporting/night-shift/processed-feedback.json is indeed []. So this is grounded real-data commentary, not an invented claim. No fabricated facts, no HWG issues, language matches market."
+}

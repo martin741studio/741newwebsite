@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entwurf erster Bildschirm – Soziokratie Christian Rüther</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--acc:#337ab7;--acc-d:#296292;--head:#183a58;--ink:#2d2622;--cream:#ebf2f8;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;width:100%;height:100vh;overflow:hidden}
+  .bar{background:var(--acc-d);color:#fff;font-size:15px;text-align:center;padding:10px}
+  .bar b{font-weight:700}
+  header{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:14px 120px;border-bottom:1px solid #eee}
+  header img{height:70px;max-width:300px;object-fit:contain}
+  header .brand{font-family:Fraunces,serif;font-size:23px;color:var(--head);white-space:nowrap}
+  nav{display:flex;gap:24px;font-size:16px;font-weight:500;color:#4a3f39;white-space:nowrap}
+  .btn{display:inline-block;white-space:nowrap;background:var(--acc);color:#fff;font-weight:700;border-radius:999px;padding:14px 26px;font-size:16px}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:52px 120px 36px;background:linear-gradient(180deg,#fff,var(--cream))}
+  .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:700}
+  h1{font-family:Fraunces,serif;font-weight:600;font-size:48px;line-height:1.08;margin:14px 0 18px;color:var(--head)}
+  h1 span{color:var(--acc)}
+  .sub{font-size:19px;line-height:1.55;color:#55493f;max-width:600px}
+  .stars{display:flex;align-items:center;gap:10px;margin:20px 0 22px;font-size:15.5px;color:#55493f}
+  .proof{display:flex;align-items:center;gap:10px;margin:20px 0 22px;font-size:15.5px;color:#55493f}
+  .proof b{color:var(--head)}
+  .stars i{color:#f2b01e;font-style:normal;letter-spacing:2px;font-size:18px}
+  .ctas{display:flex;gap:14px;align-items:center;margin-top:22px}
+  .stars + .ctas,.proof + .ctas{margin-top:0}
+  .ghost{border:1.5px solid #d8cbbf;border-radius:999px;padding:13px 22px;font-size:16px;font-weight:600;color:var(--ink)}
+  .note{font-size:14px;color:#7a6d63;margin-top:12px}
+  .pic{position:relative;border-radius:22px;overflow:hidden;height:470px;width:430px;justify-self:center;box-shadow:0 20px 50px rgba(0,0,0,.12);background:var(--cream)}
+  .pic img.main{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+  .me{position:absolute;left:18px;bottom:18px;display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;padding:10px 16px 10px 10px;box-shadow:0 6px 20px rgba(0,0,0,.14);font-size:14.5px}
+  .me img{width:46px;height:65px;border-radius:4px;object-fit:cover;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+  .me b{display:block;font-size:15.5px}
+  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0 120px}
+  .trust div{background:#fff;border:1px solid #eadbcd;border-radius:14px;padding:14px 16px;font-size:14.5px;color:#55493f}
+  .trust b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
+</style>
+</head>
+<body>
+  <div class="bar">Erstgespräch vereinbaren: <b>+43 699 11114398</b> · Neustiftgasse 89-91, 1070 Wien</div>
+  <header>
+    <span class="brand">Soziokratie Christian Rüther</span>
+    <nav><span>Soziokratie</span><span>KonsenT-Moderation</span><span>Fallbeispiele</span><span>Über mich</span><span>Kontakt</span></nav>
+    <span class="btn">Erstgespräch vereinbaren</span>
+  </header>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Soziokratie · KonsenT-Moderation · S3 und Holakratie</div>
+      <h1>Ihr Soziokratie-Berater <span>in Wien.</span></h1>
+      <p class="sub">Ihr Team oder Ihre Organisation will gemeinsam auf Augenhöhe entscheiden? Ich begleite Sie mit Beratung, KonsenT-Moderation von Meetings und Klausuren und Workshops zu SKM, S3 und Holakratie.</p>
+      <div class="proof"><b>Autor des Lehrbuchs „KonsenT-Moderation“</b> · Masterthesis zur Soziokratie</div>
+      <div class="ctas"><span class="btn">Erstgespräch vereinbaren</span><span class="ghost">Buch gratis als PDF →</span></div>
+      <p class="note">Rufen Sie an (werktags 8 bis 17 Uhr) oder schreiben Sie mir. Ich melde mich persönlich bei Ihnen.</p>
+    </div>
+    <div class="pic"><img class="main" src="portrait.jpg" alt="Christian Rüther"><div class="me"><img src="buch.jpg" alt="Buch KonsenT-Moderation"><div><b>KonsenT-Moderation</b>Mein Lehrbuch und Praxisleitfaden</div></div></div>
+  </section>
+  <div class="trust">
+    <div><b>Mag. Christian Rüther, MBA</b>Begleiter von Teams und Organisationen</div>
+    <div><b>Buch „KonsenT-Moderation“</b>Lehrbuch und Praxisleitfaden, 2022</div>
+    <div><b>SKM, S3 und Holakratie</b>alle drei Ansätze im Überblick</div>
+    <div><b>Christian Rüther e.U.</b>Neustiftgasse 89-91, 1070 Wien</div>
+  </div>
+</body>
+</html>

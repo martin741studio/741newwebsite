@@ -1,0 +1,43 @@
+{
+  "_note": "Legal word lists for gate G2. 'block' = the script fails. 'review' = listed for human review, does not fail. No legal advice: grey areas go to Martin. Shared with Un-Burning D11 in a later step.",
+  "hwg": {
+    "block": [
+      ["Heilversprechen / Heilung", "\\b(heilt|heilen|geheilt|heilung|heilbar)\\b"],
+      ["Garantie", "\\b(garantiert|garantie|garantieren|garantierte)\\b"],
+      ["100 Prozent", "\\b100\\s?(%|prozent)"],
+      ["Schmerzfrei / beschwerdefrei", "\\b(schmerzfrei\\w*|beschwerdefrei\\w*|symptomfrei\\w*)\\b"],
+      ["Wunder", "\\bwunder\\w*"],
+      ["Beweis / nachweislich wirksam", "\\b(nachweislich|wissenschaftlich bewiesen|bewiesen wirksam|erwiesenermaßen)\\b"],
+      ["Vorher / Nachher", "\\bvorher[\\s/-]*nachher\\b"],
+      ["Erfolgsquote", "\\b(erfolgsquote|erfolgsgarantie|erfolgreich behandelt|heilungserfolg\\w*)\\b"],
+      ["Befreit von", "\\bbefreit (sie|dich) von\\b|\\bbeseitigt\\b|\\bverschwinden (für immer|dauerhaft)\\b"],
+      ["Angst-Wörter", "\\b(albtraum|alptraum|gefährlich\\w*|lebensgefahr|ruin\\w*)\\b"]
+    ],
+    "review": [
+      ["Wirkwort ohne Relativierung (hilft, wirkt, lindert, verbessert, stärkt, reduziert)", "\\b(hilft|helfen|wirkt|wirken|lindert|lindern|verbessert|stärkt|reduziert|löst|löst auf)\\b"],
+      ["Wirksamkeit / bewährt", "\\b(wirksam\\w*|bewährt\\w*|effektiv\\w*)\\b"],
+      ["§ 12 HWG Anlage prüfen (Krankheit genannt)", "\\b(krebs|tumor\\w*|diabetes|epilepsie|sucht\\w*|bluthochdruck|herzinfarkt|schlaganfall|depression\\w*)\\b"],
+      ["Exklusive Zielgruppe", "\\b(nur für|ausschließlich für|am liebsten)\\b"]
+    ],
+    "softeners": ["kann", "können", "könnte", "ziel", "unterstützen", "unterstützt", "möglich", "individuell geprüft", "in der fachliteratur"],
+    "required_notice": "ersetzt keine ärztliche Diagnose"
+  },
+  "brao": {
+    "block": [
+      ["Spezialisierung / Experte ohne Titel", "\\b(spezialisiert\\w*|spezialist\\w*|experte\\w*|expertin\\w*|expertise)\\b"],
+      ["Superlativ / Marktführer", "\\b(führend\\w*|beste[rnms]?|bestens|exzellen\\w*|nummer eins|platz (1|eins)|nr\\.? ?1 (anwalt|kanzlei|in|für|der|im)|marktführ\\w*|unschlagbar\\w*|einzigartig\\w*|top-?anwalt|top-?kanzlei)\\b"],
+      ["Ergebnisversprechen", "\\b(straffreiheit|strafe vermeiden|gewinnen|gewinnt|erfolgsquote|erfolgsgarantie|garantie\\w*|garantier\\w*)\\b"],
+      ["Kostenlos / Festpreis", "\\b(kostenlos\\w*|gratis|festpreis\\w*|umsonst)\\b"],
+      ["Fachanwalt für Strafrecht", "fachanwält?\\w* für strafrecht"],
+      ["Kampfrhetorik", "\\bhart in der sache\\b"],
+      ["Angst-Wörter", "\\b(albtraum|alptraum|ruin\\w*|haft droht)\\b"]
+    ],
+    "review": [
+      ["Titel nur mit Beleg (Fachanwalt / Fachanwältin)", "\\bfachanwält?\\w*"],
+      ["Schwerpunkt nur mit Beleg", "\\b(schwerpunkt\\w*|interessenschwerpunkt|tätigkeitsschwerpunkt)\\b"],
+      ["Preisangabe (Honorar, Pauschale, Vorschuss)", "(honorar|kosten|pauschale|vorschuss|stundensatz|gebühr)\\w*[^.\\n]{0,60}\\d[\\d.,]*\\s?(€|euro)"]
+    ],
+    "required_notice": null
+  },
+  "none": {"block": [["Garantie", "\\b(garantiert|garantie)\\b"]], "review": [], "required_notice": null}
+}

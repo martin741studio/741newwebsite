@@ -1,0 +1,1091 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Content Pool: Praxis Hüwel</title><style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1d2320;--mut:#66706b;--line:#e2e0d8;--acc:#2f5d50;--a:#2f5d50;--b:#8a6d1f;--c:#6b7280;--cut:#a23b3b;--warn:#b45309;--ok:#2f5d50}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#141816;--card:#1c211f;--ink:#e8ece9;--mut:#9aa5a0;--line:#2b322f;--acc:#7fc4ae;--a:#7fc4ae;--b:#d6b25a;--c:#9aa5a0;--cut:#e08585;--warn:#e0a45a;--ok:#7fc4ae}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 80px}
+h1{font-size:28px;margin:0 0 4px}h2{font-size:22px;margin:40px 0 12px;padding-top:8px;border-top:1px solid var(--line)}h3{font-size:18px;margin:24px 0 8px}h5{margin:0 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.sub{color:var(--mut);margin:0 0 16px}.meta{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:13px}
+.chip b{color:var(--acc)}
+.find{display:grid;gap:10px}.find div{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:8px;padding:12px 16px}
+.find .ids{display:block;margin-top:6px;font-size:12px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.pcard h3{margin:0 0 6px}.pcard .cnt{font-size:13px;color:var(--mut);margin-bottom:8px}.pcard ol{padding-left:18px;margin:8px 0 0;font-size:14px}
+table{border-collapse:collapse;width:100%;font-size:14px;background:var(--card)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--bg);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.tblwrap{overflow-x:auto}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px}.filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 14px;cursor:pointer;font-size:13px}.filters button.on{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+details.item{background:var(--card);border:1px solid var(--line);border-radius:8px;margin:6px 0}details.item>summary{list-style:none;cursor:pointer;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 12px}
+details.item>summary::-webkit-details-marker{display:none}.rank{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--mut)}
+.topic{flex:1 1 280px;font-weight:600}.num{font-variant-numeric:tabular-nums;width:28px;text-align:right}.bar{display:inline-block;width:80px;height:8px;background:var(--line);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+.prio{display:inline-block;min-width:22px;text-align:center;border-radius:4px;color:#fff;font-weight:700;font-size:12px;padding:1px 6px}.pr-A{background:var(--a)}.pr-B{background:var(--b)}.pr-C{background:var(--c)}.pr-cut{background:var(--cut)}
+.tag2,.tag{font-size:12px;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:1px 6px}.pill{font-size:11px;border-radius:4px;padding:1px 6px;border:1px solid var(--line)}.c-review{color:var(--warn);border-color:var(--warn)}.c-block{color:var(--cut);border-color:var(--cut)}.c-ok{color:var(--ok)}
+.st{font-size:12px;color:var(--mut)}.st-needs_client{color:var(--warn)}.st-adjacent_review{color:var(--cut)}
+.body{padding:4px 16px 14px;border-top:1px solid var(--line)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:720px){.grid{grid-template-columns:1fr}.bar{display:none}}
+.mut{color:var(--mut)}.mini td{border:0;padding:2px 10px 2px 0}.needs{color:var(--warn)}details.raw{margin-top:8px}details.raw summary{cursor:pointer;color:var(--acc);font-size:14px}details.raw li{font-size:13px;margin:3px 0}
+.map td:first-child{white-space:nowrap;font-weight:600}.empty{color:var(--mut);font-style:italic}
+a{color:var(--acc)}.note{background:var(--card);border:1px dashed var(--line);border-radius:8px;padding:10px 14px;margin:10px 0;font-size:14px}
+.hidden{display:none}
+</style></head><body><div class="wrap">
+<h1>Content Pool: Praxis Hüwel</h1><p class="sub">Homepage first. Existing site, relaunched on 2026-10-06. Health client, HWG mode. Nürnberg.</p>
+<div class="meta"><span class="chip">Date <b>2026-10-11</b></span><span class="chip">Mode <b>existing</b></span><span class="chip">Items <b>42</b> live, <b>3</b> cut</span><span class="chip">Paid data <b>0.32 USD</b> of 5 USD cap</span><span class="chip">Competitor sites <b>27</b> (1 unreadable)</span><span class="chip">Validator <b>passed</b></span></div>
+<h2 id="findings">What you must know first</h2><div class="find">
+<div>The homepage is already strong. It has 1603 words. The floor from gate A0 is 419 words (70 % of the median 598 words of 13 Nürnberg practice homepages). The gap is not the home page. The gap is the depth of single pages and missing pages: six pages have 304 words or fewer, and there is no page for PostVac and Long Covid or for single concerns.<span class="ids">Items: CP-SVC-014, CP-SVC-007, CP-SVC-004, CP-SVC-017, CP-SVC-018</span></div>
+<div>Homöopathie is the biggest real search demand of the practice. In Search Console, searches for Homöopathie in all spellings bring 916 impressions in 90 days. &quot;homöopathie nürnberg&quot; has 291 impressions at position 22.8, &quot;homöopath nürnberg&quot; 175 at 7.5. &quot;heilpraktiker nürnberg&quot; has 214 impressions at 14.6 and 4 clicks. Frequenztherapie, the main term, has few searches but the practice holds the top spots (positions 2 and 5, Local Pack).<span class="ids">Items: CP-SVC-009, CP-LOC-001, CP-SVC-006</span></div>
+<div>The biggest open topic that fits the services is Magnetfeldtherapie. &quot;magnetfeldtherapie&quot; has 9,900 searches and is legally unburdened. The practice offers it as PEMF (Ondamed), but its page has 220 words and calls it Ondamed. The next topics: &quot;mikronährstoffe&quot; 9,900 and &quot;mikronährstoffanalyse&quot; 2,900, and &quot;nebennierenschwäche&quot; 4,400. All three pages exist and are thin or new.<span class="ids">Items: CP-SVC-007, CP-SVC-014, CP-SVC-015</span></div>
+<div>Large volumes are traps. &quot;darmsanierung&quot; 18,100, &quot;entgiftung körper&quot; 9,900 and &quot;histaminintoleranz test&quot; 9,900 do not match any service (Hüwel offers no Ausleitung). &quot;bioresonanz&quot; has 14,800 searches, but for &quot;bioresonanz nürnberg&quot; only 20, and ENT and dental practices fill the results. The Bioresonanz page stays an explanation, never a method promise.<span class="ids">Items: CP-SVC-023, CP-SVC-020</span></div>
+<div>The relaunch changed the data. Search Console covers the old and the new site, and 62 of the 72 page clicks went to the home page. DataForSEO knows only 2 own keywords with volume. The old page &quot;Schmerzen und Verletzungen&quot; had 7 clicks and 71 impressions and is now an anchor on a collective page. Own pages for single concerns come back, in daily language and without diagnoses (HWG). Decision 2026-10-11: Schmerzen und Verletzungen first, then Stress, Erschöpfung und Psyche.<span class="ids">Items: CP-SVC-018</span></div>
+<div>Proof and entity data are thin. Google shows 4.9 with 10 reviews. The competitors in the Local Pack have 22 to 107. The MedicalBusiness markup has no opening hours, no sameAs and no services. The Doctolib entry still shows an old address. These fixes are cheap.<span class="ids">Items: CP-AUT-002, CP-AUT-003, CP-LOC-006, CP-LOC-005</span></div>
+<div>The reference page of a Mannheim practice may serve as a structure example only. It uses direct claims of effect, the kind of wording for which Hüwel received a warning in 2018. All texts avoid healing promises. &quot;Frequenztherapie&quot; stays the main term.<span class="ids">Items: CP-SVC-006, CP-SVC-007</span></div>
+</div>
+<h2 id="pillars">The four pillars</h2><div class="cards">
+<div class="pcard"><h3>Location</h3><div class="cnt">5 items · 2 A · 4 need the client</div><p>Hero and title with Nürnberg and Südstadt. A location block with Nürbanum, access, parking and hours. Neighbouring places only in text. Place pages for Fürth, Erlangen and Schwabach fail the proof rule and are cut. Fix the entity data: structured data, Doctolib and the directories.</p><b>Top items</b><ol><li>Umgebung in einem Satz: Fürth, Erlangen, Schwabach (ohne eigene Ortsseiten) <span class="mut">(78)</span></li><li>Hero, Title und H1: Heilpraktiker Nürnberg mit Südstadt und Nürbanum <span class="mut">(75)</span></li><li>Standort-Block: Nürbanum, Allersberger Str. 185 Geb. A7 3. OG, Anfahrt, Parken, Karte, Zeiten Mo–Sa 08–20, So 10–22 <span class="mut">(68)</span></li></ol></div>
+<div class="pcard"><h3>Main service</h3><div class="cnt">24 items · 8 A · 5 need the client</div><p>Twelve real services. Strengthen the thin pages (Magnetfeldtherapie, Mikronährstoffe, Ursachen-Klarheitsanalyse), add a page for PostVac and Long Covid, bring back single concern pages as proposals. Costs, process and FAQ get the questions from Google. Services that are not offered (detox, gut cleansing, histamine test) stay out.</p><b>Top items</b><ol><li>Homöopathie Nürnberg: Hauptseite für die stärkste Suchnachfrage der Praxis <span class="mut">(90)</span></li><li>Nebennierenschwäche als naturheilkundliches Konzept (Seite hat 609 Wörter; 4.400 Suchen) <span class="mut">(81)</span></li><li>Mikronährstoff-Begleitung (Seite hat nur 204 Wörter; &#x27;mikronährstoffe&#x27; 9.900, &#x27;mikronährstoffanalyse&#x27; 2.900 Suchen) <span class="mut">(78)</span></li></ol></div>
+<div class="pcard"><h3>Brand</h3><div class="cnt">5 items · 1 A · 1 need the client</div><p>Ursachen finden statt Symptome verwalten for people with long, unclear complaints. Entrepreneurs, self-employed and managers 45+ as a second group. One form of address (Sie or Du).</p><b>Top items</b><ol><li>Zielgruppen klar sagen: langjährige Beschwerden trotz vieler Arztbesuche, Unternehmer, Selbständige, Führungskräfte 45+ <span class="mut">(77)</span></li><li>Über Martin Hüwel: Klinik-Erfahrung, Ausbildung, Gründlichkeit (Seite hat 375 Wörter), Vorstellungsvideo <span class="mut">(73)</span></li><li>Positionierung: &#x27;Ursachen finden statt Symptome verwalten&#x27; für Menschen mit langen, unklaren Beschwerden <span class="mut">(72)</span></li></ol></div>
+<div class="pcard"><h3>Authority</h3><div class="cnt">8 items · 1 A · 4 need the client</div><p>Qualifications and associations with proof. Reviews without effect claims. Patient quotes only after a HWG check. Listings and the Doctolib correction go to the backlink workflow.</p><b>Top items</b><ol><li>Beweis-Leiste: Google 4,9 mit 10 Bewertungen, kurzes Zitat <span class="mut">(77)</span></li><li>Verzeichnis- und Portal-Einträge als Linkziele: Doctolib (korrigieren), jameda, werkenntdenbesten, ProvenExpert, Gelbe Seiten <span class="mut">(74)</span></li><li>Bewertungen aufbauen: Bewertungs-Kit, ruhiger Ablauf (Programm-Aufgabe, kein Seitentext) <span class="mut">(72)</span></li></ol></div>
+</div>
+<h2 id="map">Homepage map: where the pool plugs into the CRO blueprint</h2><p class="mut">The 10 rows are the CRO P0 blueprint. The pool never removes a row. It ranks what goes into each row.</p><div class="tblwrap"><table class="map"><tr><th>CRO row</th><th>Pool items (best first)</th></tr>
+<tr><td>1 Hero</td><td><span class="prio pr-A">A</span> Hero, Title und H1: Heilpraktiker Nürnberg mit Südstadt und Nürbanum <span class="mut">CP-LOC-001</span><br><span class="prio pr-B">B</span> Positionierung: &#x27;Ursachen finden statt Symptome verwalten&#x27; für Menschen mit langen, unklaren Beschwerden <span class="mut">CP-BRD-001</span></td></tr>
+<tr><td>2 Proof strip</td><td><span class="prio pr-A">A</span> Beweis-Leiste: Google 4,9 mit 10 Bewertungen, kurzes Zitat <span class="mut">CP-AUT-002</span></td></tr>
+<tr><td>3 Is this for me?</td><td><span class="prio pr-A">A</span> Zielgruppen klar sagen: langjährige Beschwerden trotz vieler Arztbesuche, Unternehmer, Selbständige, Führungskräfte 45+ <span class="mut">CP-BRD-002</span></td></tr>
+<tr><td>4 Services</td><td><span class="prio pr-B">B</span> Leistungsübersicht &#x27;Vier Werkzeuge, ein Ziel&#x27; mit Link zu jeder Methode <span class="mut">CP-SVC-001</span></td></tr>
+<tr><td>5 First visit</td><td><span class="prio pr-B">B</span> Preise und Erstattung: Einzeltermin, Ersttermin, Pakete, GKV und PKV, Zahlung <span class="mut">CP-SVC-003</span><br><span class="prio pr-B">B</span> Ablauf und Ersttermin: Dauer, Vorbereitung, Absage, Wartezeit (Seite &#x27;Termine &amp; Ablauf&#x27; hat 570 Wörter) <span class="mut">CP-SVC-002</span></td></tr>
+<tr><td>6 About the practitioner</td><td><span class="prio pr-B">B</span> Über Martin Hüwel: Klinik-Erfahrung, Ausbildung, Gründlichkeit (Seite hat 375 Wörter), Vorstellungsvideo <span class="mut">CP-BRD-003</span><br><span class="prio pr-B">B</span> Qualifikationen: staatlich geprüfter Heilpraktiker, Ausbildung, Weiterbildungen, Erfahrung (Seite &#x27;Qualifikation&#x27;) <span class="mut">CP-AUT-001</span><br><span class="prio pr-C">C</span> Mitgliedschaften und Verbände (BVMID seit Juli 2026) mit echten Logos <span class="mut">CP-AUT-006</span></td></tr>
+<tr><td>7 Reviews</td><td><span class="empty">No pool item. The CRO blueprint row stays as is.</span></td></tr>
+<tr><td>8 FAQ</td><td><span class="prio pr-A">A</span> Umgebung in einem Satz: Fürth, Erlangen, Schwabach (ohne eigene Ortsseiten) <span class="mut">CP-LOC-003</span><br><span class="prio pr-B">B</span> FAQ ausbauen: Kosten, Kasse, Wartezeit, Ersttermin, &#x27;Kann ein Heilpraktiker helfen?&#x27; (sachlich) <span class="mut">CP-SVC-005</span><br><span class="prio pr-B">B</span> Kurze Direktantworten (40 bis 60 Wörter) unter den FAQ für KI-Antworten <span class="mut">CP-SVC-025</span></td></tr>
+<tr><td>9 Location</td><td><span class="prio pr-B">B</span> Standort-Block: Nürbanum, Allersberger Str. 185 Geb. A7 3. OG, Anfahrt, Parken, Karte, Zeiten Mo–Sa 08–20, So 10–22 <span class="mut">CP-LOC-002</span></td></tr>
+<tr><td>10 Closing CTA</td><td><span class="prio pr-B">B</span> Termin und Kontakt: Kontaktformular zuerst, Telefon, Calendly nachrangig, auf jeder Seite erreichbar <span class="mut">CP-SVC-026</span></td></tr>
+<tr><td>Whole page</td><td><span class="prio pr-B">B</span> Ansprache einheitlich: Seite im Sie, PDF &#x27;Wartezeit-Vermeider&#x27; im Du <span class="mut">CP-BRD-004</span><br><span class="prio pr-B">B</span> Strukturdaten der Startseite ergänzen: Öffnungszeiten, sameAs (ProvenExpert, Doctolib, LinkedIn), Leistungen, Preisspanne <span class="mut">CP-LOC-006</span></td></tr>
+</table></div>
+<h3>Items for other pages (one line each, ready for the next page run)</h3><div class="tblwrap"><table><tr><th>Page tag</th><th>Items</th></tr>
+<tr><td>authority-page</td><td><span class="prio pr-C">C</span> Patientenstimmen: Abschnitt &#x27;Hilfreiche Erfahrungsberichte&#x27; auf Startseite und eigene Seite prüfen und umbauen (Ablauf und Atmosphäre, keine Wirkung) <span class="mut">CP-AUT-004</span><br><span class="prio pr-C">C</span> Person-Auszeichnung für Martin Hüwel (Person, sameAs, Qualifikation, knowsAbout) <span class="mut">CP-AUT-008</span></td></tr>
+<tr><td>blog-faq</td><td><span class="prio pr-B">B</span> Homöopathie-Fragen und Beiträge: Antibiotika, Krankenhaus, Kosten, Kinder, Erstanamnese <span class="mut">CP-SVC-010</span><br><span class="prio pr-C">C</span> Fachbeiträge und Infothek (5 Artikel zur Homöopathie): als Wissens-Bereich ordnen und prüfen <span class="mut">CP-AUT-005</span></td></tr>
+<tr><td>later</td><td><span class="prio pr-B">B</span> Bewertungen aufbauen: Bewertungs-Kit, ruhiger Ablauf (Programm-Aufgabe, kein Seitentext) <span class="mut">CP-AUT-003</span><br><span class="prio pr-C">C</span> Schwermetallbelastung abklären (über den Bioscan) <span class="mut">CP-SVC-022</span><br><span class="prio pr-C">C</span> Gesundheitscheck für Unternehmer, Selbständige und Führungskräfte 45+ (eigene Zielgruppen-Seite) <span class="mut">CP-SVC-021</span></td></tr>
+<tr><td>offsite</td><td><span class="prio pr-B">B</span> Verzeichnis- und Portal-Einträge als Linkziele: Doctolib (korrigieren), jameda, werkenntdenbesten, ProvenExpert, Gelbe Seiten <span class="mut">CP-AUT-007</span><br><span class="prio pr-B">B</span> Name, Adresse, Telefon einheitlich: alte Adresse bei Doctolib, &#x27;Geb. F, 1. OG&#x27; bei Verzeichnissen, Geister-Name &#x27;Praxis für Burn-Out-Behandlung&#x27; <span class="mut">CP-LOC-005</span></td></tr>
+<tr><td>service:anliegen</td><td><span class="prio pr-B">B</span> Anliegen-Seiten wieder einzeln: zuerst Schmerzen und Verletzungen, dann Stress, Erschöpfung und Psyche (nur Anliegen, keine Diagnosen) <span class="mut">CP-SVC-018</span></td></tr>
+<tr><td>service:bioresonanz</td><td><span class="prio pr-B">B</span> Bioresonanz: erklärt und eingeordnet, ohne Methodenversprechen (Seite hat 568 Wörter) <span class="mut">CP-SVC-020</span></td></tr>
+<tr><td>service:bioscan</td><td><span class="prio pr-A">A</span> Bioscan: Messung von rund 240 Parametern erklärt (Seite hat 304 Wörter) <span class="mut">CP-SVC-012</span></td></tr>
+<tr><td>service:erschoepfung</td><td><span class="prio pr-B">B</span> Chronische Erschöpfung: erst ärztlich abklären, dann Begleitung (Seite hat 490 Wörter) <span class="mut">CP-SVC-016</span></td></tr>
+<tr><td>service:frequenztherapie</td><td><span class="prio pr-A">A</span> Frequenztherapie (Ondamed / PEMF): Hauptseite, Hauptbegriff der Praxis <span class="mut">CP-SVC-006</span></td></tr>
+<tr><td>service:gesundheitscheck</td><td><span class="prio pr-A">A</span> Gesundheitscheck (Bioscan): Ablauf, Umfang, ehrliche Grenzen (Seite hat 751 Wörter) <span class="mut">CP-SVC-011</span></td></tr>
+<tr><td>service:homoeopathie</td><td><span class="prio pr-A">A</span> Homöopathie Nürnberg: Hauptseite für die stärkste Suchnachfrage der Praxis <span class="mut">CP-SVC-009</span></td></tr>
+<tr><td>service:magnetfeldtherapie</td><td><span class="prio pr-B">B</span> Magnetfeldtherapie (PEMF) erklärt: Verfahren, Ablauf, ehrliche Einordnung (heute &#x27;Ondamed-Therapie&#x27;, 220 Wörter) <span class="mut">CP-SVC-007</span></td></tr>
+<tr><td>service:methoden-hub</td><td><span class="prio pr-B">B</span> Methoden-Idee &#x27;Vier Werkzeuge, ein Ziel&#x27; mit Erklärung, wie sie zusammenspielen <span class="mut">CP-BRD-005</span></td></tr>
+<tr><td>service:mikronaehrstoffe</td><td><span class="prio pr-A">A</span> Mikronährstoff-Begleitung (Seite hat nur 204 Wörter; &#x27;mikronährstoffe&#x27; 9.900, &#x27;mikronährstoffanalyse&#x27; 2.900 Suchen) <span class="mut">CP-SVC-014</span></td></tr>
+<tr><td>service:nebennierenschwaeche</td><td><span class="prio pr-A">A</span> Nebennierenschwäche als naturheilkundliches Konzept (Seite hat 609 Wörter; 4.400 Suchen) <span class="mut">CP-SVC-015</span></td></tr>
+<tr><td>service:postvac</td><td><span class="prio pr-A">A</span> Begleitung bei PostVac und Long Covid (GBP-Leistung) <span class="mut">CP-SVC-017</span></td></tr>
+<tr><td>service:pse</td><td><span class="prio pr-B">B</span> Psychosomatische Energetik (PSE): Seite hat 780 Wörter, Begriff wird kaum gesucht <span class="mut">CP-SVC-008</span></td></tr>
+<tr><td>service:ursachenanalyse</td><td><span class="prio pr-B">B</span> Behandlungspakete und Ursachen-Klarheitsanalyse als klares Angebot mit Preis und Inhalt <span class="mut">CP-SVC-004</span></td></tr>
+<tr><td>service:vitalstoffanalyse</td><td><span class="prio pr-A">A</span> Vitalstoffanalyse Nürnberg (Seite hat 466 Wörter) <span class="mut">CP-SVC-013</span></td></tr>
+<tr><td>service:wartezeit</td><td><span class="prio pr-C">C</span> Wartezeit-Vermeider: Mini-Audit als Einstieg (Seite hat 167 Wörter) <span class="mut">CP-SVC-019</span></td></tr>
+</table></div>
+<h2 id="detail">Detail per pillar</h2><div class="filters"><button class="on" data-f="all">All</button><button data-f="A">A</button><button data-f="B">B</button><button data-f="C">C</button><button data-f="client">Needs client</button><button data-f="adj">Adjacent</button></div>
+<h3>Location</h3><details class="item p-A" data-prio="A" data-pillar="location">
+<summary><span class="rank">LOC-003</span><span class="prio pr-A">A</span>
+<span class="topic">Umgebung in einem Satz: Fürth, Erlangen, Schwabach (ohne eigene Ortsseiten)</span><span class="bar"><i style="width:78%"></i></span><span class="num">78</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Stufe 4 der Einzugsgebiet-Regel. Nachfrage ist klein bis mittel, die Praxis liegt in Nürnberg</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: faq</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>78</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>77</td><td class="mut">3 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker fürth <b>260</b>, heilpraktiker erlangen <b>320</b>, heilpraktiker schwabach <b>210</b>, naturheilpraxis fürth <b>no data</b>, naturheilpraxis erlangen <b>no data</b></p>
+
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-jochem.de, naturheilkunde-praxis-trojahn.de, privatpraxis-gottfried.de</p>
+<p class='mut'>Anteil lokaler Sites, die Nachbarorte nennen</p>
+
+
+<ul class='needs'><li>[FEHLT] Aus welchen Orten kommen die Patient:innen wirklich?</li></ul>
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker fürth</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker erlangen</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker schwabach</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-jochem.de,naturheilkunde-praxis-trojahn.de,privatpraxis-gottfried.de</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="location">
+<summary><span class="rank">LOC-001</span><span class="prio pr-A">A</span>
+<span class="topic">Hero, Title und H1: Heilpraktiker Nürnberg mit Südstadt und Nürbanum</span><span class="bar"><i style="width:75%"></i></span><span class="num">75</span>
+<span class="tag2">homepage</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Standort und Fach belegt (Live-Seite, GBP). H1 steht schon so; Title und Auffindbarkeit sind die Aufgabe</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: hero</p>
+<p><b>Question:</b> Heilpraktiker in Nürnberg, in meiner Nähe</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>94</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>8</td><td class="mut">12 of 13 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker nürnberg <b>1,000</b>, heilpraktiker in nürnberg <b>no data</b>, nürnberg heilpraktiker <b>no data</b>, heilpraktikerin nürnberg <b>no data</b>, heilpraktiker nürnberg südstadt <b>10</b>, heilpraktiker nürnberg innenstadt <b>no data</b>, naturheilpraxis nürnberg <b>no data</b>, heilpraktiker empfehlung nürnberg <b>no data</b>, heilpraktiker in der nähe <b>no data</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> heilpraktiker nürnberg; heilpraktiker in nürnberg; heilpraktiker nürnberg darm; heilpraktiker nürnberg haut</p><p><b>People also ask:</b> Bei welchen Beschwerden zum Heilpraktiker?; Kann ein Heilpraktiker bei Migräne helfen?; Kann ein Heilpraktiker wirklich helfen?</p><p><b>Client signal:</b> GSC 3 months: 12 queries, 386 impressions, 6 clicks, best position 3.0; top query &#x27;heilpraktiker nürnberg&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-brahmer.de, heilzentrum-helios.de, tanja-dietz.de, heilpraktikerin-renner-nuernberg.de, naturheilpraxis-gallin.de, naturheilpraxis-jochem.de, naturheilpraxis-im-suedwestpark.de, naturheilpraxis-elke-ruehl.de, carolin-heilmann.de, naturheilkunde-praxis-trojahn.de, privatpraxis-gottfried.de, praxis-rietsch.de</p>
+<p class='mut'>Anteil lokaler Praxis-Sites mit &#x27;Nürnberg&#x27; in Titel, Überschrift oder URL</p>
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff.</p>
+
+
+<details class="raw"><summary>Raw data (8 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker nürnberg</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker nürnberg südstadt</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^heilpraktiker (in )?nürnberg | nürnberg heilpraktiker | heilpraktiker nürnberg (süd|innen|nord|ost|west)</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Bei welchen Beschwerden zum Heilpraktiker?</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">^heilpraktiker( in)? nürnberg|nürnberg heilpraktiker|heilpraktikerin nürnberg|^heilpraktiker in der nähe|^heilpraktiker$|heilpraktiker nürnb</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-praxis-huewel.de.json">03-demand/ranked-praxis-huewel.de.json</a> <span class="mut">GSC 3 months: 12 queries, 386 impressions, 6 clicks, best position 3.0; top query &#x27;heilpraktiker nürnberg&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-brahmer.de,heilzentrum-helios.de,tanja-dietz.de,heilpraktikerin-renner-nuernberg.de,naturheilpraxis-gallin.de,naturheilpraxi</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">heilpraktiker nürnberg</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="location">
+<summary><span class="rank">LOC-002</span><span class="prio pr-B">B</span>
+<span class="topic">Standort-Block: Nürbanum, Allersberger Str. 185 Geb. A7 3. OG, Anfahrt, Parken, Karte, Zeiten Mo–Sa 08–20, So 10–22</span><span class="bar"><i style="width:68%"></i></span><span class="num">68</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>NAP und Zeiten von Hüwel bestätigt (29.08.). Lokale Suchen nach &#x27;Nürbanum&#x27; zeigen Orts-Wiedererkennung</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: standort</p>
+<p><b>Question:</b> Wie komme ich zur Praxis im Nürbanum? Gibt es Parkplätze?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>85</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>15</td><td class="mut">11 of 13 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker nürnberg südstadt <b>10</b></p>
+<p><b>Client signal:</b> GSC 3 months: 8 queries, 8 impressions, 0 clicks, best position 6.0; top query &#x27;apotheke nürbanum&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-brahmer.de, heilzentrum-helios.de, tanja-dietz.de, heilpraktikerin-renner-nuernberg.de, naturheilpraxis-jochem.de, naturheilpraxis-im-suedwestpark.de, naturheilpraxis-elke-ruehl.de, carolin-heilmann.de, naturheilkunde-praxis-trojahn.de, noris-nhz.de, praxis-rietsch.de</p>
+<p class='mut'>Überschrift oder URL zu Anfahrt oder Standort</p>
+
+
+<ul class='needs'><li>[FEHLT] Parken (kostenlos?) und Barrierefreiheit bestätigen</li><li>[FEHLT] ÖPNV-Haltestelle</li></ul>
+<details class="raw"><summary>Raw data (5 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker nürnberg südstadt</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">nürbanum|nuerbanum|wohlleben|kreuels|bartl</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-praxis-huewel.de.json">03-demand/ranked-praxis-huewel.de.json</a> <span class="mut">GSC 3 months: 8 queries, 8 impressions, 0 clicks, best position 6.0; top query &#x27;apotheke nürbanum&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-brahmer.de,heilzentrum-helios.de,tanja-dietz.de,heilpraktikerin-renner-nuernberg.de,naturheilpraxis-jochem.de,naturheilpraxi</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">Abschnitt 2</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="location">
+<summary><span class="rank">LOC-005</span><span class="prio pr-B">B</span>
+<span class="topic">Name, Adresse, Telefon einheitlich: alte Adresse bei Doctolib, &#x27;Geb. F, 1. OG&#x27; bei Verzeichnissen, Geister-Name &#x27;Praxis für Burn-Out-Behandlung&#x27;</span><span class="bar"><i style="width:64%"></i></span><span class="num">64</span>
+<span class="tag2">offsite</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Eigene Entität. Citation-Audit 2026-08-31 mit Befunden</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">0 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Client signal:</b> Citation-Audit 2026-08-31: Doctolib mit Alt-Adresse, &#x27;Geb. F, 1. OG&#x27; auf 4 Verzeichnissen, Geister-Name auf theralupa und YellowMap (Gedächtnis huewel-nap)</p>
+
+
+
+
+
+<ul class='needs'><li>[FEHLT] Freigabe, Doctolib und Verzeichnisse zu korrigieren</li></ul>
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/ranked-praxis-huewel.de.json">03-demand/ranked-praxis-huewel.de.json</a> <span class="mut">Citation-Audit 2026-08-31: Doctolib mit Alt-Adresse, &#x27;Geb. F, 1. OG&#x27; auf 4 Verzeichnissen, Geister-Name auf theralupa un</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">Abschnitt 2 NAP</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="location">
+<summary><span class="rank">LOC-006</span><span class="prio pr-B">B</span>
+<span class="topic">Strukturdaten der Startseite ergänzen: Öffnungszeiten, sameAs (ProvenExpert, Doctolib, LinkedIn), Leistungen, Preisspanne</span><span class="bar"><i style="width:62%"></i></span><span class="num">62</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>MedicalBusiness steht schon. Öffnungszeiten, sameAs und Leistungen fehlen (Live-Prüfung 2026-10-11). Auf der alten Seite waren sie korrigiert</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: entity-schema.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>31</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>69</td><td class="mut">4 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, naturheilpraxis-im-suedwestpark.de, naturheilpraxis-elke-ruehl.de, privatpraxis-gottfried.de</p>
+<p class='mut'>Anteil lokaler Sites mit MedicalBusiness/Physician im JSON-LD</p>
+
+
+<ul class='needs'><li>[FEHLT] Preisspanne freigeben</li></ul>
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,naturheilpraxis-im-suedwestpark.de,naturheilpraxis-elke-ruehl.de,privatpraxis-gottfried.de</span></li><li><span class="tag">competitor-page</span> <a href="../05-sitetree/own-metrics.json">05-sitetree/own-metrics.json</a> <span class="mut">jsonld_types der Startseite; Live-Prüfung JSON-LD 2026-10-11</span></li></ul></details>
+</div></details>
+<h3>Main service</h3><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-009</span><span class="prio pr-A">A</span>
+<span class="topic">Homöopathie Nürnberg: Hauptseite für die stärkste Suchnachfrage der Praxis</span><span class="bar"><i style="width:90%"></i></span><span class="num">90</span>
+<span class="tag2">service:homoeopathie</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Die Seite hat die meisten Impressionen der Praxis (GSC). &#x27;homöopath nürnberg&#x27; steht auf Position 7,5, &#x27;homöopathie nürnberg&#x27; auf 22,8</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+<p><b>Question:</b> Homöopath in Nürnberg: wie läuft die Behandlung ab, was kostet sie?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>80</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>92</td><td class="mut">1 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): homöopathie nürnberg <b>50</b>, homöopath nürnberg <b>50</b>, klassische homöopathie nürnberg <b>no data</b>, homöopathie <b>no data</b> <em>nat.</em>, heilpraktiker homöopathie nürnberg <b>10</b>, homöopathie kosten <b>40</b> <em>nat.</em>, homöopathie erstanamnese <b>40</b> <em>nat.</em>, homöopathie kinder <b>no data</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> homöopathie nürnberg; homöopathie nürnberg arzt; kinderarzt homöopathie nürnberg; klassische homöopathie nürnberg</p><p><b>Client signal:</b> GSC 3 months: 59 queries, 916 impressions, 4 clicks, best position 1.0; top query &#x27;homöopathie nürnberg&#x27;</p>
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-elke-ruehl.de</p>
+<p class='mut'>Seite zu Homöopathie bei lokalen Praxen</p>
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. Keine Wirksamkeits-Aussagen.</p>
+
+
+<details class="raw"><summary>Raw data (10 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">homöopathie nürnberg</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">homöopath nürnberg</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker homöopathie nürnberg</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">homöopathie kosten</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">homöopathie erstanamnese</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">homöopathie nürnberg | homöopath nürnberg</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">h[oöä]m[oöäei]{1,3}[oöäe]?p[ah]|homeop|homöop|homopat|hömöop|hömop|homäop|homaop</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-praxis-huewel.de.json">03-demand/ranked-praxis-huewel.de.json</a> <span class="mut">GSC 3 months: 59 queries, 916 impressions, 4 clicks, best position 1.0; top query &#x27;homöopathie nürnberg&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-elke-ruehl.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-3.json">02-competitors/serp-3.json</a> <span class="mut">homöopathie nürnberg</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-015</span><span class="prio pr-A">A</span>
+<span class="topic">Nebennierenschwäche als naturheilkundliches Konzept (Seite hat 609 Wörter; 4.400 Suchen)</span><span class="bar"><i style="width:81%"></i></span><span class="num">81</span>
+<span class="tag2">service:nebennierenschwaeche</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Hüwel hat die Leistung bestätigt. Die Seite sagt schon &#x27;Konzept&#x27; und grenzt Morbus Addison ab</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+<p><b>Question:</b> Wie merkt man Probleme mit den Nebennieren? Wie testet man die Nebennierenfunktion?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>100</td><td class="mut">0 of 18 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): nebennierenschwäche <b>4,400</b> <em>nat.</em>, nebennierenschwäche symptome <b>1,600</b> <em>nat.</em>, nebennierenschwäche heilpraktiker <b>no data</b> <em>nat.</em>, nebennierenschwäche nürnberg <b>no data</b></p>
+<p><b>Autocomplete:</b> nebennierenschwäche; nebennierenschwäche icd; nebennierenschwäche jod; nebennierenschwäche q10</p><p><b>People also ask:</b> Kann sich die Nebenniere wieder erholen?; Was kann man gegen Nebennierenschwäche tun?; Wie merkt man Probleme mit den Nebennieren?</p>
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/nebennierenschw%C3%A4che.html">https://www.praxis-huewel.de/nebennierenschw%C3%A4che.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+
+<p class='mut'>Seite zu Nebennieren. Treffer bei Google: Kliniken, Lexika, Krankenkassen</p>
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. &#x27;Nebennierenschwäche&#x27; ist keine anerkannte Diagnose. Die Abgrenzung zu Morbus Addison bleibt.</p>
+
+
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">nebennierenschwäche</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">nebennierenschwäche symptome</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">nebennieren</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Kann sich die Nebenniere wieder erholen?</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-014</span><span class="prio pr-A">A</span>
+<span class="topic">Mikronährstoff-Begleitung (Seite hat nur 204 Wörter; &#x27;mikronährstoffe&#x27; 9.900, &#x27;mikronährstoffanalyse&#x27; 2.900 Suchen)</span><span class="bar"><i style="width:78%"></i></span><span class="num">78</span>
+<span class="tag2">service:mikronaehrstoffe</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Hüwel hat die Leistung bestätigt (21.08.). Die Seite ist dünn, die Nachfrage ist groß</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+<p><b>Question:</b> Wie stelle ich einen Mineralstoffmangel fest? Was kostet eine Analyse?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>94</td><td class="mut">1 of 18 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): mikronährstoffe <b>9,900</b> <em>nat.</em>, mikronährstoffanalyse <b>2,900</b> <em>nat.</em>, mikronährstoffanalyse nürnberg <b>20</b>, stoffwechselanalyse <b>2,400</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> mikronährstoffanalyse; mikronährstoffanalyse dm; mikronährstoffanalyse oö; wo mikronährstoffanalyse</p><p><b>People also ask:</b> Was ist das beste Mikronährstoffpräparat?; Was ist eine Vitalstoffanalyse?; Was kostet eine Blutuntersuchung auf Vitamine und Mineralstoffe?</p>
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/mikron%C3%A4hrstoff-begleitung.html">https://www.praxis-huewel.de/mikron%C3%A4hrstoff-begleitung.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> ineofit.de</p>
+<p class='mut'>Seite zu Mikronährstoffen. Die Treffer bei Google sind Hausärzte und Portale</p>
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. Keine Mangel-Diagnose, keine Präparat-Werbung (HWG).</p>
+
+
+<details class="raw"><summary>Raw data (7 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">mikronährstoffe</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">mikronährstoffanalyse</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">mikronährstoffanalyse nürnberg</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">stoffwechselanalyse</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">mikronährstoff</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Was ist das beste Mikronährstoffpräparat?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">ineofit.de</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-006</span><span class="prio pr-A">A</span>
+<span class="topic">Frequenztherapie (Ondamed / PEMF): Hauptseite, Hauptbegriff der Praxis</span><span class="bar"><i style="width:78%"></i></span><span class="num">78</span>
+<span class="tag2">service:frequenztherapie</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Kernmethode. Praxis steht bei &#x27;frequenztherapie nürnberg&#x27; auf Platz 2 und 5 und im Local Pack</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+<p><b>Question:</b> Was ist Frequenztherapie und was kostet sie?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>67</td><td class="mut">6 of 18 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): frequenztherapie <b>1,000</b> <em>nat.</em>, frequenztherapie nürnberg <b>20</b>, frequenztherapie heilpraktiker <b>10</b> <em>nat.</em>, frequenztherapie erfahrungen <b>10</b> <em>nat.</em>, frequenztherapie kosten <b>20</b> <em>nat.</em>, frequenz therapie in der nähe <b>no data</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> frequenztherapie de; frequenztherapie app; frequenztherapie nls; frequenztherapie nrw</p><p><b>People also ask:</b> Was ist Frequenztherapie?; Was kostet eine Frequenztherapie?</p><p><b>Client signal:</b> GSC 3 months: 3 queries, 29 impressions, 0 clicks, best position 3.3; top query &#x27;frequenztherapie&#x27;</p>
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, schmerzpraxis-mannheim.de, ineofit.de, therapie-leipzig.de, praxis-schwabe.de, ondamed.de</p>
+<p class='mut'>Seite oder Überschrift zu Frequenztherapie, Ondamed oder PEMF</p>
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff.</p>
+
+
+<details class="raw"><summary>Raw data (11 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">frequenztherapie</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">frequenztherapie nürnberg</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">frequenztherapie heilpraktiker</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">frequenztherapie erfahrungen</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">frequenztherapie kosten</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^frequenztherapie | frequenz therapie</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Was ist Frequenztherapie?</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">frequenz</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-praxis-huewel.de.json">03-demand/ranked-praxis-huewel.de.json</a> <span class="mut">GSC 3 months: 3 queries, 29 impressions, 0 clicks, best position 3.3; top query &#x27;frequenztherapie&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,schmerzpraxis-mannheim.de,ineofit.de,therapie-leipzig.de,praxis-schwabe.de,ondamed.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-2.json">02-competitors/serp-2.json</a> <span class="mut">frequenztherapie nürnberg: praxis-huewel.de #2 und #5</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-011</span><span class="prio pr-A">A</span>
+<span class="topic">Gesundheitscheck (Bioscan): Ablauf, Umfang, ehrliche Grenzen (Seite hat 751 Wörter)</span><span class="bar"><i style="width:77%"></i></span><span class="num">77</span>
+<span class="tag2">service:gesundheitscheck</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Bestehende Leistung mit Hauptseite</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>62</td><td class="mut">5 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): gesundheitscheck heilpraktiker <b>no data</b> <em>nat.</em>, gesundheitscheck labor heilpraktiker <b>no data</b> <em>nat.</em>, ganzheitlicher gesundheitscheck <b>10</b> <em>nat.</em>, blutuntersuchung heilpraktiker <b>no data</b> <em>nat.</em>, stoffwechselanalyse <b>2,400</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> gesundheitscheck heilpraktiker</p>
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-brahmer.de, naturheilpraxis-gallin.de, naturheilpraxis-jochem.de, naturheilpraxis-elke-ruehl.de, privatpraxis-gottfried.de</p>
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. Aussagekraft des Verfahrens ehrlich nennen, keine Diagnose.</p>
+
+
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">ganzheitlicher gesundheitscheck</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">stoffwechselanalyse</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">gesundheitscheck</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-brahmer.de,naturheilpraxis-gallin.de,naturheilpraxis-jochem.de,naturheilpraxis-elke-ruehl.de,privatpraxis-gottfried.de</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-013</span><span class="prio pr-A">A</span>
+<span class="topic">Vitalstoffanalyse Nürnberg (Seite hat 466 Wörter)</span><span class="bar"><i style="width:76%"></i></span><span class="num">76</span>
+<span class="tag2">service:vitalstoffanalyse</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Eigene Seite und GBP-Leistung</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>55</td><td class="mut">basis: paa</td></tr>
+<tr><td>Gap</td><td>85</td><td class="mut">2 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): vitalstoffanalyse <b>590</b> <em>nat.</em>, vitalstoffanalyse nürnberg <b>no data</b>, vitalstoffanalyse kosten <b>90</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> bioresonanz vitalstoffanalyse</p><p><b>People also ask:</b> Was ist eine Vitalstoffanalyse?; Was kostet eine Blutuntersuchung auf Vitamine und Mineralstoffe?; Wie kann ich einen Mineralstoffmangel feststellen?</p>
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/vitalstoffanalyse.html">https://www.praxis-huewel.de/vitalstoffanalyse.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-gallin.de, naturheilpraxis-elke-ruehl.de</p>
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff.</p>
+
+
+<details class="raw"><summary>Raw data (5 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">vitalstoffanalyse</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">vitalstoffanalyse kosten</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">vitalstoffanalyse</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Was ist eine Vitalstoffanalyse?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-gallin.de,naturheilpraxis-elke-ruehl.de</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-017</span><span class="prio pr-A">A</span>
+<span class="topic">Begleitung bei PostVac und Long Covid (GBP-Leistung)</span><span class="bar"><i style="width:76%"></i></span><span class="num">76</span>
+<span class="tag2">service:postvac</span><span class="pill c-review">HWG review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Leistung von Hüwel bestätigt (GBP). Eigene Seite gibt es nicht</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>83</td><td class="mut">3 of 18 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): post vac syndrom <b>2,900</b> <em>nat.</em>, post vac syndrom behandlung <b>30</b> <em>nat.</em>, postvac heilpraktiker <b>no data</b> <em>nat.</em>, long covid heilpraktiker <b>no data</b> <em>nat.</em>, long covid nürnberg <b>10</b></p>
+<p><b>Autocomplete:</b> post vac syndrom; post vac syndrom cfs; post vac syndrom gdb; post vac syndrom icd</p><p><b>People also ask:</b> Was ist der Unterschied zwischen Post Vac und Long COVID?; Wie häufig treten Post-VAC-Syndrome auf?</p>
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilkunde-praxis-trojahn.de, privatpraxis-gottfried.de, therapie-leipzig.de</p>
+<p class='mut'>Seite zu PostVac oder Long Covid. Treffer bei Google: Kliniken, Behörden</p>
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. Sehr hoch: Krankheitsbezug, öffentliche Debatte. Nur Begleitung, ärztliche Abklärung zuerst, keine Aussage zu Ursache oder Heilung.</p>
+<p><b>Decision note:</b> Wartet auf das Gespräch zwischen Martin Drendel und Martin Hüwel (Stand 2026-10-11). Bis dahin keine Seite und keine Anzeige. Höchstes HWG-Risiko.</p>
+<ul class='needs'><li>[FEHLT] Wie genau begleitet die Praxis? Textfreigabe durch Hüwel</li></ul>
+<details class="raw"><summary>Raw data (6 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">post vac syndrom</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">post vac syndrom behandlung</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">long covid nürnberg</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">post vac|postvac|long covid</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Was ist der Unterschied zwischen Post Vac und Long COVID?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilkunde-praxis-trojahn.de,privatpraxis-gottfried.de,therapie-leipzig.de</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-012</span><span class="prio pr-A">A</span>
+<span class="topic">Bioscan: Messung von rund 240 Parametern erklärt (Seite hat 304 Wörter)</span><span class="bar"><i style="width:75%"></i></span><span class="num">75</span>
+<span class="tag2">service:bioscan</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Eigene Seite, Suchbegriff &#x27;bioscan&#x27; 390 Suchen</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>48</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>89</td><td class="mut">2 of 18 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): bioscan <b>390</b> <em>nat.</em>, bioscan nürnberg <b>10</b></p>
+
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> ineofit.de, praxis-schwabe.de</p>
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. &#x27;Ehrliche Einordnung&#x27; bleibt.</p>
+
+
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">bioscan</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">bioscan nürnberg</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">ineofit.de,praxis-schwabe.de</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-016</span><span class="prio pr-B">B</span>
+<span class="topic">Chronische Erschöpfung: erst ärztlich abklären, dann Begleitung (Seite hat 490 Wörter)</span><span class="bar"><i style="width:74%"></i></span><span class="num">74</span>
+<span class="tag2">service:erschoepfung</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Eigene Seite. Sie nennt zuerst die ärztliche Abklärung</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+<p><b>Question:</b> Was tun bei chronischer Fatigue?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>55</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>78</td><td class="mut">4 of 18 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): chronische erschöpfung <b>no data</b> <em>nat.</em>, chronische erschöpfung heilpraktiker <b>no data</b> <em>nat.</em>, chronische erschöpfung nürnberg <b>no data</b>, erschöpfung was tun <b>880</b> <em>nat.</em>, chronisches müdigkeitssyndrom <b>no data</b> <em>nat.</em>, me cfs heilpraktiker <b>no data</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> chronische erschöpfung; chronische erschöpfung ms; chronische erschöpfung cfs; chronische erschöpfung gdb</p><p><b>People also ask:</b> Was sind die Ursachen von ME/CFS?; Was tun bei chronischer Fatigue?; Welche Behandlungsmöglichkeiten gibt es für ME/CFS?</p>
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/chronische-ersch%C3%B6pfung.html">https://www.praxis-huewel.de/chronische-ersch%C3%B6pfung.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> privatpraxis-gottfried.de, schmerzpraxis-mannheim.de, ineofit.de, therapie-leipzig.de</p>
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. ME/CFS ist eine Krankheit: keine Behandlungs- oder Heilaussage.</p>
+
+
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">erschöpfung was tun</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">chronische erschöpfung|erschöpfung</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Was sind die Ursachen von ME/CFS?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">privatpraxis-gottfried.de,schmerzpraxis-mannheim.de,ineofit.de,therapie-leipzig.de</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-007</span><span class="prio pr-B">B</span>
+<span class="topic">Magnetfeldtherapie (PEMF) erklärt: Verfahren, Ablauf, ehrliche Einordnung (heute &#x27;Ondamed-Therapie&#x27;, 220 Wörter)</span><span class="bar"><i style="width:74%"></i></span><span class="num">74</span>
+<span class="tag2">service:magnetfeldtherapie</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Das Verfahren ist PEMF. Der Suchbegriff &#x27;magnetfeldtherapie&#x27; hat 9.900 Suchen und ist rechtlich unbelastet. Hüwel hat die Leistung bestätigt</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+<p><b>Question:</b> Wie sinnvoll ist eine Magnetfeldtherapie? Was kostet sie?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>78</td><td class="mut">4 of 18 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): magnetfeldtherapie <b>9,900</b> <em>nat.</em>, magnetfeldtherapie nürnberg <b>10</b>, magnetfeldtherapie heilpraktiker <b>no data</b> <em>nat.</em>, magnetfeldtherapie kosten <b>480</b> <em>nat.</em>, pemf therapie <b>480</b> <em>nat.</em>, pemf nürnberg <b>no data</b>, ondamed <b>90</b> <em>nat.</em>, ondamed therapie <b>10</b> <em>nat.</em>, ondamed nürnberg <b>no data</b></p>
+<p><b>Autocomplete:</b> ondamed; ondamedia; ondamed inc; ondamed net</p><p><b>People also ask:</b> Was kostet Magnetfeldtherapie beim Arzt?; Welche Nebenwirkungen hat Magnetfeldtherapie?; Wie oft darf man Magnetfeldtherapie machen?</p>
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> schmerzpraxis-mannheim.de, therapie-leipzig.de, praxis-schwabe.de, ondamed.de</p>
+<p class='mut'>Seite zu Magnetfeld, PEMF oder Ondamed</p>
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. Die Einordnung nennt Grenzen. Struktur von Referenzseiten ja, deren Wirkaussagen nein.</p>
+
+
+<details class="raw"><summary>Raw data (10 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">magnetfeldtherapie</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">magnetfeldtherapie nürnberg</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">magnetfeldtherapie kosten</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">pemf therapie</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">ondamed</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">ondamed therapie</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">magnetfeldtherapie | pemf | ondamed</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Was kostet Magnetfeldtherapie beim Arzt?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">schmerzpraxis-mannheim.de,therapie-leipzig.de,praxis-schwabe.de,ondamed.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-6.json">02-competitors/serp-6.json</a> <span class="mut">magnetfeldtherapie (AI-Übersicht, PAA)</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-005</span><span class="prio pr-B">B</span>
+<span class="topic">FAQ ausbauen: Kosten, Kasse, Wartezeit, Ersttermin, &#x27;Kann ein Heilpraktiker helfen?&#x27; (sachlich)</span><span class="bar"><i style="width:74%"></i></span><span class="num">74</span>
+<span class="tag2">homepage</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>FAQ steht schon (4 Fragen im FAQ-Markup der Startseite, dazu der Abschnitt &#x27;Häufige Fragen&#x27;). Die Fragen aus Google ergänzen</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: faq. Section: faq</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>55</td><td class="mut">basis: paa</td></tr>
+<tr><td>Gap</td><td>69</td><td class="mut">4 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker erstgespräch <b>no data</b> <em>nat.</em>, was kostet ein heilpraktiker <b>320</b> <em>nat.</em>, heilpraktiker private krankenkasse <b>10</b> <em>nat.</em></p>
+<p><b>People also ask:</b> Bei welchen Beschwerden zum Heilpraktiker?; Kann ein Heilpraktiker bei Migräne helfen?; Kann ein Heilpraktiker wirklich helfen?</p>
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, naturheilpraxis-im-suedwestpark.de, noris-nhz.de, privatpraxis-gottfried.de</p>
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. &#x27;Kann ein Heilpraktiker helfen&#x27; nur sachlich, ohne Zusage.</p>
+
+
+<details class="raw"><summary>Raw data (5 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">was kostet ein heilpraktiker</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker private krankenkasse</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Bei welchen Beschwerden zum Heilpraktiker?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,naturheilpraxis-im-suedwestpark.de,noris-nhz.de,privatpraxis-gottfried.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">PAA bei &#x27;heilpraktiker nürnberg&#x27;</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-025</span><span class="prio pr-B">B</span>
+<span class="topic">Kurze Direktantworten (40 bis 60 Wörter) unter den FAQ für KI-Antworten</span><span class="bar"><i style="width:74%"></i></span><span class="num">74</span>
+<span class="tag2">homepage</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Format-Item. Inhalte aus Ablauf, Kosten, Methoden</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: faq</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>55</td><td class="mut">basis: paa</td></tr>
+<tr><td>Gap</td><td>69</td><td class="mut">4 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>People also ask:</b> Was ist Frequenztherapie?; Was ist eine Vitalstoffanalyse?; Was kostet Magnetfeldtherapie beim Arzt?</p>
+
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, naturheilpraxis-im-suedwestpark.de, noris-nhz.de, privatpraxis-gottfried.de</p>
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff.</p>
+
+
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Was ist Frequenztherapie?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,naturheilpraxis-im-suedwestpark.de,noris-nhz.de,privatpraxis-gottfried.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-6.json">02-competitors/serp-6.json</a> <span class="mut">ai_overview bei &#x27;magnetfeldtherapie&#x27;</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-12.json">02-competitors/serp-12.json</a> <span class="mut">ai_overview bei &#x27;heilpraktiker kosten&#x27;</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-001</span><span class="prio pr-B">B</span>
+<span class="topic">Leistungsübersicht &#x27;Vier Werkzeuge, ein Ziel&#x27; mit Link zu jeder Methode</span><span class="bar"><i style="width:73%"></i></span><span class="num">73</span>
+<span class="tag2">homepage</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Steht auf der Startseite; Seiten für alle Methoden existieren</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>100</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>0</td><td class="mut">13 of 13 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-brahmer.de, heilzentrum-helios.de, tanja-dietz.de, heilpraktikerin-renner-nuernberg.de, naturheilpraxis-gallin.de, naturheilpraxis-jochem.de, naturheilpraxis-im-suedwestpark.de, naturheilpraxis-elke-ruehl.de, carolin-heilmann.de, naturheilkunde-praxis-trojahn.de, noris-nhz.de, privatpraxis-gottfried.de, praxis-rietsch.de</p>
+<p class='mut'>Überschrift oder URL zu Leistungen</p>
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff.</p>
+
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-brahmer.de,heilzentrum-helios.de,tanja-dietz.de,heilpraktikerin-renner-nuernberg.de,naturheilpraxis-gallin.de,naturheilpraxi</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">Abschnitt 1</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-003</span><span class="prio pr-B">B</span>
+<span class="topic">Preise und Erstattung: Einzeltermin, Ersttermin, Pakete, GKV und PKV, Zahlung</span><span class="bar"><i style="width:73%"></i></span><span class="num">73</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Preise und Erstattung stehen live. Hüwel will transparent sein</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: erster-termin</p>
+<p><b>Question:</b> Was kostet ein Heilpraktiker? Zahlt die Kasse?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>55</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>46</td><td class="mut">7 of 13 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker kosten <b>880</b> <em>nat.</em>, was kostet ein heilpraktiker <b>320</b> <em>nat.</em>, heilpraktiker private krankenkasse <b>10</b> <em>nat.</em>, heilpraktiker beihilfe <b>30</b> <em>nat.</em>, heilpraktiker nürnberg kosten <b>no data</b>, homöopathie kosten <b>40</b> <em>nat.</em>, frequenztherapie kosten <b>20</b> <em>nat.</em>, magnetfeldtherapie kosten <b>480</b> <em>nat.</em>, pemf therapie kosten <b>20</b> <em>nat.</em>, bioresonanz kosten <b>50</b> <em>nat.</em>, vitalstoffanalyse kosten <b>90</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> was kostet frequenztherapie; was kostet magnetfeldtherapie; was kostet mikronährstoffanalyse; was kostet magnetfeldtherapie beim arzt</p><p><b>People also ask:</b> Was kostet 1 Std Heilpraktiker?; Was kostet Magnetfeldtherapie beim Arzt?; Was kostet ein Blutbild beim Heilpraktiker?</p>
+<p><b>Live site:</b> present (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-brahmer.de, heilzentrum-helios.de, heilpraktikerin-renner-nuernberg.de, naturheilpraxis-jochem.de, naturheilpraxis-elke-ruehl.de, naturheilkunde-praxis-trojahn.de, privatpraxis-gottfried.de</p>
+<p class='mut'>Preise sichtbar oder Preis-URL</p>
+
+
+
+<details class="raw"><summary>Raw data (14 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker kosten</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">was kostet ein heilpraktiker</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker private krankenkasse</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker beihilfe</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">homöopathie kosten</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">frequenztherapie kosten</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">magnetfeldtherapie kosten</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">pemf therapie kosten</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">bioresonanz kosten</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">vitalstoffanalyse kosten</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">heilpraktiker.*kosten|was kost</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Was kostet 1 Std Heilpraktiker?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-brahmer.de,heilzentrum-helios.de,heilpraktikerin-renner-nuernberg.de,naturheilpraxis-jochem.de,naturheilpraxis-elke-ruehl.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-12.json">02-competitors/serp-12.json</a> <span class="mut">heilpraktiker kosten</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-026</span><span class="prio pr-B">B</span>
+<span class="topic">Termin und Kontakt: Kontaktformular zuerst, Telefon, Calendly nachrangig, auf jeder Seite erreichbar</span><span class="bar"><i style="width:73%"></i></span><span class="num">73</span>
+<span class="tag2">homepage</span><span class="pill c-review">HWG review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Hüwel will das Kontaktformular als Buchungsweg. Formulare laufen seit 06.10.</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: abschluss-cta</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>62</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>38</td><td class="mut">8 of 13 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, tanja-dietz.de, naturheilpraxis-gallin.de, naturheilpraxis-jochem.de, naturheilpraxis-elke-ruehl.de, carolin-heilmann.de, noris-nhz.de, privatpraxis-gottfried.de</p>
+<p class='mut'>Formular oder Termin-Weg</p>
+<p><b>Compliance note:</b> DSGVO: Einwilligungstext und Verarbeitung prüfen (offene AVV).</p>
+
+<ul class='needs'><li>[FEHLT] AVV 741 und Hüwel für die Formular-Verarbeitung prüfen</li></ul>
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,tanja-dietz.de,naturheilpraxis-gallin.de,naturheilpraxis-jochem.de,naturheilpraxis-elke-ruehl.de,carolin-heilmann.de,n</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-002</span><span class="prio pr-B">B</span>
+<span class="topic">Ablauf und Ersttermin: Dauer, Vorbereitung, Absage, Wartezeit (Seite &#x27;Termine &amp; Ablauf&#x27; hat 570 Wörter)</span><span class="bar"><i style="width:72%"></i></span><span class="num">72</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Echter Ablauf der Praxis (Live-Seite)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: erster-termin</p>
+<p><b>Question:</b> Wie läuft der erste Termin beim Heilpraktiker ab?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>45</td><td class="mut">basis: paa</td></tr>
+<tr><td>Gap</td><td>54</td><td class="mut">6 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker erstgespräch <b>no data</b> <em>nat.</em>, heilpraktiker erstanamnese <b>no data</b> <em>nat.</em>, heilpraktiker termin nürnberg <b>no data</b>, heilpraktiker wartezeit <b>no data</b> <em>nat.</em></p>
+<p><b>People also ask:</b> Wie lange dauert ein therapeutisches Erstgespräch?; Wie viel kostet eine Anamnese beim Heilpraktiker?</p>
+<p><b>Live site:</b> present (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-gallin.de, naturheilpraxis-jochem.de, naturheilpraxis-elke-ruehl.de, carolin-heilmann.de, noris-nhz.de, privatpraxis-gottfried.de</p>
+<p class='mut'>Überschrift oder URL zum Ablauf</p>
+
+
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Wie lange dauert ein therapeutisches Erstgespräch?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-gallin.de,naturheilpraxis-jochem.de,naturheilpraxis-elke-ruehl.de,carolin-heilmann.de,noris-nhz.de,privatpraxis-gottfried.de</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-008</span><span class="prio pr-B">B</span>
+<span class="topic">Psychosomatische Energetik (PSE): Seite hat 780 Wörter, Begriff wird kaum gesucht</span><span class="bar"><i style="width:71%"></i></span><span class="num">71</span>
+<span class="tag2">service:pse</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Kernmethode und Hauptseite. Suchbegriff ohne Datensatz</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>45</td><td class="mut">basis: autocomplete</td></tr>
+<tr><td>Gap</td><td>78</td><td class="mut">4 of 18 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): psychosomatische energetik <b>no data</b> <em>nat.</em>, psychosomatische energetik nürnberg <b>10</b></p>
+<p><b>Autocomplete:</b> psychosomatische energetik; psychosomatische energetik pdf; psychosomatische energetik pse; psychosomatische energetik buch</p>
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, naturheilpraxis-elke-ruehl.de, noris-nhz.de, therapie-leipzig.de</p>
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff.</p>
+
+
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">psychosomatische energetik nürnberg</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">psychosomatische energetik</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,naturheilpraxis-elke-ruehl.de,noris-nhz.de,therapie-leipzig.de</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-020</span><span class="prio pr-B">B</span>
+<span class="topic">Bioresonanz: erklärt und eingeordnet, ohne Methodenversprechen (Seite hat 568 Wörter)</span><span class="bar"><i style="width:68%"></i></span><span class="num">68</span>
+<span class="tag2">service:bioresonanz</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Das ist nicht Hüwels Verfahren. Die Seite grenzt Frequenztherapie ab. &#x27;bioresonanz&#x27; hat 14.800 Suchen, bei &#x27;bioresonanz nürnberg&#x27; nur 20, und die Treffer sind HNO- und Zahnpraxen</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>100</td><td class="mut">0 of 18 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): bioresonanz <b>14,800</b> <em>nat.</em>, bioresonanztherapie <b>14,800</b> <em>nat.</em>, bioresonanz nürnberg <b>20</b>, bioresonanz kosten <b>50</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> bioresonanz; bioresonanz ins; bioresonanz ulm; bioresonanz uri</p><p><b>People also ask:</b> Wie läuft eine Bioresonanztherapie ab?; Wie viel kostet eine Bioresonanztherapie pro Sitzung?</p><p><b>Client signal:</b> GSC 3 months: 2 queries, 10 impressions, 0 clicks, best position 1.0; top query &#x27;bioresonanz&#x27;</p>
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/methoden-als-werkzeuge/bioresonanz.html">https://www.praxis-huewel.de/methoden-als-werkzeuge/bioresonanz.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. Bicom und Bioresonanz sind vorbelastet. Nie als Geräte- oder Methodenversprechen. Die Seite nennt den Begriff nur zur Einordnung.</p>
+<p><b>Decision note:</b> Entscheidung 2026-10-11: Die Erklärung bleibt als Einordnungs-Seite. Nie als Methodenversprechen. Die Seite fällt nicht weg.</p>
+
+<details class="raw"><summary>Raw data (8 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">bioresonanz</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">bioresonanztherapie</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">bioresonanz nürnberg</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">bioresonanz kosten</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">bioresonanz</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Wie läuft eine Bioresonanztherapie ab?</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">bioresonanz</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-praxis-huewel.de.json">03-demand/ranked-praxis-huewel.de.json</a> <span class="mut">GSC 3 months: 2 queries, 10 impressions, 0 clicks, best position 1.0; top query &#x27;bioresonanz&#x27;</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-010</span><span class="prio pr-B">B</span>
+<span class="topic">Homöopathie-Fragen und Beiträge: Antibiotika, Krankenhaus, Kosten, Kinder, Erstanamnese</span><span class="bar"><i style="width:62%"></i></span><span class="num">62</span>
+<span class="tag2">blog-faq</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Fünf Beiträge stehen schon (Artikel). Fragen rund um die echte Leistung</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: faq.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>45</td><td class="mut">basis: autocomplete</td></tr>
+<tr><td>Gap</td><td>100</td><td class="mut">0 of 18 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): homöopathie antibiotika <b>110</b> <em>nat.</em>, homöopathie wirkung <b>140</b> <em>nat.</em>, homöopathie kosten <b>40</b> <em>nat.</em>, homöopathie kinder <b>no data</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> homöopathie nürnberg; homöopathie nürnberg arzt; homöopathie kinder nürnberg; homöopathie apotheke nürnberg</p>
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. &#x27;Wirkung&#x27; und &#x27;Antibiotika&#x27; nur als Einordnung, nie als Versprechen. Prüfen, ob Beiträge Wirkaussagen enthalten.</p>
+
+
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">homöopathie antibiotika</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">homöopathie wirkung</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">homöopathie kosten</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">homöopathie</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-004</span><span class="prio pr-B">B</span>
+<span class="topic">Behandlungspakete und Ursachen-Klarheitsanalyse als klares Angebot mit Preis und Inhalt</span><span class="bar"><i style="width:60%"></i></span><span class="num">60</span>
+<span class="tag2">service:ursachenanalyse</span><span class="pill c-review">HWG review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Pakete stehen auf der Startseite (freigegebener Text 04.09.). Die Seite zur Analyse hat nur 181 Wörter</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: erster-termin</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>23</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>38</td><td class="mut">3 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, naturheilpraxis-elke-ruehl.de, privatpraxis-gottfried.de</p>
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. Keine Ergebnis-Zusagen im Paketnamen.</p>
+
+<ul class='needs'><li>[FEHLT] Aktuelle Preise und Pakete bestätigen</li></ul>
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,naturheilpraxis-elke-ruehl.de,privatpraxis-gottfried.de</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-018</span><span class="prio pr-B">B</span>
+<span class="topic">Anliegen-Seiten wieder einzeln: zuerst Schmerzen und Verletzungen, dann Stress, Erschöpfung und Psyche (nur Anliegen, keine Diagnosen)</span><span class="bar"><i style="width:56%"></i></span><span class="num">56</span>
+<span class="tag2">service:anliegen</span><span class="pill c-review">HWG review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Die alte Seite &#x27;schmerzen-verletzungen&#x27; hatte 7 Klicks bei 71 Impressionen (zweitbeste Seite nach der Startseite). Sie ist heute ein Anker auf einer Sammelseite. Fit 2: HWG-Risiko bei Krankheitsnamen</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: block.</p>
+<p><b>Question:</b> Bei welchen Beschwerden gehe ich zum Heilpraktiker?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>62</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>38</td><td class="mut">8 of 13 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): bandscheibenvorfall nürnberg <b>no data</b>, schmerztherapie nürnberg <b>no data</b>, chronische schmerzen heilpraktiker <b>no data</b> <em>nat.</em>, burnout heilpraktiker nürnberg <b>no data</b>, stress heilpraktiker nürnberg <b>no data</b>, schlafstörungen heilpraktiker <b>no data</b> <em>nat.</em></p>
+<p><b>People also ask:</b> Bei welchen Beschwerden zum Heilpraktiker?</p><p><b>Client signal:</b> GSC 3 Monate: alte URL /was-ist-ihr-anliegen/schmerzen-verletzungen.html 7 Klicks und 71 Impressionen. Heute leitet sie per Stub auf /was-ist-ihr-anliegen.html#schmerzen (597 Wörter für alle Anliegen). GSC 3 months: 3 queries, 16 impressions, 0 clicks, best position 13.0; top query &#x27;bandscheibenvorfall nürnberg&#x27;</p>
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, tanja-dietz.de, heilpraktikerin-renner-nuernberg.de, naturheilpraxis-gallin.de, naturheilpraxis-elke-ruehl.de, naturheilkunde-praxis-trojahn.de, noris-nhz.de, privatpraxis-gottfried.de</p>
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. § 12 HWG und Krankheitsnamen: Seiten über Anliegen und Alltag, nicht über Diagnosen. Keine Seite zu Krebs.</p>
+<p><b>Decision note:</b> Entscheidung 2026-10-11: zwei Seiten gehen voran, die mit Seitenverlauf: Schmerzen und Verletzungen (7 Klicks), Stress, Erschöpfung und Psyche (alte Seite 17 Impressionen). Alltagssprache, keine Diagnosen, nie Krebs. Weitere Anliegen (zum Beispiel Schlaf) erst, wenn die Nachfrage belegt ist.</p>
+<ul class='needs'><li>[FEHLT] Texte der zwei Anliegen-Seiten von Hüwel freigeben lassen</li></ul>
+<details class="raw"><summary>Raw data (5 sources)</summary><ul><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Bei welchen Beschwerden zum Heilpraktiker?</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">bandscheibe|schmerz|migräne|kopfschmerz|stress|burnout|schlaf|angst|kniearthrose|wirbelsäule</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-praxis-huewel.de.json">03-demand/ranked-praxis-huewel.de.json</a> <span class="mut">GSC 3 Monate: alte URL /was-ist-ihr-anliegen/schmerzen-verletzungen.html 7 Klicks und 71 Impressionen. Heute leitet sie </span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,tanja-dietz.de,heilpraktikerin-renner-nuernberg.de,naturheilpraxis-gallin.de,naturheilpraxis-elke-ruehl.de,naturheilku</span></li><li><span class="tag">client-data</span> <a href="../03-demand/gsc-pages-90d.tsv">03-demand/gsc-pages-90d.tsv</a> <span class="mut">/was-ist-ihr-anliegen/schmerzen-verletzungen.html 7 Klicks</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="service">
+<summary><span class="rank">SVC-022</span><span class="prio pr-C">C</span>
+<span class="topic">Schwermetallbelastung abklären (über den Bioscan)</span><span class="bar"><i style="width:52%"></i></span><span class="num">52</span>
+<span class="tag2">later</span><span class="pill c-review">HWG review</span><span class="st st-adjacent_review">Adjacent: Martin decides</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Hüwel bestätigt nur &#x27;abklären&#x27;. Eine Ausleitung bietet er nicht an (24.08.)</p><p><b>Fit 1 of 3.</b> Patient audience. Item type: page.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>78</td><td class="mut">4 of 18 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>33</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): schwermetallbelastung <b>170</b> <em>nat.</em>, schwermetalle test <b>170</b> <em>nat.</em>, schwermetalle ausleiten <b>1,900</b> <em>nat.</em></p>
+
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-brahmer.de, naturheilkunde-praxis-trojahn.de, noris-nhz.de, privatpraxis-gottfried.de</p>
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. Keine Ausleitung, keine Entgiftungs-Zusage.</p>
+<p><b>Decision note:</b> Angrenzend. Nur Abklärung, nie Ausleitung.</p>
+<ul class='needs'><li>[FEHLT] Nur &#x27;abklären&#x27; ohne Ausleitung? Seite überhaupt gewünscht?</li></ul>
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">schwermetallbelastung</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">schwermetalle test</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">schwermetalle ausleiten</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-brahmer.de,naturheilkunde-praxis-trojahn.de,noris-nhz.de,privatpraxis-gottfried.de</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="service">
+<summary><span class="rank">SVC-019</span><span class="prio pr-C">C</span>
+<span class="topic">Wartezeit-Vermeider: Mini-Audit als Einstieg (Seite hat 167 Wörter)</span><span class="bar"><i style="width:49%"></i></span><span class="num">49</span>
+<span class="tag2">service:wartezeit</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Eigenes Angebot mit PDF-Download. Kein Suchbegriff, aber Einstieg für Besucher, die noch nicht buchen</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>42</td><td class="mut">2 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, naturheilpraxis-elke-ruehl.de</p>
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. &#x27;Kostenlos&#x27; nur, wenn es stimmt.</p>
+
+
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,naturheilpraxis-elke-ruehl.de</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="service">
+<summary><span class="rank">SVC-021</span><span class="prio pr-C">C</span>
+<span class="topic">Gesundheitscheck für Unternehmer, Selbständige und Führungskräfte 45+ (eigene Zielgruppen-Seite)</span><span class="bar"><i style="width:47%"></i></span><span class="num">47</span>
+<span class="tag2">later</span><span class="pill c-review">HWG review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Zielgruppe steht auf der Termin-Seite. Hüwel will zu Paketen für Unternehmer. Das Angebot dafür ist noch offen</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: page.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>20</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">0 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): gesundheitscheck für unternehmer <b>no data</b> <em>nat.</em>, unternehmer erschöpfung <b>no data</b> <em>nat.</em>, manager burnout vorbeugen <b>no data</b> <em>nat.</em>, selbständige stress gesundheit <b>no data</b> <em>nat.</em>, führungskräfte gesundheit <b>10</b> <em>nat.</em></p>
+
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+
+<p class='mut'>Seite oder Überschrift für Unternehmer</p>
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff.</p>
+<p><b>Decision note:</b> Wartet auf das Angebotsgespräch. Local SEO löst den B2B-Kanal nicht (LinkedIn).</p>
+<ul class='needs'><li>[FEHLT] Angebot und Pakete für Unternehmer (Pivot-Gespräch mit Martin Drendel)</li></ul>
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">führungskräfte gesundheit</span></li></ul></details>
+</div></details>
+<h3>Brand</h3><details class="item p-A" data-prio="A" data-pillar="brand">
+<summary><span class="rank">BRD-002</span><span class="prio pr-A">A</span>
+<span class="topic">Zielgruppen klar sagen: langjährige Beschwerden trotz vieler Arztbesuche, Unternehmer, Selbständige, Führungskräfte 45+</span><span class="bar"><i style="width:77%"></i></span><span class="num">77</span>
+<span class="tag2">homepage</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Beide Zielgruppen stehen auf den Seiten (Startseite, Termine)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: fuer-mich</p>
+<p><b>Question:</b> Ist die Praxis etwas für mich?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>45</td><td class="mut">basis: paa</td></tr>
+<tr><td>Gap</td><td>92</td><td class="mut">1 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>People also ask:</b> Bei welchen Beschwerden zum Heilpraktiker?</p>
+<p><b>Live site:</b> present (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilzentrum-helios.de</p>
+
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff.</p>
+
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Bei welchen Beschwerden zum Heilpraktiker?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="brand">
+<summary><span class="rank">BRD-003</span><span class="prio pr-B">B</span>
+<span class="topic">Über Martin Hüwel: Klinik-Erfahrung, Ausbildung, Gründlichkeit (Seite hat 375 Wörter), Vorstellungsvideo</span><span class="bar"><i style="width:73%"></i></span><span class="num">73</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Eigene Biografie und Video (YouTube-Facade) sind live</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: ueber</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>62</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>38</td><td class="mut">8 of 13 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Client signal:</b> GSC 3 months: 2 queries, 29 impressions, 3 clicks, best position 4.4; top query &#x27;martin hüwel&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://www.praxis-huewel.de/ueber-mich.html">https://www.praxis-huewel.de/ueber-mich.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, tanja-dietz.de, naturheilpraxis-jochem.de, naturheilpraxis-im-suedwestpark.de, naturheilpraxis-elke-ruehl.de, carolin-heilmann.de, naturheilkunde-praxis-trojahn.de, privatpraxis-gottfried.de</p>
+<p class='mut'>Überschrift oder URL zur Person</p>
+
+
+
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">hüwel|huewel</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-praxis-huewel.de.json">03-demand/ranked-praxis-huewel.de.json</a> <span class="mut">GSC 3 months: 2 queries, 29 impressions, 3 clicks, best position 4.4; top query &#x27;martin hüwel&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,tanja-dietz.de,naturheilpraxis-jochem.de,naturheilpraxis-im-suedwestpark.de,naturheilpraxis-elke-ruehl.de,carolin-heil</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">Abschnitt 3</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="brand">
+<summary><span class="rank">BRD-001</span><span class="prio pr-B">B</span>
+<span class="topic">Positionierung: &#x27;Ursachen finden statt Symptome verwalten&#x27; für Menschen mit langen, unklaren Beschwerden</span><span class="bar"><i style="width:72%"></i></span><span class="num">72</span>
+<span class="tag2">homepage</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Die H1 sagt es schon; es ist Hüwels eigene Zielgruppe (&#x27;trotz vieler Arztbesuche&#x27;)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: hero</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>38</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>62</td><td class="mut">5 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-brahmer.de, heilzentrum-helios.de, heilpraktikerin-renner-nuernberg.de, naturheilpraxis-gallin.de, privatpraxis-gottfried.de</p>
+<p class='mut'>Aussagen zu Ursachen oder Ganzheit</p>
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. &#x27;Ursachen finden&#x27; ohne Erfolgs- oder Heilzusage.</p>
+
+
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-brahmer.de,heilzentrum-helios.de,heilpraktikerin-renner-nuernberg.de,naturheilpraxis-gallin.de,privatpraxis-gottfried.de</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="brand">
+<summary><span class="rank">BRD-005</span><span class="prio pr-B">B</span>
+<span class="topic">Methoden-Idee &#x27;Vier Werkzeuge, ein Ziel&#x27; mit Erklärung, wie sie zusammenspielen</span><span class="bar"><i style="width:68%"></i></span><span class="num">68</span>
+<span class="tag2">service:methoden-hub</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Eigener Ansatz auf Startseite und Methoden-Seite</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>62</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>38</td><td class="mut">8 of 13 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-brahmer.de, heilzentrum-helios.de, tanja-dietz.de, naturheilpraxis-gallin.de, naturheilpraxis-jochem.de, naturheilpraxis-elke-ruehl.de, naturheilkunde-praxis-trojahn.de, privatpraxis-gottfried.de</p>
+<p class='mut'>Seite oder Überschrift zum Ansatz</p>
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff.</p>
+
+
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-brahmer.de,heilzentrum-helios.de,tanja-dietz.de,naturheilpraxis-gallin.de,naturheilpraxis-jochem.de,naturheilpraxis-elke-rue</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="brand">
+<summary><span class="rank">BRD-004</span><span class="prio pr-B">B</span>
+<span class="topic">Ansprache einheitlich: Seite im Sie, PDF &#x27;Wartezeit-Vermeider&#x27; im Du</span><span class="bar"><i style="width:66%"></i></span><span class="num">66</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Befund aus dem Live-Stand (Gedächtnis huewel-website-live-state)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">0 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Client signal:</b> Seite im Sie, PDF im Du (Stand 06.10.)</p>
+
+
+
+
+
+<ul class='needs'><li>[FEHLT] Sie oder Du für das PDF</li></ul>
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/ranked-praxis-huewel.de.json">03-demand/ranked-praxis-huewel.de.json</a> <span class="mut">Seite im Sie, PDF im Du (Stand 06.10.)</span></li></ul></details>
+</div></details>
+<h3>Authority</h3><details class="item p-A" data-prio="A" data-pillar="authority">
+<summary><span class="rank">AUT-002</span><span class="prio pr-A">A</span>
+<span class="topic">Beweis-Leiste: Google 4,9 mit 10 Bewertungen, kurzes Zitat</span><span class="bar"><i style="width:77%"></i></span><span class="num">77</span>
+<span class="tag2">homepage</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Local Pack 2026-10-11: Hüwel 4,9 (10). Brahmer 50, Winter 51, Dr. Philipp 107, Helios 22</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof. Section: beweis-leiste</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>62</td><td class="mut">5 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Client signal:</b> Local Pack &#x27;frequenztherapie nürnberg&#x27;: Dr. Philipp 107, Helios 22, Hüwel 10 Bewertungen. &#x27;naturheilpraxis nürnberg&#x27;: Brahmer 50, Winter 51</p>
+<p><b>Live site:</b> present (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, tanja-dietz.de, naturheilkunde-praxis-trojahn.de, privatpraxis-gottfried.de, praxis-rietsch.de</p>
+<p class='mut'>Bewertungen oder Stimmen sichtbar</p>
+<p><b>Compliance note:</b> § 11 HWG: Äußerungen Dritter nur ohne Wirkbezug. Bewertungen ohne Krankheitsbezug.</p>
+
+
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/ranked-praxis-huewel.de.json">03-demand/ranked-praxis-huewel.de.json</a> <span class="mut">Local Pack &#x27;frequenztherapie nürnberg&#x27;: Dr. Philipp 107, Helios 22, Hüwel 10 Bewertungen. &#x27;naturheilpraxis nürnberg&#x27;: Br</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,tanja-dietz.de,naturheilkunde-praxis-trojahn.de,privatpraxis-gottfried.de,praxis-rietsch.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-2.json">02-competitors/serp-2.json</a> <span class="mut">local_pack ratings</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="authority">
+<summary><span class="rank">AUT-007</span><span class="prio pr-B">B</span>
+<span class="topic">Verzeichnis- und Portal-Einträge als Linkziele: Doctolib (korrigieren), jameda, werkenntdenbesten, ProvenExpert, Gelbe Seiten</span><span class="bar"><i style="width:74%"></i></span><span class="num">74</span>
+<span class="tag2">offsite</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Portale stehen bei &#x27;heilpraktiker nürnberg&#x27; vorn. Übergabe an backlink-dach</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: link-target.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>94</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">0 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker nürnberg <b>1,000</b></p>
+
+
+
+<p class='mut'>Ziele aus den Google-Ergebnissen: doctolib.de (3 Treffer), gelbeseiten.de, jameda.de, werkenntdenbesten.de, theralupa.de, medfuehrer.de</p>
+
+
+
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker nürnberg</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">doctolib ×3, gelbeseiten</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-13.json">02-competitors/serp-13.json</a> <span class="mut">jameda ×4 bei &#x27;vitalstoffanalyse nürnberg&#x27;</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="authority">
+<summary><span class="rank">AUT-003</span><span class="prio pr-B">B</span>
+<span class="topic">Bewertungen aufbauen: Bewertungs-Kit, ruhiger Ablauf (Programm-Aufgabe, kein Seitentext)</span><span class="bar"><i style="width:72%"></i></span><span class="num">72</span>
+<span class="tag2">later</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Hüwel 10 Bewertungen gegen 22 bis 107 bei den Wettbewerbern</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>69</td><td class="mut">4 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Client signal:</b> Bewertungs-Leiter: 10 gegen 22, 50, 51, 107</p>
+
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, naturheilkunde-praxis-trojahn.de, privatpraxis-gottfried.de, praxis-rietsch.de</p>
+
+<p><b>Compliance note:</b> Keine Anreize, kein Gating.</p>
+
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/ranked-praxis-huewel.de.json">03-demand/ranked-praxis-huewel.de.json</a> <span class="mut">Bewertungs-Leiter: 10 gegen 22, 50, 51, 107</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,naturheilkunde-praxis-trojahn.de,privatpraxis-gottfried.de,praxis-rietsch.de</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="authority">
+<summary><span class="rank">AUT-001</span><span class="prio pr-B">B</span>
+<span class="topic">Qualifikationen: staatlich geprüfter Heilpraktiker, Ausbildung, Weiterbildungen, Erfahrung (Seite &#x27;Qualifikation&#x27;)</span><span class="bar"><i style="width:72%"></i></span><span class="num">72</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Echte Angaben von Hüwel, auf der Seite &#x27;Über mich&#x27; kurz</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof. Section: ueber</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>38</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>62</td><td class="mut">5 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://www.praxis-huewel.de/ueber-mich.html">https://www.praxis-huewel.de/ueber-mich.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> tanja-dietz.de, naturheilpraxis-jochem.de, naturheilpraxis-elke-ruehl.de, privatpraxis-gottfried.de, praxis-rietsch.de</p>
+<p class='mut'>Qualifikation in Überschrift oder URL</p>
+
+
+<ul class='needs'><li>[FEHLT] Liste der Weiterbildungen mit Jahr und Nachweis</li></ul>
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">tanja-dietz.de,naturheilpraxis-jochem.de,naturheilpraxis-elke-ruehl.de,privatpraxis-gottfried.de,praxis-rietsch.de</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="authority">
+<summary><span class="rank">AUT-005</span><span class="prio pr-C">C</span>
+<span class="topic">Fachbeiträge und Infothek (5 Artikel zur Homöopathie): als Wissens-Bereich ordnen und prüfen</span><span class="bar"><i style="width:49%"></i></span><span class="num">49</span>
+<span class="tag2">blog-faq</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Artikel sind live. Wettbewerb in der Tiefe ist gering, aber das HWG-Risiko ist hoch</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: page.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>40</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>56</td><td class="mut">8 of 18 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): homöopathie antibiotika <b>110</b> <em>nat.</em>, homöopathie wirkung <b>140</b> <em>nat.</em></p>
+
+<p><b>Live site:</b> weak (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-brahmer.de, heilzentrum-helios.de, naturheilpraxis-gallin.de, naturheilpraxis-elke-ruehl.de, privatpraxis-gottfried.de, praxis-rietsch.de, ineofit.de, therapie-leipzig.de</p>
+<p class='mut'>Blog- oder Wissensbereich</p>
+<p><b>Compliance note:</b> HWG § 3, § 11, UWG: keine Heilversprechen, keine Wirkaussagen zu Krankheiten, keine Diagnosen. &#x27;Frequenztherapie&#x27; bleibt der Hauptbegriff (Abmahnung 2018). &#x27;Bioresonanz&#x27; nur als Suchbegriff. Wirksamkeitsaussagen zur Homöopathie prüfen.</p>
+
+
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">homöopathie antibiotika</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">homöopathie wirkung</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-brahmer.de,heilzentrum-helios.de,naturheilpraxis-gallin.de,naturheilpraxis-elke-ruehl.de,privatpraxis-gottfried.de,praxis-ri</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="authority">
+<summary><span class="rank">AUT-006</span><span class="prio pr-C">C</span>
+<span class="topic">Mitgliedschaften und Verbände (BVMID seit Juli 2026) mit echten Logos</span><span class="bar"><i style="width:47%"></i></span><span class="num">47</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Mitgliedschaft aus dem Gedächtnis (Hüwel); Logos fehlen</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof. Section: ueber</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>8</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>46</td><td class="mut">1 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> praxis-rietsch.de</p>
+
+
+
+<ul class='needs'><li>[FEHLT] Liste der Verbände und Logo-Dateien</li></ul>
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">praxis-rietsch.de</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="authority">
+<summary><span class="rank">AUT-004</span><span class="prio pr-C">C</span>
+<span class="topic">Patientenstimmen: Abschnitt &#x27;Hilfreiche Erfahrungsberichte&#x27; auf Startseite und eigene Seite prüfen und umbauen (Ablauf und Atmosphäre, keine Wirkung)</span><span class="bar"><i style="width:47%"></i></span><span class="num">47</span>
+<span class="tag2">authority-page</span><span class="pill c-review">HWG review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Steht schon auf der Startseite. HWG-Risiko ist hoch bei Äußerungen Dritter</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>35</td><td class="mut">4 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://www.praxis-huewel.de/">https://www.praxis-huewel.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, tanja-dietz.de, naturheilpraxis-im-suedwestpark.de, naturheilkunde-praxis-trojahn.de</p>
+
+<p><b>Compliance note:</b> § 11 Abs. 1 Nr. 11 HWG: Äußerungen Dritter zur Wirkung sind unzulässig. Texte prüfen, Wirkbezug entfernen.</p>
+
+<ul class='needs'><li>[FEHLT] Schriftliche Einwilligungen der Patient:innen</li></ul>
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,tanja-dietz.de,naturheilpraxis-im-suedwestpark.de,naturheilkunde-praxis-trojahn.de</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="authority">
+<summary><span class="rank">AUT-008</span><span class="prio pr-C">C</span>
+<span class="topic">Person-Auszeichnung für Martin Hüwel (Person, sameAs, Qualifikation, knowsAbout)</span><span class="bar"><i style="width:44%"></i></span><span class="num">44</span>
+<span class="tag2">authority-page</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Heute nur Name und Berufsbezeichnung in &#x27;founder&#x27;</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: entity-schema.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>35</td><td class="mut">4 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+
+<p><b>Competitors covering it:</b> heilzentrum-helios.de, naturheilpraxis-im-suedwestpark.de, naturheilpraxis-elke-ruehl.de, privatpraxis-gottfried.de</p>
+
+
+
+<ul class='needs'><li>[FEHLT] Titel und Qualifikationen bestätigen (CP-AUT-001)</li></ul>
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilzentrum-helios.de,naturheilpraxis-im-suedwestpark.de,naturheilpraxis-elke-ruehl.de,privatpraxis-gottfried.de</span></li></ul></details>
+</div></details>
+<h2 id="cut">Cut items and why</h2><details class="item p-cut" data-prio="cut" data-pillar="location">
+<summary><span class="rank">LOC-004</span><span class="prio pr-cut">cut</span>
+<span class="topic">Eigene Ortsseiten für Fürth, Erlangen, Schwabach</span><span class="bar"><i style="width:61%"></i></span><span class="num">61</span>
+<span class="tag2">cut</span><span class="pill c-ok">HWG ok</span><span class="st st-cut">Cut</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Nachfrage 210 bis 320 pro Ort, aber keine Einzugs-Belege und keine eigenen lokalen Fakten. Local Falcon: Radius ist die Relevanz-Grenze, keine Ortsseite löst das</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: page.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>78</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>77</td><td class="mut">3 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>0</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker fürth <b>260</b>, heilpraktiker erlangen <b>320</b>, heilpraktiker schwabach <b>210</b></p>
+
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-jochem.de, naturheilkunde-praxis-trojahn.de, privatpraxis-gottfried.de</p>
+
+
+<p><b>Decision note:</b> Regel Ortsseite: Nachfrage, Einzugssignal und eigene lokale Fakten, alle drei. Nur die Nachfrage ist da. Orte nur im Text (CP-LOC-003).</p>
+
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker fürth</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker erlangen</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker schwabach</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-jochem.de,naturheilkunde-praxis-trojahn.de,privatpraxis-gottfried.de</span></li></ul></details>
+</div></details><details class="item p-cut" data-prio="cut" data-pillar="service">
+<summary><span class="rank">SVC-024</span><span class="prio pr-cut">cut</span>
+<span class="topic">Suchen ohne Patienten-Absicht: Heilpraktiker-Ausbildung, Vorbereitungskurs, Heileurythmie, &#x27;sleep medicine&#x27;</span><span class="bar"><i style="width:48%"></i></span><span class="num">48</span>
+<span class="tag2">cut</span><span class="pill c-ok">HWG ok</span><span class="st st-cut">Cut</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Keine Behandlungs-Absicht oder keine Leistung. &#x27;heileurythmie nürnberg&#x27; rankt auf #54, die Praxis bietet sie nicht an</p><p><b>Fit 0 of 3.</b> Patient audience. Item type: cut-log.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>70</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>100</td><td class="mut">0 of 13 local cover it</td></tr>
+<tr><td>Fit</td><td>0</td><td></td></tr><tr><td>Conversion</td><td>0</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker ausbildung <b>no data</b> <em>nat.</em></p>
+<p><b>Client signal:</b> GSC 3 months: 13 queries, 72 impressions, 0 clicks, best position 1.0; top query &#x27;heilpraktiker ausbildung&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://www.praxis-huewel.de/ueber-mich.html">https://www.praxis-huewel.de/ueber-mich.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+
+
+
+<p><b>Decision note:</b> Kein Seitenziel. Aus Anzeigen und Texten fernhalten. Quelle: GSC-Anfragen und DataForSEO-Rankings der Domain.</p>
+
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">ausbildung|vorbereitungskurs|werden|heileurythmie|sleep medicine</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-praxis-huewel.de.json">03-demand/ranked-praxis-huewel.de.json</a> <span class="mut">GSC 3 months: 13 queries, 72 impressions, 0 clicks, best position 1.0; top query &#x27;heilpraktiker ausbildung&#x27;</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-praxis-huewel.de.json">03-demand/ranked-praxis-huewel.de.json</a> <span class="mut">heileurythmie nürnberg #54 (170/Monat), apotheke nürbanum #71</span></li></ul></details>
+</div></details><details class="item p-cut" data-prio="cut" data-pillar="service">
+<summary><span class="rank">SVC-023</span><span class="prio pr-cut">cut</span>
+<span class="topic">Entgiftung, Darmsanierung, Histamin-Test, Mikroimmuntherapie</span><span class="bar"><i style="width:40%"></i></span><span class="num">40</span>
+<span class="tag2">cut</span><span class="pill c-ok">HWG ok</span><span class="st st-cut">Cut</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Die Praxis bietet das nicht an (Live-Seite, Hüwel 24.08.). Große Suchvolumen sind hier eine Falle</p><p><b>Fit 0 of 3.</b> Patient audience. Item type: cut-log.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>83</td><td class="mut">3 of 18 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>0</td><td></td></tr><tr><td>Conversion</td><td>0</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): darmsanierung <b>18,100</b> <em>nat.</em>, entgiftung körper <b>9,900</b> <em>nat.</em>, histaminintoleranz test <b>9,900</b> <em>nat.</em>, mikroimmuntherapie <b>880</b> <em>nat.</em>, darmsanierung nürnberg <b>10</b></p>
+
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilpraxis-elke-ruehl.de, naturheilkunde-praxis-trojahn.de, privatpraxis-gottfried.de</p>
+
+
+<p><b>Decision note:</b> Regel &#x27;Keyword muss zur echten Leistung passen&#x27;. Darmsanierung 18.100, Entgiftung 9.900, Histamin-Test 9.900 Suchen, aber keine Leistung.</p>
+
+<details class="raw"><summary>Raw data (6 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">darmsanierung</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">entgiftung körper</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">histaminintoleranz test</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">mikroimmuntherapie</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">darmsanierung nürnberg</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilpraxis-elke-ruehl.de,naturheilkunde-praxis-trojahn.de,privatpraxis-gottfried.de</span></li></ul></details>
+</div></details>
+<h2 id="decisions">Decisions for Martin</h2><ol><li>PostVac and Long Covid (CP-SVC-017): waits for the talk between Martin Drendel and Martin Hüwel. No page and no ad until then. Highest HWG risk.</li><li>Entrepreneur offer (CP-SVC-021): wait for the pivot talk with Hüwel. Local SEO does not solve that channel.</li><li>Check the five homeopathy articles and the patient quotes for HWG before any growth.</li><li>Decided on 2026-10-11: two concern pages go first (Schmerzen und Verletzungen; Stress, Erschöpfung und Psyche). The Bioresonanz page stays as an explanation only. Search Console access works (API, www property).</li></ol>
+<h2 id="client">Open facts from the client</h2><div class="tblwrap"><table><tr><th>[FEHLT]</th><th>Blocks items</th></tr><tr><td>Aus welchen Orten kommen die Patient:innen wirklich?</td><td>CP-LOC-003</td></tr><tr><td>Wie genau begleitet die Praxis? Textfreigabe durch Hüwel</td><td>CP-SVC-017</td></tr><tr><td>AVV 741 und Hüwel für die Formular-Verarbeitung prüfen</td><td>CP-SVC-026</td></tr><tr><td>Liste der Weiterbildungen mit Jahr und Nachweis</td><td>CP-AUT-001</td></tr><tr><td>Parken (kostenlos?) und Barrierefreiheit bestätigen</td><td>CP-LOC-002</td></tr><tr><td>ÖPNV-Haltestelle</td><td>CP-LOC-002</td></tr><tr><td>Sie oder Du für das PDF</td><td>CP-BRD-004</td></tr><tr><td>Freigabe, Doctolib und Verzeichnisse zu korrigieren</td><td>CP-LOC-005</td></tr><tr><td>Preisspanne freigeben</td><td>CP-LOC-006</td></tr><tr><td>Aktuelle Preise und Pakete bestätigen</td><td>CP-SVC-004</td></tr><tr><td>Texte der zwei Anliegen-Seiten von Hüwel freigeben lassen</td><td>CP-SVC-018</td></tr><tr><td>Nur &#x27;abklären&#x27; ohne Ausleitung? Seite überhaupt gewünscht?</td><td>CP-SVC-022</td></tr><tr><td>Liste der Verbände und Logo-Dateien</td><td>CP-AUT-006</td></tr><tr><td>Schriftliche Einwilligungen der Patient:innen</td><td>CP-AUT-004</td></tr><tr><td>Angebot und Pakete für Unternehmer (Pivot-Gespräch mit Martin Drendel)</td><td>CP-SVC-021</td></tr><tr><td>Titel und Qualifikationen bestätigen (CP-AUT-001)</td><td>CP-AUT-008</td></tr></table></div><p class="mut">The full list for the client is in 01-client/client-baseline.md section 8 and in the German form.</p>
+<h2 id="raw">Raw data</h2><h3>Competitor pages measured</h3><div class="tblwrap"><table><tr><th>Page</th><th>Tier</th><th>Words</th><th>H2</th><th>FAQ</th><th>Price</th><th>Rating</th><th>Method</th></tr>
+<tr><td><a href="../02-competitors/metrics.json">naturheilpraxis-brahmer.de/</a></td><td>local</td><td>808</td><td>4</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">heilzentrum-helios.de/</a></td><td>local</td><td>1438</td><td>11</td><td>yes</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">heilzentrum-helios.de/ueber-uns/therapeutenuebersicht/</a></td><td>local</td><td>423</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">heilzentrum-helios.de/frequenztherapie/</a></td><td>local</td><td>1394</td><td>16</td><td>yes</td><td>yes</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">tanja-dietz.de/</a></td><td>local</td><td>240</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">heilpraktikerin-renner-nuernberg.de/</a></td><td>local</td><td>423</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td>https://hegerfeld.de/</td><td>local</td><td colspan="6"><b>unreadable</b>: &lt;urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)&gt;. Not read as "nothing found".</td></tr>
+<tr><td>https://naturheilpraxis-gallin.de/</td><td>local</td><td colspan="6"><b>unreadable</b>: &lt;urlopen error [Errno 61] Connection refused&gt;. Not read as "nothing found".</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">http://naturheilpraxis-gallin.de/</a></td><td>local</td><td>598</td><td>11</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">naturheilpraxis-jochem.de/</a></td><td>local</td><td>367</td><td>1</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">naturheilpraxis-im-suedwestpark.de/</a></td><td>local</td><td>2667</td><td>0</td><td>yes</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">naturheilpraxis-elke-ruehl.de/</a></td><td>local</td><td>635</td><td>11</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.naturheilpraxis-elke-ruehl.de/lexikon/m/mineralstoffe-spurenelemen</a></td><td>local</td><td>394</td><td>5</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">carolin-heilmann.de/</a></td><td>local</td><td>341</td><td>1</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">naturheilkunde-praxis-trojahn.de/</a></td><td>local</td><td>741</td><td>4</td><td>-</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.naturheilkunde-praxis-trojahn.de/behandlung-therapie-hilfe-schmerz</a></td><td>local</td><td>306</td><td>0</td><td>-</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">noris-nhz.de/</a></td><td>local</td><td>308</td><td>1</td><td>yes</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">noris-nhz.de/behandlungsschwerpunkte/</a></td><td>local</td><td>2261</td><td>0</td><td>yes</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">privatpraxis-gottfried.de/</a></td><td>local</td><td>1690</td><td>1</td><td>yes</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.privatpraxis-gottfried.de/ganzheitliche-medizin-nuernberg/</a></td><td>local</td><td>1964</td><td>1</td><td>yes</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">praxis-rietsch.de/</a></td><td>local</td><td>383</td><td>3</td><td>-</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.praxis-rietsch.de/leistungen/naturheilkunde/</a></td><td>local</td><td>122</td><td>1</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">schmerzpraxis-mannheim.de/</a></td><td>niche</td><td>450</td><td>14</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">schmerzpraxis-mannheim.de/das-ondamed-system/</a></td><td>niche</td><td>425</td><td>15</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">ineofit.de/</a></td><td>niche</td><td>1391</td><td>18</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">ineofit.de/leistungen</a></td><td>niche</td><td>447</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">therapie-leipzig.de/</a></td><td>niche</td><td>209</td><td>2</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.therapie-leipzig.de/aussteller-produkte/produkt/therapie-leipzig/2</a></td><td>niche</td><td>186</td><td>2</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">praxis-schwabe.de/</a></td><td>niche</td><td>322</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">praxis-schwabe.de/sample-page-2/ondamed-2/</a></td><td>niche</td><td>296</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td>https://ondamed.de/</td><td>niche</td><td colspan="6"><b>unreadable</b>: &lt;urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1081)&gt;. Not read as "nothing found".</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">http://www.ondamed.de/</a></td><td>niche</td><td>7</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">orthinform.de/</a></td><td>topic</td><td>585</td><td>15</td><td>-</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">orthinform.de/lexikon/pulsierende-magnetfeldtherapie</a></td><td>topic</td><td>1326</td><td>7</td><td>yes</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">igel-monitor.de/</a></td><td>topic</td><td>1588</td><td>4</td><td>yes</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">igel-monitor.de/presse/pressemitteilungen/magnetfeldtherapie-ohne-nutz</a></td><td>topic</td><td>1368</td><td>4</td><td>-</td><td>yes</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">praxis-breitenberger.de/</a></td><td>topic</td><td>1603</td><td>4</td><td>yes</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.praxis-breitenberger.de/ratgeber/stress-erschoepfung/nebennierensc</a></td><td>topic</td><td>3340</td><td>12</td><td>yes</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">krankenhaus-naturheilweisen.de/</a></td><td>topic</td><td>525</td><td>8</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.krankenhaus-naturheilweisen.de/krankheitsbilder/chronisches-fatigu</a></td><td>topic</td><td>1166</td><td>9</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.krankenhaus-naturheilweisen.de/fileadmin/user_upload/KfN/PDFs/Info</a></td><td>topic</td><td>63226</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">heilpraktikerin-lerch.de/</a></td><td>topic</td><td>266</td><td>0</td><td>-</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">heilpraktikerin-lerch.de/chronische-erschoepfung-und-burnout-syndrom/</a></td><td>topic</td><td>523</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">theraklinik.de/</a></td><td>topic</td><td>3502</td><td>5</td><td>-</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">theraklinik.de/die-therapien/behandlung-bei-post-vac-syndrom/</a></td><td>topic</td><td>2079</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">praxis-lindstedt.de/</a></td><td>topic</td><td>506</td><td>3</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.praxis-lindstedt.de/leistungsspektrum/ernaehrungsmedizin/mikronaeh</a></td><td>topic</td><td>230</td><td>4</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">naturheilpraxis-meiler.de/</a></td><td>topic</td><td>694</td><td>1</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.naturheilpraxis-meiler.de/praxis-und-honorar-uebersicht</a></td><td>topic</td><td>596</td><td>0</td><td>yes</td><td>yes</td><td>-</td><td>http</td></tr>
+</table></div>
+<h3>Files</h3><ul><li><a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">client facts and [FEHLT] list</span></li><li><a href="../02-competitors/metrics.json">02-competitors/metrics.json</a> <span class="mut">page measures</span></li><li><a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">competitor sitemaps</span></li><li><a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">SERP 'heilpraktiker berlin charlottenburg' (serp-1 to serp-11 exist)</span></li><li><a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">search volumes, call 1</span></li><li><a href="../03-demand/volume2.json">03-demand/volume2.json</a> <span class="mut">search volumes, call 2</span></li><li><a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">Google autocomplete tree</span></li><li><a href="../03-demand/trends.json">03-demand/trends.json</a> <span class="mut">Google Trends</span></li><li><a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">own rankings (more ranked-*.json for competitors)</span></li><li><a href="../04-pool/pool.json">04-pool/pool.json</a> <span class="mut">the pool, machine-readable</span></li><li><a href="../spend.jsonl">spend.jsonl</a> <span class="mut">every paid call and its cost</span></li></ul>
+</div><script>
+document.querySelectorAll('.filters').forEach(function(f){f.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+f.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var v=b.dataset.f;
+document.querySelectorAll('details.item').forEach(function(d){d.classList.toggle('hidden',!(v==='all'||d.dataset.prio===v||(v==='client'&&d.querySelector('.st-needs_client'))||(v==='adj'&&d.querySelector('.st-adjacent_review'))))})})});
+</script></body></html>

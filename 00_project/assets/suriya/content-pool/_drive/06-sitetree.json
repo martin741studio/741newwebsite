@@ -1,0 +1,2656 @@
+{
+ "meta": {
+  "client": "Praxis Suriya (Coralie Suriyapperuma)",
+  "slug": "suriya",
+  "domain": "suriya-praxis.de",
+  "built": "2026-10-11",
+  "programme_modules_source": "website-struktur-master-prompt.md Schritte 4 und 6 (Programmplan-Datei nicht gefunden unter ~/Downloads); Seitenbaum nach den Menüpunkten Praxis, Migräne, Nervensystem, Schmerztherapie, Ayurveda, Blog"
+ },
+ "kpi": {
+  "Bleibt": 30,
+  "Überarbeiten": 15,
+  "Neu": 0,
+  "Vorschlag": 1
+ },
+ "kpi_patient": {
+  "Bleibt": 30,
+  "Überarbeiten": 15,
+  "Neu": 0,
+  "Vorschlag": 1
+ },
+ "nodes": [
+  {
+   "id": "ST-00",
+   "parent": null,
+   "title": "Startseite",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M2 Startseite",
+   "job": "Nach CRO-Blueprint (10 Zeilen): Hero steht. Preise je Einstiegsangebot ergänzen, Erster-Termin-Block, Beweis-Leiste, drei Einstiegsangebote vor dem Rest. Kontaktwege (Formular #terminanfrage, WhatsApp, Nummer, Zeiten) bleiben 1:1.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/",
+   "kw": "heilpraktiker ingelheim",
+   "pool_tag": "homepage",
+   "needs_client": [
+    "Drei Einstiegsangebote bestätigen",
+    "Ein Preis je Angebot"
+   ],
+   "note": "Seite hat bereits rund 2.000 Wörter, FAQ mit 9 Fragen, Karte, Bewertungs-Widget und MedicalBusiness-Schema.",
+   "_items": [
+    "CP-LOC-001",
+    "CP-LOC-002",
+    "CP-LOC-008",
+    "CP-SVC-001",
+    "CP-SVC-002",
+    "CP-SVC-026",
+    "CP-BRD-001",
+    "CP-BRD-002",
+    "CP-BRD-003",
+    "CP-BRD-004",
+    "CP-BRD-005",
+    "CP-AUT-001",
+    "CP-AUT-004",
+    "CP-AUT-010"
+   ],
+   "_gsc": {
+    "clicks": 69,
+    "impressions": 2327
+   },
+   "_words": 2161,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "heilpraktiker ingelheim",
+    "volume": 140,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-LOC-001",
+     "priority": "A",
+     "topic": "Hero-Überschrift mit Kernort und Kernthema (Naturheilpraxis in Ingelheim für Migräne und Nervensystem)",
+     "status": "draft"
+    },
+    {
+     "id": "CP-LOC-002",
+     "priority": "A",
+     "topic": "Standort-Block: Adresse, Karte, Anfahrt, Fahrzeit nach Mainz, Wiesbaden und Bingen, Öffnungszeiten, ein Name überall",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-LOC-008",
+     "priority": "C",
+     "topic": "Schema auf der Website: MedicalBusiness mit gleichem Namen, Adresse und Telefon wie das Google-Profil",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-SVC-001",
+     "priority": "B",
+     "topic": "Startseite: Leistungskarten mit den drei Einstiegsangeboten und je einem Preis",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-SVC-002",
+     "priority": "B",
+     "topic": "Erster Termin: Ablauf in 3 bis 4 Schritten, Dauer, was du mitbringst, kostenloses Erstgespräch",
+     "status": "draft"
+    },
+    {
+     "id": "CP-SVC-026",
+     "priority": "B",
+     "topic": "FAQ auf der Startseite: Was kostet es? Kann ein Heilpraktiker bei Migräne helfen? Zahlt die Kasse? Wie läuft der erste Termin?",
+     "status": "draft"
+    },
+    {
+     "id": "CP-BRD-001",
+     "priority": "A",
+     "topic": "Differenzierung: Migräne und Nervensystem als Kern. Welche lokalen Praxen zeigen das?",
+     "status": "draft"
+    },
+    {
+     "id": "CP-BRD-002",
+     "priority": "B",
+     "topic": "Methode in drei Sätzen: Kopf, Kiefer, Nacken und Nervensystem zusammen sehen; individuell; auf Augenhöhe",
+     "status": "draft"
+    },
+    {
+     "id": "CP-BRD-003",
+     "priority": "B",
+     "topic": "Für wen ist die Praxis? Erkennungs-Block ohne Krankheitsliste (Kopf, Nacken, Kiefer, Stress) und Abgrenzung",
+     "status": "draft"
+    },
+    {
+     "id": "CP-BRD-004",
+     "priority": "B",
+     "topic": "Weniger Begriffe, weniger Preise auf einmal: drei Einstiegsangebote, ein Preis je Angebot, Programm weiter unten",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-BRD-005",
+     "priority": "B",
+     "topic": "Über-mich: Mein Weg, Ausbildung und Ansatz (Coralie)",
+     "status": "draft"
+    },
+    {
+     "id": "CP-AUT-001",
+     "priority": "B",
+     "topic": "Beweis-Leiste auf der Startseite: Heilpraktikerin seit 2010, Bewertung 5,0 mit 12 Google-Bewertungen, Fortbildungen",
+     "status": "draft"
+    },
+    {
+     "id": "CP-AUT-004",
+     "priority": "B",
+     "topic": "Bewertungsblock auf der Startseite mit echten Google-Bewertungen (live-Widget) und Link zum Profil",
+     "status": "draft"
+    },
+    {
+     "id": "CP-AUT-010",
+     "priority": "C",
+     "topic": "Echte Fotos der Praxisräume und von Coralie bei der Arbeit (32 Originale liegen im Drive)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-10",
+   "parent": "ST-00",
+   "title": "Praxis",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Menü-Gruppe (Über mich, Behandlung & Methoden, Kosten, Termin, Kontakt). Menü ändert Dinakar nur mit Martins Go.",
+   "kind": "group",
+   "audience": "patient",
+   "group_patterns": [
+    "^/heilpraktikerin-ingelheim$",
+    "^/behandlungsangebot$",
+    "^/kosten-abrechnung$",
+    "^/termin-buchen$",
+    "^/contact-2$"
+   ],
+   "_items": [],
+   "_count": 5,
+   "_gsc": null
+  },
+  {
+   "id": "ST-11",
+   "parent": "ST-10",
+   "title": "Über mich: Coralie Suriyapperuma, Heilpraktikerin",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M6 Behandlerseite",
+   "job": "E-E-A-T-Seite steht (10 Ausbildungsstationen, Ansatz, Schwerpunkte). Ergänzen: Presse-Link (Allgemeine Zeitung 2023, nach Freigabe), Verband falls vorhanden, Person-Schema prüfen.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/heilpraktikerin-ingelheim/",
+   "kw": "heilpraktikerin ingelheim",
+   "pool_tag": "authority-page",
+   "needs_client": [
+    "Artikel der Allgemeinen Zeitung (2023-09-28) verlinken dürfen?",
+    "Mitglied in einem Berufsverband?"
+   ],
+   "_items": [
+    "CP-AUT-002",
+    "CP-AUT-006"
+   ],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 19
+   },
+   "_words": 2241,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "heilpraktikerin ingelheim",
+    "volume": 140,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-AUT-002",
+     "priority": "A",
+     "topic": "Qualifikationen und Person-Schema: alle Stationen mit Jahr und Schule, auf jeder Leistungsseite 'Wer behandelt dich?'",
+     "status": "draft"
+    },
+    {
+     "id": "CP-AUT-006",
+     "priority": "C",
+     "topic": "Presse: Allgemeine Zeitung (28.09.2023) zur Wiedereröffnung als 'Bekannt aus' mit Link",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-12",
+   "parent": "ST-10",
+   "title": "Behandlung & Methoden (Hub)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M8 Hub und Spoke",
+   "job": "Methoden-Hub mit sieben Kacheln steht seit 2026-10-07. Er verlinkt Ohrakupunktur, Schröpfen, Craniosacral, ThetaHealing, hnc, Akupunktur, Lymph.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/behandlungsangebot/",
+   "kw": "ohrakupunktur",
+   "pool_tag": "service:behandlungsangebot",
+   "note": "Titel am 2026-10-07 von 'Diagnostik & Therapien' auf 'Behandlung & Methoden' geändert. Der Arbeitstitel '(Hub)' ist nur intern und steht nie öffentlich.",
+   "_items": [
+    "CP-SVC-019"
+   ],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 21
+   },
+   "_words": 637,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "ohrakupunktur",
+    "volume": 3600,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-019",
+     "priority": "B",
+     "topic": "Methoden-Seiten (Ohrakupunktur, Schröpftherapie, Craniosacrale Therapie, ThetaHealing, hnc) und Methoden-Hub: behalten, gegenseitig verlinken",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-13",
+   "parent": "ST-10",
+   "title": "Kosten & Abrechnung",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Alte Seite mit Preisen, die von den neuen Seiten abweichen (Behandlung 80 €, Schmerztherapie 85 oder 95 €). Alle Preise aus einer Quelle, Ansprache 'du', Selbstzahler und Erstattung klar (ohne Zusagen).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/kosten-abrechnung/",
+   "kw": "akupunktur kosten",
+   "pool_items": [
+    "CP-SVC-003"
+   ],
+   "needs_client": [
+    "Welcher Einzelpreis gilt für die Schmerztherapie: 85, 95 oder 80 €?"
+   ],
+   "_items": [
+    "CP-SVC-003"
+   ],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 205
+   },
+   "_words": 1001,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "akupunktur kosten",
+    "volume": 1600,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-003",
+     "priority": "A",
+     "topic": "Preise und Kosten: ein klarer Preis je Angebot, Hinweis Selbstzahler und Erstattung",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-14",
+   "parent": "ST-10",
+   "title": "Termin buchen",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Kontaktweg (Formular). Gesperrter Pfad: Google-Profil-Terminlink. Nicht ändern, nicht weiterleiten.",
+   "kind": "system",
+   "audience": "patient",
+   "path": "/termin-buchen/",
+   "note": "Der Pfad bleibt wie er ist (Termin-Link des Google-Profils).",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 24
+   },
+   "_words": 749,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-15",
+   "parent": "ST-10",
+   "title": "Kontakt",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Adresse, Zeiten, Karte. Bleibt.",
+   "kind": "system",
+   "audience": "patient",
+   "path": "/contact-2/",
+   "_items": [],
+   "_gsc": {
+    "clicks": 6,
+    "impressions": 124
+   },
+   "_words": 566,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-16",
+   "parent": "ST-10",
+   "title": "Impressum",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Rechtstext. Steuernummer bleibt wie sie ist (Martin 2026-10-01).",
+   "kind": "system",
+   "audience": "patient",
+   "path": "/impressum/",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 6
+   },
+   "_words": 932,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-17",
+   "parent": "ST-10",
+   "title": "Datenschutz",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Rechtstext.",
+   "kind": "system",
+   "audience": "patient",
+   "path": "/datenschutzerklaerung/",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 11
+   },
+   "_words": 3356,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-20",
+   "parent": "ST-00",
+   "title": "Migräne",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Hauptseite SURIYA Neuro Migräne: drei einfache Einstiege (Massage, Akupunktur, Cranio-Neuro-Analyse) zuerst, 12-Wochen-Programm und Preis weiter unten, Kompass ganz unten (Martin gab Go am 2026-10-06, nicht umgesetzt).",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/suriya-neuro-migraene/",
+   "kw": "migräne heilpraktiker",
+   "pool_tag": "service:suriya-neuro-migraene",
+   "needs_client": [
+    "Welche drei Einstiege stehen oben?"
+   ],
+   "note": "HWG: keine Heilversprechen. Keyword-Werkzeug liefert für fast alle Migräne-Begriffe kein Volumen.",
+   "_items": [
+    "CP-SVC-009"
+   ],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 3
+   },
+   "_words": 2214,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "migräne heilpraktiker",
+    "volume": 170,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-009",
+     "priority": "A",
+     "topic": "Migräne: eine einfache Einstiegsseite (SURIYA Neuro Migräne) mit Cranio-Neuro-Analyse zuerst, Programm und Preis weiter unten",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-21",
+   "parent": "ST-20",
+   "title": "SURIYA Cranio-Neuro-Analyse",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Einstiegsangebot. Mit der Migräne-Analyse zusammenführen: erst Inhalt zusammenlegen, dann entscheiden, welche Adresse bleibt.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/suriya-cranio-neuro-analyse/",
+   "kw": "spannungskopfschmerz",
+   "pool_tag": "service:suriya-cranio-neuro-analyse",
+   "_items": [
+    "CP-SVC-010"
+   ],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 1
+   },
+   "_words": 2199,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "spannungskopfschmerz",
+    "volume": 1300,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-010",
+     "priority": "B",
+     "topic": "Cranio-Neuro-Analyse als Einstiegsangebot: eine Seite, Migräne-Analyse zusammenlegen (Prüfung der Texte vor jeder Weiterleitung)",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-22",
+   "parent": "ST-20",
+   "title": "Migräne-Analyse",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Zweite Analyse-Seite. Kein Dublett im Text (2,4 % gleiche Fünf-Wort-Folgen mit ST-21). Zusammenlegen ist eine Inhaltsfrage, keine Weiterleitung auf Verdacht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/migraene-analyse-ingelheim/",
+   "note": "Coralie: beide Analysen überschneiden sich im Angebot. Martin gab Go für das Zusammenlegen.",
+   "_items": [],
+   "_gsc": {
+    "clicks": null,
+    "impressions": null,
+    "note": "not listed in GSC (no impressions)"
+   },
+   "_words": 2512,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-23",
+   "parent": "ST-20",
+   "title": "SURIYA Migräne Kompass (online, Warteliste)",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M10 Online-Angebote",
+   "job": "Seite steht. Planpreis und Start offen.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/suriya-migraene-kompass/",
+   "needs_client": [
+    "Starttermin und Preis (geplant) bestätigen"
+   ],
+   "_items": [],
+   "_gsc": {
+    "clicks": null,
+    "impressions": null,
+    "note": "not listed in GSC (no impressions)"
+   },
+   "_words": 1361,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-24",
+   "parent": "ST-20",
+   "title": "SURIYA Neuro Self-Care (Zoom, kostenfrei)",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M10 Online-Angebote",
+   "job": "Seite steht. Lead-Magnet.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/suriya-neuro-self-care/",
+   "pool_tag": "service:suriya-neuro-self-care",
+   "_items": [
+    "CP-SVC-025"
+   ],
+   "_gsc": {
+    "clicks": null,
+    "impressions": null,
+    "note": "not listed in GSC (no impressions)"
+   },
+   "_words": 1756,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-025",
+     "priority": "B",
+     "topic": "Online-Angebote: Migräne Kompass (Warteliste) und Neuro Self-Care (kostenfrei, dienstags Zoom) als Einstieg und Leadmagnet",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-25",
+   "parent": "ST-20",
+   "title": "Blog: Migräne und Nacken (4 Beiträge)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M8 Hub und Spoke",
+   "job": "Vier Beiträge zu Migräne, Nacken und Ayurveda. Je mit Link zur Migräne-Seite ergänzen (Linkaudit 10.10.: Beiträge ohne ausgehende Links).",
+   "kind": "group",
+   "audience": "patient",
+   "group_patterns": [
+    "^/migraene-und-nackenverspannungen",
+    "^/nackenspannung-migraene$",
+    "^/migraene-ist-oft",
+    "^/ayurveda-bei-migraene"
+   ],
+   "_items": [],
+   "_count": 4,
+   "_gsc": null
+  },
+  {
+   "id": "ST-30",
+   "parent": "ST-00",
+   "title": "Nervensystem & Vagusnerv",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Fragen aus 'Weitere Fragen' ergänzen (Vagusnerv entlasten, welcher Arzt, Druckpunkt). Alte Blog-Seite /nervenregulation-vagusnerv/ (11 Klicks) bleibt und verlinkt hierher.",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/nervensystem-vagus-beruhigen/",
+   "kw": "nervensystem beruhigen",
+   "pool_tag": "service:nervensystem-vagus-beruhigen",
+   "_items": [
+    "CP-SVC-011"
+   ],
+   "_gsc": {
+    "clicks": 1,
+    "impressions": 8
+   },
+   "_words": 2399,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "nervensystem beruhigen",
+    "volume": 6600,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-011",
+     "priority": "A",
+     "topic": "Nervensystem beruhigen und Vagusnerv: Seite behalten und stärken",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-31",
+   "parent": "ST-30",
+   "title": "Nervenregulationsmassage",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Technik laut Coralie (2026-09-14): Aroma-Öl punktuell an Hals und Punkten, nicht Shirodhara.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/nervenregulationsmassage/",
+   "pool_tag": "service:nervenregulationsmassage",
+   "_items": [
+    "CP-SVC-012"
+   ],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 5
+   },
+   "_words": 1433,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-012",
+     "priority": "C",
+     "topic": "Nervenregulationsmassage: Seite behalten, zur Massage-Seite und zur Nervensystem-Seite verlinken",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-32",
+   "parent": "ST-30",
+   "title": "Craniosacrale Therapie",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Im Methoden-Hub verlinkt.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/craniosacrale-therapie/",
+   "kw": "craniosacrale therapie",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 1
+   },
+   "_words": 2020,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "craniosacrale therapie",
+    "volume": 12100,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-33",
+   "parent": "ST-30",
+   "title": "hnc (Human Neuro Cybrainetics)",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/hnc-human-neuro-cybrainetics/",
+   "kw": "hnc therapie",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 4
+   },
+   "_words": 2346,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "hnc therapie",
+    "volume": 720,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-34",
+   "parent": "ST-30",
+   "title": "ThetaHealing",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Der Blog-Artikel /innere-arbeit-theta-healing-meditation/ (10 Klicks) verlinkt hierher.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/thetahealing/",
+   "kw": "thetahealing",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 4
+   },
+   "_words": 1777,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "thetahealing",
+    "volume": 3600,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-40",
+   "parent": "ST-00",
+   "title": "Ganzheitliche Schmerztherapie",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Ein Preis (heute 85 und 95 €). Seite sonst stark: 2.400 Wörter, FAQ, Autorin, Reviews.",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/ganzheitliche-schmerztherapie/",
+   "kw": "schmerztherapie mainz",
+   "pool_tag": "service:ganzheitliche-schmerztherapie",
+   "needs_client": [
+    "Einzelpreis bestätigen"
+   ],
+   "_items": [
+    "CP-SVC-004"
+   ],
+   "_gsc": {
+    "clicks": 2,
+    "impressions": 69
+   },
+   "_words": 2420,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "schmerztherapie mainz",
+    "volume": 320,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-004",
+     "priority": "A",
+     "topic": "Ganzheitliche Schmerztherapie: Seite behalten und stärken (Nacken, Kiefer, Rücken; ein Preis)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-41",
+   "parent": "ST-40",
+   "title": "Nacken- und Schulterschmerzen",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Ein Preis (heute 85 und 95 €).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/nacken-schulter/",
+   "kw": "nackenverspannung",
+   "pool_tag": "service:nacken-schulter",
+   "needs_client": [
+    "Einzelpreis bestätigen"
+   ],
+   "_items": [
+    "CP-SVC-005"
+   ],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 1
+   },
+   "_words": 1908,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "nackenverspannung",
+    "volume": 3600,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-005",
+     "priority": "A",
+     "topic": "Nacken- und Schulterschmerzen: Seite behalten, Fragen zu Verspannung und Kopfschmerz ergänzen",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-42",
+   "parent": "ST-40",
+   "title": "Kiefer und CMD",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/kiefer-cmd/",
+   "kw": "kieferschmerzen",
+   "pool_tag": "service:kiefer-cmd",
+   "_items": [
+    "CP-SVC-006"
+   ],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 4
+   },
+   "_words": 1744,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "kieferschmerzen",
+    "volume": 5400,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-006",
+     "priority": "A",
+     "topic": "Kiefer und CMD: Seite behalten (Kieferschmerzen, Knacken, Zähneknirschen, Schiene)",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-43",
+   "parent": "ST-40",
+   "title": "Rückenschmerzen und Hexenschuss",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/hexenschuss-ruecken/",
+   "kw": "hexenschuss",
+   "pool_tag": "service:hexenschuss-ruecken",
+   "_items": [
+    "CP-SVC-007"
+   ],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 2
+   },
+   "_words": 1876,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "hexenschuss",
+    "volume": 60500,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-007",
+     "priority": "A",
+     "topic": "Rückenschmerzen und Hexenschuss: Seite behalten",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-44",
+   "parent": "ST-40",
+   "title": "Frozen Shoulder",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Kleine Nische.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/frozen-shoulder/",
+   "kw": "frozen shoulder",
+   "pool_tag": "service:frozen-shoulder",
+   "_items": [
+    "CP-SVC-008"
+   ],
+   "_gsc": {
+    "clicks": null,
+    "impressions": null,
+    "note": "not listed in GSC (no impressions)"
+   },
+   "_words": 1965,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "frozen shoulder",
+    "volume": null,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-008",
+     "priority": "C",
+     "topic": "Frozen Shoulder: Seite behalten (kleine Nische)",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-45",
+   "parent": "ST-40",
+   "title": "Akupunktur Ingelheim",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Ablauf- und Kostenfragen ohne Krankheitsliste ergänzen.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/akupunktur-ingelheim-praxis/",
+   "kw": "akupunktur ingelheim",
+   "pool_tag": "service:akupunktur-ingelheim-praxis",
+   "_items": [
+    "CP-SVC-018"
+   ],
+   "_gsc": {
+    "clicks": null,
+    "impressions": null,
+    "note": "not listed in GSC (no impressions)"
+   },
+   "_words": 2168,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "akupunktur ingelheim",
+    "volume": 30,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-018",
+     "priority": "A",
+     "topic": "Akupunktur Ingelheim: Seite behalten, Kosten- und Ablauf-Fragen ergänzen (ohne Krankheitsliste)",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-46",
+   "parent": "ST-40",
+   "title": "Ohrakupunktur",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ohrakupunktur-ingelheim/",
+   "kw": "ohrakupunktur",
+   "_items": [],
+   "_gsc": {
+    "clicks": 1,
+    "impressions": 7
+   },
+   "_words": 1608,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "ohrakupunktur",
+    "volume": 3600,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-47",
+   "parent": "ST-40",
+   "title": "Schröpftherapie",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/schroepftherapie-ingelheim/",
+   "kw": "schröpfen",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 12
+   },
+   "_words": 1202,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "schröpfen",
+    "volume": 18100,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-48",
+   "parent": "ST-40",
+   "title": "Lymphdrainage, Lymphmassage, Lipödem-Begleitung",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht (5er-Karte 540 €, Kopf-Gesichts-Lymph 80 €). HWG: Lipödem nur als Begleitung.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/lymphdrainage-lipoedem-ingelheim/",
+   "kw": "lymphdrainage ingelheim",
+   "pool_tag": "service:lymphdrainage-lipoedem-ingelheim",
+   "_items": [
+    "CP-SVC-022"
+   ],
+   "_gsc": {
+    "clicks": 1,
+    "impressions": 26
+   },
+   "_words": 1843,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "lymphdrainage ingelheim",
+    "volume": 50,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-022",
+     "priority": "A",
+     "topic": "Lymphdrainage und Lymphmassage (5er-Karte, Kopf-Gesichts-Lymph): Seite behalten; Lipödem-Begleitung ohne Heilversprechen",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-49",
+   "parent": "ST-40",
+   "title": "Mikronährstoffe, Hormone und Wechseljahre",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. HWG: keine Heilversprechen.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/mikronaehrstoffe-hormone-wechseljahre/",
+   "kw": "wechseljahre",
+   "pool_tag": "service:mikronaehrstoffe-hormone-wechseljahre",
+   "_items": [
+    "CP-SVC-023"
+   ],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 3
+   },
+   "_words": 2097,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "wechseljahre",
+    "volume": 33100,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-023",
+     "priority": "B",
+     "topic": "Mikronährstoffe, Hormone und Wechseljahre: Seite behalten, ohne Krankheitslisten",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-50",
+   "parent": "ST-00",
+   "title": "Ayurveda in Ingelheim (Hub)",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M8 Hub und Spoke",
+   "job": "Hub steht auf /ayurveda-ingelheim/ (nicht auf Coralies Slug).",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/ayurveda-ingelheim/",
+   "kw": "ayurveda ingelheim",
+   "pool_tag": "service:ayurveda-ingelheim",
+   "_items": [
+    "CP-SVC-015"
+   ],
+   "_gsc": {
+    "clicks": 1,
+    "impressions": 20
+   },
+   "_words": 1611,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "ayurveda ingelheim",
+    "volume": 20,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-015",
+     "priority": "A",
+     "topic": "Ayurveda-Hub und Regenerationstherapie (ARRIVAL, GROUNDING, RELEASE, RESTORE) auf /ayurveda-ingelheim/",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-51",
+   "parent": "ST-50",
+   "title": "Ayurveda-Massage & Therapie (Coralies Seite)",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "UNANTASTBAR (WP 1511). Kein Umtexten, kein Ersatz, keine Weiterleitung, nicht offline. Nur interne Links dorthin. Sie hat keinen H1-Tag (nur gemeldet).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ayurveda-therapie/",
+   "kw": "ayurveda massage",
+   "pool_tag": "service:ayurveda-therapie",
+   "note": "Martin 2026-09-29: 'which never should have happened'. Der Slug /ayurveda-therapie/ gehört ihr. Dinakars Entwurf 4466 darf ihn nicht bekommen.",
+   "_items": [
+    "CP-SVC-014"
+   ],
+   "_gsc": {
+    "clicks": 40,
+    "impressions": 978
+   },
+   "_words": 1462,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "ayurveda massage",
+    "volume": 4400,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-014",
+     "priority": "A",
+     "topic": "Ayurveda-Massage auf Coralies eigener Seite /ayurveda-therapie/ (WP 1511): schützen, nicht anfassen. Nur interne Links hin",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-52",
+   "parent": "ST-50",
+   "title": "Massage in Ingelheim",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht seit 2026-10-01 (17 Klicks 'massage ingelheim' in 90 Tagen). Gutschein-Kauf- und Kontaktweg sichtbar machen (Spitze Ende Dezember).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/massage-ingelheim/",
+   "kw": "massage ingelheim",
+   "pool_tag": "service:massage-ingelheim",
+   "_items": [
+    "CP-SVC-013",
+    "CP-SVC-028"
+   ],
+   "_gsc": {
+    "clicks": 10,
+    "impressions": 326
+   },
+   "_words": 1555,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "massage ingelheim",
+    "volume": 480,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-013",
+     "priority": "A",
+     "topic": "Massage in Ingelheim: Übersichtsseite (Rückenmassage, Abhyanga, Nervenregulation, Lymph; Ganzkörper nur für Frauen; Gutschein)",
+     "status": "draft"
+    },
+    {
+     "id": "CP-SVC-028",
+     "priority": "A",
+     "topic": "Massage-Gutschein: sichtbarer Kauf- und Kontaktweg vor dem Dezember",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-53",
+   "parent": "ST-50",
+   "title": "SURIYA Ayurveda Regenerationstherapie",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht (ARRIVAL, GROUNDING, RELEASE, RESTORE).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ayurveda-regenerationstherapie-ingelheim/",
+   "kw": "ayurveda kur",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 17
+   },
+   "_words": 2129,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "ayurveda kur",
+    "volume": 5400,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-54",
+   "parent": "ST-50",
+   "title": "Ayurveda Ausleitung (7 Tage, Pilot 2026)",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Fortführung nach 2026 offen. Die 14-Tage-Kur wurde eingestellt.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ayurveda-ausleitung-7-tage/",
+   "kw": "panchakarma",
+   "pool_tag": "service:ayurveda-ausleitung-7-tage",
+   "needs_client": [
+    "Läuft der 7-Tage-Pilot weiter, zu welchem Preis?"
+   ],
+   "_items": [
+    "CP-SVC-016"
+   ],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 3
+   },
+   "_words": 1311,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "panchakarma",
+    "volume": 720,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-016",
+     "priority": "B",
+     "topic": "Ayurveda Ausleitung (7-Tage-Pilot 2026): Seite behalten, Fortführung klären",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-55",
+   "parent": "ST-50",
+   "title": "Ayurveda-Beratung",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ayurveda-beratung/",
+   "kw": "ayurveda beratung",
+   "pool_tag": "service:ayurveda-beratung",
+   "_items": [
+    "CP-SVC-017"
+   ],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 54
+   },
+   "_words": 1982,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "ayurveda beratung",
+    "volume": 90,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-017",
+     "priority": "B",
+     "topic": "Ayurveda-Beratung: Seite behalten (120 € / 60 min laut Kostenseite)",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-56",
+   "parent": "ST-50",
+   "title": "Massage buchen",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Buchungsseite mit Formular. Sie bringt 36 Klicks (Position um 10 für 'massage ingelheim'). Nicht weiterleiten, bevor /massage-ingelheim/ ranked.",
+   "kind": "system",
+   "audience": "patient",
+   "path": "/massage-buchen/",
+   "note": "83 % der Fünf-Wort-Folgen von /termin-buchen/ stehen auch hier. Kontaktweg: bleibt.",
+   "_items": [],
+   "_gsc": {
+    "clicks": 36,
+    "impressions": 2179
+   },
+   "_words": 806,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-60",
+   "parent": "ST-00",
+   "title": "Einzugsgebiet Mainz",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Fünf Seiten bleiben. Jede braucht eigene lokale Beweise statt Ortstausch. Heilpraktikerin Mainz zuerst (390 Suchen).",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/heilpraktiker-mainz/",
+   "kw": "heilpraktiker mainz",
+   "pool_items": [
+    "CP-LOC-003"
+   ],
+   "needs_client": [
+    "Ein lokaler Beweis je Mainz-Seite (zum Beispiel Fahrzeit, Patientinnen aus Mainz)"
+   ],
+   "_items": [
+    "CP-LOC-003"
+   ],
+   "_gsc": {
+    "clicks": 8,
+    "impressions": 430
+   },
+   "_words": 2805,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "heilpraktiker mainz",
+    "volume": 390,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-LOC-003",
+     "priority": "A",
+     "topic": "Ortsseiten Mainz (Heilpraktikerin, Schmerztherapie, Massage, Ayurveda-Massage, Akupunktur): behalten, lokale Beweise ergänzen",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-61",
+   "parent": "ST-60",
+   "title": "Schmerztherapie Mainz",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/schmerztherapie-mainz/",
+   "kw": "schmerztherapie mainz",
+   "_items": [],
+   "_gsc": {
+    "clicks": 2,
+    "impressions": 77
+   },
+   "_words": 2050,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "schmerztherapie mainz",
+    "volume": 320,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-62",
+   "parent": "ST-60",
+   "title": "Akupunktur Mainz",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht (8 Klicks).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/schmerztherapie-mainz/akupunktur/",
+   "kw": "akupunktur mainz",
+   "_items": [],
+   "_gsc": {
+    "clicks": 8,
+    "impressions": 339
+   },
+   "_words": 1680,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "akupunktur mainz",
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-63",
+   "parent": "ST-60",
+   "title": "Massage Mainz",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht (1.441 Impressionen, Position um 47 für 'massage mainz').",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/massage-mainz/",
+   "kw": "massage mainz",
+   "_items": [],
+   "_gsc": {
+    "clicks": 11,
+    "impressions": 1441
+   },
+   "_words": 1876,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "massage mainz",
+    "volume": 4400,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-64",
+   "parent": "ST-60",
+   "title": "Ayurveda-Massage Mainz",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Alte Seite mit 30 Klicks. 52 % ihres Textes steht auch auf der Wiesbaden-Version: eigene lokale Texte schreiben (Regel gegen Ortstausch).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/massage-mainz/ayurveda/",
+   "kw": "ayurveda massage mainz",
+   "note": "Nicht weiterleiten: die Seite bringt Klicks.",
+   "_items": [],
+   "_gsc": {
+    "clicks": 30,
+    "impressions": 724
+   },
+   "_words": 985,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "ayurveda massage mainz",
+    "volume": 20,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-70",
+   "parent": "ST-00",
+   "title": "Einzugsgebiet Wiesbaden",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Vier Seiten bleiben. Jede braucht eigene lokale Beweise statt Ortstausch.",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/heilpraktiker-wiesbaden/",
+   "kw": "massage wiesbaden",
+   "pool_items": [
+    "CP-LOC-004"
+   ],
+   "needs_client": [
+    "Ein lokaler Beweis je Wiesbaden-Seite"
+   ],
+   "_items": [
+    "CP-LOC-004"
+   ],
+   "_gsc": {
+    "clicks": 7,
+    "impressions": 530
+   },
+   "_words": 2907,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "massage wiesbaden",
+    "volume": 5400,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-LOC-004",
+     "priority": "A",
+     "topic": "Ortsseiten Wiesbaden (Heilpraktikerin, Schmerztherapie, Massage, Ayurveda-Massage): behalten, lokale Beweise ergänzen",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-71",
+   "parent": "ST-70",
+   "title": "Schmerztherapie Wiesbaden",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/schmerztherapie-wiesbaden/",
+   "kw": "akupunktur wiesbaden",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 100
+   },
+   "_words": 2162,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "akupunktur wiesbaden",
+    "volume": 260,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-72",
+   "parent": "ST-70",
+   "title": "Massage Wiesbaden",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/massage-wiesbaden/",
+   "kw": "massage wiesbaden",
+   "_items": [],
+   "_gsc": {
+    "clicks": 3,
+    "impressions": 751
+   },
+   "_words": 1893,
+   "_schema": [
+    "AggregateRating",
+    "Answer",
+    "BreadcrumbList",
+    "EntryPoint",
+    "FAQPage",
+    "GeoCoordinates",
+    "ImageObject",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Question",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "massage wiesbaden",
+    "volume": 5400,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-73",
+   "parent": "ST-70",
+   "title": "Ayurveda-Massage Wiesbaden",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Alte Seite (7 Klicks). Gleiches Muster wie Mainz: eigene lokale Texte.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/massage-wiesbaden/ayurveda/",
+   "kw": "ayurveda massage wiesbaden",
+   "_items": [],
+   "_gsc": {
+    "clicks": 7,
+    "impressions": 387
+   },
+   "_words": 1521,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "ayurveda massage wiesbaden",
+    "volume": 90,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-80",
+   "parent": "ST-00",
+   "title": "Gesundheitsjournal (Blog)",
+   "status": "Überarbeiten",
+   "origin": "programm",
+   "module": "M8 Hub und Spoke",
+   "job": "Übersicht steht. Beiträge brauchen ausgehende Links zu den Leistungsseiten (Linkaudit 10.10.). FAQ-Sets zu Ayurveda-Massage im Hub, nicht auf Coralies Seite.",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/blog/",
+   "pool_tag": "blog-faq",
+   "_items": [
+    "CP-SVC-027",
+    "CP-SVC-029"
+   ],
+   "_gsc": {
+    "clicks": null,
+    "impressions": null,
+    "note": "not listed in GSC (no impressions)"
+   },
+   "_words": 673,
+   "_schema": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ListItem",
+    "MedicalBusiness",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-027",
+     "priority": "B",
+     "topic": "Fragen zu Ayurveda-Massage (Ablauf, Kosten, Nebenwirkungen): Antworten auf der Ayurveda-Seite und im Hub",
+     "status": "draft"
+    },
+    {
+     "id": "CP-SVC-029",
+     "priority": "B",
+     "topic": "Blog und Gesundheitsjournal: Beiträge zu Ayurveda im Winter und Nervensystem mit Links zu den Leistungsseiten",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-81",
+   "parent": "ST-80",
+   "title": "Ratgeber Vagusnerv und Nervensystem beruhigen (Wissensartikel)",
+   "status": "Vorschlag",
+   "origin": "vorschlag",
+   "module": "M8 Hub und Spoke",
+   "job": "Wissensartikel mit Links zu ST-30. Nachfrage ist Wissenssuche (Vagusnerv, Nervensystem beruhigen). Kommt aus Suchdaten, nicht von Coralie: mit ihr abstimmen. HWG: keine Heilversprechen.",
+   "kind": "page",
+   "audience": "patient",
+   "slug": "/ratgeber/vagusnerv-nervensystem-beruhigen/",
+   "kw": "vagusnerv beruhigen",
+   "needs_client": [
+    "Möchte Coralie einen Ratgeber-Bereich?"
+   ],
+   "note": "Nur Vorschlag, nicht gesetzt.",
+   "_items": [],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "vagusnerv beruhigen",
+    "volume": 5400,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-90",
+   "parent": "ST-00",
+   "title": "Altbestand ohne eigene Rolle (Enfold-Seiten, nicht angefasst)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Alte Seiten und Beiträge. Nicht ändern, bis Martin aufräumen sagt: sieben Einträge in der Liste der Weiterleitungs-Vorschläge.",
+   "kind": "group",
+   "audience": "patient",
+   "group_patterns": [
+    "^/behandlungsangebot-2$",
+    "^/meinayurvedaangebot$",
+    "^/suriya-praxis-fuer-naturheilkunde-ingelheim$",
+    "^/praxis-suriya-ingelheim-nervenregulation-vagusnerv",
+    "^/nervenregulation-vagusnerv$",
+    "^/ayurveda-ganzkoerpermassage$",
+    "^/back-to-the-roots",
+    "^/termin-vereinbaren-direkt$",
+    "^/darmgesundheit",
+    "^/hormongesundheit$",
+    "^/allergiebehandlung$",
+    "^/ayurveda-fortbildung$",
+    "^/ayurveda-darm-test$",
+    "^/ayurveda-workshop",
+    "^/innere-arbeit",
+    "^/die-heilkraft",
+    "^/ayurveda-kochworkshops",
+    "^/5-ayurveda-rituale",
+    "^/praxis-fuer-naturheilkunde-ingelheim$",
+    "^/ayurveda-beratung-behandlung-massage$"
+   ],
+   "_items": [],
+   "_count": 20,
+   "_gsc": null
+  }
+ ],
+ "redirect_proposals": [
+  {
+   "from": "/praxis-fuer-naturheilkunde-ingelheim/",
+   "to": "/",
+   "reason": "Gleicher Text wie die Startseite (100 % der Fünf-Wort-Folgen, Messung 2026-10-11). Die Adresse leitet schon auf / um, steht aber noch in der Sitemap. Aus der Sitemap nehmen."
+  },
+  {
+   "from": "/behandlungsangebot-2/",
+   "to": "/behandlungsangebot/",
+   "reason": "Alte Behandlungsübersicht (Sie-Form, 1.133 Wörter) neben dem neuen Methoden-Hub mit gleicher Aufgabe. Beide Seiten gelesen. Kein Kurs- oder Spezialschema. Nur mit Martins Go."
+  },
+  {
+   "from": "/meinayurvedaangebot/",
+   "to": "/ayurveda-ingelheim/",
+   "reason": "Alte Ayurveda-Übersicht (588 Wörter, 214 Impressionen, 2 Klicks) mit gleicher Aufgabe wie der Hub. Beide Seiten gelesen. Coralies Seite 1511 wird nicht berührt. Nur mit Martins Go."
+  },
+  {
+   "from": "/suriya-praxis-fuer-naturheilkunde-ingelheim/",
+   "to": "/",
+   "reason": "Alte Seite 'Gesundheit mit Ayurveda' mit Stichwortliste von Krankheitsbildern (HWG-Risiko) und Sie-Form. Keine Treffer in GSC. Nur mit Martins Go."
+  },
+  {
+   "from": "/praxis-suriya-ingelheim-nervenregulation-vagusnerv-akupunktur-ayurveda/",
+   "to": "/nervensystem-vagus-beruhigen/",
+   "reason": "Gleiches Thema wie die neue Nervensystem-Seite (Vagusnerv, Nervenregulationsmassage). Beide gelesen. Keine Treffer in GSC. Nur mit Martins Go."
+  },
+  {
+   "from": "/nervenregulation-vagusnerv/",
+   "to": "/nervensystem-vagus-beruhigen/",
+   "reason": "NICHT jetzt. Der Beitrag bringt 11 Klicks. Erst Link auf die neue Seite einbauen, in 8 Wochen messen, dann entscheiden."
+  },
+  {
+   "from": "/massage-buchen/",
+   "to": "/massage-ingelheim/",
+   "reason": "NICHT jetzt. Die Buchungsseite bringt 36 Klicks und trägt ein Formular. 83 % der Fünf-Wort-Folgen von /termin-buchen/ stehen auch hier. Kontaktweg bleibt, bis /massage-ingelheim/ die Klicks hält."
+  }
+ ],
+ "catchment": [
+  {
+   "level": 1,
+   "name": "Kern-Ort",
+   "places": [
+    "Ingelheim am Rhein"
+   ],
+   "action": "Startseite und alle Leistungen mit Ortsbezug. Die Seiten stehen. Kleine Suchzahlen: der Ort bringt die meisten Klicks, aber wenige Suchen.",
+   "kw": [
+    "massage ingelheim",
+    "naturheilpraxis ingelheim",
+    "heilpraktiker ingelheim"
+   ],
+   "volumes": {
+    "massage ingelheim": 480,
+    "naturheilpraxis ingelheim": 210,
+    "heilpraktiker ingelheim": 140
+   }
+  },
+  {
+   "level": 2,
+   "name": "Große Nachbarn",
+   "places": [
+    "Mainz",
+    "Wiesbaden"
+   ],
+   "action": "Seiten stehen (Mainz 5, Wiesbaden 4). Nicht neu bauen. Eigene lokale Beweise statt Ortstausch.",
+   "kw": [
+    "massage mainz",
+    "massage wiesbaden",
+    "heilpraktiker mainz",
+    "lymphdrainage mainz",
+    "akupunktur wiesbaden"
+   ],
+   "volumes": {
+    "massage mainz": 4400,
+    "massage wiesbaden": 5400,
+    "heilpraktiker mainz": 390,
+    "lymphdrainage mainz": 320,
+    "akupunktur wiesbaden": 260
+   }
+  },
+  {
+   "level": 3,
+   "name": "Klarer dritter Ort",
+   "places": [
+    "Bingen"
+   ],
+   "action": "Coralie nennt Bingen. Es gibt kleine Nachfrage, aber noch keinen lokalen Beweis. Erst im Text nennen. Seite nur mit Fahrzeit und einem lokalen Faktum.",
+   "kw": [
+    "heilpraktiker bingen",
+    "massage bingen"
+   ],
+   "volumes": {
+    "heilpraktiker bingen": 90,
+    "massage bingen": 390
+   }
+  },
+  {
+   "level": 4,
+   "name": "Kleinorte",
+   "places": [
+    "Gau-Algesheim",
+    "Heidesheim",
+    "Nieder-Olm",
+    "Oppenheim",
+    "Rüsselsheim"
+   ],
+   "action": "Nur im Fließtext oder FAQ, nach Bestätigung durch Coralie.",
+   "kw": [
+    "massage gau-algesheim",
+    "heilpraktiker nieder-olm",
+    "heilpraktiker rüsselsheim"
+   ],
+   "volumes": {
+    "massage gau-algesheim": 140,
+    "heilpraktiker nieder-olm": 30,
+    "heilpraktiker rüsselsheim": 110
+   }
+  }
+ ],
+ "reasons": [
+  "<b>Text depth is not the gap.</b> The homepage has {home_words} words. The floor is {floor} words (median {median} words). The service pages have {svc_min} to {svc_max} words. The work is order, one price per offer, proof and contact. It is not a rebuild.",
+  "<b>The brand core is not found yet.</b> Her queries show massage first. Migräne and Nervensystem bring few impressions. The new pages went online from 2026-09-24 and were not yet indexed on 2026-09-29 (baseline report).",
+  "<b>Trust and contact are thin.</b> Google shows 12 reviews. The local leader shows 37. None of the 62 measured pages has a tap-to-call link. Three prices exist for one session.",
+  "<b>Links are not the gap.</b> Referring domains: {rd}. Source: DataForSEO backlinks summary, 2026-10-11."
+ ],
+ "not_built": [
+  "Eine Bingen-Seite: Nachfrage klein, noch kein lokaler Beweis (CP-LOC-005).",
+  "Seiten für Kleinorte: nicht bestätigt (CP-LOC-006, Ergänzung nur im Text).",
+  "Seiten für Thai-Massage, Faszientherapie, Shirodhara, Massage für Männer, Bioresonanz, Kinesiologie, Infusionen: Coralie bietet sie nicht an (CP-SVC-030 bis 034).",
+  "Eine eigene Seite 'Lymphmassage': Entscheidung vom 2026-10-01, Begriff steht auf der Lymphdrainage-Seite.",
+  "Weitere Seiten für Verzeichnisse und Presse: externe Linkziele, keine Seiten (CP-AUT-007, CP-AUT-008)."
+ ],
+ "referring_domains": {
+  "suriya-praxis.de": 65,
+  "heilpraktikerin-uta-biehs.de": 50,
+  "naturheilkunde-ingelheim.de": 49,
+  "naturheilpraxis-ingelheim.de": 63
+ },
+ "unassigned_items": [],
+ "gsc_available": true,
+ "gsc_note": null,
+ "benchmark": {
+  "homepages_measured": {
+   "naturheilpraxis-ingelheim.de": 436,
+   "heilpraktikerin-uta-biehs.de": 1490,
+   "naturheilkunde-ingelheim.de": 595,
+   "ayu-med.de": 156,
+   "chiropraxis-ingelheim.de": 257,
+   "heilpraktikerin-kissel.de": 1938,
+   "heilpraktiker-petrak.de": 207,
+   "naturheilpraxis-in-mainz.de": 215,
+   "health-horizon.de": 269,
+   "naturheilpraxis-mtschneider.de": 524,
+   "praxis-roehl.de": 224
+  },
+  "median_words": 269,
+  "floor_70pct": 188,
+  "own_homepage_words": 2161,
+  "own_below_floor": false
+ }
+}

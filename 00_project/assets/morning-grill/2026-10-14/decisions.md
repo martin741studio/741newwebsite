@@ -19,3 +19,14 @@
 
 ## Dumann — done (reported back)
 Status page live: https://clients.741.studio/r/f92ed4298f5c/daniela-dumann-fahrplan-2026-10.html?v=20261014a, listed as "Dein SEO-Fahrplan". 13 cards released (E1-E11, E22, E23) — Martin answered directly in the Dumann chat. 14 drafts (E12-E21, E24-E27) held back for now. No live-site fix touched. Portal message to Daniela is drafted, waits for Martin's go to send.
+
+## Command Center answers 14.10. 20:51–20:55 (pulled 21:10)
+- suriya-gsc-row → a: agent drafts the ask, Martin sends. Note: the 13.10. email already told Coralie we restore Search Console via her website ourselves.
+- taxi-gdpr → c: parked.
+- suriya-listing-mails → own: run the backlink workflow for Suriya to see what is going on with her backlinks; the BrightLocal run is on our side and must be checked there.
+- taxi-plugins → own: Daniel and the other agency took over completely. 741 does no more plugin/update work for Taxi.
+- 741-overdue → own: agent goes through all overdue portal tasks; every decision it needs goes to Martin's decision cards.
+- 741-citations-stale → b: first build the citations workflow (run file, runbook), then work the lists.
+- falcon-connector → b: not today.
+- walk-7fdd0f14 (STÜRZL start date) → already set: 07.10.2026 (portal + goal sheet). Do not ask again.
+- walk-d6ab93f0 (STÜRZL welcome mail) → already done, leave it.

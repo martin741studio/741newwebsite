@@ -1,0 +1,40 @@
+{
+  "client": "Rabenmütter Shop",
+  "page": "rabenmuetter-seitenbaum-2026-08 / 6 · Zusätzliche Verkaufskanäle",
+  "mode": "FEEDBACK",
+  "feedback_id": "66478f5c-02a4-4076-b1c3-ad9d211e3533",
+  "input_file": "feedback/Rabenmütter Shop/66478f5c-02a4-4076-b1c3-ad9d211e3533.md",
+  "pass": true,
+  "hard_checks": {
+    "no_fehlt_in_core_fields": {
+      "applicable": false,
+      "note": "FEEDBACK item, no Title/Meta/H1/NAP block/JSON-LD core fields exist. The [fehlt: ...] tags in the draft (Pinterest/TikTok catalog live+sync status, revenue/traffic numbers) sit in body/next-step prose, not in a required core field, so this check does not block."
+    },
+    "nap_match": {
+      "applicable": false,
+      "note": "No NAP block in this draft. Rabenmütter Shop is an online shop, not a LocalBusiness page, and per plan.json notes is not in context.json.nap_locked — consistent with the skill rule that NAP is not a blocker for this client/content type."
+    },
+    "jsonld_valid": {
+      "applicable": false,
+      "note": "No JSON-LD in this feedback draft (not a page spec/audit)."
+    },
+    "language_match": {
+      "pass": true,
+      "note": "Draft is written in German throughout; plan item market_lang = de. Match."
+    },
+    "hwg_scan": {
+      "pass": true,
+      "note": "Content is e-commerce sales-channel logistics (Etsy/Pinterest/TikTok Shop). Not a health client and no health/outcome claims of any kind in the draft."
+    },
+    "rubric_or_feedback_check": {
+      "pass": true,
+      "note": "FEEDBACK mode: 8-dim rubric skipped per SKILL.md; checked sentence-for-sentence against 'Kunde sagt'. (1) 'Etsy ... bin da allerdings raus' + brand-fit reason ('gruselige Karten, handgemacht ... passen wir nicht rein') -> draft strikes Etsy from the section and states the brand-fit reason accurately, without softening or reinterpreting it. (2) 'Wir haben (hoffe ich) über Pinterest ein Businesskonto mit Shop' -> carried over as an existing channel, and the hedge 'hoffe ich' is correctly reflected by not asserting the Pinterest shop is confirmed live — flagged [fehlt: Bestätigung ob live] instead of assuming. (3) 'ich habe über TikTok einen Shop eingerichtet' -> carried over as an existing, more confidently stated channel (matches the customer's more definite phrasing), also correctly flagged for live/sync confirmation. (4) 'Etsy fände ich jetzt einfach zuviel' -> reflected in the final recommendation (Etsy dropped, no third channel added). Every sentence in the comment is addressed; nothing is invented; unknowns (sync status, revenue/traffic numbers) are flagged with [fehlt: ...] rather than fabricated. The runner-continuity note at the bottom (this feedback also appeared and passed on 2026-09-15, content unchanged, reappearing only because processed-feedback.json has not yet been updated by Martin's morning review) is accurate given the skill's stated ledger mechanics and does not itself constitute an invented or altered fact."
+    },
+    "deslop": {
+      "applicable": false,
+      "note": "The Vorschlag is an internal strategy/next-steps recommendation to Martin (channel choice, sync-status questions to ask the client), not new client-facing prose meant to ship as-is (e.g. not a GBP description rewrite). Per SKILL.md this is not a deslop blocker; not run."
+    }
+  },
+  "fails": [],
+  "scores": null
+}

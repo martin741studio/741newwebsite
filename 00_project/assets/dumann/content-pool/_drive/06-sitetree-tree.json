@@ -1,0 +1,567 @@
+{
+ "meta": {
+  "client": "Naturheilpraxis Daniela Dumann",
+  "slug": "dumann",
+  "domain": "danieladumann.de",
+  "built": "2026-10-11",
+  "programme_modules_source": "website-struktur-master-prompt.md Schritt 4 und 6 (Programmplan-Datei nicht gefunden unter ~/Downloads)"
+ },
+ "nodes": [
+  {
+   "id": "ST-00",
+   "parent": null,
+   "title": "Startseite",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M2 Startseite",
+   "job": "Hero mit Stadt, Beweis-Leiste, Leistungen, erster Termin, Über, FAQ, Standort. Aufbau nach CRO-Blueprint (10 Zeilen).",
+   "path": "/",
+   "kw": "heilpraktiker berlin",
+   "pool_tag": "homepage",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-10",
+   "parent": "ST-00",
+   "title": "Behandlungen und Preise (Leistungs-Hub)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Leistungsübersicht mit Preisen und Abrechnung. Krankheitslisten raus (HWG). Verlinkt jede Einzelleistung.",
+   "path": "/behandlungen",
+   "kw": "heilpraktiker kosten",
+   "pool_items": [
+    "CP-SVC-003",
+    "CP-SVC-002"
+   ],
+   "kind": "hub",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-11",
+   "parent": "ST-10",
+   "title": "Aderlass nach Hildegard",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Verfahren, Ablauf, Dauer, Preis. Keine Wirkversprechen. Fragen-Set unten.",
+   "path": "/aderlass-therapie",
+   "kw": "aderlass berlin",
+   "pool_tag": "service:aderlass",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-12",
+   "parent": "ST-10",
+   "title": "Darmsanierung nach Hildegard",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Methode, Ablauf, Fragen (nach Antibiotika, wie lange). Nicht Colon-Hydro.",
+   "path": "/darmsanierung",
+   "kw": "darmsanierung berlin",
+   "pool_tag": "service:darmsanierung",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-13",
+   "parent": "ST-10",
+   "title": "Ernährungsberatung",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Ernährungsberatung mit Hildegard-Ansatz in Charlottenburg.",
+   "path": "/ernährungsberatung",
+   "kw": "ernährungsberatung berlin",
+   "pool_tag": "service:ernaehrungsberatung",
+   "kind": "page",
+   "audience": "patient",
+   "note": "Geprüft: /ernaehrungstherapie-hildegard-von-bingen ist eine Ausbildungsseite (Kurs buchen), keine Dublette. Sie liegt im Viriditas-Bereich."
+  },
+  {
+   "id": "ST-14",
+   "parent": "ST-10",
+   "title": "Fasten nach Hildegard (Begleitung für Patient:innen)",
+   "status": "Vorschlag",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Eigene Patienten-Seite für Fasten-Begleitung. Die heutige Seite /hildegard-fasten ist eine Kursseite.",
+   "slug": "/fasten-nach-hildegard/",
+   "kw": "fasten nach hildegard von bingen",
+   "pool_tag": "service:fasten",
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Begleitet sie Patient:innen beim Fasten, oder nur Kurse?"
+   ],
+   "note": "Suchen zu Hildegard-Fasten landen heute auf der Kursseite /hildegard-fasten, weit hinter Seite 1."
+  },
+  {
+   "id": "ST-15",
+   "parent": "ST-10",
+   "title": "Oligoscan und Mikronährstoffe",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Verfahren, Grenzen, Ablauf, Preis. Ehrlich zur Aussagekraft.",
+   "path": "/oligoscan",
+   "kw": "oligoscan",
+   "pool_tag": "service:oligoscan",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-16",
+   "parent": "ST-10",
+   "title": "Schilddrüse",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Stärkste Patientenseite (siehe Zahlen). URL und Rankings schützen. Text neu, HWG-sicher, Leistung genau benennen.",
+   "path": "/schilddrüse",
+   "kw": "schilddrüse heilpraktiker",
+   "pool_tag": "service:schilddruese",
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Was genau bietet sie an (Massage, Begleitung, Labor)?",
+    "Die Seite nennt Mikroimmuntherapie. Sie fehlt in der Leistungsliste. Bietet sie das an?"
+   ],
+   "note": "H1 heute: Schilddrüsenspezialist und Mikroimmuntherapie, Text beginnt mit Hypothyreose. HWG- und Spezialisten-Claim prüfen, bevor die Seite wächst."
+  },
+  {
+   "id": "ST-17",
+   "parent": "ST-10",
+   "title": "Homöopathie",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Klassische Homöopathie, Erstanamnese 220 bis 380 EUR, Ablauf.",
+   "path": "/homoeopathie",
+   "kw": "homöopathie berlin",
+   "pool_tag": "service:homoeopathie",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-18",
+   "parent": "ST-10",
+   "title": "Massagen und Anwendungen",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Nebenleistung. Hildegard-Anwendungen, ohne Wellness-Versprechen.",
+   "path": "/massage",
+   "kw": "massage charlottenburg",
+   "pool_tag": "service:massage",
+   "kind": "page",
+   "audience": "patient",
+   "note": "Mit der Kundin klären, ob Massage Kernleistung bleibt."
+  },
+  {
+   "id": "ST-19",
+   "parent": "ST-10",
+   "title": "Hildegard-Heilkunde: wie die Praxis damit arbeitet (Hub)",
+   "status": "Neu",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Erklärt Methode und die 5 Säulen. Verlinkt alle Einzelleistungen. Stärkt die Alleinstellung.",
+   "slug": "/hildegard-heilkunde/",
+   "kw": "hildegard von bingen medizin",
+   "pool_tag": "service:hildegard-heilkunde",
+   "kind": "hub",
+   "audience": "patient",
+   "note": "Herkunft: Methodentext der Kundin auf /behandlungen (Abschnitt Hildegard Heilkunde)."
+  },
+  {
+   "id": "ST-20",
+   "parent": "ST-10",
+   "title": "Pflanzenheilkunde",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "später",
+   "job": "Bleibt, wie sie ist. Patienten-Fassung folgt in einem späteren Lauf.",
+   "path": "/kräuterheilkunde",
+   "kw": "kräuterheilkunde",
+   "pool_items": [
+    "CP-SVC-017"
+   ],
+   "kind": "page",
+   "audience": "both"
+  },
+  {
+   "id": "ST-30",
+   "parent": "ST-00",
+   "title": "Über Daniela Dumann (Behandlerin, E-E-A-T)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M6 Behandlerseite",
+   "job": "Abschlüsse, Vizepräsidentin der Gesellschaft, Mitgliedschaften, Geschichte, Person-Auszeichnung. Der Über-mich-Prototyp liegt vor.",
+   "path": "/lebenslauf",
+   "kw": "daniela dumann heilpraktikerin berlin",
+   "pool_items": [
+    "CP-AUT-010",
+    "CP-BRD-003",
+    "CP-AUT-001",
+    "CP-AUT-002",
+    "CP-AUT-006",
+    "CP-AUT-007",
+    "CP-BRD-002"
+   ],
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-31",
+   "parent": "ST-30",
+   "title": "Erfahrungen von Patient:innen",
+   "status": "Vorschlag",
+   "origin": "vorschlag",
+   "module": "M6 Behandlerseite",
+   "job": "Drei Stimmen zu Ablauf und Atmosphäre, mit Einwilligung. Keine Wirkaussagen.",
+   "slug": "/erfahrungen/",
+   "kw": "heilpraktiker erfahrungen",
+   "pool_items": [
+    "CP-AUT-005"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Mindestens 3 Zitate mit schriftlicher Einwilligung"
+   ]
+  },
+  {
+   "id": "ST-32",
+   "parent": "ST-00",
+   "title": "Blog (Hildegard-Kräuterlexikon, Rezepte)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M8 Hub und Spoke",
+   "job": "Bleibt. Der Blog stützt das Fach. Kategorien bleiben.",
+   "path": "/blog",
+   "kw": "hildegard von bingen kräuter",
+   "kind": "hub",
+   "audience": "both"
+  },
+  {
+   "id": "ST-33",
+   "parent": "ST-32",
+   "title": "Hildegard-Medizin erklärt (Wissens-Hub)",
+   "status": "Vorschlag",
+   "origin": "vorschlag",
+   "module": "M8 Hub und Spoke",
+   "job": "Themen-Hub mit eigenen Quellen. Verlinkt Blogartikel und die Leistungen.",
+   "slug": "/hildegard-wissen/",
+   "kw": "hildegard von bingen medizin",
+   "pool_tag": "blog-faq",
+   "kind": "hub",
+   "audience": "patient",
+   "note": "Entsteht aus Suchanfragen (Autocomplete, GSC), nicht aus Kundeninhalt. Deshalb Vorschlag."
+  },
+  {
+   "id": "ST-40",
+   "parent": "ST-00",
+   "title": "Kontakt und Anfahrt",
+   "status": "Neu",
+   "origin": "programm",
+   "module": "M5 Standort",
+   "job": "Adresse, Anfahrt, Karte, Termin-Weg, Telefon. Heute gibt es nur ein Formular auf der Startseite.",
+   "slug": "/kontakt/",
+   "kw": "heilpraktiker berlin charlottenburg",
+   "pool_items": [
+    "CP-LOC-002"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Parken und Barrierefreiheit"
+   ],
+   "note": "Herkunft: Pflichtseite des Programms (Kontakt, Impressum, Datenschutz)."
+  },
+  {
+   "id": "ST-41",
+   "parent": "ST-00",
+   "title": "Termin buchen",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M10 Conversion",
+   "job": "Bestehende Buchungsseite. Der Link zum Buchungssystem muss auch auf dem Handy erreichbar sein.",
+   "path": "/book-online",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-42",
+   "parent": "ST-00",
+   "title": "Impressum",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Pflichtseite.",
+   "path": "/impressum",
+   "kind": "system",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-43",
+   "parent": "ST-00",
+   "title": "Datenschutzerklärung",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Pflichtseite.",
+   "path": "/datenschutzerklärung",
+   "kind": "system",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-44",
+   "parent": "ST-00",
+   "title": "Widerruf und Stornierung",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Pflichtseite.",
+   "path": "/widerruf-stornierung",
+   "kind": "system",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-50",
+   "parent": null,
+   "title": "Viriditas: Kurse und Seminare (eigener Bereich)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Zweite Zielgruppe. Bleibt unverändert. Eigener Lauf mit eigener Zielgruppe.",
+   "path": "/kurse-seminare",
+   "kw": "fastenleiter ausbildung",
+   "pool_items": [
+    "CP-BRD-005"
+   ],
+   "kind": "hub",
+   "audience": "trainee"
+  },
+  {
+   "id": "ST-51",
+   "parent": "ST-50",
+   "title": "Ausbildung Kräuterheilkunde",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/ausbildung-kraeuterheilkunde",
+   "kind": "page",
+   "audience": "trainee",
+   "kw": "ausbildung kräuterheilkunde"
+  },
+  {
+   "id": "ST-52",
+   "parent": "ST-50",
+   "title": "Ausbildung Ganzheitsmedizin und Gesundheitsberater",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/ausbildung-ganzheitsmedizin-gesundheitsberater",
+   "kind": "page",
+   "audience": "trainee",
+   "kw": "gesundheitsberater ausbildung"
+  },
+  {
+   "id": "ST-53",
+   "parent": "ST-50",
+   "title": "Ausbildung Fastenleiterin",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/ausbildung-fastenleiterin",
+   "kind": "page",
+   "audience": "trainee",
+   "kw": "fastenleiter ausbildung"
+  },
+  {
+   "id": "ST-54",
+   "parent": "ST-50",
+   "title": "Ausbildung Darmheilkunde",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/ausbildung-darmheilkunde",
+   "kind": "page",
+   "audience": "trainee"
+  },
+  {
+   "id": "ST-55",
+   "parent": "ST-50",
+   "title": "Ausbildung vor Ort",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/ausbildung-vor-ort",
+   "kind": "page",
+   "audience": "trainee"
+  },
+  {
+   "id": "ST-56",
+   "parent": "ST-50",
+   "title": "Hildegard-Fasten (Kursseite)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/hildegard-fasten",
+   "kind": "page",
+   "audience": "trainee",
+   "kw": "hildegard fasten"
+  },
+  {
+   "id": "ST-57",
+   "parent": "ST-50",
+   "title": "Workshops",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/workshops",
+   "kind": "page",
+   "audience": "trainee"
+  },
+  {
+   "id": "ST-58",
+   "parent": "ST-50",
+   "title": "Vorträge",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/vortraege",
+   "kind": "page",
+   "audience": "trainee"
+  },
+  {
+   "id": "ST-59",
+   "parent": "ST-50",
+   "title": "Kräutersalon",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/kraeutersalon",
+   "kind": "page",
+   "audience": "trainee"
+  },
+  {
+   "id": "ST-60",
+   "parent": "ST-50",
+   "title": "Fortbildung und Supervision",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/fortbildung-supervision",
+   "kind": "page",
+   "audience": "trainee"
+  },
+  {
+   "id": "ST-61",
+   "parent": "ST-50",
+   "title": "Internationale Hildegard-Gesellschaft",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/hildegard-gesellschaft",
+   "kind": "page",
+   "audience": "trainee"
+  },
+  {
+   "id": "ST-62",
+   "parent": "ST-50",
+   "title": "Ausbildung Ernährungstherapie nach Hildegard",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/ernaehrungstherapie-hildegard-von-bingen",
+   "kind": "page",
+   "audience": "trainee"
+  },
+  {
+   "id": "ST-90",
+   "parent": null,
+   "title": "Wix-System- und Veranstaltungsseiten",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "außerhalb",
+   "job": "Bleibt. Termin- und Produktseiten, Beiträge, Blog-Kategorien, Mitgliederbereich. Nicht Teil dieses Plans.",
+   "kind": "group",
+   "group_patterns": [
+    "/service-page/",
+    "/product-page/",
+    "/post/",
+    "/blog/",
+    "/category/",
+    "/members|/challenges|/file-share|/booking-form"
+   ],
+   "audience": "both"
+  }
+ ],
+ "redirect_proposals": [],
+ "catchment": [
+  {
+   "level": 1,
+   "name": "Kern-Ort",
+   "places": [
+    "Charlottenburg",
+    "Berlin"
+   ],
+   "action": "Startseite und alle Leistungen mit Ortsbezug. Slugs bleiben, Texte schärfen.",
+   "kw": [
+    "heilpraktiker berlin",
+    "heilpraktiker berlin charlottenburg",
+    "ernährungsberatung charlottenburg"
+   ]
+  },
+  {
+   "level": 2,
+   "name": "Große Nachbarn",
+   "places": [
+    "Wilmersdorf",
+    "Westend",
+    "Schöneberg"
+   ],
+   "action": "Keine eigenen Seiten: Volumen 10 oder keine Daten, keine Einzugs-Belege. Namen im Fließtext der Startseite und der Kontaktseite.",
+   "kw": [
+    "heilpraktiker wilmersdorf",
+    "heilpraktiker westend",
+    "heilpraktiker schöneberg"
+   ]
+  },
+  {
+   "level": 3,
+   "name": "Klarer dritter Ort",
+   "places": [],
+   "action": "Keiner belegt. Erst nach Antwort der Kundin und echten Zahlen aus der Search Console.",
+   "kw": []
+  },
+  {
+   "level": 4,
+   "name": "Kleinorte",
+   "places": [
+    "Spandau",
+    "Reinickendorf"
+   ],
+   "action": "Nur im Fließtext oder FAQ, nach Bestätigung des Einzugsgebiets.",
+   "kw": [
+    "heilpraktiker spandau"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>404</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body,
+        html {
+            background-color: #014a97;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body::before {
+            background: radial-gradient(ellipse 100% 160% at 65% 28%, rgba(0, 0, 0, 0), #000, #000);
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: .75;
+        }
+
+
+        .main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            z-index: 2;
+            justify-content: center;
+        }
+
+        #errorCode {
+            width: 180px;
+            max-width: 60%;
+            display: inline-block;
+            align-self: center;
+            fill: white;
+            position: relative;
+            margin-top: -3em;
+        }
+
+        .text {
+            width: 400px;
+            max-width: 80%;
+            display: inline-block;
+            align-self: center;
+            text-align: left;
+            width: auto;
+            margin-left: 2em;
+
+        }
+
+        h3 {
+            font-weight: normal;
+            margin: 0;
+            padding: .4em 0;
+            margin: .4em 0;
+            opacity: .9;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        h3:last-child {
+            border-bottom: none;
+        }
+
+        @keyframes floorGlow {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: .3;
+            }
+
+            15% {
+                opacity: .3;
+            }
+
+            90% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes glow {
+
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes buoyBase {
+            0% {
+                fill: #245FAF
+            }
+
+            10% {
+                fill: #52E4FF
+            }
+
+            15% {
+                fill: #52E4FF
+            }
+
+            90% {
+                fill: #245FAF
+            }
+
+            100% {
+                fill: #245FAF
+            }
+        }
+
+        @keyframes glassTop {
+            0% {
+                opacity: .25;
+            }
+
+            10% {
+                opacity: .45;
+            }
+
+            15% {
+                opacity: .45;
+            }
+
+            90% {
+                opacity: .25;
+            }
+
+            100% {
+                opacity: .25;
+            }
+        }
+
+        @keyframes glassLeft {
+            0% {
+                opacity: .23;
+                fill: #E37B62;
+            }
+
+            10% {
+                opacity: .52;
+                fill: #ffffff;
+            }
+
+            15% {
+                opacity: .52;
+                fill: #ffffff;
+            }
+
+            90% {
+                opacity: .23;
+                fill: #E37B62;
+            }
+
+            100% {
+                opacity: .23;
+                fill: #E37B62;
+            }
+        }
+
+        @keyframes glassRight {
+            0% {
+                opacity: .45;
+                fill: #4A4FC8;
+            }
+
+            10% {
+                opacity: .75;
+                fill: #ffffff;
+            }
+
+            15% {
+                opacity: .75;
+                fill: #ffffff;
+            }
+
+            90% {
+                opacity: .45;
+                fill: #4A4FC8;
+            }
+
+            100% {
+                opacity: .45;
+                fill: #4A4FC8;
+            }
+        }
+
+        @keyframes lightLeft {
+            0% {
+                fill: #963B3B
+            }
+
+            10% {
+                fill: #FFFFFF
+            }
+
+            15% {
+                fill: #FFFFFF
+            }
+
+            90% {
+                fill: #963B3B
+            }
+
+            100% {
+                fill: #963B3B
+            }
+        }
+
+        @keyframes lightRight {
+            0% {
+                fill: #840808
+            }
+
+            10% {
+                fill: #FFCBCB
+            }
+
+            15% {
+                fill: #FFCBCB
+            }
+
+            90% {
+                fill: #840808
+            }
+
+            100% {
+                fill: #840808
+            }
+        }
+
+        @keyframes lightTop {
+            0% {
+                fill: #C36969
+            }
+
+            10% {
+                fill: #FFE5E5
+            }
+
+            15% {
+                fill: #FFE5E5
+            }
+
+            90% {
+                fill: #C36969
+            }
+
+            100% {
+                fill: #C36969
+            }
+        }
+
+        #floorGlow,
+        #underGlow {
+            animation: floorGlow 1.5s infinite ease-out;
+        }
+
+        #glow {
+            animation: glow 1.5s infinite ease-out;
+        }
+
+        #buoyBase {
+            animation: buoyBase 1.5s infinite ease-out;
+        }
+
+        #glassTop {
+            animation: glassTop 1.5s infinite ease-out;
+        }
+
+        #glassLeft {
+            animation: glassLeft 1.5s infinite ease-out;
+        }
+
+        #glassRight {
+            animation: glassRight 1.5s infinite ease-out;
+        }
+
+        #lightLeft {
+            animation: lightLeft 1.5s infinite ease-out;
+        }
+
+        #lightRight {
+            animation: lightRight 1.5s infinite ease-out;
+        }
+
+        #lightTop {
+            animation: lightTop 1.5s infinite ease-out;
+        }
+
+
+        @media screen AND (max-width: 560px) {
+            .main {
+                flex-direction: column;
+            }
+
+            .text {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="main">
+
+        <svg id="errorCode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="167"
+            height="256" viewBox="0 0 167 256">
+            <defs>
+                <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.484"
+                    gradientTransform="translate(-0.017 0.201) scale(1.034 0.598)" gradientUnits="objectBoundingBox">
+                    <stop offset="0" stop-color="#ff2307" />
+                    <stop offset="1" stop-color="#f55" stop-opacity="0.031" />
+                    <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                </radialGradient>
+                <radialGradient id="radial-gradient-2" cx="0.5" cy="0.5" r="0.484"
+                    gradientTransform="translate(-0.017 0.201) scale(1.034 0.598)" gradientUnits="objectBoundingBox">
+                    <stop offset="0" stop-color="#fc1717" />
+                    <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                </radialGradient>
+                <radialGradient id="radial-gradient-3" cx="0.5" cy="0.5" r="0.484"
+                    gradientTransform="translate(-0.017 0.201) scale(1.034 0.598)" gradientUnits="objectBoundingBox">
+                    <stop offset="0" stop-color="#ff0031" />
+                    <stop offset="1" stop-color="red" stop-opacity="0" />
+                </radialGradient>
+            </defs>
+            <g id="Group_905" data-name="Group 905" transform="translate(37.309 58.724)">
+                <ellipse id="floorGlow" cx="83.5" cy="93" rx="83.5" ry="93" transform="translate(-37.309 11.276)"
+                    opacity="0.274" fill="url(#radial-gradient)" />
+                <path id="Path_736" data-name="Path 736" d="M-23478.5,917.739l46.02,26.683,45.8-26.683-45.8-26.271Z"
+                    transform="translate(23478.691 -812.724)" fill="#000001" />
+                <path id="Path_733" data-name="Path 733" d="M-23478.5,917.739l46.02,26.683V917.739l-46.045-26.016Z"
+                    transform="translate(23478.691 -839.724)" fill="#170f71" />
+                <path id="Path_734" data-name="Path 734" d="M-23432.691,918.014l.215,26.408,45.8-26.683v-26Z"
+                    transform="translate(23478.691 -839.724)" fill="#02063c" />
+                <path id="buoyBase" d="M-23478.5,917.739l46.02,26.683,45.8-26.683-45.8-26.271Z"
+                    transform="translate(23478.691 -865.724)" fill="#52e4ff" />
+                <path id="Path_739" data-name="Path 739" d="M-23432.691,918.014l.215,26.408,45.8-26.683v-26Z"
+                    transform="translate(23432.691 -891.724)" fill="#4a9ac8" opacity="0.45" />
+                <path id="Path_741" data-name="Path 741" d="M-23478.5,917.739l46.02,26.683V917.739l-46.045-26.016Z"
+                    transform="translate(23524.691 -891.724)" fill="#62c4e3" opacity="0.23" />
+                <ellipse id="underGlow" cx="29.5" cy="30.5" rx="29.5" ry="30.5" transform="translate(16.691 25.276)"
+                    fill="url(#radial-gradient-2)" />
+                <ellipse id="glow" cx="48.5" cy="93" rx="48.5" ry="93" transform="translate(-2.309 -58.724)"
+                    fill="url(#radial-gradient-3)" />
+                <path id="lightLeft" d="M-23478.5,895.939l7.832,4.542.023-31.013-7.8-4.472Z"
+                    transform="translate(23516.789 -843.753)" fill="#fff" />
+                <path id="lightRight" d="M-23470.7,869.488l.035,30.993,7.8-4.542V865.016Z"
+                    transform="translate(23516.789 -843.753)" fill="#ffcbcb" />
+                <path id="lightTop" d="M-23478.5,895.939l7.832,4.542,7.8-4.542-7.8-4.472Z"
+                    transform="translate(23516.789 -874.753)" fill="#ffe5e5" />
+                <path id="glassRight" d="M-23432.691,918.014l.215,26.408,45.8-26.683v-26Z"
+                    transform="translate(23478.691 -865.724)" fill="#fff" opacity="0.75" />
+                <path id="glassLeft" d="M-23478.5,917.739l46.02,26.683V917.739l-46.045-26.016Z"
+                    transform="translate(23478.691 -865.724)" fill="#fff" opacity="0.522" />
+                <path id="glassTop" d="M-23478.5,917.739l46.02,26.683,45.8-26.683-45.8-26.271Z"
+                    transform="translate(23478.691 -891.724)" fill="#fff" opacity="0.45" />
+            </g>
+        </svg>
+
+        <!-- <h1>404</h1> -->
+        <div class="text">
+            <h3>Page or file not found</h3>
+            <h3>Seite oder Datei nicht gefunden</h3>
+            <h3>Página o archivo no encontrado</h3>
+            <h3>Page ou fichier introuvable</h3>
+            <h3>Pagina non trovata</h3>
+            <h3>Sidan hittades inte</h3>
+            <h3>Pagina niet gevonden</h3>
+        </div>
+    </div>
+</body>
+
+</html>

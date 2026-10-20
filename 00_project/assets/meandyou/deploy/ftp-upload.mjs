@@ -1,0 +1,13 @@
+import * as ftp from "/Users/martindrendel/741website/node_modules/basic-ftp/dist/index.js";
+import dotenv from "/Users/martindrendel/741website/node_modules/dotenv/lib/main.js";
+import fs from "fs";
+dotenv.config({path:"/Users/martindrendel/741website/.env",quiet:true});
+const D="/Users/martindrendel/741website/00_project/assets/meandyou/deploy/meandyou";
+const news=fs.readFileSync("/Users/martindrendel/741website/00_project/assets/meandyou/deploy/new_assets.txt","utf8").split("\n").filter(Boolean);
+const c=new ftp.Client(180000);
+await c.access({host:process.env.CLIENTS_FTP_HOST,user:process.env.CLIENTS_FTP_USER,password:process.env.CLIENTS_FTP_PASSWORD,secure:false});
+await c.cd("clients.741.studio/meandyou/assets");
+for(const f of news) await c.uploadFrom(D+"/assets/"+f,f);
+await c.cd("../v2"); await c.uploadFromDir(D+"/v2");
+await c.cd("../v3"); await c.uploadFromDir(D+"/v3");
+console.log("ok",news.length,"assets"); c.close();

@@ -1,0 +1,67 @@
+{
+ "date": "2026-10-11",
+ "page": "st-23-ordnungswidrigkeiten/05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G2 legal": {
+   "mode": "brao",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Wortzahl 2148 außerhalb Zielbereich 900 bis 1600"
+   ],
+   "info": {
+    "words": 2148,
+    "placeholders": 0
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "10 Sätze über 28 Wörter (zum Beispiel: Eine Geldbuße wird nicht festgesetzt, soweit der Täter gegenüber der F...)",
+    "Sprecher gemischt: ich 3, wir 30"
+   ],
+   "counts": {
+    "du": 0,
+    "sie": 52,
+    "ich": 3,
+    "wir": 30
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 2148,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "[Hinweis] Begriffs-Abdeckung 86 % (29 Begriffe aus mindestens 50 % der Seiten). Fehlen: freiheitsstrafe, steuer, überblick, rechtsprechung. Pflicht nur, wenn die Suchabsicht den Begriff braucht."
+   ]
+  }
+ }
+}

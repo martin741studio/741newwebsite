@@ -1,0 +1,100 @@
+{
+ "slug": "lena-fistler",
+ "steps": {
+  "intake": {
+   "agent": "orchestrator",
+   "status": "done",
+   "at": "2026-10-15T15:39",
+   "outputs": [
+    "intake.md",
+    "intake.json",
+    "browser-queue.jsonl"
+   ],
+   "blockers": []
+  },
+  "demand": {
+   "agent": "orchestrator(main session)",
+   "status": "done",
+   "at": "2026-10-16T13:29",
+   "outputs": [
+    "demand.md",
+    "evidence/dfs-volumes-ads.json",
+    "evidence/dfs-serp-*.json",
+    "evidence/dfs-backlinks-summary.json",
+    "evidence/dfs-refdomains-spam.json",
+    "cost_ledger.jsonl"
+   ],
+   "gap_keyword": "körpertherapie münchen",
+   "gap_volume": 110,
+   "gate_g1": "pass",
+   "note": "DataForSEO run from main whitelisted session; sandbox IP 179.65.207.101 was the only thing blocked."
+  },
+  "site": {
+   "agent": "B",
+   "status": "done",
+   "at": "2026-10-15T16:00",
+   "outputs": [
+    "site-findings.md",
+    "evidence/site.json",
+    "evidence/site-pages.json",
+    "evidence/site-urls.json",
+    "evidence/site-page-urls.txt",
+    "evidence/site-price-page.txt",
+    "evidence/site-health-quotes.txt",
+    "evidence/site-schema-localbusiness.txt"
+   ],
+   "blockers": [
+    "Sub-step 5 (competitor page metrics) not run: demand.md (agent A) has no competitor URLs, status failed (DataForSEO task 40207, IP 179.65.207.101 not whitelisted). Rerun page_metrics.py after agent A's rerun."
+   ],
+   "cost_usd": 0,
+   "notes": "Key findings: LocalBusiness schema street address Augustenstraße 79 RG differs from visible Nymphenburgerstr. 166 (14 pages). No H1 on home and 15 of 17 pages. Contact page has no tel link. One broken href ${findUrl} on home (400)."
+  },
+  "homepage": {
+   "agent": "C",
+   "status": "done",
+   "at": "2026-10-15T16:00",
+   "score_today": "13/44 (item 22 HWG gate = 0)",
+   "outputs": [
+    "homepage.md",
+    "draft/index.html",
+    "draft/logo.png",
+    "draft/portrait.png",
+    "draft/seal.png",
+    "evidence/scorecard-today.md",
+    "evidence/home-draft-1440.jpg",
+    "evidence/img/",
+    "evidence/raw/",
+    "review-assets/lena-fistler/startseite-heute.webp",
+    "review-assets/lena-fistler/startseite-entwurf.webp",
+    "review-assets/lena-fistler/logo.webp",
+    "review-assets/lena-fistler/portrait-lena.webp",
+    "review-assets/lena-fistler/foto-rueckenschmerz.webp",
+    "review-assets/lena-fistler/foto-stress.webp",
+    "review-assets/lena-fistler/foto-ueber-mich.webp"
+   ],
+   "blockers": [],
+   "open_points": [
+    "Reassurance facts under the CTA (response time, duration, price range) from Lena",
+    "Practice room photo: none on the site",
+    "Phone and opening hours mismatch between website and Google panel",
+    "Confirm the Termin buchen target (panel shows zeeg.me); not checked in a browser"
+   ],
+   "cost_usd": 0
+  },
+  "scan": {
+   "agent": "D",
+   "status": "done",
+   "at": "2026-10-16T13:43:04.902159",
+   "keyword": "körpertherapie münchen",
+   "report_key": "4fe389eb4e0685a",
+   "solv": 10.2,
+   "found_in": 35,
+   "credits": 49,
+   "outputs": [
+    "evidence/falcon-report-4fe389eb4e0685a.json",
+    "../../04_site/public/review-assets/lena-fistler/scan-grid.webp",
+    "competitors.md"
+   ]
+  }
+ }
+}

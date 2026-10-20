@@ -1,0 +1,376 @@
+<!--
+  741 SKELETON TEMPLATE — SEO & Content Roadmap
+  Reusable base for any program client. Built first for Bali Healing (2026-09-22).
+
+  HOW TO REUSE:
+  1. Copy this file to the client's scratchpad, rename it.
+  2. Replace {{CLIENT_NAME}}, {{CLIENT_DOMAIN}}, {{CLIENT_LOCATION}}, {{BUILD_DATE}} in the header block below.
+  3. Keep the 6-track structure (Backlinks / On-Site Architecture / Geo / AI Visibility / Reviews / Technical+Tracking)
+     — it's the standard shape for a 741 SEO roadmap — but swap the actual activities per client's real situation.
+     Don't reuse Bali Healing's specific activities (GBP mirror, magazine cadence, etc.) unless they genuinely apply.
+  4. Every <div class="track"> needs: why / expected outcome / timing / owner (grid4) + a findings box.
+     Findings box is either class="live" (real data already pulled — state it plainly) or a <p class="todo">
+     with a 🔲 marking exactly what's still needed. Never mark something "live" without a real, checked source.
+  5. Deploy via: node scripts/deploy-client-report.mjs <client-hash> <file.html>
+     Client hash + client_id lookup: see client_reports table in Supabase 741-portal, or the client's own memory file.
+  6. Only insert the Supabase client_reports row (making it visible on the client's portal) once Martin says it's
+     ready for the client to see — an uploaded-but-unlisted file is a private draft, not yet client-facing.
+-->
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEO &amp; Content Roadmap — {{CLIENT_NAME}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap">
+<style>
+:root{
+  --ground:#fffcf3; --panel:#ffffff; --ink:#252525; --ink-soft:#5f5f5f;
+  --grey:#8c8c8c; --line:#efeadb; --line-2:#e6dfca;
+  --accent:#fac118; --accent-ink:#5a4600;
+  --keep:#2e9e5b; --keep-bg:#e7f5ec; --keep-ln:#bfe4cc;
+  --rev:#c98a1e; --rev-bg:#fdf3d7; --rev-ln:#efdca6;
+  --new:#252525; --new-bg:#fff6d6; --new-ln:#f3d873;
+  --dead:#c0392b; --dead-bg:#fdecea; --dead-ln:#f3c9c3;
+  --pend:#8c8c8c; --pend-bg:#f2f0e8; --pend-ln:#d9d3bf;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ground:#1a1814; --panel:#232019; --ink:#f4efe2;
+    --ink-soft:#c3bba7; --grey:#948c78; --line:#332f26; --line-2:#3d382c;
+    --accent:#fac118; --accent-ink:#fac118;
+    --keep:#5cc98a; --keep-bg:#182a20; --keep-ln:#2b4a37;
+    --rev:#e0a63a; --rev-bg:#2c2413; --rev-ln:#4a3d1c;
+    --new:#fac118; --new-bg:#2a2412; --new-ln:#54471d;
+    --dead:#e57565; --dead-bg:#2c1a17; --dead-ln:#4a2b26;
+    --pend:#948c78; --pend-bg:#26231b; --pend-ln:#3d382c;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#1a1814; --panel:#232019; --ink:#f4efe2; --ink-soft:#c3bba7;
+  --grey:#948c78; --line:#332f26; --line-2:#3d382c;
+  --accent:#fac118; --accent-ink:#fac118;
+  --keep:#5cc98a; --keep-bg:#182a20; --keep-ln:#2b4a37;
+  --rev:#e0a63a; --rev-bg:#2c2413; --rev-ln:#4a3d1c;
+  --new:#fac118; --new-bg:#2a2412; --new-ln:#54471d;
+  --dead:#e57565; --dead-bg:#2c1a17; --dead-ln:#4a2b26;
+  --pend:#948c78; --pend-bg:#26231b; --pend-ln:#3d382c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ground);color:var(--ink);font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1140px;margin:0 auto;padding:38px 24px 90px}
+.top{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:2px solid var(--line);padding-bottom:22px;margin-bottom:26px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .logo{height:40px;width:auto;display:block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand .logo{filter:invert(1)}}
+:root[data-theme="dark"] .brand .logo{filter:invert(1)}
+.brand .sub{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--grey)}
+.top .meta{text-align:right;font-size:12.5px;color:var(--grey);line-height:1.7}
+h1{font-family:"Anton",sans-serif;font-weight:400;font-size:clamp(30px,4.6vw,50px);line-height:.98;letter-spacing:.3px;text-wrap:balance;margin:8px 0 6px}
+h1 em{font-style:normal;color:var(--accent);-webkit-text-stroke:0}
+.lead{font-size:15.5px;color:var(--ink-soft);max-width:72ch;margin-bottom:26px}
+.lead b{color:var(--ink)}
+.backlink{display:inline-block;margin:0 0 14px;font-size:12.5px;font-weight:800;text-decoration:none;color:#5a4600;background:rgba(250,193,24,.18);padding:7px 13px;border-radius:20px}
+.backlink:hover{background:rgba(250,193,24,.32)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;position:relative;overflow:hidden}
+.kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--kc,var(--accent))}
+.kpi.k-keep{--kc:var(--keep)} .kpi.k-rev{--kc:var(--rev)} .kpi.k-new{--kc:var(--accent)} .kpi.k-pend{--kc:var(--pend)}
+.kpi .n{font-family:"Anton",sans-serif;font-size:34px;line-height:1;letter-spacing:.5px;font-variant-numeric:tabular-nums;margin:2px 0 4px}
+.kpi .l{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--grey)}
+.kpi .d{font-size:12.5px;color:var(--ink-soft);margin-top:3px}
+.sect{font-family:"Anton",sans-serif;font-weight:400;font-size:22px;letter-spacing:.4px;margin:40px 0 4px;display:flex;align-items:center;gap:12px}
+.sect::after{content:"";flex:1;height:2px;background:var(--line)}
+.sect-lead{font-size:13.5px;color:var(--ink-soft);max-width:82ch;margin-bottom:20px}
+.track{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 20px 20px;margin-bottom:16px;box-shadow:0 1px 0 var(--line-2)}
+.track .th{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.track .idx{font-family:"Anton",sans-serif;font-size:15px;color:var(--accent-ink);background:var(--accent);width:26px;height:26px;border-radius:7px;display:grid;place-items:center;flex:0 0 auto}
+.track h3{font-size:15.5px;font-weight:800;letter-spacing:.2px}
+.track .status{margin-left:auto;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;padding:3px 9px;border-radius:20px;flex:0 0 auto}
+.status.ready{color:var(--keep);background:var(--keep-bg);border:1px solid var(--keep-ln)}
+.status.pending{color:var(--pend);background:var(--pend-bg);border:1px solid var(--pend-ln)}
+.status.progress{color:var(--rev);background:var(--rev-bg);border:1px solid var(--rev-ln)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:10px}
+.grid4 .g{font-size:12px}
+.grid4 .g b{display:block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:var(--grey);margin-bottom:4px}
+.grid4 .g span{color:var(--ink-soft)}
+.findings{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line-2)}
+.findings b{display:block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:var(--grey);margin-bottom:6px}
+.findings p{font-size:13px;color:var(--ink-soft)}
+.findings .todo{color:var(--pend);font-style:italic}
+.findings .live{background:var(--keep-bg);border:1px solid var(--keep-ln);border-radius:10px;padding:10px 12px;color:var(--ink);font-style:normal}
+@media (max-width:760px){.grid4{grid-template-columns:1fr 1fr}}
+.alert{background:var(--pend-bg);border:1px solid var(--pend-ln);border-left:5px solid var(--pend);border-radius:14px;padding:16px 20px;margin:22px 0}
+.alert h3{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--pend);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.alert p{font-size:13.5px;color:var(--ink-soft);max-width:82ch}
+.foot{margin-top:34px;padding-top:18px;border-top:2px solid var(--line);font-size:12.5px;color:var(--grey);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:520px){.top{align-items:flex-start}.top .meta{text-align:left}}
+</style>
+</head><body>
+
+<div class="wrap">
+  <a class="backlink" href="https://clients.741.studio/" target="_top">← Back to Dashboard</a>
+  <header class="top">
+    <div class="brand">
+      <img class="logo" src="data:image/png;base64,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" alt="741 Studio">
+      <span class="sub">Content &amp;<br>SEO Program</span>
+    </div>
+    <div class="meta">
+      {{CLIENT_NAME}} · {{CLIENT_LOCATION}}<br>
+      {{CLIENT_DOMAIN}} · roadmap built {{BUILD_DATE}} · draft — not yet reviewed
+    </div>
+  </header>
+
+  <h1>SEO &amp; Content <em>Roadmap</em></h1>
+  <p class="lead">The full activity plan across backlinks, on-site architecture, geo, AI visibility, reviews and tracking. <b>This is a skeleton</b> — every track's "why" and "planned outcome" is set, but the findings inside each track are still pending the underlying data pull (marked below). Filled in as each check is run.</p>
+
+  <section class="kpis">
+    <div class="kpi k-keep"><div class="n">3</div><div class="l">Ready / running</div><div class="d">LinkedIn outreach, magazine plan, GBP name decision</div></div>
+    <div class="kpi k-rev"><div class="n">2</div><div class="l">Confirmed findings</div><div class="d">schema audit, review-cadence gap — real data already in</div></div>
+    <div class="kpi k-pend"><div class="n">6</div><div class="l">Pending data pull</div><div class="d">competitors, GBP re-audit, GSC/GA4, backlinks, internal links, tracking</div></div>
+    <div class="kpi k-new"><div class="n">13</div><div class="l">Total activities</div><div class="d">across 6 tracks below</div></div>
+  </section>
+
+  <!-- TRACK 1 -->
+  <div class="sect">1 · Backlinks &amp; Off-Page Authority</div>
+  <p class="sect-lead">Reciprocal collaborations, press, and community links — not generic guest-post link building.</p>
+
+  <div class="track">
+    <div class="th"><span class="idx">1</span><h3>LinkedIn collaboration outreach (Peggy's account)</h3><span class="status ready">Running</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Reciprocal articles + link back = a real backlink from an active, credible local business, not a link farm</span></div>
+      <div class="g"><b>Expected outcome</b><span>5–10 collaborations from the first batch of 10–15 sent, each = 1 backlink + cross-audience exposure</span></div>
+      <div class="g"><b>Timing</b><span>Batch 1 sending now, first replies in 1–2 weeks</span></div>
+      <div class="g"><b>Owner</b><span>Peggy (send), 741 (drafts + tracking)</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Pending — fill in after the first batch's reply data comes back (~1–2 weeks)</p></div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">2</span><h3>Bali magazine features, every 2 months</h3><span class="status ready">Planned</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>A magazine's domain carries far more authority than a local business blog — your highest-DA backlink source</span></div>
+      <div class="g"><b>Expected outcome</b><span>1 high-DA backlink + press mention every 2 months, ~6/year</span></div>
+      <div class="g"><b>Timing</b><span>First placement ~Nov 22, 2026</span></div>
+      <div class="g"><b>Owner</b><span>741 (pitch + article), Bali Healing (confirm placements)</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Pending — no placement secured yet, this is the plan only</p></div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">3</span><h3>Chamber of Commerce + local sponsorships</h3><span class="status pending">Not started</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Trusted local .org/.id domains link back, and it signals real community presence, which Google weighs for local trust</span></div>
+      <div class="g"><b>Expected outcome</b><span>3–5 new high-trust local backlinks this quarter</span></div>
+      <div class="g"><b>Timing</b><span>Research + first sign-up in 2–4 weeks</span></div>
+      <div class="g"><b>Owner</b><span>741 (research + shortlist), Bali Healing (join/pay)</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Pending — need a shortlist of Canggu/Bali Chambers + sponsorship options first</p></div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">4</span><h3>Monthly local PR / news distribution</h3><span class="status pending">Not started</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>AI engines (ChatGPT, Perplexity, Gemini) weigh news mentions heavily to verify business trust — separate from ranking value</span></div>
+      <div class="g"><b>Expected outcome</b><span>Monthly press mention, builds AI-citation trust over time</span></div>
+      <div class="g"><b>Timing</b><span>Starts once Core-30 content exists to report on</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Pending — depends on Track 2 content existing first</p></div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">10</span><h3>Backlink deep-dive</h3><span class="status progress">Partial data</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>"Improve backlinks" isn't executable without knowing exactly what exists and what's missing</span></div>
+      <div class="g"><b>Expected outcome</b><span>Prioritized backlink action list: reclaimable broken links, domains worth pursuing further, any toxic links to disavow</span></div>
+      <div class="g"><b>Timing</b><span>One DataForSEO backlinks pull, same session as competitor check</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings"><b>Findings</b>
+      <p class="live"><b style="margin:0 0 4px">Baseline already known (2026-09-08 pull):</b> 66 backlinks, 44 referring domains, 27 broken (41%) — reclaim opportunity. Domain rank 104 on DataForSEO's own scale (not comparable to Ahrefs). <span class="todo">Full per-link breakdown (which 27, which domains worth pursuing, disavow check) still 🔲 pending.</span></p>
+    </div>
+  </div>
+
+  <!-- TRACK 2 -->
+  <div class="sect">2 · On-Site Architecture (Core 30 / GBP Mirror)</div>
+  <p class="sect-lead">Homepage → category pages → service pages, mirroring the GBP category structure so Google maps entities instead of guessing from text.</p>
+
+  <div class="track">
+    <div class="th"><span class="idx">5</span><h3>Rebuild homepage H1/H2 hierarchy around GBP categories</h3><span class="status progress">Base plan exists</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>H1 = primary category + city; H2s = the 6 secondary categories held today (Wellness center, Acupuncture clinic, Naturopathic practitioner, Women's health, Osteopath, Reiki), each linking to a dedicated page</span></div>
+      <div class="g"><b>Expected outcome</b><span>Clear topical structure Google can map to entities — formalizes the approved sitetree (Acupuncture page, IV Drip landing page, 5 explainer posts)</span></div>
+      <div class="g"><b>Timing</b><span>Builds on the approved sitetree</span></div>
+      <div class="g"><b>Owner</b><span>741 (build), Bali Healing (approve)</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="live">Site-tree baseline already delivered 18 Sep (39 keep / 1 update / 8 new / 18 legacy-duplicate). <span class="todo">Awaiting Track 11 re-crawl to confirm current linking state before build starts.</span></p></div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">6</span><h3>Fill the 4 open GBP secondary-category slots</h3><span class="status pending">Awaiting decision</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>More relevant categories = more local-search entry points without diluting the primary category</span></div>
+      <div class="g"><b>Expected outcome</b><span>Broader Map Pack visibility on TCM, physiotherapy, IV drip, craniosacral</span></div>
+      <div class="g"><b>Timing</b><span>Same-day GBP change once the 4 are picked</span></div>
+      <div class="g"><b>Owner</b><span>741 (execute), Bali Healing (pick the 4)</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Pending — 6 of 10 slots used today (see Track 8 for full re-audit)</p></div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">8</span><h3>GBP completeness re-audit</h3><span class="status pending">Not run</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Confirm services, descriptions and categories are complete against the 741 blueprint (20–50 services, 40–60 map-keywords) — not assumed</span></div>
+      <div class="g"><b>Expected outcome</b><span>A clean pass/fail list per GBP (Natural Health Center + Beauty Clinic)</span></div>
+      <div class="g"><b>Timing</b><span>Same session as Track 7</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Pending — last full scan was Aug 2026, needs a fresh pass</p></div>
+  </div>
+
+  <!-- TRACK 3 -->
+  <div class="sect">3 · Hyper-Local Geo Content</div>
+  <p class="sect-lead">Push specific grid points from just-outside-the-pack into the top 3, with real landmark-tied content.</p>
+
+  <div class="track">
+    <div class="th"><span class="idx">7</span><h3>Local Falcon grid-dot targeting</h3><span class="status pending">Needs fresh scan</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Find grid points ranking 4–6 (just outside Map Pack top 3) and write landmark-tied content for those exact areas — far higher ROI than blanket content</span></div>
+      <div class="g"><b>Expected outcome</b><span>Move specific grid points from rank 4–6 into top 3</span></div>
+      <div class="g"><b>Timing</b><span>Needs a fresh Local Falcon scan first (last full scan Aug 2026)</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Pending — fresh scan not yet run this cycle</p></div>
+  </div>
+
+  <!-- TRACK 4 -->
+  <div class="sect">4 · AI Agent Visibility (GEO/AEO)</div>
+  <p class="sect-lead">Getting cited and recommended by ChatGPT, Perplexity and Gemini — a different game from classic Google ranking.</p>
+
+  <div class="track">
+    <div class="th"><span class="idx">A</span><h3>Rotate review requests across GBP, Bing Places, Yelp, TripAdvisor</h3><span class="status pending">Not started</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>ChatGPT partly reads Bing for Business, not just Google — Google-only reviews are invisible to some AI agents</span></div>
+      <div class="g"><b>Expected outcome</b><span>Presence in AI answers beyond just Google Maps</span></div>
+      <div class="g"><b>Timing</b><span>Setup within 2 weeks</span></div>
+      <div class="g"><b>Owner</b><span>741 (setup), Bali Healing staff (ask)</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Pending</p></div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">B</span><h3>Attribute-rich review asks</h3><span class="status pending">Folds into Track 11 below</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>AI agents scan review text for specifics ("helped with my back pain after 3 sessions"), not star ratings, to answer conversational prompts</span></div>
+      <div class="g"><b>Expected outcome</b><span>More AI citations for specific services</span></div>
+      <div class="g"><b>Timing</b><span>Rolls into the review-engine fix</span></div>
+      <div class="g"><b>Owner</b><span>Bali Healing staff</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Pending — template wording to be supplied with Track 11's WhatsApp flow</p></div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">C</span><h3>Short YouTube clips for 30–50% of core pages</h3><span class="status pending">Needs resourcing decision</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Gemini is trained natively on video and favors businesses with video assets tied to pages</span></div>
+      <div class="g"><b>Expected outcome</b><span>Better Gemini/AI Overview citation odds</span></div>
+      <div class="g"><b>Timing</b><span>Open — needs a decision on who films</span></div>
+      <div class="g"><b>Owner</b><span>Bali Healing (film), 741 (publish/embed)</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Pending — not a research gap, a resourcing question for Pasha/Peggy</p></div>
+  </div>
+
+  <!-- TRACK 5 -->
+  <div class="sect">5 · Reviews Engine</div>
+  <p class="sect-lead">The gap Martin flagged directly from Maps: reviews arrive in bursts with long gaps in between, on both GBPs.</p>
+
+  <div class="track">
+    <div class="th"><span class="idx">11</span><h3>Standing review-request process on both GBPs</h3><span class="status progress">Confirmed problem, fix not yet running</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>A steady trickle, not bursts, is the trust signal Google and AI agents both read; naming the service reinforces the Track 2 entity mapping</span></div>
+      <div class="g"><b>Expected outcome</b><span>Target 2x the local leader (~240 reviews on Natural Health Center), arriving steadily</span></div>
+      <div class="g"><b>Timing</b><span>Needs Pasha/Peggy to commit staff to asking after every visit</span></div>
+      <div class="g"><b>Owner</b><span>Bali Healing staff (ask), 741 (WhatsApp templates + QR flow)</span></div>
+    </div>
+    <div class="findings">
+      <b>Findings</b>
+      <p class="live">Confirmed via Local Falcon audit: Natural Health Center review count frozen at 97 for 7+ weeks despite ~179 WhatsApp enquiries in that window — velocity zero. Competitor Blood Ozone Bali sits at 118 and still climbing. Bali Healing Beauty Clinic is thinner still, at 10 reviews. <span class="todo">🔲 Pending: WhatsApp template + QR flow (same system as Hüwel) still to be built and handed over.</span></p>
+    </div>
+  </div>
+
+  <!-- TRACK 6 -->
+  <div class="sect">6 · Technical / Schema &amp; Tracking</div>
+  <p class="sect-lead">What Google and AI engines can actually read as fact — plus whether we can measure any of this at all.</p>
+
+  <div class="track">
+    <div class="th"><span class="idx">12</span><h3>Sitewide LocalBusiness schema</h3><span class="status progress">Findings confirmed, fix not yet applied</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Schema is how Google and AI engines confirm entity facts instead of guessing from body text</span></div>
+      <div class="g"><b>Expected outcome</b><span>Stronger entity confirmation for Maps + AI Overviews</span></div>
+      <div class="g"><b>Timing</b><span>Low-risk, one Wix custom-code block — ready once approved</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings">
+      <b>Findings</b>
+      <p class="live">Checked live on 22 Sep 2026: homepage carries only a bare <code>WebSite</code> schema block (name + URL, nothing else). Ozone Therapy, Naturopathy, Infusions and Skin Tag &amp; Mole Removal pages have <b>zero</b> structured data. No <code>LocalBusiness</code>/<code>MedicalClinic</code> schema anywhere (no address, phone, hours, geo, aggregateRating), no <code>Service</code> schema, no FAQ/BLUF answer blocks. <span class="todo">🔲 Pending: sign-off to add, then execution.</span></p>
+    </div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">P5</span><h3>On-page BLUF + Service/FAQ schema on top 5 service pages</h3><span class="status pending">Not started</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Direct-answer blocks + schema together are what AI Overviews and Perplexity actually pull from</span></div>
+      <div class="g"><b>Expected outcome</b><span>Higher odds of being the cited source in AI answers for the 5 highest-value service pages</span></div>
+      <div class="g"><b>Timing</b><span>Rolls out with Track 2's page build</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Pending — which 5 pages to prioritize depends on Track 7's competitor + volume data</p></div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">9</span><h3>Tracking infrastructure: GSC, GA4, keyword-level rank tracking</h3><span class="status pending">Not connected</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Without this, every other track is unmeasurable — GSC shows real queries (DataForSEO only estimates), GA4 needs the live property reconnected, and nothing today tracks which page ranks for which term</span></div>
+      <div class="g"><b>Expected outcome</b><span>A working measurement layer before any "improvement" number gets reported to the client</span></div>
+      <div class="g"><b>Timing</b><span>GSC connect is a 10-minute step; GA4 fix needs Pasha to add the service account as viewer; both should land before Track 2 content goes live</span></div>
+      <div class="g"><b>Owner</b><span>Pasha (GSC access, GA4 viewer), 741 (rank tracking setup)</span></div>
+    </div>
+    <div class="findings">
+      <b>Findings</b>
+      <p class="live">Confirmed gap: GSC not connected for balihealing.com at all. GA4 — the reporting service account only sees the OLD, disconnected property (387358295); the live property (428850764, holding G-773QRR6N6H) has never been shared with it. <span class="todo">🔲 Pending: Pasha's action on both.</span></p>
+    </div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">11b</span><h3>Internal linking re-verification</h3><span class="status pending">Not re-run this cycle</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>Building Track 2's new architecture on an unverified base risks repeating the same gap the Sept 7 audit found</span></div>
+      <div class="g"><b>Expected outcome</b><span>Confirmed current state, not an assumption that last month's fixes are still intact</span></div>
+      <div class="g"><b>Timing</b><span>One fresh crawl, same session as Track 7</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="live">Baseline from 7 Sep audit: 2 flat hubs, homepage 0 content links, 46 pages with 0–1 inbound links. Priority 1 fixes were completed and published since. <span class="todo">🔲 Pending: fresh crawl to confirm current state before Track 2 build starts.</span></p></div>
+  </div>
+
+  <div class="track">
+    <div class="th"><span class="idx">7b</span><h3>Competitor benchmark — top 5 per highest-volume service</h3><span class="status pending">Not run</span></div>
+    <div class="grid4">
+      <div class="g"><b>Why</b><span>See exactly why competitors outrank or trail Bali Healing per service — category count, review velocity, backlinks, content depth — not a guess</span></div>
+      <div class="g"><b>Expected outcome</b><span>A ranked, evidence-based list of what to close per service</span></div>
+      <div class="g"><b>Timing</b><span>One Local Falcon competitor pull + one DataForSEO SERP check, same day</span></div>
+      <div class="g"><b>Owner</b><span>741</span></div>
+    </div>
+    <div class="findings"><b>Findings</b><p class="todo">🔲 Pending — covers IV drip, ozone, acupuncture, naturopath, skin tag removal</p></div>
+  </div>
+
+  <div class="alert">
+    <h3>⚠ How to read this skeleton</h3>
+    <p>Green "live" boxes = real data already pulled and verified. Grey "🔲 Pending" lines = the activity and its logic are locked, but the underlying data hasn't been collected yet. Nothing on this page is guessed — once each pending item is run, its box gets replaced with the real finding, and this becomes the actual client-facing report.</p>
+  </div>
+
+  <footer class="foot">
+    <span>741 Studio · Content &amp; SEO Program · Bali Healing · internal draft</span>
+    <span>13 activities · 6 tracks · 6 pending data pulls · built 22 Sep 2026</span>
+  </footer>
+</div>
+</body></html>

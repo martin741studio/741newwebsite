@@ -1,0 +1,45 @@
+{
+  "pass": true,
+  "mode": "FEEDBACK",
+  "client": "Rabenmütter Shop",
+  "slug": "2-trauerkarten-pillar",
+  "feedback_id": "801d4d7d-1a22-4d45-a08e-e0b213dff2ec",
+  "rubric_skipped": true,
+  "checks": {
+    "addresses_client_comment_sentence_for_sentence": {
+      "result": "pass",
+      "detail": [
+        "'vielen Dank - super, super Vorschläge' -> read as approval of the section as a whole; draft correctly states no content change to the Seitenbaum is needed, only a note that the client agreed.",
+        "'auch die Idee die Karte handschriftlich schreiben zu lassen' -> tied to the specific proposal item the client is asking about, not treated as a new idea to invent.",
+        "'noch habe ich keine Idee wie das umgesetzt aussehen könnte' -> answered with two concrete, real-world implementation models (printed handwriting font vs. genuine hand-written cards), each with its trade-offs stated plainly.",
+        "'aber das kannst du mir bestimmt erklären' -> draft does not attempt to speak for Martin to the client; it stages the explanation as a next step for Martin, correctly routing the actual client-facing reply to him rather than sending one itself (memory client-questions-verify-first)."
+      ]
+    },
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "n/a",
+      "detail": "FEEDBACK draft answering an open client question, not a page spec; no Title/Meta/H1/NAP/JSON-LD fields present. The [fehlt: ...] tags sit in body text (which of the two models the original proposal meant, pricing/process details for Modell B), not in a required field, so this check does not apply."
+    },
+    "nap_matches_locked_record": {
+      "result": "n/a",
+      "detail": "No NAP data referenced or needed for this feedback item (product/implementation question, not a location/citation section)."
+    },
+    "jsonld_valid": {
+      "result": "n/a",
+      "detail": "No JSON-LD in this FEEDBACK draft."
+    },
+    "language_matches_market": {
+      "result": "pass",
+      "detail": "Rabenmütter Shop is a DACH client (market_lang 'de' per plan.json); draft is fully in German."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "detail": "Not a health client and no treatment/outcome claims in this content; no 'heilt/garantiert/100%/Heilung' language present."
+    }
+  },
+  "notes": [
+    "Draft honestly flags that it cannot tell which of the two handwriting models (font vs. real handwriting) the original Seitenbaum proposal meant, since the source section text was not fetchable this run — correct per hard rule 2 (real data only, never invent) rather than guessing one model as fact.",
+    "Diff-Hinweis correctly states no before/after text comparison was possible for the same reason, and does not fabricate one.",
+    "'Nächster Schritt' list is concrete and appropriately gated on Martin's confirmation before anything goes back to the client — matches the human-in-the-loop rule for client-facing replies."
+  ],
+  "fails": []
+}

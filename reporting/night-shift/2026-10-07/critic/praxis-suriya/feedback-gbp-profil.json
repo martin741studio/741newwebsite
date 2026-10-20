@@ -1,0 +1,20 @@
+{
+  "plan_index": 0,
+  "client": "Praxis Suriya",
+  "slug": "feedback-gbp-profil",
+  "mode": "FEEDBACK",
+  "input_file": "feedback/praxis-suriya/7fd15e89-27b8-426c-a28a-d88998ef37b1.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": "n/a (FEEDBACK doc has no Title/Meta/H1/NAP/JSON-LD blocks)",
+    "nap_matches_locked_record": "n/a (no NAP block in this doc)",
+    "jsonld_valid": "n/a (no JSON-LD in this doc)",
+    "language_matches_market_lang": "pass — market_lang=de, full doc is German",
+    "hwg_scan": "pass — no \"heilt\"/\"garantiert\"/\"100%\"/\"Heilung\" claims; content is GBP-profile logistics, not a health claim",
+    "feedback_addresses_comment": "pass — all three thread comments (Öffnungszeiten Di–Do/Fr + Mo-Telefonsprechzeit, kein Termin-Button/nur Buchungsformular, barrierefrei aber Toilette nicht, und die abschließende Freigabe 'kannst DU ändern') sind je einem konkreten Vorschlags-Punkt zugeordnet: Öffnungszeiten-Feld, CTA/Termin-Button-Entscheidung, zwei Barrierefreiheits-Attribute, Umsetzungs-Freigabe. Kein Kommentar bleibt unbeantwortet.",
+    "deslop_check": "skipped — correctly: Vorschlag is an internal GBP-Konfigurationsempfehlung an Martin (Felder/Attribute setzen), kein client-facing Fließtext, der 1:1 veröffentlicht wird. Per SKILL.md Regel kein Blocker.",
+    "real_data_only": "pass — alle Fakten (Zeiten, kein Termin-Button, Toilette nicht barrierefrei, Freigabe) stammen wörtlich aus dem Kommentar-Thread. Einzige Ableitung: 'Montag, Samstag, Sonntag: geschlossen' ist eine notwendige Vervollständigung des Wochenschemas aus den gegebenen Öffnungstagen (Di–Fr genannt), keine erfundene Tatsache. Fehlender Originaltext des Report-Abschnitts korrekt als [fehlt: ...] im Diff-Hinweis markiert statt erfunden."
+  },
+  "fails": [],
+  "format_check": "pass — drei geforderte Teile vorhanden: Kunde sagt (verbatim, mit Zeitstempeln), Vorschlag (GBP-Feld-genaue Werte + Begründung), Diff-Hinweis (eine Zeile, erklärt fehlenden Vorher-Text statt zu erfinden)"
+}

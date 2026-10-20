@@ -1,0 +1,37 @@
+{
+  "plan_item_index": 1,
+  "client": "Praxis Suriya",
+  "page": "suriya/nap-domains",
+  "mode": "FEEDBACK",
+  "feedback_id": "d1c58471-eafc-4ef9-8418-1611a2345445",
+  "source_file": "feedback/praxis-suriya/d1c58471-eafc-4ef9-8418-1611a2345445.md",
+  "pass": true,
+  "checks": {
+    "sentence_for_sentence_addressed": {
+      "result": "pass",
+      "reason": "All three client statements are addressed: (1) 'ayurveda Ingelheim oder ayurveda mainz' -> Vorschlag Punkt 1 (ayurveda-ingelheim, priority, NAP-safe) and Punkt 2 (ayurveda-mainz, catchment-only, no second address); (2) 'ich habe auch noch die domain Femalecare' -> Vorschlag Punkt 3 (clarify spelling/TLD/status before use); (3) 'Du kannst gerne die Domaine zubuchen die wichtig sind' -> the whole Vorschlag gives Martin a concrete priority to act on, which is what delegation asked for."
+    },
+    "nap_block_matches_locked_record": {
+      "result": "pass",
+      "reason": "Name 'Praxis Suriya - Ayurveda & Naturheilkunde', Schützenpfad 29 / 55218 Ingelheim am Rhein, +49 174 7411087, Heilpraktiker all match context.json.nap_locked for client_id 3f71ef33-8c74-4ea1-b2d3-0273c2e99649 field by field."
+    },
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "pass",
+      "reason": "No Title/Meta/H1/JSON-LD in a FEEDBACK doc; the NAP block itself has no [fehlt:]. The [fehlt:] markers present are on search-volume data and the Femalecare domain details — correctly flagged rather than invented, per the real-data-only rule."
+    },
+    "market_lang_de": {
+      "result": "pass",
+      "reason": "Entire draft is in German, matching market_lang 'de'."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "reason": "Domain/NAP recommendation content only; no cure/guarantee/fear claims ('heilt', 'garantiert', '100%', 'Heilung')."
+    },
+    "deslop_body_copy": {
+      "result": "not_applicable",
+      "reason": "Vorschlag is an internal domain-registration recommendation to Martin, not client-facing prose shipped as-is — per SKILL.md §3 this is not a de-slop blocker."
+    }
+  },
+  "fails": [],
+  "notes": "Executor correctly avoided inventing DataForSEO search-volume numbers for 'ayurveda ingelheim' vs 'ayurveda mainz' and avoided guessing the Femalecare domain's exact spelling/TLD/registration status, flagging both as [fehlt:] instead. The NAP-conflict reasoning (Ingelheim = locked address, Mainz = catchment only, never a second GBP/address) is correct and directly protects the locked NAP record. No local copy of the live report section '8 · C · NAP / Citations / Domains' was found in the repo, confirming the Executor's [fehlt] note on the original section was accurate, not a shortcut."
+}

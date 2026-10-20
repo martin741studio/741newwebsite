@@ -1,0 +1,433 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Website-Struktur ShuiGuru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap">
+<style>
+:root{
+  --ground:#fffcf3; --panel:#ffffff; --ink:#252525; --ink-soft:#5f5f5f;
+  --grey:#8c8c8c; --line:#efeadb; --line-2:#e6dfca;
+  --accent:#fac118; --accent-ink:#5a4600;
+  --keep:#2e9e5b; --keep-bg:#e7f5ec; --keep-ln:#bfe4cc;
+  --rev:#c98a1e; --rev-bg:#fdf3d7; --rev-ln:#efdca6;
+  --new:#252525; --new-bg:#fff6d6; --new-ln:#f3d873;
+  --dead:#c0392b; --dead-bg:#fdecea; --dead-ln:#f3c9c3;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ground:#1a1814; --panel:#232019; --ink:#f4efe2;
+    --ink-soft:#c3bba7; --grey:#948c78; --line:#332f26; --line-2:#3d382c;
+    --accent:#fac118; --accent-ink:#fac118;
+    --keep:#5cc98a; --keep-bg:#182a20; --keep-ln:#2b4a37;
+    --rev:#e0a63a; --rev-bg:#2c2413; --rev-ln:#4a3d1c;
+    --new:#fac118; --new-bg:#2a2412; --new-ln:#54471d;
+    --dead:#e57565; --dead-bg:#2c1a17; --dead-ln:#4a2b26;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#1a1814; --panel:#232019; --ink:#f4efe2; --ink-soft:#c3bba7;
+  --grey:#948c78; --line:#332f26; --line-2:#3d382c;
+  --accent:#fac118; --accent-ink:#fac118;
+  --keep:#5cc98a; --keep-bg:#182a20; --keep-ln:#2b4a37;
+  --rev:#e0a63a; --rev-bg:#2c2413; --rev-ln:#4a3d1c;
+  --new:#fac118; --new-bg:#2a2412; --new-ln:#54471d;
+  --dead:#e57565; --dead-bg:#2c1a17; --dead-ln:#4a2b26;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--ground); color:var(--ink);
+  font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  line-height:1.5; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1140px;margin:0 auto;padding:38px 24px 90px}
+
+/* ---------- header ---------- */
+.top{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  border-bottom:2px solid var(--line);padding-bottom:22px;margin-bottom:26px}
+.brand{display:flex;align-items:center;gap:14px}
+.mark{font-family:"Anton",sans-serif;font-size:34px;letter-spacing:.5px;
+  background:var(--ink);color:var(--accent);line-height:1;padding:6px 12px 8px;border-radius:7px}
+.brand .sub{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--grey)}
+.top .meta{text-align:right;font-size:12.5px;color:var(--grey);line-height:1.7}
+h1{font-family:"Anton",sans-serif;font-weight:400;font-size:clamp(30px,4.6vw,50px);
+  line-height:.98;letter-spacing:.3px;text-wrap:balance;margin:8px 0 6px}
+h1 em{font-style:normal;color:var(--accent);-webkit-text-stroke:0}
+.lead{font-size:15.5px;color:var(--ink-soft);max-width:66ch;margin-bottom:26px}
+.lead b{color:var(--ink)}
+
+/* ---------- kpi ---------- */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;position:relative;overflow:hidden}
+.kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--kc,var(--accent))}
+.kpi.k-keep{--kc:var(--keep)} .kpi.k-rev{--kc:var(--rev)} .kpi.k-new{--kc:var(--accent)} .kpi.k-dead{--kc:var(--dead)}
+.kpi .n{font-family:"Anton",sans-serif;font-size:38px;line-height:1;letter-spacing:.5px;
+  font-variant-numeric:tabular-nums;margin:2px 0 4px}
+.kpi .l{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--grey)}
+.kpi .d{font-size:12.5px;color:var(--ink-soft);margin-top:3px}
+
+/* ---------- legend ---------- */
+.legend{display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:12.5px;color:var(--ink-soft);
+  margin:6px 0 16px;padding:12px 16px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.legend .li{display:flex;align-items:center;gap:7px}
+.dot{width:13px;height:13px;border-radius:4px;flex:0 0 auto;border:1.5px solid}
+.dot.keep{background:var(--keep-bg);border-color:var(--keep)}
+.dot.rev{background:var(--rev-bg);border-color:var(--rev)}
+.dot.new{background:var(--new-bg);border-color:var(--new-ln)}
+.dot.idea{background:var(--panel);border-color:var(--line-2);border-style:dashed}
+.dot.dead{background:var(--dead-bg);border-color:var(--dead)}
+
+/* ---------- program strip ---------- */
+.prog{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:30px}
+.pcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.pcard .ph{font-family:"Anton",sans-serif;font-size:12px;letter-spacing:.4px;color:var(--accent-ink);
+  background:var(--accent);display:inline-block;padding:2px 9px 3px;border-radius:6px;margin-bottom:8px}
+.pcard h4{font-size:13.5px;font-weight:800;margin-bottom:3px}
+.pcard p{font-size:12px;color:var(--ink-soft)}
+
+/* ---------- section heading ---------- */
+.sect{font-family:"Anton",sans-serif;font-weight:400;font-size:22px;letter-spacing:.4px;
+  margin:40px 0 4px;display:flex;align-items:center;gap:12px}
+.sect::after{content:"";flex:1;height:2px;background:var(--line)}
+.sect-lead{font-size:13.5px;color:var(--ink-soft);max-width:78ch;margin-bottom:20px}
+
+/* ---------- tree ---------- */
+.tree{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px;align-items:start}
+.branch{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:4px 4px 8px;
+  box-shadow:0 1px 0 var(--line-2)}
+.branch.pillar{box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 32%,transparent)}
+.branch>.bh{display:flex;align-items:center;gap:10px;padding:15px 16px 4px}
+.branch>.bh .idx{font-family:"Anton",sans-serif;font-size:15px;color:var(--accent-ink);
+  background:var(--accent);width:26px;height:26px;border-radius:7px;display:grid;place-items:center;flex:0 0 auto}
+.branch>.bh h2{font-size:15px;font-weight:800;letter-spacing:.2px}
+.branch>.bh .bc{margin-left:auto;font-size:11px;font-weight:700;color:var(--grey);
+  font-variant-numeric:tabular-nums;text-align:right;line-height:1.3}
+.bmod{font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--grey);
+  padding:0 16px 9px 52px}
+.bmod b{color:var(--accent-ink)}
+.nodes{display:flex;flex-direction:column;gap:7px;padding:0 10px 6px}
+
+.node{display:block;text-decoration:none;color:inherit;border:1px solid var(--nl,var(--line));
+  background:var(--nb,var(--panel));border-radius:10px;padding:10px 12px;position:relative;
+  transition:transform .12s ease, box-shadow .12s ease}
+.node.keep{--nb:var(--keep-bg);--nl:var(--keep-ln)}
+.node.rev{--nb:var(--rev-bg);--nl:var(--rev-ln)}
+.node.new{--nb:var(--new-bg);--nl:var(--new-ln)}
+.node.idea{--nb:var(--panel);--nl:var(--line-2);border-style:dashed;border-width:1.5px}
+a.node:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(37,37,37,.10)}
+.node .nt{display:flex;align-items:center;gap:8px;font-size:13.6px;font-weight:700;line-height:1.3;flex-wrap:wrap}
+.node .tag{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;
+  padding:2px 6px;border-radius:5px;flex:0 0 auto}
+.tag.keep{color:var(--keep);background:color-mix(in srgb,var(--keep) 15%,transparent)}
+.tag.rev{color:var(--rev);background:color-mix(in srgb,var(--rev) 16%,transparent)}
+.tag.new{color:var(--accent-ink);background:var(--accent)}
+.tag.idea{color:var(--ink-soft);background:transparent;border:1.5px solid var(--line-2)}
+.node .nu{font-size:11.5px;color:var(--grey);margin-top:3px;word-break:break-all;font-variant-numeric:tabular-nums}
+.node .nd{font-size:12px;color:var(--ink-soft);margin-top:4px}
+.vol{display:inline-block;font-size:10.5px;font-weight:800;color:var(--accent-ink);
+  background:var(--accent);padding:1px 7px;border-radius:20px;margin-top:6px;letter-spacing:.2px}
+.pos{display:inline-block;font-size:10.5px;font-weight:800;color:var(--ink-soft);
+  background:color-mix(in srgb,var(--grey) 16%,transparent);padding:1px 7px;border-radius:20px;margin-top:6px;margin-left:5px;letter-spacing:.2px}
+.sub{margin-left:14px;border-left:2px dashed var(--line-2);padding-left:10px;display:flex;flex-direction:column;gap:7px}
+
+/* ---------- keyword tables ---------- */
+.kwgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;align-items:start}
+.kwcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 20px 20px;
+  box-shadow:0 1px 0 var(--line-2)}
+.kwcard h3{font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.kwcard h3.miss{color:var(--dead)} .kwcard h3.opp{color:var(--rev)}
+.kwcard .ch{font-size:12.5px;color:var(--ink-soft);margin-bottom:14px}
+.krow{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.krow:first-of-type{border-top:none}
+.krow .kw{font-size:13.5px;font-weight:600;flex:1;min-width:0}
+.krow .kw small{display:block;font-weight:400;color:var(--grey);font-size:11px;margin-top:1px}
+.krow .val{font-family:"Anton",sans-serif;font-size:17px;letter-spacing:.4px;font-variant-numeric:tabular-nums;flex:0 0 auto}
+.krow .val.v{color:var(--accent-ink)}
+.badge{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;
+  padding:2px 7px;border-radius:20px;flex:0 0 auto}
+.badge.ok{color:var(--keep);background:var(--keep-bg);border:1px solid var(--keep-ln)}
+.badge.warn{color:var(--dead);background:var(--dead-bg);border:1px solid var(--dead-ln)}
+
+/* ---------- why callout ---------- */
+.why{background:var(--rev-bg);border:1px solid var(--rev-ln);border-left:5px solid var(--rev);
+  border-radius:14px;padding:18px 22px;margin:6px 0 30px}
+.why h3{font-family:"Anton",sans-serif;font-weight:400;font-size:18px;letter-spacing:.3px;color:var(--rev);margin-bottom:8px}
+.why p{font-size:13.5px;color:var(--ink-soft);max-width:82ch}
+.why ul{list-style:none;margin:12px 0 10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:9px}
+.why li{font-size:13px;color:var(--ink-soft);display:flex;gap:9px;align-items:baseline;
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.why li::before{content:counter(w);counter-increment:w;font-family:"Anton",sans-serif;font-size:13px;
+  color:var(--accent-ink);background:var(--accent);width:22px;height:22px;border-radius:6px;
+  display:grid;place-items:center;flex:0 0 auto}
+.why ul{counter-reset:w}
+.why li b{color:var(--ink)}
+.why .fix{font-size:13.5px;color:var(--ink);font-weight:600;margin-top:4px}
+
+/* ---------- tier / slug ---------- */
+.tierhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.tierhead .tno{font-family:"Anton",sans-serif;font-size:13px;color:var(--accent-ink);background:var(--accent);
+  padding:2px 9px 3px;border-radius:6px}
+.kwcard .act{font-size:12px;color:var(--ink-soft);margin-top:12px;padding-top:11px;border-top:1px dashed var(--line-2)}
+.kwcard .act b{color:var(--ink)}
+.slug{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;
+  background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--accent-ink);
+  padding:1px 6px;border-radius:5px;white-space:nowrap}
+
+/* ---------- altlast ---------- */
+.alert{background:var(--dead-bg);border:1px solid var(--dead-ln);
+  border-left:5px solid var(--dead);border-radius:14px;padding:16px 20px;margin-top:22px}
+.alert h3{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--dead);margin-bottom:8px;
+  display:flex;align-items:center;gap:8px}
+.alert p{font-size:13.5px;color:var(--ink-soft);max-width:80ch}
+.alert code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;
+  background:color-mix(in srgb,var(--dead) 12%,transparent);color:var(--dead);padding:1px 6px;border-radius:5px}
+.alert ul{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:5px}
+.alert li{font-size:13px;display:flex;gap:8px;align-items:baseline}
+.alert li::before{content:"\2192";color:var(--dead);font-weight:800}
+
+.foot{margin-top:34px;padding-top:18px;border-top:2px solid var(--line);
+  font-size:12.5px;color:var(--grey);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:520px){
+  .top{align-items:flex-start} .top .meta{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.bh .fb-btns{display:inline-flex;gap:5px;margin-left:8px}
+.fb-ok,.fb-cm{font-family:"DM Sans",sans-serif;font-size:10px;font-weight:800;letter-spacing:.2px;
+  border:1px solid var(--line-2);background:var(--ground);color:var(--grey);border-radius:6px;padding:3px 7px;cursor:pointer;white-space:nowrap}
+.fb-ok:hover{border-color:var(--keep);color:var(--keep)}
+.fb-cm:hover{border-color:var(--rev);color:var(--rev)}
+.fb-ok.done{background:var(--keep-bg);border-color:var(--keep-ln);color:var(--keep)}
+.fb-cm.done{background:var(--rev-bg);border-color:var(--rev-ln);color:var(--rev)}
+.fb-box{display:none;padding:0 12px 10px}
+.fb-box textarea{width:100%;min-height:60px;border:1px solid var(--line-2);border-radius:8px;padding:8px 10px;
+  font-family:"DM Sans",sans-serif;font-size:13px;background:var(--ground);color:var(--ink);resize:vertical}
+.fb-box .send{margin-top:6px;font-weight:800;font-size:12px;background:var(--ink);color:#fff;border:none;border-radius:8px;padding:7px 14px;cursor:pointer}
+.fb-bar{margin:22px 0 8px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.fb-bar .hint{font-size:13.5px;color:var(--ink-soft);max-width:80ch}
+.fb-bar .hint b{color:var(--ink)}
+.fb-bar .big{align-self:flex-start;font-family:"DM Sans",sans-serif;font-weight:800;font-size:14px;background:var(--keep);color:#fff;border:none;border-radius:10px;padding:11px 22px;cursor:pointer}
+.fb-bar .big:disabled{opacity:.6;cursor:default}
+.fb-toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:11px 20px;border-radius:10px;font-size:13.5px;font-weight:700;opacity:0;pointer-events:none;transition:.25s;z-index:50}
+.fb-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+.draft{margin-top:8px;border:1px dashed var(--line-2);border-radius:10px;background:color-mix(in srgb,var(--accent) 5%,var(--panel))}
+.draft>summary{cursor:pointer;list-style:none;padding:9px 12px;font-size:12.5px;font-weight:800;color:var(--accent-ink);display:flex;align-items:center;gap:7px}
+.draft>summary::-webkit-details-marker{display:none}
+.draft>summary::before{content:"\25B8";color:var(--accent-ink);font-weight:800}
+.draft[open]>summary::before{content:"\25BE"}
+.draftbody{padding:2px 13px 13px;font-size:13px;line-height:1.55}
+.draftbody h4{font-size:12px;font-weight:800;margin:12px 0 3px;color:var(--ink);text-transform:uppercase;letter-spacing:.4px}
+.draftbody p{margin:5px 0;color:var(--ink-soft)}
+.draftbody .say{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 11px;margin:6px 0;color:var(--ink)}
+.draftbody .meta{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;white-space:pre-wrap;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:9px 11px;margin:6px 0;color:var(--ink)}
+.draftbody .fq{border-top:1px solid var(--line);padding:6px 0}.draftbody .fq:first-of-type{border-top:none}
+.draftbody .warn{color:var(--rev)}
+.brand .logo{height:40px;width:auto;display:block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand .logo{filter:invert(1)}}
+:root[data-theme="dark"] .brand .logo{filter:invert(1)}
+.backlink{display:inline-block;margin:0 0 14px;font-size:12.5px;font-weight:800;text-decoration:none;color:#5a4600;background:rgba(250,193,24,.18);padding:7px 13px;border-radius:20px}
+.backlink:hover{background:rgba(250,193,24,.32)}
+</style>
+</head><body>
+
+<div class="wrap">
+  <a class="backlink" href="https://clients.741.studio/" target="_top">← Zurück zum Dashboard</a>
+  <header class="top">
+    <div class="brand">
+      <img class="logo" src="data:image/png;base64,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" alt="741 Studio">
+      <span class="sub">Local-SEO-<br>Programm</span>
+    </div>
+    <div class="meta">
+      ShuiGuru · Berlin + bundesweit<br>
+      shuiguru.de · Stand 04.09.2026
+    </div>
+  </header>
+
+  <h1>Website-Struktur <em>ShuiGuru</em></h1>
+  <p class="lead">Der komplette Seitenbaum auf einen Blick &mdash; <b>alle Bestandsseiten</b>, <b>welche neuen Text bekommen</b> und <b>welche neu dazukommen</b>. Gebaut entlang deiner Säulen <b>Büro &middot; Garten &amp; Höfe &middot; Hausbau-Plancheck</b> (+ Schule als Herzens-Thema) und verzahnt mit dem 90-Tage-Programm. Farbe zeigt den Status, das gelbe Kürzel die geprüfte Google-Nachfrage. <b>Gestrichelte Karten sind unsere Ideen aus der Datenanalyse &mdash; noch nicht von dir bestätigt; die stimmen wir erst mit dir ab.</b> Deine Website wird erst nach deiner Freigabe angefasst.</p>
+
+  <section class="kpis">
+    <div class="kpi k-keep"><div class="l">Bleibt</div><div class="n">6</div><div class="d">Bestand, unverändert</div></div>
+    <div class="kpi k-rev"><div class="l">Überarbeiten</div><div class="n">6</div><div class="d">URL bleibt, Text neu</div></div>
+    <div class="kpi k-new"><div class="l">Neu</div><div class="n">4</div><div class="d">aus deinen Inhalten · +2 Vorschläge</div></div>
+    <div class="kpi k-dead"><div class="l">Kern-Sichtbarkeit</div><div class="n">0</div><div class="d">Kern-Themen nicht in Top&nbsp;100</div></div>
+  </section>
+
+  <div class="legend">
+    <span class="li"><span class="dot keep"></span> Bleibt wie es ist</span>
+    <span class="li"><span class="dot rev"></span> Überarbeiten &mdash; URL bleibt, Text neu</span>
+    <span class="li"><span class="dot new"></span> Neu bauen (aus deinen Inhalten/Leistungen)</span>
+    <span class="li"><span class="dot idea"></span> Vorschlag &mdash; unsere Idee, mit dir abstimmen</span>
+    <span class="li"><span class="vol" style="margin:0">720/Mo</span> geprüftes Suchvolumen</span>
+    <span class="li"><span class="pos" style="margin:0">Maps&nbsp;#2</span> Position auf Google&nbsp;Maps</span>
+  </div>
+
+  <div class="why">
+    <h3>Warum steht die Kern-Sichtbarkeit auf 0?</h3>
+    <p>In Google Maps bist du schon stark (Hausbau Platz&nbsp;2, Garten Platz&nbsp;3). In der normalen Google-Suche rankt shuiguru.de dagegen <b>für kein einziges Keyword in den Top&nbsp;100</b> (geprüfte Google-Daten, 04.09.2026) &mdash; aus vier Gründen:</p>
+    <ul>
+      <li><span><b>Die Seiten sind zu dünn.</b> Startseite 147 Wörter, Arbeitswelt 214, Plancheck 290 &mdash; die Top-Wettbewerber liegen bei ~1.500 Wörtern. Google hat schlicht zu wenig Text zu ranken.</span></li>
+      <li><span><b>Kein Suchbegriff in Titeln &amp; Überschriften.</b> &bdquo;Frieden unterm Dach&ldquo;, &bdquo;Endlich läuft&rsquo;s&ldquo;, &bdquo;Grundrisse sind eine Offenbarung&ldquo; sind schöne Botschaften &mdash; aber niemand sucht danach. Dazu 2&times;H1 auf Start + Arbeitswelt, gar keine H1 auf Höfe + Philosophie.</span></li>
+      <li><span><b>Über-mich fehlt praktisch.</b> Deine Bio-Seite hat 22 Wörter, kein Foto-/Person-Schema &mdash; Google (und KI-Suchen) können deine Expertise nicht belegen (Modul&nbsp;6).</span></li>
+      <li><span><b>Junge Autorität.</b> 23 verlinkende Domains (Wettbewerber: 48&ndash;202), 0 Google-Bewertungen (Wettbewerber: 10&ndash;36), Domain erst seit Mai 2026 im Link-Index (Modul&nbsp;7).</span></li>
+    </ul>
+    <p class="fix">→ Genau das dreht das Programm: fokussierte Säulen-Seiten (Modul&nbsp;8), deine Über-mich-Seite (Modul&nbsp;6), Verzeichnisse + Partner-Links (Modul&nbsp;7) und die Bewertungs-Engine.</p>
+  </div>
+
+  <div class="prog">
+    <div class="pcard"><span class="ph">Tag 1–30</span><h4>Fundament</h4><p>Google-Profil komplett, Bewertungs-Engine (0&nbsp;→&nbsp;10+), technisches SEO, Startseite + Säulen-Struktur schärfen.</p></div>
+    <div class="pcard"><span class="ph">Tag 31–60</span><h4>Vertrauens-Motor</h4><p>Verzeichnisse/Citations, konvertierende Leistungsseiten (Modul&nbsp;5), <b>Über-mich-Seite&nbsp;+&nbsp;E-E-A-T</b> (Modul&nbsp;6), Verbands-Eintrag + PR.</p></div>
+    <div class="pcard"><span class="ph">Tag 61–90</span><h4>Autoritäts-Multiplikator</h4><p>Themen-Autorität Hub&nbsp;&amp;&nbsp;Spoke (Modul&nbsp;8), Nutzersignale, Online-Angebote &amp; Conversion (Modul&nbsp;10).</p></div>
+  </div>
+
+  <div class="tree">
+
+<div class="branch pillar"><div class="bh"><span class="idx">1</span><h2>Startseite</h2><span class="bc">Pillar</span></div><div class="bmod">Modul&nbsp;2 · <b>Positionierung + AEO</b></div><div class="nodes"><a class="node rev" href="https://shuiguru.de/" rel="noopener"><div class="nt">Startseite <span class="tag rev">Überarbeiten</span></div><div class="nu">shuiguru.de/</div><div class="nd">Neuer Mastertext (147 → ~1.600 Wörter; Wettbewerber-Median 1.510). Fokus: Feng-Shui-Beratung für Büro, Garten &amp; Hausbau — Berlin + bundesweit. Nur noch EINE H1.</div><span class="vol">feng shui berater 320/Mo</span><span class="pos">Maps&nbsp;#4</span></a><a class="node" style="border-style:dashed;background:color-mix(in srgb,var(--accent) 7%,var(--panel));display:block" href="https://clients.741.studio/r/5f46411185b2/maria-text-startseite.html?v=20260904"><div class="nt" style="color:var(--accent-ink)">📄 Fertigen Startseiten-Text öffnen &amp; freigeben →</div><div class="nd">Vollständiger Text auf eigener, lesbarer Seite — mit ✓ Passt / Kommentar.</div></a></div></div>
+<div class="branch pillar"><div class="bh"><span class="idx">2</span><h2>Säule&nbsp;1 · Büro &amp; Arbeitswelt</h2><span class="bc">1 überarb. · 1 Vorschlag</span></div><div class="bmod">Modul&nbsp;8 · <b>Hub&nbsp;&amp;&nbsp;Spoke</b> · Maps-Messung: Markt ist frei (kein Anbieter über 2&nbsp;%)</div><div class="nodes"><a class="node rev" href="https://shuiguru.de/feng-shui-in-der-arbeitswelt/" rel="noopener"><div class="nt">Feng Shui in der Arbeitswelt <span class="tag rev">Überarbeiten</span></div><div class="nu">/feng-shui-in-der-arbeitswelt/</div><div class="nd">Auf &bdquo;feng shui büro&ldquo; ausrichten: Titel + H1 neu (heute 2&times;H1, 214 Wörter), Handwerk/Praxis/Büro-Inhalte behalten, Online-Beratung sichtbar machen.</div><span class="vol">feng shui büro 320/Mo</span></a><a class="node idea" style="border-style:dashed" href="https://shuiguru.de/feng-shui-in-der-arbeitswelt/" rel="noopener"><div class="nt">Ratgeber Arbeitszimmer &amp; Homeoffice <span class="tag idea">Vorschlag</span></div><div class="nu">/feng-shui-arbeitszimmer/</div><div class="nd">Unsere Idee aus der Datenanalyse (Homeoffice-Suchen: &bdquo;arbeitsplatz im wohnzimmer&ldquo; u.&nbsp;a.) — nur wenn das Thema zu deinem Angebot passt.</div><span class="vol">arbeitszimmer 170/Mo</span></a><a class="node" style="border-style:dashed;background:color-mix(in srgb,var(--accent) 7%,var(--panel));display:block" href="https://clients.741.studio/r/5f46411185b2/maria-text-buero-2026-09.html?v=20260913"><div class="nt" style="color:var(--accent-ink)">📄 Fertigen Büro-Text öffnen &amp; freigeben →</div><div class="nd">Vollständiger Text auf eigener, lesbarer Seite — mit ✓ Passt / Kommentar.</div></a><a class="node" style="border-style:dashed;background:color-mix(in srgb,var(--accent) 7%,var(--panel));display:block" href="https://clients.741.studio/r/5f46411185b2/maria-text-arbeitszimmer-2026-09.html?v=20260923"><div class="nt" style="color:var(--accent-ink)">📄 Fertigen Homeoffice-Text öffnen &amp; freigeben →</div><div class="nd">Vollständiger Text auf eigener, lesbarer Seite — mit ✓ Passt / Kommentar.</div></a></div></div>
+<div class="branch pillar"><div class="bh"><span class="idx">3</span><h2>Säule&nbsp;2 · Höfe &amp; Garten</h2><span class="bc">1 überarb. · 1 neu</span></div><div class="bmod">Modul&nbsp;8 · <b>Hub&nbsp;&amp;&nbsp;Spoke</b> · Maps: du bist #3 (36,7&nbsp;%)</div><div class="nodes"><a class="node rev" href="https://shuiguru.de/hoefe-und-hofgemeinschaften/" rel="noopener"><div class="nt">Höfe &amp; Hofgemeinschaften <span class="tag rev">Überarbeiten</span></div><div class="nu">/hoefe-und-hofgemeinschaften/</div><div class="nd">H1 fehlt komplett — setzen. Bauernhöfe/Pferdeställe/Gemeinschaften bleiben der Kern; Garten-Begriffe ergänzen.</div><span class="vol">feng shui garten 720/Mo</span><span class="pos">Maps&nbsp;#3</span></a><a class="node new" href="https://shuiguru.de/hoefe-und-hofgemeinschaften/" rel="noopener"><div class="nt">Feng Shui im Garten <span class="tag new">Neu</span></div><div class="nu">/feng-shui-garten/</div><div class="nd">Spoke aus deinem Außen-Thema: anlegen · Pflanzen · Eingang · Vorgarten — mit Beispielen (Leute suchen &bdquo;beispiele&ldquo; + &bdquo;bilder&ldquo;).</div><span class="vol">garten 720 + gartengestaltung 30</span></a><a class="node" style="border-style:dashed;background:color-mix(in srgb,var(--accent) 7%,var(--panel));display:block" href="https://clients.741.studio/r/5f46411185b2/maria-text-hoefe-2026-09.html?v=20260913"><div class="nt" style="color:var(--accent-ink)">📄 Fertigen Höfe-Text öffnen &amp; freigeben →</div><div class="nd">Vollständiger Text auf eigener, lesbarer Seite — mit ✓ Passt / Kommentar.</div></a><a class="node" style="border-style:dashed;background:color-mix(in srgb,var(--accent) 7%,var(--panel));display:block" href="https://clients.741.studio/r/5f46411185b2/maria-text-garten-2026-09.html?v=20260913"><div class="nt" style="color:var(--accent-ink)">📄 Fertigen Garten-Text öffnen &amp; freigeben →</div><div class="nd">Vollständiger Text auf eigener, lesbarer Seite — mit ✓ Passt / Kommentar.</div></a><a class="node" style="border-style:dashed;background:color-mix(in srgb,var(--accent) 7%,var(--panel));display:block" href="https://clients.741.studio/r/5f46411185b2/maria-faq-fragen-2026-10.html?v=20261008"><div class="nt" style="color:var(--accent-ink)">❓ 6 Google-Fragen beantworten (Garten, Hausbau, Büro, Über mich) →</div><div class="nd">Echte „Nutzer fragen auch“-Fragen aus der Google-Suche – mit Formulierungsvorschlag, bitte in deinen Worten.</div></a></div></div>
+<div class="branch pillar"><div class="bh"><span class="idx">4</span><h2>Säule&nbsp;3 · Hausbau &amp; Plancheck</h2><span class="bc">1 überarb. · 1 neu</span></div><div class="bmod">Modul&nbsp;8 · <b>Hub&nbsp;&amp;&nbsp;Spoke</b> · Maps: du bist #2 (65,3&nbsp;%) — fast gewonnen</div><div class="nodes"><a class="node rev" href="https://shuiguru.de/plancheck-vor-baubeginn/" rel="noopener"><div class="nt">Plancheck vor Baubeginn <span class="tag rev">Überarbeiten</span></div><div class="nu">/plancheck-vor-baubeginn/</div><div class="nd">Titel auf &bdquo;Feng Shui im Hausbau — Plancheck vor Baubeginn&ldquo;. Dein Text nennt Kauf UND Bau — den Haus-Kauf-Check explizit machen.</div><span class="vol">hausbau 260 + haus 260/Mo</span><span class="pos">Maps&nbsp;#2</span></a><a class="node new" href="https://shuiguru.de/plancheck-vor-baubeginn/" rel="noopener"><div class="nt">Grundriss-Analyse mit Beispielen <span class="tag new">Neu</span></div><div class="nu">/feng-shui-grundriss/</div><div class="nd">Spoke aus deinem Bestandsthema Grundrissanalyse (Arbeitswelt + Plancheck): Beispiele, Bagua, typische Schwachstellen.</div><span class="vol">grundriss beispiele 110/Mo</span></a><a class="node" style="border-style:dashed;background:color-mix(in srgb,var(--accent) 7%,var(--panel));display:block" href="https://clients.741.studio/r/5f46411185b2/maria-text-plancheck-2026-09.html?v=20260913"><div class="nt" style="color:var(--accent-ink)">📄 Fertigen Plancheck-Text öffnen &amp; freigeben →</div><div class="nd">Vollständiger Text auf eigener, lesbarer Seite — mit ✓ Passt / Kommentar.</div></a><a class="node" style="border-style:dashed;background:color-mix(in srgb,var(--accent) 7%,var(--panel));display:block" href="https://clients.741.studio/r/5f46411185b2/maria-text-grundriss-2026-09.html?v=20260913"><div class="nt" style="color:var(--accent-ink)">📄 Fertigen Grundriss-Text öffnen &amp; freigeben →</div><div class="nd">Vollständiger Text auf eigener, lesbarer Seite — mit ✓ Passt / Kommentar.</div></a></div></div>
+<div class="branch pillar"><div class="bh"><span class="idx">5</span><h2>Schule &amp; Institutionen</h2><span class="bc">Herzens-Thema · 1 bleibt</span></div><div class="bmod"><b>Mission, kein SEO-Ziel</b> (Suchvolumen ~0) · Kanal: Direktansprache + Referenzen</div><div class="nodes"><a class="node keep" href="https://shuiguru.de/feng-shui-in-schule-und-institutionen/" rel="noopener"><div class="nt">Das glückliche Klassenzimmer <span class="tag keep">Bleibt</span></div><div class="nu">/feng-shui-in-schule-und-institutionen/</div><div class="nd">Dein bester Bestandstext (409 Wörter, saubere H1) — bleibt. Feinschliff: Fallstudien verlinken; trägt Marke &amp; Story, öffnet Türen bei Trägern.</div></a><a class="node" style="border-style:dashed;background:color-mix(in srgb,var(--accent) 7%,var(--panel));display:block" href="https://clients.741.studio/r/5f46411185b2/maria-text-schule-2026-09.html?v=20260914"><div class="nt" style="color:var(--accent-ink)">📄 Fertigen Schule-Text öffnen &amp; freigeben →</div><div class="nd">Vollständiger Text auf eigener, lesbarer Seite — mit ✓ Passt / Kommentar.</div></a></div></div>
+<div class="branch pillar"><div class="bh"><span class="idx">6</span><h2>Über mich &amp; Philosophie</h2><span class="bc">2 überarb.</span></div><div class="bmod">Modul&nbsp;6 · <b>E-E-A-T</b> — Google &amp; KI-Suchen brauchen die Person hinter ShuiGuru</div><div class="nodes"><a class="node rev" href="https://shuiguru.de/hi/" rel="noopener"><div class="nt">Über mich — Maria Brasse <span class="tag rev">Überarbeiten</span></div><div class="nu">/hi/</div><div class="nd">Heute 22 Wörter! Neu: Werdegang, Ausbildung <span class="slug">[von dir bestätigen]</span>, Foto, Person-Schema. Die meistzitierte KI-Quelle deiner Wettbewerber sind genau solche Seiten.</div></a><a class="node rev" href="https://shuiguru.de/meine-philosophie/" rel="noopener"><div class="nt">Meine Philosophie <span class="tag rev">Überarbeiten</span></div><div class="nu">/meine-philosophie/</div><div class="nd">Titel-Tippfehler fixen (&bdquo;Freiden … rbeiten&ldquo;), H1 setzen. Schamanisches Feng Shui + deine Methoden verständlich erklären — das ist deine Differenzierung.</div></a><a class="node" style="border-style:dashed;background:color-mix(in srgb,var(--accent) 7%,var(--panel));display:block" href="https://clients.741.studio/r/5f46411185b2/maria-text-hi-2026-09.html?v=20260913"><div class="nt" style="color:var(--accent-ink)">📄 Fertigen Über-mich-Text öffnen &amp; freigeben →</div><div class="nd">Vollständiger Text auf eigener, lesbarer Seite — mit ✓ Passt / Kommentar.</div></a><a class="node" style="border-style:dashed;background:color-mix(in srgb,var(--accent) 7%,var(--panel));display:block" href="https://clients.741.studio/r/5f46411185b2/maria-text-philosophie-2026-09.html?v=20260913"><div class="nt" style="color:var(--accent-ink)">📄 Fertigen Philosophie-Text öffnen &amp; freigeben →</div><div class="nd">Vollständiger Text auf eigener, lesbarer Seite — mit ✓ Passt / Kommentar.</div></a></div></div>
+<div class="branch pillar"><div class="bh"><span class="idx">7</span><h2>Online-Beratung &amp; Kosten</h2><span class="bc">2 neu · 1 Vorschlag</span></div><div class="bmod">Modul&nbsp;10 · <b>Conversion</b> · Online-Beratung steht schon auf Arbeitswelt- + Kontakt-Seite (Bestand!)</div><div class="nodes"><a class="node new" href="https://shuiguru.de/kaeffchen/" rel="noopener"><div class="nt">Online-Beratung &amp; Fern-Plancheck <span class="tag new">Neu</span></div><div class="nu">/online-beratung/</div><div class="nd">Du bietest Online-Beratung bereits an — sie hat nur keine eigene Seite. Neu: Ablauf (Fotos/Videos/Grundrisse einsenden), bundesweit + D-A-CH.</div><span class="vol">beratung online 10/Mo</span></a><a class="node new" href="https://shuiguru.de/kaeffchen/" rel="noopener"><div class="nt">Kosten &amp; Ablauf <span class="tag new">Neu</span></div><div class="nu">/kosten/</div><div class="nd">Meistgesuchte Frage (&bdquo;Was kostet…&ldquo;). Dein Modell steht auf der Kontakt-Seite: Vorgespräch → individueller Preisvorschlag. Genau das transparent erklären — ohne Zahlen zu erfinden.</div><span class="vol">beratung kosten 30/Mo</span></a><a class="node" style="border-style:dashed;background:color-mix(in srgb,var(--accent) 7%,var(--panel));display:block" href="https://clients.741.studio/r/5f46411185b2/maria-text-onlineberatung-2026-09.html?v=20260913"><div class="nt" style="color:var(--accent-ink)">📄 Fertigen Online-Beratung-Text öffnen &amp; freigeben →</div><div class="nd">Vollständiger Text auf eigener, lesbarer Seite — mit ✓ Passt / Kommentar.</div></a><a class="node" style="border-style:dashed;background:color-mix(in srgb,var(--accent) 7%,var(--panel));display:block" href="https://clients.741.studio/r/5f46411185b2/maria-text-kosten-2026-09.html?v=20260913"><div class="nt" style="color:var(--accent-ink)">📄 Fertigen Kosten-Text öffnen &amp; freigeben →</div><div class="nd">Vollständiger Text auf eigener, lesbarer Seite — mit ✓ Passt / Kommentar.</div></a><a class="node idea" style="border-style:dashed" href="https://shuiguru.de/" rel="noopener"><div class="nt">Stadt-Seiten (München · Hamburg · Köln) <span class="tag idea">Vorschlag</span></div><div class="nu">/feng-shui-[stadt]/</div><div class="nd">Nur falls du dort wirklich vor Ort arbeitest (Volumen klein: 10–50/Mo). Sonst deckt die Online-Beratungs-Seite das ab. Mit dir abstimmen.</div><span class="vol">münchen 50 · hamburg 20</span></a></div></div>
+<div class="branch pillar"><div class="bh"><span class="idx">8</span><h2>Erfolge (Blog)</h2><span class="bc">2 bleiben</span></div><div class="bmod"><b>Nutzersignale + Vertrauen</b> — echte Fallstudien sind dein stärkstes Beweismaterial</div><div class="nodes"><a class="node keep" href="https://shuiguru.de/blog/" rel="noopener"><div class="nt">Erfolge — Übersicht <span class="tag keep">Bleibt</span></div><div class="nu">/blog/</div><div class="nd">Bleibt. Feinschliff: H1 setzen, als &bdquo;Erfolge&ldquo; führen.</div></a><a class="node keep" href="https://shuiguru.de/blog/" rel="noopener"><div class="nt">5 Fallstudien <span class="tag keep">Bleibt</span></div><div class="nu">Eifel · Berlin · Brandenburg ×2 · Frauenarzt-Praxis</div><div class="nd">Starkes Material (380–670 Wörter je Story, mit Ort!). Feinschliff: je Story 2 Sätze Intro mit Leistung + Ergebnis; aus Startseite verlinken.</div></a></div></div>
+<div class="branch pillar"><div class="bh"><span class="idx">9</span><h2>Kontakt &amp; Pflicht</h2><span class="bc">3 bleiben</span></div><div class="bmod">Basis</div><div class="nodes"><a class="node keep" href="https://shuiguru.de/kaeffchen/" rel="noopener"><div class="nt">Käffchen? (Kontakt) <span class="tag keep">Bleibt</span></div><div class="nu">/kaeffchen/</div><div class="nd">Charmanter Slug — bleibt. Feinschliff: Telefon + E-Mail prominent, Formular-Check.</div></a><a class="node keep" href="https://shuiguru.de/impressum/" rel="noopener"><div class="nt">Impressum <span class="tag keep">Bleibt</span></div><div class="nu">/impressum/</div><div class="nd">Bleibt — NAP hier ist sauber (Warthestr.&nbsp;29, 12051 Berlin).</div></a><a class="node keep" href="https://shuiguru.de/datenschutz/" rel="noopener"><div class="nt">Datenschutz <span class="tag keep">Bleibt</span></div><div class="nu">/datenschutz/</div><div class="nd">Bleibt.</div></a></div></div>
+</div>
+
+  <h2 class="sect">Schlüsselwörter &amp; Recherche</h2>
+  <p class="sect-lead">Grundlage: geprüfte Google-Daten (Rankings + Suchvolumen, Region Deutschland), Abfragen 31.08.–04.09.2026. Search-Console-Daten folgen, sobald der Website-Zugang da ist. Kurz gesagt: In Google <b>Maps</b> bist du bei deinen Nischen schon vorn — in der normalen <b>Google-Suche</b> rankt die Website noch gar nicht. Genau diese Lücke füllt der Seitenbaum oben.</p>
+
+  <div class="kwgrid">
+    <div class="kwcard">
+      <h3 class="miss">Wofür du heute gefunden wirst</h3>
+      <p class="ch">Google-Suche: kein Keyword in den Top&nbsp;100. Google Maps: schon stark — dein Fundament.</p>
+      <div class="krow"><div class="kw">feng shui hausbau<small>Google Maps, 5-km-Messung Berlin</small></div><span class="badge ok">Maps&nbsp;#2</span><div class="val v">65,3&nbsp;%</div></div>
+      <div class="krow"><div class="kw">feng shui garten<small>Google Maps</small></div><span class="badge ok">Maps&nbsp;#3</span><div class="val v">36,7&nbsp;%</div></div>
+      <div class="krow"><div class="kw">feng shui beratung berlin<small>Google Maps</small></div><span class="badge ok">Maps&nbsp;#4</span><div class="val v">25,9&nbsp;%</div></div>
+      <div class="krow"><div class="kw">feng shui büro<small>Google Maps — Markt ist leer</small></div><span class="badge warn">offen</span><div class="val v">—</div></div>
+      <div class="krow"><div class="kw">Büro · Garten · Hausbau · Beratung<small>normale Google-Suche (Website)</small></div><span class="badge warn">nicht in Top&nbsp;100</span></div>
+    </div>
+
+    <div class="kwcard">
+      <h3 class="opp">Größte Chancen nach Suchvolumen</h3>
+      <p class="ch">Geprüfte Nachfrage, kaum Wettbewerb — die Seiten oben.</p>
+      <div class="krow"><div class="kw">feng shui garten</div><div class="val">720</div></div>
+      <div class="krow"><div class="kw">feng shui berater</div><div class="val">320</div></div>
+      <div class="krow"><div class="kw">feng shui büro</div><div class="val">320</div></div>
+      <div class="krow"><div class="kw">feng shui beratung</div><div class="val">260</div></div>
+      <div class="krow"><div class="kw">feng shui hausbau</div><div class="val">260</div></div>
+      <div class="krow"><div class="kw">feng shui haus</div><div class="val">260</div></div>
+      <div class="krow"><div class="kw">feng shui arbeitszimmer<small>Vorschlag-Seite</small></div><div class="val">170</div></div>
+      <div class="krow"><div class="kw">feng shui grundriss beispiele</div><div class="val">110</div></div>
+      <div class="krow"><div class="kw">feng shui beratung kosten</div><div class="val">30</div></div>
+    </div>
+  </div>
+
+
+  <h2 class="sect">Einzugsgebiet &amp; lokale Slugs</h2>
+  <p class="sect-lead">Dein Modell ist besonders: <b>Berlin vor Ort + Deutschland per Online-Beratung</b>. Die Berlin-Suchen sind klein, aber kaufbereit — die holen wir über dein Google-Profil. Die große Nachfrage (Garten, Büro, Hausbau) ist bundesweit — die holt die Online-Beratungs-Seite. Eigene Orts-Seiten bauen wir nur, wo echtes Volumen UND echtes Angebot ist. Slug-Muster: <span class="slug">/[thema]/</span> — Kleinschreibung, bestehende URLs bleiben.</p>
+
+  <div class="kwgrid">
+    <div class="kwcard">
+      <div class="tierhead"><h3 class="opp">Kern · Berlin</h3><span class="tno">Stufe 1</span></div>
+      <p class="ch">Klein, aber heiß — läuft über Startseite + Google-Profil. Keine eigenen Bezirks-Seiten nötig.</p>
+      <div class="krow"><div class="kw">feng shui berlin</div><div class="val">40</div></div>
+      <div class="krow"><div class="kw">feng shui beratung berlin</div><span class="badge ok">Maps&nbsp;#4</span><div class="val">20</div></div>
+      <div class="krow"><div class="kw">feng shui berater berlin</div><div class="val">10</div></div>
+      <div class="act"><b>Aktion:</b> Startseite lokal schärfen + Profil-Vollausbau. Fertig.</div>
+    </div>
+
+    <div class="kwcard">
+      <div class="tierhead"><h3 class="opp">Deutschland · Online</h3><span class="tno">Stufe 2</span></div>
+      <p class="ch">Deine echte Reichweite — du berätst nachweislich online (steht auf deiner Website).</p>
+      <div class="krow"><div class="kw">feng shui garten</div><div class="val">720</div></div>
+      <div class="krow"><div class="kw">feng shui büro</div><div class="val">320</div></div>
+      <div class="krow"><div class="kw">feng shui hausbau</div><div class="val">260</div></div>
+      <div class="act"><b>Aktion:</b> Säulen-Seiten + neue Seite <span class="slug">/online-beratung/</span> tragen bundesweit.</div>
+    </div>
+
+    <div class="kwcard">
+      <div class="tierhead"><h3 class="opp">Stadt-Seiten</h3><span class="tno">Stufe 3 · Vorschlag</span></div>
+      <p class="ch">Nur bei echtem Vor-Ort-Angebot — Volumen ist klein.</p>
+      <div class="krow"><div class="kw">feng shui münchen</div><div class="val">50</div></div>
+      <div class="krow"><div class="kw">feng shui beratung münchen</div><div class="val">40</div></div>
+      <div class="krow"><div class="kw">feng shui hamburg</div><div class="val">20</div></div>
+      <div class="krow"><div class="kw">feng shui köln</div><div class="val">20</div></div>
+      <div class="act"><b>Aktion:</b> mit dir abstimmen — sonst deckt die Online-Seite das ab.</div>
+    </div>
+
+    <div class="kwcard">
+      <div class="tierhead"><h3 class="opp">Kieze &amp; Umland</h3><span class="tno">Stufe 4</span></div>
+      <p class="ch">Neukölln, Kreuzberg, Brandenburg &amp; Co.: keine messbaren Suchdaten.</p>
+      <div class="act"><b>Aktion:</b> KEINE eigenen Seiten — nur im Fließtext („… in Neukölln, Kreuzberg und ganz Berlin"), in FAQ und im Google-Profil. Copy-Paste-Ortsseiten wertet Google ab.</div>
+    </div>
+  </div>
+
+
+  <div class="alert">
+    <h3>⚠ Vor neuem Inhalt aufräumen</h3>
+    <p>Keine Dubletten — deine Struktur ist schlank. Aber ein paar <b>technische Altlasten</b> bremsen jede neue Seite. Zuerst fixen, dann Inhalt:</p>
+    <ul>
+      <li>Doppelte H1 auf <code>/</code> und <code>/feng-shui-in-der-arbeitswelt/</code> → je EINE H1</li>
+      <li>Gar keine H1 auf <code>/hoefe-und-hofgemeinschaften/</code> · <code>/meine-philosophie/</code> · <code>/blog/</code> → setzen</li>
+      <li>Titel-Tippfehler auf <code>/meine-philosophie/</code> (&bdquo;Freiden … rbeiten&ldquo;) → korrigieren</li>
+      <li>Kein LocalBusiness-/Person-Schema, og:image fehlt → mit dem Startseiten-Text einbauen</li>
+      <li>Messung fehlt komplett (kein Analytics, keine Search Console) → richten wir ein, sobald dein WordPress-Zugang da ist; Daten fließen dann hier in die Reports</li>
+    </ul>
+  </div>
+
+  <div class="fb-bar">
+    <div class="hint"><b>Deine Freigabe:</b> Geh die Themen-Blöcke durch. Passt ein Block, klick <b>✓&nbsp;Passt</b>. Fehlt etwas oder passt ein Thema nicht, klick <b>💬</b> und schreib es rein. Wenn insgesamt alles passt, drück den grünen Knopf — dann bauen wir es in den nächsten Wochen genau so auf.</div>
+    <button class="big" id="fb-approve-all">✅ Passt für mich — Aufbau freigeben</button>
+  </div>
+
+  <footer class="foot">
+    <span>741 Studio · Local-SEO-Programm · ShuiGuru</span>
+    <span>6 bleibt · 6 überarbeiten · 4 neu · 2 Vorschläge · Stand 04.09.2026</span>
+  </footer>
+</div>
+<div class="fb-toast" id="fb-toast"></div>
+
+<script>
+(function(){
+  var SB='https://galjmtozcgxcwtzkzbpi.supabase.co/rest/v1/report_feedback';
+  var KEY='sb_publishable_hHvVDgtVIsU8E1GhlWB7RA_ZGNKYUln';
+  var CLIENT='444ac77b-747d-4855-89e5-12ac97d2363c';
+  var SLUG='maria-seitenbaum-2026-09';
+  var LS='fb-'+SLUG; var state={}; try{state=JSON.parse(localStorage.getItem(LS)||'{}')}catch(e){}
+  function save(){try{localStorage.setItem(LS,JSON.stringify(state))}catch(e){}}
+  function toast(m){var t=document.getElementById('fb-toast');t.textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2600)}
+  function post(section,verdict,comment,cb){
+    fetch(SB,{method:'POST',headers:{'apikey':KEY,'Authorization':'Bearer '+KEY,'Content-Type':'application/json','Prefer':'return=minimal'},
+      body:JSON.stringify({client_id:CLIENT,report_slug:SLUG,section_key:section,verdict:verdict,comment:comment||null})})
+    .then(function(r){if(r.ok){cb&&cb(true)}else{toast('Senden fehlgeschlagen — bitte nochmal.');cb&&cb(false)}})
+    .catch(function(){toast('Keine Verbindung — bitte nochmal.');cb&&cb(false)});
+  }
+  document.querySelectorAll('.bh').forEach(function(h,i){
+    var h2=h.querySelector('h2'); if(!h2) return;
+    var key=(i+1)+' · '+h2.textContent.trim();
+    var wrap=document.createElement('span'); wrap.className='fb-btns';
+    var ok=document.createElement('button'); ok.className='fb-ok'; ok.textContent='✓ Passt';
+    var cm=document.createElement('button'); cm.className='fb-cm'; cm.textContent='💬';
+    wrap.appendChild(ok); wrap.appendChild(cm); h.appendChild(wrap);
+    var box=document.createElement('div'); box.className='fb-box';
+    box.innerHTML='<textarea placeholder="Was sollen wir bei diesem Thema ändern oder ergänzen?"></textarea><br><button class="send">Kommentar senden</button>';
+    h.insertAdjacentElement('afterend',box);
+    if(state[key]==='ok'){ok.classList.add('done');ok.textContent='✓ Freigegeben'}
+    if(state[key]==='cm'){cm.classList.add('done')}
+    ok.addEventListener('click',function(){ if(ok.classList.contains('done'))return;
+      post(key,'freigegeben',null,function(s){if(s){ok.classList.add('done');ok.textContent='✓ Freigegeben';state[key]='ok';save();toast('Block freigegeben — danke!')}}); });
+    cm.addEventListener('click',function(){box.style.display=box.style.display==='block'?'none':'block';if(box.style.display==='block')box.querySelector('textarea').focus()});
+    box.querySelector('.send').addEventListener('click',function(){
+      var v=box.querySelector('textarea').value.trim(); if(!v){toast('Bitte erst einen Kommentar schreiben.');return}
+      post(key,'aenderung',v,function(s){if(s){box.style.display='none';cm.classList.add('done');state[key]='cm';save();toast('Kommentar gesendet — wir melden uns!')}}); });
+  });
+  var all=document.getElementById('fb-approve-all');
+  if(all){ if(state['GESAMT']==='ok'){all.disabled=true;all.textContent='✅ Freigegeben — danke!'}
+    all.addEventListener('click',function(){ if(all.disabled)return;
+      post('GESAMT','freigegeben','Gesamt-Freigabe Aufbau-Plan',function(s){
+        if(s){all.disabled=true;all.textContent='✅ Freigegeben — danke!';state['GESAMT']='ok';save();toast('Alles freigegeben — wir bauen es auf!')}}); }); }
+})();
+</script>
+</body></html>

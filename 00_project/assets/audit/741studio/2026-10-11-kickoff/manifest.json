@@ -1,0 +1,173 @@
+{
+ "run": "741studio/2026-10-11-kickoff",
+ "evidence": [
+  {
+   "id": "ev_gsc",
+   "file": "evidence/gsc-read-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "google-search-console-api",
+   "collected_at": "2026-10-11T07:30:00+02:00",
+   "note": "Search Console API (service account, URL-prefix property https://741.studio/): 28 and 90 days, queries, pages, countries, devices, sitemaps list (empty).",
+   "request": {
+    "script": "scripts/google_read.mjs"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "4587c44bef47190da78c3d4814268a3d0f2041c2e967eea363c40b5f2f5b79b8",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_ga4",
+   "file": "evidence/ga4-read-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "google-analytics-data-api",
+   "collected_at": "2026-10-11T07:30:00+02:00",
+   "note": "GA4 Data API, property 363739406 (MonsterInsights property): 28 days. The property of the live tag G-FZG9BNPQXK is not readable.",
+   "request": {
+    "script": "scripts/ga4_read.mjs"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "ab72925da69794ce088e012773180bc26b2380aeadb5e6e3d733f2287043f6ad",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_inspect",
+   "file": "evidence/gsc-url-inspection-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "google-search-console-api",
+   "collected_at": "2026-10-11T07:30:00+02:00",
+   "note": "URL Inspection API for 16 sample URLs: 12 indexed, 4 unknown to Google.",
+   "request": {
+    "script": "scripts/inspect_urls.mjs"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "f11dc6b9d617786d751edfa32b882f6ea9865ebf192d93aac957426aa54d84c7",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_site",
+   "file": "evidence/site-check-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "live-site-script",
+   "collected_at": "2026-10-11T07:30:00+02:00",
+   "note": "Live check of 15 URLs on 741.studio (robots meta, H1, schema, tags, canonical).",
+   "request": {
+    "script": "audit-workflow/scripts/site_check.py"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "1f902e8075307b7937e9a43b5bd3f18877fe80f0686c065fb68c3ce280ee6c68",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_gbp",
+   "file": "evidence/gbp-read-2026-10-11.json",
+   "kind": "html_snapshot",
+   "tool": "chrome-gbp-read",
+   "collected_at": "2026-10-11T07:30:00+02:00",
+   "note": "GBP \"741 Studio Marketing\" read in Chrome (741studio18): categories, services, description, hours, areas, reviews, photos, posts, performance.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "0a0586e38b62dc24e7670caed7ef4a5fbe3c6b24120e03a84f97d3c226ad9ee2",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_leads",
+   "file": "evidence/supabase-leads-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "supabase-741-leads",
+   "collected_at": "2026-10-11T07:30:00+02:00",
+   "note": "Lead table counts (no personal data).",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "0f85b497058fc5039b682c71e37a4a14c4967c50cf16bedd436ae11a26cfa766",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_free",
+   "file": "evidence/free-tests-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "google-autocomplete",
+   "collected_at": "2026-10-11T07:30:00+02:00",
+   "note": "Brand autocomplete (5 queries).",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "fb5ca00e2f1c2c5808a20ae16a975d64ad2e898aef29788c783170ac747d630a",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_account",
+   "file": "evidence/falcon-account-studio.json",
+   "kind": "api_json",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T07:30:00+02:00",
+   "note": "Falcon account on 11.10.: 589 usable credits. No scan exists for the 741 Studio profile.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "c49774717ac5c14b9386e42123b038386364902d1d28ffc9f9e28433ddb59ba9",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_ads",
+   "file": "evidence/reused/bali-google-ads-report-2026-08-10.md",
+   "kind": "file",
+   "tool": "internal-doc",
+   "collected_at": "2026-08-10T12:00:00+02:00",
+   "note": "Weekly Ads report 3-9 Aug for the Bali campaign. REUSED. Chrome blocks ads.google.com.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "ecae78e97573fde84304a24ecb24fa8df287422748c9ec7cfd6faa2b17a0ee2a",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_kp",
+   "file": "evidence/reused/bali-keyword-volume-2026-07-29.csv",
+   "kind": "file",
+   "tool": "google-keyword-planner",
+   "collected_at": "2026-07-29T15:34:00+02:00",
+   "note": "Keyword Planner export, location Bali, 29.07.2026. REUSED.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "3bddcdb0a49e8b00157375d9772d6e26ec46d629be1dab0b34dd790878899405",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_kp2",
+   "file": "evidence/reused/bali-keyword-volume-expanded-2026-07-29.csv",
+   "kind": "file",
+   "tool": "google-keyword-planner",
+   "collected_at": "2026-07-29T15:34:00+02:00",
+   "note": "Expanded Keyword Planner export (digital agency bali 500). REUSED.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "b408f100b4df3a3165933eb337a1109ff4416fe4225ef56475e8e64560300d9c",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_drive_summary",
+   "file": "",
+   "kind": "drive_file",
+   "tool": "google-drive",
+   "collected_at": "2026-10-11T10:10:00+02:00",
+   "note": "Doc v2 (strategy: ads first) in folder _Audit-Hilfsdaten (741 Studio). v1 (id 1C4UOM3Q..., Maps view) moved to the Drive trash.",
+   "request": {},
+   "cost_usd": 0,
+   "cost_credits": 0,
+   "sha256": "",
+   "refetch_after": null,
+   "drive_file_id": "1Bq3oIW_cFPJid9Jm7AZWcz2bzQpwHWzFJpQV9SNq_Bw",
+   "drive_url": "https://docs.google.com/document/d/1Bq3oIW_cFPJid9Jm7AZWcz2bzQpwHWzFJpQV9SNq_Bw/edit",
+   "drive_folder_id": "1JMGFtCBMCWG1RQq5lksC4D51VrgncwOF",
+   "drive_folder_url": "https://drive.google.com/drive/folders/1JMGFtCBMCWG1RQq5lksC4D51VrgncwOF"
+  }
+ ]
+}

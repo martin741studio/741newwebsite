@@ -1,0 +1,554 @@
+{
+ "collected_at": "2026-10-11T09:58:09.810Z",
+ "properties": {
+  "properties/363739406": {
+   "totals": {
+    "status": 200,
+    "json": {
+     "metricHeaders": [
+      {
+       "name": "sessions",
+       "type": "TYPE_INTEGER"
+      },
+      {
+       "name": "activeUsers",
+       "type": "TYPE_INTEGER"
+      },
+      {
+       "name": "keyEvents",
+       "type": "TYPE_FLOAT"
+      },
+      {
+       "name": "screenPageViews",
+       "type": "TYPE_INTEGER"
+      }
+     ],
+     "rows": [
+      {
+       "metricValues": [
+        {
+         "value": "197"
+        },
+        {
+         "value": "88"
+        },
+        {
+         "value": "0"
+        },
+        {
+         "value": "472"
+        }
+       ]
+      }
+     ],
+     "rowCount": 1,
+     "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "Europe/Berlin"
+     },
+     "kind": "analyticsData#runReport"
+    }
+   },
+   "channels": {
+    "status": 200,
+    "json": {
+     "dimensionHeaders": [
+      {
+       "name": "sessionDefaultChannelGroup"
+      }
+     ],
+     "metricHeaders": [
+      {
+       "name": "sessions",
+       "type": "TYPE_INTEGER"
+      },
+      {
+       "name": "keyEvents",
+       "type": "TYPE_FLOAT"
+      }
+     ],
+     "rows": [
+      {
+       "dimensionValues": [
+        {
+         "value": "Organic Social"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "106"
+        },
+        {
+         "value": "0"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "Direct"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "81"
+        },
+        {
+         "value": "0"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "Organic Search"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "8"
+        },
+        {
+         "value": "0"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "Referral"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "2"
+        },
+        {
+         "value": "0"
+        }
+       ]
+      }
+     ],
+     "rowCount": 4,
+     "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "Europe/Berlin"
+     },
+     "kind": "analyticsData#runReport"
+    }
+   },
+   "countries": {
+    "status": 200,
+    "json": {
+     "dimensionHeaders": [
+      {
+       "name": "country"
+      }
+     ],
+     "metricHeaders": [
+      {
+       "name": "sessions",
+       "type": "TYPE_INTEGER"
+      }
+     ],
+     "rows": [
+      {
+       "dimensionValues": [
+        {
+         "value": "Indonesia"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "93"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "Germany"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "61"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "Spain"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "7"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "India"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "5"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "Austria"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "4"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "Finland"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "3"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "Switzerland"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "3"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "France"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "2"
+        }
+       ]
+      }
+     ],
+     "rowCount": 25,
+     "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "Europe/Berlin"
+     },
+     "kind": "analyticsData#runReport"
+    }
+   },
+   "events": {
+    "status": 200,
+    "json": {
+     "dimensionHeaders": [
+      {
+       "name": "eventName"
+      }
+     ],
+     "metricHeaders": [
+      {
+       "name": "eventCount",
+       "type": "TYPE_INTEGER"
+      }
+     ],
+     "rows": [
+      {
+       "dimensionValues": [
+        {
+         "value": "page_view"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "472"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "user_engagement"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "362"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "session_start"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "197"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "first_visit"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "77"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "booking_click"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "15"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "generate_lead"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "4"
+        }
+       ]
+      }
+     ],
+     "rowCount": 6,
+     "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "Europe/Berlin"
+     },
+     "kind": "analyticsData#runReport"
+    }
+   },
+   "hosts": {
+    "status": 200,
+    "json": {
+     "dimensionHeaders": [
+      {
+       "name": "hostName"
+      }
+     ],
+     "metricHeaders": [
+      {
+       "name": "sessions",
+       "type": "TYPE_INTEGER"
+      }
+     ],
+     "rows": [
+      {
+       "dimensionValues": [
+        {
+         "value": "741.studio"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "174"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "localhost"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "10"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "blackhillsgoldblog.com"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "3"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "mhelpdesk.com"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "2"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "127.0.0.1"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "1"
+        }
+       ]
+      },
+      {
+       "dimensionValues": [
+        {
+         "value": "balccadd.com"
+        }
+       ],
+       "metricValues": [
+        {
+         "value": "1"
+        }
+       ]
+      }
+     ],
+     "rowCount": 14,
+     "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "Europe/Berlin"
+     },
+     "kind": "analyticsData#runReport"
+    }
+   }
+  },
+  "properties/380342026": {
+   "totals": {
+    "status": 200,
+    "json": {
+     "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "America/Los_Angeles"
+     },
+     "kind": "analyticsData#runReport"
+    }
+   },
+   "channels": {
+    "status": 200,
+    "json": {
+     "dimensionHeaders": [
+      {
+       "name": "sessionDefaultChannelGroup"
+      }
+     ],
+     "metricHeaders": [
+      {
+       "name": "sessions",
+       "type": "TYPE_INTEGER"
+      },
+      {
+       "name": "keyEvents",
+       "type": "TYPE_FLOAT"
+      }
+     ],
+     "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "America/Los_Angeles"
+     },
+     "kind": "analyticsData#runReport"
+    }
+   },
+   "countries": {
+    "status": 200,
+    "json": {
+     "dimensionHeaders": [
+      {
+       "name": "country"
+      }
+     ],
+     "metricHeaders": [
+      {
+       "name": "sessions",
+       "type": "TYPE_INTEGER"
+      }
+     ],
+     "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "America/Los_Angeles"
+     },
+     "kind": "analyticsData#runReport"
+    }
+   },
+   "events": {
+    "status": 200,
+    "json": {
+     "dimensionHeaders": [
+      {
+       "name": "eventName"
+      }
+     ],
+     "metricHeaders": [
+      {
+       "name": "eventCount",
+       "type": "TYPE_INTEGER"
+      }
+     ],
+     "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "America/Los_Angeles"
+     },
+     "kind": "analyticsData#runReport"
+    }
+   },
+   "hosts": {
+    "status": 200,
+    "json": {
+     "dimensionHeaders": [
+      {
+       "name": "hostName"
+      }
+     ],
+     "metricHeaders": [
+      {
+       "name": "sessions",
+       "type": "TYPE_INTEGER"
+      }
+     ],
+     "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "America/Los_Angeles"
+     },
+     "kind": "analyticsData#runReport"
+    }
+   }
+  }
+ }
+}

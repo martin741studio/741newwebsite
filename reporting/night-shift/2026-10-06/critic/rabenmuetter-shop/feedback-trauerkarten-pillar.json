@@ -1,0 +1,30 @@
+{
+  "plan_index": 4,
+  "client": "Rabenmütter Shop",
+  "slug": "feedback-trauerkarten-pillar",
+  "mode": "FEEDBACK",
+  "feedback_id": "801d4d7d-1a22-4d45-a08e-e0b213dff2ec",
+  "executor_file": "feedback/rabenmuetter-shop/801d4d7d-1a22-4d45-a08e-e0b213dff2ec.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": "n/a — FEEDBACK item has no Title/Meta/H1/NAP/JSON-LD block; the [fehlt: ...] markers present (original section text not fetchable, which of Modell A/B was originally meant, implementation details to confirm with client) correctly flag unverifiable facts, not invented content standing in for required fields.",
+    "nap_block_matches_locked_record": "n/a — no NAP block in this feedback item (subject is a pillar page content suggestion + a client implementation question, not an address field); Rabenmütter Shop also has no locked NAP record in context.json.nap_locked.",
+    "jsonld_valid": "n/a — no JSON-LD in this feedback item.",
+    "language_matches_market_lang": "pass — copy is German throughout, market_lang=de.",
+    "hwg_scan": "n/a — non-health client (Rabenmütter Shop, grief cards/e-commerce); no HWG-relevant claims present anyway.",
+    "feedback_addresses_comment_sentence_for_sentence": {
+      "result": "pass",
+      "evidence": [
+        "'vielen Dank - super, super Vorschläge' -> Vorschlag opens with 'Zustimmung vermerken. Der Abschnitt \"Trauerkarten (Pillar)\" bleibt wie vorgeschlagen stehen.'",
+        "'auch die Idee die Karte handschriftlich schreiben zu lassen' -> Lesart and Vorschlag both name this idea explicitly as part of the client's approval, not silently dropped.",
+        "'noch habe ich keine Idee wie das umgesetzt aussehen könnte' -> Vorschlag directly answers with two concrete, named implementation models (Modell A: Handschrift-Schriftart; Modell B: echte Handschrift), each with a one-line trade-off.",
+        "'aber das kannst du mir bestimmt erklären' -> Vorschlag's 'Empfehlung an Martin' closes the loop: confirm which model, clarify open points, then send the client a short concrete explanation — correctly treated as an answer owed to the client, not as a new SEO deliverable.",
+        "Correct non-invention: the original '2 · Trauerkarten (Pillar)' section text is absent from the repo (verified: no file in 04_site, 00_project, or elsewhere mentions 'Trauerkarten' outside this night-shift run) — the draft marks this as [fehlt] and explains both plausible models generically rather than claiming to know which one was originally proposed."
+      ],
+      "note": "Same discipline as the already-passed item 3 (feedback-verkaufskanaele): a factual gap (original section wording) is marked [fehlt] and reasoned around, never guessed at."
+    },
+    "deslop_hard_check": "not applied — the Modell A/B text and the 'Empfehlung an Martin' are internal working notes to decide between two options and gather missing facts, not finished client-facing prose meant to ship as-is. The draft itself states the real client-facing answer still needs to be written after confirmation. Per SKILL.md this is not a blocker for this kind of FEEDBACK item."
+  },
+  "fails": [],
+  "verdict": "pass"
+}

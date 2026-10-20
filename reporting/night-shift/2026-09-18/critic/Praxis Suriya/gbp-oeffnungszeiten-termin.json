@@ -1,0 +1,19 @@
+{
+  "client": "Praxis Suriya",
+  "slug": "gbp-oeffnungszeiten-termin",
+  "mode": "FEEDBACK",
+  "feedback_id": "5bea6cb2-688d-4c24-b436-1a576e7ade75",
+  "executor_file": "feedback/Praxis Suriya/5bea6cb2-688d-4c24-b436-1a576e7ade75.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": "n/a (FEEDBACK item has no title/meta/H1/NAP/JSON-LD fields)",
+    "nap_block_matches_locked_record": "n/a (no NAP block in this item)",
+    "jsonld_valid": "n/a (no JSON-LD in this item)",
+    "language_matches_market_lang": "pass (all copy in German, market_lang=de)",
+    "hwg_scan": "pass (no heilt/garantiert/100%/Heilung found)",
+    "feedback_addresses_comment_sentence_for_sentence": "pass — all 3 facts from Kunde-sagt block are answered: (1) Öffnungszeiten Di-Do 7:30-18:00 / Fr 7:30-12:00 reproduced exactly in Vorschlag; (2) telefonische Terminvereinbarung Mo 12:00-14:00 addressed with a concrete GBP-Hinweis-field placement; (3) 'kein Termin-Button, nur Buchungsformular' addressed with a correct, compliance-aware CTA recommendation (link to Buchungsformular, do not activate the native Google button since no real booking flow sits behind it).",
+    "deslop_hard_check": "not required as blocker — Vorschlag body is internal implementation instructions to Martin (which GBP fields to set), not client-facing copy meant to ship as-is; the one literal ship-text snippet ('Telefonische Terminvereinbarung: Montag 12:00 – 14:00 Uhr.') is a short factual sentence with no Tier-1/Tier-2 slop vocabulary, no 'not just X, but Y' construction, no stacked em-dashes, no invented numbers — manually verified clean against seo-page-optimizer/slopmonster signs-of-ai-writing.md."
+  },
+  "fails": [],
+  "notes": "Item correctly scoped to only the first of two related client comments (opening hours, phone-booking window, no native GBP appointment button); the second comment (Barrierefreiheit, feedback_id 61abce05...) is explicitly and correctly deferred to plan index 1, as instructed by the Planner's note. No invented facts; missing approval-to-publish is marked [fehlt: ...] per hard rule 2 instead of being assumed."
+}

@@ -1,0 +1,150 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://stuerzl-steuerstrafrecht.de/kosten/#webpage",
+   "url": "https://stuerzl-steuerstrafrecht.de/kosten/",
+   "name": "Anwaltskosten Selbstanzeige & Steuerstrafverfahren | STÜRZL",
+   "description": "Anwaltskosten im Steuerstrafverfahren und bei Selbstanzeige: Abrechnung nach Zeitaufwand, Vorschuss, Erstberatung und KI-Einsatz offen erklärt.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/#website"
+   },
+   "breadcrumb": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/kosten/#breadcrumb"
+   },
+   "mainEntity": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/kosten/#service"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://stuerzl-steuerstrafrecht.de/kosten/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Startseite",
+     "item": "https://stuerzl-steuerstrafrecht.de/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Kosten und Honorar",
+     "item": "https://stuerzl-steuerstrafrecht.de/kosten/"
+    }
+   ]
+  },
+  {
+   "@type": "LegalService",
+   "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei",
+   "name": "STÜRZL Steuerstrafrecht",
+   "url": "https://stuerzl-steuerstrafrecht.de/",
+   "email": "kanzlei@stuerzl-steuerstrafrecht.de",
+   "department": [
+    {
+     "@type": "LegalService",
+     "name": "STÜRZL Steuerstrafrecht München",
+     "telephone": "+49 89 72444170",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "München",
+      "postalCode": "80331",
+      "addressCountry": "DE",
+      "streetAddress": "Oberanger 32"
+     },
+     "parentOrganization": {
+      "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+     }
+    },
+    {
+     "@type": "LegalService",
+     "name": "STÜRZL Steuerstrafrecht Frankfurt am Main",
+     "telephone": "+49 69 298028870",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Frankfurt am Main",
+      "postalCode": "60329",
+      "addressCountry": "DE",
+      "streetAddress": "Untermainkai 26"
+     },
+     "parentOrganization": {
+      "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "Service",
+   "@id": "https://stuerzl-steuerstrafrecht.de/kosten/#service",
+   "serviceType": "anwaltskosten selbstanzeige",
+   "provider": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+   },
+   "url": "https://stuerzl-steuerstrafrecht.de/kosten/"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://stuerzl-steuerstrafrecht.de/kosten/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Was kostet ein Anwalt im Steuer- und Wirtschaftsstrafrecht?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In unseren Rechtsgebieten rechnen wir nach Zeitaufwand ab, nicht nach den gesetzlichen Gebühren. Den Stundensatz bestimmen Seniorität und Erfahrungsgrad sowie Umfang und Komplexität des Falls, seine Bedeutung und das Haftungsrisiko. In der Erstberatung informieren wir Sie offen über die voraussichtlichen Kosten eines Mandats."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wie rechnen Sie bei einer Selbstanzeige ab?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Auch eine Selbstanzeige ist ein steuerstrafrechtliches Mandat. Wir rechnen deshalb grundsätzlich nach Zeitaufwand ab. Eine Pauschale ist im Einzelfall möglich, zum Beispiel wenn das Mandat eine Beratungstätigkeit betrifft und ein Gutachten das Ziel ist."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wer bezahlt den Anwalt im Strafverfahren?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Die Vergütung richtet sich nach der Vergütungsvereinbarung mit der Kanzlei. Bei Freispruch, abgelehnter Eröffnung des Hauptverfahrens oder Einstellung trägt die Staatskasse grundsätzlich die notwendigen Auslagen (§ 467 Abs. 1 StPO), regelmäßig aber nur bis zur gesetzlichen Vergütung."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Warum rechnen Sie nicht nach dem RVG ab?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Wirtschafts- und Steuerstrafverfahren sind oft sehr umfangreich und mit hohen Haftungsrisiken verbunden. Die gesetzlichen Gebühren bilden diesen Aufwand regelmäßig nicht angemessen ab. Deshalb vereinbaren wir die Vergütung im Einzelfall in Textform."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Warum arbeiten mehrere Anwälte an einem Mandat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Wir arbeiten nach dem Vier-Augen-Prinzip. So kontrollieren wir wichtige Entscheidungen zusätzlich. Die Zusammenarbeit von erfahrenen und jüngeren Anwälten kann außerdem Kosten sparen, weil jüngere Anwälte geringere Stundensätze haben und weniger komplexe Tätigkeiten übernehmen können."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Setzen Sie KI ein?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja, als Hilfsmittel, etwa bei der Aktenauswertung und der Recherche. Betreuung und Strategie sowie die Verantwortung bleiben bei uns. Mehr dazu steht oben im Abschnitt zu moderner Technologie."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bleibt vertraulich, was ich zu meinen Finanzen sage?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja. Als Rechtsanwälte unterliegen wir der gesetzlichen Verschwiegenheit (§ 43a Abs. 2 BRAO, § 203 StGB). Das gilt schon für Ihre Kostenanfrage. Für eine erste Anfrage genügt das Thema, etwa „Kosten einer Selbstanzeige“. Zahlen aus Ihren Steuerunterlagen brauchen wir dafür nicht."
+     }
+    }
+   ]
+  }
+ ]
+}

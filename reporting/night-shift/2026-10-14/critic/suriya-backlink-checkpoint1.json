@@ -1,0 +1,15 @@
+{
+  "id": "suriya-backlink-checkpoint1",
+  "verdict": "pass",
+  "checks": {
+    "C1": {"pass": true, "why": "targets.md exists with all 21 candidates in Name/Typ/Kontakt/Warum-relevant format, sorted into the 5 scoped categories (Verbände, Vereine, Sponsoring, Presse, Hersteller); done-definition fully covered."},
+    "C2": {"pass": true, "why": "Spot-checked 4 entries (Ingelheim aktiv e.V., FDH RLP, Wild Spice incl. the 'Mail ohne Antwort' note, SpVgg Ingelheim '~50 Sponsoren') against local-sources.md and mentions.md — all match the source exactly, no invented facts."},
+    "C3": {"pass": true, "why": "Two explicit [fehlt: ...] markers (Verbandsmitgliedschaft unbekannt; merkurist.de bewusst ausgeschlossen wegen Kennzeichnungs-Risiko) instead of filler."},
+    "C4": {"pass": true, "why": "All client-facing text in German; no medical/treatment claims, so no HWG exposure — content is partnership/outreach targets, not health claims."},
+    "C5": {"pass": true, "why": "git status --porcelain shows only the new untracked reporting/night-shift/2026-10-14/ folder; no outreach, publish or membership claimed — targets.md and summary.md both state explicitly nothing was sent or applied."},
+    "C6": {"pass": true, "why": "Martin can pick rows to approve tomorrow with minimal edits — each row already has type, public contact and a concrete reason; summary.md flags the two decisions he still needs to make (which targets, and Coralie's per-partner OK)."},
+    "C7": {"pass": true, "why": "Not applicable — targets.md is an internal research/decision document for Martin, not copy intended to be sent to or read by the client or a third party."}
+  },
+  "fails": [],
+  "one_line": "Solid, sourced, gap-marked target list Martin can act on tomorrow — pass."
+}

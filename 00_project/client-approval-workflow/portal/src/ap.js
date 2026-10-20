@@ -51,7 +51,7 @@ const apT = (b) => AP_TX[((b && b.client && b.client.lang) || 'de') === 'de' ? '
 const apTabLabel = (b) => apT(b).tab + (apOpenCount(b) ? ' <span class="pill pill-yellow" style="margin-left:4px;">' + apOpenCount(b) + '</span>' : '');
 const AP_LOCK = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2H5v13h14V9h-2zM9 7a3 3 0 0 1 6 0v2H9V7z"/></svg>';
 let apSel = {};        // item_id → gewählte Variante, bis die Entscheidung gespeichert ist
-let apFilter = 'all';
+let apFilter = 'open';
 let apPreview = false; // Admin: Kundenansicht ansehen (nur lesen)
 let apArmed = null;    // Admin: zweiter Klick bestätigt das Go
 

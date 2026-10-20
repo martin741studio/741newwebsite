@@ -1,0 +1,579 @@
+{
+ "run": "stuerzl/2026-10-11-kickoff",
+ "evidence": [
+  {
+   "id": "ev_fr_index",
+   "file": "evidence/falcon-report-index.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Report index for the Frankfurt place id (read, free). Known bug: pagination repeated page 1, only 10 unique reports listed.",
+   "request": {
+    "tool": "listLocalFalconScanReports",
+    "placeId": "ChIJyVGAdikEaW8RUOWpEJs-2XA"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "0007da27cc1d538250f56f7ce9d24aa4f97169e0ff2c1db05a4e14d47acd76d8",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_fe76d86f6e46b4e",
+   "file": "evidence/falcon-report-fe76d86f6e46b4e.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Full report read (free). anwalt steuerstrafrecht Google 7x7 5 mi 09.10.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "fe76d86f6e46b4e"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "8de3dbbb212ff96066da205194f4ed0e89a708de6946ad3224e7a1c6b0307e2e",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_d324749bfe7176a",
+   "file": "evidence/falcon-report-d324749bfe7176a.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Full report read (free). anwalt steuerhinterziehung Google 7x7 5 mi 09.10.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "d324749bfe7176a"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "63e29c2bb70e3d2143aa290a6e08c9d4438a4f0c6a941dc2cf55d55bd10bba99",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_fe8cb2ce248bb2e",
+   "file": "evidence/falcon-report-fe8cb2ce248bb2e.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Full report read (free). steuerfahndung anwalt Google 7x7 5 mi 09.10.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "fe8cb2ce248bb2e"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "67d881476628b0e290d2abd84fe5925b028e1748c7ebe16a4197a82de3a84c53",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_af37b0f5cb2f296",
+   "file": "evidence/falcon-report-af37b0f5cb2f296.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Full report read (free). selbstanzeige anwalt Google 7x7 5 mi 09.10.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "af37b0f5cb2f296"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "2acdae3832ed8d2398fc8934a391828d91a073300ad7080dc7f52608fd7c9955",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_eb2f136efd0fe1e",
+   "file": "evidence/falcon-report-eb2f136efd0fe1e.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Full report read (free). anwalt steuerstrafrecht Google 9x9 5 km 17.09.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "eb2f136efd0fe1e"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "b0908b6d36cb632fa68c2e4750b19fc3608cdef8b5b1110cb01eebc8779cef85",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_004b590aed4b96c",
+   "file": "evidence/falcon-report-004b590aed4b96c.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Full report read (free). anwalt steuerstrafrecht Google 7x7 5 km 01.10.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "004b590aed4b96c"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "67c3f5cb3e9663efb197aaebe5b120dd846fa018290ad3e4fa27f799788aa492",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_6b59ef96d3bcf75",
+   "file": "evidence/falcon-report-6b59ef96d3bcf75.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Full report read (free). anwalt steuerhinterziehung Google 7x7 5 km 01.10.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "6b59ef96d3bcf75"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "9056fb8d94c090417d9401e7e1ec6ea36e968174171ebdb7cf6a5571e504085e",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_60605f4fb872bea",
+   "file": "evidence/falcon-report-60605f4fb872bea.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Full report read (free). steuerfahndung anwalt Google 7x7 5 km 01.10.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "60605f4fb872bea"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "1d5b289f4e8cd3bf38751ed4a011a0e7c38eb1de811aac0809753a1cd7fc3266",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_e5f5803382f47ee",
+   "file": "evidence/falcon-report-e5f5803382f47ee.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Full report read (free). selbstanzeige anwalt 5 km 01.10.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "e5f5803382f47ee"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "39bd6dbb0b61e525428d6ba63c24ba08a20d4c60de1d2d3c43c4b52ee0f07dfb",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_cd13432c3276856",
+   "file": "evidence/falcon-report-cd13432c3276856.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Full report read (free). anwalt wirtschaftsstrafrecht 5 km 01.10.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "cd13432c3276856"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "3e7a4bb36a15a010f496d104fe8d7be586d5f1e724fcc4366f2f829a01082dde",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_07d0917bde1b164",
+   "file": "evidence/falcon-report-07d0917bde1b164.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Full report read (free). fachanwalt steuerrecht 5 km 01.10.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "07d0917bde1b164"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "73c9300a77c09cb39ed4f0e2f849f9b83face2b1649d665464b92f47dec9f707",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_c4e888e0b4b1829",
+   "file": "evidence/falcon-report-c4e888e0b4b1829.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Full report read (free). steueranwalt 5 km 01.10.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "c4e888e0b4b1829"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "11bcc2771abdeaf024006f325b41503f79b3f4dc0ef4ac76401874160af38d1a",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_684d4e2f03135a5",
+   "file": "evidence/falcon-report-684d4e2f03135a5.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Full report read (free). strafverteidiger 5 km 01.10.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "684d4e2f03135a5"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "7c0d412897173f9c5bb0fcf135fbe46bb45f887f9f094074c760123e52e95257",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_drivers",
+   "file": "evidence/drivers.json",
+   "kind": "api_json",
+   "tool": "derived",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Driver analysis (Spearman reviews vs SoLV, category lift) computed from the Falcon reports. Script analyze_drivers.py.",
+   "request": {
+    "script": "scripts/analyze_drivers.py"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "cfd6e43d2091ad3a6abbd73046d565d30138abbe69ccb01c973b405ad3141a88",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_site",
+   "file": "evidence/site-check-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "live-site-script",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Live check of home, robots, sitemap, schwerpunkte, kontakt, impressum, steuerstrafrecht.",
+   "request": {
+    "script": "scripts/site_check.py"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "2bcd4bf8e63b317c76a7c19051672b90d2371af98656a2c7150ba56f6a5e84b6",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_adlaw",
+   "file": "evidence/adlaw-scan-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "live-site-script",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Word scan of 6 public pages for risky advertising-law words (hint list only).",
+   "request": {
+    "script": "scripts/adlaw_scan.py"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "75b359eab4f068202ac1bbd041f516e48d68498973897ce49a2568be9a4f74bb",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_free",
+   "file": "evidence/free-tests-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "google-autocomplete+pagespeed",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Brand autocomplete (5 queries). PageSpeed API test: HTTP 429 quota (no API key).",
+   "request": {
+    "script": "scripts/free_tests.py"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "f5640098f1f39b0acf4c886b584fb632577e90a5900d1b286be0752a130988e1",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_google",
+   "file": "evidence/google-read-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "google-service-account",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "GA4 property 483853149 and Search Console: HTTP 403. The service account has no access.",
+   "request": {
+    "script": "scripts/google_read.mjs"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "c4a084086fec0243502f703b5a4661bacbf5d8f3c634a9c02d21dbccd6f1e7b5",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_bl",
+   "file": "evidence/backlinks-summary-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "dataforseo",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Backlink summary for the client domain and 6 competitor domains.",
+   "request": {
+    "endpoint": "backlinks/summary/live",
+    "targets": 7
+   },
+   "cost_usd": 0.1683,
+   "cost_credits": 0,
+   "sha256": "4765b642061ef0b87e2235c88ea221a26fd1981b9df628e41d35f8c2524b4455",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_gbp",
+   "file": "evidence/gbp-manager-read-2026-10-11.json",
+   "kind": "html_snapshot",
+   "tool": "chrome-gbp-read",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Business Profile Manager and Search profile view, read only, as 741studio18. Transcription; screenshots not archived.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "57582ff9c8bde465870b2a447964541cb247b0379c9d1f3bbfb64b5a4b7dbaed",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_panels",
+   "file": "evidence/competitor-panels-2026-10-11.json",
+   "kind": "html_snapshot",
+   "tool": "chrome-google-panel",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Public Google panels of 5 competitors: review count, rating, hours. Replaces Falcon review numbers.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "31722ddf3bad4f3948e3bc5c60d82e7d20fd1eb8826c7a1af16fd78456222f46",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_apple",
+   "file": "evidence/apple-maps-2026-10-11.json",
+   "kind": "html_snapshot",
+   "tool": "chrome-apple-maps",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Apple Maps web listing of the Frankfurt profile (unclaimed, old address).",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "f5a13196453dd2e716e056f3494f0c291ce881a2db19d2d1a58027b130451f2c",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_sb",
+   "file": "evidence/supabase-read-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "supabase-741-portal",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Client, access_grants and empty NAP tables (read).",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "c4dcd0f6bdf8fd73ec27248f8963b82bdc10d9e8ffaa0df15d50ee78479d8c84",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_week1",
+   "file": "evidence/reused/stuerzl-woche1-befunde-2026-10-01.md",
+   "kind": "file",
+   "tool": "internal-doc",
+   "collected_at": "2026-10-09T12:00:00+02:00",
+   "note": "Week-1 findings file (01.10. to 09.10.): GBP, website, GA4 check, citations, access. REUSED, not re-pulled.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "ab08dea2bf40f5551fe7a3cf07770f3e930f4dfbbaf8da91aa931d057daae7bf",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_campaign",
+   "file": "evidence/reused/stuerzl-localfalcon-kampagne-2026-10-09.md",
+   "kind": "file",
+   "tool": "internal-doc",
+   "collected_at": "2026-10-09T12:00:00+02:00",
+   "note": "Falcon campaign run 09.10. incl. AI platforms. REUSED, not re-pulled.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "c2e92290ac4e077feae98d29bbf74f08cce8e7d86c53311e8622e578d90ebb94",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_comp",
+   "file": "evidence/reused/stuerzl-wettbewerber-analyse-2026-10-09.md",
+   "kind": "file",
+   "tool": "internal-doc",
+   "collected_at": "2026-10-09T12:00:00+02:00",
+   "note": "Competitor analysis 09.10. REUSED, not re-pulled.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "3349f244254fa32a71913f48f170caf5d2cd0ed20da858ff673575793809a046",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_backlog",
+   "file": "evidence/reused/stuerzl-umsetzung-backlog.md",
+   "kind": "file",
+   "tool": "internal-doc",
+   "collected_at": "2026-10-09T12:00:00+02:00",
+   "note": "Backlog: open data and quick wins. REUSED, not re-pulled.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "db09326a5dac0fe7f0031c134140f9e64dd9e93c2aebebd2f80f0181e8c4ee9e",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_crawl",
+   "file": "evidence/reused/crawl.json",
+   "kind": "api_json",
+   "tool": "live-site-script",
+   "collected_at": "2026-10-08T12:00:00+02:00",
+   "note": "Site crawl 80 URLs (08.10.). REUSED, not re-pulled.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "6dc44b0ef5bc7e7b99aa6a4101cefcee394759b04ca90b44ae23571a0cfa7cd3",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_onpage",
+   "file": "evidence/reused/onpage_home.json",
+   "kind": "api_json",
+   "tool": "dataforseo",
+   "collected_at": "2026-09-17T12:00:00+02:00",
+   "note": "DataForSEO on-page home. REUSED, not re-pulled.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "21e39866741aa46f8cd9a677e67e5d75622d6eedf203faf507e8b5bb3aa64ba4",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_serp",
+   "file": "evidence/reused/serp_live.json",
+   "kind": "api_json",
+   "tool": "dataforseo",
+   "collected_at": "2026-10-08T12:00:00+02:00",
+   "note": "SERP check 08.10. REUSED, not re-pulled.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "566fd2a7d331d4432b2c7ac83860db8e3426aa5652cb6ecb0ba4d57b0b10f28a",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_bl_old",
+   "file": "evidence/reused/backlinks_summary.json",
+   "kind": "api_json",
+   "tool": "dataforseo",
+   "collected_at": "2026-10-08T12:00:00+02:00",
+   "note": "Backlink summary 08.10. (older than ev_bl). REUSED, not re-pulled.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "7814d4a7f76d40843f25d516314a0db644f01e5959ff193fb8a9d3732d1f3975",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_refdom",
+   "file": "evidence/reused/bl_refdomains.json",
+   "kind": "api_json",
+   "tool": "live-site-script",
+   "collected_at": "2026-10-08T12:00:00+02:00",
+   "note": "Referring domains of the client domain 08.10. REUSED, not re-pulled.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "09a97b9133cbfe3afa5d705bfa7771a3a33701dbf7f8dce8cfdaf196f773ab50",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_vol_de",
+   "file": "evidence/reused/2026-10-01-suchvolumen-deutschland.json",
+   "kind": "api_json",
+   "tool": "dataforseo",
+   "collected_at": "2026-10-01T12:00:00+02:00",
+   "note": "Search volume DE 01.10. REUSED, not re-pulled.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "516c1c5d73718aec6ddaec0414d036e9e4cfc800b987a00681f8cd7f845127b1",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_vol_ffm",
+   "file": "evidence/reused/2026-10-01-suchvolumen-frankfurt.json",
+   "kind": "api_json",
+   "tool": "dataforseo",
+   "collected_at": "2026-10-01T12:00:00+02:00",
+   "note": "Search volume Frankfurt 01.10. REUSED, not re-pulled.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "80c0f9cedc41f4102a720d970edc9a8bab9d930c3e0c6536048c0d66f9a8e985",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_ac",
+   "file": "evidence/reused/2026-10-01-autocomplete.json",
+   "kind": "api_json",
+   "tool": "live-site-script",
+   "collected_at": "2026-10-01T12:00:00+02:00",
+   "note": "Autocomplete 129 variants 01.10. REUSED, not re-pulled.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "c0bd9ba636f54dc809eda63e035b3292b44d7742ac4d6a76593de6fc3ca4115d",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_sheet01",
+   "file": "",
+   "kind": "drive_file",
+   "tool": "google-sheets",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Source-of-Truth sheet, tab 01 Erstgespraech. Read 11.10.2026 via the sheet HTML view in Chrome. Answers from calls 17.09. and 06.10. (filled 08.10.). REUSED, the sheet is the evidence.",
+   "request": {
+    "tab": "01 Erstgespraech"
+   },
+   "cost_usd": 0,
+   "cost_credits": 0,
+   "sha256": "",
+   "refetch_after": null,
+   "drive_file_id": "10JISY6H71F_pIX8KzGhrTucDvWXfv2WYh4-M3E72SqY",
+   "drive_url": "https://docs.google.com/spreadsheets/d/10JISY6H71F_pIX8KzGhrTucDvWXfv2WYh4-M3E72SqY/edit"
+  },
+  {
+   "id": "ev_r_sheet02",
+   "file": "",
+   "kind": "drive_file",
+   "tool": "google-sheets",
+   "collected_at": "2026-10-11T01:10:00+02:00",
+   "note": "Source-of-Truth sheet, tab 02 Audit. Read 11.10.2026 via the sheet HTML view in Chrome. Audit findings and client answers (filled 08.10. to 09.10.). REUSED, the sheet is the evidence.",
+   "request": {
+    "tab": "02 Audit"
+   },
+   "cost_usd": 0,
+   "cost_credits": 0,
+   "sha256": "",
+   "refetch_after": null,
+   "drive_file_id": "10JISY6H71F_pIX8KzGhrTucDvWXfv2WYh4-M3E72SqY",
+   "drive_url": "https://docs.google.com/spreadsheets/d/10JISY6H71F_pIX8KzGhrTucDvWXfv2WYh4-M3E72SqY/edit"
+  },
+  {
+   "id": "ev_drive_summary",
+   "file": "",
+   "kind": "drive_file",
+   "tool": "google-drive",
+   "collected_at": "2026-10-11T01:30:00+02:00",
+   "note": "Doc \"[Audit-Hilfsdaten] Maps-Audit Zusammenfassung 2026-10-11 (v2)\" in the client Drive folder, subfolder _Audit-Hilfsdaten. v1 (id 1Fy7c95O...) held old review numbers and was moved to the Drive trash.",
+   "request": {},
+   "cost_usd": 0,
+   "cost_credits": 0,
+   "sha256": "",
+   "refetch_after": null,
+   "drive_file_id": "1-dc_lScnBO7ZiUDlkpzcctIG9ZscQTSJko42U3qgdK0",
+   "drive_url": "https://docs.google.com/document/d/1-dc_lScnBO7ZiUDlkpzcctIG9ZscQTSJko42U3qgdK0/edit",
+   "drive_folder_id": "1a5PVq3JRS-_7UeAQ5UP-JZr9mkA12OnY",
+   "drive_folder_url": "https://drive.google.com/drive/folders/1a5PVq3JRS-_7UeAQ5UP-JZr9mkA12OnY"
+  }
+ ]
+}

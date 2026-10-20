@@ -1,0 +1,386 @@
+<!-- wp:html -->
+<style>.sg-page{--t:#10595B;--td:#0b3a3b;--tint:#eff5f5}
+.sg-page .wp-block-group__inner-container>*{margin-block-start:0}
+.sg-page .wp-block-group__inner-container{padding:0}
+.sg-page>*{margin-top:0!important;margin-bottom:0!important}
+.sg-page>.wp-block-group__inner-container>*{margin:0!important}
+/* hero */
+.sg-page .sg-hero{min-height:620px;display:flex;align-items:center;padding:110px 6%;
+ background:linear-gradient(90deg,rgba(11,58,59,.9) 0%,rgba(11,58,59,.62) 42%,rgba(11,58,59,.05) 75%),url(https://shuiguru.de/wp-content/uploads/2023/01/vadim-kaipov-f6jkAE1ZWuY-unsplash.jpg) center/cover no-repeat;color:#fff}
+.sg-page .sg-hero-box{max-width:640px}
+.sg-page .sg-hero p.sg-eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:13px;font-weight:600;color:#bfe0e0;margin:0 0 14px!important}
+.sg-page .sg-hero .sg-h1{color:#fff;font-size:clamp(30px,4vw,50px);line-height:1.15;margin:0 0 20px!important}
+.sg-page .sg-hero .sg-h1 em{font-style:normal;color:#bfe0e0}
+.sg-page .sg-hero p.sg-hero-lead{font-size:17px;line-height:1.65;color:#eef6f6;margin:0 0 18px!important}
+.sg-page .sg-hero p.sg-hero-line{font-size:15px;color:#fff;margin:0 0 22px!important;opacity:.95}
+.sg-page .sg-hero>.wp-block-group__inner-container{width:100%;max-width:1120px;margin:0 auto}
+.sg-page .sg-hero-split{position:relative;background:var(--td)!important;min-height:600px}
+.sg-page .sg-hero-split:before{content:"";position:absolute;top:0;right:0;bottom:0;width:50%;background:url(https://shuiguru.de/wp-content/uploads/2023/01/vadim-kaipov-f6jkAE1ZWuY-unsplash.jpg) center/cover no-repeat}
+.sg-page .sg-hero-split .sg-hero-box{max-width:min(560px,44vw)}
+/* buttons */
+.sg-page .sg-btn .wp-block-button__link{background:var(--t);color:#fff;border-radius:0;padding:14px 30px;font-weight:600}
+.sg-page .sg-hero .sg-btn .wp-block-button__link{background:#fff;color:var(--t)}
+.sg-page .sg-btn .wp-block-button__link:hover{background:#e87010!important;color:#fff!important}
+.sg-page .sg-btn-light .wp-block-button__link{background:#fff;color:var(--t)}
+/* bands */
+.sg-page .sg-band{padding:80px 24px}
+.sg-page .sg-band-white{background:#fff}
+.sg-page .sg-band-tint{background:var(--tint)}
+.sg-page .sg-band-note{background:#fdf6df;border-top:3px solid #e7c34a;border-bottom:3px solid #e7c34a;padding:44px 24px}
+.sg-page .sg-band-cta{background:var(--t);color:#fff;text-align:center}
+.sg-page .sg-band-cta h2{color:#fff!important}
+.sg-page .sg-band-cta .wp-block-buttons{justify-content:center}
+.sg-page .sg-inner{max-width:1120px;margin:0 auto}
+.sg-page .sg-narrow{max-width:760px}
+.sg-page .sg-band h2{color:var(--t);font-size:clamp(26px,3vw,36px);line-height:1.2;margin:0 0 18px!important;position:relative}
+.sg-page .sg-band:not(.sg-band-cta):not(.sg-band-note) h2:after{content:"";display:block;width:56px;height:3px;background:var(--t);margin-top:14px}
+.sg-page .sg-head-center{text-align:center;max-width:780px;margin:0 auto 34px!important}
+.sg-page .sg-head-center h2:after{margin-left:auto;margin-right:auto}
+.sg-page .sg-band p{font-size:17px;line-height:1.75;margin:0 0 16px!important}
+.sg-page .sg-band h3{font-size:23px;color:#222!important;margin:0 0 12px!important}
+.sg-page .sg-band h3 a{color:inherit;text-decoration:none;border-bottom:2px solid var(--t)}
+.sg-page .sg-band h3 a:hover{color:var(--t)}
+/* splits */
+.sg-page .sg-split{gap:56px;align-items:flex-start;margin:0!important}
+.sg-page .sg-split-img,.sg-page .sg-row{align-items:center}
+.sg-page .sg-row{margin:0 0 56px!important}
+.sg-page .sg-row:last-child{margin-bottom:0!important}
+.sg-page .sg-img{margin:0!important}
+.sg-page .sg-img img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;box-shadow:0 18px 40px rgba(11,58,59,.18)}
+/* lists, steps, cards */
+.sg-page ul.sg-check{list-style:none;margin:0 auto 16px;padding:0;max-width:820px;text-align:left}
+.sg-page .sg-split ul.sg-check{max-width:none}
+.sg-page ul.sg-check li{position:relative;padding:12px 16px 12px 46px;margin:0 0 10px;background:#fff;border-left:3px solid var(--t);font-size:17px;line-height:1.6}
+.sg-page .sg-band-white ul.sg-check li{background:var(--tint)}
+.sg-page ul.sg-check li:before{content:"✓";position:absolute;left:16px;top:12px;color:var(--t);font-weight:700}
+.sg-page .sg-steps>.wp-block-group__inner-container{counter-reset:sgstep;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+.sg-page .sg-step{counter-increment:sgstep;background:#fff;padding:56px 20px 20px;position:relative;border-top:4px solid var(--t)}
+.sg-page .sg-band-white .sg-step{background:var(--tint)}
+.sg-page .sg-step:before{content:counter(sgstep);position:absolute;left:20px;top:14px;width:32px;height:32px;border-radius:50%;background:var(--t);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.sg-page .sg-step p{margin:0 0 6px!important;font-size:16px!important}
+.sg-page .sg-step p.sg-step-title{font-size:18px!important;color:var(--t)}
+.sg-page .sg-cards>.wp-block-group__inner-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.sg-page .sg-cols-4>.wp-block-group__inner-container{grid-template-columns:repeat(4,1fr)}
+.sg-page .sg-cols-2>.wp-block-group__inner-container{grid-template-columns:repeat(2,1fr)}
+@media(max-width:1000px){.sg-page .sg-cols-4>.wp-block-group__inner-container{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.sg-page .sg-cols-4>.wp-block-group__inner-container,.sg-page .sg-cols-2>.wp-block-group__inner-container{grid-template-columns:1fr}}
+.sg-page .sg-band-follow{padding-top:0}
+.sg-page .sg-card{background:#fff;padding:26px;border-top:4px solid var(--t);box-shadow:0 6px 20px rgba(11,58,59,.07)}
+.sg-page .sg-band-white .sg-card{background:var(--tint);box-shadow:none}
+.sg-page .sg-card p{margin:0 0 8px!important;font-size:16px!important}
+.sg-page .sg-card p.sg-card-title{font-size:19px!important;color:var(--t)}
+.sg-page .sg-card .sg-ic{display:block;font-size:30px;margin-bottom:8px}
+.sg-page .sg-card p.sg-price{font-size:30px!important;font-weight:700;color:var(--t)}
+.sg-page .sg-badges{text-align:center}
+.sg-page .sg-badges .sg-badge{display:inline-block;background:var(--t);color:#fff;padding:8px 18px;margin:0 8px 8px 0;border-radius:999px}
+.sg-page .sg-badges .sg-badge strong{margin-right:6px}
+/* faq */
+.sg-page .sg-faq{background:#fff;border:0;border-left:3px solid var(--t);padding:16px 20px;margin:0 0 12px!important}
+.sg-page .sg-band-white .sg-faq{background:var(--tint)}
+.sg-page .sg-faq summary{cursor:pointer;font-weight:600;color:var(--t);font-size:17px}
+.sg-page .sg-faq p{margin:12px 0 0!important}
+.sg-page .sg-map{line-height:0}
+@media(max-width:781px){
+ .sg-page .sg-hero{min-height:0;padding:90px 20px 60px;background:linear-gradient(180deg,rgba(11,58,59,.55),rgba(11,58,59,.92)),url(https://shuiguru.de/wp-content/uploads/2023/01/vadim-kaipov-f6jkAE1ZWuY-unsplash.jpg) center/cover no-repeat}
+ .sg-page .sg-hero-split{flex-direction:column;align-items:stretch;padding:0 0 50px}
+ .sg-page .sg-hero-split:before{position:static;display:block;width:auto;height:300px;margin:0 0 30px}
+ .sg-page .sg-hero-split>.wp-block-group__inner-container{padding:0 20px}
+ .sg-page .sg-hero-split .sg-hero-box{max-width:none}
+ .sg-page .sg-band{padding:56px 18px}
+ .sg-page .sg-split{gap:24px}
+ .sg-page .sg-row .wp-block-column:has(.sg-img){order:-1}
+ .sg-page .sg-split-img .wp-block-column:has(.sg-img){order:-1}
+}
+</style>
+<!-- /wp:html -->
+
+<!-- wp:group {"className": "sg-page"} -->
+<div class="wp-block-group sg-page"><!-- wp:group {"className": "sg-hero alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-hero alignfull"><!-- wp:group {"className": "sg-hero-box"} -->
+<div class="wp-block-group sg-hero-box"><!-- wp:paragraph {"className":"sg-eyebrow"} -->
+<p class="sg-eyebrow">ShuiGuru · Feng Shui Beratung · Maria Brasse</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level": 1, "className": "sg-h1"} -->
+<h1 class="wp-block-heading sg-h1">Feng Shui im Homeoffice und Arbeitszimmer</h1>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"sg-hero-lead"} -->
+<p class="sg-hero-lead">Ihr Homeoffice ist anders als ein Büro im Betrieb: Der Schreibtisch teilt sich den Raum oft mit dem Wohn- oder Schlafzimmer, und die Grenze zwischen Arbeit und Privatleben verschwimmt leicht. Mit dem schamanischen Feng Shui richte ich Ihren Arbeitsplatz zuhause so ein, dass Sie konzentriert arbeiten und trotzdem abends wirklich abschalten können.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"sg-hero-line"} -->
+<p class="sg-hero-line">📍 Berlin & bundesweit online · 📞 <b>01578 59 555 28</b></p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"sg-btn"} -->
+<div class="wp-block-button sg-btn"><a class="wp-block-button__link wp-element-button" href="https://shuiguru.de/kaeffchen/">Käffchen vereinbaren</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-img"} -->
+<div class="wp-block-columns sg-split sg-split-img"><!-- wp:column {"width":"45%"} -->
+<div class="wp-block-column" style="flex-basis:45%"><!-- wp:image {"id":540,"sizeSlug":"large","linkDestination":"none","className":"sg-img"} -->
+<figure class="wp-block-image size-large sg-img"><img src="https://shuiguru.de/wp-content/uploads/2022/12/outsite-co-R-LK3sqLiBw-unsplash-1024x683.jpg" alt="Heller Wohnraum mit Arbeitsecke" class="wp-image-540"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading -->
+<h2 class="wp-block-heading">Wenn der Homeoffice-Platz nicht funktioniert</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Der Schreibtisch steht seit Jahren „provisorisch" in der Ecke vom Wohnzimmer. Die Konzentration bricht ab, sobald jemand durch den Raum läuft. Am Feierabend bleibt der Laptop einfach liegen, weil es keinen echten Übergang zwischen Arbeit und Freizeit gibt. Solche Homeoffice-Ecken funktionieren selten wirklich gut – nicht, weil die Möbel falsch sind, sondern weil der Platz nie bewusst als Arbeitsort eingerichtet wurde.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Oft kommt dazu, dass der Platz mit anderen geteilt werden muss: das Esszimmer wird zum Konferenzraum, das Gästezimmer zum Büro, sobald Besuch kommt. Wer wechselnde Räume nutzt, verliert leicht das Gefühl für einen festen, verlässlichen Arbeitsort – und genau dieses Gefühl ist es, das die Konzentration trägt.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:group {"className": "sg-head-center"} -->
+<div class="wp-block-group sg-head-center"><!-- wp:heading -->
+<h2 class="wp-block-heading">Die vier Himmelsrichtungen und Elemente am Arbeitsplatz</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Genau wie im Garten arbeite ich auch am Homeoffice-Platz mit denselben vier Grundfragen aus dem schamanischen Feng Shui:</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-cards sg-cols-4"} -->
+<div class="wp-block-group sg-cards sg-cols-4"><!-- wp:group {"className": "sg-card"} -->
+<div class="wp-block-group sg-card"><!-- wp:paragraph {"className":"sg-card-title"} -->
+<p class="sg-card-title"><span class="sg-ic">🌬️</span><strong>Osten – Luft</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Hat der Platz Leichtigkeit, oder staut sich die Luft im Raum?</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-card"} -->
+<div class="wp-block-group sg-card"><!-- wp:paragraph {"className":"sg-card-title"} -->
+<p class="sg-card-title"><span class="sg-ic">🔥</span><strong>Süden – Feuer</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Wirkt der Platz kraftvoll? Fühlen Sie sich dort sichtbar und stark?</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-card"} -->
+<div class="wp-block-group sg-card"><!-- wp:paragraph {"className":"sg-card-title"} -->
+<p class="sg-card-title"><span class="sg-ic">💧</span><strong>Westen – Wasser</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Wie entsteht Klarheit und Ruhe, wenn der Feierabend kommt?</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-card"} -->
+<div class="wp-block-group sg-card"><!-- wp:paragraph {"className":"sg-card-title"} -->
+<p class="sg-card-title"><span class="sg-ic">🪨</span><strong>Norden – Erde</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Was braucht es, damit aus Ihren Arbeits-Ideen wirklich etwas wird?</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+<!-- wp:paragraph -->
+<p>Diese vier Fragen zeigen meist schon, wo der Platz zu Hause hakt – bevor auch nur ein Möbelstück verschoben wird.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Der Schreibtisch im Wohnzimmer oder Schlafzimmer</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Wo ein Schreibtisch im Homeoffice steht, ist oft eine Notlösung – aber auch bei wenig Platz gilt: Idealerweise mit freiem Blick zur Tür, aber nicht direkt in der Zuglinie, und mit stabilem Rücken zu einer Wand statt zu Fenster oder Durchgang. Im Schlafzimmer ist besonders wichtig, dass der Arbeitsplatz abends optisch „verschwinden" kann – zugeklappt, abgedeckt oder in einem Schrank verstaut, damit der Raum wieder als Schlafraum wirkt und nicht dauerhaft nach Arbeit aussieht.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:group {"className": "sg-head-center"} -->
+<div class="wp-block-group sg-head-center"><!-- wp:heading -->
+<h2 class="wp-block-heading">Farben und Pflanzen fürs Homeoffice</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Auch auf kleinem Raum machen Farbe, Pflanzen und ein paar bewusst gewählte Objekte einen Unterschied:</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:list {"className":"sg-check"} -->
+<ul class="wp-block-list sg-check"><!-- wp:list-item -->
+<li><b>Blau- und Grüntöne</b> am Arbeitsplatz wirken beruhigend und konzentrationsfördernd – auch als Schreibtischunterlage oder Bürostuhl-Bezug</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><b>Runde, weiche Blätter</b> (etwa Grünlilie, Geldbaum oder Philodendron) wirken ausgleichend und sind Luftreiniger – praktisch gerade in kleinen Räumen</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><b>Kristalle, Steine und Skulpturen</b> arbeiten für den Arbeitsplatz als Energiereiniger, Harmonisierer, Stimmungsaufheller und Mentaltrainer</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><b>Ein aufgeräumter Schreibtisch</b> – gerade der Bereich hinter dem Bildschirm – ist oft wirksamer als jede Deko</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Die Grenze zwischen Arbeit und Feierabend</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Der größte Unterschied zum Büro im Betrieb: Zuhause gibt es keinen Weg nach Hause, der Kopf und Körper automatisch umschaltet. Ein bewusstes Ritual am Ende des Arbeitstages – der Laptop wird geschlossen und weggeräumt, ein Fenster kurz geöffnet, ein Gegenstand vom Schreibtisch geräumt – kann diese fehlende Grenze ersetzen. Wie genau das für Ihren Platz und Ihren Tagesablauf funktioniert, schaue ich mir individuell an. Für ein Büro im Betrieb mit Team und Kundenverkehr lesen Sie mehr auf meiner Seite <a href="https://shuiguru.de/feng-shui-in-der-arbeitswelt/">Feng Shui in der Arbeitswelt</a>.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Kleine Räume, klare Wirkung</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Auch wenn kein eigenes Zimmer zur Verfügung steht, lässt sich eine klare Zone schaffen: ein Regal als Sichtschutz zum Wohnbereich, ein Raumteiler oder Vorhang, oder einfach eine andere Blickrichtung als beim Entspannen. Wichtig ist, dass der Blick vom Schreibtisch aus etwas anderes zeigt als der Blick vom Sofa – schon das reicht oft, damit der Kopf zwischen Arbeit und Feierabend umschalten kann. Wege im Raum sollten frei bleiben: Ein Schreibtisch, an dem man sich jeden Tag vorbeiquetschen muss, kostet auf Dauer mehr Energie, als er einbringt.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:group {"className": "sg-head-center"} -->
+<div class="wp-block-group sg-head-center"><!-- wp:heading -->
+<h2 class="wp-block-heading">So läuft die Beratung ab</h2>
+<!-- /wp:heading -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-steps"} -->
+<div class="wp-block-group sg-steps"><!-- wp:group {"className": "sg-step"} -->
+<div class="wp-block-group sg-step"><!-- wp:paragraph {"className":"sg-step-title"} -->
+<p class="sg-step-title"><strong>Vorgespräch</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Wir starten mit einem unverbindlichen Vorgespräch zu Ihrem Anliegen – alle Fragen sind willkommen.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-step"} -->
+<div class="wp-block-group sg-step"><!-- wp:paragraph {"className":"sg-step-title"} -->
+<p class="sg-step-title"><strong>Fotos und Videos schicken</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Sie schicken mir Fotos und Videos Ihres Homeoffice-Platzes aus mehreren Blickwinkeln – sie sind die Grundlage meiner Analyse.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-step"} -->
+<div class="wp-block-group sg-step"><!-- wp:paragraph {"className":"sg-step-title"} -->
+<p class="sg-step-title"><strong>Video-Call mit Analyse und konkreten Änderungsschritten</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Im ausführlichen Video-Call besprechen wir meine Analyse und die konkreten Änderungsschritte – vieles davon lässt sich sofort und ohne Neuanschaffungen umsetzen.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Für wen</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Alle, die dauerhaft oder teilweise von zuhause arbeiten – ob eigene Arbeitsecke im Wohnzimmer, Schreibtisch im Schlafzimmer oder ein kleines, separates Arbeitszimmer. Für ein Büro im Betrieb mit mehreren Arbeitsplätzen passt eher die Seite <a href="https://shuiguru.de/feng-shui-in-der-arbeitswelt/">Feng Shui in der Arbeitswelt</a>.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-faq"} -->
+<div class="wp-block-columns sg-split sg-split-faq"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Häufige Fragen</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Welche Farbe eignet sich fürs Homeoffice?</summary><!-- wp:paragraph -->
+<p>Blau- und Grüntöne unterstützen die Konzentration. Welche Farbe zu Ihrem Raum und Ihrer Arbeit passt, schaue ich mir konkret an.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Welche Pflanzen eignen sich fürs Homeoffice?</summary><!-- wp:paragraph -->
+<p>Pflanzen mit runden, weichen Blättern wie Grünlilie, Geldbaum oder Philodendron wirken ausgleichend und sind gute Luftreiniger – praktisch gerade auf kleinem Raum.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Wo sollte der Schreibtisch im Homeoffice stehen?</summary><!-- wp:paragraph -->
+<p>Mit freiem Blick zur Tür, aber nicht direkt in der Zuglinie, und mit dem Rücken zu einer stabilen Wand statt zu Fenster oder Durchgang. Im Schlafzimmer sollte der Platz abends „verschwinden" können.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Arbeiten Sie auch mit der Reichtumsecke oder dem Bagua?</summary><!-- wp:paragraph -->
+<p>Nein – das ist klassisches Feng Shui. Ich arbeite schamanisch mit den vier Himmelsrichtungen und den vier Elementen Feuer, Wasser, Luft und Erde – ohne Berechnung, dafür mit einem individuellen Blick auf Ihren Platz.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Wie fange ich an, meinen Homeoffice-Platz nach Feng Shui einzurichten?</summary><!-- wp:paragraph -->
+<p>Am einfachsten mit den vier Grundfragen: Hat der Platz Leichtigkeit? Wirkt er kraftvoll? Entsteht abends Klarheit und Ruhe? Und was braucht es, damit aus Ihren Ideen etwas wird? Daraus ergeben sich fast immer die ersten, konkreten Schritte.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Geht die Homeoffice-Beratung auch online?</summary><!-- wp:paragraph -->
+<p>Ja. Fotos aus mehreren Blickwinkeln reichen für eine fundierte erste Einschätzung – ich berate bundesweit online.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-cta alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-cta alignfull"><!-- wp:group {"className": "sg-inner sg-narrow"} -->
+<div class="wp-block-group sg-inner sg-narrow"><!-- wp:heading -->
+<h2 class="wp-block-heading">Bereit für einen Homeoffice-Platz, an dem Sie gerne arbeiten?</h2>
+<!-- /wp:heading -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"sg-btn sg-btn-light"} -->
+<div class="wp-block-button sg-btn sg-btn-light"><a class="wp-block-button__link wp-element-button" href="https://shuiguru.de/kaeffchen/">Käffchen vereinbaren</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:html -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Feng Shui im Homeoffice & Arbeitszimmer", "provider": {"@type": "ProfessionalService", "name": "ShuiGuru"}, "areaServed": ["Berlin", "Deutschland"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Welche Farbe eignet sich fürs Homeoffice?", "acceptedAnswer": {"@type": "Answer", "text": "Blau- und Grüntöne unterstützen die Konzentration. Welche Farbe zu Ihrem Raum und Ihrer Arbeit passt, schaue ich mir konkret an."}}, {"@type": "Question", "name": "Welche Pflanzen eignen sich fürs Homeoffice?", "acceptedAnswer": {"@type": "Answer", "text": "Pflanzen mit runden, weichen Blättern wie Grünlilie, Geldbaum oder Philodendron wirken ausgleichend und sind gute Luftreiniger – praktisch gerade auf kleinem Raum."}}, {"@type": "Question", "name": "Wo sollte der Schreibtisch im Homeoffice stehen?", "acceptedAnswer": {"@type": "Answer", "text": "Mit freiem Blick zur Tür, aber nicht direkt in der Zuglinie, und mit dem Rücken zu einer stabilen Wand statt zu Fenster oder Durchgang. Im Schlafzimmer sollte der Platz abends „verschwinden\" können."}}, {"@type": "Question", "name": "Arbeiten Sie auch mit der Reichtumsecke oder dem Bagua?", "acceptedAnswer": {"@type": "Answer", "text": "Nein – das ist klassisches Feng Shui. Ich arbeite schamanisch mit den vier Himmelsrichtungen und den vier Elementen Feuer, Wasser, Luft und Erde – ohne Berechnung, dafür mit einem individuellen Blick auf Ihren Platz."}}, {"@type": "Question", "name": "Wie fange ich an, meinen Homeoffice-Platz nach Feng Shui einzurichten?", "acceptedAnswer": {"@type": "Answer", "text": "Am einfachsten mit den vier Grundfragen: Hat der Platz Leichtigkeit? Wirkt er kraftvoll? Entsteht abends Klarheit und Ruhe? Und was braucht es, damit aus Ihren Ideen etwas wird? Daraus ergeben sich fast immer die ersten, konkreten Schritte."}}, {"@type": "Question", "name": "Geht die Homeoffice-Beratung auch online?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Fotos aus mehreren Blickwinkeln reichen für eine fundierte erste Einschätzung – ich berate bundesweit online."}}]}</script>
+<!-- /wp:html --></div>
+<!-- /wp:group -->

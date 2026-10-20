@@ -1,0 +1,2450 @@
+{
+ "client": "Praxis Suriya",
+ "as_of": "2026-10-11",
+ "catalog_version": "0.1.0",
+ "rows": [
+  {
+   "id": "G01",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "scan",
+     "role": "rule_source",
+     "ref": "00_project/assets/maps-playbook-dryrun-suriya/audit-fields/evidence/drivers.json (audit-workflow/scripts/analyze_drivers.py on Falcon reports of 15.-16.08.2026)",
+     "date": "2026-08-15",
+     "note": "name_keyword test: own profile name contained \"heilpraktiker ingelheim\" on 15.08.; lift 6.1 (5 km) and 7.4 (2.5 km) in the top 10"
+    },
+    {
+     "type": "live",
+     "role": "rule_source",
+     "ref": "Local Falcon MCP getLocalFalconGbpProfile (place ChIJCasDQHi-vUcR1iIwAQ6zUqI), saved: 00_project/assets/maps-playbook-dryrun-suriya/falcon/gbp-profile.json",
+     "date": "2026-10-11",
+     "note": "title = \"Praxis SURIYA - Nervensystemregulation · Schmerztherapie · Ayurveda-Massage\"; metadata.hasPendingEdits = true. The 30.09. baseline showed a different suffix, so the name changed since then"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/assets/un-burning/praxis-suriya/baseline/BASELINE-REPORT.md (sections 11-13: GBP state 30.09., 12 reviews, name change pending)",
+     "date": "2026-09-30",
+     "note": "GBP name on 30.09. still 'Praxis Suriya - Ayurveda & Naturheilkunde'; rename pending since 02.09., not approved",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/impressum/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Imprint says 'Praxisname: Praxis Suriya', owner Coralie Suriyapperuma; no Gewerbe or DBA proof found",
+     "role": "rule_source"
+    },
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal client_locations id cfec507f-81f3-461e-afc2-ad02961410ef",
+     "date": "2026-09-02",
+     "note": "Master row still holds the suffix name",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/nap-corrections.json (UB.C04: 16 listings, 32 corrections, strict NAP match 0 percent)",
+     "date": "2026-10-11",
+     "note": "UB.C04: name matches master in 1 of 15 listings; UB.C03 rule: extra words in GBP name = blocks_revenue",
+     "role": "rule_source"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md section 'Stand 01.10.2026 (Entscheidungen)' (GBP name stays, tax ID stays)",
+     "date": "2026-10-01",
+     "note": "Martin 01.10.: GBP name stays as is (conflicts with SoT 'Praxis Suriya')",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/maps-playbook-measure-catalog.json",
+     "date": "2026-10-11",
+     "note": "Niche text says suffix removed 02.09. (not true in GBP)",
+     "role": "rule_source"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Der Profilname lautet live „Praxis SURIYA - Nervensystemregulation · Schmerztherapie · Ayurveda-Massage“: drei Keywords, kein Rechtsnachweis, Profil hat offene Änderungen. Der Impressums-Name ist „Praxis Suriya“. Beim Scan am 15.08. hieß das Profil „Heilpraktiker Ingelheim I Praxis Suriya …“; Namen mit den Suchwörtern sind in den Top 10 6- bis 7-mal häufiger. Die Sichtbarkeit von damals kann am Namen hängen.",
+   "task_hint": "Do nothing live. Martin decides (gate 1). After the decision, re-scan \"heilpraktiker ingelheim\" (49 credits, Martin go) to see the effect of the name change.",
+   "blocked_by": [
+    "un-burning"
+   ]
+  },
+  {
+   "id": "G02",
+   "status": "done",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "role": "rule_source",
+     "ref": "Local Falcon MCP getLocalFalconGbpProfile (place ChIJCasDQHi-vUcR1iIwAQ6zUqI), saved: 00_project/assets/maps-playbook-dryrun-suriya/falcon/gbp-profile.json",
+     "date": "2026-10-11",
+     "note": "storefrontAddress Schützenpfad 29, 55218 Ingelheim am Rhein; businessType CUSTOMER_AND_BUSINESS_LOCATION"
+    },
+    {
+     "type": "live",
+     "role": "rule_source",
+     "ref": "Local Falcon MCP getLocalFalconGbpVerificationStatus (place ChIJCasDQHi-vUcR1iIwAQ6zUqI), saved: 00_project/assets/maps-playbook-dryrun-suriya/falcon/gbp-verification.json",
+     "date": "2026-10-11",
+     "note": "needs_verification=false, ownership_conflict=false, guideline_issues=false, has_voice_of_merchant=true"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/assets/un-burning/praxis-suriya/baseline/BASELINE-REPORT.md (sections 11-13: GBP state 30.09., 12 reviews, name change pending)",
+     "date": "2026-09-30",
+     "note": "GBP address Schützenpfad 29, 55218 Ingelheim am Rhein (30.09.)",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/impressum/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Imprint same address (live 11.10.)",
+     "role": "rule_source"
+    },
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "JSON-LD PostalAddress same, geo 49.9642316/8.0547794",
+     "role": "rule_source"
+    },
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal client_locations id cfec507f-81f3-461e-afc2-ad02961410ef",
+     "date": "2026-09-02",
+     "note": "Master row locked 02.09. same address",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/nap-corrections.json (UB.C04: 16 listings, 32 corrections, strict NAP match 0 percent)",
+     "date": "2026-10-11",
+     "note": "UB.C04: address matches master in 13 of 13 readable listings",
+     "role": "rule_source"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Live-Adresse Schützenpfad 29, 55218 Ingelheim am Rhein, Typ „Kunden- und Geschäftsstandort“; Profil ist verifiziert, kein Eigentümerkonflikt, keine Richtlinien-Hinweise.",
+   "task_hint": "none (monitor; un-burning UB.C03 owns any later NAP fix)",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "G03",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "role": "rule_source",
+     "ref": "Local Falcon MCP getLocalFalconGbpProfile (place ChIJCasDQHi-vUcR1iIwAQ6zUqI), saved: 00_project/assets/maps-playbook-dryrun-suriya/falcon/gbp-profile.json",
+     "date": "2026-10-11",
+     "note": "serviceArea.placeInfos: 17 places incl. \"Deutschland\""
+    },
+    {
+     "type": "live",
+     "ref": "Local Falcon MCP (listAllLocalFalconLocations, listLocalFalconScanReports, getLocalFalconReport): NOT connected in this session",
+     "date": "2026-10-11",
+     "note": "GBP service-area field cannot be read (Falcon not connected)",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md (SOURCE OF TRUTH block, locked 02.09., updates to 10.10.)",
+     "date": "2026-09-08",
+     "note": "Catchment confirmed 08.09.: Ingelheim, Bingen, Mainz, Wiesbaden",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "JSON-LD areaServed lists the same 4 places",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Das Service-Gebiet im Profil nennt 17 Orte, darunter „Deutschland“ und „Landkreis Mainz-Bingen“. Bestätigt sind Ingelheim, Bingen, Mainz, Wiesbaden.",
+   "task_hint": "Draft the service-area list from the approved catchment (Ingelheim, Bingen, Mainz, Wiesbaden plus real neighbours). Remove \"Deutschland\". Needs go (gate 8: keep the real service-area setting).",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "G04",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No call-tracking script on the live homepage; only GTM-K9MDDN7P (consent default denied)"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/assets/un-burning/praxis-suriya/baseline/BASELINE-REPORT.md (sections 11-13: GBP state 30.09., 12 reviews, name change pending)",
+     "date": "2026-09-30",
+     "note": "GBP shows only the main number 0174 7411087 (30.09.)"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/maps-playbook-measure-catalog.json",
+     "date": "2026-10-11",
+     "note": "Provider for DACH not chosen (tool_checks 11.10.)",
+     "role": "rule_source"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Keine Tracking-Nummer: GBP zeigt nur 0174 7411087, auf der Seite läuft kein Call-Tracking; Anbieter ist nicht gewählt.",
+   "task_hint": "Optional later: choose provider, secondary number only, GDPR consent first (gate 9). Needs Martin go.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "G05",
+   "status": "partly",
+   "last_known_status": "done",
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "role": "rule_source",
+     "ref": "Local Falcon MCP getLocalFalconGbpProfile (place ChIJCasDQHi-vUcR1iIwAQ6zUqI), saved: 00_project/assets/maps-playbook-dryrun-suriya/falcon/gbp-profile.json",
+     "date": "2026-10-11",
+     "note": "profile.description length 660 characters"
+    },
+    {
+     "type": "document",
+     "ref": "Drive 1aLjDeuHWP5QUlezjnbSwFvJcPqX9PnyZJJgG2zHkpfk (Änderungsprotokoll GBP + Website)",
+     "date": "2026-08-23",
+     "note": "Description (669 chars, approved text) entered 23.08.",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md (SOURCE OF TRUTH block, locked 02.09., updates to 10.10.)",
+     "date": "2026-08-24",
+     "note": "Memory: all GBP changes verified live on 24.08.",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "reporting/night-shift/2026-10-06/feedback/praxis-suriya/ and 2026-10-09/ (drafts)",
+     "date": "2026-10-09",
+     "note": "Description text came from Coralie 20.08.",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Beschreibung ist live (660 Zeichen, unter 750). Ob sie dem freigegebenen Text entspricht, ist nicht belegt; HWG-Prüfung offen.",
+   "task_hint": "Compare the live text with the approved week-1 text. Run the HWG check. Edit only with go.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "G06",
+   "status": "done",
+   "last_known_status": "partly",
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "scan",
+     "role": "rule_source",
+     "ref": "00_project/assets/maps-playbook-dryrun-suriya/audit-fields/evidence/drivers.json (audit-workflow/scripts/analyze_drivers.py on Falcon reports of 15.-16.08.2026)",
+     "date": "2026-08-15",
+     "note": "B10.01 green, B11.09: driver category naturopathic practitioner in akupunktur ingelheim; client holds it as primary"
+    },
+    {
+     "type": "live",
+     "role": "rule_source",
+     "ref": "Local Falcon MCP getLocalFalconGbpProfile (place ChIJCasDQHi-vUcR1iIwAQ6zUqI), saved: 00_project/assets/maps-playbook-dryrun-suriya/falcon/gbp-profile.json",
+     "date": "2026-10-11",
+     "note": "categories.primaryCategory = Naturheilpraktiker (gcid:naturopathic_practitioner)"
+    },
+    {
+     "type": "document",
+     "ref": "Drive 1aLjDeuHWP5QUlezjnbSwFvJcPqX9PnyZJJgG2zHkpfk (Änderungsprotokoll GBP + Website)",
+     "date": "2026-08-23",
+     "note": "Primary category Naturopath (Heilpraktiker) per protocol 23.08.",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal client_locations id cfec507f-81f3-461e-afc2-ad02961410ef",
+     "date": "2026-09-02",
+     "note": "Master categories updated 02.09.",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "live",
+     "ref": "Local Falcon MCP (listAllLocalFalconLocations, listLocalFalconScanReports, getLocalFalconReport): NOT connected in this session",
+     "date": "2026-10-11",
+     "note": "Live category read unavailable",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Primärkategorie „Naturheilpraktiker“ entspricht dem Marktführer bei „heilpraktiker ingelheim“ und ist die Treiberkategorie bei „akupunktur ingelheim“ (Lift 3,05).",
+   "task_hint": "none (keep; re-check at the next re-audit)",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "G07",
+   "status": "done",
+   "last_known_status": "partly",
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "scan",
+     "role": "rule_source",
+     "ref": "00_project/assets/maps-playbook-dryrun-suriya/audit-fields/evidence/drivers.json (audit-workflow/scripts/analyze_drivers.py on Falcon reports of 15.-16.08.2026)",
+     "date": "2026-08-15",
+     "note": "B11.05 category gap 0: client holds all categories with lift >= 1.98"
+    },
+    {
+     "type": "live",
+     "role": "rule_source",
+     "ref": "Local Falcon MCP getLocalFalconGbpProfile (place ChIJCasDQHi-vUcR1iIwAQ6zUqI), saved: 00_project/assets/maps-playbook-dryrun-suriya/falcon/gbp-profile.json",
+     "date": "2026-10-11",
+     "note": "additionalCategories (4): Massagezentrum, Ayurveda-Klinik, Akupunkturklinik, Zentrum für Schmerztherapie; blueprint allows up to 9"
+    },
+    {
+     "type": "document",
+     "ref": "Drive 1aLjDeuHWP5QUlezjnbSwFvJcPqX9PnyZJJgG2zHkpfk (Änderungsprotokoll GBP + Website)",
+     "date": "2026-08-23",
+     "note": "5 categories: Naturopath, Massage spa, Ayurvedic clinic, Acupuncture clinic, Pain control clinic"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md (SOURCE OF TRUTH block, locked 02.09., updates to 10.10.)",
+     "date": "2026-09-08",
+     "note": "SoT lists also 'Alternativmediziner/in' as secondary (not in GBP list)"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/gbp-visibility-blueprint.md",
+     "date": "2026-08-20",
+     "note": "Blueprint: up to 9 secondary categories",
+     "role": "rule_source"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Alle Kategorien mit Treiberwirkung hält das Profil schon (Naturheilpraktiker, Schmerztherapie-Zentrum). Kategorien-Lücke 0. „Massagezentrum“ ist grenzwertig, aber durch die Ayurveda-Massage gedeckt.",
+   "task_hint": "none (optional: review Massagezentrum against the no-dilution rule)",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "G08",
+   "status": "partly",
+   "last_known_status": "partly",
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "role": "rule_source",
+     "ref": "Local Falcon MCP listLocalFalconGbpServices (place ChIJCasDQHi-vUcR1iIwAQ6zUqI), saved: 00_project/assets/maps-playbook-dryrun-suriya/falcon/gbp-services.json",
+     "date": "2026-10-11",
+     "note": "23 services, all without description or price; includes Faszientherapie"
+    },
+    {
+     "type": "document",
+     "ref": "Drive 1aLjDeuHWP5QUlezjnbSwFvJcPqX9PnyZJJgG2zHkpfk (Änderungsprotokoll GBP + Website)",
+     "date": "2026-08-23",
+     "note": "23 services listed 23.08., incl. 'Faszientherapie'",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md (SOURCE OF TRUTH block, locked 02.09., updates to 10.10.)",
+     "date": "2026-09-08",
+     "note": "Faszientherapie is NOT offered (Coralie 08.09.)",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/robots.txt, /sitemap_index.xml, /page-sitemap.xml, /llms.txt (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "54 sitemap pages: every main service has a page; no Faszien page",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal client_locations id cfec507f-81f3-461e-afc2-ad02961410ef",
+     "date": "2026-09-02",
+     "note": "Master services list still contains Faszientherapie",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "23 Leistungen im Profil, keine mit Beschreibung. „Faszientherapie“ steht noch drin, obwohl Coralie sie nicht anbietet.",
+   "task_hint": "Draft: remove Faszientherapie (needs go). Add service descriptions after HWG check. Map each service to its page (W09).",
+   "blocked_by": [
+    "W09"
+   ]
+  },
+  {
+   "id": "G09",
+   "status": "partly",
+   "last_known_status": "partly",
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "role": "rule_source",
+     "ref": "Local Falcon MCP listLocalFalconGbpMedia (place ChIJCasDQHi-vUcR1iIwAQ6zUqI), saved: 00_project/assets/maps-playbook-dryrun-suriya/falcon/gbp-media.json",
+     "date": "2026-10-11",
+     "note": "5 media: COVER 2023-05-04, ADDITIONAL 2024-06-06 (x2), 2020-08-26, PROFILE. The 14.08. note counted 7 photos, so the count differs by source"
+    },
+    {
+     "type": "document",
+     "ref": "https://clients.741.studio/r/8dbd937730d2/praxis-suriya-woche1-2026-08.html",
+     "date": "2026-08-14",
+     "note": "7 photos on 14.08., target 15-20+",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal tasks (client 3f71ef33...) 45 rows",
+     "date": "2026-09-21",
+     "note": "Task 'Fotos/Videos einpflegen' closed 21.09. (claim, no count)",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md (SOURCE OF TRUTH block, locked 02.09., updates to 10.10.)",
+     "date": "2026-09-08",
+     "note": "Photo upload from Coralie still open per memory (04.09. selection, no go)",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Nur 5 Fotos über die Schnittstelle sichtbar; das jüngste Zusatzfoto ist vom 06.06.2024, das Titelfoto von 2023. Kein Upload in den letzten 90 Tagen.",
+   "task_hint": "Request photo set from Coralie (team, practice sign, rooms). Use file-name rule service-district-brand, geotag, caption. Upload only with go.",
+   "blocked_by": [
+    "client"
+   ]
+  },
+  {
+   "id": "G10",
+   "status": "n/a",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "00_project/maps-playbook-measure-catalog.json",
+     "date": "2026-10-11",
+     "note": "Niche rule: HWG section 11, default n/a for Heilpraktiker",
+     "role": "rule_source"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md (SOURCE OF TRUTH block, locked 02.09., updates to 10.10.)",
+     "date": "2026-09-08",
+     "note": "Coralie is Heilpraktikerin (SoT)"
+    },
+    {
+     "type": "document",
+     "ref": "https://clients.741.studio/r/8dbd937730d2/praxis-suriya-woche1-2026-08.html",
+     "date": "2026-08-14",
+     "note": "Week-1 HWG note: no before-after stories"
+    }
+   ],
+   "newest_evidence_date": "2026-09-08",
+   "age_days": 33,
+   "finding_de": "Vorher-Nachher-Bilder entfallen: Heilpraktikerin, HWG-Standard „n/a“ laut Katalog.",
+   "task_hint": "none",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "G11",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Local Falcon MCP (listAllLocalFalconLocations, listLocalFalconScanReports, getLocalFalconReport): NOT connected in this session",
+     "date": "2026-10-11",
+     "note": "GBP photos unreadable",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/maps-playbook-measure-catalog.json",
+     "date": "2026-10-11",
+     "note": "Niche rule: signage and team only; Suriya is a solo practice, no vehicle",
+     "role": "rule_source"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Einzelpraxis ohne Fahrzeug: relevant sind nur ein Schild- und ein Behandlerinnenfoto; GBP-Fotos sind nicht lesbar.",
+   "task_hint": "Read GBP photos; ask Coralie for a signage photo with the name 'Praxis Suriya'.",
+   "blocked_by": [
+    "client"
+   ]
+  },
+  {
+   "id": "G12",
+   "status": "partly",
+   "last_known_status": "partly",
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "role": "rule_source",
+     "ref": "Local Falcon MCP listLocalFalconGbpPosts (place ChIJCasDQHi-vUcR1iIwAQ6zUqI), saved: 00_project/assets/maps-playbook-dryrun-suriya/falcon/gbp-posts.json",
+     "date": "2026-10-11",
+     "note": "3 LIVE posts: 2026-01-19, 2026-06-11, 2026-07-07"
+    },
+    {
+     "type": "document",
+     "ref": "https://clients.741.studio/r/8dbd937730d2/praxis-suriya-woche1-2026-08.html",
+     "date": "2026-08-14",
+     "note": "Last post 07.07. (state 14.08.)",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal tasks (client 3f71ef33...) 45 rows",
+     "date": "2026-09-21",
+     "note": "Task 'Post-Rhythmus startet' closed 21.09. (claim)",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "3 Beiträge live: 19.01., 11.06. und 07.07.2026. Der letzte liegt 96 Tage zurück; kein Rhythmus von 14 Tagen.",
+   "task_hint": "Write the next 4 posts (own text, HWG check). Post only with go. Calendar: 1 per 14 days.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "G13",
+   "status": "n/a",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "00_project/maps-playbook-measure-catalog.json",
+     "date": "2026-10-11",
+     "note": "Niche rule: HWG section 7, default off",
+     "role": "rule_source"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/suriya-elementor-dinakar-set.md, suriya-conversion-paths-must-stay.md, suriya-ayurveda-massage-page-untouchable.md, suriya-baseline-tracking.md, no-review-answering.md",
+     "date": "2026-10-01",
+     "note": "Website already shows a 5-card discount (10 percent, lymph) - gate 5 review open",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-01",
+   "age_days": 10,
+   "finding_de": "Angebots-Posts bleiben aus: HWG §7 (Rabatte), Standard „aus“. Die 10-%-5er-Karte auf der Website braucht eine Rechtsprüfung durch Martin.",
+   "task_hint": "Martin checks HWG section 7 for the 5-card lymph discount on the site before any offer post.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "G14",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal tasks (client 3f71ef33...) 45 rows",
+     "date": "2026-09-21",
+     "note": "Task 'Bewertungs-Engine: Skripte live, tägliches Fragen' closed 21.09. (claim)"
+    },
+    {
+     "type": "document",
+     "ref": "07_social/templates/bewertungs-anleitung/suriya-bewertungs-anleitung.pdf (+ suriya-bewertung-whatsapp.png)",
+     "date": "2026-09-04",
+     "note": "Review guide PDF + WhatsApp image with QR, 04.09."
+    },
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Widget shows 12 reviews on 11.10. (no change since 14.08.)"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Bewertungs-Anleitung mit QR liegt vor und die Aufgabe steht auf erledigt, doch ohne dokumentierten Ablauf und ohne Zuwachs (12 Bewertungen).",
+   "task_hint": "Write the ask process (who, when, channel, consent) and test it; mail or SMS only with consent (gate 2).",
+   "blocked_by": [
+    "G15",
+    "client"
+   ]
+  },
+  {
+   "id": "G15",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "07_social/templates/bewertungs-anleitung/suriya-bewertungs-anleitung.pdf (+ suriya-bewertung-whatsapp.png)",
+     "date": "2026-09-04",
+     "note": "Guide with QR to writereview?placeid=ChIJCasDQHi-vUcR1iIwAQ6zUqI; no tapping card file"
+    }
+   ],
+   "newest_evidence_date": "2026-09-04",
+   "age_days": 37,
+   "finding_de": "QR-Anleitung (PDF, WhatsApp-Bild) ist gestaltet; Tapping-Karte und Einsatz bei jedem Termin sind nicht belegt.",
+   "task_hint": "Ask Coralie whether the guide is handed out; prepare a QR card file if wanted.",
+   "blocked_by": [
+    "client"
+   ]
+  },
+  {
+   "id": "G16",
+   "status": "n/a",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "00_project/maps-playbook-measure-catalog.json",
+     "date": "2026-10-11",
+     "note": "Risk class OUT (gate 2): bonus per 5-star breaks Google policy",
+     "role": "rule_source"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md (SOURCE OF TRUTH block, locked 02.09., updates to 10.10.)",
+     "date": "2026-09-08",
+     "note": "Solo practice, no staff incentive scheme in SoT"
+    }
+   ],
+   "newest_evidence_date": "2026-09-08",
+   "age_days": 33,
+   "finding_de": "Bonus je 5-Sterne-Bewertung ist ausgeschlossen (OUT); die Einzelpraxis hat keine Mitarbeiter-Prämien.",
+   "task_hint": "none",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "G17",
+   "status": "partly",
+   "last_known_status": "missing",
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "scan",
+     "role": "rule_source",
+     "ref": "00_project/assets/maps-playbook-dryrun-suriya/audit-fields/evidence/drivers.json (audit-workflow/scripts/analyze_drivers.py on Falcon reports of 15.-16.08.2026)",
+     "date": "2026-08-15",
+     "note": "Spearman reviews vs SoLV: 0.34 heilpraktiker ingelheim, -0.11 migräne behandlung, -0.01 akupunktur ingelheim. Leader Naturheilpraxis Ingelheim: 36 reviews"
+    },
+    {
+     "type": "live",
+     "role": "rule_source",
+     "ref": "Local Falcon MCP listLocalFalconGbpReviews (place ChIJCasDQHi-vUcR1iIwAQ6zUqI), saved: 00_project/assets/maps-playbook-dryrun-suriya/falcon/gbp-reviews.json",
+     "date": "2026-10-11",
+     "note": "total_reviews 12, average 5.000. Dates: 2017-11-25, 2018-04-28, 2023-09-08, 2023-11-03, 2024-02-01, 2025-04-09, 2025-05-06, 2025-11-20, 2025-11-21, 2025-12-20, 2026-05-09, 2026-07-05"
+    },
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Trustindex widget: 'Basierend auf 12 Bewertungen' (11.10.)",
+     "role": "rule_source"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/assets/un-burning/praxis-suriya/baseline/BASELINE-REPORT.md (sections 11-13: GBP state 30.09., 12 reviews, name change pending)",
+     "date": "2026-09-30",
+     "note": "12 reviews, 5.0 stars on 30.09. (Falcon read)",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "https://clients.741.studio/r/8dbd937730d2/praxis-suriya-woche1-2026-08.html",
+     "date": "2026-08-14",
+     "note": "12 reviews on 14.08.; leader Ternes 36",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "12 Bewertungen, Schnitt 5,0, jüngste vom 05.07.2026; 5 neue in 12 Monaten, keine in 90 Tagen. Reviews erklären die Sichtbarkeit hier nur schwach (rho 0,34 bei „heilpraktiker ingelheim“, sonst nahe 0). Marktführer hat 36.",
+   "task_hint": "Fix the ask process first (G14, G15). Get leader pace from the audit (B05.03, B11.03). Target 2x leader.",
+   "blocked_by": [
+    "G14"
+   ]
+  },
+  {
+   "id": "G18",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "role": "rule_source",
+     "ref": "Local Falcon MCP listLocalFalconGbpReviews (place ChIJCasDQHi-vUcR1iIwAQ6zUqI), saved: 00_project/assets/maps-playbook-dryrun-suriya/falcon/gbp-reviews.json",
+     "date": "2026-10-11",
+     "note": "reply = false on all 12 reviews"
+    },
+    {
+     "type": "live",
+     "ref": "Local Falcon MCP (listAllLocalFalconLocations, listLocalFalconScanReports, getLocalFalconReport): NOT connected in this session",
+     "date": "2026-10-11",
+     "note": "Reply rate unreadable",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "https://clients.741.studio/r/8dbd937730d2/praxis-suriya-woche1-2026-08.html",
+     "date": "2026-08-14",
+     "note": "14.08.: 'Bewertungen beantworten: live prüfen'",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/suriya-elementor-dinakar-set.md, suriya-conversion-paths-must-stay.md, suriya-ayurveda-massage-page-untouchable.md, suriya-baseline-tracking.md, no-review-answering.md",
+     "date": "2026-10-07",
+     "note": "Memory no-review-answering: Coralie answers herself (client side)",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Von 12 Bewertungen hat keine eine Antwort der Praxis (Antwortquote 0 Prozent).",
+   "task_hint": "Send Coralie neutral thank-you reply templates (she answers herself; HWG: never confirm a patient). 741 does not reply.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "G19",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No evidence log found for Suriya"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/un-burning-workflow.md",
+     "date": "2026-10-11",
+     "note": "Un-burning area B starts only if UB.B01 finds a problem",
+     "role": "rule_source"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Kein Beweis-Log für Bearbeitungsvorschläge vorhanden; ob ein Verstoß vorliegt, klärt die Prüfung des Profilstatus.",
+   "task_hint": "Wait for un-burning UB.B01/B02; no edit suggestion without evidence log and Martin go.",
+   "blocked_by": [
+    "un-burning"
+   ]
+  },
+  {
+   "id": "G20",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/nap-corrections.json (UB.C04: 16 listings, 32 corrections, strict NAP match 0 percent)",
+     "date": "2026-10-11",
+     "note": "UB.C04: duplicate listings exist only at directories (Cylex x2, Infobel x2, Theralupa x2, MapQuest x2), not on Maps"
+    },
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No Maps spam check on file"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Dubletten gibt es nur bei Verzeichnissen (Cylex, Infobel, Theralupa, MapQuest); eine Maps-Spam-Prüfung liegt nicht vor.",
+   "task_hint": "Un-burning UB.B02/C05 first; report only genuine, documented violations.",
+   "blocked_by": [
+    "un-burning"
+   ]
+  },
+  {
+   "id": "G21",
+   "status": "n/a",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md (SOURCE OF TRUTH block, locked 02.09., updates to 10.10.)",
+     "date": "2026-09-08",
+     "note": "One real location Schützenpfad 29; Mainz and Wiesbaden are catchment, not premises"
+    },
+    {
+     "type": "document",
+     "ref": "reporting/night-shift/2026-10-06/feedback/praxis-suriya/ and 2026-10-09/ (drafts)",
+     "date": "2026-10-09",
+     "note": "Draft 06.10.: no second profile for Mainz (not a real location)"
+    }
+   ],
+   "newest_evidence_date": "2026-10-09",
+   "age_days": 2,
+   "finding_de": "Eine echte Praxis in Ingelheim; Mainz und Wiesbaden sind Einzugsgebiet ohne Standort. Kein zweites Profil erlaubt.",
+   "task_hint": "none",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "G22",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/nap-corrections.json (UB.C04: 16 listings, 32 corrections, strict NAP match 0 percent)",
+     "date": "2026-10-11",
+     "note": "Old names and phones live in 16 listings (e.g. 06132 9723199, 06132 9795890, 01622714361)"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/nap-master.json (UB.C01)",
+     "date": "2026-10-11",
+     "note": "Old address Binger Str. 41 not found live; old names list"
+    },
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No Maps search by old name and address on file"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Alte Namen und Rufnummern kursieren in Verzeichnissen; die Suche nach einem alten Google-Profil (alter Name, alte Adresse) wurde nicht gemacht.",
+   "task_hint": "Un-burning UB.B02: search Maps by old names and old address; claim only own old profiles with go.",
+   "blocked_by": [
+    "un-burning"
+   ]
+  },
+  {
+   "id": "W01",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": true,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "https://clients.741.studio/r/8dbd937730d2/praxis-suriya-woche1-2026-08.html",
+     "date": "2026-08-14",
+     "note": "14.08.: PageSpeed about 1.3 s, 139 KB (no LCP value)"
+    },
+    {
+     "type": "live",
+     "ref": "https://www.googleapis.com/pagespeedonline/v5/runPagespeed (free, 1 call 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Free PSI call today failed: HTTP 429 quota",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal tasks (client 3f71ef33...) 45 rows",
+     "date": "2026-09-21",
+     "note": "Task 'INP unter 200 ms, Core Web Vitals' closed 21.09. (claim)",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-08-14",
+   "age_days": 58,
+   "finding_de": "Mobile LCP ist nicht belegt: Messwert vom 14.08. ohne LCP, PageSpeed-Abruf heute scheiterte (429).",
+   "task_hint": "Re-run PageSpeed (mobile) when quota allows; record LCP and INP.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W02",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Viewport meta present"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_e/inspect-results.json (GSC URL Inspection, 25 URLs)",
+     "date": "2026-10-10",
+     "note": "GSC mobile usability verdict 'unspecified' (10.10.)"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/suriya-elementor-dinakar-set.md, suriya-conversion-paths-must-stay.md, suriya-ayurveda-massage-page-untouchable.md, suriya-baseline-tracking.md, no-review-answering.md",
+     "date": "2026-10-06",
+     "note": "06.10.: mobile menu fixed (CSS only), no retest on a real phone after rollback"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Viewport ist gesetzt, mobiles Menü wurde am 06.10. repariert; ein Test auf echtem Handy nach dem Rückbau fehlt.",
+   "task_hint": "Run the mobile check list (375 px) and let Martin test the menu on a phone.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W03",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No CRO prototype for Suriya in 00_project/cro-registry or Drive"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/suriya-elementor-dinakar-set.md, suriya-conversion-paths-must-stay.md, suriya-ayurveda-massage-page-untouchable.md, suriya-baseline-tracking.md, no-review-answering.md",
+     "date": "2026-09-29",
+     "note": "Site is the Elementor set by Dinakar (24.-29.09.), not a CRO-workflow result",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Kein CRO-Prototyp im Register; das neue Elementor-Design ist live, aber nicht über den CRO-Workflow freigegeben.",
+   "task_hint": "Optional: run cro-homepage Track A for '/'; Martin decides.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W04",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No canary or monitor config for suriya-praxis.de found in reporting/ or scripts/"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Kein Frühwarn-Check für suriya-praxis.de gefunden.",
+   "task_hint": "Add the site to the canary list (check homepage, form, sitemap daily).",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W05",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No uptime service config for suriya-praxis.de found"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Kein Erreichbarkeits-Check mit Alarm eingerichtet.",
+   "task_hint": "Set up an uptime check with alert to Martin.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W06",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "00_project/startseite-money-page-standard.md (section E: 11 checks)",
+     "date": "2026-09-13",
+     "note": "SMP checklist E has 11 points",
+     "role": "rule_source"
+    },
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Pass: H1 city+topic, title/meta local, NAP in footer, map, HTTPS, reviews visible, schema, address in hero. Open: phone not in hero, load time unmeasured, sticky CTA not rendered-checked"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Von 11 Startseiten-Punkten sind 8 belegt; Rufnummer im Hero, Ladezeit und sichtbarer Sticky-CTA fehlen.",
+   "task_hint": "Put the phone number in the hero as a tel: link; measure speed; check sticky CTA on mobile.",
+   "blocked_by": [
+    "W01"
+   ]
+  },
+  {
+   "id": "W07",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "City in H1/title/meta, footer NAP, map, areaServed, local section 'Für Ingelheim, Bingen, Mainz & Wiesbaden'"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "Map on 31 of 31 money pages"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Lokale Signale stehen auf fast allen Seiten (Stadt in H1/Title, NAP, Karte, Schema); Liste der „lokalen Punkte“ (B06) liegt nicht vor.",
+   "task_hint": "Run audit fields B06.02/B06.05 to fix the point list.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W08",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Homepage links 9 of 24 service pages (pillars, massage, Akupunktur, Ohrakupunktur, Analyse, Mikronährstoffe)"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/suriya-elementor-dinakar-set.md, suriya-conversion-paths-must-stay.md, suriya-ayurveda-massage-page-untouchable.md, suriya-baseline-tracking.md, no-review-answering.md",
+     "date": "2026-10-10",
+     "note": "Coralie page /ayurveda-therapie/ is not linked from the homepage content",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/baseline/internal-linking-audit-2026-10-10.md",
+     "date": "2026-10-10",
+     "note": "Audit 10.10.: /ayurveda-therapie/ has 5 real inbound links"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Die Startseite verlinkt die vier Säulen und Massage, nicht aber Coralies Ayurveda-Massage-Seite, Lymphdrainage oder Schröpfen.",
+   "task_hint": "Add content links from the homepage to /ayurveda-therapie/ and missing main services (link only, never edit page 1511).",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W09",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/robots.txt, /sitemap_index.xml, /page-sitemap.xml, /llms.txt (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Sitemap 11.10.: pages for Schmerz, Migräne, Nervensystem, Ayurveda, Massage, Akupunktur, Ohrakupunktur, Schröpfen, Lymph, Cranio, hnc, Theta, Mikronährstoffe"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "30 of 31 money pages have alt-text gaps; /ayurveda-therapie/ has no H1"
+    },
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No SPO (seo-page-optimizer) audit run for Suriya pages"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Alle Hauptleistungen haben eine Seite; die SPO-Prüfung lief nicht, bekannte Mängel: Alt-Texte und fehlende H1 auf der Ayurveda-Seite.",
+   "task_hint": "Run seo-page-optimizer AUDIT on the top money pages; HWG check per page.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W10",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "Money pages: 30 of 31 have exactly 1 H1; /ayurveda-therapie/ has 0. Legacy: /termin-buchen/ 4 H1, /massage-buchen/ 4, /contact-2/ 3, /ayurveda-fortbildung/ 3"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Fast alle Leistungsseiten haben genau eine H1; Buchungs- und Altseiten haben 2 bis 4 H1, die Ayurveda-Seite keine.",
+   "task_hint": "Fix H1 on /termin-buchen/ and legacy pages; do not touch page 1511 without Coralie's go.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W11",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No real case example with consent on the pages (scan of 31 money pages: no case text)"
+    },
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal tasks (client 3f71ef33...) 45 rows",
+     "date": "2026-09-21",
+     "note": "Task 'Fallbeispiele freigeben' (week 6, client) open"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Kein Praxisbeispiel mit Einwilligung auf den Leistungsseiten; die Aufgabe „Fallbeispiele freigeben“ ist offen.",
+   "task_hint": "Ask Coralie for process-based examples (no cure story); written consent first.",
+   "blocked_by": [
+    "client"
+   ]
+  },
+  {
+   "id": "W12",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No content pool or cut line exists for Suriya"
+    },
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/robots.txt, /sitemap_index.xml, /page-sitemap.xml, /llms.txt (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Many sub-service pages are live (Nacken, Kiefer, Hexenschuss, Frozen Shoulder, Ohrakupunktur ...)",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Für Suriya gibt es keinen Content-Pool und keine Schnittlinie; viele Unterseiten sind live, ein Soll-Vergleich fehlt.",
+   "task_hint": "Build the content pool from the page list and GSC queries to define the cut line.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W13",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/robots.txt, /sitemap_index.xml, /page-sitemap.xml, /llms.txt (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Sitemap: Mainz 4 pages, Wiesbaden 5 pages, Ingelheim pages; no Bingen page"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md (SOURCE OF TRUTH block, locked 02.09., updates to 10.10.)",
+     "date": "2026-09-08",
+     "note": "Bingen is a confirmed catchment (08.09.)"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/assets/un-burning/praxis-suriya/baseline/BASELINE-REPORT.md (sections 11-13: GBP state 30.09., 12 reviews, name change pending)",
+     "date": "2026-09-30",
+     "note": "GSC: Bingen 1 impression in 88 days"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Mainz und Wiesbaden haben eigene Seiten, Bingen (bestätigtes Einzugsgebiet) hat keine.",
+   "task_hint": "Plan one Bingen page with real local value (spec via seo-page-optimizer).",
+   "blocked_by": [
+    "W09"
+   ]
+  },
+  {
+   "id": "W14",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No similarity or slop lint run; catalogue gives no threshold"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Ähnlichkeits- und Slop-Prüfung lief nicht; die 9 Stadtseiten sind ein Prüfkandidat.",
+   "task_hint": "Run similarity script and slop lint on city and method pages.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W15",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/link-plan.json (UB.E04: 32 of 54 pages without link to parent, 49 missing links)",
+     "date": "2026-10-11",
+     "note": "UB.E04: 32 of 54 pages have no content link to their parent"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/suriya-elementor-dinakar-set.md, suriya-conversion-paths-must-stay.md, suriya-ayurveda-massage-page-untouchable.md, suriya-baseline-tracking.md, no-review-answering.md",
+     "date": "2026-09-29",
+     "note": "Menu = Dinakar structure since 29.09.; the portal tree of 13.09. is a different tree",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Der Seitenbaum ist größtenteils gebaut; zwei Bäume (Portal 13.09., Dinakar 29.09.) liegen vor, 32 von 54 Seiten haben keinen Link zur Elternseite.",
+   "task_hint": "Martin names the approved tree; then apply link-plan.json (with go).",
+   "blocked_by": [
+    "W13",
+    "un-burning"
+   ]
+  },
+  {
+   "id": "W16",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/robots.txt, /sitemap_index.xml, /page-sitemap.xml, /llms.txt (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Sitemap 11.10.: no calculator or tool page"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "/ayurveda-darm-test/ is a free phone call form, not an info tool"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Es gibt keine Info-Tools oder Rechner; „Darm-Check“ ist nur ein kostenloses Kurzgespräch.",
+   "task_hint": "Low priority; any tool must be info-only (HWG). Decide with W17.",
+   "blocked_by": [
+    "W17"
+   ]
+  },
+  {
+   "id": "W17",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No demand-ranked tool list for Suriya"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Keine nach Nachfrage geordnete Tool-Liste vorhanden.",
+   "task_hint": "Derive 3 tool ideas from GSC queries; no diagnosis tools.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W18",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/link-plan.json (UB.E04: 32 of 54 pages without link to parent, 49 missing links)",
+     "date": "2026-10-11",
+     "note": "UB.E04: 32 of 54 pages without link to parent; 49 missing links"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/baseline/internal-linking-audit-2026-10-10.md",
+     "date": "2026-10-10",
+     "note": "Audit 10.10.: blog posts 0 out-links, 8 city pages 1 inbound each"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Blog-Artikel und Stadtseiten hängen am Footer; 32 von 54 Seiten haben keinen Inhaltslink zur Elternseite.",
+   "task_hint": "Apply link-plan.json step by step with Martin's go (never edit page 1511).",
+   "blocked_by": [
+    "un-burning",
+    "W09"
+   ]
+  },
+  {
+   "id": "W19",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/baseline/internal-linking-audit-2026-10-10.md",
+     "date": "2026-10-10",
+     "note": "Internal-link review done 10.10. (this month)"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/link-plan.json (UB.E04: 32 of 54 pages without link to parent, 49 missing links)",
+     "date": "2026-10-11",
+     "note": "Parent links missing; true orphans not counted separately"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Eine Link-Prüfung lief am 10.10.; echte Waisenseiten sind nicht getrennt gezählt, ein Crawl-Diff-Bericht fehlt.",
+   "task_hint": "Schedule a monthly crawl diff and orphan count.",
+   "blocked_by": [
+    "W18"
+   ]
+  },
+  {
+   "id": "W20",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Homepage: button 'Termin vereinbaren' + WhatsApp in hero; form sits after the FAQ"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/suriya-elementor-dinakar-set.md, suriya-conversion-paths-must-stay.md, suriya-ayurveda-massage-page-untouchable.md, suriya-baseline-tracking.md, no-review-answering.md",
+     "date": "2026-10-01",
+     "note": "Form test by Martin 01.10.: works",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Startseite hat Button und WhatsApp im Hero; das Formular liegt weiter unten nach den FAQ.",
+   "task_hint": "Test a short form or anchor button above the fold; no health details in the form.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W21",
+   "status": "done",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "WhatsApp float plugin (wab.js) present on 31 of 31 money pages; not checked in a rendered mobile view"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "WhatsApp-Schwebebutton ist auf allen 31 Leistungsseiten eingebunden; gerenderte Mobilansicht nicht geprüft.",
+   "task_hint": "Verify the button on a 375 px screenshot.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W22",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "0 tel: links on 31 money pages; WhatsApp and booking buttons on all"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Kontrastreiche Buttons und WhatsApp sind überall da, aber nirgends ein anklickbarer Telefonlink (tel:).",
+   "task_hint": "Add tel: link with +49 174 7411087 in hero and footer (Martin go; page 1511 excluded).",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W23",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "Review block on 29 of 31 money pages; missing on /massage-ingelheim/ and /ayurveda-therapie/"
+    },
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Quotes include health outcomes ('deutliche Besserung', 'endlich eine Hilfe'): HWG gate 5"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Bewertungsblock steht auf 29 von 31 Leistungsseiten; einzelne Zitate nennen Besserung, das braucht eine HWG-Prüfung durch Martin.",
+   "task_hint": "Add the block on the 2 missing pages; Martin checks each quote for healing claims.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W24",
+   "status": "n/a",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "00_project/maps-playbook-measure-catalog.json",
+     "date": "2026-10-11",
+     "note": "Niche rule health: off by default (health data), gate 10",
+     "role": "rule_source"
+    },
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Site uses plain contact forms; no abandoned-form tool",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Nachfassen bei abgebrochenen Formularen bleibt aus: Gesundheitsdaten, Standard „aus“ (Gate 10).",
+   "task_hint": "none (Martin may enable later with consent flow)",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W25",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "00_project/assets/un-burning/praxis-suriya/baseline/BASELINE-REPORT.md (sections 11-13: GBP state 30.09., 12 reviews, name change pending)",
+     "date": "2026-09-30",
+     "note": "Baseline §13: requests via form and WhatsApp are counted nowhere (01.10.)"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/suriya-elementor-dinakar-set.md, suriya-conversion-paths-must-stay.md, suriya-ayurveda-massage-page-untouchable.md, suriya-baseline-tracking.md, no-review-answering.md",
+     "date": "2026-10-09",
+     "note": "GTM events s741_form_submit / s741_whatsapp_click feed Google Ads only (09.10.)",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-09-30",
+   "age_days": 11,
+   "finding_de": "Anfragen über Formular und WhatsApp werden in keinem CRM gezählt; die GTM-Ereignisse gehen nur an Google Ads.",
+   "task_hint": "Decide a lead log (portal Anfragen tab) with a data processing agreement; no health data.",
+   "blocked_by": [
+    "client"
+   ]
+  },
+  {
+   "id": "W26",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "/kosten-abrechnung/ live, last change 2024-11-13: 'Behandlung 80 €', Rückenmassage 80 €, formal 'Sie'"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md (SOURCE OF TRUTH block, locked 02.09., updates to 10.10.)",
+     "date": "2026-09-15",
+     "note": "Current prices: Schmerztherapie 95 €, Nervenregulation 120 €, Massage ab 70 € (Coralie 15.09.)"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Kosten-Seite ist live, aber von 2024: „Behandlung 80 €“ widerspricht den bestätigten 95 € und die Seite siezt.",
+   "task_hint": "Draft updated cost page from confirmed prices; Martin checks HWG wording; Coralie confirms numbers.",
+   "blocked_by": [
+    "client"
+   ]
+  },
+  {
+   "id": "W27",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "FAQ answers cost and insurance; 7- vs 14-day comparison on Ausleitung pages per memory"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "Cost page present"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Kosten-FAQ und Kosten-Seite helfen bei der Entscheidung; Vergleichs- und Ablaufseiten sind nur teilweise da.",
+   "task_hint": "List top 3 decisions from GSC; add comparison block only with real facts, no promises.",
+   "blocked_by": [
+    "W26"
+   ]
+  },
+  {
+   "id": "W28",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "FAQPage schema on 28 of 31 money pages; missing: /ayurveda-ingelheim/, /ayurveda-ausleitung-7-tage/, /ayurveda-therapie/"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "FAQ mit Schema steht auf 28 von 31 Leistungsseiten; es fehlen die Ayurveda-Hub-, 7-Tage- und Coralies Ayurveda-Seite.",
+   "task_hint": "Add FAQ to the 2 editable pages; page 1511 only with Coralie's go.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W29",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/robots.txt, /sitemap_index.xml, /page-sitemap.xml, /llms.txt (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Sitemap 11.10.: no best-of or list page"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Keine eigene Best-of-Liste vorhanden; für eine Heilpraktikerin wegen UWG/HWG kaum geeignet.",
+   "task_hint": "Low priority; only with Martin go and neutral criteria (gate 11).",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W30",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/robots.txt, /sitemap_index.xml, /page-sitemap.xml, /llms.txt (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Sitemap 11.10.: no project report pages"
+    },
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal tasks (client 3f71ef33...) 45 rows",
+     "date": "2026-09-21",
+     "note": "Task 'Fallbeispiele freigeben' open (client)"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Keine Projektberichte; HWG und Einwilligung sind nicht geklärt.",
+   "task_hint": "Only after written consent and HWG rules; ask Coralie in one bundle with W11.",
+   "blocked_by": [
+    "client",
+    "W11"
+   ]
+  },
+  {
+   "id": "W31",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "Local landmarks in text on 18 of 31 pages (Kaiserpfalz, Boehringer, Gutenberg, Rheingau); not verified against Maps"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Lokale Orientierungspunkte (Kaiserpfalz, Boehringer, Gutenberg, Rheingau) kommen vor, eine Maps-Prüfung fehlt.",
+   "task_hint": "Check each landmark mention against Maps; add the missing places.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W32",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Trustindex block 'live von Google', 12 reviews, no link to the Google profile; only Trustindex badge link"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "Gate 5: two quotes mention improvement"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Bewertungsblock zeigt echte Google-Bewertungen ohne Link zum Google-Profil; Zitate mit Besserungsaussagen braucht Martins Prüfung.",
+   "task_hint": "Add source link to the review page; Martin checks quotes.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "W33",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "JSON-LD MedicalBusiness: name 'Praxis Suriya', NAP, geo, hours, areaServed, sameAs, static aggregateRating 5/12"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_e/inspect-results.json (GSC URL Inspection, 25 URLs)",
+     "date": "2026-10-10",
+     "note": "Rich results PASS: breadcrumbs and review snippets on / (10.10.)"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/assets/un-burning/praxis-suriya/baseline/BASELINE-REPORT.md (sections 11-13: GBP state 30.09., 12 reviews, name change pending)",
+     "date": "2026-09-30",
+     "note": "GBP name differs (suffix)"
+    },
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/impressum/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Imprint Instagram 'coraliesuriyaperuma' vs schema 'suriya.praxis'"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Schema ist gültig und trägt „Praxis Suriya“; GBP-Name weicht ab, Social-Handles widersprechen dem Impressum, Bewertung ist fest eingetragen.",
+   "task_hint": "Align schema and imprint handles after G01; read the rating from the real source.",
+   "blocked_by": [
+    "G01"
+   ]
+  },
+  {
+   "id": "W34",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "Missing meta: 12 legacy pages incl. /termin-buchen/; alt gaps on 30 of 31 money pages; H1 errors on 8 pages; canonical present on all"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/index-intended.json (UB.E02: 64 ok, 7 index_unwanted, 1 index_missing, 3 decision_needed, 44 unverified)",
+     "date": "2026-10-11",
+     "note": "UB.E02: /akupunktur-ingelheim-praxis/ index_missing; soft 404 /404-error-page/"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Canonical ist überall gesetzt, aber Meta fehlt auf 12 Altseiten, Alt-Texte fehlen auf fast allen Leistungsseiten, mehrere Seiten haben falsche H1.",
+   "task_hint": "Fix alt text, meta and H1 in one batch with go; request indexing for /akupunktur-ingelheim-praxis/.",
+   "blocked_by": [
+    "un-burning"
+   ]
+  },
+  {
+   "id": "W35",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/robots.txt, /sitemap_index.xml, /page-sitemap.xml, /llms.txt (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "https://suriya-praxis.de/llms.txt returns HTTP 404 (11.10.)"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "llms.txt fehlt (404).",
+   "task_hint": "Prepare llms.txt draft from the page tree; publish with go.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "O01",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_c/listings/EV-C-listing-golocal.html (+ jameda, aerzte-de, theralupa-*, infobel-*, work5)",
+     "date": "2026-10-11",
+     "note": "Theralupa (2 listings), Jameda, ärzte.de exist but with phone 06132 ... or 01622714361 and old names"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/nap-corrections.json (UB.C04: 16 listings, 32 corrections, strict NAP match 0 percent)",
+     "date": "2026-10-11",
+     "note": "UB.C04 corrections rows for these listings"
+    },
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal client_citations (56 rows) + directories",
+     "date": "2026-09-30",
+     "note": "Portal: Heilpraktiker.de, arzt-auskunft, sanego, DocInsider, Doctolib 'planned'"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Theralupa (2 Einträge), Jameda und ärzte.de gibt es, aber mit falscher Rufnummer und altem Namen; Heilpraktiker.de, arzt-auskunft und sanego sind nur geplant.",
+   "task_hint": "Correct NAP at Theralupa, Jameda, ärzte.de (claim route); merge the Theralupa duplicate; then submit the rest.",
+   "blocked_by": [
+    "un-burning"
+   ]
+  },
+  {
+   "id": "O02",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal client_citations (56 rows) + directories",
+     "date": "2026-09-30",
+     "note": "Portal: 31 rows 'live', only 1 with URL, nap_match empty"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_c/listings/ + listing-fetch-status.json (un-burning listing fetches, UB.C04)",
+     "date": "2026-10-11",
+     "note": "Live: GoLocal, Cylex, Infobel x2, work5 found; GoYellow HTTP 410; branchen-info.net refused"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/nap-corrections.json (UB.C04: 16 listings, 32 corrections, strict NAP match 0 percent)",
+     "date": "2026-10-11",
+     "note": "UB.C04: strict NAP match 0 of 16 (0 percent)"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Das Portal meldet 31 Einträge als live, aber nur 1 mit URL; die Live-Prüfung findet Einträge mit altem Namen und falscher Rufnummer, GoYellow ist 410.",
+   "task_hint": "Fix portal statuses from the live check; correct NAP per nap-corrections.json (BrightLocal or client login).",
+   "blocked_by": [
+    "un-burning"
+   ]
+  },
+  {
+   "id": "O03",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal client_citations (56 rows) + directories",
+     "date": "2026-09-30",
+     "note": "Das Örtliche, Das Telefonbuch, Gelbe Seiten, meinestadt: status 'planned'"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/nap-corrections.json (UB.C04: 16 listings, 32 corrections, strict NAP match 0 percent)",
+     "date": "2026-10-11",
+     "note": "No core listing with strict NAP match"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Kernverzeichnisse Das Örtliche, Telefonbuch, Gelbe Seiten und meinestadt sind nur geplant; kein Eintrag hat das exakte NAP.",
+   "task_hint": "Submit the 4 missing core directories after the NAP fix (runbook group A).",
+   "blocked_by": [
+    "un-burning"
+   ]
+  },
+  {
+   "id": "O04",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal client_citations (56 rows) + directories",
+     "date": "2026-09-30",
+     "note": "Bing, Apple, TomTom 'live' (no URL); Foursquare venue has old name in URL; HERE and Facebook 'planned'"
+    },
+    {
+     "type": "document",
+     "ref": "Supabase 741-portal tasks (client 3f71ef33...) 45 rows",
+     "date": "2026-09-21",
+     "note": "Task 'Apple Maps + Bing + Facebook eingereicht' closed 30.08.",
+     "role": "secondary_claim"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/coralie-aggregator-pack.md",
+     "date": "2026-08-25",
+     "note": "Aggregator pack shows OLD name and OLD hours Di-Fr 09-19"
+    }
+   ],
+   "newest_evidence_date": "2026-09-30",
+   "age_days": 11,
+   "finding_de": "Bing, Apple und TomTom stehen im Portal als live, ohne URL; Foursquare trägt den alten Namen, HERE und Facebook fehlen, das Aggregator-Paket nennt alte Daten.",
+   "task_hint": "Update aggregator pack to 'Praxis Suriya' and Mo-Sa 07:30-20:00; verify each listing URL.",
+   "blocked_by": [
+    "un-burning"
+   ]
+  },
+  {
+   "id": "O05",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No Google quote-search or citation monitor run for the listings"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/index-intended.json (UB.E02: 64 ok, 7 index_unwanted, 1 index_missing, 3 decision_needed, 44 unverified)",
+     "date": "2026-10-11",
+     "note": "UB.E02 covers the own site only (1 index_missing)",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Ob die Verzeichniseinträge bei Google indexiert sind, wurde nie geprüft; Prüfung der eigenen Seite zeigt nur 1 Seite „nicht indexiert“.",
+   "task_hint": "Run a quote search per live listing after the NAP fix.",
+   "blocked_by": [
+    "un-burning",
+    "O02"
+   ]
+  },
+  {
+   "id": "O06",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No sponsor list for Suriya"
+    },
+    {
+     "type": "document",
+     "ref": "Drive 1ogvG1qphDcwhIp4cgNy8F8etenIvXoCbrlplWEcO9pI (LinkedIn und Kollaborations-Outreach v1)",
+     "date": "2026-09-21",
+     "note": "Partner outreach plan exists, not sent",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Ob Coralie lokal sponsert, ist unbekannt; es gibt keine Sponsorenliste.",
+   "task_hint": "Ask Coralie about existing sponsoring; keep link rules of gate 4.",
+   "blocked_by": [
+    "client"
+   ]
+  },
+  {
+   "id": "O07",
+   "status": "n/a",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "00_project/maps-playbook-measure-catalog.json",
+     "date": "2026-10-11",
+     "note": "Niche rule: n/a for most Heilpraktiker",
+     "role": "rule_source"
+    },
+    {
+     "type": "live",
+     "ref": "https://suriya-praxis.de/impressum/ (curl, 2026-10-11)",
+     "date": "2026-10-11",
+     "note": "Imprint: sole proprietor Heilpraktikerin, no Gewerbe or chamber entry shown"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "IHK/HWK entfällt für die Heilpraktikerin (freier Beruf, keine Kammermitgliedschaft im Impressum).",
+   "task_hint": "Martin confirms there is no Gewerbe or chamber membership.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "O08",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_d/crawl-sitemap.json + pages/*.html (un-burning crawl, 54 sitemap pages, UB.D01-D07)",
+     "date": "2026-10-11",
+     "note": "No association mention on 31 money pages"
+    },
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No backlink sheet with association links"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Eine Verbandsmitgliedschaft wird auf der Website nirgends genannt; ob Coralie Mitglied ist, ist unbekannt.",
+   "task_hint": "Ask Coralie for professional associations (e.g. Heilpraktiker or Ayurveda bodies) and whether they list members.",
+   "blocked_by": [
+    "client"
+   ]
+  },
+  {
+   "id": "O09",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_c/listings/EV-C-listing-allgemeine-zeitung.html (article dated 2023-09-28, link to suriya-praxis.de)",
+     "date": "2026-10-11",
+     "note": "Allgemeine Zeitung article 28.09.2023 links to suriya-praxis.de (link live 11.10.)"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md (SOURCE OF TRUTH block, locked 02.09., updates to 10.10.)",
+     "date": "2026-09-09",
+     "note": "09.09.: AZ declines editorial posts, offers paid 'Gesponserter Artikel' 200/420 EUR",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Der redaktionelle Link der Allgemeinen Zeitung ist von 2023, also außerhalb von 12 Monaten; Kontakt besteht, bezahlter Artikel ist Gate 4.",
+   "task_hint": "New earned press contact via partner swap (S16) or a labelled paid article through backlink-dach; Martin go.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "O10",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No donation or sponsor list for Suriya"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Spenden oder Sponsoring für .org-Links sind nicht belegt.",
+   "task_hint": "Ask Coralie about existing charity ties; a donation for a link counts as paid (gate 4).",
+   "blocked_by": [
+    "client"
+   ]
+  },
+  {
+   "id": "O11",
+   "status": "n/a",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "00_project/maps-playbook-measure-catalog.json",
+     "date": "2026-10-11",
+     "note": "Niche rule: n/a for most practices",
+     "role": "rule_source"
+    },
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md (SOURCE OF TRUTH block, locked 02.09., updates to 10.10.)",
+     "date": "2026-09-08",
+     "note": "Services only; /shop/ is a legacy 82-word page"
+    }
+   ],
+   "newest_evidence_date": "2026-09-08",
+   "age_days": 33,
+   "finding_de": "Hersteller- und Lieferantenlinks entfallen: Dienstleistungspraxis ohne Handel.",
+   "task_hint": "none",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "O12",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "00_project/maps-playbook-measure-catalog.json",
+     "date": "2026-10-11",
+     "note": "Rule text says 'See O06'; O06 unknown",
+     "role": "rule_source"
+    },
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No sponsor list"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Veranstaltungs-Sponsoring ist unbekannt (hängt an O06); die Regel verweist nur auf O06.",
+   "task_hint": "Resolve with O06.",
+   "blocked_by": [
+    "O06",
+    "client"
+   ]
+  },
+  {
+   "id": "O13",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/praxis-suriya-client.md (SOURCE OF TRUTH block, locked 02.09., updates to 10.10.)",
+     "date": "2026-09-09",
+     "note": "09.09.: VRM paid-article price list received (200/420 EUR), shortlist of 5 press targets"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/maps-playbook-measure-catalog.json",
+     "date": "2026-10-11",
+     "note": "Gate 4: only via backlink-dach; needs review pace and on-page solid",
+     "role": "rule_source"
+    }
+   ],
+   "newest_evidence_date": "2026-09-09",
+   "age_days": 32,
+   "finding_de": "Eine Shortlist liegt vor (5 Presseziele, VRM-Preisliste); Kauf erst nach solidem Bewertungstempo und On-Page.",
+   "task_hint": "Hold the order until G17 and W09/W34 are fixed; then run the backlink-dach buy path.",
+   "blocked_by": [
+    "G17"
+   ]
+  },
+  {
+   "id": "O14",
+   "status": "unknown",
+   "last_known_status": "partly",
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "scan",
+     "ref": "Supabase 741-portal scans, backlinks_manual report_key ahrefs-free-2026-08-15 (Ahrefs Free, Martin)",
+     "date": "2026-08-15",
+     "note": "Ahrefs free check 15.08.: DR 5, 575 links, 430 domains; one-off, client + Ternes + ZAM only"
+    }
+   ],
+   "newest_evidence_date": "2026-08-15",
+   "age_days": 57,
+   "finding_de": "Es gibt nur einen einmaligen Ahrefs-Wert vom 15.08. (DR 5, 575 Links); ein monatlicher Snapshot mit drei Wettbewerbern fehlt.",
+   "task_hint": "Take a fresh backlink snapshot (free tool or approved DataForSEO call) for client + 3 competitors.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "O15",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No anchor data for Suriya"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/maps-playbook-measure-catalog.json",
+     "date": "2026-10-11",
+     "note": "Gate 4 rule; mix rule not defined in the catalogue",
+     "role": "rule_source"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Keine Linktext-Daten vorhanden; die Mix-Regel ist im Katalog nicht beziffert.",
+   "task_hint": "Pull anchors in the next backlink snapshot; define the mix rule.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "O16",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No classifier output for Suriya"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Quell-Domains wurden nie klassifiziert.",
+   "task_hint": "Run the backlink-dach classifier when the buy path starts.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "O17",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "document",
+     "ref": "00_project/maps-playbook-measure-catalog.json",
+     "date": "2026-10-11",
+     "note": "Connectively closed Dec 2024; HARO English only; DACH channels unverified (11.10.)",
+     "role": "rule_source"
+    },
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No channel list for Suriya"
+    },
+    {
+     "type": "document",
+     "ref": "Drive 1ogvG1qphDcwhIp4cgNy8F8etenIvXoCbrlplWEcO9pI (LinkedIn und Kollaborations-Outreach v1)",
+     "date": "2026-09-21",
+     "note": "Partner outreach plan exists instead",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Kein HARO- oder Expertenkanal eingerichtet; DACH-Kanäle sind ungeprüft.",
+   "task_hint": "Research 2 DACH expert-quote channels; HWG check per quote.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "O18",
+   "status": "unknown",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "none",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No brand-mention search or reclaim log for Suriya"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/assets/un-burning/praxis-suriya/baseline/BASELINE-REPORT.md (sections 11-13: GBP state 30.09., 12 reviews, name change pending)",
+     "date": "2026-09-30",
+     "note": "GSC: brand query 'suriya gelnhausen' = another practice"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Unverlinkte Erwähnungen wurden nie gesucht; es gibt eine Namensverwechslung mit einer anderen Praxis in Gelnhausen.",
+   "task_hint": "Run a brand search with the name and address; log open mentions.",
+   "blocked_by": [
+    "none"
+   ]
+  },
+  {
+   "id": "O19",
+   "status": "missing",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "derived",
+   "evidence": [
+    {
+     "type": "live",
+     "ref": "Search of repo, Drive folder 1Hg7S3n1HyZmYmk4HLFmWfdTDtbI9NBis and Supabase for monitor, CRO prototype, content pool, sponsor, watch artefacts (2026-10-11)",
+     "date": "2026-10-11",
+     "note": "No reputation or Reddit watch for Suriya"
+    },
+    {
+     "type": "document",
+     "ref": "00_project/assets/un-burning/praxis-suriya/baseline/BASELINE-REPORT.md (sections 11-13: GBP state 30.09., 12 reviews, name change pending)",
+     "date": "2026-09-30",
+     "note": "Brand ambiguity with 'Suriya Gelnhausen' in GSC"
+    },
+    {
+     "type": "live",
+     "ref": "00_project/assets/un-burning/praxis-suriya/2026-10-11-dryrun/evidence/area_c/listings/ + listing-fetch-status.json (un-burning listing fetches, UB.C04)",
+     "date": "2026-10-11",
+     "note": "GoLocal shows 2 reviews under 'Praxis Suriya'"
+    }
+   ],
+   "newest_evidence_date": "2026-10-11",
+   "age_days": 0,
+   "finding_de": "Keine Marken- und Reddit-Beobachtung eingerichtet; Namensverwechslung mit „Suriya Gelnhausen“ ist sichtbar.",
+   "task_hint": "Set a monthly brand watch; negative items go to un-burning; no burying (gate 3).",
+   "blocked_by": [
+    "un-burning"
+   ]
+  },
+  {
+   "id": "O20",
+   "status": "partly",
+   "last_known_status": null,
+   "stale": false,
+   "confidence": "verified",
+   "evidence": [
+    {
+     "type": "scan",
+     "ref": "Supabase 741-portal scans, ai_baseline report_keys 2f91c5b0a241a41 (ChatGPT 77.78%), b533aa3d9ec1256 (AI Overviews 0%)",
+     "date": "2026-08-15",
+     "note": "15.08.: ChatGPT names the practice at 7 of 9 points (77.78 percent) for one prompt; AI Overviews 0 percent"
+    },
+    {
+     "type": "live",
+     "ref": "Supabase 741-portal visibility_prompts / visibility_results / visibility_summary (0 rows)",
+     "date": "2026-10-11",
+     "note": "0 AI prompts stored (blueprint wants 10-30)",
+     "role": "secondary_claim"
+    }
+   ],
+   "newest_evidence_date": "2026-08-15",
+   "age_days": 57,
+   "finding_de": "ChatGPT nannte die Praxis am 15.08. an 7 von 9 Punkten, Google-KI nicht; es gibt nur 1 Prompt statt 10 bis 30.",
+   "task_hint": "Set up 10-30 stable money prompts; repeat the AI check monthly (scan expires in 3 days).",
+   "blocked_by": [
+    "none"
+   ]
+  }
+ ]
+}

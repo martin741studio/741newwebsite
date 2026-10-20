@@ -1,0 +1,154 @@
+{
+ "slug": "sabine-schwarz",
+ "steps": {
+  "intake": {
+   "agent": "orchestrator",
+   "status": "done",
+   "at": "2026-10-12T14:52",
+   "outputs": [
+    "intake.md",
+    "intake.json",
+    "browser-queue.jsonl"
+   ],
+   "blockers": [
+    "old page: gate G4"
+   ]
+  },
+  "demand": {
+   "agent": "A",
+   "status": "done",
+   "start": "14:54:42",
+   "end": "14:56:29",
+   "outputs": [
+    "demand.md",
+    "evidence/dfs-volumes-ads.json",
+    "evidence/dfs-serp-1.json",
+    "evidence/dfs-serp-2.json",
+    "evidence/dfs-serp-name.json",
+    "evidence/dfs-serp-name2.json",
+    "evidence/dfs-backlinks-summary.json",
+    "evidence/dfs-refdomains-spam.json"
+   ],
+   "blockers": [],
+   "cost_usd": 0.1504,
+   "gap_keyword": "paartherapie coburg",
+   "gap_volume": 110
+  },
+  "site": {
+   "agent": "B",
+   "status": "done",
+   "start": "2026-10-12T14:54:48",
+   "end": "2026-10-12T14:58:30",
+   "outputs": [
+    "site-findings.md",
+    "evidence/site.json",
+    "evidence/site-pages.json",
+    "evidence/site-page-urls.txt",
+    "evidence/comp-pages.json"
+   ],
+   "blockers": [
+    "http does not redirect to https (200 on http)",
+    "page_metrics counts aside text and cookie banner; praxisnoranebel.de is in Wuerzburg"
+   ]
+  },
+  "homepage": {
+   "agent": "C",
+   "status": "done",
+   "start": "2026-10-12T14:55",
+   "end": "2026-10-12T15:01",
+   "draft_home_py_secs": 3,
+   "outputs": [
+    "draft/index.html",
+    "draft/portrait.jpg",
+    "draft/badge.jpg",
+    "draft/draft-home.json",
+    "evidence/home-draft-1440.jpg",
+    "evidence/scorecard-today.md",
+    "homepage.md",
+    "../../../04_site/public/review-assets/sabine-schwarz/startseite-heute.webp",
+    "../../../04_site/public/review-assets/sabine-schwarz/startseite-entwurf.webp",
+    "../../../04_site/public/review-assets/sabine-schwarz/foto-1.webp",
+    "../../../04_site/public/review-assets/sabine-schwarz/foto-2.webp",
+    "../../../04_site/public/review-assets/sabine-schwarz/foto-3.webp"
+   ],
+   "score_today": "22/44",
+   "blockers": []
+  },
+  "scan": {
+   "agent": "D",
+   "status": "done",
+   "start": "14:55:05",
+   "end": "15:10:30",
+   "scan_start": "14:56:53",
+   "scan_end": "~15:00 (first complete answer between the 5th and 6th poll; confirmed 15:05)",
+   "outputs": [
+    "scan-search.md",
+    "competitors.md",
+    "evidence/falcon-report-5544ec2c473e732.json",
+    "evidence/falcon-run-response.json",
+    "evidence/scan-grid.png",
+    "../../04_site/public/review-assets/sabine-schwarz/scan-grid.webp"
+   ],
+   "credits": 49,
+   "report_key": "5544ec2c473e732",
+   "keyword": "paartherapie coburg",
+   "solv": 10.2,
+   "found_in": 26,
+   "blockers": [
+    "verify in Chrome operator: 2 extra profiles (SASCH Praxis same address 0 reviews; Sabine Schwarz Paartherapie Studio FRIEDA Coburg 0 reviews) are hers; claimed=false"
+   ]
+  },
+  "operator": {
+   "agent": "O",
+   "status": "done",
+   "start": "14:54:34",
+   "end": "15:00:20",
+   "outputs": [
+    "evidence/chat-2026-10-12.md",
+    "evidence/google-panel-2026-10-12.md",
+    "evidence/home-today-1440.jpg",
+    "evidence/home-images.txt"
+   ],
+   "blockers": [
+    "LinkedIn: Message button opened no chat overlay; thread read via linkedin.com/messaging (same thread, Sabine Schwarz). Nothing typed or sent.",
+    "Chrome resize_window did not change viewport (stayed 1512 wide); 1440 shot made with headless Chrome. No cookie banner on site (only a map-consent placeholder, not clicked)."
+   ]
+  },
+  "writer": {
+   "agent": "E",
+   "status": "done",
+   "start": "15:00:56",
+   "end": "15:13:45",
+   "outputs": [
+    "prospect.json",
+    "prospect.skeleton2.json",
+    "evidence/factcheck-auto.md",
+    "04_site/review/sabine-schwarz/index.html",
+    "_run.json"
+   ],
+   "draft_prospect_secs": [
+    0.01,
+    0.02
+   ],
+   "todos_replaced": 96,
+   "validate": {
+    "errors": 0,
+    "warnings": [
+     "no loom_url"
+    ]
+   },
+   "factcheck": {
+    "wrong": 0,
+    "mismatch": 0,
+    "not_found": [
+     "calc.val 300 = 2 x 150 EUR (derived, in sources)"
+    ],
+    "absolute": 17
+   },
+   "blockers": [
+    "loom_url missing (hero placeholder)",
+    "fresh fact-check subagent (step 9.3) not run by E"
+   ]
+  }
+ }
+}

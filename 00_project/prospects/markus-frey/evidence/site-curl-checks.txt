@@ -1,0 +1,47 @@
+Site checks for https://stressfrey.de/ (agent B, 2026-10-15). Source: live HTML fetched with curl (UA Chrome), read only.
+
+## Per page (static HTML)
+page | title | title_len | h1_count | h2_count | meta_desc_len | tel_links | forms | Koeln_in_visible_text | img_without_alt
+home | StressFrey.de - StressFrey-Akademie | 35 | 0 | 4 | 359 | 0 | 2 | 1 | 2 of 4
+kontakt | Kontakt - StressFrey-Akademie | 29 | 1 | 0 | 51 | 0 | 4 | 1 | 3 of 7
+online-coaching | Online Coaching - StressFrey-Akademie | 37 | 1 | 1 | 268 | 0 | 2 | 1 | 3 of 5
+termin | Termin - StressFrey-Akademie | 28 | 1 | 0 | 137 | 0 | 2 | 1 | 2 of 4
+vortraege | Vorträge von Markus Frey - StressFrey-Akademie | 46 | 0 | 2 | 256 | 0 | 3 | 2 | 3 of 5
+selbstbestimmt | Selbstbestimmt (Navigation) - StressFrey-Akademie | 49 | 0 | 0 | 199 | 0 | 1 | 0 | 4 of 4
+shop | Shop - StressFrey-Akademie | 26 | 0 | 0 | 241 | 0 | 2 | 1 | 4 of 6
+energie-impulse | Energie-Impulse - StressFrey-Akademie | 37 | 1 | 0 | 117 | 0 | 1 | 0 | 2 of 2
+ziele-statt-vorsaetze | Ziele statt Vorsaetze - StressFrey-Akademie | 43 | 1 | 0 | 47 | 0 | 1 | 0 | 3 of 3
+markus-frey-persoenlich | Markus Frey - ein paar persönliche Worte - StressFrey-Akademie | 62 | 2 | 2 | 122 | 0 | 3 | 1 | 7 of 11
+gesund-im-stress-blog | Gesund im Stress - Blog - StressFrey-Akademie | 45 | 0 | 6 | 163 | 0 | 2 | 1 | 8 of 10
+
+## Main menu link check
+Menu item "Willkommen" href: https://stressfrey.de/?page_id=4510 -> HTTP 404 ("Seite wurde nicht gefunden"). The link appears in the main menu of 8 of the 11 pages checked (home, kontakt, online-coaching, termin, vortraege, shop, blog, persoenlich). Not found in energie-impulse, selbstbestimmt, ziele-statt-vorsaetze.
+
+## Home page tracking and schema (static HTML)
+Meta Pixel id(s): ['1268688827965746']
+GA4 ids (G-...): []
+GTM ids (GTM-...): []
+Cookiebot config strings present: True
+JSON-LD @types: ['WebPage', 'ImageObject', 'BreadcrumbList', 'WebSite']
+
+## Home headings
+H2 texts: ['Auch in herausfordernden Zeiten, Krisenzeiten gar, dauerhaft Zugriff auf die persönliche S', 'Coaching', 'Vorträge', 'Produkte']
+
+## Contact page (kontakt)
+Contact Form 7 form present: True | fields: Name, E-Mail, Betreff, Nachricht, consent checkbox (Datenschutz)
+Phone text on page: +49 (0)221 6086438 (no tel: link)
+Sidebar WooCommerce categories text: Bücher, Hörbuch, Jacket, Mens, Scarfs, Shirts, Unkategorisiert, Womens (theme leftover)
+
+## Booking page (termin)
+iframe src: ['https://www.etermin.net/stressfrey/serviceid/127937?noinitscroll=1']
+Visible text before the iframe: Termin / Termin / Markus Frey
+
+## Lead magnet page (selbstbestimmt)
+Button text: "E-Book kostenfrei anfordern!" | footer: "©Markus Frey, 2026"
+
+## Price page (shop)
+Visible prices: Den Stress im Griff 21,80 EUR (21.80) | Mit Stress zu Spitzenleistung 49,90 EUR (49.90). Coaching has no price on site.
+
+## Redirects (curl -sI, 2026-10-15)
+http://stressfrey.de/ -> 301 https://stressfrey.de/ | https://www.stressfrey.de/ -> 301 https://stressfrey.de/ | /selbstbestimmt -> 301 /selbstbestimmt/ | /kontakt -> 301 /kontakt/
+Dead URL test: /this-page-does-not-exist-xyz/ -> 404 (template works)

@@ -1,0 +1,117 @@
+{
+ "_help": "Copy to <run>/04-pool/candidates.json. The agent writes JUDGMENT only. build_pool.py adds every number. Delete this key.",
+ "meta": {
+  "client": "<Name>",
+  "slug": "<slug>",
+  "domain": "<domain.de>",
+  "url": "https://<domain.de>",
+  "city": "<City>",
+  "mode": "new|existing",
+  "niche": "<trade, method>",
+  "compliance_mode": "hwg|brao|none",
+  "cap_usd": 5.0,
+  "run_date": "YYYY-MM-DD",
+  "primary_channel": "<booking form|phone|WhatsApp>",
+  "places": [
+   "<core place>",
+   "<neighbour>"
+  ]
+ },
+ "services": {
+  "<key>": {
+   "name": "<service name as the client says it>",
+   "source": "dataset.md 1.1"
+  }
+ },
+ "competitors": {
+  "<domain>": {
+   "tier": "local|niche|topic"
+  }
+ },
+ "items": [
+  {
+   "id": "CP-LOC-001",
+   "pillar": "location",
+   "audience": "patient",
+   "page_tag": "homepage",
+   "section_hint": "hero",
+   "item_type": "block",
+   "topic": "Hero headline with city and district",
+   "fit": 3,
+   "fit_reason": "Core place of the practice (NAP).",
+   "conversion": 3,
+   "effort": 1,
+   "keywords": [
+    "<trade> <city>"
+   ],
+   "ac_terms": [
+    "^<trade> <city>"
+   ],
+   "paa_terms": [],
+   "client_signal_kw": [],
+   "cover_tiers": [
+    "local"
+   ],
+   "cover_patterns": [
+    "<district>"
+   ],
+   "cover_note": "Share of local sites with the district in title, heading or URL",
+   "compliance": {
+    "mode": "hwg",
+    "flag": "ok",
+    "note": null
+   },
+   "needs_client": [],
+   "evidence_extra": []
+  },
+  {
+   "id": "CP-SVC-006",
+   "pillar": "service",
+   "audience": "patient",
+   "page_tag": "service:<slug>",
+   "section_hint": "leistungen",
+   "item_type": "block",
+   "topic": "<Service>: card and own page",
+   "fit": 3,
+   "fit_reason": "Service is on the live site.",
+   "conversion": 2,
+   "effort": 2,
+   "service_ref": "<key>",
+   "keywords": [
+    "<service> <city>",
+    "<service>"
+   ],
+   "ac_terms": [
+    "^<service>"
+   ],
+   "paa_terms": [
+    "<service>"
+   ],
+   "client_signal_kw": [
+    "<service>"
+   ],
+   "cover_tiers": [
+    "local",
+    "niche"
+   ],
+   "cover_patterns": [
+    "<service>"
+   ],
+   "compliance": {
+    "mode": "hwg",
+    "flag": "review",
+    "note": "HWG: no healing promises."
+   },
+   "needs_client": []
+  }
+ ],
+ "_fields": {
+  "fit": "0 not offered (cut), 1 adjacent (client confirms), 2 education around a real service, 3 exact service",
+  "conversion": "0-3",
+  "effort": "1 text only, 2 needs client facts or images, 3 new page or third party",
+  "demand_mode": "optional: expectation for blocks visitors expect (proof, location, first visit)",
+  "page_tag": "homepage | service:<slug> | place:<slug> | authority-page | blog-faq | offsite | later | cut",
+  "client_signal_text": "optional free text when the data is not in a file",
+  "live_status": "optional manual override"
+ }
+}

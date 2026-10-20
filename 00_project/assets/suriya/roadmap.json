@@ -1,0 +1,122 @@
+{
+  "client": "Praxis Suriya",
+  "client_slug": "suriya",
+  "phase": "P4",
+  "updated_at": "2026-10-16T12:00:00Z",
+  "north_star_goal": {
+    "title": "Top 3 im Maps-Grid für die 5 Kern-Keywords & 5+ Patientenanfragen/Woche",
+    "target_metric": "Top 3 Local Falcon SoLV, Anfragen >= 5/Woche",
+    "deadline": "2026-12-01",
+    "source": "Programm-Vereinbarung 2026-09-03"
+  },
+  "benchmark_delta": {
+    "baseline": {
+      "solv_ayurveda": "95.9%",
+      "solv_akupunktur": "91.8%",
+      "solv_heilpraktiker": "77.6%",
+      "solv_migraene": "30.6%",
+      "solv_schmerztherapie": "0.0%",
+      "requests_per_week": 2,
+      "menu_structure": "Überladen mit 5 Unterpunkten unter Ayurveda",
+      "access_status": "GSC & GTM blockiert, WP-Rolle nur Viewer"
+    },
+    "market_benchmark": {
+      "solv_target": "> 85% über alle 5 Kern-Keywords",
+      "requests_target": "5+ Anfragen/Woche",
+      "menu_structure": "Schlankes Menü (1 Unterpunkt) + 3-Karten-Hub auf Hauptseite",
+      "tracking_status": "Vollständiges Event-Tracking (Call, WhatsApp, Buchung)"
+    },
+    "gap_summary": "Schmerztherapie und Migräne hinken hinterher; Menü verwirrt Besucher; GSC/GTM-Zugänge müssen reaktiviert werden."
+  },
+  "milestones": [
+    {
+      "id": "M1",
+      "title": "Diagnosis & Onboarding Baseline",
+      "phase": "P2",
+      "status": "completed",
+      "completed_at": "2026-09-23",
+      "evidence": "00_project/morning-grill-goals.json"
+    },
+    {
+      "id": "M2",
+      "title": "Access Re-Activation & Legal Footer Compliance",
+      "phase": "P3",
+      "status": "in_progress",
+      "tasks": [
+        {
+          "id": "T2.1",
+          "task": "Dinakar: Footer Legal Links (Impressum + Datenschutz) live setzen",
+          "status": "in_progress"
+        },
+        {
+          "id": "T2.2",
+          "task": "Coralie: WordPress Admin-Rolle vergeben (bisherige Einladung war nur Viewer)",
+          "status": "blocked"
+        },
+        {
+          "id": "T2.3",
+          "task": "GSC- & GTM-Zugang wiederherstellen (Martin spricht Coralie direkt an)",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "Ayurveda-Hub & Menü-Verschlankung",
+      "phase": "P4",
+      "status": "completed",
+      "completed_at": "2026-10-19",
+      "tasks": [
+        {
+          "id": "T3.1",
+          "task": "Hauptmenü verschlanken: Unter 'Ayurveda' nur 'Ayurveda Massage' belassen",
+          "status": "completed",
+          "completed_at": "2026-10-19"
+        },
+        {
+          "id": "T3.2",
+          "task": "3-Karten-Hub auf /ayurveda-ingelheim/ einbauen (1. Massage, 2. Ausleitung, 3. Darm-Check)",
+          "status": "completed",
+          "completed_at": "2026-10-19"
+        },
+        {
+          "id": "T3.3",
+          "task": "Abstimmungsnachricht via WhatsApp an Coralie senden",
+          "status": "completed",
+          "completed_at": "2026-10-19"
+        }
+      ]
+    },
+    {
+      "id": "M4",
+      "title": "Proof Tracking & Falcon Scan",
+      "phase": "P6",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "T4.1",
+          "task": "Erster Local Falcon Scan nach Zyklus-Reset (~19.10.)",
+          "status": "pending"
+        },
+        {
+          "id": "T4.2",
+          "task": "Tantri: 28 Verzeichnis-Citations verifizieren",
+          "status": "pending"
+        },
+        {
+          "id": "T4.3",
+          "task": "Wöchentliches Anfragen-Logging reaktivieren",
+          "status": "pending"
+        }
+      ]
+    }
+  ],
+  "client_rules": [
+    "No backlink or disavow work",
+    "No big change without backup and her OK",
+    "No URL changes",
+    "Ayurveda-Massage page untouchable",
+    "Contact paths must stay",
+    "Strict plain text in client-editable WordPress text boxes (Hard-Coded Rule)"
+  ]
+}

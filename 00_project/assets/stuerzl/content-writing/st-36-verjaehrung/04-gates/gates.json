@@ -1,0 +1,65 @@
+{
+ "date": "2026-10-11",
+ "page": "st-36-verjaehrung/05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G2 legal": {
+   "mode": "brao",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Wortzahl 1490 außerhalb Zielbereich 560 bis 1300"
+   ],
+   "info": {
+    "words": 1490,
+    "placeholders": 4
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "counts": {
+    "du": 0,
+    "sie": 10,
+    "ich": 0,
+    "wir": 6
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1490,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Article ohne datePublished (erst nach Freigabe des Kunden setzen)",
+    "Article ohne Autorenname"
+   ]
+  }
+ }
+}

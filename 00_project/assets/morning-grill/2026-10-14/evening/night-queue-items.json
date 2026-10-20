@@ -1,0 +1,83 @@
+[
+ {
+  "id": "brasse-faq-live-check",
+  "client": "Maria Brasse",
+  "class": "public_audit",
+  "lang": "German",
+  "title": "Which live shuiguru.de pages lack the FAQ block",
+  "brief": "All 12 page texts in 00_project/maria-brasse-pages/ have an FAQ, but the evening log said 4 pages lack one. Check the LIVE pages on https://shuiguru.de (public, no login) against the 12 texts: which live page shows no FAQ block or an older FAQ. No drafts.",
+  "inputs": ["https://shuiguru.de", "00_project/maria-brasse-pages/", "reporting/night-shift/2026-10-13/items/brasse-faq/faq-entwuerfe.md"],
+  "done": "items/brasse-faq-live-check/live-faq-check.md with a table: page, live URL, FAQ on live page yes/no/older, matching repo text file."
+ },
+ {
+  "id": "johni-access-replan",
+  "client": "Johni Jaya Motor",
+  "class": "research",
+  "lang": "English",
+  "title": "Cross-check Johni Jaya Motor's overdue task list against today's findings",
+  "brief": "Portal shows 25 overdue tasks, but today's re-check found hours and booking are actually already done and the FAQ is the real gap. Read the client memory and the public site (no login) to work out which of the 25 items are genuinely still open versus already done but not ticked. Write a short re-plan note in English.",
+  "inputs": ["https://johnijayamotor.com", "_johni_jaya_archive/"],
+  "done": "items/johni-access-replan/replan-note.md"
+ },
+ {
+  "id": "kamil-oberhausen-audit",
+  "client": "Kamil (Physio Anatomie + Kraft)",
+  "class": "public_audit",
+  "lang": "German",
+  "title": "Public check of physiotherapieoberhausen.com after the Kraft hack",
+  "brief": "physiotherapiekraft.de had a sitewide spam injection. Check whether physiotherapieoberhausen.com (same owner, shared GA4 property) shows any of the same signs: injected links, odd redirects, suspicious footer content. Public read-only, no login, no cleanup.",
+  "inputs": ["https://physiotherapieoberhausen.com"],
+  "done": "items/kamil-oberhausen-audit/findings.md with a clean result or a list of suspicious items and their exact page/URL."
+ },
+ {
+  "id": "suriya-backlink-checkpoint1",
+  "client": "Praxis Suriya",
+  "class": "research",
+  "lang": "German",
+  "title": "Continue the Suriya backlink checkpoint 1 research",
+  "brief": "The backlink-DACH workflow checkpoint 1 is partly done, blocked on the DataForSEO IP whitelist for the automated part. Continue the manual research that does not need that tool: local ecosystem targets (Vereine, Verbände, Presse) near her practice. List candidate targets with public contact info where available. No outreach.",
+  "inputs": ["00_project/assets/suriya/backlink/"],
+  "done": "items/suriya-backlink-checkpoint1/targets.md with name, type, contact (if public), why relevant."
+ },
+ {
+  "id": "dumann-dashboard-items-draft",
+  "client": "Daniela Dumann",
+  "class": "draft",
+  "lang": "German",
+  "title": "Draft the design-approval record and Maps-name note for Daniela's dashboard",
+  "brief": "By the 14.10. rule, the 3 live Maps-name mismatches are not self-fixed; they go to Daniela as dashboard items for her own feedback first. Draft the dashboard-item text (design-approval record + Maps-name mismatch) in German, ready for Martin to place in her portal. Do not place it live.",
+  "inputs": ["00_project/assets/dumann/"],
+  "done": "items/dumann-dashboard-items-draft/draft.md",
+  "due": "2026-10-15"
+ },
+ {
+  "id": "kamil-disapproval-research",
+  "client": "Kamil (Physio Anatomie + Kraft)",
+  "class": "research",
+  "lang": "German",
+  "title": "Research why Google disapproved the Kraft campaign (policy mismatch)",
+  "brief": "The disapproval mail cites 'online gambling'; the account UI shows 'unreliable claims'. Compare Google's advertising policy pages for both categories against the physiotherapiekraft.de page content (public, no login) to work out the likely real trigger and the fix needed on the page.",
+  "inputs": ["https://physiotherapiekraft.de", "https://support.google.com/adspolicy/"],
+  "done": "items/kamil-disapproval-research/findings.md"
+ },
+ {
+  "id": "huewel-gbp-round2-draft",
+  "client": "Praxis Hüwel",
+  "class": "draft",
+  "lang": "German",
+  "title": "Draft Hüwel's GBP round 2 content (FAQ + remaining services)",
+  "brief": "Next milestone is GBP round 2: FAQ answers and roughly 19 more service entries, using the established terms (Magnetfeldtherapie, never a device promise on 'Bioresonanz', see the client memory for the full term list). Draft the FAQ text and the service list in German, ready for Dinakar to enter live. Do not publish.",
+  "inputs": ["00_project/assets/huewel/"],
+  "done": "items/huewel-gbp-round2-draft/draft.md"
+ },
+ {
+  "id": "kamil-dashboard-numbers",
+  "client": "Kamil (Physio Anatomie + Kraft)",
+  "class": "build",
+  "lang": "German",
+  "title": "Prepare Kamil's monthly numbers for his dashboard",
+  "brief": "Next milestone is moving the August/September numbers into Kamil's client dashboard and preparing improvement notes (website, income streams). Use the existing report generator pattern to build a dashboard-ready local draft. Do not touch the live dashboard.",
+  "inputs": ["reporting/out/physio-anatomie-2026-07.html", "reporting/out/physiokraft-2026-07.html", "reporting/monthly-client-report.mjs"],
+  "done": "items/kamil-dashboard-numbers/draft.md"
+ }
+]

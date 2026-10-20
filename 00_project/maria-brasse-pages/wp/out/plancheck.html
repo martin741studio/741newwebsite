@@ -1,0 +1,373 @@
+<!-- wp:html -->
+<style>.sg-page{--t:#10595B;--td:#0b3a3b;--tint:#eff5f5}
+.sg-page .wp-block-group__inner-container>*{margin-block-start:0}
+.sg-page .wp-block-group__inner-container{padding:0}
+.sg-page>*{margin-top:0!important;margin-bottom:0!important}
+.sg-page>.wp-block-group__inner-container>*{margin:0!important}
+/* hero */
+.sg-page .sg-hero{min-height:620px;display:flex;align-items:center;padding:110px 6%;
+ background:linear-gradient(90deg,rgba(11,58,59,.9) 0%,rgba(11,58,59,.62) 42%,rgba(11,58,59,.05) 75%),url(https://shuiguru.de/wp-content/uploads/2026/09/feng-shui-plancheck-vor-baubeginn.jpg) center 30%/cover no-repeat;color:#fff}
+.sg-page .sg-hero-box{max-width:640px}
+.sg-page .sg-hero p.sg-eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:13px;font-weight:600;color:#bfe0e0;margin:0 0 14px!important}
+.sg-page .sg-hero .sg-h1{color:#fff;font-size:clamp(30px,4vw,50px);line-height:1.15;margin:0 0 20px!important}
+.sg-page .sg-hero .sg-h1 em{font-style:normal;color:#bfe0e0}
+.sg-page .sg-hero p.sg-hero-lead{font-size:17px;line-height:1.65;color:#eef6f6;margin:0 0 18px!important}
+.sg-page .sg-hero p.sg-hero-line{font-size:15px;color:#fff;margin:0 0 22px!important;opacity:.95}
+.sg-page .sg-hero>.wp-block-group__inner-container{width:100%;max-width:1120px;margin:0 auto}
+.sg-page .sg-hero-split{position:relative;background:var(--td)!important;min-height:600px}
+.sg-page .sg-hero-split:before{content:"";position:absolute;top:0;right:0;bottom:0;width:50%;background:url(https://shuiguru.de/wp-content/uploads/2026/09/feng-shui-plancheck-vor-baubeginn.jpg) center 30%/cover no-repeat}
+.sg-page .sg-hero-split .sg-hero-box{max-width:min(560px,44vw)}
+/* buttons */
+.sg-page .sg-btn .wp-block-button__link{background:var(--t);color:#fff;border-radius:0;padding:14px 30px;font-weight:600}
+.sg-page .sg-hero .sg-btn .wp-block-button__link{background:#fff;color:var(--t)}
+.sg-page .sg-btn .wp-block-button__link:hover{background:#e87010!important;color:#fff!important}
+.sg-page .sg-btn-light .wp-block-button__link{background:#fff;color:var(--t)}
+/* bands */
+.sg-page .sg-band{padding:80px 24px}
+.sg-page .sg-band-white{background:#fff}
+.sg-page .sg-band-tint{background:var(--tint)}
+.sg-page .sg-band-note{background:#fdf6df;border-top:3px solid #e7c34a;border-bottom:3px solid #e7c34a;padding:44px 24px}
+.sg-page .sg-band-cta{background:var(--t);color:#fff;text-align:center}
+.sg-page .sg-band-cta h2{color:#fff!important}
+.sg-page .sg-band-cta .wp-block-buttons{justify-content:center}
+.sg-page .sg-inner{max-width:1120px;margin:0 auto}
+.sg-page .sg-narrow{max-width:760px}
+.sg-page .sg-band h2{color:var(--t);font-size:clamp(26px,3vw,36px);line-height:1.2;margin:0 0 18px!important;position:relative}
+.sg-page .sg-band:not(.sg-band-cta):not(.sg-band-note) h2:after{content:"";display:block;width:56px;height:3px;background:var(--t);margin-top:14px}
+.sg-page .sg-head-center{text-align:center;max-width:780px;margin:0 auto 34px!important}
+.sg-page .sg-head-center h2:after{margin-left:auto;margin-right:auto}
+.sg-page .sg-band p{font-size:17px;line-height:1.75;margin:0 0 16px!important}
+.sg-page .sg-band h3{font-size:23px;color:#222!important;margin:0 0 12px!important}
+.sg-page .sg-band h3 a{color:inherit;text-decoration:none;border-bottom:2px solid var(--t)}
+.sg-page .sg-band h3 a:hover{color:var(--t)}
+/* splits */
+.sg-page .sg-split{gap:56px;align-items:flex-start;margin:0!important}
+.sg-page .sg-split-img,.sg-page .sg-row{align-items:center}
+.sg-page .sg-row{margin:0 0 56px!important}
+.sg-page .sg-row:last-child{margin-bottom:0!important}
+.sg-page .sg-img{margin:0!important}
+.sg-page .sg-img img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;box-shadow:0 18px 40px rgba(11,58,59,.18)}
+/* lists, steps, cards */
+.sg-page ul.sg-check{list-style:none;margin:0 auto 16px;padding:0;max-width:820px;text-align:left}
+.sg-page .sg-split ul.sg-check{max-width:none}
+.sg-page ul.sg-check li{position:relative;padding:12px 16px 12px 46px;margin:0 0 10px;background:#fff;border-left:3px solid var(--t);font-size:17px;line-height:1.6}
+.sg-page .sg-band-white ul.sg-check li{background:var(--tint)}
+.sg-page ul.sg-check li:before{content:"✓";position:absolute;left:16px;top:12px;color:var(--t);font-weight:700}
+.sg-page .sg-steps>.wp-block-group__inner-container{counter-reset:sgstep;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+.sg-page .sg-step{counter-increment:sgstep;background:#fff;padding:56px 20px 20px;position:relative;border-top:4px solid var(--t)}
+.sg-page .sg-band-white .sg-step{background:var(--tint)}
+.sg-page .sg-step:before{content:counter(sgstep);position:absolute;left:20px;top:14px;width:32px;height:32px;border-radius:50%;background:var(--t);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.sg-page .sg-step p{margin:0 0 6px!important;font-size:16px!important}
+.sg-page .sg-step p.sg-step-title{font-size:18px!important;color:var(--t)}
+.sg-page .sg-cards>.wp-block-group__inner-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.sg-page .sg-cols-4>.wp-block-group__inner-container{grid-template-columns:repeat(4,1fr)}
+.sg-page .sg-cols-2>.wp-block-group__inner-container{grid-template-columns:repeat(2,1fr)}
+@media(max-width:1000px){.sg-page .sg-cols-4>.wp-block-group__inner-container{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.sg-page .sg-cols-4>.wp-block-group__inner-container,.sg-page .sg-cols-2>.wp-block-group__inner-container{grid-template-columns:1fr}}
+.sg-page .sg-band-follow{padding-top:0}
+.sg-page .sg-card{background:#fff;padding:26px;border-top:4px solid var(--t);box-shadow:0 6px 20px rgba(11,58,59,.07)}
+.sg-page .sg-band-white .sg-card{background:var(--tint);box-shadow:none}
+.sg-page .sg-card p{margin:0 0 8px!important;font-size:16px!important}
+.sg-page .sg-card p.sg-card-title{font-size:19px!important;color:var(--t)}
+.sg-page .sg-card .sg-ic{display:block;font-size:30px;margin-bottom:8px}
+.sg-page .sg-card p.sg-price{font-size:30px!important;font-weight:700;color:var(--t)}
+.sg-page .sg-badges{text-align:center}
+.sg-page .sg-badges .sg-badge{display:inline-block;background:var(--t);color:#fff;padding:8px 18px;margin:0 8px 8px 0;border-radius:999px}
+.sg-page .sg-badges .sg-badge strong{margin-right:6px}
+/* faq */
+.sg-page .sg-faq{background:#fff;border:0;border-left:3px solid var(--t);padding:16px 20px;margin:0 0 12px!important}
+.sg-page .sg-band-white .sg-faq{background:var(--tint)}
+.sg-page .sg-faq summary{cursor:pointer;font-weight:600;color:var(--t);font-size:17px}
+.sg-page .sg-faq p{margin:12px 0 0!important}
+.sg-page .sg-map{line-height:0}
+@media(max-width:781px){
+ .sg-page .sg-hero{min-height:0;padding:90px 20px 60px;background:linear-gradient(180deg,rgba(11,58,59,.55),rgba(11,58,59,.92)),url(https://shuiguru.de/wp-content/uploads/2026/09/feng-shui-plancheck-vor-baubeginn.jpg) center 30%/cover no-repeat}
+ .sg-page .sg-hero-split{flex-direction:column;align-items:stretch;padding:0 0 50px}
+ .sg-page .sg-hero-split:before{position:static;display:block;width:auto;height:300px;margin:0 0 30px}
+ .sg-page .sg-hero-split>.wp-block-group__inner-container{padding:0 20px}
+ .sg-page .sg-hero-split .sg-hero-box{max-width:none}
+ .sg-page .sg-band{padding:56px 18px}
+ .sg-page .sg-split{gap:24px}
+ .sg-page .sg-row .wp-block-column:has(.sg-img){order:-1}
+ .sg-page .sg-split-img .wp-block-column:has(.sg-img){order:-1}
+}
+</style>
+<!-- /wp:html -->
+
+<!-- wp:group {"className": "sg-page"} -->
+<div class="wp-block-group sg-page"><!-- wp:group {"className": "sg-hero alignfull sg-hero-split", "tagName": "section"} -->
+<section class="wp-block-group sg-hero alignfull sg-hero-split"><!-- wp:group {"className": "sg-hero-box"} -->
+<div class="wp-block-group sg-hero-box"><!-- wp:paragraph {"className":"sg-eyebrow"} -->
+<p class="sg-eyebrow">ShuiGuru · Feng Shui Beratung · Maria Brasse</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level": 1, "className": "sg-h1"} -->
+<h1 class="wp-block-heading sg-h1">Feng Shui im Hausbau – der Plancheck vor Baubeginn</h1>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"sg-hero-lead"} -->
+<p class="sg-hero-lead">Der Plancheck prüft Ihren Grundriss und Ihre Bauplanung, bevor gebaut wird. Eine externe Meinung verschafft Sicherheit: Passt das Haus zu Ihnen, Ihrer Familie oder Ihrem Betrieb – und lassen sich Ihre Wünsche darin wirklich verwirklichen? Grundrisse und Baupläne sind eine Offenbarung – sie zeigen mehr über ein zukünftiges Zuhause, als die meisten vermuten.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"sg-hero-line"} -->
+<p class="sg-hero-line">📍 Berlin & bundesweit online · 📞 <b>01578 59 555 28</b></p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"sg-btn"} -->
+<div class="wp-block-button sg-btn"><a class="wp-block-button__link wp-element-button" href="https://shuiguru.de/kaeffchen/">Käffchen vereinbaren</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-img"} -->
+<div class="wp-block-columns sg-split sg-split-img"><!-- wp:column {"width":"45%"} -->
+<div class="wp-block-column" style="flex-basis:45%"><!-- wp:image {"id":514,"sizeSlug":"large","linkDestination":"none","className":"sg-img"} -->
+<figure class="wp-block-image size-large sg-img"><img src="https://shuiguru.de/wp-content/uploads/2022/12/architecture-gf83f52be6_1920-1024x683.jpg" alt="Grundriss mit Stift – Feng-Shui-Grundrissanalyse" class="wp-image-514"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading -->
+<h2 class="wp-block-heading">Sie wollen ein Haus kaufen oder bauen?</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Dann biete ich Ihnen eine detaillierte und aufschlussreiche Rückmeldung und Beratung zu Ihrem Vorhaben. Die meisten Bauherr:innen und Käufer:innen prüfen Statik, Energiewerte und Grundbuch – aber kaum jemand prüft, ob der Grundriss selbst zu den Menschen passt, die darin leben werden. Genau diese Lücke schließt der Plancheck.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:group {"className": "sg-head-center"} -->
+<div class="wp-block-group sg-head-center"><!-- wp:heading -->
+<h2 class="wp-block-heading">Die Fragen, die ich beim Plancheck stelle</h2>
+<!-- /wp:heading -->
+</div>
+<!-- /wp:group -->
+<!-- wp:list {"className":"sg-check"} -->
+<ul class="wp-block-list sg-check"><!-- wp:list-item -->
+<li>Ist das Haus passend zu den Vorhaben und Bewohner:innen?</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Lassen sich mit diesem Haus die Wünsche realisieren, die Sie sich erhoffen?</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Bringt das Haus die passende Energie für Ihre Familie oder Ihren Betrieb mit?</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Wo liegen Schwachstellen, wo Stärken?</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Welche Visionen lassen sich in diesem Haus realisieren – und welche nicht?</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Ist es die richtige Zeit, zu bauen oder zu kaufen?</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Kann es Probleme mit Behörden, Verkäufer:innen, Handwerker:innen oder Zusteller:innen geben?</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Passt das Haus überhaupt zum Grundstück?</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Was der Grundriss verrät</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Ein Grundriss ist mehr als eine Raumaufteilung – er zeigt, wie Energie durchs Haus fließen wird. Ich lege einen Kompass mit den vier Himmelsrichtungen über Ihren Plan: Wo liegen Eingang, Schlafbereich, Arbeitsbereich? Wie verlaufen Wege und Sichtachsen vom Eingang durchs Haus? Ein Eingang, der direkt auf eine Treppe oder eine Wand trifft, lässt Energie sofort wieder abfließen. Ein Schlafzimmer über der Garage oder direkt an einer stark befahrenen Straße liegt energetisch ungünstig. Küche und Bad, die sich denselben Wasserbereich teilen, ohne dass das im Plan auffällt, sind ein klassischer, leicht übersehener Schwachpunkt. Solche Details werden im ersten Bau-Enthusiasmus schnell übersehen – der Plancheck holt sie vor die Entscheidung, nicht danach.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-img"} -->
+<div class="wp-block-columns sg-split sg-split-img"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading -->
+<h2 class="wp-block-heading">Ausrichtung und Himmelsrichtung</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Wie ein Haus zur Sonne, zur Straße und zu den Himmelsrichtungen steht, entscheidet über mehr als nur den Lichteinfall. Ein Haupteingang, der nach Süden oder Südosten öffnet, empfängt in der Regel mehr Licht und wirkt einladender als ein reiner Nordeingang. Schlafräume profitieren oft von ruhigeren, weniger sonnenexponierten Ausrichtungen, während Wohn- und Essbereiche von mehr Licht und Aktivität profitieren. Diese Zusammenhänge lassen sich am Plan schon vor dem Bau erkennen und – innerhalb der baulichen Möglichkeiten – noch beeinflussen.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+<!-- wp:column {"width":"45%"} -->
+<div class="wp-block-column" style="flex-basis:45%"><!-- wp:image {"id":646,"sizeSlug":"large","linkDestination":"none","className":"sg-img"} -->
+<figure class="wp-block-image size-large sg-img"><img src="https://shuiguru.de/wp-content/uploads/2022/12/sketchbook-g87b3420cd_1920-1024x683.jpg" alt="Architektur-Skizze mit Stiften – Planung vor Baubeginn" class="wp-image-646"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Warum vor Baubeginn der beste Zeitpunkt ist</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Am Grundriss lässt sich fast alles noch ändern – nach dem Einzug wird jede Anpassung teuer: eine versetzte Wand, ein anders gelegter Eingang oder ein getauschtes Zimmer lassen sich auf dem Papier in einer Beratung klären, nach dem Bau nur noch mit Bauunternehmen und Budget. Der Plancheck beantwortet deshalb vorab, ob Haus, Grundstück und Vorhaben zusammenpassen, statt Schwachstellen erst im fertigen Bau zu entdecken.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Neubau in Berlin und Brandenburg</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Ob Einfamilienhaus im Berliner Umland, Reihenhaus in einem der neuen Quartiere oder Umbau eines Bestandshauses in der Stadt – die Grundfragen bleiben dieselben. Gerade bei den in Berlin und Brandenburg verbreiteten kompakten Grundstückszuschnitten lohnt sich der Blick auf Wege, Ausrichtung und Zonierung besonders, weil hier wenig Fläche viel leisten muss.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:group {"className": "sg-head-center"} -->
+<div class="wp-block-group sg-head-center"><!-- wp:heading -->
+<h2 class="wp-block-heading">Häufige Schwachstellen nach Himmelsrichtung</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Bestimmte Muster tauchen in Grundrissen immer wieder auf:</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:list {"className":"sg-check"} -->
+<ul class="wp-block-list sg-check"><!-- wp:list-item -->
+<li><b>Arbeits-/Homeoffice-Zimmer nach Norden</b> bekommt oft zu wenig natürliches Licht für konzentriertes Arbeiten über den Tag</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><b>Schlafzimmer mit direkter Westausrichtung</b> heizt sich im Sommer stark auf und stört dadurch die nächtliche Ruhe</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><b>Wohnbereich nach Norden</b> statt nach Süden oder Westen wirkt oft kühler und dunkler, als es die Planzeichnung vermuten lässt</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>Keines dieser Muster ist automatisch ein Ausschlusskriterium – aber jedes davon lässt sich vor dem Bau noch anders lösen (andere Raumzuordnung, größere Fensterflächen, Verschattung), während es nach dem Einzug nur noch mit Aufwand korrigierbar ist.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Was Sie am Ende in der Hand haben</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Nach dem Plancheck erhalten Sie eine schriftliche Einschätzung mit konkreten Antworten auf Ihre offenen Fragen – keine vage Bauchgefühl-Note, sondern eine nachvollziehbare Grundlage für Ihre Entscheidung. Sie wissen dann, wo das Haus zu Ihnen passt, wo es Kompromisse braucht, und was sich noch anpassen lässt, bevor der erste Spatenstich fällt.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-follow sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-follow sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner sg-narrow sg-follow"} -->
+<div class="wp-block-group sg-inner sg-narrow sg-follow"><!-- wp:paragraph -->
+<p>Wie eine Grundrissanalyse im Detail abläuft, zeige ich Ihnen auf einer eigenen Seite – oder Sie starten direkt auf der <a href="https://shuiguru.de/">Startseite</a>.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Für wen</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Bauherr:innen vor dem ersten Spatenstich genauso wie Käufer:innen, die ein bestehendes Haus prüfen lassen möchten. Auch bei Umbauten oder Erweiterungen lohnt sich der externe Blick auf den Plan.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-faq"} -->
+<div class="wp-block-columns sg-split sg-split-faq"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Häufige Fragen</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Wann sollte ich den Plancheck beauftragen?</summary><!-- wp:paragraph -->
+<p>So früh wie möglich – am besten, sobald ein konkreter Grundriss oder Bauplan vorliegt und bevor Sie unterschreiben oder bauen. Je früher, desto mehr lässt sich noch anpassen.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Reicht ein Grundriss, oder muss ich das Grundstück zeigen?</summary><!-- wp:paragraph -->
+<p>Ein Grundriss ist die Basis. Zusätzliche Angaben zum Grundstück, zur Ausrichtung und zu Fotos der Umgebung verbessern die Einschätzung – gern auch als selbst gezeichnete Skizze.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Spielt die Himmelsrichtung beim Hausbau eine Rolle?</summary><!-- wp:paragraph -->
+<p>Ja, die Ausrichtung des Hauses und einzelner Räume zur Himmelsrichtung ist einer der zentralen Punkte im Plancheck – sie beeinflusst Lichteinfall, Nutzung und die energetische Wirkung der Räume.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Kann der Plancheck auch bei einem Bestandshaus helfen, das ich kaufen möchte?</summary><!-- wp:paragraph -->
+<p>Ja. Gerade beim Hauskauf zeigt der Plancheck, ob Haus und Grundstück zu Ihren Vorhaben passen, bevor Sie sich langfristig binden.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>In welche Himmelsrichtung sollte ein Haus idealerweise ausgerichtet sein?</summary><!-- wp:paragraph -->
+<p>Es gibt keine pauschale „beste" Richtung – das hängt vom Grundstück, dem Grundriss und den Prioritäten ab (mehr Licht, mehr Ruhe, weniger Straßenlärm). Genau das prüfe ich individuell an Ihrem Plan.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-cta alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-cta alignfull"><!-- wp:group {"className": "sg-inner sg-narrow"} -->
+<div class="wp-block-group sg-inner sg-narrow"><!-- wp:heading -->
+<h2 class="wp-block-heading">Bereit für Ihren Plancheck?</h2>
+<!-- /wp:heading -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"sg-btn sg-btn-light"} -->
+<div class="wp-block-button sg-btn sg-btn-light"><a class="wp-block-button__link wp-element-button" href="https://shuiguru.de/kaeffchen/">Käffchen vereinbaren</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:html -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Feng Shui Plancheck vor Baubeginn", "provider": {"@type": "ProfessionalService", "name": "ShuiGuru"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wann sollte ich den Plancheck beauftragen?", "acceptedAnswer": {"@type": "Answer", "text": "So früh wie möglich – am besten, sobald ein konkreter Grundriss oder Bauplan vorliegt und bevor Sie unterschreiben oder bauen. Je früher, desto mehr lässt sich noch anpassen."}}, {"@type": "Question", "name": "Reicht ein Grundriss, oder muss ich das Grundstück zeigen?", "acceptedAnswer": {"@type": "Answer", "text": "Ein Grundriss ist die Basis. Zusätzliche Angaben zum Grundstück, zur Ausrichtung und zu Fotos der Umgebung verbessern die Einschätzung – gern auch als selbst gezeichnete Skizze."}}, {"@type": "Question", "name": "Spielt die Himmelsrichtung beim Hausbau eine Rolle?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, die Ausrichtung des Hauses und einzelner Räume zur Himmelsrichtung ist einer der zentralen Punkte im Plancheck – sie beeinflusst Lichteinfall, Nutzung und die energetische Wirkung der Räume."}}, {"@type": "Question", "name": "Kann der Plancheck auch bei einem Bestandshaus helfen, das ich kaufen möchte?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Gerade beim Hauskauf zeigt der Plancheck, ob Haus und Grundstück zu Ihren Vorhaben passen, bevor Sie sich langfristig binden."}}, {"@type": "Question", "name": "In welche Himmelsrichtung sollte ein Haus idealerweise ausgerichtet sein?", "acceptedAnswer": {"@type": "Answer", "text": "Es gibt keine pauschale „beste\" Richtung – das hängt vom Grundstück, dem Grundriss und den Prioritäten ab (mehr Licht, mehr Ruhe, weniger Straßenlärm). Genau das prüfe ich individuell an Ihrem Plan."}}]}</script>
+<!-- /wp:html --></div>
+<!-- /wp:group -->

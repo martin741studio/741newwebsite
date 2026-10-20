@@ -1,0 +1,281 @@
+{
+ "client": "STÜRZL Steuerstrafrecht",
+ "client_slug": "stuerzl",
+ "page_slug": "ordnungswidrigkeiten",
+ "page_type": "service",
+ "mode": "rewrite",
+ "language": "de",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "voice_sheet": "00_project/assets/stuerzl/voice.md",
+ "pool_item_ids": [
+  "CP-SVC-018"
+ ],
+ "sitetree_node": "ST-23",
+ "url_slug": "/ordnungswidrigkeiten/",
+ "keyword_primary": "steuerordnungswidrigkeit",
+ "keywords_cluster": [
+  {
+   "kw": "steuerordnungswidrigkeit",
+   "volume": 30,
+   "scope": "national",
+   "source": "DataForSEO google_ads/search_volume/live, de, 2276",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "leichtfertige steuerverkürzung",
+   "volume": 390,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "organisationsverschulden",
+   "volume": 480,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "aufsichtspflichtverletzung",
+   "volume": 320,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "steuerverkürzung",
+   "volume": 320,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "verbandsgeldbuße",
+   "volume": 40,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "leichtfertige steuerverkürzung strafe",
+   "volume": 50,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "anwalt ordnungswidrigkeitenrecht",
+   "volume": 30,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  }
+ ],
+ "intent": "mixed (informational mit Anwaltsbezug)",
+ "reader": "Steuerpflichtige und Unternehmer, die einen Vorwurf wegen leichtfertiger Steuerverkürzung oder Steuergefährdung oder ein Bußgeld gegen das Unternehmen (Organisationsverschulden) erhalten haben oder erwarten. PAA: Was versteht man unter leichtfertiger Steuerverkürzung? Welche Beispiele gibt es? Was ist der Unterschied zur Steuerhinterziehung?",
+ "local_city": null,
+ "cta": {
+  "goal": "Vertrauliche Anfrage über das Formular (nur Thema, keine Falldaten)",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nennen Sie uns nur Ihr Thema, keine Einzelheiten. Ihre Angaben unterliegen unserer gesetzlichen Verschwiegenheit.",
+  "secondary": "Anrufen: Frankfurt +49 69 298028870, München +49 89 72444170"
+ },
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "H1, Situation, ein Weg",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Direkt-Antwort"
+  },
+  {
+   "id": "S03",
+   "element": "check-list",
+   "job": "Situationen"
+  },
+  {
+   "id": "S04",
+   "element": "step-flow",
+   "job": "Ablauf",
+   "cta": "primary"
+  },
+  {
+   "id": "S05",
+   "element": "person",
+   "job": "E-E-A-T"
+  },
+  {
+   "id": "S06",
+   "element": "text",
+   "job": "Kosten kurz",
+   "cta": "secondary"
+  },
+  {
+   "id": "S07",
+   "element": "accordion",
+   "job": "Vertiefung",
+   "cta": "secondary"
+  },
+  {
+   "id": "S08",
+   "element": "faq",
+   "job": "FAQ"
+  },
+  {
+   "id": "S09",
+   "element": "cta",
+   "job": "Abschluss",
+   "cta": "primary"
+  }
+ ],
+ "dropped_sections": [
+  {
+   "id": "Beweis",
+   "reason": "Bewertungsfreigabe offen. Beweis liegt auf der Startseite. Titel stehen im Person-Block."
+  }
+ ],
+ "gate": "A0-full",
+ "money_page": true,
+ "bestand_words": 229,
+ "benchmark_median_words": 1083,
+ "benchmark_sources": "siehe 01-brief/gate-a0.md (12 Kanzlei-Seiten, gelesen 2026-10-11)",
+ "word_range": [
+  900,
+  1600
+ ],
+ "require_answer_block": true,
+ "faq_min": 8,
+ "internal_links_min": 4,
+ "internal_link_targets": [
+  {
+   "url": "/sonstiges-wirtschaftsstrafrecht/",
+   "anchor": "Wirtschaftsstrafrecht",
+   "role": "pillar"
+  },
+  {
+   "url": "/steuerstrafrecht/",
+   "anchor": "Steuerstrafrecht",
+   "role": "pillar"
+  },
+  {
+   "url": "/steuerfahndung-durchsuchung/",
+   "anchor": "Steuerfahndung und Durchsuchung",
+   "role": "sibling"
+  },
+  {
+   "url": "/ratgeber/verjaehrung/",
+   "anchor": "Verjährung",
+   "role": "sibling"
+  },
+  {
+   "url": "/kosten/",
+   "anchor": "Kosten und Honorar",
+   "role": "money-page"
+  },
+  {
+   "url": "/dr-anja-stuerzl/",
+   "anchor": "Dr. Anja Stürzl",
+   "role": "person"
+  },
+  {
+   "url": "/selbstanzeige/",
+   "anchor": "Selbstanzeige",
+   "role": "sibling"
+  },
+  {
+   "url": "/compliance/",
+   "anchor": "Compliance",
+   "role": "sibling"
+  }
+ ],
+ "cta_min": 3,
+ "cta_text": "Vertraulich anfragen",
+ "proof_assets": [
+  "Fachanwältin für Steuerrecht seit 2021 (Lebenslauf)",
+  "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022 (Lebenslauf)",
+  "Kommentar zu §§ 379, 380 AO (Live-Profil)"
+ ],
+ "forbidden_words": [
+  "spezialisiert",
+  "Spezialist",
+  "Experte",
+  "Expertin",
+  "Expertise",
+  "führend",
+  "Exzellenz",
+  "kostenlos",
+  "gratis",
+  "Festpreis",
+  "WhatsApp",
+  "Wiesenhüttenstraße",
+  "Albtraum",
+  "Ruin",
+  "Haft droht",
+  "einzigartig",
+  "hart in der Sache"
+ ],
+ "own_phrases": [
+  "Wir stehen Ihnen zur Seite",
+  "langjährige Erfahrung",
+  "Fehler passieren",
+  "Das Mandanteninteresse steht für uns immer im Vordergrund",
+  "möglichst geräuschlos und effizient",
+  "Effektive Strafverteidigung ist nicht zwingend laut und konfrontativ"
+ ],
+ "placeholders_allowed": [],
+ "blockers": [],
+ "nap_file": "00_project/assets/stuerzl/nap.json",
+ "schema_faq": false,
+ "paa_questions": [
+  {
+   "q": "Was versteht man unter leichtfertiger Steuerverkürzung?",
+   "status": "answered"
+  },
+  {
+   "q": "Welche Beispiele gibt es für leichtfertige Steuerverkürzung?",
+   "status": "answered"
+  },
+  {
+   "q": "Was ist der Unterschied zwischen leichtfertiger Steuerverkürzung und Steuerhinterziehung?",
+   "status": "answered"
+  },
+  {
+   "q": "Ab wann greift die Steuerverkürzung?",
+   "status": "dropped",
+   "reason": "Die Frage verlangt eine Betragsgrenze. § 378 AO nennt keine. Eine Antwort ohne Kenntnis des Falls ist nicht rechtssicher.",
+   "reason_code": "nicht rechtssicher"
+  },
+  {
+   "q": "Was passiert bei Verdacht auf Steuerhinterziehung?",
+   "status": "dropped",
+   "reason": "Gehört zu Steuerstrafrecht und Verteidigung im Steuerstrafverfahren (ST-11, ST-12).",
+   "reason_code": "Duplikat"
+  },
+  {
+   "q": "Welche Straftat ist die Steuerhinterziehung nach § 369 und 370 AO?",
+   "status": "dropped",
+   "reason": "Gehört zum Ratgeber Strafrahmen (ST-35) und zur Säulenseite (ST-11).",
+   "reason_code": "Duplikat"
+  },
+  {
+   "q": "Was ist eine leichte Steuerhinterziehung?",
+   "status": "dropped",
+   "reason": "Kein gesetzlicher Begriff. Die Abgrenzung steht in der Frage zur leichtfertigen Steuerverkürzung.",
+   "reason_code": "nicht rechtssicher"
+  },
+  {
+   "q": "Wie lange dauert ein Strafverfahren wegen Steuerhinterziehung?",
+   "status": "dropped",
+   "reason": "Gehört zu Verteidigung im Steuerstrafverfahren (ST-12).",
+   "reason_code": "Duplikat"
+  }
+ ],
+ "fix_round_note": "Korrekturrunde 2026-10-11: ST-11, ST-18, ST-36 ergänzt, ST-21 entfällt (Obergrenze 8 Textlinks). ST-24 hat keinen Slug."
+}

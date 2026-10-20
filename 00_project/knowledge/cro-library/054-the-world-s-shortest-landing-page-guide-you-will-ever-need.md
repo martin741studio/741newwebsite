@@ -1,0 +1,13 @@
+# The World's Shortest Landing Page Guide You Will Ever Need
+
+Video: https://www.youtube.com/watch?v=D4Bl1erYxgo
+
+Key topics: Landing page design, Above the fold, Social proof strategies, Customer problems, Mobile optimization
+
+## Source guide (NotebookLM)
+
+To build a high-converting webpage, you must concentrate the vast majority of your energy on the uppermost section by immediately presenting a compelling headline and a direct call to action. The primary goal of this initial space is to dissolve customer anxiety using targeted social proof and clearly articulate how your offering solves their specific pain points. As visitors scroll further down, you should highlight your unique differentiators and seamlessly blend product features with their corresponding benefits to keep the audience engaged. Ultimately, the guide serves as a practical blueprint for structuring a website that turns casual browsers into qualified leads through persuasive copywriting and flawless mobile optimization.
+
+## Transcript
+
+i've designed hundreds of landing pages that convert if you want to build one that actually works here's everything you need to know in under two minutes focus 80 to 90% of your effort on the topmost section also called the above the fold answer why should I care in your headline and promise a clear outcome show how you achieve that in your sub headline and have one clear call to action back all of this up visually by showing the thing that people get or the outcome they want add two forms of social proof and reduce fear and uncertainty underneath the CTA speak directly to your end customer and describe all the problems they're facing the emotional cost and how your product or service solves it either show this visually or through scannable text load the page with tons of social proof show the result visually the source who it came from and a short headline that sums it up fast show this upfront on mobile don't hide this in a carousel for the rest of your page list out all of your differentiators and don't worry about page length just keep each section valuable and unique combine the feature which is what someone gets with the benefit which is why they should care make each headline so strong that someone is sold just by reading those and nothing else for your lead form explain why someone should act today add three to five incentives and social proof for that final push collect as little information as required to get a qualified lead for ecom make product selection seamless and guide the user through each step finally make sure mobile is optimized with a sticky call to action and phone number if you want more on how to build a million-doll landing page click this video

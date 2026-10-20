@@ -1,0 +1,11 @@
+2026-10-11 · Start: Martin "für Anja Stürzl müssen wir den Workflow auch durchgehen, direkt starten". Mode existing, BRAO, cap 5 USD
+2026-10-11 · Step 0 Readiness: DataForSEO balance 17.95 USD; GSC access 403 on https, www and sc-domain (service account not added) -> [FEHLT] · next: Step 1
+2026-10-11 · Step 1 Client baseline from existing Stürzl files (findings, competitor analysis, backlog) and a crawl of the site (no sitemap.xml exists: 404) · 01-client/client-baseline.md
+2026-10-11 · Step 2-4 Seeds 113 terms; 16 SERPs (3 failed on location_name, repeated with location_code 1004363); 54 competitor pages + 27 sitemaps (11 local, 8 niche, 4 muenchen, 3 topic); 25 own pages measured; autocomplete tree (12 seeds, 1,554 suggestions); ranked keywords 9 domains; Trends; backlinks 4 domains · 02-competitors/, 03-demand/
+2026-10-11 · Step 5-7 53 candidates (BRAO flags); scoring gave 0 items at A, rule R-S6 added (relative top quarter); validator 53 items, 0 errors, 0 warnings · 04-pool/
+2026-10-11 · Step 8 Report rendered and checked in Chrome · 05-report/content-pool-report.html, .xlsx · next: CHECKPOINT 1 (Martin)
+2026-10-11 · Sitemap step: 45 nodes (6 Bleibt, 24 Überarbeiten, 6 Neu, 5 Vorschlag), rules S1-S8 pass, 3 redirect proposals checked by text comparison · 05-sitetree/, 05-report/content-pool-sitetree.html + .xlsx · next: CHECKPOINT 2 (Martin)
+2026-10-11 · Spend 0.4712 USD of 5 USD cap (31 paid calls) · spend.jsonl
+2026-10-11 · Martin's feedback on the draft pool: München is a confirmed location (package question closed); Frankfurt location must be visible; redirect proposals to be clarified with Irsch; go for the Drive upload. Pool and sitemap updated: location block with both offices (CP-LOC-002), both location pages now conversion 3, redirect notes. GSC patterns prepared for tomorrow · next: upload, then re-run with GSC
+2026-10-11 · Drive upload: STÜRZL Steuerstrafrecht > Content Pool (id 1JCmeTjDdUsGrzGD0sySpf7lSFuSBKOGR), 17 files, sizes match MANIFEST.json (folder shared with 741 team only) · next: GSC export tomorrow, rebuild, re-upload (old versions to _archiv)
+2026-10-11 · Neue Kundentexte (Compliance, Kosten, KI) eingegangen und abgelegt: 01-client/client-texte/, 01-client/client-input-2026-10-11.md · beim nächsten Neuaufbau CP-SVC-012, CP-SVC-003, FAQ-Hub nachziehen. pool.json/xlsx NICHT von Hand geändert

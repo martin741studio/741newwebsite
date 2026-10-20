@@ -1,0 +1,2 @@
+# me&you / Michael Ehlers — Seite „Was ist Rhetorik“ (CRO-Lauf, Unterseite)
+Seite: `/rhetorik` · Basis: Vorschau v2 https://clients.741.studio/meandyou/v2/rhetorik.html · Ziel laut Copy Deck: Kontakt gewinnen, nicht verkaufen · Haupt-CTA: Kostenloses Training ansehen → https://www.meandyou.de/sichtbarkeit-neu · Quelle: Martin 2026-10-12 („continue with what is rhetorik page“) · Checkpoints 1 und 2 · Status: Copy freigegeben

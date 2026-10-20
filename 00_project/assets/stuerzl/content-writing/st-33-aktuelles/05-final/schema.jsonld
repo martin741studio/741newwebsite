@@ -1,0 +1,76 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://stuerzl-steuerstrafrecht.de/aktuelles/#webpage",
+   "url": "https://stuerzl-steuerstrafrecht.de/aktuelles/",
+   "name": "Aktuelles | STÜRZL Steuerstrafrecht",
+   "description": "Aktuelles von STÜRZL Steuerstrafrecht: Interviews, Fachbeiträge, Vorträge und Seminare von Dr. Anja Stürzl und der Kanzlei.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/#website"
+   },
+   "breadcrumb": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/aktuelles/#breadcrumb"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://stuerzl-steuerstrafrecht.de/aktuelles/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Startseite",
+     "item": "https://stuerzl-steuerstrafrecht.de/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Aktuelles",
+     "item": "https://stuerzl-steuerstrafrecht.de/aktuelles/"
+    }
+   ]
+  },
+  {
+   "@type": "LegalService",
+   "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei",
+   "name": "STÜRZL Steuerstrafrecht",
+   "url": "https://stuerzl-steuerstrafrecht.de/",
+   "email": "kanzlei@stuerzl-steuerstrafrecht.de",
+   "department": [
+    {
+     "@type": "LegalService",
+     "name": "STÜRZL Steuerstrafrecht München",
+     "telephone": "+49 89 72444170",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "München",
+      "postalCode": "80331",
+      "addressCountry": "DE",
+      "streetAddress": "Oberanger 32"
+     },
+     "parentOrganization": {
+      "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+     }
+    },
+    {
+     "@type": "LegalService",
+     "name": "STÜRZL Steuerstrafrecht Frankfurt am Main",
+     "telephone": "+49 69 298028870",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Frankfurt am Main",
+      "postalCode": "60329",
+      "addressCountry": "DE",
+      "streetAddress": "Untermainkai 26"
+     },
+     "parentOrganization": {
+      "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+     }
+    }
+   ]
+  }
+ ]
+}

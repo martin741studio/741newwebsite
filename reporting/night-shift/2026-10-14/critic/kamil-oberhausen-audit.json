@@ -1,0 +1,15 @@
+{
+  "id": "kamil-oberhausen-audit",
+  "verdict": "pass",
+  "checks": {
+    "C1": {"pass": true, "why": "findings.md covers the full public check (homepage, robots.txt, sitemap, page-sitemap, blog, impressum, Google index, redirects, prompt-injection), plus sources.md and summary.md exist."},
+    "C2": {"pass": true, "why": "Re-fetched robots.txt, page-sitemap.xml, and blog page live: empty Disallow + sitemap_index.xml reference, the exact same 7 URLs, and the same two article titles + medmix.at link all matched findings.md exactly."},
+    "C3": {"pass": true, "why": "Two explicit [fehlt: ...] lines mark what the public check can't see (admin/plugin access, malware scanner) instead of filling in guesses."},
+    "C4": {"pass": true, "why": "summary.md (the Martin-facing German text) is plain German with no medical/treatment claims, so no HWG issue; findings.md is the internal English audit log, which is fine for an internal report."},
+    "C5": {"pass": true, "why": "findings.md explicitly states 'No login, no cleanup, no changes made'; all files written are inside items/kamil-oberhausen-audit/; the unrelated modified files in git status predate this task (same list as the session-start snapshot)."},
+    "C6": {"pass": true, "why": "Clear CLEAN result, exact checked table with URLs, named gaps, and one concrete recommendation (WP-CLI/Novamira backend check) Martin can act on tomorrow."},
+    "C7": {"pass": true, "why": "Not applicable: the only German text (summary.md) is an internal note addressed to Martin ('Martin muss entscheiden'), not client-facing copy, so no deslop_de.py run needed."}
+  },
+  "fails": [],
+  "one_line": "Clean public scan, facts check out against live site, gaps clearly flagged — ready to act on."
+}

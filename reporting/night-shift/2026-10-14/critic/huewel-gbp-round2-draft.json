@@ -1,0 +1,17 @@
+{
+  "id": "huewel-gbp-round2-draft",
+  "verdict": "pass",
+  "checks": {
+    "C1": {"pass": true, "why": "draft.md covers both named scopes (8 new FAQ + 19 new Leistungen), matching the 'GBP OFFEN (nächste Runde)' count from memory huewel-client; sources.md and summary.md support it."},
+    "C2": {"pass": true, "why": "Spot-checked 10+ facts against sources.md/memory huewel-client and client-baseline.md: Einzeltermin 90€/60Min, Frequenztherapie-Basis 540€, Psychosomatische Ursachenklärung 345€, Intensiver Ursachenprozess 885€, schwermetalltest 320/Mon, schwermetallbelastung 170/Mon, pemf therapie 480/Mon, nebennierenschwäche 4.400/1.600, mikronährstoffanalyse 3.600/9.900, erschöpfung was tun 880 — all trace exactly. No invented facts found."},
+    "C3": {"pass": true, "why": "Explicit [fehlt] section at the end of draft.md (Zeichenlimit, Runde-1-Report nicht im Repo, Parken/ÖPNV unbestätigt) plus matching [fehlt] lines in sources.md."},
+    "C4": {"pass": true, "why": "All client-facing text is German and HWG-safe: keeps 'Frequenztherapie' as main term (2018 Abmahnung), 'Bioresonanz' only as search term, no healing/cure claims, metals only 'Abklärung' not 'Ausleitung', chronic-illness topic deliberately excluded pending review."},
+    "C5": {"pass": true, "why": "git status --porcelain shows only pre-existing repo state (same files already modified/untracked at session start per gitStatus snapshot); no file was written outside reporting/night-shift/2026-10-14/items/huewel-gbp-round2-draft/ by this task; draft explicitly labeled 'NICHT veröffentlicht' with no send/publish/upload claim."},
+    "C6": {"pass": true, "why": "Ready for Dinakar to copy into GBP; only open items are flagged decisions (cross-check vs round 1, chronic-illness topic), not missing work."},
+    "C7": {"pass": false, "why": "deslop_de.py draft.md: score 3/5 — 66 Gedankenstrich (em/en-dash) punctuation hits, plus one flagged unsourced claim ('rund 90 minuten' not in the tool's claim list, though it does match memory's 'Ersttermin ~90 Min')."}
+  },
+  "fails": [
+    "Run deslop_de.py's dash fix on draft.md: replace the 66 '—'/'–' occurrences with commas, colons, or sentence breaks per the de content-writing style rule, then re-run to confirm 5/5."
+  ],
+  "one_line": "Pass — facts check out and nothing was sent live, but the German copy needs a dash cleanup pass before it's final (3/5 on deslop)."
+}

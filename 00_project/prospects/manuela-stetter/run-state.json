@@ -1,0 +1,131 @@
+{
+ "slug": "manuela-stetter",
+ "steps": {
+  "intake": {
+   "agent": "orchestrator",
+   "status": "done",
+   "at": "2026-10-14T14:11",
+   "outputs": [
+    "intake.md",
+    "intake.json",
+    "browser-queue.jsonl"
+   ],
+   "blockers": []
+  },
+  "demand": {
+   "agent": "A",
+   "status": "done",
+   "at": "2026-10-14T14:14",
+   "outputs": [
+    "demand.md"
+   ],
+   "blockers": [],
+   "gap_keyword": "heilpraktikerin landshut",
+   "gap_volume": 320,
+   "scan_centre": "Landshut (48.5372,12.1522)",
+   "cost_usd": 0.1498,
+   "notes": "Essenbach ~12 km from Landshut centre; 5 km radius will not cover the practice"
+  },
+  "site": {
+   "agent": "B",
+   "status": "done",
+   "at": "2026-10-14T14:17",
+   "outputs": [
+    "site-findings.md",
+    "evidence/site.json",
+    "evidence/site-pages.json",
+    "evidence/comp-pages.json"
+   ],
+   "blockers": []
+  },
+  "homepage": {
+   "agent": "C",
+   "status": "done",
+   "started": "2026-10-14T14:12",
+   "at": "2026-10-14T14:18",
+   "outputs": [
+    "homepage.md",
+    "draft/index.html",
+    "draft/logo.png",
+    "draft/praxis.jpg",
+    "draft/portrait.jpg",
+    "evidence/home-draft-1440.jpg",
+    "evidence/scorecard-today.md",
+    "../../../04_site/public/review-assets/manuela-stetter/startseite-entwurf.webp",
+    "../../../04_site/public/review-assets/manuela-stetter/startseite-heute.webp",
+    "../../../04_site/public/review-assets/manuela-stetter/foto-1.webp",
+    "../../../04_site/public/review-assets/manuela-stetter/foto-2.webp",
+    "../../../04_site/public/review-assets/manuela-stetter/foto-3.webp"
+   ],
+   "score_today": "12/44",
+   "draft_home_secs": 4.4,
+   "blockers": [],
+   "notes": [
+    "draft_home.py needs python3.14 (Homebrew python3 3.15 has no PIL)",
+    "script took logo as portrait and a stock daisy as praxis photo; fixed by hand",
+    "no real practice room photo on the site"
+   ]
+  },
+  "scan": {
+   "agent": "D",
+   "status": "done",
+   "at": "2026-10-14T14:17",
+   "outputs": [
+    "competitors.md",
+    "evidence/falcon-report-0e90f7a9f4d310d.json",
+    "evidence/scan-grid.png",
+    "../../../04_site/public/review-assets/manuela-stetter/scan-grid.webp"
+   ],
+   "report_key": "0e90f7a9f4d310d",
+   "keyword": "heilpraktikerin landshut",
+   "credits": 49,
+   "blockers": [
+    "Grid centre Landshut: her practice (8.3 km NE of centre) is outside the 5 km radius; 7 of 49 points found in northern edge only"
+   ]
+  },
+  "operator": {
+   "agent": "O",
+   "status": "partial",
+   "at": "2026-10-14T14:15",
+   "outputs": [
+    "evidence/google-panel-2026-10-14.md",
+    "evidence/home-today-1440.jpg",
+    "evidence/home-images.txt"
+   ],
+   "jobs": {
+    "panel": "done",
+    "home-shot": "done",
+    "chat": "failed"
+   },
+   "blockers": [
+    "chat: needs SECOND, active is Martin Drendel (linkedin.com/in/martindrendel)"
+   ]
+  },
+  "writer": {
+   "agent": "E",
+   "status": "done",
+   "at": "2026-10-14T14:22",
+   "outputs": [
+    "prospect.json",
+    "../../04_site/review/manuela-stetter/index.html",
+    "evidence/factcheck-auto.md"
+   ],
+   "todos_replaced": 89,
+   "validate": "0 errors, 1 warning (no loom_url)",
+   "factcheck": "204 numbers, 0 not found, 0 wrong, 0 mismatch, 17 absolute words (all checked against evidence)",
+   "slop": "5/5 (hero, 13 headlines, hero cards, 5 guide texts)",
+   "calc_val": "300 = 2 x 150 EUR / 60 min (/termine-buchen/)",
+   "proof": [
+    "schlirf",
+    "laserstein",
+    "abel",
+    "lengauer"
+   ],
+   "blockers": [
+    "draft (agent C) trust row shows 'Über 600 Frauen': site-findings.md section 6 says 600 vs 400 conflict, do not use without Martin's check; the draft image startseite-entwurf.webp shows it",
+    "site-findings.md section 2 says 14 of 28 sitemap URLs are clutter; site-pages.json gives 19 clutter / 9 practice pages; page uses 9 of 28",
+    "Local Falcon says claimed:false; panel shows no claim prompt: page makes no claim statement"
+   ]
+  }
+ }
+}

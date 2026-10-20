@@ -1,0 +1,47 @@
+{
+  "client": "Praxis Suriya",
+  "client_id": "3f71ef33-8c74-4ea1-b2d3-0273c2e99649",
+  "feedback_id": "d1c58471-eafc-4ef9-8418-1611a2345445",
+  "mode": "FEEDBACK",
+  "plan_index": 2,
+  "executor_file": "feedback/praxis-suriya/d1c58471-eafc-4ef9-8418-1611a2345445.md",
+  "pass": true,
+  "verdict": "pass",
+  "hard_checks": {
+    "1_no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "pass",
+      "note": "No Title/Meta/H1/JSON-LD in a FEEDBACK draft (not applicable). The NAP block ('Kanonische Geschäftsdaten') has no [fehlt:] markers. The several [fehlt:] markers present (missing original report passage; which domain variant the client means; whether there is a Mainz branch; exact Femalecare URL spelling; whois check not possible in this session) all sit outside Title/Meta/H1/NAP/JSON-LD and correctly flag real data gaps instead of inventing data (hard rule 2)."
+    },
+    "2_nap_matches_locked_record": {
+      "result": "pass",
+      "note": "Checked field by field against context.json.nap_locked for client_id 3f71ef33-8c74-4ea1-b2d3-0273c2e99649: business_name 'Praxis Suriya - Ayurveda & Naturheilkunde' ✓, street 'Schützenpfad 29' ✓, postal_code+city '55218 Ingelheim am Rhein' ✓, phone '+49 174 7411087' ✓, primary_category 'Heilpraktiker' ✓. Exact match, and the draft correctly uses this record (not 'Mainz') to catch the client's ambiguous city-name domain suggestion."
+    },
+    "3_jsonld_valid_localbusiness_faqpage": {
+      "result": "n/a",
+      "note": "FEEDBACK mode produces no JSON-LD/schema output; nothing to validate here."
+    },
+    "4_copy_language_matches_market_lang": {
+      "result": "pass",
+      "note": "market_lang = de. Entire Vorschlag and surrounding analysis is German."
+    },
+    "5_hwg_scan": {
+      "result": "pass",
+      "note": "Scanned for 'heilt', 'garantiert', '100 %', 'Heilung' and similar cure/guarantee/fear claims. None present. Content is domain-naming and citation strategy, not treatment-outcome copy."
+    },
+    "6_rubric_or_feedback_equivalent": {
+      "result": "pass",
+      "note": "FEEDBACK mode: 8-dim rubric skipped per skill; checked instead that the draft addresses the client's comment sentence-for-sentence. Client comment has three clauses: (a) 'ayurveda Ingelheim oder ayurveda mainz' -> point 1 addresses both variants, flags the client did not choose between them ([fehlt: vom Kunden zu bestätigen]), and correctly cross-checks against the locked NAP (Ingelheim am Rhein, not Mainz) to warn that a Mainz-named domain would misrepresent location unless a real Mainz branch exists ([fehlt: Zweigstelle in Mainz?]) — concludes with the sound, NAP-consistent default recommendation = addressed. (b) 'ich habe auch noch die domain Femalecare' -> point 2 acknowledges the offered domain, flags the exact spelling/TLD is unconfirmed and that a technical/whois check is still needed before recommending its use = addressed. (c) 'Du kannst gerne die Domaine zubuchen die wichtig sind' -> point 3 correctly reads this as a general go-ahead without fixed names, and — in line with hard rule 1 (read-only, no purchases/registrations from the night run) and human-in-the-loop gates — recommends Martin get a written confirmation of the exact domain list before registering, rather than the Executor itself deciding to register anything = addressed. All three clauses covered, nothing invented."
+    },
+    "7_deslop_hard_check": {
+      "result": "exempt",
+      "note": "Per skill's FEEDBACK exception: de-slop only applies to a Vorschlag section that is new client-facing prose meant to ship as-is (e.g. a GBP description rewrite), and is never a blocker when the Vorschlag is an internal recommendation to Martin, not copy. This Vorschlag is entirely internal analysis and recommendations addressed to Martin (domain-naming risk assessment, open questions to confirm with the client, a process recommendation for registration sign-off) — none of it is client-facing marketing prose, so the tool was not run and is not a blocker here."
+    }
+  },
+  "additional_observations": [
+    "Executor correctly refused to invent the original live-report section text (not fetchable in this session) and marked it [fehlt:] instead, per hard rule 2 — a human must diff this Vorschlag against the live report in the portal before it is applied, which is exactly what the morning REVIEW.md gate is for.",
+    "The Ingelheim-vs-Mainz reasoning is the strongest part of this draft: it catches a real compliance/SEO risk (a misleading city-name domain for a location without a real presence there) using only the locked canonical NAP, rather than just picking one of the client's two suggested names.",
+    "Correctly treats 'Du kannst gerne die Domaine zubuchen' as a client authorization signal, not an instruction to the Executor to register anything — no CMS/registration/purchase action was taken or implied as already done, consistent with hard rule 1 (read-only toward the world) and the human-in-the-loop gates.",
+    "Domain-availability/whois status is honestly marked as unverified in this session rather than guessed."
+  ],
+  "fails": []
+}

@@ -1,0 +1,107 @@
+[
+ {
+  "id": "2026-10-20-katharina-kisser-01",
+  "client": "Katharina Kisser",
+  "priority": 1,
+  "type": "decide",
+  "headline": "Katharina Kisser (katharinakisser.at): all 49 plugins vanished after the malware clean-up. Booking and Stripe payments are broken now.",
+  "evidence": ["chat 035ae64f-c1f3-4149-97cc-96834e352a9d.jsonl", "S2", "likely cause: Imunify360 auto-quarantine, not the agent"],
+  "options": {
+   "a": "I check the WHM Imunify360 quarantine log myself today, then we decide restore vs. reinstall",
+   "b": "Agent drafts the client message now (site down, under repair) while we wait for the log",
+   "c": "Park until the client notices and writes in"
+  },
+  "recommended": "a",
+  "why": "Booking and payment are down right now; the log shows whether the plugins can be restored as-is or need reinstalling.",
+  "deadline": "2026-10-20",
+  "then": {
+   "a": "Agent stands by to restore/reinstall once you share what the log shows",
+   "b": "Draft goes into plan.md as a ```text block, slop-checked, for your send",
+   "c": "Card returns tomorrow unless the client writes first"
+  }
+ },
+ {
+  "id": "2026-10-20-ulrike-roeth-01",
+  "client": "Ulrike Röth (prospect)",
+  "priority": 3,
+  "type": "decide",
+  "headline": "Ulrike Röth (prospect) has 2 confirmed calendar calls — today 16:00 WITA and tomorrow 14:00 WITA, different Meet links. The reminder for today's call did not go out (Remote Control was inactive).",
+  "evidence": ["calendar S10", "chat 46fd7ef6-3271-4efb-b468-2c8e3b9e1d7f.jsonl", "S2", "created 2026-10-15, 78 seconds apart — looks like a rebooking that did not cancel the old slot"],
+  "options": {
+   "a": "Today 16:00 WITA is the real call; I message her now to confirm and cancel tomorrow's slot",
+   "b": "Tomorrow 14:00 WITA is the real call; cancel today's and tell her",
+   "c": "Both are real (2 separate topics) — leave both"
+  },
+  "recommended": "a",
+  "why": "The newer-created event (today 16:00) carries the 'now it's the correct date, thanks' note; the call is in hours, so this needs an answer now.",
+  "deadline": "2026-10-20",
+  "then": {
+   "a": "Agent drafts the WhatsApp confirm + cancellation note for tomorrow's slot, you send",
+   "b": "Agent drafts the reschedule message for today's slot, you send",
+   "c": "Agent leaves both bookings and treats them as two calls"
+  }
+ },
+ {
+  "id": "2026-10-20-daniela-dumann-01",
+  "client": "Daniela Dumann",
+  "priority": 4,
+  "type": "decide",
+  "headline": "Daniela Dumann: 2 Google Business listings still unmerged, waiting on your decision since 2026-10-12 (8 days). A WhatsApp/email progress update is also drafted and waiting for your send.",
+  "evidence": ["chat c02ee9da-a957-4c5a-937c-9a84fee86fda.jsonl", "chat 065572cb-f2b0-4923-b9a8-4d18606e8a2f.jsonl", "S2"],
+  "options": {
+   "a": "Tell me which of her 2 GBP listings is correct; agent starts the merge and sends the drafted update",
+   "b": "I need the agent to lay out both listings side by side first",
+   "c": "Park a few more days, she has not asked"
+  },
+  "recommended": "a",
+  "why": "The dashboard numbers depend on one GBP; 8 days is past the 3-day approval window and a client update is sitting ready.",
+  "deadline": "2026-10-21",
+  "then": {
+   "a": "Agent starts the merge path and puts the update in plan.md as a ```text block for your send",
+   "b": "Agent writes a one-page side-by-side (both profile URLs, NAP, review counts)",
+   "c": "Card returns in a few days"
+  }
+ },
+ {
+  "id": "2026-10-20-741-gayo-contract-01",
+  "client": "741 Studio (intern)",
+  "priority": 2,
+  "type": "decide",
+  "headline": "Gayo's contract v7.1 (EN+Bahasa) is ready to sign but still needs a Bahasa-law review (e.g. Ibu Made) first.",
+  "evidence": ["chat 72125a55-acd3-4da1-af05-53c79049d4e7.jsonl", "S2", "memory gayo-employment-contract"],
+  "options": {
+   "a": "I send v7.1 to Ibu Made for review before signing",
+   "b": "Sign as is, skip the Bahasa-law review",
+   "c": "Park, no rush yet"
+  },
+  "recommended": "a",
+  "why": "A local-law review before signing is cheap insurance on an employment contract; no deadline forces this today.",
+  "deadline": "2026-10-20",
+  "then": {
+   "a": "Walk item for you to send it; agent waits for the review back",
+   "b": "Agent marks the contract ready to send for signature",
+   "c": "Card returns next week"
+  }
+ },
+ {
+  "id": "2026-10-20-goalsheet-overlay-01",
+  "client": "741 Studio (intern)",
+  "priority": 7,
+  "type": "define",
+  "headline": "The goal sheet generator found 2 Supabase clients with no overlay row yet: Katharina Kisser, me&you / Pauspapier (both got placeholder defaults).",
+  "evidence": ["generate_goals.py warnings, 2026-10-20", "00_project/morning-grill-goals-overlay.json"],
+  "options": {
+   "a": "I give the aliases/chat/status for both now (1 minute each)",
+   "b": "Agent proposes sensible defaults from the chats it already read, I just confirm",
+   "c": "Leave the placeholders, fix later"
+  },
+  "recommended": "b",
+  "why": "Without a real overlay row the morning grill cannot track status/phase/goals for these two correctly.",
+  "deadline": "2026-10-20",
+  "then": {
+   "a": "Agent writes the overlay rows as you say them",
+   "b": "Agent drafts both overlay rows from today's chat scan, shows you the diff",
+   "c": "Placeholder stays until the next time this warning fires"
+  }
+ }
+]

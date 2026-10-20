@@ -1,0 +1,6 @@
+# GPT Design Doc — me&you, Seite „Stimmen“
+Stand 2026-10-12. Quelle Text: `04-copy/approved-copy.md` (freigegeben). Verfahren wie Seminar-, Michael- und Rhetorik-Seite: ein Bild, Startseiten-Mockup (`../../06-gpt-assets/full-page-v1-final.png`) als Stil-Referenz. Prompt `prompt.txt` (16.078 Zeichen, 101 Zitate, check_prompt 0 fehlend), Generator `build_prompt.py`, Einheiten `units.json` (`make_units.py`).
+Sektionen: 1 Hero (Collage der drei echten Video-Standbilder) · 2 Antwort + Zahlenkacheln · 3 Videos „Vorher. Nachher.“ · 4 Themenkarten · 5 öffentliche Stimmen mit Logos · 6 Im Seminar (echtes Gruppenfoto) · 7 Michael (echtes Porträt weißes Hemd) · 8 Transparenz mit Sternverteilung · 9 Gespräch · 10 FAQ · 11 Abschluss + Footer.
+Haupt-CTA „Gespräch buchen“, eine CTA-Farbe #4F6D90. Keine neuen GPT-Personen: alle Personenbilder sind echt (Videos, Michael, Gruppe). Neu generiert wird höchstens das Abschlussfoto, falls das Startseiten-Bild nicht passt (Startseite hat `closer-terrace.webp`, wird wiederverwendet).
+Kein Google-Sternwert im Bild, Sternverteilung nur ProvenExpert.
+Refs: ref-homepage-mockup.jpg, ref-logo.png, ref-michael-white.jpg, ref-group.jpg, ref-video-1.jpg, ref-video-2.jpg, ref-video-3.jpg.

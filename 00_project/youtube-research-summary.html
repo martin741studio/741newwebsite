@@ -1,0 +1,339 @@
+<title>What Actually Wins</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #EEF0F2;
+    --surface: #FFFFFF;
+    --surface-2: #E4E7EA;
+    --ink: #1B1F27;
+    --muted: #5B6472;
+    --line: #D3D8DC;
+    --accent: #2F5D62;
+    --accent-soft: #DCE8E7;
+    --good: #3F8F5F;
+    --good-soft: #E3F1E8;
+    --bad: #B8433A;
+    --bad-soft: #F6E5E3;
+    --watch: #A8781F;
+    --watch-soft: #F2E8D6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171C;
+      --surface: #1B1F26;
+      --surface-2: #242932;
+      --ink: #E7E9ED;
+      --muted: #94A0AC;
+      --line: #333A44;
+      --accent: #7FC2C4;
+      --accent-soft: #21343A;
+      --good: #6FCB94;
+      --good-soft: #1D3327;
+      --bad: #E28479;
+      --bad-soft: #3A2320;
+      --watch: #E3B564;
+      --watch-soft: #3A2F1A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171C;
+    --surface: #1B1F26;
+    --surface-2: #242932;
+    --ink: #E7E9ED;
+    --muted: #94A0AC;
+    --line: #333A44;
+    --accent: #7FC2C4;
+    --accent-soft: #21343A;
+    --good: #6FCB94;
+    --good-soft: #1D3327;
+    --bad: #E28479;
+    --bad-soft: #3A2320;
+    --watch: #E3B564;
+    --watch-soft: #3A2F1A;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.5;
+  }
+  .num {
+    font-family: "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  header.masthead {
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+  }
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(32px, 5vw, 46px);
+    line-height: 1.05;
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  .dek {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 62ch;
+    margin: 0;
+  }
+
+  section { margin-bottom: 44px; }
+  h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0 0 4px;
+  }
+  .section-note {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 18px;
+    max-width: 65ch;
+  }
+
+  /* Bar chart */
+  .chart {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 24px 18px;
+  }
+  .bar-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 64px;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .bar-row:last-child { border-bottom: none; }
+  .bar-label {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  .bar-label .who { display: block; color: var(--muted); font-size: 11.5px; margin-top: 1px; }
+  .bar-track {
+    background: var(--surface-2);
+    border-radius: 4px;
+    height: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .bar-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    background: var(--accent);
+    border-radius: 4px;
+  }
+  .bar-x {
+    font-size: 13px;
+    text-align: right;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .chart-scale {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10.5px;
+    color: var(--muted);
+    margin-top: 8px;
+    padding-left: 212px;
+  }
+
+  /* signal / guardrail two-column */
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 640px) { .split { grid-template-columns: 1fr; } }
+  .panel {
+    border-radius: 10px;
+    padding: 18px 18px 14px;
+    border: 1px solid var(--line);
+  }
+  .panel.good { background: var(--good-soft); border-color: color-mix(in srgb, var(--good) 35%, var(--line)); }
+  .panel.bad { background: var(--bad-soft); border-color: color-mix(in srgb, var(--bad) 35%, var(--line)); }
+  .panel-title {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .panel.good .panel-title { color: var(--good); }
+  .panel.bad .panel-title { color: var(--bad); }
+  .panel ul { margin: 0; padding-left: 18px; }
+  .panel li { font-size: 13.5px; margin-bottom: 9px; }
+  .panel li:last-child { margin-bottom: 0; }
+  .evidence {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+  /* action list */
+  .action {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .action:first-child { padding-top: 0; }
+  .action:last-child { border-bottom: none; padding-bottom: 0; }
+  .action-n {
+    font-family: "Fraunces", serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .action-title { font-weight: 600; font-size: 15.5px; margin-bottom: 3px; }
+  .action-why { color: var(--muted); font-size: 13.5px; }
+  .tag {
+    display: inline-block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-left: 8px;
+    vertical-align: 1px;
+  }
+
+  footer.decision {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 20px 22px;
+  }
+  footer.decision p { margin: 0 0 6px; font-size: 14.5px; }
+  footer.decision p:last-child { margin-bottom: 0; }
+  footer.decision .q { font-weight: 600; }
+</style>
+
+<div class="page">
+
+  <header class="masthead">
+    <div class="eyebrow">
+      <span>Field report · 2026-09-16, revised</span>
+      <span>741 · YouTube channel research</span>
+      <span>Audience: creative agency owners</span>
+    </div>
+    <h1>What actually wins, for your channel</h1>
+    <p class="dek">Avatar corrected: graphic designers, brand strategists, and boutique creative agency owners who hate the technical backend — Zapier, CRM, site speed, tracking. The channel is lead gen for CRO, ads, local SEO, and backend automation. Below is what the real outlier data says to do first, and what to avoid, ranked by evidence.</p>
+  </header>
+
+  <section>
+    <h2>The clearest signal</h2>
+    <p class="section-note">Each bar is a real video's views ÷ its own channel's average views per video — not raw view count. "Automate client onboarding" showed up as an outlier <strong>6 separate times</strong> across 6 different channels — the cleanest, most repeated signal found in either scan run this session.</p>
+    <div class="chart">
+      <div class="bar-row">
+        <div class="bar-label">I Built a $10k SaaS Website in 1 Hour using AI<span class="who">Rafael Rabl</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+        <div class="bar-x num">16.5&times;</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">94.9% Margins Selling GoHighLevel — Why Most Never See Them<span class="who">GHL Experts</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:96%"></div></div>
+        <div class="bar-x num">15.8&times;</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">He Makes $509K/mo Selling GoHighLevel AI Websites<span class="who">ItsKeaton</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:71%"></div></div>
+        <div class="bar-x num">11.7&times;</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Scaling Up: How To Run A Successful Creative Agency<span class="who">The Futur, 2.8M subs</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:78%"></div></div>
+        <div class="bar-x num">12.8&times;</div>
+      </div>
+      <div class="chart-scale"><span>0&times;</span><span>5&times;</span><span>10&times;</span><span>15&times;</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What this means for your case</h2>
+    <p class="section-note">4 different channels, 4 different topics — same underlying pattern every time: a specific, verifiable number in the title. Not a client name alone, not a curiosity hook.</p>
+    <div class="split">
+      <div class="panel good">
+        <div class="panel-title">Do this</div>
+        <ul>
+          <li>Put a real, specific number in the title — dollars, hours, or a percentage<span class="evidence">Confirmed on 4 separate channels: $300k/mo, $509K/mo, 94.9% margins, $10k in 1 hour</span></li>
+          <li>State a transformation, even without naming the client<span class="evidence">OpsKings' best videos ("We've automated an entire department", "We've doubled his business") beat their own named-client testimonial video 9&times; over</span></li>
+          <li>Lead with the actual automation flow on screen<span class="evidence">"Automate client onboarding" is an outlier on 6 separate channels — the single strongest signal found</span></li>
+        </ul>
+      </div>
+      <div class="panel bad">
+        <div class="panel-title">Avoid this</div>
+        <ul>
+          <li>A client name with no stated result<span class="evidence">OpsKings' actual named-client testimonial got only 74 views — one of their worst</span></li>
+          <li>Generic listicles and "101" titles<span class="evidence">"Email Marketing 101" — 10 views; "6 email campaigns every business should run" — 21 views, both next to 2,000&ndash;100,000-view winners on the same channels</span></li>
+          <li>A vague "secret" tease with no number attached<span class="evidence">"The REAL GoHighLevel bill nobody shows you" — 8 views, vs. 15.8&times; for the same channel's version that stated the real number (94.9%) directly</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Your first 3 videos, in order</h2>
+    <p class="section-note">Ranked by strength of evidence behind the format, not by ease of filming.</p>
+    <div class="action">
+      <div class="action-n num">1</div>
+      <div>
+        <div class="action-title">A real client automation build, with the transformation stated in the title <span class="tag">strongest evidence</span></div>
+        <div class="action-why">You already do this work — see <span class="num">Tacheles</span> (white-label backend automation for a creative agency). Title the result plainly ("we automated X and it now runs itself"), not as a generic "case study" or "testimonial."</div>
+      </div>
+    </div>
+    <div class="action">
+      <div class="action-n num">2</div>
+      <div>
+        <div class="action-title">The client-onboarding automation walkthrough, real flow on screen</div>
+        <div class="action-why">This exact topic is an outlier on 6 separate channels — the single most repeated demand signal found across both scans this session.</div>
+      </div>
+    </div>
+    <div class="action">
+      <div class="action-n num">3</div>
+      <div>
+        <div class="action-title">The tech-stack teardown: "The exact tech stack we set up for a [real number]-figure design agency"</div>
+        <div class="action-why">Modeled on the GHL Experts and Rafael Rabl pattern — state the real stack and the real result number directly, no clickbait.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="decision">
+    <p class="q">One decision needed from you:</p>
+    <p>Can the Tacheles engagement be named, with a real result number, in video 1 — or does that relationship need to stay unnamed? That's the only blocker to scripting it.</p>
+  </footer>
+
+</div>

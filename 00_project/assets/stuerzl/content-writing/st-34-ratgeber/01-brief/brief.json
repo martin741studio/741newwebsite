@@ -1,0 +1,200 @@
+{
+ "client": "STÜRZL Steuerstrafrecht",
+ "client_slug": "stuerzl",
+ "page_slug": "ratgeber",
+ "page_type": "hub",
+ "mode": "new",
+ "language": "de",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "voice_sheet": "00_project/assets/stuerzl/voice.md",
+ "pool_item_ids": [
+  "CP-AUT-009"
+ ],
+ "sitetree_node": "ST-34",
+ "url_slug": "/ratgeber/",
+ "keyword_primary": "steuerstrafrecht ratgeber",
+ "keywords_cluster": [
+  {
+   "kw": "steuerstrafrecht ratgeber",
+   "volume": null,
+   "scope": "national",
+   "source": "DataForSEO google_ads/search_volume/live, de, 2276: keine Daten (heißt nicht keine Nachfrage); Autocomplete: kein Treffer für 'ratgeber'",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "steuerstrafrecht",
+   "volume": 590,
+   "scope": "national",
+   "source": "DataForSEO google_ads/search_volume/live, de, 2276 (Hauptkeyword der Säulenseite ST-11, hier nicht Ziel)",
+   "date": "2026-10-11"
+  }
+ ],
+ "intent": "informational",
+ "reader": "Besucher, die zu einer Frage im Steuerstrafrecht suchen (Strafe, Verjährung, Krypto, Selbstanzeige, Durchsuchung) und den passenden Beitrag oder die passende Leistungsseite finden wollen.",
+ "local_city": null,
+ "cta": {
+  "goal": "Vertrauliche Anfrage über das Formular (nur Thema, keine Falldaten)",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nennen Sie uns nur Ihr Thema, keine Einzelheiten. Ihre Angaben unterliegen unserer gesetzlichen Verschwiegenheit.",
+  "secondary": "Anrufen: Frankfurt +49 69 298028870, München +49 89 72444170"
+ },
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "H1 mit Keyword, ein Satz Nutzen, Autoren- und Datumsplatzhalter, Prüfdatum"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Was der Ratgeber enthält, Definition Steuerstraftat (§ 369 AO), Links zu den Säulen ST-11 und ST-12"
+  },
+  {
+   "id": "S03",
+   "element": "el-grid",
+   "job": "6 Karten mit Nutzen-Überschrift, einer Zeile und Link auf Kind- oder Geldseite"
+  },
+  {
+   "id": "S04",
+   "element": "step-flow",
+   "job": "So nutzen Sie den Ratgeber, 3 Schritte",
+   "cta": "secondary"
+  },
+  {
+   "id": "S05",
+   "element": "faq",
+   "job": "4 kurze Antworten mit Gesetz und Link (nur Kurzfassung, Tiefe steht in den Beiträgen)"
+  },
+  {
+   "id": "S06",
+   "element": "cta",
+   "job": "Abschluss, Titel Dr. Stürzl, CTA, Adressblock, Hinweis allgemeine Information",
+   "cta": "primary"
+  }
+ ],
+ "gate": "A0-brand",
+ "money_page": false,
+ "paa_questions": [
+  {
+   "q": "Darf das Finanzamt meine Wohnung durchsuchen?",
+   "status": "answered"
+  },
+  {
+   "q": "Wann fängt Steuerhinterziehung an?",
+   "status": "dropped",
+   "reason": "Wird im Beitrag zur Verjährung (ST-36) beantwortet; der Hub verlinkt dorthin und wiederholt es nicht.",
+   "reason_code": "Duplikat"
+  },
+  {
+   "q": "Was macht das Finanzamt bei Verdacht auf Steuerhinterziehung?",
+   "status": "answered"
+  },
+  {
+   "q": "Welche Strafen gibt es bei Steuerhinterziehung?",
+   "status": "answered"
+  }
+ ],
+ "schema_faq": false,
+ "bestand_words": null,
+ "benchmark_median_words": null,
+ "word_range": [
+  350,
+  750
+ ],
+ "require_answer_block": true,
+ "faq_min": 4,
+ "internal_links_min": 8,
+ "internal_link_targets": [
+  {
+   "url": "/ratgeber/steuerhinterziehung-strafe/",
+   "anchor": "Strafe und Strafrahmen",
+   "role": "sibling"
+  },
+  {
+   "url": "/ratgeber/verjaehrung/",
+   "anchor": "Verjährung",
+   "role": "sibling"
+  },
+  {
+   "url": "/ratgeber/krypto/",
+   "anchor": "Krypto und Steuerhinterziehung",
+   "role": "sibling"
+  },
+  {
+   "url": "/selbstanzeige/",
+   "anchor": "Selbstanzeige",
+   "role": "money-page"
+  },
+  {
+   "url": "/steuerfahndung-durchsuchung/",
+   "anchor": "Steuerfahndung und Durchsuchung",
+   "role": "money-page"
+  },
+  {
+   "url": "/faq/",
+   "anchor": "Häufige Fragen",
+   "role": "sibling"
+  },
+  {
+   "url": "/dr-anja-stuerzl/",
+   "anchor": "Dr. Anja Stürzl",
+   "role": "person"
+  },
+  {
+   "url": "/steuerstrafrecht/",
+   "anchor": "Steuerstrafrecht",
+   "role": "pillar"
+  },
+  {
+   "url": "/steuerstrafrecht/verteidigung-im-steuerstrafverfahren/",
+   "anchor": "Verteidigung im Steuerstrafverfahren",
+   "role": "money-page"
+  }
+ ],
+ "cta_min": 2,
+ "cta_text": "Vertraulich anfragen",
+ "proof_assets": [
+  "Fachanwältin für Steuerrecht seit 2021 (Lebenslauf)",
+  "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022 (Lebenslauf)"
+ ],
+ "forbidden_words": [
+  "spezialisiert",
+  "Spezialist",
+  "Experte",
+  "Expertin",
+  "Expertise",
+  "führend",
+  "Exzellenz",
+  "kostenlos",
+  "gratis",
+  "Festpreis",
+  "WhatsApp",
+  "Wiesenhüttenstraße",
+  "Albtraum",
+  "Ruin",
+  "Haft droht",
+  "hart in der Sache"
+ ],
+ "own_phrases": [
+  "Wir stehen Ihnen zur Seite",
+  "Fehler passieren",
+  "Das Mandanteninteresse steht für uns immer im Vordergrund",
+  "Steuerhinterziehung ist kein Kavaliersdelikt, sondern eine Straftat",
+  "Wie gravierend die Folgen sind, hängt von einer ganzen Reihe an Faktoren ab"
+ ],
+ "placeholders_allowed": [
+  "Autor",
+  "Veröffentlichungsdatum"
+ ],
+ "blockers": [],
+ "nap_file": "00_project/assets/stuerzl/nap.json",
+ "byline": {
+  "name": "",
+  "title": "",
+  "person_page": "/dr-anja-stuerzl/",
+  "review_due": "2027-10-11"
+ }
+}

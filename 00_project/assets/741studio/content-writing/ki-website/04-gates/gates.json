@@ -1,0 +1,68 @@
+{
+ "date": "2026-10-13",
+ "page": "05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G2 legal": {
+   "mode": "none",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Haupt-Keyword \"ki website\" nicht im Title"
+   ],
+   "info": {
+    "words": 1795,
+    "placeholders": 0
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Sprecher gemischt: ich 8, wir 41"
+   ],
+   "counts": {
+    "du": 85,
+    "sie": 1,
+    "ich": 8,
+    "wir": 41
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1795,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "[Hinweis] 1 von 7 Themen-Begriffen der Wettbewerber-Überschriften fehlen im Text: webseit* (5/11, z. B. \"Wenig Zeit? Das sind die besten kostenlosen KI-ges\")",
+    "Begriffs- und Norm-Prüfung nicht gelaufen (mit --fetch starten)",
+    "Direkt-Antwort hat 5 Sätze (Regel: 2 bis 4, etwa 50 Wörter). Kürzen für KI-Zitate."
+   ]
+  }
+ }
+}

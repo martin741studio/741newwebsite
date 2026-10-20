@@ -1,0 +1,69 @@
+{
+ "date": "2026-10-11",
+ "page": "st-18-steuerfahndung-durchsuchung/05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Claims nicht verwendet: ['C04']"
+   ]
+  },
+  "G2 legal": {
+   "mode": "brao",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Wortzahl 1841 außerhalb Zielbereich 1300 bis 1800"
+   ],
+   "info": {
+    "words": 1841,
+    "placeholders": 1
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "4 Sätze über 28 Wörter (zum Beispiel: Nach der Durchsuchung können Sie eine schriftliche Mitteilung verlange...)",
+    "Sprecher gemischt: ich 4, wir 32"
+   ],
+   "counts": {
+    "du": 0,
+    "sie": 94,
+    "ich": 4,
+    "wir": 32
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1841,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "[Hinweis] Begriffs-Abdeckung 87 % (24 Begriffe aus mindestens 50 % der Seiten). Fehlen: steuerhinterziehung, steuerberater, steuer. Pflicht nur, wenn die Suchabsicht den Begriff braucht."
+   ]
+  }
+ }
+}

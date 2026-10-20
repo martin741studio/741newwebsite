@@ -1,0 +1,35 @@
+{
+  "plan_index": 4,
+  "client": "Rabenmütter Shop",
+  "slug": "feedback-trauerkarten-pillar",
+  "mode": "FEEDBACK",
+  "feedback_id": "801d4d7d-1a22-4d45-a08e-e0b213dff2ec",
+  "executor_file": "feedback/rabenmuetter-shop/801d4d7d-1a22-4d45-a08e-e0b213dff2ec.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": "n/a — FEEDBACK item has no Title/Meta/H1/NAP-Block/JSON-LD field. The [fehlt: ...] markers sit in the Vorschlag body (missing original report-section text; open points before a client answer), not in one of the five required fields.",
+    "nap_block_matches_locked_record": "n/a — this feedback item is about a pillar page's handwritten-card offer, no address/NAP content at all.",
+    "jsonld_valid": "n/a — no JSON-LD in this doc.",
+    "language_matches_market_lang": "pass — market_lang=de, full doc is German.",
+    "hwg_scan": "pass — no \"heilt\"/\"garantiert\"/\"100%\"/\"Heilung\" claims; content is e-commerce product-implementation strategy, not health copy; client is a shop, not a YMYL/health client.",
+    "feedback_addresses_comment_sentence_for_sentence": {
+      "result": "pass",
+      "evidence": [
+        "Re-pulled the source comment from context.json.feedback_open (id 801d4d7d-...), compared verbatim: the 'Kunde sagt' quote in the Executor file matches character-for-character, including the timestamp 30.08.2026, 16:38.",
+        "Comment clause 1 — 'vielen Dank - super, super Vorschläge': addressed via 'Zustimmung vermerken. Der Abschnitt ... bleibt wie vorgeschlagen stehen.'",
+        "Comment clause 2 — 'auch die Idee die Karte handschriftlich schreiben zu lassen' (client approves that idea too): correctly read as approval, not a new request — no invented change to the section.",
+        "Comment clause 3 — 'noch habe ich keine Idee wie das umgesetzt aussehen könnte': this is the one open question in the comment. Addressed head-on with two concrete, named implementation models (A: digital handwriting font, B: real hand-written cards), each with a one-line trade-off.",
+        "Comment clause 4 — 'aber das kannst du mir bestimmt erklären': directly answered by the explanation itself, plus a clear list of what must still be confirmed before Martin can give the client a final answer (which model was originally meant, who writes, time/surcharge, UI placement).",
+        "No clause of the client's comment is left unanswered."
+      ]
+    },
+    "deslop_hard_check": {
+      "result": "skipped — correctly",
+      "reason": "The Vorschlag's two-model explanation and open-points list are explicitly scoped as 'Empfehlung an Martin (intern, keine Kunden-Kopie)' — internal strategy/explanation for Martin, not finished client-facing marketing prose meant to ship verbatim. Per SKILL.md this is the 'internal recommendation, not copy' case (same category as the Rabenmütter Verkaufskanäle and Suriya NAP/domain-strategy feedback items already passed in this run), so de-slop is not a blocker here."
+    },
+    "real_data_only": "pass — the client comment is quoted verbatim from context.json.feedback_open. The Executor explicitly could not retrieve the original report-section text (no local copy, live fetch of rabenmuetter-verlag.de failed again with a tool-internal error) and marks that gap as [fehlt: ...] instead of guessing which model (A or B) the original proposal meant. The two models offered are stated as 'die zwei gängigen Modelle für ein solches Angebot' — generic domain knowledge presented as such, not asserted as the client's specific setup. All open facts needed before a client-facing answer (who writes, timing, surcharge, UI) are listed as [fehlt: von Martin/der Kundin zu bestätigen], nothing is invented."
+  },
+  "fails": [],
+  "verdict": "pass",
+  "note": "Independent re-verification for this run (2026-10-07): re-pulled context.json.feedback_open fresh and compared the Executor file against it sentence-for-sentence. All six hard checks pass (three n/a because this FEEDBACK item has no Title/Meta/H1/NAP/JSON-LD content and no NAP content at all). No invented facts — the inability to fetch the original pillar-section text is honestly flagged as [fehlt: ...] rather than guessed. De-slop correctly skipped as an internal-recommendation document, not client-facing copy."
+}

@@ -1,0 +1,68 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://www.meandyou.de/michael#webpage",
+   "url": "https://www.meandyou.de/michael",
+   "name": "Michael Ehlers | Rhetoriktrainer seit 1990 und Autor",
+   "description": "Michael Ehlers trainiert seit 1990 Menschen in Rhetorik. Autor von neun Büchern, Lehrauftrag an der Universität St. Gallen. Jetzt Gespräch buchen.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "https://www.meandyou.de/#website"
+   },
+   "breadcrumb": {
+    "@id": "https://www.meandyou.de/michael#breadcrumb"
+   },
+   "about": {
+    "@id": "https://www.meandyou.de/michael#person"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.meandyou.de/michael#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Startseite",
+     "item": "https://www.meandyou.de/"
+    }
+   ]
+  },
+  {
+   "@type": "EducationalOrganization",
+   "@id": "https://www.meandyou.de/#organization",
+   "name": "Institut Michael Ehlers GmbH",
+   "url": "https://www.meandyou.de/",
+   "email": "management@meandyou.de",
+   "department": []
+  },
+  {
+   "@type": "Person",
+   "@id": "https://www.meandyou.de/michael#person",
+   "name": "Michael Ehlers",
+   "jobTitle": "Rhetoriktrainer und Executive Coach",
+   "url": "https://www.meandyou.de/michael",
+   "worksFor": {
+    "@id": "https://www.meandyou.de/#organization"
+   },
+   "hasCredential": [
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "Lehrbeauftragter für Rhetorik und Kommunikation, Universität St. Gallen"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "Expert Lead, SGMI Center for Rhetoric, St. Gallen"
+    }
+   ],
+   "sameAs": [
+    "https://institut-ehlers.de/michael-ehlers",
+    "https://de.linkedin.com/in/rhetoriktrainer",
+    "https://www.focus.de/autoren/michael-ehlers_e598339a-a33c-4231-8f5e-8c9e4a424fc9.html",
+    "https://open.spotify.com/show/06KoTy9DZC61mNvf4X2L2E"
+   ]
+  }
+ ]
+}

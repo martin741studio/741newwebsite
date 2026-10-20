@@ -1,0 +1,70 @@
+{
+ "date": "2026-10-11",
+ "page": "st-35-steuerhinterziehung-strafe/05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Claims nicht verwendet: ['C05']"
+   ]
+  },
+  "G2 legal": {
+   "mode": "brao",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Wortzahl 1848 außerhalb Zielbereich 1030 bis 1800"
+   ],
+   "info": {
+    "words": 1848,
+    "placeholders": 4
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "2 Sätze über 28 Wörter (zum Beispiel: 2 StGB wägt das Gericht unter anderem die Art der Ausführung, die vers...)"
+   ],
+   "counts": {
+    "du": 0,
+    "sie": 9,
+    "ich": 0,
+    "wir": 10
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1848,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "[Hinweis] Begriffs-Abdeckung 91 % (36 Begriffe aus mindestens 50 % der Seiten). Fehlen: finanzamt, strafen, straffreiheit. Pflicht nur, wenn die Suchabsicht den Begriff braucht.",
+    "Article ohne datePublished (erst nach Freigabe des Kunden setzen)",
+    "Article ohne Autorenname"
+   ]
+  }
+ }
+}

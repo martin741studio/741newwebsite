@@ -1,0 +1,803 @@
+{
+ "catalog_version": "2026-10-11.3",
+ "blocks": {
+  "B01": "Leadgenerierung & Marketing-Historie",
+  "B02": "Profitabilität & Ticket-Größen",
+  "B03": "Lead-Volumen & Abschlussquoten",
+  "B04": "Geografischer Fokus & CRM-Daten",
+  "B05": "Google-Profil & lokale Rankings",
+  "B06": "Live-Technik-Check",
+  "B07": "Off-Page, PR & Reputation",
+  "B08": "Betrieb & Kommunikationsregeln",
+  "B09": "Eignungsprüfung \"Nein sagen können\"",
+  "B10": "GBP-Qualität im Detail",
+  "B11": "Wettbewerber-Benchmark",
+  "B12": "KI-Sichtbarkeit & Apple Maps",
+  "B13": "Risiko: Sperrung und Duplikate"
+ },
+ "block_weights": {
+  "B05": 25,
+  "B10": 15,
+  "B11": 15,
+  "B06": 15,
+  "B07": 10,
+  "B13": 10,
+  "B12": 5,
+  "B04": 5
+ },
+ "block_weights_by_strategy": {
+  "maps": {
+   "B05": 25,
+   "B10": 15,
+   "B11": 15,
+   "B06": 15,
+   "B07": 10,
+   "B13": 10,
+   "B12": 5,
+   "B04": 5
+  },
+  "paid": {
+   "B06": 30,
+   "B05": 20,
+   "B03": 10,
+   "B04": 10,
+   "B13": 10,
+   "B10": 5,
+   "B07": 5,
+   "B11": 5,
+   "B12": 5
+  }
+ },
+ "fields": [
+  {
+   "field_id": "B01.01",
+   "block": "B01",
+   "label_de": "Aktuelle Lead-Kanäle",
+   "input_type": "C + A",
+   "source": "Form (channel list, share %). GA4 channel split via service account as cross-check",
+   "rule": "red if stated and GA4 differ by over 25 points",
+   "light": true,
+   "critical": false
+  },
+  {
+   "field_id": "B01.02",
+   "block": "B01",
+   "label_de": "Bisherige Marketing-Performance",
+   "input_type": "C + A",
+   "source": "Form (past agencies, spend, result). GA4 and GSC 12-month trend",
+   "rule": "grey if no data. Else trend arrow only",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B01.03",
+   "block": "B01",
+   "label_de": "Aktuelles SEO-Setup",
+   "input_type": "A + C",
+   "source": "Live-site script (CMS, plugins, GTM/GA4). GSC access. Form (who runs it)",
+   "rule": "yellow if GSC or GA4 missing",
+   "light": true,
+   "critical": false
+  },
+  {
+   "field_id": "B01.04",
+   "block": "B01",
+   "label_de": "Alternativplan",
+   "input_type": "C",
+   "source": "Form",
+   "rule": "text only",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B01.05",
+   "block": "B01",
+   "label_de": "Grund für diesen Call",
+   "input_type": "C",
+   "source": "Form",
+   "rule": "text only. Shown on page 1 as one line",
+   "light": true,
+   "critical": false
+  },
+  {
+   "field_id": "B02.01",
+   "block": "B02",
+   "label_de": "Profitabelste Leistungen",
+   "input_type": "C",
+   "source": "Form (top 5, ranked)",
+   "rule": "text",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B02.02",
+   "block": "B02",
+   "label_de": "Durchschnittliche Ticket-Größe",
+   "input_type": "C",
+   "source": "Form (EUR)",
+   "rule": "text",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B02.03",
+   "block": "B02",
+   "label_de": "Leistungen mit höchster Marge",
+   "input_type": "C",
+   "source": "Form (top 3)",
+   "rule": "text",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B02.04",
+   "block": "B02",
+   "label_de": "Customer Lifetime Value",
+   "input_type": "C",
+   "source": "Form (EUR or repeat count)",
+   "rule": "text",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B02.05",
+   "block": "B02",
+   "label_de": "Margen-Leistung sichtbar?",
+   "input_type": "D",
+   "source": "B02.03 against B10.02 (GBP services), B06.08 (pages), B05.06 (keywords)",
+   "rule": "red if a top-margin service has no GBP service, no page and no keyword",
+   "light": false,
+   "critical": true
+  },
+  {
+   "field_id": "B03.01",
+   "block": "B03",
+   "label_de": "Monatliches Lead-Volumen",
+   "input_type": "C",
+   "source": "Form (total and per channel)",
+   "rule": "text",
+   "light": true,
+   "critical": false
+  },
+  {
+   "field_id": "B03.02",
+   "block": "B03",
+   "label_de": "Abschlussquote je Kanal",
+   "input_type": "C",
+   "source": "Form",
+   "rule": "text",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B03.03",
+   "block": "B03",
+   "label_de": "ROI-Tragfähigkeit",
+   "input_type": "D",
+   "source": "Break-even = program fee / average ticket (or CLV). Compare with current leads per month. No forecast",
+   "rule": "red if break-even needs more new clients per month than current total leads x closing rate",
+   "light": false,
+   "critical": true
+  },
+  {
+   "field_id": "B04.01",
+   "block": "B04",
+   "label_de": "Ziel-Stadtteile und Einzugsgebiete",
+   "input_type": "C + A",
+   "source": "Form (list). Agent maps them to the Falcon grid and to GSC queries",
+   "rule": "green if all target areas lie inside the scanned grid. Else yellow or red by share",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B04.02",
+   "block": "B04",
+   "label_de": "CRM-Datenauswertung",
+   "input_type": "C + A",
+   "source": "Form upload (anonymized export: postcode, service, date, source). Script summarizes",
+   "rule": "grey if no upload. Else text and top 5 postcodes",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B04.03",
+   "block": "B04",
+   "label_de": "Expansionsabsicht",
+   "input_type": "C",
+   "source": "Form (new location, new service, 12 months)",
+   "rule": "text. A new location sets a flag for B13.01",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B05.01",
+   "block": "B05",
+   "label_de": "GBP-Abhängigkeit der Leads",
+   "input_type": "C + B",
+   "source": "Form (share of leads from Google profile). GBP insights (calls, routes, site clicks, 90 days)",
+   "rule": "text. Red flag if share over 40 % and profile is weak",
+   "light": true,
+   "critical": false
+  },
+  {
+   "field_id": "B05.02",
+   "block": "B05",
+   "label_de": "GBP-Anzahl und echte Adressen",
+   "input_type": "A + C",
+   "source": "Falcon list by name, address, phone. Form (confirm real addresses). Master data",
+   "rule": "red if a profile has no real service address or an unknown profile exists",
+   "light": true,
+   "critical": true
+  },
+  {
+   "field_id": "B05.03",
+   "block": "B05",
+   "label_de": "Bewertungstempo und -prozess",
+   "input_type": "A + C",
+   "source": "Falcon review data (count, rating, new per 90 days and 12 months). Form (how reviews are asked)",
+   "rule": "green if own velocity at least 50 % of leader's. Yellow 25-49 %. Red below 25 %",
+   "light": true,
+   "critical": true
+  },
+  {
+   "field_id": "B05.04",
+   "block": "B05",
+   "label_de": "Review-Antwortquote",
+   "input_type": "A",
+   "source": "Falcon or Maps read (share answered, median delay)",
+   "rule": "green at 90 % or more. Yellow 50-89 %. Red below 50 %. Health: neutral thanks only",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B05.05",
+   "block": "B05",
+   "label_de": "Aktuelles Ranking-Wissen",
+   "input_type": "C + D",
+   "source": "Form (what the client believes). Delta against B05.06",
+   "rule": "text. Red if belief is top 3 and measure is not",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B05.06",
+   "block": "B05",
+   "label_de": "Messung je Keyword (SoLV, ARP)",
+   "input_type": "A",
+   "source": "Falcon scan 7x7 per keyword (Google). Existing reports first (free)",
+   "rule": "green: SoLV 40 % or more. Yellow 15-39 %. Red below 15 %",
+   "light": true,
+   "critical": true
+  },
+  {
+   "field_id": "B05.07",
+   "block": "B05",
+   "label_de": "Google-Ads-Audit",
+   "input_type": "C + B",
+   "source": "Form (runs Ads? budget). Ads account read: conversion tracking, location setting, search terms, cost per lead",
+   "rule": "grey if no Ads. Red if no conversion tracking or location setting too wide",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B05.08",
+   "block": "B05",
+   "label_de": "Maps-Verlauf (Trend)",
+   "input_type": "D",
+   "source": "Last run against this run (only same grid and radius)",
+   "rule": "arrow. Grey on first run",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B06.01",
+   "block": "B06",
+   "label_de": "Asset-Eigentümerschaft",
+   "input_type": "A + B + C",
+   "source": "Domain registrar (WHOIS), DNS and hosting, `access_grants`, form (who owns GA4, GTM, GSC, Ads, GBP). GBP manager list (browser read)",
+   "rule": "green if client is owner of domain and GBP. Yellow if unconfirmed. Red if a third party owns domain or GBP",
+   "light": true,
+   "critical": true
+  },
+  {
+   "field_id": "B06.02",
+   "block": "B06",
+   "label_de": "Startseite und Conversion-UX",
+   "input_type": "A",
+   "source": "Desktop and mobile screenshot. Checklist: H1 matches keyword, CTA above fold, tap-to-call, form, trust proof, tracking events fire",
+   "rule": "by checklist share (green 75 % or more)",
+   "light": true,
+   "critical": false
+  },
+  {
+   "field_id": "B06.03",
+   "block": "B06",
+   "label_de": "Schnelle SEO-Fehler",
+   "input_type": "A",
+   "source": "Live-site script: title, meta, H1, canonical, JSON-LD, OG, alt, robots, sitemap, HTTPS, redirects",
+   "rule": "green: no error. Yellow: 1-3. Red: 4 or more",
+   "light": true,
+   "critical": false
+  },
+  {
+   "field_id": "B06.04",
+   "block": "B06",
+   "label_de": "Qualität der Location-Seiten",
+   "input_type": "A",
+   "source": "Per location: own page, unique text (similarity), NAP match, map, LocalBusiness schema, link to and from GBP",
+   "rule": "by checklist share",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B06.05",
+   "block": "B06",
+   "label_de": "Live-NAP-Konsistenz",
+   "input_type": "A",
+   "source": "Site (Impressum, footer, schema) against GBP against master data against `client_citations` + 10 live directory checks",
+   "rule": "red if any core NAP field differs on site or GBP",
+   "light": false,
+   "critical": true
+  },
+  {
+   "field_id": "B06.06",
+   "block": "B06",
+   "label_de": "Indexierung",
+   "input_type": "A",
+   "source": "GSC URL Inspection and coverage. Fallback: sitemap against `site:` search via Firecrawl",
+   "rule": "green: 95 % or more of sitemap URLs indexed",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B06.07",
+   "block": "B06",
+   "label_de": "Tech-Stack und Analytics",
+   "input_type": "A",
+   "source": "GTM, GA4, Ads tag, consent mode, key events, call tracking. PageSpeed (mobile)",
+   "rule": "red if no conversion events. Yellow if mobile LCP over 2.5 s",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B06.08",
+   "block": "B06",
+   "label_de": "Keyword-zu-Seite-Zuordnung",
+   "input_type": "A + D",
+   "source": "Each priority keyword and each GBP service against site pages",
+   "rule": "green if every one has a matching own page",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B07.01",
+   "block": "B07",
+   "label_de": "Backlink-Audit",
+   "input_type": "A",
+   "source": "DataForSEO backlinks summary: client + competitors (rank, backlinks, referring domains, dofollow share, first seen)",
+   "rule": "relative to leader: green at 50 % of leader's referring domains or more. Yellow 20-49 %. Red below 20 %",
+   "light": true,
+   "critical": false
+  },
+  {
+   "field_id": "B07.02",
+   "block": "B07",
+   "label_de": "Lokale PR und Citations",
+   "input_type": "A",
+   "source": "`client_citations` status (270 rows in DB), core DACH directories, niche directories",
+   "rule": "green if 80 % of core directories are live",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B07.03",
+   "block": "B07",
+   "label_de": "Social-Media-Auftritt",
+   "input_type": "A",
+   "source": "Profile found, last post date, followers (Firecrawl)",
+   "rule": "green if active in last 60 days",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B07.04",
+   "block": "B07",
+   "label_de": "Anti-SEO und Negativ-PR-Suche",
+   "input_type": "A",
+   "source": "Brand query autocomplete (\"name + erfahrungen / abzocke / bewertung\"). First-page results. Review spikes of 1-star",
+   "rule": "red if a negative result sits on page 1 or a 1-star burst exists",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B08.01",
+   "block": "B08",
+   "label_de": "CRM und Umsatz-Zuordnung",
+   "input_type": "C",
+   "source": "Form (system, can leads link to channel and revenue)",
+   "rule": "yellow if not possible",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B08.02",
+   "block": "B08",
+   "label_de": "Ansprechpartner",
+   "input_type": "C",
+   "source": "Form (name, role, decision maker, approver)",
+   "rule": "text. Writes to master data",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B08.03",
+   "block": "B08",
+   "label_de": "Tabu-Bereiche der Website",
+   "input_type": "C",
+   "source": "Form (what nobody may change)",
+   "rule": "text. Writes to `client_master_data.boundaries`",
+   "light": false,
+   "critical": true
+  },
+  {
+   "field_id": "B08.04",
+   "block": "B08",
+   "label_de": "Kommunikationspräferenzen",
+   "input_type": "C",
+   "source": "Form (channel, reply time, address form du or Sie)",
+   "rule": "text. Writes to `clients.lang` / mode",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B09.01",
+   "block": "B09",
+   "label_de": "Operative Kapazität",
+   "input_type": "C",
+   "source": "Form (new clients per month possible, waiting time, staff)",
+   "rule": "red if capacity is below the leads needed for break-even",
+   "light": true,
+   "critical": true
+  },
+  {
+   "field_id": "B09.02",
+   "block": "B09",
+   "label_de": "Finanzielle Tragfähigkeit",
+   "input_type": "C",
+   "source": "Form (budget range, ad budget, payment readiness)",
+   "rule": "red if budget is below the offer. No price is shown to the client",
+   "light": true,
+   "critical": false
+  },
+  {
+   "field_id": "B09.03",
+   "block": "B09",
+   "label_de": "Realitäts-Check der Anrufannahme",
+   "input_type": "C + A",
+   "source": "Form (who answers, hours, missed calls). Site and GBP phone hours. Optional test call logged by Martin (M)",
+   "rule": "red if site hours and GBP hours differ, or answered share is under 70 %",
+   "light": true,
+   "critical": true
+  },
+  {
+   "field_id": "B09.04",
+   "block": "B09",
+   "label_de": "Fit-Verdikt",
+   "input_type": "D",
+   "source": "Section 5.3",
+   "rule": "Ja / Noch nicht / Nein / Offen",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B10.01",
+   "block": "B10",
+   "label_de": "Kategorien (primär + sekundär)",
+   "input_type": "A",
+   "source": "Falcon list, against leader categories",
+   "rule": "green if primary equals leader's primary and gaps are 0-1. Red if primary differs from the main service",
+   "light": true,
+   "critical": true
+  },
+  {
+   "field_id": "B10.02",
+   "block": "B10",
+   "label_de": "Leistungen im Profil",
+   "input_type": "A",
+   "source": "Falcon list or Maps read: count, each with own page",
+   "rule": "green if every listed service has a page and count is in 20-50, or full coverage in a small practice",
+   "light": true,
+   "critical": false
+  },
+  {
+   "field_id": "B10.03",
+   "block": "B10",
+   "label_de": "Produkte",
+   "input_type": "A",
+   "source": "Maps read",
+   "rule": "grey if not relevant",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B10.04",
+   "block": "B10",
+   "label_de": "Attribute",
+   "input_type": "A",
+   "source": "Maps read",
+   "rule": "yellow if relevant attributes missing",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B10.05",
+   "block": "B10",
+   "label_de": "Beschreibung",
+   "input_type": "A",
+   "source": "Length (max 750), main keyword, advertising-law words",
+   "rule": "red if empty or breaks advertising law",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B10.06",
+   "block": "B10",
+   "label_de": "Fotos",
+   "input_type": "A",
+   "source": "Count, last upload date, against leader",
+   "rule": "green at 70 % of leader's count and upload in 90 days",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B10.07",
+   "block": "B10",
+   "label_de": "Beiträge (Posts)",
+   "input_type": "A",
+   "source": "Last post date, posts in 90 days",
+   "rule": "green: 1 or more per 14 days",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B10.08",
+   "block": "B10",
+   "label_de": "Fragen und Antworten",
+   "input_type": "A",
+   "source": "Count, answered share",
+   "rule": "yellow if none",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B10.09",
+   "block": "B10",
+   "label_de": "Öffnungszeiten",
+   "input_type": "A",
+   "source": "Complete, special hours, match to site",
+   "rule": "red if differs from site",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B10.10",
+   "block": "B10",
+   "label_de": "Inhalt der Bewertungen",
+   "input_type": "A",
+   "source": "Share of reviews that name a service or place. Sentiment",
+   "rule": "green: 40 % or more name a service",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B10.11",
+   "block": "B10",
+   "label_de": "Link-Ziele (Website, Termin)",
+   "input_type": "A",
+   "source": "Link target is the best page. UTM tagged",
+   "rule": "yellow if link goes to a weak page",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B11.01",
+   "block": "B11",
+   "label_de": "Wettbewerber-Auswahl und Begründung",
+   "input_type": "A",
+   "source": "Top 5 (light: 2) from the Falcon report of the priority-1 keyword. Reason per pick",
+   "rule": "text. Must state why these",
+   "light": true,
+   "critical": false
+  },
+  {
+   "field_id": "B11.02",
+   "block": "B11",
+   "label_de": "Vergleichstabelle",
+   "input_type": "A",
+   "source": "Per competitor: SoLV, ARP, reviews, rating, category count, service count, domain, referring domains, first seen, niche page yes/no",
+   "rule": "table",
+   "light": true,
+   "critical": false
+  },
+  {
+   "field_id": "B11.03",
+   "block": "B11",
+   "label_de": "Review-Lücke",
+   "input_type": "D",
+   "source": "Section 5.3 formula (facts)",
+   "rule": "green if gap 0. Yellow up to 9 months or if reviews are not a driver. Red above 9 months when reviews are a driver",
+   "light": true,
+   "critical": false
+  },
+  {
+   "field_id": "B11.04",
+   "block": "B11",
+   "label_de": "Autoritäts-Lücke",
+   "input_type": "D",
+   "source": "Referring domains against leader",
+   "rule": "as B07.01",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B11.05",
+   "block": "B11",
+   "label_de": "Kategorien-Lücke",
+   "input_type": "D",
+   "source": "Leader categories the client lacks",
+   "rule": "green 0. Yellow 1-2. Red 3 or more",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B11.06",
+   "block": "B11",
+   "label_de": "Inhalts-Lücke",
+   "input_type": "D",
+   "source": "Leader service pages the client lacks",
+   "rule": "same scale",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B11.07",
+   "block": "B11",
+   "label_de": "Schwäche des Marktführers",
+   "input_type": "A + D",
+   "source": "Lowest rating, no niche page, old profile, few posts",
+   "rule": "text. Output yes/no for \"angle\"",
+   "light": false,
+   "critical": true
+  },
+  {
+   "field_id": "B11.08",
+   "block": "B11",
+   "label_de": "Realismus für Platz 1",
+   "input_type": "D",
+   "source": "Section 5.3 (D1), per priority-1 keyword",
+   "rule": "realistic / slow / unrealistic",
+   "light": false,
+   "critical": true
+  },
+  {
+   "field_id": "B11.09",
+   "block": "B11",
+   "label_de": "Treiber-Analyse",
+   "input_type": "D",
+   "source": "`analyze_drivers.py` on the full Falcon report: rho reviews, category lift",
+   "rule": "green if the client holds all driver categories. Yellow if one is missing. Red if two or more are missing",
+   "light": false,
+   "critical": true
+  },
+  {
+   "field_id": "B12.01",
+   "block": "B12",
+   "label_de": "KI-Sichtbarkeit je Plattform",
+   "input_type": "A",
+   "source": "Falcon scans: ChatGPT, Gemini, AI Mode, AI Overviews. Per keyword",
+   "rule": "green: mentioned in 40 % or more",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B12.02",
+   "block": "B12",
+   "label_de": "Zitierte Quellen",
+   "input_type": "A",
+   "source": "Falcon AI scan source list",
+   "rule": "text. Shows which domains win",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B12.03",
+   "block": "B12",
+   "label_de": "Apple Maps",
+   "input_type": "A",
+   "source": "Falcon Apple scan or listing check",
+   "rule": "red if no listing",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B12.04",
+   "block": "B12",
+   "label_de": "KI-Money-Prompts",
+   "input_type": "A + D",
+   "source": "Own prompt list in `visibility_prompts` against blueprint (10-30)",
+   "rule": "green if 10 or more active prompts",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B13.01",
+   "block": "B13",
+   "label_de": "Duplikate und Doppel-Einträge",
+   "input_type": "A",
+   "source": "Falcon list and Maps search by name, address, phone, old addresses",
+   "rule": "red if a duplicate exists",
+   "light": true,
+   "critical": true
+  },
+  {
+   "field_id": "B13.02",
+   "block": "B13",
+   "label_de": "Adress- und Verifizierungsrisiko",
+   "input_type": "A + C",
+   "source": "Storefront or service-area. Virtual office or coworking hint. Recent move (form). Verification state",
+   "rule": "red if address moved and GBP or site is not updated",
+   "light": true,
+   "critical": true
+  },
+  {
+   "field_id": "B13.03",
+   "block": "B13",
+   "label_de": "Name im Profil",
+   "input_type": "A",
+   "source": "GBP name against legal name. Keyword stuffing",
+   "rule": "red if extra words",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B13.04",
+   "block": "B13",
+   "label_de": "Kategorie- und Attribut-Risiko",
+   "input_type": "A",
+   "source": "Restricted categories",
+   "rule": "yellow if borderline",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B13.05",
+   "block": "B13",
+   "label_de": "Branchen-Werberecht",
+   "input_type": "A + M",
+   "source": "Niche profile: health = HWG, law = BRAO/BORA and UWG, tax = StBerG and UWG, other = UWG. Scan site and GBP text for banned claims",
+   "rule": "red if a banned claim exists",
+   "light": false,
+   "critical": true
+  },
+  {
+   "field_id": "B13.06",
+   "block": "B13",
+   "label_de": "Profilstatus und Zugriff",
+   "input_type": "A + B",
+   "source": "Open or closed flag. Manager list. `access_grants`",
+   "rule": "yellow if no manager access for 741",
+   "light": false,
+   "critical": false
+  },
+  {
+   "field_id": "B13.07",
+   "block": "B13",
+   "label_de": "Review-Richtlinien-Risiko",
+   "input_type": "A",
+   "source": "Incentive or gating hints. 1-star bursts (links to B07.04)",
+   "rule": "red if gating hint found",
+   "light": false,
+   "critical": false
+  }
+ ]
+}

@@ -1,0 +1,170 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://stuerzl-steuerstrafrecht.de/korruptionsstrafrecht/#webpage",
+   "url": "https://stuerzl-steuerstrafrecht.de/korruptionsstrafrecht/",
+   "name": "Korruptionsstrafrecht Anwalt Frankfurt & München | STÜRZL",
+   "description": "Korruptionsstrafrecht: Was §§ 299 und 331 ff. StGB regeln, welche steuerlichen Folgen möglich sind und wie wir Sie beraten. Vertraulich anfragen.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/#website"
+   },
+   "breadcrumb": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/korruptionsstrafrecht/#breadcrumb"
+   },
+   "mainEntity": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/korruptionsstrafrecht/#service"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://stuerzl-steuerstrafrecht.de/korruptionsstrafrecht/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Startseite",
+     "item": "https://stuerzl-steuerstrafrecht.de/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Leistungen",
+     "item": "https://stuerzl-steuerstrafrecht.de/leistungen/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Wirtschaftsstrafrecht",
+     "item": "https://stuerzl-steuerstrafrecht.de/sonstiges-wirtschaftsstrafrecht/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Korruptionsstrafrecht",
+     "item": "https://stuerzl-steuerstrafrecht.de/korruptionsstrafrecht/"
+    }
+   ]
+  },
+  {
+   "@type": "LegalService",
+   "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei",
+   "name": "STÜRZL Steuerstrafrecht",
+   "url": "https://stuerzl-steuerstrafrecht.de/",
+   "email": "kanzlei@stuerzl-steuerstrafrecht.de",
+   "department": [
+    {
+     "@type": "LegalService",
+     "name": "STÜRZL Steuerstrafrecht München",
+     "telephone": "+49 89 72444170",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "München",
+      "postalCode": "80331",
+      "addressCountry": "DE",
+      "streetAddress": "Oberanger 32"
+     },
+     "parentOrganization": {
+      "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+     }
+    },
+    {
+     "@type": "LegalService",
+     "name": "STÜRZL Steuerstrafrecht Frankfurt am Main",
+     "telephone": "+49 69 298028870",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Frankfurt am Main",
+      "postalCode": "60329",
+      "addressCountry": "DE",
+      "streetAddress": "Untermainkai 26"
+     },
+     "parentOrganization": {
+      "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "Service",
+   "@id": "https://stuerzl-steuerstrafrecht.de/korruptionsstrafrecht/#service",
+   "serviceType": "korruptionsstrafrecht",
+   "provider": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+   },
+   "url": "https://stuerzl-steuerstrafrecht.de/korruptionsstrafrecht/"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://stuerzl-steuerstrafrecht.de/korruptionsstrafrecht/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Ist eine Flasche Wein für den Geschäftspartner noch erlaubt?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Eine feste Wertgrenze nennt das Gesetz nicht. Im geschäftlichen Verkehr kommt es nach § 299 StGB darauf an, ob der Vorteil als Gegenleistung für eine unlautere Bevorzugung oder eine Pflichtverletzung gewährt wird. Ob ein Geschenk im Einzelfall ein Risiko darstellt, hängt von den Umständen ab. Das klären wir vertraulich mit Ihnen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Darf man dem Betriebsprüfer zum Mittagessen einladen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Wer bei einer Behörde Aufgaben der öffentlichen Verwaltung wahrnimmt, kann Amtsträger im Sinne von § 11 Abs. 1 Nr. 2 StGB sein. Für Amtsträger gelten die §§ 331 bis 335 StGB. Schon ein Vorteil für die Dienstausübung kann nach § 333 Abs. 1 StGB mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe bestraft werden. Ob eine Einladung im Einzelfall zulässig ist, beurteilen wir nur mit Kenntnis der Umstände."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Was unterscheidet Vorteilsannahme und Bestechlichkeit?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Die Vorteilsannahme (§ 331 StGB) knüpft an einen Vorteil für die Dienstausübung an. Die Bestechlichkeit (§ 332 StGB) verlangt eine Gegenleistung für eine Diensthandlung, bei der Dienstpflichten verletzt werden oder verletzt würden. Der Strafrahmen der Bestechlichkeit ist höher."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ist Bestechung auch strafbar, wenn kein Amtsträger beteiligt ist?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja. § 299 StGB erfasst Bestechlichkeit und Bestechung im geschäftlichen Verkehr zwischen Angestellten oder Beauftragten von Unternehmen. Das Gesetz sieht Freiheitsstrafe bis zu drei Jahren oder Geldstrafe vor."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Welche Folgen kann ein Korruptionsvorwurf für ein Unternehmen haben?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Die Folgen betreffen zwei Ebenen. Gegen die juristische Person oder Personenvereinigung kann eine Geldbuße nach § 30 OWiG festgesetzt werden, wenn eine Leitungsperson eine Straftat begangen hat. Auch die Aufsichtspflicht nach § 130 OWiG kann eine Rolle spielen. Die Einziehung dessen, was durch die Tat erlangt wurde, richtet sich nach § 73 StGB gegen den Täter oder Teilnehmer. Wurde gegen die juristische Person eine Geldbuße festgesetzt, schließt § 30 Abs. 5 OWiG die Einziehung gegen sie wegen derselben Tat aus."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wirkt sich ein Korruptionsvorwurf auf die Steuer aus?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Das kann sein. Nach § 4 Abs. 5 Satz 1 Nr. 10 EStG dürfen Zuwendungen von Vorteilen den Gewinn nicht mindern, wenn die Zuwendung eine rechtswidrige Handlung ist. Waren die Kosten abgezogen, prüfen wir mit Ihnen, ob eine steuerliche Korrektur oder Selbstanzeige in Betracht kommt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wie läuft ein Ermittlungsverfahren bei Korruptionsvorwürfen ab?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Erfährt die Staatsanwaltschaft von dem Verdacht einer Straftat, muss sie den Sachverhalt erforschen und auch entlastende Umstände ermitteln (§ 160 StPO). Bieten die Ermittlungen genügenden Anlass, erhebt sie Anklage, andernfalls stellt sie das Verfahren ein (§ 170 StPO). Bei der Vernehmung ist Beschuldigten zu eröffnen, welche Tat ihnen zur Last gelegt wird. Sie sind darauf hinzuweisen, dass es ihnen freisteht, sich zu äußern oder nicht zur Sache auszusagen, und dass sie jederzeit einen Verteidiger befragen können (§ 136 Abs. 1 StPO). Läuft schon eine Durchsuchung, lesen Sie Steuerfahndung und Durchsuchung."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wer erfährt von meiner Anfrage zu einem Geschenk oder einer Einladung?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Als Rechtsanwälte sind wir gesetzlich zur Verschwiegenheit verpflichtet (§ 43a Abs. 2 BRAO, § 203 StGB). Das gilt schon für Ihre Anfrage. Beschreiben Sie uns zunächst nur das Thema, etwa „Einladung an einen Geschäftspartner“, ohne Namen und ohne Beträge."
+     }
+    }
+   ]
+  }
+ ]
+}

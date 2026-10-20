@@ -1,0 +1,43 @@
+{
+  "plan_index": 2,
+  "client": "Praxis Suriya",
+  "slug": "feedback-gbp-beschreibung",
+  "mode": "FEEDBACK",
+  "feedback_id": "21a25f8b-8ee2-4f8f-8378-36aac01e35c4",
+  "executor_file": "feedback/praxis-suriya/21a25f8b-8ee2-4f8f-8378-36aac01e35c4.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": "n/a — FEEDBACK item has no Title/Meta/H1/NAP-Block/JSON-LD field. One [fehlt: ...] exists, but only in Diff-Hinweis (original report text not reachable from this run) — not one of the five required fields, so this check does not apply.",
+    "nap_block_matches_locked_record": "pass — independently re-checked context.json.nap_locked for client_id 3f71ef33-8c74-4ea1-b2d3-0273c2e99649: street 'Schützenpfad 29', postal_code '55218', city 'Ingelheim am Rhein'. The Vorschlag's NAP-Check line cites 'Ingelheim am Rhein ... Schützenpfad 29, 55218' — matches field by field.",
+    "jsonld_valid": "n/a — no JSON-LD in this feedback item.",
+    "language_matches_market_lang": "pass — copy is German throughout; market_lang=de.",
+    "hwg_scan": "pass — re-scanned Vorschlag text for 'heilt', 'garantiert', '100 %', 'Heilung'; none present. Text names methods and an individual treatment plan, makes no outcome promise.",
+    "feedback_addresses_comment_sentence_for_sentence": {
+      "result": "pass",
+      "evidence": [
+        "Comment is the client's own ready-to-use GBP description, verbatim, prefixed 'ÄNDERN:'.",
+        "Vorschlag reproduces that exact text 1:1 as the GBP 'Beschreibung' field value — compared word for word against context.json.feedback_open entry 21a25f8b-...: identical.",
+        "Length (669/750 chars), HWG, language, and NAP checks are run against the real content.",
+        "Umsetzung note correctly states no further client confirmation is needed, matching the client's own 'ÄNDERN' framing (a replacement instruction, not a request for a new draft)."
+      ],
+      "note": "Nothing invented. The one open point (no in-repo/live copy of the original description to diff against) is marked [fehlt: ...] in Diff-Hinweis rather than guessed."
+    },
+    "deslop_hard_check": {
+      "result": "pass — 5/5 CLEAN",
+      "method": "deslop.py execution was blocked by sandbox approval in this session; ran the equivalent check by hand against deslop.py's own rule tables (read source directly) on the exact Vorschlag body copy (not JSON-LD, not meta).",
+      "trace": [
+        "vocab/vocab_exact: catalogue is English-only ('delve','leverage','seamless','crafted','journey', etc.) — body text is 100% German, zero matches.",
+        "phrases: every pattern requires an English construction ('whether you're X or', 'not just X but Y', 'imagine a', 'say goodbye to') — none occur in German copy, zero matches.",
+        "em-dash density: text contains no '—' character at all.",
+        "hyphen-stacking: only 'Kopf-,' and 'Nacken-' before a comma/space, never hyphen-directly-joining two letter runs (COMPOUND regex needs letter-hyphen-letter with no space/punct between) — zero qualifying stacked compounds.",
+        "semicolons: text contains zero ';' characters.",
+        "tricolon rule-of-three: the regex hard-codes the English word 'and' as the list conjunction; this German text uses 'und' throughout ('Akupunktur, manuelle Körpertherapie, Nervenregulation, Ayurveda und orthomolekulare Medizin') — pattern requires literal 'and', so no match.",
+        "proof-number check: noun list is English ('customers','patients','clients' etc.); text has '669 Zeichen' / '750 Zeichen' next to German nouns only — no match."
+      ],
+      "applicability_note": "This Vorschlag is new client-facing prose meant to ship as-is into the GBP 'Beschreibung' field (the SKILL.md example of what to run deslop on for FEEDBACK items), so the check was run rather than skipped — it happens to be identical to the quoted client text, but that does not exempt it since it is shipping as the Vorschlag, not quoted as 'Kunde sagt'. Result unaffected either way: 5/5 CLEAN."
+    }
+  },
+  "fails": [],
+  "verdict": "pass",
+  "note": "Independent re-verification for this run (2026-10-07), not copied from the 2026-09-15/2026-10-06 critic files: re-pulled nap_locked and feedback_open from this run's context.json, re-read the Executor file fresh, and hand-traced deslop.py's source rules against the exact Vorschlag text since the deslop.py script itself could not be executed in this sandbox (blocked by approval). All six hard checks pass. Verdict unchanged: pass."
+}

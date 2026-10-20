@@ -1,0 +1,358 @@
+<!-- wp:html -->
+<style>.sg-page{--t:#10595B;--td:#0b3a3b;--tint:#eff5f5}
+.sg-page .wp-block-group__inner-container>*{margin-block-start:0}
+.sg-page .wp-block-group__inner-container{padding:0}
+.sg-page>*{margin-top:0!important;margin-bottom:0!important}
+.sg-page>.wp-block-group__inner-container>*{margin:0!important}
+/* hero */
+.sg-page .sg-hero{min-height:620px;display:flex;align-items:center;padding:110px 6%;
+ background:linear-gradient(90deg,rgba(11,58,59,.9) 0%,rgba(11,58,59,.62) 42%,rgba(11,58,59,.05) 75%),url(https://shuiguru.de/wp-content/uploads/2022/12/copernico-p_kICQCOM4s-unsplash.jpg) center/cover no-repeat;color:#fff}
+.sg-page .sg-hero-box{max-width:640px}
+.sg-page .sg-hero p.sg-eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:13px;font-weight:600;color:#bfe0e0;margin:0 0 14px!important}
+.sg-page .sg-hero .sg-h1{color:#fff;font-size:clamp(30px,4vw,50px);line-height:1.15;margin:0 0 20px!important}
+.sg-page .sg-hero .sg-h1 em{font-style:normal;color:#bfe0e0}
+.sg-page .sg-hero p.sg-hero-lead{font-size:17px;line-height:1.65;color:#eef6f6;margin:0 0 18px!important}
+.sg-page .sg-hero p.sg-hero-line{font-size:15px;color:#fff;margin:0 0 22px!important;opacity:.95}
+.sg-page .sg-hero>.wp-block-group__inner-container{width:100%;max-width:1120px;margin:0 auto}
+.sg-page .sg-hero-split{position:relative;background:var(--td)!important;min-height:600px}
+.sg-page .sg-hero-split:before{content:"";position:absolute;top:0;right:0;bottom:0;width:50%;background:url(https://shuiguru.de/wp-content/uploads/2022/12/copernico-p_kICQCOM4s-unsplash.jpg) center/cover no-repeat}
+.sg-page .sg-hero-split .sg-hero-box{max-width:min(560px,44vw)}
+/* buttons */
+.sg-page .sg-btn .wp-block-button__link{background:var(--t);color:#fff;border-radius:0;padding:14px 30px;font-weight:600}
+.sg-page .sg-hero .sg-btn .wp-block-button__link{background:#fff;color:var(--t)}
+.sg-page .sg-btn .wp-block-button__link:hover{background:#e87010!important;color:#fff!important}
+.sg-page .sg-btn-light .wp-block-button__link{background:#fff;color:var(--t)}
+/* bands */
+.sg-page .sg-band{padding:80px 24px}
+.sg-page .sg-band-white{background:#fff}
+.sg-page .sg-band-tint{background:var(--tint)}
+.sg-page .sg-band-note{background:#fdf6df;border-top:3px solid #e7c34a;border-bottom:3px solid #e7c34a;padding:44px 24px}
+.sg-page .sg-band-cta{background:var(--t);color:#fff;text-align:center}
+.sg-page .sg-band-cta h2{color:#fff!important}
+.sg-page .sg-band-cta .wp-block-buttons{justify-content:center}
+.sg-page .sg-inner{max-width:1120px;margin:0 auto}
+.sg-page .sg-narrow{max-width:760px}
+.sg-page .sg-band h2{color:var(--t);font-size:clamp(26px,3vw,36px);line-height:1.2;margin:0 0 18px!important;position:relative}
+.sg-page .sg-band:not(.sg-band-cta):not(.sg-band-note) h2:after{content:"";display:block;width:56px;height:3px;background:var(--t);margin-top:14px}
+.sg-page .sg-head-center{text-align:center;max-width:780px;margin:0 auto 34px!important}
+.sg-page .sg-head-center h2:after{margin-left:auto;margin-right:auto}
+.sg-page .sg-band p{font-size:17px;line-height:1.75;margin:0 0 16px!important}
+.sg-page .sg-band h3{font-size:23px;color:#222!important;margin:0 0 12px!important}
+.sg-page .sg-band h3 a{color:inherit;text-decoration:none;border-bottom:2px solid var(--t)}
+.sg-page .sg-band h3 a:hover{color:var(--t)}
+/* splits */
+.sg-page .sg-split{gap:56px;align-items:flex-start;margin:0!important}
+.sg-page .sg-split-img,.sg-page .sg-row{align-items:center}
+.sg-page .sg-row{margin:0 0 56px!important}
+.sg-page .sg-row:last-child{margin-bottom:0!important}
+.sg-page .sg-img{margin:0!important}
+.sg-page .sg-img img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;box-shadow:0 18px 40px rgba(11,58,59,.18)}
+/* lists, steps, cards */
+.sg-page ul.sg-check{list-style:none;margin:0 auto 16px;padding:0;max-width:820px;text-align:left}
+.sg-page .sg-split ul.sg-check{max-width:none}
+.sg-page ul.sg-check li{position:relative;padding:12px 16px 12px 46px;margin:0 0 10px;background:#fff;border-left:3px solid var(--t);font-size:17px;line-height:1.6}
+.sg-page .sg-band-white ul.sg-check li{background:var(--tint)}
+.sg-page ul.sg-check li:before{content:"✓";position:absolute;left:16px;top:12px;color:var(--t);font-weight:700}
+.sg-page .sg-steps>.wp-block-group__inner-container{counter-reset:sgstep;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+.sg-page .sg-step{counter-increment:sgstep;background:#fff;padding:56px 20px 20px;position:relative;border-top:4px solid var(--t)}
+.sg-page .sg-band-white .sg-step{background:var(--tint)}
+.sg-page .sg-step:before{content:counter(sgstep);position:absolute;left:20px;top:14px;width:32px;height:32px;border-radius:50%;background:var(--t);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.sg-page .sg-step p{margin:0 0 6px!important;font-size:16px!important}
+.sg-page .sg-step p.sg-step-title{font-size:18px!important;color:var(--t)}
+.sg-page .sg-cards>.wp-block-group__inner-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.sg-page .sg-cols-4>.wp-block-group__inner-container{grid-template-columns:repeat(4,1fr)}
+.sg-page .sg-cols-2>.wp-block-group__inner-container{grid-template-columns:repeat(2,1fr)}
+@media(max-width:1000px){.sg-page .sg-cols-4>.wp-block-group__inner-container{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.sg-page .sg-cols-4>.wp-block-group__inner-container,.sg-page .sg-cols-2>.wp-block-group__inner-container{grid-template-columns:1fr}}
+.sg-page .sg-band-follow{padding-top:0}
+.sg-page .sg-card{background:#fff;padding:26px;border-top:4px solid var(--t);box-shadow:0 6px 20px rgba(11,58,59,.07)}
+.sg-page .sg-band-white .sg-card{background:var(--tint);box-shadow:none}
+.sg-page .sg-card p{margin:0 0 8px!important;font-size:16px!important}
+.sg-page .sg-card p.sg-card-title{font-size:19px!important;color:var(--t)}
+.sg-page .sg-card .sg-ic{display:block;font-size:30px;margin-bottom:8px}
+.sg-page .sg-card p.sg-price{font-size:30px!important;font-weight:700;color:var(--t)}
+.sg-page .sg-badges{text-align:center}
+.sg-page .sg-badges .sg-badge{display:inline-block;background:var(--t);color:#fff;padding:8px 18px;margin:0 8px 8px 0;border-radius:999px}
+.sg-page .sg-badges .sg-badge strong{margin-right:6px}
+/* faq */
+.sg-page .sg-faq{background:#fff;border:0;border-left:3px solid var(--t);padding:16px 20px;margin:0 0 12px!important}
+.sg-page .sg-band-white .sg-faq{background:var(--tint)}
+.sg-page .sg-faq summary{cursor:pointer;font-weight:600;color:var(--t);font-size:17px}
+.sg-page .sg-faq p{margin:12px 0 0!important}
+.sg-page .sg-map{line-height:0}
+@media(max-width:781px){
+ .sg-page .sg-hero{min-height:0;padding:90px 20px 60px;background:linear-gradient(180deg,rgba(11,58,59,.55),rgba(11,58,59,.92)),url(https://shuiguru.de/wp-content/uploads/2022/12/copernico-p_kICQCOM4s-unsplash.jpg) center/cover no-repeat}
+ .sg-page .sg-hero-split{flex-direction:column;align-items:stretch;padding:0 0 50px}
+ .sg-page .sg-hero-split:before{position:static;display:block;width:auto;height:300px;margin:0 0 30px}
+ .sg-page .sg-hero-split>.wp-block-group__inner-container{padding:0 20px}
+ .sg-page .sg-hero-split .sg-hero-box{max-width:none}
+ .sg-page .sg-band{padding:56px 18px}
+ .sg-page .sg-split{gap:24px}
+ .sg-page .sg-row .wp-block-column:has(.sg-img){order:-1}
+ .sg-page .sg-split-img .wp-block-column:has(.sg-img){order:-1}
+}
+</style>
+<!-- /wp:html -->
+
+<!-- wp:group {"className": "sg-page"} -->
+<div class="wp-block-group sg-page"><!-- wp:group {"className": "sg-hero alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-hero alignfull"><!-- wp:group {"className": "sg-hero-box"} -->
+<div class="wp-block-group sg-hero-box"><!-- wp:paragraph {"className":"sg-eyebrow"} -->
+<p class="sg-eyebrow">ShuiGuru · Feng Shui Beratung · Maria Brasse</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level": 1, "className": "sg-h1"} -->
+<h1 class="wp-block-heading sg-h1">Feng Shui in der Arbeitswelt – für mehr Konzentration und ein besseres Arbeitsklima im Büro</h1>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"sg-hero-lead"} -->
+<p class="sg-hero-lead">Feng Shui im Büro ordnet Schreibtische, Wege, Licht und Zuständigkeiten so, dass Arbeit leichter fließt. Ich analysiere Ihren Grundriss, erkenne Störfaktoren und zeige konkrete, sofort umsetzbare Veränderungen – für Handwerksbetriebe, Praxen und Büros gleichermaßen.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"sg-hero-line"} -->
+<p class="sg-hero-line">📍 Vor Ort in Berlin & online bundesweit · 📞 <b>01578 59 555 28</b></p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"sg-btn"} -->
+<div class="wp-block-button sg-btn"><a class="wp-block-button__link wp-element-button" href="https://shuiguru.de/kaeffchen/">Käffchen vereinbaren</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-img"} -->
+<div class="wp-block-columns sg-split sg-split-img"><!-- wp:column {"width":"45%"} -->
+<div class="wp-block-column" style="flex-basis:45%"><!-- wp:image {"id":962,"sizeSlug":"large","linkDestination":"none","className":"sg-img"} -->
+<figure class="wp-block-image size-large sg-img"><img src="https://shuiguru.de/wp-content/uploads/2023/01/krakenimages-376KN_ISplE-unsplash1-1024x683.jpg" alt="Team im Büro bei einer erfolgreichen Besprechung" class="wp-image-962"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading -->
+<h2 class="wp-block-heading">Woran Sie ein Büro erkennen, das bremst</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Manche Zeichen sind leiser, als man denkt: Projekte stocken ohne erkennbaren Grund. Das Team wirkt angespannt, obwohl niemand sagen kann, warum. Kund:innen bleiben aus, obwohl die Leistung stimmt. Der Geldfluss stottert. Oft liegt die Ursache nicht in der Strategie, sondern im Raum selbst – in Sitzordnung, Laufwegen, Licht und der stillen Wirkung von Unordnung.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:group {"className": "sg-head-center"} -->
+<div class="wp-block-group sg-head-center"><!-- wp:heading -->
+<h2 class="wp-block-heading">Was ich im Büro verändere</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Ich schaffe das Fundament für eine nachhaltige und solide Geschäfts- und Betriebsentwicklung – mit vier konkreten Hebeln:</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-cards sg-cols-2"} -->
+<div class="wp-block-group sg-cards sg-cols-2"><!-- wp:group {"className": "sg-card"} -->
+<div class="wp-block-group sg-card"><!-- wp:paragraph {"className":"sg-card-title"} -->
+<p class="sg-card-title"><span class="sg-ic">🗺️</span><strong>Grundrissanalyse</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Ich bestimme die „Schätze der Vorfahren" im Raum, unterstütze die eigenen Kräfte des Betriebs und kläre emotionale Faktoren, die im Alltag oft übersehen werden. So entsteht ein klares Bild: Wo unterstützt der Raum die Arbeit – und wo bremst er sie?</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-card"} -->
+<div class="wp-block-group sg-card"><!-- wp:paragraph {"className":"sg-card-title"} -->
+<p class="sg-card-title"><span class="sg-ic">💶</span><strong>Geldfluss & Störfaktoren</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Ich erkenne, wo Energie und Aufmerksamkeit im Raum verloren gehen, und lege konkrete Schritte zu finanziellem Erfolg fest.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-card"} -->
+<div class="wp-block-group sg-card"><!-- wp:paragraph {"className":"sg-card-title"} -->
+<p class="sg-card-title"><span class="sg-ic">🚪</span><strong>Äußere Einflüsse</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Auch was von außen auf ein Büro wirkt – Zufahrt, Nachbarschaft, Sichtachsen – hat Einfluss. Ich erkenne diese Störfaktoren und zeige, wie sie sich entschärfen lassen.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-card"} -->
+<div class="wp-block-group sg-card"><!-- wp:paragraph {"className":"sg-card-title"} -->
+<p class="sg-card-title"><span class="sg-ic">🧑‍🤝‍🧑</span><strong>Teamkonstellation</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Wer unterstützt wen, wer steht sich im Weg? Die Sitzordnung ist selten Zufall – ich mache sichtbar, was im Team wirkt, und wie sich der Weg in eine teamstabile und erfolgreiche Zukunft herauskristallisiert.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Häufig unterschätzt: die stille Wirkung von Unordnung</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Ein Aktenstapel, der sich seit Monaten hält. Ein Lager, in dem niemand mehr genau weiß, was wo liegt. Ein Empfang, der Besuchende eher verwirrt als willkommen heißt. Solche Details wirken klein – summieren sich aber zu einem Raum, der Energie kostet statt gibt. Ich schaue gezielt auf diese Stellen, weil sie oft die schnellsten und nachhaltigsten Veränderungen ermöglichen. Oft können diese Veränderungen mit den vorhandenen Mitteln umgesetzt werden und sind daher sehr kostengünstig.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Der Schreibtisch als Machtposition</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Wo ein Schreibtisch steht, entscheidet mehr, als die meisten denken: Idealerweise mit freiem Blick zur Tür, aber nicht in direkter Zuglinie dazu – so behält man den Überblick, ohne im Durchgang zu sitzen. Mit dem Rücken zur offenen Tür oder zum Fenster zu sitzen, erzeugt dagegen ein unterschwelliges Unruhegefühl, selbst wenn niemand benennen kann, warum. Die genaue Position hängt immer von Raum und Grundriss ab – das kläre ich individuell.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:group {"className": "sg-head-center"} -->
+<div class="wp-block-group sg-head-center"><!-- wp:heading -->
+<h2 class="wp-block-heading">Farben und Pflanzen im Büro</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Farbe und Pflanzen sind die schnellsten Stellschrauben im Büro:</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:list {"className":"sg-check"} -->
+<ul class="wp-block-list sg-check"><!-- wp:list-item -->
+<li><b>Blau- und Grüntöne</b> wirken beruhigend und konzentrationsfördernd – gut für Räume, in denen fokussiert gearbeitet wird</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><b>Gelb- und Orangetöne</b> bringen Energie und eignen sich für Bereiche mit Kundenkontakt oder Kreativarbeit</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><b>Runde, weiche Blätter</b> (etwa Grünlilie oder Efeutute) wirken ausgleichend und sind Luftreiniger</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><b>Kristalle, Steine und Skulpturen</b> arbeiten für das Büro als Energiereiniger, Harmonisierer, Stimmungsaufheller und Mentaltrainer</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>Ein aufgeräumter Schreibtisch – gerade der Bereich hinter dem Bildschirm – ist dabei oft wirksamer als jede Deko.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Berlin: viele neue Arbeitsformen, ein altes Prinzip</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Berlin hat eine der größten und vielfältigsten Coworking- und Start-up-Szenen Europas – Homeoffice, Coworking-Spaces und klassische Büros bestehen hier oft parallel, häufig sogar in ein und demselben Team. Die Feng-Shui-Prinzipien gelten in allen drei Fällen gleich: Wo sitze ich mit Blick zur Tür? Wo liegt mein Rücken geschützt? Was bringt Energie, was zieht sie ab? Ob eigenes Büro, gemieteter Schreibtisch im Coworking-Space oder Homeoffice-Ecke im Wohnzimmer – die gleiche Analyse lässt sich auf jede dieser Situationen anwenden.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">So läuft die Beratung ab</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Ob durch reine Online-Beratung oder durch einen Besuch vor Ort: Ich zeige Ihnen die Schwächen und Stärken Ihres Geschäfts oder Betriebs konkret auf. Für die Online-Beratung reichen Fotos, Videos und ein Grundriss – gern auch selbst gezeichnet, so gut es geht.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-text"} -->
+<div class="wp-block-columns sg-split sg-split-text"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Für wen</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Handwerk, Praxis und Büro – überall dort, wo Menschen täglich arbeiten, wirkt Feng Shui unmittelbar. Ob Einzelbüro, Werkstatt oder wachsendes Team: Der Blick bleibt derselbe, nur der Maßstab wechselt. Denselben Blick bringe ich auch bei <a href="https://shuiguru.de/hoefe-und-hofgemeinschaften/">Höfen und Hofgemeinschaften</a> ein – mehr dazu auf der <a href="https://shuiguru.de/">Startseite</a>.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-faq"} -->
+<div class="wp-block-columns sg-split sg-split-faq"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Häufige Fragen</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Wo sollte der Schreibtisch stehen?</summary><!-- wp:paragraph -->
+<p>Grundsätzlich mit freiem Blick zur Tür, aber nicht direkt in der Zuglinie – eine der wichtigsten Fragen jeder Grundrissanalyse. Die genaue Position hängt von Raum und Himmelsrichtung ab; das kläre ich individuell mit Ihnen.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Geht die Büro-Beratung auch online?</summary><!-- wp:paragraph -->
+<p>Ja. Fotos, Videos und ein Grundriss reichen für eine fundierte erste Einschätzung – ich berate Betriebe in ganz Deutschland online. Für größere Teams oder komplexe Räume komme ich gern auch vor Ort.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Was kostet eine Büro-Beratung?</summary><!-- wp:paragraph -->
+<p>Das hängt vom Umfang ab – ein Einzelbüro ist etwas anderes als ein ganzer Betrieb. Nach einem kurzen, unverbindlichen Vorgespräch erhalten Sie einen individuellen Preisvorschlag.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Welche Pflanzen eignen sich für ein Büro?</summary><!-- wp:paragraph -->
+<p>Pflanzen mit runden, weichen Blättern wie Grünlilie, Geldbaum oder Philodendron wirken ausgleichend und vertragen auch Bürolicht und Arbeitsluft gut. Auch stachelige und sperrige Pflanzen können, gut platziert, viel Positives bewirken – es kommt immer auf die Ziele und Arbeitszusammenhänge an. Wichtig ist aber immer: Nur gesunde Pflanzen können den Arbeitsalltag unterstützen.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Welche Farbe eignet sich für das Büro?</summary><!-- wp:paragraph -->
+<p>Blau- und Grüntöne unterstützen Konzentration, Gelb- und Orangetöne bringen Energie für Bereiche mit viel Austausch. Welche Farbe zu Ihrem Raum und Ihrer Arbeit passt, schaue ich mir konkret an.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-cta alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-cta alignfull"><!-- wp:group {"className": "sg-inner sg-narrow"} -->
+<div class="wp-block-group sg-inner sg-narrow"><!-- wp:heading -->
+<h2 class="wp-block-heading">Bereit, Ihr Büro neu zu ordnen?</h2>
+<!-- /wp:heading -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"sg-btn sg-btn-light"} -->
+<div class="wp-block-button sg-btn sg-btn-light"><a class="wp-block-button__link wp-element-button" href="https://shuiguru.de/kaeffchen/">Käffchen vereinbaren</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:html -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Feng Shui in der Arbeitswelt", "provider": {"@type": "ProfessionalService", "name": "ShuiGuru"}, "areaServed": ["Berlin", "Deutschland"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wo sollte der Schreibtisch stehen?", "acceptedAnswer": {"@type": "Answer", "text": "Grundsätzlich mit freiem Blick zur Tür, aber nicht direkt in der Zuglinie – eine der wichtigsten Fragen jeder Grundrissanalyse. Die genaue Position hängt von Raum und Himmelsrichtung ab; das kläre ich individuell mit Ihnen."}}, {"@type": "Question", "name": "Geht die Büro-Beratung auch online?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Fotos, Videos und ein Grundriss reichen für eine fundierte erste Einschätzung – ich berate Betriebe in ganz Deutschland online. Für größere Teams oder komplexe Räume komme ich gern auch vor Ort."}}, {"@type": "Question", "name": "Was kostet eine Büro-Beratung?", "acceptedAnswer": {"@type": "Answer", "text": "Das hängt vom Umfang ab – ein Einzelbüro ist etwas anderes als ein ganzer Betrieb. Nach einem kurzen, unverbindlichen Vorgespräch erhalten Sie einen individuellen Preisvorschlag."}}, {"@type": "Question", "name": "Welche Pflanzen eignen sich für ein Büro?", "acceptedAnswer": {"@type": "Answer", "text": "Pflanzen mit runden, weichen Blättern wie Grünlilie, Geldbaum oder Philodendron wirken ausgleichend und vertragen auch Bürolicht und Arbeitsluft gut. Auch stachelige und sperrige Pflanzen können, gut platziert, viel Positives bewirken – es kommt immer auf die Ziele und Arbeitszusammenhänge an. Wichtig ist aber immer: Nur gesunde Pflanzen können den Arbeitsalltag unterstützen."}}, {"@type": "Question", "name": "Welche Farbe eignet sich für das Büro?", "acceptedAnswer": {"@type": "Answer", "text": "Blau- und Grüntöne unterstützen Konzentration, Gelb- und Orangetöne bringen Energie für Bereiche mit viel Austausch. Welche Farbe zu Ihrem Raum und Ihrer Arbeit passt, schaue ich mir konkret an."}}]}</script>
+<!-- /wp:html --></div>
+<!-- /wp:group -->

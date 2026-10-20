@@ -1,0 +1,3 @@
+# Diagnose — 741.studio Live-Seite (Ausgangspunkt für Track B)
+
+Stärken: echtes Vorher/Nachher-Beweisbild im Hero, echte Kennzahlen (+278 %/+195 %/+233 %), echte Kunden-Logos, eigenes Konversions-Diagramm (Outcome-Sektion). Schwächen gegenüber den Referenzen: kleinere/kompaktere Hero-Typografie als bei vergleichbaren Studio-Seiten, kein Gründer-Gesicht auf der Startseite, dunkles Leistungen-Band nutzt ein fremdes Stock-Video statt eigenen Materials, Giveaway/Community-Promo wirken zeitlich begrenzt für eine Showpiece-Seite. Siehe volle Herleitung in `05-gpt-design-doc/concept/concept.md` und `02-data/references/board.md`.

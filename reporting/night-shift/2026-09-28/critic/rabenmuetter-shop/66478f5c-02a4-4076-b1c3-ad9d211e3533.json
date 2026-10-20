@@ -1,0 +1,48 @@
+{
+  "client": "Rabenmütter Shop",
+  "client_id": "fbcc70d1-4c56-437c-b5fb-8056e48d3f62",
+  "feedback_id": "66478f5c-02a4-4076-b1c3-ad9d211e3533",
+  "mode": "FEEDBACK",
+  "plan_index": 3,
+  "executor_file": "feedback/rabenmuetter-shop/66478f5c-02a4-4076-b1c3-ad9d211e3533.md",
+  "pass": true,
+  "verdict": "pass",
+  "hard_checks": {
+    "1_no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "pass",
+      "note": "No Title/Meta/H1/JSON-LD in a FEEDBACK draft (not applicable) and no NAP block (this client is an online shop, not a local-NAP case). The two [fehlt:] markers present (missing original report-section text at top; Pinterest Business/Shop status unconfirmed) sit outside Title/Meta/H1/NAP/JSON-LD and correctly flag real data gaps instead of inventing data (hard rule 2)."
+    },
+    "2_nap_matches_locked_record": {
+      "result": "n/a",
+      "note": "Datenpaket table itself states there is no nap_locked entry for client_id fbcc70d1-4c56-437c-b5fb-8056e48d3f62 (online shop, not a local NAP case). Executor did not invent one. Checked context.json.nap_locked directly: confirmed, no entry for this client_id."
+    },
+    "3_jsonld_valid_localbusiness_faqpage": {
+      "result": "n/a",
+      "note": "FEEDBACK mode produces no JSON-LD/schema output; nothing to validate here."
+    },
+    "4_copy_language_matches_market_lang": {
+      "result": "pass",
+      "note": "market_lang = de. Entire Vorschlag, Kunde-sagt quote, and internal Empfehlung block are German."
+    },
+    "5_hwg_scan": {
+      "result": "pass",
+      "note": "Scanned for 'heilt', 'garantiert', '100 %', 'Heilung' and similar cure/guarantee/fear claims. None present; client is an e-commerce card shop, not a health/YMYL case, and content is sales-channel strategy only."
+    },
+    "6_rubric_or_feedback_equivalent": {
+      "result": "pass",
+      "note": "FEEDBACK mode: 8-dim rubric skipped per skill; checked instead that the draft addresses the client's comment sentence-for-sentence. Client comment has four points: (a) 'Etsy... bin da allerdings raus' -> 'Etsy: von der Liste gestrichen' = addressed. (b) 'auf Etsy verkaufen Menschen... gruselige Karten, handgemacht, Künstler... da passen wir irgendwie auch gar nicht rein' -> Begründung sentence names the same positioning mismatch (handgemachte, künstlerische, teils 'gruselige' Karten passt nicht zur eigenen Positionierung) = addressed, uses the client's own word 'gruselig' rather than paraphrasing it away. (c) 'Wir haben (hoffe ich) über Pinterest ein Businesskonto mit Shop' -> dedicated Pinterest section quotes the client's own hedge ('hoffe ich') verbatim and correctly marks the account/shop status as [fehlt: vom Kunden zu bestätigen] instead of assuming it is confirmed -- correct application of the 'verify before assuming' rule (memory client-questions-verify-first). (d) 'ich habe über TikTok einen Shop eingerichtet' -> TikTok Shop section: 'Laut Kundin bereits eingerichtet. Bestätigter Kanal' = addressed as confirmed, unlike the hedged Pinterest point -- the draft correctly distinguishes confirmed fact from unconfirmed assumption within the same comment. All four points covered, nothing invented."
+    },
+    "7_deslop_hard_check": {
+      "result": "pass",
+      "note": "The client-facing Vorschlag body (heading through the TikTok Shop paragraph, excluding the verbatim Kunde-sagt quote and excluding the internal 'Empfehlung an Martin (intern, keine Kunden-Kopie)' block) was checked by hand against the five tell groups in slopmonster/references/signs-of-ai-writing.md, since tools/deslop.py could not be executed in this sandboxed Critic session (command blocked, requires approval not available here). Findings: no Tier-1/Tier-2 AI vocabulary (no 'nahtlos', 'ganzheitlich', 'robust' etc.); no 'not just X, but Y' or similar hedge-shape constructions; only two em-dashes total, each in a separate short sentence, not stacked in one sentence; no rule-of-three rhythm; no invented proof -- uncertain facts are explicitly marked [fehlt:] rather than asserted. Manual review found 5/5 equivalent, clean of AI tells. This substitution for the automated linter, and the reason for it, is logged as a limitation below."
+    }
+  },
+  "additional_observations": [
+    "Tool availability limitation: python3 .../slopmonster/tools/deslop.py was blocked ('requires approval') in this Critic invocation, so hard check 7 was completed via manual catalogue review per signs-of-ai-writing.md instead of the automated linter. Recommend Martin confirm deslop.py is reachable from a standalone night-shift Critic invocation before relying on the automated gate in future runs -- same class of tool-reachability gap the skill already flags for Supabase and DataForSEO MCP tools.",
+    "Executor was transparent about a real data gap: the original live-report section text ('6 · Zusätzliche Verkaufskanäle') was not fetchable in that session and is marked [fehlt:] rather than guessed -- correct per hard rule 2. A human must diff the Vorschlag against the live report before it is applied in the portal.",
+    "The internal 'Empfehlung an Martin' block is clearly labelled 'keine Kunden-Kopie' and correctly kept separate from the client-facing Vorschlag text -- good separation of concerns.",
+    "Executor's own 'Hinweis zum Lauf-Verlauf' notes this exact feedback item already passed Critic review in four prior runs (2026-09-15, 09-16, 09-18, 09-22) with unchanged input data; this run's independent review reaches the same pass verdict.",
+    "processed-feedback.json is still empty for this feedback_id, so Martin has not yet applied/rejected this item in the daytime workflow -- expected, the night run never marks feedback as processed itself."
+  ],
+  "fails": []
+}

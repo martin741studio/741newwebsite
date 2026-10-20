@@ -2768,17 +2768,46 @@
       };
   
       // Booking clicks (cal.com / Calendly) — delegated, so it covers every page.
+      // cal.com links also get Meta click ids + one shared event id as metadata[...]
+      // params. cal.com returns them in its BOOKING_CREATED webhook, and the Edge
+      // Function cal-booking-capi sends the server-side "Schedule" event with that
+      // event id and fbc/fbp (attribution to the ad click).
+      window.__calMeta = function () {
+        var q = new URLSearchParams(location.search);
+        var fbclid = q.get("fbclid") || "";
+        var m;
+        var fbc = (m = document.cookie.match(/(?:^|;\s*)_fbc=([^;]+)/)) ? decodeURIComponent(m[1]) : (fbclid ? "fb.1." + Date.now() + "." + fbclid : "");
+        var fbp = (m = document.cookie.match(/(?:^|;\s*)_fbp=([^;]+)/)) ? decodeURIComponent(m[1]) : "";
+        var eid = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : ("sc-" + Date.now() + "-" + Math.random().toString(16).slice(2));
+        return { fbc: fbc, fbp: fbp, eid: eid, src: (location.origin + location.pathname).slice(0, 200) };
+      };
+      window.__decorateCalLink = function (a) {
+        var href = a.getAttribute("href") || "";
+        if (!/^https?:\/\/(app\.)?cal\.com\//i.test(href)) return null;
+        var meta = window.__calMeta();
+        var u = new URL(href, location.href);
+        u.searchParams.set("metadata[eid]", meta.eid);
+        u.searchParams.set("metadata[src]", meta.src);
+        if (meta.fbc) u.searchParams.set("metadata[fbc]", meta.fbc);
+        if (meta.fbp) u.searchParams.set("metadata[fbp]", meta.fbp);
+        a.setAttribute("href", u.toString());
+        return meta;
+      };
       document.addEventListener("click", function (e) {
         try {
           var a = e.target && e.target.closest && e.target.closest("a[href]");
           if (!a) return;
           var href = a.getAttribute("href") || "";
           if (/cal\.com|calendly\.com/i.test(href)) {
+            var meta = null;
+            try { meta = window.__decorateCalLink(a); } catch (e2) {}
             window.track741("booking_click", {
               provider: /calendly/i.test(href) ? "calendly" : "cal.com",
               link_text: (a.textContent || "").trim().slice(0, 60)
             });
-            if (window.fbq && !window.fbq.__stubOnly) window.fbq("track", "Schedule");
+            // No client "Schedule" here any more (Martin, 2026-10-19): a link click is not a
+            // booking. The server-side Schedule comes from the cal.com webhook (Edge Function
+            // cal-booking-capi) with metadata[eid] as event_id.
           }
         } catch (err) {}
       }, true);

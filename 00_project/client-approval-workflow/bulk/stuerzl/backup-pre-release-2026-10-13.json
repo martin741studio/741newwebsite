@@ -1,0 +1,22 @@
+{
+  "taken_at": "2026-10-13T07:51:05Z",
+  "note": "State of the Stürzl rows right before login creation and release (Martin's go in chat, 13 Oct 2026). Card text is unchanged by the release and is in drafts.sql (E3 recommended_key = B, note extended 13 Oct 06:50 UTC). Restore a card to draft: update approval_items set status='draft', released_at=null, remind_at=null, due_at=null where id=<id>; restore settings: update client_approval_settings set approver_user_id=null where client_id=<client>.",
+  "client_id": "b6f6e303-50e4-4afb-a343-337206cec316",
+  "settings": {
+    "approver_name": "Dr. Anja Stürzl",
+    "approver_user_id": null,
+    "health_client": false,
+    "auto_approve_consent": false,
+    "digest_enabled": false,
+    "last_digest_at": null,
+    "updated_at": "2026-10-13T06:45:07.022201+00:00"
+  },
+  "items": [
+    {"id": "725f143e-153e-44de-8b24-afe1570ab6db", "code": "E1", "status": "draft", "version": 1, "recommended_key": "A", "risk_class": "legal", "must_active_yes": true, "hwg_checked": false, "released_at": null, "remind_at": null, "due_at": null, "updated_at": "2026-10-13T06:45:07.022201+00:00"},
+    {"id": "21a96941-7397-4942-91b1-5b5563d6f68f", "code": "E2", "status": "draft", "version": 1, "recommended_key": "A", "risk_class": "legal", "must_active_yes": true, "hwg_checked": false, "released_at": null, "remind_at": null, "due_at": null, "updated_at": "2026-10-13T06:45:07.022201+00:00"},
+    {"id": "c11d0ce0-36b9-4091-bd24-84a64dcbddd5", "code": "E3", "status": "draft", "version": 1, "recommended_key": "B", "risk_class": "none", "must_active_yes": false, "hwg_checked": false, "released_at": null, "remind_at": null, "due_at": null, "updated_at": "2026-10-13T06:50:45.169766+00:00"},
+    {"id": "41fb1325-922c-454f-b502-06fad5128acc", "code": "E4", "status": "draft", "version": 1, "recommended_key": "A", "risk_class": "none", "must_active_yes": false, "hwg_checked": false, "released_at": null, "remind_at": null, "due_at": null, "updated_at": "2026-10-13T06:45:07.022201+00:00"},
+    {"id": "9104fca4-3716-410d-832e-5bc0bc8c4748", "code": "E5", "status": "draft", "version": 1, "recommended_key": "A", "risk_class": "price", "must_active_yes": true, "hwg_checked": false, "released_at": null, "remind_at": null, "due_at": null, "updated_at": "2026-10-13T06:45:07.022201+00:00"},
+    {"id": "e5e645a4-357d-464e-9133-6127130ec38f", "code": "E6", "status": "draft", "version": 1, "recommended_key": "A", "risk_class": "legal", "must_active_yes": true, "hwg_checked": false, "released_at": null, "remind_at": null, "due_at": null, "updated_at": "2026-10-13T06:45:07.022201+00:00"}
+  ]
+}

@@ -1,0 +1,2 @@
+- 2026-10-14 evening: NLP test mail sent with contradictions flagged. Paused until Marcel picks the campaign text [c4cdeb06].
+- 2026-10-19 evening: quiet since 17.10.; landing page -> intro video -> prototype -> Ads.

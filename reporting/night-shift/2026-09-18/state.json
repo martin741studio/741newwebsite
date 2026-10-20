@@ -1,0 +1,103 @@
+{
+  "date": "2026-09-18",
+  "model": "claude-sonnet-5",
+  "budget": {
+    "pages_max": 6,
+    "invocations_max": 14,
+    "invocations_used": 5
+  },
+  "plan": [
+    {
+      "index": 0,
+      "client": "Praxis Suriya",
+      "client_id": "3f71ef33-8c74-4ea1-b2d3-0273c2e99649",
+      "mode": "FEEDBACK",
+      "feedback_id": "5bea6cb2-688d-4c24-b436-1a576e7ade75",
+      "slug": "gbp-oeffnungszeiten-termin"
+    },
+    {
+      "index": 1,
+      "client": "Praxis Suriya",
+      "client_id": "3f71ef33-8c74-4ea1-b2d3-0273c2e99649",
+      "mode": "FEEDBACK",
+      "feedback_id": "61abce05-2b04-49b4-b4ab-420ab4374080",
+      "slug": "gbp-oeffnungszeiten-barrierefreiheit"
+    },
+    {
+      "index": 2,
+      "client": "Praxis Suriya",
+      "client_id": "3f71ef33-8c74-4ea1-b2d3-0273c2e99649",
+      "mode": "FEEDBACK",
+      "feedback_id": "d1c58471-eafc-4ef9-8418-1611a2345445",
+      "slug": "nap-citations-domains"
+    },
+    {
+      "index": 3,
+      "client": "Rabenmütter Shop",
+      "client_id": "fbcc70d1-4c56-437c-b5fb-8056e48d3f62",
+      "mode": "FEEDBACK",
+      "feedback_id": "66478f5c-02a4-4076-b1c3-ad9d211e3533",
+      "slug": "verkaufskanaele-etsy"
+    },
+    {
+      "index": 4,
+      "client": "Rabenmütter Shop",
+      "client_id": "fbcc70d1-4c56-437c-b5fb-8056e48d3f62",
+      "mode": "FEEDBACK",
+      "feedback_id": "801d4d7d-1a22-4d45-a08e-e0b213dff2ec",
+      "slug": "trauerkarten-pillar-handschrift"
+    },
+    {
+      "index": 5,
+      "client": "Rabenmütter Shop",
+      "client_id": "fbcc70d1-4c56-437c-b5fb-8056e48d3f62",
+      "mode": "CREATE",
+      "task_id": "4fc4c019-7e99-4ca5-a5b2-6ec233120705",
+      "slug": "ratgeber-trauerkarte-schreiben"
+    }
+  ],
+  "pages": {
+    "Praxis Suriya/gbp-oeffnungszeiten-termin": {
+      "mode": "FEEDBACK",
+      "attempts": 1,
+      "status": "pass",
+      "critic": "critic/Praxis Suriya/gbp-oeffnungszeiten-termin.json",
+      "output": "feedback/Praxis Suriya/5bea6cb2-688d-4c24-b436-1a576e7ade75.md"
+    },
+    "Praxis Suriya/gbp-oeffnungszeiten-barrierefreiheit": {
+      "mode": "FEEDBACK",
+      "attempts": 1,
+      "status": "pass",
+      "critic": "critic/Praxis Suriya/gbp-oeffnungszeiten-barrierefreiheit.json",
+      "output": "feedback/Praxis Suriya/61abce05-2b04-49b4-b4ab-420ab4374080.md"
+    },
+    "Praxis Suriya/nap-citations-domains": {
+      "mode": "FEEDBACK",
+      "attempts": 1,
+      "status": "pass",
+      "critic": "critic/Praxis Suriya/nap-citations-domains.json",
+      "output": "feedback/Praxis Suriya/d1c58471-eafc-4ef9-8418-1611a2345445.md"
+    },
+    "Rabenmütter Shop/verkaufskanaele-etsy": {
+      "mode": "FEEDBACK",
+      "attempts": 1,
+      "status": "pass",
+      "critic": "critic/Rabenmütter Shop/verkaufskanaele-etsy.json",
+      "output": "feedback/Rabenmütter Shop/66478f5c-02a4-4076-b1c3-ad9d211e3533.md"
+    },
+    "Rabenmütter Shop/trauerkarten-pillar-handschrift": {
+      "mode": "FEEDBACK",
+      "attempts": 1,
+      "status": "pass",
+      "critic": "critic/Rabenmütter Shop/trauerkarten-pillar-handschrift.json",
+      "output": "feedback/Rabenmütter Shop/801d4d7d-1a22-4d45-a08e-e0b213dff2ec.md"
+    },
+    "Rabenmütter Shop/ratgeber-trauerkarte-schreiben": {
+      "mode": "CREATE",
+      "attempts": 0,
+      "status": "planned",
+      "critic": null
+    }
+  },
+  "stopped_reason": null
+}

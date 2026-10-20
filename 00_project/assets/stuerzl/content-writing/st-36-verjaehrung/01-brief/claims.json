@@ -1,0 +1,321 @@
+{
+ "claims": [
+  {
+   "id": "C01",
+   "type": "credential",
+   "text": "Dr. Anja Stürzl ist Fachanwältin für Steuerrecht seit 2021",
+   "source": "Lebenslauf Dr. Stürzl, vermerkt in cro/04-copy/approved-copy.md, 2026-10-11; Live-Profilseite /dr-anja-stuerzl, gelesen 2026-10-11 (Kammernachweis offen)",
+   "numbers": [
+    "2021"
+   ],
+   "must_appear": [
+    "Fachanwältin für Steuerrecht"
+   ],
+   "required": true
+  },
+  {
+   "id": "C02",
+   "type": "credential",
+   "text": "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022",
+   "source": "Lebenslauf Dr. Stürzl, approved-copy.md, 2026-10-11; Live-Profilseite",
+   "numbers": [
+    "2022"
+   ],
+   "must_appear": [
+    "Zertifizierte Beraterin für Steuerstrafrecht"
+   ],
+   "required": true
+  },
+  {
+   "id": "C03",
+   "type": "fact",
+   "text": "Telefon Frankfurt +49 69 298028870, München +49 89 72444170",
+   "source": "Source of Truth Tab 00 / nap.json (bestätigt, Martin 2026-10-11); approved-copy.md",
+   "numbers": [
+    "49",
+    "69",
+    "298028870",
+    "89",
+    "72444170"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "C04",
+   "type": "legal",
+   "text": "Anwälte sind zur Verschwiegenheit verpflichtet; die erste Anfrage nennt nur das Thema, keine Einzelheiten",
+   "source": "approved-copy.md Abschnitt 8 und Hero, 2026-10-11 (§ 43a Abs. 2 BRAO, § 203 StGB)",
+   "numbers": [
+    "43a",
+    "203"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "C05",
+   "type": "fact",
+   "text": "Eigene Wendungen der Kanzlei: 'Wir stehen Ihnen zur Seite'; 'Das Mandanteninteresse steht für uns immer im Vordergrund'",
+   "source": "Live-Seiten Start und Kanzlei, gelesen 2026-10-11 (ST-14 _work/live/)",
+   "numbers": [],
+   "must_appear": [
+    "stehen Ihnen zur Seite"
+   ],
+   "required": false
+  },
+  {
+   "id": "C06",
+   "type": "fact",
+   "text": "Rechtsstand dieser Seite: Gesetzestexte vom 11. Oktober 2026. Rechtsprechung nicht ausgewertet. Zuletzt geprüft am 11. Oktober 2026 (Gesetzestexte und Quellen)",
+   "source": "Lauf-Datum, Texte in _work/gesetze/",
+   "numbers": [
+    "11",
+    "2026"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V01",
+   "type": "legal",
+   "text": "§ 78 Abs. 3 Nr. 4 StGB: Verjährungsfrist fünf Jahre bei Taten, die im Höchstmaß mit Freiheitsstrafe von mehr als einem Jahr bis zu fünf Jahren bedroht sind. § 78 Abs. 4 StGB: maßgeblich ist die Strafdrohung des Gesetzes ohne Rücksicht auf Schärfungen für besonders schwere Fälle",
+   "source": "gesetze-im-internet.de/stgb/__78.html, gelesen 2026-10-11 (_work/gesetze/stgb__78.txt)",
+   "numbers": [
+    "78",
+    "3",
+    "4",
+    "5",
+    "1"
+   ],
+   "must_appear": [
+    "§ 78"
+   ],
+   "required": true
+  },
+  {
+   "id": "V02",
+   "type": "legal",
+   "text": "§ 370 Abs. 1 AO: Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe. § 370 Abs. 2 AO: Versuch strafbar. § 370 Abs. 4 AO: Steuern verkürzt, wenn nicht, nicht in voller Höhe oder nicht rechtzeitig festgesetzt. § 370 Abs. 1 Nr. 2: Unkenntnislassen. § 370 Abs. 3 Satz 2 Nr. 1 bis 6: Regelbeispiele",
+   "source": "ao__370.txt, gelesen 2026-10-11",
+   "numbers": [
+    "370",
+    "1",
+    "2",
+    "3",
+    "4",
+    "6"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V03",
+   "type": "legal",
+   "text": "§ 376 Abs. 1 AO: In den in § 370 Abs. 3 Satz 2 Nummer 1 bis 6 genannten Fällen besonders schwerer Steuerhinterziehung beträgt die Verjährungsfrist 15 Jahre; § 78b Abs. 4 StGB gilt entsprechend. Abs. 2: Unterbrechung auch durch Bekanntgabe der Einleitung des Bußgeldverfahrens. Abs. 3: abweichend von § 78c Abs. 3 Satz 2 StGB verjährt in diesen Fällen die Verfolgung spätestens, wenn seit dem in § 78a StGB bezeichneten Zeitpunkt das Zweieinhalbfache der gesetzlichen Verjährungsfrist verstrichen ist. § 78 Abs. 3 Nummer 4 und Abs. 4 StGB: für alle anderen Fälle bleibt es bei fünf Jahren (Schluss aus dem Wortlaut)",
+   "source": "ao__376.txt, gelesen 2026-10-11",
+   "numbers": [
+    "376",
+    "1",
+    "15",
+    "78b",
+    "4",
+    "2",
+    "3",
+    "370",
+    "6"
+   ],
+   "must_appear": [
+    "§ 376"
+   ],
+   "required": true
+  },
+  {
+   "id": "V04",
+   "type": "legal",
+   "text": "§ 78a StGB: Die Verjährung beginnt, sobald die Tat beendet ist. Tritt ein zum Tatbestand gehörender Erfolg erst später ein, so beginnt die Verjährung mit diesem Zeitpunkt (Satz 2). Wann eine Steuerhinterziehung beendet ist, regeln § 78a StGB und § 370 AO nicht; Rechtsprechung dazu nicht gelesen (nur Einzelfall-Hinweis)",
+   "source": "stgb__78a.txt, ao__370.txt, gelesen 2026-10-11",
+   "numbers": [
+    "78a",
+    "370",
+    "2"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V05",
+   "type": "legal",
+   "text": "§ 78c Abs. 1 Nr. 1 und Nr. 4 StGB: Unterbrechung durch erste Vernehmung, Bekanntgabe der Einleitung des Ermittlungsverfahrens, jede richterliche Beschlagnahme- oder Durchsuchungsanordnung. Abs. 3 Satz 1: nach jeder Unterbrechung beginnt die Verjährung von neuem. Satz 2: spätestens verjährt, wenn das Doppelte der gesetzlichen Frist verstrichen ist",
+   "source": "stgb__78c.txt, gelesen 2026-10-11",
+   "numbers": [
+    "78",
+    "1",
+    "4",
+    "3",
+    "2"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V06",
+   "type": "legal",
+   "text": "Eigene Rechnung: Doppelte Frist von fünf Jahren = zehn Jahre; Zweieinhalbfaches von 15 Jahren = 37,5 Jahre (§ 376 Abs. 3 AO, § 78c Abs. 3 Satz 2 StGB). Von der Kanzlei zu prüfen. Weiter: Vorbehalt § 78b StGB nach § 78c Abs. 3 Satz 3 StGB; Ruhen nach § 78b Abs. 3 StGB (Urteil des ersten Rechtszuges); § 78b Abs. 1 Nummer 2 und Abs. 4 StGB nur als Verweis (nicht ausgeführt)",
+   "source": "Rechnung aus ao__376.txt und stgb__78c.txt, 2026-10-11",
+   "numbers": [
+    "10",
+    "37,5",
+    "15",
+    "5"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V07",
+   "type": "legal",
+   "text": "§ 78b Abs. 3 StGB: Ist vor Ablauf der Verjährungsfrist ein Urteil des ersten Rechtszuges ergangen, läuft die Frist nicht vor dem rechtskräftigen Abschluss des Verfahrens ab",
+   "source": "stgb__78b.txt, gelesen 2026-10-11",
+   "numbers": [
+    "78",
+    "3"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V08",
+   "type": "legal",
+   "text": "§ 169 Abs. 2 Satz 1 Nummer 1 AO: ein Jahr für Verbrauchsteuern. § 169 Abs. 1 Satz 1 AO: nach Ablauf der Festsetzungsfrist sind Festsetzung, Aufhebung, Änderung nicht mehr zulässig. Abs. 2: vier Jahre im Regelfall (Satz 1 Nr. 2); zehn Jahre, soweit eine Steuer hinterzogen, fünf Jahre, soweit sie leichtfertig verkürzt worden ist (Satz 2)",
+   "source": "ao__169.txt, gelesen 2026-10-11",
+   "numbers": [
+    "169",
+    "1",
+    "2",
+    "4",
+    "10",
+    "5"
+   ],
+   "must_appear": [
+    "§ 169"
+   ],
+   "required": true
+  },
+  {
+   "id": "V09",
+   "type": "legal",
+   "text": "§ 170 Abs. 2 Satz 1 Nummer 1 AO: Beginn der Festsetzungsfrist mit Ablauf des Kalenderjahrs der Einreichung der Erklärung, spätestens mit Ablauf des dritten Kalenderjahrs nach dem Jahr der Steuerentstehung, es sei denn, die Festsetzungsfrist nach Absatz 1 beginnt später. § 170 Abs. 6 und 7 AO: bei Kapitalerträgen aus Staaten außerhalb der EU und der EFTA, die nicht automatisch mitgeteilt werden, und bei Drittstaat-Gesellschaften beginnt die Frist frühestens mit Ablauf des Kalenderjahres, in dem die Finanzbehörde davon erfährt, spätestens zehn Jahre nach Ablauf des Kalenderjahres der Steuerentstehung",
+   "source": "ao__170.txt, gelesen 2026-10-11",
+   "numbers": [
+    "170",
+    "2",
+    "1",
+    "6",
+    "7",
+    "10"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V10",
+   "type": "legal",
+   "text": "§ 171 Abs. 7 AO: in den Fällen des § 169 Abs. 2 Satz 2 endet die Festsetzungsfrist nicht, bevor die Verfolgung der Steuerstraftat verjährt ist. § 171 Abs. 5 AO: Ermittlungen der Steuerfahndung oder Bekanntgabe der Einleitung des Steuerstrafverfahrens vor Fristablauf: Ablauf nicht, bevor die Bescheide unanfechtbar sind",
+   "source": "ao__171.txt, gelesen 2026-10-11",
+   "numbers": [
+    "171",
+    "7",
+    "5",
+    "169",
+    "2"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V11",
+   "type": "legal",
+   "text": "§ 228 AO: Zahlungsverjährung fünf Jahre, in Fällen der §§ 370, 373 oder 374 zehn Jahre. § 229 Abs. 1 AO: Beginn mit Ablauf des Kalenderjahrs der erstmaligen Fälligkeit, nicht vor wirksamer Festsetzung",
+   "source": "ao__228.txt, ao__229.txt, gelesen 2026-10-11",
+   "numbers": [
+    "228",
+    "229",
+    "5",
+    "10",
+    "1"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V12",
+   "type": "legal",
+   "text": "§ 371 Abs. 1 AO: Angaben zu allen unverjährten Steuerstraftaten einer Steuerart, mindestens zu allen Taten innerhalb der letzten zehn Kalenderjahre",
+   "source": "ao__371.txt, gelesen 2026-10-11",
+   "numbers": [
+    "371",
+    "1",
+    "10"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V13",
+   "type": "fact",
+   "text": "Kanzleiaussage (Live-FAQ, Mythen), nur noch zur Selbstanzeige verwendet: Eine Auswahl einzelner Jahre genügt bei der Selbstanzeige nicht. Der frühere Satz 'ab dem ersten Tag nach Fristablauf steht eine Hinterziehung durch Unterlassen im Raum' steht nicht mehr im Text (Review-Punkt A4); die FAQ 'Wann fängt Steuerhinterziehung an' stützt sich auf § 370 Abs. 1, 2, 4 AO",
+   "source": "Live-FAQ Abschnitt V; Referenzseite Selbstanzeige, gelesen 2026-10-11",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V14",
+   "type": "fact",
+   "text": "Autocomplete-Fragen 'steuerhinterziehung verjährung 10 jahre' und '... 5 jahre'; PAA 'Wann fängt Steuerhinterziehung an?', 'Wann verjährt die Steuerschuld?', 'Wie lange kann das Finanzamt Steuerbescheide rückwirkend ändern?'",
+   "source": "autocomplete.json und SERP serp-9.json (content-pool), 2026-10-11",
+   "numbers": [
+    "5",
+    "10"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V15",
+   "type": "placeholder",
+   "text": "Autorin oder Autor des Beitrags mit Titel; Veröffentlichungsdatum",
+   "source": "pool CP-SVC-022 (sitetree ST-36 needs_client: Autor und Freigabe)",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V16",
+   "type": "legal",
+   "text": "Art. 97 § 23 EGAO: § 376 der Abgabenordnung in der Fassung des Artikels 10 des Gesetzes vom 19. Dezember 2008 (BGBl. I S. 2794) gilt für alle bei Inkrafttreten dieses Gesetzes noch nicht abgelaufenen Verjährungsfristen",
+   "source": "gesetze-im-internet.de/aoeg_1977/BJNR033419976.html, gelesen 2026-10-11 (_work/gesetze/egao_art97_par23.txt). Nur die Fassung von 2008 ist belegt; spätere Übergangsregeln nicht gelesen (OPEN-FLAGS)",
+   "numbers": [
+    "97",
+    "23",
+    "2008"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V17",
+   "type": "legal",
+   "text": "Vereinfachtes Beispiel (eigene Rechnung nach § 170 Abs. 2 Satz 1 Nummer 1 und § 169 Abs. 2 Satz 2 AO): Erklärung im Jahr 2022 eingereicht, Frist beginnt mit Ablauf des Jahres 2022, zehn Jahre, Ende 2032 ohne Verlängerung",
+   "source": "Rechnung aus ao__169.txt und ao__170.txt, 2026-10-11; von der Kanzlei zu prüfen",
+   "numbers": [
+    "2022",
+    "10",
+    "2032"
+   ],
+   "must_appear": [],
+   "required": false
+  }
+ ]
+}

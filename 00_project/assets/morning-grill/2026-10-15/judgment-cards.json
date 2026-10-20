@@ -1,0 +1,93 @@
+[
+ {
+  "id": "2026-10-15-security-open",
+  "client": "741 (security)",
+  "priority": 1,
+  "type": "approve",
+  "headline": "Laptop malware check closed clean, but 4 fixes from that investigation are still not done: SSH keys + Hostinger password not rotated, Atomic BI Chrome extension still installed, Mac firewall off, MariaDB open to the network.",
+  "evidence": [
+   "s2 035ae64f"
+  ],
+  "options": {
+   "a": "Do all 4 now",
+   "b": "Just the key/password rotation now, rest later",
+   "c": "Already done since, just not logged"
+  },
+  "recommended": "a",
+  "why": "Stolen credentials + an exposed DB are a real window while they sit open.",
+  "deadline": "2026-10-15",
+  "created": "2026-10-15",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "walk queue: SSH/Hostinger rotate, remove extension, firewall on; agent handles MariaDB config with a go",
+   "b": "partial walk queue",
+   "c": "mark done, no action"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 15.10.)",
+  "walk": "Rotate stolen SSH keys + Hostinger password, remove Atomic BI Chrome extension, turn Mac firewall on (10 min)"
+ },
+ {
+  "id": "2026-10-15-huewel-pr7",
+  "client": "Praxis Hüwel",
+  "priority": 2,
+  "type": "approve",
+  "headline": "Hüwel: new Anliegen-Seite (Schmerzen & Verletzungen) is a ready PR, waiting for your go to merge and deploy.",
+  "evidence": [
+   "s2 30032f40"
+  ],
+  "options": {
+   "a": "Merge and deploy now",
+   "b": "Show me the page first",
+   "c": "Not yet"
+  },
+  "recommended": "b",
+  "why": "A new page merits one look before it goes live, even if the PR is clean.",
+  "deadline": "2026-10-16",
+  "created": "2026-10-15",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "agent merges + deploys, checks live",
+   "b": "agent sends the preview link",
+   "c": "park reason"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 15.10.)"
+ },
+ {
+  "id": "2026-10-15-kamil-reinfection",
+  "client": "Kamil (Physio Anatomie + Kraft)",
+  "priority": 2,
+  "type": "decide",
+  "headline": "Kamil: physiotherapiekraft.de was reinfected and cleaned a SECOND time, still locked (403). Password rotation is waiting on the cleanup finishing.",
+  "evidence": [
+   "s2 team cleanup"
+  ],
+  "options": {
+   "a": "Wait for the team to confirm clean, then rotate",
+   "b": "Rotate passwords now anyway",
+   "c": "Take the site fully offline until clean"
+  },
+  "recommended": "a",
+  "why": "Rotating mid-cleanup risks locking out the people fixing it.",
+  "deadline": "2026-10-16",
+  "created": "2026-10-15",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "card returns once the team confirms",
+   "b": "agent/Martin rotates now",
+   "c": "site goes offline, client told"
+  },
+  "line": null,
+  "line_kind": "watch",
+  "source": "judgment (S2 15.10.)"
+ }
+]

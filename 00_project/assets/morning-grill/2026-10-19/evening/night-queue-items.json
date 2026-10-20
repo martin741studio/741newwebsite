@@ -1,0 +1,107 @@
+[
+ {
+  "id": "suriya-live-edit-changelist",
+  "client": "Praxis Suriya",
+  "class": "public_audit",
+  "lang": "German",
+  "title": "Change list of the Antigravity Backlink-M3 run on suriya-praxis.de",
+  "brief": "An agent run edited the live WordPress menu and the 3-card hub on 19.10. List every visible change on the PUBLIC site (menu items, hub cards, links, new pages) against the last known state in the repo. Read only, no login, no edits.",
+  "inputs": [
+   "https://suriya-praxis.de",
+   "00_project/assets/suriya/",
+   "00_project/assets/backlink/suriya/"
+  ],
+  "done": "items/suriya-live-edit-changelist/changelist.md with a table: element, before, after, source URL."
+ },
+ {
+  "id": "dumann-third-google-account",
+  "client": "Daniela Dumann",
+  "class": "research",
+  "lang": "German",
+  "title": "Find the third Google profile of Naturheilpraxis Daniela Dumann",
+  "brief": "Two Google listings are known (9 and 2 reviews). A third account or profile is suspected. Search Google Maps and Google Search publicly for name, address and phone variants; list every listing found with URL, name, address, review count. No login, no edits.",
+  "inputs": [
+   "00_project/assets/dumann/",
+   "https://www.google.com/maps"
+  ],
+  "done": "items/dumann-third-google-account/listings.md"
+ },
+ {
+  "id": "stuerzl-ads-draft",
+  "client": "STÜRZL Steuerstrafrecht",
+  "class": "draft",
+  "lang": "German",
+  "title": "Google Ads campaign draft for STÜRZL (keywords, ad groups, 3 ads, negatives)",
+  "brief": "Ads must go live within 2 weeks of program start (~21.10.). Draft the campaign structure from the content pool and audit: 2-3 ad groups, keywords with match types, 3 RSAs per group, negative list, geo (München), budget suggestion. Draft only, no Ads account access, no spend.",
+  "inputs": [
+   "00_project/assets/stuerzl/content-pool/",
+   "00_project/assets/audit/stuerzl/2026-10-11-kickoff/findings.json"
+  ],
+  "done": "items/stuerzl-ads-draft/campaign-draft.md"
+ },
+ {
+  "id": "huewel-gbp-round2-finalize",
+  "client": "Praxis Hüwel",
+  "class": "draft",
+  "lang": "German",
+  "title": "Finalize the GBP round 2 text pack (FAQ, review replies, services) for Hüwel",
+  "brief": "The night result of 14.10. passed the critic. Re-check every line against the live website and HWG rules, fix tone to the practice voice, output a paste-ready pack per GBP field (plain text, no HTML). Draft only, no GBP write.",
+  "inputs": [
+   "reporting/night-shift/2026-10-14/items/huewel-gbp-round2-draft/",
+   "https://schmerzpraxis-huewel.de"
+  ],
+  "done": "items/huewel-gbp-round2-finalize/gbp-pack.md"
+ },
+ {
+  "id": "brasse-citations-live-check",
+  "client": "Maria Brasse",
+  "class": "public_audit",
+  "lang": "German",
+  "title": "Which of the 25 submitted citations for ShuiGuru are live now",
+  "brief": "client_citations shows 25 submitted, 1 live. Check each submitted directory publicly (search the directory for ShuiGuru / Maria Brasse): live yes/no, NAP matches yes/no. Read only, no login.",
+  "inputs": [
+   "00_project/assets/citations/brasse/",
+   "https://shuiguru.de"
+  ],
+  "done": "items/brasse-citations-live-check/live-check.md"
+ },
+ {
+  "id": "meandyou-v4-qa",
+  "client": "me&you / Pauspapier",
+  "class": "public_audit",
+  "lang": "German",
+  "title": "QA of Draft C v4 (13 pages + 3 legal pages) before Martin's Loom",
+  "brief": "Check all pages at https://clients.741.studio/meandyou/v4/ publicly: broken links, missing images, mobile layout at 375 px, legal page completeness (Impressum fields, DSGVO sections), consistent company name. Report only.",
+  "inputs": [
+   "https://clients.741.studio/meandyou/v4/",
+   "00_project/assets/meandyou/cro/"
+  ],
+  "done": "items/meandyou-v4-qa/qa-report.md"
+ },
+ {
+  "id": "kamil-security-offer-draft",
+  "client": "Kamil (Physio Anatomie + Kraft)",
+  "class": "draft",
+  "lang": "German",
+  "title": "Yearly website security + backup offer text for Kamil (EUR 500/year floor)",
+  "brief": "Draft the one-page offer in Martin's voice: what happened (hack), what the service covers (updates, backups, malware scan, uptime watch), price EUR 500/year, no tool names. Slop check 5/5. Draft only, not sent.",
+  "inputs": [
+   "00_project/assets/kamil/",
+   "~/.claude/projects/-Users-martindrendel-741website/memory/kamil-physio-client.md"
+  ],
+  "done": "items/kamil-security-offer-draft/offer.md"
+ },
+ {
+  "id": "grill-build-cards-guard",
+  "client": "741 Studio (intern)",
+  "class": "build",
+  "lang": "English",
+  "title": "Guard in build_cards.py for prospects without a client name",
+  "brief": "build_cards.py crashed on 19.10. when a prospect folder (korinna-heintze) had client null. Propose a patch (diff) that falls back to the folder name; write the diff to the item folder, do NOT edit the skill files.",
+  "inputs": [
+   "~/.claude/skills/morning-grill/scripts/build_cards.py",
+   "00_project/assets/morning-grill/2026-10-19/evening/scan.json"
+  ],
+  "done": "items/grill-build-cards-guard/patch.diff"
+ }
+]

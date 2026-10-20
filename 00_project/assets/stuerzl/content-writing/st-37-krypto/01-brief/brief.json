@@ -1,0 +1,202 @@
+{
+ "client": "STÜRZL Steuerstrafrecht",
+ "client_slug": "stuerzl",
+ "page_slug": "krypto",
+ "page_type": "blog",
+ "mode": "new",
+ "language": "de",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "voice_sheet": "00_project/assets/stuerzl/voice.md",
+ "pool_item_ids": [
+  "CP-SVC-023"
+ ],
+ "sitetree_node": "ST-37",
+ "url_slug": "/ratgeber/krypto/",
+ "keyword_primary": "krypto steuerhinterziehung",
+ "keywords_cluster": [
+  {
+   "kw": "krypto steuerhinterziehung",
+   "volume": 20,
+   "scope": "national",
+   "source": "DataForSEO google_ads/search_volume/live, de, 2276 (20 heißt wenig Daten, nicht kaum Nachfrage)",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "selbstanzeige krypto",
+   "volume": null,
+   "scope": "national",
+   "source": "Autocomplete (autocomplete.json)",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "steuerstrafverfahren krypto",
+   "volume": null,
+   "scope": "national",
+   "source": "Autocomplete (autocomplete.json)",
+   "date": "2026-10-11"
+  }
+ ],
+ "intent": "informational",
+ "reader": "Privatperson mit Bitcoin oder anderen Kryptowerten, die wissen will, ob Gewinne zu erklären waren und was bei nicht erklärten Gewinnen strafrechtlich droht. Sucht 'krypto steuerhinterziehung', 'selbstanzeige krypto'. PAA: Wie funktioniert Krypto-Steuer? Muss ich Kryptogewinne unter 600 Euro angeben? Was passiert, wenn man Krypto-Gewinne nicht angibt?",
+ "local_city": null,
+ "cta": {
+  "goal": "Vertrauliche Anfrage über das Formular (nur Thema, keine Falldaten)",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nennen Sie uns nur Ihr Thema, keine Einzelheiten. Ihre Angaben unterliegen unserer gesetzlichen Verschwiegenheit.",
+  "secondary": "Anrufen: Frankfurt +49 69 298028870, München +49 89 72444170"
+ },
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "H1 mit Keyword, Autorenzeile (Platzhalter), Rechtsstand"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Kurzantwort: § 23 EStG mit Zehn-Jahres-Ausnahme, § 370 AO, Vorsatz"
+  },
+  {
+   "id": "S03",
+   "element": "text",
+   "job": "Steuerrechtlicher Hintergrund nach BMF-Schreiben 06.03.2025 (nur gelesene Randnummern); Link Selbstanzeige im ersten Drittel"
+  },
+  {
+   "id": "S04",
+   "element": "text",
+   "job": "Strafrechtliche Seite: § 370, Vorsatz, § 378, Zinsen; Link Strafe (Geschwister)"
+  },
+  {
+   "id": "S05",
+   "element": "text",
+   "job": "Mitwirkung und Meldepflichten (BMF Rn. 88 und 89, KStTG mit Datum der ersten Meldung und Grenzen)"
+  },
+  {
+   "id": "S06",
+   "element": "text",
+   "job": "Selbstanzeige bei nicht erklärten Gewinnen, 25.000 Euro und § 398a; Link Selbstanzeige"
+  },
+  {
+   "id": "S07",
+   "element": "step-flow",
+   "job": "Was im Überblick zählt, 3 Punkte, allgemeine Information, keine Aufforderung"
+  },
+  {
+   "id": "S08",
+   "element": "faq",
+   "job": "5 Fragen, 3 echte PAA"
+  },
+  {
+   "id": "S09",
+   "element": "text",
+   "job": "Quellenliste"
+  },
+  {
+   "id": "S10",
+   "element": "person",
+   "job": "Autorenbox (Platzhalter), Titel Dr. Stürzl, einziger CTA, Link zur Geldseite, Hinweis",
+   "cta": "primary"
+  }
+ ],
+ "gate": "A0-light",
+ "money_page": false,
+ "paa_questions": [
+  {
+   "q": "Wie funktioniert Krypto-Steuer?",
+   "status": "answered"
+  },
+  {
+   "q": "Muss ich Kryptogewinne unter 600 Euro bei der Steuer angeben?",
+   "status": "answered"
+  },
+  {
+   "q": "Wird Krypto bald besteuert?",
+   "status": "dropped",
+   "reason": "Frage nach künftiger Gesetzgebung; Prognose ist nicht belegbar. Krypto wird schon heute nach § 23 EStG besteuert (steht in der Antwort zur Krypto-Steuer).",
+   "reason_code": "nicht rechtssicher"
+  },
+  {
+   "q": "Was passiert, wenn man Krypto-Gewinne nicht angibt?",
+   "status": "answered"
+  }
+ ],
+ "schema_faq": false,
+ "bestand_words": null,
+ "benchmark_median_words": 1214,
+ "benchmark_sources": "siehe 01-brief/gate-a0.md (13 lesbare Seiten, 2026-10-11)",
+ "word_range": [
+  850,
+  1300
+ ],
+ "require_answer_block": true,
+ "faq_min": 3,
+ "internal_links_min": 4,
+ "internal_link_targets": [
+  {
+   "url": "/selbstanzeige/",
+   "anchor": "Selbstanzeige",
+   "role": "money-page"
+  },
+  {
+   "url": "/ratgeber/steuerhinterziehung-strafe/",
+   "anchor": "Steuerhinterziehung: Strafe und Strafrahmen",
+   "role": "sibling"
+  },
+  {
+   "url": "/dr-anja-stuerzl/",
+   "anchor": "Dr. Anja Stürzl",
+   "role": "person"
+  },
+  {
+   "url": "/ratgeber/",
+   "anchor": "Ratgeber Steuerstrafrecht",
+   "role": "pillar"
+  }
+ ],
+ "cta_min": 1,
+ "cta_text": "Vertraulich anfragen",
+ "proof_assets": [
+  "Fachanwältin für Steuerrecht seit 2021 (Lebenslauf)",
+  "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022 (Lebenslauf)"
+ ],
+ "forbidden_words": [
+  "spezialisiert",
+  "Spezialist",
+  "Experte",
+  "Expertin",
+  "Expertise",
+  "führend",
+  "Exzellenz",
+  "kostenlos",
+  "gratis",
+  "Festpreis",
+  "WhatsApp",
+  "Wiesenhüttenstraße",
+  "Albtraum",
+  "Ruin",
+  "Haft droht",
+  "hart in der Sache"
+ ],
+ "own_phrases": [
+  "Wir stehen Ihnen zur Seite",
+  "Fehler passieren",
+  "Das Mandanteninteresse steht für uns immer im Vordergrund",
+  "Steuerhinterziehung ist kein Kavaliersdelikt, sondern eine Straftat",
+  "Wie gravierend die Folgen sind, hängt von einer ganzen Reihe an Faktoren ab"
+ ],
+ "byline": {
+  "name": "",
+  "title": "",
+  "person_page": "/dr-anja-stuerzl/",
+  "review_due": "2027-10-11"
+ },
+ "placeholders_allowed": [
+  "Autor",
+  "Veröffentlichungsdatum"
+ ],
+ "blockers": [],
+ "nap_file": "00_project/assets/stuerzl/nap.json"
+}

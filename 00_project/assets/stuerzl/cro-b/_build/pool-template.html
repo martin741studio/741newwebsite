@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Element-Pool STÜRZL Track B</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{--p:#4E6F55;--pd:#323335;--cream:#F4F1EC;--olive:#4E6F55;--sl:#8DA38E;--ink:#323335;--mut:#6A6C70;--line:#E2DDD4;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:150px}
+body{margin:0;background:#fff;color:var(--ink);font:400 16px/1.6 Manrope,system-ui,sans-serif}
+h1,h2,h3,h4{font-family:'Newsreader',Georgia,serif;font-weight:500;margin:0;color:var(--pd);letter-spacing:-.01em}
+img{max-width:100%;display:block}
+.bar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 28px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.bar h1{font-size:22px;margin-right:auto}.bar small{display:block;font:400 13px/1.3 Manrope;color:var(--mut)}
+.bar .cnt{font:600 14px Manrope;color:var(--pd)}
+.btn{font:600 14px Manrope;border-radius:999px;padding:9px 16px;border:1.5px solid var(--p);background:#fff;color:var(--p);cursor:pointer;transition:.18s var(--ease)}
+.btn:hover{background:var(--p);color:#fff}.btn.solid{background:var(--olive);border-color:var(--olive);color:#fff}.btn.solid:hover{filter:brightness(.92);background:var(--olive);color:#fff}
+.rm-t{font:500 13px Manrope;display:flex;gap:6px;align-items:center;color:var(--mut)}
+.filters{position:sticky;top:61px;z-index:40;background:#fff;border-bottom:1px solid var(--line);padding:8px 28px;display:flex;gap:8px;flex-wrap:wrap}
+.chip{font:500 13px Manrope;border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:#fff;color:var(--mut);cursor:pointer}
+.chip.on{background:var(--pd);border-color:var(--pd);color:#fff}
+main{max-width:1380px;margin:0 auto;padding:30px 28px 120px}
+.intro{max-width:880px;margin:0 0 30px;color:var(--mut)}
+.group{margin:44px 0 18px;padding-top:10px;border-top:2px solid var(--p)}
+.group h2{font-size:30px}.group p{margin:4px 0 0;color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.card.v-ja{box-shadow:0 0 0 2px var(--sl)}.card.v-nein{opacity:.55}.card.v-vielleicht{box-shadow:0 0 0 2px #e0b84a}
+.card header{padding:14px 18px 8px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.card h3{font-size:20px}.id{font:600 12px Manrope;color:#fff;background:var(--p);border-radius:6px;padding:2px 7px}
+.tag{font:500 12px Manrope;color:var(--mut);margin-left:auto}
+.stage{position:relative;background:var(--cream);height:340px;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stage.tall{height:440px}.stage .sc{position:absolute;inset:0;overflow-y:auto;scrollbar-width:thin}
+.meta{padding:12px 18px 4px;font-size:14px}.meta small{display:block;color:var(--mut);font-size:12.5px;margin-top:5px;line-height:1.45}
+.vote{margin-top:auto;padding:10px 18px 16px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.vote button.v{font:600 13px Manrope;border-radius:999px;padding:7px 14px;border:1.5px solid var(--line);background:#fff;cursor:pointer;color:var(--ink)}
+.vote button.v[data-v=ja].on{background:var(--olive);border-color:var(--olive);color:#fff}.vote button.v[data-v=vielleicht].on{background:#f3d98a;border-color:#e0b84a}.vote button.v[data-v=nein].on{background:#d9d7d2;border-color:#b5b2ab}
+.vote input{flex:1;min-width:120px;border:1px solid var(--line);border-radius:999px;padding:7px 12px;font:400 13px Manrope}
+.replay{font:600 13px Manrope;background:none;border:none;color:var(--p);cursor:pointer;padding:4px 8px}
+.foot{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--pd);color:#fff;padding:10px 28px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.foot span{margin-right:auto;font-size:14px}.foot .btn{border-color:#fff;color:#fff;background:transparent}.foot .btn:hover{background:#fff;color:var(--pd)}
+.rm *{animation:none!important;transition:none!important}
+/* demo helpers */
+.pad{padding:28px 30px}.big{font:500 34px/1.15 'Newsreader',serif;color:var(--pd)}
+.wv{position:relative;display:inline-block;padding-bottom:12px}
+.wv svg{position:absolute;left:0;bottom:0;width:100%;height:12px;overflow:visible}
+.ghost{position:absolute;font:500 150px/1 'Newsreader',serif;color:var(--p);opacity:.07;pointer-events:none;user-select:none}
+.btn-cta{display:inline-flex;gap:10px;align-items:center;background:var(--olive);color:#fff;font:600 16px Manrope;padding:15px 26px;border-radius:999px;text-decoration:none;box-shadow:0 8px 20px -10px rgba(78,111,85,.6);transition:transform .18s var(--ease)}
+.btn-cta:hover{transform:translateY(-2px)}.btn-cta .ar{transition:transform .18s var(--ease)}.btn-cta:hover .ar{transform:translateX(4px)}
+.btn-line{display:inline-flex;gap:10px;align-items:center;border:1.5px solid var(--p);color:var(--p);font:600 16px Manrope;padding:13px 22px;border-radius:999px;background:transparent}
+.breathe{animation:br 4.5s ease-in-out infinite}@keyframes br{50%{transform:scale(1.03)}}
+.fi{opacity:0;transform:translateY(22px);transition:opacity .6s var(--ease),transform .6s var(--ease)}.fi.on{opacity:1;transform:none}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+
+/* stürzl additions */
+{{EXTRA_CSS}}
+</style></head><body>
+<div class="bar"><div><h1>Element-Pool: STÜRZL Steuerstrafrecht, Track B</h1><small>Jedes Element läuft live. Klicke <b>Ja</b>, <b>Vielleicht</b> oder <b>Nein</b>. Bei "↻ Nochmal" siehst du die Bewegung erneut.</small></div>
+<span class="cnt" id="cnt"></span><label class="rm-t"><input type="checkbox" id="rm"> Bewegung reduzieren (Test)</label>
+<button class="btn" id="copy">Ergebnis kopieren</button><button class="btn solid" id="save">Als Datei speichern</button></div>
+<div class="filters" id="filters"></div>
+<main><p class="intro">Alle Elemente sind in den Farben und Schriften von STÜRZL gebaut (Anthrazit, Salbei, Creme, ein Salbei-Button, Newsreader und Manrope). Texte sind Platzhalter oder echte Fakten aus dem Datensatz. Nichts hier verspricht ein Ergebnis. Der Notfall-Streifen und die Nummern bewegen sich nie. Deine Stimmen speichert die Seite im Browser und, wenn der lokale Server läuft, auch im Projektordner. Am Ende "Ergebnis kopieren" oder "Als Datei speichern".</p><div id="root"></div></main>
+<div class="foot"><span id="foot">0 von 0 bewertet</span><button class="btn" id="reset">Alles zurücksetzen</button></div>
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const RM=()=>document.body.classList.contains('rm');
+const NS='http://www.w3.org/2000/svg';
+function autoScroll(sc,ms=7500){sc.scrollTop=0;const max=sc.scrollHeight-sc.clientHeight,t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/ms);sc.scrollTop=max*(p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2);if(p<1)requestAnimationFrame(f)})(t0)}
+const mk=(tag,attrs={},parent)=>{const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);parent&&parent.appendChild(e);return e};
+const draw=(path,ms=1100)=>{path.style.transition='none';path.style.strokeDasharray=1;path.style.strokeDashoffset=RM()?0:1;path.getBoundingClientRect();if(!RM()){path.style.transition=`stroke-dashoffset ${ms}ms cubic-bezier(.22,1,.36,1)`;path.style.strokeDashoffset=0}};
+const fade=(els,gap=120)=>{els.forEach(e=>{e.classList.remove('on')});void document.body.offsetWidth;els.forEach((e,i)=>setTimeout(()=>e.classList.add('on'),RM()?0:80+i*gap))};
+const wavePath=(w=200)=>{let d='M0 6';for(let x=0;x<w;x+=25)d+=` Q${x+12.5} ${x%50?12:0} ${x+25} 6`;return d};
+{{ELEMENTS}}
+const KEY='stuerzl-pool-votes-v1';let V={};try{V=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+const root=$('#root');const players={};
+const label={ja:'Ja',vielleicht:'Vielleicht',nein:'Nein'};
+G.forEach((g,gi)=>{const sec=document.createElement('section');sec.id='g'+gi;sec.innerHTML=`<div class="group"><h2>${g[0]}</h2><p>${g[1]}</p></div><div class="grid"></div>`;root.appendChild(sec);const grid=$('.grid',sec);
+ E.filter(e=>e.g===gi).forEach(e=>{const c=document.createElement('article');c.className='card';c.dataset.id=e.id;
+  c.innerHTML=`<header><span class="id">${e.id}</span><h3>${e.t}</h3><span class="tag">${g[0].split(':')[0]}</span></header><div class="stage${e.tall?' tall':''}"></div><div class="meta">${e.w}<small>Quelle: ${e.s} · Aufwand ${e.e} · HWG: ${e.h}</small></div><div class="vote"><button class="v" data-v="ja">Ja</button><button class="v" data-v="vielleicht">Vielleicht</button><button class="v" data-v="nein">Nein</button><input placeholder="Notiz (optional)"><button class="replay">↻ Nochmal</button></div>`;
+  grid.appendChild(c);const st=$('.stage',c);const dm=D[e.d](st);players[e.id]=dm;
+  const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){dm.play();io.disconnect()}},{threshold:.6});io.observe(st);
+  $('.replay',c).onclick=()=>dm.play();
+  const inp=$('input',c);inp.value=(V[e.id]&&V[e.id].note)||'';
+  $$('.v',c).forEach(b=>b.onclick=()=>{const cur=V[e.id]||{};cur.v=cur.v===b.dataset.v?null:b.dataset.v;V[e.id]=cur;paint(c);persist()});
+  inp.oninput=()=>{const cur=V[e.id]||{};cur.note=inp.value;V[e.id]=cur;persist()};paint(c)})});
+function paint(c){const id=c.dataset.id,v=(V[id]||{}).v;c.classList.remove('v-ja','v-vielleicht','v-nein');if(v)c.classList.add('v-'+v);$$('.v',c).forEach(b=>b.classList.toggle('on',b.dataset.v===v));count()}
+function payload(){const out={gespeichert:new Date().toISOString(),stimmen:E.map(e=>({id:e.id,titel:e.t,sektion:G[e.g][0],stimme:(V[e.id]||{}).v||null,notiz:(V[e.id]||{}).note||''}))};return out}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(V))}catch(e){}if(location.protocol.startsWith('http')){fetch('save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload())}).catch(()=>{})}count()}
+function count(){const n=E.filter(e=>(V[e.id]||{}).v).length;$('#cnt').textContent=n+' von '+E.length+' bewertet';$('#foot').textContent=n+' von '+E.length+' bewertet · Ja '+E.filter(e=>(V[e.id]||{}).v==='ja').length+' · Vielleicht '+E.filter(e=>(V[e.id]||{}).v==='vielleicht').length+' · Nein '+E.filter(e=>(V[e.id]||{}).v==='nein').length}
+function md(){const p=payload();let t='# Element-Abstimmung STÜRZL Track B ('+p.gespeichert.slice(0,10)+')\n';['ja','vielleicht','nein',null].forEach(k=>{const l=p.stimmen.filter(s=>s.stimme===k);t+='\n## '+(k?label[k]:'Nicht bewertet')+' ('+l.length+')\n';l.forEach(s=>t+='- '+s.id+' '+s.titel+(s.notiz?' — '+s.notiz:'')+'\n')});return t}
+$('#copy').onclick=async()=>{try{await navigator.clipboard.writeText(md());$('#copy').textContent='Kopiert ✓'}catch(e){prompt('Kopiere den Text:',md())}setTimeout(()=>$('#copy').textContent='Ergebnis kopieren',1800)};
+$('#save').onclick=()=>{const b=new Blob([JSON.stringify(payload(),null,1)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='element-votes-'+new Date().toISOString().slice(0,10)+'.json';a.click()};
+$('#reset').onclick=()=>{if(confirm('Alle Stimmen löschen?')){V={};$$('.card').forEach(c=>{$('input',c).value='';paint(c)});persist()}};
+$('#rm').onchange=e=>{document.body.classList.toggle('rm',e.target.checked);Object.values(players).forEach(p=>p.play())};
+// filters
+const F=$('#filters');[['alle','Alle'],['offen','Noch offen'],['ja','Ja'],['vielleicht','Vielleicht'],['nein','Nein']].forEach(([k,l],i)=>{const b=document.createElement('button');b.className='chip'+(i?'':' on');b.textContent=l;b.onclick=()=>{$$('#filters .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');$$('.card').forEach(c=>{const v=(V[c.dataset.id]||{}).v||'';c.style.display=(k==='alle'||(k==='offen'&&!v)||v===k)?'':'none'})};F.appendChild(b)});
+G.forEach((g,i)=>{const a=document.createElement('a');a.className='chip';a.href='#g'+i;a.style.textDecoration='none';a.textContent=g[0].replace('Sektion ','S').replace('Der rote Faden der ganzen Seite','Faden').split(':')[0];F.appendChild(a)});
+count();
+</script></body></html>

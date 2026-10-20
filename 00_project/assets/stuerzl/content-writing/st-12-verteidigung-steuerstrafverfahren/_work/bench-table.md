@@ -1,0 +1,27 @@
+Median 1442.5, 70 % = 1009, Seiten 24 von 24
+| Wörter | Seite |
+| --- | --- |
+| 5890 | https://www.hortmannlaw.com/steuerfahndung-strafverfahren-selbstanzeige-anwalt |
+| 4515 | https://www.lhp-gruppe.de/themen/steuerstrafverfahren/ |
+| 3317 | https://www.hlp-beratung.eu/2026/10/02/einleitung-steuerstrafverfahren/ |
+| 2746 | https://www.ra-kotz.de/steuerstrafverfahren.htm |
+| 2618 | https://rechtinfo.de/blog/ermittlungsverfahren-steuerstrafrecht/ |
+| 2605 | https://leipzig-steuerstrafverteidiger.de/blog/steuerstrafrecht/ |
+| 2532 | https://steueranwalt-rhein-main.de/steuerfahndung-zollfahndung/ |
+| 1888 | https://www.rudolph-recht.de/rechtsgebiete/steuerstrafrecht/ |
+| 1844 | https://www.juhn.com/fachwissen/steuerhinterziehung-selbstanzeige/aufgaben-der-steuerfahndung/ |
+| 1640 | https://www.juhn.com/fachwissen/steuerhinterziehung-selbstanzeige/einstellung-des-steuerstrafverfahrens/ |
+| 1516 | https://www.steinbock-partner.de/steuerrecht/steuerstrafverfahren/ |
+| 1447 | https://www.die-anwalts-kanzlei.de/steuerstrafrecht/steuerstrafverfahren-nach-betriebspruefung/ |
+| 1438 | https://www.anwalt-haxthausen.berlin/steuerstrafrecht.html |
+| 1024 | https://www.strafrecht-dr-peter.de/rechtsbeitraege/steuerstrafverfahren-nach-betriebspruefung-ablauf-und-rechtliche-konsequenzen/ |
+| 999 | https://www.lhp-gruppe.de/themen/strafbefehl-im-steuerstrafverfahren/ |
+| 943 | https://kanzlei-wb.com/was-tun-bei-einem-steuerstrafverfahren/ |
+| 844 | https://www.kanzlei-luebbing.de/steuerstrafrecht-und-selbstanzeige/ablauf-selbstanzeige-beratung/ |
+| 806 | https://steuerdelikt.de/steuerstrafverfahren/steuerstrafverfahren-uebersicht |
+| 797 | https://gwgl-hamburg.de/rechtsgebiete/steuern/vertretung-in-steuerstrafverfahren/ |
+| 763 | https://leipzig-steuerstrafverteidiger.de/steuerstrafrecht/steuerstrafverfahren/ |
+| 649 | https://www.pmpg.de/recht/steuerstrafverfahren-selbstanzeige/ |
+| 370 | https://ra-hoernschemeyer.de/steuerstrafverfahren/ |
+| 307 | https://steuerdelikt.de/haeufige-fragen/steuerstrafverfahren/wann-werden-steuerstrafverfahren-eingestellt |
+| 183 | https://www.steuerstrafverfahren-notruf.de/ermittlungsgruende-und-anlass-fuer-ein-steuerstrafverfahren/ |

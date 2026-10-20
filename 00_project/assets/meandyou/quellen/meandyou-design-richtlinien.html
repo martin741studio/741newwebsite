@@ -1,0 +1,338 @@
+<title>Me&You Design-Richtlinien</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    /* me&you brand palette (ca. — exakte Hex aus der Branding-Datei bestätigen) */
+    --cream:#F2EDE4; --cream2:#E9E3D7; --grey:#E7E8E8; --sand:#D8CCB7;
+    --slate:#7E99B6; --navy:#2B3C52; --char:#47403A;
+    --ink:#2B2A27; --muted:#6F6A61; --line:#DED7C9; --card:#FFFFFF;
+    --paper:#F7F4EE;
+    --head:"Libre Baskerville",Georgia,serif;
+    --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --shadow:0 1px 2px rgba(43,42,39,.05),0 10px 30px -14px rgba(43,42,39,.18);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --cream:#2A3646; --cream2:#232E3C; --grey:#2E3440; --sand:#3a3426;
+      --slate:#8FA9C6; --navy:#9FB6D1; --char:#C9BFAF;
+      --ink:#ECE8DF; --muted:#A49E92; --line:#33404F; --card:#1C2530;
+      --paper:#161D26;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --cream:#2A3646; --cream2:#232E3C; --grey:#2E3440; --sand:#3a3426;
+    --slate:#8FA9C6; --navy:#9FB6D1; --char:#C9BFAF;
+    --ink:#ECE8DF; --muted:#A49E92; --line:#33404F; --card:#1C2530;
+    --paper:#161D26;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.6);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:52px 24px 100px}
+  h1{font-family:var(--head);font-weight:700;font-size:clamp(34px,5.5vw,52px);line-height:1.1;margin:0 0 10px;letter-spacing:-.01em;text-wrap:balance}
+  h2{font-family:var(--head);font-weight:700;font-size:clamp(23px,3.2vw,30px);margin:0;line-height:1.15}
+  h3{font-family:var(--head);font-weight:700;font-size:20px;margin:0 0 4px}
+  .over{font-family:var(--body);font-weight:600;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .sub{max-width:62ch;color:var(--muted);font-size:17.5px;margin:12px 0 0}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);font-weight:500}
+  .meta b{color:var(--ink)}
+  section{margin-top:60px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--navy);padding-bottom:12px;margin-bottom:22px}
+  .sec-head .no{font-family:var(--body);font-weight:700;font-size:13px;color:var(--slate)}
+  p{margin:0 0 12px;max-width:72ch}
+  ul{margin:0 0 12px;padding-left:20px}
+  li{margin-bottom:7px;max-width:70ch}
+  .note{background:var(--cream2);border-left:4px solid var(--slate);padding:16px 20px;border-radius:0 10px 10px 0;margin:16px 0 0;max-width:76ch}
+  .note b{color:var(--ink)}
+  /* palette */
+  .pal{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px}
+  .sw{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card);box-shadow:var(--shadow)}
+  .sw .chip{height:80px}
+  .sw .lab{padding:9px 11px;font-size:12px}
+  .sw .lab b{display:block;font-size:12.5px}
+  .sw .lab span{color:var(--muted);font-family:var(--body)}
+  /* type demo */
+  .type{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:640px){.type{grid-template-columns:1fr}}
+  .type .box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;box-shadow:var(--shadow)}
+  .type .big-serif{font-family:var(--head);font-size:30px;line-height:1.1;margin:6px 0 10px}
+  .type .big-sans{font-family:var(--body);font-weight:600;font-size:22px;margin:6px 0 10px}
+  .type small{color:var(--muted);font-size:12.5px}
+  /* persona cards */
+  .persona{border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:24px;background:var(--card)}
+  .p-head{padding:22px 24px;color:#fff}
+  .persona.replayers .p-head{background:linear-gradient(135deg,#6f6256,#8a7b6b)}
+  .persona.overlooked .p-head{background:linear-gradient(135deg,#223449,#2B3C52)}
+  .persona.undersold .p-head{background:linear-gradient(135deg,#6e5a45,#937a56)}
+  .p-head .no{font-family:var(--body);font-weight:700;font-size:12px;opacity:.7;letter-spacing:.12em}
+  .p-head h2{color:#fff;margin:6px 0 6px}
+  .p-head .claim{font-family:var(--head);font-style:italic;font-size:16px;opacity:.95;margin:0 0 12px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tags span{font-family:var(--body);font-weight:600;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:4px 12px}
+  .p-body{padding:22px 24px}
+  .p-body h4{font-family:var(--body);font-weight:700;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin:18px 0 6px}
+  .p-body h4:first-child{margin-top:0}
+  .p-body p,.p-body ul{font-size:14.5px;margin-bottom:0}
+  .p-body ul{padding-left:18px;margin-top:4px}
+  .hero-line{font-family:var(--head);font-size:17px;line-height:1.3;background:var(--cream2);border-radius:8px;padding:10px 14px;margin-top:6px}
+  .hero-line em{font-style:normal;color:var(--muted);font-family:var(--body);font-size:12px;display:block;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media (max-width:600px){.grid2{grid-template-columns:1fr}}
+  .foto{counter-reset:f;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  @media (max-width:520px){.foto{grid-template-columns:1fr}}
+  .foto div{background:var(--cream2);border-radius:8px;padding:10px 12px;font-size:13.5px;display:grid;grid-template-columns:24px 1fr;gap:8px;align-items:start}
+  .foto div::before{counter-increment:f;content:"0" counter(f);font-weight:700;color:var(--slate);font-size:12px}
+  .dd{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:560px){.dd{grid-template-columns:1fr}}
+  .dd>div{border-radius:10px;padding:14px 16px;font-size:14px}
+  .dd .do{background:#E4EFE6}
+  .dd .no2{background:#F3E2DD}
+  .dd b{display:block;font-weight:700;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;font-family:var(--body)}
+  .dd .do b{color:#2E7D4F} .dd .no2 b{color:#B0402E}
+  :root[data-theme="dark"] .dd .do,:root:not([data-theme="light"]) .dd .do{}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .dd .do{background:#1E3327}:root:not([data-theme="light"]) .dd .no2{background:#3D211B}}
+  :root[data-theme="dark"] .dd .do{background:#1E3327}:root[data-theme="dark"] .dd .no2{background:#3D211B}
+  .navbar{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .navbar span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-weight:600;font-size:14px}
+  footer{margin-top:72px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 24px}
+  a{color:var(--navy)}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) a{color:var(--slate)}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="over">Michael Ehlers · me&amp;you · Design- und Build-Richtlinien</div>
+    <h1>Design-Richtlinien</h1>
+    <p class="sub">Die verbindliche Grundlage, bevor wir die neue Website bauen. Was wir gestalten und wie wir es gestalten, abgeleitet aus der Source-of-Truth (Ehlers V1.1). Rund 20 Prozent flexibel.</p>
+    <div class="meta">
+      <span>Stand: <b>05.10.2026</b></span>
+      <span>Quelle: <b>Ehlers.pdf (V1.1)</b></span>
+      <span>Umsetzung: <b>741</b> · Design: <b>Celine</b></span>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head"><span class="no">00</span><h2>Stand &amp; Vorrang</h2></div>
+    <p>Das Design-System aus der PDF steht: Farben, Typografie, Personas, Layout- und Fotografie-Regeln sind die Basis und bleiben. Beim <b>strategischen Aufbau</b> gilt zusätzlich das jüngere Sales-Feedback, das an ein paar Stellen über die PDF-Mockups geht:</p>
+    <ul>
+      <li>Dachidee ist <b>UNÜBERSEHBAR</b> (Claim „Werde unübersehbar, wenn es darauf ankommt.", Subline „Persönlichkeit. Kongruenz. Wirkung."). Wird als <b>Kampagnenlayer</b> geführt, also im Hero und Kampagnen-Bereich, nicht dauerhaft neben dem Namen.</li>
+      <li>Die Homepage hat <b>eine zentrale Botschaft</b>, nicht drei gleichwertige Einstiege. Die drei Personas werden zu Situationen unter dieser Botschaft.</li>
+      <li><b>„Seminare für Intelligente" ist nicht mehr die Hauptheadline</b> (in den PDF-Mockups steht sie noch so).</li>
+      <li>Seminare werden als <b>eigenständige Formate</b> aufgebaut, nicht als lineare Stufe I bis V. Ein klarer Starter, dann frei wählbare Formate.</li>
+      <li><b>Keine Seminarpreise auf der Seite.</b> Überall der Termin-/Buchungslink, ein Closer schließt ab.</li>
+    </ul>
+    <div class="note"><b>Kurz:</b> Look and Feel aus der PDF, strategische Hierarchie aus dem Sales-Feedback. Wo sich beides widerspricht, gewinnt das Sales-Feedback.</div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="no">01</span><h2>Marke</h2></div>
+    <h3>Logo</h3>
+    <p>MICHAEL &amp; EHLERS / YOU COMMUNICATION. Immer das echte Logo-Asset verwenden, nie nachbauen.</p>
+
+    <h3 style="margin-top:26px">Farbpalette</h3>
+    <p class="note" style="margin-top:0;margin-bottom:16px"><b>Hinweis:</b> Hex-Werte unten sind Näherungen aus der PDF. Die exakten Werte aus der Branding-/Figma-Datei übernehmen, bevor wir bauen.</p>
+    <div class="pal">
+      <div class="sw"><div class="chip" style="background:#F2EDE4"></div><div class="lab"><b>Cremeweiß</b><span>ca. #F2EDE4 · Grundfläche</span></div></div>
+      <div class="sw"><div class="chip" style="background:#E7E8E8"></div><div class="lab"><b>Hellgrau</b><span>ca. #E7E8E8 · Flächen</span></div></div>
+      <div class="sw"><div class="chip" style="background:#D8CCB7"></div><div class="lab"><b>Sand</b><span>ca. #D8CCB7 · warme Akzente</span></div></div>
+      <div class="sw"><div class="chip" style="background:#7E99B6"></div><div class="lab"><b>Taubenblau</b><span>ca. #7E99B6 · Akzent</span></div></div>
+      <div class="sw"><div class="chip" style="background:#2B3C52"></div><div class="lab"><b>Dunkelnavy</b><span>ca. #2B3C52 · Flächen, Text</span></div></div>
+      <div class="sw"><div class="chip" style="background:#47403A"></div><div class="lab"><b>Warmes Anthrazit</b><span>ca. #47403A · Text, Tiefe</span></div></div>
+    </div>
+
+    <h3 style="margin-top:30px">Typografie</h3>
+    <div class="type">
+      <div class="box">
+        <div class="over">Überschriften</div>
+        <div class="big-serif">Libre Baskerville</div>
+        <small>Serif. Für alle Headlines und Claims. Ruhig, hochwertig, erwachsen.</small>
+      </div>
+      <div class="box">
+        <div class="over">Unterüberschrift · Fließtext · Overline</div>
+        <div class="big-sans">Inter</div>
+        <small>Sans. Für Subheads, Body, Overlines, UI. Klar und zurückhaltend.</small>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="no">02</span><h2>Die drei Personas</h2></div>
+    <p>Jede Persona ist eine eigene Welt in Sprache, Bild und Layout. Eine Fläche spricht immer genau eine Person an. Benannt nach dem Problem, nicht der Demografie.</p>
+
+    <!-- REPLAYERS -->
+    <div class="persona replayers">
+      <div class="p-head">
+        <div class="no">01</div>
+        <h2>The Replayers</h2>
+        <div class="claim">„Es sollte sich sicher anfühlen zuzugeben, dass man den Faden verliert."</div>
+        <div class="tags"><span>Warm</span><span>Privat</span><span>Ungehetzt</span></div>
+      </div>
+      <div class="p-body">
+        <div class="grid2">
+          <div>
+            <h4>Ton</h4>
+            <p>Warm, geduldig, nachsichtig. Spricht die Person nach dem Meeting an, nicht während dessen. Nie klinisch, nie wie eine Bühne.</p>
+            <h4>Einsatz</h4>
+            <p>Kostenloser Trainings-Funnel, das Buch, die 39-Euro-Community, Erstkontakt-Anzeigen und organische Inhalte. Unsere breiteste Fläche.</p>
+            <h4>Visuelles Ziel</h4>
+            <p>Wiedererkennung vor Anleitung. Sie sollen sich selbst auf der Seite sehen, bevor ihnen gesagt wird, was zu tun ist.</p>
+          </div>
+          <div>
+            <h4>Grafik &amp; Layout</h4>
+            <ul>
+              <li>Großzügige Abstände, eine Idee pro Bildschirm</li>
+              <li>Weiche Kanten, nichts Scharfes</li>
+              <li>Keine sichtbaren Rasterlinien oder harten Trennlinien</li>
+              <li>Fließtext mit geringerem Kontrast als die Überschrift</li>
+              <li>Nie mehr als ein CTA gleichzeitig sichtbar</li>
+            </ul>
+            <h4>Hero</h4>
+            <div class="hero-line"><em>Der Nachdenker</em>Dir fehlen nicht die Worte. Sie kommen nur zu spät.</div>
+          </div>
+        </div>
+        <h4 style="margin-top:20px">Fotografie</h4>
+        <div class="foto">
+          <div><span>Naher Bildausschnitt, Innenraum, natürliches Licht</span></div>
+          <div><span>Person in Bewegung, nicht gestellt</span></div>
+          <div><span>Blickt selten in die Kamera</span></div>
+          <div><span>Leichtes Korn bleibt erhalten, nie glatt retuschiert</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OVERLOOKED -->
+    <div class="persona overlooked">
+      <div class="p-head">
+        <div class="no">02</div>
+        <h2>The Overlooked</h2>
+        <div class="claim">„Recht zu haben war nie der schwierige Teil."</div>
+        <div class="tags"><span>Präzise</span><span>Glaubwürdig</span><span>Unsentimental</span></div>
+      </div>
+      <div class="p-body">
+        <div class="grid2">
+          <div>
+            <h4>Ton</h4>
+            <p>Gefasst, strukturiert, kühles Licht. Respektiert die Intelligenz der Leser:innen. Nirgends ein motivierender Ton.</p>
+            <h4>Einsatz</h4>
+            <p>Der 999-Euro-Onlinekurs, die Methodenseiten, Michaels Referenzen, Vergleiche und FAQ. Alles, was geglaubt werden muss.</p>
+            <h4>Visuelles Ziel</h4>
+            <p>Zeigen, dass es ein System gibt, keine Persönlichkeit. Wenn eine Seite ein Diagramm statt eines Absatzes sein könnte, soll es ein Diagramm sein.</p>
+          </div>
+          <div>
+            <h4>Grafik &amp; Layout</h4>
+            <ul>
+              <li>Sichtbares Raster, ausgerichtete Linien, nummerierte Schritte</li>
+              <li>Weiche Kanten, nichts Scharfes</li>
+              <li>Diagramm vor Dekoration</li>
+              <li>Tabellen und Vergleiche sind willkommen</li>
+              <li>Bildunterschriften transportieren echte Information</li>
+            </ul>
+            <h4>Hero</h4>
+            <div class="hero-line"><em>Das Problem</em>Du bist der Klügste im Raum, aber niemand hört dir zu?</div>
+          </div>
+        </div>
+        <h4 style="margin-top:20px">Fotografie</h4>
+        <div class="foto">
+          <div><span>Räume und Publikum, mit leichtem Abstand</span></div>
+          <div><span>Härteres Licht, architektonische Linien</span></div>
+          <div><span>Person im Kontext, nicht isoliert</span></div>
+          <div><span>Schwarz-Weiß ist hier erlaubt</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UNDERSOLD -->
+    <div class="persona undersold">
+      <div class="p-head">
+        <div class="no">03</div>
+        <h2>The Undersold</h2>
+        <div class="claim">„Dein Unternehmen ist größer, als du klingst."</div>
+        <div class="tags"><span>Selten</span><span>Souverän</span><span>Erhaben</span></div>
+      </div>
+      <div class="p-body">
+        <div class="grid2">
+          <div>
+            <h4>Ton</h4>
+            <p>Weit, warm, goldenes Licht. Seltenheit statt laut. Souveränität durch Zurückhaltung und durch das, was weggelassen wird.</p>
+            <h4>Einsatz</h4>
+            <p>Die Seminare, die Locations, das Bewerbungsformular, das private Follow-up. Das kleinste Publikum, der höchste Wert.</p>
+            <h4>Visuelles Ziel</h4>
+            <p>Location und Gruppe sollen wie das eigentliche Produkt anführen. Nie Konferenz-Ästhetik, nie ein Hotel-Ballsaal.</p>
+          </div>
+          <div>
+            <h4>Grafik &amp; Layout</h4>
+            <ul>
+              <li>Breite Ausschnitte, viel Raum</li>
+              <li>Kleine Schrift vor großformatigem Bild</li>
+              <li>Weniger Elemente pro Bildschirm als überall sonst</li>
+              <li>Daten und Orte werden wie Überschriften behandelt</li>
+              <li>Ein CTA, weit unten auf der Seite, ohne Dringlichkeit</li>
+            </ul>
+            <h4>Hero</h4>
+            <div class="hero-line"><em>Unter Wert</em>Ihr Unternehmen ist größer, als es nach außen wirkt.</div>
+          </div>
+        </div>
+        <h4 style="margin-top:20px">Fotografie</h4>
+        <div class="foto">
+          <div><span>Landschaft und Location vor Menschen</span></div>
+          <div><span>Goldene Stunde, lange Schatten</span></div>
+          <div><span>Kleine Gruppen, nie eine Menge</span></div>
+          <div><span>Keine Lanyards, keine Bühne, keine Ballsäle</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="no">03</span><h2>Seitenstruktur</h2></div>
+    <h3>Navigation</h3>
+    <div class="navbar"><span>Seminare</span><span>Für wen</span><span>Unsere Methode</span><span>Über Michael</span></div>
+    <h3 style="margin-top:24px">Header-Carousel</h3>
+    <p>Ein Hero-Carousel mit drei Varianten, eine pro Persona. Jede Variante nutzt die Hero-Zeile und Bildwelt ihrer Persona:</p>
+    <ul>
+      <li><b>Der Nachdenker</b> (Replayers): „Dir fehlen nicht die Worte. Sie kommen nur zu spät."</li>
+      <li><b>Das Problem</b> (Overlooked): „Du bist der Klügste im Raum, aber niemand hört dir zu?"</li>
+      <li><b>Unter Wert</b> (Undersold): „Ihr Unternehmen ist größer, als es nach außen wirkt."</li>
+    </ul>
+    <p>Darunter die zentrale Botschaft (UNÜBERSEHBAR), dann die drei Situationen, Michaels Autorität und Beweis, die Seminare als Formate, und das Gespräch als nächster Schritt.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="no">04</span><h2>Immer / Nie</h2></div>
+    <div class="dd">
+      <div class="do"><b>Immer</b>
+        <ul style="margin:0;padding-left:18px">
+          <li>Eine Fläche, eine Persona, eine Botschaft</li>
+          <li>Der echte Michael in Aktion, Tageslicht, leichtes Korn</li>
+          <li>Jede Behauptung neben ihrem Beweis</li>
+          <li>Mobile-first, fast alles wird am Handy gesehen</li>
+          <li>Libre Baskerville für Headlines, Inter für den Rest</li>
+        </ul>
+      </div>
+      <div class="no2"><b>Nie</b>
+        <ul style="margin:0;padding-left:18px">
+          <li>Studio-Steifheit, Stock-Optik, glatt retuschiert</li>
+          <li>Hotel-Ballsaal, Lanyards, Bühnen-Kongress-Look</li>
+          <li>Preise auf der Seite (überall der Termin-Link)</li>
+          <li>Gedankenstriche in der Copy (gelten als KI-Indiz)</li>
+          <li>Ein Design, das mit allen drei Personas gleichzeitig spricht</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="no">05</span><h2>Noch offen vom Kunden</h2></div>
+    <ul>
+      <li>Die neuen Seminar-Bezeichnungen, die Schwerpunkte je Format und was genau der Starter ist.</li>
+      <li>Danach: Freigabe der Hierarchie-/Struktur-Seite, dann Design und Build.</li>
+    </ul>
+    <p class="note" style="margin-top:4px">Bestehende Orte und aktuelle Preise (Kurs, Community, Buch) liegen bereits vor. Offen ist nur, was sich mit der neuen Seminar-Architektur ändert.</p>
+  </section>
+
+  <footer>
+    <span>741.studio · Design-Richtlinien me&amp;you</span>
+    <span>Basis: Ehlers V1.1 + Sales-Feedback · ~20% flexibel</span>
+  </footer>
+</div>

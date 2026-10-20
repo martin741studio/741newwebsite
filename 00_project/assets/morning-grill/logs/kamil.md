@@ -1,0 +1,2 @@
+- 2026-10-14 evening: Yearly security/backup offer (€500/yr) sent same day. Ads pause/keep decision still open while hacked site is closed [e418e89f].
+- 2026-10-19 evening: Google Ads checked, no ad schedule, weekends run by default; weekend bid adjustments = Martin's decision; security offer draft open [610a8689].

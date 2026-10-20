@@ -1,0 +1,71 @@
+{
+  "title": "Content Pool: Naturheilpraxis Daniela Dumann",
+  "subtitle": "Homepage first. Existing site. Health client, HWG mode.",
+  "findings": [
+    {
+      "text": "Her Search Console shows two audiences. Of the {gsc.listed_impr} impressions in the listed queries, {gsc.training_impr} ({gsc.training_share}) come from training and lexicon searches, {gsc.patient_service_impr} ({gsc.patient_service_share}) from patient and service searches, and {gsc.brand_impr} from her name. The clicks show the problem: {gsc.brand_clicks} clicks come from her name, {gsc.patient_service_clicks} from patient and service searches, {gsc.training_clicks} from training searches. Patient searches show up, but they do not bring clicks yet. The DataForSEO data adds: 0 of 63 ranked keywords is a generic patient search such as 'heilpraktiker berlin'. The homepage must speak to patients. The Viriditas school moves to its own area.",
+      "items": [
+        "CP-BRD-004",
+        "CP-BRD-005"
+      ]
+    },
+    {
+      "text": "Her own Search Console (3 months, {gsc.total_clicks} clicks in total) shows real patient demand that the site already serves near the top: Schilddrüse queries get {CP-SVC-014.gsc_impr} impressions (best position {CP-SVC-014.gsc_pos}), Aderlass queries get {CP-SVC-006.gsc_impr} impressions (best position {CP-SVC-006.gsc_pos}). Hildegard fasting searches get {CP-SVC-011.gsc_impr} impressions, but the best position is {CP-SVC-011.gsc_pos}, far from page 1, on a course page.",
+      "items": [
+        "CP-SVC-014",
+        "CP-SVC-006",
+        "CP-SVC-011"
+      ]
+    },
+    {
+      "text": "The homepage has {bench.own} words. The floor from gate A0 is {bench.floor} words (70 % of the median {bench.median} words of {bench.n} competitor homepages). The page is below the floor.",
+      "items": [
+        "CP-SVC-001",
+        "CP-SVC-002",
+        "CP-SVC-003"
+      ]
+    },
+    {
+      "text": "Hildegard-Heilkunde in Charlottenburg is open ground in the readable set: 0 of 9 local practice sites name Hildegard in title, heading or URL. Caveat: the site naturheilpraxis-berlin-westend.de ranks #2 for this search and blocks all readers. Check it by hand before this claim goes to the client.",
+      "items": [
+        "CP-BRD-001",
+        "CP-SVC-018"
+      ]
+    },
+    {
+      "text": "The big competitor keywords are a trap. Colon-Hydro-Therapie (6,600 searches), HPU and Blutegel (5,400) belong to services the client does not offer. The fit test cuts them.",
+      "items": [
+        "CP-SVC-020"
+      ]
+    },
+    {
+      "text": "Proof is the weak point, links are not. Google shows 5.0 with 9 reviews. Competitors in the Local Pack have 13 to 51 reviews. All visible reviews are about courses, not about patient visits. Patient quotes with consent do not exist yet. Her domain has 148 referring domains, the three competitors checked have 55 to 215 (DataForSEO backlinks summary, 2026-10-11).",
+      "items": [
+        "CP-AUT-003",
+        "CP-AUT-004",
+        "CP-AUT-005"
+      ]
+    },
+    {
+      "text": "Visitors expect prices, a first-visit block and an FAQ. {CP-SVC-003.cov} local sites show prices or costs. The client has verified prices (220 EUR, 150 EUR per hour). Use them.",
+      "items": [
+        "CP-SVC-002",
+        "CP-SVC-003",
+        "CP-SVC-004"
+      ]
+    }
+  ],
+  "pillars": {
+    "location": "Hero with city and district, a full location block, places named in text only. Place pages for Wilmersdorf and Westend fail the proof rule and are cut. Open: catchment, parking, one brand name across website and Google profile.",
+    "service": "Eight real services, each with a card and later its own page. Questions and costs sit around real services only. Condition-based Hildegard searches wait for the client and the HWG check. Seasonal note: fasting interest peaks in February.",
+    "brand": "Hildegard-Heilkunde as the clear difference. Method in three sentences, story of the practitioner. Two audiences are split: patients on the homepage, trainees in the Viriditas area.",
+    "authority": "Qualifications and the vice-president role are verified and unique. Reviews, patient quotes and the garden need client input. Directory listings go to the backlink workflow."
+  },
+  "decisions": [
+    "Confirm the split: homepage for patients, Viriditas as its own area (CP-BRD-004, CP-BRD-005).",
+    "Adjacent topic CP-SVC-019 (Hildegard by complaint): keep out of the homepage until the client and the HWG check say yes.",
+    "Check naturheilpraxis-berlin-westend.de by hand (blocked for all readers).",
+    "Send the client form (13 open facts) before copy starts. Items with status needs_client stay drafts until then.",
+    "Massage (CP-SVC-016) and Pflanzenheilkunde (CP-SVC-017) are minor. Decide if they stay on the homepage."
+  ]
+}

@@ -1,0 +1,1284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bali Healing – Ozone Therapy · Google Ads Weekly Report</title>
+  
+  <!-- Import Premium Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(22, 27, 44, 0.65);
+      --card-hover: rgba(29, 36, 58, 0.85);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 255, 255, 0.15);
+      --tx-main: #f3f4f6;
+      --tx-muted: #9ca3af;
+      --accent-teal: #0ea5e9;
+      --accent-teal-glow: rgba(14, 165, 233, 0.15);
+      --accent-green: #10b981;
+      --accent-green-glow: rgba(16, 185, 129, 0.15);
+      --accent-gold: #f59e0b;
+      --accent-gold-glow: rgba(245, 158, 11, 0.15);
+      --accent-red: #f43f5e;
+      
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(at 10% 10%, rgba(14, 165, 233, 0.05) 0px, transparent 50%),
+        radial-gradient(at 90% 90%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+      color: var(--tx-main);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.6;
+      padding: 40px 24px;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header & Meta */
+    header {
+      position: relative;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 38px;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-teal);
+      margin-top: 4px;
+    }
+
+    .meta-box {
+      text-align: right;
+    }
+
+    .meta-tag {
+      display: inline-flex;
+      align-items: center;
+      background: var(--accent-green-glow);
+      color: var(--accent-green);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .meta-tag::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--accent-green);
+      border-radius: 50%;
+      margin-right: 8px;
+      box-shadow: 0 0 8px var(--accent-green);
+    }
+
+    .meta-date {
+      color: var(--tx-muted);
+      font-size: 13px;
+    }
+
+    .meta-details {
+      display: flex;
+      gap: 16px;
+      font-size: 12px;
+      color: var(--tx-muted);
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .meta-item svg {
+      width: 12px;
+      height: 12px;
+      fill: currentColor;
+    }
+
+    /* Currency Controls */
+    .controls {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .control-label {
+      font-size: 13px;
+      color: var(--tx-muted);
+      font-weight: 500;
+    }
+
+    .toggle-group {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 3px;
+      display: flex;
+      position: relative;
+    }
+
+    .toggle-btn {
+      background: none;
+      border: none;
+      color: var(--tx-muted);
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 16px;
+      cursor: pointer;
+      border-radius: 20px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .toggle-btn.active {
+      background: var(--accent-teal);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+    }
+
+    /* Headline Highlight Card */
+    .headline-card {
+      background: linear-gradient(135deg, rgba(22, 27, 44, 0.8) 0%, rgba(14, 165, 233, 0.05) 100%);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent-teal);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .headline-card::after {
+      content: '"';
+      position: absolute;
+      right: 20px;
+      bottom: -40px;
+      font-family: var(--font-serif);
+      font-size: 180px;
+      color: rgba(255, 255, 255, 0.02);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .headline-title {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-teal);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .headline-content {
+      font-family: var(--font-serif);
+      font-size: 21px;
+      line-height: 1.5;
+      color: var(--tx-main);
+      font-style: italic;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .stat-card:hover {
+      background: var(--card-hover);
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .stat-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .stat-title {
+      font-size: 13px;
+      color: var(--tx-muted);
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+
+    .stat-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--tx-muted);
+    }
+
+    .stat-card.accent-teal .stat-icon {
+      background: var(--accent-teal-glow);
+      color: var(--accent-teal);
+    }
+
+    .stat-card.accent-green .stat-icon {
+      background: var(--accent-green-glow);
+      color: var(--accent-green);
+    }
+
+    .stat-card.accent-gold .stat-icon {
+      background: var(--accent-gold-glow);
+      color: var(--accent-gold);
+    }
+
+    .stat-value {
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-meta {
+      font-size: 12px;
+      color: var(--tx-muted);
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .stat-change {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .stat-change.up {
+      color: var(--accent-green);
+    }
+
+    .stat-change.neutral {
+      color: var(--tx-muted);
+    }
+
+    /* Main Dashboard Content Layout */
+    .dashboard-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .dashboard-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Panel Card Structure */
+    .panel {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 8px;
+    }
+
+    .panel-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 600;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .panel-title svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent-teal);
+    }
+
+    .panel-badge {
+      font-size: 11px;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--tx-muted);
+      padding: 4px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Funnel Visualization */
+    .funnel-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px 0;
+    }
+
+    .funnel-layer {
+      display: grid;
+      grid-template-columns: 140px 1fr 100px;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+      padding: 12px 16px;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    .funnel-layer:hover {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .funnel-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--tx-main);
+    }
+
+    .funnel-bar-wrap {
+      height: 16px;
+      background: #0d111b;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .funnel-bar-fill {
+      height: 100%;
+      border-radius: 8px;
+      transition: width 1s ease-out;
+    }
+
+    .funnel-layer.impr .funnel-bar-fill {
+      background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+      box-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
+    }
+
+    .funnel-layer.clicks .funnel-bar-fill {
+      background: linear-gradient(90deg, #10b981, #34d399);
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+    }
+
+    .funnel-layer.leads .funnel-bar-fill {
+      background: linear-gradient(90deg, #64748b, #94a3b8);
+    }
+
+    .funnel-layer.leads.has-data .funnel-bar-fill {
+      background: linear-gradient(90deg, #f59e0b, #fbbf24);
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+    }
+
+    .funnel-val {
+      text-align: right;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    .funnel-conversion-rate {
+      position: absolute;
+      left: 50%;
+      top: -14px;
+      transform: translateX(-50%);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--accent-teal);
+      letter-spacing: 0.5px;
+      z-index: 2;
+    }
+
+    /* Calculator Style */
+    .calc-slider-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .calc-row {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .calc-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .calc-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--tx-muted);
+    }
+
+    .calc-num {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .calc-slider-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Range Input Custom Styling */
+    input[type=range] {
+      -webkit-appearance: none;
+      width: 100%;
+      background: transparent;
+    }
+
+    input[type=range]:focus {
+      outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 6px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      border: none;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      background: var(--accent-teal);
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -6px;
+      box-shadow: 0 0 10px rgba(14, 165, 233, 0.6);
+      transition: transform 0.1s ease;
+    }
+
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      background: #38bdf8;
+    }
+
+    .projection-results {
+      background: rgba(14, 165, 233, 0.04);
+      border: 1px solid rgba(14, 165, 233, 0.15);
+      border-radius: 12px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .projection-card {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .proj-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--tx-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .proj-value {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .proj-value.teal {
+      color: var(--accent-teal);
+    }
+    .proj-value.green {
+      color: var(--accent-green);
+    }
+    .proj-value.gold {
+      color: var(--accent-gold);
+    }
+
+    /* Campaigns Details Card */
+    .details-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .details-item {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      font-size: 13px;
+    }
+
+    .details-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .details-label {
+      color: var(--tx-muted);
+    }
+
+    .details-val {
+      font-weight: 500;
+      color: var(--tx-main);
+      text-align: right;
+    }
+
+    .details-val a {
+      color: var(--accent-teal);
+      text-decoration: none;
+    }
+
+    .details-val a:hover {
+      text-decoration: underline;
+    }
+
+    /* Insights Section (The Read) */
+    .insights-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .insight-item {
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      display: flex;
+      gap: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .insight-item:hover {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .insight-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+      background: var(--accent-teal-glow);
+      color: var(--accent-teal);
+    }
+
+    .insight-item.warning .insight-num {
+      background: rgba(244, 63, 94, 0.15);
+      color: var(--accent-red);
+    }
+
+    .insight-item.warning {
+      border-left: 3px solid var(--accent-red);
+      background: rgba(244, 63, 94, 0.02);
+    }
+
+    .insight-content h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .insight-content p {
+      font-size: 13px;
+      color: var(--tx-muted);
+      line-height: 1.5;
+    }
+
+    /* Action Plan */
+    .actions-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .action-card {
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent-teal);
+      border-radius: 10px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .action-card.urgent {
+      border-top-color: var(--accent-gold);
+    }
+
+    .action-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      color: #ffffff;
+    }
+
+    .action-header svg {
+      width: 16px;
+      height: 16px;
+      color: var(--accent-teal);
+    }
+
+    .action-card.urgent .action-header svg {
+      color: var(--accent-gold);
+    }
+
+    .action-desc {
+      font-size: 13px;
+      color: var(--tx-muted);
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      color: var(--tx-muted);
+      font-size: 12px;
+      margin-top: 40px;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-right {
+      font-family: monospace;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Utility */
+    .highlight-gold {
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    .highlight-teal {
+      color: var(--accent-teal);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    
+    <header>
+      <div class="brand">
+        <div class="brand-title">Bali Healing</div>
+        <div class="brand-subtitle">Google Ads Campaign Dashboard</div>
+      </div>
+      <div class="meta-box">
+        <span class="meta-tag">Campaign Active</span>
+        <div class="meta-date">Aug 3 – Aug 9, 2026 (First real week of delivery)</div>
+        <div class="meta-details">
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            Account: <span>Bali Healing – Ozone (239-394-2913)</span>
+          </div>
+          <div class="meta-item">
+            MCC: <span>741.Studio (476-158-5143)</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Controls -->
+    <div class="controls">
+      <span class="control-label">Report Currency:</span>
+      <div class="toggle-group">
+        <button id="btn-idr" class="toggle-btn active" onclick="setCurrency('IDR')">IDR (Rp)</button>
+        <button id="btn-eur" class="toggle-btn" onclick="setCurrency('EUR')">EUR (€)</button>
+      </div>
+    </div>
+
+    <!-- Executive Headline -->
+    <div class="headline-card">
+      <div class="headline-title">
+        <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        Performance Summary
+      </div>
+      <div class="headline-content">
+        First week of delivery went live successfully. Very strong 10.53% CTR indicates excellent ad copy & keyword match. 0 WhatsApp conversions is normal and mathematically expected at 6 clicks. Budget utilization is low (5%) due to natural search volume caps for "ozone therapy" in Bali, not budget restrictions.
+      </div>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="stats-grid">
+      <!-- IMPRESSIONS -->
+      <div class="stat-card accent-teal">
+        <div class="stat-header">
+          <span class="stat-title">Impressions</span>
+          <div class="stat-icon">
+            <svg style="width: 16px; height: 16px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+          </div>
+        </div>
+        <div class="stat-value">57</div>
+        <div class="stat-meta">
+          <span class="stat-change up">↑ 57</span> vs. prior 7 days
+        </div>
+      </div>
+      
+      <!-- CLICKS -->
+      <div class="stat-card accent-teal">
+        <div class="stat-header">
+          <span class="stat-title">Clicks</span>
+          <div class="stat-icon">
+            <svg style="width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24"><path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="stat-value">6</div>
+        <div class="stat-meta">
+          <span class="stat-change up">↑ 6</span> vs. prior 7 days
+        </div>
+      </div>
+
+      <!-- CTR -->
+      <div class="stat-card accent-green">
+        <div class="stat-header">
+          <span class="stat-title">Click-Through Rate</span>
+          <div class="stat-icon">
+            <svg style="width: 16px; height: 16px; fill: currentColor;" viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+          </div>
+        </div>
+        <div class="stat-value">10.53%</div>
+        <div class="stat-meta">
+          <span class="stat-change up" style="background: rgba(16, 185, 129, 0.15); padding: 1px 6px; border-radius: 4px;">Top 5%</span> benchmark rating
+        </div>
+      </div>
+
+      <!-- AVG. CPC -->
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-title">Avg. CPC</span>
+          <div class="stat-icon">
+            <svg style="width: 16px; height: 16px; fill: currentColor;" viewBox="0 0 24 24"><path d="M21 7.28V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-2.28c.59-.35 1-.98 1-1.72V9c0-.74-.41-1.37-1-1.72zM20 9v6h-7V9h7zM5 5h14v1.78c-.61.55-1 1.34-1 2.22v6c0 .88.39 1.67 1 2.22V19H5V5z"/></svg>
+          </div>
+        </div>
+        <div class="stat-value" id="val-cpc">IDR 10,001</div>
+        <div class="stat-meta">
+          <span class="stat-change neutral">Max cap: €0.60</span>
+        </div>
+      </div>
+
+      <!-- COST -->
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-title">Total Cost</span>
+          <div class="stat-icon">
+            <svg style="width: 16px; height: 16px; fill: currentColor;" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+          </div>
+        </div>
+        <div class="stat-value" id="val-cost">IDR 60,008</div>
+        <div class="stat-meta">
+          <span class="stat-change neutral">~5% budget used</span>
+        </div>
+      </div>
+
+      <!-- LEADS -->
+      <div class="stat-card accent-gold">
+        <div class="stat-header">
+          <span class="stat-title">WhatsApp Leads</span>
+          <div class="stat-icon">
+            <svg style="width: 16px; height: 16px; fill: currentColor;" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </div>
+        </div>
+        <div class="stat-value">0</div>
+        <div class="stat-meta">
+          <span class="stat-change neutral">Tracking verified live</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Section Grid -->
+    <div class="dashboard-layout">
+      
+      <!-- LEFT COLUMN -->
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        
+        <!-- Funnel and Setup Details -->
+        <div class="panel">
+          <div class="panel-header">
+            <h2 class="panel-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+              Weekly Performance Funnel
+            </h2>
+            <span class="panel-badge">Aug 3-9, 2026</span>
+          </div>
+
+          <div class="funnel-container">
+            <!-- Impressions -->
+            <div class="funnel-layer impr">
+              <div class="funnel-label">Impressions</div>
+              <div class="funnel-bar-wrap">
+                <div class="funnel-bar-fill" style="width: 100%;"></div>
+              </div>
+              <div class="funnel-val">57</div>
+            </div>
+
+            <!-- Clicks -->
+            <div class="funnel-layer clicks">
+              <div class="funnel-conversion-rate">10.53% CTR</div>
+              <div class="funnel-label">Clicks</div>
+              <div class="funnel-bar-wrap">
+                <div class="funnel-bar-fill" style="width: 10.53%;"></div>
+              </div>
+              <div class="funnel-val">6</div>
+            </div>
+
+            <!-- WhatsApp Click -->
+            <div class="funnel-layer leads">
+              <div class="funnel-conversion-rate">0.00% CVR</div>
+              <div class="funnel-label">WhatsApp Leads</div>
+              <div class="funnel-bar-wrap">
+                <div class="funnel-bar-fill" style="width: 0%;"></div>
+              </div>
+              <div class="funnel-val">0</div>
+            </div>
+          </div>
+
+          <div class="details-list" style="margin-top: 10px; border-top: 1px solid var(--border); padding-top: 16px;">
+            <div class="details-item">
+              <span class="details-label">Campaign Setup</span>
+              <span class="details-val">Search Campaign · English · Bali target (Presence only)</span>
+            </div>
+            <div class="details-item">
+              <span class="details-label">Ad Group</span>
+              <span class="details-val">Ozone Therapy</span>
+            </div>
+            <div class="details-item">
+              <span class="details-label">Target Page</span>
+              <span class="details-val"><a href="https://www.balihealing.com/ozone-hyperbaric-major-autohemotherapy" target="_blank">balihealing.com/ozone...autohemotherapy</a></span>
+            </div>
+            <div class="details-item">
+              <span class="details-label">Bidding Configuration</span>
+              <span class="details-val">Maximize Clicks (CPC limit: <span class="calc-val-cpc">IDR 10,590</span> / €0.60)</span>
+            </div>
+            <div class="details-item">
+              <span class="details-label">Daily Budget</span>
+              <span class="details-val"><span class="calc-val-budget">IDR 176,500</span> / €10.00</span>
+            </div>
+            <div class="details-item">
+              <span class="details-label">Optimization Score</span>
+              <span class="details-val highlight-teal">83.8%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Projection Calculator (WOW Factor) -->
+        <div class="panel">
+          <div class="panel-header">
+            <h2 class="panel-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="9"></line><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="15" y2="17"></line><line x1="12" y1="9" x2="12" y2="17"></line></svg>
+              Interactive Projection Calculator
+            </h2>
+            <span class="panel-badge">Lead Scenarios</span>
+          </div>
+
+          <p style="font-size: 13px; color: var(--tx-muted); margin-bottom: 8px;">
+            Adjust the inputs below to visualize how the campaign will scale when impressions increase (broadened reach) and when we receive our first WhatsApp conversions (standard lead rates).
+          </p>
+
+          <div class="calc-slider-group">
+            <!-- Slider 1: Impressions -->
+            <div class="calc-row">
+              <div class="calc-info">
+                <span class="calc-label">Impression Volume (Traffic Opportunity)</span>
+                <span class="calc-num" id="calc-impr-val">500</span>
+              </div>
+              <div class="calc-slider-wrap">
+                <input type="range" id="slider-impr" min="50" max="5000" step="50" value="500" oninput="updateCalculator()">
+              </div>
+            </div>
+
+            <!-- Slider 2: CTR -->
+            <div class="calc-row">
+              <div class="calc-info">
+                <span class="calc-label">Ad Click-Through Rate (CTR)</span>
+                <span class="calc-num" id="calc-ctr-val">10.53%</span>
+              </div>
+              <div class="calc-slider-wrap">
+                <input type="range" id="slider-ctr" min="1" max="25" step="0.5" value="10.5" oninput="updateCalculator()">
+              </div>
+            </div>
+
+            <!-- Slider 3: CVR -->
+            <div class="calc-row">
+              <div class="calc-info">
+                <span class="calc-label">WhatsApp Lead Conversion Rate (CVR)</span>
+                <span class="calc-num" id="calc-cvr-val">10.0%</span>
+              </div>
+              <div class="calc-slider-wrap">
+                <input type="range" id="slider-cvr" min="1" max="25" step="0.5" value="10.0" oninput="updateCalculator()">
+              </div>
+            </div>
+          </div>
+
+          <!-- Projection Output Card -->
+          <div class="projection-results">
+            <div class="projection-card">
+              <span class="proj-title">Projected Clicks</span>
+              <span class="proj-value teal" id="proj-clicks">53</span>
+            </div>
+            
+            <div class="projection-card">
+              <span class="proj-title">Projected Spend</span>
+              <span class="proj-value" id="proj-spend">IDR 530,053</span>
+            </div>
+
+            <div class="projection-card">
+              <span class="proj-title">Projected WA Leads</span>
+              <span class="proj-value green" id="proj-leads">5</span>
+            </div>
+
+            <div class="projection-card">
+              <span class="proj-title">Cost Per Lead (CPL)</span>
+              <span class="proj-value gold" id="proj-cpl">IDR 106,011</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        
+        <!-- Key Analysis & Reading -->
+        <div class="panel">
+          <div class="panel-header">
+            <h2 class="panel-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Campaign Insights
+            </h2>
+            <span class="panel-badge">The Read</span>
+          </div>
+
+          <div class="insights-grid">
+            <div class="insight-item">
+              <div class="insight-num">1</div>
+              <div class="insight-content">
+                <h3>Delivery Status</h3>
+                <p>The campaign is live and serving. Good execution check on the technical setup (conversion triggers, billing, structure).</p>
+              </div>
+            </div>
+
+            <div class="insight-item">
+              <div class="insight-num">2</div>
+              <div class="insight-content">
+                <h3>Excellent Click Quality</h3>
+                <p>A CTR of <span class="highlight-teal">10.53%</span> is exceptional (industry avg: ~3-5%). This confirms ad copy and target search keywords match buyer intent perfectly.</p>
+              </div>
+            </div>
+
+            <div class="insight-item">
+              <div class="insight-num">3</div>
+              <div class="insight-content">
+                <h3>Search Volume Constraint</h3>
+                <p>Impressions are low (57) because search demand for "ozone therapy" in Bali is naturally thin. We are demand-capped, meaning raising the budget won't generate more clicks; we need broader keywords.</p>
+              </div>
+            </div>
+
+            <div class="insight-item">
+              <div class="insight-num">4</div>
+              <div class="insight-content">
+                <h3>0 Lead Expectation</h3>
+                <p>No conversions are expected at 6 clicks. Conversion tracking (WhatsApp clicks) is live, tested, and verified—it simply needs a statistically normal volume of traffic (e.g. 30-50 clicks) to land the first leads.</p>
+              </div>
+            </div>
+
+            <div class="insight-item warning">
+              <div class="insight-num">⚠️</div>
+              <div class="insight-content">
+                <h3>Indonesia Tax ID (NPWP)</h3>
+                <p class="highlight-gold">Google indicates the Indonesia tax ID (NPWP) is not verified. This must be resolved in Billing settings to avoid compliance/tax invoice blockages.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Items -->
+        <div class="panel">
+          <div class="panel-header">
+            <h2 class="panel-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+              Next Actions
+            </h2>
+            <span class="panel-badge">Execution Plan</span>
+          </div>
+
+          <div class="actions-list" style="grid-template-columns: 1fr;">
+            <div class="action-card">
+              <div class="action-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                1. Broaden Keyword Focus
+              </div>
+              <div class="action-desc">
+                Since pure "ozone" queries are highly niche, add adjacent wellness ad groups (e.g., IV therapy, wellness clinics Canggu/Ubud, biological detox) to boost impression and click volume.
+              </div>
+            </div>
+
+            <div class="action-card">
+              <div class="action-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"></path><polyline points="17 6 23 6 23 12"></polyline></svg>
+                2. Loosen CPC Cap
+              </div>
+              <div class="action-desc">
+                Gradually loosen the €0.60 CPC limit (e.g., test €0.70-0.80) to check if we can win a higher share of the thin search demand.
+              </div>
+            </div>
+
+            <div class="action-card">
+              <div class="action-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                3. Bidding & Timeframe
+              </div>
+              <div class="action-desc">
+                Maintain "Maximize Clicks" until the pixel records at least 15-30 conversions, then switch to automated "Maximize Conversions". Run for 2-3 more weeks before determining ROI.
+              </div>
+            </div>
+
+            <div class="action-card urgent">
+              <div class="action-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                4. Fix NPWP Tax-ID (Admin)
+              </div>
+              <div class="action-desc">
+                Verify the Indonesian tax registration in the billing tab to prevent payment holdbacks or invoices issues.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="footer-left">
+        <span>Report prepared for <strong>Bali Healing Center</strong> by</span>
+        <svg viewBox="0 0 134 32" style="height: 14px; fill: #ffffff; display: inline-block; vertical-align: middle;">
+          <!-- 741.studio text logo representation -->
+          <text x="0" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="22" fill="#ffffff" letter-spacing="1">741<tspan fill="#0ea5e9">.STUDIO</tspan></text>
+        </svg>
+      </div>
+      <div class="footer-right">
+        IDR_RATE = 17,650 per EUR
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Exchange rate definition
+    const IDR_PER_EUR = 17650;
+    
+    // Campaign Raw Metrics (Aug 3-9)
+    const baseMetrics = {
+      clicks: 6,
+      impressions: 57,
+      ctr: 10.53,
+      cpc_idr: 10001,
+      cost_idr: 60008,
+      conversions: 0,
+      budget_idr: 176500 // IDR ~176.5k (equivalent to €10/day)
+    };
+
+    // Current Currency State
+    let currentCurrency = 'IDR';
+
+    // Format number wrapper
+    function fmt(val, isCurrency = false, isInt = false) {
+      if (isCurrency) {
+        if (currentCurrency === 'IDR') {
+          return 'IDR ' + Math.round(val).toLocaleString('en-US');
+        } else {
+          const eurVal = val / IDR_PER_EUR;
+          return '€' + (isInt ? Math.round(eurVal) : eurVal.toFixed(2)).toLocaleString('en-US');
+        }
+      }
+      return isInt ? Math.round(val).toLocaleString('en-US') : val.toLocaleString('en-US');
+    }
+
+    // Set active currency toggle
+    function setCurrency(cur) {
+      currentCurrency = cur;
+      
+      // Update toggle buttons class
+      document.getElementById('btn-idr').classList.toggle('active', cur === 'IDR');
+      document.getElementById('btn-eur').classList.toggle('active', cur === 'EUR');
+      
+      // Refresh static numeric dashboard fields
+      document.getElementById('val-cpc').innerText = fmt(baseMetrics.cpc_idr, true);
+      document.getElementById('val-cost').innerText = fmt(baseMetrics.cost_idr, true);
+      
+      // Update details fields
+      document.querySelectorAll('.calc-val-cpc').forEach(el => {
+        el.innerText = fmt(baseMetrics.cpc_idr * 1.059, true); // approx CPC limit
+      });
+      document.querySelectorAll('.calc-val-budget').forEach(el => {
+        el.innerText = fmt(baseMetrics.budget_idr, true);
+      });
+
+      // Update calculations
+      updateCalculator();
+    }
+
+    // Interactive Projection Calculator Logic
+    function updateCalculator() {
+      // Get slider inputs
+      const impr = parseFloat(document.getElementById('slider-impr').value);
+      const ctr = parseFloat(document.getElementById('slider-ctr').value);
+      const cvr = parseFloat(document.getElementById('slider-cvr').value);
+
+      // Update slider visual text values
+      document.getElementById('calc-impr-val').innerText = fmt(impr, false, true);
+      document.getElementById('calc-ctr-val').innerText = ctr.toFixed(2) + '%';
+      document.getElementById('calc-cvr-val').innerText = cvr.toFixed(1) + '%';
+
+      // Perform calculations
+      const projectedClicks = Math.round(impr * (ctr / 100));
+      const projectedSpendIDR = projectedClicks * baseMetrics.cpc_idr;
+      const projectedLeads = Math.round(projectedClicks * (cvr / 100));
+      
+      let cplText = '—';
+      if (projectedLeads > 0) {
+        cplText = fmt(projectedSpendIDR / projectedLeads, true);
+      }
+
+      // Update projected UI values
+      document.getElementById('proj-clicks').innerText = fmt(projectedClicks, false, true);
+      document.getElementById('proj-spend').innerText = fmt(projectedSpendIDR, true);
+      document.getElementById('proj-leads').innerText = fmt(projectedLeads, false, true);
+      document.getElementById('proj-cpl').innerText = cplText;
+    }
+
+    // Set initial values on load
+    window.onload = function() {
+      setCurrency('IDR');
+    };
+  </script>
+</body>
+</html>

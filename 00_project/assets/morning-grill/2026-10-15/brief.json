@@ -1,0 +1,675 @@
+{
+ "date": "2026-10-15",
+ "bookmark": "2026-10-14T05:44+08:00",
+ "read_at": "2026-10-15T06:04+08:00",
+ "time_zone": "WITA (UTC+8)",
+ "sources": {
+  "S1_sessions": {
+   "status": "ok",
+   "error": null
+  },
+  "S2_chats": {
+   "status": "ok",
+   "error": null
+  },
+  "S3_registry": {
+   "status": "ok",
+   "error": null
+  },
+  "S4_git": {
+   "status": "ok",
+   "error": null
+  },
+  "S5_standup": {
+   "status": "ok",
+   "error": null
+  },
+  "S6_nightshift": {
+   "status": "ok",
+   "error": null
+  },
+  "S7_citations": {
+   "status": "ok",
+   "error": null
+  },
+  "S8_tracking": {
+   "status": "unreadable",
+   "error": "tracking workflow not built yet"
+  },
+  "S9_memory": {
+   "status": "ok",
+   "error": null
+  },
+  "S10_calendar": {
+   "status": "ok",
+   "error": null
+  },
+  "S11_cards": {
+   "status": "ok",
+   "error": null
+  },
+  "S12_prospects": {
+   "status": "ok",
+   "error": null
+  },
+  "S13_deadlines": {
+   "status": "ok",
+   "error": null
+  }
+ },
+ "cards": [
+  {
+   "id": "2026-10-15-huewel-pr7",
+   "client": "Praxis Hüwel",
+   "priority": 2,
+   "type": "approve",
+   "headline": "Hüwel: new Anliegen-Seite (Schmerzen & Verletzungen) is a ready PR, waiting for your go to merge and deploy.",
+   "evidence": [
+    "s2 30032f40"
+   ],
+   "options": {
+    "a": "Merge and deploy now",
+    "b": "Show me the page first",
+    "c": "Not yet"
+   },
+   "recommended": "b",
+   "why": "A new page merits one look before it goes live, even if the PR is clean.",
+   "deadline": "2026-10-16",
+   "created": "2026-10-15",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "agent merges + deploys, checks live",
+    "b": "agent sends the preview link",
+    "c": "park reason"
+   },
+   "line": null,
+   "line_kind": "watch",
+   "source": "judgment (S2 15.10.)"
+  },
+  {
+   "id": "2026-10-15-kamil-reinfection",
+   "client": "Kamil (Physio Anatomie + Kraft)",
+   "priority": 2,
+   "type": "decide",
+   "headline": "Kamil: physiotherapiekraft.de was reinfected and cleaned a SECOND time, still locked (403). Password rotation is waiting on the cleanup finishing.",
+   "evidence": [
+    "s2 team cleanup"
+   ],
+   "options": {
+    "a": "Wait for the team to confirm clean, then rotate",
+    "b": "Rotate passwords now anyway",
+    "c": "Take the site fully offline until clean"
+   },
+   "recommended": "a",
+   "why": "Rotating mid-cleanup risks locking out the people fixing it.",
+   "deadline": "2026-10-16",
+   "created": "2026-10-15",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "card returns once the team confirms",
+    "b": "agent/Martin rotates now",
+    "c": "site goes offline, client told"
+   },
+   "line": null,
+   "line_kind": "watch",
+   "source": "judgment (S2 15.10.)"
+  },
+  {
+   "id": "2026-10-15-suriya-listing-mails",
+   "client": "Praxis Suriya",
+   "priority": 3,
+   "type": "route",
+   "headline": "Praxis Suriya: 28 directory confirmation emails are unhandled. Verify links can expire.",
+   "evidence": [
+    "Supabase listing_emails (handled = false)",
+    "S7"
+   ],
+   "options": {
+    "a": "Tantri clicks the verify links today (portal task + WhatsApp)",
+    "b": "Agent lists them first, I decide",
+    "c": "Park"
+   },
+   "recommended": "a",
+   "why": "Group A listings are 741's job; expired links mean a new submission.",
+   "deadline": "2026-10-15",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "task draft for Tantri with the list",
+    "b": "agent writes list into plan.md",
+    "c": "park reason required"
+   }
+  },
+  {
+   "id": "2026-10-15-night-stopped",
+   "client": "741 (night shift)",
+   "priority": 3,
+   "type": "decide",
+   "headline": "The night run stopped early (run cap 14: no room for Executor + Critic). 0 item(s) have no critic check.",
+   "evidence": [
+    "reporting/night-shift/2026-10-14/state.json",
+    "S6"
+   ],
+   "options": {
+    "a": "Re-run the unchecked items tonight",
+    "b": "Check them by hand in the walk queue",
+    "c": "Drop them"
+   },
+   "recommended": "a",
+   "why": "Unchecked items must not be released.",
+   "deadline": "2026-10-16",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "agent puts them into tonight's night queue card",
+    "b": "click cards with the file links",
+    "c": "marked skipped"
+   }
+  },
+  {
+   "id": "2026-10-15-STÜRZL Steue-approve",
+   "client": "STÜRZL Steuerstrafrecht",
+   "priority": 4,
+   "type": "approve",
+   "headline": "STÜRZL Steuerstrafrecht: 4 workflow results wait for your approval for more than 3 days (audit, cro, pool, cro_b).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-16",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-15-Praxis Hüwel-approve",
+   "client": "Praxis Hüwel",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Praxis Hüwel: 1 workflow results wait for your approval for more than 3 days (pool).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-16",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-15-Praxis Suriy-approve",
+   "client": "Praxis Suriya",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Praxis Suriya: 1 workflow results wait for your approval for more than 3 days (pool).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-16",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  }
+ ],
+ "below_the_line": [
+  {
+   "id": "2026-10-15-741 Studio (-approve",
+   "client": "741 Studio (Eigen-Audit)",
+   "priority": 4,
+   "type": "approve",
+   "headline": "741 Studio (Eigen-Audit): 1 workflow results wait for your approval for more than 3 days (audit).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-16",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-15-night-pass",
+   "client": "741 (night shift)",
+   "priority": 4,
+   "type": "approve",
+   "headline": "6 night result(s) passed the critic and wait for your release: Which live shuiguru.de pages lack the FAQ block; Cross-check Johni Jaya Motor's overdue task list a; Public check of physiotherapieoberhausen.com after; Continue the Suriya backlink checkpoint 1 research; Draft the design-approval record and Maps-name not.",
+   "evidence": [
+    "reporting/night-shift/2026-10-14/state.json",
+    "S6",
+    "reporting/night-shift/2026-10-14/items/brasse-faq-live-check/summary.md",
+    "reporting/night-shift/2026-10-14/items/johni-access-replan/summary.md",
+    "reporting/night-shift/2026-10-14/items/kamil-oberhausen-audit/summary.md",
+    "reporting/night-shift/2026-10-14/items/suriya-backlink-checkpoint1/summary.md",
+    "reporting/night-shift/2026-10-14/items/dumann-dashboard-items-draft/summary.md",
+    "reporting/night-shift/2026-10-14/items/huewel-gbp-round2-draft/summary.md"
+   ],
+   "options": {
+    "a": "I read the summaries: release them to the day queue",
+    "b": "Open them one by one (click cards)",
+    "c": "Park with a reason"
+   },
+   "recommended": "b",
+   "why": "Drafts reach clients only after your release; a short look is the real gate.",
+   "deadline": "2026-10-16",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "agent moves them into plan.md as 'ready to release' click cards",
+    "b": "one click card per result with the summary",
+    "c": "park reason"
+   }
+  },
+  {
+   "id": "2026-10-15-741-overdue",
+   "client": "741 (all clients)",
+   "priority": 4,
+   "type": "decide",
+   "headline": "54 portal tasks are overdue across 6 clients. Many may be done in chats but not ticked.",
+   "evidence": [
+    "reporting/standup/2026-10-14.json",
+    "S5",
+    "Praxis Suriya: 5",
+    "Praxis Hüwel: 2",
+    "Bali Healing: 22",
+    "Daniela Dumann: 4",
+    "Maria Brasse: 15",
+    "Rabenmütter: 6"
+   ],
+   "options": {
+    "a": "Agent matches overdue tasks to chat work and proposes 'needs review' / re-plan per client for Monday",
+    "b": "Re-plan all overdue tasks today",
+    "c": "Ignore the counts until the portal sync exists"
+   },
+   "recommended": "a",
+   "why": "Default D6 allows 'needs review'; you decide re-plans in the Monday review.",
+   "deadline": "2026-10-19",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "agent writes overdue-match.md; Monday card",
+    "b": "agent drafts re-plan now",
+    "c": "park with reason"
+   }
+  },
+  {
+   "id": "2026-10-15-741-citations-stale",
+   "client": "741 (citations)",
+   "priority": 5,
+   "type": "decide",
+   "headline": "Citations stand still: Praxis Suriya 25, Praxis Hüwel 29 entries are 'planned' for more than 14 days.",
+   "evidence": [
+    "Supabase client_citations",
+    "S7",
+    "memory citations-listings-module"
+   ],
+   "options": {
+    "a": "Tantri works the group-A list this week, 10 per day",
+    "b": "First build the citations workflow (run file, runbook), then work",
+    "c": "Park until the backlink merge is done"
+   },
+   "recommended": "a",
+   "why": "Citations live is a leading number in every goal sheet; the runbook already exists.",
+   "deadline": "2026-10-16",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "task drafts per client from reporting/submission-runbook.mjs output",
+    "b": "start ⚙️🖇️ chat task",
+    "c": "park"
+   }
+  }
+ ],
+ "walk_queue": [
+  {
+   "client": "741 (security)",
+   "item": "Rotate stolen SSH keys + Hostinger password, remove Atomic BI Chrome extension, turn Mac firewall on (10 min)",
+   "deadline": "2026-10-15",
+   "id": "2026-10-15-security-open"
+  }
+ ],
+ "clients": {
+  "Praxis Suriya": {
+   "today": [
+    "Program task (week 6): 30-Tage-Zwischenmessung + Vorher/Nachher-Grid an Kunden",
+    "Open from chat: BrightLocal campaign + 28 unhandled directory confirmation emails handed off as tomorrow's day work [b88add01-075c-4d8b-9213-05abf36dd995.jsonl]"
+   ],
+   "fixed": [
+    "Review strategy delivered: plan + 2 WhatsApp templates + materials page live; card E8 released in her portal [e418e89f-75da-412d-8821-da8997f51fe4.jsonl]",
+    "Backlink workflow DACH started: 93 domains checked, 87 spam, 1 real target (Heilpraktikerschule Wimmer) [b88add01-075c-4d8b-9213-05abf36dd995.jsonl]",
+    "Night-shift backlink checkpoint sorted 21 local targets, critic passed [671568b5-df6f-4641-9bff-4baf5a726bfb.jsonl]",
+    "Fresh full WordPress backup run (last one was 15 days old) before any site change [b88add01-075c-4d8b-9213-05abf36dd995.jsonl]",
+    "Run backlink: in Arbeit (2026-10-14)",
+    "Night result ready: Continue the Suriya backlink checkpoint 1 research (critic passed, not released)"
+   ],
+   "watch": [
+    "Access missing: Google Search Console, Website / Hosting / CMS",
+    "5 overdue portal tasks",
+    "Last portal activity 2026-10-13 (portal only; chat work does not show)",
+    "Citations: 31 live, 0 submitted, 25 planned",
+    "Waiting for client: GSC access back since 2026-10-12",
+    "Waiting for client: answer to review-strategy decision card E8 (A or B)"
+   ],
+   "next": [
+    "First Falcon scan after cycle reset ~19.10.",
+    "Next workflow: tracking (first scan), phone"
+   ],
+   "goal": "Top 3 in the Maps grid for the 5 tracked keywords (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P4",
+   "chat": "local_3702122f-abe4-4a49-9c58-2ab484fd1086"
+  },
+  "Praxis Hüwel": {
+   "today": [
+    "Program task (week 8): GBP-Engagement-Takt (Fotos, Angebote, Q&A)",
+    "Program task (week 8): PR-Pipeline weiterführen",
+    "Open from chat: Falcon after-scan incomplete, 4 of 6 keywords unscanned; credits renew around 19.10 [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]",
+    "Open from chat: PR #7 (Schmerzen-Seite) needs Martin's go to go live; Barbara N. testimonial consent still unconfirmed [30032f40-112f-40e2-9d8e-ed66bfdce9e1.jsonl]",
+    "Open from chat: Anliegen-Seite \"Stress und Psyche\" still to build as its own job [30032f40-112f-40e2-9d8e-ed66bfdce9e1.jsonl]"
+   ],
+   "fixed": [
+    "New page /anliegen-schmerzen-verletzungen.html built via CRO+content-write workflow, draft PR #7, nothing live [30032f40-112f-40e2-9d8e-ed66bfdce9e1.jsonl]",
+    "Dashboard card E11 opened: draft link so Hüwel can review and give feedback [30032f40-112f-40e2-9d8e-ed66bfdce9e1.jsonl]",
+    "New German client dashboard (dsh.js) built and live for Hüwel first, with an Ergebnisse card (GSC+GA4 numbers) [f239aac6-bbec-4997-a303-916ed3a078f9.jsonl]",
+    "7 decision cards E1-E3 and E5-E8 set to go, each with its own work task created [f239aac6-bbec-4997-a303-916ed3a078f9.jsonl]",
+    "Night result ready: Draft Hüwel's GBP round 2 content (FAQ + remaining services) (critic passed, not released)"
+   ],
+   "watch": [
+    "Access missing: Google Tag Manager",
+    "2 overdue portal tasks",
+    "Last portal activity 2026-10-13 (portal only; chat work does not show)",
+    "Citations: 38 live, 0 submitted, 29 planned"
+   ],
+   "next": [
+    "GBP round 2 (FAQ, review replies, ~19 services)",
+    "Next workflow: phone, citations"
+   ],
+   "goal": "First measurable patient leads from Maps and the website (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P4",
+   "chat": "local_78a6b59d-dc6b-486c-a4fc-55c99656b50e"
+  },
+  "STÜRZL Steuerstrafrecht": {
+   "today": [
+    "Program task (week 0): Kategorien, sämtliche Leistungen + Beschreibungen, Unternehmensbeschreibung",
+    "Program task (week 0): Öffnungszeiten-Hebel, Termin-URL, Attribute, FAQ",
+    "Program task (week 0): Vollaudit + neue Seitenarchitektur (Standorte, Rechtsgebiete, Anwältin, Hub/Spoke)",
+    "Open from chat: She still has no portal password, so she cannot log in to her dashboard yet [c072bfc1-02a5-44cd-9f72-57190095d7aa.jsonl]"
+   ],
+   "fixed": [
+    "Checked 3 sources for an existing Google Ads account (741studio18, her GA4 links, Ads Transparency): none found [5a89f936-dc15-4db3-98f2-8cb0ee11d622.jsonl]",
+    "Decision card E8 released: \"does an Ads account exist\", recommended option is a new account under her own address [5a89f936-dc15-4db3-98f2-8cb0ee11d622.jsonl]",
+    "Google-profile data (calls, directions) live on her feed [c072bfc1-02a5-44cd-9f72-57190095d7aa.jsonl]"
+   ],
+   "watch": [
+    "Access missing: Google Ads",
+    "Onboarding 0/6, next: Vertrag & AVV unterzeichnen",
+    "Last portal activity 2026-10-13 (portal only; chat work does not show)",
+    "Citations: 0 live, 0 submitted, 0 planned",
+    "Waiting for client: answer to card E8 (Google Ads account), 7-day deadline, reminder after 3 days"
+   ],
+   "next": [
+    "Google Ads live within 2 weeks of start (due ~2026-10-21)",
+    "Next workflow: copy approvals, cro"
+   ],
+   "goal": "Start date fixed, Google Ads live within 2 weeks after start, approved money pages live (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P1",
+   "chat": "local_4d2052e4-d986-4cc4-a03c-d4d8d7b79bdb"
+  },
+  "Daniela Dumann": {
+   "today": [
+    "Program task (week 5): Hub-Seite + erste 4–6 Spoke-Seiten (nach Buchungswert priorisiert)",
+    "Program task (week 5): Gastartikel 1 platziert",
+    "Open from chat: Apology + new-login message to Daniela is drafted but not yet sent [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]"
+   ],
+   "fixed": [
+    "All 27 decision cards now released; another session found 20 extra real pages beyond the original 7 [0d991c89-d222-4753-8b45-fd40f1c857f2.jsonl]",
+    "Status page \"Dein SEO-Fahrplan\" live in her portal, 13 cards open for her [065572cb-f2b0-4923-b9a8-4d18606e8a2f.jsonl]",
+    "Her feed went live on the new dashboard (Google Search Console data only, no GA4 property found) [c072bfc1-02a5-44cd-9f72-57190095d7aa.jsonl]",
+    "Night-shift drafted design-approval record + Maps-name note for her dashboard, critic passed [0f052383-3f7b-4d56-b36e-0b010a99c978.jsonl]",
+    "Night result ready: Draft the design-approval record and Maps-name note for Daniela's dashboard (critic passed, not released)"
+   ],
+   "watch": [
+    "Access missing: Google Tag Manager",
+    "4 overdue portal tasks",
+    "Onboarding 5/6, next: Fragebogen Positionierung",
+    "Last portal activity 2026-10-13 (portal only; chat work does not show)",
+    "Citations: 1 live, 0 submitted, 85 planned, 4 inconsistent"
+   ],
+   "next": [
+    "Next workflow: pool -> sitetree, copy"
+   ],
+   "goal": "53 Google reviews by day 90 and top 3 in Maps for the main keywords (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P4",
+   "chat": "local_03cdcb69-f227-4162-98d2-430bfd51b959"
+  },
+  "Maria Brasse": {
+   "today": [
+    "Program task (week 5): Gastartikel 1 platziert",
+    "Open from chat: No Google Analytics property found for her yet [c072bfc1-02a5-44cd-9f72-57190095d7aa.jsonl]"
+   ],
+   "fixed": [
+    "Night-shift audit: checked live shuiguru.de pages vs the 12 approved texts for a missing FAQ block, critic passed [41083452-bd45-4055-80c0-33284585c6ac.jsonl]",
+    "Google-profile numbers confirmed on her feed: 56 route requests in Sept, 14 reviews at 4.9 stars [c072bfc1-02a5-44cd-9f72-57190095d7aa.jsonl]",
+    "Night result ready: Which live shuiguru.de pages lack the FAQ block (critic passed, not released)"
+   ],
+   "watch": [
+    "Access missing: Google Tag Manager",
+    "15 overdue portal tasks",
+    "Last portal activity 2026-10-13 (portal only; chat work does not show)",
+    "Waiting for your approval: prospect result from 2026-10-13",
+    "Citations: 1 live, 25 submitted, 31 planned",
+    "Waiting for client: share Google Search Console with the 741 reporting account"
+   ],
+   "next": [
+    "Next workflow: citations live checks"
+   ],
+   "goal": "Top 3 in Maps for Feng Shui Berlin keywords and more requests than the 30.09. baseline (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P4",
+   "chat": "local_a6311a65-fd78-4230-bc86-c427aa7cb0dc"
+  },
+  "Bali Healing": {
+   "today": [
+    "Program task (week 5): Hub page + first 4-6 spoke pages (prioritised by booking value)",
+    "Program task (week 5): Guest article 1 placed",
+    "Open from chat: Testimonial-video section (from the About page) still to be added to the landing pages [e9c4af07-3299-4589-a6fe-c51d3d98e3df.jsonl]",
+    "Open from chat: GBP description text, Person/FAQ schema, Core Web Vitals, and remaining location pages still open [e9c4af07-3299-4589-a6fe-c51d3d98e3df.jsonl]"
+   ],
+   "fixed": [
+    "Wix \"Similar Treatments\" section rolled out: all 10 of 10 Beauty landing pages live with the section [e9c4af07-3299-4589-a6fe-c51d3d98e3df.jsonl]",
+    "Program checklist re-verified: 6 items ticked genuinely done, 3 marked open with a note on what's missing [e9c4af07-3299-4589-a6fe-c51d3d98e3df.jsonl]",
+    "Client tracker sheet updated in Drive to match real state [e9c4af07-3299-4589-a6fe-c51d3d98e3df.jsonl]"
+   ],
+   "watch": [
+    "22 overdue portal tasks",
+    "Onboarding 1/6, next: Grant access",
+    "Last portal activity 2026-10-13 (portal only; chat work does not show)",
+    "Waiting for your approval: audit result from 2026-10-13",
+    "Decided: Still open: agent prepares next step today (read-only Ads check + document list)"
+   ],
+   "next": [
+    "Next workflow: audit follow-up, pool"
+   ],
+   "goal": "Onboarding 6/6 and Google Ads live within 2 weeks, then bookings from Ads and Maps (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P1",
+   "chat": "local_f85771e6-dfcb-403a-a238-ed0fbccbb030"
+  },
+  "Rabenmütter": {
+   "today": [
+    "Open from chat: GA4 bot filter never activated; navigation by occasion/motif not built; Ausmal-Set untouched [7b5d9fd7-e3ba-4e2a-ba4a-e2ae6306a887.jsonl]",
+    "Open from chat: Muttertag collection only a stub, Trauerkarten hub only a short paragraph [7b5d9fd7-e3ba-4e2a-ba4a-e2ae6306a887.jsonl]"
+   ],
+   "fixed": [
+    "Program checklist re-verified against the real Shopify store: top-3 product pages + the \"22/30\" item ticked done [7b5d9fd7-e3ba-4e2a-ba4a-e2ae6306a887.jsonl]",
+    "Keyword positions confirmed: einfach nö #8, nö einfach nö #11, ich atme ein ich raste aus #27, fettnäpfchen #60 [7b5d9fd7-e3ba-4e2a-ba4a-e2ae6306a887.jsonl]",
+    "Dashboard display bug fixed (wrongly showed \"72 more than August\" with no August data yet) [c072bfc1-02a5-44cd-9f72-57190095d7aa.jsonl]"
+   ],
+   "watch": [
+    "6 overdue portal tasks",
+    "Onboarding 2/6, next: Konto & Stammdaten"
+   ],
+   "next": [],
+   "goal": "The 'Baseline -> Ziel' values of the Rabenmütter report page (Martin 2026-10-13); agent copies them here, Martin confirms",
+   "status": "active",
+   "phase": "P4",
+   "chat": "local_efe1b833-106f-4276-9bda-026856b03025"
+  },
+  "Johni Jaya Motor": {
+   "today": [
+    "Program task (week 9): Hours levers, booking URL, attributes, FAQ",
+    "Program task (week 9): Local directories + maps apps (Indonesian set)",
+    "Program task (week 9): Team briefing, scripts live, daily asking begins",
+    "Open from chat: Hours/booking-URL/attributes/FAQ checklist item stays open [701c3ead-2007-4dd1-bc2d-bc7ab8a9dd3e.jsonl]",
+    "Open from chat: His Google (Maps) listing still shows as not connected in Local Falcon, so his dashboard has no Google data [c072bfc1-02a5-44cd-9f72-57190095d7aa.jsonl]"
+   ],
+   "fixed": [
+    "Night-shift cross-check: of 25 overdue tasks, hours+booking were actually already done; FAQ is the real gap [a5816426-b156-4bc1-9fbb-abda703f1904.jsonl]",
+    "Week-9 checklist re-verified: only 1 of 4 items (categories/services/description) is genuinely done [701c3ead-2007-4dd1-bc2d-bc7ab8a9dd3e.jsonl]",
+    "Night result ready: Cross-check Johni Jaya Motor's overdue task list against today's findings (critic passed, not released)"
+   ],
+   "watch": [
+    "Onboarding 3/6, next: Upload material",
+    "Last portal activity 2026-10-13 (portal only; chat work does not show)"
+   ],
+   "next": [
+    "Access: GA4, Google Business Profile, GSC (Martin 13.10.: tracking already exists, GBP setup is what is left; he will double-check the rest)"
+   ],
+   "goal": "Restart: 3 missing access done, overdue list cleared or re-planned, then the normal Maps goal (Martin 2026-10-13)",
+   "status": "restart",
+   "phase": "P1",
+   "chat": "local_03e24cbe-ddb1-49e4-ba31-59f3ea5d57b4"
+  },
+  "Kamil (Physio Anatomie + Kraft)": {
+   "today": [
+    "Open from chat: physiotherapiekraft.de still closed (403) as of ~21:48; update stalled 7h then restarted, 8 of 9 items done [610a8689-b73f-4bfe-af28-425137092fae.jsonl]",
+    "Open from chat: WP-admin/FTP/cPanel/DB password rotation still pending full cleanup+verification [610a8689-b73f-4bfe-af28-425137092fae.jsonl]",
+    "Open from chat: CRO homepage prototype run for Kraft put on hold while the site is compromised [d1f7f540-3078-40fb-b5d9-714d17957a12.jsonl]"
+   ],
+   "fixed": [
+    "physiotherapiekraft.de reinfected again (casino spam, deleted homepage, new backdoors), fully cleaned 2nd time [610a8689-b73f-4bfe-af28-425137092fae.jsonl]",
+    "Homepage restored from an Aug 14 DB backup; 3 tampered WP core files replaced; self-healing malware watchdog killed [610a8689-b73f-4bfe-af28-425137092fae.jsonl]",
+    "Sister site physiotherapieoberhausen.com audited for the same signs (none found) [7a55ba9f-72c5-4a2e-83d1-cf1e3f085df1.jsonl]",
+    "Both practices live on the new client dashboard with a profile switch (Kraft/Anatomie) [8ccce35e-b7da-458b-a2e7-d85933e6ddb5.jsonl]",
+    "Night result ready: Public check of physiotherapieoberhausen.com after the Kraft hack (critic passed, not released)"
+   ],
+   "watch": [
+    "Waiting for team: cleanup + re-verification finished before Martin rotates all passwords"
+   ],
+   "next": [
+    "Move the monthly numbers into his client dashboard and prepare improvement recommendations (website, income streams)"
+   ],
+   "goal": "Monthly reports current (August, September) and cost per lead held or lowered (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P6",
+   "chat": "local_6681ef9f-5848-4b28-9073-25e5cacaf787"
+  },
+  "Marcel Rosenbach": {
+   "today": [
+    "Open from chat: Pipedrive backfill for 16 of the 23 missing participants still pending [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]",
+    "Open from chat: Cleanup still to do: delete probe tag, end test campaign, rename live campaign, merge duplicate Pipedrive contacts [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]"
+   ],
+   "fixed": [
+    "Root cause of broken automation found: placeholder KlickTipp tag ID never created; fixed once real tag existed [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]",
+    "End-to-end flow verified live with a real new signup: Tally to Zap to KlickTipp tag to Pipedrive, all steps green [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]",
+    "Mail 1 campaign built, placeholder-name bug fixed, started live after go [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]",
+    "Failure monitoring confirmed: 2 Telegram alert Zaps active plus a 5-minute UptimeRobot check [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]",
+    "Run automation: in Arbeit (2026-10-14)",
+    "Run canary: in Arbeit (2026-10-14)"
+   ],
+   "watch": [
+    "Waiting for client: confirm access wording (1 year vs 2 years) before Mail 1 text is finalised",
+    "Waiting for client: delete his own test contacts/deals in KlickTipp and Pipedrive"
+   ],
+   "next": [
+    "Landing page (in progress 13.10.) -> Martin's intro video -> prototype for Marcel -> Ads",
+    "Next workflow: offer, then cro / automation"
+   ],
+   "goal": "Close a new website build with a monthly subscription, plus Google Ads as soon as possible; show Hüwel as proof (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P0",
+   "chat": "local_61b8f208-18a7-4a11-981d-0fb3170dad82"
+  },
+  "me&you / Pauspapier": {
+   "today": [],
+   "fixed": [
+    "Drafted+sent message to Tajan sorting Marat's 4 feedback points, routing the no-show-rate item to the 08.10 plan [5c4f6ee6-ba4e-47c4-8a82-ecf176ed92ea.jsonl]",
+    "Confirmed the Calendly booking link is already built into the new appointment page [5c4f6ee6-ba4e-47c4-8a82-ecf176ed92ea.jsonl]"
+   ],
+   "watch": [],
+   "next": [
+    "Next workflow: cro checkpoint 3"
+   ],
+   "goal": "Both landing pages live and the no-show rate measured and lowered (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P4",
+   "chat": null
+  }
+ },
+ "line_741": [
+  "Parked (2026-09-23): waiting for the lawyer's reply to Martin's letter (pay 0 €)",
+  "Review pages ready, not sent: Claudia Tiemann, Ana Violeta Fredel, Stephan Meyer, Claudia Maria Steifensand, Manuela Stetter, Sabine Schwarz, Catja Grieshaber, Christian Ruether",
+  "Lead follow-up: Eri Trostl (overdue (> 7 days))"
+ ],
+ "goal_gaps": 18
+}

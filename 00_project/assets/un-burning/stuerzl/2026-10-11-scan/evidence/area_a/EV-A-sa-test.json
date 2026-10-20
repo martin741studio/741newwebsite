@@ -1,0 +1,50 @@
+{
+ "service_account": "reporting-bot@studio-apis-503306.iam.gserviceaccount.com",
+ "tests": [
+  {
+   "name": "gsc_sites_list",
+   "status": 200,
+   "body": {
+    "total_properties_visible": 5,
+    "stuerzl_matches": []
+   }
+  },
+  {
+   "name": "gsc_site_get sc-domain:stuerzl-steuerstrafrecht.de",
+   "status": 404,
+   "body": {
+    "error": "'sc-domain:stuerzl-steuerstrafrecht.de' is not a verified Search Console site in this account."
+   }
+  },
+  {
+   "name": "gsc_site_get https://stuerzl-steuerstrafrecht.de/",
+   "status": 404,
+   "body": {
+    "error": "'https://stuerzl-steuerstrafrecht.de/' is not a verified Search Console site in this account."
+   }
+  },
+  {
+   "name": "gsc_site_get https://www.stuerzl-steuerstrafrecht.de/",
+   "status": 404,
+   "body": {
+    "error": "'https://www.stuerzl-steuerstrafrecht.de/' is not a verified Search Console site in this account."
+   }
+  },
+  {
+   "name": "ga4_account_summaries",
+   "status": 200,
+   "body": {
+    "properties_visible": 39,
+    "matches_483853149": []
+   }
+  },
+  {
+   "name": "ga4_runReport_483853149",
+   "status": 403,
+   "body": {
+    "error": "User does not have sufficient permissions for this property. To learn more about Property ID, see https://developers.google.com/analytics/devguides/reporting/data/v1/property-id.",
+    "reason": "PERMISSION_DENIED"
+   }
+  }
+ ]
+}

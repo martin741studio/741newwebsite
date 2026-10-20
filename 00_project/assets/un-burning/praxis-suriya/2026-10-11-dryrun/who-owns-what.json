@@ -1,0 +1,248 @@
+{
+ "run": "praxis-suriya-2026-10-11-dryrun",
+ "rule": "100 percent client ownership, agency is admin. Statuses: owned, unconfirmed, third_party, unknown.",
+ "assets": [
+  {
+   "asset": "domain_registrar",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "unknown: DENIC and RDAP do not disclose the holder (entities list is empty)",
+   "741_role": "unknown",
+   "status": "unknown",
+   "evidence_ids": [
+    "EV-A-whois-www",
+    "EV-A-rdap-denic"
+   ],
+   "access_request": "Coralie shows the registrar account or sends a DENIC web-whois screenshot",
+   "confidence": "client_stated",
+   "note": "Martin: every asset is already with the owner (client_stated).",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "dns",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "Cyon name servers ns1.cyon.ch, ns2.cyon.ch; SOA serial 2023050203; zone last changed 2023-05-04 (DENIC)",
+   "741_role": "unknown",
+   "status": "unconfirmed",
+   "evidence_ids": [
+    "EV-A-dig-ns",
+    "EV-A-dig-soa",
+    "EV-A-whois-www"
+   ],
+   "access_request": "Confirm the Cyon account holder in the browser",
+   "confidence": "verified",
+   "note": "",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "hosting",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "Cyon (A 149.126.4.112, rDNS s103.cyon.net), LiteSpeed cache header",
+   "741_role": "admin (Cyon access per memory)",
+   "status": "unconfirmed",
+   "evidence_ids": [
+    "EV-A-dig-a",
+    "EV-A-headers-root"
+   ],
+   "access_request": "Confirm the Cyon account holder in the browser",
+   "confidence": "verified",
+   "note": "Mail MX is mail.suriya-praxis.de on Cyon; SPF include spf.protection.cyon.net.",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "cms",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "WordPress (Enfold + Elementor); admin user list not read (no WordPress access used in this run)",
+   "741_role": "admin user 'Martin' (memory, not re-verified)",
+   "status": "unknown (needs browser read)",
+   "evidence_ids": [
+    "EV-M-praxis-suriya-client"
+   ],
+   "access_request": "Read Users list in wp-admin",
+   "confidence": "verified",
+   "note": "",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "gbp",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "unknown: owner and manager list needs a logged-in read. Place ID ChIJCasDQHi-vUcR1iIwAQ6zUqI",
+   "741_role": "manager 741studio18@gmail.com (memory, not re-verified)",
+   "status": "unknown (needs browser read)",
+   "evidence_ids": [
+    "EV-M-praxis-suriya-client"
+   ],
+   "access_request": "Read GBP > Settings > People and access",
+   "confidence": "verified",
+   "note": "",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "ga4",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "unknown (needs browser read)",
+   "741_role": "unknown",
+   "status": "unknown (needs browser read)",
+   "evidence_ids": [],
+   "access_request": "Read GA4 > Admin > Access management",
+   "confidence": "client_stated",
+   "note": "",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "gsc",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "Service account reporting-bot@studio-apis-503306 has siteFullUser on https://suriya-praxis.de/ (verified). Owner list not readable via API.",
+   "741_role": "Full user (service account) and browser account 741studio18 (memory)",
+   "status": "unconfirmed",
+   "evidence_ids": [
+    "EV-E-gsc-sitemaps"
+   ],
+   "access_request": "Read Search Console > Settings > Users and permissions",
+   "confidence": "verified",
+   "note": "",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "gtm",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "unknown",
+   "741_role": "unknown",
+   "status": "unknown (needs browser read)",
+   "evidence_ids": [],
+   "access_request": "Ask which GTM container, if any, the site uses",
+   "confidence": "client_stated",
+   "note": "",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "ads",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "unknown",
+   "741_role": "unknown",
+   "status": "unknown (needs browser read)",
+   "evidence_ids": [],
+   "access_request": "Read Google Ads account access",
+   "confidence": "client_stated",
+   "note": "",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "social:instagram",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "Profile suriya.praxis exists (search result snippets). Other handles in use: coraliesuriyaperuma, suriyapraxis, suriya.ayurveda",
+   "741_role": "unknown",
+   "status": "unknown (needs browser read)",
+   "evidence_ids": [
+    "EV-C-search-1",
+    "EV-D-page-suriya-praxis.de_impressum",
+    "EV-C-scrape-cylex"
+   ],
+   "access_request": "Confirm which handle is the real one and who administers it",
+   "confidence": "verified",
+   "note": "",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "social:facebook",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "Profile facebook.com/coraliesuriyapperuma exists (search result). Other handles in use: hellotosuriyapperuma, naturheilpraxissuriya",
+   "741_role": "unknown",
+   "status": "unknown (needs browser read)",
+   "evidence_ids": [
+    "EV-C-search-1",
+    "EV-D-page-suriya-praxis.de_impressum",
+    "EV-C-scrape-cylex"
+   ],
+   "access_request": "Confirm which handle is the real one and who administers it",
+   "confidence": "verified",
+   "note": "",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "social:linkedin",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "Profile de.linkedin.com/in/coralie-suriyapperuma-coach exists (search result)",
+   "741_role": "unknown",
+   "status": "unknown (needs browser read)",
+   "evidence_ids": [
+    "EV-C-search-1"
+   ],
+   "access_request": null,
+   "confidence": "verified",
+   "note": "",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "listing:cylex",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "Not claimed: page offers 'Eintrag uebernehmen' and 'Eintrag entfernen'",
+   "741_role": "none",
+   "status": "third_party",
+   "evidence_ids": [
+    "EV-C-scrape-cylex"
+   ],
+   "access_request": "Coralie claims the listing (email or phone verification at Cylex)",
+   "confidence": "verified",
+   "note": "Two entries exist (main + duplicate).",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "listing:mapquest",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "Not claimed: 'Claim it' offered",
+   "741_role": "none",
+   "status": "third_party",
+   "evidence_ids": [
+    "EV-C-scrape-mapquest"
+   ],
+   "access_request": "Coralie claims the listing",
+   "confidence": "verified",
+   "note": "",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "listing:golocal",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "Marked as user report ('Nutzermeldung - nicht von golocal geprueft'); claim state unknown",
+   "741_role": "unknown",
+   "status": "unknown",
+   "evidence_ids": [
+    "EV-C-listing-golocal"
+   ],
+   "access_request": "Check if a golocal account exists for Coralie",
+   "confidence": "client_stated",
+   "note": "",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "listing:theralupa",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "Two entries (10902, 11505); login owner unknown",
+   "741_role": "unknown",
+   "status": "unknown",
+   "evidence_ids": [
+    "EV-C-listing-theralupa-10902",
+    "EV-C-listing-theralupa-11505"
+   ],
+   "access_request": "Coralie confirms which Theralupa login she has",
+   "confidence": "client_stated",
+   "note": "",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  },
+  {
+   "asset": "listing:wildcrumble_ug",
+   "owner_expected": "client (Coralie Suriyapperuma); 741 = admin",
+   "owner_found": "Related business, not harm: Wildcrumble UG (haftungsbeschraenkt), same address Schützenpfad 29 (Gebäude 44), same phone 0174 7411087, managing director Coralie Suriyapperuma",
+   "741_role": "none",
+   "status": "owned",
+   "evidence_ids": [
+    "EV-C-listing-wildcrumble-impressum"
+   ],
+   "access_request": null,
+   "confidence": "verified",
+   "note": "Shared phone and address with the practice. Needs no action. Note for NAP work: do not mix the two businesses in listings.",
+   "collected_at": "2026-10-11T01:43:42+02:00"
+  }
+ ],
+ "collected_at": "2026-10-11T01:43:42+02:00"
+}

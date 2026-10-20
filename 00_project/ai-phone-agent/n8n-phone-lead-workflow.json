@@ -1,0 +1,111 @@
+{
+  "name": "741 – Inbound Phone Lead (ElevenLabs → Supabase → Telegram)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "elevenlabs-postcall",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "b1a1e001-0000-4000-8000-000000000001",
+      "name": "ElevenLabs Post-Call",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [260, 300],
+      "webhookId": "elevenlabs-postcall"
+    },
+    {
+      "parameters": {
+        "jsCode": "const inp = $input.first().json;\nconst payload = inp.body ?? inp;\nconst data = payload.data ?? {};\nconst analysis = data.analysis ?? {};\nconst dcr = analysis.data_collection_results ?? {};\nconst meta = data.metadata ?? {};\nconst phone = meta.phone_call ?? {};\nconst val = (k) => (dcr[k] && dcr[k].value != null && String(dcr[k].value).trim() !== '' ? String(dcr[k].value).trim() : null);\n\nlet transcriptText = null;\nif (Array.isArray(data.transcript)) {\n  transcriptText = data.transcript\n    .map(t => `${t.role === 'agent' ? 'Assistentin' : 'Anrufer'}: ${t.message ?? ''}`)\n    .filter(s => s.replace(/^[^:]*:\\s*/, '').trim().length > 0)\n    .join('\\n');\n}\n\nconst bestTime = val('beste_uhrzeit');\nlet anliegen = val('anliegen');\nif (bestTime) anliegen = (anliegen ? anliegen + ' ' : '') + `(Beste Rückrufzeit: ${bestTime})`;\n\nconst duration = Number(meta.call_duration_secs ?? 0) || null;\nconst isSpam = !!(dcr.ist_spam && (dcr.ist_spam.value === true || dcr.ist_spam.value === 'true'));\nconst convId = data.conversation_id ?? null;\n\nconst row = {\n  quelle: 'telefon',\n  seite: 'gbp',\n  name: val('name'),\n  firma: val('firma'),\n  telefon: val('telefon') || phone.external_number || null,\n  caller_id: phone.external_number || null,\n  email: val('email'),\n  anliegen,\n  branche: val('branche'),\n  stadt: val('stadt'),\n  sprache: val('sprache') || 'de',\n  zusammenfassung: analysis.transcript_summary ?? null,\n  transcript: transcriptText,\n  recording_url: convId ? `https://elevenlabs.io/app/conversational-ai/history/${convId}` : null,\n  dauer_sekunden: duration,\n  conversation_id: convId,\n  status: 'neu'\n};\n\nconst hasContact = !!(row.name || row.telefon);\nconst keep = !isSpam && (duration === null || duration >= 10) && hasContact;\n\nconst tg = [\n  '📞 Neuer Anruf — 741 Studio',\n  row.name ? `👤 ${row.name}` : null,\n  row.firma ? `🏢 ${row.firma}` : null,\n  row.telefon ? `☎️ ${row.telefon}` : null,\n  row.stadt ? `📍 ${row.stadt}` : null,\n  row.anliegen ? `📝 ${row.anliegen}` : null,\n  row.zusammenfassung ? `\\n${row.zusammenfassung}` : null,\n  row.recording_url ? `\\n🎧 ${row.recording_url}` : null\n].filter(Boolean).join('\\n');\n\nreturn [{ json: { keep, isSpam, duration, row, telegram_text: tg } }];"
+      },
+      "id": "b1a1e001-0000-4000-8000-000000000002",
+      "name": "Map Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [480, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "typeValidation": "loose", "version": 2 },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "cond-keep",
+              "leftValue": "={{ $json.keep }}",
+              "rightValue": "",
+              "operator": { "type": "boolean", "operation": "true", "singleValue": true }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b1a1e001-0000-4000-8000-000000000003",
+      "name": "Lead behalten?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [700, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bgiljrygqvlgwsrjvhnp.supabase.co/rest/v1/phone_leads?on_conflict=conversation_id",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "apikey", "value": "={{ $env.SUPABASE_SERVICE_KEY }}" },
+            { "name": "Authorization", "value": "=Bearer {{ $env.SUPABASE_SERVICE_KEY }}" },
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "resolution=merge-duplicates,return=minimal" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.row) }}",
+        "options": {}
+      },
+      "id": "b1a1e001-0000-4000-8000-000000000004",
+      "name": "Supabase Insert",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [940, 220]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.telegram.org/bot{{ $env.TELEGRAM_BOT_TOKEN }}/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ chat_id: $env.TELEGRAM_CHAT_ID, text: $('Map Payload').item.json.telegram_text, disable_web_page_preview: true }) }}",
+        "options": {}
+      },
+      "id": "b1a1e001-0000-4000-8000-000000000005",
+      "name": "Telegram Notify",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1160, 220]
+    },
+    {
+      "parameters": {},
+      "id": "b1a1e001-0000-4000-8000-000000000006",
+      "name": "Verworfen (Spam/leer)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [940, 400]
+    }
+  ],
+  "connections": {
+    "ElevenLabs Post-Call": { "main": [[{ "node": "Map Payload", "type": "main", "index": 0 }]] },
+    "Map Payload": { "main": [[{ "node": "Lead behalten?", "type": "main", "index": 0 }]] },
+    "Lead behalten?": {
+      "main": [
+        [{ "node": "Supabase Insert", "type": "main", "index": 0 }],
+        [{ "node": "Verworfen (Spam/leer)", "type": "main", "index": 0 }]
+      ]
+    },
+    "Supabase Insert": { "main": [[{ "node": "Telegram Notify", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "pinData": {}
+}

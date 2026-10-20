@@ -1,0 +1,375 @@
+{
+  "run": "stuerzl-2026-10-11-scan",
+  "rule": "100 percent client ownership, agency is admin. Statuses: owned, unconfirmed, third_party, unknown. No asset is marked 'owned' because no ownership proof could be read without a logged-in browser. Rows built on older stored data carry their original date in collected_at.",
+  "assets": [
+    {
+      "asset": "domain_registrar",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "unknown: DENIC and RDAP do not disclose the holder (entities list empty). Status 'connect', last changed 2023-09-11T12:54:04+02:00. Name servers at Artfiles.",
+      "741_role": "unknown",
+      "status": "unknown",
+      "evidence_ids": [
+        "EV-A-whois-denic",
+        "EV-A-rdap-denic",
+        "EV-A-whois"
+      ],
+      "access_request": "Frau Jilg / Dr. Stürzl sends a DENIC web-whois screenshot (https://webwhois.denic.de) for stuerzl-steuerstrafrecht.de, or names the registrar account and its holder. Client approves adding Martin as admin contact.",
+      "confidence": "verified",
+      "note": "Holder hidden by DENIC policy: recorded as unreadable, not as 'nothing found'.",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "dns",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Artfiles name servers auth1.artfiles.de, auth2.artfiles.de. SOA serial 2026082604 (zone changed 2026-08-26). TXT: MS=ms12218001 (Microsoft 365 verification), google-site-verification (one token), SPF include:spf.protection.outlook.com ip4:89.63.12.99. No CAA.",
+      "741_role": "unknown (no DNS access)",
+      "status": "unconfirmed",
+      "evidence_ids": [
+        "EV-A-dig-ns",
+        "EV-A-dig-soa",
+        "EV-A-dig-txt",
+        "EV-A-dig-caa",
+        "EV-A-dig-ns-parent"
+      ],
+      "access_request": "Client names who holds the Artfiles customer account; client approves a read-only zone export or a second contact for DNS.",
+      "confidence": "verified",
+      "note": "",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "hosting",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Artfiles New Media GmbH, Hamburg: A 212.53.214.189, rDNS www140.c.artfiles.de, Apache. HTTPS valid (Let's Encrypt YR1, 2026-08-26 to 2026-11-24). Apex redirects to www (301).",
+      "741_role": "none: no FTP or hosting access (client_stated, 2026-10-09)",
+      "status": "unconfirmed",
+      "evidence_ids": [
+        "EV-A-dig-a",
+        "EV-A-dig-rdns",
+        "EV-A-whois-ip",
+        "EV-A-headers-https",
+        "EV-A-headers-www",
+        "EV-A-tls-cert",
+        "EV-A-baseline-s9-s11"
+      ],
+      "access_request": "Client names the Artfiles account holder (customer number) and approves a full site backup to the client plus 741 as second user.",
+      "confidence": "verified",
+      "note": "Hosting is not on a 741 server. TLS expires 2026-11-24 (auto-renew not verifiable).",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "mail",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "MX mail.stuerzl-steuerstrafrecht.de -> 89.63.12.99 (network WORTMANN AG, DE). SPF includes Microsoft Online Protection. Run by a third party.",
+      "741_role": "none",
+      "status": "unknown",
+      "evidence_ids": [
+        "EV-A-dig-mx",
+        "EV-A-dig-a-mail",
+        "EV-A-dig-txt"
+      ],
+      "access_request": "Client names the IT provider for mail and whether Microsoft 365 is used. Needed before any form or lead-intake mail is set up.",
+      "confidence": "verified",
+      "note": "",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "cms",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Joomla / Helix Ultimate / SP Page Builder. Super Users: the technical contact (Linkemann, user adminmili) and Framotec. The 741 account is group 'Administrator'.",
+      "741_role": "Administrator (not Super User)",
+      "status": "third_party",
+      "evidence_ids": [
+        "EV-A-baseline-s9-s11",
+        "EV-A-memory-excerpt",
+        "EV-A-home-html"
+      ],
+      "access_request": "Client approves a Super User role for the 741 account (per note of 2026-10-09 requested from Herr Linkemann; the backlog only shows a WhatsApp draft), or lets the contact execute the NAP change. Then read the user list and remove old agency users with the client's go.",
+      "confidence": "client_stated",
+      "note": "Blocks H-C-002 to H-C-004.",
+      "collected_at": "2026-10-09T00:00:00+02:00"
+    },
+    {
+      "asset": "gbp_frankfurt",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Anja Stürzl (anja.stuerzl@googlemail.com) is Primary owner; 741 (741studio18@gmail.com) and Michael Linkemann (michael@linkemann.de) are Managers. The former agency is not listed.",
+      "741_role": "manager",
+      "status": "owned",
+      "evidence_ids": [
+        "EV-A-browser-gbp-managers"
+      ],
+      "access_request": "Client approves reading GBP > Settings > People and access (screenshot), and, if Dr. Stürzl is not Primary Owner, a transfer of the primary ownership to a firm-owned Google account with 741 as manager.",
+      "confidence": "verified",
+      "note": "",
+      "collected_at": "2026-10-07T00:00:00+02:00",
+      "checked_at": "2026-10-11T11:39:35+08:00"
+    },
+    {
+      "asset": "gbp_muenchen",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "unknown: the München profile is not in the 741 account (33 businesses listed, one Stürzl profile)",
+      "741_role": "granted 2026-10-07, role not read",
+      "status": "unknown",
+      "evidence_ids": [
+        "EV-A-browser-gbp-businesslist"
+      ],
+      "access_request": "Same as Frankfurt, for the München profile.",
+      "confidence": "verified",
+      "note": "Second office, not a duplicate.",
+      "collected_at": "2026-10-07T00:00:00+02:00",
+      "checked_at": "2026-10-11T11:39:35+08:00"
+    },
+    {
+      "asset": "ga4",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "unconfirmed: 741 has an account role without Administrator and cannot list users. The former agency KEMB created the property in May 2025.",
+      "741_role": "non-admin (cannot manage users)",
+      "status": "unconfirmed",
+      "evidence_ids": [
+        "EV-A-browser-ga4-account-access"
+      ],
+      "access_request": "Client approves reading GA4 > Admin > Access management, makes the firm account Administrator, and adds reporting-bot@studio-apis-503306.iam.gserviceaccount.com as Viewer.",
+      "confidence": "verified",
+      "note": "Service account result is verified (2026-10-11); ownership facts are client_stated.",
+      "collected_at": "2026-10-09T00:00:00+02:00",
+      "checked_at": "2026-10-11T11:39:35+08:00"
+    },
+    {
+      "asset": "gsc",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Domain property sc-domain:stuerzl-steuerstrafrecht.de (TXT google-site-verification present). Holder presumed to be the technical contact (client_stated). Service account lists 5 properties, none for this site; sites.get returns 404 'not a verified Search Console site in this account' (2026-10-11).",
+      "741_role": "none",
+      "status": "unknown",
+      "evidence_ids": [
+        "EV-A-dig-txt",
+        "EV-A-sa-test",
+        "EV-A-baseline-s9-s11"
+      ],
+      "access_request": "Client or the technical contact adds the firm's Google account as Owner and 741studio18 plus reporting-bot@studio-apis-503306.iam.gserviceaccount.com as users. Needed for the disavow upload and index checks.",
+      "confidence": "verified",
+      "note": "Existence of a DNS verification is verified; who verified it is not.",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "gtm",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Container GTM-WFPFSTK2 loaded on the site (verified in HTML). Access granted to 741studio18 on 2026-10-07 by the former agency; Version 4 published 2026-10-09 (Martin's go). Account owner not read.",
+      "741_role": "publish rights (Version 4)",
+      "status": "unconfirmed",
+      "evidence_ids": [
+        "EV-A-home-html",
+        "EV-A-baseline-s9-s11"
+      ],
+      "access_request": "Client approves reading GTM > Admin > User management; if the account belongs to the former agency, export the container into a firm-owned account.",
+      "confidence": "client_stated",
+      "note": "",
+      "collected_at": "2026-10-09T00:00:00+02:00"
+    },
+    {
+      "asset": "ads",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "No Google Ads account known. Onboarding call 2026-10-06: Google Ads existed once in the past.",
+      "741_role": "none",
+      "status": "unknown",
+      "evidence_ids": [
+        "EV-A-baseline-s9-s11"
+      ],
+      "access_request": "Client says whether an old Ads account exists and who manages it. A new account is created under firm ownership with 741 as manager.",
+      "confidence": "client_stated",
+      "note": "",
+      "collected_at": "2026-10-06T00:00:00+02:00"
+    },
+    {
+      "asset": "social:linkedin",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Company page stuerzl-steuerstrafrecht exists (716 followers, primary location with the old address). Admins not readable without login.",
+      "741_role": "unknown",
+      "status": "unknown",
+      "evidence_ids": [
+        "EV-C-search-misc"
+      ],
+      "access_request": "Client names the page admins and adds 741 as editor if wanted.",
+      "confidence": "verified",
+      "note": "",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "social:instagram",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "No firm-owned Instagram profile appeared in the search results (only third-party posts). Not proof of absence.",
+      "741_role": "none",
+      "status": "unknown",
+      "evidence_ids": [
+        "EV-C-search-misc"
+      ],
+      "access_request": "None needed unless the client runs a profile.",
+      "confidence": "verified",
+      "note": "",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "listing:anwalt.de",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Kanzlei profile 5.0/79 plus profiles of Dr. Stürzl (5.0/55) and Lea Wimmer (5.0/23). Content is maintained (uploads, legal tips, reviews). Account holder not readable.",
+      "741_role": "none",
+      "status": "unconfirmed",
+      "evidence_ids": [
+        "EV-C-listing-anwalt-de-firm",
+        "EV-C-listing-anwalt-de-anja"
+      ],
+      "access_request": "Client shares the anwalt.de login via the vault (or edits the address herself after the NAP lock).",
+      "confidence": "verified",
+      "note": "Main digital lead channel per client.",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "listing:rak_brak",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Official lawyers' directory data (seen via the Anwalt-Lotse mirror): Wiesenhüttenstr. 17, Zweigstelle München Oberanger 32, member of RAK Frankfurt.",
+      "741_role": "none (only the lawyer can notify the chamber)",
+      "status": "unconfirmed",
+      "evidence_ids": [
+        "EV-C-listing-anwalt-lotse-anja"
+      ],
+      "access_request": "Dr. Stürzl reports the new address to the Rechtsanwaltskammer after the NAP lock.",
+      "confidence": "derived",
+      "note": "Official site not read.",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "listing:cylex_ffm",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Entry 16927796, unclaimed ('Eintrag übernehmen').",
+      "741_role": "none",
+      "status": "third_party",
+      "evidence_ids": [
+        "EV-C-listing-cylex-ffm"
+      ],
+      "access_request": "Client claims the entry (verification at Cylex).",
+      "confidence": "verified",
+      "note": "",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "listing:cylex_muc_ok",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Entry 17168776 (Oberanger 32), unclaimed.",
+      "741_role": "none",
+      "status": "third_party",
+      "evidence_ids": [
+        "EV-C-listing-cylex-muc-ok"
+      ],
+      "access_request": "Client or Lea Wimmer claims the entry.",
+      "confidence": "verified",
+      "note": "",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "listing:cylex_muc_wrong",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Entry 17045957 (Neuhauser Str. 3a, category Software Hersteller), unclaimed. Duplicate of 17168776.",
+      "741_role": "none",
+      "status": "third_party",
+      "evidence_ids": [
+        "EV-C-listing-cylex-muc-wrong"
+      ],
+      "access_request": "Client claims it, then asks Cylex to remove it (per-item go).",
+      "confidence": "verified",
+      "note": "",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "listing:11880",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Entry 081314253B114102102; not marked as owner-confirmed. Claim state unknown.",
+      "741_role": "none",
+      "status": "unknown",
+      "evidence_ids": [
+        "EV-C-listing-11880"
+      ],
+      "access_request": "Client confirms whether a 11880 account exists; otherwise uses 'Änderungen vorschlagen'.",
+      "confidence": "verified",
+      "note": "",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "listing:rechtecheck",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Two entries (Frankfurt person page, München firm page), both offer 'Daten aktualisieren' (unclaimed).",
+      "741_role": "none",
+      "status": "third_party",
+      "evidence_ids": [
+        "EV-C-listing-rechtecheck-frankfurt",
+        "EV-C-listing-rechtecheck-muenchen"
+      ],
+      "access_request": "Client registers or claims the entries at rechtecheck.de.",
+      "confidence": "verified",
+      "note": "",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "listing:infobel",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Entry DE109851584 (Frankfurt (Oder)); page behind captcha, claim state unknown.",
+      "741_role": "none",
+      "status": "unknown",
+      "evidence_ids": [
+        "EV-C-listing-infobel"
+      ],
+      "access_request": "Client checks in the browser whether an Infobel account exists.",
+      "confidence": "derived",
+      "note": "",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "listing:bestattorneyusa",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Two auto-generated profiles (Tucson, Boston), 'Claim this profile' offered. Not created by the firm.",
+      "741_role": "none",
+      "status": "third_party",
+      "evidence_ids": [
+        "EV-C-bestattorneyusa-anja",
+        "EV-C-bestattorneyusa-lea"
+      ],
+      "access_request": "Dr. Stürzl and Lea Wimmer each claim or ask for removal (per-item go).",
+      "confidence": "verified",
+      "note": "",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "listing:bestlawyers",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Firm page and two lawyer profiles, all 'Unactivated Profile'.",
+      "741_role": "none",
+      "status": "third_party",
+      "evidence_ids": [
+        "EV-C-listing-bestlawyers"
+      ],
+      "access_request": "Client activates the profiles if wanted (also gives control of the address text).",
+      "confidence": "verified",
+      "note": "",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    },
+    {
+      "asset": "listing:juwist",
+      "owner_expected": "client (Dr. Anja Stürzl / STÜRZL Steuerstrafrecht); 741 = admin",
+      "owner_found": "Member list of the association JuWiSt e.V. shows the old address.",
+      "741_role": "none",
+      "status": "third_party",
+      "evidence_ids": [
+        "EV-C-search-misc"
+      ],
+      "access_request": "Dr. Stürzl asks the association to update her entry after the NAP lock.",
+      "confidence": "derived",
+      "note": "",
+      "collected_at": "2026-10-11T05:36:18+02:00"
+    }
+  ],
+  "collected_at": "2026-10-11T05:36:18+02:00",
+  "service_account_test": {
+    "service_account": "reporting-bot@studio-apis-503306",
+    "date": "2026-10-11",
+    "gsc": "5 properties visible, none for stuerzl-steuerstrafrecht.de; sites.get 404 for sc-domain and both https variants",
+    "ga4": "account summaries list 39 properties, 483853149 is not among them; runReport on properties/483853149 returned 403 PERMISSION_DENIED",
+    "evidence_id": "EV-A-sa-test"
+  }
+}

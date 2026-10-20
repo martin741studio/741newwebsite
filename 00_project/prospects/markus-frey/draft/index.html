@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entwurf erster Bildschirm – StressFrey-Akademie Köln</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#00558b;--blue-d:#003f6b;--navy:#1d3550;--ink:#22303d;--mist:#eef4f8;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;width:100%;height:100vh;overflow:hidden}
+  .bar{background:var(--blue-d);color:#fff;font-size:15px;text-align:center;padding:10px}
+  .bar b{font-weight:700}
+  header{display:flex;align-items:center;justify-content:space-between;padding:12px 120px;border-bottom:1px solid #e3ebf1}
+  header img{height:70px}
+  nav{display:flex;gap:30px;font-size:16px;font-weight:500;color:#3d4d5c}
+  .btn{white-space:nowrap;display:inline-block;background:var(--blue);color:#fff;font-weight:700;border-radius:999px;padding:14px 26px;font-size:16px}
+  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:44px 120px 30px;background:linear-gradient(180deg,#fff,var(--mist))}
+  .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:700}
+  h1{font-family:Fraunces,serif;font-weight:600;font-size:42px;line-height:1.1;margin:14px 0 18px;color:var(--navy)}
+  h1 span{color:var(--blue)}
+  .sub{font-size:19px;line-height:1.55;color:#3d4d5c;max-width:600px}
+  .stars{display:flex;align-items:center;gap:10px;margin:20px 0 22px;font-size:15.5px;color:#3d4d5c}
+  .stars i{color:#f2b01e;font-style:normal;letter-spacing:2px;font-size:18px}
+  .ctas{display:flex;gap:12px;align-items:center}
+  .ghost{white-space:nowrap;border:1.5px solid #c5d4df;border-radius:999px;padding:13px 20px;font-size:16px;font-weight:600;color:var(--ink)}
+  .note{font-size:14px;color:#5f6f7c;margin-top:12px}
+  .pic{position:relative;border-radius:22px;overflow:hidden;height:440px;box-shadow:0 20px 50px rgba(0,0,0,.12)}
+  .pic img.main{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+  .me{position:absolute;left:18px;bottom:18px;display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;padding:10px 16px 10px 10px;box-shadow:0 6px 20px rgba(0,0,0,.14);font-size:14.5px}
+  .me img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 25%}
+  .me b{display:block;font-size:15.5px}
+  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0 120px}
+  .trust div{background:#fff;border:1px solid #d6e2ea;border-radius:14px;padding:14px 16px;font-size:14.5px;color:#3d4d5c}
+  .trust b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
+</style>
+</head>
+<body>
+  <div class="bar">Kennenlern-Coaching: <b>0221 6086438</b> · Gerstenkamp 19, 51061 Köln-Mülheim</div>
+  <header>
+    <img src="logo.png" alt="StressFrey Akademie">
+    <nav><span>Online Coaching</span><span>Vorträge</span><span>Shop</span><span>Blog</span></nav>
+    <span class="btn">Kennenlern-Coaching sichern</span>
+  </header>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Stress- und Energiemanagement · Köln</div>
+      <h1>Stressmanagement-Coaching in Köln: <span>Ihre Spitzenenergie, auch morgen noch.</span></h1>
+      <p class="sub">Sie wollen Leistung bringen, ohne die Kerze an beiden Enden abzubrennen? Im Coaching klären Sie Ihre Werte und Ihre beruflichen wie privaten Ziele. Danach entwickeln Sie Denk- und Handlungsgewohnheiten, die Ihre Energie im Alltag stärken, auch wenn der Terminkalender voll ist.</p>
+      <div class="stars"><i>★★★★★</i> 5,0 bei Google · 1 Bewertung</div>
+      <div class="ctas"><span class="btn">Kostenloses Kennenlern-Coaching sichern</span><span class="ghost">Mehr zum Online Coaching →</span></div>
+      <p class="note">Das Kennenlern-Coaching ist kostenlos, und Sie buchen direkt online.</p>
+    </div>
+    <div class="pic"><img class="main" src="hero.jpg" alt="Markus Frey"><div class="me"><img src="portrait.jpg" alt="Markus Frey"><div><b>Markus Frey</b>Coach und Autor in Köln</div></div></div>
+  </section>
+  <div class="trust">
+    <div><b>Markus Frey</b>Coach und Autor aus Köln</div>
+    <div><b>Buch und Hörbuch</b>„Mit Stress zur Spitzenleistung“</div>
+    <div><b>3 Vorträge</b>zu Resilienz und Energie</div>
+    <div><b>Köln-Mülheim</b>Gerstenkamp 19, 51061 Köln</div>
+  </div>
+</body>
+</html>

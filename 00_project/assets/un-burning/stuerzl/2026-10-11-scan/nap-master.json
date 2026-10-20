@@ -1,0 +1,87 @@
+{
+  "client_slug": "stuerzl",
+  "client_id": "b6f6e303-50e4-4afb-a343-337206cec316",
+  "locked": true,
+  "locked_at": "2026-10-11T11:20:42+08:00",
+  "status_note": "ADDRESS LOCKED by Martin on 2026-10-11: Untermainkai 26, 60329 Frankfurt am Main is the master address. Old address Wiesenhüttenstraße 17 (valid until 2026-10-05) is now an old value. Hours, phone and fax for listings are still open. The client's own confirmation of the address is not recorded in writing yet (source: Mail Florentine Jilg, 2026-10-07). Fixes still need GO-2 per wave.",
+  "name": "STÜRZL Steuerstrafrecht",
+  "name_variants_to_hunt": [
+    "Stürzl Steuerstrafrecht",
+    "Stuerzl Steuerstrafrecht",
+    "Stützel",
+    "Dr. Anja Stürzl",
+    "Kanzlei Stürzl"
+  ],
+  "owner": "Dr. Anja Stürzl",
+  "locations": [
+    {
+      "id": "frankfurt",
+      "role": "main office",
+      "address_proposed_canonical": {
+        "street": "Untermainkai 26",
+        "postal_code": "60329",
+        "city": "Frankfurt am Main",
+        "note": "registered address and client entrance (proposal, not confirmed)"
+      },
+      "address_old": {
+        "street": "Wiesenhüttenstraße 17",
+        "postal_code": "60329",
+        "city": "Frankfurt am Main",
+        "valid_until": "2026-10-05"
+      },
+      "other_addresses": [
+        {
+          "label": "post and reception",
+          "street": "Wilhelm-Leuschner-Straße 23",
+          "postal_code": "60329",
+          "city": "Frankfurt am Main"
+        },
+        {
+          "label": "underground garage",
+          "street": "Wilhelm-Leuschner-Straße 27-29",
+          "postal_code": "60329",
+          "city": "Frankfurt am Main",
+          "note": "bays 148 and 146"
+        }
+      ],
+      "phone_seen": "+49 69 298028870",
+      "fax_seen": "-9 extension (069 29 80 28 87-9)",
+      "hours_conflict": {
+        "gbp": "opens 09:00",
+        "website_contact_page": "phone Mo-Fr 09:30-14:30",
+        "schema": "09:00-18:00"
+      },
+      "gbp_place_id": "ChIJyVGAdikEaW8RUOWpEJs-2XA"
+    },
+    {
+      "id": "muenchen",
+      "role": "second office (head: Lea Wimmer)",
+      "address": {
+        "street": "Oberanger 32",
+        "city": "München"
+      },
+      "phone_seen": "+49 89 72444170",
+      "gbp_note": "GBP exists since early 2026, 5.0 stars with 1 review (2026-10-01). Not a duplicate. Whether Munich is inside the 741 package is open."
+    }
+  ],
+  "website": "https://stuerzl-steuerstrafrecht.de",
+  "email_public": "kanzlei@stuerzl-steuerstrafrecht.de",
+  "emergency_numbers": "2 mobile numbers on the website. Not confirmed with the client.",
+  "legal_form_note": "Law firm. Professional rules apply (BRAO, BORA, UWG). Professional secrecy (§203 StGB): never name clients.",
+  "title_note": "Fachanwältin für Steuerrecht since 2021 and certified adviser for tax criminal law (DAA) since 2022 are publicly documented. Confirm with the client before publishing. Fachanwalt für Strafrecht is NOT documented.",
+  "address_form": "Sie (Martin, 2026-10-11)",
+  "sources": [
+    "00_project/assets/un-burning/stuerzl/baseline/stuerzl-woche1-befunde-2026-10-01.md sections 1, 3, 9"
+  ],
+  "locked_by": "Martin Drendel (chat, 2026-10-11)",
+  "fields_locked": [
+    "name",
+    "frankfurt.address (Untermainkai 26, 60329 Frankfurt am Main)"
+  ],
+  "fields_open": [
+    "opening hours (09:00 / 09:30 / 09:00-18:00 conflict)",
+    "primary phone and fax for listings",
+    "emergency numbers",
+    "München inside the 741 package"
+  ]
+}

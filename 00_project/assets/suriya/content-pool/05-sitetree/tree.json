@@ -1,0 +1,852 @@
+{
+ "meta": {
+  "client": "Praxis Suriya (Coralie Suriyapperuma)",
+  "slug": "suriya",
+  "domain": "suriya-praxis.de",
+  "built": "2026-10-11",
+  "programme_modules_source": "website-struktur-master-prompt.md Schritte 4 und 6 (Programmplan-Datei nicht gefunden unter ~/Downloads); Seitenbaum nach den Menüpunkten Praxis, Migräne, Nervensystem, Schmerztherapie, Ayurveda, Blog"
+ },
+ "nodes": [
+  {
+   "id": "ST-00",
+   "parent": null,
+   "title": "Startseite",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M2 Startseite",
+   "job": "Nach CRO-Blueprint (10 Zeilen): Hero steht. Preise je Einstiegsangebot ergänzen, Erster-Termin-Block, Beweis-Leiste, drei Einstiegsangebote vor dem Rest. Kontaktwege (Formular #terminanfrage, WhatsApp, Nummer, Zeiten) bleiben 1:1.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/",
+   "kw": "heilpraktiker ingelheim",
+   "pool_tag": "homepage",
+   "needs_client": [
+    "Drei Einstiegsangebote bestätigen",
+    "Ein Preis je Angebot"
+   ],
+   "note": "Seite hat bereits rund 2.000 Wörter, FAQ mit 9 Fragen, Karte, Bewertungs-Widget und MedicalBusiness-Schema."
+  },
+  {
+   "id": "ST-10",
+   "parent": "ST-00",
+   "title": "Praxis",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Menü-Gruppe (Über mich, Behandlung & Methoden, Kosten, Termin, Kontakt). Menü ändert Dinakar nur mit Martins Go.",
+   "kind": "group",
+   "audience": "patient",
+   "group_patterns": [
+    "^/heilpraktikerin-ingelheim$",
+    "^/behandlungsangebot$",
+    "^/kosten-abrechnung$",
+    "^/termin-buchen$",
+    "^/contact-2$"
+   ]
+  },
+  {
+   "id": "ST-11",
+   "parent": "ST-10",
+   "title": "Über mich: Coralie Suriyapperuma, Heilpraktikerin",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M6 Behandlerseite",
+   "job": "E-E-A-T-Seite steht (10 Ausbildungsstationen, Ansatz, Schwerpunkte). Ergänzen: Presse-Link (Allgemeine Zeitung 2023, nach Freigabe), Verband falls vorhanden, Person-Schema prüfen.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/heilpraktikerin-ingelheim/",
+   "kw": "heilpraktikerin ingelheim",
+   "pool_tag": "authority-page",
+   "needs_client": [
+    "Artikel der Allgemeinen Zeitung (2023-09-28) verlinken dürfen?",
+    "Mitglied in einem Berufsverband?"
+   ]
+  },
+  {
+   "id": "ST-12",
+   "parent": "ST-10",
+   "title": "Behandlung & Methoden (Hub)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M8 Hub und Spoke",
+   "job": "Methoden-Hub mit sieben Kacheln steht seit 2026-10-07. Er verlinkt Ohrakupunktur, Schröpfen, Craniosacral, ThetaHealing, hnc, Akupunktur, Lymph.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/behandlungsangebot/",
+   "kw": "ohrakupunktur",
+   "pool_tag": "service:behandlungsangebot",
+   "note": "Titel am 2026-10-07 von 'Diagnostik & Therapien' auf 'Behandlung & Methoden' geändert. Der Arbeitstitel '(Hub)' ist nur intern und steht nie öffentlich."
+  },
+  {
+   "id": "ST-13",
+   "parent": "ST-10",
+   "title": "Kosten & Abrechnung",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Alte Seite mit Preisen, die von den neuen Seiten abweichen (Behandlung 80 €, Schmerztherapie 85 oder 95 €). Alle Preise aus einer Quelle, Ansprache 'du', Selbstzahler und Erstattung klar (ohne Zusagen).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/kosten-abrechnung/",
+   "kw": "akupunktur kosten",
+   "pool_items": [
+    "CP-SVC-003"
+   ],
+   "needs_client": [
+    "Welcher Einzelpreis gilt für die Schmerztherapie: 85, 95 oder 80 €?"
+   ]
+  },
+  {
+   "id": "ST-14",
+   "parent": "ST-10",
+   "title": "Termin buchen",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Kontaktweg (Formular). Gesperrter Pfad: Google-Profil-Terminlink. Nicht ändern, nicht weiterleiten.",
+   "kind": "system",
+   "audience": "patient",
+   "path": "/termin-buchen/",
+   "note": "Der Pfad bleibt wie er ist (Termin-Link des Google-Profils)."
+  },
+  {
+   "id": "ST-15",
+   "parent": "ST-10",
+   "title": "Kontakt",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Adresse, Zeiten, Karte. Bleibt.",
+   "kind": "system",
+   "audience": "patient",
+   "path": "/contact-2/"
+  },
+  {
+   "id": "ST-16",
+   "parent": "ST-10",
+   "title": "Impressum",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Rechtstext. Steuernummer bleibt wie sie ist (Martin 2026-10-01).",
+   "kind": "system",
+   "audience": "patient",
+   "path": "/impressum/"
+  },
+  {
+   "id": "ST-17",
+   "parent": "ST-10",
+   "title": "Datenschutz",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Rechtstext.",
+   "kind": "system",
+   "audience": "patient",
+   "path": "/datenschutzerklaerung/"
+  },
+  {
+   "id": "ST-20",
+   "parent": "ST-00",
+   "title": "Migräne",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Hauptseite SURIYA Neuro Migräne: drei einfache Einstiege (Massage, Akupunktur, Cranio-Neuro-Analyse) zuerst, 12-Wochen-Programm und Preis weiter unten, Kompass ganz unten (Martin gab Go am 2026-10-06, nicht umgesetzt).",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/suriya-neuro-migraene/",
+   "kw": "migräne heilpraktiker",
+   "pool_tag": "service:suriya-neuro-migraene",
+   "needs_client": [
+    "Welche drei Einstiege stehen oben?"
+   ],
+   "note": "HWG: keine Heilversprechen. Keyword-Werkzeug liefert für fast alle Migräne-Begriffe kein Volumen."
+  },
+  {
+   "id": "ST-21",
+   "parent": "ST-20",
+   "title": "SURIYA Cranio-Neuro-Analyse",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Einstiegsangebot. Mit der Migräne-Analyse zusammenführen: erst Inhalt zusammenlegen, dann entscheiden, welche Adresse bleibt.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/suriya-cranio-neuro-analyse/",
+   "kw": "spannungskopfschmerz",
+   "pool_tag": "service:suriya-cranio-neuro-analyse"
+  },
+  {
+   "id": "ST-22",
+   "parent": "ST-20",
+   "title": "Migräne-Analyse",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Zweite Analyse-Seite. Kein Dublett im Text (2,4 % gleiche Fünf-Wort-Folgen mit ST-21). Zusammenlegen ist eine Inhaltsfrage, keine Weiterleitung auf Verdacht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/migraene-analyse-ingelheim/",
+   "note": "Coralie: beide Analysen überschneiden sich im Angebot. Martin gab Go für das Zusammenlegen."
+  },
+  {
+   "id": "ST-23",
+   "parent": "ST-20",
+   "title": "SURIYA Migräne Kompass (online, Warteliste)",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M10 Online-Angebote",
+   "job": "Seite steht. Planpreis und Start offen.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/suriya-migraene-kompass/",
+   "needs_client": [
+    "Starttermin und Preis (geplant) bestätigen"
+   ]
+  },
+  {
+   "id": "ST-24",
+   "parent": "ST-20",
+   "title": "SURIYA Neuro Self-Care (Zoom, kostenfrei)",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M10 Online-Angebote",
+   "job": "Seite steht. Lead-Magnet.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/suriya-neuro-self-care/",
+   "pool_tag": "service:suriya-neuro-self-care"
+  },
+  {
+   "id": "ST-25",
+   "parent": "ST-20",
+   "title": "Blog: Migräne und Nacken (4 Beiträge)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M8 Hub und Spoke",
+   "job": "Vier Beiträge zu Migräne, Nacken und Ayurveda. Je mit Link zur Migräne-Seite ergänzen (Linkaudit 10.10.: Beiträge ohne ausgehende Links).",
+   "kind": "group",
+   "audience": "patient",
+   "group_patterns": [
+    "^/migraene-und-nackenverspannungen",
+    "^/nackenspannung-migraene$",
+    "^/migraene-ist-oft",
+    "^/ayurveda-bei-migraene"
+   ]
+  },
+  {
+   "id": "ST-30",
+   "parent": "ST-00",
+   "title": "Nervensystem & Vagusnerv",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Fragen aus 'Weitere Fragen' ergänzen (Vagusnerv entlasten, welcher Arzt, Druckpunkt). Alte Blog-Seite /nervenregulation-vagusnerv/ (11 Klicks) bleibt und verlinkt hierher.",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/nervensystem-vagus-beruhigen/",
+   "kw": "nervensystem beruhigen",
+   "pool_tag": "service:nervensystem-vagus-beruhigen"
+  },
+  {
+   "id": "ST-31",
+   "parent": "ST-30",
+   "title": "Nervenregulationsmassage",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Technik laut Coralie (2026-09-14): Aroma-Öl punktuell an Hals und Punkten, nicht Shirodhara.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/nervenregulationsmassage/",
+   "pool_tag": "service:nervenregulationsmassage"
+  },
+  {
+   "id": "ST-32",
+   "parent": "ST-30",
+   "title": "Craniosacrale Therapie",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Im Methoden-Hub verlinkt.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/craniosacrale-therapie/",
+   "kw": "craniosacrale therapie"
+  },
+  {
+   "id": "ST-33",
+   "parent": "ST-30",
+   "title": "hnc (Human Neuro Cybrainetics)",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/hnc-human-neuro-cybrainetics/",
+   "kw": "hnc therapie"
+  },
+  {
+   "id": "ST-34",
+   "parent": "ST-30",
+   "title": "ThetaHealing",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Der Blog-Artikel /innere-arbeit-theta-healing-meditation/ (10 Klicks) verlinkt hierher.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/thetahealing/",
+   "kw": "thetahealing"
+  },
+  {
+   "id": "ST-40",
+   "parent": "ST-00",
+   "title": "Ganzheitliche Schmerztherapie",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Ein Preis (heute 85 und 95 €). Seite sonst stark: 2.400 Wörter, FAQ, Autorin, Reviews.",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/ganzheitliche-schmerztherapie/",
+   "kw": "schmerztherapie mainz",
+   "pool_tag": "service:ganzheitliche-schmerztherapie",
+   "needs_client": [
+    "Einzelpreis bestätigen"
+   ]
+  },
+  {
+   "id": "ST-41",
+   "parent": "ST-40",
+   "title": "Nacken- und Schulterschmerzen",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Ein Preis (heute 85 und 95 €).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/nacken-schulter/",
+   "kw": "nackenverspannung",
+   "pool_tag": "service:nacken-schulter",
+   "needs_client": [
+    "Einzelpreis bestätigen"
+   ]
+  },
+  {
+   "id": "ST-42",
+   "parent": "ST-40",
+   "title": "Kiefer und CMD",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/kiefer-cmd/",
+   "kw": "kieferschmerzen",
+   "pool_tag": "service:kiefer-cmd"
+  },
+  {
+   "id": "ST-43",
+   "parent": "ST-40",
+   "title": "Rückenschmerzen und Hexenschuss",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/hexenschuss-ruecken/",
+   "kw": "hexenschuss",
+   "pool_tag": "service:hexenschuss-ruecken"
+  },
+  {
+   "id": "ST-44",
+   "parent": "ST-40",
+   "title": "Frozen Shoulder",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Kleine Nische.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/frozen-shoulder/",
+   "kw": "frozen shoulder",
+   "pool_tag": "service:frozen-shoulder"
+  },
+  {
+   "id": "ST-45",
+   "parent": "ST-40",
+   "title": "Akupunktur Ingelheim",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Ablauf- und Kostenfragen ohne Krankheitsliste ergänzen.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/akupunktur-ingelheim-praxis/",
+   "kw": "akupunktur ingelheim",
+   "pool_tag": "service:akupunktur-ingelheim-praxis"
+  },
+  {
+   "id": "ST-46",
+   "parent": "ST-40",
+   "title": "Ohrakupunktur",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ohrakupunktur-ingelheim/",
+   "kw": "ohrakupunktur"
+  },
+  {
+   "id": "ST-47",
+   "parent": "ST-40",
+   "title": "Schröpftherapie",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/schroepftherapie-ingelheim/",
+   "kw": "schröpfen"
+  },
+  {
+   "id": "ST-48",
+   "parent": "ST-40",
+   "title": "Lymphdrainage, Lymphmassage, Lipödem-Begleitung",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht (5er-Karte 540 €, Kopf-Gesichts-Lymph 80 €). HWG: Lipödem nur als Begleitung.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/lymphdrainage-lipoedem-ingelheim/",
+   "kw": "lymphdrainage ingelheim",
+   "pool_tag": "service:lymphdrainage-lipoedem-ingelheim"
+  },
+  {
+   "id": "ST-49",
+   "parent": "ST-40",
+   "title": "Mikronährstoffe, Hormone und Wechseljahre",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. HWG: keine Heilversprechen.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/mikronaehrstoffe-hormone-wechseljahre/",
+   "kw": "wechseljahre",
+   "pool_tag": "service:mikronaehrstoffe-hormone-wechseljahre"
+  },
+  {
+   "id": "ST-50",
+   "parent": "ST-00",
+   "title": "Ayurveda in Ingelheim (Hub)",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M8 Hub und Spoke",
+   "job": "Hub steht auf /ayurveda-ingelheim/ (nicht auf Coralies Slug).",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/ayurveda-ingelheim/",
+   "kw": "ayurveda ingelheim",
+   "pool_tag": "service:ayurveda-ingelheim"
+  },
+  {
+   "id": "ST-51",
+   "parent": "ST-50",
+   "title": "Ayurveda-Massage & Therapie (Coralies Seite)",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "UNANTASTBAR (WP 1511). Kein Umtexten, kein Ersatz, keine Weiterleitung, nicht offline. Nur interne Links dorthin. Sie hat keinen H1-Tag (nur gemeldet).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ayurveda-therapie/",
+   "kw": "ayurveda massage",
+   "pool_tag": "service:ayurveda-therapie",
+   "note": "Martin 2026-09-29: 'which never should have happened'. Der Slug /ayurveda-therapie/ gehört ihr. Dinakars Entwurf 4466 darf ihn nicht bekommen."
+  },
+  {
+   "id": "ST-52",
+   "parent": "ST-50",
+   "title": "Massage in Ingelheim",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht seit 2026-10-01 (17 Klicks 'massage ingelheim' in 90 Tagen). Gutschein-Kauf- und Kontaktweg sichtbar machen (Spitze Ende Dezember).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/massage-ingelheim/",
+   "kw": "massage ingelheim",
+   "pool_tag": "service:massage-ingelheim"
+  },
+  {
+   "id": "ST-53",
+   "parent": "ST-50",
+   "title": "SURIYA Ayurveda Regenerationstherapie",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht (ARRIVAL, GROUNDING, RELEASE, RESTORE).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ayurveda-regenerationstherapie-ingelheim/",
+   "kw": "ayurveda kur"
+  },
+  {
+   "id": "ST-54",
+   "parent": "ST-50",
+   "title": "Ayurveda Ausleitung (7 Tage, Pilot 2026)",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht. Fortführung nach 2026 offen. Die 14-Tage-Kur wurde eingestellt.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ayurveda-ausleitung-7-tage/",
+   "kw": "panchakarma",
+   "pool_tag": "service:ayurveda-ausleitung-7-tage",
+   "needs_client": [
+    "Läuft der 7-Tage-Pilot weiter, zu welchem Preis?"
+   ]
+  },
+  {
+   "id": "ST-55",
+   "parent": "ST-50",
+   "title": "Ayurveda-Beratung",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ayurveda-beratung/",
+   "kw": "ayurveda beratung",
+   "pool_tag": "service:ayurveda-beratung"
+  },
+  {
+   "id": "ST-56",
+   "parent": "ST-50",
+   "title": "Massage buchen",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Buchungsseite mit Formular. Sie bringt 36 Klicks (Position um 10 für 'massage ingelheim'). Nicht weiterleiten, bevor /massage-ingelheim/ ranked.",
+   "kind": "system",
+   "audience": "patient",
+   "path": "/massage-buchen/",
+   "note": "83 % der Fünf-Wort-Folgen von /termin-buchen/ stehen auch hier. Kontaktweg: bleibt."
+  },
+  {
+   "id": "ST-60",
+   "parent": "ST-00",
+   "title": "Einzugsgebiet Mainz",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Fünf Seiten bleiben. Jede braucht eigene lokale Beweise statt Ortstausch. Heilpraktikerin Mainz zuerst (390 Suchen).",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/heilpraktiker-mainz/",
+   "kw": "heilpraktiker mainz",
+   "pool_items": [
+    "CP-LOC-003"
+   ],
+   "needs_client": [
+    "Ein lokaler Beweis je Mainz-Seite (zum Beispiel Fahrzeit, Patientinnen aus Mainz)"
+   ]
+  },
+  {
+   "id": "ST-61",
+   "parent": "ST-60",
+   "title": "Schmerztherapie Mainz",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/schmerztherapie-mainz/",
+   "kw": "schmerztherapie mainz"
+  },
+  {
+   "id": "ST-62",
+   "parent": "ST-60",
+   "title": "Akupunktur Mainz",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht (8 Klicks).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/schmerztherapie-mainz/akupunktur/",
+   "kw": "akupunktur mainz"
+  },
+  {
+   "id": "ST-63",
+   "parent": "ST-60",
+   "title": "Massage Mainz",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht (1.441 Impressionen, Position um 47 für 'massage mainz').",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/massage-mainz/",
+   "kw": "massage mainz"
+  },
+  {
+   "id": "ST-64",
+   "parent": "ST-60",
+   "title": "Ayurveda-Massage Mainz",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Alte Seite mit 30 Klicks. 52 % ihres Textes steht auch auf der Wiesbaden-Version: eigene lokale Texte schreiben (Regel gegen Ortstausch).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/massage-mainz/ayurveda/",
+   "kw": "ayurveda massage mainz",
+   "note": "Nicht weiterleiten: die Seite bringt Klicks."
+  },
+  {
+   "id": "ST-70",
+   "parent": "ST-00",
+   "title": "Einzugsgebiet Wiesbaden",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Vier Seiten bleiben. Jede braucht eigene lokale Beweise statt Ortstausch.",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/heilpraktiker-wiesbaden/",
+   "kw": "massage wiesbaden",
+   "pool_items": [
+    "CP-LOC-004"
+   ],
+   "needs_client": [
+    "Ein lokaler Beweis je Wiesbaden-Seite"
+   ]
+  },
+  {
+   "id": "ST-71",
+   "parent": "ST-70",
+   "title": "Schmerztherapie Wiesbaden",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/schmerztherapie-wiesbaden/",
+   "kw": "akupunktur wiesbaden"
+  },
+  {
+   "id": "ST-72",
+   "parent": "ST-70",
+   "title": "Massage Wiesbaden",
+   "status": "Bleibt",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite steht.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/massage-wiesbaden/",
+   "kw": "massage wiesbaden"
+  },
+  {
+   "id": "ST-73",
+   "parent": "ST-70",
+   "title": "Ayurveda-Massage Wiesbaden",
+   "status": "Überarbeiten",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Alte Seite (7 Klicks). Gleiches Muster wie Mainz: eigene lokale Texte.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/massage-wiesbaden/ayurveda/",
+   "kw": "ayurveda massage wiesbaden"
+  },
+  {
+   "id": "ST-80",
+   "parent": "ST-00",
+   "title": "Gesundheitsjournal (Blog)",
+   "status": "Überarbeiten",
+   "origin": "programm",
+   "module": "M8 Hub und Spoke",
+   "job": "Übersicht steht. Beiträge brauchen ausgehende Links zu den Leistungsseiten (Linkaudit 10.10.). FAQ-Sets zu Ayurveda-Massage im Hub, nicht auf Coralies Seite.",
+   "kind": "hub",
+   "audience": "patient",
+   "path": "/blog/",
+   "pool_tag": "blog-faq"
+  },
+  {
+   "id": "ST-81",
+   "parent": "ST-80",
+   "title": "Ratgeber Vagusnerv und Nervensystem beruhigen (Wissensartikel)",
+   "status": "Vorschlag",
+   "origin": "vorschlag",
+   "module": "M8 Hub und Spoke",
+   "job": "Wissensartikel mit Links zu ST-30. Nachfrage ist Wissenssuche (Vagusnerv, Nervensystem beruhigen). Kommt aus Suchdaten, nicht von Coralie: mit ihr abstimmen. HWG: keine Heilversprechen.",
+   "kind": "page",
+   "audience": "patient",
+   "slug": "/ratgeber/vagusnerv-nervensystem-beruhigen/",
+   "kw": "vagusnerv beruhigen",
+   "needs_client": [
+    "Möchte Coralie einen Ratgeber-Bereich?"
+   ],
+   "note": "Nur Vorschlag, nicht gesetzt."
+  },
+  {
+   "id": "ST-90",
+   "parent": "ST-00",
+   "title": "Altbestand ohne eigene Rolle (Enfold-Seiten, nicht angefasst)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Alte Seiten und Beiträge. Nicht ändern, bis Martin aufräumen sagt: sieben Einträge in der Liste der Weiterleitungs-Vorschläge.",
+   "kind": "group",
+   "audience": "patient",
+   "group_patterns": [
+    "^/behandlungsangebot-2$",
+    "^/meinayurvedaangebot$",
+    "^/suriya-praxis-fuer-naturheilkunde-ingelheim$",
+    "^/praxis-suriya-ingelheim-nervenregulation-vagusnerv",
+    "^/nervenregulation-vagusnerv$",
+    "^/ayurveda-ganzkoerpermassage$",
+    "^/back-to-the-roots",
+    "^/termin-vereinbaren-direkt$",
+    "^/darmgesundheit",
+    "^/hormongesundheit$",
+    "^/allergiebehandlung$",
+    "^/ayurveda-fortbildung$",
+    "^/ayurveda-darm-test$",
+    "^/ayurveda-workshop",
+    "^/innere-arbeit",
+    "^/die-heilkraft",
+    "^/ayurveda-kochworkshops",
+    "^/5-ayurveda-rituale",
+    "^/praxis-fuer-naturheilkunde-ingelheim$",
+    "^/ayurveda-beratung-behandlung-massage$"
+   ]
+  }
+ ],
+ "reasons": [
+  "<b>Text depth is not the gap.</b> The homepage has {home_words} words. The floor is {floor} words (median {median} words). The service pages have {svc_min} to {svc_max} words. The work is order, one price per offer, proof and contact. It is not a rebuild.",
+  "<b>The brand core is not found yet.</b> Her queries show massage first. Migräne and Nervensystem bring few impressions. The new pages went online from 2026-09-24 and were not yet indexed on 2026-09-29 (baseline report).",
+  "<b>Trust and contact are thin.</b> Google shows 12 reviews. The local leader shows 37. None of the 62 measured pages has a tap-to-call link. Three prices exist for one session.",
+  "<b>Links are not the gap.</b> Referring domains: {rd}. Source: DataForSEO backlinks summary, 2026-10-11."
+ ],
+ "not_built": [
+  "Eine Bingen-Seite: Nachfrage klein, noch kein lokaler Beweis (CP-LOC-005).",
+  "Seiten für Kleinorte: nicht bestätigt (CP-LOC-006, Ergänzung nur im Text).",
+  "Seiten für Thai-Massage, Faszientherapie, Shirodhara, Massage für Männer, Bioresonanz, Kinesiologie, Infusionen: Coralie bietet sie nicht an (CP-SVC-030 bis 034).",
+  "Eine eigene Seite 'Lymphmassage': Entscheidung vom 2026-10-01, Begriff steht auf der Lymphdrainage-Seite.",
+  "Weitere Seiten für Verzeichnisse und Presse: externe Linkziele, keine Seiten (CP-AUT-007, CP-AUT-008)."
+ ],
+ "redirect_proposals": [
+  {
+   "from": "/praxis-fuer-naturheilkunde-ingelheim/",
+   "to": "/",
+   "reason": "Gleicher Text wie die Startseite (100 % der Fünf-Wort-Folgen, Messung 2026-10-11). Die Adresse leitet schon auf / um, steht aber noch in der Sitemap. Aus der Sitemap nehmen."
+  },
+  {
+   "from": "/behandlungsangebot-2/",
+   "to": "/behandlungsangebot/",
+   "reason": "Alte Behandlungsübersicht (Sie-Form, 1.133 Wörter) neben dem neuen Methoden-Hub mit gleicher Aufgabe. Beide Seiten gelesen. Kein Kurs- oder Spezialschema. Nur mit Martins Go."
+  },
+  {
+   "from": "/meinayurvedaangebot/",
+   "to": "/ayurveda-ingelheim/",
+   "reason": "Alte Ayurveda-Übersicht (588 Wörter, 214 Impressionen, 2 Klicks) mit gleicher Aufgabe wie der Hub. Beide Seiten gelesen. Coralies Seite 1511 wird nicht berührt. Nur mit Martins Go."
+  },
+  {
+   "from": "/suriya-praxis-fuer-naturheilkunde-ingelheim/",
+   "to": "/",
+   "reason": "Alte Seite 'Gesundheit mit Ayurveda' mit Stichwortliste von Krankheitsbildern (HWG-Risiko) und Sie-Form. Keine Treffer in GSC. Nur mit Martins Go."
+  },
+  {
+   "from": "/praxis-suriya-ingelheim-nervenregulation-vagusnerv-akupunktur-ayurveda/",
+   "to": "/nervensystem-vagus-beruhigen/",
+   "reason": "Gleiches Thema wie die neue Nervensystem-Seite (Vagusnerv, Nervenregulationsmassage). Beide gelesen. Keine Treffer in GSC. Nur mit Martins Go."
+  },
+  {
+   "from": "/nervenregulation-vagusnerv/",
+   "to": "/nervensystem-vagus-beruhigen/",
+   "reason": "NICHT jetzt. Der Beitrag bringt 11 Klicks. Erst Link auf die neue Seite einbauen, in 8 Wochen messen, dann entscheiden."
+  },
+  {
+   "from": "/massage-buchen/",
+   "to": "/massage-ingelheim/",
+   "reason": "NICHT jetzt. Die Buchungsseite bringt 36 Klicks und trägt ein Formular. 83 % der Fünf-Wort-Folgen von /termin-buchen/ stehen auch hier. Kontaktweg bleibt, bis /massage-ingelheim/ die Klicks hält."
+  }
+ ],
+ "catchment": [
+  {
+   "level": 1,
+   "name": "Kern-Ort",
+   "places": [
+    "Ingelheim am Rhein"
+   ],
+   "action": "Startseite und alle Leistungen mit Ortsbezug. Die Seiten stehen. Kleine Suchzahlen: der Ort bringt die meisten Klicks, aber wenige Suchen.",
+   "kw": [
+    "massage ingelheim",
+    "naturheilpraxis ingelheim",
+    "heilpraktiker ingelheim"
+   ]
+  },
+  {
+   "level": 2,
+   "name": "Große Nachbarn",
+   "places": [
+    "Mainz",
+    "Wiesbaden"
+   ],
+   "action": "Seiten stehen (Mainz 5, Wiesbaden 4). Nicht neu bauen. Eigene lokale Beweise statt Ortstausch.",
+   "kw": [
+    "massage mainz",
+    "massage wiesbaden",
+    "heilpraktiker mainz",
+    "lymphdrainage mainz",
+    "akupunktur wiesbaden"
+   ]
+  },
+  {
+   "level": 3,
+   "name": "Klarer dritter Ort",
+   "places": [
+    "Bingen"
+   ],
+   "action": "Coralie nennt Bingen. Es gibt kleine Nachfrage, aber noch keinen lokalen Beweis. Erst im Text nennen. Seite nur mit Fahrzeit und einem lokalen Faktum.",
+   "kw": [
+    "heilpraktiker bingen",
+    "massage bingen"
+   ]
+  },
+  {
+   "level": 4,
+   "name": "Kleinorte",
+   "places": [
+    "Gau-Algesheim",
+    "Heidesheim",
+    "Nieder-Olm",
+    "Oppenheim",
+    "Rüsselsheim"
+   ],
+   "action": "Nur im Fließtext oder FAQ, nach Bestätigung durch Coralie.",
+   "kw": [
+    "massage gau-algesheim",
+    "heilpraktiker nieder-olm",
+    "heilpraktiker rüsselsheim"
+   ]
+  }
+ ]
+}

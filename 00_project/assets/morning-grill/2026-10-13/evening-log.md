@@ -1,7 +1,26 @@
 # Evening log 2026-10-13 (WITA) · draft 17:00 · status: draft
 
 Sources since the morning bookmark (11:30 WITA): S1–S12, 25 sessions, 37 transcripts (unreadable: S8_tracking). Calendar = copy of the morning read.
-Snapshot: grill_snapshots id=11 (evening). Tasks: `evening/tasks.json` (26 open: 11 open, 6 in progress, 9 waiting).
+Snapshot: grill_snapshots id=13 (evening, with the 'Today' tab data; id=11 was the first run). Tasks: `evening/tasks.json` (26 open: 11 open, 6 in progress, 9 waiting).
+
+## 1. Roadmap — where each client stands
+| Client | Phase | Week | Track | Next step |
+|---|---|---|---|---|
+| Bali Healing | P1 Onboarding | 5 | OFF (24 overdue portal tasks) | Next workflow: audit follow-up, pool |
+| Johni Jaya Motor | P1 Onboarding | 9 | OFF (25 overdue portal tasks) | Access: GA4, Google Business Profile, GSC (Martin 13.10.: tracking already exists, GBP set |
+| Praxis Hüwel | P4 Build-up | 8 | OFF (2 overdue portal tasks) | GBP round 2 (FAQ, review replies, ~19 services) |
+| Maria Brasse | P4 Build-up | 5 | OFF (15 overdue portal tasks) | Next workflow: citations live checks |
+| Praxis Suriya | P4 Build-up | 6 | OFF (5 overdue portal tasks) | First Falcon scan after cycle reset ~19.10. |
+| Daniela Dumann | P4 Build-up | 5 | OFF (4 overdue portal tasks) | Next workflow: pool -> sitetree, copy |
+| Rabenmütter | P4 Build-up | 5 | OFF (6 overdue portal tasks) | not set |
+| Taxi-Zentrale Nürnberg | P4 Build-up | – | UNKNOWN (no portal program) | Akeeba download key saved in Joomla, updates installed, spam source found and closed (Dani |
+| Marcel Rosenbach | P0 Prospect | – | UNKNOWN (no portal program) | Landing page (in progress 13.10.) -> Martin's intro video -> prototype for Marcel -> Ads |
+| me&you / Pauspapier | P4 Build-up | – | UNKNOWN (no portal program) | Next workflow: cro checkpoint 3 |
+| Kamil (Physio Anatomie + Kraft) | P6 Proof + Quarter | – | ON (no overdue portal task) | Move the monthly numbers into his client dashboard and prepare improvement recommendations |
+| STÜRZL Steuerstrafrecht | P1 Onboarding | 0 | ON (no overdue portal task) | Rate-1 payment = start date |
+
+## 4. Not delegated
+- None today. All 12 open Martin tasks are "only you" items: decisions, go's, messages, Loom, keys and passwords.
 
 ## What agents did while you were away
 - Hüwel GA4 chat — PR #5 merged, consent notice live, GA4 realtime shows phone_click + email_click; indexing requested for 5 core pages [e8aede79]
@@ -40,8 +59,8 @@ Snapshot: grill_snapshots id=11 (evening). Tasks: `evening/tasks.json` (26 open:
 - **Blockers / waiting for:** Coralie: GSC access + WordPress role since 12.10.; Dinakar: speed/accessibility work; Tantri: directory verify links
 
 ## Daniela Dumann (P4, active)
-- **Done:** portal reply posted [bac0e038]; E3 card text unified [0d991c89]
-- **Open:** Wix publish of the 3 subpage fixes — owner Martin (your card: "convo with the client first", so NOT done); card drafts + status page — owner agent [065572cb]
+- **Done:** portal reply posted [bac0e038]; E3 card text unified [0d991c89]; 13 decision cards live for Daniela (E1–E11, E22, E23, released by Martin in the Dumann chat); 14 back to draft; no staging copy [57c00bed]
+- **Open:** Wix publish of the 3 subpage fixes — owner Martin (your card: "convo with the client first", so NOT done); tell Daniela about the 13 open cards (no email sent) — owner Martin; status page + portal message not released — owner Martin [57c00bed]
 - **Tomorrow:** your talk with Daniela — owner Martin
 - **Blockers / waiting for:** access GA4, Search Console, Tag Manager missing
 

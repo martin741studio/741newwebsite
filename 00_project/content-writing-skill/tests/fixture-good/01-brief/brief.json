@@ -1,0 +1,73 @@
+{
+ "client": "Testkanzlei",
+ "page_type": "service",
+ "language": "de",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "keyword_primary": "selbstanzeige anwalt",
+ "local_city": null,
+ "pool_item_ids": [
+  "CP-SVC-009"
+ ],
+ "cta": {
+  "goal": "Anfrage",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nur Ihr Thema, keine Einzelheiten."
+ },
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "x",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "x"
+  },
+  {
+   "id": "S03",
+   "element": "check-list",
+   "job": "x"
+  },
+  {
+   "id": "S04",
+   "element": "faq",
+   "job": "x"
+  },
+  {
+   "id": "S05",
+   "element": "cta",
+   "job": "x",
+   "cta": "primary"
+  }
+ ],
+ "gate": "A0-full",
+ "money_page": true,
+ "bestand_words": 60,
+ "benchmark_median_words": null,
+ "faq_min": 2,
+ "internal_links_min": 1,
+ "cta_min": 2,
+ "cta_text": "Vertraulich anfragen",
+ "forbidden_words": [
+  "Experte"
+ ],
+ "blockers": [],
+ "nap_file": "00_project/content-writing-skill/tests/fixture-nap.json",
+ "client_slug": "testkanzlei",
+ "url_slug": "/selbstanzeige/",
+ "paa_questions": [
+  {
+   "q": "Ist eine Selbstanzeige immer noch möglich?",
+   "status": "answered"
+  },
+  {
+   "q": "Was kostet die Beratung?",
+   "status": "answered"
+  }
+ ]
+}

@@ -1,0 +1,261 @@
+{
+ "claims": [
+  {
+   "id": "C01",
+   "type": "number",
+   "text": "ProvenExpert: 250 veröffentlichte Bewertungen, davon 227 mit 5 Sternen (21x4, 2x3). Profil zeigt keine Gesamtnote",
+   "source": "provenexpert.com/de-de/michael-ehlers, Firecrawl 2026-10-11",
+   "numbers": [
+    "250",
+    "227",
+    "5"
+   ],
+   "must_appear": [
+    "227 von 250"
+   ],
+   "required": true
+  },
+  {
+   "id": "C08",
+   "type": "fact",
+   "text": "Gespräch 30 Minuten, kostenlos, per Video (online)",
+   "source": "Calendly Sichtbarkeit Neu (30 min), Firecrawl 2026-10-12; Copy Deck R3 Block 08",
+   "numbers": [
+    "30"
+   ],
+   "must_appear": [
+    "30 Minuten",
+    "kostenlos"
+   ],
+   "required": true
+  },
+  {
+   "id": "C09",
+   "type": "fact",
+   "text": "Telefon Kontakt +49 15888367664",
+   "source": "meandyou.de/sichtbarkeit-termin Footer, Firecrawl 2026-10-12; freigegebene Startseiten-Copy S07",
+   "numbers": [
+    "49",
+    "15888367664"
+   ],
+   "must_appear": [
+    "15888367664"
+   ],
+   "required": true
+  },
+  {
+   "id": "C16",
+   "type": "fact",
+   "text": "Nach der Buchung schickt Calendly eine Bestätigung per E-Mail. Das Team erinnert heute manuell per WhatsApp: 24 Stunden vorher, am Termintag, 15 Minuten vorher mit dem Link zum Call",
+   "source": "Calendly-Standard; 00_project/meandyou-noshow-prompt.md 'Heutige Erinnerungen'; Funnel-Check 06.10. (Telefon Pflichtfeld)",
+   "numbers": [
+    "24",
+    "15"
+   ],
+   "must_appear": [
+    "WhatsApp"
+   ],
+   "required": true
+  },
+  {
+   "id": "C17",
+   "type": "fact",
+   "text": "Die Calendly-Bestätigungsmail enthält einen Link zum Umbuchen (auf der Seite mit gelber Marke)",
+   "source": "Calendly-Standardmail (Links Umbuchen/Absagen); im Konto nicht geprüft, siehe OPEN-FLAGS",
+   "numbers": [],
+   "must_appear": [
+    "umbuchen"
+   ],
+   "required": false
+  },
+  {
+   "id": "C18",
+   "type": "fact",
+   "text": "Im Gespräch: wo du stehst, wo du Wirkung verlierst, welches Seminar, welcher Ort und Termin passt. Danach entscheidest du in Ruhe",
+   "source": "freigegebene Startseiten-Copy S07; Copy Deck R3 Block 08",
+   "numbers": [],
+   "must_appear": [
+    "welches Seminar"
+   ],
+   "required": true
+  },
+  {
+   "id": "C19",
+   "type": "fact",
+   "text": "Das Gespräch führt ein Mitglied aus Michaels Team (Setter), nicht Michael selbst",
+   "source": "Funnel-Check 06.10.; Memory 08.10. (Setter bei anderer Agentur, Name unbekannt)",
+   "numbers": [],
+   "must_appear": [
+    "Michaels Team"
+   ],
+   "required": true
+  },
+  {
+   "id": "C03",
+   "type": "number",
+   "text": "über 8.000 Teilnehmer",
+   "source": "meandyou.de 2026-10-11",
+   "numbers": [
+    "8.000"
+   ],
+   "must_appear": [
+    "8.000"
+   ],
+   "required": false
+  },
+  {
+   "id": "M01",
+   "type": "fact",
+   "text": "Michael Ehlers trainiert seit 1990 Menschen in Rhetorik",
+   "source": "institut-ehlers.de/michael-ehlers, Firecrawl 2026-10-12",
+   "numbers": [
+    "1990"
+   ],
+   "must_appear": [
+    "1990"
+   ],
+   "required": false
+  },
+  {
+   "id": "M02",
+   "type": "credential",
+   "text": "Lehrbeauftragter an der Universität St. Gallen (Rhetorik und Kommunikation)",
+   "source": "institut-ehlers.de/michael-ehlers, Firecrawl 2026-10-12",
+   "numbers": [],
+   "must_appear": [
+    "St. Gallen"
+   ],
+   "required": false
+  },
+  {
+   "id": "C05",
+   "type": "credential",
+   "text": "ERFOLG Magazin Heft 3/2017: Top 100 Erfolgstrainer Deutschland/Österreich (Michael Ehlers)",
+   "source": "meandyou.de 2026-10-11, Cover ERFOLG Heft 3/2017",
+   "numbers": [
+    "100",
+    "2017",
+    "3"
+   ],
+   "must_appear": [
+    "ERFOLG Magazin"
+   ],
+   "required": false
+  },
+  {
+   "id": "Q1",
+   "type": "fact",
+   "text": "Christin R., ProvenExpert, Rhetorik 1 Mallorca: Ich fand es spannend, dass wir Teilnehmer ein Mix von Anfänger bis Profi waren und Michael uns alle, egal auf welchem Level, weiterbringen konnte.",
+   "source": "cro/02-data/reviews.md P4",
+   "numbers": [],
+   "must_appear": [
+    "Christin R."
+   ],
+   "required": false
+  },
+  {
+   "id": "Q2",
+   "type": "fact",
+   "text": "Michael B., ProvenExpert, Rhetorik 1 Mallorca: Besonders beeindruckt hat mich der Praxisteil, in dem wir freie Reden vor der Gruppe hielten und sowohl von Michael Ehlers als auch von den anderen Teilnehmern wertvolles Feedback bekamen.",
+   "source": "cro/02-data/reviews.md P3",
+   "numbers": [],
+   "must_appear": [
+    "Michael B."
+   ],
+   "required": false
+  },
+  {
+   "id": "Q3",
+   "type": "fact",
+   "text": "Peter Escher, Moderator MDR: Trotz 40 Jahren Medienerfahrung konnte ich erstaunlich viel vom Rhetoriktraining profitieren.",
+   "source": "meandyou.de Zitate 2026-10-11; freigegebene Startseiten-Copy S08",
+   "numbers": [
+    "40"
+   ],
+   "must_appear": [
+    "Peter Escher"
+   ],
+   "required": false
+  },
+  {
+   "id": "CD1",
+   "type": "fact",
+   "text": "Copy Deck R3 Block 08: Unübersehbar wird man nicht, indem man lauter wird. / Ein Gespräch, 30 Minuten, kostenlos. Wir klären, wo du stehst und welches Format passt.",
+   "source": "cro/02-data/copydeck-r3.txt",
+   "numbers": [
+    "30"
+   ],
+   "must_appear": [
+    "indem man lauter wird"
+   ],
+   "required": false
+  },
+  {
+   "id": "P1",
+   "type": "placeholder",
+   "text": "Name und Rolle der Person im Gespräch; Foto",
+   "source": "fehlt (Kunde)",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "P2",
+   "type": "placeholder",
+   "text": "Drei Pflichtfragen im Formular und Buchungsfenster 48 bis 72 Stunden: geplant (No-Show-Plan 08.10.), in Calendly noch nicht eingestellt",
+   "source": "Docs Umsetzungsplan und Buchungsstrecke 08.10.",
+   "numbers": [
+    "3",
+    "48",
+    "72"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "P3",
+   "type": "placeholder",
+   "text": "Video von Michael für die Bestätigung (60 bis 90 Sekunden), Skript liegt vor, nicht gedreht",
+   "source": "Doc Buchungsstrecke 08.10.",
+   "numbers": [
+    "60",
+    "90"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "C20",
+   "type": "fact",
+   "text": "Calendly zeigt die Uhrzeiten in der Zeitzone des Besuchers (automatisch erkannt)",
+   "source": "T3: Firecrawl Eastern Time, Headless Bali Zentralindonesische Zeit, 2026-10-12",
+   "numbers": [],
+   "must_appear": [
+    "Zeitzone"
+   ],
+   "required": false
+  },
+  {
+   "id": "C21",
+   "type": "fact",
+   "text": "Die Buchungsdaten verarbeitet der Dienst Calendly (Embed von calendly.com)",
+   "source": "T10, Calendly-Embed in v2 und live",
+   "numbers": [],
+   "must_appear": [
+    "Calendly"
+   ],
+   "required": false
+  },
+  {
+   "id": "C22",
+   "type": "fact",
+   "text": "Telefon ist im Calendly-Formular Pflichtfeld; das Team nutzt die Nummer für WhatsApp-Erinnerungen",
+   "source": "Funnel-Check 06.10. (Telefon Pflicht, 'Daher haben sie die Handynummer für WhatsApp')",
+   "numbers": [],
+   "must_appear": [
+    "Handynummer"
+   ],
+   "required": false
+  }
+ ]
+}

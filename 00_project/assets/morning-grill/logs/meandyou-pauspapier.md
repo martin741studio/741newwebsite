@@ -1,0 +1,2 @@
+- 2026-10-14 evening: Quiet. Waiting on Martin's Loom + go-live date.
+- 2026-10-19 evening: Draft C v4 with Impressum/Datenschutz/AGB live at clients.741.studio/meandyou/v4/; footer + schema Me&You Communication FZCO; Loom + go-live date open [5c4f6ee6].

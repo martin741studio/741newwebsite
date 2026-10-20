@@ -1,0 +1,41 @@
+{
+  "client": "Praxis Suriya",
+  "page": "suriya-woche1-2026-08 / 8 · C · NAP / Citations / Domains",
+  "mode": "FEEDBACK",
+  "feedback_id": "d1c58471-eafc-4ef9-8418-1611a2345445",
+  "input_file": "feedback/Praxis Suriya/d1c58471-eafc-4ef9-8418-1611a2345445.md",
+  "pass": true,
+  "hard_checks": {
+    "no_fehlt_in_core_fields": {
+      "applicable": false,
+      "note": "FEEDBACK item, no Title/Meta/H1/JSON-LD core fields exist. The three [fehlt: ...] tags in the draft (Femalecare spelling/TLD, domain-availability check, missing original report text for the diff) sit in body/Diff-Hinweis prose, not in a required core field, so this check does not block."
+    },
+    "nap_match": {
+      "applicable": true,
+      "pass": true,
+      "note": "Draft NAP block ('Praxis Suriya - Ayurveda & Naturheilkunde', Schützenpfad 29, 55218 Ingelheim am Rhein, +49 174 7411087, Heilpraktiker) checked field-by-field against context.json.nap_locked for client_id 3f71ef33-8c74-4ea1-b2d3-0273c2e99649 — exact match, no drift."
+    },
+    "jsonld_valid": {
+      "applicable": false,
+      "note": "No JSON-LD in this feedback draft (not a page spec/audit)."
+    },
+    "language_match": {
+      "pass": true,
+      "note": "Draft is written in German throughout; plan item market_lang = de. Match."
+    },
+    "hwg_scan": {
+      "pass": true,
+      "note": "Content is domain-registration/citation logistics only. No 'heilt', 'garantiert', '100 %', 'Heilung', or other outcome/cure claims anywhere in the draft."
+    },
+    "rubric_or_feedback_check": {
+      "pass": true,
+      "note": "FEEDBACK mode: 8-dim rubric skipped per SKILL.md; checked sentence-for-sentence against 'Kunde sagt'. (1) 'ayurveda Ingelheim oder ayurveda mainz' -> carried over as two distinct domain-name ideas, correctly annotated: Ingelheim matches the locked NAP city, Mainz is flagged as a neighbouring town (not the practice site) with a concrete citation-consistency reason to get a Martin go/no-go before buying. (2) 'ich habe auch noch die domian Femalecare' -> carried over as an already-owned domain; exact spelling/TLD correctly marked [fehlt: vom Kunden zu bestätigen] instead of being guessed. (3) 'Du kannst gerne die Domaine zubuchen die wichtig sind' -> read as a conditional go-ahead, not converted into an executed purchase (hard rule 1, read-only toward the world — no domain was actually bought); draft instead lists next steps requiring Martin's go. Every sentence in the comment is addressed; nothing is invented; genuine unknowns (spelling, availability, original report text) are flagged with [fehlt: ...] rather than fabricated."
+    },
+    "deslop": {
+      "applicable": false,
+      "note": "The Vorschlag is an internal strategy/next-steps recommendation to Martin (domain choice, citation sequencing), not new client-facing prose meant to ship as-is (e.g. not a GBP description rewrite). Per SKILL.md this is not a deslop blocker; not run."
+    }
+  },
+  "fails": [],
+  "scores": null
+}

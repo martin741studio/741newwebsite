@@ -1,7 +1,14 @@
 #!/usr/bin/env python3
-"""UserPromptExpansion + UserPromptSubmit hook (DRAFT, not installed).
+"""UserPromptExpansion + UserPromptSubmit hook. Installed at user level, 2026-10-15.
 
-1. Registers a session as an automation session when Martin starts /automation-build.
+1. Registers a session as an automation session when Martin starts /automation-build
+   (literal prefix), OR when the prompt paraphrases the same request: a build verb
+   (bau/baue/bauen/verbinde/verbinden) next to an automation noun (Zapier/Zap/
+   Automation-Strecke/Zapier-Strecke). Added 2026-10-15 after a real fresh-session test
+   showed a paraphrase got neither the skill (disable-model-invocation stays as designed —
+   this hook never loads the skill body, it only switches the guard/done-gate on) nor the
+   hook, and the model attempted to build an automation ad hoc, ungated. This hook's job is
+   only to arm the guard and the done gate; it never changes what loads the skill itself.
 2. Records Martin's go tokens. Only a prompt that is exactly "go A3" (or "go A3 A4", "go spec")
    counts. Text from other sessions, scheduled turns or subagents is wrapped and never matches.
 Never blocks a prompt. Never fails a turn.
@@ -11,6 +18,19 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import automation_lib as L
 
 GO_RE = re.compile(r'^\s*go\s+((?:A\d+|spec)(?:[\s,+&]+(?:A\d+|spec))*)\s*[.!]?\s*$', re.I)
+# Paraphrase match (2026-10-15): a build verb near an automation noun, anywhere in the prompt.
+# Biased towards catching too much rather than too little — this only arms the guard/gate,
+# it does not load the skill body and does not block anything by itself.
+PARA_VERB_RE = r'\b(bau(?:e|en|t)?|verbinde(?:n|t)?)\b'
+PARA_NOUN_RE = r'\b(zapier(?:[- ]?strecke)?|zap|automation[s]?[- ]?strecke)\b'
+PARAPHRASE_RE = re.compile(PARA_VERB_RE, re.I), re.compile(PARA_NOUN_RE, re.I)
+# Wrapped-text guard (2026-10-15, after a real false registration): GO_RE is protected because
+# it is anchored to the full prompt (^...$), so a wrapped block never matches it. PARAPHRASE_RE
+# uses .search() instead and has no such anchor, so it used to fire on a build verb and an
+# automation noun anywhere inside a task-notification, cross-session message or other
+# harness-delivered block — text Martin never typed. A genuine prompt from Martin never starts
+# with the harness's own markup, so refuse to arm on a prompt that does.
+WRAPPED_RE = re.compile(r'^\s*<[\w-]+[\s>]')
 
 
 def out(text):
@@ -28,12 +48,15 @@ prompt = (d.get('prompt') or '').strip()
 if not sid:
     sys.exit(0)
 
-starts = (EVENT == 'UserPromptExpansion' and d.get('command_name') == 'automation-build') or \
-         (EVENT == 'UserPromptSubmit' and re.match(r'^/automation-build(\s|$)', prompt))
+literal = EVENT == 'UserPromptSubmit' and bool(re.match(r'^/automation-build(\s|$)', prompt))
+paraphrase = EVENT == 'UserPromptSubmit' and not literal and not WRAPPED_RE.match(prompt) and \
+             bool(PARAPHRASE_RE[0].search(prompt)) and bool(PARAPHRASE_RE[1].search(prompt))
+starts = (EVENT == 'UserPromptExpansion' and d.get('command_name') == 'automation-build') or literal or paraphrase
 if starts:
     s = L.session(sid) or {}
     first = not s
     s.setdefault('registered_at', L.now())
+    s['trigger'] = 'paraphrase' if paraphrase else ('literal' if literal else 'expansion')
     s.setdefault('run_dir', None)
     s['last_start_prompt'] = prompt[:300]
     L.save_session(sid, s)

@@ -1,0 +1,92 @@
+{
+ "title": "Content Pool: 741.Studio (own run)",
+ "subtitle": "Homepage first. Existing site, 116 pages. Two markets: DACH practices and clinics (German) and expat businesses in Bali (English). No HWG for the agency itself.",
+ "findings": [
+  {
+   "text": "Brand queries carry most of the visible search traffic. They bring {gsc.brand_impr} of {gsc.listed_impr} listed impressions ({gsc.brand_share}). Non-brand queries bring {gsc.patient_service_impr} impressions and {gsc.patient_service_clicks} click. The brand item counts {CP-BRD-003.gsc_impr} impressions across all spellings, and the name is ambiguous.",
+   "items": [
+    "CP-BRD-003",
+    "CP-LOC-001",
+    "CP-LOC-006"
+   ]
+  },
+  {
+   "text": "The English home page has {bench.own} words. The floor from gate A0 is {bench.floor} words (70 % of the median {bench.median} words of {bench.n} Bali agency homepages). It passes. The German peers are bigger: the 19 German agency homepages have a median of 2,029 words, the German home page has 741. It carries three H1.",
+   "items": [
+    "CP-LOC-001",
+    "CP-BRD-001",
+    "CP-LOC-003"
+   ]
+  },
+  {
+   "text": "The offers are on the site but Google cannot use many of them. 20 of 116 pages carry noindex. Some are intended (legal pages, private previews). The Bali pages, the three free-audit pages and the visibility grant pages are targets, not previews.",
+   "items": [
+    "CP-LOC-002",
+    "CP-SVC-004",
+    "CP-SVC-011"
+   ]
+  },
+  {
+   "text": "Bali needs one page that Google may index. 'digital agency bali' has 390 searches a month, 'marketing agency bali' 260, 'web design bali' 260. All Bali agency homepages name Bali ({CP-LOC-002.cov}) and hold the local pack. The two Bali pages of 741 are noindex.",
+   "items": [
+    "CP-LOC-002",
+    "CP-SVC-007",
+    "CP-SVC-001"
+   ]
+  },
+  {
+   "text": "Practices are table stakes in Germany. {CP-SVC-002.cov} niche agencies have a page for practices or doctors. 'seo für ärzte' has 390 searches, 'webdesign arztpraxis' 260. 741 has case studies for practices (for example a Heilpraktiker in Freiburg) but no page that names the vertical.",
+   "items": [
+    "CP-SVC-002",
+    "CP-AUT-001",
+    "CP-SVC-003"
+   ]
+  },
+  {
+   "text": "Pages repeat themselves. Google Ads has three near-identical pages (551 to 629 words), Meta Ads two. Many 'Best ... Bali' posts share one pattern, and a German-path copy exists for most. Merge them into a few deep pages and check the text overlap before any redirect.",
+   "items": [
+    "CP-SVC-005",
+    "CP-SVC-006",
+    "CP-AUT-005"
+   ]
+  },
+  {
+   "text": "Price and proof need decisions. 'seo kosten' has 320 searches, 'seo preise' 210. Only {CP-SVC-009.cov} agency sites show a price. Martin's rule says numbers only in the call. The home H1 promises 'Top 3 in 90 days' without a case next to it. Google shows 4.5 with 17 reviews and the newest has no reply.",
+   "items": [
+    "CP-SVC-009",
+    "CP-BRD-006",
+    "CP-AUT-002",
+    "CP-AUT-003"
+   ]
+  },
+  {
+   "text": "Large volumes are traps. 'google bewertungen löschen' has 5,400 searches, but law firms and removal agencies fill the results. 'website erstellen lassen' has 3,600 and is a broad price search. 'seo nürnberg' has 390 but 741 has no local fact there. City pages are cut.",
+   "items": [
+    "CP-SVC-016",
+    "CP-LOC-004"
+   ]
+  },
+  {
+   "text": "Data limits. Three competitor homepages could not be used: webtiger-pro.de is not readable, and sansiromedia.com and healthypixels.de gave 12 words. No Maps measurement was run (the audit bought nothing), so the local-pack competitors for Bali are known only from the search results. The Search Console base is small. DataForSEO knows no own keyword with meaning.",
+   "items": [
+    "CP-LOC-005",
+    "CP-LOC-002"
+   ]
+  }
+ ],
+ "pillars": {
+  "location": "Hero and title that say what 741.Studio does and for whom, with one H1. One indexable Bali page. German pages that are really German. Fix the Google profile (category, services, description, hours) and add structured data. City pages stay out.",
+  "service": "Local SEO is the flagship, with a page per vertical: practices first, law firms later. The free audit is the first step and must be indexable. One strong page each for Google Ads and Meta Ads, one for web design. A process page, a cost page and an FAQ. Automation, review removal, social media and e-commerce wait for Martin.",
+  "brand": "One sentence for what 741.Studio is. Two markets, two doors, two languages. A name that wins its own search. The method in three sentences. The founder story. Claim discipline: every promise with its case next to it.",
+  "authority": "Case studies with numbers and the clients' words, linked from each claim. A real proof strip. Reviews with replies. Link targets: agency directories. Merge the thin blog posts. Cut the off-topic ones."
+ },
+ "decisions": [
+  "Cost page (CP-SVC-009): no numbers, a 'from' hint, or a range? Your rule says numbers only in the call.",
+  "Law firms (CP-SVC-003): is the vertical a goal, and may the Stürzl case be named? Only one client so far.",
+  "Adjacent offers (CP-SVC-015, CP-SVC-016, CP-SVC-017): automation, review removal, social media and e-commerce. Offered or not? If not, remove them from the Google profile description.",
+  "Blog: merge the near-identical 'Best ... Bali' posts (CP-AUT-005) and decide on the off-topic posts (CP-AUT-006): keep, noindex or remove.",
+  "Which noindex pages become indexable: the Bali pages, the audit pages (CP-SVC-004)? The visibility grant waits for the terms review (CP-SVC-011).",
+  "Is Berlin a base? 'webdesign agentur berlin' (1,300 searches) counts only if yes.",
+  "Google Ads and Meta Ads variants: which single page per service stays?"
+ ]
+}

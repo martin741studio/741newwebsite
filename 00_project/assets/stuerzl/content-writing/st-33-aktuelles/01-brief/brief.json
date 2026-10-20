@@ -1,0 +1,113 @@
+{
+ "client": "STÜRZL Steuerstrafrecht",
+ "client_slug": "stuerzl",
+ "page_slug": "aktuelles",
+ "page_type": "news",
+ "mode": "rewrite",
+ "language": "de",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "voice_sheet": "00_project/assets/stuerzl/voice.md",
+ "pool_item_ids": [],
+ "sitetree_node": "ST-33",
+ "url_slug": "/aktuelles/",
+ "keyword_primary": "aktuelles",
+ "keywords_cluster": [],
+ "intent": "navigational",
+ "reader": "Besucher, die wissen wollen, was die Kanzlei veröffentlicht und wo sie auftritt: Interviews, Fachbeiträge, Vorträge, Seminare. Auch Journalisten und Kolleginnen.",
+ "local_city": null,
+ "cta": {
+  "goal": "Vertrauliche Anfrage; Weiterlesen im Ratgeber und bei den Veröffentlichungen",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nennen Sie uns nur Ihr Thema, keine Einzelheiten."
+ },
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "H1 Aktuelles, eine Zeile"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Einleitungsabsatz (news-hub): was hier steht, Verweis auf Ratgeber und Veröffentlichungen. Die Beitragsliste erzeugt das CMS."
+  },
+  {
+   "id": "S03",
+   "element": "cta",
+   "job": "Kurzer CTA 'Vertraulich anfragen' mit Beruhigungszeile, unter der CMS-Liste",
+   "cta": "primary"
+  }
+ ],
+ "dropped_sections": [
+  {
+   "id": "Beitragsliste",
+   "reason": "Das CMS erzeugt die Liste der Beiträge (Auftrag der Kanzlei und Batch-Anweisung: nur ein Einleitungsabsatz)."
+  },
+  {
+   "id": "CTA",
+   "reason": "Template News-Hub: keine Texte außer dem Einleitungsabsatz."
+  }
+ ],
+ "gate": "A0-C",
+ "money_page": false,
+ "bestand_words": 0,
+ "benchmark_median_words": null,
+ "benchmark_sources": "Typ C (News-Hub): kein Wortziel. Nachrichtenseiten von 8 Wettbewerbern gemessen nur für den Überschriften-Vergleich in G6 (_work/bench-metrics.json). Bestand: Live-Seite hat 338 Wörter, das ist ausschließlich die Beitragsliste (CMS), der Einleitungstext fehlt (0 Wörter).",
+ "word_range": [
+  40,
+  140
+ ],
+ "require_answer_block": true,
+ "faq_min": 0,
+ "internal_links_min": 3,
+ "internal_link_targets": [
+  {
+   "url": "/ratgeber/",
+   "anchor": "Ratgeber",
+   "role": "hub"
+  },
+  {
+   "url": "/publikationen/",
+   "anchor": "Veröffentlichungen, Vorträge und Presse",
+   "role": "sibling"
+  },
+  {
+   "url": "/dr-anja-stuerzl/",
+   "anchor": "Dr. Anja Stürzl",
+   "role": "person"
+  },
+  {
+   "url": "/kontakt/",
+   "anchor": "Kontakt und Anfahrt",
+   "role": "contact"
+  }
+ ],
+ "cta_min": 1,
+ "proof_assets": [],
+ "forbidden_words": [
+  "spezialisiert",
+  "Spezialist",
+  "Experte",
+  "Expertin",
+  "Expertise",
+  "führend",
+  "Exzellenz",
+  "kostenlos",
+  "Festpreis",
+  "WhatsApp",
+  "Wiesenhüttenstraße",
+  "Albtraum",
+  "Ruin",
+  "Haft droht"
+ ],
+ "own_phrases": [],
+ "placeholders_allowed": [],
+ "blockers": [],
+ "nap_file": "00_project/assets/stuerzl/nap.json",
+ "paa_questions": [],
+ "schema_faq": false,
+ "cta_text": "Vertraulich anfragen"
+}

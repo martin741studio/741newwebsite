@@ -176,3 +176,7 @@ Templates in `00_project/automation-workflow/templates/`:
 | `martin-steps.md` | class M steps for Martin |
 
 Run folder: `state.json`, `_run.json`, `inventory.md`, `spec.md`, `test-plan.md`, `test-report.json`, `changelog.md`, `snapshots/`, `evidence/`, `rollback.md`, `golive-checklist.md`, `martin-steps.md`, `runbook-de.md`, `testprotokoll-de.md`.
+
+## Martin guide (2026-10-12)
+
+The 741 character Martin points out the one thing per section the reader must not miss. Rules, poses, markup and the inline helper: `00_project/assets/brand/martin-guide/README.md`. In this workflow: in the client runbook and handover: present at the data flow, think at the steps the client must do. Max 1 callout per section, bubble text in first person and plain language, every number with source and date, check desktop and mobile with a screenshot.

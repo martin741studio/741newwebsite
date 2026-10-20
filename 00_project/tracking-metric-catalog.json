@@ -1,0 +1,741 @@
+{
+ "catalog": "tracking",
+ "version": "0.1.0",
+ "date": "2026-10-12",
+ "status": "draft for checkpoint 1",
+ "time_zone": "Europe/Berlin",
+ "field_notes": {
+  "collector": "auto = Supabase cron/edge function; agent = Claude run (weekly/monthly/quarterly); client = client enters in portal; manual = Martin or team",
+  "layer": "glance = 30-second view; proof = raw evidence with date and source; raw = data layer for agents only",
+  "client_visible": "true = shown in the client tab after Martin's release",
+  "warning": "yellow goes to the 08:05 standup; red goes at once by email alerts@741.studio -> martin@741.studio",
+  "baseline": "frozen comparison value; for Suriya the period 28.06.-23.09.2026 (before the relaunch)",
+  "v1": "true = part of version 1 (pilot Praxis Suriya)"
+ },
+ "metrics": [
+  {
+   "id": "M01",
+   "key": "gbp_call_clicks",
+   "name_de": "Anrufe über dein Google-Profil",
+   "name_en": "GBP call clicks",
+   "definition": "Taps on 'Anrufen' in the Google profile, per day, summed per week (Mon-Sun).",
+   "unit": "count/week",
+   "source": "Google Business Profile performance via Local Falcon getLocalFalconGbpPerformanceMetrics (CALL_CLICKS)",
+   "collector": "auto",
+   "cadence": "daily pull, weekly view",
+   "owner": "741",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": "sum of M01+M02+M03 in the last complete week < 70 % of the baseline week average",
+    "red": "feed unreadable 2 days in a row (report as 'nicht lesbar', never as 0)"
+   },
+   "quarter_question": "Did more visibility turn into more contact actions?",
+   "v1": true,
+   "note": "Google reports with about 3 days delay. Only complete weeks are compared. Counts taps, not answered calls."
+  },
+  {
+   "id": "M02",
+   "key": "gbp_website_clicks",
+   "name_de": "Klicks auf deine Website aus dem Google-Profil",
+   "name_en": "GBP website clicks",
+   "definition": "Clicks on the website button in the Google profile.",
+   "unit": "count/week",
+   "source": "Local Falcon GBP performance (WEBSITE_CLICKS)",
+   "collector": "auto",
+   "cadence": "daily pull, weekly view",
+   "owner": "741",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": "see M01 (combined)",
+    "red": null
+   },
+   "quarter_question": "Does the profile send people to the booking page?",
+   "v1": true
+  },
+  {
+   "id": "M03",
+   "key": "gbp_direction_requests",
+   "name_de": "Routen-Anfragen zu deiner Praxis",
+   "name_en": "GBP direction requests",
+   "definition": "Requests for a route to the business address.",
+   "unit": "count/week",
+   "source": "Local Falcon GBP performance (BUSINESS_DIRECTION_REQUESTS)",
+   "collector": "auto",
+   "cadence": "daily pull, weekly view",
+   "owner": "741",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": "see M01 (combined)",
+    "red": null
+   },
+   "quarter_question": "Where do people come from (geo pockets)?",
+   "v1": true
+  },
+  {
+   "id": "M04",
+   "key": "gbp_views",
+   "name_de": "Aufrufe deines Google-Profils",
+   "name_en": "GBP profile views",
+   "definition": "Sum of the four impression metrics (Maps and Search, mobile and desktop).",
+   "unit": "count/week",
+   "source": "Local Falcon GBP performance (BUSINESS_IMPRESSIONS_*)",
+   "collector": "auto",
+   "cadence": "daily pull, weekly view",
+   "owner": "741",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": "last complete week < 70 % of baseline week average",
+    "red": "last complete week < 40 % of baseline week average for 2 weeks"
+   },
+   "quarter_question": "Ranking saturation or loss?",
+   "v1": true,
+   "note": "Single-day spikes (Suriya 15.08.: 142 desktop Maps views) are marked, not removed."
+  },
+  {
+   "id": "M05",
+   "key": "form_leads",
+   "name_de": "Anfragen über das Website-Formular",
+   "name_en": "Website form leads",
+   "definition": "Each submit of the booking or contact form that reaches the portal table leads (channel = formular).",
+   "unit": "count/week",
+   "source": "portal table leads (via edge function lead-intake, needs a site change with go)",
+   "collector": "auto",
+   "cadence": "real time, weekly view",
+   "owner": "741",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": "0 form leads in 14 days while M02 > 0",
+    "red": "form check fails (see M27)"
+   },
+   "quarter_question": "Which pages and keywords bring real inquiries?",
+   "v1": true,
+   "note": "Store only contact data, channel, page and status. Never symptoms or case details (health data, Art. 9 GDPR; same rule as portal-leads-crm)."
+  },
+  {
+   "id": "M06",
+   "key": "phone_mail_leads",
+   "name_de": "Anfragen per Telefon, Mail oder WhatsApp",
+   "name_en": "Phone/mail leads",
+   "definition": "Leads the client enters in the tab 'Anfragen' (channel telefon/mail/whatsapp) with the question 'Wie hast du uns gefunden?'.",
+   "unit": "count/week",
+   "source": "portal table leads (created_by = client)",
+   "collector": "client",
+   "cadence": "continuous, weekly view",
+   "owner": "client",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": "no client entry for 14 days",
+    "red": null
+   },
+   "quarter_question": "How large is the hidden phone share?",
+   "v1": true
+  },
+  {
+   "id": "M07",
+   "key": "real_leads",
+   "name_de": "Echte Anfragen",
+   "name_en": "Real leads",
+   "definition": "M05 + M06 minus entries marked spam or 'passt nicht' (fit = no).",
+   "unit": "count/week",
+   "source": "portal table leads",
+   "collector": "auto",
+   "cadence": "weekly",
+   "owner": "741",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": "4-week sum < 70 % of the previous 4 weeks",
+    "red": null
+   },
+   "quarter_question": "Is the lead flow growing?",
+   "v1": true
+  },
+  {
+   "id": "M08",
+   "key": "booked_jobs",
+   "name_de": "Gebuchte Termine",
+   "name_en": "Booked jobs",
+   "definition": "Leads with status 'gebucht' (first paid appointment or programme start).",
+   "unit": "count/month",
+   "source": "portal table leads (status set by client)",
+   "collector": "client",
+   "cadence": "continuous, monthly view",
+   "owner": "client",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": "no status update for 14 days while open leads exist -> one reminder card",
+    "red": null
+   },
+   "quarter_question": "Do leads turn into revenue?",
+   "v1": true,
+   "note": "If missing: show 'fehlt seit <Datum>'. Never estimate."
+  },
+  {
+   "id": "M09",
+   "key": "booked_value_eur",
+   "name_de": "Wert der gebuchten Termine",
+   "name_en": "Booked value",
+   "definition": "Sum of the value the client enters per booked lead (first booking or package price).",
+   "unit": "EUR/month",
+   "source": "portal leads.mandate_value_eur (rename to value_eur in the tracking view)",
+   "collector": "client",
+   "cadence": "monthly",
+   "owner": "client",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": null,
+    "red": null
+   },
+   "quarter_question": "Return on the programme?",
+   "v1": true
+  },
+  {
+   "id": "M10",
+   "key": "cost_basis_eur",
+   "name_de": "Kosten für Sichtbarkeit",
+   "name_en": "Cost basis",
+   "definition": "741 programme fee of the month + paid ads spend of the month (if any).",
+   "unit": "EUR/month",
+   "source": "741 invoice (fee) + Google Ads / Meta spend",
+   "collector": "manual (fee set once per client) + auto (ads)",
+   "cadence": "monthly",
+   "owner": "741",
+   "layer": "proof",
+   "client_visible": true,
+   "warning": {
+    "yellow": null,
+    "red": null
+   },
+   "quarter_question": "Cost per booked job trend",
+   "v1": true
+  },
+  {
+   "id": "M11",
+   "key": "cost_per_booked_job",
+   "name_de": "Kosten je gebuchtem Termin",
+   "name_en": "Cost per booked job",
+   "definition": "M10 / M08 for the same month. Empty when M08 is missing.",
+   "unit": "EUR",
+   "source": "computed",
+   "collector": "auto",
+   "cadence": "monthly",
+   "owner": "741",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": "rises 2 months in a row",
+    "red": null
+   },
+   "quarter_question": "Double down or cut?",
+   "v1": true
+  },
+  {
+   "id": "M12",
+   "key": "lead_to_booked_rate",
+   "name_de": "Anteil gebuchter Anfragen",
+   "name_en": "Lead-to-booked rate",
+   "definition": "M08 / M07 for the same month.",
+   "unit": "%",
+   "source": "computed",
+   "collector": "auto",
+   "cadence": "monthly",
+   "owner": "741",
+   "layer": "proof",
+   "client_visible": true,
+   "warning": {
+    "yellow": null,
+    "red": null
+   },
+   "quarter_question": "Lead quality or capacity problem?",
+   "v1": true
+  },
+  {
+   "id": "M13",
+   "key": "grid_top3_share",
+   "name_de": "Kartenpunkte mit Platz 1-3",
+   "name_en": "Grid share of top-3 points (SoLV)",
+   "definition": "Share of the 49 grid points where the profile is in places 1-3, per locked keyword.",
+   "unit": "%",
+   "source": "Local Falcon campaign scan (solv)",
+   "collector": "auto (scheduled campaign) + agent (read report)",
+   "cadence": "monthly",
+   "owner": "741",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": "drop >= 15 points vs previous scan on any locked keyword",
+    "red": "drop >= 40 points on the main keyword"
+   },
+   "quarter_question": "Who gained ground and why?",
+   "v1": true,
+   "note": "Client text never says SoLV. It says 'An X von 49 Punkten auf der Karte bist du unter den ersten 3'."
+  },
+  {
+   "id": "M14",
+   "key": "grid_avg_rank",
+   "name_de": "Durchschnittlicher Platz auf der Karte",
+   "name_en": "Average rank (ARP)",
+   "definition": "Average place over the grid points where the profile is found.",
+   "unit": "rank",
+   "source": "Local Falcon campaign scan (arp)",
+   "collector": "auto",
+   "cadence": "monthly",
+   "owner": "741",
+   "layer": "proof",
+   "client_visible": true,
+   "warning": {
+    "yellow": "worse by >= 2 places vs previous scan",
+    "red": null
+   },
+   "quarter_question": "Distance limit and authority plateau",
+   "v1": true
+  },
+  {
+   "id": "M15",
+   "key": "grid_found_in",
+   "name_de": "Kartenpunkte, an denen du erscheinst",
+   "name_en": "Found in",
+   "definition": "Number of grid points (of 49) where the profile is in the top 20.",
+   "unit": "points",
+   "source": "Local Falcon campaign scan (found_in)",
+   "collector": "auto",
+   "cadence": "monthly",
+   "owner": "741",
+   "layer": "proof",
+   "client_visible": true,
+   "warning": {
+    "yellow": null,
+    "red": null
+   },
+   "quarter_question": "New geo pockets",
+   "v1": true
+  },
+  {
+   "id": "M16",
+   "key": "grid_competitors",
+   "name_de": "Mitbewerber auf der Karte",
+   "name_en": "Grid competitors",
+   "definition": "Top 3 competitors per locked keyword with top-3 share, average rank, review count and rating.",
+   "unit": "table",
+   "source": "Local Falcon competitor report (auto with every scan)",
+   "collector": "agent",
+   "cadence": "monthly",
+   "owner": "741",
+   "layer": "proof",
+   "client_visible": true,
+   "warning": {
+    "yellow": "a new business enters the top 3",
+    "red": null
+   },
+   "quarter_question": "Who is new, who lost ground, who disappeared?",
+   "v1": true
+  },
+  {
+   "id": "M17",
+   "key": "reviews_total",
+   "name_de": "Bewertungen gesamt und Durchschnitt",
+   "name_en": "Reviews total + rating",
+   "definition": "Total Google reviews and average stars.",
+   "unit": "count, stars",
+   "source": "Local Falcon listLocalFalconGbpReviews",
+   "collector": "auto",
+   "cadence": "daily",
+   "owner": "741",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": null,
+    "red": "new review with 1 or 2 stars"
+   },
+   "quarter_question": "Review distribution and economics",
+   "v1": true
+  },
+  {
+   "id": "M18",
+   "key": "reviews_velocity",
+   "name_de": "Neue Bewertungen pro Monat",
+   "name_en": "Review velocity",
+   "definition": "New reviews per calendar month (date_created), rolling 3-month average.",
+   "unit": "count/month",
+   "source": "Local Falcon listLocalFalconGbpReviews",
+   "collector": "auto",
+   "cadence": "daily pull, monthly view",
+   "owner": "741",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": "0 new reviews in 60 days, or own 3-month average < median of the top-3 competitors",
+    "red": null
+   },
+   "quarter_question": "Do we keep pace with the leaders?",
+   "v1": true
+  },
+  {
+   "id": "M19",
+   "key": "competitor_review_velocity",
+   "name_de": "Neue Bewertungen der Mitbewerber",
+   "name_en": "Competitor review velocity",
+   "definition": "Monthly delta of review counts of the top-3 competitors per main keyword.",
+   "unit": "count/month",
+   "source": "Local Falcon competitor data per scan (review count) - delta between scans",
+   "collector": "agent",
+   "cadence": "monthly",
+   "owner": "741",
+   "layer": "proof",
+   "client_visible": true,
+   "warning": {
+    "yellow": "see M18",
+    "red": null
+   },
+   "quarter_question": "Review gap to the market leader",
+   "v1": true,
+   "note": "Falcon review count 0 can mean 'no data' (Stürzl audit finding). Treat 0 as unknown and verify."
+  },
+  {
+   "id": "M20",
+   "key": "reviews_unanswered",
+   "name_de": "Bewertungen ohne Antwort",
+   "name_en": "Unanswered reviews",
+   "definition": "Reviews without owner reply.",
+   "unit": "count",
+   "source": "Local Falcon listLocalFalconGbpReviews (unanswered=true)",
+   "collector": "auto",
+   "cadence": "daily",
+   "owner": "client",
+   "layer": "raw",
+   "client_visible": false,
+   "warning": {
+    "yellow": null,
+    "red": null
+   },
+   "quarter_question": null,
+   "v1": true,
+   "note": "741 does not answer reviews (memory no-review-answering). Info only."
+  },
+  {
+   "id": "M21",
+   "key": "gsc_clicks",
+   "name_de": "Klicks aus der Google-Suche",
+   "name_en": "GSC clicks",
+   "definition": "Search Console clicks, 28 days vs previous 28 days, plus per focus keyword.",
+   "unit": "count/28d",
+   "source": "Search Console API via service account (scripts/gsc-client-export.mjs)",
+   "collector": "auto",
+   "cadence": "weekly",
+   "owner": "741",
+   "layer": "glance",
+   "client_visible": true,
+   "warning": {
+    "yellow": "28-day clicks < 80 % of previous 28 days",
+    "red": "API 403 (access lost) -> 'nicht lesbar'"
+   },
+   "quarter_question": "Content saturation, cut or refresh candidates",
+   "v1": true
+  },
+  {
+   "id": "M22",
+   "key": "gsc_pages",
+   "name_de": "Seiten mit Klicks",
+   "name_en": "GSC pages",
+   "definition": "Clicks and impressions per page, 90 days.",
+   "unit": "table",
+   "source": "Search Console API",
+   "collector": "agent",
+   "cadence": "monthly + quarterly",
+   "owner": "741",
+   "layer": "raw",
+   "client_visible": false,
+   "warning": {
+    "yellow": null,
+    "red": null
+   },
+   "quarter_question": "Prune, double down, refresh",
+   "v1": true
+  },
+  {
+   "id": "M23",
+   "key": "serp_position",
+   "name_de": "Platz in der normalen Google-Suche (unabhängige Messung)",
+   "name_en": "Independent SERP position",
+   "definition": "Organic position, mobile, client city, per locked keyword and 'keyword + Stadt'.",
+   "unit": "rank",
+   "source": "DataForSEO SERP (ranking-tracking-master-prompt step 3)",
+   "collector": "agent",
+   "cadence": "monthly",
+   "owner": "741",
+   "layer": "proof",
+   "client_visible": true,
+   "warning": {
+    "yellow": "drop out of the top 10 on a locked keyword",
+    "red": null
+   },
+   "quarter_question": "Independent check of agency claims",
+   "v1": true,
+   "note": "Runs inside the monthly agent run (laptop) until a fixed-IP runner exists."
+  },
+  {
+   "id": "M24",
+   "key": "ga4_tracking_health",
+   "name_de": "Messung auf der Website funktioniert",
+   "name_en": "GA4 tracking health",
+   "definition": "GA4 sessions per day and key events (form submit, tel click).",
+   "unit": "count/day",
+   "source": "GA4 Data API via service account (account-level viewer)",
+   "collector": "auto",
+   "cadence": "daily",
+   "owner": "741",
+   "layer": "raw",
+   "client_visible": false,
+   "warning": {
+    "yellow": null,
+    "red": "0 sessions for a day while the 7-day average > 5"
+   },
+   "quarter_question": null,
+   "v1": true
+  },
+  {
+   "id": "M25",
+   "key": "site_uptime",
+   "name_de": "Website erreichbar",
+   "name_en": "Site uptime",
+   "definition": "HTTP status of the homepage and the booking page.",
+   "unit": "status",
+   "source": "edge function fetch",
+   "collector": "auto",
+   "cadence": "hourly",
+   "owner": "741",
+   "layer": "raw",
+   "client_visible": false,
+   "warning": {
+    "yellow": null,
+    "red": "not 200 in 2 checks in a row"
+   },
+   "quarter_question": null,
+   "v1": true
+  },
+  {
+   "id": "M26",
+   "key": "form_present",
+   "name_de": "Buchungsformular vorhanden",
+   "name_en": "Form present",
+   "definition": "Booking page contains the form element and its submit endpoint; no test submits.",
+   "unit": "status",
+   "source": "edge function fetch + HTML marker",
+   "collector": "auto",
+   "cadence": "daily",
+   "owner": "741",
+   "layer": "raw",
+   "client_visible": false,
+   "warning": {
+    "yellow": null,
+    "red": "marker missing"
+   },
+   "quarter_question": null,
+   "v1": true
+  },
+  {
+   "id": "M27",
+   "key": "profile_integrity",
+   "name_de": "Google-Profil unverändert",
+   "name_en": "Profile integrity",
+   "definition": "Daily diff of name, address, phone, website, hours, primary category against the locked master (NAP source of truth) plus pending Google updates.",
+   "unit": "diff",
+   "source": "Local Falcon getLocalFalconGbpProfile + getLocalFalconGbpGoogleUpdates",
+   "collector": "auto",
+   "cadence": "daily",
+   "owner": "741",
+   "layer": "raw",
+   "client_visible": false,
+   "warning": {
+    "yellow": "pending Google suggestion exists",
+    "red": "live field differs from master"
+   },
+   "quarter_question": null,
+   "v1": true
+  },
+  {
+   "id": "M28",
+   "key": "profile_verification",
+   "name_de": "Google-Profil verifiziert",
+   "name_en": "Profile verification",
+   "definition": "Verification state of the profile.",
+   "unit": "status",
+   "source": "Local Falcon getLocalFalconGbpVerificationStatus",
+   "collector": "auto",
+   "cadence": "daily",
+   "owner": "741",
+   "layer": "raw",
+   "client_visible": false,
+   "warning": {
+    "yellow": null,
+    "red": "unverified or suspended"
+   },
+   "quarter_question": null,
+   "v1": true
+  },
+  {
+   "id": "M29",
+   "key": "client_update_age",
+   "name_de": "Letztes Update an dich",
+   "name_en": "Days since last client update",
+   "definition": "Days since the last released weekly card or portal note.",
+   "unit": "days",
+   "source": "tracking_weekly_cards + messages",
+   "collector": "auto",
+   "cadence": "daily",
+   "owner": "741",
+   "layer": "raw",
+   "client_visible": false,
+   "warning": {
+    "yellow": "card not released by Wednesday 12:00, or > 10 days without update",
+    "red": null
+   },
+   "quarter_question": "Were we never in the dark?",
+   "v1": true
+  },
+  {
+   "id": "M30",
+   "key": "ai_visibility",
+   "name_de": "Empfehlung durch KI-Assistenten",
+   "name_en": "AI visibility (SAIV)",
+   "definition": "Share of AI answers (ChatGPT, Google AI Overviews) that name the business, 3x3 grid, main keyword.",
+   "unit": "%",
+   "source": "Local Falcon AI scan (chatgpt, gaio)",
+   "collector": "agent",
+   "cadence": "quarterly",
+   "owner": "741",
+   "layer": "proof",
+   "client_visible": true,
+   "warning": {
+    "yellow": null,
+    "red": null
+   },
+   "quarter_question": "Algorithm updates and AI trends",
+   "v1": false
+  },
+  {
+   "id": "M31",
+   "key": "backlinks_snapshot",
+   "name_de": "Verweise anderer Websites",
+   "name_en": "Backlink snapshot",
+   "definition": "Referring domains of the client and the top-3 competitors, new in the quarter.",
+   "unit": "count",
+   "source": "DataForSEO backlinks",
+   "collector": "agent",
+   "cadence": "quarterly",
+   "owner": "741",
+   "layer": "proof",
+   "client_visible": true,
+   "warning": {
+    "yellow": null,
+    "red": null
+   },
+   "quarter_question": "Which links were built (own and competitors)?",
+   "v1": false
+  },
+  {
+   "id": "M32",
+   "key": "capacity",
+   "name_de": "Freie Termine pro Woche",
+   "name_en": "Capacity",
+   "definition": "Client's own estimate: free slots per week and maximum patients per week (Suriya: max 12-16 per week).",
+   "unit": "slots/week",
+   "source": "client (quarterly question in the portal)",
+   "collector": "client",
+   "cadence": "quarterly",
+   "owner": "client",
+   "layer": "proof",
+   "client_visible": true,
+   "warning": {
+    "yellow": "free slots < 2 per week",
+    "red": null
+   },
+   "quarter_question": "Capacity check before more growth",
+   "v1": true
+  },
+  {
+   "id": "M33",
+   "key": "search_demand_season",
+   "name_de": "Suchnachfrage im Jahresverlauf",
+   "name_en": "Seasonal search demand",
+   "definition": "Monthly search volume history (12-24 months) for the locked keywords and main topics.",
+   "unit": "searches/month",
+   "source": "DataForSEO keyword volume history + GSC impressions by month",
+   "collector": "agent",
+   "cadence": "quarterly",
+   "owner": "741",
+   "layer": "raw",
+   "client_visible": false,
+   "warning": {
+    "yellow": null,
+    "red": null
+   },
+   "quarter_question": "Season radar 2-3 quarters ahead",
+   "v1": false
+  },
+  {
+   "id": "M34",
+   "key": "lead_geo",
+   "name_de": "Woher deine Anfragen kommen",
+   "name_en": "Lead geography",
+   "definition": "Postcode or town per lead (client enters town only), aggregated per quarter.",
+   "unit": "table",
+   "source": "portal leads.location",
+   "collector": "client",
+   "cadence": "quarterly",
+   "owner": "741",
+   "layer": "proof",
+   "client_visible": true,
+   "warning": {
+    "yellow": null,
+    "red": null
+   },
+   "quarter_question": "New geo pockets, CRM data match",
+   "v1": true
+  }
+ ],
+ "locked_scan_config": {
+  "rule": "One locked config per client. A change needs Martin's go and is logged with date and reason. Scans with another config are stored but not compared.",
+  "suriya": {
+   "grid": "7x7",
+   "radius": "5 km",
+   "platform": "google",
+   "cadence": "monthly campaign",
+   "credits_per_run": 245,
+   "keywords": [
+    "heilpraktiker ingelheim",
+    "migräne behandlung",
+    "schmerztherapie ingelheim",
+    "akupunktur ingelheim",
+    "naturheilpraxis ingelheim"
+   ],
+   "note": "Locked by Martin 2026-10-12. First campaign run after the Falcon cycle reset (~19.10.).",
+   "locked_at": "2026-10-12"
+  }
+ },
+ "client_config": {
+  "suriya": {
+   "fee_eur_90d": 3699,
+   "fee_eur_month": 1233,
+   "ads": "none",
+   "ga4_measurement_id": "G-B93S7ZWNNR",
+   "gtm": "GTM-K9MDDN7P",
+   "lead_events": [
+    "s741_form_submit",
+    "s741_whatsapp_click",
+    "s741_phone_click"
+   ]
+  }
+ },
+ "rules_added": [
+  "Every result carries a source link (Martin 2026-10-12)."
+ ]
+}

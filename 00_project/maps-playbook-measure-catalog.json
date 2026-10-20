@@ -1,0 +1,4428 @@
+{
+ "catalog_version": "0.1.0",
+ "date": "2026-10-11",
+ "status": "DRAFT, design approved by Martin at checkpoint 1 (2026-10-11). Not loaded into any database.",
+ "source": "Martin board (74 cards) plus text (3 extra measures). German labels are the board words.",
+ "pillars": {
+  "P1 Google-Profil": "GBP, the Maps engine",
+  "P2 Website": "On-page, conversion",
+  "P3 Off-Page": "Authority, citations, PR"
+ },
+ "status_values": [
+  "done",
+  "partly",
+  "missing",
+  "n/a",
+  "unknown"
+ ],
+ "task_states": [
+  "proposed",
+  "approved",
+  "blocked",
+  "in_progress",
+  "done",
+  "verified"
+ ],
+ "age_rules_days": {
+  "live": 30,
+  "scan": 60,
+  "document": 180
+ },
+ "confidence_values": [
+  "verified",
+  "derived",
+  "client_stated",
+  "none"
+ ],
+ "automation_codes": {
+  "A": "agent checks",
+  "B": "agent prepares",
+  "C": "agent edits with access and go",
+  "D": "human executes",
+  "E": "client delivers or decides"
+ },
+ "effort_scale": {
+  "S": 1,
+  "M": 2.5,
+  "L": 4.5
+ },
+ "phases": {
+  "d1-30": "Days 1 to 30",
+  "m2+": "From month 2",
+  "later": "Later or on demand"
+ },
+ "score_formula": "score = impact x confidence / (effort + risk). Confidence: verified 1, derived 0.75, client_stated 0.5. Risk: DO 0, gate 1 to 3.",
+ "risk_points": {
+  "DO": 0,
+  "GATE_default": 2,
+  "GATE_high": 3,
+  "high_gates": [
+   "1",
+   "2",
+   "4",
+   "7",
+   "8"
+  ]
+ },
+ "gates": {
+  "1": "DBA name: only a real legal business designation that also appears on signage, imprint and site. Never a profile-only trick.",
+  "2": "Reviews: ask every customer, no filter, no per-star bonus (OUT). Mail or SMS requests need a legal basis (consent).",
+  "3": "Reddit and manipulation: burying is OUT. Watch and answer with real help.",
+  "4": "Paid links: only through the backlink-dach buy path. Paid articles carry a label. Donation for a link counts as paid.",
+  "5": "Health (HWG): check photos, offers, prices, project reports and embedded reviews. No cure promise.",
+  "6": "Spam reports: only genuine, documented violations. Evidence log first.",
+  "7": "Profiles: only the client's own real locations and former profiles.",
+  "8": "Address: only a real eligible address. No virtual or coworking address. Service-area profiles keep the real setting.",
+  "9": "Tracking number: main number stays primary NAP. Tracking number secondary only. GDPR consent on the site.",
+  "10": "Abandoned forms: no data stored before consent. Health data off by default.",
+  "11": "Best-of lists: neutral rules, no fake rankings, labelled as own list."
+ },
+ "evidence_rules": {
+  "role": "Each evidence item has a role: rule_source (carries the status, sets the age) or secondary_claim (memory note, portal task, draft text: never sets status or age). Default: rule_source.",
+  "absence": "A 741-side artefact (page, doc, config) that is absent from repo, Drive and Supabase after a logged search = missing. A client-side fact with no data = unknown.",
+  "claims": "Portal tasks marked done, memory notes and drafts are claims. They never prove a measure.",
+  "default_off": "A measure with default_off is n/a until Martin switches it on for the client."
+ },
+ "legal_note": "Facts on review requests (BGH), call tracking consent, Google name policy and HWG were checked by web search on 2026-10-11 from secondary sources. This is not legal advice. Martin confirms with a lawyer where he has one.",
+ "tool_checks_2026_10_11": {
+  "HARO": "Connectively closed Dec 2024. HARO bought by Featured, free daily email since Apr 2025. English market.",
+  "DACH directories": "Gelbe Seiten, Das Örtliche, 11880 and Cylex exist (search result, 11.10.2026). Free basic entries confirmed for Gelbe Seiten and Cylex by secondary source.",
+  "Call tracking": "DACH providers exist (e.g. matelso, others). Dynamic numbers need consent first. Provider not chosen.",
+  "Google name policy": "Official Google help page \"FAQ: Name des Unternehmens\" exists. Keywords, services, places in the name are not allowed."
+ },
+ "measures": [
+  {
+   "id": "G01",
+   "pillar": "P1 Google-Profil",
+   "group": "Profil-Fundament",
+   "label_de": "Keyword im Profilnamen (DBA)",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "1"
+   ],
+   "gate_text": "Audit field B13.03 stays red until proof exists. A rename needs Martin go and a clean-up check first.",
+   "alternative": "Keep the legal name in the profile name. Put keywords in description, services, categories and site title instead.",
+   "dach_adaptation": "Legal business designation from the Gewerbeanmeldung (Geschäftsbezeichnung or Firmenzusatz). It must match imprint, signage, website. Check Google name policy.",
+   "niche_rules": {
+    "health": "Health: name must not carry cure or disease claims (HWG). Praxis Suriya case: owner said the suffix was SEO-only (02.09.2026). The GBP still shows it on 11.10.2026. Rename waits for Martin go. Martin decision of 01.10.2026 (name stays) conflicts with the master record: open question",
+    "trades_local": "Typical lever. Proof needed",
+    "law_tax": "Law and tax: professional rules limit names (BRAO, StBerG). Keywords as service names are risky"
+   },
+   "audit_feed": [
+    "B13.03"
+   ],
+   "linked_asset": "AUD B13.03 flags extra words as risk. No build asset",
+   "coverage": "missing",
+   "gap": "No rule for a legal DBA. Audit rule B13.03 says red for extra words: needs an exception when legal-name proof exists",
+   "evidence_sources": [
+    "GBP name (Falcon list)",
+    "imprint",
+    "Gewerbeanmeldung or Handelsregister proof",
+    "signage photo"
+   ],
+   "age_class": "document",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "GBP name equals the legal name, or extra words have written legal proof on imprint, signage and site",
+    "partly": "Extra words exist and proof is partly there",
+    "missing": "Extra words exist and no proof exists (risk present)",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "d1-30",
+   "runbook": "RB01",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.C03"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G02",
+   "pillar": "P1 Google-Profil",
+   "group": "Profil-Fundament",
+   "label_de": "Physische Adresse",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "8"
+   ],
+   "gate_text": "No address change without clean-up and Martin go.",
+   "alternative": "If no eligible address exists, set the profile as service-area business. Do not use a virtual address.",
+   "dach_adaptation": "Real, publicly visible address, eligible under Google rules. No virtual office or coworking address.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "Service-area firms hide the address in GBP and keep the service-area setting",
+    "law_tax": "Law and tax: office address required in imprint"
+   },
+   "audit_feed": [
+    "B05.02",
+    "B13.02"
+   ],
+   "linked_asset": "NAP master (huewel-nap, maria-brasse-nap), `client_locations`, AUD B05.02, B13.02",
+   "coverage": "covered",
+   "gap": "Check exists. Nothing to build: only a real eligible address counts",
+   "evidence_sources": [
+    "GBP address",
+    "imprint",
+    "master NAP (client_locations)",
+    "Falcon list"
+   ],
+   "age_class": "document",
+   "automation": [
+    "A"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "GBP, site and master NAP show the same real address",
+    "partly": "Address same, but verification or visibility unclear",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 4,
+   "impact_from_driver": false,
+   "phase": "d1-30",
+   "runbook": "RB01",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.C03",
+    "UB.B01"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G03",
+   "pillar": "P1 Google-Profil",
+   "group": "Profil-Fundament",
+   "label_de": "Einzugsgebiete",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "8"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Service area in GBP: real towns the firm serves. Use the catchment levels from the structure report.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B04.01"
+   ],
+   "linked_asset": "STR step 5 (catchment levels, worktree), AUD B04.01",
+   "coverage": "partly",
+   "gap": "Catchment is analysed. The GBP service-area setting itself is not a task type",
+   "evidence_sources": [
+    "GBP service area",
+    "catchment report (STR step 5)",
+    "GSC queries"
+   ],
+   "age_class": "document",
+   "automation": [
+    "A",
+    "B"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "GBP service area equals the approved catchment list",
+    "partly": "List exists but differs from catchment",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "d1-30",
+   "runbook": "RB01",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G04",
+   "pillar": "P1 Google-Profil",
+   "group": "Profil-Fundament",
+   "label_de": "Rufnummern-Attribution (Tracking-Nummer)",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "9"
+   ],
+   "gate_text": "GDPR consent on the site first. Main number stays primary.",
+   "alternative": "Static secondary number in GBP only. No dynamic numbers on the site until consent works.",
+   "dach_adaptation": "Tracking number from a DACH call-tracking provider. Main number stays the primary NAP. Tracking number is secondary. Dynamic numbers on the site need consent before they show.",
+   "niche_rules": {
+    "health": "Health: call data are sensitive. Static number only, no session recording",
+    "trades_local": "same as base",
+    "law_tax": "Law and tax: no recording without consent (professional secrecy)"
+   },
+   "audit_feed": [
+    "B06.07",
+    "B09.03"
+   ],
+   "linked_asset": "AUD B06.07 (call tracking tag), B09.03 (phone hours)",
+   "coverage": "missing",
+   "gap": "No process: tracking number as secondary, main number stays primary NAP, consent text. DE tool choice open",
+   "evidence_sources": [
+    "GBP phone fields",
+    "site tag check",
+    "consent banner config",
+    "provider name"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Secondary tracking number set in GBP and the call data is visible per source",
+    "partly": "Tag installed, GBP not set (or the reverse)",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB01",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.C07"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G05",
+   "pillar": "P1 Google-Profil",
+   "group": "Profil-Fundament",
+   "label_de": "Unternehmensbeschreibung",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "German text, max 750 characters, own words, no promises. Written per client in the week-1 report.",
+   "niche_rules": {
+    "health": "HWG check: no cure promise",
+    "trades_local": "same as base",
+    "law_tax": "Advertising law check (BRAO, StBerG, UWG)"
+   },
+   "audit_feed": [
+    "B10.05"
+   ],
+   "linked_asset": "WK1 step 6 (max 750 characters, counted), AUD B10.05",
+   "coverage": "covered",
+   "gap": "Texts exist per client. Execution needs GBP access and a per-change go",
+   "evidence_sources": [
+    "GBP description (Falcon list or Maps read)",
+    "WK1 section E text"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "B",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Live text equals the approved text, length at most 750",
+    "partly": "Live text exists but is not the approved one",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "d1-30",
+   "runbook": "RB01",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G06",
+   "pillar": "P1 Google-Profil",
+   "group": "Kategorien & Leistungen",
+   "label_de": "Primärkategorie",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Primary category from the Google list. The driver result of the audit decides the pick.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B10.01",
+    "B11.05",
+    "B11.09"
+   ],
+   "linked_asset": "BP section 1, AUD B10.01, B11.05, B11.09 (driver analysis)",
+   "coverage": "covered",
+   "gap": "Use the audit driver result to rank this lever. Execution = task",
+   "evidence_sources": [
+    "GBP categories (Falcon list)",
+    "audit B10.01, B11.05, B11.09",
+    "Falcon report category lift"
+   ],
+   "age_class": "scan",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Primary equals the driver category and the main service",
+    "partly": "Primary is related but not the driver category",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 5,
+   "impact_from_driver": true,
+   "phase": "d1-30",
+   "runbook": "RB02",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": true,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G07",
+   "pillar": "P1 Google-Profil",
+   "group": "Kategorien & Leistungen",
+   "label_de": "Sekundärkategorien",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Up to 9 secondary categories. Only categories the firm really serves. Coverage beats volume.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B10.01"
+   ],
+   "linked_asset": "BP section 1 (1 + 9), AUD B10.01",
+   "coverage": "covered",
+   "gap": "As G06",
+   "evidence_sources": [
+    "GBP categories",
+    "audit B10.01",
+    "Falcon report category lift"
+   ],
+   "age_class": "scan",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [
+    "G06"
+   ],
+   "cadence": "once",
+   "status_rules": {
+    "done": "All real services have a category, no extra ones",
+    "partly": "1 to 2 gaps or 1 extra",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 4,
+   "impact_from_driver": true,
+   "phase": "d1-30",
+   "runbook": "RB02",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": true,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G08",
+   "pillar": "P1 Google-Profil",
+   "group": "Kategorien & Leistungen",
+   "label_de": "Service-Ausbau (20 bis 50)",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "20 to 50 services if each has a page and search demand. Small practices: coverage beats volume.",
+   "niche_rules": {
+    "health": "HWG check on each service text",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B10.02",
+    "B06.08"
+   ],
+   "linked_asset": "BP section 2 (each service needs its own page), AUD B10.02, WK1 step 6",
+   "coverage": "covered",
+   "gap": "Small-practice rule exists: coverage beats volume. Page dependency links to W09",
+   "evidence_sources": [
+    "GBP services",
+    "site page list",
+    "audit B10.02, B06.08"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "B",
+    "C"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "dependencies": [
+    "W09"
+   ],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Every service has demand and its own page",
+    "partly": "Services listed without page, or pages without services",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 4,
+   "impact_from_driver": true,
+   "phase": "d1-30",
+   "runbook": "RB02",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G09",
+   "pillar": "P1 Google-Profil",
+   "group": "Bilder & Fotos",
+   "label_de": "Kontinuierlicher Foto-Upload",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Real photos with file name service-district-brand, geotag and caption loop (LOOP section 1). Monthly upload.",
+   "niche_rules": {
+    "health": "No patient faces without written consent. HWG for treatment images",
+    "trades_local": "Job photos with address blurred",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B10.06"
+   ],
+   "linked_asset": "LOOP section 1 (file name, EXIF, caption loop), AUD B10.06",
+   "coverage": "partly",
+   "gap": "Rules exist. Missing: a monthly upload routine and a client photo intake",
+   "evidence_sources": [
+    "GBP photo count and last date (Falcon or Maps read)",
+    "client photo intake folder"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "B",
+    "C",
+    "E"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Upload in the last 30 days and count reaches 70 percent of the leader",
+    "partly": "Photos older than 90 days or low count",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB03",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G10",
+   "pillar": "P1 Google-Profil",
+   "group": "Bilder & Fotos",
+   "label_de": "Vorher/Nachher-Bilder",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "Health: HWG check and consent before any upload.",
+   "alternative": "For health: show the practice, team and process. No outcome images.",
+   "dach_adaptation": "Before and after images from real jobs. Written consent. No stock images.",
+   "niche_rules": {
+    "health": "HWG section 11: no before-after images for aesthetic treatments. Only with medical indication and review by Martin. Default: n/a for Heilpraktiker",
+    "trades_local": "Standard lever. Blur plates and house numbers",
+    "law_tax": "n/a"
+   },
+   "audit_feed": [],
+   "linked_asset": "HWG guideline (memory hwg-fallstudien-guideline)",
+   "coverage": "partly",
+   "gap": "Health: HWG limits apply. Trades: no process yet",
+   "evidence_sources": [
+    "client consent log",
+    "GBP photos"
+   ],
+   "age_class": "document",
+   "automation": [
+    "B",
+    "E"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "At least 3 consented image pairs live, or n/a",
+    "partly": "Pairs exist, consent missing",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB03",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": true,
+   "default_off_reason": "Health default off (HWG). Martin can switch it on per client"
+  },
+  {
+   "id": "G11",
+   "pillar": "P1 Google-Profil",
+   "group": "Bilder & Fotos",
+   "label_de": "Team- und Fahrzeugfotos (beschriftet)",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Photos of the team and of lettered vehicles (name, phone, address visible). Real signage photos.",
+   "niche_rules": {
+    "health": "Signage and team only",
+    "trades_local": "Vehicle photo is the main lever",
+    "law_tax": "Team portraits only"
+   },
+   "audit_feed": [
+    "B10.06"
+   ],
+   "linked_asset": "LOOP section 1 (real signage photos)",
+   "coverage": "partly",
+   "gap": "Vehicle-photo trick is new. Needs client photos",
+   "evidence_sources": [
+    "GBP photos",
+    "client photo intake"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "E"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "client"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Team photo and a lettered vehicle or signage photo live",
+    "partly": "One of the two live",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB03",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G12",
+   "pillar": "P1 Google-Profil",
+   "group": "Beiträge",
+   "label_de": "Regelmäßige Google Posts",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Own texts, one post per 14 days. No auto-posting tool (WK1 rule). Calendar of 8 posts per quarter.",
+   "niche_rules": {
+    "health": "HWG check on every post",
+    "trades_local": "same as base",
+    "law_tax": "Advertising law check"
+   },
+   "audit_feed": [
+    "B10.07"
+   ],
+   "linked_asset": "AUD B10.07 (check). WK1 rule: own texts, no Falcon Agent auto-posts",
+   "coverage": "partly",
+   "gap": "No post calendar, no text pipeline, no owner",
+   "evidence_sources": [
+    "GBP posts (last date, count in 90 days)",
+    "post calendar"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "B",
+    "C"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "At least 1 post per 14 days over the last 90 days",
+    "partly": "Posts exist but gaps over 30 days",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB04",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G13",
+   "pillar": "P1 Google-Profil",
+   "group": "Beiträge",
+   "label_de": "Saisonale Angebote und Promos",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "Health, law and tax: legal check by Martin before any offer.",
+   "alternative": "Use information posts (opening hours, seasonal tips) instead of price offers.",
+   "dach_adaptation": "Seasonal offers and promos as GBP offer posts.",
+   "niche_rules": {
+    "health": "HWG section 7: price discounts and gifts are limited. Default: off",
+    "trades_local": "Allowed. Price and period must be exact",
+    "law_tax": "Fee rules (RVG, StBVV) limit discounts. Default: off"
+   },
+   "audit_feed": [
+    "B10.07"
+   ],
+   "linked_asset": "-",
+   "coverage": "missing",
+   "gap": "New. Health: price offers and gifts are restricted (HWG). Law and tax: own advertising law",
+   "evidence_sources": [
+    "GBP offer posts"
+   ],
+   "age_class": "live",
+   "automation": [
+    "B",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "dependencies": [],
+   "cadence": "quarterly",
+   "status_rules": {
+    "done": "Seasonal offer live and legal check passed",
+    "partly": "Offer drafted, not live",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 1,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB04",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": true,
+   "default_off_reason": "Default off: price offers are legally risky for health, law and tax. Martin can switch it on per client"
+  },
+  {
+   "id": "G14",
+   "pillar": "P1 Google-Profil",
+   "group": "Bewertungs-System",
+   "label_de": "CRM-Automatisierung (Bewertungsanfrage)",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "2"
+   ],
+   "gate_text": "Review gating is against Google policy. Mail or SMS requests without consent are unlawful advertising (BGH, checked 11.10.2026, not legal advice).",
+   "alternative": "Ask every customer. No satisfaction filter. No per-review incentive.",
+   "dach_adaptation": "Review request after each job to every customer. No filter. Channel by consent. Link to the Google review form.",
+   "niche_rules": {
+    "health": "Ask in person or on paper. Mail needs consent. No promise or reward",
+    "trades_local": "Ask on site after the job (QR card). Mail or SMS only with consent",
+    "law_tax": "Mandate secrecy: client decides, no naming of mandate"
+   },
+   "audit_feed": [
+    "B05.03",
+    "B13.07"
+   ],
+   "linked_asset": "AUD B05.03 asks how reviews are requested, B13.07 flags gating",
+   "coverage": "missing",
+   "gap": "No build asset. Gated SMS is review gating. Alternative: ask every customer, no filter",
+   "evidence_sources": [
+    "review request process (client form)",
+    "audit B05.03",
+    "audit B13.07"
+   ],
+   "age_class": "document",
+   "automation": [
+    "C",
+    "E",
+    "D"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "dependencies": [
+    "G15"
+   ],
+   "cadence": "continuous",
+   "status_rules": {
+    "done": "Process runs for every customer, no filter, consent channel documented",
+    "partly": "Ad-hoc asks only",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 4,
+   "impact_from_driver": true,
+   "phase": "d1-30",
+   "runbook": "RB05",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G15",
+   "pillar": "P1 Google-Profil",
+   "group": "Bewertungs-System",
+   "label_de": "RFID / QR-Tapping-Karten",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "QR or NFC card with the direct Google review link. Handed out by staff.",
+   "niche_rules": {
+    "health": "Hand out in person. No pressure",
+    "trades_local": "Card in the van and on the invoice",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B05.03"
+   ],
+   "linked_asset": "WK1 step 6 (patient guide with QR, spec only)",
+   "coverage": "partly",
+   "gap": "QR guide exists as spec. NFC or QR card for the review link: new, low risk",
+   "evidence_sources": [
+    "card design file",
+    "review link (GBP place ID)"
+   ],
+   "age_class": "document",
+   "automation": [
+    "B",
+    "D",
+    "E"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Card in use by staff at every job",
+    "partly": "Card designed, not in use",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": true,
+   "phase": "d1-30",
+   "runbook": "RB05",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G16",
+   "pillar": "P1 Google-Profil",
+   "group": "Bewertungs-System",
+   "label_de": "Mitarbeiter-Incentives (Bonus je 5-Sterne)",
+   "source": "board",
+   "risk_class": "OUT",
+   "gates": [
+    "2"
+   ],
+   "gate_text": "OUT: a bonus per 5-star review pushes filtering and breaks Google policy and fair-trade rules.",
+   "alternative": "Team goal on number of asks per job. Paid in EUR, same for any rating.",
+   "dach_adaptation": "Per-star cash bonus for staff is OUT. Replace with a team goal on asks per job.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B13.07"
+   ],
+   "linked_asset": "-",
+   "coverage": "missing",
+   "gap": "Per-star cash bonus is OUT. Alternative: team goal on asks per job, not on stars",
+   "evidence_sources": [
+    "staff rule document"
+   ],
+   "age_class": "document",
+   "automation": [
+    "D"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "client"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Rule: goal counts asks, not stars",
+    "partly": "n/a",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 1,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB05",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G17",
+   "pillar": "P1 Google-Profil",
+   "group": "Bewertungs-System",
+   "label_de": "Review Velocity",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Review pace measured against the market leader. Target 2x leader (program rule). Own review numbers come from the Google profile itself, never from Falcon (Martin rule 11.10.2026).",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B05.03",
+    "B11.03"
+   ],
+   "linked_asset": "AUD B05.03, B11.03 (gap to leader). WK1 rule 6 (target 2x leader)",
+   "coverage": "covered",
+   "gap": "Target and check exist. Build = G14 and G15",
+   "evidence_sources": [
+    "GBP profile read in Chrome (own count, rating, age, replies)",
+    "audit B05.03, B05.04 (competitor values from Falcon, marked partly incomplete)"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [
+    "G14"
+   ],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Own pace at least 50 percent of the leader and trend up",
+    "partly": "Pace 25 to 49 percent of the leader",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 5,
+   "impact_from_driver": true,
+   "phase": "d1-30",
+   "runbook": "RB05",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": true,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G18",
+   "pillar": "P1 Google-Profil",
+   "group": "Bewertungs-System",
+   "label_de": "Antwort-Disziplin",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "The client answers every review. 741 never replies. 741 supplies templates (thanks, exact service, place, brand) and tracks the reply rate.",
+   "niche_rules": {
+    "health": "Neutral thanks only. Never confirm that a person was a patient",
+    "trades_local": "same as base",
+    "law_tax": "Never confirm a mandate"
+   },
+   "audit_feed": [
+    "B05.04"
+   ],
+   "linked_asset": "AUD B05.04, WK1 step 6 (reply templates). Memory no-review-answering",
+   "coverage": "covered",
+   "gap": "Client answers. 741 gives templates and tracks the reply rate",
+   "evidence_sources": [
+    "GBP profile read in Chrome (own count, rating, age, replies)",
+    "audit B05.03, B05.04 (competitor values from Falcon, marked partly incomplete)"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "B",
+    "E"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Reply rate 90 percent or more",
+    "partly": "50 to 89 percent",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "d1-30",
+   "runbook": "RB05",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G19",
+   "pillar": "P1 Google-Profil",
+   "group": "Konkurrenz-Abwehr",
+   "label_de": "Bearbeitungsvorschläge (Suggest edits)",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "6"
+   ],
+   "gate_text": "Evidence log first. Martin go per report.",
+   "alternative": "Skip if the case is only competitive. Improve the own profile instead.",
+   "dach_adaptation": "Suggest edits only for genuine, documented errors.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B13.01",
+    "B11.07"
+   ],
+   "linked_asset": "-",
+   "coverage": "missing",
+   "gap": "No process. Only genuine documented violations",
+   "evidence_sources": [
+    "evidence log (screenshot, date, rule broken)"
+   ],
+   "age_class": "document",
+   "automation": [
+    "A",
+    "B",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Evidence log exists and edits were filed",
+    "partly": "Evidence exists, not filed",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 1,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB06",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G20",
+   "pillar": "P1 Google-Profil",
+   "group": "Konkurrenz-Abwehr",
+   "label_de": "Meldung von Spam-Einträgen",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "6"
+   ],
+   "gate_text": "Genuine and documented only. Martin go per report. Overlap with un-burning for own duplicates.",
+   "alternative": "Document and wait. No bulk reports.",
+   "dach_adaptation": "Report a competitor profile only for a real violation (fake address, keyword name, closed business).",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B13.01",
+    "B11.07"
+   ],
+   "linked_asset": "AUD B13.01 (own duplicates only)",
+   "coverage": "missing",
+   "gap": "Reporting of competitors is new. Needs evidence log",
+   "evidence_sources": [
+    "evidence log",
+    "Maps listing screenshot"
+   ],
+   "age_class": "document",
+   "automation": [
+    "A",
+    "B",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Report filed with evidence",
+    "partly": "Evidence ready, not filed",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB06",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.C05"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G21",
+   "pillar": "P1 Google-Profil",
+   "group": "Konkurrenz-Abwehr",
+   "label_de": "Mehrfach-Profile (Standort-Expansion)",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "7"
+   ],
+   "gate_text": "Only real own locations. No duplicate profiles.",
+   "alternative": "Cover the area with a location page, not a second profile.",
+   "dach_adaptation": "Extra profiles only for real own locations with a real address and staff.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B13.01",
+    "B04.03"
+   ],
+   "linked_asset": "AUD B13.01 (duplicate = red), B04.03 (expansion intent)",
+   "coverage": "missing",
+   "gap": "Only real own locations. Audit treats duplicates as risk: need a clear line between duplicate and real location",
+   "evidence_sources": [
+    "master NAP locations",
+    "audit B13.01"
+   ],
+   "age_class": "document",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "L",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "dependencies": [
+    "G02",
+    "W13"
+   ],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Every location is real and has its own profile and page",
+    "partly": "Location real, profile or page missing",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB06",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.C05",
+    "UB.B02"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "G22",
+   "pillar": "P1 Google-Profil",
+   "group": "Konkurrenz-Abwehr",
+   "label_de": "Google-Profil-Übernahme durch Dritte / Capturing",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "7"
+   ],
+   "gate_text": "Own former profiles only. Martin go per claim.",
+   "alternative": "If the old profile is not provable as own, do nothing.",
+   "dach_adaptation": "Reclaim own old or dormant profiles (former address, old name). Never someone else's.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B13.06"
+   ],
+   "linked_asset": "WK1 section 11 (Falcon Guard), AUD B13.06",
+   "coverage": "partly",
+   "gap": "Decided by Martin 11.10.2026: only reclaim own old or dormant profiles. No takeover-defence task. Falcon Guard stays a monitoring item in WK1",
+   "evidence_sources": [
+    "Maps search by old name and address",
+    "manager list",
+    "audit B13.01, B13.06"
+   ],
+   "age_class": "document",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "dependencies": [
+    "G02"
+   ],
+   "cadence": "once",
+   "status_rules": {
+    "done": "No unclaimed own old profile exists",
+    "partly": "Old profile found, claim open",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB06",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.B02"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W01",
+   "pillar": "P2 Website",
+   "group": "Fundament & Gesundheit",
+   "label_de": "Ladezeit (Site Speed)",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Mobile LCP under 2.5 s. Images WebP, caching, no old plugins.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.07"
+   ],
+   "linked_asset": "AUD B06.07 (PageSpeed API, to be tested)",
+   "coverage": "partly",
+   "gap": "Check only. No fix routine",
+   "evidence_sources": [
+    "PageSpeed API result",
+    "site audit script"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Mobile LCP 2.5 s or less",
+    "partly": "LCP 2.5 to 4 s",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB07",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W02",
+   "pillar": "P2 Website",
+   "group": "Fundament & Gesundheit",
+   "label_de": "Mobile Bedienbarkeit",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Clean mobile layout, tap targets, no horizontal scroll.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.02"
+   ],
+   "linked_asset": "AUD B06.02, memory mobile-fluid-root-and-header",
+   "coverage": "partly",
+   "gap": "Check exists. Fix = per client site",
+   "evidence_sources": [
+    "mobile screenshot",
+    "audit B06.02"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "All mobile checks pass",
+    "partly": "1 to 3 checks fail",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB07",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W03",
+   "pillar": "P2 Website",
+   "group": "Fundament & Gesundheit",
+   "label_de": "Modernes Website-Design",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Modern, clear design on the money pages. CRO prototype exists for the homepage.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.02"
+   ],
+   "linked_asset": "CRO workflow and skill `cro-homepage`, skill `imagery-audit`",
+   "coverage": "covered",
+   "gap": "Homepage only. Other pages not covered",
+   "evidence_sources": [
+    "CRO handoff",
+    "screenshot"
+   ],
+   "age_class": "document",
+   "automation": [
+    "A",
+    "B"
+   ],
+   "effort": "L",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "CRO prototype approved and live",
+    "partly": "Prototype approved, not live",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB07",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W04",
+   "pillar": "P2 Website",
+   "group": "Fundament & Gesundheit",
+   "label_de": "Automatisierte Frühwarn-Checks (Canary)",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Daily agent test: forms submit, plugins load, layout intact. Alarm to Martin on failure.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.07"
+   ],
+   "linked_asset": "SEC section 9 (monitoring, worktree only)",
+   "coverage": "missing",
+   "gap": "No agent that crawls forms, plugins and layout daily. Needs a scheduled task",
+   "evidence_sources": [
+    "monitor config",
+    "last 7 run logs"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "continuous",
+   "status_rules": {
+    "done": "Monitor runs daily and logs are green",
+    "partly": "Monitor on some pages only",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB07",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W05",
+   "pillar": "P2 Website",
+   "group": "Fundament & Gesundheit",
+   "label_de": "Hosting-Erreichbarkeits-Check (Uptime)",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Uptime check every 5 minutes with alert. Hosting access documented.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.01"
+   ],
+   "linked_asset": "SEC section 2, AUD B06.01 (ownership only)",
+   "coverage": "missing",
+   "gap": "No uptime check",
+   "evidence_sources": [
+    "uptime service config",
+    "audit B06.01"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "continuous",
+   "status_rules": {
+    "done": "Uptime check live with alert",
+    "partly": "Check live, no alert route",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB07",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W06",
+   "pillar": "P2 Website",
+   "group": "Startseite",
+   "label_de": "Wichtigste Seite der Website",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "The homepage holds H1 with service and town, phone, booking, proof, NAP.",
+   "niche_rules": {
+    "health": "HWG box and no cure claims",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.02"
+   ],
+   "linked_asset": "SMP, CRO workflow and skill",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "SMP checklist E",
+    "audit B06.02"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "All SMP E points pass",
+    "partly": "5 or more pass",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 4,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB08",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W07",
+   "pillar": "P2 Website",
+   "group": "Startseite",
+   "label_de": "Lokale Relevanzsignale",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Local relevance signals: town in H1, title and meta, map, NAP match, district names.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.02",
+    "B06.05"
+   ],
+   "linked_asset": "SMP section E (local minimum), CRO",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "audit B06.02, B06.05"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "All local points pass",
+    "partly": "Most pass",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 4,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB08",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": true,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W08",
+   "pillar": "P2 Website",
+   "group": "Startseite",
+   "label_de": "Verlinkungsfokus",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Homepage links to the main service pages with clear anchors. Main services = pillar pages of the approved site tree. If no tree exists: top 5 services by margin (audit B02.03) or demand.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.03"
+   ],
+   "linked_asset": "SMP, PSEO section 6",
+   "coverage": "partly",
+   "gap": "Rule exists, no client check",
+   "evidence_sources": [
+    "crawl link list"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "All main services linked from the homepage",
+    "partly": "Some linked",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB08",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W09",
+   "pillar": "P2 Website",
+   "group": "Haupt- und Unterseiten",
+   "label_de": "Dedizierte Service-Seiten",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "One page per main service with H1, H2, FAQ, proof, CTA.",
+   "niche_rules": {
+    "health": "HWG check",
+    "trades_local": "same as base",
+    "law_tax": "Advertising law check"
+   },
+   "audit_feed": [
+    "B06.08"
+   ],
+   "linked_asset": "SMP, skill `seo-page-optimizer`, STR (keyword to page), AUD B06.08",
+   "coverage": "covered",
+   "gap": "Covered. Content pool will rank what to write",
+   "evidence_sources": [
+    "sitemap and page list",
+    "audit B06.08"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "B",
+    "C"
+   ],
+   "effort": "L",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Every main service has a live page that passes the SPO check",
+    "partly": "Page exists but fails the check",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 5,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB09",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W10",
+   "pillar": "P2 Website",
+   "group": "Haupt- und Unterseiten",
+   "label_de": "H1- und H2-Optimierung",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "One H1 per page with keyword. H2 per sub-topic.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.03"
+   ],
+   "linked_asset": "Skill `seo-page-optimizer`, SMP section D, AUD B06.03",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "audit B06.03",
+    "crawl"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "No H1 or H2 error",
+    "partly": "1 to 3 errors",
+    "missing": "More than 3 errors",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB09",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W11",
+   "pillar": "P2 Website",
+   "group": "Haupt- und Unterseiten",
+   "label_de": "Spezifischer Content und echte Jobs",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Real job reports and specific content per service. No generic text.",
+   "niche_rules": {
+    "health": "HWG: no cure story. Process and approach only",
+    "trades_local": "Real job with place, date and photo",
+    "law_tax": "No mandate detail"
+   },
+   "audit_feed": [
+    "B06.08"
+   ],
+   "linked_asset": "QA gate, content pool (design), HWG guideline",
+   "coverage": "partly",
+   "gap": "Real-job proof has no intake process for trades",
+   "evidence_sources": [
+    "page text",
+    "project intake"
+   ],
+   "age_class": "live",
+   "automation": [
+    "B",
+    "E"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Each service page holds one real example with consent",
+    "partly": "Examples on some pages",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB09",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W12",
+   "pillar": "P2 Website",
+   "group": "Haupt- und Unterseiten",
+   "label_de": "Unter-Dienstleistungsseiten",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Sub-service pages for niche services with their own demand.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.08"
+   ],
+   "linked_asset": "STR sitetree, skill `seo-page-optimizer`, PSEO",
+   "coverage": "partly",
+   "gap": "Covered as page spec. Content pool picks them",
+   "evidence_sources": [
+    "content pool items",
+    "page list"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "B"
+   ],
+   "effort": "L",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [
+    "W09"
+   ],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "All pool items above the cut line are live",
+    "partly": "Some live",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB09",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W13",
+   "pillar": "P2 Website",
+   "group": "Standortseiten",
+   "label_de": "Regionale Abdeckung",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Place pages for real catchment towns. Only with demand and unique local facts.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B04.01",
+    "B06.04"
+   ],
+   "linked_asset": "STR step 5, PSEO, content pool rule 11",
+   "coverage": "covered",
+   "gap": "Covered. Place page only with demand and unique facts",
+   "evidence_sources": [
+    "catchment report",
+    "content pool",
+    "page list"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "B"
+   ],
+   "effort": "L",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [
+    "W09"
+   ],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Every approved place has a unique live page",
+    "partly": "Some live",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB10",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.D05"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W14",
+   "pillar": "P2 Website",
+   "group": "Standortseiten",
+   "label_de": "Kein KI-Slop",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Unique text per page. Similarity check. Human edit. No AI tells.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.04"
+   ],
+   "linked_asset": "PSEO section 1 (uniqueness), skill `slopmonster`, QA gate",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "similarity script",
+    "slop lint"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "All pages pass similarity and lint",
+    "partly": "1 to 2 pages fail",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB10",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.D04"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W15",
+   "pillar": "P2 Website",
+   "group": "Standortseiten",
+   "label_de": "Tiefe Funnel-Struktur",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Place page, then service-in-place page, then contact. Depth by demand, not by default.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.04"
+   ],
+   "linked_asset": "PSEO section 3 (page anatomy)",
+   "coverage": "partly",
+   "gap": "No funnel-depth check per client",
+   "evidence_sources": [
+    "site tree",
+    "audit B06.04"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [
+    "W13"
+   ],
+   "cadence": "quarterly",
+   "status_rules": {
+    "done": "Tree equals the approved tree",
+    "partly": "Tree partly built",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB10",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": true,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W16",
+   "pillar": "P2 Website",
+   "group": "Interaktive Tools",
+   "label_de": "Nützliche Tools und Rechner",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Calculator or tool that fits the niche and search demand. One tool first.",
+   "niche_rules": {
+    "health": "No diagnosis tools. Info tools only",
+    "trades_local": "Cost or size calculator",
+    "law_tax": "Fee calculator only with exact public tariff (RVG, StBVV)"
+   },
+   "audit_feed": [],
+   "linked_asset": "Review-page ROI calculator, taxi price calculator (client case)",
+   "coverage": "partly",
+   "gap": "No catalogue of tool types per niche, no process",
+   "evidence_sources": [
+    "tool page list",
+    "content pool"
+   ],
+   "age_class": "live",
+   "automation": [
+    "B",
+    "C"
+   ],
+   "effort": "L",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Tool live, tracked, indexed",
+    "partly": "Tool in draft",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB11",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W17",
+   "pillar": "P2 Website",
+   "group": "Interaktive Tools",
+   "label_de": "SEO-Hebel der Tools",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Pick tool topics from real search demand.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [],
+   "linked_asset": "Content pool (demand data)",
+   "coverage": "missing",
+   "gap": "Rule that picks tools from search demand is missing",
+   "evidence_sources": [
+    "content pool demand data"
+   ],
+   "age_class": "document",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "quarterly",
+   "status_rules": {
+    "done": "Tool list ranked by demand and approved",
+    "partly": "List without demand data",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB11",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W18",
+   "pillar": "P2 Website",
+   "group": "Interne Verlinkung",
+   "label_de": "Fluss nach oben",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Home on top. Service and place pages link up to home and to the main service. Sub-service pages link to both. Blog links to service and contact.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.03"
+   ],
+   "linked_asset": "PSEO section 6, SMP, ILP (741.studio only)",
+   "coverage": "partly",
+   "gap": "Board diagram is a rule. No client check script",
+   "evidence_sources": [
+    "crawl link graph",
+    "board diagram"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [
+    "W09"
+   ],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "All pages follow the hierarchy",
+    "partly": "Some pages break it",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB12",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.E04",
+    "UB.D06"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W19",
+   "pillar": "P2 Website",
+   "group": "Interne Verlinkung",
+   "label_de": "Regelmäßige Anpassungen",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Monthly link review after new pages go live. Crawl diff.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [],
+   "linked_asset": "-",
+   "coverage": "missing",
+   "gap": "No cadence, no crawl diff (Ahrefs not usable)",
+   "evidence_sources": [
+    "crawl diff report"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [
+    "W18"
+   ],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Review done last month, no orphan page",
+    "partly": "Review older than 60 days",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB12",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.E04"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W20",
+   "pillar": "P2 Website",
+   "group": "Conversion-Ebene",
+   "label_de": "Lead-Formular oben",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Short lead form in the first screen of the homepage.",
+   "niche_rules": {
+    "health": "No health details in the form",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.02"
+   ],
+   "linked_asset": "CRO workflow, PSEO section 3, AUD B06.02",
+   "coverage": "covered",
+   "gap": "Covered for homepage",
+   "evidence_sources": [
+    "screenshot",
+    "CRO handoff"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Form above the fold and submits",
+    "partly": "Form lower on page",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 4,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB13",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W21",
+   "pillar": "P2 Website",
+   "group": "Conversion-Ebene",
+   "label_de": "Mobile Navigation, immer sichtbar (sticky CTA)",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Sticky call or booking button on mobile.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.02"
+   ],
+   "linked_asset": "SMP, STR, AUD B06.02 (tap-to-call)",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "mobile screenshot",
+    "audit B06.02"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Sticky CTA works on all main pages",
+    "partly": "Home only",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 4,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB13",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W22",
+   "pillar": "P2 Website",
+   "group": "Conversion-Ebene",
+   "label_de": "Kontrastreiche CTAs und Click-to-Call im Fließtext",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Contrast CTAs and tap-to-call inside body text on every money page.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.02"
+   ],
+   "linked_asset": "CRO, AUD B06.02",
+   "coverage": "partly",
+   "gap": "Homepage only. Body-text CTAs on other pages not checked",
+   "evidence_sources": [
+    "page scan"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "All money pages pass",
+    "partly": "Home only",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB13",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W23",
+   "pillar": "P2 Website",
+   "group": "Conversion-Ebene",
+   "label_de": "Vertrauenssignale (inkl. Google-Icon bei Zitaten)",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Real reviews with source, name rule and place. Proof near each CTA.",
+   "niche_rules": {
+    "health": "HWG: no healing claim in a quote",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.02"
+   ],
+   "linked_asset": "CRO, SMP, skill `behandler-seite`",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "page scan",
+    "review source"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Proof block on all money pages",
+    "partly": "Home only",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB13",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W24",
+   "pillar": "P2 Website",
+   "group": "Conversion-Ebene",
+   "label_de": "Abgebrochene Formulare nachfassen",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "10"
+   ],
+   "gate_text": "No data stored before consent (GDPR).",
+   "alternative": "Short forms with one step. Callback button instead.",
+   "dach_adaptation": "Capture a started form only after consent. Follow up once.",
+   "niche_rules": {
+    "health": "Off by default (health data)",
+    "trades_local": "same as base",
+    "law_tax": "Off by default (secrecy)"
+   },
+   "audit_feed": [
+    "B06.07"
+   ],
+   "linked_asset": "-",
+   "coverage": "missing",
+   "gap": "New. Needs prior consent (GDPR). Health data is sensitive",
+   "evidence_sources": [
+    "form tool config",
+    "consent text"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "dependencies": [
+    "G04"
+   ],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Tool live with consent and one follow-up rule",
+    "partly": "Tool tested, no consent flow",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB13",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": true,
+   "default_off_reason": "Default off: needs a consent flow. Martin can switch it on per client"
+  },
+  {
+   "id": "W25",
+   "pillar": "P2 Website",
+   "group": "Conversion-Ebene",
+   "label_de": "CRM-Anbindung",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Leads from forms and calls land in one CRM with source.",
+   "niche_rules": {
+    "health": "No health data in the CRM without a processing agreement",
+    "trades_local": "same as base",
+    "law_tax": "Secrecy: no mandate detail"
+   },
+   "audit_feed": [
+    "B08.01"
+   ],
+   "linked_asset": "AUD B08.01, memory leadgen-funnel-infra, portal leads CRM (staging)",
+   "coverage": "partly",
+   "gap": "Check exists. No standard connector per client",
+   "evidence_sources": [
+    "CRM config",
+    "audit B08.01"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Every lead has a source in the CRM",
+    "partly": "Forms connected, calls not",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB13",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W26",
+   "pillar": "P2 Website",
+   "group": "Kaufentscheidende Inhalte",
+   "label_de": "Kosten- und Preisseiten",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "Gate 5: health, law and tax price rules. Only verified numbers. Martin checks the wording.",
+   "alternative": "",
+   "dach_adaptation": "Price range or fee page where allowed. Verified numbers only.",
+   "niche_rules": {
+    "health": "HWG check. Fee ranges are common for Heilpraktiker. Martin checks the exact wording per practice",
+    "trades_local": "Range with \"from\" price and what changes it",
+    "law_tax": "Only public tariff (RVG, StBVV) and clear terms"
+   },
+   "audit_feed": [],
+   "linked_asset": "QA gate (cost question), WK1 (cost FAQ mandatory)",
+   "coverage": "partly",
+   "gap": "No cost-page standard per niche. Prices: only verified",
+   "evidence_sources": [
+    "page text",
+    "price list from client"
+   ],
+   "age_class": "live",
+   "automation": [
+    "B",
+    "E"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "quarterly",
+   "status_rules": {
+    "done": "Cost page live with verified numbers",
+    "partly": "Page live, numbers unverified",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB14",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W27",
+   "pillar": "P2 Website",
+   "group": "Kaufentscheidende Inhalte",
+   "label_de": "Entscheidungshilfen (Vergleich, Finanzierung, Garantie)",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Compare and decide pages: repair or replace, financing, guarantee, comparison table.",
+   "niche_rules": {
+    "health": "No treatment promises",
+    "trades_local": "Strong lever",
+    "law_tax": "Info only"
+   },
+   "audit_feed": [],
+   "linked_asset": "-",
+   "coverage": "missing",
+   "gap": "New page types. Content pool can rank them",
+   "evidence_sources": [
+    "content pool items"
+   ],
+   "age_class": "live",
+   "automation": [
+    "B",
+    "C"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "quarterly",
+   "status_rules": {
+    "done": "Pages live for the top decisions",
+    "partly": "Some live",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB14",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W28",
+   "pillar": "P2 Website",
+   "group": "Kaufentscheidende Inhalte",
+   "label_de": "Lokale FAQs",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Local FAQs with schema, from reviews, GSC and autocomplete.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.08"
+   ],
+   "linked_asset": "SMP section D, PSEO, skill `seo-page-optimizer`",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "page scan",
+    "FAQ schema check"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "B",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "FAQ with schema on all money pages",
+    "partly": "Some pages",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB14",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W29",
+   "pillar": "P2 Website",
+   "group": "Kaufentscheidende Inhalte",
+   "label_de": "Eigene \"Best-of\"-Verzeichnisse",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "11"
+   ],
+   "gate_text": "Fair-trade law (UWG): no misleading ranking. Martin go.",
+   "alternative": "Publish a guide (\"how to choose\") with criteria, no ranking of named firms.",
+   "dach_adaptation": "Own list of best providers or tips in the area. Neutral, labelled, no fake test seal.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [],
+   "linked_asset": "-",
+   "coverage": "missing",
+   "gap": "New. Own ranking lists need neutral rules (fair-trade law)",
+   "evidence_sources": [
+    "list page",
+    "criteria text"
+   ],
+   "age_class": "live",
+   "automation": [
+    "B",
+    "C"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "List live with open criteria and label",
+    "partly": "Draft",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 1,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB14",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W30",
+   "pillar": "P2 Website",
+   "group": "Lokale Texturen",
+   "label_de": "Echte Projektberichte",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "Gate 5: health consent and no healing claim (HWG guideline). Law: secrecy. Written consent for every report.",
+   "alternative": "",
+   "dach_adaptation": "Real project reports with place, date, result in plain words. Consent in writing.",
+   "niche_rules": {
+    "health": "HWG guideline: no healing claim, consent, no identifiable health data",
+    "trades_local": "Strong lever",
+    "law_tax": "Case only anonymised, with consent. Secrecy first"
+   },
+   "audit_feed": [],
+   "linked_asset": "HWG guideline (health), case-study pages on 741.studio",
+   "coverage": "partly",
+   "gap": "Health covered. Trades: no intake and consent process",
+   "evidence_sources": [
+    "report pages",
+    "consent log"
+   ],
+   "age_class": "document",
+   "automation": [
+    "B",
+    "E"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "quarterly",
+   "status_rules": {
+    "done": "At least 3 reports live with consent",
+    "partly": "1 to 2 live",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB15",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W31",
+   "pillar": "P2 Website",
+   "group": "Lokale Texturen",
+   "label_de": "Verweis auf Google-Maps-Landmarks",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Name real landmarks and districts near the job or practice. Verified on Maps.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.04"
+   ],
+   "linked_asset": "SMP section E (districts) in part",
+   "coverage": "missing",
+   "gap": "Landmark rule and source check missing",
+   "evidence_sources": [
+    "page text",
+    "Maps check"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "B"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Landmarks used on place pages and verified",
+    "partly": "Some mentions",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB15",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W32",
+   "pillar": "P2 Website",
+   "group": "Lokale Texturen",
+   "label_de": "Eingebettete Rezensionen mit Ortsbezug",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "5"
+   ],
+   "gate_text": "Health: third-party praise rules. On-click method is a grey zone.",
+   "alternative": "Show a rating summary and a link to the Google profile. No full quotes.",
+   "dach_adaptation": "Real reviews embedded with place and service. Use the on-click method only if Martin accepts the grey zone.",
+   "niche_rules": {
+    "health": "HWG: reviews without healing claims. Martin checks each quote",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B10.10"
+   ],
+   "linked_asset": "LOOP section 3 (on-click shield, grey zone)",
+   "coverage": "partly",
+   "gap": "Method exists but is grey zone. Health: third-party praise limits (HWG)",
+   "evidence_sources": [
+    "page scan",
+    "review source"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Block live with source link",
+    "partly": "Block live without source",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB15",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W33",
+   "pillar": "P2 Website",
+   "group": "Technik (nur Text)",
+   "label_de": "Local Schema (JSON-LD)",
+   "source": "text",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "LocalBusiness schema with hours, services, address, phone, sameAs.",
+   "niche_rules": {
+    "health": "Use fitting health type, no claims",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.03"
+   ],
+   "linked_asset": "SMP, PSEO section 5, AUD B06.03",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "schema test"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "quarterly",
+   "status_rules": {
+    "done": "Valid schema, same data as GBP",
+    "partly": "Valid schema, data differs",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB16",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W34",
+   "pillar": "P2 Website",
+   "group": "Technik (nur Text)",
+   "label_de": "Basics: Alt, Canonical, Breadcrumbs, Meta",
+   "source": "text",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Alt texts, canonical, breadcrumbs, meta titles and descriptions.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.03"
+   ],
+   "linked_asset": "Skill `seo-page-optimizer`, AUD B06.03, PSEO",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "audit B06.03",
+    "crawl"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "No error",
+    "partly": "1 to 3 errors",
+    "missing": "More than 3 errors",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB16",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.D07"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "W35",
+   "pillar": "P2 Website",
+   "group": "Technik (nur Text)",
+   "label_de": "llms.txt",
+   "source": "text",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Plain-text llms.txt with key pages. Low priority. No proven ranking effect.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B12.02"
+   ],
+   "linked_asset": "-",
+   "coverage": "missing",
+   "gap": "New. Low cost, low proof of effect: set as low priority",
+   "evidence_sources": [
+    "file check"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "C"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "File live and correct",
+    "partly": "Draft",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 1,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB16",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O01",
+   "pillar": "P3 Off-Page",
+   "group": "Branchenverzeichnisse",
+   "label_de": "Spezielle Nischen-Verzeichnisse",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Niche directories of the trade or practice type (e.g. jameda, Doctolib, trade portals). Free first.",
+   "niche_rules": {
+    "health": "Manual. HWG check on profile text",
+    "trades_local": "Trade portals, Handwerkskammer search",
+    "law_tax": "Anwaltsuche, Steuerberaterverzeichnis"
+   },
+   "audit_feed": [
+    "B07.02"
+   ],
+   "linked_asset": "Skill `backlink-dach` (pillar A niche), Citations module",
+   "coverage": "covered",
+   "gap": "Covered. Health manual (jameda, Doctolib)",
+   "evidence_sources": [
+    "client_citations",
+    "directories table",
+    "audit B07.02"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "B",
+    "D"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent",
+    "human"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "All verified niche listings live and NAP correct",
+    "partly": "Some live",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "d1-30",
+   "runbook": "RB17",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O02",
+   "pillar": "P3 Off-Page",
+   "group": "Branchenverzeichnisse",
+   "label_de": "Lokale Verzeichniseinträge",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Local directories only: Gelbe Seiten, Das Örtliche, 11880, Cylex (exist as of 11.10.2026). Map data and core listings are O03.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.02"
+   ],
+   "linked_asset": "Citations module (44 DACH directories), `coralie-submission-runbook.md`",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "client_citations (tier local)",
+    "listing pages",
+    "audit B07.02"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent",
+    "human"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "80 percent of core directories live",
+    "partly": "Some live",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "d1-30",
+   "runbook": "RB17",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.C04"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O03",
+   "pillar": "P3 Off-Page",
+   "group": "Branchenverzeichnisse",
+   "label_de": "Kern-Verzeichniseinträge",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Core and map-data listings only: Apple Business Connect, Bing Places, Foursquare. Local directories are O02.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.02",
+    "B06.05"
+   ],
+   "linked_asset": "Citations module, BrightLocal",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "client_citations (tier core)",
+    "Apple, Bing and Foursquare listing pages",
+    "audit B06.05"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent",
+    "human"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "All core live and NAP correct",
+    "partly": "Some live",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 4,
+   "impact_from_driver": false,
+   "phase": "d1-30",
+   "runbook": "RB17",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.C04"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O04",
+   "pillar": "P3 Off-Page",
+   "group": "Branchenverzeichnisse",
+   "label_de": "Datenaggregatoren und Verteilung",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Data aggregators and map data suppliers. Same NAP everywhere.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B06.05"
+   ],
+   "linked_asset": "`coralie-aggregator-pack.md`, `portal-aggregator-selfservice-spec.md`",
+   "coverage": "covered",
+   "gap": "Covered. DACH aggregator list to verify",
+   "evidence_sources": [
+    "aggregator pack",
+    "client_citations"
+   ],
+   "age_class": "document",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent",
+    "human"
+   ],
+   "dependencies": [
+    "G02"
+   ],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Submitted to all free aggregators",
+    "partly": "Some submitted",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "d1-30",
+   "runbook": "RB17",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.C04"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O05",
+   "pillar": "P3 Off-Page",
+   "group": "Branchenverzeichnisse",
+   "label_de": "Indexierung der Verzeichniseinträge",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Check that new listings are indexed and found by name + town.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.02"
+   ],
+   "linked_asset": "`reporting/citation-monitor.mjs` (DataForSEO)",
+   "coverage": "partly",
+   "gap": "Monitor checks live status. Index check not confirmed",
+   "evidence_sources": [
+    "citation monitor",
+    "Google quote search"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [
+    "O02"
+   ],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "95 percent of listings found",
+    "partly": "Some missing",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "d1-30",
+   "runbook": "RB17",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O06",
+   "pillar": "P3 Off-Page",
+   "group": "Lokales Ökosystem",
+   "label_de": "Lokale Sponsoring-Partnerschaften",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "4"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Sponsor a local club or event. Link on a sponsor page. Label as partner.",
+   "niche_rules": {
+    "health": "No health claims in the link text",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.01"
+   ],
+   "linked_asset": "`backlink-workflow-dach.md` pillar B, LOOP section 4",
+   "coverage": "partly",
+   "gap": "Process exists. Pilot (Hüwel) has no live link yet",
+   "evidence_sources": [
+    "sponsor list",
+    "backlink sheet"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "D",
+    "E"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "human",
+    "client"
+   ],
+   "dependencies": [],
+   "cadence": "quarterly",
+   "status_rules": {
+    "done": "One live sponsor link",
+    "partly": "Sponsoring agreed, link not live",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB18",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O07",
+   "pillar": "P3 Off-Page",
+   "group": "Lokales Ökosystem",
+   "label_de": "IHK und Handwerkskammern",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "IHK, Handwerkskammer or Innung membership page with link. Only if the trade needs a Gewerbe licence.",
+   "niche_rules": {
+    "health": "n/a for most Heilpraktiker",
+    "trades_local": "same as base",
+    "law_tax": "Use Kammer instead (Rechtsanwaltskammer, Steuerberaterkammer)"
+   },
+   "audit_feed": [
+    "B07.01"
+   ],
+   "linked_asset": "Backlink workflow (fixed priority, only if Gewerbe)",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "backlink sheet"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "human"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Member link live",
+    "partly": "Member, no link",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB18",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O08",
+   "pillar": "P3 Off-Page",
+   "group": "Lokales Ökosystem",
+   "label_de": "Berufs- und Branchenverbände",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Trade or profession association profile with link.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.01"
+   ],
+   "linked_asset": "Backlink workflow",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "backlink sheet"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "human"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Member link live",
+    "partly": "Member, no link",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB18",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O09",
+   "pillar": "P3 Off-Page",
+   "group": "Lokales Ökosystem",
+   "label_de": "Lokale Presse und Blogger",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "4"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Regional press, city portals, local blogs. Paid articles carry a label.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.01"
+   ],
+   "linked_asset": "Backlink workflow pillar D",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "backlink sheet",
+    "press list"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "D",
+    "E"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "human"
+   ],
+   "dependencies": [],
+   "cadence": "quarterly",
+   "status_rules": {
+    "done": "One live editorial link in 12 months",
+    "partly": "Contact made",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB18",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O10",
+   "pillar": "P3 Off-Page",
+   "group": "Lokales Ökosystem",
+   "label_de": "Gemeinnützige Organisationen (.org-Links)",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "4"
+   ],
+   "gate_text": "Donation for a link counts as a paid link (gate 4).",
+   "alternative": "Donate without a link request. Ask for a link only for a real partnership.",
+   "dach_adaptation": "Support a local non-profit and ask for a partner link. Treat a donation for a link as paid.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.01"
+   ],
+   "linked_asset": "Backlink workflow (in part)",
+   "coverage": "partly",
+   "gap": "Donation for a link is a paid link: label rule needed",
+   "evidence_sources": [
+    "sponsor list",
+    "donation receipt"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "D",
+    "E"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "client",
+    "human"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Link live and labelled where needed",
+    "partly": "Donation made, no link",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB18",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O11",
+   "pillar": "P3 Off-Page",
+   "group": "Lokales Ökosystem",
+   "label_de": "Hersteller und Lieferanten",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Manufacturer and supplier partner pages with link.",
+   "niche_rules": {
+    "health": "n/a for most practices",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.01"
+   ],
+   "linked_asset": "Backlink workflow",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "backlink sheet"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "human"
+   ],
+   "dependencies": [],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Link live",
+    "partly": "Contact made",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB18",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O12",
+   "pillar": "P3 Off-Page",
+   "group": "Lokales Ökosystem",
+   "label_de": "Sponsoring lokaler Veranstaltungen",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [
+    "4"
+   ],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Event sponsoring. Merge with O06. Same process.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.01"
+   ],
+   "linked_asset": "Backlink workflow (merge with O06)",
+   "coverage": "partly",
+   "gap": "Same process as O06. Different trigger: event sponsoring",
+   "evidence_sources": [
+    "sponsor list"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "human"
+   ],
+   "dependencies": [
+    "O06"
+   ],
+   "cadence": "quarterly",
+   "status_rules": {
+    "done": "One live event or club sponsor link with partner label",
+    "partly": "Sponsoring agreed, link not live",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB18",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O13",
+   "pillar": "P3 Off-Page",
+   "group": "Backlink-Kauf",
+   "label_de": "Strategischer Backlink-Kauf",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "4"
+   ],
+   "gate_text": "Gate 4: only through backlink-dach. Readiness: review pace and on-page must be solid.",
+   "alternative": "Earn links through O06 to O12 first.",
+   "dach_adaptation": "Buy only through the strict path: label, price band, no subscription, Martin go per order.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.01"
+   ],
+   "linked_asset": "Skill `backlink-dach` pillar C (strict path, label)",
+   "coverage": "covered",
+   "gap": "Covered. Pilot not run",
+   "evidence_sources": [
+    "buy shortlist",
+    "order log"
+   ],
+   "age_class": "document",
+   "automation": [
+    "A",
+    "B",
+    "D"
+   ],
+   "effort": "L",
+   "owner_type": [
+    "human"
+   ],
+   "dependencies": [
+    "G17",
+    "W09"
+   ],
+   "cadence": "once",
+   "status_rules": {
+    "done": "Orders follow the path and are labelled",
+    "partly": "Shortlist only",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB19",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O14",
+   "pillar": "P3 Off-Page",
+   "group": "Backlink-Kauf",
+   "label_de": "Domain-Rating-Überwachung und Indexierung",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Track authority with DataForSEO rank data (Ahrefs not usable). Monthly.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.01"
+   ],
+   "linked_asset": "Backlink workflow step 5 (monthly report, not scheduled)",
+   "coverage": "partly",
+   "gap": "Use DataForSEO rank, not DR. No schedule exists",
+   "evidence_sources": [
+    "DataForSEO backlinks summary",
+    "indexation check"
+   ],
+   "age_class": "scan",
+   "automation": [
+    "A"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Monthly snapshot for client and 3 competitors",
+    "partly": "Snapshot older than 60 days",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB19",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O15",
+   "pillar": "P3 Off-Page",
+   "group": "Backlink-Kauf",
+   "label_de": "Auswahl der Linktexte",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "4"
+   ],
+   "gate_text": "Gate 4: applies to paid placements (label, anchor rule). Free links follow the same mix.",
+   "alternative": "",
+   "dach_adaptation": "Anchor mix 60 percent brand, 30 percent partial, 10 percent exact. No repeat of an exact anchor.",
+   "niche_rules": {
+    "health": "No cure words in anchors",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.01"
+   ],
+   "linked_asset": "Backlink workflow section 3.1 (anchor mix 60 / 30 / 10, no repeat of exact anchor)",
+   "coverage": "covered",
+   "gap": "Covered. Needs a check on paid placements only",
+   "evidence_sources": [
+    "DataForSEO anchors"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Mix within the rule",
+    "partly": "Mix off by 10 to 20 points",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB19",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O16",
+   "pillar": "P3 Off-Page",
+   "group": "Backlink-Kauf",
+   "label_de": "Auswahl der Quell-Domains",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "4"
+   ],
+   "gate_text": "Gate 4: applies to the buy path. A source passes the classifier first.",
+   "alternative": "",
+   "dach_adaptation": "Source-domain filter: local relevance first, then quality. Classifier prompt and spam flag.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.01"
+   ],
+   "linked_asset": "`local-backlink-classifier-prompt.md`, `gap-analysis.mjs` (spam flag)",
+   "coverage": "covered",
+   "gap": "Covered",
+   "evidence_sources": [
+    "gap analysis",
+    "classifier output"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "All sources pass the classifier",
+    "partly": "Some flagged",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB19",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.D10"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O17",
+   "pillar": "P3 Off-Page",
+   "group": "Digitale PR",
+   "label_de": "HARO / Connectively",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "Tool status checked 11.10.2026: Connectively closed Dec 2024, HARO relaunched by Featured (free email). DACH channels still unverified.",
+   "alternative": "Direct press mail to regional editors.",
+   "dach_adaptation": "Journalist requests: Featured HARO email (English), Source of Sources (English), plus DACH channels to verify.",
+   "niche_rules": {
+    "health": "HWG check on every quote",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.01"
+   ],
+   "linked_asset": "Backlink workflow section 3.3 (DACH journalist channels, marked \"to verify\")",
+   "coverage": "partly",
+   "gap": "Tool status checked 11.10.2026: Connectively closed Dec 2024. HARO runs again under Featured (free email, since Apr 2025). English market. DACH channels still to verify",
+   "evidence_sources": [
+    "channel list with check date",
+    "request log"
+   ],
+   "age_class": "document",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "human"
+   ],
+   "dependencies": [],
+   "cadence": "quarterly",
+   "status_rules": {
+    "done": "One channel set up and tested",
+    "partly": "Channels listed, not tested",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "later",
+   "runbook": "RB20",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O18",
+   "pillar": "P3 Off-Page",
+   "group": "Digitale PR",
+   "label_de": "Unverlinkte Erwähnungen aufspüren",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Find brand mentions without link. Ask for a link by short mail.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.04"
+   ],
+   "linked_asset": "Backlink workflow section 3.3 (DataForSEO Content Analysis, Google quotes, Firecrawl), AUD B07.04",
+   "coverage": "partly",
+   "gap": "Method exists in text. No script, no reclaim mail template, no schedule",
+   "evidence_sources": [
+    "brand search results",
+    "reclaim log"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "B",
+    "D"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent",
+    "human"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Search run in last 30 days and open mentions have mails",
+    "partly": "Search run, no mails",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB20",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O19",
+   "pillar": "P3 Off-Page",
+   "group": "Digitale PR",
+   "label_de": "Reputations-Management und Reddit-Beobachtung",
+   "source": "board",
+   "risk_class": "GATE",
+   "gates": [
+    "3"
+   ],
+   "gate_text": "Gate 3: burying is OUT. Clean-up of harm goes to un-burning.",
+   "alternative": "Real reputation response and own positive content.",
+   "dach_adaptation": "Watch brand and topic on gutefrage.net, Reddit, jameda. Answer with real help. No burying.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B07.04",
+    "B13.07"
+   ],
+   "linked_asset": "Backlink workflow section 3.3 (reddit watch), AUD B07.04, B13.07. Sibling chat un-burning",
+   "coverage": "partly",
+   "gap": "Watch with real help = DO. Reddit burying = OUT. Clean-up of harm belongs to un-burning",
+   "evidence_sources": [
+    "brand search",
+    "audit B07.04"
+   ],
+   "age_class": "live",
+   "automation": [
+    "A",
+    "D"
+   ],
+   "effort": "S",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Watch ran, negative items have a reply plan",
+    "partly": "Watch ran, no plan",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 2,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB20",
+   "unburn_overlap": true,
+   "unburn_checks": [
+    "UB.D08",
+    "UB.D09"
+   ],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  },
+  {
+   "id": "O20",
+   "pillar": "P3 Off-Page",
+   "group": "KI-Zitierung",
+   "label_de": "LLM-Strukturierung und Zitate",
+   "source": "board",
+   "risk_class": "DO",
+   "gates": [],
+   "gate_text": "",
+   "alternative": "",
+   "dach_adaptation": "Entity match on site, GBP, directories. Definition block, FAQ schema, sources block. Monthly check of 5 to 30 fixed AI prompts.",
+   "niche_rules": {
+    "health": "same as base",
+    "trades_local": "same as base",
+    "law_tax": "same as base"
+   },
+   "audit_feed": [
+    "B12.01",
+    "B12.04"
+   ],
+   "linked_asset": "AUD B12.01 to B12.04, BP section 4 (money prompts), WK1 section 11 (AI scans), backlink pillar E",
+   "coverage": "covered",
+   "gap": "Check and scans exist. Page structure rules in SMP (GEO)",
+   "evidence_sources": [
+    "Falcon AI scans",
+    "prompt log",
+    "audit B12"
+   ],
+   "age_class": "scan",
+   "automation": [
+    "A",
+    "B"
+   ],
+   "effort": "M",
+   "owner_type": [
+    "agent"
+   ],
+   "dependencies": [],
+   "cadence": "monthly",
+   "status_rules": {
+    "done": "Brand named in 40 percent of prompts or rising",
+    "partly": "Named in some prompts",
+    "missing": "Nothing in place",
+    "n_a": "Reason required",
+    "unknown": "No data or evidence older than the age rule"
+   },
+   "impact_base": 3,
+   "impact_from_driver": false,
+   "phase": "m2+",
+   "runbook": "RB21",
+   "unburn_overlap": false,
+   "unburn_checks": [],
+   "needs_audit": false,
+   "default_off": false,
+   "default_off_reason": ""
+  }
+ ]
+}

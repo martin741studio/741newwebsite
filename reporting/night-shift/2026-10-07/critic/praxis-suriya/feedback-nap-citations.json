@@ -1,0 +1,20 @@
+{
+  "plan_index": 1,
+  "client": "Praxis Suriya",
+  "slug": "feedback-nap-citations",
+  "mode": "FEEDBACK",
+  "input_file": "feedback/praxis-suriya/d1c58471-eafc-4ef9-8418-1611a2345445.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": "n/a (FEEDBACK doc has no Title/Meta/H1/NAP-block/JSON-LD; the two [fehlt: ...] markers sit in Vorschlag/Diff-Hinweis body text, which is allowed)",
+    "nap_matches_locked_record": "pass — inline reference 'Schützenpfad 29, 55218 Ingelheim am Rhein' matches context.json nap_locked (client_id 3f71ef33-...) field by field",
+    "jsonld_valid": "n/a (no JSON-LD in this doc)",
+    "language_matches_market_lang": "pass — market_lang=de, full doc is German",
+    "hwg_scan": "pass — no \"heilt\"/\"garantiert\"/\"100%\"/\"Heilung\" claims; content is domain/citation strategy, not a health claim",
+    "feedback_addresses_comment": "pass — all three elements of the comment (Domain-Idee Ingelheim, Domain-Idee Mainz, Besitz von Femalecare + generelle Freigabe) are each answered with a concrete recommendation: NAP-sichere Ingelheim-Domain, Mainz nur als Redirect (mit NAP-Risiko-Begründung), Femalecare als zukünftige Themen-Landingpage. Kein Teil des Kommentars bleibt unbeantwortet.",
+    "deslop_check": "skipped — correctly: Vorschlag is an internal domain-strategy recommendation to Martin, not client-facing prose meant to ship as-is. Per SKILL.md rule no blocker.",
+    "real_data_only": "pass — Domainnamen, Femalecare-Besitz und Freigabe-Satz sind wörtlich aus dem Kommentar (context.json id d1c58471). Adresse stammt aus nap_locked. Hormon-/Frauengesundheits-Bezug stammt aus einem separaten echten Kommentar derselben Kundin ('Hormone PMS, Premenopause, Menopause könnten noch hinzukommen', context.json). Fehlendes Suchvolumen und fehlender Original-Reporttext korrekt als [fehlt: ...] markiert statt erfunden."
+  },
+  "fails": [],
+  "format_check": "pass — drei geforderte Teile vorhanden: Kunde sagt (verbatim mit Zeitstempel), Vorschlag (je Domain-Option eine konkrete Empfehlung + NAP-Begründung), Diff-Hinweis (eine Zeile, erklärt fehlenden Vorher-Text statt zu erfinden)"
+}

@@ -1,0 +1,58 @@
+[2026-10-13 20:30:07] v2 === night v2 2026-10-13 start · 4 items · caps 14 runs / $10.0 / 22:45 · dry=False ===
+[2026-10-13 20:30:07] v2 run 1/14 EXECUTOR bali-beauty-similar (budget left $10.00)
+[2026-10-13 20:32:24] v2   EXECUTOR bali-beauty-similar exit=0 cost=$0.524 total=$0.52 sub=success :: 'DONE bali-beauty-similar: similar-treatments.md, sources.md, summary.md'
+[2026-10-13 20:32:24] v2 run 2/14 CRITIC bali-beauty-similar (budget left $9.48)
+[2026-10-13 20:33:20] v2   CRITIC bali-beauty-similar exit=0 cost=$0.290 total=$0.81 sub=success :: 'VERDICT bali-beauty-similar: pass'
+[2026-10-13 20:33:20] v2 run 3/14 EXECUTOR brasse-faq (budget left $9.19)
+[2026-10-13 20:37:59] v2   EXECUTOR brasse-faq exit=0 cost=$0.773 total=$1.59 sub=success :: 'DONE brasse-faq: faq-entwuerfe.md, sources.md, summary.md'
+[2026-10-13 20:37:59] v2 run 4/14 CRITIC brasse-faq (budget left $8.41)
+[2026-10-13 20:39:11] v2   CRITIC brasse-faq exit=0 cost=$0.237 total=$1.82 sub=success :: 'VERDICT brasse-faq: retry'
+[2026-10-13 20:39:11] v2 run 5/14 EXECUTOR brasse-faq (budget left $8.18)
+[2026-10-13 20:40:03] v2   EXECUTOR brasse-faq exit=0 cost=$0.241 total=$2.06 sub=success :: 'DONE brasse-faq: faq-entwuerfe.md, sources.md, summary.md'
+[2026-10-13 20:40:03] v2 run 6/14 CRITIC brasse-faq (budget left $7.94)
+[2026-10-13 20:41:25] v2   CRITIC brasse-faq exit=0 cost=$0.320 total=$2.38 sub=success :: 'The file already contains "retry" (the Write tool\'s trailing newline is fine — content is exactly the word). No further action needed.\n\nVERDICT brasse-faq: retr'
+[2026-10-13 20:41:25] v2 run 7/14 EXECUTOR stuerzl-gsc-chancen (budget left $7.62)
+[2026-10-13 20:45:22] v2   EXECUTOR stuerzl-gsc-chancen exit=0 cost=$0.660 total=$3.04 sub=success :: 'DONE stuerzl-gsc-chancen: gsc-chancen.md, sources.md, summary.md'
+[2026-10-13 20:45:22] v2 run 8/14 CRITIC stuerzl-gsc-chancen (budget left $6.96)
+[2026-10-13 20:47:31] v2   CRITIC stuerzl-gsc-chancen exit=0 cost=$0.621 total=$3.66 sub=success :: 'VERDICT stuerzl-gsc-chancen: pass'
+[2026-10-13 20:47:31] v2 run 9/14 EXECUTOR kamil-oberhausen-audit (budget left $6.34)
+[2026-10-13 20:49:14] v2   EXECUTOR kamil-oberhausen-audit exit=0 cost=$0.313 total=$3.98 sub=success :: 'DONE kamil-oberhausen-audit: audit.md, sources.md, summary.md'
+[2026-10-13 20:49:15] v2 run 10/14 CRITIC kamil-oberhausen-audit (budget left $6.02)
+[2026-10-13 20:50:22] v2   CRITIC kamil-oberhausen-audit exit=0 cost=$0.256 total=$4.23 sub=success :: 'VERDICT kamil-oberhausen-audit: pass'
+REVIEW → /Users/martindrendel/741website/reporting/night-shift/2026-10-13/REVIEW.md
+[2026-10-13 20:50:22] v2 === night v2 2026-10-13 end · runs 10 · $4.23 · stop=None ===
+no confirmed queue /Users/martindrendel/741website/reporting/night-shift/queue/2026-10-14.json; nothing to do
+[2026-10-14 20:30:07] v2 === night v2 2026-10-14 start · 7 items · caps 14 runs / $10.0 / 22:45 · dry=False ===
+[2026-10-14 20:30:07] v2 run 1/14 EXECUTOR brasse-faq-live-check (budget left $10.00)
+[2026-10-14 20:33:15] v2   EXECUTOR brasse-faq-live-check exit=0 cost=$0.972 total=$0.97 sub=success :: 'DONE brasse-faq-live-check: live-faq-check.md, sources.md, summary.md'
+[2026-10-14 20:33:15] v2 run 2/14 CRITIC brasse-faq-live-check (budget left $9.03)
+[2026-10-14 20:34:16] v2   CRITIC brasse-faq-live-check exit=0 cost=$0.322 total=$1.29 sub=success :: 'VERDICT brasse-faq-live-check: pass'
+[2026-10-14 20:34:16] v2 run 3/14 EXECUTOR johni-access-replan (budget left $8.71)
+[2026-10-14 20:36:28] v2   EXECUTOR johni-access-replan exit=0 cost=$0.503 total=$1.80 sub=success :: 'DONE johni-access-replan: replan-note.md, sources.md, summary.md'
+[2026-10-14 20:36:28] v2 run 4/14 CRITIC johni-access-replan (budget left $8.20)
+[2026-10-14 20:37:39] v2   CRITIC johni-access-replan exit=0 cost=$0.313 total=$2.11 sub=success :: 'VERDICT johni-access-replan: pass'
+[2026-10-14 20:37:39] v2 run 5/14 EXECUTOR kamil-oberhausen-audit (budget left $7.89)
+[2026-10-14 20:39:15] v2   EXECUTOR kamil-oberhausen-audit exit=0 cost=$0.295 total=$2.41 sub=success :: 'DONE kamil-oberhausen-audit: findings.md, sources.md, summary.md'
+[2026-10-14 20:39:15] v2 run 6/14 CRITIC kamil-oberhausen-audit (budget left $7.59)
+[2026-10-14 20:40:16] v2   CRITIC kamil-oberhausen-audit exit=0 cost=$0.243 total=$2.65 sub=success :: 'VERDICT kamil-oberhausen-audit: pass'
+[2026-10-14 20:40:17] v2 run 7/14 EXECUTOR suriya-backlink-checkpoint1 (budget left $7.35)
+[2026-10-14 20:42:54] v2   EXECUTOR suriya-backlink-checkpoint1 exit=0 cost=$0.446 total=$3.09 sub=success :: 'DONE suriya-backlink-checkpoint1: targets.md, sources.md, summary.md'
+[2026-10-14 20:42:54] v2 run 8/14 CRITIC suriya-backlink-checkpoint1 (budget left $6.91)
+[2026-10-14 20:44:00] v2   CRITIC suriya-backlink-checkpoint1 exit=0 cost=$0.341 total=$3.44 sub=success :: 'VERDICT suriya-backlink-checkpoint1: pass'
+[2026-10-14 20:44:00] v2 run 9/14 EXECUTOR dumann-dashboard-items-draft (budget left $6.56)
+[2026-10-14 20:47:54] v2   EXECUTOR dumann-dashboard-items-draft exit=0 cost=$0.767 total=$4.20 sub=success :: 'DONE dumann-dashboard-items-draft: draft.md, sources.md, summary.md'
+[2026-10-14 20:47:54] v2 run 10/14 CRITIC dumann-dashboard-items-draft (budget left $5.80)
+[2026-10-14 20:48:40] v2   CRITIC dumann-dashboard-items-draft exit=0 cost=$0.259 total=$4.46 sub=success :: 'VERDICT dumann-dashboard-items-draft: pass'
+[2026-10-14 20:48:40] v2 run 11/14 EXECUTOR huewel-gbp-round2-draft (budget left $5.54)
+[2026-10-14 20:52:54] v2   EXECUTOR huewel-gbp-round2-draft exit=0 cost=$0.683 total=$5.14 sub=success :: 'DONE huewel-gbp-round2-draft: draft.md, sources.md, summary.md'
+[2026-10-14 20:52:54] v2 run 12/14 CRITIC huewel-gbp-round2-draft (budget left $4.86)
+[2026-10-14 20:53:55] v2   CRITIC huewel-gbp-round2-draft exit=0 cost=$0.309 total=$5.45 sub=success :: 'VERDICT huewel-gbp-round2-draft: pass'
+[2026-10-14 20:53:55] v2 run 13/14 EXECUTOR kamil-dashboard-numbers (budget left $4.55)
+[2026-10-14 20:57:08] v2   EXECUTOR kamil-dashboard-numbers exit=0 cost=$0.558 total=$6.01 sub=success :: 'BLOCKED kamil-dashboard-numbers: Pulled real July 2026 numbers from reporting/out/physio-anatomie-2026-07.html and physiokraft-2026-07.html (sessions, leads=0, '
+[2026-10-14 20:57:08] v2 run 14/14 CRITIC kamil-dashboard-numbers (budget left $3.99)
+[2026-10-14 20:57:39] v2   CRITIC kamil-dashboard-numbers exit=0 cost=$0.166 total=$6.18 sub=success :: 'VERDICT kamil-dashboard-numbers: retry'
+[2026-10-14 20:57:39] v2 stop: run cap 14 reached
+REVIEW → /Users/martindrendel/741website/reporting/night-shift/2026-10-14/REVIEW.md
+[2026-10-14 20:57:39] v2 === night v2 2026-10-14 end · runs 14 · $6.18 · stop=run cap 14: no room for Executor + Critic ===
+no confirmed queue /Users/martindrendel/741website/reporting/night-shift/queue/2026-10-19.json; nothing to do
+no confirmed queue /Users/martindrendel/741website/reporting/night-shift/queue/2026-10-19.json; nothing to do

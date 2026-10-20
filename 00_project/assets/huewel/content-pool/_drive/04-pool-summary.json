@@ -1,0 +1,73 @@
+{
+ "title": "Content Pool: Praxis Hüwel",
+ "subtitle": "Homepage first. Existing site, relaunched on 2026-10-06. Health client, HWG mode. Nürnberg.",
+ "findings": [
+  {
+   "text": "The homepage is already strong. It has {bench.own} words. The floor from gate A0 is {bench.floor} words (70 % of the median {bench.median} words of {bench.n} Nürnberg practice homepages). The gap is not the home page. The gap is the depth of single pages and missing pages: six pages have 304 words or fewer, and there is no page for PostVac and Long Covid or for single concerns.",
+   "items": [
+    "CP-SVC-014",
+    "CP-SVC-007",
+    "CP-SVC-004",
+    "CP-SVC-017",
+    "CP-SVC-018"
+   ]
+  },
+  {
+   "text": "Homöopathie is the biggest real search demand of the practice. In Search Console, searches for Homöopathie in all spellings bring {CP-SVC-009.gsc_impr} impressions in 90 days. \"homöopathie nürnberg\" has 291 impressions at position 22.8, \"homöopath nürnberg\" 175 at 7.5. \"heilpraktiker nürnberg\" has 214 impressions at 14.6 and 4 clicks. Frequenztherapie, the main term, has few searches but the practice holds the top spots (positions 2 and 5, Local Pack).",
+   "items": [
+    "CP-SVC-009",
+    "CP-LOC-001",
+    "CP-SVC-006"
+   ]
+  },
+  {
+   "text": "The biggest open topic that fits the services is Magnetfeldtherapie. \"magnetfeldtherapie\" has 9,900 searches and is legally unburdened. The practice offers it as PEMF (Ondamed), but its page has 220 words and calls it Ondamed. The next topics: \"mikronährstoffe\" 9,900 and \"mikronährstoffanalyse\" 2,900, and \"nebennierenschwäche\" 4,400. All three pages exist and are thin or new.",
+   "items": [
+    "CP-SVC-007",
+    "CP-SVC-014",
+    "CP-SVC-015"
+   ]
+  },
+  {
+   "text": "Large volumes are traps. \"darmsanierung\" 18,100, \"entgiftung körper\" 9,900 and \"histaminintoleranz test\" 9,900 do not match any service (Hüwel offers no Ausleitung). \"bioresonanz\" has 14,800 searches, but for \"bioresonanz nürnberg\" only 20, and ENT and dental practices fill the results. The Bioresonanz page stays an explanation, never a method promise.",
+   "items": [
+    "CP-SVC-023",
+    "CP-SVC-020"
+   ]
+  },
+  {
+   "text": "The relaunch changed the data. Search Console covers the old and the new site, and 62 of the 72 page clicks went to the home page. DataForSEO knows only 2 own keywords with volume. The old page \"Schmerzen und Verletzungen\" had 7 clicks and 71 impressions and is now an anchor on a collective page. Own pages for single concerns come back, in daily language and without diagnoses (HWG). Decision 2026-10-11: Schmerzen und Verletzungen first, then Stress, Erschöpfung und Psyche.",
+   "items": [
+    "CP-SVC-018"
+   ]
+  },
+  {
+   "text": "Proof and entity data are thin. Google shows 4.9 with 10 reviews. The competitors in the Local Pack have 22 to 107. The MedicalBusiness markup has no opening hours, no sameAs and no services. The Doctolib entry still shows an old address. These fixes are cheap.",
+   "items": [
+    "CP-AUT-002",
+    "CP-AUT-003",
+    "CP-LOC-006",
+    "CP-LOC-005"
+   ]
+  },
+  {
+   "text": "The reference page of a Mannheim practice may serve as a structure example only. It uses direct claims of effect, the kind of wording for which Hüwel received a warning in 2018. All texts avoid healing promises. \"Frequenztherapie\" stays the main term.",
+   "items": [
+    "CP-SVC-006",
+    "CP-SVC-007"
+   ]
+  }
+ ],
+ "pillars": {
+  "location": "Hero and title with Nürnberg and Südstadt. A location block with Nürbanum, access, parking and hours. Neighbouring places only in text. Place pages for Fürth, Erlangen and Schwabach fail the proof rule and are cut. Fix the entity data: structured data, Doctolib and the directories.",
+  "service": "Twelve real services. Strengthen the thin pages (Magnetfeldtherapie, Mikronährstoffe, Ursachen-Klarheitsanalyse), add a page for PostVac and Long Covid, bring back single concern pages as proposals. Costs, process and FAQ get the questions from Google. Services that are not offered (detox, gut cleansing, histamine test) stay out.",
+  "brand": "Ursachen finden statt Symptome verwalten for people with long, unclear complaints. Entrepreneurs, self-employed and managers 45+ as a second group. One form of address (Sie or Du).",
+  "authority": "Qualifications and associations with proof. Reviews without effect claims. Patient quotes only after a HWG check. Listings and the Doctolib correction go to the backlink workflow."
+ },
+ "decisions": [
+  "PostVac and Long Covid (CP-SVC-017): waits for the talk between Martin Drendel and Martin Hüwel. No page and no ad until then. Highest HWG risk.",
+  "Entrepreneur offer (CP-SVC-021): wait for the pivot talk with Hüwel. Local SEO does not solve that channel.",
+  "Check the five homeopathy articles and the patient quotes for HWG before any growth.",
+  "Decided on 2026-10-11: two concern pages go first (Schmerzen und Verletzungen; Stress, Erschöpfung und Psyche). The Bioresonanz page stays as an explanation only. Search Console access works (API, www property)."
+ ]
+}

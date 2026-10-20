@@ -1,0 +1,68 @@
+{
+ "date": "2026-10-11",
+ "page": "st-34-ratgeber/05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Claims nicht verwendet: ['C05']"
+   ]
+  },
+  "G2 legal": {
+   "mode": "brao",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "info": {
+    "words": 610,
+    "placeholders": 3
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "1 Sätze über 28 Wörter (zum Beispiel: Das Strafverfahren ist eingeleitet, sobald die Finanzbehörde, die Poli...)"
+   ],
+   "counts": {
+    "du": 0,
+    "sie": 21,
+    "ich": 2,
+    "wir": 10
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 610,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Benchmark hat nur 3 lesbare Seiten (unter 5): Themen-, Begriffs- und Norm-Prüfung sind nur Hinweise",
+    "[Hinweis] 2 von 8 Themen-Begriffen der Wettbewerber-Überschriften fehlen im Text: steuerb* (2/3, z. B. \"Haftung Steuerberater – 4 Fragen & Antworten\"); haftung* (2/3, z. B. \"Haftung Steuerberater – 4 Fragen & Antworten\")",
+    "Begriffs- und Norm-Prüfung nicht gelaufen (mit --fetch starten)"
+   ]
+  }
+ }
+}

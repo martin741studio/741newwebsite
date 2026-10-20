@@ -1,0 +1,2 @@
+Direct fetch: https://www.infobel.com/de/germany/sturzl_steuerstrafrecht/frankfurt_oder/DE109851584-069298028870/businessdetails.aspx -> firecrawl_scrape returned the Infobel 'Abuse' page (captcha 'I am not a robot'); page content UNREADABLE live.
+Search snippet (firecrawl_search, 2026-10-11, query '"Wiesenhüttenstraße 17" Frankfurt Stürzl'): title 'STÜRZL Steuerstrafrecht, Frankfurt (Oder), DE - Infobel'; text 'STÜRZL Steuerstrafrecht in Frankfurt (Oder). Wiesenhüttenstraße 17 60329 Frankfurt (Oder). Telefon anzeigen.' URL carries phone 069298028870.

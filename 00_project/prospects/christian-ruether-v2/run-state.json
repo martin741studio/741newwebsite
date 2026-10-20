@@ -1,0 +1,199 @@
+{
+  "slug": "christian-ruether-v2",
+  "steps": {
+    "intake": {
+      "agent": "orchestrator",
+      "status": "done",
+      "at": "2026-10-12T10:01",
+      "outputs": [
+        "intake.md",
+        "intake.json",
+        "browser-queue.jsonl"
+      ],
+      "blockers": [
+        "no place_id: operator job maps_search",
+        "old page: gate G4"
+      ],
+      "start": "10:01:01",
+      "end": "10:01:33"
+    },
+    "demand": {
+      "agent": "A",
+      "status": "done",
+      "start": "10:02:15",
+      "end": "10:04:10",
+      "outputs": [
+        "demand.md",
+        "evidence/dfs-volumes-ads.json",
+        "evidence/dfs-serp-1.json",
+        "evidence/dfs-serp-2.json",
+        "evidence/dfs-serp-3.json",
+        "evidence/dfs-serp-4.json",
+        "evidence/dfs-serp-name.json",
+        "evidence/dfs-serp-name2.json",
+        "evidence/dfs-backlinks-summary.json",
+        "evidence/dfs-refdomains-spam.json"
+      ],
+      "blockers": [
+        "gap keyword organisationsberatung wien: site has no consulting page today",
+        "soziokratie wien and kreisorganisationsmethode: no Google number",
+        "2 extra SERP calls (serp-3, serp-4) above plan"
+      ],
+      "cost_usd": 0.1577
+    },
+    "site": {
+      "agent": "B",
+      "status": "done",
+      "start": "10:02:22",
+      "end": "10:07:32",
+      "outputs": [
+        "site-findings.md",
+        "evidence/site.json",
+        "evidence/site-pages.json",
+        "evidence/comp-pages.json",
+        "evidence/own-commercial-pages.json"
+      ],
+      "blockers": [
+        "no contact page and no contact form on site (not a tool blocker)",
+        "page_metrics counts sidebar text on his pages, so own word counts are inflated; main text counted separately by curl"
+      ]
+    },
+    "homepage": {
+      "agent": "C",
+      "status": "done",
+      "start": "10:02:34",
+      "end": "10:07:01",
+      "outputs": [
+        "draft/index.html",
+        "draft/buch.jpg",
+        "draft/portrait.jpg",
+        "draft/draft-home.json",
+        "draft/index.script-output.html",
+        "evidence/home-draft-1440.jpg",
+        "evidence/scorecard-today.md",
+        "homepage.md",
+        "../04_site/public/review-assets/christian-ruether-v2/startseite-heute.webp",
+        "../04_site/public/review-assets/christian-ruether-v2/startseite-entwurf.webp",
+        "../04_site/public/review-assets/christian-ruether-v2/foto-1.webp",
+        "../04_site/public/review-assets/christian-ruether-v2/foto-2.webp",
+        "../04_site/public/review-assets/christian-ruether-v2/foto-3.webp"
+      ],
+      "blockers": []
+    },
+    "scan": {
+      "agent": "D",
+      "status": "done",
+      "start": "10:02:40",
+      "end": "10:04:30",
+      "outputs": [
+        "scan-search.md",
+        "competitors.md",
+        "evidence/falcon-report-b52a97742083dc4.json",
+        "evidence/scan-grid.png",
+        "../04_site/public/review-assets/christian-ruether-v2/scan-grid.webp"
+      ],
+      "blockers": [],
+      "credits": 51,
+      "scan_start": "10:05:06",
+      "scan_end": "10:08:11",
+      "report_key": "b52a97742083dc4"
+    },
+    "operator": {
+      "agent": "O",
+      "status": "done",
+      "start": "10:02:04",
+      "end": "10:04:35",
+      "outputs": [
+        "evidence/maps-match.md",
+        "evidence/google-panel-2026-10-12.md",
+        "evidence/chat-2026-10-12.md",
+        "evidence/home-today-1440.jpg",
+        "evidence/home-images.txt"
+      ],
+      "blockers": [
+        "Cookie banner on soziokratie.org has no decline button (only 'Cookie Einstellungen' and 'Alle Akzeptieren'); nothing accepted, banner is visible in the screenshot",
+        "Maps profile 'Soziokratie' exists (Neustiftgasse 89-91, phone +43 699 11114398) but has no rating, no reviews, no category: contradicts the LinkedIn message of 2026-10-05 that said no Google profile exists"
+      ]
+    },
+    "writer": {
+      "agent": "E",
+      "status": "done",
+      "start": "10:07:53",
+      "end": "10:13:40",
+      "outputs": [
+        "prospect.json",
+        "prospect.skeleton1.json",
+        "prospect.skeleton2.json",
+        "evidence/draft-facts.json",
+        "evidence/factcheck-auto.md",
+        "_run.json",
+        "../../../04_site/review/christian-ruether-v2/index.html"
+      ],
+      "blockers": [
+        "factcheck.py: 24 WRONG lines are false positives: every '20' (real volume of 'organisationsberatung wien', own monthly series, and rank 'ersten 20') is read as 10+10 of a merged variant; tool fix needed",
+        "validate.py: 6 merged-variant warnings are false positives (same volume 10, no cpc, but different monthly series)",
+        "no loom_url yet",
+        "no visual check yet (no browser in this step)"
+      ]
+    },
+    "build": {
+      "agent": "orchestrator",
+      "status": "done",
+      "end": "10:20:02",
+      "outputs": [
+        "../../../04_site/review/christian-ruether-v2/index.html",
+        "_run.json"
+      ],
+      "blockers": [],
+      "note": "validate 0 errors, factcheck.py 0 WRONG / 0 MISMATCH after the F fixes"
+    },
+    "factcheck": {
+      "agent": "F",
+      "status": "done",
+      "start": "10:14:28",
+      "end": "10:19:21",
+      "outputs": [
+        "evidence/fact-check.md",
+        "evidence/factcheck-auto.md"
+      ],
+      "blockers": [],
+      "note": "86 claims, 7 must fix, all fixed 10:20"
+    },
+    "visual": {
+      "agent": "G",
+      "status": "done",
+      "start": "10:14:35",
+      "end": "10:17",
+      "outputs": [
+        "evidence/page-desktop-1500.jpg",
+        "evidence/page-mobile-375.jpg",
+        "evidence/visual-check.md"
+      ],
+      "blockers": [],
+      "note": "1 mobile issue (cleanup card too wide), fixed in prospect.json; not re-checked at 375 px"
+    },
+    "G4": {
+      "status": "done",
+      "note": "Martin 12.10.: old page christian-ruether stays; new run as christian-ruether-v2 to measure the time"
+    },
+    "message": {
+      "status": "waiting_gate",
+      "gate": "G2",
+      "note": "WhatsApp draft with email ask given to Martin"
+    },
+    "deploy": {
+      "status": "waiting",
+      "gate": "G3",
+      "blockers": [
+        "no go"
+      ]
+    },
+    "loom": {
+      "status": "done",
+      "outputs": [
+        "evidence/loom-transcript.md"
+      ],
+      "note": "loom_url set 2026-10-12, page rebuilt, validate 0 errors; 3 video statements differ from the page (reviews, München, IT-Bereich)"
+    }
+  }
+}

@@ -1,0 +1,361 @@
+{
+ "run": "balihealing/2026-10-11-kickoff",
+ "evidence": [
+  {
+   "id": "ev_fr_index",
+   "file": "evidence/falcon-report-index-bali.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Index of 125 reports for both profiles (read, free).",
+   "request": {
+    "tool": "listLocalFalconScanReports"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "b0dda7014668b3fd2f9bb91a97ceb3ba5ea6008816a16a8fa7f48a56d8bdc0ac",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_account",
+   "file": "evidence/falcon-account-bali.json",
+   "kind": "api_json",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Account credits on 11.10.: 787 usable, package cycle ends 19.10.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "3144d5c3ee8c07d7ac6524ea15dc1baa02cebc0b60d759243094dce09b69422e",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_a3571d78784eb37",
+   "file": "evidence/falcon-report-a3571d78784eb37.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T00:00:00+02:00",
+   "note": "NEW scan Go-A 11.10.: iv drip therapy bali, Google, 7x7, 5 mi, center Canggu.",
+   "request": {
+    "tool": "runLocalFalconScan",
+    "keyword": "iv drip therapy bali"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 49,
+   "sha256": "36b3d8efdbbce5b9ebf7c63cc6ebfb395fc1e5b0d1a4b1ef07ff9ba9b53f6946",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_35b51c632c07fcd",
+   "file": "evidence/falcon-report-35b51c632c07fcd.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T00:00:00+02:00",
+   "note": "NEW scan Go-A 11.10.: skin tag removal bali, Google, 7x7, 5 mi, center Canggu.",
+   "request": {
+    "tool": "runLocalFalconScan",
+    "keyword": "skin tag removal bali"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 49,
+   "sha256": "701cd5a5a3f5b3cdf439cbc7f5ef82812c0c21982fe64b8807367a7c8e814ff8",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_77bdce783b54d7d",
+   "file": "evidence/falcon-report-77bdce783b54d7d.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T00:00:00+02:00",
+   "note": "NEW scan Go-A 11.10.: acupuncture bali, Google, 7x7, 5 mi, center Canggu.",
+   "request": {
+    "tool": "runLocalFalconScan",
+    "keyword": "acupuncture bali"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 49,
+   "sha256": "285ade4dc2969b0506f9fdaf89194067b85da419036036b2791ae34650d4c02a",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_96d072830da5aec",
+   "file": "evidence/falcon-report-96d072830da5aec.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T00:00:00+02:00",
+   "note": "NEW scan Go-A 11.10.: naturopath, Google, 7x7, 5 mi, center Canggu.",
+   "request": {
+    "tool": "runLocalFalconScan",
+    "keyword": "naturopath"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 49,
+   "sha256": "fdcd25a63467770f1007da25b92214167418eb35591a50dc863d88279aa31f62",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_cb816599ff84775",
+   "file": "evidence/falcon-report-cb816599ff84775.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Existing report read (free): ozone therapy 10/5.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "cb816599ff84775"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "ff3e183ece71f998e990dd587a00a57129a79a9bf0d535b753bc262ef1ad605f",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_46ddecb0d209e85",
+   "file": "evidence/falcon-report-46ddecb0d209e85.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Existing report read (free): ozone therapy 9/28.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "46ddecb0d209e85"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "b02c8c2d66a5de6f5f66c89986c990026709cf10028c7d54712ff9c2f5b1d0d0",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_cdfc97a18047ec0",
+   "file": "evidence/falcon-report-cdfc97a18047ec0.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Existing report read (free): iv drip therapy bali 3 km 9/22.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "cdfc97a18047ec0"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "2e45ffc2cd6ff13541b293a07f5828e7bb1016a0f0f7a73bfdf82bf52f9af4ad",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_0ac7a01c950e749",
+   "file": "evidence/falcon-report-0ac7a01c950e749.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Existing report read (free): skin tag removal bali 3 km 9/22.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "0ac7a01c950e749"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "661bfaab68d322255c4a86f1755ef3aae2a9d775ee6df2ca20a07e2cd51d2c3f",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_0154762c5bf281a",
+   "file": "evidence/falcon-report-0154762c5bf281a.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Existing report read (free): naturopath 3 km 8/23.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "0154762c5bf281a"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "7dbe96af0fb08515765c6a29fa24c9caace2107a56326058f84cfb22aa27fdf4",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_892263880b6e529",
+   "file": "evidence/falcon-report-892263880b6e529.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Existing report read (free): acupuncture 3 km 8/23.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "892263880b6e529"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "8eb2b5f5ed013735a9e8770f543080c729d5ca6bb24d5e8c4034e99cbd362d88",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_fr_a127798a716cfc1",
+   "file": "evidence/falcon-report-a127798a716cfc1.json",
+   "kind": "falcon_report",
+   "tool": "local-falcon",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Existing report read (free): osteopathy bali 5 mi 9/22.",
+   "request": {
+    "tool": "getLocalFalconReport",
+    "reportKey": "a127798a716cfc1"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "c579d2dd11f4c08a217cd2e80695fd1cb135c799be03dcf6644db2c7502e7dff",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_drivers",
+   "file": "evidence/drivers.json",
+   "kind": "api_json",
+   "tool": "derived",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Driver analysis (reviews, categories, name keywords) over all saved Falcon reports.",
+   "request": {
+    "script": "audit-workflow/scripts/analyze_drivers.py"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "c43cd1be2b6848f970176e7ba72d7c7fe49710af8efeb771f228e979cd035874",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_site",
+   "file": "evidence/site-check-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "live-site-script",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Live check of 13 URLs on balihealing.com (robots meta, H1, schema).",
+   "request": {
+    "script": "audit-workflow/scripts/site_check.py"
+   },
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "4136b695ad1cf659cff8f3f07f8bc77eb6cfe54be0e644ac0ce1ff10e27e5bb3",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_free",
+   "file": "evidence/free-tests-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "google-autocomplete",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Brand autocomplete (5 queries).",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "57fac506dc64dfffbaff95710e159068244457bce80b06ac8882c72e652b9e09",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_bl",
+   "file": "evidence/backlinks-summary-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "dataforseo",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Backlink summary for the client domain and 8 competitor domains.",
+   "request": {
+    "endpoint": "backlinks/summary/live",
+    "targets": 9
+   },
+   "cost_usd": 0.2163,
+   "cost_credits": 0,
+   "sha256": "c03f1f73e552d4018ad6dfc0865796dfdb5529f846145fd9a03f58b78094cf0f",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_vol",
+   "file": "evidence/search-volume-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "dataforseo",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Search volume Indonesia, 25 keywords (None = no data, not no demand).",
+   "request": {
+    "endpoint": "keywords_data/google_ads/search_volume/live"
+   },
+   "cost_usd": 0.09,
+   "cost_credits": 0,
+   "sha256": "18777614bea5c6cd2d93d6d3a37c0d1433e4f8445022b8100d406eba671aa5b3",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_gbp",
+   "file": "evidence/gbp-read-2026-10-11.json",
+   "kind": "html_snapshot",
+   "tool": "chrome-gbp-read",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Both GBPs read in Chrome (741studio18): categories, services, description, hours, attributes, reviews, performance, photos, posts. Plus Apple Maps listings.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "0cb5f80d18f3f8648ccf94d85bb3a12414b06ce7be9eec201d302df45d62e08d",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_gsc",
+   "file": "evidence/gsc-ga4-read-2026-10-11.json",
+   "kind": "html_snapshot",
+   "tool": "chrome-gsc-ga4-read",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Search Console (URL-prefix property) and GA4 home read in Chrome.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "e87e14a61555809f650f43115faeb65146a3413027e028930a2f1bd3b64fa799",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_sb",
+   "file": "evidence/supabase-read-2026-10-11.json",
+   "kind": "api_json",
+   "tool": "supabase-741-portal",
+   "collected_at": "2026-10-11T04:45:00+02:00",
+   "note": "Client, access_grants and empty NAP tables (read).",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "9dddea7db94f39908f6b8281e869c20b479654cc163f8cd5061ea547a4cc4ce6",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_ads",
+   "file": "evidence/reused/balihealing-google-ads-report-2026-08-10.md",
+   "kind": "file",
+   "tool": "internal-doc",
+   "collected_at": "2026-08-10T12:00:00+02:00",
+   "note": "Weekly Ads report 3-9 Aug. REUSED. Chrome blocks ads.google.com, so no fresh Ads read.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "5f773cc1517f565714022609ee0445bdaab47b037a659303334128a95e8350c4",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_ads_1013",
+   "file": "evidence/ads-read-2026-10-13.json",
+   "kind": "html_snapshot",
+   "tool": "chrome-ads-read",
+   "collected_at": "2026-10-13T10:20:00+08:00",
+   "note": "Google Ads account read in Chrome (741studio18), read only: verification tasks and history, campaigns all time, billing. Screenshots in evidence/ads-*-2026-10-13.jpg.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "0067b0d121224070471109d2d2d452fc15b56895c61fcdfd564ff7d0a0e0944b",
+   "refetch_after": null
+  },
+  {
+   "id": "ev_r_ads_handoff",
+   "file": "evidence/reused/bali-healing-google-ads-handoff.md",
+   "kind": "file",
+   "tool": "internal-doc",
+   "collected_at": "2026-08-02T12:00:00+02:00",
+   "note": "Ads build spec and tracking notes. REUSED.",
+   "request": {},
+   "cost_usd": 0.0,
+   "cost_credits": 0,
+   "sha256": "73560becc6a8844f7f6505782929c0b6e2e214430bc0450d1d801fb7639ebf9f",
+   "refetch_after": null
+  }
+ ]
+}

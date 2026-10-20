@@ -1,0 +1,303 @@
+{
+ "client": "STÜRZL Steuerstrafrecht",
+ "client_slug": "stuerzl",
+ "page_type": "service",
+ "mode": "new",
+ "language": "de",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "voice_sheet": "00_project/assets/stuerzl/voice.md",
+ "local_city": null,
+ "cta": {
+  "goal": "Vertrauliche Anfrage über das Formular (nur Thema, keine Falldaten)",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nennen Sie uns nur Ihr Thema, keine Einzelheiten. Ihre Angaben unterliegen unserer gesetzlichen Verschwiegenheit.",
+  "secondary": "Anrufen: Frankfurt +49 69 298028870, München +49 89 72444170"
+ },
+ "gate": "A0-full",
+ "money_page": true,
+ "require_answer_block": true,
+ "cta_min": 3,
+ "cta_text": "Vertraulich anfragen",
+ "proof_assets": [
+  "Fachanwältin für Steuerrecht seit 2021 (Lebenslauf)",
+  "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022 (Lebenslauf)"
+ ],
+ "forbidden_words": [
+  "spezialisiert",
+  "Spezialist",
+  "Experte",
+  "Expertin",
+  "Expertise",
+  "führend",
+  "Exzellenz",
+  "einzigartig",
+  "hart in der Sache",
+  "kostenlos",
+  "gratis",
+  "Festpreis",
+  "Straffreiheit",
+  "Strafe vermeiden",
+  "gewinnen",
+  "WhatsApp",
+  "Wiesenhüttenstraße",
+  "Albtraum",
+  "Ruin",
+  "Haft droht",
+  "Angst"
+ ],
+ "own_phrases": [
+  "Wir stehen Ihnen zur Seite",
+  "Fehler passieren",
+  "Das Mandanteninteresse steht für uns immer im Vordergrund",
+  "möglichst geräuschlos und effizient",
+  "Jedes Mandat und jeder Mandant ist anders",
+  "Aufklären. Verständigen. Verteidigen."
+ ],
+ "placeholders_allowed": [
+  "Pauschale Erstberatung",
+  "Rechtsschutzversicherung"
+ ],
+ "blockers": [],
+ "nap_file": "00_project/assets/stuerzl/nap.json",
+ "page_slug": "steuerfahndung-durchsuchung",
+ "pool_item_ids": [
+  "CP-SVC-007"
+ ],
+ "sitetree_node": "ST-18",
+ "url_slug": "/steuerfahndung-durchsuchung/",
+ "keyword_primary": "steuerfahndung anwalt",
+ "keywords_cluster": [
+  {
+   "kw": "steuerfahndung",
+   "volume": 6600,
+   "scope": "national",
+   "source": "DataForSEO google_ads/search_volume/live, de, 2276 (content-pool/03-demand/volume.json)",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "steuerfahndung münchen",
+   "volume": 210,
+   "scope": "local",
+   "source": "DataForSEO (st-18/_work/volume.json)",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "steuerfahndung hessen",
+   "volume": 140,
+   "scope": "local",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "steuerfahndung frankfurt",
+   "volume": 50,
+   "scope": "local",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "wann kommt die steuerfahndung",
+   "volume": 40,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "steuerfahndung durchsuchung",
+   "volume": 30,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "hausdurchsuchung steuerfahndung",
+   "volume": 30,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "anwalt steuerfahndung",
+   "volume": 10,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "steuerfahndung anwalt",
+   "volume": null,
+   "scope": "national",
+   "source": "DataForSEO: keine Daten (kein Hinweis auf fehlende Nachfrage, Autocomplete und PAA zeigen sie)",
+   "date": "2026-10-11"
+  }
+ ],
+ "intent": "commercial / akut",
+ "reader": "Privatperson oder Unternehmer, bei dem die Steuerfahndung durchsucht oder durchsuchen will, oder der eine Ladung bekommen hat. Sucht 'steuerfahndung anwalt', 'steuerfahndung vor der tür', 'was tun bei durchsuchung'. PAA: Was tun, wenn die Steuerfahndung kommt? Darf das Finanzamt meine Wohnung durchsuchen? Wann durchsucht die Steuerfahndung?",
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "H1, Akutfall, Notfallnummern als Platzhalter, ein Weg",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Direkt-Antwort: was tun, wenn die Steuerfahndung kommt"
+  },
+  {
+   "id": "S03",
+   "element": "check-list",
+   "job": "Wann diese Seite wichtig ist"
+  },
+  {
+   "id": "S04",
+   "element": "step-flow",
+   "job": "Die erste Stunde: fünf Hinweise mit Gesetz",
+   "cta": "primary"
+  },
+  {
+   "id": "S05",
+   "element": "person",
+   "job": "E-E-A-T"
+  },
+  {
+   "id": "S06",
+   "element": "text",
+   "job": "Kosten kurz",
+   "cta": "secondary"
+  },
+  {
+   "id": "S07",
+   "element": "accordion",
+   "job": "Vertiefung: Steuerfahndung, Rechte bei der Durchsuchung, Beschlagnahme, Vernehmung, danach",
+   "cta": "secondary"
+  },
+  {
+   "id": "S08",
+   "element": "faq",
+   "job": "6 Fragen"
+  },
+  {
+   "id": "S09",
+   "element": "cta",
+   "job": "Abschluss",
+   "cta": "primary"
+  }
+ ],
+ "dropped_sections": [
+  {
+   "id": "Beweis",
+   "reason": "Bewertungsfreigabe offen (anwalt.de-Zahl nicht freigegeben, Google-Zahlen nicht freigegeben). Beweis liegt auf der Startseite. Titel stehen im Person-Block."
+  }
+ ],
+ "bestand_words": null,
+ "benchmark_median_words": 1275,
+ "benchmark_sources": "siehe 01-brief/gate-a0.md (31 Seiten aus serp-4 und serp-10, gelesen 2026-10-11)",
+ "word_range": [
+  1300,
+  1800
+ ],
+ "faq_min": 6,
+ "internal_links_min": 4,
+ "internal_link_targets": [
+  {
+   "url": "/steuerstrafrecht/verteidigung-im-steuerstrafverfahren/",
+   "anchor": "Verteidigung im Steuerstrafverfahren",
+   "role": "sibling"
+  },
+  {
+   "url": "/selbstanzeige/",
+   "anchor": "Selbstanzeige",
+   "role": "sibling"
+  },
+  {
+   "url": "/steuerstrafrecht/durchsuchungsbegleitung-schulung/",
+   "anchor": "Durchsuchungsbegleitung und Schulung",
+   "role": "child (ST-19)"
+  },
+  {
+   "url": "/kosten/",
+   "anchor": "Kosten und Honorar",
+   "role": "money-page"
+  },
+  {
+   "url": "/dr-anja-stuerzl/",
+   "anchor": "Dr. Anja Stürzl",
+   "role": "person"
+  },
+  {
+   "url": "/verteidigung-von-individualpersonen/",
+   "anchor": "Verteidigung von Privatpersonen",
+   "role": "sibling"
+  }
+ ],
+ "paa_questions": [
+  {
+   "q": "Was tun, wenn die Steuerfahndung kommt?",
+   "status": "answered"
+  },
+  {
+   "q": "Was passiert, wenn die Steuerfahndung vor der Tür steht?",
+   "status": "answered"
+  },
+  {
+   "q": "Darf das Finanzamt meine Wohnung durchsuchen?",
+   "status": "answered"
+  },
+  {
+   "q": "Wann durchsucht die Steuerfahndung?",
+   "status": "answered"
+  },
+  {
+   "q": "Wie hoch sind die Kosten für einen Anwalt im Steuerstrafverfahren?",
+   "status": "answered"
+  },
+  {
+   "q": "Wie lange dauert es von der Anzeige bis zur Hausdurchsuchung?",
+   "status": "dropped",
+   "reason_code": "nicht rechtssicher",
+   "reason": "Das Gesetz nennt keine Frist. Jede Zahl wäre geraten."
+  },
+  {
+   "q": "Wie zeige ich jemanden anonym beim Finanzamt an?",
+   "status": "dropped",
+   "reason_code": "off-offer",
+   "reason": "Anzeige gegen Dritte gehört nicht zum Angebot dieser Seite (Strafanzeige steht auf ST-29)."
+  },
+  {
+   "q": "Welcher Anwalt bei Steuerhinterziehung?",
+   "status": "dropped",
+   "reason_code": "Duplikat",
+   "reason": "Wird auf der Säulenseite ST-11 (anwalt steuerstrafrecht) und ST-14 beantwortet."
+  },
+  {
+   "q": "Welchen Anwalt bei Finanzamt?",
+   "status": "dropped",
+   "reason_code": "Duplikat",
+   "reason": "Wird auf der Säulenseite ST-11 beantwortet."
+  },
+  {
+   "q": "Wer kann mir bei Kryptobetrug helfen?",
+   "status": "dropped",
+   "reason_code": "off-offer",
+   "reason": "Kryptobetrug ist kein Angebot der Kanzlei."
+  },
+  {
+   "q": "Wo bekommst du eine kostenlose Rechtsberatung?",
+   "status": "dropped",
+   "reason_code": "off-offer",
+   "reason": "Kostenlose Beratung ist kein Angebot der Kanzlei (Wort 'kostenlos' verboten)."
+  },
+  {
+   "q": "Wo finde ich kostenlose Rechtsberatung in Frankfurt am Main?",
+   "status": "dropped",
+   "reason_code": "off-offer",
+   "reason": "Kostenlose Beratung ist kein Angebot der Kanzlei."
+  }
+ ],
+ "service_type": "Rechtsberatung und Verteidigung bei Steuerfahndung und Durchsuchung"
+}

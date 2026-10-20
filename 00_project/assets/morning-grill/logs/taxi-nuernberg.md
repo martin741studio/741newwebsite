@@ -1,0 +1,2 @@
+- 2026-10-14 evening: Spam source traced to RSForm! Pro licence, updated; cookie plugin fixed, all tested live. Akeeba key still not pasted by Martin [c072bfc1].
+- 2026-10-19 evening: Joure Fixe with Werbeagentur Bamberger 16:00 WITA (calendar); Akeeba key + spam findings still open.

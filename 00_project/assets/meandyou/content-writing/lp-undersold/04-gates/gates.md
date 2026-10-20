@@ -13,6 +13,7 @@ Page: `page.md`. Result: **PASS**
 ## Warnings
 
 - G1 facts: Claims nicht verwendet: ['M08']
+- G3 seo: Wortzahl 1456 außerhalb Zielbereich 900 bis 1450
 - G4 style: Sprecher gemischt: ich 7, wir 3
 - G6 seo/geo coverage + schema: [Hinweis] Begriffs-Abdeckung 57 % (40 Begriffe aus mindestens 50 % der Seiten). Fehlen: umgang, situationen, coaching, inhouse, präsentationen, reisekosten, business, anfrage, zuhörer, münchen, kompetenz, pausen. Pflicht nur, wenn die Suchabsicht den Begriff braucht.
 - G6 seo/geo coverage + schema: Direkt-Antwort hat 5 Sätze (Regel: 2 bis 4, etwa 50 Wörter). Kürzen für KI-Zitate.

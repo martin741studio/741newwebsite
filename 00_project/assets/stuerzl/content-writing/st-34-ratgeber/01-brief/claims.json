@@ -1,0 +1,234 @@
+{
+ "claims": [
+  {
+   "id": "C01",
+   "type": "credential",
+   "text": "Dr. Anja Stürzl ist Fachanwältin für Steuerrecht seit 2021",
+   "source": "Lebenslauf Dr. Stürzl, vermerkt in cro/04-copy/approved-copy.md, 2026-10-11; Live-Profilseite /dr-anja-stuerzl, gelesen 2026-10-11 (Kammernachweis offen)",
+   "numbers": [
+    "2021"
+   ],
+   "must_appear": [
+    "Fachanwältin für Steuerrecht"
+   ],
+   "required": true
+  },
+  {
+   "id": "C02",
+   "type": "credential",
+   "text": "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022",
+   "source": "Lebenslauf Dr. Stürzl, approved-copy.md, 2026-10-11; Live-Profilseite",
+   "numbers": [
+    "2022"
+   ],
+   "must_appear": [
+    "Zertifizierte Beraterin für Steuerstrafrecht"
+   ],
+   "required": true
+  },
+  {
+   "id": "C03",
+   "type": "fact",
+   "text": "Telefon Frankfurt +49 69 298028870, München +49 89 72444170",
+   "source": "Source of Truth Tab 00 / nap.json (bestätigt, Martin 2026-10-11); approved-copy.md",
+   "numbers": [
+    "49",
+    "69",
+    "298028870",
+    "89",
+    "72444170"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "C04",
+   "type": "legal",
+   "text": "Anwälte sind zur Verschwiegenheit verpflichtet; die erste Anfrage nennt nur das Thema, keine Einzelheiten",
+   "source": "approved-copy.md Abschnitt 8 und Hero, 2026-10-11 (§ 43a Abs. 2 BRAO, § 203 StGB)",
+   "numbers": [
+    "43a",
+    "203"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "C05",
+   "type": "fact",
+   "text": "Eigene Wendungen der Kanzlei: 'Wir stehen Ihnen zur Seite'; 'Das Mandanteninteresse steht für uns immer im Vordergrund'",
+   "source": "Live-Seiten Start und Kanzlei, gelesen 2026-10-11 (ST-14 _work/live/)",
+   "numbers": [],
+   "must_appear": [
+    "stehen Ihnen zur Seite"
+   ],
+   "required": false
+  },
+  {
+   "id": "C06",
+   "type": "fact",
+   "text": "Prüfstand dieses Hubs: Gesetzestexte gelesen am 11. Oktober 2026; zuletzt geprüft am 11. Oktober 2026. Jeder Beitrag nennt die gelesenen Quellen und sein eigenes Prüfdatum; der Hub sagt nicht mehr, dass alle Beiträge den Rechtsstand vom 11. Oktober 2026 wiedergeben (Review-Punkt A2)",
+   "source": "Lauf-Datum, Texte in _work/gesetze/",
+   "numbers": [
+    "11",
+    "2026"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "H01",
+   "type": "legal",
+   "text": "§ 370 Abs. 1 AO: Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe. Abs. 3: in besonders schweren Fällen Freiheitsstrafe von sechs Monaten bis zu zehn Jahren",
+   "source": "ao__370.txt, gelesen 2026-10-11",
+   "numbers": [
+    "370",
+    "1",
+    "3",
+    "5",
+    "10"
+   ],
+   "must_appear": [
+    "§ 370"
+   ],
+   "required": true
+  },
+  {
+   "id": "H02",
+   "type": "legal",
+   "text": "Verjährung: § 78 StGB (Strafverfolgung grundsätzlich fünf Jahre, § 78 Abs. 3 Nummer 4), § 376 Abs. 1 AO (15 Jahre in den in § 370 Abs. 3 Satz 2 Nummer 1 bis 6 genannten Fällen), § 169 Abs. 2 Satz 2 AO (Festsetzung zehn Jahre bei Hinterziehung), § 171 AO (Ablaufhemmung, die Frist kann länger laufen)",
+   "source": "Beitrag ST-36 mit Gesetzestexten stgb__78.txt, ao__376.txt, ao__169.txt, ao__171.txt, gelesen 2026-10-11",
+   "numbers": [
+    "78",
+    "3",
+    "4",
+    "376",
+    "1",
+    "15",
+    "370",
+    "2",
+    "6",
+    "169",
+    "10",
+    "171",
+    "5"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "H03",
+   "type": "legal",
+   "text": "§ 397 Abs. 1 AO: Das Strafverfahren ist eingeleitet, sobald die Finanzbehörde, die Polizei, die Staatsanwaltschaft, eine ihrer Ermittlungspersonen oder der Strafrichter eine Maßnahme trifft, die erkennbar darauf abzielt, gegen jemanden wegen einer Steuerstraftat strafrechtlich vorzugehen. Abs. 3: Mitteilung spätestens, wenn er aufgefordert wird, Tatsachen darzulegen oder Unterlagen vorzulegen",
+   "source": "gesetze-im-internet.de/ao_1977/__397.html, gelesen 2026-10-11 (_work/gesetze/ao__397.txt)",
+   "numbers": [
+    "397",
+    "1",
+    "3"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "H04",
+   "type": "legal",
+   "text": "§ 102 StPO: bei dem, der als Täter oder Teilnehmer verdächtig ist, kann eine Durchsuchung der Wohnung vorgenommen werden, wenn zu vermuten ist, dass sie zur Auffindung von Beweismitteln führt. § 105 Abs. 1 StPO: Durchsuchungen dürfen nur durch den Richter, bei Gefahr im Verzug auch durch die Staatsanwaltschaft und ihre Ermittlungspersonen angeordnet werden. § 404 Abs. 1 AO: Beamte der Steuerfahndung sind Ermittlungspersonen der Staatsanwaltschaft",
+   "source": "stpo__102.txt, stpo__105.txt, ao__404.txt, gelesen 2026-10-11",
+   "numbers": [
+    "102",
+    "105",
+    "1",
+    "404"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "H05",
+   "type": "legal",
+   "text": "§ 371 AO: Voraussetzungen und Ausschlussgründe der Selbstanzeige",
+   "source": "ao__371.txt, gelesen 2026-10-11",
+   "numbers": [
+    "371"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "H06",
+   "type": "fact",
+   "text": "Ratgeber-Beiträge der Geschwisterseiten ST-35, ST-36, ST-37 sind Vorschläge und noch nicht freigegeben. Kartenzeilen zur Selbstanzeige (ST-14), Steuerfahndung (ST-18, noch zu schreiben) und FAQ (Live-FAQ: Ablauf, Behörden, Zwangsmaßnahmen) stammen aus sitetree.json und Live-FAQ",
+   "source": "sitetree.json (ST-14, ST-18, ST-32, ST-34 bis ST-37), Live-FAQ, gelesen 2026-10-11",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "H07",
+   "type": "fact",
+   "text": "Dr. Anja Stürzl ist Inhaberin der Kanzlei; Büros in Frankfurt und München, Mandate in ganz Deutschland",
+   "source": "Live-Profilseite (Inhaberin), approved-copy.md, Source of Truth Tab 00, 2026-10-11",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "H08",
+   "type": "legal",
+   "text": "§ 369 Abs. 1 AO: Steuerstraftaten (Zollstraftaten) sind 1. Taten, die nach den Steuergesetzen strafbar sind, 2. der Bannbruch, 3. die Wertzeichenfälschung und deren Vorbereitung, soweit die Tat Steuerzeichen betrifft, 4. die Begünstigung einer Person, die eine Tat nach den Nummern 1 bis 3 begangen hat",
+   "source": "ao__369.txt, gelesen 2026-10-11",
+   "numbers": [
+    "369",
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "H09",
+   "type": "fact",
+   "text": "Adressblock: Frankfurt: Untermainkai 26, 60329 Frankfurt am Main, Telefon +49 69 298028870. München: Oberanger 32, 80331 München, Telefon +49 89 72444170. Telefonisch erreichbar Montag bis Freitag 09:30 bis 14:30 Uhr; Termine und Erstberatung auch außerhalb dieser Zeiten nach Vereinbarung",
+   "source": "Source of Truth Tab 00 (source-of-truth-2026-10-11.md) und nap.json, bestätigt (Martin 2026-10-11); Entscheidung 5 der Korrekturrunde",
+   "numbers": [
+    "26",
+    "60329",
+    "49",
+    "69",
+    "298028870",
+    "32",
+    "80331",
+    "89",
+    "72444170",
+    "09:30",
+    "14:30"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "H10",
+   "type": "legal",
+   "text": "§ 397 Abs. 1 und 3 AO wörtlich nach der Statutenliste (Finanzbehörde, Polizei, Staatsanwaltschaft, Ermittlungsperson, Strafrichter); Review-Punkt A3",
+   "source": "ao__397.txt, gelesen 2026-10-11",
+   "numbers": [
+    "397",
+    "1",
+    "3"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "H11",
+   "type": "placeholder",
+   "text": "Autorin oder Autor des Hubs mit Titel; Veröffentlichungsdatum",
+   "source": "pool CP-AUT-009 (needs_client); Auftrag Korrekturrunde: Hub bekommt Autoren- und Datumsplatzhalter",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  }
+ ]
+}

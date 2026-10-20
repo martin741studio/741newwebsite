@@ -1,0 +1,305 @@
+{
+ "claims": [
+  {
+   "id": "C01",
+   "type": "credential",
+   "text": "Dr. Anja Stürzl ist Fachanwältin für Steuerrecht seit 2021",
+   "source": "Lebenslauf Dr. Stürzl, vermerkt in cro/04-copy/approved-copy.md, 2026-10-11; Live-Profilseite /dr-anja-stuerzl, gelesen 2026-10-11 (Kammernachweis offen)",
+   "numbers": [
+    "2021"
+   ],
+   "must_appear": [
+    "Fachanwältin für Steuerrecht"
+   ],
+   "required": true
+  },
+  {
+   "id": "C02",
+   "type": "credential",
+   "text": "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022",
+   "source": "Lebenslauf Dr. Stürzl, approved-copy.md, 2026-10-11; Live-Profilseite",
+   "numbers": [
+    "2022"
+   ],
+   "must_appear": [
+    "Zertifizierte Beraterin für Steuerstrafrecht"
+   ],
+   "required": true
+  },
+  {
+   "id": "C03",
+   "type": "fact",
+   "text": "Telefon Frankfurt +49 69 298028870, München +49 89 72444170",
+   "source": "Source of Truth Tab 00 / nap.json (bestätigt, Martin 2026-10-11); approved-copy.md",
+   "numbers": [
+    "49",
+    "69",
+    "298028870",
+    "89",
+    "72444170"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "C04",
+   "type": "legal",
+   "text": "Anwälte sind zur Verschwiegenheit verpflichtet; die erste Anfrage nennt nur das Thema, keine Einzelheiten",
+   "source": "approved-copy.md Abschnitt 8 und Hero, 2026-10-11 (§ 43a Abs. 2 BRAO, § 203 StGB)",
+   "numbers": [
+    "43a",
+    "203"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "C05",
+   "type": "fact",
+   "text": "Eigene Wendungen der Kanzlei: 'Wir stehen Ihnen zur Seite'; 'Das Mandanteninteresse steht für uns immer im Vordergrund'",
+   "source": "Live-Seiten Start und Kanzlei, gelesen 2026-10-11 (ST-14 _work/live/)",
+   "numbers": [],
+   "must_appear": [
+    "stehen Ihnen zur Seite"
+   ],
+   "required": false
+  },
+  {
+   "id": "C06",
+   "type": "fact",
+   "text": "Rechtsstand dieser Seite: Gesetzestexte vom 11. Oktober 2026; steuerlich gilt das BMF-Schreiben vom 6. März 2025; spätere Änderungen und Rechtsprechung nicht ausgewertet. Zuletzt geprüft am 11. Oktober 2026 (Gesetzestexte und Quellen)",
+   "source": "Lauf-Datum, _work/gesetze/, _work/bmf-krypto-clean.txt (Kopf: BMF vom 06.03.2025, BStBl I S. 658), _work/bmf-seite-2026-10-11.md (Seite des BMF, Datum 06.03.2025, Ankündigung schrittweiser Ergänzung)",
+   "numbers": [
+    "11",
+    "2026"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "K01",
+   "type": "legal",
+   "text": "BMF-Schreiben vom 6. März 2025 (BStBl I S. 658), Einzelfragen zur ertragsteuerrechtlichen Behandlung bestimmter Kryptowerte: Kryptowerte sind Wirtschaftsgüter (Rn. 31, BFH 14.02.2023 IX R 3/22); sie sind 'andere Wirtschaftsgüter' im Sinne des § 23 Abs. 1 Satz 1 Nummer 2 EStG; Gewinne aus der Veräußerung im Privatvermögen können Einkünfte aus privaten Veräußerungsgeschäften sein, wenn der Zeitraum zwischen Anschaffung und Veräußerung nicht mehr als ein Jahr beträgt (Rn. 53). Das BMF hat angekündigt, das Schreiben schrittweise zu ergänzen (Seite des BMF, _work/bmf-seite-2026-10-11.md)",
+   "source": "lsth.bundesfinanzministerium.de/esth/2025/B-Anhaenge/Anhang-04/inhalt.html, gelesen 2026-10-11 (_work/bmf-krypto-2025-03-06.md, bmf-krypto-clean.txt)",
+   "numbers": [
+    "2025",
+    "6",
+    "658",
+    "31",
+    "53",
+    "23",
+    "1",
+    "2"
+   ],
+   "must_appear": [
+    "BMF-Schreiben vom 6. März 2025"
+   ],
+   "required": true
+  },
+  {
+   "id": "K02",
+   "type": "legal",
+   "text": "§ 23 Abs. 3 Satz 5 EStG: Gewinne bleiben steuerfrei, wenn der aus den privaten Veräußerungsgeschäften erzielte Gesamtgewinn im Kalenderjahr weniger als 1.000 Euro betragen hat. BMF Rn. 53: bis Veranlagungszeitraum 2023 600 Euro; Summe der Gewinne aus sämtlichen privaten Veräußerungsgeschäften im Kalenderjahr",
+   "source": "estg__23.txt (Abs. 3 Satz 5, 7, 8: Verlustausgleich, § 10d EStG) und BMF-Schreiben Rn. 53, gelesen 2026-10-11. Die Aussage 'Freigrenze, nichts bleibt steuerfrei, wenn die Grenze erreicht ist' ist der Schluss aus dem Wortlaut 'weniger als 1 000 Euro'",
+   "numbers": [
+    "23",
+    "3",
+    "5",
+    "1.000",
+    "600",
+    "2023",
+    "2024",
+    "7",
+    "8",
+    "10"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "K03",
+   "type": "legal",
+   "text": "BMF Rn. 54 und 55: Tausch in Euro, Waren, Dienstleistungen und andere Kryptowerte führt zu einer Veräußerung; die Veräußerungsfristen beginnen nach jedem Tausch neu",
+   "source": "BMF-Schreiben Rn. 54, 55, gelesen 2026-10-11",
+   "numbers": [
+    "54",
+    "55"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "K04",
+   "type": "legal",
+   "text": "BMF-Schreiben: eigene Kapitel zu Mining, Staking, Lending, Einkünfte aus Gewerbebetrieb (§ 15 EStG), Kapitalvermögen (§ 20 EStG), private Veräußerungsgeschäfte, sonstige Einkünfte (§ 22 Nummer 3 EStG); Rn. 63: bei Currency oder Payment Token keine Verlängerung der Veräußerungsfrist auf zehn Jahre (§ 23 Abs. 1 Satz 1 Nummer 2 Satz 4 EStG). § 23 Abs. 1 Satz 1 Nummer 2 Satz 4 EStG (Wortlaut): Bei Wirtschaftsgütern, aus deren Nutzung als Einkunftsquelle zumindest in einem Kalenderjahr Einkünfte erzielt werden, erhöht sich der Zeitraum auf zehn Jahre. Der Bezug zu Staking und Lending ist nicht aus dem Wortlaut belegt; der Text sagt nur, dass das BMF-Schreiben dazu eigene Abschnitte hat",
+   "source": "BMF-Schreiben Inhaltsverzeichnis, Einleitung zu Kapitel II, Rn. 63, gelesen 2026-10-11; estg__23.txt, gelesen 2026-10-11",
+   "numbers": [
+    "63",
+    "10",
+    "15",
+    "20",
+    "22",
+    "3",
+    "4"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "K05",
+   "type": "legal",
+   "text": "§ 150 Abs. 2 AO: Angaben in den Steuererklärungen sind wahrheitsgemäß zu machen. § 370 Abs. 1 AO: Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe; unrichtige oder unvollständige Angaben oder pflichtwidriges Unkenntnislassen und dadurch Steuern verkürzt",
+   "source": "ao__150.txt, ao__370.txt, gelesen 2026-10-11",
+   "numbers": [
+    "150",
+    "2",
+    "370",
+    "1",
+    "5"
+   ],
+   "must_appear": [
+    "§ 370"
+   ],
+   "required": true
+  },
+  {
+   "id": "K06",
+   "type": "legal",
+   "text": "§ 15 StGB: strafbar ist nur vorsätzliches Handeln, wenn das Gesetz fahrlässiges Handeln nicht ausdrücklich mit Strafe bedroht (§ 370 AO droht keine Fahrlässigkeit an). § 378 AO: leichtfertige Steuerverkürzung ist Ordnungswidrigkeit, Geldbuße bis fünfzigtausend Euro",
+   "source": "stgb__15.txt, ao__378.txt, gelesen 2026-10-11",
+   "numbers": [
+    "15",
+    "378",
+    "50.000"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "K07",
+   "type": "legal",
+   "text": "§ 235 Abs. 1 AO: hinterzogene Steuern sind zu verzinsen. § 238 Abs. 1 AO: einhalb Prozent für jeden Monat, nur volle Monate",
+   "source": "ao__235.txt, ao__238.txt, gelesen 2026-10-11",
+   "numbers": [
+    "235",
+    "238",
+    "0,5"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "K08",
+   "type": "legal",
+   "text": "BMF Rn. 89: bei zentralen Handelsplattformen eines ausländischen Betreibers erweiterte Mitwirkungspflicht nach § 90 Abs. 2 AO, insbesondere regelmäßiger und vollständiger Abruf der Transaktionsübersichten; fehlende Aufzeichnungen und Datenverluste (Insolvenz, Hacker-Angriff) gehen zu Lasten der Steuerpflichtigen. Rn. 87 bis 89: Mitwirkungs- und Aufzeichnungspflichten. Rn. 88: Die Angaben in den Steuererklärungen sind wahrheitsgemäß nach bestem Wissen und Gewissen zu machen (§ 150 Abs. 2 AO); die Steuerpflichtigen sind zur Mitwirkung bei der Ermittlung des Sachverhalts verpflichtet",
+   "source": "BMF-Schreiben Rn. 87 bis 89 und ao__90.txt, gelesen 2026-10-11",
+   "numbers": [
+    "89",
+    "90",
+    "2",
+    "87",
+    "88",
+    "150"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "K09",
+   "type": "legal",
+   "text": "KStTG § 9 Abs. 1: Anbieter melden jährlich spätestens zum 31. Juli für den vorangegangenen Meldezeitraum Informationen an das Bundeszentralamt für Steuern. § 10: Meldezeitraum ist das Kalenderjahr. § 21: Pflichten erstmals für das Kalenderjahr 2026. § 13: Information der Nutzer, dass Informationen für Zwecke des Besteuerungsverfahrens erhoben und zur Weiterleitung an die Landesfinanzbehörden gemeldet werden (oder die zuständigen Behörden anderer Staaten). § 2 KStTG: Den Pflichten unterliegen Kryptowerte-Dienstleister mit Herkunftsmitgliedstaat Deutschland und Kryptowerte-Betreiber mit Inlandsbezug. Eigene Ableitung: Die erste Meldung für das Kalenderjahr 2026 ist bis zum 31. Juli 2027 fällig (§ 9 Abs. 1, § 10, § 21 KStTG)",
+   "source": "gesetze-im-internet.de/ksttg/BJNR1600B0025.html, gelesen 2026-10-11 (_work/gesetze/ksttg.txt); Datum 31. Juli 2027 ist eine Ableitung aus drei Normen, von der Fachanwältin zu bestätigen",
+   "numbers": [
+    "9",
+    "10",
+    "13",
+    "21",
+    "31",
+    "2026",
+    "1",
+    "2",
+    "2027"
+   ],
+   "must_appear": [
+    "KStTG"
+   ],
+   "required": true
+  },
+  {
+   "id": "K10",
+   "type": "legal",
+   "text": "§ 371 AO: Berichtigung zu allen Steuerstraftaten einer Steuerart in vollem Umfang, alle unverjährten Taten, mindestens letzte zehn Kalenderjahre (Abs. 1); Ausschlussgründe (Abs. 2); Zahlung innerhalb der Frist (Abs. 3). § 371 Abs. 2 Satz 1 Nummer 1 Buchstabe b: Bekanntgabe der Einleitung des Straf- oder Bußgeldverfahrens; Nummer 3: verkürzte Steuer über 25 000 Euro je Tat; § 398a AO: anderer Weg, wenn die Wirkung nur an Abs. 2 Satz 1 Nummer 3 oder 4 scheitert",
+   "source": "ao__371.txt und ao__398a.txt (in st-35 _work/gesetze), gelesen 2026-10-11",
+   "numbers": [
+    "371",
+    "10",
+    "1",
+    "2",
+    "3",
+    "25.000",
+    "398a",
+    "4"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "K11",
+   "type": "legal",
+   "text": "§ 136 Abs. 1 StPO: dem Beschuldigten steht frei, sich zu äußern oder nicht zur Sache auszusagen; er darf jederzeit einen Verteidiger befragen",
+   "source": "stpo__136.txt (in st-35 _work/gesetze), gelesen 2026-10-11",
+   "numbers": [
+    "136",
+    "1"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "K12",
+   "type": "fact",
+   "text": "Kanzleiaussage (Live-FAQ): Vorsatz liegt auch vor, wenn man den Erfolg billigend in Kauf nimmt. Ersetzt im Text durch BGH 1 StR 416/08 Rn. 41 (Tatbestand setzt weder direkten Vorsatz noch Bereicherungsabsicht voraus). Die Aussage 'bleibt der Steuerpflichtige für die Angaben verantwortlich' steht nicht mehr im Text (Review-Punkt A2); der Text nennt stattdessen § 150 Abs. 2 AO",
+   "source": "Live-FAQ Abschnitt V; BGH 1 StR 416/08 (st-35 _work/bgh-1-StR-416-08.txt), gelesen 2026-10-11",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "K13",
+   "type": "fact",
+   "text": "PAA 'Wie funktioniert Krypto-Steuer?', 'Muss ich Kryptogewinne unter 600 Euro bei der Steuer angeben?', 'Was passiert, wenn man Krypto-Gewinne nicht angibt?'",
+   "source": "DataForSEO SERP st-37-krypto/_work/serp.json, 2026-10-11",
+   "numbers": [
+    "600"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "K14",
+   "type": "placeholder",
+   "text": "Autorin oder Autor des Beitrags mit Titel; Veröffentlichungsdatum",
+   "source": "pool CP-SVC-023 (needs_client: Wer schreibt den Beitrag? Berufsrecht-Check)",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "K15",
+   "type": "legal",
+   "text": "BGH, Urteil vom 2. Dezember 2008, 1 StR 416/08 (BGHSt 53, 71): Die Tatbestandsmäßigkeit der Steuerhinterziehung setzt weder direkten Vorsatz noch Bereicherungsabsicht voraus (Rn. 41)",
+   "source": "hrr-strafrecht.de/1/08/1-416-08.php, gelesen 2026-10-11 (st-35 _work/bgh-1-StR-416-08.txt, Rn. 41)",
+   "numbers": [
+    "2008",
+    "416",
+    "08",
+    "53",
+    "71",
+    "2",
+    "1"
+   ],
+   "must_appear": [],
+   "required": false
+  }
+ ]
+}

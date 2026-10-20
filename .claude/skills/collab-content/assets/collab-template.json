@@ -1,0 +1,38 @@
+{
+  "client": "client_slug",
+  "partner": {
+    "name": "Partner Business Name",
+    "domain": "partnerdomain.com",
+    "location": "City, Region",
+    "core_services": ["Service 1", "Service 2"]
+  },
+  "synergy": {
+    "geographic_complement": "Region A x Region B",
+    "modality_complement": "Modality 1 x Modality 2",
+    "shared_audience": "Target demographic description"
+  },
+  "selected_angle": {
+    "id": "ANGLE-1",
+    "title_working": "Working Title of Angle",
+    "thesis": "Core narrative explaining why this integration provides immense value to the reader."
+  },
+  "articles": {
+    "article_client": {
+      "target_site": "clientdomain.com",
+      "working_title": "Article on Client Site",
+      "featured_partner": "Partner Name",
+      "target_url": "https://partnerdomain.com/target-service",
+      "anchor_text": "contextual anchor text",
+      "file_path": "article_client.md"
+    },
+    "article_partner": {
+      "target_site": "partnerdomain.com",
+      "working_title": "Article on Partner Site",
+      "featured_client": "Client Name",
+      "target_urls": ["https://clientdomain.com/target-service"],
+      "anchor_text": "contextual anchor text",
+      "file_path": "article_partner.md"
+    }
+  },
+  "status": "drafted"
+}

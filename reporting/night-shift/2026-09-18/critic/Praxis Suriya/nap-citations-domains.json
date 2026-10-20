@@ -1,0 +1,19 @@
+{
+  "client": "Praxis Suriya",
+  "slug": "nap-citations-domains",
+  "mode": "FEEDBACK",
+  "feedback_id": "d1c58471-eafc-4ef9-8418-1611a2345445",
+  "executor_file": "feedback/Praxis Suriya/d1c58471-eafc-4ef9-8418-1611a2345445.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": "n/a (FEEDBACK item has no title/meta/H1/JSON-LD fields); the quoted NAP block itself contains no [fehlt:] tag — the [fehlt:] tags present are correctly scoped to the Femalecare spelling/TLD and to domain-availability data, not to the NAP block",
+    "nap_block_matches_locked_record": "pass — quoted block ('Praxis Suriya - Ayurveda & Naturheilkunde', Schützenpfad 29, 55218 Ingelheim am Rhein, +49 174 7411087, Heilpraktiker) matches context.json.nap_locked for client_id 3f71ef33-8c74-4ea1-b2d3-0273c2e99649 field by field (business_name, street, postal_code, city, phone, primary_category)",
+    "jsonld_valid": "n/a (no JSON-LD in this item)",
+    "language_matches_market_lang": "pass (all copy in German, market_lang=de)",
+    "hwg_scan": "pass (no heilt/garantiert/100%/Heilung claims; 'Heilpraktiker' is only used as the locked professional category label, not a cure claim)",
+    "feedback_addresses_comment_sentence_for_sentence": "pass — all 3 facts from Kunde-sagt are answered: (1) 'ayurveda Ingelheim oder ayurveda mainz' -> both domain-name ideas listed individually under 'Domain-Ideen der Kundin', plus a compliance-relevant note that the practice's locked address is Ingelheim, not Mainz; (2) 'ich habe auch noch die domain Femalecare' -> listed under 'Bereits vorhandene Domain', with exact spelling/TLD correctly marked [fehlt: vom Kunden zu bestätigen] instead of being guessed; (3) 'Du kannst gerne die Domaine zubuchen die wichtig sind' -> converted into a concrete 'Nächster Schritt (braucht Martin)' checklist (confirm spelling, check availability, decide on Mainz as a place-name signal, then update the Citations block) rather than an unverified auto-purchase, consistent with hard rule 2 (real data only) and the human-in-the-loop gate on any real-world action",
+    "deslop_hard_check": "not required as blocker — the entire Vorschlag is explicitly framed as an internal recommendation/next-steps list to Martin ('braucht ein Go von Martin', 'Nächster Schritt (braucht Martin)'), not client-facing copy meant to ship as-is; no prose section here is intended to be pasted into a live report or sent to the client verbatim"
+  },
+  "fails": [],
+  "notes": "Diff-Hinweis correctly flags that the original report section text could not be found/fetched, rather than fabricating a before/after comparison (hard rule 2). Domain-availability data is correctly marked [fehlt: ...] rather than invented, since no domain-research tool is available in this feedback run. The Status-Hinweis block (noting this feedback_id passed Critic on 2026-09-16 and is still unprocessed in processed-feedback.json) is accurate context for Martin and does not affect this run's grading, which is based solely on today's executor output."
+}

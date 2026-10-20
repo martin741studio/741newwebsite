@@ -1,0 +1,46 @@
+{
+  "client": "Praxis Suriya",
+  "client_id": "3f71ef33-8c74-4ea1-b2d3-0273c2e99649",
+  "feedback_id": "5bea6cb2-688d-4c24-b436-1a576e7ade75",
+  "mode": "FEEDBACK",
+  "plan_index": 0,
+  "executor_file": "feedback/praxis-suriya/5bea6cb2-688d-4c24-b436-1a576e7ade75.md",
+  "pass": true,
+  "verdict": "pass",
+  "hard_checks": {
+    "1_no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "pass",
+      "note": "No Title/Meta/H1/JSON-LD in a FEEDBACK draft (not applicable). The NAP block ('Kanonische Geschäftsdaten') has no [fehlt:] markers. The two [fehlt:] markers present (missing original report text at top; Sa/So hours unconfirmed) sit outside Title/Meta/H1/NAP/JSON-LD and correctly flag real data gaps instead of inventing data (hard rule 2)."
+    },
+    "2_nap_matches_locked_record": {
+      "result": "pass",
+      "note": "Checked field by field against context.json.nap_locked for client_id 3f71ef33-8c74-4ea1-b2d3-0273c2e99649: business_name 'Praxis Suriya - Ayurveda & Naturheilkunde' ✓, street 'Schützenpfad 29' ✓, postal_code+city '55218 Ingelheim am Rhein' ✓, phone '+49 174 7411087' ✓, primary_category 'Heilpraktiker' ✓. Exact match."
+    },
+    "3_jsonld_valid_localbusiness_faqpage": {
+      "result": "n/a",
+      "note": "FEEDBACK mode produces no JSON-LD/schema output; nothing to validate here."
+    },
+    "4_copy_language_matches_market_lang": {
+      "result": "pass",
+      "note": "market_lang = de. Entire Vorschlag and surrounding text is German."
+    },
+    "5_hwg_scan": {
+      "result": "pass",
+      "note": "Scanned for 'heilt', 'garantiert', '100 %', 'Heilung' and similar cure/guarantee/fear claims. None present. Content is opening-hours data and a GBP-button recommendation, not treatment-outcome copy."
+    },
+    "6_rubric_or_feedback_equivalent": {
+      "result": "pass",
+      "note": "FEEDBACK mode: 8-dim rubric skipped per skill; checked instead that the draft addresses the client's comment sentence-for-sentence. (a) 'Di-Do 7.30-18.00, Fr 7.30-12.00' -> table rows Di/Mi/Do 7:30-18:00, Fr 7:30-12:00 = addressed. (b) 'Telefonisch Termin vereinbaren Mo. 12-14 Uhr' -> Montag row 'Keine Praxiszeiten. Telefonische Terminvereinbarung 12:00-14:00 Uhr' = addressed. (c) 'Termin Button habe ich nicht, nur Buchungsformular' -> dedicated Termin-Button paragraph confirms no button, explains booking-form-only state, and gives a concrete GBP action-button recommendation tied to the existing form = addressed. All three points from the client's comment are covered, nothing invented."
+    },
+    "7_deslop_hard_check": {
+      "result": "exempt",
+      "note": "Per skill's FEEDBACK exception: de-slop only applies to a Vorschlag section that is new client-facing prose meant to ship as-is (e.g. a GBP description rewrite), and is never a blocker when the Vorschlag is just an internal recommendation to Martin, not copy. This Vorschlag is (1) a structured opening-hours data table meant for direct GBP data entry, not marketing prose, and (2) an internal recommendation sentence to Martin ('Empfehlung: ...') about which GBP action-button URL to set. Neither is 'new client-facing prose' in the AI-slop sense, so the tool was not run and is not a blocker here. (Note: the sandboxed critic session could not execute python3 in this run regardless — approval for Bash(python3 *) was unexpectedly denied — but this does not change the exemption verdict above.)"
+    }
+  },
+  "additional_observations": [
+    "Executor was transparent about a real data gap: the original live-report section text ('6 · A · Google Business Profil') was not fetchable in that session and is marked [fehlt:] rather than guessed — correct behaviour per hard rule 2 (real data only). This means a human must diff the Vorschlag against the live report before it is applied in the portal, which is exactly what the morning gate in REVIEW.md is for; it is not a Critic fail.",
+    "Output includes two extra sections beyond the skill's required three-part format (Datenpaket, Verwandter Thread). These add useful traceability and do not violate any hard check; not a blocker.",
+    "Sa/So opening hours correctly left as [fehlt: vom Kunden zu bestätigen] instead of assumed closed — correct, since the client's comment did not mention weekend hours."
+  ],
+  "fails": []
+}

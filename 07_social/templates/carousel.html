@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1080px; height:1080px; overflow:hidden; }
+  .slide {
+    position:relative; width:1080px; height:1080px;
+    background:#111111;
+    font-family:'DM Sans', Arial, sans-serif;
+    color:#fff; overflow:hidden;
+    display:none; flex-direction:column;
+  }
+  .slide.active { display:flex; }
+  .halftone {
+    position:absolute; inset:0;
+    background-image:radial-gradient(circle, rgba(255,255,255,0.06) 2px, transparent 2px);
+    background-size:24px 24px;
+    -webkit-mask-image:linear-gradient(150deg, transparent 40%, black 88%);
+            mask-image:linear-gradient(150deg, transparent 40%, black 88%);
+  }
+  .topbar {
+    position:relative; z-index:2;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:60px 64px 0;
+  }
+  .topbar img { height:44px; }
+  .kicker { text-align:right; }
+  .kicker .k { color:#fac118; font-weight:700; font-size:20px; letter-spacing:4px; }
+  .kicker .c { color:#7a7a7a; font-weight:700; font-size:20px; letter-spacing:3px; margin-top:4px; }
+
+  .body { position:relative; z-index:2; flex:1; display:flex; flex-direction:column; justify-content:center; padding:0 64px; }
+
+  /* cover */
+  .cover .eyebrow { color:#fac118; font-weight:700; font-size:28px; letter-spacing:6px; margin-bottom:28px; }
+  .cover h1 { font-family:'Anton', Impact, sans-serif; text-transform:uppercase; font-size:118px; line-height:1.0; }
+  .cover h1 .hl { display:inline-block; background:#fac118; color:#111; padding:0 16px; margin-top:12px; }
+  .cover .sub { margin-top:40px; font-size:34px; line-height:1.4; color:#e6e6e6; font-weight:500; max-width:820px; }
+
+  /* tip */
+  .tip .num { font-family:'Anton', Impact, sans-serif; font-size:150px; line-height:0.9; color:#fac118; }
+  .tip h2 { font-family:'Anton', Impact, sans-serif; text-transform:uppercase; font-size:76px; line-height:1.02; margin-top:8px; }
+  .tip .txt { margin-top:34px; font-size:36px; line-height:1.5; color:#dcdcdc; font-weight:400; max-width:900px; }
+  .tip .txt b { color:#fff; font-weight:700; }
+
+  /* stat */
+  .stat { align-items:flex-start; }
+  .stat .big { font-family:'Anton', Impact, sans-serif; font-size:230px; line-height:0.9; color:#fac118; }
+  .stat .lab { font-size:42px; line-height:1.35; color:#fff; font-weight:700; margin-top:20px; max-width:860px; }
+  .stat .lab span { color:#fac118; }
+
+  /* cta */
+  .slide.cta { background:#fac118; color:#111; }
+  .cta .body { justify-content:center; }
+  .cta .eyebrow { font-weight:700; font-size:26px; letter-spacing:5px; margin-bottom:26px; }
+  .cta h2 { font-family:'Anton', Impact, sans-serif; text-transform:uppercase; font-size:104px; line-height:1.0; }
+  .cta .sub { margin-top:34px; font-size:36px; line-height:1.4; font-weight:600; max-width:840px; }
+  .cta .url { margin-top:56px; font-family:'Anton', Impact, sans-serif; font-size:56px; }
+  .cta .topbar img { filter:invert(1); }
+  .cta .kicker .k { color:#111; } .cta .kicker .c { color:#6b5a15; }
+
+  .foot {
+    position:relative; z-index:2;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:0 64px 56px; color:#7a7a7a; font-weight:600; font-size:22px; letter-spacing:1px;
+  }
+  .swipe { color:#fac118; font-family:'Anton', Impact, sans-serif; font-size:30px; letter-spacing:1px; }
+  .cta .foot { color:#6b5a15; }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+/* ================= CONFIG — pro Thema nur das hier anpassen ================= */
+const CONFIG = {
+  series: "LOCAL SEO PLAYBOOK",
+  handle: "@741.studio",
+  slides: [
+    { type:"cover",
+      eyebrow:"741 PLAYBOOK",
+      title:["SO STEHST DU", "BEI GOOGLE MAPS", "GANZ OBEN"],
+      hlLine:2,
+      sub:"6 Schritte, mit denen lokale Betriebe im „Map Pack" landen — und die Anrufe bekommen." },
+    { type:"stat",
+      big:"46%",
+      lab:["aller Google-Suchen haben eine ", "lokale Absicht", ". Wer die Top 3 auf der Karte besetzt, gewinnt die meisten Kunden."] },
+    { type:"tip", num:"01", title:"Profil vollständig ausfüllen",
+      txt:"Google rankt den, der sein Google-Unternehmensprofil am besten versteht. <b>Kategorie, alle Leistungen, echte Fotos, korrekte Öffnungszeiten</b> — keine leeren Felder." },
+    { type:"tip", num:"02", title:"Bewertungen aktiv sammeln",
+      txt:"Nicht nur die Sterne zählen. <b>Menge, Aktualität und deine Antworten</b> auf jede Bewertung sind ein direktes Ranking-Signal — und schaffen Vertrauen." },
+    { type:"tip", num:"03", title:"Überall gleiche Daten",
+      txt:"Name, Adresse, Telefon müssen <b>in jedem Verzeichnis identisch</b> sein. Widersprüche verwirren Google und kosten Platzierung. Einträge konsistent halten." },
+    { type:"tip", num:"04", title:"Standort-Inhalte auf der Seite",
+      txt:"Deine Website braucht echte Ortsbezüge: <b>Leistung + Stadt</b>, Anfahrt, lokale Referenzen. So versteht Google, wo du relevant bist." },
+    { type:"tip", num:"05", title:"Sichtbarkeit im Umkreis messen",
+      txt:"Platz 1 direkt am Standort reicht nicht. Miss dein Ranking im <b>gesamten Einzugsgebiet</b> per Grid-Scan — dort entscheidet sich, wer gefunden wird." },
+    { type:"tip", num:"06", title:"Dranbleiben, nicht einmalig",
+      txt:"Local SEO ist kein Projekt, sondern ein Prozess. <b>Monatlich Profil pflegen, Bewertungen sammeln, Rankings prüfen</b> — Wettbewerber schlafen nicht." },
+    { type:"cta",
+      eyebrow:"DEIN NÄCHSTER SCHRITT",
+      title:["WO STEHST DU", "AUF DER KARTE?"],
+      sub:"Wir machen dir einen kostenlosen Sichtbarkeits-Check für dein Einzugsgebiet.",
+      url:"→ 741.STUDIO" }
+  ]
+};
+/* ============================================================================ */
+
+const LOGO = "file:///Users/martindrendel/741website/04_site/assets/images/logo_white.png";
+const n = CONFIG.slides.length;
+const idx = Math.max(1, Math.min(n, parseInt((location.hash||"#1").slice(1),10) || 1));
+const s = CONFIG.slides[idx-1];
+const pad = x => String(x).padStart(2,"0");
+
+function top(){
+  return `<div class="topbar"><img src="${LOGO}" alt="741">
+    <div class="kicker"><div class="k">${CONFIG.series}</div><div class="c">${pad(idx)} / ${pad(n)}</div></div></div>`;
+}
+function foot(right){
+  return `<div class="foot"><span>741.studio</span>${right||""}</div>`;
+}
+
+let cls = "slide active " + s.type, inner = "";
+if (s.type === "cover"){
+  const h1 = s.title.map((l,i)=> (i+1===s.hlLine)?`<span class="hl">${l}</span>`:l).join("<br>");
+  inner = top() + `<div class="body cover"><div class="eyebrow">${s.eyebrow}</div><h1>${h1}</h1><div class="sub">${s.sub}</div></div>` + foot(`<span class="swipe">SWIPE →</span>`);
+} else if (s.type === "stat"){
+  inner = top() + `<div class="body stat"><div class="big">${s.big}</div><div class="lab">${s.lab.map((t,i)=> i===1?`<span>${t}</span>`:t).join("")}</div></div>` + foot(`<span class="swipe">SWIPE →</span>`);
+} else if (s.type === "tip"){
+  inner = top() + `<div class="body tip"><div class="num">${s.num}</div><h2>${s.title}</h2><div class="txt">${s.txt}</div></div>` + foot(`<span class="swipe">SWIPE →</span>`);
+} else if (s.type === "cta"){
+  inner = top() + `<div class="body"><div class="eyebrow">${s.eyebrow}</div><h2>${s.title.join("<br>")}</h2><div class="sub">${s.sub}</div><div class="url">${s.url}</div></div>` + foot(`<span>${CONFIG.handle}</span>`);
+}
+document.getElementById("stage").innerHTML = `<div class="${cls}">${s.type==="cta"?"":'<div class="halftone"></div>'}${inner}</div>`;
+</script>
+</body>
+</html>

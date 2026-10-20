@@ -1,0 +1,47 @@
+{
+  "plan_item_index": 5,
+  "client": "Rabenmütter Shop",
+  "page": "rabenmuetter/shop-navigation-kategorien",
+  "mode": "AUDIT",
+  "task_id": "4577d1d6-c16f-4b49-a27f-4b1e60a7d1d5",
+  "source_file": "audits/rabenmuetter/shop-navigation-kategorien.md",
+  "pass": false,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "not_applicable",
+      "reason": "This is a blocked AUDIT status report, not a CREATE spec. It contains no Title/Meta/H1/JSON-LD fields to check. The [fehlt: ...] markers present are all in the data-package table and the dimension table, correctly flagging missing source data rather than a missing required field."
+    },
+    "nap_block_matches_locked_record": {
+      "result": "pass",
+      "reason": "Checked context.json.nap_locked directly: no entry exists for client_id fbcc70d1-4c56-437c-b5fb-8056e48d3f62 (Rabenmütter Shop, a nationwide online shop with no stationary location). The file's claim 'nicht zutreffend — kein Eintrag' is confirmed correct, not a guess."
+    },
+    "jsonld_valid": {
+      "result": "not_applicable",
+      "reason": "No JSON-LD was produced or evaluated; the target page's schema could not be fetched (see site-fetch finding below), so dimension 7 is correctly left unscored rather than invented."
+    },
+    "market_lang_de": {
+      "result": "pass",
+      "reason": "Entire audit file is in German, matching plan item market_lang 'de'."
+    },
+    "hwg_scan": {
+      "result": "not_applicable",
+      "reason": "Rabenmütter Shop (Trauerkarten/stationery e-commerce) is not a health/YMYL client; no cure/guarantee/fear language appears anywhere in the file regardless."
+    },
+    "rubric_8dim_scored_ge_80": {
+      "result": "fail",
+      "reason": "Verified the target site fetch failure independently: WebFetch on https://rabenmuetter-verlag.de returns the identical tool-level error reported in the file (API Error: 404, model: claude-3-5-haiku-20241022, no page content received). No DataForSEO tool is present in this session either. All 8 rubric dimensions are correctly marked [fehlt: Seite nicht abrufbar] / nicht zutreffend rather than scored or guessed — per scoring-rubric.md line 5 ('If you did not fetch the page, you cannot score it') this is the required behaviour, not a quality defect. But the hard check itself ('every dimension ≥ 80') is literally not met, since zero dimensions carry a valid score. This is a data-availability block, not a content-quality failure, so it is recorded as a mechanical check fail to trigger the one permitted retry, per SKILL.md §3's bounded retry-then-needs_martin flow — not as a verdict that the page or the shop's navigation is poorly structured."
+    },
+    "deslop_body_copy": {
+      "result": "pass",
+      "reason": "Confirmed no new client-facing prose exists in this file (only the Datenpaket table, the blocker narrative, and the Empfehlung-an-Martin list, all internal status reporting). Per SKILL.md §3 this correctly exempts the file from the de-slop hard check."
+    },
+    "real_data_only_rule": {
+      "result": "pass",
+      "reason": "The file invents no category names, no competitor data, and no PAA questions. It explicitly declines to promote the task description's own example categories (Anlass/Motiv) into the fix list without site verification (lines 86-89 of the audit). This is exactly the SKILL.md rule 2 behaviour ('Missing → write [fehlt: …] and continue. Never invent.')."
+    }
+  },
+  "fails": [
+    "rubric_8dim_scored_ge_80: all 8 dimensions unscored due to confirmed site-fetch and DataForSEO tool unavailability in this session (independently re-verified by Critic), not due to any content or reasoning fault in the Executor's output."
+  ],
+  "notes": "Independent verification of plan item index 5. Re-ran the WebFetch against rabenmuetter-verlag.de myself before grading and hit the same tool-level 404 the Executor reported, confirming this is a genuine, reproducible session/tool blocker and not a one-off or an Executor shortcut. The audit correctly followed the hard rule to refuse guessing instead of producing a fabricated rubric score. Verdict is 'retry' per protocol (bounded one retry before needs_martin) so a fresh Executor attempt gets one more chance at the fetch; given this is the same documented blocker seen 8 times across prior nights for this client's site, a second identical failure on retry should be marked needs_martin by the next Critic pass rather than attempted a third time."
+}

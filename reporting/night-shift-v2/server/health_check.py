@@ -71,7 +71,7 @@ def run_real_task():
     env.pop("CLAUDE_CODE_OAUTH_TOKEN", None)  # health check uses no special auth path
     try:
         p = subprocess.run(
-            ["/home/nightshift/.local/bin/claude", "-p", "Reply with exactly: OK", "--model", "claude-sonnet-5",
+            ["/home/nightshift/.local/bin/claude", "-p", "Reply with exactly: OK", "--model", "claude-haiku-5-5",
              "--max-turns", "2", "--output-format", "json", "--permission-mode", "dontAsk",
              "--strict-mcp-config"],
             capture_output=True, text=True, timeout=WALL_CLOCK_TIMEOUT, env=env,

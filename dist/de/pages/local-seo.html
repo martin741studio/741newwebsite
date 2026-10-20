@@ -483,6 +483,10 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
   .proof{flex-direction:column;text-align:center;}
 }
 </style>
+<script>
+/* ads-mode: visitors from paid/Meta links (utm_medium=paid or utm_source=meta) get quiz step 1 in the hero. Set on <html> before paint. */
+(function(){try{var p=new URLSearchParams(location.search);var m=(p.get('utm_medium')||'').toLowerCase(),s=(p.get('utm_source')||'').toLowerCase();if(m==='paid'||s==='meta'){document.documentElement.classList.add('ads-mode');var strip=function(){var n=document.body&&document.body.firstChild;if(n&&n.nodeType===3&&/^\s*html\s*$/.test(n.nodeValue)){n.parentNode.removeChild(n);}};strip();document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('ads-mode');strip();});}}catch(e){}})();
+</script>
   <script async type="module" crossorigin src="/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/weavy-CxATN43c.css">
 </head>
@@ -1146,6 +1150,38 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
             .testi-grid { grid-template-columns: 1fr 1fr; }
             .ls2-sticky { padding: .8rem 1rem; }
           }
+          /* ads-mode (utm_medium=paid / utm_source=meta): slim header with logo only; the quiz card takes the right hero column, the video moves below */
+          .ls2-adsq { display: none; }
+          html.ads-mode .navbar_main .banner_component,
+          html.ads-mode .navbar_main .navbar_main-cta-wrapper,
+          html.ads-mode .navbar_main .huge_nav-button-dummy,
+          html.ads-mode .navbar_main .huge_nav-button.is-real,
+          html.ads-mode .nav-links-wrapper,
+          html.ads-mode .mobile-menu-toggle { display: none !important; }
+          html.ads-mode .ls2 { padding-top: 84px; }
+          html.ads-mode .ls2-hero { padding-top: 2rem; }
+          html.ads-mode .ls2-hero-grid { align-items: start; }
+          html.ads-mode .ls2-adsq { display: block; }
+          html.ads-mode .ls2-hero-video { grid-column: 1 / -1; width: 100%; max-width: 720px; margin: 1.5rem auto 0; }
+          /* the quiz card (#qzOverlay .qz) is moved into #adsQuizHost by the quiz script in ads-mode; all 6 steps run here, no popup */
+          .ls2-adsq .qz { margin: 0; padding: 28px 26px 24px; border: 1px solid var(--color-card-border); box-shadow: 0 20px 50px rgba(26,26,26,.08); }
+          .ls2-adsq .qz-close { display: none; }
+          .ls2-adsq .qz-trust { justify-content: flex-start; }
+          .ls2-adsq-sub { display: none; color: var(--color-text-muted); line-height: 1.5; margin: 0 0 1.2rem; }
+          /* mobile (ads-mode): H1, one-line subline, quiz card, video. Desktop keeps the left column as today. */
+          @media (max-width: 900px) {
+            html.ads-mode .ls2-adsq-sub { display: block; }
+            html.ads-mode .ls2-hero .ls2-sub,
+            html.ads-mode .ls2-hero .ls2-cta,
+            html.ads-mode .ls2-hero .ls2-cta-sub,
+            html.ads-mode .ls2-hero .ls2-hero-stat { display: none; }
+            html.ads-mode .ls2-hero-grid { gap: 1.5rem; }
+            html.ads-mode .ls2-hero-video { margin-top: 0; }
+          }
+          @media (max-width: 600px) {
+            html.ads-mode .ls2 { padding-top: 64px; }
+            .ls2-adsq .qz { padding: 24px 18px 20px; }
+          }
         </style>
 
 <div class="ls2-wrap">
@@ -1153,11 +1189,13 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
     <div class="ls2-hero-grid">
       <div class="reveal-up">
         <h1 class="ls2-h1">Werden Sie die erste Wahl in Ihrer Region.</h1>
+        <p class="ls2-adsq-sub">Kostenlose Sichtbarkeits-Analyse als Video. Zustellung in 2 Stunden per WhatsApp und E-Mail.</p>
         <p class="ls2-sub">Kostenlose Sichtbarkeits-Analyse: Wir zeigen Ihnen in einem individuellen Video genau, wo Sie heute stehen &mdash; und was die drei größten Hebel für mehr Anrufe und Kunden sind.</p>
         <a class="ls2-cta" href="https://741.studio/pages/sichtbarkeits-analyse.html" data-qz>Kostenlose Analyse starten &rarr;</a>
         <span class="ls2-cta-sub">2 Stunden Zustellung &middot; per WhatsApp &amp; E-Mail &middot; DSGVO-konform</span>
         <p class="ls2-hero-stat">29 echte Erfolge &middot; 3 Schritte Prozess</p>
       </div>
+      <div class="ls2-adsq" id="adsQuiz"><div id="adsQuizHost"></div></div>
       <div class="ls2-hero-video reveal-up">
         <iframe src="https://www.youtube.com/embed/dQ9OE8GSolw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
@@ -2603,17 +2641,46 @@ html<!-- Last Published: Tue Jan 20 2026 20:07:56 GMT+0000 (Coordinated Universa
       };
   
       // Booking clicks (cal.com / Calendly) — delegated, so it covers every page.
+      // cal.com links also get Meta click ids + one shared event id as metadata[...]
+      // params. cal.com returns them in its BOOKING_CREATED webhook, and the Edge
+      // Function cal-booking-capi sends the server-side "Schedule" event with that
+      // event id and fbc/fbp (attribution to the ad click).
+      window.__calMeta = function () {
+        var q = new URLSearchParams(location.search);
+        var fbclid = q.get("fbclid") || "";
+        var m;
+        var fbc = (m = document.cookie.match(/(?:^|;\s*)_fbc=([^;]+)/)) ? decodeURIComponent(m[1]) : (fbclid ? "fb.1." + Date.now() + "." + fbclid : "");
+        var fbp = (m = document.cookie.match(/(?:^|;\s*)_fbp=([^;]+)/)) ? decodeURIComponent(m[1]) : "";
+        var eid = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : ("sc-" + Date.now() + "-" + Math.random().toString(16).slice(2));
+        return { fbc: fbc, fbp: fbp, eid: eid, src: (location.origin + location.pathname).slice(0, 200) };
+      };
+      window.__decorateCalLink = function (a) {
+        var href = a.getAttribute("href") || "";
+        if (!/^https?:\/\/(app\.)?cal\.com\//i.test(href)) return null;
+        var meta = window.__calMeta();
+        var u = new URL(href, location.href);
+        u.searchParams.set("metadata[eid]", meta.eid);
+        u.searchParams.set("metadata[src]", meta.src);
+        if (meta.fbc) u.searchParams.set("metadata[fbc]", meta.fbc);
+        if (meta.fbp) u.searchParams.set("metadata[fbp]", meta.fbp);
+        a.setAttribute("href", u.toString());
+        return meta;
+      };
       document.addEventListener("click", function (e) {
         try {
           var a = e.target && e.target.closest && e.target.closest("a[href]");
           if (!a) return;
           var href = a.getAttribute("href") || "";
           if (/cal\.com|calendly\.com/i.test(href)) {
+            var meta = null;
+            try { meta = window.__decorateCalLink(a); } catch (e2) {}
             window.track741("booking_click", {
               provider: /calendly/i.test(href) ? "calendly" : "cal.com",
               link_text: (a.textContent || "").trim().slice(0, 60)
             });
-            if (window.fbq && !window.fbq.__stubOnly) window.fbq("track", "Schedule");
+            // No client "Schedule" here any more (Martin, 2026-10-19): a link click is not a
+            // booking. The server-side Schedule comes from the cal.com webhook (Edge Function
+            // cal-booking-capi) with metadata[eid] as event_id.
           }
         } catch (err) {}
       }, true);
@@ -2963,6 +3030,27 @@ var QZ_CONFIG = {
   document.querySelectorAll('[data-qz]').forEach(function(a){
     a.addEventListener('click', function(e){ e.preventDefault(); e.stopImmediatePropagation(); open(); }, true);
   });
+
+  /* ads-mode: the whole quiz runs inline in the hero. The card is moved out of the overlay; render/validate/submit stay the same.
+     QuizOpened fires once on the first answer or "Weiter" click. Other "Analyse starten" links scroll to the hero quiz. */
+  var adsHost = document.getElementById('adsQuizHost');
+  if(adsHost && document.documentElement.classList.contains('ads-mode')){
+    var card = overlay.querySelector('.qz');
+    adsHost.appendChild(card);
+    idx = 0; render();
+    var quizOpened = false;
+    card.addEventListener('click', function(e){
+      if(quizOpened || !e.target.closest) return;
+      if(e.target.closest('.qz-opt, .qz-next')){ quizOpened = true; try{fbq('trackCustom','QuizOpened');}catch(err){} }
+    }, true);
+    document.addEventListener('click', function(e){
+      var a = e.target.closest ? e.target.closest('[data-qz]') : null;
+      if(!a) return;
+      e.preventDefault(); e.stopImmediatePropagation();
+      var top = adsHost.getBoundingClientRect().top + window.pageYOffset - 24;
+      if(window.lenis && window.lenis.scrollTo){ window.lenis.scrollTo(top); } else { window.scrollTo({top: top, behavior: 'smooth'}); }
+    }, true);
+  }
 })();
 </script>
 </body>

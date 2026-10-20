@@ -1,0 +1,117 @@
+{
+  "client": "Talkinfive",
+  "client_slug": "talkinfive",
+  "phase": "P4",
+  "updated_at": "2026-10-16T12:00:00Z",
+  "north_star_goal": {
+    "title": "Portfolio Conversion verdoppeln & Load Time unter 1.2s",
+    "target_metric": "TTFB < 200ms, Page Weight < 1.5MB",
+    "deadline": "2026-11-15",
+    "source": "Brand Atlas Audit 2026-10-16"
+  },
+  "benchmark_delta": {
+    "baseline": {
+      "ttfb_ms": 2100,
+      "page_weight_mb": 10.51,
+      "gifs_count": 3,
+      "cache_active": false
+    },
+    "market_benchmark": {
+      "ttfb_ms": 150,
+      "page_weight_mb": 1.5,
+      "gifs_count": 0,
+      "cache_active": true
+    },
+    "gap_summary": "Brand Atlas lädt 10.51MB unkomprimierte GIFs; WP Fastest Cache ist installiert aber inaktiv; TTFB beträgt 2.1s statt <200ms."
+  },
+  "milestones": [
+    {
+      "id": "M1",
+      "title": "Deep Audit & Vulnerability Scan",
+      "phase": "P2",
+      "status": "completed",
+      "completed_at": "2026-10-16",
+      "evidence": "00_project/assets/morning-grill/2026-10-16/evening-log.md"
+    },
+    {
+      "id": "M2",
+      "title": "Speed Quick-Wins (Media & Caching)",
+      "phase": "P3",
+      "status": "completed",
+      "completed_at": "2026-10-16T12:28:35Z",
+      "tasks": [
+        {
+          "id": "T2.1",
+          "task": "3x GIFs zu WebM/MP4 konvertieren und in Elementor einbinden (-95% Dateigröße)",
+          "status": "completed",
+          "completed_at": "2026-10-16T12:00:00Z"
+        },
+        {
+          "id": "T2.2",
+          "task": "WP Fastest Cache HTML-Caching und Gzip aktivieren",
+          "status": "completed",
+          "completed_at": "2026-10-16T12:00:00Z"
+        },
+        {
+          "id": "T2.3",
+          "task": "Arrow-2.png externe Demo-URL durch lokales Asset ersetzen",
+          "status": "completed",
+          "completed_at": "2026-10-16T12:28:35Z"
+        }
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "Mobile UX & Conversion Paths",
+      "phase": "P4",
+      "status": "completed",
+      "completed_at": "2026-10-17T06:15:00Z",
+      "tasks": [
+        {
+          "id": "T3.1",
+          "task": "Mobile Navigation (Clean 6-Link Setup beibehalten)",
+          "status": "completed",
+          "completed_at": "2026-10-17T06:15:00Z"
+        },
+        {
+          "id": "T3.2",
+          "task": "Sticky Mobile Booking CTA (Verworfen: Editorial Look beibehalten, keine Overlays)",
+          "status": "cancelled",
+          "cancelled_at": "2026-10-16T12:47:00Z"
+        },
+        {
+          "id": "T3.3",
+          "task": "Doppelte Google Tag Manager Container bereinigen",
+          "status": "completed",
+          "completed_at": "2026-10-16T12:34:10Z"
+        }
+      ]
+    },
+    {
+      "id": "M4",
+      "title": "Proof & Telemetry Verification",
+      "phase": "P6",
+      "status": "completed",
+      "completed_at": "2026-10-17T06:16:30Z",
+      "tasks": [
+        {
+          "id": "T4.1",
+          "task": "Lighthouse Re-Audit und TTFB Messung",
+          "status": "completed",
+          "completed_at": "2026-10-17T06:16:10Z"
+        },
+        {
+          "id": "T4.2",
+          "task": "Ergebnis-Report an Celine erstellen",
+          "status": "completed",
+          "completed_at": "2026-10-17T06:16:21Z",
+          "artifact": "00_project/assets/talkinfive/celine-performance-report.md"
+        }
+      ]
+    }
+  ],
+  "client_rules": [
+    "Strict plain text only in client-editable WordPress text boxes (Hard-Coded Rule)",
+    "No modifying live Elementor templates without backup"
+  ]
+}

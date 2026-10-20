@@ -1,0 +1,35 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ihre Sichtbarkeit auf Google Maps</title><style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1c1f23;--mut:#5d646c;--line:#e3e1da;--acc:#fac118;--g:#1f8a4c;--y:#b7791f;--r:#c53030;--n:#7a828a;--gbg:#e6f4ec;--ybg:#fcf3dc;--rbg:#fbe6e6;--nbg:#eceef0}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#15171a;--card:#1e2125;--ink:#ecebe6;--mut:#a3a9b0;--line:#33373c;--g:#4cc27f;--y:#e5b04a;--r:#f07a7a;--n:#9aa1a8;--gbg:#17301f;--ybg:#352b12;--rbg:#3a1c1c;--nbg:#2a2d31}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 'DM Sans',system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 64px}h1{font-size:22px;margin:0}h2{font-size:17px;margin:28px 0 10px}h3{font-size:15px;margin:0}
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline;border-bottom:3px solid var(--acc);padding-bottom:10px}.meta{color:var(--mut);font-size:13px}
+.grid2{display:grid;grid-template-columns:minmax(220px,1fr) 2fr;gap:14px;margin-top:16px}@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.score{font-size:56px;font-weight:700;line-height:1}.score small{font-size:20px;color:var(--mut);font-weight:500}
+.chip{display:inline-block;padding:3px 12px;border-radius:99px;font-weight:700;font-size:14px}.chip.Ja{background:var(--gbg);color:var(--g)}.chip.Noch\ nicht{background:var(--ybg);color:var(--y)}.chip.Nein{background:var(--rbg);color:var(--r)}.chip.Offen{background:var(--nbg);color:var(--n)}
+.dot b{font-size:16px;line-height:1}.dot.green{color:var(--g)}.dot.yellow{color:var(--y)}.dot.red{color:var(--r)}.dot.grey,.dot.unknown,.dot.offen,.dot.unvollständig{color:var(--n)}.sr{position:absolute;left:-9999px}
+.bar{height:10px;border-radius:6px;background:var(--nbg);overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+.kw{display:grid;grid-template-columns:minmax(150px,1.1fr) 2fr minmax(110px,1fr);gap:10px;align-items:center;padding:7px 0;border-top:1px solid var(--line)}.kw:first-of-type{border-top:0}
+@media(max-width:640px){.kw{grid-template-columns:1fr}}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}.tile{display:block;color:inherit;text-decoration:none;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--n);border-radius:10px;padding:10px 12px}
+.tile.green{border-left-color:var(--g)}.tile.yellow{border-left-color:var(--y)}.tile.red{border-left-color:var(--r)}.tile .id{font-size:12px;color:var(--mut)}.tile p{margin:4px 0 0;font-size:13px;color:var(--mut)}.tile:hover{border-color:var(--acc)}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:7px 8px;border-top:1px solid var(--line);vertical-align:top}th{font-size:12px;color:var(--mut);font-weight:600}
+.badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:99px;background:var(--nbg);color:var(--mut);white-space:nowrap;text-decoration:none}a.badge:hover{background:var(--acc);color:#1c1f23}
+details.blk{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:0 14px}details.blk>summary{cursor:pointer;padding:12px 0;display:flex;gap:10px;align-items:center;flex-wrap:wrap;list-style:none}details.blk>summary::-webkit-details-marker{display:none}
+details.blk>summary .nm{font-weight:700}details.blk>summary .tk{color:var(--mut);font-size:13px;flex-basis:100%}
+details.row summary{cursor:pointer}details.row .more{margin:6px 0 4px;padding:8px 10px;background:var(--bg);border-radius:8px;font-size:13px;color:var(--mut)}.more b{color:var(--ink)}
+.flag{border-left:4px solid var(--r);padding:6px 10px;margin:6px 0;background:var(--rbg);border-radius:6px;font-size:14px}.miss{border-left:4px solid var(--n);padding:6px 10px;margin:6px 0;background:var(--nbg);border-radius:6px;font-size:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.note{font-size:12px;color:var(--mut)}code{font-size:12px;background:var(--nbg);padding:1px 5px;border-radius:4px}.draft{background:var(--ybg);color:var(--y);padding:6px 12px;border-radius:8px;font-weight:600;font-size:13px;display:inline-block;margin-top:8px}
+footer{margin-top:40px;color:var(--mut);font-size:12px}
+@media print{body{background:#fff}.wrap{padding:0}details.blk:not([open])>*:not(summary){display:none}}
+</style></head><body><div class="wrap">
+<div class="top"><h1>741 Studio (Eigen-Audit) · Sichtbarkeit auf Google Maps</h1><div class="meta">Stand 11.10.2026</div></div><span class="draft">Entwurf – noch nicht freigegeben</span>
+<div class="grid2"><div class="card"><div class="meta">Maps-Readiness</div><div class="score">48<small> / 100</small></div><div class="note">Erste Messung. Sie dient als Ausgangspunkt für die nächsten Monate.</div></div>
+<div class="card"><h3>Was das Ergebnis sagt</h3><p>Ihre Kanzlei ist bei Google gut bewertet, aber das Profil und die Website nutzen noch wenig von dem, was Google für ein Ranking in Maps prüft. Die größten Hebel sind die Kategorien im Profil, die Leistungen, die Adresse nach dem Umzug und eine klare Anfrage-Möglichkeit auf der Website.</p></div></div>
+<h2>Wo Sie stehen</h2><div class="card"><div class="kw"><div><b>web design bali</b><div class="note">Prio 1 · Suchen/Monat: 500</div></div><div><div class="bar" role="img" aria-label="Top-3-Fläche None Prozent"><i style="width:2%"></i></div><div class="note">Top-3-Fläche nicht gemessen · Ø-Rang –</div></div><div class="note"></div></div><div class="kw"><div><b>digital marketing agency bali</b><div class="note">Prio 1 · Suchen/Monat: 500</div></div><div><div class="bar" role="img" aria-label="Top-3-Fläche None Prozent"><i style="width:2%"></i></div><div class="note">Top-3-Fläche nicht gemessen · Ø-Rang –</div></div><div class="note"></div></div><div class="kw"><div><b>digital agency bali</b><div class="note">Prio 1 · Suchen/Monat: 500</div></div><div><div class="bar" role="img" aria-label="Top-3-Fläche None Prozent"><i style="width:2%"></i></div><div class="note">Top-3-Fläche nicht gemessen · Ø-Rang –</div></div><div class="note"></div></div></div>
+<h2>Die ersten Schritte</h2><div class="card"><table><thead><tr><th></th><th>Aktion</th><th>Wirkung</th><th>Aufwand</th><th>Wer</th></tr></thead><tbody></tbody></table><p class="note">Änderungen am Profil, an der Website und an Verzeichnissen setzen wir erst nach Ihrer Freigabe um.</p></div>
+<h2>Bereiche</h2><div class="tiles"></div>
+<h2>Detail</h2>
+<footer>Quelle: Google-Daten. Messungen vom 09.10. bis 11.10.2026.</footer></div></body></html>

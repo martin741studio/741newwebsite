@@ -1,0 +1,404 @@
+{
+ "claims": [
+  {
+   "id": "C01",
+   "type": "credential",
+   "text": "Dr. Anja Stürzl ist Fachanwältin für Steuerrecht seit 2021",
+   "source": "Lebenslauf Dr. Stürzl, vermerkt in cro/04-copy/approved-copy.md, 2026-10-11; Live-Profilseite /dr-anja-stuerzl, gelesen 2026-10-11 (Kammernachweis offen)",
+   "numbers": [
+    "2021"
+   ],
+   "must_appear": [
+    "Fachanwältin für Steuerrecht"
+   ],
+   "required": true
+  },
+  {
+   "id": "C02",
+   "type": "credential",
+   "text": "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022",
+   "source": "Lebenslauf Dr. Stürzl, approved-copy.md, 2026-10-11; Live-Profilseite",
+   "numbers": [
+    "2022"
+   ],
+   "must_appear": [
+    "Zertifizierte Beraterin für Steuerstrafrecht"
+   ],
+   "required": true
+  },
+  {
+   "id": "C03",
+   "type": "fact",
+   "text": "Telefon Frankfurt +49 69 298028870, München +49 89 72444170",
+   "source": "Source of Truth Tab 00 / nap.json (bestätigt, Martin 2026-10-11); approved-copy.md",
+   "numbers": [
+    "49",
+    "69",
+    "298028870",
+    "89",
+    "72444170"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "C04",
+   "type": "legal",
+   "text": "Anwälte sind zur Verschwiegenheit verpflichtet; die erste Anfrage nennt nur das Thema, keine Einzelheiten",
+   "source": "approved-copy.md Abschnitt 8 und Hero, 2026-10-11 (§ 43a Abs. 2 BRAO, § 203 StGB)",
+   "numbers": [
+    "43a",
+    "203"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "C05",
+   "type": "fact",
+   "text": "Eigene Wendungen der Kanzlei: 'Wir stehen Ihnen zur Seite'; 'Das Mandanteninteresse steht für uns immer im Vordergrund'",
+   "source": "Live-Seiten Start und Kanzlei, gelesen 2026-10-11 (ST-14 _work/live/)",
+   "numbers": [],
+   "must_appear": [
+    "stehen Ihnen zur Seite"
+   ],
+   "required": false
+  },
+  {
+   "id": "C06",
+   "type": "fact",
+   "text": "Rechtsstand dieser Seite: Gesetzestexte vom 11. Oktober 2026. Rechtsprechung: BGH-Urteile vom 2. Dezember 2008 (1 StR 416/08) und vom 27. Oktober 2015 (1 StR 373/15); weitere Entscheidungen nicht ausgewertet. Zuletzt geprüft am 11. Oktober 2026 (Gesetzestexte und Quellen)",
+   "source": "Lauf-Datum, Texte in _work/gesetze/, _work/bgh-1-StR-416-08.txt, _work/bgh-1-StR-373-15.txt",
+   "numbers": [
+    "11",
+    "2026"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L01",
+   "type": "legal",
+   "text": "§ 370 Abs. 1 AO: Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe, wer den Finanzbehörden über steuerlich erhebliche Tatsachen unrichtige oder unvollständige Angaben macht oder sie pflichtwidrig in Unkenntnis lässt und dadurch Steuern verkürzt oder nicht gerechtfertigte Steuervorteile erlangt",
+   "source": "gesetze-im-internet.de/ao_1977/__370.html, gelesen 2026-10-11 (_work/gesetze/ao__370.txt)",
+   "numbers": [
+    "370",
+    "5"
+   ],
+   "must_appear": [
+    "§ 370"
+   ],
+   "required": true
+  },
+  {
+   "id": "L02",
+   "type": "legal",
+   "text": "§ 370 Abs. 2 AO: Versuch strafbar. § 370 Abs. 4 AO: Steuern sind verkürzt, wenn sie nicht, nicht in voller Höhe oder nicht rechtzeitig festgesetzt werden",
+   "source": "ao__370.txt, gelesen 2026-10-11",
+   "numbers": [
+    "2",
+    "4"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L03",
+   "type": "legal",
+   "text": "§ 370 Abs. 3 AO: in besonders schweren Fällen Freiheitsstrafe von sechs Monaten bis zu zehn Jahren; Regelbeispiele Satz 2 Nr. 1 bis 6 (großes Ausmaß, Amtsträger, Mithilfe Amtsträger, Belege, Bande, Drittstaat-Gesellschaft)",
+   "source": "ao__370.txt, gelesen 2026-10-11",
+   "numbers": [
+    "3",
+    "6",
+    "10",
+    "1"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L04",
+   "type": "legal",
+   "text": "§ 38 Abs. 2 StGB: Mindestmaß der zeitigen Freiheitsstrafe ein Monat",
+   "source": "gesetze-im-internet.de/stgb/__38.html, gelesen 2026-10-11",
+   "numbers": [
+    "38",
+    "2"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L05",
+   "type": "legal",
+   "text": "§ 40 StGB: Geldstrafe mindestens fünf und höchstens 360 volle Tagessätze; ein Tagessatz mindestens einen und höchstens dreißigtausend Euro",
+   "source": "stgb__40.txt, gelesen 2026-10-11",
+   "numbers": [
+    "40",
+    "5",
+    "360",
+    "30.000",
+    "1"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L06",
+   "type": "legal",
+   "text": "§ 41 StGB: Geldstrafe neben Freiheitsstrafe, wenn sich der Täter bereichert hat",
+   "source": "stgb__41.txt, gelesen 2026-10-11",
+   "numbers": [
+    "41"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L07",
+   "type": "legal",
+   "text": "§ 46 Abs. 1 StGB: Schuld ist Grundlage der Strafzumessung. Abs. 2: Art der Ausführung, verschuldete Auswirkungen, Vorleben, persönliche und wirtschaftliche Verhältnisse, Verhalten nach der Tat, besonders Bemühen um Wiedergutmachung",
+   "source": "stgb__46.txt, gelesen 2026-10-11",
+   "numbers": [
+    "46",
+    "1",
+    "2"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L08",
+   "type": "legal",
+   "text": "§ 56 StGB: Bewährung bei Freiheitsstrafe bis zu einem Jahr (Abs. 1); bis zu zwei Jahren bei besonderen Umständen (Abs. 2); bei mindestens sechs Monaten nicht, wenn die Verteidigung der Rechtsordnung sie gebietet (Abs. 3)",
+   "source": "stgb__56.txt, gelesen 2026-10-11",
+   "numbers": [
+    "56",
+    "1",
+    "2",
+    "3"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L09",
+   "type": "legal",
+   "text": "BGH, Urteil vom 2. Dezember 2008, 1 StR 416/08 (BGHSt 53, 71, HRRS 2009 Nr. 127): großes Ausmaß liegt vor, wenn der Hinterziehungsbetrag 50.000 Euro übersteigt; sechsstelliger Betrag: Geldstrafe nur bei gewichtigen Milderungsgründen schuldangemessen; Millionenhöhe: aussetzungsfähige Freiheitsstrafe nur bei besonders gewichtigen Milderungsgründen; Milderungsgrund: im Wesentlichen steuerehrliches Verhalten im Tatzeitraum, Tat betrifft nur geringen Teil der Betätigungen. Der Tatbestand setzt weder direkten Vorsatz noch Bereicherungsabsicht voraus (Rn. 41)",
+   "source": "hrr-strafrecht.de/1/08/1-416-08.php, gelesen 2026-10-11 (_work/bgh-1-StR-416-08.txt, Rn. 40, 41, 44, 45, 48 und Milderungsgrund aa). Die Wertgrenze 100.000 Euro dieses Urteils hat der Senat 2015 aufgegeben (Claim L21) und steht nicht mehr im Text",
+   "numbers": [
+    "2008",
+    "416",
+    "08",
+    "53",
+    "71",
+    "2009",
+    "127",
+    "50.000",
+    "1",
+    "2"
+   ],
+   "must_appear": [
+    "1 StR 416/08"
+   ],
+   "required": true
+  },
+  {
+   "id": "L10",
+   "type": "legal",
+   "text": "§ 235 Abs. 1 AO: hinterzogene Steuern sind zu verzinsen. § 238 Abs. 1 AO: Zinsen einhalb Prozent für jeden Monat, nur für volle Monate",
+   "source": "ao__235.txt und ao__238.txt, gelesen 2026-10-11",
+   "numbers": [
+    "235",
+    "238",
+    "0,5",
+    "1"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L11",
+   "type": "legal",
+   "text": "§ 375 Abs. 1 AO: neben Freiheitsstrafe von mindestens einem Jahr kann das Gericht die Fähigkeit aberkennen, öffentliche Ämter zu bekleiden und Rechte aus öffentlichen Wahlen zu erlangen",
+   "source": "ao__375.txt, gelesen 2026-10-11",
+   "numbers": [
+    "375",
+    "1"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L12",
+   "type": "legal",
+   "text": "§ 32 Abs. 2 Nummer 5 BZRG: nicht ins Führungszeugnis aufgenommen werden Verurteilungen zu Geldstrafe von nicht mehr als neunzig Tagessätzen oder Freiheitsstrafe von nicht mehr als drei Monaten, wenn im Register keine weitere Strafe eingetragen ist. § 32 Abs. 4 BZRG: In ein Führungszeugnis für Behörden sind diese Verurteilungen aufzunehmen, wenn die Taten bei oder in Zusammenhang mit der Ausübung eines Gewerbes oder dem Betrieb einer sonstigen wirtschaftlichen Unternehmung begangen wurden und das Führungszeugnis für die in § 149 Abs. 2 Satz 1 Nummer 1 der Gewerbeordnung bezeichneten Entscheidungen bestimmt ist",
+   "source": "bzrg__32.txt, gelesen 2026-10-11",
+   "numbers": [
+    "32",
+    "2",
+    "5",
+    "90",
+    "4",
+    "149",
+    "1"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L13",
+   "type": "legal",
+   "text": "§ 170 Abs. 2 StPO: Einstellung, wenn Ermittlungen keinen genügenden Anlass zur Anklage bieten. § 398 AO: Absehen von der Verfolgung bei geringwertiger Steuerverkürzung, geringer Schuld, ohne öffentliches Interesse. § 153a Abs. 1 StPO: bei einem Vergehen mit Zustimmung des Gerichts und des Beschuldigten vorläufig Absehen von der Anklage unter Auflagen, wenn diese geeignet sind, das öffentliche Interesse an der Strafverfolgung zu beseitigen, und die Schwere der Schuld nicht entgegensteht; Erfüllung der Auflagen: Tat nicht mehr als Vergehen verfolgbar. § 407 Abs. 1 StPO: Strafbefehl bei Vergehen auf Antrag der Staatsanwaltschaft ohne Hauptverhandlung. § 410 StPO: Einspruch innerhalb von zwei Wochen nach Zustellung (Abs. 1); ohne rechtzeitigen Einspruch steht der Strafbefehl einem rechtskräftigen Urteil gleich (Abs. 3)",
+   "source": "stpo__170.txt, ao__398.txt, stpo__153a.txt, stpo__407.txt, stpo__410.txt, gelesen 2026-10-11",
+   "numbers": [
+    "170",
+    "2",
+    "398",
+    "153",
+    "1",
+    "407",
+    "410",
+    "3"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L14",
+   "type": "legal",
+   "text": "§ 371 AO: wer zu allen Steuerstraftaten einer Steuerart in vollem Umfang berichtigt, wird wegen dieser Taten nicht nach § 370 bestraft; Ausschlussgründe in Abs. 2, darunter Betrag über 25.000 Euro je Tat (Satz 1 Nummer 3); Abs. 2a: abweichende Regel für Umsatzsteuervoranmeldungen und Lohnsteueranmeldungen ohne diese Grenze; Zahlung innerhalb der bestimmten Frist (Abs. 3); § 398a AO regelt das Absehen von der Verfolgung, wenn die Wirkung nur an Abs. 2 Nummer 3 oder 4 scheitert",
+   "source": "ao__371.txt und ao__398a.txt, gelesen 2026-10-11",
+   "numbers": [
+    "371",
+    "2",
+    "3",
+    "25.000",
+    "398a",
+    "4",
+    "1"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L15",
+   "type": "legal",
+   "text": "§ 136 Abs. 1 StPO: dem Beschuldigten ist zu eröffnen, dass es ihm freisteht, sich zu äußern oder nicht zur Sache auszusagen und jederzeit, auch vor der Vernehmung, einen Verteidiger zu befragen",
+   "source": "stpo__136.txt, gelesen 2026-10-11",
+   "numbers": [
+    "136",
+    "1"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L16",
+   "type": "legal",
+   "text": "§ 369 Abs. 1 Nr. 1 AO: Steuerstraftaten sind Taten, die nach den Steuergesetzen strafbar sind. § 12 Abs. 2 StGB: Vergehen sind Taten, die mit Geldstrafe bedroht sind oder im Mindestmaß mit geringerer Freiheitsstrafe. § 15 StGB: strafbar ist nur vorsätzliches Handeln, wenn das Gesetz fahrlässiges nicht ausdrücklich mit Strafe bedroht. § 378 AO: leichtfertige Steuerverkürzung ist eine Ordnungswidrigkeit, Geldbuße bis zu fünfzigtausend Euro",
+   "source": "ao__369.txt, stgb__12.txt, stgb__15.txt, ao__378.txt, gelesen 2026-10-11",
+   "numbers": [
+    "369",
+    "1",
+    "12",
+    "2",
+    "15",
+    "378",
+    "50.000"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L17",
+   "type": "fact",
+   "text": "Kanzleiaussagen (Live-FAQ und Kanzleiseite): Steuerhinterziehung ist kein Kavaliersdelikt, sondern eine Straftat. Die Berufung auf das Schweigerecht darf nicht als Schuldeingeständnis gewertet werden",
+   "source": "Live-Kanzleiseite und Live-FAQ (Abschnitte I.1, IV), gelesen 2026-10-11 (_work/live der Referenzseite). Die frühere Kanzleiaussage zu Nebenfolgen (berufs- und beamtenrechtliche Folgen, Waffen- oder Jagdverbot, Passentzug) steht nicht mehr im Text, weil keine Norm gelesen wurde (Review-Punkt A4). Die Aussage zu 'nicht als vorbestraft' steht nicht mehr im Text (Review-Punkt A3)",
+   "numbers": [],
+   "must_appear": [
+    "Kavaliersdelikt"
+   ],
+   "required": false
+  },
+  {
+   "id": "L18",
+   "type": "fact",
+   "text": "Eigene Wendung der Kanzlei: Fehler passieren. Wie gravierend die Folgen sind, hängt von einer ganzen Reihe an Faktoren ab.",
+   "source": "Live-Seite Kanzlei, gelesen 2026-10-11",
+   "numbers": [],
+   "must_appear": [
+    "Fehler passieren"
+   ],
+   "required": false
+  },
+  {
+   "id": "L19",
+   "type": "fact",
+   "text": "PAA-Frage 'Was passiert bei 10000 Euro Steuerhinterziehung?' (Suche 'steuerhinterziehung strafe')",
+   "source": "DataForSEO SERP, _work/serp.json, 2026-10-11",
+   "numbers": [
+    "10.000"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L20",
+   "type": "placeholder",
+   "text": "Autorin oder Autor des Beitrags mit Titel; Veröffentlichungsdatum",
+   "source": "pool CP-SVC-021 (needs_client: Autor und Freigabe), sitetree ST-35",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L21",
+   "type": "legal",
+   "text": "BGH, Urteil vom 27. Oktober 2015, 1 StR 373/15 (BGHSt 61, 28, HRRS 2016 Nr. 212): Ein großes Ausmaß im Sinne von § 370 Abs. 3 Satz 2 Nummer 1 AO liegt bei jeder Steuerhinterziehung über 50.000 Euro vor (Leitsatz 1, Rn. 29 bis 32); der Senat hält nicht an der Wertgrenze 100.000 Euro fest (Leitsatz 2); auch bei der einheitlichen Wertgrenze prüft der Tatrichter in einem zweiten Schritt, ob Besonderheiten des Einzelfalls die Indizwirkung des Regelbeispiels entkräften (Leitsatz 5); Geständnis, lange Verfahrensdauer und Nachzahlung der verkürzten Steuern können als Strafzumessungsfaktoren berücksichtigt werden (Leitsatz 6)",
+   "source": "hrr-strafrecht.de/1/15/1-373-15.php, gelesen 2026-10-11 (_work/bgh-1-StR-373-15.txt). Bestätigung der Anwendung im Jahr 2025: Landgericht Bonn, 62 KLs 1/24, Urteil vom 03.06.2025 (_work/lg-bonn-62-KLs-1-24-auszug.txt)",
+   "numbers": [
+    "2015",
+    "373",
+    "15",
+    "61",
+    "28",
+    "2016",
+    "212",
+    "50.000",
+    "27",
+    "1",
+    "2"
+   ],
+   "must_appear": [
+    "1 StR 373/15"
+   ],
+   "required": true
+  },
+  {
+   "id": "L22",
+   "type": "legal",
+   "text": "Eigene Ableitung für die Frage 'Wie lange dauert ein Strafverfahren': das Gesetz und die gelesenen Quellen nennen keine Dauer; eine lange Verfahrensdauer kann Strafzumessungsfaktor sein (Claim L21)",
+   "source": "_work/bgh-1-StR-373-15.txt Leitsatz 6",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L23",
+   "type": "legal",
+   "text": "§ 56 Abs. 1 bis 3 StGB (Bewährung) und § 378 AO (Geldbuße bis 50.000 Euro) in der Tabelle 'Strafrahmen auf einen Blick'",
+   "source": "stgb__56.txt, ao__378.txt, gelesen 2026-10-11",
+   "numbers": [
+    "56",
+    "378",
+    "50.000",
+    "1",
+    "2",
+    "3"
+   ],
+   "must_appear": [],
+   "required": false
+  }
+ ]
+}

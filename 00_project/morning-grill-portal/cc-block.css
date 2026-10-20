@@ -69,3 +69,14 @@
 #grill .cc-st.open { background:#fdeee6; color:#c2410c; } #grill .cc-st.in_progress { background:#e8effd; color:#2563eb; } #grill .cc-st.waiting { background:var(--amber-soft); color:#b45309; }
 #grill .cc-st.drafted { border:1px dashed #cfc9b8; } #grill .cc-st.done, #grill .cc-st.decided { background:var(--green-soft); color:var(--green); }
 #grill .cc-st.needs_check { background:#f3e8fd; color:#7e22ce; }
+#grill .cc-tiles6 { grid-template-columns:repeat(6,1fr); }
+#grill details.cc-trow { border-bottom:1px solid #ece8da; } #grill details.cc-trow summary { list-style:none; display:grid; grid-template-columns:48px 1.4fr 1.3fr 44px 44px 44px 2fr; gap:10px; align-items:center; padding:9px 4px; cursor:pointer; font-size:14px; }
+#grill details.cc-trow summary::-webkit-details-marker { display:none; }
+#grill .cc-tr { font-size:11.5px; font-weight:800; text-align:center; padding:3px 0; border-radius:6px; background:var(--grey-light); color:var(--grey); }
+#grill .cc-tr.off { background:#fdeee6; color:#c2410c; } #grill .cc-tr.on { background:var(--green-soft); color:var(--green); }
+#grill .cc-tn { font-weight:700; } #grill .cc-tn small { display:block; font-weight:400; color:var(--grey); font-size:12px; }
+#grill .cc-tph { font-size:12.5px; color:var(--grey); } #grill .cc-pbar { display:block; height:6px; background:#ece8da; border-radius:9px; overflow:hidden; margin-bottom:3px; } #grill .cc-pbar i { display:block; height:100%; background:var(--yellow); }
+#grill .cc-tc { font-size:13px; white-space:nowrap; } #grill .cc-tnext { font-size:13px; color:var(--grey); }
+#grill .cc-tdet { display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; padding:6px 4px 14px 58px; }
+#grill .cc-tdet h5 { margin:0 0 6px; font-size:12px; text-transform:uppercase; letter-spacing:.07em; color:var(--grey); } #grill .cc-tdet ul { margin:0; padding:0; list-style:none; } #grill .cc-tdet li { font-size:13.5px; margin:3px 0; display:flex; gap:6px; }
+@media (max-width:900px) { #grill .cc-tiles6 { grid-template-columns:repeat(3,1fr); } #grill details.cc-trow summary { grid-template-columns:44px 1fr 40px 40px 40px; } #grill .cc-tph, #grill .cc-tnext { display:none; } #grill .cc-tdet { grid-template-columns:1fr; padding-left:4px; } }

@@ -1,0 +1,29 @@
+{
+  "plan_index": 1,
+  "client": "Praxis Suriya",
+  "slug": "feedback-nap-citations",
+  "mode": "FEEDBACK",
+  "feedback_id": "d1c58471-eafc-4ef9-8418-1611a2345445",
+  "executor_file": "feedback/praxis-suriya/d1c58471-eafc-4ef9-8418-1611a2345445.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": "n/a — FEEDBACK item has no Title/Meta/H1/NAP/JSON-LD block. The two [fehlt: ...] present are correctly used: one flags missing DataForSEO search-volume data for the two domain options, the other flags that the original report section text is not available in-repo for a diff — neither is a placeholder standing in for required content.",
+    "nap_block_matches_locked_record": "pass — Vorschlag cites 'Schützenpfad 29, 55218 Ingelheim am Rhein' as the real practice address to justify the Ingelheim-domain option; matches context.json.nap_locked for client_id 3f71ef33-8c74-4ea1-b2d3-0273c2e99649 (street, postal_code, city) field by field.",
+    "jsonld_valid": "n/a — no JSON-LD in this feedback item.",
+    "language_matches_market_lang": "pass — copy is German throughout, market_lang=de.",
+    "hwg_scan": "pass — no 'heilt', 'garantiert', '100 %', 'Heilung' or similar claims anywhere; the only risk language is a correct compliance note about Google Business Profile NAP policy (domain/profile risk), not a health claim.",
+    "feedback_addresses_comment_sentence_for_sentence": {
+      "result": "pass",
+      "evidence": [
+        "'ayurveda Ingelheim' -> Vorschlag Domain-Option 1 'Ayurveda Ingelheim', grounded in the real practice address.",
+        "'ayurveda mainz' -> Vorschlag Domain-Option 2 'Ayurveda Mainz', with added NAP-safety note (redirect-only, never a second GBP location) since Mainz is not the real site.",
+        "'ich habe auch noch die domian Femalecare' -> Vorschlag Domain 'Femalecare (bereits im Besitz der Kundin)', tied to the client's own previously stated hormone/women's-health focus (feedback id 6d137591, 'Hormone PMS, Premenopause, Menopause'), not an invented new fact.",
+        "'Du kannst gerne die Domaine zubuchen die wichtig sind' -> Vorschlag Umsetzung section reads this as the client's blanket go-ahead to register the Ingelheim domain and integrate Femalecare, Mainz only as a redirect."
+      ],
+      "note": "No client-implied fact was left unmarked; the one genuinely missing data point (real search volume for 'Ayurveda Ingelheim' vs 'Ayurveda Mainz') is explicitly flagged as [fehlt: ...] rather than guessed, per the no-invented-data rule."
+    },
+    "deslop_hard_check": "not applied — Vorschlag is an internal domain-strategy recommendation to Martin (which domain to register, which risk to avoid), not finished client-facing prose meant to ship as-is. Per SKILL.md this is not a blocker for FEEDBACK items of this kind."
+  },
+  "fails": [],
+  "verdict": "pass"
+}

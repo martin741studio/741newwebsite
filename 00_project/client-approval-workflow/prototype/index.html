@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Entscheidungen · Praxis Suriya (Prototyp)</title>
+<link rel="stylesheet" href="martin-guide/martin-guide.css">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16150f;--mut:#6b6862;--line:#e6e2d6;--bg:#f6f4ee;--card:#fff;--y:#fac118;--yd:#d99e00;--g:#16a34a;--gbg:#e8f6ed;--r:#c2410c;--rbg:#fdeee6;--b:#2563eb;--bbg:#e8effd}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "DM Sans",system-ui,sans-serif}
+.proto{background:var(--ink);color:#fff;text-align:center;font-size:14px;padding:8px 16px}
+header{background:#fff;border-bottom:1px solid var(--line)}
+.hd{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:16px}
+.hd img{height:34px}
+.hd .who{margin-left:auto;font-size:14px;color:var(--mut)}
+.tabs{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;gap:6px}
+.tab{border:0;background:none;padding:12px 14px;font:700 15px "DM Sans";color:var(--mut);border-bottom:3px solid transparent;cursor:pointer}
+.tab.on{color:var(--ink);border-color:var(--y)}
+main{max-width:1080px;margin:0 auto;padding:28px 20px 80px}
+h1{font:400 40px/1.1 Anton,sans-serif;letter-spacing:.01em;margin:0 0 6px;text-transform:uppercase}
+.lead{color:var(--mut);margin:0 0 22px;max-width:680px}
+.count{display:inline-flex;gap:8px;align-items:center;background:var(--y);border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px}
+.filters{display:flex;gap:8px;margin:18px 0 20px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;font:500 14px "DM Sans";cursor:pointer}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:18px;box-shadow:0 4px 16px rgba(22,21,15,.04)}
+.item.done{opacity:.75}
+.top{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.type{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:3px 9px;border-radius:6px;background:#f1efe8}
+.dl{font-size:14px;color:var(--mut);margin-left:auto}
+.dl.must{color:var(--r);font-weight:700}
+.item h2{font-size:21px;margin:0 0 6px}
+.why{background:var(--bbg);border-radius:10px;padding:10px 14px;font-size:15px;margin:10px 0 16px}
+.why b{color:var(--b)}
+.vars{display:grid;gap:12px}
+.vars.cols{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.var{position:relative;border:2px solid var(--line);border-radius:12px;padding:14px 14px 12px;cursor:pointer;background:#fff;transition:border-color .2s}
+.var:hover{border-color:#cfc9b8}
+.var.sel{border-color:var(--ink);box-shadow:0 0 0 3px rgba(250,193,24,.45)}
+.var .lab{font-size:13px;color:var(--mut);margin-bottom:4px;display:flex;gap:8px;align-items:center}
+.rec{background:var(--y);color:var(--ink);font-weight:700;border-radius:999px;padding:1px 9px;font-size:12.5px}
+.var .val{font-size:17px;font-weight:500}
+.var .big{font:400 30px Anton,sans-serif}
+.lock{display:inline-flex;align-items:center;gap:4px;background:var(--y);border-radius:5px;padding:0 6px;font-weight:700}
+.lock svg{width:13px;height:13px}
+.ba{display:grid;grid-template-columns:1fr 2fr;gap:14px}
+.before{border:1px dashed #cfc9b8;border-radius:12px;padding:14px;background:#faf9f5}
+.before .lab{font-size:13px;color:var(--mut);margin-bottom:4px}
+.note{font-size:14px;color:var(--mut);margin-top:10px;display:flex;gap:6px;align-items:flex-start}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;align-items:center}
+.btn{border:0;border-radius:10px;padding:11px 16px;font:700 15px "DM Sans";cursor:pointer;min-height:44px}
+.b1{background:var(--ink);color:#fff}
+.b2{background:#fff;border:1.5px solid var(--ink);color:var(--ink)}
+.b3{background:none;color:var(--r);text-decoration:underline;padding:11px 6px}
+.ta{display:none;width:100%;margin-top:10px;border:1.5px solid var(--line);border-radius:10px;padding:10px;font:15px "DM Sans";min-height:70px}
+.ta.on{display:block}
+.res{display:flex;gap:10px;align-items:center;background:var(--gbg);border-radius:10px;padding:10px 14px;font-size:15px;margin-top:14px}
+.res.chg{background:var(--rbg)}
+.undo{margin-left:auto;font-size:14px;color:var(--mut);text-decoration:underline;cursor:pointer;background:none;border:0}
+/* mini page context */
+.ctx{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;font-size:13px}
+.ctx .bar{display:flex;align-items:center;gap:8px;padding:8px 10px;border-bottom:1px solid var(--line)}
+.ctx .bar .lg{font-weight:700;font-size:13px}
+.ctx .bar .sp{margin-left:auto}
+.ctx .hero{padding:14px 12px 22px;background:linear-gradient(135deg,#f3efe4,#e9e3d3);position:relative;min-height:120px}
+.ctx .hero b{display:block;font-size:15px;margin-bottom:4px}
+.callbtn{display:inline-flex;align-items:center;gap:5px;background:#2f5d50;color:#fff;border-radius:999px;padding:5px 10px;font-weight:700;font-size:12.5px}
+.sticky{position:absolute;left:10px;right:10px;bottom:8px;text-align:center;border-radius:10px;padding:7px}
+.node{display:flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#faf9f5;font-size:15px}
+.node .k{font-size:12.5px;font-weight:700;padding:2px 8px;border-radius:5px;background:#e9f2ff;color:var(--b)}
+/* 741 view */
+.grid2{display:grid;grid-template-columns:1.2fr 1fr;gap:18px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.panel h3{margin:0 0 10px;font-size:17px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+td,th{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:13px;color:var(--mut);font-weight:500}
+.pill{font-size:12.5px;font-weight:700;border-radius:999px;padding:2px 9px;white-space:nowrap}
+.p-open{background:#f1efe8}.p-ok{background:var(--gbg);color:var(--g)}.p-chg{background:var(--rbg);color:var(--r)}.p-live{background:var(--ink);color:#fff}.p-auto{background:#fff6d6;color:#8a6200}
+.gobtn{background:var(--y);border:0;border-radius:8px;padding:6px 10px;font:700 13.5px "DM Sans";cursor:pointer;white-space:nowrap}
+.sw{display:flex;align-items:center;gap:10px;font-size:14.5px;margin:8px 0}
+.log{font-size:14px;max-height:340px;overflow:auto}
+.log div{padding:6px 0;border-bottom:1px solid var(--line)}
+.log i{color:var(--mut);font-style:normal}
+.demo{background:#fff6d6;border:1px solid #f0d77a;border-radius:12px;padding:12px 14px;font-size:14.5px;margin-top:14px}
+@media(max-width:760px){.ba,.grid2{grid-template-columns:1fr}h1{font-size:32px}}
+</style>
+</head>
+<body>
+<div class="proto">Prototyp · nur lokal · Beispiel-Elemente aus dem Content-Pool von Praxis Suriya (11.10.) und dem Live-Abgleich (13.10.) · nichts davon ist an die Kundin gegangen</div>
+<header>
+  <div class="hd"><img src="logo_black.png" alt="741 Studio"><span class="who" id="who">Angemeldet als Coralie Suriyapperuma</span></div>
+  <div class="tabs"><button class="tab on" data-v="client">Kunden-Ansicht (Coralie)</button><button class="tab" data-v="admin">741-Ansicht (wir)</button></div>
+</header>
+<main>
+  <section id="client">
+    <h1>Deine Entscheidungen</h1>
+    <p class="lead">Hier siehst du, was wir für deine Website und dein Google-Profil vorbereitet haben. Du wählst aus 2–3 Varianten. Eine ist markiert mit „741 empfiehlt“. Nichts geht live, bevor du entschieden hast.</p>
+    <aside class="mg"><img class="mg__img" src="martin-guide/martin-hello.webp" alt="Martin von 741 winkt zur Begrüßung" width="112"><div class="mg__bubble"><span class="mg__name">Martin</span><p>Hallo Coralie, hier entscheidest du mit. Bei jedem Punkt habe ich meine Empfehlung markiert, ein Klick auf „Freigeben“ reicht.</p></div></aside>
+    <span class="count" id="cnt"></span>
+    <div id="done"></div>
+    <div class="filters" id="filters"></div>
+    <div id="items"></div>
+  </section>
+  <section id="admin" hidden>
+    <h1>Freigaben · Praxis Suriya</h1>
+    <p class="lead">Was Coralie entschieden hat, landet in „Bereit für live“. Live geht es erst mit deinem Go.</p>
+    <div class="grid2">
+      <div class="panel"><h3>Alle Elemente</h3><table><thead><tr><th>Element</th><th>Status</th><th>Gewählt</th><th></th></tr></thead><tbody id="atab"></tbody></table>
+        <div class="demo"><div class="sw"><input type="checkbox" id="consent"><label for="consent"><b>Zustimmung zur 7-Tage-Regel</b> im Onboarding unterschrieben</label></div>
+        Ohne diese Zustimmung gilt Schweigen nie als Freigabe. Preise, Gesundheits- und Behandlungsaussagen brauchen immer ein aktives Ja.<br><br>
+        <button class="gobtn" id="ff">Demo: 7 Tage vorspulen</button></div>
+      </div>
+      <div class="panel"><h3>Entscheidungs-Protokoll</h3><div class="log" id="log"></div></div>
+    </div>
+  </section>
+</main>
+<script>
+const LOCK='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 9V7a5 5 0 0 0-10 0v2H5v13h14V9h-2zM9 7a3 3 0 0 1 6 0v2H9V7z"/></svg>';
+const SENT='13.10.', REMIND='16.10.', DUE='20.10.';
+const ITEMS=[
+ {id:'E1',type:'Preis',area:'Website',mustYes:true,title:'Preis für eine Einzelsitzung Schmerztherapie',
+  why:'Auf deiner Website stehen für dieselbe Sitzung <b>80 €, 85 € und 95 €</b> (geprüft am 13.10.). Ein Preis überall schafft Vertrauen.',
+  mg:{pose:'think',alt:'Martin von 741 denkt nach',t:'Hier brauche ich dein Ja. Für dieselbe Sitzung stehen auf deiner Website drei verschiedene Preise.'},
+  kind:'price',vars:[{v:'95 €',l:'steht so auf /ganzheitliche-schmerztherapie/',rec:true},{v:'85 €',l:'steht als Überschrift auf /nacken-schulter/'}],
+  note:'Gilt dann auf allen Seiten: Schmerztherapie, Nacken & Schulter, Kosten & Abrechnung.'},
+ {id:'E2',type:'Text',area:'Website',mustYes:false,title:'Überschrift der Seite „Massage in Ingelheim“',
+  why:'<b>„massage ingelheim“ wird 480-mal im Monat gesucht.</b> Massage bringt 58 % deiner Sichtbarkeit bei Google. Das Keyword bleibt, die Formulierung wählst du.',
+  mg:{pose:'point',alt:'Martin von 741 zeigt auf das Schloss',t:'Das gelbe Schloss bleibt stehen, weil genau danach gesucht wird. Den Rest des Satzes wählst du.'},
+  kind:'text',before:'Massage in Ingelheim',kw:'Massage in Ingelheim',
+  vars:[{v:'{kw} – Ayurveda, Rücken & Nervenregulation',rec:true,l:'nennt drei deiner Massage-Arten'},{v:'{kw} – Zeit, in der dein Körper loslassen darf',l:'gefühlvoller'},{v:'{kw}',l:'bleibt wie bisher'}]},
+ {id:'E3',type:'Design',area:'Website',mustYes:false,title:'Anruf-Button: wo soll er stehen?',
+  why:'<b>7 von 11 Praxen in deiner Umgebung</b> haben einen Knopf, der direkt anruft. Auf deiner Seite steht die Nummer nur als Text.',
+  kind:'design',vars:[{v:'Im Kopf der Seite',d:'head',rec:true,l:'immer oben sichtbar'},{v:'Leiste unten am Handy',d:'sticky',l:'nur auf dem Handy'}]},
+ {id:'E4',type:'Google-Profil',area:'GBP',mustYes:false,title:'Leistung im Google-Profil umbenennen',
+  why:'Die Migräne-Analyse und die SURIYA Cranio-Neuro-Analyse werden auf der Website <b>eine Seite</b>. Das Profil soll dasselbe zeigen.',
+  kind:'text2',vars:[{v:'„Migräne-Analyse“ → „SURIYA Cranio-Neuro-Analyse“',rec:true,l:'ein Name, wie auf der Website'},{v:'Beide Leistungen behalten',l:'zwei Einträge im Profil'}],
+  locked:'Hauptkategorie „Heilpraktiker/in“, Name, Adresse und Website-Link ändert nur 741. Sie haben die größte Wirkung auf dein Ranking.'},
+ {id:'E5',type:'Seitenbaum',area:'Website',mustYes:true,title:'Neuer Ratgeber: „Vagusnerv und Nervensystem beruhigen“',
+  why:'<b>„nervensystem beruhigen“ wird 6.600-mal im Monat gesucht.</b> Ein Ratgeber beantwortet die Fragen und verweist auf deine Seite „Nervensystem & Vagusnerv“.',
+  kind:'node',node:'/ratgeber/vagusnerv-nervensystem-beruhigen/',nk:'Wissen / Ratgeber',
+  vars:[{v:'Ja, das passt zu mir – ich liefere 3–5 Fragen meiner Patientinnen',rec:true},{v:'Ja, aber schreibt ihr den Entwurf, ich prüfe'},{v:'Nein, das ist nicht mein Thema'}]}
+];
+let S=load()||{sel:{},dec:{},live:{},log:[],consent:false,day:0};
+ITEMS.forEach(i=>{if(S.sel[i.id]==null)S.sel[i.id]=i.vars.findIndex(v=>v.rec)});
+let F='Alle';
+function load(){try{return JSON.parse(localStorage.getItem('appr-proto'))}catch(e){return null}}
+function save(){try{localStorage.setItem('appr-proto',JSON.stringify(S))}catch(e){}}
+function now(){const d=new Date();return d.toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'})+' '+d.toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})}
+function txt(i,k){return i.vars[k].v.replace('{kw}',i.kw||'')}
+function vHTML(i,v,k){
+  const sel=S.sel[i.id]===k?' sel':'';const rec=v.rec?'<span class="rec">741 empfiehlt</span>':'';
+  let val;
+  if(i.kind==='price')val=`<div class="big">${v.v}</div>`;
+  else if(i.kind==='text')val=`<div class="val">${v.v.replace('{kw}',`<span class="lock">${LOCK}${i.kw}</span>`)}</div>`;
+  else if(i.kind==='design'){const head=v.d==='head';val=`<div class="ctx"><div class="bar"><span class="lg">Praxis Suriya</span><span class="sp"></span>${head?'<span class="callbtn">☎ Anrufen</span>':'<span style="color:#999">Menü</span>'}</div><div class="hero"><b>Naturheilpraxis in Ingelheim für Migräne &amp; Nervensystem</b>Termin vereinbaren …${head?'':'<span class="callbtn sticky">☎ Jetzt anrufen</span>'}</div></div><div class="val" style="margin-top:8px">${v.v}</div>`}
+  else val=`<div class="val">${v.v}</div>`;
+  return `<div class="var${sel}" data-i="${i.id}" data-k="${k}"><div class="lab">Variante ${String.fromCharCode(65+k)} ${rec}</div>${val}${v.l?`<div class="note">${v.l}</div>`:''}</div>`;
+}
+function itemHTML(i){
+  const d=S.dec[i.id];
+  const dl=i.mustYes?'<span class="dl must">Braucht dein aktives Ja</span>':`<span class="dl">Frist ${DUE} · danach gilt „741 empfiehlt“</span>`;
+  let body='';
+  if(i.kind==='text')body=`<div class="ba"><div class="before"><div class="lab">Jetzt live</div><div class="val">${i.before}</div></div><div class="vars">${i.vars.map((v,k)=>vHTML(i,v,k)).join('')}</div></div>`;
+  else if(i.kind==='node')body=`<div class="node"><span class="k">${i.nk}</span><code>${i.node}</code></div><div class="vars" style="margin-top:12px">${i.vars.map((v,k)=>vHTML(i,v,k)).join('')}</div>`;
+  else body=`<div class="vars cols">${i.vars.map((v,k)=>vHTML(i,v,k)).join('')}</div>`;
+  const lockNote=i.locked?`<div class="note"><span class="lock">${LOCK}nur 741</span> ${i.locked}</div>`:'';
+  const acts=d?`<div class="res${d.t==='chg'?' chg':''}">${d.t==='chg'?'✎ Änderung gewünscht':'✓ Entschieden'}: <b>${d.t==='chg'?d.note:txt(i,d.k)}</b>${d.note&&d.t==='ok2'?' · Notiz: '+d.note:''} <i style="color:#6b6862">(${d.by}, ${d.at})</i><button class="undo" data-u="${i.id}">ändern</button></div>`:
+   `<div class="acts"><button class="btn b1" data-a="ok" data-i="${i.id}">Freigeben</button><button class="btn b2" data-a="ok2" data-i="${i.id}">Freigeben mit kleiner Änderung</button><button class="btn b3" data-a="chg" data-i="${i.id}">Änderung wünschen</button></div><textarea class="ta" id="ta-${i.id}" placeholder="Was soll anders sein?"></textarea>`;
+  const mg=i.mg&&!d?`<aside class="mg mg--small"><img class="mg__img" src="martin-guide/martin-${i.mg.pose}.webp" alt="${i.mg.alt}" width="72"><div class="mg__bubble"><span class="mg__name">Martin</span><p>${i.mg.t}</p></div></aside>`:'';
+  return `<article class="item${d?' done':''}"><div class="top"><span class="type">${i.type}</span>${dl}</div><h2>${i.title}</h2><div class="why">Warum: ${i.why}</div>${mg}${body}${i.note?`<div class="note">${i.note}</div>`:''}${lockNote}${acts}</article>`;
+}
+function render(){
+  const open=ITEMS.filter(i=>!S.dec[i.id]).length;
+  document.getElementById('cnt').textContent=open?`${open} warten auf dich`:'Alles entschieden – danke!';
+  document.getElementById('done').innerHTML=open?'':`<aside class="mg"><img class="mg__img" src="martin-guide/martin-celebrate.webp" alt="Martin von 741 freut sich" width="112"><div class="mg__bubble"><span class="mg__name">Martin</span><p>Danke, Coralie! Alles ist entschieden. Ich melde mich, sobald es live ist.</p></div></aside>`;
+  const types=['Alle','Offen',...new Set(ITEMS.map(i=>i.type))];
+  document.getElementById('filters').innerHTML=types.map(t=>`<button class="chip${t===F?' on':''}" data-f="${t}">${t}</button>`).join('');
+  const list=ITEMS.filter(i=>F==='Alle'||(F==='Offen'?!S.dec[i.id]:i.type===F));
+  document.getElementById('items').innerHTML=list.map(itemHTML).join('');
+  renderAdmin();save();
+}
+function status(i){const d=S.dec[i.id];if(S.live[i.id])return['live','p-live'];if(!d)return[i.mustYes?'offen · aktives Ja':'offen · Frist '+DUE,'p-open'];if(d.t==='chg')return['Änderung gewünscht','p-chg'];if(d.by==='automatisch')return['bereit für live (Tag 7)','p-auto'];return['bereit für live','p-ok']}
+function renderAdmin(){
+  document.getElementById('atab').innerHTML=ITEMS.map(i=>{const [s,c]=status(i);const d=S.dec[i.id];const ready=d&&d.t!=='chg'&&!S.live[i.id];
+    return `<tr><td><b>${i.type}</b><br>${i.title}</td><td><span class="pill ${c}">${s}</span></td><td>${d?(d.t==='chg'?d.note:txt(i,d.k)):'—'}</td><td>${ready?`<button class="gobtn" data-go="${i.id}">Go für live</button>`:''}</td></tr>`}).join('');
+  document.getElementById('log').innerHTML=S.log.length?S.log.slice().reverse().map(l=>`<div>${l.at} · <b>${l.who}</b> · ${l.what}<br><i>${l.id} · Version 1 · Art: ${l.art}</i></div>`).join(''):'<div><i>Noch keine Entscheidung.</i></div>';
+  document.getElementById('consent').checked=!!S.consent;
+}
+function decide(id,t,note,by){
+  const i=ITEMS.find(x=>x.id===id),k=S.sel[id];
+  S.dec[id]={t,k,note,by:by||'Coralie',at:now()};
+  S.log.push({at:now(),who:by||'Coralie Suriyapperuma',id,art:by==='automatisch'?'automatisch nach 7 Tagen':'Kunde',what:t==='chg'?`Änderung gewünscht: „${note}“`:`gewählt: ${txt(i,k)}${note?' · Notiz: '+note:''}`});
+}
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-f],[data-a],.var,[data-u],[data-go],.tab,#ff');if(!t)return;
+  if(t.classList.contains('tab')){document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t));const a=t.dataset.v==='admin';document.getElementById('client').hidden=a;document.getElementById('admin').hidden=!a;document.getElementById('who').textContent=a?'Angemeldet als Martin (741)':'Angemeldet als Coralie Suriyapperuma';return}
+  if(t.dataset.f){F=t.dataset.f;return render()}
+  if(t.classList.contains('var')){if(S.dec[t.dataset.i])return;S.sel[t.dataset.i]=+t.dataset.k;return render()}
+  if(t.dataset.u){delete S.dec[t.dataset.u];delete S.live[t.dataset.u];S.log.push({at:now(),who:'Coralie Suriyapperuma',id:t.dataset.u,art:'Kunde',what:'Entscheidung zurückgenommen'});return render()}
+  if(t.dataset.go){S.live[t.dataset.go]=true;S.log.push({at:now(),who:'Martin',id:t.dataset.go,art:'741 Go',what:'Go für live gegeben'});return render()}
+  if(t.id==='ff'){let n=0;ITEMS.forEach(i=>{if(!S.dec[i.id]&&!i.mustYes&&S.consent){S.sel[i.id]=i.vars.findIndex(v=>v.rec);decide(i.id,'ok','', 'automatisch');n++}});
+    if(!S.consent)alertBox('Keine Zustimmung zur 7-Tage-Regel: nichts wird automatisch freigegeben.');else if(!n)alertBox('Nichts offen, das automatisch freigegeben werden darf.');return render()}
+  if(t.dataset.a){const id=t.dataset.i,a=t.dataset.a,ta=document.getElementById('ta-'+id);
+    if(a==='ok')return decide(id,'ok',''),render();
+    if(!ta.classList.contains('on')){ta.classList.add('on');ta.focus();t.textContent=a==='chg'?'Wunsch senden':'Freigeben mit Notiz';return}
+    const note=ta.value.trim();if(!note){ta.focus();return}
+    decide(id,a,note);render()}
+});
+document.getElementById('consent').addEventListener('change',e=>{S.consent=e.target.checked;S.log.push({at:now(),who:'Martin',id:'—',art:'Einstellung',what:S.consent?'Zustimmung 7-Tage-Regel erfasst':'Zustimmung 7-Tage-Regel entfernt'});render()});
+function alertBox(m){const d=document.createElement('div');d.className='demo';d.textContent=m;document.querySelector('#admin .panel').appendChild(d);setTimeout(()=>d.remove(),3500)}
+render();
+</script>
+</body>
+</html>

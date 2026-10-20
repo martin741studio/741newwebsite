@@ -21,7 +21,12 @@ async function run() {
       password: process.env.FTP_PASSWORD,
       secure: false,
     });
-    try { await client.cd("public_html"); } catch { /* already chrooted */ }
+    // agent_deploy is chrooted to the web root, but a stray "public_html" folder exists inside it.
+    // Only cd when the root is not already the web root (no index.html there). Same logic as upload.js.
+    const rootNames = (await client.list()).map((f) => f.name);
+    if (!rootNames.includes("index.html")) {
+      try { await client.cd("public_html"); } catch { /* already there */ }
+    }
     const base = await client.pwd(); // remember root so each file starts from here
     for (const rel of files) {
       const local = path.join(DIST, rel);

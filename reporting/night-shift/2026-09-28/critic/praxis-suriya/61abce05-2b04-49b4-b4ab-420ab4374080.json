@@ -1,0 +1,47 @@
+{
+  "client": "Praxis Suriya",
+  "client_id": "3f71ef33-8c74-4ea1-b2d3-0273c2e99649",
+  "feedback_id": "61abce05-2b04-49b4-b4ab-420ab4374080",
+  "mode": "FEEDBACK",
+  "plan_index": 1,
+  "executor_file": "feedback/praxis-suriya/61abce05-2b04-49b4-b4ab-420ab4374080.md",
+  "pass": true,
+  "verdict": "pass",
+  "hard_checks": {
+    "1_no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "pass",
+      "note": "No Title/Meta/H1/JSON-LD in a FEEDBACK draft (not applicable). The NAP block ('Kanonische Geschäftsdaten') has no [fehlt:] markers. The two [fehlt:] markers present (missing original report text at top; Sa/So hours unconfirmed) sit outside Title/Meta/H1/NAP/JSON-LD and correctly flag real data gaps instead of inventing data (hard rule 2)."
+    },
+    "2_nap_matches_locked_record": {
+      "result": "pass",
+      "note": "Checked field by field against context.json.nap_locked for client_id 3f71ef33-8c74-4ea1-b2d3-0273c2e99649: business_name 'Praxis Suriya - Ayurveda & Naturheilkunde' ✓, street 'Schützenpfad 29' ✓, postal_code+city '55218 Ingelheim am Rhein' ✓, phone '+49 174 7411087' ✓, primary_category 'Heilpraktiker' ✓. Exact match."
+    },
+    "3_jsonld_valid_localbusiness_faqpage": {
+      "result": "n/a",
+      "note": "FEEDBACK mode produces no JSON-LD/schema output; nothing to validate here."
+    },
+    "4_copy_language_matches_market_lang": {
+      "result": "pass",
+      "note": "market_lang = de. Entire Vorschlag and surrounding text is German."
+    },
+    "5_hwg_scan": {
+      "result": "pass",
+      "note": "Scanned for 'heilt', 'garantiert', '100 %', 'Heilung' and similar cure/guarantee/fear claims. None present. Content is opening-hours data, a GBP-button recommendation, and an accessibility (Barrierefreiheit) fact statement, not treatment-outcome copy."
+    },
+    "6_rubric_or_feedback_equivalent": {
+      "result": "pass",
+      "note": "FEEDBACK mode: 8-dim rubric skipped per skill; checked instead that the draft addresses the client's comment sentence-for-sentence. Client comment has four points: (a) 'Di-Do 7.30-18.00, Fr 7.30-12.00' -> table rows Di/Mi/Do 7:30-18:00, Fr 7:30-12:00 = addressed. (b) 'Telefonisch Termin vereinbaren Mo. 12-14 Uhr' -> Montag row 'Keine Praxiszeiten. Telefonische Terminvereinbarung 12:00-14:00 Uhr' = addressed. (c) 'Termin Button habe ich nicht, nur Buchungsformular' -> dedicated Termin-Button paragraph confirms no button, explains booking-form-only state, gives a concrete GBP action-button recommendation tied to the existing form = addressed. (d) 'barrier frei aber nicht Toilette' (the new point vs. the prior thread item 5bea6cb2, plan-index 0) -> dedicated new 'Barrierefreiheit' section states plainly 'Die Praxis ist barrierefrei zugänglich. Die Toilette der Praxis ist nicht barrierefrei.' plus a concrete recommendation not to activate the 'Barrierefreie Toilette' GBP attribute = addressed. All four points from the client's comment are covered, nothing invented; the unconfirmed exact accessibility feature list is correctly marked [fehlt: genaue Merkmalsliste vom Kunden zu bestätigen] rather than guessed."
+    },
+    "7_deslop_hard_check": {
+      "result": "exempt",
+      "note": "Per skill's FEEDBACK exception: de-slop only applies to a Vorschlag section that is new client-facing prose meant to ship as-is (e.g. a GBP description rewrite), and is never a blocker when the Vorschlag is an internal recommendation to Martin, not copy. This Vorschlag is (1) a structured opening-hours data table meant for direct GBP data entry, (2) a short factual accessibility statement meant for direct GBP attribute entry, not marketing prose, and (3) 'Empfehlung: ...' sentences addressed to Martin about which GBP settings to change. None of this is 'new client-facing prose' in the AI-slop sense, so the tool was not run and is not a blocker here."
+    }
+  },
+  "additional_observations": [
+    "Executor correctly threaded this item against the prior feedback item in the same comment thread (feedback_id 5bea6cb2, plan-index 0, 28 seconds earlier, same section): it restates the already-processed opening-hours/Termin-Button content unverändert for completeness and adds only the new Barrierefreiheit point, with a clear Diff-Hinweis explaining exactly what changed. This is good practice, not a hard-check requirement, and not a blocker either way.",
+    "Executor was transparent about a real data gap: the original live-report section text ('6 · A · Google Business Profil') was not fetchable in that session and is marked [fehlt:] rather than guessed — correct behaviour per hard rule 2 (real data only). A human must diff the Vorschlag against the live report before it is applied in the portal, which is exactly what the morning gate in REVIEW.md is for; it is not a Critic fail.",
+    "The 'Verwandter Thread' note correctly flags a later, potentially conflicting comment (feedback_id 7fd15e89, 2026-08-31, same section: 'Öffnungszeiten kannst DU ändern wie du möchtest') that was out of this run's client quota and not processed. This is a useful heads-up for the morning review, not a Critic fail.",
+    "Recommendation NOT to activate 'Barrierefreie Toilette' as a GBP attribute is a correct, conservative reading of the client's statement (barrier-free overall, but not the toilet) — avoids setting a false expectation for wheelchair users."
+  ],
+  "fails": []
+}

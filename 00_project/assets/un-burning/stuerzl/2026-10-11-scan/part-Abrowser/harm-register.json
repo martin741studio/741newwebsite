@@ -1,0 +1,141 @@
+{
+  "run": {
+    "run_id": "stuerzl-2026-10-11-scan-browser",
+    "client_slug": "stuerzl",
+    "domain": "stuerzl-steuerstrafrecht.de",
+    "mode": "scan",
+    "started_at": "2026-10-11T11:25:13+08:00",
+    "catalog_version": "ub-1",
+    "params": {
+      "scanned_areas": [
+        "A",
+        "C"
+      ]
+    }
+  },
+  "items": [
+    {
+      "confidence": "verified",
+      "collected_at": "2026-10-11T11:25:13+08:00",
+      "source_tool": "claude-in-chrome (read only)",
+      "approval": "proposed",
+      "client_safe": true,
+      "destructive": false,
+      "area": "A",
+      "entity": "gbp",
+      "item": "Google-Profil Frankfurt: Anja Stürzl ist Primärinhaberin, 741 und Michael Linkemann sind Verwalter. Die frühere Agentur steht nicht mehr in der Liste.",
+      "why": "Die Inhaberin kontrolliert das Profil. Das ist das Ziel.",
+      "check_id": "UB.A04",
+      "source_field": "B06.01",
+      "target": "GBP Frankfurt (ChIJyVGAdikEaW8RUOWpEJs-2XA)",
+      "severity": "cosmetic",
+      "action": "keep",
+      "action_detail": "Rolle bestätigt. Nichts zu tun.",
+      "actor": "741",
+      "effort": "S",
+      "evidence_ids": [
+        "EV-A-browser-gbp-managers"
+      ],
+      "refetch": {
+        "tool": "chrome",
+        "params": "business.google.com > Stürzl profile > Business Profile settings > People and access",
+        "cost": 0
+      },
+      "drilldown_hint": "Rolle von Michael Linkemann (Manager) mit der Kanzlei klären, wenn er nicht mehr zuständig ist.",
+      "id": "H-A-101"
+    },
+    {
+      "confidence": "verified",
+      "collected_at": "2026-10-11T11:25:13+08:00",
+      "source_tool": "claude-in-chrome (read only)",
+      "approval": "proposed",
+      "client_safe": true,
+      "destructive": false,
+      "area": "A",
+      "entity": "gbp",
+      "item": "Das Google-Profil München (Oberanger 32) ist im 741-Konto nicht sichtbar. Inhaber und Verwalter sind unbekannt.",
+      "why": "Ohne Zugriff kann 741 Name, Adresse und Zeiten dieses Profils weder prüfen noch pflegen.",
+      "check_id": "UB.A04",
+      "source_field": "B13.06",
+      "target": "GBP München (Oberanger 32)",
+      "severity": "leaks_link_power",
+      "action": "claim",
+      "action_detail": "Kanzlei bittet den Inhaber des Münchner Profils, 741studio18@gmail.com als Verwalter einzutragen. Vorher klären, ob München im Paket ist.",
+      "actor": "client",
+      "effort": "S",
+      "evidence_ids": [
+        "EV-A-browser-gbp-businesslist"
+      ],
+      "refetch": {
+        "tool": "chrome",
+        "params": "business.google.com/locations, list of 33 businesses, search Stürzl",
+        "cost": 0
+      },
+      "drilldown_hint": "Liste enthält genau ein Stürzl-Profil (Frankfurt). Das Münchner Profil existiert laut Maps (5,0 mit 1 Bewertung, Stand 01.10.).",
+      "client_text": "Für das Profil in München bitten wir um einen Verwalter-Zugang, damit Name, Adresse und Zeiten dort stimmig bleiben.",
+      "id": "H-A-102"
+    },
+    {
+      "confidence": "verified",
+      "collected_at": "2026-10-11T11:25:13+08:00",
+      "source_tool": "claude-in-chrome (read only)",
+      "approval": "proposed",
+      "client_safe": true,
+      "destructive": false,
+      "area": "A",
+      "entity": "analytics",
+      "item": "Google Analytics 4: 741 hat nur eine Rolle ohne Administrator-Recht und sieht die anderen Nutzer nicht. Wer Administrator ist, bleibt unbestätigt.",
+      "why": "Die frühere Agentur hat die Property im Mai 2025 angelegt. Ohne Admin-Sicht ist unklar, ob die Inhaberin die Kontrolle hat.",
+      "check_id": "UB.A05",
+      "source_field": "B06.01",
+      "target": "GA4 483853149 (Konto 350607888)",
+      "severity": "leaks_link_power",
+      "action": "claim",
+      "action_detail": "Frau Dr. Stürzl öffnet \"Kontozugriffsverwaltung\" und bestätigt per Screenshot, dass sie Administratorin ist. Danach gibt sie 741 die Administrator-Rolle oder entfernt alte Zugänge nach Absprache.",
+      "actor": "client",
+      "effort": "S",
+      "evidence_ids": [
+        "EV-A-browser-ga4-account-access"
+      ],
+      "refetch": {
+        "tool": "chrome",
+        "params": "analytics.google.com > Admin > Account access management (account 350607888)",
+        "cost": 0
+      },
+      "drilldown_hint": "Account details und Trash sind für 741 gesperrt (grau). Das bestätigt die fehlende Admin-Rolle.",
+      "client_text": "Bitte bestätigen Sie kurz, dass Sie in Google Analytics Administratorin sind. Die Schritte stehen in der Checkliste.",
+      "id": "H-A-103"
+    },
+    {
+      "confidence": "verified",
+      "collected_at": "2026-10-11T11:25:13+08:00",
+      "source_tool": "claude-in-chrome (read only)",
+      "approval": "proposed",
+      "client_safe": true,
+      "destructive": false,
+      "area": "C",
+      "entity": "gbp",
+      "item": "Das Google-Profil Frankfurt zeigt noch die alte Adresse Wiesenhüttenstr. 17. Die Kanzlei ist seit 05.10.2026 am Untermainkai 26.",
+      "why": "Mandanten sehen und navigieren zur alten Adresse. Das ist der meistgesehene Eintrag.",
+      "check_id": "UB.C03",
+      "source_field": "B06.05",
+      "target": "GBP Frankfurt (ChIJyVGAdikEaW8RUOWpEJs-2XA)",
+      "severity": "blocks_revenue",
+      "action": "fix",
+      "action_detail": "Adresse im Profil auf Untermainkai 26, 60329 Frankfurt am Main ändern (Inhaberin ist Anja Stürzl; Änderung erfordert ihre Freigabe). Eine Adressänderung kann eine erneute Verifizierung auslösen. Nur der regelkonforme Weg: echte Kanzlei, echte Adresse, Nachweis, Video der echten Räume. Zeitpunkt mit der Kanzlei abstimmen.",
+      "actor": "741",
+      "effort": "M",
+      "evidence_ids": [
+        "EV-A-browser-gbp-businesslist"
+      ],
+      "refetch": {
+        "tool": "chrome",
+        "params": "business.google.com/locations, row STÜRZL Steuerstrafrecht",
+        "cost": 0
+      },
+      "drilldown_hint": "Die Adresse steht in der Liste unter dem Namen. Öffnungszeiten und Kategorie (nur Lawyer) sind Lücken für das Wachstums-SEO, nicht Teil von Un-Burning.",
+      "client_text": "Im Google-Profil steht noch die alte Adresse. Wir stellen sie nach Ihrer Freigabe auf Untermainkai 26 um.",
+      "id": "H-C-101"
+    }
+  ]
+}

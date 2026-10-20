@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "un-burning/harm-register.schema.json",
+  "title": "Un-Burning harm register (one run)",
+  "description": "PROPOSAL. One file per run: harm-register.json. Agents write this JSON first. Nothing is loaded into Supabase before Martin's go.",
+  "type": "object",
+  "required": ["run", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "run": {
+      "type": "object",
+      "required": ["run_id", "client_slug", "domain", "mode", "started_at", "catalog_version", "params"],
+      "additionalProperties": false,
+      "properties": {
+        "run_id": {"type": "string", "description": "<client_slug>-<YYYY-MM-DD>-<mode>"},
+        "client_slug": {"type": "string"},
+        "client_id": {"type": ["string", "null"], "description": "uuid in Supabase clients, null if unknown"},
+        "domain": {"type": "string"},
+        "mode": {"enum": ["scan", "reverify", "dryrun"]},
+        "from_audit_run": {"type": ["string", "null"]},
+        "previous_run_id": {"type": ["string", "null"]},
+        "started_at": {"type": "string", "format": "date-time"},
+        "timezone": {"const": "Europe/Berlin"},
+        "catalog_version": {"type": "string"},
+        "params": {
+          "type": "object",
+          "description": "Fixed per client series so a re-scan is comparable: sitemap url, crawl depth, directory list version, GSC property, flags such as with_backlinks.",
+          "additionalProperties": true
+        },
+        "cost": {"type": "object", "properties": {"eur": {"type": "number"}, "credits": {"type": "number"}}, "additionalProperties": false},
+        "bedrock": {"$ref": "#/$defs/bedrock"}
+      }
+    },
+    "items": {"type": "array", "items": {"$ref": "#/$defs/item"}}
+  },
+  "$defs": {
+    "area": {"enum": ["B", "C", "D", "E"], "description": "Area A is retired. Ownership and access are onboarding preconditions (preconditions.json)."},
+    "bedrock": {
+      "type": "object",
+      "description": "Computed by script from items. Never typed by hand.",
+      "properties": {
+        "areas": {
+          "type": "object",
+          "patternProperties": {"^[B-E]$": {"enum": ["green", "yellow", "red", "grey"]}},
+          "additionalProperties": false
+        },
+        "ready_for_growth": {"type": "boolean"}
+      }
+    },
+    "item": {
+      "type": "object",
+      "required": ["id", "area", "entity", "item", "check_id", "severity", "action", "actor", "effort", "approval", "confidence", "collected_at", "evidence_ids"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^H-[B-E]-[0-9]{3}$"},
+        "area": {"$ref": "#/$defs/area"},
+        "entity": {"enum": ["domain", "hosting", "cms", "website", "gbp", "listing", "social", "backlink", "review", "search_index", "analytics"]},
+        "item": {"type": "string", "description": "One sentence, German. What is harmful."},
+        "why": {"type": "string", "description": "One sentence, German. Why it harms."},
+        "check_id": {"type": "string", "pattern": "^UB\\.[B-E][0-9]{2}$"},
+        "source_field": {"type": ["string", "null"], "description": "Audit field id such as B06.05, or null if Un-Burning found it."},
+        "target": {"type": "string", "description": "URL, listing URL, GBP id or asset name the item sits on."},
+        "severity": {"enum": ["blocks_revenue", "leaks_link_power", "cosmetic"]},
+        "action": {"enum": ["keep", "fix", "merge", "redirect", "delete", "report", "claim"]},
+        "action_detail": {"type": "string", "description": "Exact change, for example 'redirect /a/ to /b/ (301)'."},
+        "actor": {"enum": ["client", "741", "google"]},
+        "effort": {"enum": ["S", "M", "L"]},
+        "destructive": {"type": "boolean", "description": "True for delete, report and merge. Needs a per-item go."},
+        "approval": {"enum": ["proposed", "approved", "rejected", "done", "blocked"]},
+        "approved_by": {"type": ["string", "null"]},
+        "approved_at": {"type": ["string", "null"], "format": "date-time"},
+        "wave": {"type": ["integer", "null"], "minimum": 1},
+        "snapshot_id": {"type": ["string", "null"], "description": "Row in snapshots/manifest.json made before the change."},
+        "rollback": {"type": ["string", "null"], "description": "Exact undo step."},
+        "before": {"type": ["object", "string", "number", "null"]},
+        "after": {"type": ["object", "string", "number", "null"]},
+        "verify_check": {"type": "string", "description": "The script or command that proves the fix, with the expected result."},
+        "done_at": {"type": ["string", "null"], "format": "date-time"},
+        "confidence": {"enum": ["verified", "derived", "client_stated"]},
+        "collected_at": {"type": "string", "format": "date-time"},
+        "source_tool": {"type": "string"},
+        "evidence_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "refetch": {"type": "object", "description": "The exact call that repeats the pull: tool, params, expected cost.", "additionalProperties": true},
+        "depends_on": {"type": "array", "items": {"type": "string"}},
+        "drilldown_hint": {"type": "string"},
+        "client_safe": {"type": "boolean", "default": true},
+        "client_text": {"type": "string", "description": "Plain German sentence for the client tab. No tool names. Falls back to item text."}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"destructive": {"const": true}}, "required": ["destructive"]},
+          "then": {"properties": {"approval": {"enum": ["proposed", "approved", "rejected", "done", "blocked"]}}}
+        },
+        {
+          "if": {"properties": {"approval": {"const": "done"}}, "required": ["approval"]},
+          "then": {"required": ["snapshot_id", "before", "after", "done_at", "approved_at"]}
+        }
+      ]
+    }
+  }
+}

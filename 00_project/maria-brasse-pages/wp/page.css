@@ -1,0 +1,53 @@
+
+.sg-home-page .sg-hero{min-height:560px;display:flex;flex-direction:column;justify-content:flex-end;padding:120px 8% 70px;
+ background:linear-gradient(180deg,rgba(11,58,59,.25),rgba(11,58,59,.82)),url(%IMG%) center 30%/cover no-repeat;color:#fff;margin-top:0}
+.sg-home-page .sg-hero .sg-h1{color:#fff;font-size:clamp(28px,4vw,46px);line-height:1.2;max-width:900px;margin:0 0 18px}
+.sg-home-page .sg-hero .sg-h1 em{font-style:normal;opacity:.9}
+.sg-home-page .sg-hero-line{margin:0 0 6px;font-size:17px;color:#fff}
+.sg-home-page .sg-hero .wp-block-buttons{margin-top:18px}
+.sg-home-page .sg-btn .wp-block-button__link{background:#10595B;color:#fff;border-radius:0;padding:12px 26px;font-weight:600}
+.sg-home-page .sg-btn .wp-block-button__link:hover{background:#e87010;color:#fff}
+.sg-home-page .sg-btn-light .wp-block-button__link{background:#fff;color:#10595B}
+.sg-home-page .sg-wrap{max-width:900px;margin:0 auto;padding:40px 20px 10px}
+.sg-home-page .sg-sec{margin:0 0 42px}
+.sg-home-page .sg-sec h2{color:#10595B;font-size:clamp(24px,3vw,32px);margin:0 0 14px}
+.sg-home-page .sg-sec h3{font-size:21px;margin:26px 0 8px}
+.sg-home-page .sg-lead{font-size:19px;line-height:1.7;border-left:4px solid #10595B;padding-left:18px}
+.sg-home-page ul.sg-check{list-style:none;margin:10px 0 0;padding:0}
+.sg-home-page ul.sg-check li{position:relative;padding:0 0 10px 30px}
+.sg-home-page ul.sg-check li:before{content:"✓";position:absolute;left:0;top:0;color:#10595B;font-weight:700}
+.sg-home-page .sg-steps{counter-reset:sgstep;display:grid;gap:14px;margin:10px 0 16px}
+.sg-home-page .sg-step{counter-increment:sgstep;position:relative;padding:14px 16px 12px 64px;background:#f3f7f7;border-left:4px solid #10595B}
+.sg-home-page .sg-step:before{content:counter(sgstep);position:absolute;left:16px;top:14px;width:34px;height:34px;border-radius:50%;background:#10595B;color:#fff;
+ display:flex;align-items:center;justify-content:center;font-weight:700}
+.sg-home-page .sg-step p{margin:0 0 4px}
+.sg-home-page .sg-faq{border-bottom:1px solid #d9e3e3;padding:12px 0}
+.sg-home-page .sg-faq summary{cursor:pointer;font-weight:600;color:#10595B}
+.sg-home-page .sg-faq p{margin:10px 0 0}
+.sg-home-page .sg-cta{background:#10595B;color:#fff;text-align:center;padding:60px 20px}
+.sg-home-page .sg-cta h2{color:#fff;margin:0 0 10px}
+.sg-home-page .sg-cta p{max-width:640px;margin:0 auto 20px}
+.sg-home-page .sg-cta .wp-block-buttons{justify-content:center}
+.sg-home-page .sg-map{line-height:0}
+.sg-home-page .wp-block-group__inner-container>*{margin-block-start:0}
+.sg-home-page .sg-wrap .wp-block-group__inner-container,.sg-home-page .sg-cta .wp-block-group__inner-container,.sg-home-page .sg-hero .wp-block-group__inner-container{padding:0}
+.sg-home-page .sg-sec h3{color:#222!important}
+.sg-home-page .sg-steps>.wp-block-group__inner-container{display:grid;gap:14px}
+.sg-home-page .sg-step p{margin:0!important}
+.sg-home-page .sg-step p.sg-step-title{margin:4px 0 2px!important}
+.sg-home-page .sg-sec p{margin:0 0 14px!important}
+.sg-home-page .sg-sec p.sg-lead{margin:0!important}
+.sg-home-page .sg-sec .sg-faq p{margin:10px 0 0!important}
+.sg-home-page .sg-lead{font-size:19px!important;color:#222}
+.sg-home-page .sg-hero p.sg-hero-line{margin:0 0 6px!important}
+.sg-home-page .sg-cta p{margin:0 auto 20px!important}
+.sg-home-page .sg-cards>.wp-block-group__inner-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.sg-home-page .sg-cards>.wp-block-group__inner-container:has(>:nth-child(4):last-child){grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.sg-home-page .sg-card{background:#f3f7f7;border-top:4px solid #10595B;padding:16px}
+.sg-home-page .sg-card p{margin:0 0 6px!important}
+.sg-home-page .sg-card p.sg-card-title{color:#10595B;font-size:17px}
+.sg-home-page .sg-card p.sg-price{font-size:26px;font-weight:700;color:#10595B}
+.sg-home-page .sg-note{background:#fdf8e6;border:2px solid #e7c34a;padding:20px}
+.sg-home-page .sg-badges .sg-badge{display:inline-block;background:#10595B;color:#fff;padding:6px 14px;margin:0 8px 8px 0;border-radius:999px}
+.sg-home-page .sg-badges .sg-badge strong{margin-right:6px}
+@media(max-width:768px){.sg-home-page .sg-hero{min-height:460px;padding:90px 20px 40px}.sg-home-page .sg-wrap{padding:28px 4px 0}.sg-home-page .sg-step{padding:12px 12px 10px 50px}.sg-home-page .sg-step:before{left:10px;width:30px;height:30px}}

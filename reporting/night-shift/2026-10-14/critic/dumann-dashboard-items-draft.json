@@ -1,0 +1,17 @@
+{
+  "id": "dumann-dashboard-items-draft",
+  "verdict": "pass",
+  "checks": {
+    "C1": {"pass": true, "why": "draft.md exists with both named cards (E28 Maps-Name, E29 Design-Bestätigung), covering the full scope."},
+    "C2": {"pass": true, "why": "Spot-checked 3 facts against sources: the 14.10. rule and the design-approval/Maps-name mismatches match decisions.md verbatim; the long GBP name and Profile-ID match dataset.md line 82/84/112; the E22 preview date (9.10.) and link match approval-cards-draft.md line 313-317."},
+    "C3": {"pass": true, "why": "'Was fehlt' section marks two explicit gaps as [fehlt: ...] rather than filling them in."},
+    "C4": {"pass": true, "why": "Text is German, client-facing, and makes no health/treatment claims (only profile name and design approval) — no HWG exposure."},
+    "C5": {"pass": true, "why": "draft.md explicitly states nothing was sent, published, or written to approval_items; git status --porcelain shows only the new reporting/night-shift/2026-10-14/ folder, nothing modified elsewhere."},
+    "C6": {"pass": true, "why": "Cards follow the existing E1-E27 format exactly, numbered E28/E29 correctly (E27 is the last used number), ready for Martin to review and place after the slop-gate pass."},
+    "C7": {"pass": false, "why": "deslop_de.py on draft.md scores 4/5 ('braucht Umschreiben und Cleanse'), top finding: Gedankenstrich (em dash) overused, 7x."}
+  },
+  "fails": [
+    "Run deslop_de.py's cleanse pass on draft.md and remove/rephrase the 7 em dashes before placing the cards in approval_items."
+  ],
+  "one_line": "Pass — both cards are well-sourced and ready, just needs the em-dash cleanup before going live."
+}

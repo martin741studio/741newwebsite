@@ -1,0 +1,66 @@
+{
+ "date": "2026-10-12",
+ "page": "content-writing/startseite/05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G2 legal": {
+   "mode": "none",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "info": {
+    "words": 1832,
+    "placeholders": 4
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "1 Sätze über 28 Wörter (zum Beispiel: „Besonders beeindruckt hat mich der Praxisteil, in dem wir freie Reden...)",
+    "Sprecher gemischt: ich 17, wir 6"
+   ],
+   "counts": {
+    "du": 86,
+    "sie": 0,
+    "ich": 17,
+    "wir": 6
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1832,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "[Hinweis] Begriffs-Abdeckung 72 % (40 Begriffe aus mindestens 50 % der Seiten). Fehlen: präsenz, zuhörer, stimme, coaching, übungen, umgang, grundlagen, inhouse, workshops, sicherheit, mitarbeiter. Pflicht nur, wenn die Suchabsicht den Begriff braucht.",
+    "Direkt-Antwort hat 6 Sätze (Regel: 2 bis 4, etwa 50 Wörter). Kürzen für KI-Zitate."
+   ]
+  }
+ }
+}

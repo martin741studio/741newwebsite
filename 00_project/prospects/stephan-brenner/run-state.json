@@ -1,0 +1,85 @@
+{
+ "slug": "stephan-brenner",
+ "steps": {
+  "intake": {
+   "agent": "orchestrator",
+   "status": "done",
+   "at": "2026-10-15T15:31",
+   "outputs": [
+    "intake.md",
+    "intake.json",
+    "browser-queue.jsonl"
+   ],
+   "blockers": []
+  },
+  "demand": {
+   "agent": "orchestrator(main session)",
+   "status": "done",
+   "at": "2026-10-16T13:29",
+   "outputs": [
+    "demand.md",
+    "evidence/dfs-volumes-ads.json",
+    "evidence/dfs-serp-*.json",
+    "evidence/dfs-backlinks-summary.json",
+    "evidence/dfs-refdomains-spam.json",
+    "cost_ledger.jsonl"
+   ],
+   "gap_keyword": "anwalt gesellschaftsrecht stuttgart",
+   "gap_volume": 40,
+   "gate_g1": "pass",
+   "note": "DataForSEO run from main whitelisted session; sandbox IP 179.65.207.101 was the only thing blocked."
+  },
+  "site": {
+   "agent": "B",
+   "status": "done",
+   "at": "2026-10-15T15:53",
+   "outputs": [
+    "site-findings.md",
+    "evidence/site.json",
+    "evidence/site-pages.json",
+    "evidence/site-urls.json",
+    "evidence/site-page-urls.txt",
+    "evidence/comp-pages.json",
+    "evidence/site-checks.md"
+   ],
+   "blockers": [],
+   "notes": "Step 4 skipped (law firm). Step 3: no price page. Step 5 ran on demand.md URLs (MTR x2, HWS). Cost 0 USD."
+  },
+  "homepage": {
+   "agent": "C",
+   "status": "done",
+   "at": "2026-10-15T15:52",
+   "outputs": [
+    "draft/index.html",
+    "draft/logo.svg",
+    "draft/portrait.jpg",
+    "draft/praxis.jpg",
+    "homepage.md",
+    "evidence/home-draft-1440.jpg",
+    "evidence/scorecard-today.md",
+    "review-assets/stephan-brenner/startseite-entwurf.webp",
+    "review-assets/stephan-brenner/startseite-heute.webp",
+    "review-assets/stephan-brenner/foto-brenner.webp",
+    "review-assets/stephan-brenner/foto-dachs.webp",
+    "review-assets/stephan-brenner/foto-kanzlei.webp"
+   ],
+   "blockers": [],
+   "notes": "Score today 8/42 (non-health). Draft copy lint 5/5. CTA target link not set (Martin decision). Headline may change after agent A gap keyword."
+  },
+  "scan": {
+   "agent": "D",
+   "status": "done",
+   "at": "2026-10-16T13:42:45.512439",
+   "keyword": "anwalt gesellschaftsrecht stuttgart",
+   "report_key": "da6ceb86d5e2406",
+   "solv": 0.0,
+   "found_in": 1,
+   "credits": 49,
+   "outputs": [
+    "evidence/falcon-report-da6ceb86d5e2406.json",
+    "../../04_site/public/review-assets/stephan-brenner/scan-grid.webp",
+    "competitors.md"
+   ]
+  }
+ }
+}

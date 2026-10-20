@@ -1,0 +1,45 @@
+.kw-h1{font-size:4rem !important;line-height:1.08 !important}
+.cc-hero .seo_card{height:auto;align-self:center}
+.kw-lead{font-size:1.25rem;line-height:1.6;opacity:.9;margin:0 0 2rem;max-width:40rem}
+.kw-proof{margin-top:1.2rem;font-size:1rem;opacity:.75}
+.kw-narrow{max-width:52rem;margin:0 auto}
+.kw-narrow p{font-size:1.2rem;line-height:1.6;margin:0 0 1rem}
+.kw-h3{font-size:1.5rem;line-height:1.25;margin:0 0 .8rem;font-weight:700}
+.seo_card p{font-size:1.1rem;line-height:1.55;margin:0}
+.kw-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+.kw-props{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
+.kw-props .seo_card{padding:2rem}
+.kw-chat{display:flex;flex-direction:column;gap:.9rem}
+.kw-msg{border-radius:1rem;padding:1rem 1.2rem;font-size:1.1rem;line-height:1.45;max-width:90%}
+.kw-me{background:#fac118;color:#111;align-self:flex-end;border-bottom-right-radius:.3rem}
+.kw-ai{background:#262626;color:#fff;align-self:flex-start;border-bottom-left-radius:.3rem}
+.kw-status{display:flex;align-items:center;gap:.7rem;font-size:1.05rem;color:#ddd}
+.kw-dot{width:.8rem;height:.8rem;border-radius:50%;flex:0 0 auto}
+.kw-dot.ok{background:#22c55e}.kw-dot.wait{background:#fac118}.kw-dot.live{background:#fff}
+.kw-checks{list-style:none;padding:0;margin:2rem 0}
+.kw-checks li{position:relative;padding-left:2.2rem;font-size:1.25rem;font-weight:600;margin-bottom:.9rem}
+.kw-checks li::before{content:"✓";position:absolute;left:0;color:#d99e00;font-weight:800}
+.kw-shield{list-style:none;padding:0;margin:0}
+.kw-shield li{position:relative;padding:.8rem 0 .8rem 2.2rem;border-bottom:1px solid #333;font-size:1.15rem}
+.kw-shield li::before{content:"⛔";position:absolute;left:0;top:.8rem}
+.kw-ba{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:3rem 0 0}
+.kw-ba-label{font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.9rem;margin-bottom:1rem;color:#888}
+.kw-after{border-color:#fac118;background:#fffbea}
+.kw-after .kw-ba-label{color:#b8860b}
+.kw-list{margin:0;padding-left:1.2rem}
+.kw-list li{font-size:1.2rem;line-height:1.5;margin-bottom:.6rem}
+.kw-note{font-size:1rem;color:#666;margin-top:1rem}
+.kw-faq{background:#fff;border:1px solid #eee;border-radius:1rem;padding:1.2rem 1.5rem;margin-bottom:1rem}
+.kw-faq summary{font-weight:700;font-size:1.2rem;cursor:pointer}
+.kw-faq p{margin:1rem 0 0}
+.seo_grid>*{min-width:0}
+@media (max-width:991px){.kw-steps,.kw-props,.kw-ba{grid-template-columns:1fr}.seo_grid{grid-template-columns:minmax(0,1fr)}.seo_btn{white-space:normal;text-align:center;display:inline-block;max-width:100%}}
+@media (max-width:600px){
+ .kw-h1{font-size:5.4rem !important}
+ .kw-lead,.kw-narrow p{font-size:2.3rem}
+ .kw-proof,.kw-note{font-size:1.9rem}
+ .kw-h3{font-size:2.8rem}
+ .seo_card p,.kw-list li,.kw-msg,.kw-status,.kw-shield li,.kw-checks li{font-size:2.2rem}
+ .kw-faq summary{font-size:2.3rem}
+ .kw-ba-label{font-size:1.7rem}
+}

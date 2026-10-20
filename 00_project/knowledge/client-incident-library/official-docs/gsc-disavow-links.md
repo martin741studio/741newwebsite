@@ -1,0 +1,75 @@
+# Disavow links to your site
+
+- URL: https://support.google.com/webmasters/answer/2648487?hl=en
+- Fetched: 2026-10-12
+- Page date: living help page (no date shown)
+- Author/site: Google (support.google.com help center)
+
+---
+
+If you have a manual action against your site for unnatural links to your site, or if you think you're about to get such a manual action (because of paid links or other link schemes that violate our spam policies), you should try to remove the links from the other site to your site. If you can't remove those links yourself, or get them removed, then you should *disavow* the URLs of the questionable pages or domains that link to your website.
+
+This is an advanced feature and should only be used with caution. If used incorrectly, this feature can potentially harm your site’s performance in Google Search results.
+
+## Step 0: Decide if this is necessary
+
+In most cases, Google can assess which links to trust without additional guidance, so most sites will not need to use this tool.
+
+**You should disavow backlinks only if:**
+
+1. You have a considerable number of spammy, artificial, or low-quality links pointing to your site,
+**AND**
+2. The links have caused a manual action, or likely will cause a manual action, on your site.
+
+Google works very hard to make sure that actions on third-party sites do not negatively affect a website. In some circumstances, incoming links can affect Google’s opinion of a page or site. For example, you or an SEO that you’ve hired may have built bad links to your site via paid links or other link schemes that violate our spam policies. First and foremost, we recommend that you remove as many spammy or low-quality links from the web as possible.
+
+**The disavow links tool does not support Domain properties. If you have a Domain property, this page does not apply to you.**
+
+## Step 1: Create a list of links to disavow
+
+Assemble your list of pages or domains to disavow in a text file that you will upload to Google.
+
+**Link file format:**
+
+- Specify one URL or domain to disavow per line. You cannot disavow an entire subpath, such as `example.com/en/`
+- To disavow a domain (or subdomain) prefix it with "`domain:`", for example: `domain:example.com`
+- The file must be a text file encoded in UTF-8 or 7-bit ASCII
+- The file name must end in .txt
+- Maximum URL length is 2,048 characters
+- Maximum file size is 100,000 lines (including blank lines and comment lines) and 2MB.
+- You can include comments if you like by starting a line with a # mark. Any lines that begin with # will be ignored by Google.
+
+**Example:**
+
+\# Two pages to disavow
+http://spam.example.com/stuff/comments.html
+http://spam.example.com/stuff/paid-links.html
+# One domain to disavow
+domain:shadyseo.com
+
+If you have found URLs or sites to disavow in the links report for your site, you can download the data from the Links report by clicking the export button. **Be sure to remove any URLs from the downloaded file that you don't want to disavow.**
+
+## Step 2: Upload your list
+
+- You can post one disavow list for each property that you own. Uploading a new list for a property will replace any existing list for that property.
+- You must be a property owner to upload a disavow list.
+- Disavowed links will continue to be shown in the Links report.
+- The list applies only to the specific property to which you uploaded it, plus any child properties. So if you have both http and https properties, you should upload a list for each. If you have a disavow list applied to example.com, it will also apply to m.example.com; if you have disavow lists for both example.com and m.example.com, the list for both properties will be a combination of both lists.
+
+**To upload the list of pages or domains to disavow:**
+
+1. Go to the disavow links tool page.
+2. Select a property from the property list. The list will apply to this property only. If a list already exists for this property, you will see a summary of disavowed pages and domains. Uploading another list to this property will replace the existing list for this property.
+3. Click the button to upload your list.
+4. Choose the disavow file from your local computer as directed.
+    
+  1. **If the file has any errors**, you will see a list of errors immediately. Your old list will not be replaced. You can fix your new list and try to upload it again.
+  2. **If the upload is successful,** it can take a few weeks for Google to incorporate your list into the index as Google recrawls the web and reprocess the pages that we see.
+
+## Remove all disavowals for a property
+
+If you want to remove all disavowals for a given property, follow these steps. If you want to replace an old list with a new one, you do not need to do this; simply upload the new list.
+
+1. Go to the disavow links tool page.
+2. Select a property from the property list.
+3. Click **Cancel Disavowals**. The disavowal list for the selected property will be removed. It can take a few weeks for Google to incorporate your list into our index as we recrawl the web and reprocess the pages that we see.

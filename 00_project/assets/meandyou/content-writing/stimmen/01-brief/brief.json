@@ -1,0 +1,249 @@
+{
+ "client": "me&you Communication (Michael Ehlers)",
+ "client_slug": "meandyou",
+ "language": "de",
+ "address": "du",
+ "legal_mode": "none",
+ "voice_sheet": "00_project/assets/meandyou/voice.md",
+ "pool_item_ids": [],
+ "local_city": null,
+ "gate": "A0-full",
+ "require_answer_block": true,
+ "nap_file": "00_project/assets/meandyou/nap.json",
+ "schema_faq": false,
+ "speaker": "dritte",
+ "page_slug": "stimmen",
+ "page_type": "hub",
+ "mode": "rewrite",
+ "sitetree_node": "Stimmen",
+ "url_slug": "/stimmen",
+ "money_page": false,
+ "intent": "commercial-investigation",
+ "reader": "Interessenten, die Michael Ehlers oder ein Seminar schon kennen und vor dem Gespräch prüfen wollen, ob andere gute Erfahrungen gemacht haben; Fragen: Ist das echt? Bringt es etwas für jemanden wie mich? Gibt es Kritik?",
+ "keyword_primary": "Michael Ehlers Erfahrungen",
+ "keywords_cluster": [
+  {
+   "kw": "michael ehlers",
+   "volume": 480,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-12"
+  },
+  {
+   "kw": "michael ehlers rhetorik",
+   "volume": 90,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-12"
+  },
+  {
+   "kw": "michael ehlers seminar",
+   "volume": 10,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-12"
+  },
+  {
+   "kw": "michael ehlers erfahrungen",
+   "volume": null,
+   "scope": "national",
+   "source": "DataForSEO (keine Daten)",
+   "date": "2026-10-12"
+  },
+  {
+   "kw": "michael ehlers kritik",
+   "volume": null,
+   "scope": "national",
+   "source": "Google Autocomplete 2026-10-11",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "rhetorikseminar erfahrungen",
+   "volume": null,
+   "scope": "national",
+   "source": "DataForSEO (keine Daten), SERP",
+   "date": "2026-10-12"
+  }
+ ],
+ "cta": {
+  "goal": "kostenloses Gespräch (30 Min, Video) buchen",
+  "channel": "booking",
+  "text": "Gespräch buchen",
+  "reassurance": "30 Minuten, kostenlos, per Video",
+  "secondary": "Seminare ansehen / Telefon"
+ },
+ "cta_text": "Gespräch buchen",
+ "cta_min": 5,
+ "bestand_words": 90,
+ "bestand_note": "Vorschau v2 index.html#stimmen, eindeutige Wörter ohne Laufband-Kopien",
+ "benchmark_median_words": 3067,
+ "benchmark_sources": [
+  {
+   "url": "_work/bench-metrics.json",
+   "words": 3067,
+   "date": "2026-10-12"
+  }
+ ],
+ "benchmark_note": "5 Stimmen- und Referenzseiten von Trainern; Länge kommt dort aus ungeordneten Zitatlisten. Ziel kürzer, geordnet",
+ "word_range": [
+  1400,
+  2200
+ ],
+ "faq_min": 6,
+ "internal_links_min": 4,
+ "internal_link_targets": [
+  {
+   "url": "/",
+   "anchor": "Startseite",
+   "role": "home"
+  },
+  {
+   "url": "/seminare",
+   "anchor": "Seminare",
+   "role": "money-page"
+  },
+  {
+   "url": "/michael",
+   "anchor": "Mehr über Michael",
+   "role": "person"
+  },
+  {
+   "url": "/faq",
+   "anchor": "häufigen Fragen",
+   "role": "sibling"
+  },
+  {
+   "url": "/gespraech-buchen",
+   "anchor": "Gespräch buchen",
+   "role": "contact"
+  }
+ ],
+ "proof_assets": [
+  "ProvenExpert 250 Bewertungen, 227 mit 5 Sternen",
+  "Verteilung 227/21/2/0/0",
+  "ProvenExpert seit 2016",
+  "3 Video-Stimmen",
+  "Zitate Röser, Escher, Ates",
+  "über 8.000 Teilnehmer",
+  "seit 1990"
+ ],
+ "forbidden_words": [
+  "garantiert",
+  "Intelligente",
+  "4,8",
+  "4,9",
+  "Tajan"
+ ],
+ "own_phrases": [
+  "Vorher. Nachher.",
+  "Persönlichkeit. Kongruenz. Wirkung.",
+  "Unübersehbar wird man nicht, indem man lauter wird."
+ ],
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "Thema, für wen, CTA, Beweiszeile",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Welche Erfahrungen machen Teilnehmer? Direkt-Antwort + Zahlen",
+   "cta": null
+  },
+  {
+   "id": "S03",
+   "element": "el-feature",
+   "job": "Vorher. Nachher. Drei Videos mit Text",
+   "cta": "primary"
+  },
+  {
+   "id": "S04",
+   "element": "el-grid",
+   "job": "Stimmen nach Anliegen",
+   "cta": null
+  },
+  {
+   "id": "S05",
+   "element": "proof",
+   "job": "Öffentliche Stimmen mit Rolle",
+   "cta": null
+  },
+  {
+   "id": "S06",
+   "element": "el-grid",
+   "job": "Was Teilnehmer im Seminar erleben, Brücke /seminare",
+   "cta": "primary"
+  },
+  {
+   "id": "S07",
+   "element": "person",
+   "job": "Michael als Trainer, Brücke /michael",
+   "cta": "primary"
+  },
+  {
+   "id": "S08",
+   "element": "text",
+   "job": "Woher die Stimmen kommen, Transparenz",
+   "cta": null
+  },
+  {
+   "id": "S09",
+   "element": "step-flow",
+   "job": "Erst ein Gespräch",
+   "cta": "primary"
+  },
+  {
+   "id": "S10",
+   "element": "faq",
+   "job": "FAQ Erfahrungen, Kritik, Echtheit",
+   "cta": null
+  },
+  {
+   "id": "S11",
+   "element": "cta",
+   "job": "Abschluss",
+   "cta": "primary"
+  }
+ ],
+ "paa_questions": [
+  {
+   "q": "Wie sind die Erfahrungen mit Michael Ehlers?",
+   "source": "Keyword michael ehlers erfahrungen, SERP 2026-10-12"
+  },
+  {
+   "q": "Gibt es Kritik an Michael Ehlers?",
+   "source": "Google Autocomplete michael ehlers kritik 2026-10-11"
+  },
+  {
+   "q": "Was kostet ein Rhetorikkurs?",
+   "source": "PAA rhetorikseminar erfahrungen 2026-10-12"
+  },
+  {
+   "q": "Wie kann ich Rhetorik trainieren?",
+   "source": "PAA rhetorikseminar erfahrungen 2026-10-12"
+  },
+  {
+   "q": "Was sind die 5 Säulen der Rhetorik?",
+   "source": "PAA 2026-10-12",
+   "status": "dropped",
+   "reason_code": "Duplikat",
+   "reason": "beantwortet auf /rhetorik (Geschwisterseite)"
+  },
+  {
+   "q": "Was ist eine gute Rhetorik?",
+   "source": "PAA 2026-10-12",
+   "status": "dropped",
+   "reason_code": "Duplikat",
+   "reason": "beantwortet auf /rhetorik (Geschwisterseite)"
+  }
+ ],
+ "placeholders_allowed": [
+  "Vorname und Rolle",
+  "vollständiger Wortlaut",
+  "Leitet Michael die Seminare selbst",
+  "Name und Rolle der Person im Gespräch"
+ ],
+ "blockers": []
+}

@@ -1,0 +1,595 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Website Structure Bali Healing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap">
+<style>
+:root{
+  --ground:#fffcf3; --panel:#ffffff; --ink:#252525; --ink-soft:#5f5f5f;
+  --grey:#8c8c8c; --line:#efeadb; --line-2:#e6dfca;
+  --accent:#fac118; --accent-ink:#5a4600;
+  --keep:#2e9e5b; --keep-bg:#e7f5ec; --keep-ln:#bfe4cc;
+  --rev:#c98a1e; --rev-bg:#fdf3d7; --rev-ln:#efdca6;
+  --new:#252525; --new-bg:#fff6d6; --new-ln:#f3d873;
+  --dead:#c0392b; --dead-bg:#fdecea; --dead-ln:#f3c9c3;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ground:#1a1814; --panel:#232019; --ink:#f4efe2;
+    --ink-soft:#c3bba7; --grey:#948c78; --line:#332f26; --line-2:#3d382c;
+    --accent:#fac118; --accent-ink:#fac118;
+    --keep:#5cc98a; --keep-bg:#182a20; --keep-ln:#2b4a37;
+    --rev:#e0a63a; --rev-bg:#2c2413; --rev-ln:#4a3d1c;
+    --new:#fac118; --new-bg:#2a2412; --new-ln:#54471d;
+    --dead:#e57565; --dead-bg:#2c1a17; --dead-ln:#4a2b26;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#1a1814; --panel:#232019; --ink:#f4efe2; --ink-soft:#c3bba7;
+  --grey:#948c78; --line:#332f26; --line-2:#3d382c;
+  --accent:#fac118; --accent-ink:#fac118;
+  --keep:#5cc98a; --keep-bg:#182a20; --keep-ln:#2b4a37;
+  --rev:#e0a63a; --rev-bg:#2c2413; --rev-ln:#4a3d1c;
+  --new:#fac118; --new-bg:#2a2412; --new-ln:#54471d;
+  --dead:#e57565; --dead-bg:#2c1a17; --dead-ln:#4a2b26;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--ground); color:var(--ink);
+  font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  line-height:1.5; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1140px;margin:0 auto;padding:38px 24px 90px}
+.top{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  border-bottom:2px solid var(--line);padding-bottom:22px;margin-bottom:26px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .mark{font-family:"Anton",sans-serif;font-size:34px;letter-spacing:.5px;
+  background:var(--ink);color:var(--accent);line-height:1;padding:6px 12px 8px;border-radius:7px}
+.brand .sub{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--grey)}
+.top .meta{text-align:right;font-size:12.5px;color:var(--grey);line-height:1.7}
+h1{font-family:"Anton",sans-serif;font-weight:400;font-size:clamp(30px,4.6vw,50px);
+  line-height:.98;letter-spacing:.3px;text-wrap:balance;margin:8px 0 6px}
+h1 em{font-style:normal;color:var(--accent);-webkit-text-stroke:0}
+.lead{font-size:15.5px;color:var(--ink-soft);max-width:66ch;margin-bottom:26px}
+.lead b{color:var(--ink)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;position:relative;overflow:hidden}
+.kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--kc,var(--accent))}
+.kpi.k-keep{--kc:var(--keep)} .kpi.k-rev{--kc:var(--rev)} .kpi.k-new{--kc:var(--accent)} .kpi.k-dead{--kc:var(--dead)}
+.kpi .n{font-family:"Anton",sans-serif;font-size:38px;line-height:1;letter-spacing:.5px;
+  font-variant-numeric:tabular-nums;margin:2px 0 4px}
+.kpi .l{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--grey)}
+.kpi .d{font-size:12.5px;color:var(--ink-soft);margin-top:3px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:12.5px;color:var(--ink-soft);
+  margin:6px 0 16px;padding:12px 16px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.legend .li{display:flex;align-items:center;gap:7px}
+.dot{width:13px;height:13px;border-radius:4px;flex:0 0 auto;border:1.5px solid}
+.dot.keep{background:var(--keep-bg);border-color:var(--keep)}
+.dot.rev{background:var(--rev-bg);border-color:var(--rev)}
+.dot.new{background:var(--new-bg);border-color:var(--new-ln)}
+.dot.idea{background:var(--panel);border-color:var(--line-2);border-style:dashed}
+.dot.dead{background:var(--dead-bg);border-color:var(--dead)}
+.prog{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:30px}
+.pcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.pcard .ph{font-family:"Anton",sans-serif;font-size:12px;letter-spacing:.4px;color:var(--accent-ink);
+  background:var(--accent);display:inline-block;padding:2px 9px 3px;border-radius:6px;margin-bottom:8px}
+.pcard h4{font-size:13.5px;font-weight:800;margin-bottom:3px}
+.pcard p{font-size:12px;color:var(--ink-soft)}
+.sect{font-family:"Anton",sans-serif;font-weight:400;font-size:22px;letter-spacing:.4px;
+  margin:40px 0 4px;display:flex;align-items:center;gap:12px}
+.sect::after{content:"";flex:1;height:2px;background:var(--line)}
+.sect-lead{font-size:13.5px;color:var(--ink-soft);max-width:78ch;margin-bottom:20px}
+.tree{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px;align-items:start}
+.branch{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:4px 4px 8px;
+  box-shadow:0 1px 0 var(--line-2)}
+.branch.pillar{box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 32%,transparent)}
+.branch>.bh{display:flex;align-items:center;gap:10px;padding:15px 16px 4px}
+.branch>.bh .idx{font-family:"Anton",sans-serif;font-size:15px;color:var(--accent-ink);
+  background:var(--accent);width:26px;height:26px;border-radius:7px;display:grid;place-items:center;flex:0 0 auto}
+.branch>.bh h2{font-size:15px;font-weight:800;letter-spacing:.2px}
+.branch>.bh .bc{margin-left:auto;font-size:11px;font-weight:700;color:var(--grey);
+  font-variant-numeric:tabular-nums;text-align:right;line-height:1.3}
+.bmod{font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--grey);
+  padding:0 16px 9px 52px}
+.bmod b{color:var(--accent-ink)}
+.nodes{display:flex;flex-direction:column;gap:7px;padding:0 10px 6px}
+.node{display:block;text-decoration:none;color:inherit;border:1px solid var(--nl,var(--line));
+  background:var(--nb,var(--panel));border-radius:10px;padding:10px 12px;position:relative;
+  transition:transform .12s ease, box-shadow .12s ease}
+.node.keep{--nb:var(--keep-bg);--nl:var(--keep-ln)}
+.node.rev{--nb:var(--rev-bg);--nl:var(--rev-ln)}
+.node.new{--nb:var(--new-bg);--nl:var(--new-ln)}
+.node.idea{--nb:var(--panel);--nl:var(--line-2);border-style:dashed;border-width:1.5px}
+a.node:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(37,37,37,.10)}
+.node .nt{display:flex;align-items:center;gap:8px;font-size:13.6px;font-weight:700;line-height:1.3;flex-wrap:wrap}
+.node .tag{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;
+  padding:2px 6px;border-radius:5px;flex:0 0 auto}
+.tag.keep{color:var(--keep);background:color-mix(in srgb,var(--keep) 15%,transparent)}
+.tag.rev{color:var(--rev);background:color-mix(in srgb,var(--rev) 16%,transparent)}
+.tag.new{color:var(--accent-ink);background:var(--accent)}
+.tag.idea{color:var(--ink-soft);background:transparent;border:1.5px solid var(--line-2)}
+.node .nu{font-size:11.5px;color:var(--grey);margin-top:3px;word-break:break-all;font-variant-numeric:tabular-nums}
+.node .nd{font-size:12px;color:var(--ink-soft);margin-top:4px}
+.vol{display:inline-block;font-size:10.5px;font-weight:800;color:var(--accent-ink);
+  background:var(--accent);padding:1px 7px;border-radius:20px;margin-top:6px;letter-spacing:.2px}
+.pos{display:inline-block;font-size:10.5px;font-weight:800;color:var(--ink-soft);
+  background:color-mix(in srgb,var(--grey) 16%,transparent);padding:1px 7px;border-radius:20px;margin-top:6px;margin-left:5px;letter-spacing:.2px}
+.sub{margin-left:14px;border-left:2px dashed var(--line-2);padding-left:10px;display:flex;flex-direction:column;gap:7px}
+.kwgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;align-items:start}
+.kwcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 20px 20px;
+  box-shadow:0 1px 0 var(--line-2)}
+.kwcard h3{font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.kwcard h3.miss{color:var(--dead)} .kwcard h3.opp{color:var(--rev)}
+.kwcard .ch{font-size:12.5px;color:var(--ink-soft);margin-bottom:14px}
+.krow{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.krow:first-of-type{border-top:none}
+.krow .kw{font-size:13.5px;font-weight:600;flex:1;min-width:0}
+.krow .kw small{display:block;font-weight:400;color:var(--grey);font-size:11px;margin-top:1px}
+.krow .val{font-family:"Anton",sans-serif;font-size:17px;letter-spacing:.4px;font-variant-numeric:tabular-nums;flex:0 0 auto}
+.krow .val.v{color:var(--accent-ink)}
+.badge{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;
+  padding:2px 7px;border-radius:20px;flex:0 0 auto}
+.badge.ok{color:var(--keep);background:var(--keep-bg);border:1px solid var(--keep-ln)}
+.badge.warn{color:var(--dead);background:var(--dead-bg);border:1px solid var(--dead-ln)}
+.why{background:var(--rev-bg);border:1px solid var(--rev-ln);border-left:5px solid var(--rev);
+  border-radius:14px;padding:18px 22px;margin:6px 0 30px}
+.why h3{font-family:"Anton",sans-serif;font-weight:400;font-size:18px;letter-spacing:.3px;color:var(--rev);margin-bottom:8px}
+.why p{font-size:13.5px;color:var(--ink-soft);max-width:82ch}
+.why ul{list-style:none;margin:12px 0 10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:9px}
+.why li{font-size:13px;color:var(--ink-soft);display:flex;gap:9px;align-items:baseline;
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.why li::before{content:counter(w);counter-increment:w;font-family:"Anton",sans-serif;font-size:13px;
+  color:var(--accent-ink);background:var(--accent);width:22px;height:22px;border-radius:6px;
+  display:grid;place-items:center;flex:0 0 auto}
+.why ul{counter-reset:w}
+.why li b{color:var(--ink)}
+.why .fix{font-size:13.5px;color:var(--ink);font-weight:600;margin-top:4px}
+.tierhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.tierhead .tno{font-family:"Anton",sans-serif;font-size:13px;color:var(--accent-ink);background:var(--accent);
+  padding:2px 9px 3px;border-radius:6px}
+.kwcard .act{font-size:12px;color:var(--ink-soft);margin-top:12px;padding-top:11px;border-top:1px dashed var(--line-2)}
+.kwcard .act b{color:var(--ink)}
+.slug{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;
+  background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--accent-ink);
+  padding:1px 6px;border-radius:5px;white-space:nowrap}
+.alert{background:var(--dead-bg);border:1px solid var(--dead-ln);
+  border-left:5px solid var(--dead);border-radius:14px;padding:16px 20px;margin-top:22px}
+.alert h3{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--dead);margin-bottom:8px;
+  display:flex;align-items:center;gap:8px}
+.alert p{font-size:13.5px;color:var(--ink-soft);max-width:80ch}
+.alert code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;
+  background:color-mix(in srgb,var(--dead) 12%,transparent);color:var(--dead);padding:1px 6px;border-radius:5px}
+.alert ul{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:5px}
+.alert li{font-size:13px;display:flex;gap:8px;align-items:baseline}
+.alert li::before{content:"\2192";color:var(--dead);font-weight:800}
+.foot{margin-top:34px;padding-top:18px;border-top:2px solid var(--line);
+  font-size:12.5px;color:var(--grey);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:520px){ .top{align-items:flex-start} .top .meta{text-align:left} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.bh .fb-btns{display:inline-flex;gap:5px;margin-left:8px}
+.fb-ok,.fb-cm{font-family:"DM Sans",sans-serif;font-size:10px;font-weight:800;letter-spacing:.2px;
+  border:1px solid var(--line-2);background:var(--ground);color:var(--grey);border-radius:6px;padding:3px 7px;cursor:pointer;white-space:nowrap}
+.fb-ok:hover{border-color:var(--keep);color:var(--keep)}
+.fb-cm:hover{border-color:var(--rev);color:var(--rev)}
+.fb-ok.done{background:var(--keep-bg);border-color:var(--keep-ln);color:var(--keep)}
+.fb-cm.done{background:var(--rev-bg);border-color:var(--rev-ln);color:var(--rev)}
+.fb-box{display:none;padding:0 12px 10px}
+.fb-box textarea{width:100%;min-height:60px;border:1px solid var(--line-2);border-radius:8px;padding:8px 10px;
+  font-family:"DM Sans",sans-serif;font-size:13px;background:var(--ground);color:var(--ink);resize:vertical}
+.fb-box .send{margin-top:6px;font-weight:800;font-size:12px;background:var(--ink);color:#fff;border:none;border-radius:8px;padding:7px 14px;cursor:pointer}
+.fb-bar{margin:22px 0 8px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.fb-bar .hint{font-size:13.5px;color:var(--ink-soft);max-width:80ch}
+.fb-bar .hint b{color:var(--ink)}
+.fb-bar .big{align-self:flex-start;font-family:"DM Sans",sans-serif;font-weight:800;font-size:14px;background:var(--keep);color:#fff;border:none;border-radius:10px;padding:11px 22px;cursor:pointer}
+.fb-bar .big:disabled{opacity:.6;cursor:default}
+.fb-toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:11px 20px;border-radius:10px;font-size:13.5px;font-weight:700;opacity:0;pointer-events:none;transition:.25s;z-index:50}
+.fb-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.brand .logo{height:40px;width:auto;display:block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand .logo{filter:invert(1)}}
+:root[data-theme="dark"] .brand .logo{filter:invert(1)}
+.backlink{display:inline-block;margin:0 0 14px;font-size:12.5px;font-weight:800;text-decoration:none;color:#5a4600;background:rgba(250,193,24,.18);padding:7px 13px;border-radius:20px}
+.backlink:hover{background:rgba(250,193,24,.32)}
+</style>
+</head><body>
+
+<div class="wrap">
+  <a class="backlink" href="https://clients.741.studio/" target="_top">← Back to Dashboard</a>
+  <header class="top">
+    <div class="brand">
+      <img class="logo" src="data:image/png;base64,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" alt="741 Studio">
+      <span class="sub">Content &amp;<br>SEO Program</span>
+    </div>
+    <div class="meta">
+      Bali Healing Natural Health Center · Canggu, Bali<br>
+      balihealing.com · as of 18 Sep 2026 · data: DataForSEO + live crawl
+    </div>
+  </header>
+
+  <h1>Website Structure <em>Bali Healing</em></h1>
+  <p class="lead">The full site tree at a glance &mdash; <b>every existing page</b>, <b>what needs sharpening</b>, and <b>what's genuinely missing</b>, plus the new <b>Content / Blog</b> pillar that closes the authority gap. Color shows status; the yellow badge shows real, checked Google demand.</p>
+
+  <section class="kpis">
+    <div class="kpi k-keep"><div class="n">39</div><div class="l">Keep</div><div class="d">existing, on-topic, listed below</div></div>
+    <div class="kpi k-rev"><div class="n">1</div><div class="l">Update</div><div class="d">URL stays, terminology fix</div></div>
+    <div class="kpi k-new"><div class="n">8</div><div class="l">New</div><div class="d">real gaps, listed individually below</div></div>
+    <div class="kpi k-dead"><div class="n">18</div><div class="l">Legacy / duplicate</div><div class="d">near-duplicate URLs to clean up first (§14)</div></div>
+  </section>
+
+  <div class="legend">
+    <span class="li"><span class="dot keep"></span> Keep as is</span>
+    <span class="li"><span class="dot rev"></span> Update &mdash; URL stays, text/terms sharpened</span>
+    <span class="li"><span class="dot new"></span> New &mdash; real service or content gap, ready to build</span>
+    <span class="li"><span class="dot idea"></span> Suggestion &mdash; keyword opportunity only, confirm with Martin</span>
+    <span class="li"><span class="vol" style="margin:0">260/mo</span> checked search volume</span>
+    <span class="li"><span class="pos" style="margin:0">#33</span> current Google position</span>
+  </div>
+
+  <div class="why">
+    <h3>Why is core visibility only 1 of 7?</h3>
+    <p>DataForSEO shows 72 keywords ranking for balihealing.com (Indonesia). That looks healthy until you check <b>where</b> they land: 79% (57 of 72) funnel through the homepage, and only 7 are actual named-service terms — the rest is generic "healing"/spiritual/brand noise. Four real reasons:</p>
+    <ul>
+      <li><span><b>No blog / content layer at all.</b> 58 live pages, zero articles. Every "how does it work / is it safe / benefits" question — exactly what AI Overviews and ChatGPT cite — currently has nowhere on the site to be answered.</span></li>
+      <li><span><b>Acupuncture has zero dedicated page.</b> Real demand (260/mo "acupuncture bali"), a named GBP category, real review mentions — but ranks position 33, homepage-only. Single biggest quick win on the whole site.</span></li>
+      <li><span><b>Terminology mismatch on IV/infusions.</b> Real demand runs on "IV drip" (390+ combined variants, CPC up to $33) — the site only says "infusions." Demand is being missed at the wording level, not the service level.</span></li>
+      <li><span><b>Zero comparison/aesthetic content.</b> Nucleofill vs Rejuran/Profhilo, Microneedling vs Dermapen etc. — real commercial-intent searches, decent volume, currently unanswered anywhere on the site.</span></li>
+    </ul>
+    <p class="fix">→ This is what the new Content branch (§12), the new Acupuncture page (§4) and the Infusions terminology update (§10) fix. A fifth, separate issue &mdash; 18 duplicate/legacy pages diluting all of the above &mdash; is flagged in §14.</p>
+  </div>
+
+  <div class="prog">
+    <div class="pcard"><span class="ph">Now</span><h4>Foundation</h4><p>Acupuncture page + IV Drip terminology fix — both close real, already-confirmed demand.</p></div>
+    <div class="pcard"><span class="ph">Next</span><h4>Explainer layer</h4><p>"How it works / is it safe / benefits" posts for every core modality — the GEO/AEO layer, low volume each but this is what LLMs cite.</p></div>
+    <div class="pcard"><span class="ph">Then</span><h4>Authority multiplier</h4><p>Comparison posts + acupuncture-points hub — real commercial intent, zero competition on the site today.</p></div>
+  </div>
+
+  <div class="tree">
+
+    <!-- 1 Homepage -->
+    <div class="branch pillar">
+      <div class="bh"><span class="idx">1</span><h2>Homepage</h2><span class="bc">Pillar</span></div>
+      <div class="bmod">Money page</div>
+      <div class="nodes">
+        <a class="node keep" href="https://www.balihealing.com/" target="_blank" rel="noopener">
+          <div class="nt">Homepage <span class="tag keep">Keep</span></div>
+          <div class="nu">balihealing.com/</div>
+          <div class="nd">Just fixed (Sep 2026): 6 in-content links added (ozone, skin tag, naturopathy, facial, physio, TCM). Carries 79% of all site visibility — protect it, don't dilute it further.</div>
+          <span class="vol">bali healing (brand) 1,000/mo</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 2 Ozone & Autohemotherapy -->
+    <div class="branch pillar">
+      <div class="bh"><span class="idx">2</span><h2>Ozone &amp; Autohemotherapy</h2><span class="bc">4 keep</span></div>
+      <div class="bmod">Money cluster · best-performing on site</div>
+      <div class="nodes">
+        <a class="node keep" href="https://www.balihealing.com/ozonetherapy" target="_blank" rel="noopener">
+          <div class="nt">Ozone Therapy (Hub) <span class="tag keep">Keep</span></div>
+          <div class="nu">/ozonetherapy</div>
+          <div class="nd">Only service page on the whole site with a real independent ranking.</div>
+          <span class="vol">ozone therapy bali 170–210/mo</span><span class="pos">#6</span>
+        </a>
+        <a class="node keep" href="https://www.balihealing.com/ozone-hyperbaric-major-autohemotherapy" target="_blank" rel="noopener"><div class="nt">Hyperbaric Major Autohemotherapy <span class="tag keep">Keep</span></div><div class="nu">/ozone-hyperbaric-major-autohemotherapy</div><div class="nd">Flagship treatment; just received 3 new inbound internal links (Sep 2026).</div></a>
+        <a class="node keep" href="https://www.balihealing.com/ozone-minor-autohemotherapy" target="_blank" rel="noopener"><div class="nt">Ozone Minor Autohemotherapy <span class="tag keep">Keep</span></div><div class="nu">/ozone-minor-autohemotherapy</div></a>
+        <a class="node keep" href="https://www.balihealing.com/ozone-insufflation" target="_blank" rel="noopener"><div class="nt">Ozone Insufflation <span class="tag keep">Keep</span></div><div class="nu">/ozone-insufflation</div></a>
+      </div>
+    </div>
+
+    <!-- 3 Naturopathy -->
+    <div class="branch pillar">
+      <div class="bh"><span class="idx">3</span><h2>Naturopathy</h2><span class="bc">1 keep</span></div>
+      <div class="bmod">Money page · #1 Maps ranking</div>
+      <div class="nodes">
+        <a class="node keep" href="https://www.balihealing.com/naturopathyconsultations" target="_blank" rel="noopener">
+          <div class="nt">Naturopathy Consultations <span class="tag keep">Keep</span></div>
+          <div class="nu">/naturopathyconsultations</div>
+          <div class="nd">Dominant on Maps (naturopath ARP 1.8, 94% SoLV). Low search volume but near-top rank &mdash; protect, don't over-invest further.</div>
+          <span class="vol">naturopathy bali 20/mo</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 4 TCM & Acupuncture -->
+    <div class="branch pillar">
+      <div class="bh"><span class="idx">4</span><h2>TCM &amp; Acupuncture</h2><span class="bc">2 keep<br>1 new</span></div>
+      <div class="bmod">Biggest single gap on the site</div>
+      <div class="nodes">
+        <a class="node keep" href="https://www.balihealing.com/traditional-chinese-medicine-consultations" target="_blank" rel="noopener"><div class="nt">Traditional Chinese Medicine <span class="tag keep">Keep</span></div><div class="nu">/traditional-chinese-medicine-consultations</div></a>
+        <a class="node keep" href="https://www.balihealing.com/naet-allergytreatment" target="_blank" rel="noopener"><div class="nt">NAET Allergy Treatment <span class="tag keep">Keep</span></div><div class="nu">/naet-allergytreatment</div></a>
+        <a class="node new" href="#acupuncture-page">
+          <div class="nt">Acupuncture <span class="tag new">New</span></div>
+          <div class="nu">/acupuncture</div>
+          <div class="nd">Real GBP category, real review mentions, zero dedicated page. Currently ranks #33 homepage-only. This is a confirmed service, not a guess &mdash; just missing its own page.</div>
+          <span class="vol">acupuncture bali 260/mo</span><span class="pos">#33 (homepage)</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 5 Physio / Manual therapy -->
+    <div class="branch pillar">
+      <div class="bh"><span class="idx">5</span><h2>Physio &amp; Manual Therapy</h2><span class="bc">5 keep</span></div>
+      <div class="bmod">Confirmed real demand (Izzy baseline check, Sep 2026)</div>
+      <div class="nodes">
+        <a class="node keep" href="https://www.balihealing.com/physiotherapy" target="_blank" rel="noopener"><div class="nt">Physiotherapy <span class="tag keep">Keep</span></div><div class="nu">/physiotherapy</div><div class="nd">DataForSEO shows 0 volume but Autocomplete confirms real repeated searches &mdash; 0 = no data, not no demand. (/about-physiotherapy is a live duplicate &mdash; see §14.)</div></a>
+        <a class="node keep" href="https://www.balihealing.com/osteopathy-treatment" target="_blank" rel="noopener"><div class="nt">Osteopathy <span class="tag keep">Keep</span></div><div class="nu">/osteopathy-treatment</div></a>
+        <a class="node keep" href="https://www.balihealing.com/craniosacral-therapy" target="_blank" rel="noopener"><div class="nt">Craniosacral Therapy <span class="tag keep">Keep</span></div><div class="nu">/craniosacral-therapy</div><span class="vol">craniosacral therapy 210/mo (global)</span></a>
+        <a class="node keep" href="https://www.balihealing.com/neural-therapy" target="_blank" rel="noopener"><div class="nt">Neural Therapy <span class="tag keep">Keep</span></div><div class="nu">/neural-therapy</div></a>
+        <a class="node keep" href="https://www.balihealing.com/prolozone-injection" target="_blank" rel="noopener"><div class="nt">Prolozone Injection <span class="tag keep">Keep</span></div><div class="nu">/prolozone-injection</div></a>
+      </div>
+    </div>
+
+    <!-- 6 Mind & Energy -->
+    <div class="branch">
+      <div class="bh"><span class="idx">6</span><h2>Mind &amp; Energy</h2><span class="bc">4 keep</span></div>
+      <div class="bmod">Confirmed by GBP review tags (theta healing 10, hypnotherapy 11)</div>
+      <div class="nodes">
+        <a class="node keep" href="https://www.balihealing.com/reiki-sessions" target="_blank" rel="noopener"><div class="nt">Reiki Sessions <span class="tag keep">Keep</span></div><div class="nu">/reiki-sessions</div><span class="vol">reiki healing 390/mo</span></a>
+        <a class="node keep" href="https://www.balihealing.com/thetahealing-treatment" target="_blank" rel="noopener"><div class="nt">ThetaHealing <span class="tag keep">Keep</span></div><div class="nu">/thetahealing-treatment</div></a>
+        <a class="node keep" href="https://www.balihealing.com/clinical-hypnotherapy" target="_blank" rel="noopener"><div class="nt">Clinical Hypnotherapy <span class="tag keep">Keep</span></div><div class="nu">/clinical-hypnotherapy</div></a>
+        <a class="node keep" href="https://www.balihealing.com/access-bars-therapy" target="_blank" rel="noopener"><div class="nt">Access Bars Therapy <span class="tag keep">Keep</span></div><div class="nu">/access-bars-therapy</div></a>
+      </div>
+    </div>
+
+    <!-- 7 Beauty hub -->
+    <div class="branch pillar">
+      <div class="bh"><span class="idx">7</span><h2>Beauty Hub</h2><span class="bc">Pillar</span></div>
+      <div class="bmod">Underdeveloped GBP (Beauty Clinic: 5.0★/10 reviews vs. 4.6★/97 on Wellness)</div>
+      <div class="nodes">
+        <a class="node keep" href="https://www.balihealing.com/balihealingbeauty" target="_blank" rel="noopener"><div class="nt">Bali Healing Beauty (Hub) <span class="tag keep">Keep</span></div><div class="nu">/balihealingbeauty</div></a>
+        <a class="node keep" href="https://www.balihealing.com/beauty-consultations" target="_blank" rel="noopener"><div class="nt">Beauty Consultations <span class="tag keep">Keep</span></div><div class="nu">/beauty-consultations</div><div class="nd">Just received a new inbound link (Sep 2026).</div></a>
+      </div>
+    </div>
+
+    <!-- 8 Skin tag / mole -->
+    <div class="branch pillar">
+      <div class="bh"><span class="idx">8</span><h2>Skin Tag &amp; Mole Removal</h2><span class="bc">2 keep</span></div>
+      <div class="bmod">Money page · Ads landing page</div>
+      <div class="nodes">
+        <a class="node keep" href="https://www.balihealing.com/skintagandmoleremoval" target="_blank" rel="noopener">
+          <div class="nt">Skin Tag, Wart &amp; Mole Removal <span class="tag keep">Keep</span></div>
+          <div class="nu">/skintagandmoleremoval</div>
+          <div class="nd">Inbound links pushed from 2 → 6 (Sep 2026): Microneedling, PRP Face, Facial, Beauty Consultations.</div>
+          <span class="vol">skin tag removal bali 40/mo</span>
+        </a>
+        <a class="node keep" href="https://www.balihealing.com/dermatoscopy" target="_blank" rel="noopener"><div class="nt">Dermatoscopy <span class="tag keep">Keep</span></div><div class="nu">/dermatoscopy</div></a>
+      </div>
+    </div>
+
+    <!-- 9 Skin & injectables -->
+    <div class="branch">
+      <div class="bh"><span class="idx">9</span><h2>Skin &amp; Injectables</h2><span class="bc">14 keep</span></div>
+      <div class="bmod">Real, decent-volume comparison demand unanswered (§12)</div>
+      <div class="nodes">
+        <a class="node keep" href="https://www.balihealing.com/microneedling-collageninductiontherapy" target="_blank" rel="noopener"><div class="nt">Microneedling <span class="tag keep">Keep</span></div><div class="nu">/microneedling-collageninductiontherapy</div><span class="vol">microneedling 5,400/mo</span></a>
+        <a class="node keep" href="https://www.balihealing.com/nucleofillinjection" target="_blank" rel="noopener"><div class="nt">Nucleofill Injection <span class="tag keep">Keep</span></div><div class="nu">/nucleofillinjection</div><span class="vol">nucleofill 2,400/mo</span></a>
+        <a class="node keep" href="https://www.balihealing.com/hyaluronic-acid-injections" target="_blank" rel="noopener"><div class="nt">Hyaluronic Acid Injections <span class="tag keep">Keep</span></div><div class="nu">/hyaluronic-acid-injections</div></a>
+        <a class="node keep" href="https://www.balihealing.com/plateletrichplasma-face" target="_blank" rel="noopener"><div class="nt">PRP Face <span class="tag keep">Keep</span></div><div class="nu">/plateletrichplasma-face</div></a>
+        <div class="sub">
+          <a class="node keep" href="https://www.balihealing.com/plateletrichplasma-hair" target="_blank" rel="noopener"><div class="nt">PRP Hair <span class="tag keep">Keep</span></div></a>
+          <a class="node keep" href="https://www.balihealing.com/dmaemesotherapytreatment" target="_blank" rel="noopener"><div class="nt">DMAE Mesotherapy <span class="tag keep">Keep</span></div></a>
+          <a class="node keep" href="https://www.balihealing.com/ppcfatreductiontreatment" target="_blank" rel="noopener"><div class="nt">PPC Fat Reduction <span class="tag keep">Keep</span></div></a>
+          <a class="node keep" href="https://www.balihealing.com/acidpeelingtreatment" target="_blank" rel="noopener"><div class="nt">Acid Peeling <span class="tag keep">Keep</span></div></a>
+          <a class="node keep" href="https://www.balihealing.com/hydraglofacial" target="_blank" rel="noopener"><div class="nt">HydraGlo Facial <span class="tag keep">Keep</span></div></a>
+          <a class="node keep" href="https://www.balihealing.com/cellrejettreatment" target="_blank" rel="noopener"><div class="nt">Cell Rejet <span class="tag keep">Keep</span></div></a>
+          <a class="node keep" href="https://www.balihealing.com/cleanseandhydratebasicfacial" target="_blank" rel="noopener"><div class="nt">Cleanse &amp; Hydrate Facial <span class="tag keep">Keep</span></div></a>
+          <a class="node keep" href="https://www.balihealing.com/advancedfacialrejuvenation" target="_blank" rel="noopener"><div class="nt">Advanced Facial Rejuvenation <span class="tag keep">Keep</span></div></a>
+          <a class="node keep" href="https://www.balihealing.com/facial" target="_blank" rel="noopener"><div class="nt">Facial Treatments (Hub) <span class="tag keep">Keep</span></div></a>
+          <a class="node keep" href="https://www.balihealing.com/gyneco-aesthetic" target="_blank" rel="noopener"><div class="nt">Gyneco-Aesthetic <span class="tag keep">Keep</span></div></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 IV Drip / Infusions -->
+    <div class="branch pillar">
+      <div class="bh"><span class="idx">10</span><h2>IV Drip / Infusions</h2><span class="bc">1 update<br>1 new</span></div>
+      <div class="bmod">Terminology gap &mdash; real demand, wrong wording</div>
+      <div class="nodes">
+        <a class="node rev" href="https://www.balihealing.com/infusionstreatment" target="_blank" rel="noopener">
+          <div class="nt">Infusions <span class="tag rev">Update</span></div>
+          <div class="nu">/infusionstreatment</div>
+          <div class="nd">Site only says "infusions" &mdash; real demand runs on "IV drip." Add "IV drip" to title/H1/body without dropping "infusions." Currently ranks #38.</div>
+          <span class="vol">iv drip vitamin 12,100/mo · iv drip canggu 390/mo</span><span class="pos">#38</span>
+        </a>
+        <a class="node new" href="#bali-belly-page">
+          <div class="nt">"Bali Belly" IV Drip landing page <span class="tag new">New</span></div>
+          <div class="nu">/bali-belly-iv-drip</div>
+          <div class="nd">Very Bali-specific tourist-illness cluster, extremely high commercial intent (CPC $8&ndash;33), currently zero content. Location variants (Canggu/Seminyak/Uluwatu/Ubud) confirm real local searches, not just seed noise.</div>
+          <span class="vol">bali belly iv drip [+city] 20–390/mo per variant</span>
+        </a>
+        <a class="node keep" href="https://www.balihealing.com/intramuscularshotstreatment" target="_blank" rel="noopener"><div class="nt">Intramuscular Shots <span class="tag keep">Keep</span></div><div class="nu">/intramuscularshotstreatment</div></a>
+      </div>
+    </div>
+
+    <!-- 11 Wellness hub -->
+    <div class="branch pillar">
+      <div class="bh"><span class="idx">11</span><h2>Wellness Hub</h2><span class="bc">Pillar</span></div>
+      <div class="bmod">Nav-only today, receives no in-content links</div>
+      <div class="nodes">
+        <a class="node keep" href="https://www.balihealing.com/wellness" target="_blank" rel="noopener"><div class="nt">Wellness (Hub) <span class="tag keep">Keep</span></div><div class="nu">/wellness</div><div class="nd">Add one "part of our holistic wellness treatments" link from each cluster's future related-block.</div></a>
+      </div>
+    </div>
+
+    <!-- 12 Content / Blog -->
+    <div class="branch pillar">
+      <div class="bh"><span class="idx">12</span><h2>Content / Blog</h2><span class="bc">6 new<br>3 idea</span></div>
+      <div class="bmod">Brand-new pillar &mdash; does not exist on site today</div>
+      <div class="nodes">
+        <a class="node new" href="#explainer-ozone">
+          <div class="nt">Blog: Is Ozone Therapy Safe? How It Works <span class="tag new">New</span></div>
+          <div class="nd">AI-Overview/ChatGPT citation layer for the site's strongest existing service.</div>
+          <span class="vol">is ozone therapy safe · how does ozone therapy work 10/mo each</span>
+        </a>
+        <a class="node new" href="#explainer-naturopathy">
+          <div class="nt">Blog: What Is Naturopathy? Is It Legit? <span class="tag new">New</span></div>
+          <span class="vol">what is naturopathy 30/mo · is naturopathy legit 10/mo</span>
+        </a>
+        <a class="node new" href="#explainer-acupuncture">
+          <div class="nt">Blog: Does Acupuncture Work? <span class="tag new">New</span></div>
+          <div class="nd">Pairs with the new /acupuncture service page (§4) &mdash; links both ways.</div>
+          <span class="vol">does acupuncture work 70/mo · how does acupuncture work 50/mo</span>
+        </a>
+        <a class="node new" href="#explainer-craniosacral">
+          <div class="nt">Blog: Does Craniosacral Therapy Work? Benefits <span class="tag new">New</span></div>
+          <span class="vol">does craniosacral therapy work · craniosacral therapy benefits 10/mo each</span>
+        </a>
+        <a class="node new" href="#explainer-reiki">
+          <div class="nt">Blog: What Is Reiki? <span class="tag new">New</span></div>
+          <span class="vol">what is reiki 110/mo · apa itu reiki (ID) 140/mo</span>
+        </a>
+        <a class="node new" href="#acupoints-hub">
+          <div class="nt">Acupuncture Points Glossary (hub + entries) <span class="tag new">New</span></div>
+          <div class="nd">~30 distinct "[point] acupuncture point" queries (ST36, GB34, LI4…), 20&ndash;210/mo each. Classic pillar-and-cluster topical-authority play &mdash; makes the site the entity Google associates with TCM in Bali.</div>
+          <span class="vol">aggregate ~1,500/mo across the point-name cluster</span>
+        </a>
+        <a class="node idea" href="#comparison-posts">
+          <div class="nt">Comparison posts: Nucleofill vs Rejuran/Profhilo/Juvelook/Sculptra <span class="tag idea">Suggestion</span></div>
+          <div class="nd">Real commercial-intent volume, but only worth writing for the specific brands Bali Healing actually stocks &mdash; confirm with clinic before writing.</div>
+          <span class="vol">20–140/mo per comparison term</span>
+        </a>
+        <a class="node idea" href="#microneedling-vs">
+          <div class="nt">Microneedling vs Dermapen / with RF / with PRP <span class="tag idea">Suggestion</span></div>
+          <div class="nd">Real volume, needs confirming which specific device/protocol Bali Healing uses before publishing a "vs" claim.</div>
+          <span class="vol">20–210/mo per term</span>
+        </a>
+        <a class="node idea" href="#tcm-education">
+          <div class="nt">General TCM education (five elements, meridians, yin/yang) <span class="tag idea">Suggestion</span></div>
+          <div class="nd">Global, not Bali-specific search volume &mdash; pure authority-building, lower priority. Confirm before investing writing time here.</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 13 Contact / legal -->
+    <div class="branch">
+      <div class="bh"><span class="idx">13</span><h2>Contact · Legal</h2><span class="bc">2 keep</span></div>
+      <div class="bmod">Required pages</div>
+      <div class="nodes">
+        <a class="node keep" href="https://www.balihealing.com/contactus" target="_blank" rel="noopener"><div class="nt">Contact Us <span class="tag keep">Keep</span></div><div class="nu">/contactus</div></a>
+        <a class="node keep" href="https://www.balihealing.com/aboutus" target="_blank" rel="noopener"><div class="nt">About Us <span class="tag keep">Keep</span></div><div class="nu">/aboutus</div></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== KEYWORDS ===================== -->
+  <h2 class="sect">Keywords &amp; Research</h2>
+  <p class="sect-lead">Basis: DataForSEO pull 8 Sep 2026 (rankings + checked volume, Indonesia) + fresh keyword-suggestions pull 18 Sep 2026 (blog-topic research, seeded from all 14 core services). Short version: the site is found almost only for its brand name &mdash; its actual services barely rank anywhere but the homepage.</p>
+
+  <div class="kwgrid">
+    <div class="kwcard">
+      <h3 class="miss">What it's found for today</h3>
+      <p class="ch">72 ranked keywords total &mdash; 79% land on the homepage, only 7 are actual named-service terms.</p>
+      <div class="krow"><div class="kw">ozone therapy bali</div><span class="badge ok">#6</span><div class="val v">170</div></div>
+      <div class="krow"><div class="kw">ozone therapy</div><span class="badge warn">#25</span><div class="val v">720</div></div>
+      <div class="krow"><div class="kw">bali iv drip</div><span class="badge warn">#38</span><div class="val v">210</div></div>
+      <div class="krow"><div class="kw">acupuncture bali</div><span class="badge warn">#33 (homepage)</span><div class="val v">260</div></div>
+      <div class="krow"><div class="kw">naturopath bali<small>Maps, not organic</small></div><span class="badge ok">#1 Maps</span><div class="val v">20</div></div>
+      <div class="krow"><div class="kw">Craniosacral, Reiki, Access Bars, Prolozone…<small>zero named-service ranking</small></div><span class="badge warn">not in Top 100</span></div>
+    </div>
+
+    <div class="kwcard">
+      <h3 class="opp">Biggest opportunities by volume</h3>
+      <p class="ch">Real, checked demand with no matching content today.</p>
+      <div class="krow"><div class="kw">iv drip vitamin(s)</div><div class="val">12,100</div></div>
+      <div class="krow"><div class="kw">microneedling</div><div class="val">5,400</div></div>
+      <div class="krow"><div class="kw">vitamin c iv therapy</div><div class="val">4,400</div></div>
+      <div class="krow"><div class="kw">acupuncture bali</div><div class="val">260</div></div>
+      <div class="krow"><div class="kw">reiki healing</div><div class="val">390</div></div>
+      <div class="krow"><div class="kw">nucleofill</div><div class="val">2,400</div></div>
+      <div class="krow"><div class="kw">craniosacral therapy</div><div class="val">210</div></div>
+      <div class="krow"><div class="kw">hyaluronic acid injection</div><div class="val">210</div></div>
+      <div class="krow"><div class="kw">bali belly iv drip [city]<small>per-city variant, tourist commercial cluster</small></div><div class="val">20–390</div></div>
+      <div class="krow"><div class="kw">iv drip canggu</div><div class="val">390</div></div>
+    </div>
+  </div>
+
+  <h2 class="sect" id="cleanup">⚠ §14 · Clean Up Before Adding New Content</h2>
+  <p class="sect-lead">Cross-checked the full 58-URL sitemap by hand (18 Sep 2026) &mdash; all 9 sampled below return live HTTP 200, none redirect. That means <b>18 of 58 pages (31%)</b> are genuine duplicate/legacy content, splitting link equity and confusing Google on which URL is the real page for each service. Consolidate these first (301 the duplicate into the primary, keep the primary URL) &mdash; before publishing anything new.</p>
+  <div class="alert">
+    <h3>⚠ 18 duplicate / legacy URLs found</h3>
+    <p>Each pair below: <b>keep</b> the primary URL (used in the tree above), <code>301</code> the duplicate into it.</p>
+    <ul>
+      <li><code>/about-acid-peeling</code> → keep <code>/acidpeelingtreatment</code></li>
+      <li><code>/about-clinicalhypnotherapy</code> → keep <code>/clinical-hypnotherapy</code></li>
+      <li><code>/about-craniosacraltherapy</code> → keep <code>/craniosacral-therapy</code></li>
+      <li><code>/about-naet-allergy-treatment</code> → keep <code>/naet-allergytreatment</code></li>
+      <li><code>/about-neural-therapy</code> → keep <code>/neural-therapy</code></li>
+      <li><code>/about-osteopathy</code> → keep <code>/osteopathy-treatment</code></li>
+      <li><code>/about-physiotherapy</code> → keep <code>/physiotherapy</code></li>
+      <li><code>/about-traditional-chinesemedicine</code> → keep <code>/traditional-chinese-medicine-consultations</code></li>
+      <li><code>/aboutnucleofill</code> → keep <code>/nucleofillinjection</code></li>
+      <li><code>/dmaemesotherapy</code> → keep <code>/dmaemesotherapytreatment</code></li>
+      <li><code>/gynecoaesthetic</code> → keep <code>/gyneco-aesthetic</code></li>
+      <li><code>/hyaluronicacidinjectionstreatment</code> → keep <code>/hyaluronic-acid-injections</code></li>
+      <li><code>/infusions</code> → keep <code>/infusionstreatment</code></li>
+      <li><code>/intramuscularshots</code> → keep <code>/intramuscularshotstreatment</code></li>
+      <li><code>/microneedling</code> → keep <code>/microneedling-collageninductiontherapy</code></li>
+      <li><code>/naturalbeautyatbalihealingbeauty</code> → keep <code>/balihealingbeauty</code></li>
+      <li><code>/ppcfatreduction</code> → keep <code>/ppcfatreductiontreatment</code></li>
+      <li><code>/prptreatment</code> → confirm with clinic: consolidate into <code>/plateletrichplasma-face</code> or <code>/plateletrichplasma-hair</code>, or keep as a genuine PRP overview page &mdash; unclear from crawl alone.</li>
+    </ul>
+  </div>
+
+  <div class="alert">
+    <h3>⚠ Open data gaps &mdash; honest, not filled in</h3>
+    <p>Per the 741 standard: real data only, gaps stated, never guessed.</p>
+    <ul>
+      <li>Google Search Console access not confirmed for balihealing.com &mdash; all ranking data above is DataForSEO only, not GSC-verified clicks/impressions.</li>
+      <li>Comparison-post topics (Nucleofill vs X, Microneedling vs Dermapen) need clinic confirmation on which specific brands/devices are actually used before writing &mdash; marked as Suggestion, not New.</li>
+      <li>"Bali Belly IV Drip" page needs clinic confirmation this is a service they want to market under that name (it's a tourist-slang term, not a medical one) before building.</li>
+    </ul>
+  </div>
+
+  <div class="fb-bar">
+    <div class="hint"><b>Review:</b> Go through the branches above. If a branch looks right, click <b>✓ Looks good</b>. If something's off or missing, click <b>💬</b> and note it. When everything overall works, hit the button below.</div>
+    <button class="big" id="fb-approve-all">✅ Looks good — approve this build plan</button>
+  </div>
+
+  <footer class="foot">
+    <span>741 Studio · Content &amp; SEO Program · Bali Healing</span>
+    <span>39 keep · 1 update · 8 new · 3 suggestions · 18 duplicate URLs flagged · built 18 Sep 2026</span>
+  </footer>
+</div>
+<div class="fb-toast" id="fb-toast"></div>
+<script>
+(function(){
+  var SB='https://galjmtozcgxcwtzkzbpi.supabase.co/rest/v1/report_feedback';
+  var KEY='sb_publishable_hHvVDgtVIsU8E1GhlWB7RA_ZGNKYUln';
+  var CLIENT='d0519d13-0bfc-4dfb-b512-57bf550387e6';
+  var SLUG='balihealing-seitenbaum-2026-09';
+  var LS='fb-'+SLUG; var state={}; try{state=JSON.parse(localStorage.getItem(LS)||'{}')}catch(e){}
+  function save(){try{localStorage.setItem(LS,JSON.stringify(state))}catch(e){}}
+  function toast(m){var t=document.getElementById('fb-toast');t.textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2600)}
+  function post(section,verdict,comment,cb){
+    fetch(SB,{method:'POST',headers:{'apikey':KEY,'Authorization':'Bearer '+KEY,'Content-Type':'application/json','Prefer':'return=minimal'},
+      body:JSON.stringify({client_id:CLIENT,report_slug:SLUG,section_key:section,verdict:verdict,comment:comment||null})})
+    .then(function(r){if(r.ok){cb&&cb(true)}else{toast('Send failed — try again.');cb&&cb(false)}})
+    .catch(function(){toast('No connection — try again.');cb&&cb(false)});
+  }
+  document.querySelectorAll('.bh').forEach(function(h,i){
+    var h2=h.querySelector('h2'); if(!h2) return;
+    var key=(i+1)+' · '+h2.textContent.trim();
+    var wrap=document.createElement('span'); wrap.className='fb-btns';
+    var ok=document.createElement('button'); ok.className='fb-ok'; ok.textContent='✓ Looks good';
+    var cm=document.createElement('button'); cm.className='fb-cm'; cm.textContent='💬';
+    wrap.appendChild(ok); wrap.appendChild(cm); h.appendChild(wrap);
+    var box=document.createElement('div'); box.className='fb-box';
+    box.innerHTML='<textarea placeholder="What should change or be added here?"></textarea><br><button class="send">Send comment</button>';
+    h.insertAdjacentElement('afterend',box);
+    if(state[key]==='ok'){ok.classList.add('done');ok.textContent='✓ Approved'}
+    if(state[key]==='cm'){cm.classList.add('done')}
+    ok.addEventListener('click',function(){ if(ok.classList.contains('done'))return;
+      post(key,'approved',null,function(s){if(s){ok.classList.add('done');ok.textContent='✓ Approved';state[key]='ok';save();toast('Block approved — thanks!')}}); });
+    cm.addEventListener('click',function(){box.style.display=box.style.display==='block'?'none':'block';if(box.style.display==='block')box.querySelector('textarea').focus()});
+    box.querySelector('.send').addEventListener('click',function(){
+      var v=box.querySelector('textarea').value.trim(); if(!v){toast('Write a comment first.');return}
+      post(key,'change',v,function(s){if(s){box.style.display='none';cm.classList.add('done');state[key]='cm';save();toast('Comment sent — thanks!')}}); });
+  });
+  var all=document.getElementById('fb-approve-all');
+  if(all){ if(state['GESAMT']==='ok'){all.disabled=true;all.textContent='✅ Approved — thanks!'}
+    all.addEventListener('click',function(){ if(all.disabled)return;
+      post('GESAMT','approved','Overall approval build plan',function(s){
+        if(s){all.disabled=true;all.textContent='✅ Approved — thanks!';state['GESAMT']='ok';save();toast('All approved — we\'ll build it!')}}); }); }
+})();
+</script>
+</body></html>

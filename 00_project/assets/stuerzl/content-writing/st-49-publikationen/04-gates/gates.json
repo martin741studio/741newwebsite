@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-11",
+ "page": "st-49-publikationen/05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G2 legal": {
+   "mode": "brao",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "info": {
+    "words": 1325,
+    "placeholders": 4
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "2 Sätze über 28 Wörter (zum Beispiel: 900.000 Euro wegen eines Verstoßes gegen die Verpflichtung, durch geei...)"
+   ],
+   "counts": {
+    "du": 0,
+    "sie": 29,
+    "ich": 0,
+    "wir": 13
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1325,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Begriffs- und Norm-Prüfung nicht gelaufen (mit --fetch starten)"
+   ]
+  }
+ }
+}

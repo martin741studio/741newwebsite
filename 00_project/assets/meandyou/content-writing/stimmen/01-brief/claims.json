@@ -1,0 +1,358 @@
+{
+ "claims": [
+  {
+   "id": "C01",
+   "type": "number",
+   "text": "ProvenExpert: 250 veröffentlichte Bewertungen von 251 (99 %), davon 227 mit 5 Sternen, 21 mit 4, 2 mit 3, 0 mit 2, 0 mit 1. Profil zeigt keine Gesamtnote im Scrape; Gesamtnote nicht nennen",
+   "source": "provenexpert.com/de-de/michael-ehlers, Firecrawl maxAge 0, 2026-10-12",
+   "numbers": [
+    "250",
+    "251",
+    "227",
+    "21",
+    "2",
+    "0",
+    "1",
+    "5",
+    "4",
+    "3",
+    "99"
+   ],
+   "must_appear": [
+    "250 Bewertungen"
+   ],
+   "required": true
+  },
+  {
+   "id": "C03",
+   "type": "number",
+   "text": "über 8.000 Teilnehmer",
+   "source": "meandyou.de 2026-10-11",
+   "numbers": [
+    "8.000",
+    "8.000+"
+   ],
+   "must_appear": [
+    "8.000"
+   ],
+   "required": true
+  },
+  {
+   "id": "C04",
+   "type": "number",
+   "text": "seit über 30 Jahren Rhetoriktrainer",
+   "source": "meandyou.de 2026-10-11 (Konflikt 25 Jahre, siehe OPEN-FLAGS)",
+   "numbers": [
+    "30",
+    "30+"
+   ],
+   "must_appear": [
+    "30 Jahre"
+   ],
+   "required": true
+  },
+  {
+   "id": "C07",
+   "type": "fact",
+   "text": "3 Tage Intensivtraining + 1 Tag Get Together, 3 Videoanalysen mit Sofort-Feedback, VR-Training, Plätze 14/10/12",
+   "source": "PDF 2026 Michael Ehlers Kursinhalte R1-R3 4 Tage",
+   "numbers": [
+    "3",
+    "1",
+    "14",
+    "10",
+    "12"
+   ],
+   "must_appear": [
+    "Get Together"
+   ],
+   "required": true
+  },
+  {
+   "id": "C08",
+   "type": "fact",
+   "text": "Gespräch 30 Minuten, kostenlos, online",
+   "source": "Calendly Sichtbarkeit Neu (30 min), Copy Deck R3",
+   "numbers": [
+    "30"
+   ],
+   "must_appear": [
+    "30 Minuten"
+   ],
+   "required": true
+  },
+  {
+   "id": "C09",
+   "type": "fact",
+   "text": "Telefon Kontakt +49 15888367664",
+   "source": "meandyou.de Footer 2026-10-11",
+   "numbers": [
+    "49",
+    "15888367664"
+   ],
+   "must_appear": [
+    "15888367664"
+   ],
+   "required": false
+  },
+  {
+   "id": "C11",
+   "type": "fact",
+   "text": "Peter Escher, Moderator MDR: Trotz 40 Jahren Medienerfahrung ...",
+   "source": "meandyou.de Zitate 2026-10-11",
+   "numbers": [
+    "40"
+   ],
+   "must_appear": [
+    "Peter Escher"
+   ],
+   "required": false
+  },
+  {
+   "id": "C13",
+   "type": "fact",
+   "text": "Seminarorte: Mallorca, Barcelona, Zypern, Dubai, Frankfurt, Berlin",
+   "source": "meandyou.de Terminliste 2026-10-11",
+   "numbers": [
+    "6"
+   ],
+   "must_appear": [
+    "Mallorca",
+    "Barcelona"
+   ],
+   "required": true
+  },
+  {
+   "id": "C16",
+   "type": "fact",
+   "text": "Calendly schickt nach der Buchung eine Bestätigung per E-Mail; Setter erinnert per WhatsApp",
+   "source": "Calendly-Standard; Funnel-Check 06.10., No-Show-Plan 08.10.",
+   "numbers": [],
+   "required": false,
+   "must_appear": []
+  },
+  {
+   "id": "C19",
+   "type": "fact",
+   "text": "Video-Stimmen: 3 Videos, Länge 1:00, 1:12, 1:23",
+   "source": "meandyou.de Wistia, 2026-10-11",
+   "numbers": [
+    "3",
+    "1:00",
+    "1:12",
+    "1:23"
+   ],
+   "required": false,
+   "must_appear": []
+  },
+  {
+   "id": "M01",
+   "type": "fact",
+   "text": "Beginn 1990, erstes Rhetorikseminar mit 18 Jahren",
+   "source": "institut-ehlers.de/michael-ehlers, Firecrawl 2026-10-12 (1990 bis heute); Amazon-Autorenseite (first rhetoric seminar at 18)",
+   "numbers": [
+    "1990",
+    "18"
+   ],
+   "must_appear": [
+    "1990"
+   ],
+   "required": true
+  },
+  {
+   "id": "M02",
+   "type": "credential",
+   "text": "Lehrbeauftragter an der Universität St. Gallen (Rhetorik und Kommunikation mit Studierenden); Expert Lead am SGMI Center for Rhetoric, SGMI Management Institut St. Gallen, getrennt vom Lehrauftrag",
+   "source": "institut-ehlers.de/michael-ehlers, Firecrawl 2026-10-12",
+   "numbers": [],
+   "must_appear": [
+    "St. Gallen"
+   ],
+   "required": true
+  },
+  {
+   "id": "M04",
+   "type": "number",
+   "text": "neun Bücher als Autor oder Herausgeber; Titel: Nie wieder sprachlos!, Rhetorik. Die Kunst der Rede im digitalen Zeitalter (2018), Die 5 Säulen der positiven Kommunikation, Sales Code 55, Social Audio, Herzlich willkommen im Datengefängnis, Kommunikationsrevolution Social Media, Rhetorik: Sales-up-Call, Der Fisch stinkt vom Kopf (2014, als Hein Hansen)",
+   "source": "institut-ehlers.de/michael-ehlers, Firecrawl 2026-10-12; Amazon B01EV5J4CO; institut-fuer-persoenlichkeit.de",
+   "numbers": [
+    "9",
+    "5",
+    "2018",
+    "2014",
+    "55"
+   ],
+   "must_appear": [
+    "neun Bücher"
+   ],
+   "required": true
+  },
+  {
+   "id": "M08",
+   "type": "fact",
+   "text": "Methode Persönlichkeit, Kongruenz, Wirkung; kein Schauspiel; direkte Rückmeldung",
+   "source": "Copy Deck R3; meandyou.de; institut-ehlers.de/michael-ehlers, Firecrawl 2026-10-12",
+   "numbers": [],
+   "must_appear": [
+    "Persönlichkeit. Kongruenz. Wirkung."
+   ],
+   "required": true
+  },
+  {
+   "id": "M09",
+   "type": "fact",
+   "text": "Institut in Hallstadt bei Bamberg; Sarna Röser (Bundesvorsitzende Die Jungen Unternehmer) Zitat: Ein begeisterndes Training mit einer anregenden und humorvollen Atmosphäre. Rundum gelungen.",
+   "source": "GBP; meandyou.de",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "S01",
+   "type": "fact",
+   "text": "ProvenExpert-Profil aktiv seit 04.03.2016, letzte Aktualisierung 04.05.2026; Plattformtext: Alle Bewertungen sind subjektive Meinungen der Verfasser; Bewertungen erfolgen freiwillig und können nicht gekauft werden",
+   "source": "provenexpert.com/de-de/michael-ehlers, 2026-10-12",
+   "numbers": [
+    "2016",
+    "2026",
+    "04.03.2016"
+   ],
+   "must_appear": [
+    "2016"
+   ],
+   "required": true
+  },
+  {
+   "id": "S02",
+   "type": "fact",
+   "text": "Google-Unternehmensprofil Institut Michael Ehlers GmbH mit Bewertungen; Sternwert und Anzahl werden nicht gezeigt (Martin 12.10.); Zitate erlaubt außer G13",
+   "source": "Google Maps, gelesen 2026-10-11 (reviews.md)",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "V1",
+   "type": "quote",
+   "text": "Video 1 (1:00): Früher brauchte ich zehn Minuten, Dinge zu erklären. Heute gelingt mir das in zwei Minuten und jeder versteht mich gleich. / Ich hab im Internet recherchiert, Bücher gelesen, aber das ist letztendlich einfach alles trocken. Es ist kein echtes Üben, man bekommt kein Feedback. / Es gab auf jeden Fall Missverständnisse. / Ja, mein Selbstbewusstsein ist auf jeden Fall gewachsen. / Ich bin überzeugt davon, dass ich jetzt einfach besser hier rausgeh, als ich reinkam. / empfiehlt das Seminar Geschäftsführern",
+   "source": "Wistia gjg3u0s4ul Testimonial 1, deutsche Untertitel (ist-seite/wistia_gjg3u0s4ul.json)",
+   "numbers": [
+    "10",
+    "2",
+    "zehn",
+    "zwei"
+   ],
+   "must_appear": [
+    "zehn Minuten"
+   ],
+   "required": true
+  },
+  {
+   "id": "V2",
+   "type": "quote",
+   "text": "Video 2 (1:12): gar keinen Spaß mehr daran hatte, irgendwie vor denen zu sprechen / weil mir die Werkzeuge fehlen, wie kann ich wirklich frei sprechen / Ich hab mich tatsächlich jetzt auch kurz vor dem Seminar zum Teil vor den Konflikten gescheut. / ich war irgendwie noch 'n bisschen aufgeregt und es war auch 'n bisschen Lampenfieber da, aber gar nicht mehr dieses extreme Herzpochen / Mitarbeitergespräch aufgeschoben. Abschlussquote 30 Prozent NICHT zitieren (Untertitel unklar)",
+   "source": "Wistia kid9rty4hw Testimonial 2, deutsche Untertitel",
+   "numbers": [],
+   "must_appear": [
+    "Herzpochen"
+   ],
+   "required": true
+  },
+  {
+   "id": "V3",
+   "type": "quote",
+   "text": "Video 3 (1:23): Unsere Teammeetings gingen von zwei Stunden auf fünfundvierzig Minuten runter und wir sind produktiver geworden. / Mein Selbstbewusstsein vor dem Seminar war bei minus eins in Gesprächen. / Nach der ersten Übung haben wir Feedback bekommen. Das hat sich eingeprägt. / In den ersten sieben Tagen nach dem Seminar habe ich schon die Mitarbeitergespräche ganz anders geführt. / früher war ich schneller, viel zu schnell eigentlich / Ich hätte nie gedacht, dass ich innerhalb von nur drei Tagen die ganzen Werkzeuge an die Hand bekomme, ein guter Redner zu werden.",
+   "source": "Wistia o9x6ztrtrv Testimonial 3, deutsche Untertitel",
+   "numbers": [
+    "2",
+    "45",
+    "7",
+    "3",
+    "minus eins",
+    "sieben",
+    "drei",
+    "zwei",
+    "fünfundvierzig"
+   ],
+   "must_appear": [
+    "fünfundvierzig Minuten"
+   ],
+   "required": true
+  },
+  {
+   "id": "L1",
+   "type": "quote",
+   "text": "Sarna Röser, Bundesvorsitzende Die Jungen Unternehmer Berlin: Ein begeisterndes Training mit einer anregenden und humorvollen Atmosphäre. Rundum gelungen.",
+   "source": "meandyou.de 2026-10-11",
+   "numbers": [],
+   "must_appear": [
+    "Sarna Röser"
+   ],
+   "required": true
+  },
+  {
+   "id": "L3",
+   "type": "quote",
+   "text": "Emrullah Ates, Teilnehmer (Google): Das Seminar, oder egal, wie man es nennen mag, war einfach genial. Ich habe in diesem Kurs mehr gelernt als in all meinen bisherigen Schulungen zusammen. Keine Sekunde habe ich mich gelangweilt.",
+   "source": "meandyou.de; Google G9",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "L4",
+   "type": "quote",
+   "text": "Neven Subotic, Fußball-Bundesliga-Profi: Zitat auf der Live-Seite ist ein Bruchstück; nur mit Platzhalter vollständiger Wortlaut",
+   "source": "meandyou.de 2026-10-11",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "P01",
+   "type": "quote",
+   "text": "ProvenExpert-Zitate wörtlich (dataset.md 3c): Jasmina L. 2023 Rhetorik 1 Mallorca (enorme Fortschritte, individuelles Feedback, Selbstvertrauen); Anonym 2023 Mallorca (Mix aus Fachwissen, Beispielen aus der Praxis und Übungen); Michael B. 2023 Mallorca (freie Reden vor der Gruppe, Feedback von Michael und Teilnehmern; VR-Training unglaublich real); Christiane 2023 Mallorca (vier Tage außerhalb meiner Komfortzone, Feedback-Übungen); Justus S. 2023 (persönliche Weiterentwicklung enorm, Lernschritte eindeutig zu spüren); Katharina R. 2023 (100% Weiterempfehlung. Steile Lernkurve mit Soforteffekt); Andreas M. 2023 (Mit Humor und Leichtigkeit verschmelzen Theorie und Praxis); V. 2023 Rhetorik 2 Barcelona (beruflich wie privat einiges in Bewegung gebracht); Christin R. 2023 Mallorca (Mix von Anfänger bis Profi); Moritz B. 2023 Mallorca (auf die Bedürfnisse aller Teilnehmenden einzugehen); Julian L. 2023 Mallorca (Redeangst nehmen; Trainings vor der Kamera); Christian S. 2023 Mallorca (unsicher oder sprachlos; fordern zu fördern); Anonym 2023 (nicht nur ein Rhetoriktraining); C. 2023 (Lernen zum Erlebnis)",
+   "source": "provenexpert.com/de-de/michael-ehlers, Firecrawl 2026-10-12",
+   "numbers": [
+    "2023",
+    "100",
+    "1",
+    "2"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "G01",
+   "type": "quote",
+   "text": "Google-Zitate wörtlich (reviews.md): Isabel H. (nicht nur viel über Rhetorik gelernt, sondern auch ganz viel über mich selbst); Anna H. (Aufmerksamkeitsspanne; praktische Übungen zeigten direkt einen Unterschied; nicht nur leere Theorie); Belinda E. (4 Tage auf Mallorca; jedes Thema mit einer eigenen Story); Adrian B. (Authentizität statt Show; innere Haltung zum Ausgangspunkt); Michael H. (nicht nur wirkungsvoll zu sprechen, sondern aus innerer Klarheit heraus zu kommunizieren); Jenny E. (zwischen der ersten und der letzten Rede lagen wirklich Welten; Feedback wertschätzend, klar); Jan B. (Statt starrer Schemata, die nur Kopien erzeugen); Oliver E. (Werkzeuge für Rhetorik und Präsentationen); S. G.R. (Ganztagsworkshop, es kommt auf den Menschen an)",
+   "source": "Google Maps 2026-10-11, 02-data/reviews.md",
+   "numbers": [
+    "4",
+    "180"
+   ],
+   "must_appear": [],
+   "required": false
+  },
+  {
+   "id": "N01",
+   "type": "rule",
+   "text": "Hinweis UWG: Erfahrungen einzelner Teilnehmer, wörtlich zitiert, Kürzungen mit […], keine Zusage eines Ergebnisses",
+   "source": "legal-rules, dataset K4",
+   "numbers": [],
+   "must_appear": [
+    "keine Zusage"
+   ],
+   "required": true
+  },
+  {
+   "id": "P02",
+   "type": "fact",
+   "text": "Preis nennt Michaels Team im kostenlosen Gespräch; keine Preise auf der Seite",
+   "source": "freigegebene Michael-Seite FAQ 2026-10-12 (content-writing/michael/05-final/page.md); Hard rule keine Preise",
+   "numbers": [],
+   "must_appear": [],
+   "required": false
+  }
+ ]
+}

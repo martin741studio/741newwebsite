@@ -1,0 +1,887 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Content Pool: 741.Studio (own run)</title><style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1d2320;--mut:#66706b;--line:#e2e0d8;--acc:#2f5d50;--a:#2f5d50;--b:#8a6d1f;--c:#6b7280;--cut:#a23b3b;--warn:#b45309;--ok:#2f5d50}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#141816;--card:#1c211f;--ink:#e8ece9;--mut:#9aa5a0;--line:#2b322f;--acc:#7fc4ae;--a:#7fc4ae;--b:#d6b25a;--c:#9aa5a0;--cut:#e08585;--warn:#e0a45a;--ok:#7fc4ae}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 80px}
+h1{font-size:28px;margin:0 0 4px}h2{font-size:22px;margin:40px 0 12px;padding-top:8px;border-top:1px solid var(--line)}h3{font-size:18px;margin:24px 0 8px}h5{margin:0 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.sub{color:var(--mut);margin:0 0 16px}.meta{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:13px}
+.chip b{color:var(--acc)}
+.find{display:grid;gap:10px}.find div{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:8px;padding:12px 16px}
+.find .ids{display:block;margin-top:6px;font-size:12px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.pcard h3{margin:0 0 6px}.pcard .cnt{font-size:13px;color:var(--mut);margin-bottom:8px}.pcard ol{padding-left:18px;margin:8px 0 0;font-size:14px}
+table{border-collapse:collapse;width:100%;font-size:14px;background:var(--card)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--bg);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.tblwrap{overflow-x:auto}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px}.filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 14px;cursor:pointer;font-size:13px}.filters button.on{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+details.item{background:var(--card);border:1px solid var(--line);border-radius:8px;margin:6px 0}details.item>summary{list-style:none;cursor:pointer;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 12px}
+details.item>summary::-webkit-details-marker{display:none}.rank{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--mut)}
+.topic{flex:1 1 280px;font-weight:600}.num{font-variant-numeric:tabular-nums;width:28px;text-align:right}.bar{display:inline-block;width:80px;height:8px;background:var(--line);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+.prio{display:inline-block;min-width:22px;text-align:center;border-radius:4px;color:#fff;font-weight:700;font-size:12px;padding:1px 6px}.pr-A{background:var(--a)}.pr-B{background:var(--b)}.pr-C{background:var(--c)}.pr-cut{background:var(--cut)}
+.tag2,.tag{font-size:12px;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:1px 6px}.pill{font-size:11px;border-radius:4px;padding:1px 6px;border:1px solid var(--line)}.c-review{color:var(--warn);border-color:var(--warn)}.c-block{color:var(--cut);border-color:var(--cut)}.c-ok{color:var(--ok)}
+.st{font-size:12px;color:var(--mut)}.st-needs_client{color:var(--warn)}.st-adjacent_review{color:var(--cut)}
+.body{padding:4px 16px 14px;border-top:1px solid var(--line)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:720px){.grid{grid-template-columns:1fr}.bar{display:none}}
+.mut{color:var(--mut)}.mini td{border:0;padding:2px 10px 2px 0}.needs{color:var(--warn)}details.raw{margin-top:8px}details.raw summary{cursor:pointer;color:var(--acc);font-size:14px}details.raw li{font-size:13px;margin:3px 0}
+.map td:first-child{white-space:nowrap;font-weight:600}.empty{color:var(--mut);font-style:italic}
+a{color:var(--acc)}.note{background:var(--card);border:1px dashed var(--line);border-radius:8px;padding:10px 14px;margin:10px 0;font-size:14px}
+.hidden{display:none}
+</style></head><body><div class="wrap">
+<h1>Content Pool: 741.Studio (own run)</h1><p class="sub">Homepage first. Existing site, 116 pages. Two markets: DACH practices and clinics (German) and expat businesses in Bali (English). No HWG for the agency itself.</p>
+<div class="meta"><span class="chip">Date <b>2026-10-11</b></span><span class="chip">Mode <b>existing</b></span><span class="chip">Items <b>34</b> live, <b>2</b> cut</span><span class="chip">Paid data <b>0.34 USD</b> of 5 USD cap</span><span class="chip">Competitor sites <b>39</b> (1 unreadable)</span><span class="chip">Validator <b>passed</b></span></div>
+<h2 id="findings">What you must know first</h2><div class="find">
+<div>Brand queries carry most of the visible search traffic. They bring 656 of 797 listed impressions (82 %). Non-brand queries bring 121 impressions and 1 click. The brand item counts 640 impressions across all spellings, and the name is ambiguous.<span class="ids">Items: CP-BRD-003, CP-LOC-001, CP-LOC-006</span></div>
+<div>The English home page has 787 words. The floor from gate A0 is 622 words (70 % of the median 889 words of 18 Bali agency homepages). It passes. The German peers are bigger: the 19 German agency homepages have a median of 2,029 words, the German home page has 741. It carries three H1.<span class="ids">Items: CP-LOC-001, CP-BRD-001, CP-LOC-003</span></div>
+<div>The offers are on the site but Google cannot use many of them. 20 of 116 pages carry noindex. Some are intended (legal pages, private previews). The Bali pages, the three free-audit pages and the visibility grant pages are targets, not previews.<span class="ids">Items: CP-LOC-002, CP-SVC-004, CP-SVC-011</span></div>
+<div>Bali needs one page that Google may index. &#x27;digital agency bali&#x27; has 390 searches a month, &#x27;marketing agency bali&#x27; 260, &#x27;web design bali&#x27; 260. All Bali agency homepages name Bali (19 of 19) and hold the local pack. The two Bali pages of 741 are noindex.<span class="ids">Items: CP-LOC-002, CP-SVC-007, CP-SVC-001</span></div>
+<div>Practices are table stakes in Germany. 11 of 13 niche agencies have a page for practices or doctors. &#x27;seo für ärzte&#x27; has 390 searches, &#x27;webdesign arztpraxis&#x27; 260. 741 has case studies for practices (for example a Heilpraktiker in Freiburg) but no page that names the vertical.<span class="ids">Items: CP-SVC-002, CP-AUT-001, CP-SVC-003</span></div>
+<div>Pages repeat themselves. Google Ads has three near-identical pages (551 to 629 words), Meta Ads two. Many &#x27;Best ... Bali&#x27; posts share one pattern, and a German-path copy exists for most. Merge them into a few deep pages and check the text overlap before any redirect.<span class="ids">Items: CP-SVC-005, CP-SVC-006, CP-AUT-005</span></div>
+<div>Price and proof need decisions. &#x27;seo kosten&#x27; has 320 searches, &#x27;seo preise&#x27; 210. Only 13 of 38 agency sites show a price. Martin&#x27;s rule says numbers only in the call. The home H1 promises &#x27;Top 3 in 90 days&#x27; without a case next to it. Google shows 4.5 with 17 reviews and the newest has no reply.<span class="ids">Items: CP-SVC-009, CP-BRD-006, CP-AUT-002, CP-AUT-003</span></div>
+<div>Large volumes are traps. &#x27;google bewertungen löschen&#x27; has 5,400 searches, but law firms and removal agencies fill the results. &#x27;website erstellen lassen&#x27; has 3,600 and is a broad price search. &#x27;seo nürnberg&#x27; has 390 but 741 has no local fact there. City pages are cut.<span class="ids">Items: CP-SVC-016, CP-LOC-004</span></div>
+<div>Data limits. Three competitor homepages could not be used: webtiger-pro.de is not readable, and sansiromedia.com and healthypixels.de gave 12 words. No Maps measurement was run (the audit bought nothing), so the local-pack competitors for Bali are known only from the search results. The Search Console base is small. DataForSEO knows no own keyword with meaning.<span class="ids">Items: CP-LOC-005, CP-LOC-002</span></div>
+</div>
+<h2 id="pillars">The four pillars</h2><div class="cards">
+<div class="pcard"><h3>Location</h3><div class="cnt">5 items · 3 A · 0 need the client</div><p>Hero and title that say what 741.Studio does and for whom, with one H1. One indexable Bali page. German pages that are really German. Fix the Google profile (category, services, description, hours) and add structured data. City pages stay out.</p><b>Top items</b><ol><li>Hero, title and H1: say what 741.Studio does and for whom, with one H1 (three H1 rotate today) <span class="mut">(76)</span></li><li>Google profile fix: category (only &#x27;Web Designer&#x27;), about 70 services with automatic changes, description without place, &#x27;24 hours open&#x27;, name &#x27;741 Studio Marketing&#x27; <span class="mut">(74)</span></li><li>Bali: one page &#x27;Digital agency in Bali: web design, local SEO, ads&#x27; that Google may index (the two Bali pages are noindex) <span class="mut">(73)</span></li></ol></div>
+<div class="pcard"><h3>Main service</h3><div class="cnt">17 items · 7 A · 7 need the client</div><p>Local SEO is the flagship, with a page per vertical: practices first, law firms later. The free audit is the first step and must be indexable. One strong page each for Google Ads and Meta Ads, one for web design. A process page, a cost page and an FAQ. Automation, review removal, social media and e-commerce wait for Martin.</p><b>Top items</b><ol><li>Growth subscription (Wachstums-Abo): keep and extend rankings after the 90 days <span class="mut">(77)</span></li><li>Google Ads management: one strong page instead of three near-identical pages (ads-1, ads-2, ads-3) <span class="mut">(74)</span></li><li>Cost page without numbers: what drives the price, what is included, how to get an offer <span class="mut">(74)</span></li></ol></div>
+<div class="pcard"><h3>Brand</h3><div class="cnt">6 items · 1 A · 1 need the client</div><p>One sentence for what 741.Studio is. Two markets, two doors, two languages. A name that wins its own search. The method in three sentences. The founder story. Claim discipline: every promise with its case next to it.</p><b>Top items</b><ol><li>Brand name: &#x27;741 Studio&#x27; is ambiguous (741 studio by d&amp;s, studio 741 wien). Make the home page win the brand queries <span class="mut">(82)</span></li><li>Two markets, two doors: DACH practices and Bali expat businesses, each in its own language, one clear switch <span class="mut">(72)</span></li><li>About and founder: Martin Drendel, background, why local SEO, the Bali and Germany link (LinkedIn is the strongest channel) <span class="mut">(68)</span></li></ol></div>
+<div class="pcard"><h3>Authority</h3><div class="cnt">6 items · 1 A · 0 need the client</div><p>Case studies with numbers and the clients&#x27; words, linked from each claim. A real proof strip. Reviews with replies. Link targets: agency directories. Merge the thin blog posts. Cut the off-topic ones.</p><b>Top items</b><ol><li>Proof strip on the home page: Google 4.5 with 17 reviews, client logos (real files only), the number of programme clients (only if true) <span class="mut">(77)</span></li><li>Thin near-identical blog posts (&#x27;Best ... Bali&#x27;, &#x27;Web design Bali&#x27;, about 370 to 440 words each): merge into a few deep pages <span class="mut">(72)</span></li><li>Case studies: show numbers and the client&#x27;s own words, link each claim to its case; fix the noindex on one case page <span class="mut">(71)</span></li></ol></div>
+</div>
+<h2 id="map">Homepage map: where the pool plugs into the CRO blueprint</h2><p class="mut">The 10 rows are the CRO P0 blueprint. The pool never removes a row. It ranks what goes into each row.</p><div class="tblwrap"><table class="map"><tr><th>CRO row</th><th>Pool items (best first)</th></tr>
+<tr><td>1 Hero</td><td><span class="prio pr-A">A</span> Brand name: &#x27;741 Studio&#x27; is ambiguous (741 studio by d&amp;s, studio 741 wien). Make the home page win the brand queries <span class="mut">CP-BRD-003</span><br><span class="prio pr-A">A</span> Hero, title and H1: say what 741.Studio does and for whom, with one H1 (three H1 rotate today) <span class="mut">CP-LOC-001</span><br><span class="prio pr-C">C</span> One sentence for what 741.Studio is: local SEO and Google Maps visibility for practices, clinics and expat businesses <span class="mut">CP-BRD-001</span></td></tr>
+<tr><td>2 Proof strip</td><td><span class="prio pr-A">A</span> Proof strip on the home page: Google 4.5 with 17 reviews, client logos (real files only), the number of programme clients (only if true) <span class="mut">CP-AUT-002</span><br><span class="prio pr-B">B</span> Case studies: show numbers and the client&#x27;s own words, link each claim to its case; fix the noindex on one case page <span class="mut">CP-AUT-001</span><br><span class="prio pr-C">C</span> Claim discipline: &#x27;Top 3 in 90 days&#x27; and &#x27;Double your leads in 30 days&#x27; only with the case next to the claim; guarantee only for the 90-day package <span class="mut">CP-BRD-006</span></td></tr>
+<tr><td>3 Is this for me?</td><td><span class="prio pr-B">B</span> Two markets, two doors: DACH practices and Bali expat businesses, each in its own language, one clear switch <span class="mut">CP-BRD-002</span></td></tr>
+<tr><td>4 Services</td><td><span class="empty">No pool item. The CRO blueprint row stays as is.</span></td></tr>
+<tr><td>5 First visit</td><td><span class="prio pr-B">B</span> How it works: the 90-day path in steps (week 1 baseline, profile, content, links, reviews), what we need from you <span class="mut">CP-SVC-008</span><br><span class="prio pr-C">C</span> Method in three sentences: how a visible practice is built (without internal method names) <span class="mut">CP-BRD-004</span></td></tr>
+<tr><td>6 About the practitioner</td><td><span class="prio pr-B">B</span> About and founder: Martin Drendel, background, why local SEO, the Bali and Germany link (LinkedIn is the strongest channel) <span class="mut">CP-BRD-005</span></td></tr>
+<tr><td>7 Reviews</td><td><span class="prio pr-C">C</span> Reviews: ask after every project, reply to every review (the newest has no reply) <span class="mut">CP-AUT-003</span></td></tr>
+<tr><td>8 FAQ</td><td><span class="prio pr-B">B</span> FAQ: price, guarantee, duration, what we need, languages, cancellation <span class="mut">CP-SVC-013</span></td></tr>
+<tr><td>9 Location</td><td><span class="prio pr-C">C</span> Structured data: Organization and ProfessionalService with sameAs, services and areaServed on the home and service pages <span class="mut">CP-LOC-006</span></td></tr>
+<tr><td>10 Closing CTA</td><td><span class="empty">No pool item. The CRO blueprint row stays as is.</span></td></tr>
+</table></div>
+<h3>Items for other pages (one line each, ready for the next page run)</h3><div class="tblwrap"><table><tr><th>Page tag</th><th>Items</th></tr>
+<tr><td>later</td><td><span class="prio pr-B">B</span> Thin near-identical blog posts (&#x27;Best ... Bali&#x27;, &#x27;Web design Bali&#x27;, about 370 to 440 words each): merge into a few deep pages <span class="mut">CP-AUT-005</span><br><span class="prio pr-B">B</span> Review removal and reputation management <span class="mut">CP-SVC-016</span><br><span class="prio pr-B">B</span> Business pages for Bali by industry (villa, restaurant, clinic, gym) <span class="mut">CP-SVC-014</span><br><span class="prio pr-B">B</span> Social media management and e-commerce (named in the Google profile description) <span class="mut">CP-SVC-017</span><br><span class="prio pr-C">C</span> WhatsApp and n8n automation, AI agents <span class="mut">CP-SVC-015</span><br><span class="prio pr-C">C</span> 741 Circle: free community for visible practices (invite only) <span class="mut">CP-SVC-012</span><br><span class="prio pr-C">C</span> Answer-ready blocks for AI search: a short, clear answer per service page (what, who, where, how long) <span class="mut">CP-AUT-007</span><br><span class="prio pr-C">C</span> Visibility grant (Sichtbarkeits-Förderung): free programme for selected practices <span class="mut">CP-SVC-011</span></td></tr>
+<tr><td>offsite</td><td><span class="prio pr-A">A</span> Google profile fix: category (only &#x27;Web Designer&#x27;), about 70 services with automatic changes, description without place, &#x27;24 hours open&#x27;, name &#x27;741 Studio Marketing&#x27; <span class="mut">CP-LOC-005</span><br><span class="prio pr-C">C</span> Directory and listing link targets for an agency: Sortlist, TheManifest, Techbehemoths, DACH agency lists <span class="mut">CP-AUT-004</span></td></tr>
+<tr><td>place:bali</td><td><span class="prio pr-A">A</span> Bali: one page &#x27;Digital agency in Bali: web design, local SEO, ads&#x27; that Google may index (the two Bali pages are noindex) <span class="mut">CP-LOC-002</span></td></tr>
+<tr><td>place:deutschland</td><td><span class="prio pr-B">B</span> DACH: German home and German service pages as real German pages for practices and law firms (/de/ blog copies are English) <span class="mut">CP-LOC-003</span></td></tr>
+<tr><td>service:google-ads</td><td><span class="prio pr-A">A</span> Google Ads management: one strong page instead of three near-identical pages (ads-1, ads-2, ads-3) <span class="mut">CP-SVC-005</span></td></tr>
+<tr><td>service:kanzlei-seo</td><td><span class="prio pr-B">B</span> Local SEO for law firms (own page, BRAO-safe wording) <span class="mut">CP-SVC-003</span></td></tr>
+<tr><td>service:kosten</td><td><span class="prio pr-A">A</span> Cost page without numbers: what drives the price, what is included, how to get an offer <span class="mut">CP-SVC-009</span></td></tr>
+<tr><td>service:local-seo</td><td><span class="prio pr-A">A</span> Local SEO: main service page in two languages, with steps, what you get, proof and the free audit as the first step <span class="mut">CP-SVC-001</span></td></tr>
+<tr><td>service:meta-ads</td><td><span class="prio pr-B">B</span> Meta Ads management: one page instead of two near-identical pages <span class="mut">CP-SVC-006</span></td></tr>
+<tr><td>service:praxis-seo</td><td><span class="prio pr-A">A</span> Local SEO for practices: Heilpraktiker, doctors, physiotherapy (own page, real cases, no healing claims) <span class="mut">CP-SVC-002</span></td></tr>
+<tr><td>service:visibility-audit</td><td><span class="prio pr-A">A</span> Free visibility audit as the first step: what you get, how long it takes, one clear button <span class="mut">CP-SVC-004</span></td></tr>
+<tr><td>service:wachstums-abo</td><td><span class="prio pr-A">A</span> Growth subscription (Wachstums-Abo): keep and extend rankings after the 90 days <span class="mut">CP-SVC-010</span></td></tr>
+<tr><td>service:web-design</td><td><span class="prio pr-A">A</span> Website design and development for practices and expat businesses: own page with process and proof <span class="mut">CP-SVC-007</span></td></tr>
+</table></div>
+<h2 id="detail">Detail per pillar</h2><div class="filters"><button class="on" data-f="all">All</button><button data-f="A">A</button><button data-f="B">B</button><button data-f="C">C</button><button data-f="client">Needs client</button><button data-f="adj">Adjacent</button></div>
+<h3>Location</h3><details class="item p-A" data-prio="A" data-pillar="location">
+<summary><span class="rank">LOC-001</span><span class="prio pr-A">A</span>
+<span class="topic">Hero, title and H1: say what 741.Studio does and for whom, with one H1 (three H1 rotate today)</span><span class="bar"><i style="width:76%"></i></span><span class="num">76</span>
+<span class="tag2">homepage</span><span class="pill c-review">NONE review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>The home page has three H1 lines and the title &#x27;Architecting Digital Growth &amp; Local SEO Automation&#x27;. Visitors need the offer and the audience in the first screen</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: hero</p>
+<p><b>Question:</b> Local SEO agency for practices, clinics and expat businesses</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">19 of 38 local+niche+topic cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): local seo agentur <b>590</b> <em>nat.</em>, local seo <b>1,000</b> <em>nat.</em>, lokale suchmaschinenoptimierung <b>320</b> <em>nat.</em>, local seo agency <b>10</b> <em>nat.</em>, google maps seo <b>110</b> <em>nat.</em>, seo agentur <b>4,400</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> local seo agentur; local seo agentur gmbh; local seo agentur hamburg; local seo agentur leipzig</p><p><b>Client signal:</b> GSC 3 months: 6 queries, 16 impressions, 1 clicks, best position 4.7; top query &#x27;digital marketing&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://741.studio/">https://741.studio/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> exitobali.com, baliwebdesign.co.id, baliwebagency.com, mayaloka.com, toffeedev.com, sbgbali.com, c9bseo.id, omnirank.id, marketingonline.id, seo-freundlich.de, sichtbarkeitsmeister.de, seo-fuer-rechtsanwaelte.de, seofoxx.de, local-seo-agentur.com, localseo-agentur.de, seo-berlin.de, suchhelden.de, ambitive.de, locally-visible.de</p>
+<p class='mut'>Share of agency sites with local SEO or Google Maps in title, heading or URL</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+
+
+<details class="raw"><summary>Raw data (11 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">local seo agentur</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">local seo</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">lokale suchmaschinenoptimierung</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">local seo agency</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">google maps seo</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo agentur</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^local seo agentur|^local seo agency</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">local seo|seo agenc|seo studio|digital marketing</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-741.studio.json">03-demand/ranked-741.studio.json</a> <span class="mut">GSC 3 months: 6 queries, 16 impressions, 1 clicks, best position 4.7; top query &#x27;digital marketing&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">exitobali.com,baliwebdesign.co.id,baliwebagency.com,mayaloka.com,toffeedev.com,sbgbali.com,c9bseo.id,omnirank.id,marketingonline.id,seo-freu</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B06.02 three H1 on the home page; B13.05 success claim in the H1</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="location">
+<summary><span class="rank">LOC-005</span><span class="prio pr-A">A</span>
+<span class="topic">Google profile fix: category (only &#x27;Web Designer&#x27;), about 70 services with automatic changes, description without place, &#x27;24 hours open&#x27;, name &#x27;741 Studio Marketing&#x27;</span><span class="bar"><i style="width:74%"></i></span><span class="num">74</span>
+<span class="tag2">offsite</span><span class="pill c-ok">NONE ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Audit findings B10.01, B10.02, B10.05, B10.09, B13.03. The profile brought 8 interactions since May. This is a Maps task, listed here so the site text matches the profile</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: link-target.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">0 of 19 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Client signal:</b> Audit B05.01: 8 profile interactions and 0 calls from May to 11 October</p>
+
+
+
+
+<p><b>Decision note:</b> Stufe A durch Regel R-S6 (relative Spitze).</p>
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/ranked-741.studio.json">03-demand/ranked-741.studio.json</a> <span class="mut">Audit B05.01: 8 profile interactions and 0 calls from May to 11 October</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B10.01, B10.02, B10.05, B10.09, B13.03</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="location">
+<summary><span class="rank">LOC-002</span><span class="prio pr-A">A</span>
+<span class="topic">Bali: one page &#x27;Digital agency in Bali: web design, local SEO, ads&#x27; that Google may index (the two Bali pages are noindex)</span><span class="bar"><i style="width:73%"></i></span><span class="num">73</span>
+<span class="tag2">place:bali</span><span class="pill c-review">NONE review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>741 serves expat and foreign-run businesses in Canggu, Uluwatu, Seminyak, Ubud. The Bali landing pages carry noindex, follow. &#x27;digital agency bali&#x27; has 390 searches a month</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: page.</p>
+<p><b>Question:</b> Which agency in Bali builds websites and gets us found on Google Maps?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>100</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>0</td><td class="mut">19 of 19 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): digital agency bali <b>390</b>, digital marketing agency bali <b>210</b>, marketing agency bali <b>260</b>, web design bali <b>260</b>, website design bali <b>260</b>, web designer bali <b>260</b>, web developer bali <b>140</b>, seo agency bali <b>90</b>, seo bali <b>90</b>, local seo bali <b>no data</b>, marketing agency canggu <b>no data</b>, web design canggu <b>no data</b></p>
+<p><b>Autocomplete:</b> seo agency bali; web design bali; digital agency bali; jasa web design bali</p><p><b>People also ask:</b> Apa bedanya CEO dan SEO?; Berapa biaya jasa SEO?; Does local SEO still work?</p><p><b>Client signal:</b> GSC 3 months: 6 queries, 25 impressions, 0 clicks, best position 7.6; top query &#x27;webflow agency bali&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://741.studio/pages/bali-local-seo.html">https://741.studio/pages/bali-local-seo.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> juicebox.co.id, exitobali.com, sansiromedia.com, seoboost.co.id, baliwebdesign.co.id, baliwebagency.com, sunmedia.co.id, jaim.agency, mayaloka.com, toffeedev.com, sbgbali.com, gaiada.com, fleava.com, risanto.com, olawebdesign.com, c9bseo.id, omnirank.id, indonesia-digital-marketing.com, marketingonline.id</p>
+<p class='mut'>Share of Bali agency sites with Bali in title, heading or URL</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+<p><b>Decision note:</b> Stufe A durch Regel R-S6 (relative Spitze).</p>
+
+<details class="raw"><summary>Raw data (15 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">digital agency bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">digital marketing agency bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">marketing agency bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">web design bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">website design bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">web designer bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">web developer bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo agency bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo bali</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">(digital|marketing) agency (in |di )?bali|web design (agency )?bali|seo agency bali</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Apa bedanya CEO dan SEO?</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">bali|canggu</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-741.studio.json">03-demand/ranked-741.studio.json</a> <span class="mut">GSC 3 months: 6 queries, 25 impressions, 0 clicks, best position 7.6; top query &#x27;webflow agency bali&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,exitobali.com,sansiromedia.com,seoboost.co.id,baliwebdesign.co.id,baliwebagency.com,sunmedia.co.id,jaim.agency,mayaloka.com,t</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B06.03 noindex on the Bali pages; B06.04 location pages exist but noindex</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="location">
+<summary><span class="rank">LOC-003</span><span class="prio pr-B">B</span>
+<span class="topic">DACH: German home and German service pages as real German pages for practices and law firms (/de/ blog copies are English)</span><span class="bar"><i style="width:72%"></i></span><span class="num">72</span>
+<span class="tag2">place:deutschland</span><span class="pill c-review">NONE review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>The German home page and service pages exist. Most blog posts under /de/pages/blog/ show English titles and text. Germany brought 61 sessions in 28 days (audit B04.01)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: page.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>42</td><td class="mut">11 of 19 niche+topic cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): local seo agentur <b>590</b> <em>nat.</em>, seo agentur <b>4,400</b> <em>nat.</em>, lokale suchmaschinenoptimierung <b>320</b> <em>nat.</em>, local seo kosten <b>10</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> local seo agentur; local seo agentur gmbh; local seo agentur hamburg; local seo agentur leipzig</p>
+<p><b>Live site:</b> weak (<a href="https://741.studio/de/pages/impressum.html">https://741.studio/de/pages/impressum.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> seo-fuer-heilpraktiker.de, seo-freundlich.de, yeswebcan.de, onestep-webdesign.de, aweos.de, seofoxx.de, local-seo-agentur.com, localseo-agentur.de, seo-berlin.de, suchhelden.de, locally-visible.de</p>
+<p class='mut'>Share of German agency sites that name a city or Germany in title, heading or URL</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+
+
+<details class="raw"><summary>Raw data (7 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">local seo agentur</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo agentur</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">lokale suchmaschinenoptimierung</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">local seo kosten</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^local seo agentur</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">seo-fuer-heilpraktiker.de,seo-freundlich.de,yeswebcan.de,onestep-webdesign.de,aweos.de,seofoxx.de,local-seo-agentur.com,localseo-agentur.de,</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B04.01 DACH target market; page measures of /de/pages/blog/</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="location">
+<summary><span class="rank">LOC-006</span><span class="prio pr-C">C</span>
+<span class="topic">Structured data: Organization and ProfessionalService with sameAs, services and areaServed on the home and service pages</span><span class="bar"><i style="width:52%"></i></span><span class="num">52</span>
+<span class="tag2">homepage</span><span class="pill c-ok">NONE ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Audit B06.03: no JSON-LD on the start and service pages. Cheap to fix and it settles the brand-name ambiguity</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: entity-schema. Section: standort</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">0 of 38 local+niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+
+
+<p class='mut'>Share of agency sites that show structured data (title or heading words only, check by hand)</p>
+
+
+
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B06.03 no JSON-LD</span></li></ul></details>
+</div></details>
+<h3>Main service</h3><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-010</span><span class="prio pr-A">A</span>
+<span class="topic">Growth subscription (Wachstums-Abo): keep and extend rankings after the 90 days</span><span class="bar"><i style="width:77%"></i></span><span class="num">77</span>
+<span class="tag2">service:wachstums-abo</span><span class="pill c-review">NONE review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Live DE page (1,329 words). The copy /pages/wachstums-abo-de.html is noindex. It is the follow-up offer after the programme</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>84</td><td class="mut">3 of 19 niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): seo agentur <b>4,400</b> <em>nat.</em>, seo preise <b>210</b> <em>nat.</em>, seo kosten <b>320</b> <em>nat.</em></p>
+
+<p><b>Live site:</b> present (<a href="https://741.studio/de/pages/about.html">https://741.studio/de/pages/about.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> sichtbarkeitsmeister.de, seofoxx.de, ambitive.de</p>
+<p class='mut'>Share of German agency sites with a monthly or retainer offer</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+
+
+<details class="raw"><summary>Raw data (5 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo agentur</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo preise</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo kosten</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">sichtbarkeitsmeister.de,seofoxx.de,ambitive.de</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B06.03 wachstums-abo-de noindex</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-005</span><span class="prio pr-A">A</span>
+<span class="topic">Google Ads management: one strong page instead of three near-identical pages (ads-1, ads-2, ads-3)</span><span class="bar"><i style="width:74%"></i></span><span class="num">74</span>
+<span class="tag2">service:google-ads</span><span class="pill c-review">NONE review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Live service. Three English and three German pages each hold 551 to 629 words and the same offer. 1,600 searches for &#x27;google ads agentur&#x27;</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>53</td><td class="mut">18 of 38 local+niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): google ads agentur <b>1,600</b> <em>nat.</em>, google ads praxis <b>no data</b> <em>nat.</em>, google ads heilpraktiker <b>10</b> <em>nat.</em>, google ads anwalt <b>10</b> <em>nat.</em>, google ads agency bali <b>no data</b>, google ads management bali <b>no data</b></p>
+<p><b>Autocomplete:</b> google ads agency bali</p>
+<p><b>Live site:</b> present (<a href="https://741.studio/de/pages/google-ads-1.html">https://741.studio/de/pages/google-ads-1.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> juicebox.co.id, exitobali.com, baliwebdesign.co.id, baliwebagency.com, sunmedia.co.id, mayaloka.com, toffeedev.com, gaiada.com, olawebdesign.com, omnirank.id, marketingonline.id, sichtbarkeitsmeister.de, aweos.de, seofoxx.de, seo-berlin.de, suchhelden.de, ambitive.de, locally-visible.de</p>
+<p class='mut'>Share of agency sites with a Google Ads page or heading</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text. Health keywords are restricted in Google Ads: describe the service, make no promise.</p>
+<p><b>Decision note:</b> Stufe A durch Regel R-S6 (relative Spitze).</p>
+
+<details class="raw"><summary>Raw data (5 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">google ads agentur</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">google ads heilpraktiker</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">google ads anwalt</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">google ads agentur|google ads agency</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,exitobali.com,baliwebdesign.co.id,baliwebagency.com,sunmedia.co.id,mayaloka.com,toffeedev.com,gaiada.com,olawebdesign.com,omn</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-009</span><span class="prio pr-A">A</span>
+<span class="topic">Cost page without numbers: what drives the price, what is included, how to get an offer</span><span class="bar"><i style="width:74%"></i></span><span class="num">74</span>
+<span class="tag2">service:kosten</span><span class="pill c-review">NONE review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>People search &#x27;seo kosten&#x27; (320) and &#x27;seo preise&#x27; (210). Some competitor pages show prices (see coverage). Martin&#x27;s rule says numbers only in the call</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: page.</p>
+<p><b>Question:</b> How much does local SEO cost?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>47</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>66</td><td class="mut">13 of 38 local+niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): seo kosten <b>320</b> <em>nat.</em>, seo preise <b>210</b> <em>nat.</em>, local seo kosten <b>10</b> <em>nat.</em>, web design cost bali <b>no data</b>, website cost bali <b>no data</b>, seo retainer price bali <b>no data</b></p>
+<p><b>Autocomplete:</b> whatsapp automation cost; whatsapp automation price; whatsapp automation tool price; how much whatsapp automation cost</p><p><b>People also ask:</b> How much does a digital agency cost?; How much does a local SEO cost?</p>
+
+<p><b>Competitors covering it:</b> exitobali.com, baliwebagency.com, olawebdesign.com, c9bseo.id, seo-fuer-heilpraktiker.de, seo-freundlich.de, sichtbarkeitsmeister.de, yeswebcan.de, seo-fuer-aerzte.com, seo-fuer-rechtsanwaelte.de, jurebus.de, local-seo-agentur.com, ambitive.de</p>
+<p class='mut'>Share of agency sites whose measured page shows a price</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+<p><b>Decision note:</b> Conflict with the rule &#x27;numbers only in the call&#x27;. Martin decides before any text is written. Stufe A durch Regel R-S6 (relative Spitze).</p>
+<ul class='needs'><li>[FEHLT] Martin decides: no numbers, a &#x27;from&#x27; hint, or a range?</li></ul>
+<details class="raw"><summary>Raw data (6 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo kosten</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo preise</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">local seo kosten</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">kosten|preis|cost|price</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">How much does a digital agency cost?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">exitobali.com,baliwebagency.com,olawebdesign.com,c9bseo.id,seo-fuer-heilpraktiker.de,seo-freundlich.de,sichtbarkeitsmeister.de,yeswebcan.de,</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-007</span><span class="prio pr-A">A</span>
+<span class="topic">Website design and development for practices and expat businesses: own page with process and proof</span><span class="bar"><i style="width:74%"></i></span><span class="num">74</span>
+<span class="tag2">service:web-design</span><span class="pill c-review">NONE review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Live service. The page has 433 words and Google does not know it (audit B06.06). 3,600 searches for &#x27;website erstellen lassen&#x27;, 1,300 for &#x27;webdesign agentur berlin&#x27;, 260 for &#x27;web design bali&#x27;</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>97</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>5</td><td class="mut">36 of 38 local+niche+topic cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): website erstellen lassen <b>3,600</b> <em>nat.</em>, webdesign agentur berlin <b>1,300</b>, web design bali <b>260</b>, website design bali <b>260</b>, web designer bali <b>260</b>, web development bali <b>30</b>, web design indonesia <b>110</b>, webflow agency bali <b>no data</b>, wordpress developer bali <b>10</b>, webdesign heilpraktiker <b>70</b> <em>nat.</em>, webdesign arztpraxis <b>260</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> web design bali; pt bali web design; seo bali web design; jasa web design bali</p><p><b>People also ask:</b> Was umfasst Webdesign?</p><p><b>Client signal:</b> GSC 3 months: 10 queries, 61 impressions, 0 clicks, best position 2.0; top query &#x27;web development&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://741.studio/de/pages/website-design.html">https://741.studio/de/pages/website-design.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> juicebox.co.id, exitobali.com, sansiromedia.com, seoboost.co.id, baliwebdesign.co.id, baliwebagency.com, sunmedia.co.id, jaim.agency, mayaloka.com, toffeedev.com, sbgbali.com, gaiada.com, fleava.com, risanto.com, olawebdesign.com, c9bseo.id, omnirank.id, indonesia-digital-marketing.com, marketingonline.id, seo-fuer-heilpraktiker.de, seo-freundlich.de, sichtbarkeitsmeister.de, dein-gesundheitsbusiness.de, studio-filomena.de, healthypixels.de, yeswebcan.de, onestep-webdesign.de, seo-fuer-aerzte.com, aweos.de, seo-fuer-rechtsanwaelte.de, seofoxx.de, jurebus.de, localseo-agentur.de, suchhelden.de, ambitive.de, locally-visible.de</p>
+<p class='mut'>Share of agency sites with a web design page or heading</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+<p><b>Decision note:</b> Stufe A durch Regel R-S6 (relative Spitze).</p>
+<ul class='needs'><li>[FEHLT] Martin: is Berlin a base for web design clients? (&#x27;webdesign agentur berlin&#x27; counts only if yes)</li></ul>
+<details class="raw"><summary>Raw data (16 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">website erstellen lassen</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">webdesign agentur berlin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">web design bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">website design bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">web designer bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">web development bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">web design indonesia</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">wordpress developer bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">webdesign heilpraktiker</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">webdesign arztpraxis</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">web ?design|website erstellen|web development</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Was umfasst Webdesign?</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">web design|webflow|website|web development</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-741.studio.json">03-demand/ranked-741.studio.json</a> <span class="mut">GSC 3 months: 10 queries, 61 impressions, 0 clicks, best position 2.0; top query &#x27;web development&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,exitobali.com,sansiromedia.com,seoboost.co.id,baliwebdesign.co.id,baliwebagency.com,sunmedia.co.id,jaim.agency,mayaloka.com,t</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B06.06 website-design.html unknown to Google</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-004</span><span class="prio pr-A">A</span>
+<span class="topic">Free visibility audit as the first step: what you get, how long it takes, one clear button</span><span class="bar"><i style="width:74%"></i></span><span class="num">74</span>
+<span class="tag2">service:visibility-audit</span><span class="pill c-review">NONE review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Lead magnet in three pages (EN audit, DE analysis, DE &#x27;Google Maps top 3 in 60 minutes&#x27;), all set to noindex. 15 booking clicks in 28 days (all pages)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: erster-termin</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>74</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>26</td><td class="mut">14 of 19 niche+topic cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): google maps ranking verbessern <b>90</b> <em>nat.</em>, google unternehmensprofil optimieren <b>90</b> <em>nat.</em>, google business profil optimieren <b>20</b> <em>nat.</em>, sichtbarkeit bei google verbessern <b>no data</b> <em>nat.</em>, google maps optimieren <b>10</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> google maps ranking; google maps ranking seo; seo google maps ranking; google maps ranking grid</p>
+<p><b>Live site:</b> present (<a href="https://741.studio/pages/sichtbarkeits-analyse.html">https://741.studio/pages/sichtbarkeits-analyse.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> seo-fuer-heilpraktiker.de, seo-freundlich.de, sichtbarkeitsmeister.de, dein-gesundheitsbusiness.de, onestep-webdesign.de, aweos.de, seofoxx.de, jurebus.de, local-seo-agentur.com, localseo-agentur.de, seo-berlin.de, suchhelden.de, ambitive.de, locally-visible.de</p>
+<p class='mut'>Share of German agency sites with a free analysis or check</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+<p><b>Decision note:</b> Stufe A durch Regel R-S6 (relative Spitze).</p>
+
+<details class="raw"><summary>Raw data (7 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">google maps ranking verbessern</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">google unternehmensprofil optimieren</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">google business profil optimieren</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">google maps optimieren</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">google maps ranking|google unternehmensprofil|google business</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">seo-fuer-heilpraktiker.de,seo-freundlich.de,sichtbarkeitsmeister.de,dein-gesundheitsbusiness.de,onestep-webdesign.de,aweos.de,seofoxx.de,jur</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B06.03 noindex on visibility-audit and google-maps-fix; B01.01 booking_click 15</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-001</span><span class="prio pr-A">A</span>
+<span class="topic">Local SEO: main service page in two languages, with steps, what you get, proof and the free audit as the first step</span><span class="bar"><i style="width:73%"></i></span><span class="num">73</span>
+<span class="tag2">service:local-seo</span><span class="pill c-review">NONE review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>The flagship offer (&#x27;Top 3 in Google Maps in 90 days&#x27;). The page has 816 words and three H1. 1,000 searches a month for &#x27;local seo&#x27;, 590 for &#x27;local seo agentur&#x27;</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+<p><b>Question:</b> What is local SEO and how long does it take?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>47</td><td class="mut">10 of 19 niche+topic cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): local seo <b>1,000</b> <em>nat.</em>, local seo agentur <b>590</b> <em>nat.</em>, local seo agency <b>10</b> <em>nat.</em>, google maps seo <b>110</b> <em>nat.</em>, google maps ranking verbessern <b>90</b> <em>nat.</em>, lokale suchmaschinenoptimierung <b>320</b> <em>nat.</em>, local seo kosten <b>10</b> <em>nat.</em>, google maps ranking bali <b>no data</b>, local seo bali <b>no data</b></p>
+<p><b>Autocomplete:</b> local seo agentur; local seo ranking; google maps ranking; local seo balikpapan</p><p><b>People also ask:</b> Does local SEO still work?; How can I do local SEO?; How much does a local SEO cost?</p><p><b>Client signal:</b> GSC 3 months: 3 queries, 5 impressions, 0 clicks, best position 24.0; top query &#x27;local seo&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://741.studio/de/pages/google-maps-fix.html">https://741.studio/de/pages/google-maps-fix.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> seo-freundlich.de, sichtbarkeitsmeister.de, seo-fuer-rechtsanwaelte.de, seofoxx.de, local-seo-agentur.com, localseo-agentur.de, seo-berlin.de, suchhelden.de, ambitive.de, locally-visible.de</p>
+<p class='mut'>Share of German agency sites with a local SEO heading or page</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+<p><b>Decision note:</b> Stufe A durch Regel R-S6 (relative Spitze).</p>
+
+<details class="raw"><summary>Raw data (13 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">local seo</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">local seo agentur</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">local seo agency</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">google maps seo</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">google maps ranking verbessern</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">lokale suchmaschinenoptimierung</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">local seo kosten</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">local seo|google maps ranking|lokale seo</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Does local SEO still work?</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">local seo</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-741.studio.json">03-demand/ranked-741.studio.json</a> <span class="mut">GSC 3 months: 3 queries, 5 impressions, 0 clicks, best position 24.0; top query &#x27;local seo&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">seo-freundlich.de,sichtbarkeitsmeister.de,seo-fuer-rechtsanwaelte.de,seofoxx.de,local-seo-agentur.com,localseo-agentur.de,seo-berlin.de,such</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B06.08 priority terms and their pages</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-002</span><span class="prio pr-A">A</span>
+<span class="topic">Local SEO for practices: Heilpraktiker, doctors, physiotherapy (own page, real cases, no healing claims)</span><span class="bar"><i style="width:73%"></i></span><span class="num">73</span>
+<span class="tag2">service:praxis-seo</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Core vertical. Real client cases exist (seven case-study pages, at least two clients are practices). 390 searches for &#x27;seo für ärzte&#x27;, 260 for &#x27;webdesign arztpraxis&#x27;, 90 for &#x27;arztpraxis marketing&#x27;, 70 for &#x27;heilpraktiker marketing&#x27;</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: fuer-mich</p>
+<p><b>Question:</b> Which agency gets my practice found on Google Maps?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>85</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>15</td><td class="mut">11 of 13 niche cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): seo für ärzte <b>390</b> <em>nat.</em>, seo arztpraxis <b>40</b> <em>nat.</em>, arztpraxis marketing <b>90</b> <em>nat.</em>, seo für heilpraktiker <b>40</b> <em>nat.</em>, heilpraktiker marketing <b>70</b> <em>nat.</em>, local seo heilpraktiker <b>no data</b> <em>nat.</em>, seo heilpraktiker <b>20</b> <em>nat.</em>, webdesign arztpraxis <b>260</b> <em>nat.</em>, webdesign heilpraktiker <b>70</b> <em>nat.</em>, website für heilpraktiker <b>50</b> <em>nat.</em>, praxis website erstellen <b>70</b> <em>nat.</em>, heilpraktiker website erstellen <b>10</b> <em>nat.</em>, physiotherapie marketing <b>20</b> <em>nat.</em>, seo physiotherapie <b>no data</b> <em>nat.</em>, patienten gewinnen online <b>no data</b> <em>nat.</em>, neue patienten gewinnen <b>no data</b> <em>nat.</em>, marketing für therapeuten <b>10</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> seo arztpraxis; seo für heilpraktiker; webdesign heilpraktiker; webdesign für heilpraktiker</p><p><b>People also ask:</b> Darf ein Heilpraktiker Werbung machen?; Kann ein Heilpraktiker wirklich helfen?; Was kostet 1 Std beim Heilpraktiker?</p>
+<p><b>Live site:</b> present (<a href="https://741.studio/pages/warum-google-nicht-die-beste-praxis-belohnt.html">https://741.studio/pages/warum-google-nicht-die-beste-praxis-belohnt.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> seo-fuer-heilpraktiker.de, seo-freundlich.de, sichtbarkeitsmeister.de, dein-gesundheitsbusiness.de, studio-filomena.de, healthypixels.de, yeswebcan.de, onestep-webdesign.de, seo-fuer-aerzte.com, aweos.de, seofoxx.de</p>
+<p class='mut'>Share of niche agency sites with a page for practices or doctors</p>
+<p><b>Compliance note:</b> HWG applies to example texts and case studies of health practices: no healing promises, no before/after claims, consent for every case. Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+<p><b>Decision note:</b> Stufe A durch Regel R-S6 (relative Spitze).</p>
+
+<details class="raw"><summary>Raw data (17 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo für ärzte</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo arztpraxis</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">arztpraxis marketing</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo für heilpraktiker</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker marketing</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo heilpraktiker</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">webdesign arztpraxis</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">webdesign heilpraktiker</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">website für heilpraktiker</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">praxis website erstellen</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker website erstellen</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">physiotherapie marketing</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">marketing für therapeuten</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">(seo|webdesign|marketing|google ads).*(heilpraktiker|arztpraxis|ärzte|praxis)|heilpraktiker (seo|marketing|webdesign)</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Darf ein Heilpraktiker Werbung machen?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">seo-fuer-heilpraktiker.de,seo-freundlich.de,sichtbarkeitsmeister.de,dein-gesundheitsbusiness.de,studio-filomena.de,healthypixels.de,yeswebca</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B04.01 target markets</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-008</span><span class="prio pr-B">B</span>
+<span class="topic">How it works: the 90-day path in steps (week 1 baseline, profile, content, links, reviews), what we need from you</span><span class="bar"><i style="width:72%"></i></span><span class="num">72</span>
+<span class="tag2">homepage</span><span class="pill c-review">NONE review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Real process (week-1 playbook). Visitors compare agencies by clear steps. No page shows the steps today</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: erster-termin</p>
+<p><b>Question:</b> What happens after I book?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>35</td><td class="mut">basis: autocomplete</td></tr>
+<tr><td>Gap</td><td>66</td><td class="mut">13 of 38 local+niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Autocomplete:</b> how does google maps ranking work; how does whatsapp automation work; how does google maps rank business; how to improve google maps ranking</p>
+<p><b>Live site:</b> present (<a href="https://741.studio/de/pages/blog/best-automation-agency-bali.html">https://741.studio/de/pages/blog/best-automation-agency-bali.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> juicebox.co.id, exitobali.com, toffeedev.com, gaiada.com, seo-fuer-heilpraktiker.de, seo-freundlich.de, sichtbarkeitsmeister.de, dein-gesundheitsbusiness.de, yeswebcan.de, onestep-webdesign.de, aweos.de, jurebus.de, suchhelden.de</p>
+<p class='mut'>Share of agency sites with a process or steps heading</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text. Name steps, not the internal method sources.</p>
+
+<ul class='needs'><li>[FEHLT] Martin: which steps may be public?</li></ul>
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">how (long|does)|how to improve google maps|wie lange|wie funktioniert</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,exitobali.com,toffeedev.com,gaiada.com,seo-fuer-heilpraktiker.de,seo-freundlich.de,sichtbarkeitsmeister.de,dein-gesundheitsbu</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-006</span><span class="prio pr-B">B</span>
+<span class="topic">Meta Ads management: one page instead of two near-identical pages</span><span class="bar"><i style="width:71%"></i></span><span class="num">71</span>
+<span class="tag2">service:meta-ads</span><span class="pill c-review">NONE review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Live service. Two English and two German pages with about 550 to 626 words each. 170 searches for &#x27;meta ads agentur&#x27;</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>42</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>79</td><td class="mut">8 of 38 local+niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): meta ads agentur <b>170</b> <em>nat.</em>, meta ads bali <b>no data</b>, facebook ads agency bali <b>no data</b>, facebook werbung heilpraktiker <b>no data</b> <em>nat.</em></p>
+
+<p><b>Live site:</b> present (<a href="https://741.studio/de/pages/meta-ads-1.html">https://741.studio/de/pages/meta-ads-1.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> juicebox.co.id, exitobali.com, baliwebdesign.co.id, baliwebagency.com, sunmedia.co.id, mayaloka.com, toffeedev.com, gaiada.com</p>
+<p class='mut'>Share of agency sites with a Meta or Facebook ads page or heading</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text. Health ads on Meta are restricted: no promise, no before/after.</p>
+
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">meta ads agentur</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,exitobali.com,baliwebdesign.co.id,baliwebagency.com,sunmedia.co.id,mayaloka.com,toffeedev.com,gaiada.com</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-003</span><span class="prio pr-B">B</span>
+<span class="topic">Local SEO for law firms (own page, BRAO-safe wording)</span><span class="bar"><i style="width:62%"></i></span><span class="num">62</span>
+<span class="tag2">service:kanzlei-seo</span><span class="pill c-review">NONE review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>One law-firm client exists. The vertical is real but proof is thin. 140 searches for &#x27;seo für rechtsanwälte&#x27;, 70 for &#x27;kanzlei marketing&#x27;</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>40</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>62</td><td class="mut">5 of 13 niche cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): seo für rechtsanwälte <b>140</b> <em>nat.</em>, kanzlei marketing <b>70</b> <em>nat.</em>, anwaltsmarketing <b>20</b> <em>nat.</em>, anwalt seo <b>10</b> <em>nat.</em>, kanzlei website <b>50</b> <em>nat.</em>, webdesign kanzlei <b>10</b> <em>nat.</em>, google ads anwalt <b>10</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> seo für rechtsanwälte</p>
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> sichtbarkeitsmeister.de, onestep-webdesign.de, seo-fuer-rechtsanwaelte.de, seofoxx.de, jurebus.de</p>
+<p class='mut'>Share of niche agency sites with a page for lawyers</p>
+<p><b>Compliance note:</b> BRAO and BORA limit what a firm may say. Naming a law-firm client needs written consent. Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+<p><b>Decision note:</b> Fit 2: education around a real service. Only one client so far.</p>
+<ul class='needs'><li>[FEHLT] Martin: may the Stürzl case be named? Is the vertical a goal?</li></ul>
+<details class="raw"><summary>Raw data (9 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo für rechtsanwälte</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">kanzlei marketing</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">anwaltsmarketing</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">anwalt seo</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">kanzlei website</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">webdesign kanzlei</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">google ads anwalt</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">(seo|marketing|webdesign|google ads).*(anwalt|rechtsanw|kanzlei)</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">sichtbarkeitsmeister.de,onestep-webdesign.de,seo-fuer-rechtsanwaelte.de,seofoxx.de,jurebus.de</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-013</span><span class="prio pr-B">B</span>
+<span class="topic">FAQ: price, guarantee, duration, what we need, languages, cancellation</span><span class="bar"><i style="width:62%"></i></span><span class="num">62</span>
+<span class="tag2">homepage</span><span class="pill c-review">NONE review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>The FAQ page has 131 words (EN) and 151 (DE). Answers must come from Martin</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: faq. Section: faq</p>
+<p><b>Question:</b> Questions before booking</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>45</td><td class="mut">basis: paa</td></tr>
+<tr><td>Gap</td><td>66</td><td class="mut">13 of 38 local+niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Autocomplete:</b> how much whatsapp earn per day; how much whatsapp automation cost; how much does whatsapp automation cost</p><p><b>People also ask:</b> How much does a digital agency cost?; How much does a local SEO cost?</p>
+
+<p><b>Competitors covering it:</b> toffeedev.com, sbgbali.com, olawebdesign.com, seo-fuer-heilpraktiker.de, seo-freundlich.de, dein-gesundheitsbusiness.de, onestep-webdesign.de, seo-fuer-aerzte.com, aweos.de, seo-fuer-rechtsanwaelte.de, local-seo-agentur.com, localseo-agentur.de, ambitive.de</p>
+<p class='mut'>Share of agency sites with an FAQ signal</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+
+<ul class='needs'><li>[FEHLT] Martin: answers on guarantee and cancellation</li></ul>
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">(how (long|much)|wie lange|was kostet|garantie|guarantee)</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">How much does a digital agency cost?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">toffeedev.com,sbgbali.com,olawebdesign.com,seo-fuer-heilpraktiker.de,seo-freundlich.de,dein-gesundheitsbusiness.de,onestep-webdesign.de,seo-</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-016</span><span class="prio pr-B">B</span>
+<span class="topic">Review removal and reputation management</span><span class="bar"><i style="width:60%"></i></span><span class="num">60</span>
+<span class="tag2">later</span><span class="pill c-review">NONE review</span><span class="st st-adjacent_review">Adjacent: Martin decides</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Blog posts exist. &#x27;google bewertungen löschen&#x27; has 5,400 searches but the results are law firms and removal agencies. The core offer is review growth, not removal</p><p><b>Fit 1 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>100</td><td class="mut">0 of 19 niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>33</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): google bewertungen löschen <b>5,400</b> <em>nat.</em>, negative google bewertungen entfernen <b>20</b> <em>nat.</em>, google review removal bali <b>no data</b>, reputation management bali <b>no data</b></p>
+
+<p><b>Live site:</b> present (<a href="https://741.studio/de/pages/blog.html">https://741.studio/de/pages/blog.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+
+<p class='mut'>Share of German agency sites with a review removal page</p>
+<p><b>Compliance note:</b> Removal of reviews is a legal topic. Claims to delete reviews need care.</p>
+<p><b>Decision note:</b> Adjacent. A volume trap until the offer is clear.</p>
+<ul class='needs'><li>[FEHLT] Martin: is removal an offer?</li></ul>
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">google bewertungen löschen</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">negative google bewertungen entfernen</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-014</span><span class="prio pr-B">B</span>
+<span class="topic">Business pages for Bali by industry (villa, restaurant, clinic, gym)</span><span class="bar"><i style="width:59%"></i></span><span class="num">59</span>
+<span class="tag2">later</span><span class="pill c-review">NONE review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>References exist in Bali (restaurant, gym, beach club). No search demand found for the industry terms. Naming rights are not confirmed for every client</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>68</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>32</td><td class="mut">13 of 19 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): villa website design bali <b>no data</b>, restaurant website design bali <b>no data</b>, ecommerce website bali <b>no data</b></p>
+
+<p><b>Live site:</b> present (<a href="https://741.studio/de/pages/blog/webflow-vs-wordpress.html">https://741.studio/de/pages/blog/webflow-vs-wordpress.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> juicebox.co.id, exitobali.com, sansiromedia.com, seoboost.co.id, baliwebdesign.co.id, baliwebagency.com, sunmedia.co.id, mayaloka.com, toffeedev.com, gaiada.com, risanto.com, olawebdesign.com, omnirank.id</p>
+<p class='mut'>Share of Bali agency sites with an industry page</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+
+<ul class='needs'><li>[FEHLT] Martin: naming rights per reference</li></ul>
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,exitobali.com,sansiromedia.com,seoboost.co.id,baliwebdesign.co.id,baliwebagency.com,sunmedia.co.id,mayaloka.com,toffeedev.com</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-017</span><span class="prio pr-B">B</span>
+<span class="topic">Social media management and e-commerce (named in the Google profile description)</span><span class="bar"><i style="width:44%"></i></span><span class="num">44</span>
+<span class="tag2">later</span><span class="pill c-review">NONE review</span><span class="st st-adjacent_review">Adjacent: Martin decides</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>The profile description lists them. The site has no page for either</p><p><b>Fit 1 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>84</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>16</td><td class="mut">16 of 19 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>33</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): social media agency bali <b>110</b>, social media management bali <b>30</b></p>
+
+<p><b>Live site:</b> present (<a href="https://741.studio/de/pages/website-design.html">https://741.studio/de/pages/website-design.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> juicebox.co.id, exitobali.com, sansiromedia.com, seoboost.co.id, baliwebdesign.co.id, sunmedia.co.id, jaim.agency, mayaloka.com, toffeedev.com, gaiada.com, fleava.com, olawebdesign.com, c9bseo.id, omnirank.id, indonesia-digital-marketing.com, marketingonline.id</p>
+<p class='mut'>Share of Bali agency sites with a social media or shop page</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+<p><b>Decision note:</b> Adjacent. Remove from the profile description if not offered.</p>
+<ul class='needs'><li>[FEHLT] Martin: offered or not?</li></ul>
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">social media agency bali</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">social media management bali</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,exitobali.com,sansiromedia.com,seoboost.co.id,baliwebdesign.co.id,sunmedia.co.id,jaim.agency,mayaloka.com,toffeedev.com,gaiad</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="service">
+<summary><span class="rank">SVC-015</span><span class="prio pr-C">C</span>
+<span class="topic">WhatsApp and n8n automation, AI agents</span><span class="bar"><i style="width:55%"></i></span><span class="num">55</span>
+<span class="tag2">later</span><span class="pill c-review">NONE review</span><span class="st st-adjacent_review">Adjacent: Martin decides</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Only blog posts exist (n8n developer, WhatsApp automation, automation agency). The service is not on the main pages. &#x27;whatsapp automation&#x27; has many suggestions, volume for Bali not found</p><p><b>Fit 1 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>45</td><td class="mut">basis: autocomplete</td></tr>
+<tr><td>Gap</td><td>79</td><td class="mut">4 of 19 local cover it</td></tr>
+<tr><td>Fit</td><td>33</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): whatsapp automation bali <b>no data</b>, n8n developer bali <b>no data</b>, automation agency bali <b>no data</b>, ai agent bali <b>no data</b>, chatbot bali <b>no data</b></p>
+<p><b>Autocomplete:</b> whatsapp automation; whatsapp automation ai; whatsapp automation js; whatsapp automation ui</p>
+<p><b>Live site:</b> present (<a href="https://741.studio/">https://741.studio/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> juicebox.co.id, seoboost.co.id, baliwebdesign.co.id, toffeedev.com</p>
+<p class='mut'>Share of Bali agency sites with an automation page</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+<p><b>Decision note:</b> Adjacent. Martin decides.</p>
+<ul class='needs'><li>[FEHLT] Martin: is automation an offer or a side topic?</li></ul>
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">whatsapp automation</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,seoboost.co.id,baliwebdesign.co.id,toffeedev.com</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="service">
+<summary><span class="rank">SVC-012</span><span class="prio pr-C">C</span>
+<span class="topic">741 Circle: free community for visible practices (invite only)</span><span class="bar"><i style="width:43%"></i></span><span class="num">43</span>
+<span class="tag2">later</span><span class="pill c-ok">NONE ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Page exists (EN and DE). It supports the brand and gives a low-threshold entry</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">0 of 19 niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://741.studio/">https://741.studio/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+
+<p class='mut'>Share of German agency sites with a community</p>
+
+<p><b>Decision note:</b> Keep out of the main navigation until the community has members.</p>
+
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">manual</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">741 Circle: free community for visible practices (invite only)</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="service">
+<summary><span class="rank">SVC-011</span><span class="prio pr-C">C</span>
+<span class="topic">Visibility grant (Sichtbarkeits-Förderung): free programme for selected practices</span><span class="bar"><i style="width:37%"></i></span><span class="num">37</span>
+<span class="tag2">later</span><span class="pill c-review">NONE review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Pages exist (EN and DE, noindex). Memory says the giveaway page is not deployed until the terms are reviewed. It is a lead offer, not a search topic</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>29</td><td class="mut">8 of 19 niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://741.studio/de/">https://741.studio/de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> dein-gesundheitsbusiness.de, aweos.de, seofoxx.de, jurebus.de, local-seo-agentur.com, localseo-agentur.de, suchhelden.de, locally-visible.de</p>
+<p class='mut'>Share of German agency sites with a free or grant offer</p>
+<p><b>Compliance note:</b> Giveaway terms and consent not reviewed. No public page before that.</p>
+<p><b>Decision note:</b> Not published until the terms are reviewed.</p>
+<ul class='needs'><li>[FEHLT] Martin: terms and legal review</li></ul>
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">dein-gesundheitsbusiness.de,aweos.de,seofoxx.de,jurebus.de,local-seo-agentur.com,localseo-agentur.de,suchhelden.de,locally-visible.de</span></li></ul></details>
+</div></details>
+<h3>Brand</h3><details class="item p-A" data-prio="A" data-pillar="brand">
+<summary><span class="rank">BRD-003</span><span class="prio pr-A">A</span>
+<span class="topic">Brand name: &#x27;741 Studio&#x27; is ambiguous (741 studio by d&amp;s, studio 741 wien). Make the home page win the brand queries</span><span class="bar"><i style="width:82%"></i></span><span class="num">82</span>
+<span class="tag2">homepage</span><span class="pill c-ok">NONE ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>&#x27;741&#x27; alone has 379 impressions at position 12.2. The autocomplete shows other businesses</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: hero</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>80</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">0 of 38 local+niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): 741 studio <b>10</b> <em>nat.</em></p>
+<p><b>Client signal:</b> GSC 3 months: 23 queries, 640 impressions, 31 clicks, best position 3.6; top query &#x27;741&#x27;</p>
+
+
+
+
+
+
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">741 studio</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">^\+?/?#?741|741 ?studio|studio ?741|start.?741|741\.?\+?$</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-741.studio.json">03-demand/ranked-741.studio.json</a> <span class="mut">GSC 3 months: 23 queries, 640 impressions, 31 clicks, best position 3.6; top query &#x27;741&#x27;</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B07.04 brand ambiguity</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="brand">
+<summary><span class="rank">BRD-002</span><span class="prio pr-B">B</span>
+<span class="topic">Two markets, two doors: DACH practices and Bali expat businesses, each in its own language, one clear switch</span><span class="bar"><i style="width:72%"></i></span><span class="num">72</span>
+<span class="tag2">homepage</span><span class="pill c-ok">NONE ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Audit B04.01: two target markets. Today the site mixes English text into /de/ pages</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: fuer-mich</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>79</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>21</td><td class="mut">30 of 38 local+niche+topic cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://741.studio/case-studies/bernd-laserstein/">https://741.studio/case-studies/bernd-laserstein/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> juicebox.co.id, exitobali.com, sansiromedia.com, seoboost.co.id, baliwebdesign.co.id, baliwebagency.com, sunmedia.co.id, jaim.agency, mayaloka.com, toffeedev.com, sbgbali.com, gaiada.com, fleava.com, risanto.com, olawebdesign.com, c9bseo.id, omnirank.id, indonesia-digital-marketing.com, marketingonline.id, seo-fuer-heilpraktiker.de, seo-freundlich.de, sichtbarkeitsmeister.de, dein-gesundheitsbusiness.de, studio-filomena.de, healthypixels.de, yeswebcan.de, onestep-webdesign.de, seo-fuer-aerzte.com, aweos.de, seofoxx.de</p>
+<p class='mut'>Share of agency sites that name an audience in a heading</p>
+
+
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,exitobali.com,sansiromedia.com,seoboost.co.id,baliwebdesign.co.id,baliwebagency.com,sunmedia.co.id,jaim.agency,mayaloka.com,t</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B04.01</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="brand">
+<summary><span class="rank">BRD-005</span><span class="prio pr-B">B</span>
+<span class="topic">About and founder: Martin Drendel, background, why local SEO, the Bali and Germany link (LinkedIn is the strongest channel)</span><span class="bar"><i style="width:68%"></i></span><span class="num">68</span>
+<span class="tag2">homepage</span><span class="pill c-ok">NONE ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>The About page has 546 words. 106 of 197 sessions in 28 days came from organic social (LinkedIn)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: ueber</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>68</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>32</td><td class="mut">26 of 38 local+niche+topic cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Client signal:</b> GA4: Organic Social 106 of 197 sessions (28 days to 10 October)</p>
+<p><b>Live site:</b> present (<a href="https://741.studio/de/pages/about.html">https://741.studio/de/pages/about.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> juicebox.co.id, exitobali.com, sansiromedia.com, seoboost.co.id, baliwebdesign.co.id, baliwebagency.com, sunmedia.co.id, jaim.agency, mayaloka.com, toffeedev.com, gaiada.com, fleava.com, risanto.com, olawebdesign.com, c9bseo.id, omnirank.id, marketingonline.id, seo-freundlich.de, sichtbarkeitsmeister.de, seo-fuer-aerzte.com, aweos.de, jurebus.de, seo-berlin.de, suchhelden.de, ambitive.de, locally-visible.de</p>
+<p class='mut'>Share of agency sites with an about or team heading</p>
+
+
+
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/ranked-741.studio.json">03-demand/ranked-741.studio.json</a> <span class="mut">GA4: Organic Social 106 of 197 sessions (28 days to 10 October)</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,exitobali.com,sansiromedia.com,seoboost.co.id,baliwebdesign.co.id,baliwebagency.com,sunmedia.co.id,jaim.agency,mayaloka.com,t</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B07.03 LinkedIn strongest channel</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="brand">
+<summary><span class="rank">BRD-001</span><span class="prio pr-C">C</span>
+<span class="topic">One sentence for what 741.Studio is: local SEO and Google Maps visibility for practices, clinics and expat businesses</span><span class="bar"><i style="width:52%"></i></span><span class="num">52</span>
+<span class="tag2">homepage</span><span class="pill c-review">NONE review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Title and H1 today are &#x27;Architecting Digital Growth &amp; Local SEO Automation&#x27; and three rotating claims. The sentence must say what, for whom and what result</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: hero</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>28</td><td class="mut">17 of 38 local+niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://741.studio/">https://741.studio/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> exitobali.com, baliwebdesign.co.id, baliwebagency.com, toffeedev.com, sbgbali.com, c9bseo.id, omnirank.id, marketingonline.id, seo-freundlich.de, sichtbarkeitsmeister.de, seofoxx.de, local-seo-agentur.com, localseo-agentur.de, seo-berlin.de, suchhelden.de, ambitive.de, locally-visible.de</p>
+<p class='mut'>Share of agency sites with local SEO in a heading</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">exitobali.com,baliwebdesign.co.id,baliwebagency.com,toffeedev.com,sbgbali.com,c9bseo.id,omnirank.id,marketingonline.id,seo-freundlich.de,sic</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B06.02 three H1; B13.05 claims</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="brand">
+<summary><span class="rank">BRD-006</span><span class="prio pr-C">C</span>
+<span class="topic">Claim discipline: &#x27;Top 3 in 90 days&#x27; and &#x27;Double your leads in 30 days&#x27; only with the case next to the claim; guarantee only for the 90-day package</span><span class="bar"><i style="width:51%"></i></span><span class="num">51</span>
+<span class="tag2">homepage</span><span class="pill c-review">NONE review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Audit B13.05: success promises without linked proof. The rule protects against UWG warnings and builds trust</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof. Section: beweis-leiste</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>25</td><td class="mut">0 of 19 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+
+
+
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+
+
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B13.05</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="brand">
+<summary><span class="rank">BRD-004</span><span class="prio pr-C">C</span>
+<span class="topic">Method in three sentences: how a visible practice is built (without internal method names)</span><span class="bar"><i style="width:47%"></i></span><span class="num">47</span>
+<span class="tag2">homepage</span><span class="pill c-review">NONE review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>A clear, repeatable method is the difference to the Bali and German agencies that list only services. The wording must avoid method sources and tool names (house rule)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: erster-termin</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>28</td><td class="mut">17 of 38 local+niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://741.studio/de/">https://741.studio/de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> juicebox.co.id, baliwebdesign.co.id, jaim.agency, mayaloka.com, toffeedev.com, gaiada.com, fleava.com, sichtbarkeitsmeister.de, dein-gesundheitsbusiness.de, studio-filomena.de, seo-fuer-rechtsanwaelte.de, seofoxx.de, localseo-agentur.de, seo-berlin.de, suchhelden.de, ambitive.de, locally-visible.de</p>
+<p class='mut'>Share of agency sites with a method or approach heading</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+
+<ul class='needs'><li>[FEHLT] Martin: the three sentences</li></ul>
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,baliwebdesign.co.id,jaim.agency,mayaloka.com,toffeedev.com,gaiada.com,fleava.com,sichtbarkeitsmeister.de,dein-gesundheitsbusi</span></li></ul></details>
+</div></details>
+<h3>Authority</h3><details class="item p-A" data-prio="A" data-pillar="authority">
+<summary><span class="rank">AUT-002</span><span class="prio pr-A">A</span>
+<span class="topic">Proof strip on the home page: Google 4.5 with 17 reviews, client logos (real files only), the number of programme clients (only if true)</span><span class="bar"><i style="width:77%"></i></span><span class="num">77</span>
+<span class="tag2">homepage</span><span class="pill c-ok">NONE ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Google profile shows 4.5 stars and 17 reviews. The newest is three weeks old. Real client logos only</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof. Section: beweis-leiste</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>55</td><td class="mut">17 of 38 local+niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Client signal:</b> Google profile 4.5 stars, 17 reviews (audit B05.03)</p>
+
+<p><b>Competitors covering it:</b> juicebox.co.id, seoboost.co.id, baliwebagency.com, c9bseo.id, omnirank.id, indonesia-digital-marketing.com, seo-fuer-heilpraktiker.de, sichtbarkeitsmeister.de, dein-gesundheitsbusiness.de, onestep-webdesign.de, seo-fuer-aerzte.com, aweos.de, seo-fuer-rechtsanwaelte.de, local-seo-agentur.com, localseo-agentur.de, suchhelden.de, locally-visible.de</p>
+<p class='mut'>Share of agency sites with a rating signal</p>
+
+
+
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/ranked-741.studio.json">03-demand/ranked-741.studio.json</a> <span class="mut">Google profile 4.5 stars, 17 reviews (audit B05.03)</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,seoboost.co.id,baliwebagency.com,c9bseo.id,omnirank.id,indonesia-digital-marketing.com,seo-fuer-heilpraktiker.de,sichtbarkeit</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B05.03 reviews</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="authority">
+<summary><span class="rank">AUT-005</span><span class="prio pr-B">B</span>
+<span class="topic">Thin near-identical blog posts (&#x27;Best ... Bali&#x27;, &#x27;Web design Bali&#x27;, about 370 to 440 words each): merge into a few deep pages</span><span class="bar"><i style="width:72%"></i></span><span class="num">72</span>
+<span class="tag2">later</span><span class="pill c-review">NONE review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Many English posts share the same title pattern and similar length, and a German-path copy exists for most. Google may treat this as scaled content. The posts bring few impressions</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: page.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>74</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>26</td><td class="mut">14 of 19 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): web design cost bali <b>no data</b>, webflow vs wordpress <b>no data</b> <em>nat.</em></p>
+<p><b>Client signal:</b> GSC 3 months: 3 queries, 16 impressions, 0 clicks, best position 7.6; top query &#x27;webflow agency bali&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://741.studio/de/pages/blog.html">https://741.studio/de/pages/blog.html</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> juicebox.co.id, exitobali.com, baliwebdesign.co.id, baliwebagency.com, sunmedia.co.id, mayaloka.com, toffeedev.com, sbgbali.com, gaiada.com, fleava.com, risanto.com, omnirank.id, indonesia-digital-marketing.com, marketingonline.id</p>
+<p class='mut'>Share of Bali agency sites with a blog or guide</p>
+<p><b>Compliance note:</b> Own rules: no success promise without proof next to the claim (UWG). A guarantee only for the 90-day package. No prices on public pages (numbers only in the call). No tool names, team names or method sources in client-facing text.</p>
+<p><b>Decision note:</b> Check text overlap by script before any merge or redirect (sitemap step).</p>
+
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">^best |agency bali|web design bali</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-741.studio.json">03-demand/ranked-741.studio.json</a> <span class="mut">GSC 3 months: 3 queries, 16 impressions, 0 clicks, best position 7.6; top query &#x27;webflow agency bali&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,exitobali.com,baliwebdesign.co.id,baliwebagency.com,sunmedia.co.id,mayaloka.com,toffeedev.com,sbgbali.com,gaiada.com,fleava.c</span></li><li><span class="tag">competitor-page</span> <a href="../05-sitetree/own-metrics.json">05-sitetree/own-metrics.json</a> <span class="mut">blog posts and word counts</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="authority">
+<summary><span class="rank">AUT-001</span><span class="prio pr-B">B</span>
+<span class="topic">Case studies: show numbers and the client&#x27;s own words, link each claim to its case; fix the noindex on one case page</span><span class="bar"><i style="width:71%"></i></span><span class="num">71</span>
+<span class="tag2">homepage</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Seven case-study pages exist (Lengauer Vienna, Laserstein Freiburg, Abel, Schlirf). One carries noindex. Cases are the main proof for the 90-day claim</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof. Section: beweis-leiste</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>58</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>42</td><td class="mut">22 of 38 local+niche+topic cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://741.studio/case-studies/astrid-lengauer-en/">https://741.studio/case-studies/astrid-lengauer-en/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> exitobali.com, sansiromedia.com, seoboost.co.id, baliwebdesign.co.id, toffeedev.com, gaiada.com, omnirank.id, seo-freundlich.de, sichtbarkeitsmeister.de, dein-gesundheitsbusiness.de, studio-filomena.de, yeswebcan.de, onestep-webdesign.de, aweos.de, seofoxx.de, jurebus.de, local-seo-agentur.com, localseo-agentur.de, seo-berlin.de, suchhelden.de, ambitive.de, locally-visible.de</p>
+<p class='mut'>Share of agency sites with a case study or reference heading</p>
+<p><b>Compliance note:</b> Health practices: follow the HWG case-study rules (consent, no healing promises, no before/after). Give no result number without the measure and the date.</p>
+
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">exitobali.com,sansiromedia.com,seoboost.co.id,baliwebdesign.co.id,toffeedev.com,gaiada.com,omnirank.id,seo-freundlich.de,sichtbarkeitsmeiste</span></li><li><span class="tag">competitor-page</span> <a href="../05-sitetree/own-metrics.json">05-sitetree/own-metrics.json</a> <span class="mut">case-studies pages</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="authority">
+<summary><span class="rank">AUT-003</span><span class="prio pr-C">C</span>
+<span class="topic">Reviews: ask after every project, reply to every review (the newest has no reply)</span><span class="bar"><i style="width:50%"></i></span><span class="num">50</span>
+<span class="tag2">homepage</span><span class="pill c-review">NONE review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Audit B05.03 and B05.04: 17 reviews, the newest without an owner reply. The review ask is not documented</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof. Section: bewertungen</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>28</td><td class="mut">17 of 38 local+niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+
+<p><b>Competitors covering it:</b> juicebox.co.id, seoboost.co.id, baliwebagency.com, c9bseo.id, omnirank.id, indonesia-digital-marketing.com, seo-fuer-heilpraktiker.de, sichtbarkeitsmeister.de, dein-gesundheitsbusiness.de, onestep-webdesign.de, seo-fuer-aerzte.com, aweos.de, seo-fuer-rechtsanwaelte.de, local-seo-agentur.com, localseo-agentur.de, suchhelden.de, locally-visible.de</p>
+<p class='mut'>Share of agency sites with a rating signal</p>
+<p><b>Compliance note:</b> No incentives and no fake reviews.</p>
+
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">juicebox.co.id,seoboost.co.id,baliwebagency.com,c9bseo.id,omnirank.id,indonesia-digital-marketing.com,seo-fuer-heilpraktiker.de,sichtbarkeit</span></li><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B05.03, B05.04</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="authority">
+<summary><span class="rank">AUT-004</span><span class="prio pr-C">C</span>
+<span class="topic">Directory and listing link targets for an agency: Sortlist, TheManifest, Techbehemoths, DACH agency lists</span><span class="bar"><i style="width:40%"></i></span><span class="num">40</span>
+<span class="tag2">offsite</span><span class="pill c-ok">NONE ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>These portals appear on page 1 for the agency searches. They are link targets, not competitors</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: link-target.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>25</td><td class="mut">0 of 38 local+niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+
+
+
+
+
+
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">serp</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">web design bali: techbehemoths on page 1; local seo bali: themanifest</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="authority">
+<summary><span class="rank">AUT-007</span><span class="prio pr-C">C</span>
+<span class="topic">Answer-ready blocks for AI search: a short, clear answer per service page (what, who, where, how long)</span><span class="bar"><i style="width:38%"></i></span><span class="num">38</span>
+<span class="tag2">later</span><span class="pill c-ok">NONE ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>AI assistants send no sessions yet (GA4). Short clear blocks raise the chance of citation later</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>25</td><td class="mut">0 of 38 local+niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+
+
+
+
+
+
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">client-data</span> <a href="../01-client/audit-reused/findings.json">01-client/audit-reused/findings.json</a> <span class="mut">B12.01 AI visibility not measured</span></li></ul></details>
+</div></details>
+<h2 id="cut">Cut items and why</h2><details class="item p-cut" data-prio="cut" data-pillar="location">
+<summary><span class="rank">LOC-004</span><span class="prio pr-cut">cut</span>
+<span class="topic">City pages (SEO Nürnberg, SEO Schwabach, SEO Berlin and so on)</span><span class="bar"><i style="width:51%"></i></span><span class="num">51</span>
+<span class="tag2">cut</span><span class="pill c-ok">NONE ok</span><span class="st st-cut">Cut</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>&#x27;seo nürnberg&#x27; has 390 searches. The agency has no office, no local proof and no local client there. One copied page per city fails the place rule</p><p><b>Fit 0 of 3.</b> Patient audience. Item type: cut-log.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>100</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">0 of 19 local cover it</td></tr>
+<tr><td>Fit</td><td>0</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): seo nürnberg <b>390</b>, seo schwabach <b>50</b>, seo agentur berlin <b>2,400</b></p>
+<p><b>Client signal:</b> GSC 3 months: 2 queries, 31 impressions, 0 clicks, best position 10.0; top query &#x27;seo schwabach&#x27;</p>
+
+
+
+
+<p><b>Decision note:</b> Rule: demand, catchment signal and unique local facts. No local facts, so no city pages. A city may appear only where a real client case from that city exists (see CP-AUT-001).</p>
+
+<details class="raw"><summary>Raw data (5 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo nürnberg</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo schwabach</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">seo agentur berlin</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">seo schwabach|seo nürnberg|seo nuernberg</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-741.studio.json">03-demand/ranked-741.studio.json</a> <span class="mut">GSC 3 months: 2 queries, 31 impressions, 0 clicks, best position 10.0; top query &#x27;seo schwabach&#x27;</span></li></ul></details>
+</div></details><details class="item p-cut" data-prio="cut" data-pillar="authority">
+<summary><span class="rank">AUT-006</span><span class="prio pr-cut">cut</span>
+<span class="topic">Off-topic posts: VPN, photo metadata, secure data wiping, serverless life, right to be forgotten</span><span class="bar"><i style="width:13%"></i></span><span class="num">13</span>
+<span class="tag2">cut</span><span class="pill c-ok">NONE ok</span><span class="st st-cut">Cut</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>These topics are not services of 741.Studio and do not support the offer. They dilute the site topic</p><p><b>Fit 0 of 3.</b> Patient audience. Item type: cut-log.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>25</td><td class="mut">0 of 19 local cover it</td></tr>
+<tr><td>Fit</td><td>0</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+
+
+
+
+<p><b>Decision note:</b> Not offered. Martin decides: keep as private notes, noindex or remove. No pool target.</p>
+
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">manual</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">Off-topic posts: VPN, photo metadata, secure data wiping, serverless life, right to be forgotten</span></li></ul></details>
+</div></details>
+<h2 id="decisions">Decisions for Martin</h2><ol><li>Cost page (CP-SVC-009): no numbers, a &#x27;from&#x27; hint, or a range? Your rule says numbers only in the call.</li><li>Law firms (CP-SVC-003): is the vertical a goal, and may the Stürzl case be named? Only one client so far.</li><li>Adjacent offers (CP-SVC-015, CP-SVC-016, CP-SVC-017): automation, review removal, social media and e-commerce. Offered or not? If not, remove them from the Google profile description.</li><li>Blog: merge the near-identical &#x27;Best ... Bali&#x27; posts (CP-AUT-005) and decide on the off-topic posts (CP-AUT-006): keep, noindex or remove.</li><li>Which noindex pages become indexable: the Bali pages, the audit pages (CP-SVC-004)? The visibility grant waits for the terms review (CP-SVC-011).</li><li>Is Berlin a base? &#x27;webdesign agentur berlin&#x27; (1,300 searches) counts only if yes.</li><li>Google Ads and Meta Ads variants: which single page per service stays?</li></ol>
+<h2 id="client">Open facts from the client</h2><div class="tblwrap"><table><tr><th>[FEHLT]</th><th>Blocks items</th></tr><tr><td>Martin decides: no numbers, a &#x27;from&#x27; hint, or a range?</td><td>CP-SVC-009</td></tr><tr><td>Martin: is Berlin a base for web design clients? (&#x27;webdesign agentur berlin&#x27; counts only if yes)</td><td>CP-SVC-007</td></tr><tr><td>Martin: which steps may be public?</td><td>CP-SVC-008</td></tr><tr><td>Martin: may the Stürzl case be named? Is the vertical a goal?</td><td>CP-SVC-003</td></tr><tr><td>Martin: answers on guarantee and cancellation</td><td>CP-SVC-013</td></tr><tr><td>Martin: is removal an offer?</td><td>CP-SVC-016</td></tr><tr><td>Martin: naming rights per reference</td><td>CP-SVC-014</td></tr><tr><td>Martin: offered or not?</td><td>CP-SVC-017</td></tr><tr><td>Martin: is automation an offer or a side topic?</td><td>CP-SVC-015</td></tr><tr><td>Martin: the three sentences</td><td>CP-BRD-004</td></tr><tr><td>Martin: terms and legal review</td><td>CP-SVC-011</td></tr></table></div><p class="mut">The full list for the client is in 01-client/client-baseline.md section 8 and in the German form.</p>
+<h2 id="raw">Raw data</h2><h3>Competitor pages measured</h3><div class="tblwrap"><table><tr><th>Page</th><th>Tier</th><th>Words</th><th>H2</th><th>FAQ</th><th>Price</th><th>Rating</th><th>Method</th></tr>
+<tr><td><a href="../02-competitors/metrics.json">741.studio/</a></td><td>client</td><td>787</td><td>10</td><td>-</td><td>yes</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">juicebox.co.id/</a></td><td>local</td><td>480</td><td>25</td><td>-</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">exitobali.com/</a></td><td>local</td><td>1699</td><td>5</td><td>-</td><td>yes</td><td>-</td><td>http</td></tr>
+<tr><td>https://sansiromedia.com/</td><td>local</td><td colspan="6"><b>unreadable</b>: Only 12 words read (script-rendered page, not readable by HTTP or headless Chrome). Not used for the benchmark.. Not read as "nothing found".</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">seoboost.co.id/</a></td><td>local</td><td>968</td><td>13</td><td>-</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">baliwebdesign.co.id/</a></td><td>local</td><td>826</td><td>7</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">baliwebagency.com/</a></td><td>local</td><td>2571</td><td>5</td><td>-</td><td>yes</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">sunmedia.co.id/</a></td><td>local</td><td>952</td><td>8</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">jaim.agency/</a></td><td>local</td><td>273</td><td>31</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">mayaloka.com/</a></td><td>local</td><td>383</td><td>7</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">toffeedev.com/</a></td><td>local</td><td>1525</td><td>9</td><td>yes</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">sbgbali.com/</a></td><td>local</td><td>1388</td><td>8</td><td>yes</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">gaiada.com/</a></td><td>local</td><td>500</td><td>1</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">fleava.com/</a></td><td>local</td><td>317</td><td>6</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">risanto.com/</a></td><td>local</td><td>968</td><td>5</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">olawebdesign.com/</a></td><td>local</td><td>3274</td><td>9</td><td>yes</td><td>yes</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">c9bseo.id/</a></td><td>local</td><td>618</td><td>4</td><td>-</td><td>yes</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">omnirank.id/</a></td><td>local</td><td>1161</td><td>14</td><td>-</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">indonesia-digital-marketing.com/</a></td><td>local</td><td>655</td><td>9</td><td>-</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">marketingonline.id/</a></td><td>local</td><td>344</td><td>4</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">seo-fuer-heilpraktiker.de/</a></td><td>niche</td><td>4020</td><td>18</td><td>yes</td><td>yes</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">seo-freundlich.de/</a></td><td>niche</td><td>3467</td><td>11</td><td>yes</td><td>yes</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">sichtbarkeitsmeister.de/</a></td><td>niche</td><td>2029</td><td>12</td><td>-</td><td>yes</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">dein-gesundheitsbusiness.de/</a></td><td>niche</td><td>2054</td><td>11</td><td>yes</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">studio-filomena.de/</a></td><td>niche</td><td>702</td><td>6</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td>https://healthypixels.de/</td><td>niche</td><td colspan="6"><b>unreadable</b>: Only 12 words read (script-rendered page, not readable by HTTP or headless Chrome). Not used for the benchmark.. Not read as "nothing found".</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">yeswebcan.de/</a></td><td>niche</td><td>956</td><td>9</td><td>-</td><td>yes</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">onestep-webdesign.de/</a></td><td>niche</td><td>1881</td><td>20</td><td>yes</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">seo-fuer-aerzte.com/</a></td><td>niche</td><td>3447</td><td>10</td><td>yes</td><td>yes</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">aweos.de/</a></td><td>niche</td><td>1076</td><td>9</td><td>yes</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">seo-fuer-rechtsanwaelte.de/</a></td><td>niche</td><td>1537</td><td>12</td><td>yes</td><td>yes</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">webtiger-pro.de/</a></td><td>niche</td><td>7095</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">seofoxx.de/</a></td><td>niche</td><td>900</td><td>21</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">jurebus.de/</a></td><td>niche</td><td>844</td><td>12</td><td>-</td><td>yes</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">local-seo-agentur.com/</a></td><td>topic</td><td>2136</td><td>15</td><td>yes</td><td>yes</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">localseo-agentur.de/</a></td><td>topic</td><td>2646</td><td>24</td><td>yes</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">seo-berlin.de/</a></td><td>topic</td><td>1642</td><td>10</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">suchhelden.de/</a></td><td>topic</td><td>4741</td><td>2</td><td>-</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">ambitive.de/</a></td><td>topic</td><td>621</td><td>7</td><td>yes</td><td>yes</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">locally-visible.de/</a></td><td>topic</td><td>2745</td><td>6</td><td>-</td><td>-</td><td>yes</td><td>http</td></tr>
+</table></div>
+<h3>Files</h3><ul><li><a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">client facts and [FEHLT] list</span></li><li><a href="../02-competitors/metrics.json">02-competitors/metrics.json</a> <span class="mut">page measures</span></li><li><a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">competitor sitemaps</span></li><li><a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">SERPs of the key searches (serp-1.json, serp-2.json, ...)</span></li><li><a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">search volumes, call 1</span></li><li><a href="../03-demand/volume2.json">03-demand/volume2.json</a> <span class="mut">search volumes, call 2</span></li><li><a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">Google autocomplete tree</span></li><li><a href="../03-demand/ranked-741.studio.json">03-demand/ranked-741.studio.json</a> <span class="mut">own rankings (more ranked-*.json for competitors)</span></li><li><a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">own Search Console queries</span></li><li><a href="../04-pool/pool.json">04-pool/pool.json</a> <span class="mut">the pool, machine-readable</span></li><li><a href="../spend.jsonl">spend.jsonl</a> <span class="mut">every paid call and its cost</span></li></ul>
+</div><script>
+document.querySelectorAll('.filters').forEach(function(f){f.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+f.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var v=b.dataset.f;
+document.querySelectorAll('details.item').forEach(function(d){d.classList.toggle('hidden',!(v==='all'||d.dataset.prio===v||(v==='client'&&d.querySelector('.st-needs_client'))||(v==='adj'&&d.querySelector('.st-adjacent_review'))))})})});
+</script></body></html>

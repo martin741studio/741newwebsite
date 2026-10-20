@@ -1,0 +1,3 @@
+# me&you Communication / Michael Ehlers — Seminarseite (CRO-Lauf, Unterseite)
+Kunde: Michael Ehlers, me&you Communication (via Pauspapier) · Seite: Seminare (`/seminare`) · Basis: Vorschau v2 https://clients.741.studio/meandyou/v2/seminare.html · Live: keine eigene Seminarseite auf meandyou.de · CMS: Framer (Pauspapier) · Kontaktkanal: Gespräch buchen → Terminseite (Calendly „Sichtbarkeit Neu“) · Quelle: Martin 2026-10-12 · Checkpoints: 1 (Copy) und 2 (Prototyp) · Design-Basis: freigegebener Startseiten-Prototyp `../07-prototype/` · Status: Copy freigegeben
+Drive: Unterordner „Seminare“ im Ordner „CRO Homepage“ (https://drive.google.com/drive/folders/1d1NshM3Kvk_zQjG142t7H8Mh7JlVl4GA)

@@ -1,0 +1,80 @@
+{
+  "run_id": "stuerzl-2026-10-11-scan",
+  "client_slug": "stuerzl",
+  "client_id": "b6f6e303-50e4-4afb-a343-337206cec316",
+  "domain": "stuerzl-steuerstrafrecht.de",
+  "mode": "scan",
+  "from_audit_run": null,
+  "previous_run_id": null,
+  "started_at": "2026-10-11T11:38:55+08:00",
+  "timezone": "Europe/Berlin",
+  "catalog_version": "ub-1",
+  "params": {
+    "scanned_areas": [
+      "A",
+      "C",
+      "D",
+      "E"
+    ],
+    "parts": [
+      "part-AC",
+      "part-Abrowser",
+      "part-D",
+      "part-E"
+    ],
+    "notes": "A verified in part (public + read-only browser read of GBP Frankfurt and GA4 account access); B not scanned; GBP live data unreadable via Falcon (browser list read only)."
+  },
+  "cost": {
+    "eur": 0
+  },
+  "sources_unreadable": [
+    {
+      "source": "GBP Frankfurt and München live profile (categories, services, hours, reviews, photos)",
+      "error": "Local Falcon read not connected in this session. Browser read covered the manager list and the address in the business list only."
+    },
+    {
+      "source": "GBP München owner and manager list",
+      "error": "The profile is not in the 741 account."
+    },
+    {
+      "source": "GA4 user list",
+      "error": "741 has no Administrator role on the account."
+    },
+    {
+      "source": "Search Console (property, coverage, clicks, manual actions, disavow)",
+      "error": "No access. Service account gets HTTP 403. The verification token is in DNS and in the home page."
+    },
+    {
+      "source": "Joomla user list and global settings",
+      "error": "741 account is Administrator, not Super User."
+    },
+    {
+      "source": "Domain registrar account",
+      "error": "DENIC and RDAP hide the holder."
+    },
+    {
+      "source": "Infobel page, LinkedIn, Yelp, Bing Places, Apple Maps",
+      "error": "Captcha, login wall or not supported. Rows use search snippets and are marked derived."
+    },
+    {
+      "source": "Official lawyers' directory (RAK Frankfurt / BRAK)",
+      "error": "Read only through the Anwalt-Lotse mirror (data about 3 weeks old)."
+    },
+    {
+      "source": "Index state of any URL",
+      "error": "No Search Console access. site: results use the Firecrawl index and are rough."
+    },
+    {
+      "source": "Core Web Vitals (LCP)",
+      "error": "PageSpeed API returned 429. The earlier value (7.2 s) is not re-measured."
+    },
+    {
+      "source": "anwalt.de review dates",
+      "error": "Only 10 of 55 review dates are visible."
+    },
+    {
+      "source": "Backlink anchors (new pull)",
+      "error": "Not run. Opt-in flag off. Groups A to D reuse the stored 2026-10-09 data."
+    }
+  ]
+}

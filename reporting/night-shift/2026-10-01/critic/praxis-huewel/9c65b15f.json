@@ -1,0 +1,41 @@
+{
+  "plan_index": 3,
+  "client": "Praxis Hüwel",
+  "feedback_id": "9c65b15f-fac9-40a3-9b0a-0eafd41b1655",
+  "mode": "FEEDBACK",
+  "executor_file": "feedback/praxis-huewel/9c65b15f-fac9-40a3-9b0a-0eafd41b1655.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "pass",
+      "note": "FEEDBACK mode has no Title/Meta/H1/JSON-LD fields. The 'Kanonische Geschäftsdaten' NAP block itself carries no invented value — it is entirely [fehlt:] because context.json.nap_locked has no locked record for client_id f0a6730f-8f56-4c61-8085-1955f3bb285a (confirmed: nap_locked only lists Suriya, Dumann, Brasse). That is a correct, honest gap flag per hard rule 2, not a fabricated NAP block, so this does not count as a fail. The other [fehlt:] tags (missing original report passage; which homeopathic remedies/approach to name) are likewise genuine unknowns, not invented facts."
+    },
+    "nap_matches_locked_record": {
+      "result": "n/a",
+      "note": "No locked NAP record exists for this client_id in context.json.nap_locked, so a field-by-field match cannot be performed. The Executor correctly flagged this as [fehlt:] and escalated it in the 'Hinweis an Martin' section instead of guessing or inventing an address/phone. Treated as not-applicable rather than a fail, since fabricating a comparison would itself be a rule-2 violation."
+    },
+    "jsonld_valid": {
+      "result": "n/a",
+      "note": "FEEDBACK mode has no JSON-LD requirement per SKILL.md §3."
+    },
+    "language_matches_market": {
+      "result": "pass",
+      "note": "market_lang=de; the entire Vorschlag, the Kunde-sagt quote, and all surrounding text are German."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "note": "Scanned for 'heilt', 'garantiert', '100 %', 'Heilung' — none present. The draft explicitly discusses avoiding a 'Heilversprechen' (promise of a cure) rather than making one. The suggested example sentence ('Homöopathische Mittel können ... unterstützend eingesetzt werden. Wie schnell und wie stark eine Besserung eintritt, ist individuell unterschiedlich. Bleibt eine spürbare Wirkung aus, ist eine ergänzende oder alternative hormonelle Behandlung eine mögliche nächste Option.') makes no cure claim, no guarantee, and no fear claim — it is the correct HWG-compliant framing for exactly the risk the client raised in point 3."
+    },
+    "feedback_addresses_comment": {
+      "result": "pass",
+      "note": "Kunde sagt has 4 distinct statements, each answered as its own numbered point: (1) 'kein gesonderter Schwerpunkt, nur mittelmäßige Erfolge' -> Punkt 1, downgrades the piece from pillar/priority content to a regular Wissens-Artikel. (2) 'Thema ist komplex wg. Hormonbezug' -> Punkt 2, directs the article to name the hormonal link openly, with a [fehlt:] correctly deferring the specific remedies/approach to the client rather than inventing them. (3) 'Greifen die Mittel nicht zügig, werden dann Hormone geschluckt' -> Punkt 3, the HWG-sensitive core, reframed into a compliant example sentence that presents hormonal treatment as a complementary next option, not a failure of homeopathy. (4) 'Patienten sind da auch manchmal etwas undankbar' -> Punkt 4, correctly identified as internal practice context, not website copy, with a concrete reason (expectation-setting in Punkt 3 already mitigates this) rather than being dropped silently."
+    },
+    "deslop_body_copy": {
+      "result": "n/a",
+      "note": "Per SKILL.md §3 FEEDBACK exception: de-slop only applies when the Vorschlag is new client-facing prose meant to ship as-is (e.g. a GBP description rewrite), never when it is an internal recommendation to Martin. Here the Vorschlag is a four-point internal strategy memo ('Empfehlung: ...') about how to scope and frame a not-yet-written blog post; the one embedded sentence group is explicitly labelled 'Beispiel-Formulierung (zur Prüfung durch den Kunden)' — a draft for review, not finished copy to publish. Not run, not a blocker."
+    }
+  },
+  "fails": [],
+  "overall_verdict": "pass",
+  "reasoning": "All applicable hard checks pass. The verbatim 'Kunde sagt' quote matches context.json.feedback_open id 9c65b15f word for word. No data is invented anywhere: the missing original report passage, the missing locked NAP record for this client, and the unspecified homeopathic remedies are all explicitly marked [fehlt:] rather than guessed, consistent with hard rule 2. The FEEDBACK-mode rubric substitute (sentence-for-sentence coverage of all four points in the client's comment) is satisfied, and the one piece of draft client-facing prose (the HWG example sentence) is itself compliant with the HWG scan. The output additionally surfaces the HWG risk and the missing-NAP gap to Martin explicitly, which is the correct behavior for a FEEDBACK item touching health claims."
+}

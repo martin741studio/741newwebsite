@@ -1,0 +1,259 @@
+{
+ "client": "STÜRZL Steuerstrafrecht",
+ "client_slug": "stuerzl",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "language": "de",
+ "voice_sheet": "00_project/assets/stuerzl/voice.md",
+ "mode": "rewrite",
+ "cta": {
+  "goal": "Vertrauliche Anfrage über das Formular (nur Thema, keine Falldaten)",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nennen Sie uns nur Ihr Thema, keine Einzelheiten. Ihre Angaben unterliegen unserer gesetzlichen Verschwiegenheit.",
+  "secondary": "Anrufen: Frankfurt +49 69 298028870, München +49 89 72444170"
+ },
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "H1, Situation, ein Weg",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Direkt-Antwort"
+  },
+  {
+   "id": "S03",
+   "element": "check-list",
+   "job": "Situationen"
+  },
+  {
+   "id": "S04",
+   "element": "step-flow",
+   "job": "Ablauf",
+   "cta": "primary"
+  },
+  {
+   "id": "S05",
+   "element": "person",
+   "job": "E-E-A-T"
+  },
+  {
+   "id": "S06",
+   "element": "text",
+   "job": "Kosten kurz",
+   "cta": "secondary"
+  },
+  {
+   "id": "S07",
+   "element": "accordion",
+   "job": "Vertiefung",
+   "cta": "secondary"
+  },
+  {
+   "id": "S08",
+   "element": "faq",
+   "job": "FAQ"
+  },
+  {
+   "id": "S09",
+   "element": "cta",
+   "job": "Abschluss",
+   "cta": "primary"
+  }
+ ],
+ "gate": "A0",
+ "require_answer_block": true,
+ "cta_min": 3,
+ "cta_text": "Vertraulich anfragen",
+ "proof_assets": [
+  "Fachanwältin für Steuerrecht seit 2021 (Lebenslauf)",
+  "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022 (Lebenslauf)"
+ ],
+ "forbidden_words": [
+  "spezialisiert",
+  "Spezialist",
+  "Experte",
+  "Expertin",
+  "Expertise",
+  "führend",
+  "Exzellenz",
+  "kostenlos",
+  "Festpreis",
+  "WhatsApp",
+  "Wiesenhüttenstraße",
+  "Albtraum",
+  "Ruin",
+  "Haft droht"
+ ],
+ "own_phrases": [
+  "Wir stehen Ihnen zur Seite",
+  "langjährige Praxiserfahrung",
+  "Fehler passieren",
+  "Das Mandanteninteresse steht für uns immer im Vordergrund",
+  "möglichst geräuschlos und effizient",
+  "Jedes Mandat und jeder Mandant ist anders"
+ ],
+ "placeholders_allowed": [
+  "Pauschale Erstberatung",
+  "Rechtsschutzversicherung",
+  "Vorschuss-Rahmen"
+ ],
+ "blockers": [],
+ "page_slug": "arbeitsstrafrecht",
+ "page_type": "service",
+ "pool_item_ids": [
+  "CP-SVC-015"
+ ],
+ "sitetree_node": "ST-28",
+ "url_slug": "/arbeitsstrafrecht/",
+ "keyword_primary": "schwarzarbeit strafe",
+ "keywords_cluster": [
+  {
+   "kw": "schwarzarbeit strafe",
+   "volume": 2900,
+   "scope": "national",
+   "source": "DataForSEO google_ads/search_volume/live, de, 2276",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "finanzkontrolle schwarzarbeit",
+   "volume": 2400,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "sozialversicherungsbetrug",
+   "volume": 480,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "scheinselbständigkeit strafe",
+   "volume": 480,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "sozialversicherungsbetrug strafe",
+   "volume": 90,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "illegale arbeitnehmerüberlassung",
+   "volume": 40,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "arbeitsstrafrecht",
+   "volume": 40,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "schwarzarbeit anwalt",
+   "volume": 30,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  }
+ ],
+ "intent": "commercial",
+ "reader": "Arbeitgeber, Geschäftsführer, Auftraggeber oder Beschäftigter, bei dem Zoll (Finanzkontrolle Schwarzarbeit), Rentenversicherung oder Staatsanwaltschaft wegen Schwarzarbeit, Sozialversicherungsbeiträgen oder Arbeitnehmerüberlassung ermittelt, oder der Unstimmigkeiten klären will.",
+ "local_city": null,
+ "money_page": true,
+ "bestand_words": 148,
+ "benchmark_median_words": 1876,
+ "benchmark_sources": "siehe 01-brief/gate-a0.md (14 Seiten zu Schwarzarbeit und Arbeitsstrafrecht, gelesen 2026-10-11)",
+ "word_range": [
+  1300,
+  2000
+ ],
+ "faq_min": 6,
+ "internal_links_min": 4,
+ "internal_link_targets": [
+  {
+   "url": "/steuerstrafrecht/",
+   "anchor": "Steuerstrafrecht",
+   "role": "pillar"
+  },
+  {
+   "url": "/kosten/",
+   "anchor": "Kosten und Honorar",
+   "role": "cost"
+  },
+  {
+   "url": "/dr-anja-stuerzl/",
+   "anchor": "Dr. Anja Stürzl",
+   "role": "person"
+  },
+  {
+   "url": "/selbstanzeige/",
+   "anchor": "Selbstanzeige",
+   "role": "sibling"
+  },
+  {
+   "url": "/zollstrafrecht/",
+   "anchor": "Zollstrafrecht",
+   "role": "sibling"
+  },
+  {
+   "url": "/unternehmensvertretung/",
+   "anchor": "Unternehmensvertretung",
+   "role": "sibling"
+  },
+  {
+   "url": "/ordnungswidrigkeiten/",
+   "anchor": "Ordnungswidrigkeiten",
+   "role": "sibling"
+  }
+ ],
+ "nap_file": "00_project/assets/stuerzl/nap.json",
+ "paa_questions": [
+  {
+   "q": "Was passiert, wenn man wegen Schwarzarbeit angezeigt wird?",
+   "status": "answered"
+  },
+  {
+   "q": "Wann gilt es als Schwarzarbeit?",
+   "status": "answered"
+  },
+  {
+   "q": "Kann ich private Schwarzarbeit anonym melden?",
+   "status": "dropped",
+   "reason_code": "off-offer",
+   "reason": "Frage von Hinweisgebern; die Kanzlei verteidigt Betroffene und berät sie, sie begleitet keine Meldungen"
+  },
+  {
+   "q": "Wer bekommt Ärger bei Schwarzarbeit?",
+   "status": "dropped",
+   "reason_code": "Duplikat",
+   "reason": "Wortlaut mit Angstwort \"Ärger\" (Review D, Punkt 6); die Frage steht als \"Wer kann bei Schwarzarbeit betroffen sein?\" auf der Seite und ist dort beantwortet"
+  },
+  {
+   "q": "Was zählt als Sozialbetrug?",
+   "status": "dropped",
+   "reason_code": "off-offer",
+   "reason": "Sozialleistungsbetrug (§ 263 StGB, Jobcenter) gehört nicht zum Angebot; Seite behandelt Sozialversicherungsbeiträge (§ 266a StGB)"
+  },
+  {
+   "q": "Was sagt der Paragraph 263 StGB aus?",
+   "status": "dropped",
+   "reason_code": "off-offer",
+   "reason": "Betrug (§ 263 StGB) ist nicht Thema der Seite"
+  }
+ ],
+ "schema_faq": true
+}

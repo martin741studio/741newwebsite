@@ -60,7 +60,7 @@ Michael Ehlers sagt es in seinem Podcast „Unübersehbar“ so: Kommunikation i
 
 **01 Dein Argument stimmt. Entschieden wird anders.** Du hast die Zahlen geprüft und die Risiken benannt. Am Ende setzt sich der Vorschlag durch, der sicherer vorgetragen wurde.
 
-**02 Deine Idee kommt über einen anderen an.** Du erklärst im Meeting deine Lösung und bekommst glasige Blicke zurück. Jemand unterbricht: „Können wir das vereinfachen?“ Fünf Minuten später sagt ein Kollege dasselbe mit anderen Worten. Alle nicken, und er bekommt das Lob.
+**02 Deine Idee kommt über einen anderen an.** Du erklärst im Meeting deine Lösung und bekommst glasige Blicke zurück. Jemand unterbricht: „Können wir das vereinfachen?“ Fünf Minuten später sagt ein Kollege dasselbe mit anderen Worten. Alle nicken. Und plötzlich gehört der Gedanke ihm.
 
 **03 Mehr Detail, weniger Aufmerksamkeit.** Du willst gründlich sein und bringst jedes Argument. Je mehr du erklärst, desto früher schauen die anderen auf ihr Telefon.
 

@@ -1,0 +1,743 @@
+<title>me&you Live-Prototyp</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout: one section per screen, Remedy grid (label left, content right), one dark band, real photos lead. Single look by choice: brand site. */
+:root{
+  color-scheme:light;
+  --paper:#FAF8F4; --cream:#F2EDE4; --mist:#E7E8E8; --sand:#D8CCB7;
+  --dove:#7E99B6; --dove-deep:#64809E; --navy:#2B3C52; --char:#47403A;
+  --ink:#2A2622; --muted:#7B736B; --line:rgba(71,64,58,.16); --white:#FFFFFF;
+  --on-navy:#F2EDE4; --on-navy-muted:rgba(242,237,228,.72);
+  --serif:"Libre Baskerville",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --gut:clamp(20px,4.2vw,60px);
+  --hdr:84px;
+  --r:22px;
+  --h1:clamp(40px,min(5.4vw,9.4vh),88px);
+  --h2:clamp(27px,min(3vw,5.2vh),46px);
+  --h3:clamp(19px,min(1.7vw,3vh),26px);
+  --body:clamp(15px,min(1.15vw,2.1vh),18px);
+  --small:clamp(12.5px,min(.95vw,1.7vh),14.5px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{margin:0;background:var(--paper);color:var(--char);font-family:var(--sans);font-size:var(--body);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p,ul,figure,blockquote{margin:0}
+ul{padding:0;list-style:none}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:400;color:var(--ink);text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:var(--h1);line-height:1.04}
+h2{font-size:var(--h2);line-height:1.14}
+h3{font-size:var(--h3);line-height:1.25}
+.ov{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--dove-deep)}
+.muted{color:var(--muted)}
+.wrap{width:100%;max-width:1440px;margin-inline:auto;padding-inline:var(--gut)}
+
+/* buttons */
+.btn{white-space:nowrap;display:inline-flex;align-items:center;gap:.6em;background:var(--dove);color:var(--white);font:600 14.5px/1 var(--sans);padding:17px 28px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;transition:background .25s,transform .25s}
+.btn:hover{background:var(--navy);transform:translateY(-1px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+.btn--ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.btn--ghost:hover{background:var(--ink);color:var(--paper)}
+.btn--light{background:var(--paper);color:var(--navy)}
+.btn--light:hover{background:var(--sand);color:var(--navy)}
+
+/* header: open at top, capsule on scroll (Remedy) */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;padding:calc(env(safe-area-inset-top,0px) + 18px) var(--gut) 0;pointer-events:none}
+.hdr__in{pointer-events:auto;max-width:1320px;margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:10px 12px 10px 20px;border-radius:999px;border:1px solid transparent;transition:max-width .55s cubic-bezier(.2,.7,.2,1),background .4s,border-color .4s,box-shadow .4s,padding .4s}
+.hdr__logo img{height:38px;width:auto;transition:height .4s}
+.hdr__nav{display:flex;gap:clamp(16px,2.2vw,34px);font-size:14px;font-weight:500}
+.hdr__nav a{text-decoration:none;color:var(--ink);opacity:.82;transition:opacity .2s}
+.hdr__nav a:hover{opacity:1}
+.hdr .btn{padding:13px 22px;font-size:13.5px}
+.hdr.is-pill .hdr__in{max-width:820px;background:rgba(250,248,244,.82);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);border-color:var(--line);box-shadow:0 10px 40px -18px rgba(43,60,82,.35);padding:7px 8px 7px 18px}
+.hdr.is-pill .hdr__logo img{height:30px}
+
+/* screens */
+.screen{position:relative;min-height:100vh;min-height:100svh;display:grid;align-items:center;padding-block:calc(var(--hdr) + 24px) clamp(36px,6vh,64px)}
+.screen--cream{background:var(--cream)}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,84px);align-items:center}
+.cols{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,2fr);gap:clamp(28px,4.5vw,76px);align-items:start}
+.stack{display:flex;flex-direction:column;gap:clamp(14px,2.2vh,24px);min-width:0}
+.stack--tight{gap:clamp(8px,1.3vh,14px)}
+.frame{position:relative;overflow:hidden;border-radius:var(--r);background:var(--sand)}
+.frame img{width:100%;height:100%;object-fit:cover}
+.plx img{height:118%;margin-top:-9%;will-change:transform}
+
+/* 1 hero */
+.hero{padding-bottom:0;align-items:stretch;grid-template-rows:1fr auto;gap:clamp(18px,3vh,30px)}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,64px);align-items:center;min-height:0}
+.hero h1 span{display:block;color:var(--dove-deep)}
+.hero__sub{font:500 var(--h3)/1.3 var(--sans);color:var(--ink);max-width:22em}
+.hero__text{max-width:30em}
+.hero__proof{font-size:var(--small);color:var(--muted)}
+.hero__media{position:relative;height:100%;min-height:340px;max-height:calc(100svh - var(--hdr) - 190px)}
+.hero__media .frame{position:absolute;inset:0}
+.bubbles{position:absolute;left:-13%;bottom:5%;display:flex;flex-direction:column;gap:10px;width:min(74%,360px)}
+.bubble{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.94);border-radius:16px;padding:13px 16px;font-size:var(--small);line-height:1.4;color:var(--ink);box-shadow:0 14px 40px -20px rgba(43,60,82,.5)}
+.bubble:nth-child(2){margin-left:11%}
+.bubble:nth-child(3){margin-left:3%}
+.bubble i{flex:none;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--dove);color:var(--dove-deep);font:600 12px/19px var(--sans);text-align:center;font-style:normal}
+.trust{border-top:1px solid var(--line);background:var(--paper)}
+.trust__in{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:clamp(14px,2.6vw,40px);align-items:center;padding-block:clamp(14px,2.4vh,24px)}
+.trust b{display:block;font:400 clamp(20px,min(2vw,3.6vh),30px)/1.15 var(--serif);color:var(--ink)}
+.trust span{font-size:var(--small);color:var(--muted)}
+.trust__seal{height:clamp(58px,9vh,84px);width:auto;border-radius:4px;box-shadow:0 8px 24px -12px rgba(43,60,82,.5)}
+
+/* 2 story */
+.pull{font:italic 400 var(--h3)/1.3 var(--serif);color:var(--ink);background:var(--cream);border-radius:14px;padding:16px 22px;align-self:flex-start}
+.story__media{height:min(72svh,720px)}
+
+/* 3 problem */
+.xcards{display:grid;gap:10px}
+.xcard{display:flex;gap:16px;align-items:center;background:var(--white);border-radius:16px;padding:clamp(12px,1.9vh,18px) 20px;font-size:var(--body);line-height:1.4;color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.xcard:nth-child(even){margin-left:clamp(0px,3vw,44px)}
+.xcard:nth-child(odd){margin-right:clamp(0px,3vw,44px)}
+.xcard i{flex:none;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font:400 15px/1 var(--sans);font-style:normal}
+.good{border-top:1px solid var(--line);padding-top:clamp(12px,2vh,20px)}
+
+/* 4 places */
+.places{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,22px);height:min(68svh,700px)}
+.place{position:relative;border-radius:var(--r);overflow:hidden;color:var(--white);display:flex;align-items:flex-end;background:var(--navy)}
+.place:nth-child(2){margin-top:clamp(0px,4vh,40px);margin-bottom:calc(-1*clamp(0px,4vh,40px))}
+.place img{position:absolute;inset:0;width:100%;height:118%;margin-top:-9%;object-fit:cover;will-change:transform}
+.place::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,38,50,.05) 30%,rgba(30,38,50,.78) 100%)}
+.place__txt{position:relative;z-index:1;padding:clamp(18px,2.2vw,30px);display:flex;flex-direction:column;gap:8px}
+.place__txt small{font:500 12px/1 var(--sans);letter-spacing:.18em;opacity:.8}
+.place__txt h3{color:var(--white);font-size:clamp(22px,min(2.3vw,4vh),34px)}
+.place__txt p{font-size:var(--small);opacity:.9;max-width:26em}
+.places-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:clamp(16px,3vh,30px)}
+
+/* 5 dates */
+.toggle{display:inline-flex;background:var(--white);border-radius:999px;padding:4px;box-shadow:inset 0 0 0 1px var(--line);align-self:flex-start}
+.toggle button{border:0;background:transparent;font:600 13.5px/1 var(--sans);color:var(--muted);padding:10px 20px;border-radius:999px;cursor:pointer;transition:background .25s,color .25s}
+.toggle button[aria-selected="true"]{background:var(--navy);color:var(--paper)}
+.dates{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:start}
+.dgroup{border-top:1px solid var(--ink);padding-top:12px}
+.dgroup + .dgroup{margin-top:clamp(14px,2.6vh,26px)}
+.dgroup__h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font:600 13px/1.3 var(--sans);letter-spacing:.04em;color:var(--ink);margin-bottom:6px}
+.dgroup__h em{font-style:normal;font-weight:500;color:var(--dove-deep)}
+.drow{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:clamp(5px,1vh,9px) 0;border-bottom:1px solid var(--line)}
+.drow b{font:400 clamp(18px,min(1.75vw,3.1vh),26px)/1.2 var(--serif);color:var(--ink);font-variant-numeric:tabular-nums}
+.drow span{font-size:var(--small);color:var(--muted);text-align:right}
+
+/* 6 result band + approach */
+.duo{padding:0;display:grid;grid-template-rows:auto 1fr;align-items:stretch}
+.band{background:var(--navy);color:var(--on-navy);padding-block:calc(var(--hdr) + 6px) clamp(24px,4.4vh,44px)}
+.band .ov{color:var(--sand)}
+.band__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,4vw,70px);align-items:center}
+.band blockquote{font:400 clamp(21px,min(2.25vw,3.9vh),34px)/1.3 var(--serif);color:var(--on-navy);text-wrap:balance}
+.points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,1.8vh,18px) clamp(16px,2vw,30px)}
+.points li{display:flex;gap:12px;align-items:flex-start;font-size:var(--small);line-height:1.4;color:var(--on-navy-muted)}
+.points svg{flex:none;width:26px;height:26px;stroke:var(--sand);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.approach{display:grid;align-items:center;padding-block:clamp(22px,4vh,44px)}
+.vs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.6vw,22px);margin-top:clamp(12px,2.2vh,22px)}
+.vs__card{border-radius:var(--r);padding:clamp(16px,2.6vh,28px) clamp(18px,2vw,30px);display:flex;flex-direction:column;gap:clamp(8px,1.4vh,14px)}
+.vs__card--no{background:var(--mist)}
+.vs__card--yes{background:var(--cream)}
+.vs__card h3{font:600 var(--body)/1.3 var(--sans);letter-spacing:0}
+.vs__card li{display:flex;gap:12px;align-items:flex-start;padding:clamp(5px,.9vh,9px) 0;border-top:1px solid var(--line)}
+.vs__card li::before{content:"✕";flex:none;color:var(--muted);font-size:13px;line-height:1.7}
+.vs__card p{font-size:var(--small)}
+.vs__card .lead{font:400 var(--h3)/1.3 var(--serif);color:var(--ink)}
+
+/* 7 changes */
+.changes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(16px,2vw,30px)}
+.changes li{border-top:1px solid var(--line);padding:clamp(10px,2vh,20px) 0 clamp(10px,2.2vh,22px);font-size:var(--small);line-height:1.45}
+.changes b{display:block;font:400 clamp(16px,min(1.35vw,2.5vh),20px)/1.3 var(--serif);color:var(--ink);margin-bottom:4px}
+
+/* 8 michael */
+.michael__media{height:min(76svh,760px)}
+.award{display:flex;gap:18px;align-items:center;border-top:1px solid var(--line);padding-top:clamp(10px,2vh,18px)}
+.award img{height:clamp(56px,9vh,82px);width:auto;border-radius:4px;flex:none}
+.award p{font-size:var(--small)}
+.logos{display:flex;flex-wrap:wrap;gap:clamp(14px,2.4vw,34px);align-items:center}
+.logos img{height:clamp(18px,3vh,28px);width:auto;filter:grayscale(1);opacity:.6;mix-blend-mode:multiply}
+
+/* 9 voices */
+.voices-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(16px,3vh,30px)}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.6vw,22px)}
+.quote{background:var(--cream);border-radius:var(--r);padding:clamp(18px,3vh,32px) clamp(20px,2.2vw,34px);display:flex;flex-direction:column;justify-content:space-between;gap:clamp(12px,2vh,22px)}
+.quote p{font:400 clamp(16px,min(1.4vw,2.6vh),21px)/1.42 var(--serif);color:var(--ink)}
+.quote footer{font-size:var(--small);color:var(--muted)}
+.quote footer b{display:block;color:var(--ink);font-weight:600}
+.videos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.4vw,20px)}
+.video{aspect-ratio:3/4;max-height:52svh;border-radius:var(--r);background:linear-gradient(160deg,var(--sand),var(--dove));position:relative;display:grid;place-items:center;width:100%}
+.video:nth-child(even){background:linear-gradient(200deg,var(--mist),var(--sand))}
+.video::before{content:"";width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.9)}
+.video::after{content:"";position:absolute;border-left:15px solid var(--navy);border-block:9px solid transparent;margin-left:5px}
+.video span{position:absolute;left:14px;bottom:12px;font:500 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--navy);opacity:.75}
+
+/* 10 for whom */
+.checks li{display:flex;gap:16px;align-items:flex-start;padding:clamp(10px,1.8vh,16px) 0;border-top:1px solid var(--line);font-size:var(--body);color:var(--ink)}
+.checks li:last-child{border-bottom:1px solid var(--line)}
+.checks svg{flex:none;width:22px;height:22px;stroke:var(--dove-deep);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+.whom__media{height:min(70svh,700px)}
+
+/* 11 faq */
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(20px,3vw,48px);align-items:start;margin-top:clamp(14px,2.6vh,28px)}
+.faq__col{border-top:1px solid var(--ink)}
+.qa{border-bottom:1px solid var(--line)}
+.qa button{all:unset;box-sizing:border-box;width:100%;display:flex;gap:14px;align-items:baseline;justify-content:space-between;cursor:pointer;padding:clamp(9px,1.55vh,14px) 0;font:500 var(--small)/1.4 var(--sans);color:var(--ink)}
+.qa button:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
+.qa button::after{content:"+";font:400 20px/1 var(--sans);color:var(--dove-deep);transition:transform .3s}
+.qa[open-state="1"] button::after{transform:rotate(45deg)}
+.qa__a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s cubic-bezier(.2,.7,.2,1)}
+.qa[open-state="1"] .qa__a{grid-template-rows:1fr}
+.qa__a > div{overflow:hidden}
+.qa__a p{padding:0 34px clamp(10px,1.8vh,16px) 0;font-size:var(--small);color:var(--char)}
+
+/* 12 closing */
+.closing{padding:0;display:grid;grid-template-rows:1fr auto;align-items:stretch;color:var(--white)}
+.closing__stage{position:relative;display:grid;align-items:center;padding-block:calc(var(--hdr) + 20px) clamp(28px,5vh,56px);overflow:hidden;background:var(--navy)}
+.closing__bg{position:absolute;inset:0}
+.closing__bg img{width:100%;height:118%;margin-top:-6%;object-fit:cover;will-change:transform}
+.closing__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,34,46,.78) 0%,rgba(26,34,46,.45) 55%,rgba(26,34,46,.3) 100%)}
+.closing__grid{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(24px,5vw,80px);align-items:center}
+.closing .ov{color:var(--sand)}
+.closing h2{color:var(--white);font-size:clamp(26px,min(3.2vw,5.6vh),50px);line-height:1.18}
+.form{background:var(--paper);color:var(--char);border-radius:var(--r);padding:clamp(18px,3vh,30px);display:flex;flex-direction:column;gap:12px}
+.form h3{font-size:clamp(19px,min(1.6vw,3vh),24px)}
+.form p{font-size:var(--small)}
+.form label{display:block}
+.form label span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.form input,.form textarea{width:100%;font:400 14.5px/1.4 var(--sans);color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.form textarea{resize:vertical;min-height:clamp(60px,10vh,96px)}
+.form__row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.form__note{font-size:12.5px;color:var(--dove-deep)}
+.foot{background:var(--navy);color:var(--on-navy-muted);font-size:var(--small);border-top:1px solid rgba(242,237,228,.14)}
+.foot__in{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:clamp(16px,3vw,48px);padding-block:clamp(18px,3.4vh,34px);align-items:start}
+.foot img{height:44px;width:auto}
+.foot h4{margin:0 0 8px;font:600 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--on-navy)}
+.foot a{text-decoration:none;display:block;padding:2px 0}
+.foot a:hover{color:var(--on-navy)}
+.foot .sel{user-select:all}
+
+
+/* reveal: resting state stays readable */
+.js .rv{opacity:.35;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv[data-d="1"]{transition-delay:.08s}.js .rv[data-d="2"]{transition-delay:.16s}.js .rv[data-d="3"]{transition-delay:.24s}
+
+[role="tabpanel"][hidden]{display:none!important}
+
+@media (max-width:980px){
+  :root{--hdr:72px}
+  .hdr__nav{display:none}
+  .screen{min-height:0;padding-block:calc(var(--hdr) + 28px) 56px}
+  .hero{padding-bottom:0}
+  .hero__grid,.split,.cols,.dates,.band__grid,.closing__grid,.faq,.vs{grid-template-columns:minmax(0,1fr)}
+  .hero__media{height:auto;aspect-ratio:4/5;max-height:none}
+  .bubbles{left:4%;bottom:4%;width:88%}
+  .trust__in{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .trust__seal{grid-column:1/-1}
+  .places{grid-template-columns:minmax(0,1fr);height:auto}
+  .place{aspect-ratio:4/3}
+  .place:nth-child(2){margin:0}
+  .story__media,.michael__media,.whom__media{height:auto;aspect-ratio:4/3}
+  .points,.changes,.quotes{grid-template-columns:minmax(0,1fr)}
+  .videos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .xcard:nth-child(n){margin-inline:0}
+  .faq__col + .faq__col{border-top:0}
+  .foot__in{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .band{padding-top:56px}
+  .closing__stage{padding-top:64px}
+  .duo,.closing{min-height:0}
+}
+@media (min-width:981px) and (max-height:780px){.logos{display:none}}
+@media (prefers-reduced-motion:reduce){
+  .js .rv{opacity:1;transform:none;transition:none}
+  .hdr__in,.btn{transition:none}
+}
+</style>
+
+<header class="hdr" id="hdr">
+  <div class="hdr__in">
+    <a class="hdr__logo" href="#top" aria-label="Michael Ehlers &amp; You Communication"><img src="assets/logo-dark.webp" alt="Michael Ehlers &amp; You Communication" width="600" height="216"></a>
+    <nav class="hdr__nav" aria-label="Hauptnavigation">
+      <a href="#termine">Seminare</a>
+      <a href="#fuerwen">Für wen</a>
+      <a href="#ansatz">Unsere Methode</a>
+      <a href="#michael">Über Michael</a>
+    </nav>
+    <a class="btn" href="https://www.meandyou.de/seminare-termin">Jetzt Gespräch buchen</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1 HERO + TRUST -->
+<section class="screen hero" id="hero">
+  <div class="wrap hero__grid">
+    <div class="stack">
+      <p class="ov rv">Seminartermine - 2026</p>
+      <h1 class="rv" data-d="1">Seminare für <span>Intelligente</span></h1>
+      <p class="hero__sub rv" data-d="2">Endlich verstanden werden, ohne dich zu verstellen</p>
+      <p class="hero__text rv" data-d="2">Lerne in diesen Seminaren so zu kommunizieren, dass du überzeugst und die Anerkennung bekommst, die du verdienst</p>
+      <div class="rv" data-d="3"><a class="btn" href="https://www.meandyou.de/seminare-termin">Jetzt Gespräch buchen</a></div>
+      <p class="hero__proof rv" data-d="3">Bereits über 8.000+ Teilnehmer:innen überzeugt</p>
+    </div>
+    <div class="hero__media rv" data-d="1">
+      <div class="frame plx" data-plx="0.07"><img src="assets/michael-cafe.webp" alt="Michael Ehlers liest an einem Tisch im Freien, im Hintergrund eine sonnige Landschaft" width="1400" height="2100"></div>
+      <ul class="bubbles" aria-label="Typische Situationen">
+        <li class="bubble"><i>?</i>Du erklärst komplexe Sachverhalte, aber dein Gegenüber schaltet ab?</li>
+        <li class="bubble"><i>?</i>Das Problem ist nicht dein Wissen – sondern wie du es vermittelst.</li>
+        <li class="bubble"><i>?</i>Du hast die besten Ideen im Raum, aber andere bekommen den Zuschlag?</li>
+      </ul>
+    </div>
+  </div>
+  <div class="trust">
+    <div class="wrap trust__in">
+      <div><b>Top 100</b><span>Trainer im DACH-Raum</span></div>
+      <div><b>Über 1000</b><span>Vorträge &amp; Medienauftritte</span></div>
+      <div><b>Gründer des</b><span>Ehlers-Rhetorik-Frameworks</span></div>
+      <div><b>+30 Jahre</b><span>Erfahrung als Rhetorik-Trainer</span></div>
+      <img class="trust__seal" src="assets/erfolg-top100.webp" alt="ERFOLG Magazin: Top 100 Erfolgstrainer Deutschland/Österreich" width="202" height="249">
+    </div>
+  </div>
+</section>
+
+<!-- 2 STORY -->
+<section class="screen" id="story">
+  <div class="wrap split">
+    <div class="stack">
+      <p class="ov rv">Das Problem</p>
+      <h2 class="rv" data-d="1">Du bist der Klügste im Raum, aber niemand hört dir zu?</h2>
+      <p class="hero__sub rv" data-d="1">Warum brillante Menschen oft die schlechtesten Kommunikatoren sind</p>
+      <div class="stack stack--tight rv" data-d="2">
+        <p>Vielleicht kennst du Situationen wie die Folgende:</p>
+        <p>Du sitzt in einem Meeting und erklärst deine Lösung. Aber statt Zustimmung bekommst du nur glasige Blicke zurück. Jemand im Raum unterbricht dich:</p>
+      </div>
+      <p class="pull rv" data-d="2">“Können wir das vereinfachen?”</p>
+      <p class="rv" data-d="3">Fünf Minuten später wiederholt ein Kollege deine Idee mit anderen Worten. Alle nicken begeistert. Und er bekommt das Lob...</p>
+      <div class="rv" data-d="3"><a class="btn" href="https://www.meandyou.de/seminare-termin">Jetzt Gespräch buchen</a></div>
+    </div>
+    <div class="frame plx story__media rv" data-d="1" data-plx="0.1"><img style="object-position:38% 50%" src="assets/gen-meeting.webp" alt="Besprechungsraum mit kühlem Tageslicht, eine Person erklärt, die anderen wirken abwesend" width="1536" height="1024"></div>
+  </div>
+</section>
+
+<!-- 3 PROBLEM -->
+<section class="screen screen--cream" id="warum">
+  <div class="wrap split">
+    <div class="stack">
+      <h2 class="rv">Tatsächlich haben es Intelligente Menschen oft schwerer mit der Kommunikation</h2>
+      <p class="ov rv" data-d="1">Warum?</p>
+      <p class="rv" data-d="1" style="max-width:32em">Weil ihr Gehirn im Durchschnitt 5x mehr und schneller Lösungen feuert als bei anderen Menschen. Jetzt versuchst du, ihnen deine Lösung zu präsentieren – und was passiert?</p>
+      <div class="good stack stack--tight rv" data-d="2">
+        <p class="ov">Aber hier kommt die gute Nachricht:</p>
+        <p class="serif" style="font-size:var(--h3);line-height:1.35;max-width:24em">Ich habe die besten Techniken aus über 30 Jahren Erfahrung als Rhetorik-Trainer in diesen Kurs gepackt.</p>
+      </div>
+    </div>
+    <ul class="xcards">
+      <li class="xcard rv"><i>✕</i>Du fühlst dich oft überhört – was ggf. dazu führt, dass du dich mit der Zeit weniger einbringst</li>
+      <li class="xcard rv" data-d="1"><i>✕</i>Andere können dir nicht folgen – also halten sie dich für arrogant</li>
+      <li class="xcard rv" data-d="1"><i>✕</i>Vorträge sind für dich der Horror, weil du die Aufmerksamkeit der Leute verlierst</li>
+      <li class="xcard rv" data-d="2"><i>✕</i>Menschen unterbrechen dich mitten im Reden – und du hast das Gefühl übergangen zu werden</li>
+      <li class="xcard rv" data-d="2"><i>✕</i>Du wirst missverstanden, obwohl du gute Intentionen hast</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 PLACES -->
+<section class="screen" id="orte">
+  <div class="wrap">
+    <div class="places-head">
+      <p class="ov rv">Seminarorte</p>
+      <a class="btn btn--ghost rv" href="#termine">Zu den Terminen</a>
+    </div>
+    <div class="places">
+      <article class="place rv">
+        <img data-plx="0.06" style="object-position:30% 50%" src="assets/gen-dubai.webp" alt="Skyline von Dubai hinter Sanddünen im Abendlicht" width="1536" height="1024">
+        <div class="place__txt"><small>1</small><h3>Dubai: Wachstum trifft Wüste.</h3><p>Intensive Leadership-Tage zwischen Skyline und Stille.</p></div>
+      </article>
+      <article class="place rv" data-d="1">
+        <img data-plx="0.14" style="object-position:42% 50%" src="assets/gen-mallorca.webp" alt="Ruhige Bucht auf Mallorca mit Finca-Terrasse im Abendlicht" width="1536" height="1024">
+        <div class="place__txt"><small>2</small><h3>Mallorca: Insel. Klarheit. Umsetzung.</h3><p>Rhetorik-Seminare fernab vom Lärm – mitten aus dem Leben.</p></div>
+      </article>
+      <article class="place rv" data-d="2">
+        <img data-plx="0.06" src="assets/gen-barcelona.webp" alt="Blick von einer Dachterrasse über Barcelona bis zum Meer" width="1536" height="1024">
+        <div class="place__txt"><small>3</small><h3>Barcelona/ Nordzypern:</h3><p>Verändere deine Sprache. Verändere deine Wirkung. Intensivseminar für Menschen, die mehr zu sagen haben als Phrasen.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5 DATES -->
+<section class="screen screen--cream" id="termine">
+  <div class="wrap cols">
+    <div class="stack">
+      <p class="ov rv">Seminartermine</p>
+      <h2 class="rv" data-d="1" id="termine-h">Wo Wirkung beginnt: Deine Rhetorik-Termine 2026</h2>
+      <div class="toggle rv" data-d="2" role="tablist" aria-label="Jahr wählen">
+        <button role="tab" id="tab-2026" aria-controls="jahr-2026" aria-selected="true">2026</button>
+        <button role="tab" id="tab-2027" aria-controls="jahr-2027" aria-selected="false" tabindex="-1">2027</button>
+      </div>
+      <p class="muted rv" data-d="2" style="font-size:var(--small)">Alle Termine sind 3-Tages-Seminare.</p>
+      <div class="rv" data-d="3"><a class="btn" href="https://www.meandyou.de/seminare-termin">Jetzt Gespräch buchen</a></div>
+    </div>
+    <div>
+      <div class="dates rv" data-d="1" role="tabpanel" id="jahr-2026" aria-labelledby="tab-2026">
+        <div>
+          <div class="dgroup"><p class="dgroup__h">Mallorca &amp; Deutschland <em>Rhetorik 1</em></p>
+            <p class="drow"><b>05.03. – 08.03.</b><span>Mallorca · März</span></p>
+            <p class="drow"><b>25.06. – 28.06.</b><span>Mallorca · Juni</span></p>
+            <p class="drow"><b>10.09. – 13.09.</b><span>Frankfurt · September</span></p>
+            <p class="drow"><b>17.09. – 20.09.</b><span>Mallorca · September</span></p>
+            <p class="drow"><b>08.10. – 11.10.</b><span>Berlin · Oktober</span></p>
+            <p class="drow"><b>03.12. – 06.12.</b><span>Mallorca · Dezember</span></p>
+          </div>
+        </div>
+        <div>
+          <div class="dgroup"><p class="dgroup__h">Barcelona <em>Rhetorik 2</em></p>
+            <p class="drow"><b>16.04. – 19.04.</b><span>Barcelona · April</span></p>
+            <p class="drow"><b>16.07. – 19.07.</b><span>Barcelona · Juli</span></p>
+            <p class="drow"><b>13.08. – 16.08.</b><span>Barcelona · August</span></p>
+          </div>
+          <div class="dgroup"><p class="dgroup__h">Dubai <em>Rhetorik 3</em></p>
+            <p class="drow"><b>10.12. – 13.12.</b><span>Dubai · Dezember</span></p>
+          </div>
+          <div class="dgroup"><p class="dgroup__h">Mexico <em>Rhetorik 4</em></p>
+            <p class="drow"><b>21.01.27 – 24.01.27</b><span>Mexico · Jänner</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="dates" role="tabpanel" id="jahr-2027" aria-labelledby="tab-2027" hidden>
+        <div>
+          <div class="dgroup"><p class="dgroup__h">Mallorca &amp; Deutschland <em>Rhetorik 1</em></p>
+            <p class="drow"><b>04.03. – 07.03.</b><span>Mallorca · März</span></p>
+            <p class="drow"><b>29.04. – 02.05.</b><span>Mallorca · April/Mai</span></p>
+            <p class="drow"><b>17.06. – 20.06.</b><span>Frankfurt · Juni</span></p>
+            <p class="drow"><b>12.08. – 15.08.</b><span>Berlin · August</span></p>
+            <p class="drow"><b>14.10. – 17.10.</b><span>Mallorca · Oktober</span></p>
+          </div>
+        </div>
+        <div>
+          <div class="dgroup"><p class="dgroup__h">Barcelona <em>Rhetorik 2</em></p>
+            <p class="drow"><b>15.04. – 18.04.</b><span>Barcelona · April</span></p>
+            <p class="drow"><b>21.10. – 24.10.</b><span>Barcelona · Oktober</span></p>
+          </div>
+          <div class="dgroup"><p class="dgroup__h">Zypern <em>Rhetorik 3</em></p>
+            <p class="drow"><b>07.10. – 10.10.</b><span>Zypern · Oktober</span></p>
+          </div>
+          <div class="dgroup"><p class="dgroup__h">Mexico <em>Rhetorik 4</em></p>
+            <p class="drow"><b>21.01.27 – 24.01.27</b><span>Mexico · Jänner</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 RESULT BAND + APPROACH (the one shared screen) -->
+<section class="screen duo" id="ansatz">
+  <div class="band">
+    <div class="wrap band__grid">
+      <div class="stack">
+        <p class="ov rv">Dein Ergebnis</p>
+        <blockquote class="rv" data-d="1">Der Erfolgreichste ist letztlich nicht der, der mehr auf dem Kasten hat – sondern der, der besser kommunizieren kann.</blockquote>
+      </div>
+      <ul class="points rv" data-d="2">
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8"/></svg>Seine Botschaft klar auf den Punkt bringt – und dessen Wert verständlich kommuniziert</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 7h14v9H10l-4 3.5V16H5z"/></svg>Aus jedem Gespräch das bekommt, was er will</li>
+        <li><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3"/><path d="M3.5 19c.6-3 2.7-4.5 5.5-4.5s4.900 1.500 5.500 4.500M16 6.500a3 3 0 0 1 0 5.500M17.500 14.800c1.700.600 2.700 2 3 4.200"/></svg>Andere in jedem Gespräch begeistert (sei es auf der Arbeit oder privat)</li>
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m15.500 8.500-2 5-5 2 2-5z"/></svg>Gespräche gut führen und lenken kann</li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 3.500 19 6v5.500c0 4.200-2.800 7.300-7 9-4.200-1.700-7-4.800-7-9V6z"/><path d="m9 12 2.200 2.200L15.200 10"/></svg>Sofort Souveränität und Vertrauen ausstrahlt</li>
+        <li><svg viewBox="0 0 24 24"><path d="M6 4.500h9.500a2.500 2.500 0 0 1 2.500 2.500v12.500H8.500A2.500 2.500 0 0 1 6 17z"/><path d="M6 17a2.500 2.500 0 0 1 2.500-2.500H18M9.500 8.500h5"/></svg>Frei vor anderen spricht – und dabei mit Geschichten fesselt, die für immer im Kopf bleiben</li>
+      </ul>
+    </div>
+  </div>
+  <div class="approach">
+    <div class="wrap">
+      <div class="stack stack--tight">
+        <p class="ov rv">Unser Ansatz</p>
+        <h2 class="rv" data-d="1">Warum die meisten Kommunikations-Trainings nicht funktionieren</h2>
+        <p class="rv" data-d="1">Vielleicht hast du bereits Rhetorik-Kurse besucht, aber wirklich verändert hat sich noch nichts.</p>
+      </div>
+      <div class="vs">
+        <div class="vs__card vs__card--no rv" data-d="2">
+          <h3>Auf den meisten Seminaren lernst du:</h3>
+          <ul>
+            <li>Gestik und Mimik – und sollst schauspielern</li>
+            <li>Ein Publikum zu begeistern</li>
+            <li>Techniken, die sich falsch anfühlen</li>
+          </ul>
+        </div>
+        <div class="vs__card vs__card--yes rv" data-d="3">
+          <p class="lead">→ In “Rhetorik für Intelligente” bringe ich dir NICHT bei zu schauspielern.</p>
+          <p>Du bleibst immer noch authentisch du selbst. Aber wir kristallisieren deine kommunikativen Fähigkeiten heraus. Sodass sie sich nicht aufgesetzt anfühlen, sondern zu deinem Naturell passen.</p>
+          <p>Schließlich wollen wir dich nicht auf einen einzigen Auftritt vorbereiten, sondern deine Rhetorik-Fähigkeiten sollen nachhaltig zu einem Teil deines persönlichen Auftretens werden.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 CHANGES -->
+<section class="screen" id="veraenderungen">
+  <div class="wrap cols">
+    <div class="stack">
+      <p class="ov rv">Deine Veränderungen</p>
+      <h2 class="rv" data-d="1" style="font-size:clamp(22px,min(2.2vw,4vh),34px);line-height:1.25">Mit den Techniken aus unseren Seminaren, wirst du nach diesem Training unter anderem folgende Veränderungen bemerken:</h2>
+      <div class="rv" data-d="2"><a class="btn" href="https://www.meandyou.de/seminare-termin">Jetzt Gespräch buchen</a></div>
+    </div>
+    <ul class="changes">
+      <li class="rv"><b>Überzeugende Reden improvisieren</b>Du kannst überzeugende Reden improvisieren – die deinen Zuhörern für immer im Gedächtnis bleiben</li>
+      <li class="rv" data-d="1"><b>Feedback, das ankommt</b>Du gibst Feedback so, dass es dankend angenommen und umgesetzt wird</li>
+      <li class="rv" data-d="2"><b>“Wortmächtig”</b>Du hast auf jeden verbalen Angriff eine schlagfertige Antwort aus dem FF parat (oder wie ich es gerne nenne: Du bist “wortmächtig”)</li>
+      <li class="rv"><b>Das richtige Wort</b>Dir wird nie wieder das richtige Wort zur richtigen Zeit fehlen</li>
+      <li class="rv" data-d="1"><b>Verhandlungen gewinnen</b>Du gewinnst in Verhandlungen, weil du sie geschickt führen kannst</li>
+      <li class="rv" data-d="2"><b>Auf Augenhöhe</b>Du kannst Gespräche mit hierarchischem Machtgefälle innerhalb von Sekunden auf Augenhöhe bringen (völlig gleich, wer dir gegenüber steht)</li>
+      <li class="rv"><b>Menschen öffnen</b>Du öffnest selbst stark introvertierte und wortkarge Menschen, sodass sie gar nicht mehr aufhören können, zu reden.</li>
+      <li class="rv" data-d="1"><b>Gespräche mit Tiefe</b>Du führst oberflächlichen SmallTalk direkt in Gespräche mit Tiefe und Dimension. (Ohne unkontrolliertes Over-Sharing)</li>
+      <li class="rv" data-d="2"><b>Gesprächsfluss</b>Es fällt dir leicht, Gespräche zu eröffnen und einen guten Gesprächsfluss am Laufen zu halten.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8 MICHAEL -->
+<section class="screen screen--cream" id="michael">
+  <div class="wrap split">
+    <div class="frame plx michael__media rv" data-plx="0.09"><img src="assets/michael-door.webp" alt="Michael Ehlers lehnt in weißem Leinenhemd an einem Holzrahmen und lächelt" width="1300" height="1950"></div>
+    <div class="stack">
+      <p class="ov rv">Über Michael</p>
+      <h2 class="rv" data-d="1">Woher ich das weiß?</h2>
+      <div class="stack stack--tight rv" data-d="2">
+        <p>Ich bin nun seit über 30 Jahren Rhetorik-Trainer und durfte in dieser Zeit über 8.000 Menschen ausbilden (und vor noch sehr viel mehr Menschen sprechen).</p>
+        <p>Darunter bekannte Schauspieler, Moderatoren, Politiker, Fußballtrainer der Nationalmannschaft, Profi-Sportler, Führungskräfte, Unternehmer und – Speaker…</p>
+        <p>Zu mir kommen regelmäßig Menschen, die von sich denken, sie wären “keine großen Redner”. Nach 3 Dekaden als Rhetorik-Experte kann ich dir allerdings eines versichern:</p>
+      </div>
+      <p class="pull rv" data-d="2" style="background:var(--paper)">Jeder kann andere rhetorisch begeistern und fesseln. Völlig gleich, wie introvertiert du bist.</p>
+      <div class="award rv" data-d="3">
+        <img src="assets/erfolg-top100.webp" alt="ERFOLG Magazin Top 100" width="202" height="249">
+        <div class="stack stack--tight">
+          <h3>Ausgezeichnet statt austauschbar.</h3>
+          <p>Michael Ehlers gehört laut ERFOLG Magazin zu den Top 100 Trainern im deutschsprachigen Raum &amp; ist Top10 Speaker.</p>
+        </div>
+      </div>
+      <div class="logos rv" data-d="3" aria-label="Medien">
+        <img src="assets/logo-zdf.webp" alt="ZDF"><img src="assets/logo-ard.webp" alt="ARD"><img src="assets/logo-rtl.webp" alt="RTL"><img src="assets/logo-stern.webp" alt="stern"><img src="assets/logo-mdr.webp" alt="mdr"><img src="assets/logo-hr2.webp" alt="hr2">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 VOICES -->
+<section class="screen" id="stimmen">
+  <div class="wrap">
+    <div class="voices-head">
+      <div class="stack stack--tight">
+        <p class="ov rv">Stimmen</p>
+        <h2 class="rv" data-d="1" id="stimmen-h">Was Kunden über Michael Ehlers sagen</h2>
+      </div>
+      <div class="toggle rv" data-d="2" role="tablist" aria-label="Art der Stimmen">
+        <button role="tab" id="tab-video" aria-controls="p-video" aria-selected="false" tabindex="-1">Video-Stimmen</button>
+        <button role="tab" id="tab-zitate" aria-controls="p-zitate" aria-selected="true">Kundenstimmen</button>
+      </div>
+    </div>
+    <div class="quotes" role="tabpanel" id="p-zitate" aria-labelledby="tab-zitate">
+      <figure class="quote rv"><p>"Ein begeisterndes Training mit einer anregenden und humorvollen Atmosphäre. Rundum gelungen."</p><footer><b>Sarna Röser</b>Bundesvorsitzende „Die Jungen Unternehmer“ Berlin</footer></figure>
+      <figure class="quote rv" data-d="1"><p>„Trotz 40 Jahren Medienerfahrung konnte ich erstaunlich viel vom Rhetoriktraining profitieren.“</p><footer><b>Peter Escher</b>Moderator MDR</footer></figure>
+      <figure class="quote rv" data-d="1"><p>„Das Seminar – oder egal, wie man es nennen mag – war einfach genial. Ich habe in diesem Kurs mehr gelernt als in all meinen bisherigen Schulungen zusammen.“</p><footer><b>Emrullah Ates</b>Teilnehmer</footer></figure>
+      <figure class="quote rv" data-d="2"><p>"Ersteres ist manchmal genau so schwer wie Letzteres, deshalb ist das Training mit Michael unerlässlich, um eine bessere globale Zukunft aktiv mitzugestalten.“</p><footer><b>Neven Subotic</b>Fußball-Bundesliga-Profi</footer></figure>
+    </div>
+    <div class="videos" role="tabpanel" id="p-video" aria-labelledby="tab-video" hidden>
+      <div class="video"><span>Video · Platzhalter</span></div>
+      <div class="video"><span>Video · Platzhalter</span></div>
+      <div class="video"><span>Video · Platzhalter</span></div>
+      <div class="video"><span>Video · Platzhalter</span></div>
+    </div>
+    <div class="rv" data-d="2" style="margin-top:clamp(14px,2.6vh,26px)"><a class="btn" href="https://www.meandyou.de/seminare-termin">Jetzt Platz sichern</a></div>
+  </div>
+</section>
+
+<!-- 10 FOR WHOM -->
+<section class="screen" id="fuerwen">
+  <div class="wrap split">
+    <div class="frame plx whom__media rv" data-plx="0.1"><img style="object-position:64% 50%" src="assets/gen-group.webp" alt="Kleine Gruppe im Gespräch auf einer Terrasse im Abendlicht" width="1536" height="1024"></div>
+    <div class="stack">
+      <p class="ov rv">Für wen?</p>
+      <h2 class="rv" data-d="1">Diese Seminare sind genau richtig für dich, wenn du:</h2>
+      <ul class="checks rv" data-d="2">
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.200 12.300 2.600 2.600 5-5.400"/></svg>Als überzeugend und vertrauensvoll wahrgenommen werden willst</li>
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.200 12.300 2.600 2.600 5-5.400"/></svg>Sicher auftreten willst, ohne laut oder aufdringlich zu sein</li>
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.200 12.300 2.600 2.600 5-5.400"/></svg>Den Wert deiner Ideen auf den Punkt bringen willst (ohne dich in Fachwissen zu verlieren)</li>
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.200 12.300 2.600 2.600 5-5.400"/></svg>Gespräche lenken willst, statt nur zu reagieren</li>
+      </ul>
+      <div class="rv" data-d="3"><a class="btn" href="https://www.meandyou.de/seminare-termin">Jetzt direkt bewerben</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 FAQ -->
+<section class="screen screen--cream" id="faq">
+  <div class="wrap">
+    <div class="stack stack--tight">
+      <p class="ov rv">FAQ</p>
+      <h2 class="rv" data-d="1">Hier findest du Antworten auf mögliche Fragen und Einwände</h2>
+    </div>
+    <div class="faq" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- 12 CLOSING + CONTACT + FOOTER -->
+<section class="screen closing" id="kontakt">
+  <div class="closing__stage">
+    <div class="closing__bg"><img data-plx="0.08" style="object-position:50% 72%" src="assets/gen-closing.webp" alt="" width="1536" height="1024"></div>
+    <div class="wrap closing__grid">
+      <div class="stack">
+        <p class="ov rv">Dein nächster Schritt</p>
+        <h2 class="rv" data-d="1">Starte heute noch mit unseren Seminaren und verwandle deine Brillanz in überzeugende Kommunikation, die anderen im Gedächtnis bleibt</h2>
+        <div class="rv" data-d="2"><a class="btn btn--light" href="https://www.meandyou.de/seminare-termin">Jetzt Gespräch buchen</a></div>
+      </div>
+      <form class="form rv" data-d="2" id="kontaktform" novalidate>
+        <h3>Fragen vorab? Schreiben Sie uns.</h3>
+        <p>Manche Fragen klärt man am besten schriftlich. Nutzen Sie das Formular für organisatorische oder inhaltliche Rückfragen rund um die Seminare.</p>
+        <div class="form__row">
+          <label><span>Vorname</span><input id="f-vorname" type="text" placeholder="Vorname" autocomplete="given-name"></label>
+          <label><span>E-Mail</span><input id="f-email" type="email" placeholder="E-Mail" autocomplete="email"></label>
+        </div>
+        <label><span>Ihre Frage oder Ihr Anliegen</span><textarea id="f-frage" placeholder="Ihre Frage oder Ihr Anliegen"></textarea></label>
+        <button class="btn" type="submit" style="align-self:flex-start">Nachricht senden</button>
+        <p class="form__note" id="form-note" hidden>Prototyp: Das Formular sendet noch keine Nachricht.</p>
+      </form>
+    </div>
+  </div>
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <img src="assets/logo-light.webp" alt="Michael Ehlers &amp; You Communication" width="600" height="187">
+      <div><h4>Kontakt</h4><span class="sel">+49 15888367664</span><br><span class="sel">management@meandyou.de</span><br>Me&amp;You Communication</div>
+      <div><h4>Rechtliches</h4><a href="https://www.meandyou.de/impressum">Impressum</a><a href="https://www.meandyou.de/datenschutz">Datenschutz</a><a href="https://www.meandyou.de/agb">AGB</a></div>
+      <div><h4>Social Media</h4><a href="https://www.instagram.com/michael_ehlers_rhetorik/">Instagram</a><a href="https://de.linkedin.com/in/rhetoriktrainer">LinkedIn</a><span style="display:block;margin-top:8px;opacity:.7">© Copyright 2025. All rights Reserved.</span></div>
+    </div>
+  </footer>
+</section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var desktop = function(){ return window.innerWidth >= 1024; };
+
+  /* FAQ: the 13 real questions */
+  var FAQ = [
+    ["Kann ich mir das nicht auch einfach auf Youtube beibringen?","Theoretisch ja – praktisch nein. YouTube zeigt dir Puzzleteile, aber kein System. Du bräuchtest Monate, um die richtigen Videos zu finden und hättest trotzdem kein strukturiertes Vorgehen. Hier bekommst du ein durchdachtes System + Community + Feedback. Zeit ist Geld – und deine Zeit ist wertvoll."],
+    ["Ich bin sehr introvertiert, ist dieser Kurs trotzdem für mich?","Gerade dann ist dieser Kurs für dich gemacht. Rhetorik bedeutet nicht, lauter oder extrovertierter zu sein – sondern Wirkung zu erzielen. Introvertierte überzeugen oft durch Präzision und Ruhe. Mit den richtigen Techniken nutzt du deine Stärken, ohne dich zu verbiegen."],
+    ["Was, wenn ich keine Fortschritte in meiner Rhetorik mache?","Rhetorik ist ein Handwerk. Wer trainiert, verbessert sich. Setzt du die Übungen um, bekommst du spürbare Ergebnisse. Wenn du hängst, sorgen Feedback und klare Anleitungen dafür, dass du garantiert vorankommst."],
+    ["Kann ich dir meine Fragen auch persönlich stellen?","Ja. Neben dem Videotraining gibt es Austausch, Q&A und Feedback-Möglichkeiten – so erhältst du individuelle Antworten direkt von einem Rhetorik-Profi."],
+    ["Der Kurs ist mir zu teuer...","Die eigentliche Frage lautet: Was kostet es dich, nicht überzeugend zu kommunizieren? Verpasste Aufträge, überhörte Ideen, verlorene Chancen – das ist der wahre Preis. Der Kurs ist eine Investition, die sich schnell auszahlt."],
+    ["Ich möchte meine Rhetorik verbessern, aber habe kaum Zeit...","Perfekt – die Lektionen sind kurz und wirksam. In kleinen Einheiten baust du kontinuierlich Wirkung auf und kannst alles flexibel in deinen Alltag integrieren."],
+    ["Ich habe schon viele Bücher über Kommunikation gelesen. Reicht das nicht?","Theorie ohne Umsetzung bleibt Wissen. Hier trainierst du aktiv, bekommst Feedback und entwickelst Routinen, die in Meetings, Pitches und Gesprächen sofort tragen."],
+    ["Ich habe bereits Kommunikations-Trainings gemacht. Lerne ich hier noch was Neues?","Ja. Aktuelle Erkenntnisse treffen auf über 25 Jahre Praxis aus Politik, Medien und Wirtschaft. Viele erfahrene Teilnehmer berichten: „Ich habe noch einmal ein neues Niveau erreicht.“"],
+    ["Woher weiß ich, ob ich überhaupt „intelligent“ bin?","Es geht nicht um einen IQ-Wert, sondern um eine Haltung: reflektiert lernen, bewusst auftreten, mehr Wirkung wollen. Wenn das auf dich zutrifft, bist du hier richtig."],
+    ["Ist das ein rein theoretischer Selbstlernkurs oder gibt es auch persönliche Betreuung?","Beides: ein klar strukturiertes System für dein Tempo – plus persönliche Betreuung durch Q&A, Feedback und Community. Du bleibst nie allein mit deinen Fragen."],
+    ["Wie lange habe ich Zugang zum Online-Kurs und der Community?","Mindestens 12 Monate. Du kannst Inhalte wiederholen, Fortschritte festigen und dich dauerhaft mit der Community austauschen."],
+    ["Muss ich mich verstellen oder schauspielern?","Nein. Rhetorik heißt, authentisch Wirkung zu erzielen. Nicht anders werden – klarer werden. Die Technik unterstützt deine Persönlichkeit."],
+    ["Du hast tatsächlich bis hierhin gelesen?","Dann gehörst du zu den Menschen, die wirklich etwas verändern wollen. Genau diese Entschlossenheit bringt dich rhetorisch auf das nächste Level. Willkommen – du bist am richtigen Ort."]
+  ];
+  var list = document.getElementById('faq-list');
+  var cols = [document.createElement('div'), document.createElement('div')];
+  cols.forEach(function(c){ c.className = 'faq__col'; list.appendChild(c); });
+  var items = [];
+  FAQ.forEach(function(qa, i){
+    var el = document.createElement('div'); el.className = 'qa'; el.setAttribute('open-state', i === 0 ? '1' : '0');
+    var b = document.createElement('button'); b.type = 'button'; b.id = 'faq-q-' + i;
+    b.setAttribute('aria-expanded', i === 0 ? 'true' : 'false'); b.setAttribute('aria-controls', 'faq-a-' + i);
+    var s = document.createElement('span'); s.textContent = (i + 1) + '.  ' + qa[0]; b.appendChild(s);
+    var a = document.createElement('div'); a.className = 'qa__a'; a.id = 'faq-a-' + i; a.setAttribute('role', 'region'); a.setAttribute('aria-labelledby', b.id);
+    var inner = document.createElement('div'); var p = document.createElement('p'); p.textContent = qa[1]; inner.appendChild(p); a.appendChild(inner);
+    el.appendChild(b); el.appendChild(a); cols[i < 7 ? 0 : 1].appendChild(el); items.push(el);
+    b.addEventListener('click', function(){
+      var open = el.getAttribute('open-state') === '1';
+      items.forEach(function(o){ o.setAttribute('open-state', '0'); o.querySelector('button').setAttribute('aria-expanded', 'false'); });
+      if(!open){ el.setAttribute('open-state', '1'); b.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+
+  /* tabs (year, voices) */
+  function tabs(listEl, onChange){
+    var btns = [].slice.call(listEl.querySelectorAll('[role="tab"]'));
+    function select(btn){
+      btns.forEach(function(b){
+        var on = b === btn; b.setAttribute('aria-selected', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1;
+        document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
+      });
+      if(onChange) onChange(btn);
+    }
+    btns.forEach(function(b, i){
+      b.addEventListener('click', function(){ select(b); });
+      b.addEventListener('keydown', function(e){
+        if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){ var n = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length]; n.focus(); select(n); }
+      });
+    });
+  }
+  var th = document.getElementById('termine-h');
+  tabs(document.querySelector('#termine [role="tablist"]'), function(b){
+    th.textContent = b.id === 'tab-2027' ? 'Deine Rhetorik-Termine 2027' : 'Wo Wirkung beginnt: Deine Rhetorik-Termine 2026';
+    document.getElementById(b.getAttribute('aria-controls')).classList.add('in');
+  });
+  var sh = document.getElementById('stimmen-h');
+  tabs(document.querySelector('#stimmen [role="tablist"]'), function(b){
+    sh.textContent = b.id === 'tab-video' ? 'Was unsere Teilnehmer über die Inhalte sagen' : 'Was Kunden über Michael Ehlers sagen';
+  });
+
+  /* form: prototype only */
+  document.getElementById('kontaktform').addEventListener('submit', function(e){ e.preventDefault(); document.getElementById('form-note').hidden = false; });
+
+  /* header capsule */
+  var hdr = document.getElementById('hdr');
+  function onScrollY(y){ hdr.classList.toggle('is-pill', y > 60); }
+
+  /* reveal */
+  var rvs = [].slice.call(document.querySelectorAll('.rv'));
+  if(reduce || !('IntersectionObserver' in window)){ rvs.forEach(function(el){ el.classList.add('in'); }); }
+  else {
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+    rvs.forEach(function(el){ io.observe(el); });
+  }
+
+  /* parallax (Remedy: small factors, desktop only, only in view) */
+  var plx = [].slice.call(document.querySelectorAll('[data-plx]')).map(function(el){
+    return {box: el, img: el.tagName === 'IMG' ? el : el.querySelector('img'), f: parseFloat(el.getAttribute('data-plx')), on: false};
+  });
+  function plxUpdate(){
+    if(reduce || !desktop()){ plx.forEach(function(p){ p.img.style.transform = ''; }); return; }
+    var vh = window.innerHeight;
+    plx.forEach(function(p){
+      if(!p.on) return;
+      var r = (p.box === p.img ? p.img.parentElement : p.box).getBoundingClientRect();
+      var d = (r.top + r.height / 2 - vh / 2) * p.f;
+      p.img.style.transform = 'translate3d(0,' + d.toFixed(1) + 'px,0)';
+    });
+  }
+  if('IntersectionObserver' in window){
+    var pio = new IntersectionObserver(function(es){ es.forEach(function(e){ var p = plx.filter(function(x){ return x.box === e.target; })[0]; if(p){ p.on = e.isIntersecting; } }); plxUpdate(); }, {rootMargin:'20% 0px'});
+    plx.forEach(function(p){ pio.observe(p.box); });
+  }
+
+  /* smooth scroll (Remedy values) */
+  var lenis = null;
+  if(!reduce && window.Lenis){
+    try{
+      lenis = new window.Lenis({duration:1.1, easing:function(t){ return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }, smoothWheel:true});
+      lenis.on('scroll', function(e){ onScrollY(e.scroll); plxUpdate(); });
+      var raf = function(t){ lenis.raf(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf);
+    }catch(err){ lenis = null; }
+  }
+  if(!lenis){ window.addEventListener('scroll', function(){ onScrollY(window.scrollY); plxUpdate(); }, {passive:true}); }
+  window.addEventListener('resize', plxUpdate);
+  onScrollY(window.scrollY);
+
+  /* in-page anchors */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="#"]'); if(!a) return;
+    var id = a.getAttribute('href'); if(id.length < 2) return;
+    var t = document.querySelector(id); if(!t) return;
+    e.preventDefault();
+    if(lenis){ lenis.scrollTo(t, {offset:0}); } else { t.scrollIntoView({behavior: reduce ? 'auto' : 'smooth'}); }
+  });
+})();
+</script>

@@ -1,0 +1,52 @@
+{
+  "plan_index": 4,
+  "client": "Rabenmütter Shop",
+  "slug": "trauerkarten-pillar-handschrift",
+  "feedback_id": "801d4d7d-1a22-4d45-a08e-e0b213dff2ec",
+  "mode": "FEEDBACK",
+  "pass": true,
+  "checked_at": "2026-09-18",
+  "attempt": 1,
+  "output_file": "feedback/Rabenmütter Shop/801d4d7d-1a22-4d45-a08e-e0b213dff2ec.md",
+  "hard_checks": {
+    "no_fehlt_placeholder_in_required_fields": "pass — n/a element set (FEEDBACK mode has no Title/Meta/H1/NAP block/JSON-LD to check); the [fehlt: ...] tags present are inside the Vorschlag/next-step body, correctly flagging an unconfirmed fact (which of the two handwriting models the original proposal meant) instead of inventing it — required by hard rule 2, not a violation of this check.",
+    "nap_matches_locked_record": "n/a — no NAP block in a FEEDBACK output; Rabenmütter Shop is not a LocalBusiness page and has no nap_locked record.",
+    "json_ld_valid": "n/a — FEEDBACK item, no JSON-LD expected or present.",
+    "language_matches_market": "pass — entire output (Kunde sagt / Vorschlag / Diff-Hinweis / Status-Hinweis) is in German, matching Rabenmütter Shop's DACH market_lang.",
+    "hwg_scan": "n/a — Rabenmütter Shop is an e-commerce client (Trauerkarten), not a health/YMYL client; no health/outcome claims in the copy.",
+    "deslop_check": "n/a-not-blocking — the Vorschlag is explicitly framed as an internal recommendation to Martin ('Nächster Schritt (braucht Martin)': bestätigen, klären, danach kurze Antwort schicken), not client-facing prose meant to ship as-is. Per SKILL.md wording this is excluded from the de-slop hard check."
+  },
+  "feedback_addressed_check": {
+    "method": "sentence-for-sentence against Kunde sagt (client comment, 30.08.2026, 16:38)",
+    "sentences": [
+      {
+        "client_sentence": "Lieber Martin, vielen Dank - super, super Vorschläge",
+        "addressed": true,
+        "where": "'Die Kundin stimmt den Vorschlägen im Abschnitt \"2 · Trauerkarten (Pillar)\" zu' / 'Zustimmung ... vermerken. Keine inhaltliche Änderung am Seitenbaum nötig.'"
+      },
+      {
+        "client_sentence": "auch die Idee die Karte handschriftlich schreiben zu lassen",
+        "addressed": true,
+        "where": "Identified as the one open sub-point inside the otherwise-accepted proposal; drives the entire 'Erklärung für die Kundin' section."
+      },
+      {
+        "client_sentence": "noch habe ich keine Idee wie das umgesetzt aussehen könnte",
+        "addressed": true,
+        "where": "Answered directly with two concrete, mutually exclusive implementation models (Modell A: Handschrift-Schriftart, digital gesetzt; Modell B: echte Handschrift von Hand), each with a stated trade-off."
+      },
+      {
+        "client_sentence": "aber das kannst du mir bestimmt erklären :-)",
+        "addressed": true,
+        "where": "The explanation itself is the deliverable of the Vorschlag section; 'Nächster Schritt (braucht Martin)' correctly gates sending anything to the client until the open points are confirmed."
+      }
+    ],
+    "verdict": "all client sentences addressed; no instruction from the client's comment was misread as a command to the agent itself"
+  },
+  "compliance_notes": [
+    "No invented facts: the open item (which model, A or B, the original proposal meant) is correctly marked [fehlt: ... von Martin zu bestätigen] instead of guessed.",
+    "Content is byte-identical to the version that already passed Critic on 2026-09-15 (critic/Rabenmütter Shop/2-trauerkarten-pillar.json) and again on 2026-09-16 (critic/Rabenmütter Shop/801d4d7d-1a22-4d45-a08e-e0b213dff2ec.json) — verified by diff, only the trailing Status-Hinweis footer changed (now correctly explains this is a third appearance caused by processed-feedback.json still being empty, a daytime process gap, not a content defect).",
+    "'Nächster Schritt (braucht Martin)' keeps this as a draft for human action — no autonomous edit to any live report, client_locations, or message to the client, consistent with the human-in-the-loop gates."
+  ],
+  "fails": [],
+  "note": "Pass on attempt 1. Re-confirms a prior pass; recommend Martin action the Status-Hinweis instruction (freigeben/zurückweisen + add feedback_id to processed-feedback.json) so this item stops re-entering the plan."
+}

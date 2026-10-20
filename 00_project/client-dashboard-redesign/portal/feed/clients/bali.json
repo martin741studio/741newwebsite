@@ -1,0 +1,90 @@
+{
+  "slug": "bali",
+  "client_id": "d0519d13-0bfc-4dfb-b512-57bf550387e6",
+  "lang": "en",
+  "tz": "Asia/Makassar",
+  "base": "../src/feed-bali.json",
+  "snapshot": "../src/feed-bali.json",
+  "program": {
+    "start": "2026-09-14",
+    "weeks": 13
+  },
+  "gsc_site": "https://www.balihealing.com/",
+  "ga4": {
+    "property": "428850764",
+    "wa_event": "contact_whatsapp",
+    "tracking_start": "2026-08-02"
+  },
+  "profiles": [
+    {
+      "key": "nhc",
+      "place_id": "ChIJ63mJv4dH0i0R0VElvJNsPEk"
+    },
+    {
+      "key": "beauty",
+      "place_id": "ChIJe1V3kpFH0i0RAiUUpgbLd3k",
+      "zero_list": "beautyMap"
+    }
+  ],
+  "fill_days": 3,
+  "map": {
+    "max_age_days": 60,
+    "grid_points": 49,
+    "suffix": " bali",
+    "alias": {
+      "ozone hyperbaric major autohemotherapy": "ozone major autohemotherapy",
+      "platelet rich plasma face": "PRP face",
+      "platelet rich plasma hair": "PRP hair",
+      "dmae mesotherapy": "DMAE mesotherapy",
+      "ppc fat reduction": "PPC fat reduction",
+      "acid peeling treatment": "acid peeling",
+      "nucleofill pdrn injection": "nucleofill PDRN"
+    }
+  },
+  "leader": {
+    "keyword": "ozone therapy",
+    "series_key": "ozone_series",
+    "series_radius": "5 mi"
+  },
+  "ai": {
+    "platforms": [
+      "chatgpt",
+      "gemini",
+      "aimode"
+    ]
+  },
+  "ads": {
+    "dir": "00_project/assets/audit/balihealing/2026-10-11-kickoff/evidence",
+    "max_age_days": 7
+  },
+  "last_update": {
+    "type": "head",
+    "url_key": "roadmap_url"
+  },
+  "texts": {
+    "src_rev": "Google profile reviews (live list, both profiles)",
+    "src_rev_note": "New reviews per month counted by the date Google shows (Bali time).",
+    "src_map": "Google Maps checks (49 spots around the clinic, top-3 coverage)",
+    "src_map_note": "Latest check per keyword. Check dates differ. Scan settings differ between some keywords.",
+    "src_leader": "Google Maps check, competitor with the highest top-3 share for the ozone keyword"
+  },
+  "carried": [
+    "banner",
+    "guide",
+    "needs (except the review line)",
+    "work",
+    "decisions_note",
+    "decisions",
+    "tracks",
+    "tree",
+    "reports",
+    "funnel",
+    "profiles",
+    "meta.client_id",
+    "meta.client",
+    "meta.lang",
+    "meta.roadmap_url"
+  ],
+  "domain": "balihealing.com",
+  "feed_hash": "a331bf716f08"
+}

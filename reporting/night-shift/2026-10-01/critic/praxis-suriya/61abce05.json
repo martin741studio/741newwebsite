@@ -1,0 +1,41 @@
+{
+  "plan_index": 1,
+  "client": "Praxis Suriya",
+  "feedback_id": "61abce05-2b04-49b4-b4ab-420ab4374080",
+  "mode": "FEEDBACK",
+  "executor_file": "feedback/praxis-suriya/61abce05-2b04-49b4-b4ab-420ab4374080.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "pass",
+      "note": "FEEDBACK mode has no Title/Meta/H1/JSON-LD. The 'Kanonische Geschäftsdaten' NAP block has no [fehlt:] placeholder. Two [fehlt:] tags exist elsewhere (missing original report text for comparison; unconfirmed Sat/Sun hours) but both are outside the NAP block and correctly flag real data gaps instead of inventing data, per hard rule 2."
+    },
+    "nap_matches_locked_record": {
+      "result": "pass",
+      "note": "Kanonische Geschäftsdaten block matches context.json.nap_locked for client_id 3f71ef33-8c74-4ea1-b2d3-0273c2e99649 field by field: name 'Praxis Suriya - Ayurveda & Naturheilkunde', 'Schützenpfad 29, 55218 Ingelheim am Rhein', '+49 174 7411087', category 'Heilpraktiker'."
+    },
+    "jsonld_valid": {
+      "result": "n/a",
+      "note": "FEEDBACK mode has no JSON-LD requirement per SKILL.md §3."
+    },
+    "language_matches_market": {
+      "result": "pass",
+      "note": "market_lang=de; entire Vorschlag and surrounding text is German."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "note": "No cure/guarantee/fear claims. Content is operational (opening hours, GBP Termin-button mapping, accessibility/Barrierefreiheit attribute), not a health claim."
+    },
+    "feedback_addresses_comment": {
+      "result": "pass",
+      "note": "Kunde sagt has 3 points: (1) Di-Do 7:30-18:00, Fr 7:30-12:00 -> reflected exactly in the hours table. (2) Mo telefonisch 12:00-14:00 Uhr, kein Termin-Button nur Buchungsformular -> Monday row plus dedicated Termin-Button paragraph with a concrete GBP action-field recommendation instead of inventing a button. (3) 'barrier frei aber nicht Toilette' -> new Barrierefreiheit section correctly flips only the 'Rollstuhlgerechte Toilette' attribute to Nein while leaving entrance accessibility as Ja, matching the client's precise correction. All three client statements are answered sentence-for-sentence."
+    },
+    "deslop_body_copy": {
+      "result": "n/a",
+      "note": "Per SKILL.md §3 FEEDBACK exception: de-slop only applies to a Vorschlag section that is new client-facing prose meant to ship as-is (e.g. a GBP description rewrite). Here the Vorschlag is (a) a structured hours table and two GBP-attribute tables — data, not prose — and (b) recommendations addressed to Martin ('Empfehlung: ...'), not client-facing copy. Not run, not a blocker."
+    }
+  },
+  "fails": [],
+  "overall_verdict": "pass",
+  "reasoning": "All applicable hard checks pass. FEEDBACK-mode rubric substitute (sentence-for-sentence coverage of the client's comment) is satisfied, including the new Barrierefreiheit/Toilette correction. No invented data; the two remaining [fehlt:] markers correctly flag genuine gaps (original report text, unconfirmed weekend hours) rather than blocking NAP/Title/Meta/H1/JSON-LD fields. Verbatim 'Kunde sagt' quote matches context.json.feedback_open comment exactly."
+}

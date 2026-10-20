@@ -1,0 +1,65 @@
+{
+ "date": "2026-10-12",
+ "page": "content-writing/seminare/05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G2 legal": {
+   "mode": "none",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "info": {
+    "words": 1656,
+    "placeholders": 12
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Sprecher gemischt: ich 6, wir 3"
+   ],
+   "counts": {
+    "du": 93,
+    "sie": 0,
+    "ich": 6,
+    "wir": 3
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1656,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Begriffs- und Norm-Prüfung nicht gelaufen (mit --fetch starten)",
+    "Direkt-Antwort hat 5 Sätze (Regel: 2 bis 4, etwa 50 Wörter). Kürzen für KI-Zitate."
+   ]
+  }
+ }
+}

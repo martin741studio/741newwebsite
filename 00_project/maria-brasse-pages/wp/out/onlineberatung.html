@@ -1,0 +1,295 @@
+<!-- wp:html -->
+<style>.sg-page{--t:#10595B;--td:#0b3a3b;--tint:#eff5f5}
+.sg-page .wp-block-group__inner-container>*{margin-block-start:0}
+.sg-page .wp-block-group__inner-container{padding:0}
+.sg-page>*{margin-top:0!important;margin-bottom:0!important}
+.sg-page>.wp-block-group__inner-container>*{margin:0!important}
+/* hero */
+.sg-page .sg-hero{min-height:620px;display:flex;align-items:center;padding:110px 6%;
+ background:linear-gradient(90deg,rgba(11,58,59,.9) 0%,rgba(11,58,59,.62) 42%,rgba(11,58,59,.05) 75%),url(https://shuiguru.de/wp-content/uploads/2023/05/image14.jpeg) center 30%/cover no-repeat;color:#fff}
+.sg-page .sg-hero-box{max-width:640px}
+.sg-page .sg-hero p.sg-eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:13px;font-weight:600;color:#bfe0e0;margin:0 0 14px!important}
+.sg-page .sg-hero .sg-h1{color:#fff;font-size:clamp(30px,4vw,50px);line-height:1.15;margin:0 0 20px!important}
+.sg-page .sg-hero .sg-h1 em{font-style:normal;color:#bfe0e0}
+.sg-page .sg-hero p.sg-hero-lead{font-size:17px;line-height:1.65;color:#eef6f6;margin:0 0 18px!important}
+.sg-page .sg-hero p.sg-hero-line{font-size:15px;color:#fff;margin:0 0 22px!important;opacity:.95}
+.sg-page .sg-hero>.wp-block-group__inner-container{width:100%;max-width:1120px;margin:0 auto}
+.sg-page .sg-hero-split{position:relative;background:var(--td)!important;min-height:600px}
+.sg-page .sg-hero-split:before{content:"";position:absolute;top:0;right:0;bottom:0;width:50%;background:url(https://shuiguru.de/wp-content/uploads/2023/05/image14.jpeg) center 30%/cover no-repeat}
+.sg-page .sg-hero-split .sg-hero-box{max-width:min(560px,44vw)}
+/* buttons */
+.sg-page .sg-btn .wp-block-button__link{background:var(--t);color:#fff;border-radius:0;padding:14px 30px;font-weight:600}
+.sg-page .sg-hero .sg-btn .wp-block-button__link{background:#fff;color:var(--t)}
+.sg-page .sg-btn .wp-block-button__link:hover{background:#e87010!important;color:#fff!important}
+.sg-page .sg-btn-light .wp-block-button__link{background:#fff;color:var(--t)}
+/* bands */
+.sg-page .sg-band{padding:80px 24px}
+.sg-page .sg-band-white{background:#fff}
+.sg-page .sg-band-tint{background:var(--tint)}
+.sg-page .sg-band-note{background:#fdf6df;border-top:3px solid #e7c34a;border-bottom:3px solid #e7c34a;padding:44px 24px}
+.sg-page .sg-band-cta{background:var(--t);color:#fff;text-align:center}
+.sg-page .sg-band-cta h2{color:#fff!important}
+.sg-page .sg-band-cta .wp-block-buttons{justify-content:center}
+.sg-page .sg-inner{max-width:1120px;margin:0 auto}
+.sg-page .sg-narrow{max-width:760px}
+.sg-page .sg-band h2{color:var(--t);font-size:clamp(26px,3vw,36px);line-height:1.2;margin:0 0 18px!important;position:relative}
+.sg-page .sg-band:not(.sg-band-cta):not(.sg-band-note) h2:after{content:"";display:block;width:56px;height:3px;background:var(--t);margin-top:14px}
+.sg-page .sg-head-center{text-align:center;max-width:780px;margin:0 auto 34px!important}
+.sg-page .sg-head-center h2:after{margin-left:auto;margin-right:auto}
+.sg-page .sg-band p{font-size:17px;line-height:1.75;margin:0 0 16px!important}
+.sg-page .sg-band h3{font-size:23px;color:#222!important;margin:0 0 12px!important}
+.sg-page .sg-band h3 a{color:inherit;text-decoration:none;border-bottom:2px solid var(--t)}
+.sg-page .sg-band h3 a:hover{color:var(--t)}
+/* splits */
+.sg-page .sg-split{gap:56px;align-items:flex-start;margin:0!important}
+.sg-page .sg-split-img,.sg-page .sg-row{align-items:center}
+.sg-page .sg-row{margin:0 0 56px!important}
+.sg-page .sg-row:last-child{margin-bottom:0!important}
+.sg-page .sg-img{margin:0!important}
+.sg-page .sg-img img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;box-shadow:0 18px 40px rgba(11,58,59,.18)}
+/* lists, steps, cards */
+.sg-page ul.sg-check{list-style:none;margin:0 auto 16px;padding:0;max-width:820px;text-align:left}
+.sg-page .sg-split ul.sg-check{max-width:none}
+.sg-page ul.sg-check li{position:relative;padding:12px 16px 12px 46px;margin:0 0 10px;background:#fff;border-left:3px solid var(--t);font-size:17px;line-height:1.6}
+.sg-page .sg-band-white ul.sg-check li{background:var(--tint)}
+.sg-page ul.sg-check li:before{content:"✓";position:absolute;left:16px;top:12px;color:var(--t);font-weight:700}
+.sg-page .sg-steps>.wp-block-group__inner-container{counter-reset:sgstep;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+.sg-page .sg-step{counter-increment:sgstep;background:#fff;padding:56px 20px 20px;position:relative;border-top:4px solid var(--t)}
+.sg-page .sg-band-white .sg-step{background:var(--tint)}
+.sg-page .sg-step:before{content:counter(sgstep);position:absolute;left:20px;top:14px;width:32px;height:32px;border-radius:50%;background:var(--t);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.sg-page .sg-step p{margin:0 0 6px!important;font-size:16px!important}
+.sg-page .sg-step p.sg-step-title{font-size:18px!important;color:var(--t)}
+.sg-page .sg-cards>.wp-block-group__inner-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.sg-page .sg-cols-4>.wp-block-group__inner-container{grid-template-columns:repeat(4,1fr)}
+.sg-page .sg-cols-2>.wp-block-group__inner-container{grid-template-columns:repeat(2,1fr)}
+@media(max-width:1000px){.sg-page .sg-cols-4>.wp-block-group__inner-container{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.sg-page .sg-cols-4>.wp-block-group__inner-container,.sg-page .sg-cols-2>.wp-block-group__inner-container{grid-template-columns:1fr}}
+.sg-page .sg-band-follow{padding-top:0}
+.sg-page .sg-card{background:#fff;padding:26px;border-top:4px solid var(--t);box-shadow:0 6px 20px rgba(11,58,59,.07)}
+.sg-page .sg-band-white .sg-card{background:var(--tint);box-shadow:none}
+.sg-page .sg-card p{margin:0 0 8px!important;font-size:16px!important}
+.sg-page .sg-card p.sg-card-title{font-size:19px!important;color:var(--t)}
+.sg-page .sg-card .sg-ic{display:block;font-size:30px;margin-bottom:8px}
+.sg-page .sg-card p.sg-price{font-size:30px!important;font-weight:700;color:var(--t)}
+.sg-page .sg-badges{text-align:center}
+.sg-page .sg-badges .sg-badge{display:inline-block;background:var(--t);color:#fff;padding:8px 18px;margin:0 8px 8px 0;border-radius:999px}
+.sg-page .sg-badges .sg-badge strong{margin-right:6px}
+/* faq */
+.sg-page .sg-faq{background:#fff;border:0;border-left:3px solid var(--t);padding:16px 20px;margin:0 0 12px!important}
+.sg-page .sg-band-white .sg-faq{background:var(--tint)}
+.sg-page .sg-faq summary{cursor:pointer;font-weight:600;color:var(--t);font-size:17px}
+.sg-page .sg-faq p{margin:12px 0 0!important}
+.sg-page .sg-map{line-height:0}
+@media(max-width:781px){
+ .sg-page .sg-hero{min-height:0;padding:90px 20px 60px;background:linear-gradient(180deg,rgba(11,58,59,.55),rgba(11,58,59,.92)),url(https://shuiguru.de/wp-content/uploads/2023/05/image14.jpeg) center 30%/cover no-repeat}
+ .sg-page .sg-hero-split{flex-direction:column;align-items:stretch;padding:0 0 50px}
+ .sg-page .sg-hero-split:before{position:static;display:block;width:auto;height:300px;margin:0 0 30px}
+ .sg-page .sg-hero-split>.wp-block-group__inner-container{padding:0 20px}
+ .sg-page .sg-hero-split .sg-hero-box{max-width:none}
+ .sg-page .sg-band{padding:56px 18px}
+ .sg-page .sg-split{gap:24px}
+ .sg-page .sg-row .wp-block-column:has(.sg-img){order:-1}
+ .sg-page .sg-split-img .wp-block-column:has(.sg-img){order:-1}
+}
+</style>
+<!-- /wp:html -->
+
+<!-- wp:group {"className": "sg-page"} -->
+<div class="wp-block-group sg-page"><!-- wp:group {"className": "sg-hero alignfull sg-hero-split", "tagName": "section"} -->
+<section class="wp-block-group sg-hero alignfull sg-hero-split"><!-- wp:group {"className": "sg-hero-box"} -->
+<div class="wp-block-group sg-hero-box"><!-- wp:paragraph {"className":"sg-eyebrow"} -->
+<p class="sg-eyebrow">ShuiGuru · Feng Shui Beratung · Maria Brasse</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level": 1, "className": "sg-h1"} -->
+<h1 class="wp-block-heading sg-h1">Online-Beratung – Feng Shui bundesweit, ohne Vor-Ort-Termin</h1>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"sg-hero-lead"} -->
+<p class="sg-hero-lead">Viele meiner Analysen brauchen keinen Vor-Ort-Termin: Fotos, Videos und Grundrisse sagen mir sehr viel über einen Raum. Deshalb berate ich Kund:innen in ganz Deutschland online – sowohl für Büros und Betriebe als auch für Wohnräume und Bauvorhaben.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"sg-hero-line"} -->
+<p class="sg-hero-line">💻 Bundesweit, per Video & E-Mail · 📞 <b>01578 59 555 28</b></p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"sg-btn"} -->
+<div class="wp-block-button sg-btn"><a class="wp-block-button__link wp-element-button" href="https://shuiguru.de/kaeffchen/">Käffchen vereinbaren</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-note alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-note alignfull"><!-- wp:group {"className": "sg-inner sg-narrow"} -->
+<div class="wp-block-group sg-inner sg-narrow"><!-- wp:heading -->
+<h2 class="wp-block-heading">Aktuell: Kostenlose Online-Beratung gegen Google-Bewertung</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Bis zum 15. Oktober biete ich eine kostenlose Kurzberatung per Video an – im Gegenzug freue ich mich über eine ehrliche Google-Bewertung. Ideal, um Feng Shui unverbindlich kennenzulernen. Nach Absprache täglich, Montag bis Sonntag, 10–19 Uhr.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:group {"className": "sg-head-center"} -->
+<div class="wp-block-group sg-head-center"><!-- wp:heading -->
+<h2 class="wp-block-heading">Wie die Online-Beratung abläuft</h2>
+<!-- /wp:heading -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-steps"} -->
+<div class="wp-block-group sg-steps"><!-- wp:group {"className": "sg-step"} -->
+<div class="wp-block-group sg-step"><!-- wp:paragraph {"className":"sg-step-title"} -->
+<p class="sg-step-title"><strong>Material senden</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Sie senden mir Fotos, Videos, Grundrisse und Pläne – gern auch selbst gezeichnet, so gut es geht.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-step"} -->
+<div class="wp-block-group sg-step"><!-- wp:paragraph {"className":"sg-step-title"} -->
+<p class="sg-step-title"><strong>Rückmeldung & Preisvorschlag</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Auf dieser Grundlage entwickle ich Ihnen eine konkrete Rückmeldung und einen Preisvorschlag.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-step"} -->
+<div class="wp-block-group sg-step"><!-- wp:paragraph {"className":"sg-step-title"} -->
+<p class="sg-step-title"><strong>Bei Bedarf: Video-/Telefontermin</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Details klären wir bei Bedarf in einem Video- oder Telefontermin.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "sg-step"} -->
+<div class="wp-block-group sg-step"><!-- wp:paragraph {"className":"sg-step-title"} -->
+<p class="sg-step-title"><strong>Umsetzung</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Kompakt im Block oder als begleiteter Entwicklungsprozess – so, wie es zu Ihnen passt.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:group {"className": "sg-head-center"} -->
+<div class="wp-block-group sg-head-center"><!-- wp:heading -->
+<h2 class="wp-block-heading">Was online genauso gut funktioniert</h2>
+<!-- /wp:heading -->
+</div>
+<!-- /wp:group -->
+<!-- wp:list {"className":"sg-check"} -->
+<ul class="wp-block-list sg-check"><!-- wp:list-item -->
+<li>Grundrissanalysen</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Bürobegehungen per Video</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Plancheck vor dem Hausbau</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Erste Einschätzungen für Gärten und Höfe</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>Sichtbar wird dabei fast alles, was auch bei einem Vor-Ort-Termin zählt – nur eben über den Bildschirm.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-img"} -->
+<div class="wp-block-columns sg-split sg-split-img"><!-- wp:column {"width":"45%"} -->
+<div class="wp-block-column" style="flex-basis:45%"><!-- wp:image {"id":793,"sizeSlug":"large","linkDestination":"none","className":"sg-img"} -->
+<figure class="wp-block-image size-large sg-img"><img src="https://shuiguru.de/wp-content/uploads/2022/12/WH-1024x576.jpg" alt="Handgezeichneter Grundriss mit Notizen" class="wp-image-793"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading -->
+<h2 class="wp-block-heading">Wann ein Vor-Ort-Termin sinnvoller ist</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Bei sehr großen oder verschachtelten Anlagen – etwa Höfen mit mehreren Gebäuden – ist ein persönlicher Besuch oft aufschlussreicher, weil sich Licht, Wege und Atmosphäre direkt erleben lassen. Für die meisten Büros, Wohnräume und Baupläne reicht die Online-Beratung völlig aus. Was das Ganze kostet, erfahren Sie auf der Seite <a href="https://shuiguru.de/kosten/">Kosten &amp; Ablauf</a>.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-tint alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-tint alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:group {"className": "sg-head-center"} -->
+<div class="wp-block-group sg-head-center"><!-- wp:heading -->
+<h2 class="wp-block-heading">Was Sie mir für die Online-Beratung schicken</h2>
+<!-- /wp:heading -->
+</div>
+<!-- /wp:group -->
+<!-- wp:list {"className":"sg-check"} -->
+<ul class="wp-block-list sg-check"><!-- wp:list-item -->
+<li>Fotos aus mehreren Blickwinkeln (auch von Übergängen und Fluren)</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Ein maßstabsgetreuer oder selbst gezeichneter Grundriss</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Falls vorhanden: Angaben zur Ausrichtung des Gebäudes</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>Je vollständiger dieses Bild, desto konkreter kann ich Ihnen zurückmelden, was in Ihrem Raum wirkt und was nicht.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-white alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-white alignfull"><!-- wp:group {"className": "sg-inner"} -->
+<div class="wp-block-group sg-inner"><!-- wp:columns {"className":"sg-split sg-split-faq"} -->
+<div class="wp-block-columns sg-split sg-split-faq"><!-- wp:column {"width":"38%"} -->
+<div class="wp-block-column" style="flex-basis:38%"><!-- wp:heading -->
+<h2 class="wp-block-heading">Häufige Fragen</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Welche Unterlagen brauche ich für die Online-Beratung?</summary><!-- wp:paragraph -->
+<p>Fotos aus mehreren Blickwinkeln, idealerweise ein Grundriss oder Lageplan, und bei Bauvorhaben der aktuelle Bauplan. Je mehr Sie zeigen, desto konkreter wird die Rückmeldung.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Ist Online-Beratung genauso gründlich wie vor Ort?</summary><!-- wp:paragraph -->
+<p>Für die meisten Anliegen ja – Grundriss und Fotos verraten sehr viel. Bei sehr komplexen Anlagen ergänze ich die Analyse gegebenenfalls um Rückfragen per Video.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details {"className":"sg-faq"} -->
+<details class="wp-block-details sg-faq"><summary>Wie schnell bekomme ich eine Rückmeldung?</summary><!-- wp:paragraph -->
+<p>Das hängt vom Umfang ab – nach dem Vorgespräch nenne ich Ihnen einen konkreten Zeitrahmen.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"className": "sg-band sg-band-cta alignfull", "tagName": "section"} -->
+<section class="wp-block-group sg-band sg-band-cta alignfull"><!-- wp:group {"className": "sg-inner sg-narrow"} -->
+<div class="wp-block-group sg-inner sg-narrow"><!-- wp:heading -->
+<h2 class="wp-block-heading">Bereit für Ihre Online-Beratung?</h2>
+<!-- /wp:heading -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"sg-btn sg-btn-light"} -->
+<div class="wp-block-button sg-btn sg-btn-light"><a class="wp-block-button__link wp-element-button" href="https://shuiguru.de/kaeffchen/">Käffchen vereinbaren</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:html -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Feng-Shui-Beratung online", "provider": {"@type": "ProfessionalService", "name": "ShuiGuru"}, "areaServed": "Deutschland"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Welche Unterlagen brauche ich für die Online-Beratung?", "acceptedAnswer": {"@type": "Answer", "text": "Fotos aus mehreren Blickwinkeln, idealerweise ein Grundriss oder Lageplan, und bei Bauvorhaben der aktuelle Bauplan. Je mehr Sie zeigen, desto konkreter wird die Rückmeldung."}}, {"@type": "Question", "name": "Ist Online-Beratung genauso gründlich wie vor Ort?", "acceptedAnswer": {"@type": "Answer", "text": "Für die meisten Anliegen ja – Grundriss und Fotos verraten sehr viel. Bei sehr komplexen Anlagen ergänze ich die Analyse gegebenenfalls um Rückfragen per Video."}}, {"@type": "Question", "name": "Wie schnell bekomme ich eine Rückmeldung?", "acceptedAnswer": {"@type": "Answer", "text": "Das hängt vom Umfang ab – nach dem Vorgespräch nenne ich Ihnen einen konkreten Zeitrahmen."}}]}</script>
+<!-- /wp:html --></div>
+<!-- /wp:group -->

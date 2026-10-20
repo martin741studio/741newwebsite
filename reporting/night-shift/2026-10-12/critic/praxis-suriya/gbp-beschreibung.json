@@ -1,0 +1,37 @@
+{
+  "plan_item_index": 2,
+  "client": "Praxis Suriya",
+  "page": "suriya/gbp-beschreibung",
+  "mode": "FEEDBACK",
+  "feedback_id": "21a25f8b-8ee2-4f8f-8378-36aac01e35c4",
+  "source_file": "feedback/praxis-suriya/21a25f8b-8ee2-4f8f-8378-36aac01e35c4.md",
+  "pass": true,
+  "checks": {
+    "sentence_for_sentence_addressed": {
+      "result": "pass",
+      "reason": "Verified the 'Kunde sagt' quote in the Executor file against context.json.feedback_open id 21a25f8b-8ee2-4f8f-8378-36aac01e35c4 (line 482): the client's 'ÄNDERN:' instruction plus full replacement text matches verbatim, character for character. The Vorschlag reproduces that same text 1:1 with no paraphrase, cut, or addition."
+    },
+    "nap_block_matches_locked_record": {
+      "result": "pass",
+      "reason": "Cross-checked context.json.nap_locked for client_id 3f71ef33-8c74-4ea1-b2d3-0273c2e99649 directly: business_name 'Praxis Suriya - Ayurveda & Naturheilkunde', street 'Schützenpfad 29', postal_code '55218', city 'Ingelheim am Rhein', phone '+49 174 7411087', primary_category 'Heilpraktiker' — all match the Executor's 'Kanonische Geschäftsdaten' block field by field. The city name inside the client's own description text also matches."
+    },
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "pass",
+      "reason": "No Title/Meta/H1/JSON-LD exists in this FEEDBACK doc type. The GBP-description Vorschlag and the NAP block contain no [fehlt:]. The one [fehlt:]-equivalent note sits in the Diff-Hinweis, correctly flagging the unreachable original report text rather than inventing a comparison."
+    },
+    "market_lang_de": {
+      "result": "pass",
+      "reason": "Entire draft, including the client-supplied replacement text, is German, matching market_lang 'de'."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "reason": "Ran a direct case-insensitive scan of the Vorschlag text for 'heilt', 'garantiert', '100%'/'100 %', 'heilung' — zero matches. Approach language only ('begleite', 'verbinde ich... Medizin'), no cure or guarantee claim."
+    },
+    "deslop_body_copy": {
+      "result": "pass",
+      "reason": "Independently recounted the Vorschlag text: 669 characters (wc -m), confirming the Executor's figure and under the 750-char GBP limit. Could not execute deslop_de.py in this session — python3 script invocation requires bash approval that is unavailable in this unattended run, same constraint the Executor hit. This is not a blocker: per SKILL.md §3, the de-slop hard check applies to 'new client-facing prose meant to ship as-is' produced by the agent; here the Vorschlag is the client's own verbatim words (identical string under both 'Kunde sagt' and 'Vorschlag'), so there is no agent-authored prose to screen for AI slop. Manual read confirms no filler, no generic AI phrasing — reads as the practitioner's own voice."
+    }
+  },
+  "fails": [],
+  "notes": "Independent re-verification of plan item index 2 (suriya/gbp-beschreibung) confirms the prior pass verdict. All six hard checks were checked directly against context.json rather than taken on the Executor's word: the client comment, the locked NAP record, and the character count all verify. Same open gap as noted before: the original report section '3 · Beschreibung' in gbp-empfehlung-2026-08 is not reachable from this session, correctly flagged rather than guessed — does not block this check since the task is pure 1:1 transcription, not a before/after rewrite judgement. Carrying forward Martin-note: this feedback_id has been staged across multiple night-shift runs because processed-feedback.json has no entry for it yet."
+}

@@ -4,7 +4,7 @@ Note: the scan and the card rounds for today already ran live with Martin (chat 
 
 ## Walk queue — Martin (1–5 min each)
 - [ ] Stürzl: No program start date. Set it (start = agreed trigger, e.g. contract or kickoff).
-- [ ] Stürzl: send the welcome mail (Airmailer, password reset) to stuerzl@stuerzl-steuerstrafrecht.de
+- [x] Stürzl: send the welcome mail (Airmailer, password reset) to stuerzl@stuerzl-steuerstrafrecht.de — Martin 14.10.: already done, leave it
 
 ## Agent starts
 - QUEUED (not started this run — needs a session start from the grill chat or Martin's go): Kamil chat — draft the yearly security/backup service offer (EUR 500/year minimum per site) and a CRO homepage idea for the Kraft site. Draft only, do not send. [task t25]

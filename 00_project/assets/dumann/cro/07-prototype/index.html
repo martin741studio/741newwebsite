@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heilpraktikerin Berlin-Charlottenburg | Naturheilpraxis Dumann</title>
+<meta name="description" content="Heilpraktikerin in Berlin-Charlottenburg: Ernährungsberatung, Darmsanierung und Hildegard von Bingen Heilkunde. 5,0 Sterne bei 9 Google Bewertungen. Termin buchen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#783ca0; --purple-dark:#5b2d80; --olive:#aabe1e; --olive-hover:#b9ce2a;
+  --cream:#f8f3fb; --white:#fff; --ink:#2e2238; --muted:#5d5068; --gold:#e3a600;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --rv:16px;
+}
+@media(min-width:900px){:root{--rv:24px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font-family:Poppins,system-ui,sans-serif;font-size:18px;line-height:1.6;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+@media(min-width:900px){body{font-size:17px}}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;color:var(--purple);line-height:1.2;margin:0}
+h2{font-size:clamp(26px,6.4vw,38px);text-align:center;margin-bottom:28px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+@media(min-width:900px){section{padding:84px 0}}
+.dark{background:var(--purple-dark);color:#f4ecf9}
+.dark h2,.dark h3{color:#fff}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 26px;border-radius:12px;font:600 17px/1.25 Poppins,sans-serif;text-align:center;text-decoration:none;border:2px solid transparent;transition:transform .18s var(--ease),box-shadow .18s var(--ease),background .18s var(--ease)}
+.btn-cta{background:var(--olive);color:#2a1740;box-shadow:0 4px 14px rgba(120,60,160,.18)}
+.btn-cta .arr{transition:transform .18s var(--ease)}
+.btn-cta:hover{background:var(--olive-hover);transform:translateY(-2px);box-shadow:0 8px 22px rgba(120,60,160,.28)}
+.btn-cta:hover .arr{transform:translateX(4px)}
+.btn-cta:active,.btn-ghost:active{transform:scale(.98);transition-duration:.12s}
+.btn-ghost{background:transparent;color:var(--purple-dark);border-color:var(--purple)}
+.dark .btn-ghost{color:#fff;border-color:rgba(255,255,255,.7)}
+.btn-ghost:hover{background:rgba(120,60,160,.08)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--purple);outline-offset:3px}
+.cta--breathe{animation:breathe 4.5s ease-in-out infinite}
+.cta--breathe:hover{animation-play-state:paused}
+@keyframes breathe{0%,100%{transform:scale(1);box-shadow:0 4px 14px rgba(120,60,160,.18)}50%{transform:scale(1.025);box-shadow:0 10px 26px rgba(120,60,160,.30)}}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(248,243,251,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(120,60,160,.12)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.hd img.wm{height:42px;width:auto}
+nav.main{display:none;gap:22px;align-items:center}
+nav.main a{text-decoration:none;font-size:15px;font-weight:500;color:var(--purple-dark);padding:8px 2px}
+nav.main a:hover{color:var(--purple)}
+.hd .tel{min-width:48px;min-height:48px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--purple);color:var(--purple-dark);text-decoration:none}
+@media(min-width:900px){nav.main{display:flex}.hd .tel{display:none}.hd img.wm{height:50px}}
+
+/* hero */
+.hero{padding:28px 0 0;background:linear-gradient(180deg,#f3eaf9 0%,var(--cream) 100%);overflow:hidden}
+.hero .grid{display:grid;gap:8px}
+.hero h1{font-size:clamp(30px,8.2vw,52px)}
+.hero p.lead{margin:16px 0 22px;color:var(--muted)}
+.hero .btns{display:flex;flex-direction:column;gap:12px}
+.hero .btns .btn{width:100%}
+.reassure{margin:12px 0 0;font-size:15px;color:var(--muted)}
+.rating{display:flex;align-items:center;gap:8px;margin:16px 0 0;font-size:15px;color:var(--muted)}
+.hero .photo{margin-top:24px;align-self:end}
+.hero .photo img{width:100%;max-height:430px;object-fit:cover;object-position:50% 12%;border-radius:20px 20px 0 0}
+@media(min-width:900px){
+ .hero{padding-top:56px}
+ .hero .grid{grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+ .hero .btns{flex-direction:row}.hero .btns .btn{width:auto}
+ .hero .photo{margin:0}.hero .photo img{max-height:560px;border-radius:24px 24px 0 0}
+ .hl{padding-bottom:44px}
+}
+/* hero load reveal */
+.hl>*{opacity:0;transform:translateY(var(--rv));animation:rise .5s var(--ease) forwards}
+.hl>*:nth-child(1){animation-delay:.05s}.hl>*:nth-child(2){animation-delay:.14s}.hl>*:nth-child(3){animation-delay:.23s}.hl>*:nth-child(4){animation-delay:.32s}.hl>*:nth-child(5){animation-delay:.38s}
+.hero .photo{opacity:0;animation:rise .6s var(--ease) .42s forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* stars */
+.stars{display:inline-flex;gap:3px}
+.star{width:20px;height:20px;fill:transparent;stroke:var(--gold);stroke-width:1.6;transition:fill .35s var(--ease)}
+.big .star{width:26px;height:26px}
+.is-in .star,.hero .star{fill:var(--gold)}
+.is-in .star:nth-child(1){transition-delay:.1s}.is-in .star:nth-child(2){transition-delay:.18s}.is-in .star:nth-child(3){transition-delay:.26s}.is-in .star:nth-child(4){transition-delay:.34s}.is-in .star:nth-child(5){transition-delay:.42s}
+
+/* proof strip */
+.proof{padding:26px 0;background:var(--white);border-top:1px solid rgba(120,60,160,.1);border-bottom:1px solid rgba(120,60,160,.1)}
+.proof .row{display:grid;gap:16px;align-items:center;text-align:center}
+.score{display:flex;align-items:center;justify-content:center;gap:14px}
+.score b{font:600 46px/1 'Playfair Display',serif;color:var(--purple);opacity:0;transition:opacity .4s var(--ease) .5s}
+.proof.is-in .score b,.proof .is-in .score b{opacity:1}
+.score small{display:block;font-size:14px;color:var(--muted);text-align:left}
+.quote-one{font:500 20px/1.4 'Playfair Display',serif;color:var(--purple-dark)}
+.quote-one cite{display:block;font:400 14px Poppins;color:var(--muted);margin-top:4px}
+.proof a.lnk{color:var(--purple);font-weight:600;text-decoration:none;border-bottom:2px solid rgba(120,60,160,.3);justify-self:center;padding:10px 0;min-height:44px}
+@media(min-width:900px){.proof .row{grid-template-columns:auto 1fr auto;gap:36px;text-align:left}.score{justify-content:flex-start}.proof a.lnk{justify-self:end}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(var(--rv));transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.is-in.rv,.is-in .rv,.rv.is-in{opacity:1;transform:none}
+.rv:nth-child(2){transition-delay:.09s}.rv:nth-child(3){transition-delay:.18s}.rv:nth-child(4){transition-delay:.27s}.rv:nth-child(5){transition-delay:.36s}.rv:nth-child(6){transition-delay:.45s}
+
+/* themes */
+.themes{display:grid;gap:14px}
+.theme{background:var(--white);border-radius:16px;padding:22px;box-shadow:0 2px 12px rgba(91,45,128,.07);transition:transform .18s var(--ease),box-shadow .18s var(--ease)}
+.theme:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(91,45,128,.12)}
+.theme .ic{width:44px;height:44px;color:var(--purple);margin-bottom:10px;transform:scale(.85);transition:transform .5s var(--ease)}
+.is-in .theme .ic,.theme.is-in .ic{transform:scale(1)}
+.theme h3{font-size:21px;margin-bottom:6px}
+.theme p{margin:0;font-size:16px;color:var(--muted)}
+@media(min-width:600px){.themes{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.themes{grid-template-columns:repeat(5,minmax(0,1fr))}.theme{padding:20px 18px}}
+.theme,.svc h3{overflow-wrap:break-word;hyphens:auto}.card{overflow-wrap:break-word}
+.center{text-align:center;margin-top:30px}
+
+/* services */
+.services{display:grid;gap:18px}
+.svc{background:var(--white);border-radius:16px;overflow:hidden;text-decoration:none;display:flex;flex-direction:row;box-shadow:0 2px 12px rgba(91,45,128,.07)}
+.svc .im{overflow:hidden;width:118px;flex:none;background:#e9dff0}
+.svc .im img{width:100%;height:100%;object-fit:cover;transition:transform .35s var(--ease)}
+.svc:hover .im img{transform:scale(1.03)}
+.svc .tx{padding:14px 16px 10px;display:flex;flex-direction:column;gap:14px;flex:1;justify-content:space-between}
+.svc h3{font-family:Poppins;font-weight:600;font-size:17px;color:var(--purple-dark);line-height:1.35}
+.svc .more{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--purple);font-weight:600;font-size:16px}
+.svc .more .arr{transition:transform .18s var(--ease)}
+.svc:hover .more .arr{transform:translateX(4px)}
+@media(min-width:640px){.services{grid-template-columns:repeat(2,1fr)}.svc{flex-direction:column}.svc .im{width:auto;aspect-ratio:16/10}.svc .tx{padding:18px 20px 22px}}
+@media(min-width:1000px){.services{grid-template-columns:repeat(3,1fr)}}
+
+/* steps */
+.steps{position:relative;display:grid;gap:26px;padding-left:0}
+.line{position:absolute;background:rgba(120,60,160,.45);transform-origin:top left;transform:scaleY(0);transition:transform .9s var(--ease) .1s;left:23px;top:24px;bottom:24px;width:2px}
+.is-in .line{transform:scaleY(1)}
+.step{position:relative;display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start}
+.num{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:600 20px 'Playfair Display';background:var(--cream);color:var(--purple);border:2px solid var(--purple);transition:background .35s var(--ease),color .35s var(--ease);position:relative;z-index:1}
+.is-in .num{background:var(--purple);color:#fff}
+.is-in .step:nth-child(2) .num{transition-delay:.2s}.is-in .step:nth-child(3) .num{transition-delay:.45s}.is-in .step:nth-child(4) .num{transition-delay:.7s}.is-in .step:nth-child(5) .num{transition-delay:.95s}
+.step h3{font-family:Poppins;font-size:18px;font-weight:600;color:var(--purple-dark);margin-bottom:4px}
+.step p{margin:0;font-size:16px;color:var(--muted)}
+.note{margin-top:30px;text-align:center;font-size:16px;color:var(--muted);padding:14px 18px;border-radius:12px;background:rgba(120,60,160,.07)}
+@media(min-width:900px){
+ .steps{grid-template-columns:repeat(4,1fr);gap:22px}
+ .line{left:24px;right:auto;width:calc(75% + 16.5px);top:24px;bottom:auto;height:2px;transform-origin:left;transform:scaleX(0)}
+ .is-in .line{transform:scaleX(1)}
+ .step{grid-template-columns:1fr;gap:14px;align-content:start}
+}
+
+/* about */
+.about .grid{display:grid;gap:28px;align-items:center}
+.about .pic img{width:100%;max-height:480px;object-fit:cover;object-position:50% 22%;border-radius:20px}
+.about h2{text-align:left;margin-bottom:16px}
+.about p{margin:0 0 14px;color:#efe3f6}
+.cred{position:relative;display:inline-block;padding-bottom:10px;margin-top:6px;font-weight:500;color:#fff;font-size:16px}
+.cred::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--olive);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease) .6s}
+.is-in .cred::after{transform:scaleX(1)}
+.about .pic.rv{transform:translateX(calc(var(--rv)*-1))}.about .tx.rv{transform:translateX(var(--rv))}
+.about .is-in .pic.rv,.about .is-in .tx.rv,.about.is-in .pic.rv,.about.is-in .tx.rv{transform:none}
+.about .btn{margin-top:22px}
+@media(min-width:900px){.about .grid{grid-template-columns:.9fr 1.1fr;gap:56px}}
+
+/* reviews */
+.rev{display:grid;gap:16px}
+.card{background:var(--white);border-radius:16px;padding:22px;box-shadow:0 2px 12px rgba(91,45,128,.07);display:flex;flex-direction:column;gap:12px}
+.card .top{display:flex;justify-content:space-between;align-items:center}
+.card blockquote{margin:0;font-size:16px;color:var(--ink)}
+.card cite{font-style:normal;font-weight:600;font-size:15px;color:var(--purple-dark)}
+.g{width:22px;height:22px;opacity:0;transition:opacity .4s var(--ease) .55s}.is-in .g{opacity:1}
+@media(min-width:900px){.rev{grid-template-columns:repeat(3,1fr)}}
+
+/* faq */
+.faq{max-width:860px;margin:0 auto;display:grid;gap:12px}
+details{background:var(--white);border-radius:14px;box-shadow:0 2px 10px rgba(91,45,128,.06);overflow:hidden}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;min-height:56px;font-weight:600;font-size:17px;color:var(--purple-dark);transition:color .2s}
+summary::-webkit-details-marker{display:none}
+summary .chev{flex:none;width:22px;height:22px;transition:transform .25s var(--ease)}
+details[open] summary{color:var(--purple)}
+details[open] summary .chev{transform:rotate(180deg)}
+.ans{padding:0 20px 20px;font-size:16px;color:var(--muted);animation:openfade .25s var(--ease)}
+@keyframes openfade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.flag{display:inline-block;margin-top:8px;padding:4px 10px;border-radius:8px;background:#fff3cd;color:#6b5200;font-size:13px;font-weight:600}
+
+/* location */
+.loc .grid{display:grid;gap:26px}
+.mapbox{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;background:#e6e0ea;box-shadow:0 2px 12px rgba(91,45,128,.1);opacity:0;transition:opacity .6s var(--ease)}
+.mapbox iframe{width:100%;height:100%;border:0}
+.is-in .mapbox,.mapbox.is-in{opacity:1}
+.pin{position:absolute;left:50%;top:50%;width:38px;height:38px;margin:-38px 0 0 -19px;color:var(--purple);opacity:0;transform:translateY(-12px);pointer-events:none;filter:drop-shadow(0 4px 4px rgba(0,0,0,.25))}
+.is-in .pin{opacity:1;transform:none;transition:opacity .4s var(--ease) .5s,transform .6s var(--ease) .5s}
+.addr p{margin:0 0 10px}
+.addr ul{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px;font-size:16px;color:var(--muted)}
+@media(min-width:900px){.loc .grid{grid-template-columns:1fr 1fr;align-items:center;gap:48px}}
+
+/* closer */
+.closer{text-align:center}
+.closer h2{color:#fff}
+.assure{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin:0 0 28px;padding:0;list-style:none;font-size:16px}
+.closer .btns{display:flex;flex-direction:column;gap:12px;align-items:center}
+@media(min-width:600px){.closer .btns{flex-direction:row;justify-content:center}}
+.closer .assure li{opacity:0;transform:translateY(8px);transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.closer.is-in .assure li{opacity:1;transform:none}
+.closer.is-in .assure li:nth-child(2){transition-delay:.09s}.closer.is-in .assure li:nth-child(3){transition-delay:.18s}
+
+footer{background:#2e1a40;color:#cdbfd9;padding:30px 0 100px;font-size:15px}
+footer .wrap{display:grid;gap:8px;text-align:center}
+footer a{color:#e8dbf2}
+@media(min-width:900px){footer{padding-bottom:30px}}
+
+/* sticky mobile bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(248,243,251,.96);backdrop-filter:blur(8px);border-top:1px solid rgba(120,60,160,.18);transform:translateY(24px);opacity:0;pointer-events:none;transition:transform .3s var(--ease),opacity .3s var(--ease)}
+.bar.show{transform:none;opacity:1;pointer-events:auto}
+.bar .btn-cta{flex:1}
+.bar .tel2{width:56px;min-height:52px;border-radius:12px;border:2px solid var(--purple);display:flex;align-items:center;justify-content:center;color:var(--purple-dark);text-decoration:none}
+@media(min-width:900px){.bar{display:none}}
+
+/* reduced motion */
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}
+ .cta--breathe{animation:none!important}
+ .rv,.hl>*,.hero .photo{transform:none!important;transition:opacity .3s linear!important;animation:none!important;opacity:1}
+ .line{transform:none!important;transition:none!important}
+ .cred::after{transform:scaleX(1)!important;transition:none!important}
+ .pin{transform:none!important}
+ .ans{animation-duration:.15s!important}
+}
+/* screenshot mode: show every reveal state */
+.shot .rv,.shot .hl>*,.shot .hero .photo{opacity:1!important;transform:none!important;animation:none!important}
+.shot .star{fill:var(--gold)!important}.shot .line{transform:none!important}.shot .num{background:var(--purple)!important;color:#fff!important}
+.shot .score b,.shot .g,.shot .pin,.shot .mapbox,.shot .closer .assure li{opacity:1!important;transform:none!important}
+.shot .cred::after{transform:scaleX(1)!important}.shot .theme .ic{transform:none!important}.shot .bar{display:none}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z" stroke-linejoin="round"/></symbol>
+ <symbol id="chev" viewBox="0 0 24 24"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+ <symbol id="google" viewBox="0 0 24 24"><path fill="#4285F4" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 01-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0012 22z"/><path fill="#FBBC05" d="M6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3.1a10 10 0 000 9.2z"/><path fill="#EA4335" d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.8-2.8A10 10 0 003.1 7.4L6.4 10C7.2 7.7 9.4 5.9 12 5.9z"/></symbol>
+</svg>
+
+<header>
+ <div class="wrap hd">
+  <a href="#top" aria-label="Naturheilpraxis Daniela Dumann, Startseite"><img class="wm" src="assets/logo-wordmark.png" alt="Naturheilpraxis Daniela Dumann" width="1657" height="486"></a>
+  <nav class="main" aria-label="Hauptnavigation">
+   <a href="#ueber-mich">Über mich</a><a href="#schwerpunkte">Schwerpunkte</a><a href="#ablauf">Ablauf</a><a href="#bewertungen">Bewertungen</a><a href="#faq">FAQ</a><a href="#kontakt">Kontakt</a>
+   <a class="btn btn-cta" href="BOOKING" style="min-height:44px;padding:0 20px;font-size:15px">Termin buchen</a>
+  </nav>
+  <a class="tel" href="tel:+493036430358" aria-label="Anrufen: 030 36430358"><svg width="24" height="24"><use href="#phone"/></svg></a>
+ </div>
+</header>
+
+<main id="top">
+
+<!-- 1 HERO -->
+<section class="hero" style="padding-bottom:0">
+ <div class="wrap grid">
+  <div class="hl">
+   <h1>Ihr Weg zu mehr Wohlbefinden, persönlich begleitet von einer Heilpraktikerin in Berlin-Charlottenburg seit 2002</h1>
+   <p class="lead">Ich begleite Sie individuell bei Themen wie Verdauung, Erschöpfung, Schilddrüse und Hormonen, mit Naturheilkunde, Homöopathie und der Heilkunde nach Hildegard von Bingen.</p>
+   <div class="btns">
+    <a id="heroCta" class="btn btn-cta cta--breathe" href="BOOKING">Termin buchen <span class="arr" aria-hidden="true">→</span></a>
+    <a class="btn btn-ghost" href="tel:+493036430358">Oder anrufen: 030 36430358</a>
+   </div>
+   <p class="reassure">Erstgespräch: 60 Minuten, 220 €</p>
+   <p class="rating"><span class="stars" aria-hidden="true"><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg></span> 5,0 Sterne bei 9 Google Bewertungen</p>
+  </div>
+  <div class="photo"><img src="assets/portrait-2-web.jpg" alt="Daniela Dumann, Heilpraktikerin in Berlin-Charlottenburg" width="1000" height="1505" fetchpriority="high"></div>
+ </div>
+</section>
+
+<!-- 2 PROOF STRIP -->
+<section class="proof" aria-label="Google Bewertungen">
+ <div class="wrap row">
+  <div class="score big"><b>5,0</b><div><span class="stars" aria-hidden="true"><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg></span><small>9 Google-Bewertungen</small></div><svg class="g" width="22" height="22" style="opacity:1"><use href="#google"/></svg></div>
+  <p class="quote-one" style="margin:0">„Kann Daniela Dumann von Herzen empfehlen."<cite>Karin S., Google Bewertung</cite></p>
+  <a class="lnk" href="#bewertungen">Alle Bewertungen lesen →</a>
+ </div>
+</section>
+
+<!-- 3 THEMEN -->
+<section id="schwerpunkte">
+ <div class="wrap">
+  <h2 class="rv">Fünf Themen, bei denen ich Sie begleite</h2>
+  <div class="themes">
+   <article class="theme rv"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 10c10 0 6 10 14 10s4 8-4 8-12 4-4 10h10"/></svg><h3>Verdauung und Darm</h3><p>Begleitung bei Verdauungsbeschwerden und Darmsanierung</p></article>
+   <article class="theme rv"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M24 8c4 6 4 12 0 18-4-6-4-12 0-18zM10 20c6 0 10 4 14 10M38 20c-6 0-10 4-14 10M12 36h24"/></svg><h3>Erschöpfung</h3><p>Begleitung bei Erschöpfungszuständen und wenn der Energiehaushalt aus dem Gleichgewicht geraten ist</p></article>
+   <article class="theme rv"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M24 24c-4-8-12-6-12 0s8 8 12 2c4 6 12 4 12-2s-8-8-12 0zM24 14v22"/></svg><h3>Schilddrüse</h3><p>Naturheilkundliche Begleitung bei Schilddrüsenthemen</p></article>
+   <article class="theme rv"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M24 14c-5-5-14-2-14 8 0 8 6 16 10 16 2 0 3-1 4-1s2 1 4 1c4 0 10-8 10-16 0-10-9-13-14-8zM24 14c0-4 2-7 5-8"/></svg><h3>Ernährung</h3><p>Ernährungsberatung und Begleitung bei der Umstellung auf eine ausgewogene Ernährung</p></article>
+   <article class="theme rv"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="24" cy="18" r="9"/><path d="M24 27v14M18 35h12"/></svg><h3>Frauenthemen</h3><p>Begleitung bei Frauenbeschwerden wie PMS oder Wechseljahresbeschwerden</p></article>
+  </div>
+  <div class="center"><a class="btn btn-cta" href="BOOKING">Termin buchen <span class="arr" aria-hidden="true">→</span></a></div>
+ </div>
+</section>
+
+<!-- 4 LEISTUNGEN -->
+<section style="background:var(--white)">
+ <div class="wrap">
+  <h2 class="rv">So arbeite ich mit Ihnen</h2>
+  <div class="services">
+   <a class="svc rv" href="#"><div class="im"><img src="assets/card-aderlass.jpg" alt="" loading="lazy"></div><div class="tx"><h3>Ausleitung und Entgiftung mit Aderlass nach Hildegard von Bingen</h3><span class="more">Mehr erfahren <span class="arr" aria-hidden="true">→</span></span></div></a>
+   <a class="svc rv" href="#"><div class="im"><img src="assets/card-darm.jpg" alt="" loading="lazy"></div><div class="tx"><h3>Sanfte Darmsanierung für mehr Wohlbefinden</h3><span class="more">Mehr erfahren <span class="arr" aria-hidden="true">→</span></span></div></a>
+   <a class="svc rv" href="#"><div class="im"><img src="assets/card-ernaehrung.jpg" alt="" loading="lazy"></div><div class="tx"><h3>Ernährungsberatung, die zu Ihrem Alltag passt</h3><span class="more">Mehr erfahren <span class="arr" aria-hidden="true">→</span></span></div></a>
+   <a class="svc rv" href="#"><div class="im"><img src="assets/card-homoeopathie.jpg" alt="" loading="lazy"></div><div class="tx"><h3>Klassische Homöopathie, individuell auf Sie abgestimmt</h3><span class="more">Mehr erfahren <span class="arr" aria-hidden="true">→</span></span></div></a>
+   <a class="svc rv" href="#"><div class="im"><img src="assets/card-oligoscan.jpg" alt="" loading="lazy"></div><div class="tx"><h3>Oligoscan, Ihre Mineralstoffe und Belastungen in wenigen Minuten sichtbar machen</h3><span class="more">Mehr erfahren <span class="arr" aria-hidden="true">→</span></span></div></a>
+   <a class="svc rv" href="#"><div class="im"><img src="assets/card-massage.jpg" alt="" loading="lazy"></div><div class="tx"><h3>Massagen und Anwendungen zur tiefen Entspannung</h3><span class="more">Mehr erfahren <span class="arr" aria-hidden="true">→</span></span></div></a>
+  </div>
+ </div>
+</section>
+
+<!-- 5 ERSTER TERMIN -->
+<section id="ablauf">
+ <div class="wrap">
+  <h2 class="rv">In vier Schritten zu Ihrem ersten Termin</h2>
+  <div class="steps rv" style="transform:none">
+   <div class="line" aria-hidden="true"></div>
+   <div class="step"><span class="num">1</span><div><h3>Termin buchen</h3><p>Online über das Buchungsformular oder telefonisch unter 030 36430358</p></div></div>
+   <div class="step"><span class="num">2</span><div><h3>Anamnesebogen ausfüllen</h3><p>Vor dem Termin zugesandt, hilft mir, Sie gut vorbereitet kennenzulernen</p></div></div>
+   <div class="step"><span class="num">3</span><div><h3>Erstgespräch, 60 Minuten</h3><p>Ausführliche Anamnese, 220 €, Abrechnung nach GebüH</p></div></div>
+   <div class="step"><span class="num">4</span><div><h3>Individueller Behandlungsplan</h3><p>Gemeinsam besprechen wir die für Sie passende Kombination, Folgetermine je angefangene Stunde 150 €</p></div></div>
+  </div>
+  <p class="note rv">Hausbesuche kann ich derzeit leider nicht anbieten. Die Praxis liegt direkt am Schloss Charlottenburg.</p>
+  <div class="center"><a class="btn btn-cta" href="BOOKING">Jetzt Termin buchen <span class="arr" aria-hidden="true">→</span></a></div>
+ </div>
+</section>
+
+<!-- 6 ÜBER -->
+<section class="dark about" id="ueber-mich">
+ <div class="wrap grid">
+  <div class="pic rv"><img src="assets/portrait-1-web.jpg" alt="Daniela Dumann, Heilpraktikerin seit 2002" width="1000" height="985" loading="lazy"></div>
+  <div class="tx rv">
+   <h2>Über 20 Jahre Erfahrung, auf Ihre Situation zugeschnitten</h2>
+   <p>Seit 2002 bin ich als Heilpraktikerin in Berlin-Charlottenburg tätig. Mein Schwerpunkt liegt in der Heilkunde nach Hildegard von Bingen, die ich unter anderem bei Dr. Wighard Strehlow und an der Phytaro Heilpraktikerschule in Dortmund gelernt habe. Seit 2023 bin ich Vizepräsidentin der Internationalen Gesellschaft Hildegard von Bingen. In meinem eigenen Hildegard Kräutergarten in der Schorfheide wachsen viele der Heilpflanzen, mit denen ich in Seminaren und Workshops arbeite.</p>
+   <span class="cred">Diplom Sozialpädagogin (FH) seit 1985 · Heilpraktikerin seit 2002 · Gründerin von Viriditas, Schule für Naturheilweisen, seit 2021</span><br>
+   <a class="btn btn-cta" href="BOOKING">Termin buchen <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+ </div>
+</section>
+
+<!-- 7 BEWERTUNGEN -->
+<section id="bewertungen">
+ <div class="wrap">
+  <h2 class="rv">5,0 Sterne bei 9 Google Bewertungen</h2>
+  <!-- [FEHLT] Quotes are Google's English translation re-translated to German; real German originals needed before go-live -->
+  <div class="rev">
+   <article class="card rv"><div class="top"><span class="stars" aria-label="5 von 5 Sternen"><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg></span><svg class="g"><use href="#google"/></svg></div><blockquote>„Verfügt als Dozentin über umfassendes Wissen zur Heilkunde der Hildegard von Bingen, kombiniert mit langjähriger Erfahrung mit Patientinnen und Patienten."</blockquote><cite>Scheila B.</cite></article>
+   <article class="card rv"><div class="top"><span class="stars" aria-label="5 von 5 Sternen"><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg></span><svg class="g"><use href="#google"/></svg></div><blockquote>„Kann Daniela Dumann von Herzen empfehlen. Mein Interesse an der Heilkunde der Hildegard von Bingen hat mich zu ihr geführt."</blockquote><cite>Karin S.</cite></article>
+   <article class="card rv"><div class="top"><span class="stars" aria-label="5 von 5 Sternen"><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg></span><svg class="g"><use href="#google"/></svg></div><blockquote>„Hat uns die Prinzipien der Hildegard Medizin mit Tiefe, Herz und Seele vermittelt."</blockquote><cite>Dagmar J.</cite></article>
+  </div>
+  <div class="center"><a class="btn btn-ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJwdcWYxZRqEcR8RDtWZzHMgI" target="_blank" rel="noopener">Alle Bewertungen auf Google ansehen</a></div>
+ </div>
+</section>
+
+<!-- 8 FAQ -->
+<section id="faq" style="background:var(--white)">
+ <div class="wrap">
+  <h2 class="rv">Häufige Fragen</h2>
+  <div class="faq rv">
+   <details open><summary>Was kostet ein Termin bei einer Heilpraktikerin?<svg class="chev"><use href="#chev"/></svg></summary><div class="ans">Das Erstgespräch dauert 60 Minuten und kostet 220 €. Folgetermine werden mit 150 € je angefangene Stunde abgerechnet, nach der Gebührenordnung für Heilpraktiker (GebüH).</div></details>
+   <details><summary>Übernimmt meine private Krankenkasse die Kosten?<svg class="chev"><use href="#chev"/></svg></summary><div class="ans">Bei privater oder Zusatzversicherung ist häufig eine teilweise Erstattung möglich. Eine Garantie gibt es nicht, da die Gebührensätze aus dem Jahr 1985 stammen. Bitte klären Sie das vorab mit Ihrer Versicherung.</div></details>
+   <details><summary>Wie bereite ich mich auf den ersten Termin vor?<svg class="chev"><use href="#chev"/></svg></summary><div class="ans">Bitte senden Sie mir den Anamnesebogen ausgefüllt bis eine Woche vor dem Termin zurück, oder bringen Sie ihn zum Termin mit.</div></details>
+   <details><summary>Kann ich einen Termin absagen oder verschieben?<svg class="chev"><use href="#chev"/></svg></summary><div class="ans">Bitte sagen Sie rechtzeitig ab, damit der Termin anderweitig vergeben werden kann.<br><span class="flag">[FEHLT] Platzhaltertext, Stornobedingungen bei Daniela erfragen</span></div></details>
+   <details><summary>Bieten Sie Hausbesuche an?<svg class="chev"><use href="#chev"/></svg></summary><div class="ans">Aktuell nicht. Die Praxis liegt direkt am Schloss Charlottenburg, gut erreichbar mit Bus und S-Bahn.</div></details>
+  </div>
+ </div>
+</section>
+
+<!-- 9 STANDORT -->
+<section class="loc" id="kontakt">
+ <div class="wrap">
+  <h2 class="rv">So finden Sie zu mir</h2>
+  <div class="grid">
+   <div class="mapbox rv" style="transform:none">
+    <iframe title="Karte: Nithackstraße 24, Berlin-Charlottenburg" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=13.2936%2C52.5159%2C13.3036%2C52.5219&layer=mapnik"></iframe>
+    <svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.500A2.500 2.500 0 119.500 9 2.500 2.500 0 0112 11.500z"/></svg>
+   </div>
+   <div class="addr rv">
+    <p><strong>Naturheilpraxis Daniela Dumann</strong><br>Nithackstraße 24, 10585 Berlin-Charlottenburg<br>direkt am Schloss Charlottenburg</p>
+    <ul>
+     <li>Bus 109, 309 oder M45 bis Luisenplatz/Schloss Charlottenburg</li>
+     <li>S-Bahn bis Westend, Charlottenburg oder Jungfernheide</li>
+     <li>Mit dem Auto über die Autobahnausfahrt Spandauer Damm</li>
+     <li>Termine nach Vereinbarung</li>
+    </ul>
+    <div style="margin-top:22px"><a class="btn btn-cta" href="BOOKING">Termin buchen <span class="arr" aria-hidden="true">→</span></a></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 10 ABSCHLUSS -->
+<section class="dark closer" id="closer">
+ <div class="wrap">
+  <h2 class="rv">Vereinbaren Sie jetzt Ihren ersten Termin</h2>
+  <ul class="assure"><li>5,0 Sterne bei 9 Google Bewertungen</li><li>Heilpraktikerin seit 2002</li><li>Erstgespräch 220 €, 60 Minuten</li></ul>
+  <div class="btns"><a class="btn btn-cta cta--breathe" href="BOOKING">Termin buchen <span class="arr" aria-hidden="true">→</span></a><a class="btn btn-ghost" href="tel:+493036430358">030 36430358</a></div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <span>© Naturheilpraxis Daniela Dumann · Nithackstraße 24 · 10585 Berlin-Charlottenburg</span>
+  <span><a href="tel:+493036430358">030 36430358</a> · <a href="mailto:praxis@danieladumann.de">praxis@danieladumann.de</a></span>
+  <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
+ </div>
+</footer>
+
+<div class="bar" id="bar" role="region" aria-label="Termin buchen">
+ <a class="btn btn-cta" href="BOOKING">Termin buchen</a>
+ <a class="tel2" href="tel:+493036430358" aria-label="Anrufen"><svg width="24" height="24"><use href="#phone"/></svg></a>
+</div>
+
+<script>
+(function(){
+ var BOOKING='http://my.lemniscus.de/pss/21c5c780-26ba-4f11-8885-9a1d09a0c241';
+ document.querySelectorAll('a[href="BOOKING"]').forEach(function(a){a.href=BOOKING;a.target='_blank';a.rel='noopener';});
+ var q=location.search;
+ if(q.indexOf('shot=1')>-1){document.documentElement.classList.add('shot');document.body.classList.add('shot');document.querySelectorAll('details').forEach(function(d){d.open=true});}
+ // reveal once
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -12% 0px',threshold:.12});
+ document.querySelectorAll('.rv,.proof,.steps,.about,.closer,.loc').forEach(function(el){io.observe(el)});
+ // sticky bar: show after hero CTA leaves, hide when closer is in view
+ var bar=document.getElementById('bar'),heroOut=false,closerIn=false;
+ function upd(){bar.classList.toggle('show',heroOut&&!closerIn)}
+ new IntersectionObserver(function(es){heroOut=!es[0].isIntersecting&&es[0].boundingClientRect.top<0;upd()}).observe(document.getElementById('heroCta'));
+ new IntersectionObserver(function(es){closerIn=es[0].isIntersecting;upd()},{threshold:.2}).observe(document.getElementById('closer'));
+ // FAQ: one open at a time
+ var ds=document.querySelectorAll('details');
+ ds.forEach(function(d){d.addEventListener('toggle',function(){if(d.open)ds.forEach(function(o){if(o!==d)o.open=false})})});
+})();
+</script>
+</body>
+</html>

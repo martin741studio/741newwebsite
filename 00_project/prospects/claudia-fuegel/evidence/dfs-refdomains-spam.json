@@ -1,0 +1,44 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "0.0739 sec.",
+ "cost": 0.024036,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10160617-1494-0273-0000-fd7991442518",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "0.0683 sec.",
+   "cost": 0.024036,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "backlinks",
+    "referring_domains",
+    "live"
+   ],
+   "data": {
+    "api": "backlinks",
+    "function": "referring_domains",
+    "target": "traumdeutung-fuegel.de",
+    "limit": 100,
+    "filters": [
+     "backlinks_spam_score",
+     ">=",
+     60
+    ]
+   },
+   "result": [
+    {
+     "target": "traumdeutung-fuegel.de",
+     "total_count": 0,
+     "items_count": 0,
+     "items": null
+    }
+   ]
+  }
+ ]
+}

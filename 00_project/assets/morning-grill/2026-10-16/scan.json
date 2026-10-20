@@ -1,0 +1,1919 @@
+{
+ "date": "2026-10-16",
+ "bookmark": "2026-10-15T05:56+08:00",
+ "time_zone": "WITA (UTC+8)",
+ "read_at": "2026-10-16T12:10+08:00",
+ "sources": {
+  "S1_sessions": {
+   "status": "unreadable",
+   "error": "no sessions file passed"
+  },
+  "S2_chats": {
+   "status": "unreadable",
+   "error": "no chat summary passed"
+  },
+  "S3_registry": {
+   "status": "ok",
+   "data": {
+    "approvals_open": [
+     {
+      "client": "STÜRZL Steuerstrafrecht",
+      "workflow": "audit",
+      "last_run": "2026-10-11",
+      "age_days": 5,
+      "result": "00_project/assets/audit/stuerzl/2026-10-11-kickoff/findings.json",
+      "note": "Lauf stuerzl-2026-10-11-kickoff, Score 32/100, Verdikt Ja (automatisch erkannt) · vorher: Kickoff-Lauf, Status collecting (Daten werden gesammelt)."
+     },
+     {
+      "client": "STÜRZL Steuerstrafrecht",
+      "workflow": "cro",
+      "last_run": "2026-10-11",
+      "age_days": 5,
+      "result": "00_project/assets/stuerzl/cro/07-prototype/index.html",
+      "note": "Prototyp 37/44, Prüfer 12 Lücken behoben. Freigabe offen."
+     },
+     {
+      "client": "STÜRZL Steuerstrafrecht",
+      "workflow": "pool",
+      "last_run": "2026-10-11",
+      "age_days": 5,
+      "result": "00_project/assets/stuerzl/content-pool/05-report/content-pool-report.html",
+      "note": "Pool + Sitemap, Drive hochgeladen, GSC-Re-Run offen."
+     },
+     {
+      "client": "Praxis Hüwel",
+      "workflow": "pool",
+      "last_run": "2026-10-11",
+      "age_days": 5,
+      "result": "00_project/assets/huewel/content-pool/05-report/content-pool-report.html",
+      "note": "Pool aus _status.md erkannt"
+     },
+     {
+      "client": "Bali Healing",
+      "workflow": "audit",
+      "last_run": "2026-10-13",
+      "age_days": 3,
+      "result": "00_project/assets/audit/balihealing/2026-10-11-kickoff/report/internal.html",
+      "note": "Lauf balihealing-2026-10-11-kickoff, Score 46/100, Verdikt Offen (automatisch erkannt)"
+     },
+     {
+      "client": "Praxis Suriya",
+      "workflow": "pool",
+      "last_run": "2026-10-11",
+      "age_days": 5,
+      "result": "00_project/assets/suriya/content-pool/05-report/content-pool-report.html",
+      "note": "Pool aus _status.md erkannt"
+     },
+     {
+      "client": "STÜRZL Steuerstrafrecht",
+      "workflow": "cro_b",
+      "last_run": "2026-10-11",
+      "age_days": 5,
+      "result": "Variante B Briefbogen, 38/44 (Prüfer strenger 34 vor Korrekturen), Prüfer-Lücken behoben",
+      "note": "Track B zweite Variante: Recherche fertig, Pool 2 wartet auf Martins Abstimmung."
+     },
+     {
+      "client": "741 Studio (Eigen-Audit)",
+      "workflow": "audit",
+      "last_run": "2026-10-11",
+      "age_days": 5,
+      "result": "00_project/assets/audit/741studio/2026-10-11-kickoff/report/internal.html",
+      "note": "Lauf 741studio-2026-10-11-kickoff, Score 39/100, Verdikt Offen (automatisch erkannt)"
+     },
+     {
+      "client": "Sabine Schwarz",
+      "workflow": "prospect",
+      "last_run": "2026-10-13",
+      "age_days": 3,
+      "result": "https://741.studio/review/sabine-schwarz/",
+      "note": "validate: 0 Fehler, 0 Hinweise. LIVE (Prüfung 2026-10-13); neue lokale Änderungen brauchen ein Deploy nach Go."
+     },
+     {
+      "client": "Stephan Meyer",
+      "workflow": "prospect",
+      "last_run": "2026-10-14",
+      "age_days": 2,
+      "result": "https://741.studio/review/stephan-meyer-v2/",
+      "note": "validate: 0 Fehler, 1 Hinweise. LIVE (Prüfung 2026-10-14); neue lokale Änderungen brauchen ein Deploy nach Go."
+     },
+     {
+      "client": "Claudia Maria Steifensand",
+      "workflow": "prospect",
+      "last_run": "2026-10-13",
+      "age_days": 3,
+      "result": "https://741.studio/review/claudia-maria-steifensand/",
+      "note": "validate: 0 Fehler, 0 Hinweise. LIVE (Prüfung 2026-10-13); neue lokale Änderungen brauchen ein Deploy nach Go."
+     },
+     {
+      "client": "Manuela Stetter",
+      "workflow": "prospect",
+      "last_run": "2026-10-14",
+      "age_days": 2,
+      "result": "https://741.studio/review/manuela-stetter/",
+      "note": "validate: 0 Fehler, 0 Hinweise. LIVE (Prüfung 2026-10-14); neue lokale Änderungen brauchen ein Deploy nach Go."
+     },
+     {
+      "client": "Korinna Heintze",
+      "workflow": "booking-sequence",
+      "last_run": "2026-10-14",
+      "age_days": 2,
+      "result": "00_project/prospects/korinna-heintze/whatsapp-sequence.md",
+      "note": "Call Mo 26.10.2026, 16:30 WITA (Montag, den 26.10. um 9:30 Uhr); m1 So 25.10.2026, 16:30 WITA, m2 Mo 26.10.2026, 15:00 WITA, m3 Mo 26.10.2026, 16:00 WITA; Koste"
+     },
+     {
+      "client": "741 Studio (intern)",
+      "workflow": "evening",
+      "last_run": "2026-10-14",
+      "age_days": 2,
+      "result": "00_project/assets/morning-grill/command-center.html",
+      "note": "Scheduled 17:00 task (read-only scan, evening-log draft, snapshot id=21) followed by a live round with Martin once he replied with a voice note from the admin K"
+     },
+     {
+      "client": "Korinna Heintze",
+      "workflow": "sales-call-prep",
+      "last_run": "2026-10-15",
+      "age_days": 1,
+      "result": "",
+      "note": ""
+     },
+     {
+      "client": "Ulrike Röth",
+      "workflow": "booking-sequence",
+      "last_run": "2026-10-15",
+      "age_days": 1,
+      "result": "00_project/prospects/ulrike-roeth/whatsapp-sequence.md",
+      "note": "Call Di 20.10.2026, 16:00 WITA (Dienstag, den 20.10. um 10:00 Uhr); m1 Mo 19.10.2026, 16:00 WITA, m2 Di 20.10.2026, 14:00 WITA, m3 Di 20.10.2026, 15:30 WITA; Ko"
+     }
+    ],
+    "runs_since_bookmark": [
+     {
+      "client": "741 Studio (intern)",
+      "workflow": "morning",
+      "status": "freigegeben",
+      "last_run": "2026-10-15"
+     },
+     {
+      "client": "Korinna Heintze",
+      "workflow": "sales-call-prep",
+      "status": "fertig, Freigabe offen",
+      "last_run": "2026-10-15"
+     },
+     {
+      "client": "Ulrike Röth",
+      "workflow": "booking-sequence",
+      "status": "fertig, Freigabe offen",
+      "last_run": "2026-10-15"
+     }
+    ]
+   }
+  },
+  "S4_git": {
+   "status": "ok",
+   "data": [
+    {
+     "worktree": "741website",
+     "commits": [
+      [
+       "a5a6cb9",
+       "2026-10-16 12:05:06 +0800",
+       "feat(ops): add visual verification gate & end-of-day client update protocol; attach maria brasse live screenshots and draft digest"
+      ],
+      [
+       "4e6be28",
+       "2026-10-16 11:46:44 +0800",
+       "feat(maria-brasse): live update faq and schema on ueber-mich and feng-shui-garten via novamira"
+      ],
+      [
+       "951a3dd",
+       "2026-10-16 11:37:38 +0800",
+       "feat: deploy refreshed huewel feed and author dinakar onboarding briefing"
+      ],
+      [
+       "9eb1417",
+       "2026-10-16 11:23:14 +0800",
+       "feat: provision dinakar user, assign suriya task, and stage maria brasse copy updates"
+      ],
+      [
+       "88224e1",
+       "2026-10-16 09:27:20 +0800",
+       "docs: add developer playbook and operations README for Dinakar and team"
+      ],
+      [
+       "17ea6c5",
+       "2026-10-16 09:23:34 +0800",
+       "feat(architecture): formalize Dual-Storage Substrate with Supabase Source of Truth & Google Drive operational layer"
+      ],
+      [
+       "80f8bcb",
+       "2026-10-16 09:14:16 +0800",
+       "feat(workflow): install CRO Track B design-intense showcase workflow with verified 3-gate pipeline (92.6%)"
+      ],
+      [
+       "8183c15",
+       "2026-10-16 09:05:56 +0800",
+       "feat(workflow): harden and verify CRO homepage workflow through 3-gate pipeline (87.0%)"
+      ],
+      [
+       "29fb98e",
+       "2026-10-16 08:59:10 +0800",
+       "feat(workflow): install proof tracking and quarterly war room workflow with verified 3-gate pipeline (96.4%)"
+      ],
+      [
+       "9d826b4",
+       "2026-10-16 08:53:32 +0800",
+       "feat(workflow): install automation build workflow with verified 3-gate pipeline (91.1%)"
+      ],
+      [
+       "b85dd7d",
+       "2026-10-16 08:48:27 +0800",
+       "feat(architecture): finalize workflow architecture and meta-creation pipeline with step 0 grill enforcement"
+      ],
+      [
+       "6ed0d1b",
+       "2026-10-16 08:38:17 +0800",
+       "feat(workflow): install maps-playbook skill with verified gates and scorecard (95.8%)"
+      ],
+      [
+       "fbe2958",
+       "2026-10-16 08:26:42 +0800",
+       "feat(workflow): install un-burning skill with verified gates and scorecard (95.8%)"
+      ],
+      [
+       "9ecdd3f",
+       "2026-10-16 08:19:03 +0800",
+       "feat(workflow): install content-pool skill with verified gates and scorecard (95.8%)"
+      ],
+      [
+       "cca7bc0",
+       "2026-10-16 08:12:25 +0800",
+       "docs: finalize workflow meta-architecture and master map per cybernetic decisions"
+      ]
+     ],
+     "n_commits": 35,
+     "uncommitted": 1322
+    },
+    {
+     "worktree": "admiring-nightingale-f0f882",
+     "commits": [],
+     "n_commits": 0,
+     "uncommitted": 30
+    },
+    {
+     "worktree": "blissful-hawking-df75f1",
+     "commits": [],
+     "n_commits": 0,
+     "uncommitted": 0
+    },
+    {
+     "worktree": "dazzling-bhabha-2ba7cf",
+     "commits": [],
+     "n_commits": 0,
+     "uncommitted": 7
+    },
+    {
+     "worktree": "elated-yalow-5707f5",
+     "commits": [],
+     "n_commits": 0,
+     "uncommitted": 6
+    },
+    {
+     "worktree": "gracious-napier-16dc7c",
+     "commits": [],
+     "n_commits": 0,
+     "uncommitted": 1
+    },
+    {
+     "worktree": "great-easley-4f6970",
+     "commits": [],
+     "n_commits": 0,
+     "uncommitted": 0
+    },
+    {
+     "worktree": "hungry-perlman-bf004a",
+     "commits": [],
+     "n_commits": 0,
+     "uncommitted": 1
+    },
+    {
+     "worktree": "kind-robinson-671f58",
+     "commits": [],
+     "n_commits": 0,
+     "uncommitted": 3
+    },
+    {
+     "worktree": "priceless-heyrovsky-32d23b",
+     "commits": [],
+     "n_commits": 0,
+     "uncommitted": 2
+    },
+    {
+     "worktree": "serene-babbage-643c3d",
+     "commits": [],
+     "n_commits": 0,
+     "uncommitted": 0
+    },
+    {
+     "worktree": "silly-pasteur-1c8ae6",
+     "commits": [],
+     "n_commits": 0,
+     "uncommitted": 6
+    },
+    {
+     "worktree": "unruffled-darwin-e68a19",
+     "commits": [],
+     "n_commits": 0,
+     "uncommitted": 6
+    },
+    {
+     "worktree": "vibrant-tesla-4708ed",
+     "commits": [],
+     "n_commits": 0,
+     "uncommitted": 1
+    }
+   ]
+  },
+  "S5_standup": {
+   "status": "ok",
+   "data": {
+    "file": "reporting/standup/2026-10-15.json",
+    "clients": [
+     {
+      "mode": "program",
+      "name": "Johni Jaya Motor",
+      "woche": 9,
+      "pruefen": [
+       "Keine NAP-/Standortdaten hinterlegt",
+       "Keine Verzeichnis-Planung"
+      ],
+      "sortkey": 0,
+      "heute_741": [
+       "Hours levers, booking URL, attributes, FAQ",
+       "Local directories + maps apps (Indonesian set)",
+       "Team briefing, scripts live, daily asking begins",
+       "Apple Maps + Bing Places + Facebook submitted"
+      ],
+      "ob_fertig": 3,
+      "ob_gesamt": 6,
+      "ungelesen": 0,
+      "start_date": "2026-08-17",
+      "heute_kunde": [
+       "Supply missing photos",
+       "Answer our questions promptly"
+      ],
+      "kunde_status": "active",
+      "ob_naechster": "Upload material",
+      "ueberfaellig": 0,
+      "zugaenge_offen": [],
+      "hilfe_angefragt": 0,
+      "programm_status": "running",
+      "letzte_aktivitaet": "2026-10-14"
+     },
+     {
+      "mode": "program",
+      "name": "Praxis Suriya",
+      "woche": 7,
+      "pruefen": [],
+      "sortkey": 0,
+      "heute_741": [
+       "Vollständiger Internal-Linking-Durchgang: alle neuen Leistungs-, Standort- & Cluster-Seiten thematisch verknüpfen, Money-Pages gezielt stärken, sprechende Anchor-Texte, Hub↔Spoke sauber schließen",
+       "Cluster-Ausbau läuft weiter",
+       "PR-Pipeline: zweite Pitch-Welle"
+      ],
+      "ob_fertig": 6,
+      "ob_gesamt": 6,
+      "ungelesen": 0,
+      "start_date": "2026-09-03",
+      "heute_kunde": [],
+      "kunde_status": "active",
+      "ob_naechster": null,
+      "ueberfaellig": 6,
+      "zugaenge_offen": [
+       "Google Search Console",
+       "Website / Hosting / CMS"
+      ],
+      "hilfe_angefragt": 0,
+      "programm_status": "running",
+      "letzte_aktivitaet": "2026-10-13"
+     },
+     {
+      "mode": "program",
+      "name": "Praxis Hüwel",
+      "woche": 8,
+      "pruefen": [],
+      "sortkey": 0,
+      "heute_741": [
+       "GBP-Engagement-Takt (Fotos, Angebote, Q&A)",
+       "PR-Pipeline weiterführen"
+      ],
+      "ob_fertig": 6,
+      "ob_gesamt": 6,
+      "ungelesen": 0,
+      "start_date": "2026-08-25",
+      "heute_kunde": [],
+      "kunde_status": "active",
+      "ob_naechster": null,
+      "ueberfaellig": 7,
+      "zugaenge_offen": [
+       "Google Tag Manager"
+      ],
+      "hilfe_angefragt": 0,
+      "programm_status": "running",
+      "letzte_aktivitaet": "2026-10-13"
+     },
+     {
+      "mode": "program",
+      "name": "Bali Healing",
+      "woche": 5,
+      "pruefen": [
+       "Keine NAP-/Standortdaten hinterlegt",
+       "Keine Verzeichnis-Planung"
+      ],
+      "sortkey": 0,
+      "heute_741": [
+       "Hub page + first 4-6 spoke pages (prioritised by booking value)",
+       "Guest article 1 placed"
+      ],
+      "ob_fertig": 2,
+      "ob_gesamt": 6,
+      "ungelesen": 0,
+      "start_date": "2026-09-14",
+      "heute_kunde": [],
+      "kunde_status": "active",
+      "ob_naechster": "Grant access",
+      "ueberfaellig": 14,
+      "zugaenge_offen": [],
+      "hilfe_angefragt": 0,
+      "programm_status": "running",
+      "letzte_aktivitaet": "2026-10-13"
+     },
+     {
+      "mode": "program",
+      "name": "Naturheilpraxis Daniela Dumann",
+      "woche": 5,
+      "pruefen": [],
+      "sortkey": 0,
+      "heute_741": [
+       "Interne Verlinkung statt neuer Seiten: /behandlungen als Hub ausbauen + thematische Querverlinkung im Fließtext zwischen bestehenden Behandlungsseiten (z. B. Darmsanierung↔Ernährungsberatung, Schilddrüse↔Homöopathie/Oligoscan) ergänzen",
+       "Gastartikel 1 platziert"
+      ],
+      "ob_fertig": 5,
+      "ob_gesamt": 6,
+      "ungelesen": 0,
+      "start_date": "2026-09-14",
+      "heute_kunde": [],
+      "kunde_status": "active",
+      "ob_naechster": "Fragebogen Positionierung",
+      "ueberfaellig": 4,
+      "zugaenge_offen": [
+       "Google Tag Manager"
+      ],
+      "hilfe_angefragt": 0,
+      "programm_status": "running",
+      "letzte_aktivitaet": "2026-10-14"
+     },
+     {
+      "mode": "program",
+      "name": "Maria Brasse",
+      "woche": 5,
+      "pruefen": [],
+      "sortkey": 0,
+      "heute_741": [
+       "Gastartikel 1 platziert"
+      ],
+      "ob_fertig": 6,
+      "ob_gesamt": 6,
+      "ungelesen": 0,
+      "start_date": "2026-09-14",
+      "heute_kunde": [],
+      "kunde_status": "active",
+      "ob_naechster": null,
+      "ueberfaellig": 13,
+      "zugaenge_offen": [
+       "Google Tag Manager"
+      ],
+      "hilfe_angefragt": 0,
+      "programm_status": "running",
+      "letzte_aktivitaet": "2026-10-13"
+     },
+     {
+      "mode": "program",
+      "name": "Rabenmütter Shop",
+      "woche": 5,
+      "pruefen": [
+       "Keine NAP-/Standortdaten hinterlegt",
+       "Keine Verzeichnis-Planung"
+      ],
+      "sortkey": 0,
+      "heute_741": [],
+      "ob_fertig": 2,
+      "ob_gesamt": 6,
+      "ungelesen": 0,
+      "start_date": "2026-09-14",
+      "heute_kunde": [],
+      "kunde_status": "active",
+      "ob_naechster": "Konto & Stammdaten",
+      "ueberfaellig": 4,
+      "zugaenge_offen": [],
+      "hilfe_angefragt": 0,
+      "programm_status": "running",
+      "letzte_aktivitaet": "2026-10-14"
+     },
+     {
+      "mode": "program",
+      "name": "STÜRZL Steuerstrafrecht",
+      "woche": 2,
+      "pruefen": [
+       "Keine NAP-/Standortdaten hinterlegt"
+      ],
+      "sortkey": 0,
+      "heute_741": [
+       "Fotos/Videos einpflegen, Anwalts-Profile, Post-Rhythmus startet",
+       "INP < 200 ms, Core Web Vitals, Schema (LocalBusiness, Person, FAQ)",
+       "Erste Standort- und Top-Leistungsseiten in Produktion",
+       "Yelp, Anwalts-Verzeichnisse, Kammer, Verbände",
+       "Team-Briefing, Skripte live, Bewertungsanfragen starten",
+       "Kampagnen für lokale Suche und Google Maps aufsetzen (Suchbegriffe, Anzeigen, Ausschlüsse)",
+       "Kampagnen-Start (spätestens 2 Wochen nach Programmstart)"
+      ],
+      "ob_fertig": 0,
+      "ob_gesamt": 6,
+      "ungelesen": 0,
+      "start_date": "2026-10-07",
+      "heute_kunde": [
+       "Fehlende Fotos nachliefern",
+       "Team-Briefing durchführen, Mandanten nach Abschluss um Bewertung bitten"
+      ],
+      "kunde_status": "onboarding",
+      "ob_naechster": "Vertrag & AVV unterzeichnen",
+      "ueberfaellig": 10,
+      "zugaenge_offen": [
+       "Google Ads"
+      ],
+      "hilfe_angefragt": 0,
+      "programm_status": "running",
+      "letzte_aktivitaet": "2026-10-13"
+     },
+     {
+      "mode": "reports",
+      "name": "Kamil Böyük",
+      "woche": null,
+      "pruefen": [
+       "Keine NAP-/Standortdaten hinterlegt",
+       "Seit über 7 Tagen keine Aktivität"
+      ],
+      "sortkey": 1,
+      "heute_741": [],
+      "ob_fertig": 0,
+      "ob_gesamt": 0,
+      "ungelesen": 0,
+      "start_date": null,
+      "heute_kunde": [],
+      "kunde_status": "active",
+      "ob_naechster": null,
+      "ueberfaellig": 0,
+      "zugaenge_offen": [],
+      "hilfe_angefragt": 0,
+      "programm_status": null,
+      "letzte_aktivitaet": null
+     }
+    ]
+   }
+  },
+  "S6_nightshift": {
+   "status": "ok",
+   "data": {
+    "file": "reporting/night-shift/2026-10-14/REVIEW.md",
+    "headline": "# Night Shift v2 · 2026-10-14 · 7 items · 6 pass · 0 needs Martin",
+    "items": {},
+    "ledger_entries": 0,
+    "v2": {
+     "date": "2026-10-14",
+     "folder": "reporting/night-shift/2026-10-14",
+     "runs": 15,
+     "usd": 7.3788,
+     "stopped_reason": "run cap 14: no room for Executor + Critic",
+     "violations": [],
+     "items": [
+      {
+       "id": "brasse-faq-live-check",
+       "title": "Which live shuiguru.de pages lack the FAQ block",
+       "client": "Maria Brasse",
+       "status": "pass",
+       "attempts": 1,
+       "why": null,
+       "fails": [],
+       "one_line": "Live-Check stimmt: 11 von 12 Seiten live mit korrekter FAQ, 1 Seite (Grundriss) fehlt noch ganz — Fakten stichprobenartig live nachgeprüft, alles sauber dokumentiert.",
+       "summary": [
+        "# Zusammenfassung — brasse-faq-live-check",
+        "",
+        "Ich habe alle 12 geplanten Seiten für Maria Brasse (shuiguru.de) auf der echten Website geprüft, nicht nur im Textentwurf.",
+        "",
+        "11 von 12 Seiten sind live. Jede dieser 11 Seiten hat den FAQ-Block schon genau so, wie er im Repo-Text steht. Keine davon hat eine alte oder fehlende FAQ.",
+        ""
+       ],
+       "summary_file": "reporting/night-shift/2026-10-14/items/brasse-faq-live-check/summary.md"
+      },
+      {
+       "id": "johni-access-replan",
+       "title": "Cross-check Johni Jaya Motor's overdue task list against today's findings",
+       "client": "Johni Jaya Motor",
+       "status": "pass",
+       "attempts": 1,
+       "why": null,
+       "fails": [],
+       "one_line": "Pass — the re-plan correctly sorts the 25 overdue tasks into done/open/unconfirmed, and every spot-checked fact traces to a real source.",
+       "summary": [
+        "# Summary — johni-access-replan",
+        "",
+        "I made a re-plan note for the 25 overdue tasks on Johni Jaya Motor's portal list.",
+        "",
+        "I checked the live website and the team's own notes from today. Four things are done but still marked open: opening hours, the WhatsApp booking link, the GBP (Google Business) services and prices, and the new tracking setup. These should just be ticked off.",
+        ""
+       ],
+       "summary_file": "reporting/night-shift/2026-10-14/items/johni-access-replan/summary.md"
+      },
+      {
+       "id": "kamil-oberhausen-audit",
+       "title": "Public check of physiotherapieoberhausen.com after the Kraft hack",
+       "client": "Kamil (Physio Anatomie + Kraft)",
+       "status": "pass",
+       "attempts": 1,
+       "why": null,
+       "fails": [],
+       "one_line": "Clean public scan, facts check out against live site, gaps clearly flagged — ready to act on.",
+       "summary": [
+        "# Summary — kamil-oberhausen-audit",
+        "",
+        "I checked physiotherapieoberhausen.com from the outside, like a normal visitor. I looked for the same spam signs found on physiotherapiekraft.de: strange links, strange redirects, strange footer text, hidden pages in the sitemap, and spam in the Google search index.",
+        "",
+        "Result: clean. I found no bad links, no odd redirects, and no spam pages. The sitemap lists only the 7 real pages of the site.",
+        ""
+       ],
+       "summary_file": "reporting/night-shift/2026-10-14/items/kamil-oberhausen-audit/summary.md"
+      },
+      {
+       "id": "suriya-backlink-checkpoint1",
+       "title": "Continue the Suriya backlink checkpoint 1 research",
+       "client": "Praxis Suriya",
+       "status": "pass",
+       "attempts": 1,
+       "why": null,
+       "fails": [],
+       "one_line": "Solid, sourced, gap-marked target list Martin can act on tomorrow — pass.",
+       "summary": [
+        "# Summary — suriya-backlink-checkpoint1",
+        "",
+        "I found the local research for Praxis Suriya was already done, same day, in another work folder. I did not run new web searches. I sorted that research into one clean list: targets.md, with 21 local contacts (associations, clubs, sponsoring, press, one manufacturer). Each one has a name, type, public contact, and why it fits.",
+        "",
+        "Missing: it is not known if Coralie is already a member of any health association. No new outreach was sent — this was a read-and-sort task only, by rule.",
+        ""
+       ],
+       "summary_file": "reporting/night-shift/2026-10-14/items/suriya-backlink-checkpoint1/summary.md"
+      },
+      {
+       "id": "dumann-dashboard-items-draft",
+       "title": "Draft the design-approval record and Maps-name note for Daniela's dashboard",
+       "client": "Daniela Dumann",
+       "status": "pass",
+       "attempts": 1,
+       "why": null,
+       "fails": [
+        "Run deslop_de.py's cleanse pass on draft.md and remove/rephrase the 7 em dashes before placing the cards in approval_items."
+       ],
+       "one_line": "Pass — both cards are well-sourced and ready, just needs the em-dash cleanup before going live.",
+       "summary": [
+        "# Summary (plain English)",
+        "",
+        "I wrote two draft dashboard cards for Daniela Dumann, in German, as plain text in `draft.md`. Card E28 asks her to pick the business name shown on her Google Maps profile (it shows a short name now; a longer name was agreed in September but never took effect). Card E29 asks her to confirm she actually saw and approved the new homepage design, because our own records show an approval on 11.10 but no matching email to her.",
+        "",
+        "Nothing was sent, published, or changed live. Nothing was written to the database. The cards are not yet checked by the German text-quality tool (deslop_de.py) — that check needs to run before anyone places them in the portal.",
+        ""
+       ],
+       "summary_file": "reporting/night-shift/2026-10-14/items/dumann-dashboard-items-draft/summary.md"
+      },
+      {
+       "id": "huewel-gbp-round2-draft",
+       "title": "Draft Hüwel's GBP round 2 content (FAQ + remaining services)",
+       "client": "Praxis Hüwel",
+       "status": "pass",
+       "attempts": 1,
+       "why": null,
+       "fails": [
+        "Run deslop_de.py's dash fix on draft.md: replace the 66 '—'/'–' occurrences with commas, colons, or sentence breaks per the de content-writing style rule, then re-run to confirm 5/5."
+       ],
+       "one_line": "Pass — facts check out and nothing was sent live, but the German copy needs a dash cleanup pass before it's final (3/5 on deslop).",
+       "summary": [
+        "# Summary — huewel-gbp-round2-draft",
+        "",
+        "I made a draft for Praxis Hüwel's Google Business Profile, round 2. It has 8 new FAQ answers and 19 new service lines, in German, ready for Dinakar to copy into the live profile. Nothing is published yet.",
+        "",
+        "All facts come from Hüwel's own live website (checked today) or from the client file. I did not invent any service, price, or number.",
+        ""
+       ],
+       "summary_file": "reporting/night-shift/2026-10-14/items/huewel-gbp-round2-draft/summary.md"
+      },
+      {
+       "id": "kamil-dashboard-numbers",
+       "title": "Prepare Kamil's monthly numbers for his dashboard",
+       "client": "Kamil (Physio Anatomie + Kraft)",
+       "status": "retry",
+       "attempts": 1,
+       "why": null,
+       "fails": [
+        "Write items/kamil-dashboard-numbers/draft.md covering Kamil's monthly dashboard numbers",
+        "Write items/kamil-dashboard-numbers/sources.md with the source for each number",
+        "Mark any missing figures as [fehlt: ...] instead of leaving them out"
+       ],
+       "one_line": "Nothing was built for Kamil's dashboard numbers — the work folder is empty, needs a full redo.",
+       "summary": [],
+       "summary_file": null
+      }
+     ]
+    },
+    "pulse": "2026-10-14T21:29:56 night-v2 ok items=7 pass=6 runs=15 usd=7.38 stop=run cap 14: no room for Executor + Critic"
+   }
+  },
+  "S7_citations": {
+   "status": "ok",
+   "data": {
+    "per_client": {
+     "Praxis Suriya": {
+      "live": 31,
+      "submitted": 0,
+      "planned": 25,
+      "inconsistent": 0,
+      "missing": 0,
+      "planned_stale_14d": 25
+     },
+     "Praxis Hüwel": {
+      "live": 38,
+      "submitted": 0,
+      "planned": 29,
+      "inconsistent": 0,
+      "missing": 0,
+      "planned_stale_14d": 29
+     },
+     "Maria Brasse": {
+      "live": 1,
+      "submitted": 25,
+      "planned": 31,
+      "inconsistent": 0,
+      "missing": 0,
+      "planned_stale_14d": 0
+     },
+     "Naturheilpraxis Daniela Dumann": {
+      "live": 1,
+      "submitted": 0,
+      "planned": 85,
+      "inconsistent": 4,
+      "missing": 0,
+      "planned_stale_14d": 0
+     },
+     "STÜRZL Steuerstrafrecht": {
+      "live": 0,
+      "submitted": 0,
+      "planned": 0,
+      "inconsistent": 0,
+      "missing": 3,
+      "planned_stale_14d": 0
+     }
+    },
+    "listing_emails_unhandled": {
+     "suriya": 28
+    }
+   }
+  },
+  "S8_tracking": {
+   "status": "unreadable",
+   "error": "tracking workflow not built yet"
+  },
+  "S9_memory": {
+   "status": "ok",
+   "data": [
+    {
+     "file": "cro-track-b-design-intense.md",
+     "modified": "2026-10-16T09:13+08:00",
+     "client": null
+    },
+    {
+     "file": "MEMORY.md",
+     "modified": "2026-10-16T09:13+08:00",
+     "client": null
+    },
+    {
+     "file": "cro-workflow-tooling.md",
+     "modified": "2026-10-16T09:05+08:00",
+     "client": null
+    },
+    {
+     "file": "tracking-workflow.md",
+     "modified": "2026-10-16T08:58+08:00",
+     "client": null
+    },
+    {
+     "file": "automation-build-workflow.md",
+     "modified": "2026-10-16T08:52+08:00",
+     "client": null
+    },
+    {
+     "file": "backlink-dach-workflow.md",
+     "modified": "2026-10-16T08:43+08:00",
+     "client": null
+    },
+    {
+     "file": "maps-playbook-workflow.md",
+     "modified": "2026-10-16T08:37+08:00",
+     "client": null
+    },
+    {
+     "file": "un-burning-workflow.md",
+     "modified": "2026-10-16T08:25+08:00",
+     "client": null
+    },
+    {
+     "file": "content-pool-workflow.md",
+     "modified": "2026-10-16T08:18+08:00",
+     "client": null
+    },
+    {
+     "file": "balihealing-google-ads-setup.md",
+     "modified": "2026-10-16T07:49+08:00",
+     "client": "Bali Healing"
+    },
+    {
+     "file": "supabase-marketing-data-sources.md",
+     "modified": "2026-10-16T06:17+08:00",
+     "client": null
+    },
+    {
+     "file": "praxis-suriya-client.md",
+     "modified": "2026-10-15T19:18+08:00",
+     "client": "Praxis Suriya"
+    },
+    {
+     "file": "dumann-client.md",
+     "modified": "2026-10-15T17:16+08:00",
+     "client": "Daniela Dumann"
+    },
+    {
+     "file": "malware-pause-2026-10-15.md",
+     "modified": "2026-10-15T16:38+08:00",
+     "client": null
+    },
+    {
+     "file": "goals-data-architecture.md",
+     "modified": "2026-10-15T07:15+08:00",
+     "client": null
+    },
+    {
+     "file": "night-shift-server-workflow.md",
+     "modified": "2026-10-15T06:42+08:00",
+     "client": null
+    },
+    {
+     "file": "sales-call-prep-workflow.md",
+     "modified": "2026-10-15T06:39+08:00",
+     "client": null
+    },
+    {
+     "file": "own-answer-needs-direct-followup.md",
+     "modified": "2026-10-15T06:20+08:00",
+     "client": null
+    },
+    {
+     "file": "verify-workflow-build-status.md",
+     "modified": "2026-10-15T06:16+08:00",
+     "client": null
+    },
+    {
+     "file": "sidebar-client-group-emojis.md",
+     "modified": "2026-10-15T06:01+08:00",
+     "client": null
+    }
+   ]
+  },
+  "S10_calendar": {
+   "status": "unreadable",
+   "error": "no calendar file passed"
+  },
+  "S11_cards": {
+   "status": "ok",
+   "data": {
+    "cards": [
+     {
+      "id": "2026-10-13-741-messages",
+      "client": "741 (all clients)",
+      "priority": 1,
+      "type": "decide",
+      "headline": "5 clients have unread portal messages or help requests. Who answers today?",
+      "evidence": [
+       "reporting/standup/2026-10-13.json",
+       "S5",
+       "Praxis Suriya (1 unread, 1 help)",
+       "Praxis Hüwel (0 unread, 1 help)",
+       "Daniela Dumann (0 unread, 4 help)",
+       "Maria Brasse (0 unread, 1 help)",
+       "Rabenmütter (0 unread, 1 help)"
+      ],
+      "options": {
+       "a": "Agent drafts every reply now; I send them",
+       "b": "I answer them myself today",
+       "c": "Dinakar answers the technical ones, I answer the rest"
+      },
+      "recommended": "a",
+      "why": "Unanswered client messages are priority 1; drafts take you 2 minutes to send.",
+      "deadline": "2026-10-13",
+      "status": "decided",
+      "answer": "a",
+      "park_reason": null,
+      "then": {
+       "a": "agent writes drafts per client into plan.md (```text, slop 5/5)",
+       "b": "walk queue item",
+       "c": "portal task drafts + WhatsApp line"
+      },
+      "answer_text": "Agent drafts every reply; Martin sends",
+      "created": "2026-10-13",
+      "decided_at": "2026-10-13T11:30+08:00"
+     },
+     {
+      "id": "2026-10-13-deadline-coldemail-sending-in",
+      "client": "741",
+      "priority": 1,
+      "type": "decide",
+      "headline": "Deadline 2026-09-23 from memory has no 'done' note (20 days overdue): Demand: sign strafbewehrte Unterlassungserklärung + pay 453,50 €, deadline 23.09.2026.",
+      "evidence": [
+       "memory coldemail-sending-infra.md",
+       "S13"
+      ],
+      "options": {
+       "a": "Still open: agent prepares the next step today",
+       "b": "Already resolved: agent adds a done note to the memory file",
+       "c": "Park with a reason"
+      },
+      "recommended": "b",
+      "why": "A legal or account deadline must never stay silent; if it is resolved, the note stops the card.",
+      "deadline": "2026-10-13",
+      "status": "parked",
+      "answer": "other",
+      "park_reason": "waiting for the lawyer's reply to Martin's letter (pay 0 €)",
+      "then": {
+       "a": "plan item",
+       "b": "memory edit (done note with date)",
+       "c": "park reason"
+      },
+      "answer_text": "Martin answered with his own letter (based on the agent's recommendation) demanding to pay 0 €; waiting for the lawyer's reply",
+      "created": "2026-10-13",
+      "decided_at": "2026-10-13T11:30+08:00",
+      "stable_key": "deadline|coldemail-sending-infra.md|2026-09-23"
+     },
+     {
+      "id": "2026-10-13-deadline-balihealing-google-a",
+      "client": "Bali Healing",
+      "priority": 1,
+      "type": "decide",
+      "headline": "Deadline 2026-10-01 from memory has no 'done' note (12 days overdue): **2026-09-07 ROOT CAUSE for blocked skin-tag publish found:** account banner \"Verify your identity – Some of your ads may be paused or limit",
+      "evidence": [
+       "memory balihealing-google-ads-setup.md",
+       "S13"
+      ],
+      "options": {
+       "a": "Still open: agent prepares the next step today",
+       "b": "Already resolved: agent adds a done note to the memory file",
+       "c": "Park with a reason"
+      },
+      "recommended": "a",
+      "why": "A legal or account deadline must never stay silent; if it is resolved, the note stops the card.",
+      "deadline": "2026-10-13",
+      "status": "decided",
+      "answer": "a",
+      "park_reason": null,
+      "then": {
+       "a": "plan item",
+       "b": "memory edit (done note with date)",
+       "c": "park reason"
+      },
+      "answer_text": "Still open: agent prepares next step today (read-only Ads check + document list)",
+      "created": "2026-10-13",
+      "decided_at": "2026-10-13T11:30+08:00",
+      "stable_key": "deadline|balihealing-google-ads-setup.md|2026-10-01"
+     },
+     {
+      "id": "2026-10-13-suriya-access",
+      "client": "Praxis Suriya",
+      "priority": 1,
+      "type": "decide",
+      "headline": "Suriya: 5 approved site changes are blocked. The WordPress app password fails (401) and Search Console access is gone. Reply draft to Coralie is ready.",
+      "evidence": [
+       "inputs/s2-chats.json (S2)",
+       "memory praxis-suriya-client.md"
+      ],
+      "options": {
+       "a": "Send the ready reply today and ask for both accesses; start with backup + speed work",
+       "b": "Wait for her to offer access herself",
+       "c": "Do only the speed work with the access that still works"
+      },
+      "recommended": "a",
+      "why": "She agreed to continue on 13.10.; access is the gate for every goal number.",
+      "deadline": "2026-10-14",
+      "status": "decided",
+      "answer": "a",
+      "park_reason": null,
+      "then": {
+       "a": "message draft (du, Ich-Form, text block) + speed task for Dinakar",
+       "b": "park reason",
+       "c": "task for Dinakar"
+      },
+      "line": "Coralie agreed to continue after the PDF overview (13.10.)",
+      "line_kind": "fixed",
+      "source": "judgment (S2 chat summary)",
+      "answer_text": "Martin: Coralie sent the WordPress invitation again, but the role is only a viewer role; Martin asks for a bigger role and tells her about Search Console himself",
+      "created": "2026-10-13",
+      "decided_at": "2026-10-13T11:30+08:00",
+      "updated_at": "2026-10-13T13:15+08:00"
+     },
+     {
+      "id": "2026-10-13-bali-push",
+      "client": "Bali Healing",
+      "priority": 2,
+      "type": "route",
+      "headline": "Bali Healing: onboarding 1/6, Ads blocked, and the 8-point status reply cannot go out: it still needs outreach counts and Ads spend.",
+      "evidence": [
+       "S5 standup: onboarding, 24 overdue",
+       "memory balihealing-google-ads-setup.md",
+       "inputs/s2-chats.json (S2)"
+      ],
+      "options": {
+       "a": "I give the numbers today; agent finishes the reply and the Ads checklist",
+       "b": "Send the reply without numbers, numbers on Monday",
+       "c": "Park until Peggy answers"
+      },
+      "recommended": "a",
+      "why": "Ads live within 2 weeks is the quarter goal; billing needs the client.",
+      "deadline": "2026-10-14",
+      "status": "decided",
+      "answer": "a",
+      "park_reason": null,
+      "then": {
+       "a": "message draft (EN) + Ads checklist",
+       "b": "message draft to Izzy",
+       "c": "park reason"
+      },
+      "line": null,
+      "line_kind": "watch",
+      "source": "judgment (grill answers 2026-10-13)",
+      "answer_text": "Martin gives the two numbers today; agent finishes the reply + Ads checklist",
+      "created": "2026-10-13",
+      "decided_at": "2026-10-13T11:30+08:00"
+     },
+     {
+      "id": "2026-10-13-marcel-offer",
+      "client": "Marcel Rosenbach",
+      "priority": 2,
+      "type": "decide",
+      "headline": "Marcel wants to come to 741 fast: new website with monthly subscription plus Google Ads. Which offer goes out this week?",
+      "evidence": [
+       "Martin's grill answer 2026-10-13",
+       "memory marcel-rosenbach-client.md",
+       "memory 741studio-pricing.md"
+      ],
+      "options": {
+       "a": "Website build + monthly program, Hüwel site as proof, Ads as add-on",
+       "b": "Ads first, website after",
+       "c": "Call first, offer after the call"
+      },
+      "recommended": "a",
+      "why": "He asked for both; the Hüwel site (live since 06.10.) shows the result. Prices stay out of messages (memory 741studio-pricing).",
+      "deadline": "2026-10-15",
+      "status": "decided",
+      "answer": "other",
+      "park_reason": null,
+      "then": {
+       "a": "agent drafts offer outline + WhatsApp message (no prices) for your send",
+       "b": "Ads setup brief",
+       "c": "message draft asking for a call slot"
+      },
+      "line": "New sales opportunity: website + monthly subscription + Ads (Martin 13.10.)",
+      "line_kind": "next",
+      "source": "judgment (grill answers 2026-10-13)",
+      "answer_text": "Sequence: landing page (in progress now) -> Martin's intro video -> prototype for Marcel -> Ads",
+      "created": "2026-10-13",
+      "decided_at": "2026-10-13T11:30+08:00"
+     },
+     {
+      "id": "2026-10-13-suriya-listing-mails",
+      "client": "Praxis Suriya",
+      "priority": 3,
+      "type": "route",
+      "headline": "Praxis Suriya: 28 directory confirmation emails are unhandled. Verify links can expire.",
+      "evidence": [
+       "Supabase listing_emails (handled = false)",
+       "S7"
+      ],
+      "options": {
+       "a": "Tantri clicks the verify links today (portal task + WhatsApp)",
+       "b": "Agent lists them first, I decide",
+       "c": "Park"
+      },
+      "recommended": "a",
+      "why": "Group A listings are 741's job; expired links mean a new submission.",
+      "deadline": "2026-10-13",
+      "status": "decided",
+      "answer": "b",
+      "park_reason": null,
+      "then": {
+       "a": "task draft for Tantri with the list",
+       "b": "agent writes list into plan.md",
+       "c": "park reason required"
+      },
+      "answer_text": "Agent lists the 28 emails first; Martin decides",
+      "created": "2026-10-13",
+      "decided_at": "2026-10-13T11:30+08:00"
+     },
+     {
+      "id": "2026-10-13-cc-location",
+      "client": "741 (workflows)",
+      "priority": 5,
+      "type": "decide",
+      "headline": "Where should the Command Center live?",
+      "options": {},
+      "recommended": "a",
+      "status": "decided",
+      "answer": "a",
+      "answer_text": "Portal admin view on staging, after the Freigabe-Dashboard chat finishes (one writer per portal file)",
+      "created": "2026-10-13",
+      "decided_at": "2026-10-13T12:40+08:00"
+     },
+     {
+      "id": "2026-10-13-portal-flags",
+      "client": "741 (all clients)",
+      "priority": 5,
+      "type": "decide",
+      "headline": "Set stale portal flags after the replies are sent?",
+      "options": {},
+      "recommended": "a",
+      "status": "decided",
+      "answer": "a",
+      "answer_text": "Yes, after Martin sent the 5 replies",
+      "created": "2026-10-13",
+      "decided_at": "2026-10-13T12:40+08:00"
+     },
+     {
+      "id": "2026-10-13-bali-audit-pool",
+      "client": "Bali Healing",
+      "priority": 5,
+      "type": "decide",
+      "headline": "Continue Bali audit + content pool?",
+      "options": {},
+      "recommended": "a",
+      "status": "decided",
+      "answer": "a",
+      "answer_text": "Go for both",
+      "created": "2026-10-13",
+      "decided_at": "2026-10-13T12:40+08:00"
+     },
+     {
+      "id": "2026-10-13-huewel-ga4",
+      "client": "Praxis Hüwel",
+      "priority": 5,
+      "type": "decide",
+      "headline": "Add GA4 (with consent) to the Hüwel website?",
+      "options": {},
+      "recommended": "a",
+      "status": "decided",
+      "answer": "a",
+      "answer_text": "Yes, prepare on a test branch; live change needs a per-change go",
+      "created": "2026-10-13",
+      "decided_at": "2026-10-13T12:40+08:00"
+     },
+     {
+      "id": "2026-10-13-johni-restart",
+      "client": "Johni Jaya Motor",
+      "headline": "Johni restarts this week: 3 access items missing, 25 overdue tasks, no activity since 17.08. Who owns the restart?",
+      "created": "2026-10-13",
+      "options": {
+       "a": "Martin asks for GA4/GBP/GSC access today; agent re-plans the 25 tasks for Monday",
+       "b": "Dinakar owns the restart",
+       "c": "Park one more week"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-13T03:30:26.094766+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "Yeah, we can start now. I know there are a lot of tasks left. I guess:\n- GA for Google Business Profile\n- GC\n- GSC\nI think we already have the tracking itself. All we need to set up is Google Business Profile. The only thing that I don't know, I just double-check, but I think we have it as well. That should be fun, and we can continue."
+     },
+     {
+      "id": "2026-10-13-kamil-reports",
+      "client": "Kamil (Physio Anatomie + Kraft)",
+      "headline": "Kamil's monthly reports stop in July. August and September are overdue.",
+      "created": "2026-10-13",
+      "options": {
+       "a": "Agent builds August + September drafts today with reporting/monthly-client-report.mjs; I check and send",
+       "b": "Send one combined Aug+Sep report",
+       "c": "Ask Kamil if he still wants reports"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-13T03:32:00.816229+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "We haven't done that yet. Internally, I gave him just easy numbers in an email. Most probably, we need to and should do this in his client dashboard in our accounts for the client.\n\nWe really need to figure out: this is running, but we should really improve month by month and build up more income streams, right? We can increase his income, and we increase our billing to him if that's the case.\n\nWhat I'm saying is we check over it, and then we need to check with them: there are definitely improvements on the website. Can we recommend some points to him? Are there other points we can recommend? I can see that listed in all my GrillMe sessions, and I know that we can put that into his client dashboard and maybe into his own decision tree. We can explain to him why we want to do what we do in this kind of way."
+     },
+     {
+      "id": "2026-10-13-kamil-report-place",
+      "client": "Kamil (Physio Anatomie + Kraft)",
+      "status": "decided",
+      "answer": "a",
+      "answer_text": "Into his dashboard (Reports tab); agent drafts 2-line message",
+      "created": "2026-10-13",
+      "decided_at": "2026-10-13T14:40+08:00"
+     },
+     {
+      "id": "2026-10-13-stuerzl-cards-live",
+      "client": "STÜRZL Steuerstrafrecht",
+      "status": "decided",
+      "answer": "b",
+      "answer_text": "Put the 7 cards live now (with backup)",
+      "created": "2026-10-13",
+      "decided_at": "2026-10-13T14:40+08:00"
+     },
+     {
+      "id": "walk-a85af491",
+      "client": "STÜRZL Steuerstrafrecht",
+      "headline": "Send the email via Airmailer (BCC you) + \"Add user\" in Search Console",
+      "created": "2026-10-13",
+      "options": {
+       "a": "Done",
+       "b": "Agent or team does it"
+      },
+      "kind": "click",
+      "status": "decided",
+      "answer": "a",
+      "decided_at": "2026-10-13T04:13:37.794587+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "Done"
+     },
+     {
+      "id": "walk-bdaead53",
+      "client": "Praxis Suriya",
+      "headline": "Ask Coralie to raise your WordPress role to Administrator (text in send-pack.md, section 3). Tell her about Search Console yourself (your words 13.10.).",
+      "created": "2026-10-13",
+      "options": {
+       "a": "Done",
+       "b": "Agent or team does it"
+      },
+      "kind": "click",
+      "status": "decided",
+      "answer": "a",
+      "decided_at": "2026-10-13T04:13:45.085105+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "Done"
+     },
+     {
+      "id": "walk-7fcd74ed",
+      "client": "Daniela Dumann",
+      "headline": "Click Publish in Wix",
+      "created": "2026-10-13",
+      "options": {
+       "a": "Done",
+       "b": "Agent or team does it"
+      },
+      "kind": "click",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-13T04:14:45.687301+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "i will have a convo with the client first before we continue"
+     },
+     {
+      "id": "walk-727ac62f",
+      "client": "Praxis Hüwel",
+      "headline": "Request indexing for the 6 core pages",
+      "created": "2026-10-13",
+      "options": {
+       "a": "Done",
+       "b": "Agent or team does it"
+      },
+      "kind": "click",
+      "status": "decided",
+      "answer": "b",
+      "decided_at": "2026-10-13T04:14:53.607921+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "Agent or team does it"
+     },
+     {
+      "id": "walk-28c81388",
+      "client": "Praxis Suriya",
+      "headline": "Which program start date counts? 2026-09-03 (portal) / 2026-08-14 (memory)",
+      "created": "2026-10-13",
+      "options": {
+       "a": "2026-09-03 counts (portal)",
+       "b": "2026-08-14 counts (memory)"
+      },
+      "kind": "click",
+      "status": "decided",
+      "answer": "a",
+      "decided_at": "2026-10-13T04:15:06.513314+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "2026-09-03 counts (portal)"
+     },
+     {
+      "id": "walk-8de22b6a",
+      "client": "Praxis Hüwel",
+      "headline": "Which program start date counts? 2026-08-25 (portal) / 2026-08-16 (paid, memory)",
+      "created": "2026-10-13",
+      "options": {
+       "a": "2026-08-25 counts (portal)",
+       "b": "2026-08-16 counts (paid, memory)"
+      },
+      "kind": "click",
+      "status": "decided",
+      "answer": "a",
+      "decided_at": "2026-10-13T04:15:25.0808+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "2026-08-25 counts (portal)"
+     },
+     {
+      "id": "walk-12effd59",
+      "client": "STÜRZL Steuerstrafrecht",
+      "headline": "No program start date. Which trigger sets it?",
+      "created": "2026-10-13",
+      "options": {
+       "a": "Start = day of the kickoff call",
+       "b": "Start = day of the signed contract"
+      },
+      "kind": "click",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-13T04:15:59.722976+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "already since a week"
+     },
+     {
+      "id": "walk-6b0236c2",
+      "client": "741 (all clients)",
+      "headline": "Send the 5 portal reply drafts (ready: portal-reply-drafts.md; Suriya, Hüwel, Dumann, Brasse, Rabenmütter)",
+      "created": "2026-10-13",
+      "options": {
+       "a": "Done",
+       "b": "Agent or team does it"
+      },
+      "kind": "click",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-13T04:16:16.497575+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "need to see them first"
+     },
+     {
+      "id": "walk-5cdea1c6",
+      "client": "?",
+      "headline": null,
+      "created": "2026-10-13",
+      "options": {},
+      "kind": "click",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-13T04:16:59.769114+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "we preparing all new data and report for them first so i can present them what we do and plan. this is happneing right now over the day and is a goal for today"
+     },
+     {
+      "id": "walk-3ef7004f",
+      "client": "Bali Healing",
+      "headline": "Drag the staged content-pool files into the 'Content Pool' folder in Drive (Chrome upload timed out; files are in 00_project/assets/balihealing/content-pool/)",
+      "created": "2026-10-13",
+      "options": {
+       "a": "Done",
+       "b": "Agent or team does it"
+      },
+      "kind": "click",
+      "status": "decided",
+      "answer": "b",
+      "decided_at": "2026-10-13T04:17:11.311817+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "Agent or team does it"
+     },
+     {
+      "id": "walk-fb201e47",
+      "client": "Bali Healing",
+      "headline": "Go-C for the English client audit page after the status reply is out (page is ready as a draft)",
+      "created": "2026-10-13",
+      "options": {
+       "a": "Go-C: the English audit page may go to the client",
+       "b": "Not yet: wait until the client reacted to the status reply"
+      },
+      "kind": "click",
+      "status": "decided",
+      "answer": "a",
+      "decided_at": "2026-10-13T04:17:41.179978+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "Go-C: the English audit page may go to the client"
+     },
+     {
+      "id": "2026-10-13-741-nightshift",
+      "client": "741 (night shift)",
+      "headline": "The night shift redoes the same 5 drafts every night: nobody approves them and its ledger has 0 entries.",
+      "created": "2026-10-13",
+      "options": {
+       "a": "Approve the 'pass' drafts and write the ledger",
+       "b": "Review them one by one (walk queue)",
+       "c": "Pause the night shift until the grill shows its items"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "b",
+      "decided_at": "2026-10-13T09:30:04.882002+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "Review them one by one (walk queue)"
+     },
+     {
+      "id": "2026-10-13-741-overdue",
+      "client": "741 (all clients)",
+      "headline": "81 portal tasks are overdue across 7 clients. Many may be done in chats but not ticked.",
+      "created": "2026-10-13",
+      "options": {
+       "a": "Agent matches overdue tasks to chat work and proposes 'needs review' / re-plan per client for Monday",
+       "b": "Re-plan all overdue tasks today",
+       "c": "Ignore the counts until the portal sync exists"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "a",
+      "decided_at": "2026-10-13T09:30:18.890358+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "Agent matches overdue tasks to chat work and proposes 'needs review' / re-plan per client for Monday"
+     },
+     {
+      "id": "2026-10-13-741-citations-stale",
+      "client": "741 (citations)",
+      "headline": "Citations stand still: Praxis Suriya 25, Praxis Hüwel 29 entries are 'planned' for more than 14 days.",
+      "created": "2026-10-13",
+      "options": {
+       "a": "Tantri works the group-A list this week, 10 per day",
+       "b": "First build the citations workflow (run file, runbook), then work",
+       "c": "Park until the backlink merge is done"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-13T09:31:26.440269+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "We have a specific workflow for that that needs to be integrated into that for those clients. I don't know where it is. Look it up. There was, or is, a workflow for that, and we had it with a emoji mark that is a backlink as well. I don't know where it's gone. The fuck."
+     },
+     {
+      "id": "2026-10-14-kamil-messages",
+      "client": "Kamil (Physio Anatomie + Kraft)",
+      "headline": "Kamil: the Aug+Sep report message AND the hack message are both drafted and not sent.",
+      "created": "2026-10-14",
+      "options": {
+       "a": "Send both now (report pointer + hack notice)",
+       "b": "Combine into one message",
+       "c": "Show me the drafts first"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-13T22:00:56+00:00",
+      "source_of_answer": "chat",
+      "answer_text": "Martin already sent both himself via WhatsApp yesterday (13.10.). New follow-up: brief Kamil in chat on a yearly website security/backup service (€500/year minimum per website) he can offer, and prepare a CRO homepage workflow idea for the Kraft site for better conversion. Draft only in the Kamil chat, do not send."
+     },
+     {
+      "id": "2026-10-14-bali-topup",
+      "client": "Bali Healing",
+      "headline": "Bali Google Ads balance is IDR 103,892, about 5 days left. Top up now?",
+      "created": "2026-10-14",
+      "options": {
+       "a": "Top up IDR 500,000 now (GoPay)",
+       "b": "Top up a different amount",
+       "c": "Not yet"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-13T22:00:56+00:00",
+      "source_of_answer": "chat",
+      "answer_text": "Later this day — Martin will do the top-up himself (not an agent action). Deferred, not parked: the card returns if the top-up is not done by the evening log."
+     },
+     {
+      "id": "2026-10-14-dumann-publish",
+      "client": "Daniela Dumann",
+      "headline": "Dumann's SEO-Fahrplan status page and 20 draft cards are ready since 13.10. but not published. 5 mismatches were found first.",
+      "created": "2026-10-14",
+      "options": {
+       "a": "Publish the page and release cards in waves",
+       "b": "Show me the 5 mismatches first",
+       "c": "Wait"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-13T22:00:56+00:00",
+      "source_of_answer": "chat",
+      "answer_text": "Publish the status page and release the cards so Daniela can give feedback in her client dashboard. NEW RULE: do not fix anything on the live site until Daniela gives that feedback. The 3 live mismatches (title/description reset, 3 unpublished Wix fixes) are left as-is; the open points (design-approval record, Maps name) go to her as dashboard items, not as a 741 self-fix."
+     },
+     {
+      "id": "2026-10-14-talkinfive-leak",
+      "client": "Talkinfive (Celine)",
+      "headline": "Talkinfive: an opt-out leak fix is ready (region rule tested 17/17). Push it and tell Billy?",
+      "created": "2026-10-14",
+      "options": {
+       "a": "Push the fix, then send the Billy message",
+       "b": "Push only, hold the message",
+       "c": "Not yet"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "b",
+      "decided_at": "2026-10-13T22:00:56+00:00",
+      "source_of_answer": "chat",
+      "answer_text": "Confirmed the region/opt-out rule was already pushed live 13.10. (~17:00) and tested 5/5; the Billy message stays unsent for now (push-only). A new small issue was found during testing: the opt-out button still fires one automatic Meta event (SubscribedButtonClick, no personal data). Martin's fix instruction: switch off that automatic Meta event on opt-out, keep 741's own events, test, report. Billy message stays unsent until then."
+     },
+     {
+      "id": "2026-10-14-741-messages",
+      "client": "?",
+      "headline": null,
+      "created": "2026-10-14",
+      "options": {},
+      "kind": "decision",
+      "status": "decided",
+      "answer": "a",
+      "decided_at": "2026-10-13T22:56:56.892629+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "a"
+     },
+     {
+      "id": "2026-10-14-suriya-gsc-row",
+      "client": "Praxis Suriya",
+      "headline": "Suriya's portal row for Search Console still needs a decision: it is 'angefragt' since 12.10. Tell Coralie yourself or let the agent?",
+      "created": "2026-10-14",
+      "options": {
+       "a": "Agent drafts the ask, you send",
+       "b": "You tell her yourself, no draft needed",
+       "c": "Wait for her WordPress-role answer first"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "a",
+      "decided_at": "2026-10-14T12:51:47.74977+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "Agent drafts the ask, you send"
+     },
+     {
+      "id": "2026-10-14-taxi-gdpr",
+      "client": "Taxi-Zentrale Nürnberg",
+      "headline": "Taxi GDPR plugin: no Download Key field at all — it checks its licence via a registration email, which on 01.09. was Werbeagentur Bamberger's address, not yours. A Cloudflare save also failed that day. That chat is waiting for your own word there, a relay does not count.",
+      "created": "2026-10-14",
+      "options": {
+       "a": "Open the Taxi chat and answer there",
+       "b": "Change the registration email to 741's first",
+       "c": "Park"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "c",
+      "decided_at": "2026-10-14T12:52:03.580207+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "Park"
+     },
+     {
+      "id": "2026-10-14-suriya-listing-mails",
+      "client": "Praxis Suriya",
+      "headline": "Praxis Suriya: 28 directory confirmation emails are unhandled. Verify links can expire.",
+      "created": "2026-10-14",
+      "options": {
+       "a": "Tantri clicks the verify links today (portal task + WhatsApp)",
+       "b": "Agent lists them first, I decide",
+       "c": "Park"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-14T12:52:45.685926+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "We need to go through the backlink workflow in general to see what's going on with her backlinks. The Bright Local one that was running: that's something on our side we need to check with the backlink workflow and work on that."
+     },
+     {
+      "id": "2026-10-14-taxi-plugins",
+      "client": "Taxi-Zentrale Nürnberg",
+      "headline": "Taxi Nürnberg: pending plugin updates and a captcha change wait for your go. 900 spam mails and a missing Akeeba key were found 13.10.",
+      "created": "2026-10-14",
+      "options": {
+       "a": "Go for the plugin updates and the captcha change",
+       "b": "Updates only, no captcha yet",
+       "c": "Wait"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-14T12:53:19.003409+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "Daniel and the other agency took complete over. We are not working on that anymore for updates."
+     },
+     {
+      "id": "2026-10-14-741-overdue",
+      "client": "741 (all clients)",
+      "headline": "54 portal tasks are overdue across 6 clients. Many may be done in chats but not ticked.",
+      "created": "2026-10-14",
+      "options": {
+       "a": "Agent matches overdue tasks to chat work and proposes 'needs review' / re-plan per client for Monday",
+       "b": "Re-plan all overdue tasks today",
+       "c": "Ignore the counts until the portal sync exists"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-14T12:53:48.074056+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "You need to go through them, and if you need decisions, you will let me know in my decision cards. Then we can decide what we do with it, but we need to go through all of them."
+     },
+     {
+      "id": "2026-10-14-741-citations-stale",
+      "client": "741 (citations)",
+      "headline": "Citations stand still: Praxis Suriya 25, Praxis Hüwel 29 entries are 'planned' for more than 14 days.",
+      "created": "2026-10-14",
+      "options": {
+       "a": "Tantri works the group-A list this week, 10 per day",
+       "b": "First build the citations workflow (run file, runbook), then work",
+       "c": "Park until the backlink merge is done"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "b",
+      "decided_at": "2026-10-14T12:53:58.964976+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "First build the citations workflow (run file, runbook), then work"
+     },
+     {
+      "id": "2026-10-14-falcon-connector",
+      "client": "Johni Jaya Motor",
+      "headline": "Local Falcon is still not enabled as a connector for Claude Code. Johni's first ranking scan has waited since 12.10.",
+      "created": "2026-10-14",
+      "options": {
+       "a": "I enable it now in claude.ai",
+       "b": "Not today"
+      },
+      "kind": "decision",
+      "status": "decided",
+      "answer": "b",
+      "decided_at": "2026-10-14T12:54:03.104123+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "Not today"
+     },
+     {
+      "id": "walk-7fdd0f14",
+      "client": "STÜRZL Steuerstrafrecht",
+      "headline": "No program start date. Set it (start = agreed trigger, e.g. contract or kickoff).",
+      "created": "2026-10-14",
+      "options": {
+       "a": "Start = day of the kickoff call",
+       "b": "Start = day of the signed contract"
+      },
+      "kind": "click",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-14T12:54:31.643356+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "shutup i mentioned 5 times it was already at the 7.10 like a week ago"
+     },
+     {
+      "id": "walk-d6ab93f0",
+      "client": "STÜRZL Steuerstrafrecht",
+      "headline": "Send the welcome mail (Airmailer, password reset) to stuerzl@stuerzl-steuerstrafrecht.de",
+      "created": "2026-10-14",
+      "options": {
+       "a": "Done",
+       "b": "Agent or team does it"
+      },
+      "kind": "click",
+      "status": "decided",
+      "answer": "own",
+      "decided_at": "2026-10-14T12:55:08.703477+00:00",
+      "source_of_answer": "portal",
+      "answer_text": "thats already done you to late with a welcoming email leave it"
+     }
+    ]
+   }
+  },
+  "S12_prospects": {
+   "status": "ok",
+   "data": [
+    {
+     "slug": "claudia-tiemann",
+     "client": "Claudia Tiemann",
+     "status": "fertig, Freigabe offen",
+     "last_run": "2026-10-12"
+    },
+    {
+     "slug": "ana-violeta-fredel",
+     "client": "Ana Violeta Fredel",
+     "status": "fertig, Freigabe offen",
+     "last_run": "2026-10-12"
+    },
+    {
+     "slug": "korinna-heintze",
+     "client": null,
+     "status": "fertig, Freigabe offen",
+     "last_run": null
+    },
+    {
+     "slug": "stephan-meyer-v2",
+     "client": "Stephan Meyer",
+     "status": "fertig, Freigabe offen",
+     "last_run": "2026-10-14"
+    },
+    {
+     "slug": "claudia-maria-steifensand",
+     "client": "Claudia Maria Steifensand",
+     "status": "fertig, Freigabe offen",
+     "last_run": "2026-10-13"
+    },
+    {
+     "slug": "manuela-stetter",
+     "client": "Manuela Stetter",
+     "status": "fertig, Freigabe offen",
+     "last_run": "2026-10-14"
+    },
+    {
+     "slug": "sabine-schwarz",
+     "client": "Sabine Schwarz",
+     "status": "fertig, Freigabe offen",
+     "last_run": "2026-10-13"
+    },
+    {
+     "slug": "catja-grieshaber",
+     "client": "Catja Grieshaber",
+     "status": "fertig, Freigabe offen",
+     "last_run": "2026-10-12"
+    },
+    {
+     "slug": "christian-ruether-v2",
+     "client": "Christian Ruether",
+     "status": "fertig, Freigabe offen",
+     "last_run": "2026-10-12"
+    }
+   ]
+  },
+  "S13_deadlines": {
+   "status": "ok",
+   "data": [
+    {
+     "file": "coldemail-sending-infra.md",
+     "date": "2026-09-23",
+     "overdue_days": 23,
+     "urgent": true,
+     "client": null,
+     "text": "Demand: sign strafbewehrte Unterlassungserklärung + pay 453,50 €, deadline 23.09.2026."
+    },
+    {
+     "file": "coldemail-sending-infra.md",
+     "date": "2026-10-13",
+     "overdue_days": 3,
+     "urgent": true,
+     "client": null,
+     "text": "**Abmahnung status 2026-10-13 (Martin in the morning grill):** Martin answered the Abmahnung with his own letter (based on the earlier recommendation), demanding to pay 0 €."
+    },
+    {
+     "file": "coldemail-sending-infra.md",
+     "date": "2026-10-14",
+     "overdue_days": 2,
+     "urgent": true,
+     "client": null,
+     "text": "**Abmahnung O6A0C — STATUS 2026-10-14 (0-€-Route, Martin's choice):** Lawyer route rejected (all firms start at ~600 € > 453 € claim)."
+    },
+    {
+     "file": "maria-brasse-client.md",
+     "date": "2026-09-22",
+     "overdue_days": 24,
+     "urgent": false,
+     "client": "Maria Brasse",
+     "text": "Maria-Feedback bis 22.09. war bereits in den Texten."
+    },
+    {
+     "file": "suriya-baseline-tracking.md",
+     "date": "2026-09-27",
+     "overdue_days": 19,
+     "urgent": false,
+     "client": "Praxis Suriya",
+     "text": "Baseline-Dateien: `00_project/assets/suriya/baseline/2026-09-30-gsc-baseline.md` und `.json` (Search Console, Property https://suriya-praxis.de/, Konto 741studio18, Daten bis 27.09.2026"
+    },
+    {
+     "file": "anja-stuerzl-client.md",
+     "date": "2026-10-05",
+     "overdue_days": 11,
+     "urgent": false,
+     "client": "STÜRZL Steuerstrafrecht",
+     "text": "Rate 1 = Rechnung **741/280926** (datiert Mo 28.09.2026, fällig 05.10.,"
+    }
+   ]
+  }
+ },
+ "goal_gaps": [
+  {
+   "client": "Praxis Suriya",
+   "field": "goal_numbers:Maps grid: avg rank, 5 keywords",
+   "baseline": "rank 1-9 depending on keyword (Local Falcon 15./16.08.: ayurveda 95.9% SoLV, akupunktur 91.8%, heilpraktiker 77.6%, migräne 30.6%, schmerztherapie/vagusnerv/naturheilpraxis 0%)",
+   "target": "top 3"
+  },
+  {
+   "client": "Praxis Suriya",
+   "field": "goal_numbers:requests per week",
+   "baseline": "~2 (baseline frozen 28.06.-23.09.)",
+   "target": null
+  },
+  {
+   "client": "Praxis Hüwel",
+   "field": "goal_numbers:requests per month from GBP + site",
+   "baseline": null,
+   "target": null
+  },
+  {
+   "client": "STÜRZL Steuerstrafrecht",
+   "field": "goal_numbers:Ads live",
+   "baseline": "no",
+   "target": "live"
+  },
+  {
+   "client": "STÜRZL Steuerstrafrecht",
+   "field": "goal_numbers:approved money pages live",
+   "baseline": "0",
+   "target": "all pages in the approved site restructure (count TBD once the sitemap is approved)"
+  },
+  {
+   "client": "Daniela Dumann",
+   "field": "goal_numbers:Maps grid: avg rank, main keywords",
+   "baseline": "0% top-3 share, 5 of 49 grid points (01.10. scan, heilpraktiker charlottenburg)",
+   "target": "top 3"
+  },
+  {
+   "client": "Maria Brasse",
+   "field": "goal_numbers:Maps grid: avg rank",
+   "baseline": null,
+   "target": "top 3"
+  },
+  {
+   "client": "Maria Brasse",
+   "field": "goal_numbers:requests per month",
+   "baseline": "baseline 30.09. (to read)",
+   "target": null
+  },
+  {
+   "client": "Bali Healing",
+   "field": "goal_numbers:onboarding steps",
+   "baseline": "1/6",
+   "target": "6/6"
+  },
+  {
+   "client": "Bali Healing",
+   "field": "goal_numbers:Ads live",
+   "baseline": "no",
+   "target": "live"
+  },
+  {
+   "client": "Rabenmütter",
+   "field": "goal_numbers (none)"
+  },
+  {
+   "client": "Johni Jaya Motor",
+   "field": "goal_numbers:missing access",
+   "baseline": "3",
+   "target": "0"
+  },
+  {
+   "client": "Johni Jaya Motor",
+   "field": "goal_numbers:overdue tasks",
+   "baseline": "25",
+   "target": "0"
+  },
+  {
+   "client": "Kamil (Physio Anatomie + Kraft)",
+   "field": "goal_numbers:reports sent on time",
+   "baseline": "last: July",
+   "target": "monthly"
+  },
+  {
+   "client": "Kamil (Physio Anatomie + Kraft)",
+   "field": "goal_numbers:cost per lead (Ads)",
+   "baseline": "Aug+Sep Ads report built 14.10.: both campaigns budget-limited (Kraft 40€/day, Anatomie 38€/day)",
+   "target": "<= baseline"
+  },
+  {
+   "client": "Marcel Rosenbach",
+   "field": "goal_numbers:offer sent",
+   "baseline": "no",
+   "target": "sent"
+  },
+  {
+   "client": "me&you / Pauspapier",
+   "field": "goal_numbers:landing pages live",
+   "baseline": 0,
+   "target": 2
+  },
+  {
+   "client": "me&you / Pauspapier",
+   "field": "goal_numbers:no-show rate",
+   "baseline": null,
+   "target": null
+  }
+ ]
+}

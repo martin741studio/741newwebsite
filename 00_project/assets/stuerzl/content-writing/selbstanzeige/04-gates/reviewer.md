@@ -1,0 +1,10 @@
+# Reviewer-Bericht (frischer Subagent, nur lesend)
+
+**Runde 1 (draft-v2): FIX FIRST, 13 Punkte.** Echte Fehler: § 398a gilt nur, wenn allein Betrag oder besonders schwerer Fall entgegenstehen; Tabellenspalte muss „Hinterziehungsbetrag“ heißen; § 238-Datei fehlte; S05-Punkte ohne Gesetzesbegriffe („Beteiligter“, Umfang der Außenprüfung, „erschienen und hat sich ausgewiesen“); Erstgespräch gegen Erstberatung gegen Pauschale (UWG-Risiko); Überschrift „sagen wir vorher“ zu stark; drei Aussagen ohne Claim; „Ja.“ bei „alle Jahre“ falsch; „Täter“ bricht die Sie-Form.
+Weiche Punkte Runde 1: Textqualität 17/25 (Hook 4, Schmerz 4, CTA 3, Einwände 3, Scan 3), Lesegefühl 7/10.
+
+**Runde 2 (draft-v3): 10 von 13 geschlossen, 3 neue Lücken durch meine Änderungen** (S06-Satz drehte die Bedingung um, Nachschau-Punkt zu breit, „vorher“ schriftlich). Alle drei sind in draft-v3 korrigiert. Zusätzlich: „Erstberatung“ durchgängig, „Strafbefreiung“ statt „Wirkung“, Rechtsstand als eigene Zeile.
+Nicht geändert (Entscheidung für Martin und Kundin): „langjährige Praxiserfahrung“ (Wendung der Kanzlei, unbelegt), Frage „straffrei?“ (echte PAA-Frage), „nicht bestraft“ und „Strafbefreiung“, H1 „Anwalt für Steuerstrafrecht“ gegen BORA, „Freiheitsstrafe bis zu fünf Jahren“ in der FAQ.
+Runde 3 Reviewer: nicht gefahren (Maximum 2 Runden). Die Korrekturen nach Runde 2 prüft Martin am Checkpoint 2.
+
+**Runde 3 (v4, Live-Stimme): FIX FIRST, 3 Textlücken und 1 Technikfehler, alle behoben:** „koordinierte Selbstanzeige“ zu absolut („muss“, „entdeckt“) und im Widerspruch zu S05, jetzt „in der Praxis nötig“ und „kann als entdeckt gelten (§ 371 Abs. 2 Satz 1 Nr. 2 AO)“; „Fehler passieren“ ohne Einordnung, jetzt mit Satz zur strafrechtlichen Relevanz; „Wir gehen es …“ mit falschem Bezug, jetzt „Ihre Angelegenheit“; FAQ-Schema 8 Fragen. Zusätzlich: „Leitsatz“ ersetzt, „Handbuch“ gestrichen, Halbsatz zu nicht vorsätzlichem Handeln wiederhergestellt, § 153 und § 378 AO als Statutdateien gespeichert. Neue Flag A7 („geräuschlos“). Keine erneute Prüfung der Korrekturen (Reviewer-Maximum erreicht).

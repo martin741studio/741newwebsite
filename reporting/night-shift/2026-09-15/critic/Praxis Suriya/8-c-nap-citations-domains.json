@@ -1,0 +1,43 @@
+{
+  "pass": true,
+  "mode": "FEEDBACK",
+  "client": "Praxis Suriya",
+  "slug": "8-c-nap-citations-domains",
+  "feedback_id": "d1c58471-eafc-4ef9-8418-1611a2345445",
+  "rubric_skipped": true,
+  "checks": {
+    "addresses_client_comment_sentence_for_sentence": {
+      "result": "pass",
+      "detail": [
+        "'ayurveda Ingelheim oder ayurveda mainz' -> both carried over as two separate domain-name ideas, tied correctly to practice location (Ingelheim) vs. neighbouring catchment town (Mainz).",
+        "'ich habe auch noch die domian Femalecare' -> carried over as an already-owned domain, with exact spelling/TLD correctly flagged [fehlt: vom Kunden zu bestaetigen] rather than guessed.",
+        "'Du kannst gerne die Domaine zubuchen die wichtig sind' -> read as a conditional go-ahead, not converted into an automatic purchase; draft asks for a Martin go/no-go specifically on the Mainz name (practice sits in Ingelheim, not Mainz) before any booking. This is a reasonable, non-inventive reading, not a deviation from what was asked."
+      ]
+    },
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "n/a",
+      "detail": "Feedback draft is a domain/citations recommendation, not a page spec; no Title/Meta/H1/JSON-LD fields present. The [fehlt: ...] tags sit inside Vorschlag/Naechster-Schritt body text (domain spelling, availability check, NAP block), not in a required field, so this check does not apply."
+    },
+    "nap_matches_locked_record": {
+      "result": "n/a",
+      "detail": "context.json.nap_locked is a Postgres error this run (42703, per planner_notes), not a locked NAP record. Draft correctly declines to write a Citations/NAP block from invented data and flags [fehlt: client_locations lieferte einen Datenbankfehler ...] instead. No NAP field to check against a locked record."
+    },
+    "jsonld_valid": {
+      "result": "n/a",
+      "detail": "No JSON-LD in a FEEDBACK draft of this kind."
+    },
+    "language_matches_market": {
+      "result": "pass",
+      "detail": "DACH practice, draft fully in German."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "detail": "Content is domains/citations only (no treatment/outcome claims); no 'heilt/garantiert/100%/Heilung' language."
+    }
+  },
+  "notes": [
+    "Diff-Hinweis correctly flags that the original report section text could not be fetched (not in repo, live report unreachable from this run) and states plainly that no before/after comparison was possible, rather than fabricating one. Consistent with hard rule 2 (real data only).",
+    "Draft's recommendation to question 'Mainz' as a place reference (practice is sited in Ingelheim) is a defensible SEO/citation-consistency point, not an invented fact -- it is offered as a flag for Martin's go/no-go, not stated as a client instruction."
+  ],
+  "fails": []
+}

@@ -1,0 +1,374 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://741.studio/schemas/content-writing-brief.schema.json",
+  "title": "Content writing brief",
+  "description": "Machine-readable brief of one content-writing run (01-brief/brief.json). The scripts validate_page.py, check_style.py and run_gates.py read these fields.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "client",
+    "page_type",
+    "language",
+    "address",
+    "speaker",
+    "legal_mode",
+    "keyword_primary",
+    "pool_item_ids",
+    "cta",
+    "sections",
+    "gate"
+  ],
+  "properties": {
+    "client": {
+      "type": "string"
+    },
+    "client_slug": {
+      "type": "string"
+    },
+    "page_slug": {
+      "type": "string"
+    },
+    "page_type": {
+      "enum": [
+        "homepage",
+        "service",
+        "location",
+        "practitioner",
+        "cost",
+        "faq",
+        "blog",
+        "hub",
+        "about",
+        "team",
+        "contact",
+        "press",
+        "news"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "new",
+        "rewrite"
+      ],
+      "description": "rewrite = a Bestand text exists and is an input"
+    },
+    "language": {
+      "enum": [
+        "de",
+        "en"
+      ]
+    },
+    "address": {
+      "enum": [
+        "du",
+        "sie",
+        "you"
+      ],
+      "description": "Address form with proof in the voice sheet"
+    },
+    "speaker": {
+      "enum": [
+        "ich",
+        "wir",
+        "dritte"
+      ]
+    },
+    "legal_mode": {
+      "enum": [
+        "HWG",
+        "BRAO",
+        "none"
+      ]
+    },
+    "voice_sheet": {
+      "type": "string",
+      "description": "Path to voice.md"
+    },
+    "pool_item_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^CP-(LOC|SVC|BRD|AUT)-[0-9]{3}$"
+      }
+    },
+    "sitetree_node": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "url_slug": {
+      "type": "string"
+    },
+    "keyword_primary": {
+      "type": "string"
+    },
+    "keywords_cluster": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kw": {
+            "type": "string"
+          },
+          "volume": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "scope": {
+            "enum": [
+              "local",
+              "national"
+            ]
+          },
+          "source": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kw"
+        ]
+      }
+    },
+    "intent": {
+      "enum": [
+        "informational",
+        "commercial",
+        "transactional",
+        "navigational",
+        "local"
+      ]
+    },
+    "reader": {
+      "type": "string",
+      "description": "Who reads, which question, which words they use (from reviews)"
+    },
+    "local_city": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cta": {
+      "type": "object",
+      "required": [
+        "goal",
+        "channel",
+        "text"
+      ],
+      "properties": {
+        "goal": {
+          "type": "string"
+        },
+        "channel": {
+          "enum": [
+            "whatsapp",
+            "phone",
+            "form",
+            "booking",
+            "email"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "description": "Primary CTA button text"
+        },
+        "reassurance": {
+          "type": "string"
+        },
+        "secondary": {
+          "type": "string"
+        }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "element",
+          "job"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^S[0-9]{2}$"
+          },
+          "element": {
+            "enum": [
+              "hero",
+              "answer",
+              "text",
+              "check-list",
+              "el-grid",
+              "step-flow",
+              "stat-badge",
+              "table",
+              "timeline",
+              "faq",
+              "person",
+              "proof",
+              "notice",
+              "cta",
+              "accordion"
+            ]
+          },
+          "job": {
+            "type": "string"
+          },
+          "cta": {
+            "enum": [
+              "primary",
+              "secondary",
+              null
+            ]
+          },
+          "dropped_reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gate": {
+      "enum": [
+        "A0-full",
+        "A0-light",
+        "A0-brand"
+      ]
+    },
+    "money_page": {
+      "type": "boolean"
+    },
+    "bestand_words": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "benchmark_median_words": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "benchmark_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "words": {
+            "type": "integer"
+          },
+          "date": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "word_range": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "require_answer_block": {
+      "type": "boolean"
+    },
+    "faq_min": {
+      "type": "integer"
+    },
+    "internal_links_min": {
+      "type": "integer"
+    },
+    "internal_link_targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "anchor": {
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "pillar",
+              "sibling",
+              "person",
+              "contact",
+              "money-page"
+            ]
+          }
+        }
+      }
+    },
+    "cta_min": {
+      "type": "integer"
+    },
+    "cta_text": {
+      "type": "string"
+    },
+    "proof_assets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_words": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "own_phrases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "byline": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "person_page": {
+          "type": "string"
+        },
+        "review_due": {
+          "type": "string"
+        }
+      }
+    },
+    "placeholders_allowed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Facts that may stay yellow placeholders"
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Must be empty before step 3"
+    }
+  }
+}

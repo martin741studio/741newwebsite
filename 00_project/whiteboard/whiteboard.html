@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>741 Whiteboard</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<style>
+  :root{
+    --ink:#1a1a1a; --ink-soft:#595959; --paper:#ffffff; --desk:#f2f2ef;
+    --yellow:#fff6b6; --yellow-b:#ffdc4a;
+    --blue:#c6dcff; --blue-b:#659df2;
+    --green:#adf0c7; --green-b:#2dc75c;
+    --red:#ffc6c6; --red-b:#ff6464;
+    --purple:#dedaff; --purple-b:#8f7fee;
+    --orange:#f8d3af; --orange-b:#fe9f4d;
+    --gray:#e7e7e7; --gray-b:#8a8a7e;
+  --black:#1a1a1a; --black-b:#000000;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;height:100%;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--desk);color:var(--ink);overflow:hidden;}
+
+  /* ---- Login ---- */
+  #login{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--desk);z-index:100;}
+  #login form{background:var(--paper);padding:32px;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,.12);width:300px;}
+  #login h1{font-size:18px;margin:0 0 16px;}
+  #login input{width:100%;padding:10px;margin-bottom:10px;border:1px solid var(--gray);border-radius:6px;font-size:14px;}
+  #login button{width:100%;padding:10px;border:none;border-radius:6px;background:var(--ink);color:#fff;font-size:14px;cursor:pointer;}
+  #login .err{color:var(--red-b);font-size:12px;margin-top:6px;min-height:16px;}
+  #login .logo{font-weight:800;font-size:22px;margin-bottom:4px;}
+
+  /* ---- Toolbar ---- */
+  #toolbar{position:fixed;top:0;left:0;right:0;height:52px;background:var(--paper);border-bottom:1px solid var(--gray);display:flex;align-items:center;gap:8px;padding:0 12px;z-index:50;}
+  #toolbar .title{font-weight:700;margin-right:12px;display:inline-flex;align-items:center;gap:8px;}
+  #toolbar button{border:1px solid var(--gray);background:var(--paper);border-radius:6px;padding:7px 12px;font-size:13px;cursor:pointer;}
+  #toolbar button:hover{background:var(--desk);}
+  #toolbar .spacer{flex:1;}
+  #toolbar select{border:1px solid var(--gray);border-radius:6px;padding:6px;font-size:13px;}
+  #status{font-size:12px;color:var(--ink-soft);}
+  #zoomlabel{font-size:12px;color:var(--ink-soft);width:44px;text-align:center;}
+
+  /* ---- Canvas ---- */
+  #viewport{position:absolute;top:52px;left:0;right:0;bottom:0;overflow:hidden;cursor:default;}
+  #viewport.space-pan{cursor:grab;}
+  #viewport.panning{cursor:grabbing;}
+  #canvas{position:absolute;top:0;left:0;transform-origin:0 0;transition:transform 140ms ease-out;}
+  #canvas.no-transition{transition:none;}
+
+  .item{position:absolute;box-sizing:border-box;}
+  .frame{border-radius:10px;padding:0;border:3px solid transparent;box-shadow:0 2px 10px rgba(0,0,0,.10);}
+  .frame-head{padding:14px 16px 8px;font-weight:800;font-size:20px;cursor:move;user-select:none;}
+  .frame-body{position:absolute;inset:0;top:0;}
+
+  .card{border-radius:8px;border:2px solid transparent;padding:10px 12px;font-size:14px;line-height:1.4;box-shadow:0 1px 2px rgba(0,0,0,.06);cursor:move;overflow:auto;white-space:pre-line;}
+  .card:focus-within{outline:2px solid var(--ink);outline-offset:1px;}
+  .card[data-editing="1"]{cursor:text;}
+
+  .item .resize{position:absolute;right:2px;bottom:2px;width:14px;height:14px;cursor:nwse-resize;opacity:.35;}
+  .item .resize:hover{opacity:.9;}
+  .item .del{position:absolute;top:4px;right:4px;width:18px;height:18px;border-radius:50%;background:rgba(0,0,0,.08);color:var(--ink);font-size:12px;line-height:18px;text-align:center;cursor:pointer;display:none;}
+  .item:hover .del{display:block;}
+  .item .del:hover{background:rgba(0,0,0,.2);}
+
+  .item.locked{cursor:default;outline:2px dashed rgba(0,0,0,.25);outline-offset:-2px;}
+  .item.locked .del, .item.locked .resize{display:none!important;}
+
+  #ctxmenu{position:fixed;background:var(--paper);border:1px solid var(--gray);border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.15);padding:4px;z-index:3000;min-width:190px;display:none;}
+  #ctxmenu .ctx-item{padding:8px 12px;font-size:13px;cursor:pointer;border-radius:4px;white-space:nowrap;}
+  #ctxmenu .ctx-item:hover{background:var(--desk);}
+  #ctxmenu .ctx-sep{height:1px;background:var(--gray);margin:4px 2px;}
+
+  .color-yellow{background:var(--yellow);border-color:var(--yellow-b);}
+  .color-blue{background:var(--blue);border-color:var(--blue-b);}
+  .color-green{background:var(--green);border-color:var(--green-b);}
+  .color-red{background:var(--red);border-color:var(--red-b);}
+  .color-purple{background:var(--purple);border-color:var(--purple-b);}
+  .color-orange{background:var(--orange);border-color:var(--orange-b);}
+  .color-gray{background:var(--gray);border-color:var(--gray-b);}
+  .color-white{background:var(--paper);border-color:var(--gray);}
+  .color-black{background:var(--black);border-color:var(--black-b);color:#fff;}
+  .frame.color-black > .frame-head{color:#fff;}
+
+  .palette{position:absolute;display:flex;gap:4px;top:-30px;left:0;background:var(--paper);border:1px solid var(--gray);border-radius:6px;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,.1);display:none;z-index:5;}
+  .item.selected .palette{display:flex;}
+  .swatch{width:18px;height:18px;border-radius:4px;cursor:pointer;border:1px solid rgba(0,0,0,.15);}
+
+  .item.draw{cursor:move;}
+  .item.image{border-radius:6px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.12);cursor:move;}
+  #toolbar button.tool-active{background:var(--ink);color:#fff;border-color:var(--ink);}
+  #viewport.mode-draw{cursor:crosshair;}
+  #viewport.mode-erase{cursor:cell;}
+  .marquee-box{position:absolute;border:1px dashed var(--ink-soft);background:rgba(89,89,89,.08);z-index:2000;pointer-events:none;}
+
+  /* ---- Mobile / Touch ---- */
+  #viewport{touch-action:none;} /* we handle pan/pinch ourselves; stops the page from scrolling/zooming */
+  .item.selected .del{display:block;} /* no hover on touch: show × on the selected item */
+  @media (max-width:900px){
+    #toolbar{flex-wrap:wrap;height:auto;min-height:52px;padding:6px 8px;gap:6px;}
+    #toolbar .title{margin-right:4px;}
+    #toolbar .spacer,#status,#groupBtn,#ungroupBtn{display:none;} /* grouping lives in the long-press menu on touch */
+    #toolbar .title{font-size:0;} #toolbar .title img{height:22px;}
+    #toolbar button,#toolbar select{padding:8px 10px;font-size:13px;}
+    #login form{width:min(300px,92vw);padding:24px;}
+  }
+  @media (pointer:coarse){
+    .item .resize{width:28px;height:28px;opacity:.5;}
+    .item .del{width:26px;height:26px;line-height:26px;font-size:15px;}
+  }
+</style>
+</head>
+<body>
+
+<div id="login">
+  <form id="loginForm">
+    <div class="logo"><img src="assets/logo_black.png" alt="741" height="28" style="display:block"></div>
+    <h1>Whiteboard-Login</h1>
+    <input type="email" id="email" placeholder="E-Mail" autocomplete="username" required>
+    <input type="password" id="password" placeholder="Passwort" autocomplete="current-password" required>
+    <button type="submit">Anmelden</button>
+    <div class="err" id="loginErr"></div>
+  </form>
+</div>
+
+<div id="toolbar" style="display:none;">
+  <span class="title"><img src="assets/logo_black.png" alt="741" height="20"> Whiteboard</span>
+  <select id="boardSelect"></select>
+  <button id="newFrameBtn">+ Frame</button>
+  <button id="newCardBtn">+ Karte</button>
+  <button id="drawBtn" title="Zeichnen">✎ Zeichnen</button>
+  <button id="eraseBtn" title="Radieren">⌫ Radieren</button>
+  <select id="drawColorSelect" title="Stiftfarbe">
+    <option value="red">Rot</option>
+    <option value="blue">Blau</option>
+    <option value="green">Grün</option>
+    <option value="orange">Orange</option>
+    <option value="purple">Lila</option>
+    <option value="black">Schwarz</option>
+  </select>
+  <button id="groupBtn" title="Ausgewählte gruppieren (Shift+Klick zum Mehrfachauswählen, dann Strg+G)">Gruppieren</button>
+  <button id="ungroupBtn" title="Gruppierung aufheben (Strg+Umschalt+G)">Gruppierung aufheben</button>
+  <button id="undoBtn" title="Rückgängig (Strg+Z)">↶</button>
+  <button id="redoBtn" title="Wiederholen (Strg+Umschalt+Z)">↷</button>
+  <span id="zoomlabel">100%</span>
+  <button id="zoomOutBtn">−</button>
+  <button id="zoomInBtn">+</button>
+  <button id="resetViewBtn">Ansicht zurücksetzen</button>
+  <span class="spacer"></span>
+  <span id="status"></span>
+  <button id="logoutBtn">Abmelden</button>
+</div>
+
+<div id="viewport" style="display:none;">
+  <div id="canvas"></div>
+</div>
+<div id="ctxmenu"></div>
+
+<script>
+const SUPABASE_URL = "https://galjmtozcgxcwtzkzbpi.supabase.co";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdhbGptdG96Y2d4Y3d0emt6YnBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYwNjU1MjEsImV4cCI6MjEwMTY0MTUyMX0.X5F-qkWxH9XAFrh7Z7dC82g-jDqfMnzqBFKO1YVcR6E";
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+let currentBoardId = null;
+let items = new Map(); // id -> {row, el}
+let zoom = 1, panX = 40, panY = 210;
+let channel = null;
+let mode = 'select'; // 'select' | 'draw' | 'erase'
+let drawColor = 'red';
+
+const $ = (s)=>document.querySelector(s);
+const viewport = $('#viewport'), canvas = $('#canvas');
+
+const STROKE_COLORS = { yellow:'#ffdc4a', blue:'#659df2', green:'#2dc75c', red:'#ff6464', purple:'#8f7fee', orange:'#fe9f4d', gray:'#8a8a7e', black:'#000000', white:'#ffffff' };
+
+// ---------- UNDO / REDO ----------
+// Local, per-tab history of the user's own actions. Each entry carries its own
+// undo/redo closures with the data they need already captured — no re-derivation.
+let undoStack = [];
+let redoStack = [];
+let undoBusy = false;
+function pushUndo(undoFn, redoFn){
+  undoStack.push({ undo: undoFn, redo: redoFn });
+  if (undoStack.length > 50) undoStack.shift();
+  redoStack = [];
+}
+async function undo(){
+  if (undoBusy || !undoStack.length) return;
+  undoBusy = true;
+  try { const entry = undoStack.pop(); await entry.undo(); redoStack.push(entry); }
+  finally { undoBusy = false; }
+}
+async function redo(){
+  if (undoBusy || !redoStack.length) return;
+  undoBusy = true;
+  try { const entry = redoStack.pop(); await entry.redo(); undoStack.push(entry); }
+  finally { undoBusy = false; }
+}
+$('#undoBtn').addEventListener('click', undo);
+$('#redoBtn').addEventListener('click', redo);
+document.addEventListener('keydown', (e)=>{
+  if (document.activeElement && document.activeElement.isContentEditable){
+    if (e.key === 'Escape') document.activeElement.blur();
+    return; // don't hijack native undo while typing
+  }
+  if ((e.ctrlKey || e.metaKey) && !e.shiftKey && e.key.toLowerCase() === 'z'){ e.preventDefault(); undo(); return; }
+  if ((e.ctrlKey || e.metaKey) && (e.key.toLowerCase() === 'y' || (e.shiftKey && e.key.toLowerCase() === 'z'))){ e.preventDefault(); redo(); return; }
+  if ((e.ctrlKey || e.metaKey) && !e.shiftKey && e.key.toLowerCase() === 'g'){ e.preventDefault(); groupSelected(); return; }
+  if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'g'){ e.preventDefault(); ungroupSelected(); return; }
+  if (e.key === 'Escape' && mode !== 'select') setMode('select');
+});
+
+// ---------- DB PRIMITIVES (no undo recording — callers decide what to record) ----------
+async function dbInsert(fields, forcedId){
+  setStatus('Speichere…');
+  const payload = forcedId ? { id: forcedId, ...fields } : fields;
+  const { data, error } = await sb.from('whiteboard_items').insert({ board_id: currentBoardId, z: items.size, ...payload }).select().single();
+  if (error){ setStatus('Fehler: ' + error.message); return null; }
+  data._localEcho = true;
+  renderItem(data);
+  setStatus('Gespeichert');
+  return data;
+}
+async function dbDelete(id){
+  const rec = items.get(id);
+  if (!rec) return null;
+  const snapshot = { ...rec.row };
+  rec.el.remove(); items.delete(id);
+  await sb.from('whiteboard_items').delete().eq('id', id);
+  return snapshot;
+}
+async function deleteItemWithUndo(id){
+  const snapshot = await dbDelete(id);
+  if (!snapshot) return;
+  const fields = { type: snapshot.type, x: snapshot.x, y: snapshot.y, w: snapshot.w, h: snapshot.h, color: snapshot.color, content: snapshot.content };
+  pushUndo(
+    async ()=> { await dbInsert(fields, id); },
+    async ()=> { await dbDelete(id); }
+  );
+}
+
+// ---------- GROUPING ----------
+// A group is just a shared group_id on each member row. Dragging any member
+// (see attachDrag) looks up every row sharing that id and moves them together.
+async function groupSelected(){
+  const ids = Array.from(document.querySelectorAll('.item.selected')).map(el => el.dataset.id);
+  if (ids.length < 2){ setStatus('Mindestens 2 Elemente auswählen (Shift+Klick)'); return; }
+  const gid = crypto.randomUUID();
+  const oldGroupIds = ids.map(id => items.get(id)?.row.group_id ?? null);
+  ids.forEach(id => { const rec = items.get(id); if (rec) rec.row.group_id = gid; });
+  await sb.from('whiteboard_items').update({ group_id: gid }).in('id', ids);
+  setStatus('Gruppiert');
+  pushUndo(
+    async ()=> { for (let i=0;i<ids.length;i++){ const rec=items.get(ids[i]); if (rec) rec.row.group_id=oldGroupIds[i]; await sb.from('whiteboard_items').update({group_id: oldGroupIds[i]}).eq('id', ids[i]); } },
+    async ()=> { ids.forEach(id=>{ const rec=items.get(id); if (rec) rec.row.group_id=gid; }); await sb.from('whiteboard_items').update({group_id: gid}).in('id', ids); }
+  );
+}
+async function ungroupSelected(){
+  const selectedIds = Array.from(document.querySelectorAll('.item.selected')).map(el => el.dataset.id);
+  const gids = new Set(selectedIds.map(id => items.get(id)?.row.group_id).filter(Boolean));
+  if (!gids.size){ setStatus('Keine Gruppe ausgewählt'); return; }
+  for (const gid of gids){
+    const memberIds = [];
+    items.forEach(rec => { if (rec.row.group_id === gid) memberIds.push(rec.row.id); });
+    memberIds.forEach(id => { const rec = items.get(id); if (rec) rec.row.group_id = null; });
+    await sb.from('whiteboard_items').update({ group_id: null }).in('id', memberIds);
+    pushUndo(
+      async ()=> { memberIds.forEach(id=>{ const rec=items.get(id); if (rec) rec.row.group_id=gid; }); await sb.from('whiteboard_items').update({group_id: gid}).in('id', memberIds); },
+      async ()=> { memberIds.forEach(id=>{ const rec=items.get(id); if (rec) rec.row.group_id=null; }); await sb.from('whiteboard_items').update({group_id: null}).in('id', memberIds); }
+    );
+  }
+  setStatus('Gruppierung aufgehoben');
+}
+$('#groupBtn').addEventListener('click', groupSelected);
+$('#ungroupBtn').addEventListener('click', ungroupSelected);
+
+async function toggleLockSelected(lock){
+  const ids = Array.from(document.querySelectorAll('.item.selected')).map(el => el.dataset.id);
+  if (!ids.length) return;
+  const prev = ids.map(id => items.get(id)?.row.locked ?? false);
+  ids.forEach(id => { const rec = items.get(id); if (rec){ rec.row.locked = lock; rec.el.classList.toggle('locked', lock); } });
+  await sb.from('whiteboard_items').update({ locked: lock }).in('id', ids);
+  setStatus(lock ? 'Gesperrt' : 'Entsperrt');
+  pushUndo(
+    async ()=> { for (let i=0;i<ids.length;i++){ const rec=items.get(ids[i]); if (rec){ rec.row.locked=prev[i]; rec.el.classList.toggle('locked', prev[i]); } await sb.from('whiteboard_items').update({locked: prev[i]}).eq('id', ids[i]); } },
+    async ()=> { ids.forEach(id=>{ const rec=items.get(id); if (rec){ rec.row.locked=lock; rec.el.classList.toggle('locked', lock); } }); await sb.from('whiteboard_items').update({locked: lock}).in('id', ids); }
+  );
+}
+async function deleteSelected(){
+  const ids = Array.from(document.querySelectorAll('.item.selected')).map(el => el.dataset.id);
+  if (!ids.length) return;
+  if (!confirm(ids.length > 1 ? `${ids.length} Elemente wirklich löschen?` : 'Wirklich löschen?')) return;
+  for (const id of ids) await deleteItemWithUndo(id);
+}
+
+// ---------- CONTEXT MENU (right-click) ----------
+const ctxMenu = $('#ctxmenu');
+function hideCtxMenu(){ ctxMenu.style.display = 'none'; ctxMenu.innerHTML = ''; }
+function showCtxMenu(x, y, menuItems){
+  ctxMenu.innerHTML = '';
+  menuItems.forEach(it => {
+    if (it === '-'){ const sep = document.createElement('div'); sep.className = 'ctx-sep'; ctxMenu.appendChild(sep); return; }
+    const row = document.createElement('div');
+    row.className = 'ctx-item';
+    row.textContent = it.label;
+    row.addEventListener('click', (e)=>{ e.stopPropagation(); hideCtxMenu(); it.action(); });
+    ctxMenu.appendChild(row);
+  });
+  ctxMenu.style.display = 'block';
+  // clamp so the menu never renders off the right/bottom edge of the viewport
+  const menuW = ctxMenu.offsetWidth, menuH = ctxMenu.offsetHeight;
+  ctxMenu.style.left = Math.min(x, window.innerWidth - menuW - 8) + 'px';
+  ctxMenu.style.top = Math.min(y, window.innerHeight - menuH - 8) + 'px';
+}
+// Capture phase + mousedown: fires before any item's own click handler can
+// stopPropagation, so the menu reliably closes on any outside interaction.
+document.addEventListener('mousedown', (e)=>{ if (!e.target.closest('#ctxmenu')) hideCtxMenu(); }, true);
+document.addEventListener('contextmenu', (e)=>{ if (!e.target.closest('.item')) hideCtxMenu(); });
+canvas.addEventListener('contextmenu', (e)=>{
+  const itemEl = e.target.closest('.item');
+  if (!itemEl) return;
+  e.preventDefault();
+  if (mode !== 'select') setMode('select');
+  const rec = items.get(itemEl.dataset.id);
+  if (!rec) return;
+  if (!itemEl.classList.contains('selected')){
+    document.querySelectorAll('.item.selected').forEach(x=>x.classList.remove('selected'));
+    if (rec.row.group_id){
+      items.forEach(r => { if (r.row.group_id === rec.row.group_id) r.el.classList.add('selected'); });
+    } else {
+      itemEl.classList.add('selected');
+    }
+  }
+  const selectedEls = Array.from(document.querySelectorAll('.item.selected'));
+  const selectedIds = selectedEls.map(el => el.dataset.id);
+  const allLocked = selectedEls.every(el => el.classList.contains('locked'));
+  const anyGrouped = selectedIds.some(id => items.get(id)?.row.group_id);
+  const menuItems = [];
+  if (selectedIds.length >= 2) menuItems.push({ label: 'Gruppieren', action: groupSelected });
+  if (anyGrouped) menuItems.push({ label: 'Gruppierung aufheben', action: ungroupSelected });
+  if (menuItems.length) menuItems.push('-');
+  menuItems.push({ label: allLocked ? 'Entsperren' : 'Sperren', action: ()=> toggleLockSelected(!allLocked) });
+  menuItems.push('-');
+  menuItems.push({ label: selectedIds.length > 1 ? (selectedIds.length + ' Elemente löschen') : 'Löschen', action: deleteSelected });
+  showCtxMenu(e.clientX, e.clientY, menuItems);
+});
+
+// ---------- AUTH ----------
+$('#loginForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  $('#loginErr').textContent = '';
+  const email = $('#email').value.trim();
+  const password = $('#password').value;
+  const { error } = await sb.auth.signInWithPassword({ email, password });
+  if (error) { $('#loginErr').textContent = error.message; return; }
+  // boot() runs from onAuthStateChange below once the SIGNED_IN event fires —
+  // do not also call it here, or two concurrent loads race and duplicate/blank cards.
+});
+
+$('#logoutBtn').addEventListener('click', async ()=>{
+  await sb.auth.signOut();
+  location.reload();
+});
+
+let booting = false;
+async function boot(){
+  if (booting) return; // guard: onAuthStateChange can fire more than once per sign-in
+  booting = true;
+  try {
+    const { data: { session } } = await sb.auth.getSession();
+    if (!session) { $('#login').style.display='flex'; return; }
+    $('#login').style.display='none';
+    $('#toolbar').style.display='flex';
+    viewport.style.display='block';
+    layoutViewport();
+    await loadBoards();
+  } finally {
+    booting = false;
+  }
+}
+
+// ---------- BOARDS ----------
+async function loadBoards(){
+  const { data, error } = await sb.from('whiteboards').select('*').order('created_at');
+  if (error) { setStatus('Fehler: ' + error.message); return; }
+  const sel = $('#boardSelect');
+  sel.innerHTML = '';
+  (data||[]).forEach(b=>{
+    const opt = document.createElement('option');
+    opt.value = b.id; opt.textContent = b.title;
+    sel.appendChild(opt);
+  });
+  if (!data || data.length===0){
+    setStatus('Kein Board vorhanden.');
+    return;
+  }
+  sel.value = data[0].id;
+  await openBoard(sel.value);
+}
+$('#boardSelect').addEventListener('change', (e)=> openBoard(e.target.value));
+
+let loadToken = 0;
+async function openBoard(boardId){
+  const myToken = ++loadToken; // guard: ignore this call's result if a newer openBoard started meanwhile
+  currentBoardId = boardId;
+  setStatus('Lade…');
+  const { data, error } = await sb.from('whiteboard_items').select('*').eq('board_id', boardId).order('z');
+  if (myToken !== loadToken) return; // a newer load has since started — don't render stale data
+  canvas.innerHTML = '';
+  items.clear();
+  undoStack = []; redoStack = []; // scoped to the previous board's items — stale across a switch
+  if (error) { setStatus('Fehler: ' + error.message); return; }
+  // frames first (already ordered by z, but ensure frames render under cards)
+  (data||[]).sort((a,b)=> (a.type==='frame'?0:1) - (b.type==='frame'?0:1)).forEach(renderItem);
+  setStatus('Gespeichert');
+  subscribeRealtime(boardId);
+}
+
+function subscribeRealtime(boardId){
+  if (channel) sb.removeChannel(channel);
+  channel = sb.channel('wb-'+boardId)
+    .on('postgres_changes', {event:'*', schema:'public', table:'whiteboard_items', filter:'board_id=eq.'+boardId}, (payload)=>{
+      if (payload.eventType==='DELETE'){
+        const rec = items.get(payload.old.id);
+        if (rec){ rec.el.remove(); items.delete(payload.old.id); }
+        return;
+      }
+      const row = payload.new;
+      if (row._localEcho) return;
+      const rec = items.get(row.id);
+      if (rec){
+        applyRowToEl(row, rec.el);
+        rec.row = row;
+      } else {
+        renderItem(row);
+      }
+    })
+    .subscribe();
+}
+
+// ---------- RENDER ----------
+function renderItem(row){
+  const el = document.createElement('div');
+  el.className = 'item ' + row.type + ' color-' + row.color + (row.locked ? ' locked' : '');
+  el.dataset.id = row.id;
+  positionEl(row, el);
+
+  if (row.type === 'draw'){
+    renderDrawItem(row, el);
+    canvas.appendChild(el);
+    items.set(row.id, { row, el });
+    return;
+  }
+
+  if (row.type === 'image'){
+    renderImageItem(row, el);
+    canvas.appendChild(el);
+    items.set(row.id, { row, el });
+    return;
+  }
+
+  if (row.type === 'frame'){
+    const head = document.createElement('div');
+    head.className = 'frame-head';
+    head.contentEditable = 'false';
+    head.textContent = row.content || 'Neuer Frame';
+    el.appendChild(head);
+    head.addEventListener('dblclick', (e)=>{ if (mode !== 'select') return; e.stopPropagation(); startEdit(head, row, el); });
+    attachDrag(el, head, row);
+  } else {
+    el.contentEditable = 'false';
+    el.textContent = row.content || '';
+    el.addEventListener('dblclick', (e)=>{ if (mode !== 'select') return; e.stopPropagation(); startEdit(el, row, el); });
+    attachDrag(el, el, row);
+  }
+
+  const del = document.createElement('div');
+  del.className = 'del'; del.textContent = '×';
+  del.title = 'Löschen';
+  del.addEventListener('click', async (e)=>{
+    e.stopPropagation();
+    if (!confirm('Wirklich löschen?')) return;
+    await deleteItemWithUndo(row.id);
+  });
+  el.appendChild(del);
+
+  const palette = document.createElement('div');
+  palette.className = 'palette';
+  ['yellow','blue','green','red','purple','orange','gray','black','white'].forEach(c=>{
+    const sw = document.createElement('div');
+    sw.className = 'swatch color-' + c;
+    sw.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      const oldColor = row.color;
+      if (oldColor === c) return;
+      row.color = c;
+      el.className = 'item ' + row.type + ' color-' + c + ' selected';
+      persist(row.id, { color: c });
+      pushUndo(
+        async ()=> { const rec = items.get(row.id); if (!rec) return; rec.row.color = oldColor; rec.el.className = 'item ' + rec.row.type + ' color-' + oldColor + (rec.el.classList.contains('selected') ? ' selected' : ''); persist(row.id, { color: oldColor }); },
+        async ()=> { const rec = items.get(row.id); if (!rec) return; rec.row.color = c; rec.el.className = 'item ' + rec.row.type + ' color-' + c + (rec.el.classList.contains('selected') ? ' selected' : ''); persist(row.id, { color: c }); }
+      );
+    });
+    palette.appendChild(sw);
+  });
+  el.appendChild(palette);
+
+  el.addEventListener('click', (e)=>{
+    if (mode !== 'select') return;
+    e.stopPropagation();
+    if (e.shiftKey){
+      el.classList.toggle('selected'); // shift-click always toggles the single item, regardless of group
+      return;
+    }
+    document.querySelectorAll('.item.selected').forEach(x=> x.classList.remove('selected'));
+    if (row.group_id){
+      items.forEach(rec => { if (rec.row.group_id === row.group_id) rec.el.classList.add('selected'); });
+    } else {
+      el.classList.add('selected');
+    }
+  });
+
+  const rh = document.createElement('div');
+  rh.className = 'resize';
+  rh.addEventListener('mousedown', (e)=> { if (mode !== 'select' || row.locked) return; startResize(e, row, el); });
+  el.appendChild(rh);
+
+  canvas.appendChild(el);
+  items.set(row.id, { row, el });
+}
+
+function renderDrawItem(row, el){
+  el.style.background = 'transparent';
+  el.style.cursor = 'move';
+  let points = [], strokeWidth = 3;
+  try { const d = JSON.parse(row.content || '{}'); points = d.points || []; strokeWidth = d.width || 3; } catch(e){}
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('width', '100%'); svg.setAttribute('height', '100%');
+  svg.style.display = 'block'; svg.style.overflow = 'visible';
+  const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  path.setAttribute('d', pointsToPath(points));
+  path.setAttribute('fill', 'none');
+  path.setAttribute('stroke', STROKE_COLORS[row.color] || '#000');
+  path.setAttribute('stroke-width', strokeWidth);
+  path.setAttribute('stroke-linecap', 'round');
+  path.setAttribute('stroke-linejoin', 'round');
+  svg.appendChild(path);
+  el.appendChild(svg);
+  attachDrag(el, el, row);
+
+  const del = document.createElement('div');
+  del.className = 'del'; del.textContent = '×';
+  del.title = 'Löschen';
+  del.addEventListener('click', async (e)=>{ e.stopPropagation(); await deleteItemWithUndo(row.id); });
+  el.appendChild(del);
+}
+
+function renderImageItem(row, el){
+  el.style.background = 'var(--paper)';
+  const img = document.createElement('img');
+  img.src = row.content;
+  img.draggable = false;
+  img.style.width = '100%'; img.style.height = '100%'; img.style.display = 'block'; img.style.objectFit = 'contain'; img.style.pointerEvents = 'none';
+  el.appendChild(img);
+  attachDrag(el, el, row);
+
+  const del = document.createElement('div');
+  del.className = 'del'; del.textContent = '×';
+  del.title = 'Löschen';
+  del.addEventListener('click', async (e)=>{ e.stopPropagation(); if (!confirm('Wirklich löschen?')) return; await deleteItemWithUndo(row.id); });
+  el.appendChild(del);
+
+  const rh = document.createElement('div');
+  rh.className = 'resize';
+  rh.addEventListener('mousedown', (e)=>{ if (mode !== 'select' || row.locked) return; startResize(e, row, el); });
+  el.appendChild(rh);
+}
+
+function positionEl(row, el){
+  el.style.left = row.x + 'px';
+  el.style.top = row.y + 'px';
+  el.style.width = row.w + 'px';
+  el.style.height = row.h + 'px';
+  el.style.zIndex = row.type === 'frame' ? 1 : (row.type === 'draw' ? 20 : 10);
+}
+
+function applyRowToEl(row, el){
+  positionEl(row, el);
+  el.classList.toggle('locked', !!row.locked);
+  if (row.type === 'draw' || row.type === 'image') return; // static content once created — only position/undo touch it, and a textContent write would wipe the child element
+  el.className = 'item ' + row.type + ' color-' + row.color + (el.classList.contains('selected') ? ' selected' : '') + (row.locked ? ' locked' : '');
+  const target = row.type === 'frame' ? el.querySelector('.frame-head') : el;
+  if (target && document.activeElement !== target) target.textContent = row.content;
+}
+
+function startEdit(target, row, el){
+  target.contentEditable = 'true';
+  target.focus();
+  // No forced select-all here: a double-click already places/selects at the
+  // clicked word natively, so the cursor lands where the user clicked.
+  const oldContent = row.content;
+  const finish = ()=>{
+    target.contentEditable = 'false';
+    target.removeEventListener('blur', finish);
+    const newContent = target.textContent;
+    row.content = newContent;
+    persist(row.id, { content: newContent });
+    if (newContent !== oldContent){
+      pushUndo(
+        async ()=> { const rec = items.get(row.id); if (!rec) return; rec.row.content = oldContent; const t = rec.row.type === 'frame' ? rec.el.querySelector('.frame-head') : rec.el; if (t) t.textContent = oldContent; persist(row.id, { content: oldContent }); },
+        async ()=> { const rec = items.get(row.id); if (!rec) return; rec.row.content = newContent; const t = rec.row.type === 'frame' ? rec.el.querySelector('.frame-head') : rec.el; if (t) t.textContent = newContent; persist(row.id, { content: newContent }); }
+      );
+    }
+  };
+  target.addEventListener('blur', finish);
+  target.addEventListener('keydown', (e)=>{ if (e.key==='Enter' && !e.shiftKey && row.type!=='frame'){ e.preventDefault(); target.blur(); } if (e.key==='Escape'){ target.blur(); } });
+}
+
+// ---------- DRAG ----------
+let drag = null;
+function attachDrag(el, handle, row){
+  handle.addEventListener('mousedown', (e)=>{
+    if (e.button !== 0) return; // middle button pans (viewport handler), right button opens the menu
+    if (mode !== 'select' || row.locked) return;
+    if (el.querySelector('[contenteditable="true"]')) return;
+    if (e.target.classList.contains('resize') || e.target.classList.contains('del') || e.target.classList.contains('swatch')) return;
+    e.preventDefault();
+    let members = [{ id: row.id, el, origX: parseFloat(el.style.left), origY: parseFloat(el.style.top) }];
+    if (row.group_id){
+      members = [];
+      items.forEach(rec => {
+        if (rec.row.group_id === row.group_id && !rec.row.locked){
+          members.push({ id: rec.row.id, el: rec.el, origX: parseFloat(rec.el.style.left), origY: parseFloat(rec.el.style.top) });
+        }
+      });
+    }
+    drag = { members, startX: e.clientX, startY: e.clientY };
+  });
+}
+document.addEventListener('mousemove', (e)=>{
+  if (stroke){
+    stroke.points.push(canvasPointFromEvent(e));
+    renderLiveStroke(stroke);
+  } else if (erasing){
+    eraseAt(e);
+  } else if (marquee){
+    const rect = viewport.getBoundingClientRect();
+    marquee.curX = e.clientX - rect.left; marquee.curY = e.clientY - rect.top;
+    updateMarqueeBox();
+  } else if (drag){
+    const dx = (e.clientX - drag.startX) / zoom;
+    const dy = (e.clientY - drag.startY) / zoom;
+    drag.members.forEach(m => { m.el.style.left = (m.origX + dx) + 'px'; m.el.style.top = (m.origY + dy) + 'px'; });
+  } else if (resize){
+    const dx = (e.clientX - resize.startX) / zoom;
+    const dy = (e.clientY - resize.startY) / zoom;
+    resize.el.style.width = Math.max(80, resize.origW + dx) + 'px';
+    resize.el.style.height = Math.max(50, resize.origH + dy) + 'px';
+  } else if (panning){
+    panX = panning.origPanX + (e.clientX - panning.startX);
+    panY = panning.origPanY + (e.clientY - panning.startY);
+    applyTransform();
+  }
+});
+document.addEventListener('mouseup', (e)=>{
+  if (stroke){ finishStroke(stroke); stroke = null; }
+  erasing = false;
+  if (marquee){ finishMarquee(); }
+  if (drag){
+    const moved = drag.members.map(m => ({
+      id: m.id, oldX: m.origX, oldY: m.origY,
+      newX: parseFloat(m.el.style.left), newY: parseFloat(m.el.style.top)
+    })).filter(m => m.oldX !== m.newX || m.oldY !== m.newY);
+    if (moved.length){
+      moved.forEach(m => persist(m.id, { x: m.newX, y: m.newY }));
+      pushUndo(
+        async ()=> { moved.forEach(m => { const rec = items.get(m.id); if (rec){ rec.el.style.left = m.oldX+'px'; rec.el.style.top = m.oldY+'px'; persist(m.id, { x: m.oldX, y: m.oldY }); } }); },
+        async ()=> { moved.forEach(m => { const rec = items.get(m.id); if (rec){ rec.el.style.left = m.newX+'px'; rec.el.style.top = m.newY+'px'; persist(m.id, { x: m.newX, y: m.newY }); } }); }
+      );
+    }
+    drag = null;
+  }
+  if (resize){
+    const id = resize.id, oldW = resize.origW, oldH = resize.origH;
+    const newW = parseFloat(resize.el.style.width), newH = parseFloat(resize.el.style.height);
+    if (oldW !== newW || oldH !== newH){
+      persist(id, { w: newW, h: newH });
+      pushUndo(
+        async ()=> { const rec = items.get(id); if (!rec) return; rec.el.style.width = oldW+'px'; rec.el.style.height = oldH+'px'; persist(id, { w: oldW, h: oldH }); },
+        async ()=> { const rec = items.get(id); if (!rec) return; rec.el.style.width = newW+'px'; rec.el.style.height = newH+'px'; persist(id, { w: newW, h: newH }); }
+      );
+    }
+    resize = null;
+  }
+  if (panning){ panning = null; viewport.classList.remove('panning'); canvas.classList.remove('no-transition'); }
+});
+
+let resize = null;
+function startResize(e, row, el){
+  e.preventDefault(); e.stopPropagation();
+  resize = { id: row.id, el, startX: e.clientX, startY: e.clientY, origW: parseFloat(el.style.width), origH: parseFloat(el.style.height) };
+}
+
+// ---------- DRAW / ERASE ----------
+let stroke = null;   // {points:[[cx,cy],...], color} while a pen stroke is in progress
+let erasing = false;
+let liveStrokeEl = null;
+function canvasPointFromEvent(e){
+  const rect = viewport.getBoundingClientRect();
+  const sx = e.clientX - rect.left, sy = e.clientY - rect.top;
+  return [ (sx - panX) / zoom, (sy - panY) / zoom ];
+}
+function pointsToPath(points){
+  return points.map((p,i)=> (i===0?'M':'L') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
+}
+function renderLiveStroke(s){
+  if (!liveStrokeEl){
+    liveStrokeEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    liveStrokeEl.style.position = 'absolute'; liveStrokeEl.style.left = '0'; liveStrokeEl.style.top = '0';
+    liveStrokeEl.style.overflow = 'visible'; liveStrokeEl.style.pointerEvents = 'none'; liveStrokeEl.style.zIndex = '1000';
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('fill', 'none'); path.setAttribute('stroke-linecap', 'round'); path.setAttribute('stroke-linejoin', 'round');
+    liveStrokeEl.appendChild(path);
+    canvas.appendChild(liveStrokeEl);
+  }
+  const path = liveStrokeEl.querySelector('path');
+  path.setAttribute('d', pointsToPath(s.points));
+  path.setAttribute('stroke', STROKE_COLORS[s.color] || '#000');
+  path.setAttribute('stroke-width', 3);
+}
+async function finishStroke(s){
+  if (liveStrokeEl){ liveStrokeEl.remove(); liveStrokeEl = null; }
+  if (s.points.length < 2) return; // accidental click, not a stroke
+  const xs = s.points.map(p=>p[0]), ys = s.points.map(p=>p[1]);
+  const pad = 6; // breathing room around the stroke's own bounding box
+  const x = Math.min(...xs) - pad, y = Math.min(...ys) - pad;
+  const w = (Math.max(...xs) - Math.min(...xs)) + pad*2, h = (Math.max(...ys) - Math.min(...ys)) + pad*2;
+  const relPoints = s.points.map(p => [p[0]-x, p[1]-y]);
+  const content = JSON.stringify({ points: relPoints, width: 3 });
+  const data = await insertItem({ type:'draw', x, y, w, h, color: s.color, content });
+}
+function eraseAt(e){
+  const el = document.elementFromPoint(e.clientX, e.clientY);
+  const itemEl = el && el.closest ? el.closest('.item.draw') : null;
+  if (itemEl) deleteItemWithUndo(itemEl.dataset.id);
+}
+
+// ---------- MARQUEE SELECT ----------
+// The default behavior of a plain click-drag on empty space (canvas or a
+// frame's background) — like every other whiteboard tool. No mode to toggle.
+let marquee = null;
+let marqueeEl = null;
+let suppressNextClick = false; // swallow the native click that trails a drag, so it can't re-collapse the marquee selection
+viewport.addEventListener('click', (e)=>{
+  if (suppressNextClick){ suppressNextClick = false; e.stopPropagation(); e.preventDefault(); }
+}, true);
+function isDragHandle(target){
+  // anything that is itself a drag handle for an item (see attachDrag calls) —
+  // starting a drag there moves that item instead of opening a selection box.
+  return !!target.closest('.frame-head, .card, .item.draw, .item.image, .resize, .del, .swatch');
+}
+function updateMarqueeBox(){
+  if (!marqueeEl){
+    marqueeEl = document.createElement('div');
+    marqueeEl.className = 'marquee-box';
+    viewport.appendChild(marqueeEl);
+  }
+  const x = Math.min(marquee.startX, marquee.curX), y = Math.min(marquee.startY, marquee.curY);
+  const w = Math.abs(marquee.curX - marquee.startX), h = Math.abs(marquee.curY - marquee.startY);
+  marqueeEl.style.left = x+'px'; marqueeEl.style.top = y+'px';
+  marqueeEl.style.width = w+'px'; marqueeEl.style.height = h+'px';
+}
+function finishMarquee(){
+  if (marqueeEl){ marqueeEl.remove(); marqueeEl = null; }
+  if (!marquee) return;
+  const x0 = Math.min(marquee.startX, marquee.curX), x1 = Math.max(marquee.startX, marquee.curX);
+  const y0 = Math.min(marquee.startY, marquee.curY), y1 = Math.max(marquee.startY, marquee.curY);
+  const wasRealDrag = (x1 - x0 > 3 || y1 - y0 > 3); // ignore a near-zero drag (plain click on empty space)
+  document.querySelectorAll('.item.selected').forEach(x=>x.classList.remove('selected')); // both cases start from a clean selection
+  if (wasRealDrag){
+    const cx0 = (x0 - panX) / zoom, cy0 = (y0 - panY) / zoom;
+    const cx1 = (x1 - panX) / zoom, cy1 = (y1 - panY) / zoom;
+    items.forEach(rec => {
+      const r = rec.row;
+      if (r.type === 'frame') return; // selecting the giant background frame is never the intent
+      const ix0 = parseFloat(r.x), iy0 = parseFloat(r.y), ix1 = ix0 + parseFloat(r.w), iy1 = iy0 + parseFloat(r.h);
+      if (ix0 < cx1 && ix1 > cx0 && iy0 < cy1 && iy1 > cy0) rec.el.classList.add('selected');
+    });
+    suppressNextClick = true;
+  }
+  marquee = null;
+}
+function setMode(m){
+  mode = m;
+  viewport.classList.remove('mode-draw', 'mode-erase');
+  $('#drawBtn').classList.toggle('tool-active', m === 'draw');
+  $('#eraseBtn').classList.toggle('tool-active', m === 'erase');
+  if (m === 'draw') viewport.classList.add('mode-draw');
+  if (m === 'erase') viewport.classList.add('mode-erase');
+}
+$('#drawBtn').addEventListener('click', ()=> setMode(mode === 'draw' ? 'select' : 'draw'));
+$('#eraseBtn').addEventListener('click', ()=> setMode(mode === 'erase' ? 'select' : 'erase'));
+$('#drawColorSelect').addEventListener('change', (e)=> drawColor = e.target.value);
+
+// ---------- PAN / ZOOM ----------
+// Panning is its own explicit gesture — held Space + drag (like every design
+// tool) or a two-finger trackpad swipe (see the wheel handler below) — so it
+// never fights with a plain click-drag, which always means "select".
+let spaceHeld = false;
+document.addEventListener('keydown', (e)=>{
+  if (document.activeElement && document.activeElement.isContentEditable) return;
+  if (e.code === 'Space' && !spaceHeld){ e.preventDefault(); spaceHeld = true; viewport.classList.add('space-pan'); }
+});
+document.addEventListener('keyup', (e)=>{
+  if (e.code === 'Space'){ spaceHeld = false; viewport.classList.remove('space-pan'); }
+});
+
+let panning = null;
+viewport.addEventListener('mousedown', (e)=>{
+  if (e.button === 1){
+    // middle mouse button drag = pan, like Figma/Miro; works on empty space and on items
+    e.preventDefault();
+    canvas.classList.add('no-transition');
+    panning = { startX: e.clientX, startY: e.clientY, origPanX: panX, origPanY: panY };
+    viewport.classList.add('panning');
+    return;
+  }
+  if (e.button !== 0) return; // right button: context menu only
+  if (mode === 'draw'){
+    e.preventDefault(); e.stopPropagation();
+    stroke = { points: [canvasPointFromEvent(e)], color: drawColor };
+    return;
+  }
+  if (mode === 'erase'){
+    e.preventDefault(); e.stopPropagation();
+    erasing = true;
+    eraseAt(e);
+    return;
+  }
+  if (spaceHeld){
+    e.preventDefault();
+    canvas.classList.add('no-transition'); // panning must track the cursor instantly, no easing lag
+    panning = { startX: e.clientX, startY: e.clientY, origPanX: panX, origPanY: panY };
+    viewport.classList.add('panning');
+    return;
+  }
+  if (isDragHandle(e.target)) return; // the item's own attachDrag handles this mousedown
+  e.preventDefault();
+  const rect = viewport.getBoundingClientRect();
+  const sx = e.clientX - rect.left, sy = e.clientY - rect.top;
+  marquee = { startX: sx, startY: sy, curX: sx, curY: sy };
+  updateMarqueeBox();
+});
+
+// Smooth, gentle zoom: each wheel tick nudges a target value; a rAF loop eases
+// the actual zoom toward it, so fast scrolling doesn't jump in big steps.
+// Anchored on the mouse position (or viewport center for the +/- buttons), so
+// the point under the cursor stays put instead of the canvas drifting away.
+let zoomTarget = zoom;
+let zoomRaf = null;
+let zoomAnchor = null;
+function setZoomAnchor(mouseX, mouseY){
+  zoomAnchor = { mouseX, mouseY, canvasX: (mouseX - panX) / zoom, canvasY: (mouseY - panY) / zoom };
+}
+viewport.addEventListener('wheel', (e)=>{
+  if (!e.ctrlKey && !e.metaKey){
+    // plain scroll / two-finger trackpad swipe = pan, exactly like Miro/Figma
+    e.preventDefault();
+    canvas.classList.add('no-transition');
+    const unit = e.deltaMode === 1 ? 16 : (e.deltaMode === 2 ? 400 : 1); // Firefox/Linux report lines or pages, not pixels
+    let dx = e.deltaX * unit, dy = e.deltaY * unit;
+    if (e.shiftKey && dx === 0){ dx = dy; dy = 0; } // Shift + mouse wheel = horizontal pan (mouse has no deltaX)
+    panX -= dx; panY -= dy;
+    applyTransform();
+    return;
+  }
+  e.preventDefault();
+  const rect = viewport.getBoundingClientRect();
+  setZoomAnchor(e.clientX - rect.left, e.clientY - rect.top);
+  const step = e.deltaY > 0 ? -0.035 : 0.035; // slower, finer increments per tick
+  zoomTarget = Math.min(2.5, Math.max(0.1, zoomTarget + step));
+  if (!zoomRaf) zoomRaf = requestAnimationFrame(tickZoom);
+}, { passive:false });
+function tickZoom(){
+  canvas.classList.remove('no-transition');
+  const diff = zoomTarget - zoom;
+  zoom = Math.abs(diff) < 0.001 ? zoomTarget : zoom + diff * 0.22; // ease toward target
+  if (zoomAnchor){ panX = zoomAnchor.mouseX - zoomAnchor.canvasX * zoom; panY = zoomAnchor.mouseY - zoomAnchor.canvasY * zoom; }
+  applyTransform();
+  if (Math.abs(zoomTarget - zoom) < 0.001){ zoomRaf = null; return; }
+  zoomRaf = requestAnimationFrame(tickZoom);
+}
+function applyTransform(){
+  canvas.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
+  $('#zoomlabel').textContent = Math.round(zoom*100) + '%';
+}
+function zoomAtCenter(delta){
+  const rect = viewport.getBoundingClientRect();
+  setZoomAnchor(rect.width/2, rect.height/2);
+  zoomTarget = Math.min(2.5, Math.max(0.1, zoomTarget + delta));
+  if (!zoomRaf) zoomRaf = requestAnimationFrame(tickZoom);
+}
+$('#zoomInBtn').addEventListener('click', ()=> zoomAtCenter(0.1));
+$('#zoomOutBtn').addEventListener('click', ()=> zoomAtCenter(-0.1));
+$('#resetViewBtn').addEventListener('click', ()=>{ zoomAnchor = null; zoom=1; zoomTarget=1; panX=40; panY=210; canvas.classList.remove('no-transition'); applyTransform(); });
+applyTransform();
+
+// ---------- CREATE ----------
+async function withButtonGuard(btn, fn){
+  if (btn.disabled) return; // already inserting — ignore rapid extra clicks
+  btn.disabled = true;
+  try { await fn(); } finally { btn.disabled = false; }
+}
+$('#newFrameBtn').addEventListener('click', ()=> withButtonGuard($('#newFrameBtn'), ()=>
+  insertItem({ type:'frame', x: 40-panX+200, y: 40-panY+150, w: 520, h: 420, color:'purple', content:'Neuer Frame' })
+));
+$('#newCardBtn').addEventListener('click', ()=> withButtonGuard($('#newCardBtn'), ()=>
+  insertItem({ type:'card', x: 40-panX+240, y: 40-panY+220, w: 220, h: 90, color:'yellow', content:'Neue Karte' })
+));
+async function insertItem(fields){
+  const data = await dbInsert(fields);
+  if (!data) return null;
+  pushUndo(
+    async ()=> { await dbDelete(data.id); },
+    async ()=> { await dbInsert(fields, data.id); }
+  );
+  return data;
+}
+
+// ---------- PERSIST ----------
+let saveTimers = {};
+function persist(id, fields){
+  setStatus('Speichere…');
+  clearTimeout(saveTimers[id]);
+  saveTimers[id] = setTimeout(async ()=>{
+    const { error } = await sb.from('whiteboard_items').update(fields).eq('id', id);
+    setStatus(error ? ('Fehler: ' + error.message) : 'Gespeichert');
+  }, 250);
+}
+function setStatus(s){ $('#status').textContent = s; }
+
+// ---------- MOBILE / TOUCH ----------
+// Touch is translated into the existing mouse logic: one finger on a card/frame
+// head = move it (drag code), one finger on empty space = pan, two fingers =
+// pinch zoom + pan, tap = click, double tap = edit, long press = context menu.
+function layoutViewport(){ viewport.style.top = $('#toolbar').offsetHeight + 'px'; }
+window.addEventListener('resize', layoutViewport);
+(function(){
+  let t1 = null;          // {id, x, y, target, startX, startY, moved, panMode}
+  let pinch = null;       // {dist, midX, midY, zoom0, canvasX, canvasY}
+  let lpTimer = null, longPressed = false;
+  let lastTap = { t: 0, x: 0, y: 0 };
+  const mouseEv = (type, x, y, target, extra={}) =>
+    (target || document).dispatchEvent(new MouseEvent(type, { bubbles:true, cancelable:true, clientX:x, clientY:y, button:0, buttons:1, ...extra }));
+  const touchById = (list, id) => { for (const t of list) if (t.identifier === id) return t; return null; };
+  const inEditor = (el) => !!(el && el.closest && el.closest('[contenteditable="true"]'));
+  function clearLp(){ if (lpTimer){ clearTimeout(lpTimer); lpTimer = null; } }
+  function endSingle(){
+    if (!t1) return;
+    if (t1.panMode){ document.dispatchEvent(new MouseEvent('mouseup', { bubbles:true, clientX:t1.x, clientY:t1.y })); }
+    else mouseEv('mouseup', t1.x, t1.y, document);
+    t1 = null;
+  }
+  viewport.addEventListener('touchstart', (e)=>{
+    if (inEditor(e.target)) return; // typing in a card: keep native behaviour (keyboard, caret)
+    if (e.touches.length === 1){
+      const t = e.touches[0];
+      e.preventDefault();
+      longPressed = false;
+      const target = e.target;
+      const onHandle = isDragHandle(target) || mode !== 'select';
+      t1 = { id: t.identifier, x: t.clientX, y: t.clientY, startX: t.clientX, startY: t.clientY, target, moved:false, panMode: !onHandle };
+      if (onHandle){
+        mouseEv('mousedown', t.clientX, t.clientY, target);   // starts item drag / resize / draw / erase
+      } else {
+        spaceHeld = true; mouseEv('mousedown', t.clientX, t.clientY, target); spaceHeld = false; // starts pan
+      }
+      clearLp();
+      lpTimer = setTimeout(()=>{
+        if (!t1 || t1.moved) return;
+        longPressed = true;
+        endSingle();
+        const el = target.closest && target.closest('.item');
+        if (el) el.dispatchEvent(new MouseEvent('contextmenu', { bubbles:true, cancelable:true, clientX:t.clientX, clientY:t.clientY }));
+      }, 550);
+    } else if (e.touches.length === 2){
+      e.preventDefault();
+      clearLp();
+      endSingle(); // a second finger ends any drag/pan cleanly (position persists if it moved)
+      hideCtxMenu();
+      const a = e.touches[0], b = e.touches[1];
+      const rect = viewport.getBoundingClientRect();
+      const midX = (a.clientX + b.clientX)/2 - rect.left, midY = (a.clientY + b.clientY)/2 - rect.top;
+      pinch = { dist: Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY), zoom0: zoom,
+                canvasX: (midX - panX)/zoom, canvasY: (midY - panY)/zoom };
+      canvas.classList.add('no-transition');
+    }
+  }, { passive:false });
+  viewport.addEventListener('touchmove', (e)=>{
+    if (pinch && e.touches.length >= 2){
+      e.preventDefault();
+      const a = e.touches[0], b = e.touches[1];
+      const rect = viewport.getBoundingClientRect();
+      const midX = (a.clientX + b.clientX)/2 - rect.left, midY = (a.clientY + b.clientY)/2 - rect.top;
+      const d = Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY);
+      zoom = Math.min(2.5, Math.max(0.1, pinch.zoom0 * d / pinch.dist));
+      zoomTarget = zoom; zoomAnchor = null;
+      panX = midX - pinch.canvasX * zoom; panY = midY - pinch.canvasY * zoom;
+      applyTransform();
+      return;
+    }
+    if (!t1) return;
+    const t = touchById(e.touches, t1.id); if (!t) return;
+    e.preventDefault();
+    t1.x = t.clientX; t1.y = t.clientY;
+    if (!t1.moved && Math.hypot(t.clientX - t1.startX, t.clientY - t1.startY) > 8){ t1.moved = true; clearLp(); }
+    if (t1.moved) mouseEv('mousemove', t.clientX, t.clientY, document);
+  }, { passive:false });
+  function onTouchEnd(e){
+    if (pinch){
+      if (e.touches.length < 2){ pinch = null; canvas.classList.remove('no-transition'); }
+      if (e.touches.length === 0) t1 = null;
+      return;
+    }
+    if (!t1) return;
+    if (touchById(e.touches, t1.id)) return; // our finger is still down
+    e.preventDefault();
+    clearLp();
+    const { x, y, target, moved } = t1;
+    endSingle();
+    if (moved || longPressed || e.type === 'touchcancel') return;
+    // tap → click, two quick taps → dblclick (edit)
+    const now = Date.now();
+    const dbl = (now - lastTap.t < 350) && Math.hypot(x - lastTap.x, y - lastTap.y) < 20;
+    mouseEv('click', x, y, target, { buttons:0 });
+    if (dbl){ mouseEv('dblclick', x, y, target, { buttons:0 }); lastTap = { t:0, x:0, y:0 }; }
+    else lastTap = { t: now, x, y };
+  }
+  viewport.addEventListener('touchend', onTouchEnd, { passive:false });
+  viewport.addEventListener('touchcancel', onTouchEnd, { passive:false });
+})();
+
+// ---------- INIT ----------
+sb.auth.onAuthStateChange((event, session)=>{ if (event==='SIGNED_IN') boot(); });
+boot();
+</script>
+</body>
+</html>

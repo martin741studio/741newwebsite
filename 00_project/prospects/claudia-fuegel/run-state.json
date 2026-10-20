@@ -1,0 +1,43 @@
+{
+ "slug": "claudia-fuegel",
+ "steps": {
+  "intake": {
+   "agent": "orchestrator",
+   "status": "done",
+   "at": "2026-10-16T13:37",
+   "outputs": [
+    "intake.md",
+    "intake.json",
+    "browser-queue.jsonl"
+   ],
+   "blockers": []
+  },
+  "demand": {
+   "agent": "A",
+   "status": "waiting"
+  },
+  "site": {
+   "agent": "B",
+   "status": "waiting"
+  },
+  "homepage": {
+   "agent": "C",
+   "status": "waiting"
+  },
+  "scan": {
+   "agent": "D",
+   "status": "done",
+   "at": "2026-10-16T14:12:59.582356",
+   "keyword": "astrologie stuttgart",
+   "report_key": "6ab0269fea7c8e3",
+   "solv": 18.37,
+   "found_in": 35,
+   "credits": 49,
+   "outputs": [
+    "evidence/falcon-report-6ab0269fea7c8e3.json",
+    "../../04_site/public/review-assets/claudia-fuegel/scan-grid.webp",
+    "competitors.md"
+   ]
+  }
+ }
+}

@@ -1,0 +1,47 @@
+{
+  "client": "Rabenmütter Shop",
+  "page": "rabenmuetter-seitenbaum-2026-08 / 2 · Trauerkarten (Pillar)",
+  "mode": "FEEDBACK",
+  "feedback_id": "801d4d7d-1a22-4d45-a08e-e0b213dff2ec",
+  "input_file": "feedback/Rabenmütter Shop/801d4d7d-1a22-4d45-a08e-e0b213dff2ec.md",
+  "pass": true,
+  "hard_checks": {
+    "no_fehlt_in_core_fields": {
+      "applicable": false,
+      "note": "FEEDBACK item, no Title/Meta/H1/NAP block/JSON-LD core fields exist. The [fehlt: ...] tags in the draft (which of the two handwriting models was in the original proposal; who writes it; time and surcharge per order) sit in body/next-step prose, not in a required core field, so this check does not block."
+    },
+    "nap_match": {
+      "applicable": false,
+      "note": "No NAP block in this draft. Rabenmütter Shop is an online shop (Trauerkarten), not a LocalBusiness page, and per plan.json notes is not in context.json.nap_locked."
+    },
+    "jsonld_valid": {
+      "applicable": false,
+      "note": "No JSON-LD in this feedback draft (not a page spec/audit)."
+    },
+    "language_match": {
+      "pass": true,
+      "note": "Draft is written in German throughout; plan item market_lang = de. Match."
+    },
+    "hwg_scan": {
+      "pass": true,
+      "note": "Content is e-commerce product/fulfilment logistics for greeting cards. Not a health client and no health/outcome claims of any kind in the draft."
+    },
+    "verbatim_kunde_sagt": {
+      "pass": true,
+      "note": "Quoted comment and timestamp (30.08.2026, 16:38) checked word-for-word against context.json.feedback_open id 801d4d7d-... (created_at 2026-08-30T16:38:38+00:00) — exact match, correctly localised date format, nothing altered or invented."
+    },
+    "rubric_or_feedback_check": {
+      "pass": true,
+      "note": "FEEDBACK mode: 8-dim rubric skipped per SKILL.md; checked sentence-for-sentence against 'Kunde sagt'. (1) 'vielen Dank - super, super Vorschläge' -> read correctly as approval of the whole pillar-section proposal, logged as 'Zustimmung ... vermerken, keine inhaltliche Änderung am Seitenbaum nötig'. (2) 'auch die Idee die Karte handschriftlich schreiben zu lassen' -> identified as the one open sub-point inside the otherwise-accepted proposal. (3) 'noch habe ich keine Idee wie das umgesetzt aussehen könnte' -> answered directly with two concrete, mutually exclusive implementation models (A: handwriting-style font, digitally set; B: a real person writing by hand), each with its trade-off (speed/cost vs. differentiation/time). (4) 'aber das kannst du mir bestimmt erklären' -> the explanation itself is the deliverable of the Vorschlag section. Every sentence in the comment is addressed; the draft correctly flags what it cannot know from the available material ([fehlt: welches Modell im Original-Vorschlag stand]) instead of guessing which model the original pillar spec meant, and lists concrete follow-up questions (who writes it, time per order, surcharge, UI placement) before recommending any reply to the client. Nothing is invented."
+    },
+    "deslop": {
+      "applicable": false,
+      "note": "The Vorschlag is explicitly framed as an internal recommendation to Martin ('Nächster Schritt (braucht Martin)': confirm model A/B, clarify open points, 'danach eine kurze, konkrete Erklärung an die Kundin schicken (kein SEO-Text, direkte Antwort auf ihre Frage)') — it is not itself the client-facing reply and not new prose meant to ship as-is. Per SKILL.md this is not a deslop blocker; not run."
+    }
+  },
+  "format_notes": [
+    "Diff-Hinweis spans ~5 lines (plus a same-night continuity note) rather than the SKILL.md 'one line' guidance. Not one of the six hard checks or the FEEDBACK sentence-for-sentence criterion, and the content itself is accurate and non-blocking, so this is noted but does not fail the item."
+  ],
+  "fails": [],
+  "scores": null
+}

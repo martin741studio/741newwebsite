@@ -1,0 +1,3033 @@
+{
+ "run": "stuerzl-2026-10-11-scan",
+ "area": "E",
+ "collected_at": "2026-10-11T05:36:00+02:00",
+ "method": "Content links only: links inside #sp-component (Joomla main content area). Header menu, off-canvas menu and footer are excluded. The 9-link block that is repeated on all 25 service-tree pages (9 areas + 16 sub pages) is counted but flagged 'via_repeated_block' because it is boilerplate, not a contextual link. Parents come from the URL path and the Leistungen hub (menu has no dropdown). Anchors are derived from page names and need a human edit. Targets are existing 200 pages only.",
+ "hard_rules": [
+  "Nothing is changed in this scan (read only)",
+  "Edits to SP Page Builder content need Joomla Super User (741 account is Administrator only: SP Page Builder and Global Config blocked)",
+  "No new pages are invented as link targets; a Munich location page does not exist and is a decision, not a link target",
+  "Law firm: anchors stay factual (BORA, UWG); no client or case names (§203 StGB)"
+ ],
+ "home_missing_links_to_hubs": [
+  {
+   "from": "/",
+   "to": "/index.php/arbeitsstrafrecht",
+   "anchor_proposal": "Arbeitsstrafrecht",
+   "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+   "type": "home_to_service",
+   "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+  },
+  {
+   "from": "/",
+   "to": "/index.php/korruptionsstrafrecht",
+   "anchor_proposal": "Korruptionsstrafrecht",
+   "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+   "type": "home_to_service",
+   "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+  },
+  {
+   "from": "/",
+   "to": "/index.php/ordnungswidrigkeiten",
+   "anchor_proposal": "Ordnungswidrigkeiten",
+   "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+   "type": "home_to_service",
+   "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+  },
+  {
+   "from": "/",
+   "to": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+   "anchor_proposal": "Selbstanzeigen und steuerliche Korrekturen",
+   "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+   "type": "home_to_service",
+   "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+  },
+  {
+   "from": "/",
+   "to": "/index.php/sonstiges-wirtschaftsstrafrecht",
+   "anchor_proposal": "Sonstiges Wirtschaftsstrafrecht",
+   "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+   "type": "home_to_service",
+   "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+  },
+  {
+   "from": "/",
+   "to": "/index.php/steuerstrafrecht",
+   "anchor_proposal": "Steuerstrafrecht",
+   "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+   "type": "home_to_service",
+   "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+  },
+  {
+   "from": "/",
+   "to": "/index.php/unternehmensvertretung",
+   "anchor_proposal": "Unternehmensvertretung",
+   "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+   "type": "home_to_service",
+   "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+  },
+  {
+   "from": "/",
+   "to": "/index.php/verteidigung-von-individualpersonen",
+   "anchor_proposal": "Verteidigung von Individualpersonen",
+   "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+   "type": "home_to_service",
+   "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+  },
+  {
+   "from": "/",
+   "to": "/index.php/zollstrafrecht",
+   "anchor_proposal": "Zollstrafrecht",
+   "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+   "type": "home_to_service",
+   "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+  }
+ ],
+ "summary": {
+  "n_pages_plan": 56,
+  "n_service_tree": 26,
+  "n_subs": 16,
+  "missing_total": 85,
+  "missing_by_type": {
+   "home_to_service": 9,
+   "home_to_core": 3,
+   "fix_dead_link": 1,
+   "parent_to_child": 5,
+   "child_to_parent": 31,
+   "service_to_home": 10,
+   "topical_lateral": 16,
+   "child_to_parent_contextual": 10
+  },
+  "max_click_depth_any": 4,
+  "max_click_depth_content": 3
+ },
+ "pages": [
+  {
+   "page": "/",
+   "title": "Stürzl Steuerstrafrecht – Home",
+   "h1": [
+    "Kanzlei"
+   ],
+   "words": 328,
+   "parent": "/",
+   "grandparent": "/",
+   "hierarchy": [
+    "/"
+   ],
+   "click_depth_from_home_any_link": 0,
+   "click_depth_from_home_content_links_only": 0,
+   "inbound_content_links": 0,
+   "inbound_contextual": 0,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [],
+   "outbound_content_links": 3,
+   "outbound_contextual": 3,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/",
+     "to": "/index.php/arbeitsstrafrecht",
+     "anchor_proposal": "Arbeitsstrafrecht",
+     "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+     "type": "home_to_service",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/",
+     "to": "/index.php/korruptionsstrafrecht",
+     "anchor_proposal": "Korruptionsstrafrecht",
+     "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+     "type": "home_to_service",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/",
+     "to": "/index.php/ordnungswidrigkeiten",
+     "anchor_proposal": "Ordnungswidrigkeiten",
+     "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+     "type": "home_to_service",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/",
+     "to": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+     "anchor_proposal": "Selbstanzeigen und steuerliche Korrekturen",
+     "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+     "type": "home_to_service",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/",
+     "to": "/index.php/sonstiges-wirtschaftsstrafrecht",
+     "anchor_proposal": "Sonstiges Wirtschaftsstrafrecht",
+     "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+     "type": "home_to_service",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/",
+     "to": "/index.php/steuerstrafrecht",
+     "anchor_proposal": "Steuerstrafrecht",
+     "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+     "type": "home_to_service",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/",
+     "to": "/index.php/unternehmensvertretung",
+     "anchor_proposal": "Unternehmensvertretung",
+     "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+     "type": "home_to_service",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/",
+     "to": "/index.php/verteidigung-von-individualpersonen",
+     "anchor_proposal": "Verteidigung von Individualpersonen",
+     "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+     "type": "home_to_service",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/",
+     "to": "/index.php/zollstrafrecht",
+     "anchor_proposal": "Zollstrafrecht",
+     "why": "Startseite führt die Leistungsbereiche direkt auf (Klicktiefe 1 statt 2 über die Übersicht)",
+     "type": "home_to_service",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/",
+     "to": "/index.php/faq",
+     "anchor_proposal": "FAQ",
+     "why": "Startseite verlinkt wichtige Ziele im Inhalt, nicht nur im Menü",
+     "type": "home_to_core",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/",
+     "to": "/index.php/kontakt",
+     "anchor_proposal": "Kontakt",
+     "why": "Startseite verlinkt wichtige Ziele im Inhalt, nicht nur im Menü",
+     "type": "home_to_core",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/",
+     "to": "/index.php/team",
+     "anchor_proposal": "Team",
+     "why": "Startseite verlinkt wichtige Ziele im Inhalt, nicht nur im Menü",
+     "type": "home_to_core",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/",
+     "to": "/index.php/leistungen",
+     "anchor_proposal": "mehr zu den Schwerpunkten",
+     "type": "fix_dead_link",
+     "why": "Der Link 'mehr zu den Schwerpunkten' führt auf /index.php/schwerpunkte (404). Ziel auf eine bestehende Seite umstellen, z. B. die Leistungen-Übersicht.",
+     "anchor_note": "Anker bleibt, Ziel ändern; Entscheidung bei Martin und Kundin"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/aktuelles",
+   "title": "Stürzl Steuerstrafrecht – Aktuelles",
+   "h1": [],
+   "words": 308,
+   "parent": "/",
+   "grandparent": "/",
+   "hierarchy": [
+    "/"
+   ],
+   "click_depth_from_home_any_link": 1,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 0,
+   "inbound_contextual": 0,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [],
+   "outbound_content_links": 9,
+   "outbound_contextual": 9,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/aktuelles",
+     "to": "/index.php/component/content/article/presse?catid=10&Itemid=228",
+     "anchor_proposal": "Presse",
+     "why": "Elternseite führt ihre Unterseite auf",
+     "type": "parent_to_child",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/aktuelles",
+     "to": "/index.php/component/content/article/ranking-wirtschaftwoche?catid=10&Itemid=228",
+     "anchor_proposal": "Ranking WirtschaftsWoche",
+     "why": "Elternseite führt ihre Unterseite auf",
+     "type": "parent_to_child",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/aktuelles",
+     "to": "/index.php/component/content/article/veranstaltungshinweis?catid=10&Itemid=228",
+     "anchor_proposal": "Veranstaltungshinweis",
+     "why": "Elternseite führt ihre Unterseite auf",
+     "type": "parent_to_child",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/aktuelles",
+     "to": "/index.php/component/content/article/vortrag?catid=10&Itemid=228",
+     "anchor_proposal": "Vortrag",
+     "why": "Elternseite führt ihre Unterseite auf",
+     "type": "parent_to_child",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/arbeitsstrafrecht",
+   "title": "Stürzl Steuerstrafrecht – Arbeitsstrafrecht",
+   "h1": [
+    "Leistungen",
+    "Arbeitsstrafrecht"
+   ],
+   "words": 118,
+   "parent": "/index.php/leistungen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": 2,
+   "inbound_content_links": 25,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 24,
+   "inbound_content_from": [
+    "/index.php/korruptionsstrafrecht",
+    "/index.php/leistungen",
+    "/index.php/ordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/geldbussen-wegen-organisationsverschulden",
+    "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/unternehmensgeldbussen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/beratung-und-vorherige-pruefung-steuerstrafrechtlicher-risiken",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+    "/index.php/sonstiges-wirtschaftsstrafrecht",
+    "/index.php/steuerstrafrecht",
+    "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+    "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+    "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+    "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+    "/index.php/unternehmensvertretung",
+    "/index.php/unternehmensvertretung/strafanzeigen",
+    "/index.php/unternehmensvertretung/verteidigung-bei-ordnungswidrigkeiten-verfahren-gegen-das-unternehmen",
+    "/index.php/unternehmensvertretung/vertretung-bei-strafverfahren-gegen-mitarbeiter-leitungspersonen",
+    "/index.php/unternehmensvertretung/zeugenbegleitung",
+    "/index.php/verteidigung-von-individualpersonen",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-ordnungswidrigkeiten",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-strafanzeige",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-zeugenbegleitung",
+    "/index.php/zollstrafrecht"
+   ],
+   "outbound_content_links": 8,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/arbeitsstrafrecht",
+     "to": "/index.php/leistungen",
+     "anchor_proposal": "Leistungen",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/arbeitsstrafrecht",
+     "to": "/",
+     "anchor_proposal": "Startseite",
+     "why": "Leistungsseite verlinkt im Inhalt auf die Startseite",
+     "type": "service_to_home",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/component/content/article/capital-magazin-steuern-hinterzogen-das-sollten-sie-jetzt-nicht-tun?catid=10&Itemid=228",
+   "title": "Stürzl Steuerstrafrecht – Capital Magazin: Steuern hinterzogen? Das sollten Sie jetzt (nicht) tun",
+   "h1": [
+    "Capital Magazin: Steuern hinterzogen? Das sollten Sie jetzt (nicht) tun"
+   ],
+   "words": 82,
+   "parent": "/index.php/aktuelles",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/aktuelles"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 5,
+   "inbound_contextual": 5,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/aktuelles",
+    "/index.php/component/content/article/kluge-koepfe-im-strafrecht?catid=10&Itemid=228",
+    "/index.php/component/content/article/neue-juve-rankings-wie-frauen-im-strafrecht-zur-festen-groesse-wurden?catid=10&Itemid=228",
+    "/index.php/component/content/category/allgemein?Itemid=0",
+    "/index.php/component/content/category/allgemein?Itemid=228"
+   ],
+   "outbound_content_links": 2,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/component/content/article/capital-magazin-steuern-hinterzogen-das-sollten-sie-jetzt-nicht-tun?catid=10&Itemid=228",
+     "to": "/index.php/aktuelles",
+     "anchor_proposal": "Aktuelles",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/component/content/article/capital-magazin-steuern-hinterzogen-das-sollten-sie-jetzt-nicht-tun?catid=10&Itemid=228",
+     "to": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+     "anchor_proposal": "Selbstanzeigen und steuerliche Korrekturen",
+     "why": "Beitrag verweist auf die thematisch passende Seite (Vorschlag, Mensch prüft Passung)",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/component/content/article/influencer-innen-auf-social-media-jetzt-vor-strafverfolgung-schuetzen?catid=10&Itemid=228",
+   "title": "Stürzl Steuerstrafrecht – Influencer*innen auf Social Media – Jetzt vor Strafverfolgung schützen!",
+   "h1": [
+    "Influencer*innen auf Social Media – Jetzt vor Strafverfolgung schützen!"
+   ],
+   "words": 142,
+   "parent": "/index.php/aktuelles",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/aktuelles"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 5,
+   "inbound_contextual": 5,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/aktuelles",
+    "/index.php/component/content/article/iww-seminar?catid=10&Itemid=228",
+    "/index.php/component/content/article/private-banking-magazin?catid=10&Itemid=228",
+    "/index.php/component/content/category/allgemein?Itemid=0",
+    "/index.php/component/content/category/allgemein?Itemid=228"
+   ],
+   "outbound_content_links": 2,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/component/content/article/influencer-innen-auf-social-media-jetzt-vor-strafverfolgung-schuetzen?catid=10&Itemid=228",
+     "to": "/index.php/aktuelles",
+     "anchor_proposal": "Aktuelles",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/component/content/article/influencer-innen-auf-social-media-jetzt-vor-strafverfolgung-schuetzen?catid=10&Itemid=228",
+     "to": "/index.php/steuerstrafrecht",
+     "anchor_proposal": "Steuerstrafrecht",
+     "why": "Beitrag verweist auf die thematisch passende Seite (Vorschlag, Mensch prüft Passung)",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/component/content/article/iww-seminar?catid=10&Itemid=228",
+   "title": "Stürzl Steuerstrafrecht – Seminar PStRneo im Institut für Wissen in der Wirtschaft",
+   "h1": [
+    "Seminar PStRneo im Institut für Wissen in der Wirtschaft"
+   ],
+   "words": 243,
+   "parent": "/index.php/aktuelles",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/aktuelles"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 5,
+   "inbound_contextual": 5,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/aktuelles",
+    "/index.php/component/content/article/influencer-innen-auf-social-media-jetzt-vor-strafverfolgung-schuetzen?catid=10&Itemid=228",
+    "/index.php/component/content/article/podcast-ims024-weltfrauentag-steuerstrafrecht-gruendung-von-juwist?catid=10&Itemid=228",
+    "/index.php/component/content/category/allgemein?Itemid=0",
+    "/index.php/component/content/category/allgemein?Itemid=228"
+   ],
+   "outbound_content_links": 2,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/component/content/article/iww-seminar?catid=10&Itemid=228",
+     "to": "/index.php/aktuelles",
+     "anchor_proposal": "Aktuelles",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/component/content/article/iww-seminar?catid=10&Itemid=228",
+     "to": "/index.php/dr-anja-stuerzl",
+     "anchor_proposal": "Dr. Anja Stürzl",
+     "why": "Beitrag verweist auf die thematisch passende Seite (Vorschlag, Mensch prüft Passung)",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/component/content/article/kluge-koepfe-im-strafrecht?catid=10&Itemid=228",
+   "title": "Stürzl Steuerstrafrecht – Kluge Köpfe im Strafrecht",
+   "h1": [
+    "Kluge Köpfe im Strafrecht"
+   ],
+   "words": 51,
+   "parent": "/index.php/aktuelles",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/aktuelles"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 5,
+   "inbound_contextual": 5,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/aktuelles",
+    "/index.php/component/content/article/capital-magazin-steuern-hinterzogen-das-sollten-sie-jetzt-nicht-tun?catid=10&Itemid=228",
+    "/index.php/component/content/article/private-banking-magazin?catid=10&Itemid=228",
+    "/index.php/component/content/category/allgemein?Itemid=0",
+    "/index.php/component/content/category/allgemein?Itemid=228"
+   ],
+   "outbound_content_links": 2,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/component/content/article/kluge-koepfe-im-strafrecht?catid=10&Itemid=228",
+     "to": "/index.php/aktuelles",
+     "anchor_proposal": "Aktuelles",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/component/content/article/kluge-koepfe-im-strafrecht?catid=10&Itemid=228",
+     "to": "/index.php/dr-anja-stuerzl",
+     "anchor_proposal": "Dr. Anja Stürzl",
+     "why": "Beitrag verweist auf die thematisch passende Seite (Vorschlag, Mensch prüft Passung)",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/component/content/article/neue-juve-rankings-wie-frauen-im-strafrecht-zur-festen-groesse-wurden?catid=10&Itemid=228",
+   "title": "Stürzl Steuerstrafrecht – Neue JUVE-Rankings: Wie Frauen im Strafrecht zur festen Größe wurden",
+   "h1": [
+    "Neue JUVE-Rankings: Wie Frauen im Strafrecht zur festen Größe wurden"
+   ],
+   "words": 158,
+   "parent": "/index.php/aktuelles",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/aktuelles"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 4,
+   "inbound_contextual": 4,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/aktuelles",
+    "/index.php/component/content/article/capital-magazin-steuern-hinterzogen-das-sollten-sie-jetzt-nicht-tun?catid=10&Itemid=228",
+    "/index.php/component/content/category/allgemein?Itemid=0",
+    "/index.php/component/content/category/allgemein?Itemid=228"
+   ],
+   "outbound_content_links": 1,
+   "outbound_contextual": 1,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/component/content/article/neue-juve-rankings-wie-frauen-im-strafrecht-zur-festen-groesse-wurden?catid=10&Itemid=228",
+     "to": "/index.php/aktuelles",
+     "anchor_proposal": "Aktuelles",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/component/content/article/neue-juve-rankings-wie-frauen-im-strafrecht-zur-festen-groesse-wurden?catid=10&Itemid=228",
+     "to": "/index.php/kanzlei",
+     "anchor_proposal": "Kanzlei",
+     "why": "Beitrag verweist auf die thematisch passende Seite (Vorschlag, Mensch prüft Passung)",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/component/content/article/podcast-ims024-weltfrauentag-steuerstrafrecht-gruendung-von-juwist?catid=10&Itemid=228",
+   "title": "Stürzl Steuerstrafrecht – Podcast: IMS024: Weltfrauentag, Steuerstrafrecht, Gründung von JuWist",
+   "h1": [
+    "Podcast: IMS024: Weltfrauentag, Steuerstrafrecht, Gründung von JuWist"
+   ],
+   "words": 103,
+   "parent": "/index.php/aktuelles",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/aktuelles"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 5,
+   "inbound_contextual": 5,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/aktuelles",
+    "/index.php/component/content/article/iww-seminar?catid=10&Itemid=228",
+    "/index.php/component/content/article/webinar-steuerstrafverfahren-und-besteuerungsverfahren?catid=10&Itemid=228",
+    "/index.php/component/content/category/allgemein?Itemid=0",
+    "/index.php/component/content/category/allgemein?Itemid=228"
+   ],
+   "outbound_content_links": 2,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/component/content/article/podcast-ims024-weltfrauentag-steuerstrafrecht-gruendung-von-juwist?catid=10&Itemid=228",
+     "to": "/index.php/aktuelles",
+     "anchor_proposal": "Aktuelles",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/component/content/article/podcast-ims024-weltfrauentag-steuerstrafrecht-gruendung-von-juwist?catid=10&Itemid=228",
+     "to": "/index.php/dr-anja-stuerzl",
+     "anchor_proposal": "Dr. Anja Stürzl",
+     "why": "Beitrag verweist auf die thematisch passende Seite (Vorschlag, Mensch prüft Passung)",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/component/content/article/presse?catid=10&Itemid=228",
+   "title": "Stürzl Steuerstrafrecht – Presse",
+   "h1": [
+    "Presse"
+   ],
+   "words": 33,
+   "parent": "/index.php/aktuelles",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/aktuelles"
+   ],
+   "click_depth_from_home_any_link": 4,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 2,
+   "inbound_contextual": 2,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/component/content/article/veranstaltungshinweis?catid=10&Itemid=228",
+    "/index.php/component/content/category/allgemein?Itemid=0&amp;start=10"
+   ],
+   "outbound_content_links": 1,
+   "outbound_contextual": 1,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/component/content/article/presse?catid=10&Itemid=228",
+     "to": "/index.php/aktuelles",
+     "anchor_proposal": "Aktuelles",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/component/content/article/private-banking-magazin?catid=10&Itemid=228",
+   "title": "Stürzl Steuerstrafrecht – Private Banking Magazin",
+   "h1": [
+    "Private Banking Magazin"
+   ],
+   "words": 52,
+   "parent": "/index.php/aktuelles",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/aktuelles"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 5,
+   "inbound_contextual": 5,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/aktuelles",
+    "/index.php/component/content/article/influencer-innen-auf-social-media-jetzt-vor-strafverfolgung-schuetzen?catid=10&Itemid=228",
+    "/index.php/component/content/article/kluge-koepfe-im-strafrecht?catid=10&Itemid=228",
+    "/index.php/component/content/category/allgemein?Itemid=0",
+    "/index.php/component/content/category/allgemein?Itemid=228"
+   ],
+   "outbound_content_links": 2,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/component/content/article/private-banking-magazin?catid=10&Itemid=228",
+     "to": "/index.php/aktuelles",
+     "anchor_proposal": "Aktuelles",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/component/content/article/private-banking-magazin?catid=10&Itemid=228",
+     "to": "/index.php/steuerstrafrecht",
+     "anchor_proposal": "Steuerstrafrecht",
+     "why": "Beitrag verweist auf die thematisch passende Seite (Vorschlag, Mensch prüft Passung)",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/component/content/article/ranking-wirtschaftwoche?catid=10&Itemid=228",
+   "title": "Stürzl Steuerstrafrecht – Ranking WirtschaftsWoche",
+   "h1": [
+    "Ranking WirtschaftsWoche"
+   ],
+   "words": 37,
+   "parent": "/index.php/aktuelles",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/aktuelles"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 4,
+   "inbound_contextual": 4,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/component/content/article/vortrag?catid=10&Itemid=228",
+    "/index.php/component/content/article/webinar-steuerstrafverfahren-und-besteuerungsverfahren?catid=10&Itemid=228",
+    "/index.php/component/content/category/allgemein?Itemid=0",
+    "/index.php/component/content/category/allgemein?Itemid=228"
+   ],
+   "outbound_content_links": 2,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/component/content/article/ranking-wirtschaftwoche?catid=10&Itemid=228",
+     "to": "/index.php/aktuelles",
+     "anchor_proposal": "Aktuelles",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/component/content/article/ranking-wirtschaftwoche?catid=10&Itemid=228",
+     "to": "/index.php/kanzlei",
+     "anchor_proposal": "Kanzlei",
+     "why": "Beitrag verweist auf die thematisch passende Seite (Vorschlag, Mensch prüft Passung)",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/component/content/article/veranstaltungshinweis?catid=10&Itemid=228",
+   "title": "Stürzl Steuerstrafrecht – Veranstaltungshinweis",
+   "h1": [
+    "Veranstaltungshinweis"
+   ],
+   "words": 39,
+   "parent": "/index.php/aktuelles",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/aktuelles"
+   ],
+   "click_depth_from_home_any_link": 4,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 3,
+   "inbound_contextual": 3,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/component/content/article/presse?catid=10&Itemid=228",
+    "/index.php/component/content/article/vortrag?catid=10&Itemid=228",
+    "/index.php/component/content/category/allgemein?Itemid=0&amp;start=10"
+   ],
+   "outbound_content_links": 2,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/component/content/article/veranstaltungshinweis?catid=10&Itemid=228",
+     "to": "/index.php/aktuelles",
+     "anchor_proposal": "Aktuelles",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/component/content/article/vortrag?catid=10&Itemid=228",
+   "title": "Stürzl Steuerstrafrecht – Vortrag",
+   "h1": [
+    "Vortrag"
+   ],
+   "words": 39,
+   "parent": "/index.php/aktuelles",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/aktuelles"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 4,
+   "inbound_contextual": 4,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/component/content/article/ranking-wirtschaftwoche?catid=10&Itemid=228",
+    "/index.php/component/content/article/veranstaltungshinweis?catid=10&Itemid=228",
+    "/index.php/component/content/category/allgemein?Itemid=0",
+    "/index.php/component/content/category/allgemein?Itemid=228"
+   ],
+   "outbound_content_links": 2,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/component/content/article/vortrag?catid=10&Itemid=228",
+     "to": "/index.php/aktuelles",
+     "anchor_proposal": "Aktuelles",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/component/content/article/vortrag?catid=10&Itemid=228",
+     "to": "/index.php/dr-anja-stuerzl",
+     "anchor_proposal": "Dr. Anja Stürzl",
+     "why": "Beitrag verweist auf die thematisch passende Seite (Vorschlag, Mensch prüft Passung)",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/component/content/article/webinar-steuerstrafverfahren-und-besteuerungsverfahren?catid=10&Itemid=228",
+   "title": "Stürzl Steuerstrafrecht – Webinar: Steuerstrafverfahren und Besteuerungsverfahren",
+   "h1": [
+    "Webinar: Steuerstrafverfahren und Besteuerungsverfahren"
+   ],
+   "words": 59,
+   "parent": "/index.php/aktuelles",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/aktuelles"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 5,
+   "inbound_contextual": 5,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/aktuelles",
+    "/index.php/component/content/article/podcast-ims024-weltfrauentag-steuerstrafrecht-gruendung-von-juwist?catid=10&Itemid=228",
+    "/index.php/component/content/article/ranking-wirtschaftwoche?catid=10&Itemid=228",
+    "/index.php/component/content/category/allgemein?Itemid=0",
+    "/index.php/component/content/category/allgemein?Itemid=228"
+   ],
+   "outbound_content_links": 2,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/component/content/article/webinar-steuerstrafverfahren-und-besteuerungsverfahren?catid=10&Itemid=228",
+     "to": "/index.php/aktuelles",
+     "anchor_proposal": "Aktuelles",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/component/content/article/webinar-steuerstrafverfahren-und-besteuerungsverfahren?catid=10&Itemid=228",
+     "to": "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+     "anchor_proposal": "Verteidigung im Steuerstrafverfahren",
+     "why": "Beitrag verweist auf die thematisch passende Seite (Vorschlag, Mensch prüft Passung)",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/dr-anja-stuerzl",
+   "title": "Stürzl Steuerstrafrecht – Dr. Anja Stürzl",
+   "h1": [],
+   "words": 736,
+   "parent": "/index.php/team",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/team"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 1,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/team"
+   ],
+   "outbound_content_links": 0,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/dr-anja-stuerzl",
+     "to": "/index.php/team",
+     "anchor_proposal": "Team",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/dr-monika-glogger",
+   "title": "Stürzl Steuerstrafrecht – Dr. Monika Glogger",
+   "h1": [],
+   "words": 279,
+   "parent": "/index.php/team",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/team"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 1,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/team"
+   ],
+   "outbound_content_links": 2,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/dr-monika-glogger",
+     "to": "/index.php/team",
+     "anchor_proposal": "Team",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/faq",
+   "title": "Stürzl Steuerstrafrecht – FAQ",
+   "h1": [
+    "FAQ - Häufig gestellte Fragen.",
+    "I. Strafverfahren",
+    "II. Kosten/Versicherung",
+    "III. Selbstanzeige (nur etwas für Steuerhinterzieher?)",
+    "IV. Steuerstrafrecht A-Z",
+    "V. Die größten Mythen im Steuerstrafrecht"
+   ],
+   "words": 2525,
+   "parent": "/",
+   "grandparent": "/",
+   "hierarchy": [
+    "/"
+   ],
+   "click_depth_from_home_any_link": 1,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 0,
+   "inbound_contextual": 0,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [],
+   "outbound_content_links": 0,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/faq",
+     "to": "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+     "anchor_proposal": "Verteidigung im Steuerstrafverfahren",
+     "why": "FAQ-Abschnitt I (Strafverfahren) verweist auf die passende Leistungsseite",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/faq",
+     "to": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+     "anchor_proposal": "Selbstanzeigen und steuerliche Korrekturen",
+     "why": "FAQ-Abschnitt III (Selbstanzeige) verweist auf die passende Leistungsseite",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/faq",
+     "to": "/index.php/kontakt",
+     "anchor_proposal": "Kontakt",
+     "why": "FAQ-Abschnitt II (Kosten) verweist auf den Kontakt",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/florentine-jilg",
+   "title": "Stürzl Steuerstrafrecht – Florentine Jilg",
+   "h1": [],
+   "words": 44,
+   "parent": "/index.php/team",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/team"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 1,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/team"
+   ],
+   "outbound_content_links": 1,
+   "outbound_contextual": 1,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/florentine-jilg",
+     "to": "/index.php/team",
+     "anchor_proposal": "Team",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/friends",
+   "title": "Stürzl Steuerstrafrecht – Friends",
+   "h1": [
+    "Miteinander. Füreinander."
+   ],
+   "words": 419,
+   "parent": "/",
+   "grandparent": "/",
+   "hierarchy": [
+    "/"
+   ],
+   "click_depth_from_home_any_link": 1,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 0,
+   "inbound_contextual": 0,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [],
+   "outbound_content_links": 0,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/jessica-weyel",
+   "title": "Stürzl Steuerstrafrecht – Jessica Weyel",
+   "h1": [],
+   "words": 77,
+   "parent": "/index.php/team",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/team"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 1,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/team"
+   ],
+   "outbound_content_links": 0,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/jessica-weyel",
+     "to": "/index.php/team",
+     "anchor_proposal": "Team",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/join-our-team",
+   "title": "Stürzl Steuerstrafrecht – Join our Team",
+   "h1": [
+    "Werde Teil unseres Teams"
+   ],
+   "words": 887,
+   "parent": "/",
+   "grandparent": "/",
+   "hierarchy": [
+    "/"
+   ],
+   "click_depth_from_home_any_link": 1,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 0,
+   "inbound_contextual": 0,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [],
+   "outbound_content_links": 0,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/kanzlei",
+   "title": "Stürzl Steuerstrafrecht – Kanzlei",
+   "h1": [
+    "Kanzlei"
+   ],
+   "words": 1052,
+   "parent": "/",
+   "grandparent": "/",
+   "hierarchy": [
+    "/"
+   ],
+   "click_depth_from_home_any_link": 1,
+   "click_depth_from_home_content_links_only": 1,
+   "inbound_content_links": 1,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/"
+   ],
+   "outbound_content_links": 0,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/kontakt",
+   "title": "Stürzl Steuerstrafrecht – Kontakt",
+   "h1": [
+    "Frankfurt am Main",
+    "München"
+   ],
+   "words": 225,
+   "parent": "/",
+   "grandparent": "/",
+   "hierarchy": [
+    "/"
+   ],
+   "click_depth_from_home_any_link": 1,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 0,
+   "inbound_contextual": 0,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [],
+   "outbound_content_links": 0,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/kontakt",
+     "to": "/index.php/lea-wimmer",
+     "anchor_proposal": "Lea Wimmer",
+     "why": "Standort München nennt die Leiterin mit Profil-Link",
+     "type": "topical_lateral",
+     "anchor_note": "Anker z. B. 'Lea Wimmer'; München hat keine eigene Standortseite (siehe Hinweis)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/korruptionsstrafrecht",
+   "title": "Stürzl Steuerstrafrecht – Korruptionsstrafrecht",
+   "h1": [
+    "Leistungen",
+    "Korruptionsstrafrecht"
+   ],
+   "words": 197,
+   "parent": "/index.php/leistungen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": 2,
+   "inbound_content_links": 25,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 24,
+   "inbound_content_from": [
+    "/index.php/arbeitsstrafrecht",
+    "/index.php/leistungen",
+    "/index.php/ordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/geldbussen-wegen-organisationsverschulden",
+    "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/unternehmensgeldbussen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/beratung-und-vorherige-pruefung-steuerstrafrechtlicher-risiken",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+    "/index.php/sonstiges-wirtschaftsstrafrecht",
+    "/index.php/steuerstrafrecht",
+    "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+    "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+    "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+    "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+    "/index.php/unternehmensvertretung",
+    "/index.php/unternehmensvertretung/strafanzeigen",
+    "/index.php/unternehmensvertretung/verteidigung-bei-ordnungswidrigkeiten-verfahren-gegen-das-unternehmen",
+    "/index.php/unternehmensvertretung/vertretung-bei-strafverfahren-gegen-mitarbeiter-leitungspersonen",
+    "/index.php/unternehmensvertretung/zeugenbegleitung",
+    "/index.php/verteidigung-von-individualpersonen",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-ordnungswidrigkeiten",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-strafanzeige",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-zeugenbegleitung",
+    "/index.php/zollstrafrecht"
+   ],
+   "outbound_content_links": 8,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/korruptionsstrafrecht",
+     "to": "/index.php/leistungen",
+     "anchor_proposal": "Leistungen",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/korruptionsstrafrecht",
+     "to": "/",
+     "anchor_proposal": "Startseite",
+     "why": "Leistungsseite verlinkt im Inhalt auf die Startseite",
+     "type": "service_to_home",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/lea-wimmer",
+   "title": "Stürzl Steuerstrafrecht – Lea Wimmer",
+   "h1": [],
+   "words": 617,
+   "parent": "/index.php/team",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/team"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 1,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/team"
+   ],
+   "outbound_content_links": 1,
+   "outbound_contextual": 1,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/lea-wimmer",
+     "to": "/index.php/team",
+     "anchor_proposal": "Team",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/leistungen",
+   "title": "Stürzl Steuerstrafrecht – Leistungen",
+   "h1": [
+    "Leistungen"
+   ],
+   "words": 122,
+   "parent": "/",
+   "grandparent": "/",
+   "hierarchy": [
+    "/"
+   ],
+   "click_depth_from_home_any_link": 1,
+   "click_depth_from_home_content_links_only": 1,
+   "inbound_content_links": 1,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/"
+   ],
+   "outbound_content_links": 9,
+   "outbound_contextual": 9,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/leistungen",
+     "to": "/",
+     "anchor_proposal": "Startseite",
+     "why": "Leistungsseite verlinkt im Inhalt auf die Startseite",
+     "type": "service_to_home",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/lenka-schluetter",
+   "title": "Stürzl Steuerstrafrecht – Lenka Schlütter",
+   "h1": [],
+   "words": 83,
+   "parent": "/index.php/team",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/team"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 1,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/team"
+   ],
+   "outbound_content_links": 0,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/lenka-schluetter",
+     "to": "/index.php/team",
+     "anchor_proposal": "Team",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/maria-bruckmeier",
+   "title": "Stürzl Steuerstrafrecht – Maria Bruckmeier",
+   "h1": [],
+   "words": 114,
+   "parent": "/index.php/team",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/team"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 1,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/team"
+   ],
+   "outbound_content_links": 0,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/maria-bruckmeier",
+     "to": "/index.php/team",
+     "anchor_proposal": "Team",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/mary",
+   "title": "Stürzl Steuerstrafrecht – Mary",
+   "h1": [],
+   "words": 262,
+   "parent": "/index.php/team",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/team"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 1,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/team"
+   ],
+   "outbound_content_links": 0,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/mary",
+     "to": "/index.php/team",
+     "anchor_proposal": "Team",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/nina-gueldenring",
+   "title": "Stürzl Steuerstrafrecht – Nina Güldenring",
+   "h1": [],
+   "words": 77,
+   "parent": "/index.php/team",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/team"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 1,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/team"
+   ],
+   "outbound_content_links": 0,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/nina-gueldenring",
+     "to": "/index.php/team",
+     "anchor_proposal": "Team",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/ordnungswidrigkeiten",
+   "title": "Stürzl Steuerstrafrecht – Ordnungswidrigkeiten",
+   "h1": [
+    "Leistungen",
+    "Ordnungswidrigkeiten"
+   ],
+   "words": 199,
+   "parent": "/index.php/leistungen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": 2,
+   "inbound_content_links": 25,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 24,
+   "inbound_content_from": [
+    "/index.php/arbeitsstrafrecht",
+    "/index.php/korruptionsstrafrecht",
+    "/index.php/leistungen",
+    "/index.php/ordnungswidrigkeiten/geldbussen-wegen-organisationsverschulden",
+    "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/unternehmensgeldbussen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/beratung-und-vorherige-pruefung-steuerstrafrechtlicher-risiken",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+    "/index.php/sonstiges-wirtschaftsstrafrecht",
+    "/index.php/steuerstrafrecht",
+    "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+    "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+    "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+    "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+    "/index.php/unternehmensvertretung",
+    "/index.php/unternehmensvertretung/strafanzeigen",
+    "/index.php/unternehmensvertretung/verteidigung-bei-ordnungswidrigkeiten-verfahren-gegen-das-unternehmen",
+    "/index.php/unternehmensvertretung/vertretung-bei-strafverfahren-gegen-mitarbeiter-leitungspersonen",
+    "/index.php/unternehmensvertretung/zeugenbegleitung",
+    "/index.php/verteidigung-von-individualpersonen",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-ordnungswidrigkeiten",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-strafanzeige",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-zeugenbegleitung",
+    "/index.php/zollstrafrecht"
+   ],
+   "outbound_content_links": 10,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/ordnungswidrigkeiten",
+     "to": "/index.php/leistungen",
+     "anchor_proposal": "Leistungen",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/ordnungswidrigkeiten",
+     "to": "/",
+     "anchor_proposal": "Startseite",
+     "why": "Leistungsseite verlinkt im Inhalt auf die Startseite",
+     "type": "service_to_home",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/ordnungswidrigkeiten",
+     "to": "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+     "anchor_proposal": "Steuerordnungswidrigkeiten",
+     "why": "Elternseite führt ihre Unterseite auf",
+     "type": "parent_to_child",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/ordnungswidrigkeiten/geldbussen-wegen-organisationsverschulden",
+   "title": "Stürzl Steuerstrafrecht – Geldbußen wegen Organisationsverschulden",
+   "h1": [
+    "Leistungen",
+    "Ordnungswidrigkeiten"
+   ],
+   "words": 213,
+   "parent": "/index.php/ordnungswidrigkeiten",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/ordnungswidrigkeiten"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 4,
+   "inbound_contextual": 4,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/ordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/unternehmensgeldbussen",
+    "/index.php/zollstrafrecht"
+   ],
+   "outbound_content_links": 11,
+   "outbound_contextual": 2,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": true,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/ordnungswidrigkeiten/geldbussen-wegen-organisationsverschulden",
+     "to": "/index.php/ordnungswidrigkeiten",
+     "anchor_proposal": "Ordnungswidrigkeiten",
+     "why": "Der Link nach oben besteht nur im auf allen 25 Seiten wiederholten Block; ein Textlink im Inhalt fehlt",
+     "type": "child_to_parent_contextual",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+   "title": "Stürzl Steuerstrafrecht – Steuerordnungswidrigkeiten",
+   "h1": [
+    "Leistungen",
+    "Ordnungswidrigkeiten"
+   ],
+   "words": 199,
+   "parent": "/index.php/ordnungswidrigkeiten",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/ordnungswidrigkeiten"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 3,
+   "inbound_contextual": 3,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/ordnungswidrigkeiten/geldbussen-wegen-organisationsverschulden",
+    "/index.php/ordnungswidrigkeiten/unternehmensgeldbussen",
+    "/index.php/zollstrafrecht"
+   ],
+   "outbound_content_links": 11,
+   "outbound_contextual": 2,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": true,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+     "to": "/index.php/ordnungswidrigkeiten",
+     "anchor_proposal": "Ordnungswidrigkeiten",
+     "why": "Der Link nach oben besteht nur im auf allen 25 Seiten wiederholten Block; ein Textlink im Inhalt fehlt",
+     "type": "child_to_parent_contextual",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/ordnungswidrigkeiten/unternehmensgeldbussen",
+   "title": "Stürzl Steuerstrafrecht – Unternehmensgeldbußen",
+   "h1": [
+    "Leistungen",
+    "Ordnungswidrigkeiten"
+   ],
+   "words": 198,
+   "parent": "/index.php/ordnungswidrigkeiten",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/ordnungswidrigkeiten"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 3,
+   "inbound_contextual": 3,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/ordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/geldbussen-wegen-organisationsverschulden",
+    "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten"
+   ],
+   "outbound_content_links": 11,
+   "outbound_contextual": 2,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": true,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/ordnungswidrigkeiten/unternehmensgeldbussen",
+     "to": "/index.php/ordnungswidrigkeiten",
+     "anchor_proposal": "Ordnungswidrigkeiten",
+     "why": "Der Link nach oben besteht nur im auf allen 25 Seiten wiederholten Block; ein Textlink im Inhalt fehlt",
+     "type": "child_to_parent_contextual",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+   "title": "Stürzl Steuerstrafrecht – Selbstanzeigen & Steuerliche Korrekturen",
+   "h1": [
+    "Leistungen",
+    "Selbstanzeigen: Ihre Chance auf  Schutz bei steuerlichen Korrekturen und Straffreiheit selbst im Falle von vorsätzlich hinterzogenen Steuern"
+   ],
+   "words": 215,
+   "parent": "/index.php/leistungen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": 2,
+   "inbound_content_links": 25,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 24,
+   "inbound_content_from": [
+    "/index.php/arbeitsstrafrecht",
+    "/index.php/korruptionsstrafrecht",
+    "/index.php/leistungen",
+    "/index.php/ordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/geldbussen-wegen-organisationsverschulden",
+    "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/unternehmensgeldbussen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/beratung-und-vorherige-pruefung-steuerstrafrechtlicher-risiken",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+    "/index.php/sonstiges-wirtschaftsstrafrecht",
+    "/index.php/steuerstrafrecht",
+    "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+    "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+    "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+    "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+    "/index.php/unternehmensvertretung",
+    "/index.php/unternehmensvertretung/strafanzeigen",
+    "/index.php/unternehmensvertretung/verteidigung-bei-ordnungswidrigkeiten-verfahren-gegen-das-unternehmen",
+    "/index.php/unternehmensvertretung/vertretung-bei-strafverfahren-gegen-mitarbeiter-leitungspersonen",
+    "/index.php/unternehmensvertretung/zeugenbegleitung",
+    "/index.php/verteidigung-von-individualpersonen",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-ordnungswidrigkeiten",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-strafanzeige",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-zeugenbegleitung",
+    "/index.php/zollstrafrecht"
+   ],
+   "outbound_content_links": 10,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+     "to": "/index.php/leistungen",
+     "anchor_proposal": "Leistungen",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+     "to": "/",
+     "anchor_proposal": "Startseite",
+     "why": "Leistungsseite verlinkt im Inhalt auf die Startseite",
+     "type": "service_to_home",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+     "to": "/index.php/faq",
+     "anchor_proposal": "FAQ",
+     "why": "Leistungsseite verweist auf die passende FAQ",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/selbstanzeigen-steuerliche-korrekturen/beratung-und-vorherige-pruefung-steuerstrafrechtlicher-risiken",
+   "title": "Stürzl Steuerstrafrecht – Beratung und vorherige Prüfung steuerstrafrechtlicher Risiken",
+   "h1": [
+    "Leistungen",
+    "Selbstanzeigen: Ihre Chance auf  Schutz bei steuerlichen Korrekturen und Straffreiheit selbst im Falle von vorsätzlich hinterzogenen Steuern"
+   ],
+   "words": 217,
+   "parent": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 2,
+   "inbound_contextual": 2,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/selbstanzeigen-steuerliche-korrekturen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige"
+   ],
+   "outbound_content_links": 10,
+   "outbound_contextual": 1,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": true,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/selbstanzeigen-steuerliche-korrekturen/beratung-und-vorherige-pruefung-steuerstrafrechtlicher-risiken",
+     "to": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+     "anchor_proposal": "Selbstanzeigen und steuerliche Korrekturen",
+     "why": "Der Link nach oben besteht nur im auf allen 25 Seiten wiederholten Block; ein Textlink im Inhalt fehlt",
+     "type": "child_to_parent_contextual",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+   "title": "Stürzl Steuerstrafrecht – Selbstanzeige-Beratung / Begleitung Selbstanzeige",
+   "h1": [
+    "Leistungen",
+    "Selbstanzeigen: Ihre Chance auf  Schutz bei steuerlichen Korrekturen und Straffreiheit selbst im Falle von vorsätzlich hinterzogenen Steuern"
+   ],
+   "words": 215,
+   "parent": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 2,
+   "inbound_contextual": 2,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/selbstanzeigen-steuerliche-korrekturen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/beratung-und-vorherige-pruefung-steuerstrafrechtlicher-risiken"
+   ],
+   "outbound_content_links": 10,
+   "outbound_contextual": 1,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": true,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+     "to": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+     "anchor_proposal": "Selbstanzeigen und steuerliche Korrekturen",
+     "why": "Der Link nach oben besteht nur im auf allen 25 Seiten wiederholten Block; ein Textlink im Inhalt fehlt",
+     "type": "child_to_parent_contextual",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/sonstiges-wirtschaftsstrafrecht",
+   "title": "Stürzl Steuerstrafrecht – Sonstiges  Wirtschaftsstrafrecht",
+   "h1": [
+    "Leistungen",
+    "Sonstiges  Wirtschaftsstrafrecht"
+   ],
+   "words": 111,
+   "parent": "/index.php/leistungen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": 2,
+   "inbound_content_links": 25,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 24,
+   "inbound_content_from": [
+    "/index.php/arbeitsstrafrecht",
+    "/index.php/korruptionsstrafrecht",
+    "/index.php/leistungen",
+    "/index.php/ordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/geldbussen-wegen-organisationsverschulden",
+    "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/unternehmensgeldbussen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/beratung-und-vorherige-pruefung-steuerstrafrechtlicher-risiken",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+    "/index.php/steuerstrafrecht",
+    "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+    "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+    "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+    "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+    "/index.php/unternehmensvertretung",
+    "/index.php/unternehmensvertretung/strafanzeigen",
+    "/index.php/unternehmensvertretung/verteidigung-bei-ordnungswidrigkeiten-verfahren-gegen-das-unternehmen",
+    "/index.php/unternehmensvertretung/vertretung-bei-strafverfahren-gegen-mitarbeiter-leitungspersonen",
+    "/index.php/unternehmensvertretung/zeugenbegleitung",
+    "/index.php/verteidigung-von-individualpersonen",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-ordnungswidrigkeiten",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-strafanzeige",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-zeugenbegleitung",
+    "/index.php/zollstrafrecht"
+   ],
+   "outbound_content_links": 8,
+   "outbound_contextual": 0,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/sonstiges-wirtschaftsstrafrecht",
+     "to": "/index.php/leistungen",
+     "anchor_proposal": "Leistungen",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/sonstiges-wirtschaftsstrafrecht",
+     "to": "/",
+     "anchor_proposal": "Startseite",
+     "why": "Leistungsseite verlinkt im Inhalt auf die Startseite",
+     "type": "service_to_home",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/steuerstrafrecht",
+   "title": "Stürzl Steuerstrafrecht – Steuerstrafrecht",
+   "h1": [
+    "Leistungen",
+    "Steuerstrafrecht"
+   ],
+   "words": 187,
+   "parent": "/index.php/leistungen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": 2,
+   "inbound_content_links": 25,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 24,
+   "inbound_content_from": [
+    "/index.php/arbeitsstrafrecht",
+    "/index.php/korruptionsstrafrecht",
+    "/index.php/leistungen",
+    "/index.php/ordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/geldbussen-wegen-organisationsverschulden",
+    "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/unternehmensgeldbussen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/beratung-und-vorherige-pruefung-steuerstrafrechtlicher-risiken",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+    "/index.php/sonstiges-wirtschaftsstrafrecht",
+    "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+    "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+    "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+    "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+    "/index.php/unternehmensvertretung",
+    "/index.php/unternehmensvertretung/strafanzeigen",
+    "/index.php/unternehmensvertretung/verteidigung-bei-ordnungswidrigkeiten-verfahren-gegen-das-unternehmen",
+    "/index.php/unternehmensvertretung/vertretung-bei-strafverfahren-gegen-mitarbeiter-leitungspersonen",
+    "/index.php/unternehmensvertretung/zeugenbegleitung",
+    "/index.php/verteidigung-von-individualpersonen",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-ordnungswidrigkeiten",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-strafanzeige",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-zeugenbegleitung",
+    "/index.php/zollstrafrecht"
+   ],
+   "outbound_content_links": 12,
+   "outbound_contextual": 4,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/steuerstrafrecht",
+     "to": "/index.php/leistungen",
+     "anchor_proposal": "Leistungen",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/steuerstrafrecht",
+     "to": "/",
+     "anchor_proposal": "Startseite",
+     "why": "Leistungsseite verlinkt im Inhalt auf die Startseite",
+     "type": "service_to_home",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/steuerstrafrecht",
+     "to": "/index.php/faq",
+     "anchor_proposal": "FAQ",
+     "why": "Leistungsseite verweist auf die passende FAQ",
+     "type": "topical_lateral",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+   "title": "Stürzl Steuerstrafrecht – Durchsuchungsbegleitung & Schulung",
+   "h1": [
+    "Leistungen",
+    "Steuerstrafrecht"
+   ],
+   "words": 191,
+   "parent": "/index.php/steuerstrafrecht",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/steuerstrafrecht"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 4,
+   "inbound_contextual": 4,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/steuerstrafrecht",
+    "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+    "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+    "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren"
+   ],
+   "outbound_content_links": 12,
+   "outbound_contextual": 3,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": true,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+     "to": "/index.php/steuerstrafrecht",
+     "anchor_proposal": "Steuerstrafrecht",
+     "why": "Der Link nach oben besteht nur im auf allen 25 Seiten wiederholten Block; ein Textlink im Inhalt fehlt",
+     "type": "child_to_parent_contextual",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+   "title": "Stürzl Steuerstrafrecht – Gutachten & Risikobewertung",
+   "h1": [
+    "Leistungen",
+    "Steuerstrafrecht"
+   ],
+   "words": 250,
+   "parent": "/index.php/steuerstrafrecht",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/steuerstrafrecht"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 4,
+   "inbound_contextual": 4,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/steuerstrafrecht",
+    "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+    "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+    "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren"
+   ],
+   "outbound_content_links": 12,
+   "outbound_contextual": 3,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": true,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+     "to": "/index.php/steuerstrafrecht",
+     "anchor_proposal": "Steuerstrafrecht",
+     "why": "Der Link nach oben besteht nur im auf allen 25 Seiten wiederholten Block; ein Textlink im Inhalt fehlt",
+     "type": "child_to_parent_contextual",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+   "title": "Stürzl Steuerstrafrecht – Selbstanzeige & Korrekturberatung",
+   "h1": [
+    "Leistungen",
+    "Steuerstrafrecht"
+   ],
+   "words": 187,
+   "parent": "/index.php/steuerstrafrecht",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/steuerstrafrecht"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 4,
+   "inbound_contextual": 4,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/steuerstrafrecht",
+    "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+    "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+    "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren"
+   ],
+   "outbound_content_links": 12,
+   "outbound_contextual": 3,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": true,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+     "to": "/index.php/steuerstrafrecht",
+     "anchor_proposal": "Steuerstrafrecht",
+     "why": "Der Link nach oben besteht nur im auf allen 25 Seiten wiederholten Block; ein Textlink im Inhalt fehlt",
+     "type": "child_to_parent_contextual",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+   "title": "Stürzl Steuerstrafrecht – Verteidigung im Steuerstrafverfahren",
+   "h1": [
+    "Leistungen",
+    "Steuerstrafrecht"
+   ],
+   "words": 244,
+   "parent": "/index.php/steuerstrafrecht",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/steuerstrafrecht"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 4,
+   "inbound_contextual": 4,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/steuerstrafrecht",
+    "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+    "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+    "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung"
+   ],
+   "outbound_content_links": 12,
+   "outbound_contextual": 3,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": true,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+     "to": "/index.php/steuerstrafrecht",
+     "anchor_proposal": "Steuerstrafrecht",
+     "why": "Der Link nach oben besteht nur im auf allen 25 Seiten wiederholten Block; ein Textlink im Inhalt fehlt",
+     "type": "child_to_parent_contextual",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/team",
+   "title": "Stürzl Steuerstrafrecht – Team",
+   "h1": [
+    "Unser Team"
+   ],
+   "words": 229,
+   "parent": "/",
+   "grandparent": "/",
+   "hierarchy": [
+    "/"
+   ],
+   "click_depth_from_home_any_link": 1,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 0,
+   "inbound_contextual": 0,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [],
+   "outbound_content_links": 10,
+   "outbound_contextual": 10,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/thorben-hoppe",
+   "title": "Stürzl Steuerstrafrecht – Thorben Hoppe",
+   "h1": [],
+   "words": 102,
+   "parent": "/index.php/team",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/team"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": null,
+   "inbound_content_links": 1,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/team"
+   ],
+   "outbound_content_links": 1,
+   "outbound_contextual": 1,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/thorben-hoppe",
+     "to": "/index.php/team",
+     "anchor_proposal": "Team",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": true,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/unternehmensvertretung",
+   "title": "Stürzl Steuerstrafrecht – Unternehmensvertretung",
+   "h1": [
+    "Leistungen",
+    "Beratung und Verteidigung von Unternehmen"
+   ],
+   "words": 261,
+   "parent": "/index.php/leistungen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": 2,
+   "inbound_content_links": 25,
+   "inbound_contextual": 5,
+   "inbound_via_repeated_block": 20,
+   "inbound_content_from": [
+    "/index.php/arbeitsstrafrecht",
+    "/index.php/korruptionsstrafrecht",
+    "/index.php/leistungen",
+    "/index.php/ordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/geldbussen-wegen-organisationsverschulden",
+    "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/unternehmensgeldbussen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/beratung-und-vorherige-pruefung-steuerstrafrechtlicher-risiken",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+    "/index.php/sonstiges-wirtschaftsstrafrecht",
+    "/index.php/steuerstrafrecht",
+    "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+    "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+    "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+    "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+    "/index.php/unternehmensvertretung/strafanzeigen",
+    "/index.php/unternehmensvertretung/verteidigung-bei-ordnungswidrigkeiten-verfahren-gegen-das-unternehmen",
+    "/index.php/unternehmensvertretung/vertretung-bei-strafverfahren-gegen-mitarbeiter-leitungspersonen",
+    "/index.php/unternehmensvertretung/zeugenbegleitung",
+    "/index.php/verteidigung-von-individualpersonen",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-ordnungswidrigkeiten",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-strafanzeige",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-zeugenbegleitung",
+    "/index.php/zollstrafrecht"
+   ],
+   "outbound_content_links": 12,
+   "outbound_contextual": 4,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/unternehmensvertretung",
+     "to": "/index.php/leistungen",
+     "anchor_proposal": "Leistungen",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/unternehmensvertretung",
+     "to": "/",
+     "anchor_proposal": "Startseite",
+     "why": "Leistungsseite verlinkt im Inhalt auf die Startseite",
+     "type": "service_to_home",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/unternehmensvertretung/strafanzeigen",
+   "title": "Stürzl Steuerstrafrecht – Strafanzeigen",
+   "h1": [
+    "Leistungen",
+    "Beratung und Verteidigung von Unternehmen"
+   ],
+   "words": 373,
+   "parent": "/index.php/unternehmensvertretung",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/unternehmensvertretung"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 4,
+   "inbound_contextual": 4,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/unternehmensvertretung",
+    "/index.php/unternehmensvertretung/verteidigung-bei-ordnungswidrigkeiten-verfahren-gegen-das-unternehmen",
+    "/index.php/unternehmensvertretung/vertretung-bei-strafverfahren-gegen-mitarbeiter-leitungspersonen",
+    "/index.php/unternehmensvertretung/zeugenbegleitung"
+   ],
+   "outbound_content_links": 12,
+   "outbound_contextual": 4,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": true,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/unternehmensvertretung/verteidigung-bei-ordnungswidrigkeiten-verfahren-gegen-das-unternehmen",
+   "title": "Stürzl Steuerstrafrecht – Verteidigung bei Ordnungswidrigkeiten-verfahren gegen das Unternehmen",
+   "h1": [
+    "Leistungen",
+    "Beratung und Verteidigung von Unternehmen"
+   ],
+   "words": 274,
+   "parent": "/index.php/unternehmensvertretung",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/unternehmensvertretung"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 4,
+   "inbound_contextual": 4,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/unternehmensvertretung",
+    "/index.php/unternehmensvertretung/strafanzeigen",
+    "/index.php/unternehmensvertretung/vertretung-bei-strafverfahren-gegen-mitarbeiter-leitungspersonen",
+    "/index.php/unternehmensvertretung/zeugenbegleitung"
+   ],
+   "outbound_content_links": 12,
+   "outbound_contextual": 4,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": true,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/unternehmensvertretung/vertretung-bei-strafverfahren-gegen-mitarbeiter-leitungspersonen",
+   "title": "Stürzl Steuerstrafrecht – Vertretung bei Strafverfahren gegen Mitarbeiter / Leitungspersonen",
+   "h1": [
+    "Leistungen",
+    "Beratung und Verteidigung von Unternehmen"
+   ],
+   "words": 270,
+   "parent": "/index.php/unternehmensvertretung",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/unternehmensvertretung"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 4,
+   "inbound_contextual": 4,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/unternehmensvertretung",
+    "/index.php/unternehmensvertretung/strafanzeigen",
+    "/index.php/unternehmensvertretung/verteidigung-bei-ordnungswidrigkeiten-verfahren-gegen-das-unternehmen",
+    "/index.php/unternehmensvertretung/zeugenbegleitung"
+   ],
+   "outbound_content_links": 12,
+   "outbound_contextual": 4,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": true,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/unternehmensvertretung/zeugenbegleitung",
+   "title": "Stürzl Steuerstrafrecht – Zeugenbegleitung",
+   "h1": [
+    "Leistungen",
+    "Beratung und Verteidigung von Unternehmen"
+   ],
+   "words": 332,
+   "parent": "/index.php/unternehmensvertretung",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/unternehmensvertretung"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 4,
+   "inbound_contextual": 4,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/unternehmensvertretung",
+    "/index.php/unternehmensvertretung/strafanzeigen",
+    "/index.php/unternehmensvertretung/verteidigung-bei-ordnungswidrigkeiten-verfahren-gegen-das-unternehmen",
+    "/index.php/unternehmensvertretung/vertretung-bei-strafverfahren-gegen-mitarbeiter-leitungspersonen"
+   ],
+   "outbound_content_links": 12,
+   "outbound_contextual": 4,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": true,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/verteidigung-von-individualpersonen",
+   "title": "Stürzl Steuerstrafrecht – Verteidigung von Individualpersonen",
+   "h1": [
+    "Leistungen",
+    "Vertretung von Einzelpersonen"
+   ],
+   "words": 179,
+   "parent": "/index.php/leistungen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": 2,
+   "inbound_content_links": 25,
+   "inbound_contextual": 3,
+   "inbound_via_repeated_block": 22,
+   "inbound_content_from": [
+    "/index.php/arbeitsstrafrecht",
+    "/index.php/korruptionsstrafrecht",
+    "/index.php/leistungen",
+    "/index.php/ordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/geldbussen-wegen-organisationsverschulden",
+    "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/unternehmensgeldbussen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/beratung-und-vorherige-pruefung-steuerstrafrechtlicher-risiken",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+    "/index.php/sonstiges-wirtschaftsstrafrecht",
+    "/index.php/steuerstrafrecht",
+    "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+    "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+    "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+    "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+    "/index.php/unternehmensvertretung",
+    "/index.php/unternehmensvertretung/strafanzeigen",
+    "/index.php/unternehmensvertretung/verteidigung-bei-ordnungswidrigkeiten-verfahren-gegen-das-unternehmen",
+    "/index.php/unternehmensvertretung/vertretung-bei-strafverfahren-gegen-mitarbeiter-leitungspersonen",
+    "/index.php/unternehmensvertretung/zeugenbegleitung",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-ordnungswidrigkeiten",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-strafanzeige",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-zeugenbegleitung",
+    "/index.php/zollstrafrecht"
+   ],
+   "outbound_content_links": 11,
+   "outbound_contextual": 3,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/verteidigung-von-individualpersonen",
+     "to": "/index.php/leistungen",
+     "anchor_proposal": "Leistungen",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/verteidigung-von-individualpersonen",
+     "to": "/",
+     "anchor_proposal": "Startseite",
+     "why": "Leistungsseite verlinkt im Inhalt auf die Startseite",
+     "type": "service_to_home",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-ordnungswidrigkeiten",
+   "title": "Stürzl Steuerstrafrecht – Vertretung von Einzelpersonen - Ordnungswidrigkeiten",
+   "h1": [
+    "Leistungen",
+    "Vertretung von Einzelpersonen"
+   ],
+   "words": 180,
+   "parent": "/index.php/verteidigung-von-individualpersonen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/verteidigung-von-individualpersonen"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 3,
+   "inbound_contextual": 3,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/verteidigung-von-individualpersonen",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-strafanzeige",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-zeugenbegleitung"
+   ],
+   "outbound_content_links": 11,
+   "outbound_contextual": 3,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": true,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-strafanzeige",
+   "title": "Stürzl Steuerstrafrecht – Vertretung von Einzelpersonen - Strafanzeige",
+   "h1": [
+    "Leistungen",
+    "Vertretung von Einzelpersonen"
+   ],
+   "words": 297,
+   "parent": "/index.php/verteidigung-von-individualpersonen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/verteidigung-von-individualpersonen"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 3,
+   "inbound_contextual": 3,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/verteidigung-von-individualpersonen",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-ordnungswidrigkeiten",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-zeugenbegleitung"
+   ],
+   "outbound_content_links": 11,
+   "outbound_contextual": 3,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": true,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-zeugenbegleitung",
+   "title": "Stürzl Steuerstrafrecht – Vertretung von Einzelpersonen - Zeugenbegleitung",
+   "h1": [
+    "Leistungen",
+    "Vertretung von Einzelpersonen"
+   ],
+   "words": 256,
+   "parent": "/index.php/verteidigung-von-individualpersonen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen",
+    "/index.php/verteidigung-von-individualpersonen"
+   ],
+   "click_depth_from_home_any_link": 3,
+   "click_depth_from_home_content_links_only": 3,
+   "inbound_content_links": 3,
+   "inbound_contextual": 3,
+   "inbound_via_repeated_block": 0,
+   "inbound_content_from": [
+    "/index.php/verteidigung-von-individualpersonen",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-ordnungswidrigkeiten",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-strafanzeige"
+   ],
+   "outbound_content_links": 11,
+   "outbound_contextual": 2,
+   "outbound_to_parent": true,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": true,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-zeugenbegleitung",
+     "to": "/index.php/verteidigung-von-individualpersonen",
+     "anchor_proposal": "Verteidigung von Individualpersonen",
+     "why": "Der Link nach oben besteht nur im auf allen 25 Seiten wiederholten Block; ein Textlink im Inhalt fehlt",
+     "type": "child_to_parent_contextual",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  },
+  {
+   "page": "/index.php/zollstrafrecht",
+   "title": "Stürzl Steuerstrafrecht – Zollstrafrecht",
+   "h1": [
+    "Leistungen",
+    "Zollstrafrecht"
+   ],
+   "words": 117,
+   "parent": "/index.php/leistungen",
+   "grandparent": "/",
+   "hierarchy": [
+    "/",
+    "/index.php/leistungen"
+   ],
+   "click_depth_from_home_any_link": 2,
+   "click_depth_from_home_content_links_only": 2,
+   "inbound_content_links": 25,
+   "inbound_contextual": 1,
+   "inbound_via_repeated_block": 24,
+   "inbound_content_from": [
+    "/index.php/arbeitsstrafrecht",
+    "/index.php/korruptionsstrafrecht",
+    "/index.php/leistungen",
+    "/index.php/ordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/geldbussen-wegen-organisationsverschulden",
+    "/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+    "/index.php/ordnungswidrigkeiten/unternehmensgeldbussen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/beratung-und-vorherige-pruefung-steuerstrafrechtlicher-risiken",
+    "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+    "/index.php/sonstiges-wirtschaftsstrafrecht",
+    "/index.php/steuerstrafrecht",
+    "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+    "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+    "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+    "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+    "/index.php/unternehmensvertretung",
+    "/index.php/unternehmensvertretung/strafanzeigen",
+    "/index.php/unternehmensvertretung/verteidigung-bei-ordnungswidrigkeiten-verfahren-gegen-das-unternehmen",
+    "/index.php/unternehmensvertretung/vertretung-bei-strafverfahren-gegen-mitarbeiter-leitungspersonen",
+    "/index.php/unternehmensvertretung/zeugenbegleitung",
+    "/index.php/verteidigung-von-individualpersonen",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-ordnungswidrigkeiten",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-strafanzeige",
+    "/index.php/verteidigung-von-individualpersonen/vertretung-von-einzelpersonen-zeugenbegleitung"
+   ],
+   "outbound_content_links": 10,
+   "outbound_contextual": 2,
+   "outbound_to_parent": false,
+   "outbound_to_parent_contextual_only": false,
+   "up_link_only_via_repeated_block": false,
+   "outbound_to_home": false,
+   "missing_links": [
+    {
+     "from": "/index.php/zollstrafrecht",
+     "to": "/index.php/leistungen",
+     "anchor_proposal": "Leistungen",
+     "why": "Kind verlinkt auf seine Elternseite",
+     "type": "child_to_parent",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    },
+    {
+     "from": "/index.php/zollstrafrecht",
+     "to": "/",
+     "anchor_proposal": "Startseite",
+     "why": "Leistungsseite verlinkt im Inhalt auf die Startseite",
+     "type": "service_to_home",
+     "anchor_note": "Anker aus Menü-/Seitenname abgeleitet; Mensch prüft Wortlaut (BORA/UWG: sachlich, keine Werbeversprechen)"
+    }
+   ],
+   "do_not_edit_page": false,
+   "in_sitemap_osmap": false,
+   "assignment": "PROPOSED (URL-Pfad + Menü + Inhaltsprüfung 11.10.2026); nur bestehende Seiten als Ziel; Anker brauchen menschliche Prüfung",
+   "gsc_clicks_90d": null,
+   "gsc_note": "Search Console nicht lesbar (403)"
+  }
+ ]
+}

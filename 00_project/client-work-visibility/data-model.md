@@ -60,6 +60,9 @@ Basis: `knowledge/client-work-library/03-work-data-model/extract.md` (rules 1–
 - `work_item_internal`, `agent_run` and `evidence_link` with `visibility = internal` are admin only.
 - pgTAP-style tests in the same pattern as `client-approval-workflow/portal/04-rls-tests.sql`. A dry run with rollback comes first.
 
+## Open UX gap (found 14.10. evening, Martin)
+The admin task card's "Erledigt" button forces a Nachweis-Link (URL) field before it will submit. The DB does not require a URL: `work_evidence.url` is nullable, and the `work_items_done_proof_check` / `work_items_guard` triggers only need one evidence row with `relation in ('proves','produced')` — `kind`, `relation` and `label` are enough. For decision-type tasks (a date, an A/B choice — nothing to link) the frontend should let "Erledigt" submit with a label only (e.g. "decided live 14.10."), no URL required. Martin's call (14.10.): exempt decision tasks from the link requirement rather than keep forcing one. Not built yet — the admin UI still has the hard requirement; whoever next touches the task-card component should drop it for `type = 'task'` rows without a deliverable link, or add a task subtype distinguishing "decision" from "deliverable".
+
 ## Migration path
 1. Create the tables and seed `actor` and `phase` from the architecture map.
 2. Copy `tasks` into `work_item` (source `template`), with the old `owner 741 → accountable Martin`, `kunde → doer client`. Keep `tasks` read-only until the switch.

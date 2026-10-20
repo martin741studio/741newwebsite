@@ -1,0 +1,146 @@
+{
+ "_note": "German AI tells for the slop gate G5. Start list v1, 2026-10-11. Martin can veto words. Matching is case-insensitive on word start; entries are regex fragments. | 2026-10-12: flattery phrases added (Martin: praise openers read as fake).",
+ "vocab_hard": [
+  "ganzheitlich\\w*",
+  "nahtlos\\w*",
+  "maßgeschneidert\\w*",
+  "tauchen sie ein",
+  "tauche ein",
+  "eintauchen",
+  "entfesseln",
+  "entfessel\\w*",
+  "revolutionär\\w*",
+  "bahnbrechend\\w*",
+  "wegweisend\\w*",
+  "zukunftsweisend\\w*",
+  "synergie\\w*",
+  "rundum-sorglos",
+  "rundum sorglos",
+  "herzensangelegenheit",
+  "dreh- und angelpunkt",
+  "eckpfeiler",
+  "in der heutigen schnelllebigen",
+  "in der heutigen digitalen",
+  "in der heutigen zeit",
+  "in einer welt, in der",
+  "in einer zeit, in der",
+  "es ist wichtig zu beachten",
+  "es ist erwähnenswert",
+  "es sei darauf hingewiesen",
+  "lassen sie uns",
+  "lasst uns",
+  "tauchen wir",
+  "kurz gesagt",
+  "unterm strich",
+  "ein breites spektrum",
+  "facettenreich\\w*",
+  "unverzichtbar\\w*",
+  "unterstreicht",
+  "zeugnis von",
+  "ein zeugnis",
+  "schlüssel zu",
+  "spielt eine (entscheidende|zentrale|wichtige|große|wesentliche) rolle",
+  "herausforderungen meistern",
+  "die landschaft des",
+  "reise zu",
+  "ihre reise",
+  "deine reise",
+  "gesundheitsreise",
+  "mit leidenschaft",
+  "hand in hand",
+  "auf augenhöhe",
+  "individuell auf sie zugeschnitten",
+  "individuell auf dich zugeschnitten",
+  "liest sich (richtig|wirklich|sehr|echt) (stark|gut|toll)",
+  "trifft genau den ton",
+  "treffen genau den ton",
+  "genau den ton, den",
+  "richtig stark",
+  "super spannend",
+  "mega spannend",
+  "ich bin begeistert",
+  "hat mich begeistert",
+  "großartige arbeit",
+  "tolle arbeit",
+  "starke arbeit",
+  "klasse arbeit",
+  "danke für (die|eure|deine) (tolle|großartige|starke|super)"
+ ],
+ "vocab_soft": [
+  "individuell\\w*",
+  "nachhaltig\\w*",
+  "innovativ\\w*",
+  "kompetent\\w*",
+  "professionell\\w*",
+  "vielfältig\\w*",
+  "umfassend\\w*",
+  "optimal\\w*",
+  "bestmöglich\\w*",
+  "erstklassig\\w*",
+  "hochwertig\\w*",
+  "einzigartig\\w*",
+  "mehrwert",
+  "lösungsorientiert\\w*",
+  "effektiv\\w*",
+  "effizient\\w*",
+  "authentisch\\w*",
+  "transparent\\w*",
+  "zielgerichtet\\w*",
+  "schlüsselrolle",
+  "von grund auf",
+  "rundum"
+ ],
+ "soft_threshold": 4,
+ "constructions": [
+  {
+   "label": "nicht nur ..., sondern auch",
+   "re": "\\bnicht nur\\b.{0,90}?\\b(sondern|auch)\\b"
+  },
+  {
+   "label": "es geht nicht um X, sondern um Y",
+   "re": "\\bgeht es (nicht|weniger) (nur )?um\\b.{0,90}?\\bsondern\\b|\\bes geht (nicht|weniger) (nur )?um\\b.{0,90}?\\bsondern\\b"
+  },
+  {
+   "label": "mehr als nur",
+   "re": "\\bmehr als nur\\b"
+  },
+  {
+   "label": "Ob ... oder ..., wir",
+   "re": "\\bob\\b.{0,70}\\boder\\b.{0,70},\\s*(wir|bei uns|unser|ich|bei mir)\\b"
+  },
+  {
+   "label": "Zeitgeist-Einstieg",
+   "re": "\\bin (der|einer) (heutigen|modernen|schnelllebigen|digitalen)\\b"
+  },
+  {
+   "label": "Abschluss-Floskel am Satzanfang",
+   "re": "(^|[.!?]\\s+)(zusammenfassend|abschließend|fazit|insgesamt lässt sich)\\b"
+  },
+  {
+   "label": "Selbstbeantwortete Frage",
+   "re": "(^|[.!?]\\s+)(das ergebnis|die lösung|der grund|das beste daran|der vorteil)\\?"
+  },
+  {
+   "label": "Wir verstehen, dass ...",
+   "re": "\\b(wir|ich) (verstehen|weiß|wissen|kenne|kennen),? (wie|dass)\\b.{0,60}\\b(belastend|schwer|herausfordernd|schwierig)\\b"
+  },
+  {
+   "label": "Doch das ist noch nicht alles",
+   "re": "\\bdoch das (ist|war) noch nicht alles\\b|\\bund das ist noch nicht alles\\b"
+  },
+  {
+   "label": "Egal ob ... oder",
+   "re": "\\begal ob\\b.{0,70}\\boder\\b"
+  }
+ ],
+ "dash_chars": [
+  "—",
+  "–"
+ ],
+ "proof_patterns": [
+  "\\b(über|mehr als|rund|knapp|fast|bis zu)\\s+\\d[\\d.,]*\\s*\\w+",
+  "\\b\\d[\\d.,]*\\s*(%|prozent)\\b",
+  "\\bseit\\s+(19|20)\\d\\d\\b",
+  "\\b\\d[\\d.,]*\\+?\\s*(mandanten|fälle|fällen|patienten|kunden|jahre|jahren|bewertungen|verfahren)\\b"
+ ]
+}

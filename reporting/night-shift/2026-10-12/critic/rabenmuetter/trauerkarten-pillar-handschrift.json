@@ -1,0 +1,45 @@
+{
+  "plan_item_index": 4,
+  "client": "Rabenmütter Shop",
+  "page": "rabenmuetter/trauerkarten-pillar-handschrift",
+  "mode": "FEEDBACK",
+  "feedback_id": "801d4d7d-1a22-4d45-a08e-e0b213dff2ec",
+  "source_file": "feedback/rabenmuetter/801d4d7d-1a22-4d45-a08e-e0b213dff2ec.md",
+  "pass": true,
+  "checks": {
+    "sentence_for_sentence_addressed": {
+      "result": "pass",
+      "reason": "Checked the Vorschlag against context.json.feedback_open id 801d4d7d-1a22-4d45-a08e-e0b213dff2ec clause by clause. (1) 'vielen Dank - super, super Vorschläge' is a thank-you, needs no action, correctly not treated as a task. (2) 'auch die Idee die Karte handschriftlich schreiben zu lassen' is correctly identified as the specific prior suggestion being followed up on. (3) 'noch habe ich keine Idee wie das umgesetzt aussehen könnte' is answered with a concrete 4-step implementation model (option selection, text input with a length cap, who writes it by hand, packing/shipping lead time) plus a pricing/positioning paragraph. (4) 'aber das kannst du mir bestimmt erklären' is answered directly — the whole Vorschlag is framed as the explanation Martin owes her, closing with a recommendation of exactly which open points to clarify with her before going live. Nothing in the comment is left unaddressed, and no fact is invented: every operational unknown (who writes the cards, character limit, lead time, price premium) is marked '[fehlt: vom Kunden zu bestätigen]' instead of guessed."
+    },
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "pass",
+      "reason": "This FEEDBACK doc produces no Title/Meta/H1/NAP-block/JSON-LD, so the rule has nothing to violate. The several [fehlt: vom Kunden zu bestätigen] markers all sit inside the Vorschlag body (implementation unknowns) and the Datenpaket table (missing original report section, missing NAP applicability), exactly where the hard rule 'missing → write [fehlt: …], never invent' expects them."
+    },
+    "nap_block_matches_locked_record": {
+      "result": "pass",
+      "reason": "Checked context.json.nap_locked directly: records exist only for client_id 3f71ef33-... (Praxis Suriya), d01f4236-... (Daniela Dumann), and 444ac77b-... (Maria Brasse). No entry exists for client_id fbcc70d1-4c56-437c-b5fb-8056e48d3f62 (Rabenmütter Shop). The Executor's claim ('nicht zutreffend — kein gesperrter NAP-Datensatz') is confirmed correct; no NAP block is fabricated."
+    },
+    "jsonld_valid": {
+      "result": "pass",
+      "reason": "Not applicable — a FEEDBACK draft replying to a client comment contains no JSON-LD block. Confirmed none is present or implied."
+    },
+    "market_lang_de": {
+      "result": "pass",
+      "reason": "Full file (Datenpaket table, Kunde sagt quote, Vorschlag, Diff-Hinweis) is German, matching plan item market_lang 'de'."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "reason": "Rabenmütter Shop (Trauerkarten/stationery e-commerce) is not a health/YMYL client, so HWG does not apply by scope. Ran the scan anyway on the Vorschlag text for 'heilt', 'garantiert', '100%'/'100 %', 'Heilung' — zero matches."
+    },
+    "rubric_8dim_skipped_per_feedback_mode": {
+      "result": "pass",
+      "reason": "Per SKILL.md §3, FEEDBACK items skip the 8-dimension rubric in favour of the sentence-for-sentence check above. Confirmed this plan item is mode FEEDBACK (plan.json line 58), so the 8-dim rubric correctly does not apply here."
+    },
+    "deslop_body_copy": {
+      "result": "pass",
+      "reason": "The file itself (De-slop-Hinweis, line 21) flags that the whole Vorschlag — implementation steps, pricing question, example line, recommendation to Martin — is an internal planning note for Martin, not client-facing copy meant to ship as-is, and explicitly marks the one illustrative product-page line ('Auf Wunsch schreiben wir Ihre Worte von Hand auf die Karte.') as 'Beispiel, nicht final, ungeprüft' with a note that it still needs a deslop_de.py run before any real use. Per SKILL.md §3 this exempts the file from the de-slop hard check as a blocker. Independently attempted to run `python3 00_project/content-writing-skill/scripts/deslop_de.py --text ...` in this Critic session to verify the Executor's claim that the tool was unreachable — reproduced the same block (command required approval / did not execute) even on a trivial '--text hallo' call, confirming the Executor's account rather than contradicting it. Since the flagged line is explicitly unshipped and the rest of the Vorschlag is internal guidance to Martin, this is correctly not a blocker."
+    }
+  },
+  "fails": [],
+  "notes": "Independent verification of plan item index 4 (rabenmuetter/trauerkarten-pillar-handschrift) against context.json and plan.json. The 'Kunde sagt' quote matches context.json.feedback_open id 801d4d7d-1a22-4d45-a08e-e0b213dff2ec verbatim, including the created_at timestamp (2026-08-30T16:38:38 UTC, written in the file as '30.08.2026, 16:38'). All applicable hard checks pass; NAP, JSON-LD, and the 8-dim rubric are correctly not-applicable for this FEEDBACK item and the file does not pretend otherwise. The Executor stayed inside its data boundaries: the original pillar section text was genuinely unreachable (no Supabase/portal fetch tool, no local repo copy), and rather than guessing its content, the Executor built the requested explanation purely from the client's comment plus clearly marked open questions. No invented numbers, prices, or capacity facts. Verdict: pass."
+}

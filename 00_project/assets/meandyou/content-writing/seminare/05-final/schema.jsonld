@@ -1,0 +1,51 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://www.meandyou.de/seminare#webpage",
+   "url": "https://www.meandyou.de/seminare",
+   "name": "Rhetorik-Seminare mit Michael Ehlers | Inhalte und Termine",
+   "description": "Drei Rhetorik-Seminare zur Wahl: frei sprechen, schlagfertig bleiben, mit Sprache führen. Drei Tage in kleiner Gruppe. Kostenloses Gespräch buchen.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "https://www.meandyou.de/#website"
+   },
+   "breadcrumb": {
+    "@id": "https://www.meandyou.de/seminare#breadcrumb"
+   },
+   "mainEntity": {
+    "@id": "https://www.meandyou.de/seminare#service"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.meandyou.de/seminare#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Startseite",
+     "item": "https://www.meandyou.de/"
+    }
+   ]
+  },
+  {
+   "@type": "EducationalOrganization",
+   "@id": "https://www.meandyou.de/#organization",
+   "name": "Institut Michael Ehlers GmbH",
+   "url": "https://www.meandyou.de/",
+   "email": "management@meandyou.de",
+   "department": []
+  },
+  {
+   "@type": "Service",
+   "@id": "https://www.meandyou.de/seminare#service",
+   "serviceType": "Rhetorik-Seminare",
+   "provider": {
+    "@id": "https://www.meandyou.de/#organization"
+   },
+   "url": "https://www.meandyou.de/seminare"
+  }
+ ]
+}

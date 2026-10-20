@@ -1,0 +1,42 @@
+{
+  "plan_index": 0,
+  "client": "Praxis Suriya",
+  "mode": "FEEDBACK",
+  "feedback_id": "5bea6cb2-688d-4c24-b436-1a576e7ade75",
+  "input_file": "feedback/praxis-suriya/5bea6cb2-688d-4c24-b436-1a576e7ade75.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_required_fields": {
+      "pass": true,
+      "note": "No [fehlt: placeholder inside the NAP block; both [fehlt:] uses are legitimate real-data gaps (missing original report section, unconfirmed weekend hours), per hard rule 'Real data only ... missing -> write [fehlt: ...] and continue'."
+    },
+    "nap_match": {
+      "pass": true,
+      "note": "Draft NAP block matches nap_locked field-by-field: name 'Praxis Suriya - Ayurveda & Naturheilkunde', street 'Schützenpfad 29', postal_code 55218, city 'Ingelheim am Rhein', phone '+49 174 7411087', category 'Heilpraktiker'."
+    },
+    "json_ld_valid": {
+      "pass": true,
+      "note": "N/A for FEEDBACK mode - no JSON-LD produced or required."
+    },
+    "language_match": {
+      "pass": true,
+      "note": "Copy is German; client is a DACH practice (market_lang DE)."
+    },
+    "hwg_scan": {
+      "pass": true,
+      "note": "Content is GBP opening-hours/CTA logistics, no health claims of any kind - no 'heilt', 'garantiert', 'Heilung', '100%'."
+    },
+    "feedback_addresses_comment": {
+      "pass": true,
+      "note": "Sentence-for-sentence against context.json.feedback_open[id=5bea6cb2...]: (1) 'Di-Do 7.30-18.00' -> table rows Dienstag/Mittwoch/Donnerstag 7:30-18:00 Uhr, correct expansion of the Di-Do range. (2) 'Fr: 7.30-12.00' -> Freitag 7:30-12:00 Uhr, matches exactly. (3) 'Telefonisch Termin vereinbaren: Mo. 12-14 Uhr' -> Montag row 'Keine Praxiszeiten. Telefonische Terminvereinbarung 12:00-14:00 Uhr', correct and reasonably inferred (client gave no separate Monday walk-in hours). (4) 'Termin Button habe ich nicht, nur Buchungsformular' -> separate 'Termin-Button' section correctly states no button exists, only a booking form, with a grounded recommendation to point the GBP CTA at the existing form URL rather than inventing a button. Weekend hours, which the client did not mention, are correctly left as [fehlt: vom Kunden zu bestätigen] instead of being invented."
+    },
+    "deslop_hard_check": {
+      "pass": true,
+      "applicable": false,
+      "note": "Per SKILL.md FEEDBACK rules, de-slop only blocks when the Vorschlag is new client-facing prose meant to ship as-is (e.g. a GBP description rewrite). This Vorschlag is a data table (opening hours) plus an internal recommendation to Martin ('Empfehlung: ...') about which CTA to configure - not client-facing marketing copy - so the check does not apply as a blocker."
+    }
+  },
+  "fails": [],
+  "verdict": "pass",
+  "reason": "FEEDBACK item addresses every point of the client's comment, grounded only in the verbatim comment and the locked NAP record, correctly flags the one genuine data gap ([fehlt: vom Kunden zu bestätigen] for weekend hours) instead of inventing it, and transparently notes the one process gap (original report section unreachable this run) without letting it block or corrupt the output. No hard-check failures."
+}

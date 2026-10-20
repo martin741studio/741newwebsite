@@ -1,0 +1,1870 @@
+{
+ "meta": {
+  "client": "STÜRZL Steuerstrafrecht (Dr. Anja Stürzl)",
+  "slug": "stuerzl",
+  "domain": "stuerzl-steuerstrafrecht.de",
+  "built": "2026-10-11",
+  "programme_modules_source": "website-struktur-master-prompt.md Schritt 4 und 6 (Programmplan-Datei nicht gefunden unter ~/Downloads)"
+ },
+ "kpi": {
+  "Bleibt": 6,
+  "Überarbeiten": 24,
+  "Neu": 6,
+  "Vorschlag": 5
+ },
+ "kpi_patient": {
+  "Bleibt": 6,
+  "Überarbeiten": 24,
+  "Neu": 6,
+  "Vorschlag": 5
+ },
+ "nodes": [
+  {
+   "id": "ST-00",
+   "parent": null,
+   "title": "Startseite",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M2 Startseite",
+   "job": "Hero mit Fachgebiet und Städten, Notfall-Block, Beweis-Leiste, Leistungen, Ablauf, Über, FAQ, Kontakt. Aufbau nach CRO-Blueprint (10 Zeilen). Title und H1 heute: 'Home' und 'Kanzlei'.",
+   "path": "/",
+   "kw": "anwalt steuerstrafrecht",
+   "pool_tag": "homepage",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-LOC-001",
+    "CP-LOC-002",
+    "CP-LOC-003",
+    "CP-LOC-006",
+    "CP-LOC-009",
+    "CP-SVC-001",
+    "CP-SVC-002",
+    "CP-SVC-004",
+    "CP-SVC-020",
+    "CP-SVC-024",
+    "CP-BRD-001",
+    "CP-BRD-002",
+    "CP-BRD-003",
+    "CP-BRD-005",
+    "CP-AUT-001",
+    "CP-AUT-002",
+    "CP-AUT-003"
+   ],
+   "_gsc": null,
+   "_words": 358,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "anwalt steuerstrafrecht",
+    "volume": 480,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-LOC-001",
+     "priority": "A",
+     "topic": "Hero, Title und H1 mit Fachgebiet und Städten (heute: 'Home' und 'Kanzlei')",
+     "status": "draft"
+    },
+    {
+     "id": "CP-LOC-002",
+     "priority": "A",
+     "topic": "Zwei Standorte: Frankfurt (Untermainkai 26, Eingang, Tiefgarage) und München (Oberanger 32), je mit Karte, Telefon und Ansprechpartnerin, eine gültige Zeit",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-LOC-003",
+     "priority": "A",
+     "topic": "Notfall-Block: 'Durchsuchung läuft gerade' mit Notfallnummern, sofort sichtbar",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-LOC-006",
+     "priority": "B",
+     "topic": "Bundesweit und international: Mandate in ganz Deutschland, London, Schweiz, Österreich (Arbeitsweise, Videoberatung)",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-LOC-009",
+     "priority": "B",
+     "topic": "Strukturdaten: LegalService für Frankfurt und München getrennt, eine Zeit, areaServed, Person, sameAs",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-SVC-001",
+     "priority": "A",
+     "topic": "Leistungsübersicht: heute 9 Bereiche ohne Tiefe, künftig 6 starke Bereiche mit sauberen Überschriften",
+     "status": "draft"
+    },
+    {
+     "id": "CP-SVC-002",
+     "priority": "A",
+     "topic": "Erster Kontakt und Ablauf: Vertraulichkeit, Erstgespräch, Reaktionszeit, wie ein Mandat startet",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-SVC-004",
+     "priority": "B",
+     "topic": "FAQ-Hub: die 6 starken FAQ-Seiten (2.555 Wörter) mit 1 H1, H2 je Frage, verlinkt aus den Leistungen, mit FAQPage",
+     "status": "draft"
+    },
+    {
+     "id": "CP-SVC-020",
+     "priority": "B",
+     "topic": "Kontaktformular und Rückruf-Bitte (ohne Falldaten), Einwilligungstext",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-SVC-024",
+     "priority": "B",
+     "topic": "Kurze Direktantworten (40 bis 60 Wörter) unter jeder Frage für KI-Antworten",
+     "status": "draft"
+    },
+    {
+     "id": "CP-BRD-001",
+     "priority": "A",
+     "topic": "Positionierung: Steuer- und Wirtschaftsstrafrecht, Zoll und Begleitdelikte aus einer Hand",
+     "status": "draft"
+    },
+    {
+     "id": "CP-BRD-002",
+     "priority": "B",
+     "topic": "Zwei Mandantengruppen klar trennen: Privatpersonen (Selbstanzeige, Verfahren) und Unternehmen (Unternehmensvertretung, Compliance)",
+     "status": "draft"
+    },
+    {
+     "id": "CP-BRD-003",
+     "priority": "B",
+     "topic": "Arbeitsweise: Diskretion, Vertraulichkeit, schnelle Erreichbarkeit, E-Mail zuerst",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-BRD-005",
+     "priority": "B",
+     "topic": "Über die Kanzlei: Geschichte, Werte, zwei Standorte (Seite hat schon 1.082 Wörter)",
+     "status": "draft"
+    },
+    {
+     "id": "CP-AUT-001",
+     "priority": "A",
+     "topic": "Titel und Qualifikationen: Fachanwältin für Steuerrecht (seit 2021), Zertifizierte Beraterin für Steuerstrafrecht DAA (seit 2022)",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-AUT-002",
+     "priority": "A",
+     "topic": "Beweis-Leiste: anwalt.de 5,0 (79 Bewertungen) und Google 5,0 (14 in Frankfurt), ohne Falldetails",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-AUT-003",
+     "priority": "B",
+     "topic": "Pressestimmen und 'Bekannt aus': nur belegte Erwähnungen (LTO, JUVE, ZRI und andere)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-10",
+   "parent": "ST-00",
+   "title": "Leistungen (Übersicht)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Sechs Bereiche mit klaren Überschriften, je mit Link. Löst den toten Link /schwerpunkte ab.",
+   "path": "/index.php/leistungen",
+   "kw": "anwalt steuerstrafrecht",
+   "pool_items": [
+    "CP-SVC-001"
+   ],
+   "kind": "hub",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-001"
+   ],
+   "_gsc": null,
+   "_words": 152,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "anwalt steuerstrafrecht",
+    "volume": 480,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-001",
+     "priority": "A",
+     "topic": "Leistungsübersicht: heute 9 Bereiche ohne Tiefe, künftig 6 starke Bereiche mit sauberen Überschriften",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-11",
+   "parent": "ST-10",
+   "title": "Steuerstrafrecht (Säulenseite)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Verfahren, Strafen, Verjährung, Selbstanzeige, Rolle des Verteidigers. 1.500 bis 2.000 Wörter, 1 H1, H2 je Frage.",
+   "path": "/index.php/steuerstrafrecht",
+   "kw": "anwalt steuerstrafrecht",
+   "pool_tag": "service:steuerstrafrecht",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-005"
+   ],
+   "_gsc": null,
+   "_words": 217,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "anwalt steuerstrafrecht",
+    "volume": 480,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-005",
+     "priority": "A",
+     "topic": "Steuerstrafrecht-Säulenseite: Verfahren, Strafen, Verjährung, Selbstanzeige, Rolle des Verteidigers (1.500 bis 2.000 Wörter)",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-12",
+   "parent": "ST-11",
+   "title": "Verteidigung im Steuerstrafverfahren",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Einleitung, Akteneinsicht, Einstellung, Dauer, Kosten-Hinweis.",
+   "path": "/index.php/steuerstrafrecht/verteidigung-im-steuerstrafverfahren",
+   "kw": "steuerstrafverfahren",
+   "pool_tag": "service:steuerstrafrecht-verteidigung",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-006"
+   ],
+   "_gsc": null,
+   "_words": 276,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "steuerstrafverfahren",
+    "volume": 260,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-006",
+     "priority": "B",
+     "topic": "Verteidigung im Steuerstrafverfahren: Einleitung, Akteneinsicht, Einstellung, Dauer, Rolle des Verteidigers",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-13",
+   "parent": "ST-11",
+   "title": "Gutachten und Risikobewertung",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Steuerstrafrechtliche Risiken vorab prüfen. Für Unternehmen und Privatpersonen.",
+   "path": "/index.php/steuerstrafrecht/gutachten-risikobewertung",
+   "kw": "tax compliance",
+   "pool_tag": "service:gutachten-risikobewertung",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-011"
+   ],
+   "_gsc": null,
+   "_words": 282,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "tax compliance",
+    "volume": 590,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-011",
+     "priority": "C",
+     "topic": "Gutachten und Risikobewertung: steuerstrafrechtliche Risiken vorab prüfen",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-14",
+   "parent": "ST-10",
+   "title": "Selbstanzeige (Säulenseite)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Voraussetzungen, Ablauf, Sperrgründe, vorherige Prüfung, Kosten. Hier gehört der Text der drei Selbstanzeige-Seiten zusammen.",
+   "path": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+   "kw": "selbstanzeige anwalt",
+   "pool_tag": "service:selbstanzeige",
+   "kind": "page",
+   "audience": "patient",
+   "note": "Drei Seiten zu diesem Thema haben fast denselben Text (siehe Weiterleitungs-Vorschläge).",
+   "_items": [
+    "CP-SVC-009",
+    "CP-SVC-010"
+   ],
+   "_gsc": null,
+   "_words": 248,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "selbstanzeige anwalt",
+    "volume": 10,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-009",
+     "priority": "A",
+     "topic": "Selbstanzeige-Seite: Voraussetzungen, Ablauf, Sperrgründe, vorherige Prüfung, Kosten",
+     "status": "draft"
+    },
+    {
+     "id": "CP-SVC-010",
+     "priority": "B",
+     "topic": "Selbstanzeige-Fragen: Ist sie straffrei? Wer zahlt den Anwalt? Wie hoch ist die Strafe bei 5.000 €?",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-15",
+   "parent": "ST-14",
+   "title": "Selbstanzeige: vorherige Prüfung steuerstrafrechtlicher Risiken",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Eigener Text zur Risikoprüfung vor einer Selbstanzeige. Heute zu 74 % gleicher Text wie die Säulenseite.",
+   "path": "/index.php/selbstanzeigen-steuerliche-korrekturen/beratung-und-vorherige-pruefung-steuerstrafrechtlicher-risiken",
+   "kw": "selbstanzeige steuerhinterziehung voraussetzungen",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [],
+   "_gsc": null,
+   "_words": 252,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "selbstanzeige steuerhinterziehung voraussetzungen",
+    "volume": 10,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-16",
+   "parent": "ST-14",
+   "title": "Selbstanzeige: Beratung und Begleitung",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Heute zu 97 % gleicher Text wie die Säulenseite. Entweder eigener Text oder Zusammenführung.",
+   "path": "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+   "kw": "selbstanzeige anwalt",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [],
+   "_gsc": null,
+   "_words": 248,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "selbstanzeige anwalt",
+    "volume": 10,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-17",
+   "parent": "ST-14",
+   "title": "Selbstanzeige und Korrekturberatung (unter Steuerstrafrecht)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Zweite Selbstanzeige-Seite in einem anderen Bereich. Eigene Teile in die Säulenseite übernehmen, dann zusammenführen.",
+   "path": "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+   "kw": "selbstanzeige steuerhinterziehung",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [],
+   "_gsc": null,
+   "_words": 219,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "selbstanzeige steuerhinterziehung",
+    "volume": 480,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-18",
+   "parent": "ST-10",
+   "title": "Steuerfahndung und Durchsuchung (Akutseite)",
+   "status": "Neu",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Was tun in der ersten Stunde, Rechte, Notfallnummer, Durchsuchungsbegleitung. Eigener Text.",
+   "slug": "/steuerfahndung-durchsuchung/",
+   "kw": "steuerfahndung anwalt",
+   "pool_tag": "service:steuerfahndung-durchsuchung",
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Notfallnummern bestätigen"
+   ],
+   "note": "Herkunft: Unterseite 'Durchsuchungsbegleitung' und Call (Durchsuchung und Haft sind die wertvollsten Mandate). URL-Schema der Seite (Joomla mit /index.php/) ist eine technische Entscheidung.",
+   "_items": [
+    "CP-SVC-007"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "steuerfahndung anwalt",
+    "volume": null,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-007",
+     "priority": "B",
+     "topic": "Steuerfahndung und Durchsuchung: Akutseite 'Was tun in der ersten Stunde?', Rechte, Notfallnummer",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-19",
+   "parent": "ST-18",
+   "title": "Durchsuchungsbegleitung und Schulung (für Unternehmen)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Mitarbeiter auf den Ernstfall vorbereiten.",
+   "path": "/index.php/steuerstrafrecht/durchsuchungsbegleitung-schulung",
+   "pool_tag": "service:durchsuchungsschulung",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-008"
+   ],
+   "_gsc": null,
+   "_words": 223,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-008",
+     "priority": "C",
+     "topic": "Durchsuchungs-Schulung für Unternehmen: Mitarbeiter auf den Ernstfall vorbereiten",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-20",
+   "parent": "ST-10",
+   "title": "Wirtschaftsstrafrecht",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Ermittlungsverfahren gegen Unternehmen, Geschäftsführer, Mitarbeiter. Verlinkt Unternehmensvertretung, Ordnungswidrigkeiten, Korruption.",
+   "path": "/index.php/sonstiges-wirtschaftsstrafrecht",
+   "kw": "anwalt wirtschaftsstrafrecht",
+   "pool_tag": "service:wirtschaftsstrafrecht",
+   "kind": "page",
+   "audience": "patient",
+   "note": "Die URL 'sonstiges-…' trägt kein Suchwort. Umbenennung nur mit Weiterleitung und Go.",
+   "_items": [
+    "CP-SVC-013"
+   ],
+   "_gsc": null,
+   "_words": 142,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "anwalt wirtschaftsstrafrecht",
+    "volume": 170,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-013",
+     "priority": "A",
+     "topic": "Wirtschaftsstrafrecht: Ermittlungsverfahren gegen Unternehmen, Geschäftsführer, Mitarbeiter",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-21",
+   "parent": "ST-20",
+   "title": "Unternehmensvertretung",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Verfahren gegen Mitarbeiter und Leitung, Zeugenbegleitung, Unternehmensgeldbuße.",
+   "path": "/index.php/unternehmensvertretung",
+   "pool_tag": "service:unternehmensvertretung",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-016"
+   ],
+   "_gsc": null,
+   "_words": 291,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-016",
+     "priority": "C",
+     "topic": "Unternehmensvertretung: Verfahren gegen Mitarbeiter und Leitung, Zeugenbegleitung, Unternehmensgeldbuße",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-22",
+   "parent": "ST-21",
+   "title": "Unterseiten Unternehmensvertretung",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Vier Unterseiten bleiben. Doppelte H1 aus der Vorlage beheben.",
+   "kind": "group",
+   "group_patterns": [
+    "/unternehmensvertretung/"
+   ],
+   "audience": "patient",
+   "_items": [],
+   "_count": 4,
+   "_gsc": null
+  },
+  {
+   "id": "ST-23",
+   "parent": "ST-20",
+   "title": "Ordnungswidrigkeiten",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Steuer-OWi, leichtfertige Steuerverkürzung, Geldbußen, Organisationsverschulden.",
+   "path": "/index.php/ordnungswidrigkeiten",
+   "kw": "steuerordnungswidrigkeit",
+   "pool_tag": "service:ordnungswidrigkeiten",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-018"
+   ],
+   "_gsc": null,
+   "_words": 229,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "steuerordnungswidrigkeit",
+    "volume": 30,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-018",
+     "priority": "B",
+     "topic": "Ordnungswidrigkeiten: Steuer-OWi, leichtfertige Steuerverkürzung, Geldbußen, Organisationsverschulden",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-24",
+   "parent": "ST-23",
+   "title": "Unterseiten Ordnungswidrigkeiten",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Drei Unterseiten bleiben.",
+   "kind": "group",
+   "group_patterns": [
+    "/ordnungswidrigkeiten/"
+   ],
+   "audience": "patient",
+   "_items": [],
+   "_count": 3,
+   "_gsc": null
+  },
+  {
+   "id": "ST-25",
+   "parent": "ST-20",
+   "title": "Korruptionsstrafrecht",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Seite bleibt, Text und Überschriften neu.",
+   "path": "/index.php/korruptionsstrafrecht",
+   "pool_tag": "service:korruptionsstrafrecht",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-019"
+   ],
+   "_gsc": null,
+   "_words": 227,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-019",
+     "priority": "C",
+     "topic": "Korruptionsstrafrecht",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-26",
+   "parent": "ST-10",
+   "title": "Compliance",
+   "status": "Neu",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Tax Compliance und Prävention für Unternehmen. Neue Leistung und Kachel laut Call.",
+   "slug": "/compliance/",
+   "kw": "tax compliance",
+   "pool_tag": "service:compliance",
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Ob der Text einen steuerlichen Bezug (Tax Compliance) bekommt"
+   ],
+   "note": "Herkunft: neue Leistung laut Onboarding-Call 2026-10-06. Text der Kanzlei liegt vor (2026-10-11). Die Seite gibt es heute nicht (404).",
+   "_items": [
+    "CP-SVC-012"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "tax compliance",
+    "volume": 590,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-012",
+     "priority": "A",
+     "topic": "Compliance (neu): Tax Compliance und Prävention für Unternehmen",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-27",
+   "parent": "ST-10",
+   "title": "Zollstrafrecht",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Zollfahndung, Zollverfahren, Haftung.",
+   "path": "/index.php/zollstrafrecht",
+   "kw": "zollstrafrecht",
+   "pool_tag": "service:zollstrafrecht",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-014"
+   ],
+   "_gsc": null,
+   "_words": 147,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "zollstrafrecht",
+    "volume": 20,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-014",
+     "priority": "B",
+     "topic": "Zollstrafrecht: Zollfahndung, Zollverfahren, Haftung",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-28",
+   "parent": "ST-10",
+   "title": "Schwarzarbeit, Sozialversicherung und Arbeitnehmerüberlassung (Arbeitsstrafrecht)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Begleitdelikte als Alleinstellung. Titel mit den Suchwörtern, nicht 'Arbeitsstrafrecht'.",
+   "path": "/index.php/arbeitsstrafrecht",
+   "kw": "schwarzarbeit strafe",
+   "pool_tag": "service:arbeitsstrafrecht-begleitdelikte",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-015"
+   ],
+   "_gsc": null,
+   "_words": 148,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "schwarzarbeit strafe",
+    "volume": 2900,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-015",
+     "priority": "B",
+     "topic": "Schwarzarbeit, Sozialversicherungsbetrug, Arbeitnehmerüberlassung (Begleitdelikte als Alleinstellung)",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-29",
+   "parent": "ST-10",
+   "title": "Verteidigung von Privatpersonen",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Beschuldigte und Zeugen, Strafanzeige, Ordnungswidrigkeiten. Zielgruppe Privatperson.",
+   "path": "/index.php/verteidigung-von-individualpersonen",
+   "pool_tag": "service:individualpersonen",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-017"
+   ],
+   "_gsc": null,
+   "_words": 211,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-017",
+     "priority": "C",
+     "topic": "Verteidigung von Privatpersonen: Beschuldigte und Zeugen, Strafanzeige, Ordnungswidrigkeiten",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-30",
+   "parent": "ST-29",
+   "title": "Unterseiten Privatpersonen",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Drei Unterseiten bleiben.",
+   "kind": "group",
+   "group_patterns": [
+    "/verteidigung-von-individualpersonen/"
+   ],
+   "audience": "patient",
+   "_items": [],
+   "_count": 3,
+   "_gsc": null
+  },
+  {
+   "id": "ST-31",
+   "parent": "ST-00",
+   "title": "Kosten und Honorar",
+   "status": "Neu",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Wie Anwaltskosten entstehen: Abrechnung nach Zeit, Vorschuss, Erstberatung, kein RVG. Plus Abschnitt zum KI-Einsatz. Keine Preisversprechen.",
+   "slug": "/kosten/",
+   "kw": "anwaltskosten selbstanzeige",
+   "pool_tag": "service:kosten",
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Absatz zu Versicherung und Rechtsschutz",
+    "Prüfung der Aussage zum KI-Datenschutz"
+   ],
+   "note": "Herkunft: Kostentext der Kanzlei liegt vor (2026-10-11). Der Kostenteil in den FAQ soll entfallen. Die Seite /kosten gibt es heute nicht (404). Reihenfolge: erst diese Seite, dann den FAQ-Teil kürzen, Verweis setzen.",
+   "_items": [
+    "CP-SVC-003",
+    "CP-BRD-006"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "anwaltskosten selbstanzeige",
+    "volume": 10,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-003",
+     "priority": "A",
+     "topic": "Kosten und Honorar erklärt: Abrechnung nach Zeit, Vorschuss, Erstberatung, warum nicht nach RVG",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-BRD-006",
+     "priority": "C",
+     "topic": "KI-Einsatz in der Kanzlei: wofür KI hilft und was persönlich bleibt (Baustein der Kanzlei)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-32",
+   "parent": "ST-00",
+   "title": "FAQ",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M8 Hub und Spoke",
+   "job": "Die stärkste Seite der Kanzlei (2.555 Wörter). 1 H1, H2 je Frage, FAQPage, Links in die Leistungen, kurze Direktantworten. Der Kostenteil zieht auf die Kostenseite um.",
+   "path": "/index.php/faq",
+   "kw": "steuerstrafverfahren",
+   "pool_items": [
+    "CP-SVC-004",
+    "CP-SVC-024"
+   ],
+   "kind": "hub",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-004",
+    "CP-SVC-024"
+   ],
+   "_gsc": null,
+   "_words": 2555,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "steuerstrafverfahren",
+    "volume": 260,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-004",
+     "priority": "B",
+     "topic": "FAQ-Hub: die 6 starken FAQ-Seiten (2.555 Wörter) mit 1 H1, H2 je Frage, verlinkt aus den Leistungen, mit FAQPage",
+     "status": "draft"
+    },
+    {
+     "id": "CP-SVC-024",
+     "priority": "B",
+     "topic": "Kurze Direktantworten (40 bis 60 Wörter) unter jeder Frage für KI-Antworten",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-33",
+   "parent": "ST-00",
+   "title": "Aktuelles",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M8 Hub und Spoke",
+   "job": "Hat keine H1. Wird zum Einstieg in die Ratgeber.",
+   "path": "/index.php/aktuelles",
+   "kind": "hub",
+   "audience": "patient",
+   "_items": [],
+   "_gsc": null,
+   "_words": 338,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-34",
+   "parent": "ST-33",
+   "title": "Ratgeber Steuerstrafrecht (Wissens-Hub)",
+   "status": "Vorschlag",
+   "origin": "vorschlag",
+   "module": "M8 Hub und Spoke",
+   "job": "Themen-Hub mit eigenen Quellen. Verlinkt Ratgeber und Geldseiten.",
+   "slug": "/ratgeber/",
+   "kw": "steuerhinterziehung strafe",
+   "pool_items": [
+    "CP-AUT-009"
+   ],
+   "kind": "hub",
+   "audience": "patient",
+   "note": "Entsteht aus Suchanfragen und Wettbewerbern (WILD: 58 Artikel), nicht aus Kundeninhalt. Deshalb Vorschlag.",
+   "_items": [
+    "CP-AUT-009"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "steuerhinterziehung strafe",
+    "volume": 4400,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-AUT-009",
+     "priority": "B",
+     "topic": "Wissens-Hub Steuerstrafrecht: Ratgeber-Cluster (Verfahren, Strafe, Verjährung, Kosten, Selbstanzeige), verlinkt mit den Geldseiten",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-35",
+   "parent": "ST-34",
+   "title": "Steuerhinterziehung: Strafe und Strafrahmen",
+   "status": "Vorschlag",
+   "origin": "vorschlag",
+   "module": "M8 Hub und Spoke",
+   "job": "Ratgeber zur häufigsten Frage (4.400 Suchen).",
+   "slug": "/ratgeber/steuerhinterziehung-strafe/",
+   "kw": "steuerhinterziehung strafe",
+   "pool_items": [
+    "CP-SVC-021"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Autor und Freigabe (Dr. Stürzl oder Dr. Glogger)"
+   ],
+   "_items": [
+    "CP-SVC-021"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "steuerhinterziehung strafe",
+    "volume": 4400,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-021",
+     "priority": "B",
+     "topic": "Ratgeber: Steuerhinterziehung, Strafe und Strafrahmen (4.400 Suchen)",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-36",
+   "parent": "ST-34",
+   "title": "Verjährung der Steuerhinterziehung",
+   "status": "Vorschlag",
+   "origin": "vorschlag",
+   "module": "M8 Hub und Spoke",
+   "job": "Ratgeber (2.400 Suchen).",
+   "slug": "/ratgeber/verjaehrung/",
+   "kw": "steuerhinterziehung verjährung",
+   "pool_items": [
+    "CP-SVC-022"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Autor und Freigabe"
+   ],
+   "_items": [
+    "CP-SVC-022"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "steuerhinterziehung verjährung",
+    "volume": 2400,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-022",
+     "priority": "B",
+     "topic": "Ratgeber: Verjährung der Steuerhinterziehung (2.400 Suchen)",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-37",
+   "parent": "ST-34",
+   "title": "Krypto und Steuerhinterziehung",
+   "status": "Vorschlag",
+   "origin": "vorschlag",
+   "module": "M8 Hub und Spoke",
+   "job": "Nische. Die Kundin hat einen Influencer-Beitrag.",
+   "slug": "/ratgeber/krypto/",
+   "kw": "krypto steuerhinterziehung",
+   "pool_items": [
+    "CP-SVC-023"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Autor und Freigabe"
+   ],
+   "_items": [
+    "CP-SVC-023"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "krypto steuerhinterziehung",
+    "volume": 20,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-023",
+     "priority": "C",
+     "topic": "Ratgeber: Krypto und Steuerhinterziehung (Nische, Kundin hat einen Influencer-Beitrag)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-40",
+   "parent": "ST-00",
+   "title": "Kontakt und Anfahrt",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort",
+   "job": "Beide Büros (Frankfurt Untermainkai 26, München Oberanger 32) mit Eingang, Tiefgarage, Karte, Telefon, Notfall-Block, Kontaktformular mit Einwilligungstext. Doppelte H1 ('Frankfurt', 'München') beheben.",
+   "path": "/index.php/kontakt",
+   "pool_items": [
+    "CP-LOC-002",
+    "CP-LOC-003",
+    "CP-SVC-020",
+    "CP-LOC-006"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Eine gültige Zeit",
+    "Einwilligungstext (§ 203 StGB, DSGVO)"
+   ],
+   "_items": [
+    "CP-LOC-002",
+    "CP-LOC-003",
+    "CP-SVC-020",
+    "CP-LOC-006"
+   ],
+   "_gsc": null,
+   "_words": 255,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-LOC-002",
+     "priority": "A",
+     "topic": "Zwei Standorte: Frankfurt (Untermainkai 26, Eingang, Tiefgarage) und München (Oberanger 32), je mit Karte, Telefon und Ansprechpartnerin, eine gültige Zeit",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-LOC-003",
+     "priority": "A",
+     "topic": "Notfall-Block: 'Durchsuchung läuft gerade' mit Notfallnummern, sofort sichtbar",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-SVC-020",
+     "priority": "B",
+     "topic": "Kontaktformular und Rückruf-Bitte (ohne Falldaten), Einwilligungstext",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-LOC-006",
+     "priority": "B",
+     "topic": "Bundesweit und international: Mandate in ganz Deutschland, London, Schweiz, Österreich (Arbeitsweise, Videoberatung)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-41",
+   "parent": "ST-40",
+   "title": "Standort Frankfurt",
+   "status": "Neu",
+   "origin": "kunde",
+   "module": "M5 Standort",
+   "job": "Büro Untermainkai 26, Team, Fachgebiete mit Frankfurter Bezug. Eigener Text. Gleichrangig mit der Seite für München.",
+   "slug": "/standort-frankfurt/",
+   "kw": "anwalt steuerstrafrecht frankfurt",
+   "pool_tag": "place:frankfurt",
+   "kind": "page",
+   "audience": "patient",
+   "note": "Herkunft: das Büro und die Standortangaben der Kanzlei. Frankfurt ist der Kernort (Ortsregel erfüllt).",
+   "_items": [
+    "CP-LOC-004"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "anwalt steuerstrafrecht frankfurt",
+    "volume": null,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-LOC-004",
+     "priority": "B",
+     "topic": "Standortseite Frankfurt: Büro Untermainkai 26, Team, Fachgebiete mit Frankfurter Bezug",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-42",
+   "parent": "ST-40",
+   "title": "Standort München",
+   "status": "Neu",
+   "origin": "kunde",
+   "module": "M5 Standort",
+   "job": "Büro Oberanger 32, Lea Wimmer, Leistungen vor Ort. Eigener Text, keine Kopie der Frankfurter Seite.",
+   "slug": "/standort-muenchen/",
+   "kw": "anwalt steuerstrafrecht münchen",
+   "pool_tag": "place:muenchen",
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Ansprechpartnerin und Leistungen am Standort München"
+   ],
+   "note": "Herkunft: das München-Büro mit Standortleitung. München ist als Standort bestätigt (Martin 2026-10-11).",
+   "_items": [
+    "CP-LOC-005"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "anwalt steuerstrafrecht münchen",
+    "volume": 70,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-LOC-005",
+     "priority": "A",
+     "topic": "München-Seite: Büro Oberanger 32, Ansprechpartnerin Lea Wimmer, Leistungen vor Ort (eigener Text)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-43",
+   "parent": "ST-00",
+   "title": "Kanzlei (Über uns)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M6 Behandlerseite",
+   "job": "Geschichte, Werte, Arbeitsweise, zwei Standorte. Die Seite hat schon 1.082 Wörter.",
+   "path": "/index.php/kanzlei",
+   "pool_items": [
+    "CP-BRD-005",
+    "CP-BRD-003"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-BRD-005",
+    "CP-BRD-003"
+   ],
+   "_gsc": null,
+   "_words": 1082,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-BRD-005",
+     "priority": "B",
+     "topic": "Über die Kanzlei: Geschichte, Werte, zwei Standorte (Seite hat schon 1.082 Wörter)",
+     "status": "draft"
+    },
+    {
+     "id": "CP-BRD-003",
+     "priority": "B",
+     "topic": "Arbeitsweise: Diskretion, Vertraulichkeit, schnelle Erreichbarkeit, E-Mail zuerst",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-44",
+   "parent": "ST-43",
+   "title": "Team",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M6 Behandlerseite",
+   "job": "Anwältinnen, Standortleitung, Profile mit Fachgebiet. Namen anderer Personen klären (die Seite rankt dafür).",
+   "path": "/index.php/team",
+   "pool_items": [
+    "CP-BRD-004"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Sind Pösl, Kellner, Brunzel, Euler, Fenzl, Scherübel ehemalige Kolleg:innen?"
+   ],
+   "_items": [
+    "CP-BRD-004"
+   ],
+   "_gsc": null,
+   "_words": 259,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-BRD-004",
+     "priority": "B",
+     "topic": "Team-Seite: Anwältinnen, Standortleitung, Profile mit Fachgebiet. Namen anderer Personen klären",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-45",
+   "parent": "ST-44",
+   "title": "Dr. Anja Stürzl",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M6 Behandlerseite",
+   "job": "Titel (nach Bestätigung), Werdegang, Person-Auszeichnung, Veröffentlichungen. H1 fehlt.",
+   "path": "/index.php/dr-anja-stuerzl",
+   "kw": "anja stürzl",
+   "pool_items": [
+    "CP-AUT-001",
+    "CP-AUT-010"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Titel bestätigen"
+   ],
+   "_items": [
+    "CP-AUT-001",
+    "CP-AUT-010"
+   ],
+   "_gsc": null,
+   "_words": 768,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": "anja stürzl",
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-AUT-001",
+     "priority": "A",
+     "topic": "Titel und Qualifikationen: Fachanwältin für Steuerrecht (seit 2021), Zertifizierte Beraterin für Steuerstrafrecht DAA (seit 2022)",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-AUT-010",
+     "priority": "C",
+     "topic": "Person-Auszeichnung für Dr. Stürzl und Dr. Glogger (Person, sameAs anwalt.de, Kammer, LinkedIn, knowsAbout)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-46",
+   "parent": "ST-44",
+   "title": "Dr. Monika Glogger",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M6 Behandlerseite",
+   "job": "Werdegang, Compliance-Bezug, Person-Auszeichnung. H1 fehlt.",
+   "path": "/index.php/dr-monika-glogger",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [],
+   "_gsc": null,
+   "_words": 311,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-47",
+   "parent": "ST-44",
+   "title": "Lea Wimmer (Standortleitung München)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M6 Behandlerseite",
+   "job": "Bleibt. Verlinkt auf die Seite Standort München.",
+   "path": "/index.php/lea-wimmer",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [],
+   "_gsc": null,
+   "_words": 648,
+   "_schema": [
+    "ContactPoint",
+    "GeoCoordinates",
+    "LegalService",
+    "OpeningHoursSpecification",
+    "Person",
+    "PostalAddress"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-48",
+   "parent": "ST-44",
+   "title": "Weitere Team-Profile",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M6 Behandlerseite",
+   "job": "Weitere Profile bleiben. Überschriften nachziehen.",
+   "kind": "group",
+   "group_patterns": [
+    "/(jessica-weyel|lenka-schluetter|maria-bruckmeier|nina-gueldenring|thorben-hoppe|mary)$"
+   ],
+   "audience": "patient",
+   "_items": [],
+   "_count": 6,
+   "_gsc": null
+  },
+  {
+   "id": "ST-49",
+   "parent": "ST-43",
+   "title": "Veröffentlichungen, Vorträge und Presse",
+   "status": "Neu",
+   "origin": "kunde",
+   "module": "M6 Behandlerseite",
+   "job": "Belegte Fachbeiträge, Vorträge und Presse mit Links. Keine Logos ohne Beleg.",
+   "slug": "/publikationen/",
+   "pool_items": [
+    "CP-AUT-004",
+    "CP-AUT-003"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Liste der Beiträge und Vorträge mit Jahr",
+    "Welche Presse-Stücke stammen von der Kanzlei?"
+   ],
+   "note": "Herkunft: öffentlich belegte Vorträge und 15 Presse-Erwähnungen (Audit 2026-10-08).",
+   "_items": [
+    "CP-AUT-004",
+    "CP-AUT-003"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-AUT-004",
+     "priority": "C",
+     "topic": "Fachbeiträge, Vorträge und Seminare (R&W, Fürstenberg und andere) als eigene Seite",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-AUT-003",
+     "priority": "B",
+     "topic": "Pressestimmen und 'Bekannt aus': nur belegte Erwähnungen (LTO, JUVE, ZRI und andere)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-50",
+   "parent": "ST-49",
+   "title": "Anonymisierte Fallbeispiele",
+   "status": "Vorschlag",
+   "origin": "vorschlag",
+   "module": "M6 Behandlerseite",
+   "job": "Nur vollständig anonymisiert, nach Berufsrecht-Prüfung.",
+   "slug": "/fallbeispiele/",
+   "pool_items": [
+    "CP-AUT-005"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Welche Fälle sind darstellbar? Freigabe durch Dr. Stürzl"
+   ],
+   "_items": [
+    "CP-AUT-005"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-AUT-005",
+     "priority": "C",
+     "topic": "Anonymisierte Fallbeispiele ohne Mandantenbezug (nach Berufsrecht-Check)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-60",
+   "parent": "ST-00",
+   "title": "Impressum",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Pflichtseite.",
+   "path": "/index.php/impressum",
+   "kind": "system",
+   "audience": "patient",
+   "_items": [],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-61",
+   "parent": "ST-00",
+   "title": "Datenschutz",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Pflichtseite.",
+   "path": "/index.php/datenschutz",
+   "kind": "system",
+   "audience": "patient",
+   "_items": [],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-62",
+   "parent": "ST-00",
+   "title": "Nutzungsbedingungen",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Pflichtseite.",
+   "path": "/index.php/nutzungsbedingungen",
+   "kind": "system",
+   "audience": "patient",
+   "_items": [],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-63",
+   "parent": "ST-00",
+   "title": "Friends",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "außerhalb",
+   "job": "Bleibt. Nicht Teil dieses Plans.",
+   "path": "/index.php/friends",
+   "kind": "page",
+   "audience": "both",
+   "_items": [],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-64",
+   "parent": "ST-00",
+   "title": "Join our team",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "außerhalb",
+   "job": "Bleibt. Bewerber-Seite, nicht Teil dieses Plans.",
+   "path": "/index.php/join-our-team",
+   "kind": "page",
+   "audience": "both",
+   "_items": [],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  }
+ ],
+ "redirect_proposals": [
+  {
+   "from": "/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+   "to": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+   "reason": "97 % der Fünf-Wort-Folgen sind gleich (Messung 2026-10-11). Zusammenführen oder eigenen Text schreiben. Nur mit Zustimmung der Kundin. Klärung mit Irsch (Martin, 2026-10-11)."
+  },
+  {
+   "from": "/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+   "to": "/index.php/selbstanzeigen-steuerliche-korrekturen",
+   "reason": "Gleiches Thema in zwei Bereichen (31 % gleicher Text). Eigene Teile übernehmen, dann zusammenführen. Nur mit Zustimmung der Kundin. Klärung mit Irsch (Martin, 2026-10-11)."
+  },
+  {
+   "from": "/index.php/schwerpunkte",
+   "to": "/index.php/leistungen",
+   "reason": "Die Startseite verlinkt diese Seite, sie liefert 404. Link ändern oder Weiterleitung setzen. Klärung mit Irsch (Martin, 2026-10-11)."
+  }
+ ],
+ "catchment": [
+  {
+   "level": 1,
+   "name": "Kern-Orte",
+   "places": [
+    "Frankfurt am Main",
+    "München"
+   ],
+   "action": "Zwei Standortseiten mit eigenem Text, gleichrangig: Frankfurt und München. Beide Orte im Title der Startseite.",
+   "kw": [
+    "anwalt steuerstrafrecht frankfurt",
+    "steuerstrafrecht frankfurt",
+    "steuerfahndung frankfurt",
+    "anwalt wirtschaftsstrafrecht frankfurt",
+    "anwalt steuerstrafrecht münchen",
+    "anwalt steuerhinterziehung münchen",
+    "anwalt wirtschaftsstrafrecht münchen",
+    "selbstanzeige anwalt münchen"
+   ],
+   "volumes": {
+    "anwalt steuerstrafrecht frankfurt": null,
+    "steuerstrafrecht frankfurt": null,
+    "steuerfahndung frankfurt": 50,
+    "anwalt wirtschaftsstrafrecht frankfurt": null,
+    "anwalt steuerstrafrecht münchen": 70,
+    "anwalt steuerhinterziehung münchen": null,
+    "anwalt wirtschaftsstrafrecht münchen": 40,
+    "selbstanzeige anwalt münchen": null
+   }
+  },
+  {
+   "level": 2,
+   "name": "Große Nachbarn und Märkte",
+   "places": [
+    "Düsseldorf"
+   ],
+   "action": "Keine eigene Seite: kein Büro, keine Nachfragedaten. Düsseldorf steht im Absatz zur bundesweiten Arbeit.",
+   "kw": [
+    "anwalt steuerstrafrecht düsseldorf",
+    "strafverteidiger düsseldorf"
+   ],
+   "volumes": {
+    "anwalt steuerstrafrecht düsseldorf": null,
+    "strafverteidiger düsseldorf": 390
+   }
+  },
+  {
+   "level": 3,
+   "name": "Klarer dritter Ort",
+   "places": [],
+   "action": "Keiner belegt.",
+   "kw": [],
+   "volumes": {}
+  },
+  {
+   "level": 4,
+   "name": "Kleinorte und Umland",
+   "places": [
+    "Offenbach",
+    "Wiesbaden",
+    "Bad Homburg"
+   ],
+   "action": "Nur im Fließtext. Eigene Seiten wären Doorway-Seiten.",
+   "kw": [],
+   "volumes": {}
+  }
+ ],
+ "reasons": [
+  "<b>Depth, not topics.</b> The homepage has {home_words} words. The floor is {floor} words. The service pages have {svc_min} to {svc_max} words. The page template adds a 'Leistungen' H1 to every page, so each has 2 H1 and no H2. Three Selbstanzeige pages share up to 97 % of their text. A page for the Steuerfahndung emergency, for costs, for compliance and for the München office does not exist (404 or missing).",
+  "<b>No search focus yet.</b> Most of the demand is informational. The client ranks mostly for her own name. Search Console is not available, so her own queries and clicks are unknown.",
+  "<b>Trust signals are thin on Google.</b> Frankfurt shows 14 Google reviews, the local pack competitors 55 to 83. The anwalt.de profile shows 79. There is no Person markup, and no title is shown yet.",
+  "<b>Links are a smaller gap.</b> Referring domains: {rd}. About 40 of the client's 58 domains seen in the audit of 2026-10-08 were spam. Source: DataForSEO backlinks summary, 2026-10-11."
+ ],
+ "not_built": [
+  "Pages for Offenbach, Wiesbaden, Bad Homburg: no office, no demand, no local facts (pool item CP-LOC-007, cut).",
+  "A page for Düsseldorf: no office, no search data (CP-LOC-008, cut).",
+  "Pages for general tax advice, general criminal defence and Betriebsprüfung: adjacent. They wait for the client's answer (CP-SVC-025, 026, 027).",
+  "Directory listings and the 15 unlinked press mentions: link work, not pages (CP-AUT-007, CP-AUT-008)."
+ ],
+ "referring_domains": {
+  "stuerzl-steuerstrafrecht.de": 60,
+  "anwalt-steuerrecht-frankfurt.de": 125,
+  "dreyenberg.com": 975,
+  "wild.legal": 94
+ },
+ "unassigned_items": [],
+ "gsc_available": false,
+ "gsc_note": null,
+ "benchmark": {
+  "homepages_measured": {
+   "anwalt-steuerrecht-frankfurt.de": 220,
+   "dreyenberg.com": 769,
+   "rosepartner.de": 1463,
+   "rgra.de": 3492,
+   "rae-sus.de": 228,
+   "ht-strafrecht.de": 1445,
+   "doerr-ffm.de": 630,
+   "kanzlei-velke.de": 323,
+   "spies-rechtsanwaelte.com": 1174,
+   "dr-buchert.de": 1583,
+   "selbstanzeige-frankfurt.de": 4154
+  },
+  "median_words": 1174,
+  "floor_70pct": 822,
+  "own_homepage_words": 358,
+  "own_below_floor": true
+ }
+}

@@ -65,6 +65,33 @@ Dahinter: einmal verbrannt.
 Dahinter: höfliche Verschiebung.
 - Die Pitch-Page IST das Angebot: *"You've just seen it — the system, the results, the investment. What I'll send is the private link. But let's decide the real question now: is this a direction you want, yes or no? The package details are the easy part."*
 
+### 11. "Wir haben organisch genug zu tun — unser Flaschenhals sind die Mitarbeiter"
+Dahinter: Echter Kapazitäts-Engpass, kein Lead-Engpass. **Das ist meist ehrlich gemeint und stimmt auch.** Wer hier "aber du könntest doch noch mehr wachsen" sagt, wirkt taub und verliert den Kontakt.
+
+**Regel: Nie gegen den Engpass argumentieren. Stattdessen fragen — löst Sichtbarkeit vielleicht GENAU DIESEN Engpass?** Meistens ja, nur über einen anderen Kanal.
+
+**Die drei Umdeutungen (in dieser Reihenfolge prüfen):**
+
+1. **Recruiting ist auch ein Sichtbarkeits-Problem.** Wenn Personal der Engpass ist, ist die Frage nicht "mehr Kunden", sondern "mehr Bewerber". Recruiting-Keywords haben oft hohes Volumen bei einem Bruchteil des Klickpreises — und der Kunde rankt häufig bereits dafür, ohne es zu nutzen (keine Karriereseite, kein Pixel, kein Funnel).
+2. **Qualität statt Menge.** Bei voller Auslastung ist der Hebel nicht mehr Anfragen, sondern *bessere*: höherwertige Mandate/Aufträge bei gleicher Kapazität. Sichtbarkeit auf den teuren, transaktionalen Begriffen statt auf Recherche-Traffic.
+3. **Pipeline für später.** Auslastung ist ein Momentzustand. Wer heute recherchiert und in 6 Monaten kauft, ist ohne Tracking/Retargeting für immer weg. Das kostet nichts an Kapazität — es baut den Puffer für die nächste Delle.
+
+**Formulierung (DE):**
+> "Das ist ein gutes Problem zu haben ;-) — dann ist mehr Anfragen ja gerade nicht dein Thema. Interessanter für dich ist vielleicht: Deine Seite, die auf Platz X rankt, deckt genau die Begriffe ab, nach denen [Kandidaten/Wunschmandanten] suchen. Die Leute ziehst du ohnehin schon an — nur fängt sie aktuell nichts auf. Für einen Engpass bei [Personal] ist das der günstigste Kanal, den man haben kann."
+
+**EN:**
+> *"That's a good problem to have ;-) — so more leads clearly isn't your issue. What might be more interesting: the page that ranks #X for you already covers exactly what [candidates / high-value clients] search for. You're attracting those people anyway — there's just nothing there to catch them. For a [staffing] bottleneck, that's the cheapest channel you can get."*
+
+**Immer mit einem Ausstieg schließen:**
+> "Falls dich das Thema interessiert, schau ich mir das gern genauer an. Ansonsten: freut mich ehrlich, dass ihr so gut ausgelastet seid 👍"
+
+**Referenzfall — Dr. Rolf Claessen (Patentanwalt, Michalski · Hüttermann, Düsseldorf, 08/2026):**
+- Ablauf: Analyse geschickt → er widerspricht ("bin bei 'Patentanwalt' Platz 2 nach Wikipedia, auch in der KI-Übersicht") → mit echten SERP-Daten bestätigt, dass er recht hat (Platz 2 war eine "Ähnliche Fragen"-Box, kein Wettbewerber) → er lenkt ein ("ja, ich sollte andere Keywords optimieren") → dann der Kapazitäts-Einwand.
+- Der Fund: Seine bestrankende Seite heißt *"Patentanwalt – Kosten, **Ausbildung**, **Gehalt**, Tätigkeit"*. Genau die Begriffe, nach denen Berufseinsteiger suchen — also seine Engpass-Zielgruppe. Recruiting-Cluster: patentanwalt gehalt 1.300/Mo, patentanwalt job 1.000, ausbildung 720, patentanwaltsfachangestellte 480, patentingenieur 320, patentanwaltskandidat 170 → **~3.400/Mo bei CPC unter 2 €** (Mandanten-Begriffe: 7–25 €).
+- Lehre: **Der Einwand war der beste Aufhänger des ganzen Gesprächs.** Er hat den Engpass selbst benannt — und die Daten lagen schon vor.
+
+**Vorbereitung für den nächsten Fall:** Wenn ein Kunde "ausgelastet" sagt, sofort die Recruiting-Keywords seiner Branche ziehen (Beruf + Gehalt / Job / Ausbildung / Stellenangebote / Fachangestellte). Das dauert eine Minute und dreht das Gespräch.
+
 ## Call-Dramaturgie (Kurzfassung)
 1. Deren Ziel zuerst quantifizieren ("Wie viele Neupatienten/Monat wären ein Erfolg?") → Ziel Z notieren.
 2. Radar/Analyse zeigen (Ist-Zustand) → Lücke zwischen Ist und Z benennen.

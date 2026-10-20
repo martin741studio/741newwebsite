@@ -1,0 +1,67 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://test.example/selbstanzeige/#webpage",
+   "url": "https://test.example/selbstanzeige/",
+   "name": "Selbstanzeige Anwalt | Testkanzlei",
+   "description": "Selbstanzeige bei Steuerhinterziehung: Wann sie noch möglich ist und wie die Prüfung abläuft. Vertraulich anfragen.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "https://test.example/#website"
+   },
+   "breadcrumb": {
+    "@id": "https://test.example/selbstanzeige/#breadcrumb"
+   },
+   "mainEntity": {
+    "@id": "https://test.example/selbstanzeige/#service"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://test.example/selbstanzeige/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Startseite",
+     "item": "https://test.example/"
+    }
+   ]
+  },
+  {
+   "@type": "LegalService",
+   "@id": "https://test.example/#k",
+   "name": "Testkanzlei",
+   "url": "https://test.example/",
+   "email": "a@test.example",
+   "department": [
+    {
+     "@type": "LegalService",
+     "name": "Testkanzlei Teststadt",
+     "telephone": "+49 1",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Teststadt",
+      "postalCode": "60000",
+      "addressCountry": "DE",
+      "streetAddress": "Teststr. 1"
+     },
+     "parentOrganization": {
+      "@id": "https://test.example/#k"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "Service",
+   "@id": "https://test.example/selbstanzeige/#service",
+   "serviceType": "selbstanzeige anwalt",
+   "provider": {
+    "@id": "https://test.example/#k"
+   },
+   "url": "https://test.example/selbstanzeige/"
+  }
+ ]
+}

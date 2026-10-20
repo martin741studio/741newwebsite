@@ -1,0 +1,124 @@
+{
+ "date": "2026-10-12",
+ "page": "tests/fixture-bad/03-draft/draft-v1.md",
+ "pass": false,
+ "gates": {
+  "G1 facts": {
+   "pass": false,
+   "fails": [
+    "Zahlen ohne Beleg in der Claim-Liste: ['500']",
+    "Pflicht-Claims fehlen im Text: ['C01']"
+   ],
+   "warns": []
+  },
+  "G2 legal": {
+   "mode": "brao",
+   "pass": false,
+   "block": [
+    {
+     "rule": "Spezialisierung / Experte ohne Titel",
+     "match": "spezialist",
+     "context": "Spezialist für Selbstanzeige Zweite H1 In der heut"
+    },
+    {
+     "rule": "Ergebnisversprechen",
+     "match": "garantieren",
+     "context": " H1 In der heutigen schnelllebigen Welt garantieren wir Straffreiheit. Es geht nicht nur um"
+    },
+    {
+     "rule": "Ergebnisversprechen",
+     "match": "straffreiheit",
+     "context": "gen schnelllebigen Welt garantieren wir Straffreiheit. Es geht nicht nur um Ihr Steuerproblem"
+    }
+   ],
+   "review": [],
+   "notice_missing": false,
+   "fails": [
+    "Spezialisierung / Experte ohne Titel: \"spezialist\"",
+    "Ergebnisversprechen: \"garantieren\"",
+    "Ergebnisversprechen: \"straffreiheit\""
+   ]
+  },
+  "G3 seo": {
+   "pass": false,
+   "fails": [
+    "Title 83 Zeichen (max 60)",
+    "H1-Anzahl 2 (genau 1 nötig)",
+    "Abschnitts-IDs weichen vom Plan ab: Seite ['S01'] gegen Plan ['S01', 'S02', 'S03', 'S04', 'S05']",
+    "Wortzahl 36 unter Bestand 60",
+    "Direkt-Antwort-Block fehlt (Abschnitt mit element: answer)",
+    "FAQ: 0 Fragen (mindestens 2, Format '### Frage?')",
+    "interne Links im sichtbaren Text: 0 (mindestens 1)",
+    "CTA-Abschnitte: 1 (mindestens 2)",
+    "Primärer CTA-Text \"Vertraulich anfragen\" fehlt"
+   ],
+   "warns": [
+    "Haupt-Keyword \"selbstanzeige anwalt\" nicht (vollständig) im H1",
+    "Technik-Block (<!-- TECH -->) fehlt"
+   ],
+   "info": {
+    "words": 36,
+    "placeholders": 0
+   }
+  },
+  "G4 style": {
+   "pass": false,
+   "fails": [
+    "Gedankenstrich im Frontmatter title",
+    "Gedankenstrich — x1"
+   ],
+   "warns": [],
+   "counts": {
+    "du": 1,
+    "sie": 4,
+    "ich": 0,
+    "wir": 2
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 1,
+   "words": 36,
+   "hits": {
+    "vocabulary": [
+     "ganzheitliche",
+     "nahtlos",
+     "maßgeschneidert",
+     "in der heutigen schnelllebigen"
+    ],
+    "constructions": [
+     "nicht nur ..., sondern auch: \"nicht nur um ihr steuerproblem, sondern\"",
+     "es geht nicht um X, sondern um Y: \"es geht nicht nur um ihr steuerproblem, sondern\"",
+     "Zeitgeist-Einstieg: \"in der heutigen\""
+    ],
+    "punctuation": [
+     "Gedankenstrich — x1"
+    ],
+    "rhythm": [],
+    "invented proof": [
+     "\"über 500 mandanten\" ohne Beleg in der Claim-Liste"
+    ]
+   },
+   "pass": false,
+   "fails": [
+    "vocabulary: ganzheitliche, nahtlos, maßgeschneidert",
+    "constructions: nicht nur ..., sondern auch: \"nicht nur um ihr steuerproblem, sondern\", es geht nicht um X, sondern um Y: \"es geht nicht nur um ihr steuerproblem, sondern\", Zeitgeist-Einstieg: \"in der heutigen\"",
+    "punctuation: Gedankenstrich — x1",
+    "invented proof: \"über 500 mandanten\" ohne Beleg in der Claim-Liste"
+   ],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": false,
+   "fails": [
+    "kein Benchmark gespeichert (_work/bench-metrics.json fehlt oder leer)",
+    "H2 Direkt-Antwort-Block fehlt",
+    "H7 keine belegte Qualifikation sichtbar auf der Seite (E-E-A-T)",
+    "brief.nap_file fehlt (Schema braucht gesperrte Stammdaten)"
+   ],
+   "warns": [
+    "brief.paa_questions fehlt (PAA-Prüfung nicht möglich)"
+   ]
+  }
+ }
+}

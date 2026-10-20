@@ -1,0 +1,252 @@
+---
+client: me&you Communication (Michael Ehlers)
+page: Landingpage Replayers
+type: landing
+language: de
+address: du
+speaker: dritte
+keyword: Schlagfertigkeit lernen
+url_slug: /schlagfertigkeit-lernen
+title: Schlagfertigkeit lernen: Wenn die Worte zu spät kommen
+meta: Dir fällt die passende Antwort erst auf dem Heimweg ein? So lernst du Schlagfertigkeit mit Michael Ehlers: Übungen, Methode und ein kostenloses Gespräch.
+legal_mode: none
+status: Entwurf
+date: 2026-10-12
+flags: see OPEN-FLAGS.md
+---
+
+<!-- FLAG: Haupt-CTA Gespräch buchen, weicher Schritt Video-Training (Entscheidung Hauptsitzung). Inhalt und Länge des Trainings, Übungen im Wortlaut, Buchtitel und Bezugsquelle, Seminarnamen und Person im Gespräch vom Kunden bestätigen. Lampenfieber nur in der FAQ. Siehe OPEN-FLAGS.md -->
+<!-- S01 hero | element: hero | cta: primary -->
+<!-- design: Persona-Hero in Taubenblau hell (Startseiten-Token t1), Label „Der Nachdenker“, Text links, warmes Innenraumbild rechts (Frau schreibt abends in ein Notizbuch, naher Ausschnitt, leichtes Korn). „Schlagfertigkeit lernen“ klein über der großen Zeile, beides im selben H1. Nur ein Button sichtbar: der Header-Button bleibt verborgen, solange dieser Button im Bild ist. utm_content=hero -->
+Der Nachdenker
+
+# Schlagfertigkeit lernen. Dir fehlen nicht die Worte. Sie kommen nur zu spät.
+
+Im Meeting bleibst du still. Auf dem Heimweg hast du den perfekten Satz. Der Moment ist das Problem. Schlagfertigkeit lernst du durch kurze Übungen mit ehrlicher Rückmeldung. Hier findest du drei davon und einen ruhigen nächsten Schritt.
+
+227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert · über 8.000 Teilnehmer
+
+**Gespräch buchen**
+30 Minuten, kostenlos, per Video. Du entscheidest danach in Ruhe.
+<!-- /S01 -->
+
+<!-- S02 proof | element: proof -->
+<!-- design: ruhiges Band in Creme, ein großes Zitat in Serif, Quelle klein darunter. Kein Button. -->
+## Von der ersten bis zur letzten Rede
+
+„Die Redeübungen haben mich definitiv auf ein anderes Level gebracht […] zwischen der ersten und der letzten Rede lagen wirklich Welten.“
+
+Jenny Eikel, Google-Bewertung, nach vier Seminartagen mit Michael Ehlers
+<!-- /S02 -->
+
+<!-- S03 answer | element: answer -->
+<!-- design: viel Weißraum, Frage als H2, Antwort groß in zwei kurzen Absätzen. id="treppenwitz". -->
+## Was ist ein Treppenwitz?
+
+Ein Treppenwitz ist ein guter Gedanke, der dir einen Moment zu spät einfällt. Gemeint ist die Antwort, die dir erst beim Hinausgehen auf der Treppe kommt, wenn das Gespräch schon vorbei ist. Das Wort geht auf den französischen Ausdruck „l’esprit de l’escalier“ zurück, den Denis Diderot im 18. Jahrhundert prägte.
+
+Abends im Bett oder im Auto liegt die Antwort dann bereit. Die Worte sind also da, und am Zugang im Moment kannst du arbeiten.
+<!-- /S03 -->
+
+<!-- S04 check-list | element: check-list | cta: primary -->
+<!-- design: drei weiche Karten nebeneinander, keine Linien, je eine kurze Szene. Button darunter mittig. utm_content=momente -->
+## Drei Momente, in denen die Worte fehlen
+
+### Im Meeting
+Jemand widerspricht dir, vielleicht sogar unfair. Du weißt, dass du recht hast, und sagst trotzdem nichts. Das Gespräch läuft weiter. Schlagfertig sein heißt hier, ruhig zu antworten, solange es noch zählt, und ohne den anderen zu verletzen.
+
+### Mitten im Satz den Faden verlieren
+Du sprichst, und plötzlich ist der Faden weg. Alle schauen dich an. Es sollte sich sicher anfühlen zuzugeben, dass man den Faden verliert. Das gelingt leichter, wenn du solche Momente schon geübt hast.
+
+### Frei sprechen lernen, ohne Skript
+Du sollst frei sprechen, in der Präsentation oder im Vortrag, ohne Folien und ohne Notizen. Vorbereitet fällt es dir leicht. Spontan wird jeder Satz schwer. Frei sprechen kann man lernen, Schritt für Schritt. [Frei sprechen im Seminar](/seminare#frei-sprechen)
+
+Wenn du dich in einem dieser Momente wiederfindest, bist du hier richtig.
+
+**Gespräch buchen**
+30 Minuten, kostenlos, per Video.
+<!-- /S04 -->
+
+<!-- S05 text | element: text -->
+<!-- design: schmale Textspalte, ein Satz groß als Zitat hervorgehoben („inneres Gericht“), Quelle Podcast klein. -->
+## Warum die Worte erst später kommen
+
+Wenn die schlagfertige Antwort ausbleibt, fehlt selten das Wissen. Im Gespräch prüfst du jeden Satz, bevor du ihn sagst. Ist er gut genug? Klingt er richtig? Bis die Prüfung vorbei ist, ist der Moment vorbei.
+
+In seinem Podcast „Unübersehbar“ erzählt Michael Ehlers von einer Unternehmerin mit fünf Standorten. Sie sitzt zwei Tage in seinem Seminar und schafft es nicht, eine einzige Bitte auszusprechen. In der Folge geht es um das, was Michael das innere Gericht nennt, und darum, was es mit deiner Sprache macht. [von Kunde bestätigen: Michaels eigener Satz, warum die Worte zu spät kommen]
+
+„Wer schlagfertig ist, gilt als kommunikativ stark. Aber stimmt das auch?“ So fragt Michael in einer älteren Folge mit dem Titel „Schlagfertigkeit VS Wortmächtigkeit“. Für diese Seite heißt das: Die schnelle Pointe ist nur ein Teil. Der andere Teil ist, im richtigen Moment das zu sagen, was du wirklich meinst.
+<!-- /S05 -->
+
+<!-- S06 text | element: text | cta: primary -->
+<!-- design: dunkles Navy-Band wie Startseite, Copy-Deck-Headline groß, darunter drei weiche Spalten 01 02 03 ohne Trennlinien. Heller Button. utm_content=methode -->
+## Wirkung beginnt nicht bei der Technik.
+
+Die meisten Rhetoriktrainings starten bei Werkzeugen. Michael Ehlers startet davor: bei Persönlichkeit, Selbstbild, Mustern und innerer Stabilität. Erst wenn das steht, tragen die Werkzeuge. In seinem Podcast erklärt er, warum Technik ohne geklärte Person ein Kostüm bleibt.
+
+**Persönlichkeit.** Wer du bist, bevor du sprichst.
+
+**Kongruenz.** Wenn Haltung und Worte dasselbe sagen.
+
+**Wirkung.** Was davon im Raum ankommt.
+
+Für dich heißt das: Du arbeitest an deiner eigenen Art zu antworten, ruhig und klar.
+
+**Gespräch buchen**
+30 Minuten, kostenlos, per Video.
+<!-- /S06 -->
+
+<!-- S07 step-flow | element: step-flow -->
+<!-- design: helles Band, links Text, rechts drei Übungskarten mit großer Ziffer, weiche Ecken. Kein Button. id="uebungen". -->
+## Schlagfertigkeit lernen heißt üben
+
+Rhetorik ist ein Handwerk, und jedes Handwerk braucht Übung. Wissen allein bringt dich hier nicht weiter. Michael erklärt im Podcast, warum sich Wissen wie Fortschritt anfühlt, obwohl es keiner ist. Die Expertiseforschung beschreibt echtes Training so: individuell, mit sofortigem Feedback, an der Grenze des eigenen Könnens und mit Wiederholung. Und deshalb arbeitet Michael mit so wenig Theorie wie möglich und mit Rückmeldung zu deinem Sprechen statt Stoffplan.
+
+### Rhetorik-Übungen: Schlagfertigkeit trainieren
+
+Drei kleine Übungen für die nächste Woche:
+
+1. **Dreißig Sekunden Selbstaufnahme.** Nimm dich eine halbe Minute mit dem Handy auf, etwa mit der Antwort, die dir nach dem letzten Meeting eingefallen ist. Michael nennt sie die härteste Übung von allen.
+2. **Zwei Minuten, ein Gedanke.** Sprich zwei Minuten frei über ein Thema aus deinem Alltag. Ein Gedanke, ein Beispiel, ein Schlusssatz.
+3. **Eine ehrliche Rückmeldung.** Frag eine Person, der du vertraust: Was ist bei dir angekommen?
+
+[von Kunde bestätigen: weitere Übungen von Michael im Wortlaut]
+
+Im Seminar übst du das mit Kamera und Gruppe: dreimal Videoanalyse mit Sofort-Feedback, dazu das VR-Training vor einem virtuellen Publikum.
+<!-- /S07 -->
+
+<!-- S08 el-feature | element: el-feature | cta: secondary -->
+<!-- design: Feature-Box mit Video-Standbild (Play-Symbol) links, Text rechts. Dieser Button ist der einzige auf dem Bildschirm, Header-Button verborgen. Link https://www.meandyou.de/sichtbarkeit-neu?utm_source=lp-replayers&utm_content=video -->
+## Lieber erst in Ruhe zuschauen?
+
+Nicht jeder will gleich ein Gespräch führen. Das ist in Ordnung. Michael Ehlers hat ein kostenloses Video-Training aufgenommen. Darin zeigt er, wie du Aufmerksamkeit und Vertrauen gewinnst, ohne laut zu werden oder dich zu verbiegen. Du schaust es zu Hause, wann es dir passt. [von Kunde bestätigen: Inhalt, Länge (rund 30 Minuten) und Anmeldung des Trainings]
+
+**Kostenloses Training ansehen**
+Kostenlos. Ein Gespräch danach ist freiwillig.
+<!-- /S08 -->
+
+<!-- S09 el-grid | element: el-grid -->
+<!-- design: zwei ruhige Karten nebeneinander, links Buchcover (Platzhalter bis Freigabe), rechts Podcast-Cover. Nur Textlinks, kein Button. -->
+## Zum Lesen und Hören, ganz ohne Termin
+
+### Das Buch: Nie wieder sprachlos!
+Erschienen 2019 im Gütersloher Verlagshaus. In 50 kurzen Kapiteln beschreibt Michael Ehlers Situationen aus dem Alltag, in denen einem die Worte fehlen, und gibt praktische Tipps. Wie entschuldige ich mich angemessen? Wie verteidige ich mich, wenn ich zu Unrecht angegriffen werde? Wie macht man ein Kompliment? Ein Kapitel zeigt drei Strategien gegen Dauerklagen: Distanzieren, Verantwortung übertragen und den umgedrehten Spieß. [von Kunde bestätigen: aktueller Titel und Bezugsquelle des Buchs]
+
+### Der Podcast: Unübersehbar
+Seit 2008 spricht Michael hier über Rhetorik und Auftritt, Schlagfertigkeit und Wirkung, Führung und Persönlichkeit. Alle zwei Wochen erscheint eine neue Folge. Die neuesten Folgen dauern zwischen 6 und 12 Minuten. [Podcast anhören](https://podcasts.apple.com/de/podcast/un%C3%BCbersehbar-der-rhetorik-podcast-mit-michael-ehlers/id286899257)
+
+Mehr Grundlagen findest du auf der Seite [Was ist Rhetorik?](/rhetorik)
+<!-- /S09 -->
+
+<!-- S10 person | element: person | cta: primary -->
+<!-- design: echtes Foto Michael (Café, weißes Hemd, Blick zur Seite) links, Text rechts, vier kleine Fakten darunter ohne Rahmenlinien. utm_content=michael -->
+## Michael Ehlers trainiert seit 1990 Menschen in Rhetorik
+
+Sein erstes Rhetorikseminar gab er mit 18 Jahren. Heute ist er Lehrbeauftragter an der Universität St. Gallen und wird von ARTE und WELT TV als Rhetorik-Analyst angefragt. Das ERFOLG Magazin zählte ihn zu den Top 100 Trainern im deutschsprachigen Raum.
+
+- **St. Gallen** Lehrauftrag an der Universität
+- **Über 8.000** Teilnehmer
+- **Neun Bücher** als Autor oder Herausgeber
+- **Podcast** „Unübersehbar“ seit 2008
+
+[Mehr über Michael](/michael)
+
+**Gespräch buchen**
+30 Minuten, kostenlos, per Video.
+<!-- /S10 -->
+
+<!-- S11 proof | element: proof -->
+<!-- design: offene Zitatkarten in zwei Spalten, kein Laufband, Quelle und Seminar klein. Unten Zählzeile und Link. -->
+## So erlebten Teilnehmer das Üben mit Michael
+
+„Besonders beeindruckt hat mich der Praxisteil, in dem wir freie Reden vor der Gruppe hielten und sowohl von Michael Ehlers als auch von den anderen Teilnehmern wertvolles Feedback bekamen.“
+Michael B., ProvenExpert, Rhetorik 1 auf Mallorca
+
+„Die Trainings vor der Kamera mit den darauf folgenden Auswertungen helfen die Selbst- und Fremdwahrnehmung zu schärfen.“
+Julian L., ProvenExpert, Rhetorik 1 auf Mallorca
+
+„Die Herangehensweise und das individuelle Feedback haben mich sehr motiviert und mir unheimlich viel Selbstvertrauen geschenkt.“
+Jasmina L., ProvenExpert, Rhetorik 1 auf Mallorca
+
+„Ich fand es spannend, dass wir Teilnehmer ein Mix von Anfänger bis Profi waren und Michael uns alle, egal auf welchem Level, weiterbringen konnte.“
+Christin R., ProvenExpert, Rhetorik 1 auf Mallorca
+
+227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert. [von Kunde bestätigen: Einwilligung zur Nennung der Namen] [Alle Stimmen lesen](/stimmen)
+<!-- /S11 -->
+
+<!-- S12 step-flow | element: step-flow | cta: primary -->
+<!-- design: drei Schritte als weiche Liste ohne Linien, darunter eine ruhige Zeile zu den Seminaren. utm_content=ablauf -->
+## So geht es weiter, in deinem Tempo
+
+1. **Du buchst ein Gespräch.** Den Termin wählst du online im Kalender.
+2. **Du erzählst von deiner Situation.** Ein Mitglied aus Michaels Team hört zu [von Kunde bestätigen: Name und Rolle der Person im Gespräch]. Gemeinsam klärt ihr, wo du stehst und welches Format passt.
+3. **Du entscheidest in Ruhe.** Eine Verpflichtung gehst du nicht ein. Nach der Buchung kommt eine Bestätigung per E-Mail.
+
+Wo du später trainierst: Schlagfertigkeit ist Thema im Seminar [Ruhig bleiben, wenn es eng wird](/seminare#ruhig-bleiben) [von Kunde bestätigen: Seminarname], das 2027 in Barcelona stattfindet. Für den Einstieg gibt es [Frei sprechen im Seminar](/seminare#frei-sprechen) auf Mallorca, in Frankfurt und in Berlin. Jedes Seminar hat drei Trainingstage und einen Tag Get Together, mit 10 bis 14 Plätzen. [Alle Seminare](/seminare)
+
+**Gespräch buchen**
+30 Minuten, kostenlos, per Video.
+<!-- /S12 -->
+
+<!-- S13 faq | element: faq -->
+<!-- design: Akkordeon einspaltig, viel Abstand, erste Frage offen. Antworten als echtes HTML im DOM. -->
+## Häufige Fragen zur Schlagfertigkeit
+
+### Kann man Schlagfertigkeit lernen?
+Ja. Schlagfertigkeit ist zum großen Teil Übung. Wer Situationen oft durchspielt und ehrliche Rückmeldung bekommt, findet seine Worte schneller. Wie schnell sich etwas ändert, hängt von deinem Start und von deinem Üben ab.
+
+### Wie kann ich schlagfertig werden?
+Indem du übst, statt nur zu lesen. So wirst du Schritt für Schritt schlagfertiger. Nimm dich auf, sprich frei und hol dir Rückmeldung. Dazu kommt deine Haltung: Wenn du weißt, wofür du stehst, musst du weniger lange nach Worten suchen.
+
+### Was steckt hinter Schlagfertigkeit?
+Schlagfertigkeit ist die Fähigkeit, im Gespräch spontan und passend zu antworten. Dahinter stecken vor allem Übung, eine klare Haltung und der Zugang zu deinen eigenen Worten im Moment. Wissen allein reicht dafür selten.
+
+### Welche Übungen helfen, um Schlagfertigkeit zu trainieren?
+Kurze Aufnahmen von dir selbst, freie Reden von zwei Minuten und ehrliche Rückmeldung. Die drei Übungen weiter oben kannst du sofort beginnen. Im Seminar kommen Videoanalysen und das VR-Training dazu.
+
+### Was hilft gegen Lampenfieber vor einer Rede?
+Übung mit Rückmeldung, ob es um Lampenfieber, Redeangst oder Bühnenangst geht. Wer eine Situation schon oft geübt hat, kennt sie, bevor sie kommt. Im Seminar „Frei sprechen, auch mit Lampenfieber“ hältst du Reden vor einer kleinen Gruppe, wirst auf Video aufgenommen und sprichst im VR-Training vor einem virtuellen Publikum. Wie schnell sich etwas ändert, hängt von deinem Start und deinem Üben ab.
+
+### Wie bekomme ich die Nervosität vor dem Sprechen weg?
+Ein Mittel, das bei allen gleich wirkt, gibt es nicht. Was du tun kannst: die Situation vorher üben, laut und vor anderen. Je vertrauter dir der Moment ist, desto mehr Raum hast du für deine Worte. Im Gespräch klärt ihr, welcher Weg zu dir passt.
+
+### Ich bin eher still. Ist das ein Nachteil?
+Nein. Rhetorik heißt nicht, lauter oder extrovertierter zu werden. Viele Introvertierte überzeugen durch Präzision und Ruhe. Du arbeitest mit genau diesen Stärken.
+
+### Gibt es das auch online?
+Der erste Schritt geht online: das kostenlose Video-Training von Michael und das Gespräch per Video. Die Seminare finden vor Ort in einer kleinen Gruppe statt, weil du dort vor echten Menschen übst.
+
+### Ist das Gespräch ein Verkaufsgespräch?
+Ja, auch. Ihr klärt, welches Seminar zu dir passt, und du erfährst den Preis. Eine Verpflichtung gehst du damit nicht ein. Ob und wann du dich anmeldest, entscheidest du danach in Ruhe.
+
+Weitere Antworten findest du in den [häufigen Fragen](/faq).
+<!-- /S13 -->
+
+<!-- S14 cta | element: cta | cta: primary -->
+<!-- design: dunkler Abschluss wie Startseite, Mini-Hero mit Häkchen, Beweiszeile, ein heller Button, Telefon als Text. utm_content=abschluss -->
+## Der nächste Schritt ist ein Gespräch.
+
+Die Worte hast du schon. Im Gespräch klärt ihr, wo du stehst und welches Format zu dir passt. Danach entscheidest du in Ruhe.
+
+- 30 Minuten per Video
+- kostenlos und ohne Verpflichtung
+- Termin online wählen
+
+Über 8.000 Teilnehmer, seit 1990
+
+**[Gespräch buchen](/gespraech-buchen)**
+Lieber anrufen: +49 15888367664
+<!-- /S14 -->
+
+<!-- TECH -->
+## Technik (für 741, nicht Teil des sichtbaren Textes)
+- Title: Schlagfertigkeit lernen: Wenn die Worte zu spät kommen
+- Meta: siehe Frontmatter
+- H1: „Schlagfertigkeit lernen.“ klein + „Dir fehlen nicht die Worte. Sie kommen nur zu spät.“ groß, beides im selben H1
+- Anker: #treppenwitz (S03), #uebungen (S07)
+- Schema: WebPage (about EducationalOrganization, author/mentions Person Michael Ehlers), BreadcrumbList. Kein FAQPage, kein Preis. Book nur nach Freigabe des Titels
+- CTA-Ziel Gespräch: /gespraech-buchen?utm_source=lp-replayers&utm_content=<abschnitt> (hero, momente, methode, michael, ablauf, abschluss)
+- CTA-Ziel Video: https://www.meandyou.de/sichtbarkeit-neu?utm_source=lp-replayers&utm_content=video
+- Interne Links: /seminare, /seminare#frei-sprechen, /seminare#ruhig-bleiben, /michael, /stimmen, /rhetorik, /faq, /gespraech-buchen
+- Ein CTA pro Bildschirm: Header-Button verborgen, solange ein Abschnitts-Button sichtbar ist
+- robots noindex,nofollow nur in der Vorschau

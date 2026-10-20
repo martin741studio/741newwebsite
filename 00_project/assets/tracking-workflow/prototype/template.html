@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deine Ergebnisse · Prototyp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<style>
+:root{--yellow:#fac118;--black:#252525;--cream:#fffcf3;--grey:#8c8c8c;--grey-light:#f5f5f6;--white:#fff;--green:#2e9e5b;--green-soft:#e7f6ed;--amber-soft:#fdf3d7;--red:#c0392b;--red-soft:#fbe9e7;--blue:#2f6f8f;--blue-soft:#e6f0f5;--radius:14px;--shadow:0 2px 14px rgba(37,37,37,.07);
+--c-routes:#2f6f8f;--c-web:#7fb2c9;--c-calls:#252525;--c-views:#c98a00}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--black);font-family:"DM Sans",system-ui,sans-serif;font-size:15px;line-height:1.5}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 16px 64px}
+a{color:var(--blue)}
+.srcl{font-size:12px;font-weight:700;text-decoration:none;color:var(--blue);white-space:nowrap}
+.srcl:hover{text-decoration:underline}
+.adminbar{background:var(--black);color:#fff;border-radius:10px;padding:10px 14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:13px;margin-bottom:18px}
+.adminbar b{color:var(--yellow)}
+.adminbar .btn{margin-left:auto;background:var(--yellow);color:var(--black);border:0;border-radius:8px;padding:6px 12px;font:inherit;font-weight:700}
+h1{font-size:30px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--grey);margin:0 0 14px}
+nav.toc{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 8px}
+nav.toc a{font-size:13px;background:var(--white);border-radius:20px;padding:4px 12px;text-decoration:none;color:var(--black);box-shadow:var(--shadow)}
+h2{font-size:21px;margin:38px 0 6px}
+h2 .n{display:inline-block;background:var(--yellow);border-radius:8px;width:28px;text-align:center;margin-right:8px;font-size:16px}
+h3{font-size:16px;margin:0 0 8px}
+.lead{color:#555;margin:0 0 14px;max-width:780px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tile{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 18px;display:flex;flex-direction:column}
+.tile .lbl{font-size:13px;font-weight:700;color:#555;display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:none}
+.dot.g{background:var(--green)}.dot.a{background:var(--yellow)}.dot.r{background:var(--red)}.dot.n{background:#cfcfcf}
+.tile .val{font-size:32px;font-weight:800;margin:6px 0 2px;letter-spacing:-.02em}
+.tile .val.small{font-size:22px}
+.tile .cmp{font-size:13px;color:#555;flex:1}
+.tile .src{font-size:11.5px;color:var(--grey);margin-top:8px;border-top:1px solid var(--grey-light);padding-top:6px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 20px}
+.weekly{border-left:5px solid var(--yellow)}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;border-radius:20px;padding:2px 10px;background:var(--amber-soft);color:#8a6400}
+.weekly .nums{display:flex;gap:22px;flex-wrap:wrap;margin:10px 0}
+.weekly .nums div{font-size:13px;color:#555}.weekly .nums b{display:block;font-size:22px;color:var(--black)}
+.loom{background:var(--grey-light);border-radius:10px;padding:10px 12px;font-size:13px;margin-top:12px}
+.chain{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:6px 0 14px}
+.step{background:var(--white);border-radius:12px;box-shadow:var(--shadow);padding:12px;position:relative}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:38%;font-weight:800;color:var(--grey)}
+.step small{display:block;color:#555;font-size:12px}
+.step b{font-size:24px;display:block}
+.step.gap{background:repeating-linear-gradient(135deg,#fff,#fff 8px,#f7f7f7 8px,#f7f7f7 16px)}
+.chart{width:100%;height:auto;display:block}
+.chart .grid{stroke:#ececec}.chart .ax{fill:#8c8c8c;font-size:11px;font-family:inherit}.chart .ax-v{fill:var(--c-views)}
+.chart .mark{stroke:#bbb;stroke-dasharray:3 3}
+.s-routes{fill:var(--c-routes)}.s-web{fill:var(--c-web)}.s-calls{fill:var(--c-calls)}.partial{opacity:.45}
+.views{stroke:var(--c-views);stroke-width:2}.views-dot{fill:var(--c-views)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#555;margin:8px 0 0}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-2px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:12px;color:var(--grey);font-weight:700;padding:8px;border-bottom:1px solid #eee}
+td{padding:8px;border-bottom:1px solid var(--grey-light);vertical-align:middle}
+td small{color:var(--grey)}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.me td{background:var(--amber-soft)}
+td img{width:64px;height:64px;object-fit:cover;border-radius:8px;display:block}
+.note{background:var(--amber-soft);border-radius:10px;padding:10px 14px;font-size:13.5px;margin:12px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ctabs{display:grid;gap:14px}
+.ctab-h{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px;font-size:14px}
+.ctab-h span{font-size:12.5px;color:var(--grey)}
+.race{display:grid;grid-template-columns:230px 1fr 150px;gap:10px;align-items:center;padding:6px 0;font-size:14px}
+.race .rb{background:var(--grey-light);border-radius:6px;height:14px;overflow:hidden}
+.race .rb span{display:block;height:100%;background:var(--blue);border-radius:6px}
+.race.me .rb span{background:var(--yellow)}
+.race.me .rn{font-weight:700}
+.race em{font-style:normal;color:#555;font-size:12.5px}
+.chip{display:inline-block;font-size:11.5px;font-weight:700;border-radius:20px;padding:1px 9px;white-space:nowrap}
+.chip.g{background:var(--green-soft);color:#1e6e3f}.chip.a{background:var(--amber-soft);color:#8a6400}.chip.r{background:var(--red-soft);color:var(--red)}.chip.b{background:var(--blue-soft);color:var(--blue)}.chip.n{background:var(--grey-light);color:#666}
+.rules{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;font-size:13px}
+.rules div{background:var(--grey-light);border-radius:10px;padding:10px}
+.rules b{display:block}
+.qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.qcard ul{list-style:none;margin:0;padding:0}.qcard li{padding:7px 0;border-bottom:1px solid var(--grey-light);font-size:13.5px}
+.qcard li small{color:#666}
+ol.steps{margin:6px 0 0;padding-left:20px}ol.steps li{margin:4px 0}
+.rhythm td:first-child{white-space:nowrap;font-weight:700}
+details{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 18px}
+summary{cursor:pointer;font-weight:700}
+pre{background:#1f1f1f;color:#e8e8e8;border-radius:10px;padding:12px;font-size:12px;overflow:auto}
+.tablewrap{overflow-x:auto}
+.admin-only{background:#252525;border-radius:6px;padding:0 5px}.admin-only .srcl{color:#fac118}
+.ctabs>*,.two>*,.qgrid>*,.tiles>*{min-width:0}
+@media(max-width:860px){.tiles,.qgrid{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.chain{grid-template-columns:1fr 1fr}.step::after{display:none}.rules{grid-template-columns:1fr 1fr}.race{grid-template-columns:1fr 90px}.race .rb{grid-column:1/-1;order:3}}
+@media(max-width:520px){.tiles,.qgrid{grid-template-columns:1fr}h1{font-size:24px}}
+</style>
+<link rel="stylesheet" href="../../brand/martin-guide/martin-guide.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="adminbar">Nur für 741 sichtbar · <b>Prototyp v2</b> · Wochen-Update {{LAST_RANGE}}: <b>Entwurf, wartet auf Freigabe</b> · Ampeln und Zahlen gehen erst mit der Freigabe an die Kundin. Schwarz markierte Links sieht nur 741.
+<button class="btn" type="button" disabled>Freigeben</button></div>
+
+<h1>Deine Ergebnisse</h1>
+<p class="sub">Praxis Suriya · Stand 12.10.2026 · Daten aus deinem Google-Profil bis 09.10.2026 · Jede Zahl hat einen Link zur Quelle.</p>
+<nav class="toc"><a href="#blick">Auf einen Blick</a><a href="#anfragen">1 Anfragen</a><a href="#mitbewerber">2 Mitbewerber</a><a href="#maps">3 Google Maps</a><a href="#suche">4 Google-Suche</a><a href="#belege">5 Selbst prüfen</a><a href="#waechter">6 Überwachung</a><a href="#rhythmus">7 Updates</a><a href="#quartal">8 Quartalsrunde</a></nav>
+
+<h2 id="blick">Auf einen Blick</h2>
+<p class="lead">Wir zeigen nur volle Wochen, weil Google die Zahlen mit etwa drei Tagen Verzögerung meldet. Vergleich: der Wochenschnitt vor dem Umbau deiner Website (29.06.–27.09.2026).</p>
+<div class="tiles">
+  <div class="tile"><div class="lbl"><span class="dot a"></span>Anfragen</div>
+    <div class="val small">{{CALLS_LAST}} Anrufe über Google</div>
+    <div class="cmp">Formular-, WhatsApp- und Telefon-Klicks auf deiner Website werden schon erkannt. Ab der Freigabe zählen wir sie hier automatisch mit.</div>
+    <div class="src"><span>Google-Profil · 28.09.–04.10.</span>{{SRC_GBP}}</div></div>
+  <div class="tile"><div class="lbl"><span class="dot n"></span>Gebuchte Termine</div>
+    <div class="val small">noch keine Einträge</div>
+    <div class="cmp">Deine Website nimmt Terminanfragen an, keine festen Buchungen. Ob ein Termin zustande kam, weißt nur du: ein Klick auf „gebucht“ im Bereich „Anfragen“ genügt. Wir schätzen nie.</div>
+    <div class="src"><span>Bereich „Anfragen“</span><a class="srcl" href="#anfragen">Ansehen ↓</a></div></div>
+  <div class="tile"><div class="lbl"><span class="dot n"></span>Kosten je gebuchtem Termin</div>
+    <div class="val small">{{FEE_MONTH}} € pro Monat</div>
+    <div class="cmp">Dein Programm (3.699 € für 90 Tage) geteilt durch die gebuchten Termine des Monats. Sichtbar, sobald Termine eingetragen sind.</div>
+    <div class="src"><span>Rechnung 741 + deine Einträge</span><a class="srcl" href="#anfragen">Rechnung ↓</a></div></div>
+  <div class="tile"><div class="lbl"><span class="dot g"></span>Kontakte über dein Google-Profil</div>
+    <div class="val">{{ACT_LAST}}</div>
+    <div class="cmp">Woche {{LAST_RANGE}} · vorher im Schnitt <b>{{ACT_BASE}}</b><br>{{ROUTES_LAST}} Routen · {{WEB_LAST}} Website-Klicks · {{CALLS_LAST}} Anrufe</div>
+    <div class="src"><span>Google-Profil „Leistung“</span>{{SRC_GBP}}</div></div>
+  <div class="tile"><div class="lbl"><span class="dot a"></span>Sichtbarkeit in Google Maps</div>
+    <div class="val">38 von 49</div>
+    <div class="cmp">Kartenpunkte, an denen du für „heilpraktiker ingelheim“ unter den ersten 3 bist. Vor dir: Naturheilpraxis Ingelheim (49) und Zentrum für alternative Medizin Monika Zeller (46). Messung 15.08.</div>
+    <div class="src"><span>Maps-Messung, 49 Punkte, 5 km</span>{{SRC_MAPS}}</div></div>
+  <div class="tile"><div class="lbl"><span class="dot a"></span>Bewertungen</div>
+    <div class="val">{{REV_TOTAL}} · {{REV_RATING}} ★</div>
+    <div class="cmp">Seit 15.08.: +1, so schnell wie die stärksten Mitbewerber. Die Nummer 1 ({{LEADER_NAME}}) hat {{LEADER_REV}}, also {{REV_GAP}} mehr.</div>
+    <div class="src"><span>Google-Bewertungen · 12.10.</span>{{SRC_GBP}}</div></div>
+</div>
+
+<h2>Wochen-Update</h2>
+<div class="card weekly">
+  <span class="badge">Woche {{LAST_RANGE}} · Entwurf</span>
+  <div class="nums">
+    <div><b>{{ACT_LAST}}</b>Kontakte über Google</div>
+    <div><b>{{VIEWS_LAST}}</b>Aufrufe deines Profils</div>
+    <div><b>{{ROUTES_LAST}}</b>Routen-Anfragen</div>
+    <div><b>{{WEB_LAST}}</b>Website-Klicks</div>
+  </div>
+  <p>Diese Woche haben {{ACT_LAST}} Menschen über dein Google-Profil Kontakt zu dir gesucht. Das sind mehr als vor dem Umbau (im Schnitt {{ACT_BASE}} pro Woche). Die meisten haben sich die Route zu deiner Praxis angezeigt.</p>
+  <p>Dein Profil wurde aber seltener angezeigt: {{VIEWS_LAST}} Aufrufe statt im Schnitt {{VIEWS_BASE}}. Wir prüfen gerade, woran das liegt, und melden uns dazu hier.</p>
+  <p>Als Nächstes: feste monatliche Maps-Messung ab dem 19.10. und automatische Zählung deiner Anfragen über die Website.</p>
+  <div class="loom">▶ Video-Rundgang durch dein Google-Profil (ungeschnitten) · folgt mit der Freigabe</div>
+</div>
+
+<h2>Verlauf: Kontakte und Aufrufe pro Woche</h2>
+<div class="card">
+  {{CHART}}
+  <div class="legend"><span><i style="background:var(--c-routes)"></i>Routen-Anfragen</span><span><i style="background:var(--c-web)"></i>Website-Klicks</span><span><i style="background:var(--c-calls)"></i>Anrufe</span><span><i style="background:var(--c-views);height:3px;vertical-align:3px"></i>Aufrufe des Profils (rechte Achse)</span><span>Heller Balken = Woche noch nicht vollständig</span><span>{{SRC_GBP}}</span></div>
+</div>
+<aside class="mg mg--right" data-reveal><img class="mg__img" src="../../brand/martin-guide/poses/martin-celebrate.webp" alt="Martin von 741 freut sich" width="112"><div class="mg__bubble"><span class="mg__name">Martin</span><p>Seit dem Umbau suchen mehr Menschen über dein Google-Profil Kontakt: {{ACT_LAST}} in der Woche {{LAST_RANGE}}, vorher im Schnitt {{ACT_BASE}}.</p></div></aside>
+
+<h2 id="anfragen"><span class="n">1</span>Anfragen und Termine</h2>
+<p class="lead">Der Weg vom Gesehen-werden bis zum bezahlten Termin. Wo ein Schritt noch keine Daten hat, zeigen wir die Lücke offen.</p>
+<aside class="mg " data-reveal><img class="mg__img" src="../../brand/martin-guide/poses/martin-point.webp" alt="Martin von 741 zeigt auf den Weg zum Termin" width="112"><div class="mg__bubble"><span class="mg__name">Martin</span><p>Hier entsteht dein Ergebnis: von der Anfrage zum gebuchten Termin. Dein Klick auf „gebucht“ macht die Kosten je Termin sichtbar.</p></div></aside>
+<div class="chain">
+  <div class="step"><small>Aufrufe deines Profils</small><b>{{VIEWS_LAST}}</b><small>Woche {{LAST_RANGE}}</small></div>
+  <div class="step"><small>Kontakte über Google</small><b>{{ACT_LAST}}</b><small>Routen, Klicks, Anrufe</small></div>
+  <div class="step gap"><small>Anfragen</small><b>–</b><small>Zählung startet nach Freigabe</small></div>
+  <div class="step gap"><small>Gebuchte Termine</small><b>–</b><small>dein Klick auf „gebucht“</small></div>
+  <div class="step gap"><small>Wert der Termine</small><b>–</b><small>deine Angabe in €</small></div>
+</div>
+<div class="card tablewrap">
+<table>
+<thead><tr><th>Weg der Anfrage</th><th>Woher die Zahl kommt</th><th>Stand</th><th></th></tr></thead>
+<tbody>
+<tr><td><b>Anruf über dein Google-Profil</b></td><td>Google zählt jeden Tipp auf „Anrufen“</td><td><span class="chip g">läuft</span> {{CALLS_LAST}} in der Woche</td><td>{{SRC_GBP}}</td></tr>
+<tr><td><b>Formular „Termin buchen“</b></td><td>deine Website meldet jedes abgeschickte Formular</td><td><span class="chip a">ab Freigabe</span></td><td><a class="srcl" href="https://www.suriya-praxis.de/termin-buchen/" target="_blank" rel="noopener">Formular ↗</a></td></tr>
+<tr><td><b>WhatsApp-Klick</b></td><td>deine Website meldet jeden Klick auf WhatsApp</td><td><span class="chip a">ab Freigabe</span></td><td></td></tr>
+<tr><td><b>Klick auf deine Telefonnummer</b></td><td>deine Website meldet jeden Klick auf die Nummer</td><td><span class="chip a">ab Freigabe</span></td><td></td></tr>
+<tr><td><b>Anruf direkt, Mail, Empfehlung</b></td><td>du trägst sie im Bereich „Anfragen“ ein (Weg, „Wie hast du uns gefunden?“, Ort)</td><td><span class="chip a">ab Freigabe</span></td><td></td></tr>
+<tr><td><b>Spam / passt nicht</b></td><td>du markierst sie, sie zählen dann nicht mit</td><td><span class="chip n">–</span></td><td></td></tr>
+</tbody></table>
+<p style="font-size:12.5px;color:#555;margin:10px 0 0">Rechnung: 3.699 € für 90 Tage = {{FEE_MONTH}} € pro Monat. Kosten je gebuchtem Termin = {{FEE_MONTH}} € geteilt durch die gebuchten Termine im Monat. Anzeigen laufen keine. Einmal im Monat gleichen wir Anfragen, Formulareingänge und deine Einträge ab und zeigen Lücken hier.</p>
+</div>
+
+<h2 id="mitbewerber"><span class="n">2</span>Mitbewerber</h2>
+<p class="lead">Wer bei deinen wichtigsten Suchbegriffen in Google Maps vor dir oder hinter dir steht. Jede Praxis ist mit ihrem echten Google-Profil verlinkt.</p>
+<aside class="mg " data-reveal><img class="mg__img" src="../../brand/martin-guide/poses/martin-point.webp" alt="Martin von 741 zeigt auf das Bewertungs-Rennen" width="112"><div class="mg__bubble"><span class="mg__name">Martin</span><p>Beim Tempo neuer Bewertungen hältst du mit. Bis zur Nummer 1 fehlen dir noch {{REV_GAP}} Bewertungen.</p></div></aside>
+<div class="card">
+  <h3>Bewertungs-Rennen</h3>
+  <p style="font-size:13px;color:#555;margin:0 0 6px">Bewertungen gesamt am 12.10.2026 und neue seit der Messung am 15.08.2026.</p>
+  {{REVIEW_RACE}}
+</div>
+<div class="ctabs" style="margin-top:14px">
+{{COMP_TABLES}}
+</div>
+<div class="note">Wer aufgeholt oder verloren hat, zeigen wir ab der nächsten Messung (ab 19.10.) als Vergleich: neue Praxen, verschwundene Praxen, Gewinner und Verlierer je Suchbegriff.</div>
+
+<h2 id="maps"><span class="n">3</span>Google Maps: deine Sichtbarkeit</h2>
+<p class="lead">So oft erscheinst du in Google Maps, wenn Menschen an 49 Punkten rund um deine Praxis suchen. Jedes Kartenbild ist mit Datum gespeichert und wird nie überschrieben.</p>
+<div class="card tablewrap">
+<table>
+<thead><tr><th>Suchbegriff</th><th>Platz 1–3 an</th><th>Ø Platz</th><th>Erscheint an</th><th>Datum</th><th>Karte</th></tr></thead>
+<tbody>
+{{MAPS_ROWS}}
+</tbody></table>
+<div class="rules">
+  <div><b>Immer dieselben 5 Begriffe</b>Begriffe, die echte Menschen suchen und die du wirklich anbietest.</div>
+  <div><b>Immer dieselbe Karte</b>49 Punkte im Umkreis von 5 km um deine Praxis.</div>
+  <div><b>Jeden Monat</b>Neue Messung am ersten Montag, ohne Lücke.</div>
+  <div><b>Änderungen offen</b>Ändert sich ein Begriff, steht hier wann und warum.</div>
+</div>
+</div>
+
+<h2 id="suche"><span class="n">4</span>Normale Google-Suche (unabhängige Messung)</h2>
+<p class="lead">Wo deine Website in der normalen Google-Suche steht: gemessen auf dem Handy, an deiner Praxis, ohne Anmeldung. Mit „Suche öffnen“ siehst du dieselbe Suche selbst.</p>
+<div class="card tablewrap">
+<table>
+<thead><tr><th>Suchbegriff</th><th>Dein Platz</th><th>Deine Seite</th><th>Die ersten 3</th><th>Was Google zusätzlich zeigt</th><th></th></tr></thead>
+<tbody>
+{{SERP_ROWS}}
+</tbody></table>
+<p style="font-size:12px;color:var(--grey);margin:10px 0 0">Messung 12.10.2026, mobil, 100 Ergebnisse je Begriff.</p>
+</div>
+
+<h2 id="belege"><span class="n">5</span>Selbst prüfen</h2>
+<div class="two">
+  <div class="card"><h3>So prüfst du die Zahlen in deinem Google-Profil</h3>
+    <ol class="steps">
+      <li>Öffne Google Maps oder die Google-Suche mit deinem Google-Konto.</li>
+      <li>Suche nach „Praxis Suriya“, öffne dein Profil und tippe auf „Leistung“.</li>
+      <li>Wähle den Zeitraum der Woche, z. B. {{LAST_RANGE}}.</li>
+      <li>Vergleiche Anrufe, Website-Klicks und Routen mit den Zahlen hier.</li>
+    </ol>
+    <p style="font-size:13px;color:#555">Kleine Abweichungen sind normal: Google ergänzt Zahlen einige Tage nachträglich. {{SRC_GBP}}</p></div>
+  <div class="card"><h3>Original-Bildschirmfotos</h3>
+    <p style="font-size:14px">Einmal im Monat speichern wir ein unbearbeitetes Bildschirmfoto deiner Profil-Leistung mit Datum, damit du siehst: Hier ist nichts geschönt.</p>
+    <p style="font-size:13px;color:var(--grey)">Erstes Foto: mit dem ersten Monatsbericht. Alle Rohdaten der Abrufe findest du unten.</p></div>
+</div>
+
+<h2 id="waechter"><span class="n">6</span>Was wir für dich überwachen</h2>
+<p class="lead">Diese Punkte prüfen wir jeden Tag automatisch. Bei einem roten Befund weiß Martin es am selben Tag und kümmert sich darum. Du bekommst dann eine kurze Nachricht mit Ursache und nächstem Schritt.</p>
+<aside class="mg mg--right mg--flip" data-reveal><img class="mg__img" src="../../brand/martin-guide/poses/martin-think.webp" alt="Martin von 741 überlegt" width="112"><div class="mg__bubble"><span class="mg__name">Martin</span><p>Zwei Punkte kann ich gerade nicht prüfen: die Daten aus der Google-Suche und die Besucher-Messung deiner Website. Die Zugänge kläre ich mit dir.</p></div></aside>
+<div class="card tablewrap">
+<table><thead><tr><th>Prüfung</th><th>Stand 12.10.</th><th>Befund</th><th></th></tr></thead><tbody>
+{{GUARD_ROWS}}
+</tbody></table>
+</div>
+
+<h2 id="rhythmus"><span class="n">7</span>So halten wir dich auf dem Laufenden</h2>
+<div class="card tablewrap">
+<table class="rhythm"><tbody>
+<tr><td>Jederzeit</td><td>Nachricht im Portal-Chat. Wir antworten an Werktagen.</td></tr>
+<tr><td>Jede Woche</td><td>Wochen-Update hier mit Zahlen, drei Sätzen und einem ungeschnittenen Video-Rundgang.</td></tr>
+<tr><td>Jeden Monat</td><td>Neue Maps-Messung, Mitbewerber-Vergleich, Abgleich deiner Anfragen.</td></tr>
+<tr><td>Auf Wunsch</td><td>Gespräch mit Martin. Was wir dort entscheiden, steht danach hier.</td></tr>
+<tr><td>Alle 90 Tage</td><td>Quartalsrunde: wir schauen gemeinsam auf den Markt und legen die nächsten Schritte fest.</td></tr>
+</tbody></table>
+<p style="font-size:13px;color:#555;margin:10px 0 0">Letztes Update an dich: – (erstes Update mit der Freigabe) · Nächstes Update: Montag, 19.10.2026</p>
+</div>
+
+<h2 id="quartal"><span class="n">8</span>Quartalsrunde · um den 01.12.2026</h2>
+<p class="lead">Alle 90 Tage bewerten wir gemeinsam den Markt neu und legen die nächsten Schritte fest. Die Themen sammeln wir laufend, damit die Runde gut vorbereitet ist.</p>
+<aside class="mg " data-reveal><img class="mg__img" src="../../brand/martin-guide/poses/martin-insight.webp" alt="Martin von 741 mit einer Idee" width="112"><div class="mg__bubble"><span class="mg__name">Martin</span><p>Mein Kandidat für das nächste Quartal: „schmerztherapie ingelheim“. In der Maps-Messung vom 16.08. erscheinst du dort noch nicht unter den ersten 20.</p></div></aside>
+<div class="qgrid">
+{{QUARTER}}
+</div>
+<div class="card" style="margin-top:14px"><h3>Entscheidungen</h3><p style="font-size:13.5px;color:#555;margin:0">Noch keine Einträge. Nach jeder Runde steht hier: was wir entschieden haben, wer es macht, bis wann, und woran wir den Erfolg messen.</p></div>
+
+<h2>Rohdaten für Prüfer</h2>
+<details><summary>Rohdaten des letzten Abrufs anzeigen</summary>
+<p style="font-size:13px;color:#555">Unbearbeitete Werte, so wie Google sie liefert.</p>
+<pre>{{RAW_SNIPPET}}</pre>
+<p style="font-size:13px"><a href="data/suriya-gbp-performance-2026-06-28_2026-10-11.json">Tageswerte Google-Profil</a> · <a href="data/suriya-reviews-2026-10-12.json">Bewertungen</a> · <a href="data/suriya-scans-2026-08.json">Maps-Messungen</a> · <a href="data/suriya-competitors-2026-08.json">Mitbewerber</a> · <a href="data/suriya-competitor-reviews-2026-10-12.json">Bewertungen Mitbewerber</a> · <a href="data/suriya-serp-2026-10-12.json">Google-Suche</a></p>
+</details>
+
+</div>
+<script src="../../brand/martin-guide/martin-guide.js" defer></script>
+</body>
+</html>

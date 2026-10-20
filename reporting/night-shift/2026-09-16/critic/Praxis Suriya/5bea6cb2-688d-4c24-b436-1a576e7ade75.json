@@ -1,0 +1,22 @@
+{
+  "client": "Praxis Suriya",
+  "page": "suriya-woche1-2026-08 / 6 · A · Google Business Profil",
+  "mode": "FEEDBACK",
+  "feedback_id": "5bea6cb2-688d-4c24-b436-1a576e7ade75",
+  "input_file": "feedback/Praxis Suriya/5bea6cb2-688d-4c24-b436-1a576e7ade75.md",
+  "pass": true,
+  "hard_checks": {
+    "no_fehlt_in_core_fields": {"applicable": false, "note": "FEEDBACK item, no Title/Meta/H1/JSON-LD fields; the two [fehlt: ...] notes present are correctly used (missing client sign-off, missing original report text) and do not sit in a required core field."},
+    "nap_match": {"applicable": false, "note": "No NAP block in this feedback draft."},
+    "jsonld_valid": {"applicable": false, "note": "No JSON-LD in this feedback draft."},
+    "language_match": {"pass": true, "note": "Copy is German, matches market_lang=de."},
+    "hwg_scan": {"pass": true, "note": "No 'heilt/garantiert/100%/Heilung' or similar claims; content is GBP hours/CTA logistics only."},
+    "rubric_or_feedback_check": {
+      "pass": true,
+      "note": "FEEDBACK mode: 8-dim rubric skipped per SKILL.md. Checked sentence-for-sentence against Kunde sagt: (1) Öffnungszeiten Di-Do 7:30-18:00 -> reflected exactly; (2) Fr 7:30-12:00 -> reflected exactly; (3) telefonische Terminvereinbarung Mo 12-14 Uhr -> reflected exactly with correct note that GBP has no dedicated phone-hours field; (4) 'Termin Button habe ich nicht, nur Buchungsformular' -> addressed with concrete recommendation (link to booking form, do not enable Google's native Termin button) and a real-data-only rationale. All three facts from the comment are answered; nothing outside the comment's scope is claimed as fact. Sensible non-fabricated inference (Mon/Sat/Sun closed) is a logical completion of a 7-day hours field, not an invented data point (no volumes/competitors/NAP claims), and the executor still correctly flagged genuine unknowns as [fehlt: ...] (client sign-off, original text unavailable) instead of guessing."
+    },
+    "deslop": {"applicable": false, "note": "Vorschlag is an internal recommendation to Martin (GBP field values + implementation rationale), not new client-facing prose meant to ship as-is verbatim. Per SKILL.md this is not a deslop blocker."}
+  },
+  "fails": [],
+  "scores": null
+}

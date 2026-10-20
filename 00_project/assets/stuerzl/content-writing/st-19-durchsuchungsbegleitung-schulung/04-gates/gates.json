@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-11",
+ "page": "st-19-durchsuchungsbegleitung-schulung/05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G2 legal": {
+   "mode": "brao",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "info": {
+    "words": 1587,
+    "placeholders": 1
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "1 Sätze über 28 Wörter (zum Beispiel: Eine Durchsuchung beim Verdächtigen darf die Wohnung und andere Räume,...)"
+   ],
+   "counts": {
+    "du": 0,
+    "sie": 70,
+    "ich": 2,
+    "wir": 36
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1587,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "[Hinweis] Begriffs-Abdeckung 84 % (33 Begriffe aus mindestens 50 % der Seiten). Fehlen: beschluss, kopien, maßnahme, ablauf, strafrecht. Pflicht nur, wenn die Suchabsicht den Begriff braucht."
+   ]
+  }
+ }
+}

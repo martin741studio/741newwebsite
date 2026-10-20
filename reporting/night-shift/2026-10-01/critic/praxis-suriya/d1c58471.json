@@ -1,0 +1,41 @@
+{
+  "plan_index": 2,
+  "client": "Praxis Suriya",
+  "feedback_id": "d1c58471-eafc-4ef9-8418-1611a2345445",
+  "mode": "FEEDBACK",
+  "executor_file": "feedback/praxis-suriya/d1c58471-eafc-4ef9-8418-1611a2345445.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "pass",
+      "note": "FEEDBACK mode has no Title/Meta/H1/JSON-LD. The 'Kanonische Geschäftsdaten' NAP block has no [fehlt:] placeholder. The [fehlt:] tags present (missing original report passage; which of the two city-name domains the client means; Mainz-branch confirmation; exact Femalecare domain spelling; Whois check) all sit outside the NAP block and correctly flag genuine unknowns instead of inventing data, per hard rule 2."
+    },
+    "nap_matches_locked_record": {
+      "result": "pass",
+      "note": "Kanonische Geschäftsdaten block matches context.json.nap_locked for client_id 3f71ef33-8c74-4ea1-b2d3-0273c2e99649 field by field: 'Praxis Suriya - Ayurveda & Naturheilkunde', 'Schützenpfad 29, 55218 Ingelheim am Rhein', '+49 174 7411087', category 'Heilpraktiker'."
+    },
+    "jsonld_valid": {
+      "result": "n/a",
+      "note": "FEEDBACK mode has no JSON-LD requirement per SKILL.md §3."
+    },
+    "language_matches_market": {
+      "result": "pass",
+      "note": "market_lang=de; the entire Vorschlag and surrounding text is German."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "note": "Content is domain/citation strategy (NAP, city-name domains, registration process), not health copy. No cure/guarantee/fear claims anywhere in the draft."
+    },
+    "feedback_addresses_comment": {
+      "result": "pass",
+      "note": "Kunde sagt has 3 distinct points, each answered: (1) 'ayurveda Ingelheim oder ayurveda mainz' -> handled under '1. Domain-Namen mit Stadtbezug', correctly flags the unresolved 'oder' choice and grounds the recommendation in the locked NAP city (Ingelheim, not Mainz), with a [fehlt:] asking the client to confirm a Mainz branch before that variant is used. (2) 'ich habe auch noch die domian Femalecare' -> handled under '2. Vorhandene Domain Femalecare', notes the exact URL/spelling is unknown and a Whois check is still needed, without inventing either. (3) 'Du kannst gerne die Domaine zubuchen die wichtig sind' -> handled under '3. Freigabe zur Registrierung', turned into a concrete process recommendation to Martin (written confirmation of name+Endung+Zweck before any purchase), consistent with hard rule 1 (no CMS/registration action taken by the night run itself)."
+    },
+    "deslop_body_copy": {
+      "result": "n/a",
+      "note": "Per SKILL.md §3 FEEDBACK exception: de-slop only applies to a Vorschlag section that is new client-facing prose meant to ship as-is. Here the entire Vorschlag is an internal analysis and recommendation addressed to Martin ('Empfehlung an Martin: ...'), not copy that will be shown to the client or published anywhere. Not run, not a blocker."
+    }
+  },
+  "fails": [],
+  "overall_verdict": "pass",
+  "reasoning": "All applicable hard checks pass. Verbatim 'Kunde sagt' quote matches context.json.feedback_open comment exactly, word for word. NAP block matches the locked record field by field. FEEDBACK-mode rubric substitute (sentence-for-sentence coverage of the three distinct points in the client's comment) is satisfied, including the correct sourcing of the Ingelheim-vs-Mainz guidance back to the locked NAP city rather than a guess. No data is invented anywhere; every open question (which domain variant, Mainz branch, exact Femalecare spelling, Whois status, the original report passage) is explicitly marked [fehlt:] instead."
+}

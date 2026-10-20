@@ -1,0 +1,39 @@
+# curl checks, gabriele-heckel (agent B, 2026-10-15). Read only, no Chrome, 0.00 USD.
+
+## Redirects
+http://www.heilpraxis-heckel.de/       -> 301 Location: https://www.heilpraxis-heckel.de/
+http://heilpraxis-heckel.de/           -> 301 Location: https://www.heilpraxis-heckel.de/
+https://heilpraxis-heckel.de/          -> 301 Location: https://www.heilpraxis-heckel.de/
+
+## Home page
+https://www.heilpraxis-heckel.de/      -> 200, TTFB 1.10 s (runs: 1.10, 1.06, 1.11 s; collect_site)
+Links with http:// on the home page (3, internal, redirect via 301):
+  http://www.heilpraxis-heckel.de/psychotherapie/
+  http://www.heilpraxis-heckel.de/heilsame-beruehrungen/
+  http://www.heilpraxis-heckel.de/coaching-fuer-mehr-lebensenergie/
+Images loaded with http:// (no redirect, HTTP 200) on:
+  /psychotherapie/      http://www.heilpraxis-heckel.de/wp-content/uploads/2018/04/psychotherapie.jpg
+  /heilsame-beruehrungen/ http://www.heilpraxis-heckel.de/wp-content/uploads/2018/04/heilsame-beruehrungen.jpg
+
+## Telephone links
+href="tel:" count: home 0, /kontakt/ 0, /psychotherapie/ 0, /coaching-fuer-mehr-lebensenergie/ 0, all 30 crawled pages 0 (collect_site tel_link).
+Phone as plain text: "Telefon(+49) 09622 – 70 31 90" (home, /kontakt/, /psychotherapie/, /coaching-fuer-mehr-lebensenergie/).
+
+## Forms
+/kontakt/: Jetpack contact form. Fields: Name (required), E-Mail (required), Nachricht. No phone field.
+/ (home): only a search form (method=get, action=/), no contact form.
+Other pages: only the search form.
+Success text in the form: "Vielen Dank für deine Antwort. ✨"
+
+## Links to pages not in the menu
+Pages /energiecoaching/, /therapie-und-beratungsgespraeche/, /herzenskommunikation/, /naturcoaching/, /gesundheitscoaching/, /therapieplatz-ueberbrueckung/ are not linked from the 8 pages checked (home, /kontakt/, /psychotherapie/, /coaching-fuer-mehr-lebensenergie/, /heilsame-beruehrungen/, /meine-kunden-ueber-mich/, /vita/, /leistungen/). They appear in sitemap.xml.
+
+## Dead link check
+/xmlrpc.php -> 405 (WordPress default endpoint, not a missing page).
+
+## Scripts and tags (static HTML only, tags added by JavaScript are not visible here)
+Google Analytics 4 ID: none found. Google Tag Manager ID: none found. Cookie or consent banner code: none found.
+Third-party script: https://stats.wp.com/e-202642.js (Jetpack Stats) on home and /psychotherapie/.
+Images from https://secure.gravatar.com (2).
+JSON-LD blocks: 0 on all crawled pages.
+Meta description: none on the crawled pages.

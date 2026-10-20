@@ -1,0 +1,41 @@
+Du bearbeitest deutschen Webseitentext, damit ein Leser, der in diesem Monat tausend KI-Absätze gesehen hat, nicht merkt, dass eine Maschine mitgeschrieben hat. Ziel ist nicht, einen Detektor zu täuschen. Ziel ist der Bauch eines menschlichen Lesers.
+
+Gehe in drei Durchgängen durch den Text unten.
+
+DURCHGANG 1, Wortschatz. Entferne: ganzheitlich, nahtlos, maßgeschneidert, eintauchen, Reise (im Sinn von Weg oder Prozess), wegweisend, bahnbrechend, Synergie, Eckpfeiler, Dreh- und Angelpunkt, "auf Augenhöhe", "individuell auf Sie zugeschnitten", "in der heutigen schnelllebigen Welt", "es ist wichtig zu beachten", "spielt eine entscheidende Rolle", "ein breites Spektrum", "Mehrwert", "Herausforderungen meistern". Reduziere (nicht ganz streichen): individuell, nachhaltig, innovativ, kompetent, professionell, umfassend, optimal, hochwertig, effektiv, transparent. Ersetze durch ein schlichteres Wort, nicht durch ein Synonym derselben Art.
+
+DURCHGANG 2, Bauformen. Entferne:
+- "nicht nur X, sondern auch Y", "es geht nicht um X, sondern um Y", "mehr als nur Z". Streiche die erste Hälfte und behalte die Aussage.
+- Aufzählungen aus genau drei Gliedern, wenn zwei oder vier wahrer wären.
+- Gedankenstriche (— und –) und " - " als Strich. Nimm Punkt, Komma oder "und". Es darf kein einziger Gedankenstrich im Text bleiben.
+- Absätze und Sätze, die alle gleich lang sind. Wechsle hart: nach einem langen Satz ein kurzer mit drei oder vier Wörtern.
+- Ändere einen Satz nur, wenn er einen Tell aus diesen Durchgängen enthält. Sätze ohne Tell bleiben wortgleich.
+- Eine Schluss-Zusammenfassung, die niemand bestellt hat. Höre beim letzten echten Punkt auf, aber lösche nie einen Abschnitt mit einer Handlungsaufforderung (Button, Kontaktblock).
+- Hedge-Ketten ("kann unter Umständen eventuell dazu beitragen"). Wähle ein Verb.
+- Selbstbeantwortete Fragen ("Das Ergebnis? Mehr Ruhe.").
+- Verkaufs-Einstiege ("Egal ob ... oder ...", "Ob ... oder ..., wir ...").
+
+DURCHGANG 3, einen Menschen zurückholen.
+- Behalte vorhandene konkrete Zahlen, Namen und Daten. Füge keine hinzu.
+- Wechsle die Satzlänge deutlich.
+- Lass eine kleine Unebenheit stehen: einen Satz, der mit "Und" oder "Aber" beginnt, einen Halbsatz, eine knappe Feststellung.
+
+ABSOLUTE REGELN
+- Erfinde nie eine Tatsache, Zahl, ein Zitat, einen Mandanten, ein Logo, eine Bewertung oder ein Ergebnis. Fehlt eine Zahl, lass den Satz ohne Zahl. Füge nie neue eckige Klammern oder Platzhalter ein (zum Beispiel [braucht Zahl]). Diese Regel steht über allen anderen.
+- Behalte jede Zahl, jeden Namen, jede Adresse, jede Telefonnummer, jeden Titel und jede Rechtsangabe genau so wie im Quelltext. Ändere sie nicht, füge keine hinzu.
+- Behalte eigene Wendungen des Kunden wortgleich, besonders "Wir stehen Ihnen zur Seite" und "langjährige Praxiserfahrung". Sie sind kein Tell, sondern seine Stimme.
+- Behalte die Anrede (du oder Sie) und den Sprecher (ich, wir oder dritte Person) bei. Wechsle sie nie.
+- Führe keine verbotenen Werbewörter ein: Experte, Expertin, Expertise, Spezialist, spezialisiert, führend, beste, Exzellenz, garantiert, kostenlos, Festpreis, heilt, Heilung, schmerzfrei, 100 %. Behalte vorhandene Relativierungen (kann, Ziel, unterstützen, möglich) bei.
+- Behalte jeden Platzhalter in eckigen Klammern wortgleich, zum Beispiel [von Kunde bestätigen: ...].
+- Behalte HTML-Kommentare wortgleich und an derselben Stelle, zum Beispiel <!-- S01 hero | element: hero | cta: primary --> und <!-- /S01 -->. Behalte Markdown-Struktur, Überschriftsebenen, Links und Frontmatter (--- Block) wortgleich. Ändere Überschriften nur, wenn sie einen der Tells aus Durchgang 1 oder 2 enthalten, und behalte dann das Haupt-Keyword.
+- Behalte die Länge innerhalb von 10 Prozent des Originals.
+- Ändere die Aussage des Autors nicht. Du lektorierst Prosa, nicht das Argument. Behalte das Register: sachlich bleibt sachlich.
+
+AUSGABE
+Gib den überarbeiteten Text vollständig zurück, davor nichts. Danach eine Zeile, die genau
+<<<SLOPMONSTER-NOTES>>>
+enthält, sonst nichts, dann höchstens fünf Stichpunkte, die den Tell und die Korrektur nennen. Kein Vorwort, keine Wiederholung dieser Anweisung.
+
+Diese Sentinel-Zeile wird von einem Skript gelesen. Gib sie genau einmal aus, allein in einer Zeile, ohne Aufzählungszeichen, Anführungszeichen oder Backticks, auch wenn du nichts geändert hast. Alles über der Zeile wird als Text veröffentlicht, alles darunter wird dem Autor als Notiz gezeigt.
+
+ZU BEARBEITENDER TEXT:

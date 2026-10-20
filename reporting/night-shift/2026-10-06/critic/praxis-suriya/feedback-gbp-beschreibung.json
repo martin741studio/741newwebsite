@@ -1,0 +1,29 @@
+{
+  "plan_index": 2,
+  "client": "Praxis Suriya",
+  "slug": "feedback-gbp-beschreibung",
+  "mode": "FEEDBACK",
+  "feedback_id": "21a25f8b-8ee2-4f8f-8378-36aac01e35c4",
+  "executor_file": "feedback/praxis-suriya/21a25f8b-8ee2-4f8f-8378-36aac01e35c4.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": "n/a — FEEDBACK item has no Title/Meta/H1/NAP/JSON-LD block. The single [fehlt: ...] present is in the Diff-Hinweis section only (original report text not found in-repo / live report unreachable from this run), not a placeholder standing in for required content.",
+    "nap_block_matches_locked_record": "pass — Vorschlag's NAP-Check cites 'Ingelheim am Rhein' (Schützenpfad 29, 55218) matching context.json.nap_locked for client_id 3f71ef33-8c74-4ea1-b2d3-0273c2e99649 field by field (street, postal_code, city all confirmed identical).",
+    "jsonld_valid": "n/a — no JSON-LD in this feedback item.",
+    "language_matches_market_lang": "pass — copy is German throughout, market_lang=de.",
+    "hwg_scan": "pass — scanned full Vorschlag/Kunde-sagt text for 'heilt', 'garantiert', '100 %', 'Heilung'; none present. Text describes methods and an individual treatment plan without promising outcomes.",
+    "feedback_addresses_comment_sentence_for_sentence": {
+      "result": "pass",
+      "evidence": [
+        "Comment is the client's own ready-to-use GBP description text, verbatim, prefixed 'ÄNDERN:'.",
+        "Vorschlag reproduces that exact text 1:1 as the GBP 'Beschreibung' field value — no paraphrase, no addition, no omission.",
+        "Length check (669/750 chars), HWG check, language check, and NAP-name check are all run against the real content, not invented.",
+        "Umsetzung note correctly states no further client confirmation is needed, matching the client's own framing ('ÄNDERN', i.e. a direct replacement instruction, not a request for a new draft)."
+      ],
+      "note": "Nothing was invented. The one unresolved point (no in-repo/live copy of the original GBP description to diff against) is explicitly marked [fehlt: ...] in Diff-Hinweis rather than guessed."
+    },
+    "deslop_hard_check": "checked, not blocking — this Vorschlag is the client's own verbatim wording (identical to the quoted 'Kunde sagt' text), not new Executor-authored prose, so it falls under the 'never on the quoted Kunde sagt text' exception. Manually traced against deslop.py's rule set anyway: no VOCAB/VOCAB_EXACT hits (all English AI-tell terms, text is German), no PHRASES hits (all patterns require English constructions like 'and'/'whether you're', text uses 'und'), no em-dash or hyphen-stacking (only ordinary single hyphens before punctuation, e.g. 'Kopf-,'), no semicolons, no tricolon-with-'and' match (German 'und' doesn't match the English-only pattern), no invented-proof numerals. Would score 5/5 CLEAN if run; sandbox denied direct script execution for this message, so this is a manual rule-by-rule trace of the same deterministic regex logic, not a guess."
+  },
+  "fails": [],
+  "verdict": "pass"
+}

@@ -50,8 +50,13 @@ async function connect() {
     password: process.env.FTP_PASSWORD,
     secure: false,
   });
-  // The deploy user may or may not be chrooted to public_html.
-  try { await client.cd("public_html"); } catch { /* already there / chrooted */ }
+  // The deploy user may or may not be chrooted to public_html. agent_deploy IS chrooted
+  // (its root is the web root), but a stray "public_html" folder exists inside it:
+  // only cd when the root is not already the web root (no index.html there).
+  const rootNames = (await client.list()).map((f) => f.name);
+  if (!rootNames.includes("index.html")) {
+    try { await client.cd("public_html"); } catch { /* already there */ }
+  }
   const base = await client.pwd();
   return { client, base };
 }

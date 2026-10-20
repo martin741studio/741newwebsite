@@ -121,6 +121,33 @@ ok('scope: done gate silent in a normal session', stop('Alles fertig und live.',
 # ------------------------------------------------------------------ 3. registration and binding
 ctx = prompt('/automation-build Marcel Skool funnel', event='UserPromptExpansion', command_name='automation-build')
 ok('register via UserPromptExpansion', 'registered' in ctx and SID in ctx, ctx)
+
+# ------------------------------------------------------------------ 3a. paraphrase registration (2026-10-15)
+# Added after a real fresh-session test (trigger-tests.md) found that a paraphrase without
+# the literal "/automation-build" prefix got neither the skill nor the hook, and the model
+# tried to build an automation ad hoc. This only arms the guard/done-gate; it never loads
+# the skill body (disable-model-invocation is unchanged).
+PARA_SID = 'sess-paraphrase-4'
+ctx = prompt('Bau fuer TestClient die Zapier-Strecke Tally zu KlickTipp und Pipedrive fuer ein Gewinnspiel, mit Tests.', sid=PARA_SID)
+ok('paraphrase (verb+noun) registers', 'registered' in ctx and PARA_SID in ctx, ctx)
+ctx = prompt('Verbinde Skool mit KlickTipp fuer den neuen Kunden.', sid='sess-paraphrase-5')
+ok('paraphrase variant (verbinde+KlickTipp... no automation noun) does not register', ctx == '', ctx)
+ctx = prompt('Bau mir ein Angebot fuer TestClient.', sid='sess-paraphrase-6')
+ok('verb without an automation noun does not register', ctx == '', ctx)
+ctx = prompt('Wie laeuft die Zapier-Strecke fuer TestClient?', sid='sess-paraphrase-7')
+ok('automation noun without a build verb does not register', ctx == '', ctx)
+ctx = prompt('Verbinde bitte die Zapier-Strecke fuer TestClient neu.', sid='sess-paraphrase-8')
+ok('paraphrase variant (verbinde+Zapier-Strecke) registers', 'registered' in ctx and 'sess-paraphrase-8' in ctx, ctx)
+
+# ------------------------------------------------------------------ 3b. wrapped text must not arm the paraphrase match (2026-10-15 regression)
+# Real incident: a background task-notification reporting on OTHER work (a Zapier MCP OAuth
+# attempt) happened to contain a build verb near an automation noun, and PARAPHRASE_RE.search()
+# matched it even though Martin never typed it. GO_RE was already safe (full-string anchor);
+# PARAPHRASE_RE needs the same wrapped-text guard.
+WRAPPED_SID = 'sess-wrapped-9'
+ctx = prompt('<task-notification><task-id>a1</task-id><summary>versucht, die Zapier MCP OAuth zu verbinden und '
+             'die Automation-Strecke zu bauen, aber der Login schlug fehl</summary></task-notification>', sid=WRAPPED_SID)
+ok('wrapped task-notification with verb+noun does not register', ctx == '' and L.session(WRAPPED_SID) is None, ctx)
 d, why = guard(CHROME, {'action': 'left_click', 'action_summary': 'Opens the filter menu'})
 ok('unbound session: test_write denied', d == 'deny' and 'bind the run folder' in why, why)
 rc, out = script('run_state.py', 'init', '--session', SID, '--client', 'Marcel Rosenbach', '--slug', 'Skool Funnel', '--root', ROOT)

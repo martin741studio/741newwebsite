@@ -1,0 +1,214 @@
+{
+ "client": "STÜRZL Steuerstrafrecht",
+ "client_slug": "stuerzl",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "language": "de",
+ "voice_sheet": "00_project/assets/stuerzl/voice.md",
+ "mode": "rewrite",
+ "cta": {
+  "goal": "Vertrauliche Anfrage über das Formular (nur Thema, keine Falldaten)",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nennen Sie uns nur Ihr Thema, keine Einzelheiten. Ihre Angaben unterliegen unserer gesetzlichen Verschwiegenheit.",
+  "secondary": "Anrufen: Frankfurt +49 69 298028870, München +49 89 72444170"
+ },
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "H1, Situation, ein Weg",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Direkt-Antwort"
+  },
+  {
+   "id": "S03",
+   "element": "check-list",
+   "job": "Situationen"
+  },
+  {
+   "id": "S04",
+   "element": "step-flow",
+   "job": "Ablauf",
+   "cta": "primary"
+  },
+  {
+   "id": "S05",
+   "element": "person",
+   "job": "E-E-A-T"
+  },
+  {
+   "id": "S06",
+   "element": "text",
+   "job": "Kosten kurz",
+   "cta": "secondary"
+  },
+  {
+   "id": "S07",
+   "element": "accordion",
+   "job": "Vertiefung",
+   "cta": "secondary"
+  },
+  {
+   "id": "S08",
+   "element": "faq",
+   "job": "FAQ"
+  },
+  {
+   "id": "S09",
+   "element": "cta",
+   "job": "Abschluss",
+   "cta": "primary"
+  }
+ ],
+ "gate": "A0",
+ "require_answer_block": true,
+ "cta_min": 3,
+ "cta_text": "Vertraulich anfragen",
+ "proof_assets": [
+  "Fachanwältin für Steuerrecht seit 2021 (Lebenslauf)",
+  "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022 (Lebenslauf)"
+ ],
+ "forbidden_words": [
+  "spezialisiert",
+  "Spezialist",
+  "Experte",
+  "Expertin",
+  "Expertise",
+  "führend",
+  "Exzellenz",
+  "kostenlos",
+  "Festpreis",
+  "WhatsApp",
+  "Wiesenhüttenstraße",
+  "Albtraum",
+  "Ruin",
+  "Haft droht"
+ ],
+ "own_phrases": [
+  "Wir stehen Ihnen zur Seite",
+  "langjährige Praxiserfahrung",
+  "Fehler passieren",
+  "Das Mandanteninteresse steht für uns immer im Vordergrund",
+  "möglichst geräuschlos und effizient",
+  "Jedes Mandat und jeder Mandant ist anders"
+ ],
+ "placeholders_allowed": [
+  "Pauschale Erstberatung",
+  "Rechtsschutzversicherung",
+  "Vorschuss-Rahmen"
+ ],
+ "blockers": [],
+ "page_slug": "korruptionsstrafrecht",
+ "page_type": "service",
+ "pool_item_ids": [
+  "CP-SVC-019"
+ ],
+ "sitetree_node": "ST-25",
+ "url_slug": "/korruptionsstrafrecht/",
+ "keyword_primary": "korruptionsstrafrecht",
+ "keywords_cluster": [
+  {
+   "kw": "bestechlichkeit",
+   "volume": 2900,
+   "scope": "national",
+   "source": "DataForSEO google_ads/search_volume/live, de, 2276",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "vorteilsannahme",
+   "volume": 320,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "vorteilsgewährung",
+   "volume": 140,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "bestechung im geschäftlichen verkehr",
+   "volume": 90,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "korruptionsstrafrecht",
+   "volume": 30,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "bestechung strafe",
+   "volume": 30,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "anwalt korruptionsstrafrecht",
+   "volume": 10,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  }
+ ],
+ "intent": "commercial",
+ "reader": "Unternehmer, Geschäftsführer, Leitungsperson, Angehöriger eines Heilberufs oder Privatperson, die wissen will, wo Geschenke, Einladungen und Zuwendungen strafbar werden, oder gegen die wegen Bestechung oder Bestechlichkeit ermittelt wird.",
+ "local_city": null,
+ "money_page": true,
+ "bestand_words": 227,
+ "benchmark_median_words": 1181,
+ "benchmark_sources": "siehe 01-brief/gate-a0.md (11 Seiten zum Korruptionsstrafrecht, gelesen 2026-10-11)",
+ "word_range": [
+  900,
+  1850
+ ],
+ "faq_min": 6,
+ "internal_links_min": 4,
+ "internal_link_targets": [
+  {
+   "url": "/steuerstrafrecht/",
+   "anchor": "Steuerstrafrecht",
+   "role": "pillar"
+  },
+  {
+   "url": "/kosten/",
+   "anchor": "Kosten und Honorar",
+   "role": "cost"
+  },
+  {
+   "url": "/dr-anja-stuerzl/",
+   "anchor": "Dr. Anja Stürzl",
+   "role": "person"
+  },
+  {
+   "url": "/selbstanzeige/",
+   "anchor": "Selbstanzeige",
+   "role": "sibling"
+  },
+  {
+   "url": "/unternehmensvertretung/",
+   "anchor": "Unternehmensvertretung",
+   "role": "sibling"
+  },
+  {
+   "url": "/ordnungswidrigkeiten/",
+   "anchor": "Ordnungswidrigkeiten",
+   "role": "sibling"
+  }
+ ],
+ "nap_file": "00_project/assets/stuerzl/nap.json",
+ "paa_questions": [],
+ "schema_faq": true
+}

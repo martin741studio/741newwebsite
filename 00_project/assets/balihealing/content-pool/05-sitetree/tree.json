@@ -1,0 +1,717 @@
+{
+ "meta": {
+  "client": "Bali Healing (Natural Health Center and Beauty Clinic, Canggu)",
+  "slug": "balihealing",
+  "domain": "balihealing.com",
+  "built": "2026-10-13",
+  "programme_modules_source": "website-struktur-master-prompt.md steps 4 and 6 (programme plan file not found); tree follows the two doors decided by Martin on 13.10. (Wellness, Beauty)"
+ },
+ "nodes": [
+  {
+   "id": "ST-00",
+   "parent": null,
+   "title": "Homepage",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M2 Startseite",
+   "job": "Rebuild along the CRO blueprint (10 rows): one H1, one sentence for what the clinic is, two doors (Wellness, Beauty) with one shared consultation (Martin 13.10.), proof strip, first-visit block with price ranges, doctors, reviews, FAQ, location.",
+   "kind": "page",
+   "audience": "both",
+   "path": "/",
+   "kw": "bali healing center",
+   "pool_tag": "homepage",
+   "needs_client": [
+    "Price ranges in IDR",
+    "Doctor names, licence type and photos",
+    "Typical WhatsApp reply time",
+    "One phone number next to WhatsApp"
+   ],
+   "note": "452 words today, the same H1 twice, no phone number, no price."
+  },
+  {
+   "id": "ST-10",
+   "parent": "ST-00",
+   "title": "Wellness (health side, hub)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M8 Hub und Spoke",
+   "job": "Door 1 of 2: health care. Hub with one tile per treatment, consultation first. Link every wellness treatment page below.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/wellness",
+   "kw": "holistic clinic bali",
+   "note": "392 words, 642 impressions in 3 months."
+  },
+  {
+   "id": "ST-11",
+   "parent": "ST-10",
+   "title": "Ozone therapy (hub)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Ozone hub: what ozone treatments the clinic offers, who treats, price range, link to the three treatment pages. Wellness framing only, no disease claims (Google health policy).",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ozonetherapy",
+   "kw": "ozone therapy bali",
+   "pool_tag": "service:ozone",
+   "needs_client": [
+    "Price range per ozone treatment",
+    "Is EBOO the same as the major autohemotherapy?"
+   ],
+   "note": "Top-3 share in Maps for \"ozone therapy\" fell from 57.1 to 34.7 percent in 14 days (audit)."
+  },
+  {
+   "id": "ST-111",
+   "parent": "ST-11",
+   "title": "Ozone major autohemotherapy (MAH)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Add steps, duration, price range and aftercare. Keep the wellness framing.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ozone-hyperbaric-major-autohemotherapy",
+   "kw": "ozone therapy"
+  },
+  {
+   "id": "ST-112",
+   "parent": "ST-11",
+   "title": "Ozone minor autohemotherapy (MiAH)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Add price range and a link back to the ozone hub.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ozone-minor-autohemotherapy"
+  },
+  {
+   "id": "ST-113",
+   "parent": "ST-11",
+   "title": "Ozone insufflation",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Own page stays (Pasha). Add price range and a link back to the hub.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/ozone-insufflation"
+  },
+  {
+   "id": "ST-12",
+   "parent": "ST-10",
+   "title": "IV drip therapy in Canggu",
+   "status": "Neu",
+   "origin": "kunde",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Make this the one IV page: lift noindex (go), name it \"IV Drip\" in title and H1, add the drip menu with price ranges. Rename to \"IV Drip by Bali Healing\" needs Peggy's OK.",
+   "kind": "page",
+   "audience": "patient",
+   "slug": "/iv-drip-therapy-infusions/",
+   "kw": "iv drip bali",
+   "pool_tag": "service:iv-drip",
+   "needs_client": [
+    "Peggy's OK on the name 'IV Drip by Bali Healing'",
+    "Drip menu with price ranges"
+   ],
+   "note": "The page exists live (2,578 words of page text, 13.10.) but carries noindex and is not in the sitemap (live check 13.10.2026). \"Neu\" here means new to Google. \"iv drip bali\" has 1,300 searches a month, Maps top-3 share 0 percent."
+  },
+  {
+   "id": "ST-13",
+   "parent": "ST-10",
+   "title": "Acupuncture in Canggu",
+   "status": "Neu",
+   "origin": "kunde",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Lift noindex (go). Add who treats, steps and price range. Link to the TCM consultation page.",
+   "kind": "page",
+   "audience": "patient",
+   "slug": "/acupuncture/",
+   "kw": "acupuncture bali",
+   "pool_tag": "service:acupuncture",
+   "needs_client": [
+    "Name and licence of the acupuncturist",
+    "Price range"
+   ],
+   "note": "The page exists live (1,222 words of page text, 13.10.) but carries noindex and is not in the sitemap (live check 13.10.2026)."
+  },
+  {
+   "id": "ST-131",
+   "parent": "ST-13",
+   "title": "TCM and women's health consultations",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Keep the consultation page. Make the women's health part clear and link the gyneco-aesthetic page.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/traditional-chinese-medicine-consultations",
+   "kw": "tcm bali",
+   "pool_tag": "service:womens-health"
+  },
+  {
+   "id": "ST-14",
+   "parent": "ST-10",
+   "title": "Osteopathy",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Strengthen the page that already ranks for \"osteopath canggu\": who treats, price range, first visit.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/osteopathy-treatment",
+   "kw": "osteo canggu",
+   "pool_tag": "service:osteopathy",
+   "needs_client": [
+    "Name and qualification of the osteopath",
+    "Price range"
+   ],
+   "note": "54 clicks, 1,403 impressions in 3 months."
+  },
+  {
+   "id": "ST-15",
+   "parent": "ST-10",
+   "title": "Physiotherapy (incl. prenatal)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Add the page to the services block on the homepage and the wellness hub.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/physiotherapy",
+   "kw": "physiotherapy canggu",
+   "pool_tag": "service:physiotherapy"
+  },
+  {
+   "id": "ST-16",
+   "parent": "ST-10",
+   "title": "Craniosacral therapy",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "State who it is for and what happens in a session.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/craniosacral-therapy",
+   "kw": "craniosacral therapy bali",
+   "pool_tag": "service:craniosacral",
+   "note": "44 clicks, 331 impressions in 3 months."
+  },
+  {
+   "id": "ST-17",
+   "parent": "ST-10",
+   "title": "Neural therapy",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Explain in daily language and link from pain topics.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/neural-therapy",
+   "kw": "neural therapy bali",
+   "pool_tag": "service:neural-prolozone"
+  },
+  {
+   "id": "ST-171",
+   "parent": "ST-17",
+   "title": "Prolozone injection",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Same treatment family as neural therapy: daily language, link both ways.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/prolozone-injection",
+   "kw": "prolozone bali"
+  },
+  {
+   "id": "ST-18",
+   "parent": "ST-10",
+   "title": "NAET allergy treatment",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Keep both NAET pages: the treatment page and the explainer that brings impressions. Link them both ways.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/naet-allergytreatment",
+   "kw": "naet bali",
+   "pool_tag": "service:naet"
+  },
+  {
+   "id": "ST-181",
+   "parent": "ST-18",
+   "title": "About NAET (explainer)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Stays as it is. It brings 1,105 impressions in 3 months.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/about-naet-allergy-treatment"
+  },
+  {
+   "id": "ST-19",
+   "parent": "ST-10",
+   "title": "Clinical hypnotherapy",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Page for \"hypnotherapy bali\" (320 searches a month): who treats, what happens, price range.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/clinical-hypnotherapy",
+   "kw": "hypnotherapy bali",
+   "pool_tag": "service:hypnotherapy"
+  },
+  {
+   "id": "ST-1A",
+   "parent": "ST-10",
+   "title": "ThetaHealing",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Keep the page. State clearly what a session is.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/thetahealing-treatment",
+   "kw": "theta healing bali",
+   "pool_tag": "service:thetahealing",
+   "needs_client": [
+    "Is the Google profile \"Bali ThetaHealing\" yours?"
+   ]
+  },
+  {
+   "id": "ST-1B",
+   "parent": "ST-10",
+   "title": "Reiki",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Short page, linked from the wellness hub.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/reiki-sessions",
+   "kw": "reiki bali",
+   "pool_tag": "service:reiki-access-bars"
+  },
+  {
+   "id": "ST-1B1",
+   "parent": "ST-1B",
+   "title": "Energy alignment (Access Bars)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Short page, linked from the reiki page and the hub.",
+   "kind": "page",
+   "audience": "patient",
+   "path": "/access-bars-therapy",
+   "kw": "access bars bali"
+  },
+  {
+   "id": "ST-20",
+   "parent": "ST-00",
+   "title": "Beauty clinic (hub)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M8 Hub und Spoke",
+   "job": "Door 2 of 2: beauty. Dermatologist consultation first, then the treatment menu with a link to each treatment page.",
+   "kind": "page",
+   "audience": "beauty",
+   "path": "/balihealingbeauty",
+   "kw": "beauty clinic bali",
+   "pool_tag": "service:beauty-hub",
+   "needs_client": [
+    "Name and licence of the dermatologist"
+   ],
+   "note": "78 clicks, 4,901 impressions in 3 months."
+  },
+  {
+   "id": "ST-21",
+   "parent": "ST-20",
+   "title": "Skin tag, wart and mole removal",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Strongest service page. Add price range, steps, aftercare and the mole check as first step. Target page of the skin tag ads.",
+   "kind": "page",
+   "audience": "beauty",
+   "path": "/skintagandmoleremoval",
+   "kw": "skin tag removal bali",
+   "pool_tag": "service:skin-tag-removal",
+   "needs_client": [
+    "Price range in IDR"
+   ],
+   "note": "175 clicks, 2,694 impressions in 3 months."
+  },
+  {
+   "id": "ST-211",
+   "parent": "ST-21",
+   "title": "Mole check (dermatoscopy)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Rework into the mole check page with its own text: 57 percent of its five-word sequences are also on the removal page (read 13.10.).",
+   "kind": "page",
+   "audience": "beauty",
+   "path": "/dermatoscopy",
+   "kw": "skin check bali",
+   "pool_tag": "service:dermatoscopy"
+  },
+  {
+   "id": "ST-22",
+   "parent": "ST-20",
+   "title": "Facials in Canggu",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "One \"facial Canggu\" page that leads to HydraGlo, basic and advanced facials, with price ranges.",
+   "kind": "page",
+   "audience": "beauty",
+   "path": "/facial",
+   "kw": "facial canggu",
+   "pool_tag": "service:facials",
+   "needs_client": [
+    "Price range per facial"
+   ]
+  },
+  {
+   "id": "ST-221",
+   "parent": "ST-22",
+   "title": "Facial treatment pages",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "HydraGlo, basic and advanced facial pages stay. Each links back to the facial page.",
+   "kind": "group",
+   "audience": "beauty",
+   "group_patterns": [
+    "^/hydraglofacial$",
+    "^/cleanseandhydratebasicfacial$",
+    "^/advancedfacialrejuvenation$"
+   ]
+  },
+  {
+   "id": "ST-23",
+   "parent": "ST-20",
+   "title": "Microneedling",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Clear page per treatment with steps and recovery. Link the PRP pages.",
+   "kind": "page",
+   "audience": "beauty",
+   "path": "/microneedling-collageninductiontherapy",
+   "kw": "microneedling bali",
+   "pool_tag": "service:microneedling-prp"
+  },
+  {
+   "id": "ST-231",
+   "parent": "ST-23",
+   "title": "PRP for hair",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Steps, sessions and recovery. It brings 164 impressions in 3 months.",
+   "kind": "page",
+   "audience": "beauty",
+   "path": "/plateletrichplasma-hair",
+   "kw": "prp hair bali"
+  },
+  {
+   "id": "ST-232",
+   "parent": "ST-23",
+   "title": "PRP for the face",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Steps and recovery, link to microneedling.",
+   "kind": "page",
+   "audience": "beauty",
+   "path": "/plateletrichplasma-face"
+  },
+  {
+   "id": "ST-24",
+   "parent": "ST-20",
+   "title": "Skin boosters and injectables",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Lead page for hyaluronic acid, Nucleofill and DMAE mesotherapy.",
+   "kind": "page",
+   "audience": "beauty",
+   "path": "/hyaluronicacidinjectionstreatment",
+   "kw": "skin booster bali",
+   "pool_tag": "service:injectables"
+  },
+  {
+   "id": "ST-241",
+   "parent": "ST-24",
+   "title": "Injectable treatment pages",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Nucleofill, DMAE mesotherapy and intramuscular injection pages stay and link to the lead page.",
+   "kind": "group",
+   "audience": "beauty",
+   "group_patterns": [
+    "^/nucleofillinjection$",
+    "^/dmaemesotherapytreatment$",
+    "^/intramuscularshotstreatment$"
+   ]
+  },
+  {
+   "id": "ST-25",
+   "parent": "ST-20",
+   "title": "Body and skin: acid peeling",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Lead page of the body-and-skin cluster. Link CellreJet and PPC fat reduction.",
+   "kind": "page",
+   "audience": "beauty",
+   "path": "/acidpeelingtreatment",
+   "kw": "tca peel bali",
+   "pool_tag": "service:body-skin"
+  },
+  {
+   "id": "ST-251",
+   "parent": "ST-25",
+   "title": "CellreJet and PPC fat reduction",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Both pages stay and link to the lead page.",
+   "kind": "group",
+   "audience": "beauty",
+   "group_patterns": [
+    "^/cellrejettreatment$",
+    "^/ppcfatreductiontreatment$"
+   ]
+  },
+  {
+   "id": "ST-26",
+   "parent": "ST-20",
+   "title": "Gyneco-aesthetic treatment",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Stays. Linked from the women's health consultation.",
+   "kind": "page",
+   "audience": "beauty",
+   "path": "/gyneco-aesthetic"
+  },
+  {
+   "id": "ST-27",
+   "parent": "ST-20",
+   "title": "Beauty consultations with a dermatologist",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M5 Standort- und Leistungsseiten",
+   "job": "Stays. Entry page for the beauty door.",
+   "kind": "page",
+   "audience": "beauty",
+   "path": "/beauty-consultations"
+  },
+  {
+   "id": "ST-30",
+   "parent": "ST-00",
+   "title": "About us",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M6 Behandlerseite",
+   "job": "Add the team: doctors and practitioners with name, licence type, years and photo, framed as Indonesian doctors and nurses. Fix the missing H1.",
+   "kind": "page",
+   "audience": "both",
+   "path": "/aboutus",
+   "kw": "bali healing",
+   "pool_items": [
+    "CP-AUT-001"
+   ],
+   "needs_client": [
+    "Names, licence type and number, years and photos with consent"
+   ],
+   "note": "432 words, no H1 today."
+  },
+  {
+   "id": "ST-31",
+   "parent": "ST-30",
+   "title": "Our doctors and practitioners",
+   "status": "Neu",
+   "origin": "programm",
+   "module": "M6 Behandlerseite",
+   "job": "One profile per doctor and practitioner, only with real licences. No title without proof.",
+   "kind": "page",
+   "audience": "both",
+   "slug": "/our-doctors/",
+   "pool_items": [
+    "CP-AUT-001"
+   ],
+   "needs_client": [
+    "Names, licence type and number, years and photos with consent"
+   ]
+  },
+  {
+   "id": "ST-40",
+   "parent": "ST-00",
+   "title": "Contact and booking",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M10 Online-Angebote und Conversion",
+   "job": "Add how WhatsApp booking works, reply time, phone number, hours, map and access.",
+   "kind": "page",
+   "audience": "both",
+   "path": "/contactus",
+   "pool_items": [
+    "CP-SVC-021",
+    "CP-LOC-002"
+   ],
+   "needs_client": [
+    "Typical WhatsApp reply time",
+    "Parking and step-free access"
+   ],
+   "note": "100 words today."
+  },
+  {
+   "id": "ST-50",
+   "parent": "ST-00",
+   "title": "Questions and aftercare (hub)",
+   "status": "Neu",
+   "origin": "programm",
+   "module": "M8 Hub und Spoke",
+   "job": "Answers on cost, safety, aftercare and who should not receive a treatment. Every answer reviewed by the treating doctor.",
+   "kind": "page",
+   "audience": "both",
+   "slug": "/faq/",
+   "pool_tag": "blog-faq",
+   "pool_items": [
+    "CP-SVC-022"
+   ],
+   "needs_client": [
+    "Doctor answers for the top 10 questions"
+   ]
+  },
+  {
+   "id": "ST-60",
+   "parent": "ST-00",
+   "title": "Short explainer pages (\"About ...\")",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "The short \"About\" pages stay as they are and link to their treatment page. No new work. Two of them are redirect proposals (see below).",
+   "kind": "group",
+   "audience": "both",
+   "group_patterns": [
+    "^/about-(?!naet)",
+    "^/aboutnucleofill$",
+    "^/microneedling$",
+    "^/intramuscularshots$",
+    "^/dmaemesotherapy$",
+    "^/ppcfatreduction$",
+    "^/prptreatment$",
+    "^/hyaluronic-acid-injections$",
+    "^/naturalbeautyatbalihealingbeauty$",
+    "^/gynecoaesthetic$",
+    "^/infusions$"
+   ]
+  }
+ ],
+ "reasons": [
+  "<b>The homepage is thin.</b> It has {home_words} words. The floor is {floor} words (median {median} words of the clinic homepages). The service pages have {svc_min} to {svc_max} words. Most pages exist. The work is prices, proof, the doctors and a clear order.",
+  "<b>Two money topics are hidden from Google.</b> The IV drip page (2,578 words) and the acupuncture page (1,222 words) carry noindex and are not in the sitemap (live check 13.10.2026). \"iv drip bali\" has 1,300 searches a month.",
+  "<b>Brand search carries the site.</b> The homepage has 1,289 clicks in 3 months. The strongest service page is skin tag removal with 175 clicks.",
+  "<b>Short copies split the signal.</b> Some treatments have a short \"About\" page next to the full page, for example /gynecoaesthetic (80 words) next to /gyneco-aesthetic (674 words).",
+  "<b>Links are not the first gap.</b> The domain shows 1,001 referring domains, but most came in one spam wave (pool item CP-AUT-006). The profile name, prices and the doctors come first."
+ ],
+ "not_built": [
+  "Area pages for Ubud, Seminyak and Uluwatu: one address only, no local proof (CP-LOC-004, cut).",
+  "Naturopathy and live blood analysis: the client gave them up on 30.07. Martin 13.10.: remove from site and profile after the client's OK (CP-SVC-026). /about-naturopathy is already noindex.",
+  "Detox and colon hydrotherapy: not offered (CP-SVC-027, cut).",
+  "Breathwork, sound healing and screaming therapy, IV drip at home and Bali belly, general doctor: only after the client says yes (CP-SVC-023, 024, 025, Martin 13.10.)."
+ ],
+ "redirect_proposals": [
+  {
+   "from": "/gynecoaesthetic",
+   "to": "/gyneco-aesthetic",
+   "reason": "Short \"About\" page (80 words). 66 percent of its five-word sequences are on the full page (674 words). Both pages read 13.10. Only with Martin's go."
+  },
+  {
+   "from": "/infusions",
+   "to": "/iv-drip-therapy-infusions",
+   "reason": "Short \"About Infusions\" page (104 words), 59 percent of its text is on /infusionstreatment. Only after noindex is lifted on the IV page and with Martin's go."
+  },
+  {
+   "from": "/infusionstreatment",
+   "to": "/iv-drip-therapy-infusions",
+   "reason": "Older infusion page (995 words, 13 impressions) with the same job as the IV page (2,578 words, \"IV Drip Therapy & Infusions in Canggu\"). Both pages read 13.10., 27 percent overlap, the IV page covers more. Only after noindex is lifted and with Martin's go."
+  },
+  {
+   "from": "/naturopathyconsultations",
+   "to": "/wellness",
+   "reason": "Service given up by the client on 30.07. Martin 13.10.: remove after the client's OK. Only with the client's OK and Martin's go."
+  }
+ ],
+ "catchment": [
+  {
+   "level": 1,
+   "name": "Core place",
+   "places": [
+    "Canggu"
+   ],
+   "action": "Homepage and all service pages name Canggu. The clinic address is here.",
+   "kw": [
+    "bali healing canggu",
+    "clinic canggu",
+    "doctor canggu",
+    "iv drip canggu",
+    "facial canggu"
+   ]
+  },
+  {
+   "level": 2,
+   "name": "Near areas",
+   "places": [
+    "Berawa",
+    "Pererenan",
+    "Umalas",
+    "Seminyak"
+   ],
+   "action": "Name them in the text with drive times (check on a map). No area pages.",
+   "kw": [
+    "clinic berawa",
+    "doctor pererenan",
+    "clinic seminyak",
+    "doctor seminyak"
+   ]
+  },
+  {
+   "level": 3,
+   "name": "Bali-wide service searches",
+   "places": [
+    "Bali"
+   ],
+   "action": "Service pages target \"<service> bali\". This is where most demand sits.",
+   "kw": [
+    "iv drip bali",
+    "ozone therapy bali",
+    "acupuncture bali",
+    "skin tag removal bali",
+    "hypnotherapy bali"
+   ]
+  },
+  {
+   "level": 4,
+   "name": "Far areas",
+   "places": [
+    "Ubud",
+    "Uluwatu"
+   ],
+   "action": "No pages (CP-LOC-004 cut). Visitors from there find the Bali-wide service pages.",
+   "kw": [
+    "clinic ubud",
+    "clinic uluwatu"
+   ]
+  }
+ ]
+}

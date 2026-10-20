@@ -1,0 +1,54 @@
+{
+ "date": "2026-10-14",
+ "confirmed_by": "Martin, grill chat 14.10. ~21:25 card 'Tonight': 'Second night block now, until 22:45 (Recommended)'. Second block: kamil-dashboard-numbers (retry) + overdue-tasks-pass + citations-workflow-draft; the 6 passed items of the first block stay in results.",
+ "items": [
+  {
+   "id": "kamil-dashboard-numbers",
+   "client": "Kamil (Physio Anatomie + Kraft)",
+   "class": "build",
+   "lang": "German",
+   "title": "Prepare Kamil's monthly numbers for his dashboard",
+   "brief": "Next milestone is moving the August/September numbers into Kamil's client dashboard and preparing improvement notes (website, income streams). Use the existing report generator pattern to build a dashboard-ready local draft. Do not touch the live dashboard.",
+   "inputs": [
+    "reporting/out/physio-anatomie-2026-07.html",
+    "reporting/out/physiokraft-2026-07.html",
+    "reporting/monthly-client-report.mjs"
+   ],
+   "done": "items/kamil-dashboard-numbers/draft.md"
+  },
+  {
+   "id": "overdue-tasks-pass",
+   "client": "741 (all clients)",
+   "class": "research",
+   "lang": "English",
+   "title": "Go through all 56 overdue portal tasks and propose done / re-plan / drop",
+   "brief": "Martin (14.10. Command Center): go through ALL overdue portal tasks; every decision he must take goes to his decision cards. The list is in the inputs (56 tasks, 7 clients, with task ids). For each task, check the repo evidence (client memory files are not available; use 00_project/assets/<client>/, the morning-grill evening logs and tasks.json files, reporting/night-shift results) and propose one of: likely done but not ticked (cite the evidence file), still open and owner 741 (proposed new week), waiting for the client, drop (no longer relevant, give the reason). Taxi is out of scope. Never write to the portal. Group by client. At the end, list at most 7 decisions Martin must take, each as a card draft: question, 2-3 options, recommended option first.",
+   "inputs": [
+    "reporting/night-shift/inputs/overdue-portal-tasks-2026-10-14.tsv",
+    "00_project/assets/morning-grill/2026-10-14/evening-log.md",
+    "00_project/assets/morning-grill/2026-10-14/evening/tasks.json",
+    "00_project/assets/morning-grill/2026-10-13/evening-log.md",
+    "00_project/morning-grill-goals.json"
+   ],
+   "done": "items/overdue-tasks-pass/overdue-review.md (table per client: task, proposal, evidence) and items/overdue-tasks-pass/decision-cards.md (max 7 card drafts)"
+  },
+  {
+   "id": "citations-workflow-draft",
+   "client": "741 (citations)",
+   "class": "draft",
+   "lang": "English",
+   "title": "Draft the citations workflow (run file + runbook) up to checkpoint 1",
+   "brief": "Martin (14.10. Command Center, card citations-stale, answer b): first build the citations workflow (run file, runbook), then work the lists. Citations stand still: Praxis Suriya 25 and Praxis Hüwel 29 entries are 'planned' for more than 14 days. Follow the 741 workflow creation process (00_project/workflow-creation-workflow.md) only up to the first checkpoint: job of the workflow, steps, who does what (agent / Tantri / Martin), inputs and outputs, gates, the border to the backlink workflow (niche directories = citations), and a draft runbook for one client run. Reuse the existing scripts in the inputs; do not invent new tools. No installation, no portal or Supabase writes, no submissions.",
+   "inputs": [
+    "00_project/workflow-creation-workflow.md",
+    "00_project/coralie-submission-runbook.md",
+    "00_project/backlink-workflow-dach.md",
+    "00_project/client-listing-email-template.md",
+    "reporting/submission-runbook.mjs",
+    "reporting/citation-monitor.mjs",
+    "reporting/aggregator-pack.mjs"
+   ],
+   "done": "items/citations-workflow-draft/citations-workflow-draft.md and items/citations-workflow-draft/runbook-draft.md, plus open questions for Martin as card drafts"
+  }
+ ]
+}

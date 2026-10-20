@@ -1,0 +1,126 @@
+{
+  "slug": "ana-violeta-fredel",
+  "note": "Serial test run of v2 (one agent). Written afterwards as the first example of the v2.1 handover file.",
+  "steps": {
+    "intake": {
+      "agent": "orchestrator",
+      "status": "done",
+      "at": "2026-10-12T08:56",
+      "outputs": [
+        "intake.md",
+        "evidence/google-panel-2026-10-12.md"
+      ],
+      "blockers": []
+    },
+    "demand": {
+      "agent": "A",
+      "status": "done",
+      "outputs": [
+        "evidence/dfs-volumes-ads.json",
+        "evidence/dfs-serp-hp.json",
+        "evidence/dfs-serp-name.json",
+        "evidence/dfs-serp-name2.json",
+        "evidence/dfs-backlinks-summary.json",
+        "evidence/dfs-refdomains-spam.json"
+      ],
+      "blockers": [
+        "serp infusionstherapie merzig: 40101 twice, skipped"
+      ]
+    },
+    "site": {
+      "agent": "B",
+      "status": "done",
+      "outputs": [
+        "evidence/site.json",
+        "evidence/site-pages.json",
+        "evidence/comp-pages.json"
+      ],
+      "blockers": []
+    },
+    "homepage": {
+      "agent": "C",
+      "status": "done",
+      "outputs": [
+        "evidence/scorecard-today.md",
+        "draft/index.html",
+        "evidence/home-today-1440.jpg",
+        "evidence/home-draft-1440.jpg"
+      ],
+      "blockers": []
+    },
+    "scan": {
+      "agent": "D",
+      "status": "done",
+      "gate": "G1 go 2026-10-12",
+      "outputs": [
+        "evidence/falcon-report-4e97aa6af96df54.json",
+        "evidence/scan-grid.png"
+      ],
+      "blockers": []
+    },
+    "writer": {
+      "agent": "E",
+      "status": "done",
+      "outputs": [
+        "prospect.json"
+      ],
+      "blockers": []
+    },
+    "build": {
+      "agent": "orchestrator",
+      "status": "done",
+      "outputs": [
+        "../../../04_site/review/ana-violeta-fredel/index.html",
+        "_run.json"
+      ],
+      "blockers": []
+    },
+    "factcheck": {
+      "agent": "F",
+      "status": "done",
+      "outputs": [
+        "evidence/fact-check.md"
+      ],
+      "blockers": [],
+      "note": "116 claims, 22 fixed, re-check 21/22 + 5 small points fixed"
+    },
+    "visual": {
+      "agent": "G",
+      "status": "done",
+      "outputs": [
+        "evidence/page-desktop-1500.jpg",
+        "evidence/page-mobile-375.jpg"
+      ],
+      "blockers": []
+    },
+    "message": {
+      "agent": "orchestrator",
+      "status": "done",
+      "outputs": [
+        "message-draft.md"
+      ],
+      "blockers": [
+        "Loom: later (Martin)"
+      ]
+    },
+    "G2": {
+      "status": "done",
+      "note": "Martin go 12.10.2026"
+    },
+    "deploy": {
+      "agent": "orchestrator",
+      "status": "done",
+      "gate": "G3 go 12.10.2026",
+      "outputs": [
+        "https://741.studio/review/ana-violeta-fredel/"
+      ],
+      "note": "7 URLs 200"
+    },
+    "loom": {
+      "status": "waiting",
+      "blockers": [
+        "Loom URL from Martin"
+      ]
+    }
+  }
+}

@@ -1,4 +1,4 @@
-const CC = { tfilter: 'all', snap: null, snapId: null, created: null, mode: null, answers: {}, picks: {}, parking: null, owning: null, reopen: {}, tab: 'dec', filter: 'all' };
+const CC = { tfilter: 'all', snap: null, snapId: null, created: null, mode: null, answers: {}, picks: {}, parking: null, owning: null, reopen: {}, tab: 'today', filter: 'all' };
 const CC_ICON = { dec: '✅', you: '👆', msg: '✉️', appr: '⏳', wait: '🕒', block: '⛔', later: '📋' };
 
 async function loadGrill() {
@@ -169,10 +169,41 @@ function ccTasks() {
 <div class="cc-legend" style="margin-top:10px">${srcNote} Only a person sets 'done', with proof. An agent 'done' shows as 'needs check'. A click-card task shows 'done' as soon as you answer its card 'Done'.</div>`;
 }
 
+// "Today" tab (Martin 13.10. evening): one board per client + not delegated + waiting for + done today.
+function ccToday() {
+  const s = CC.snap, t = s.today;
+  if (!t) return '<div class="cc-panel"><div class="muted">This snapshot has no "Today" data yet. The next run writes it.</div></div>';
+  const openDec = s.cards.filter(c => ccEff(c).status === 'open').length;
+  const tiles = t.tiles.map(x => `<div class="cc-tile"><b>${esc(x.label === 'decisions open' ? openDec : x.value)}</b><span>${esc(x.label)}</span></div>`).join('');
+  const tr = { off: 'OFF', on: 'ON', unknown: '–' };
+  const rows = t.board.map(r => {
+    const pct = Math.round(r.phase_n / r.phase_max * 100);
+    const det = `<div class="cc-tdet"><div><h5>Done today (${r.n_done})</h5><ul>${r.done.map(x => `<li class="moved"><span class="ic">✓</span><span>${esc(x)}</span></li>`).join('') || '<li>nothing</li>'}</ul></div>
+<div><h5>Open (${r.n_open})</h5><ul>${r.open.map(x => `<li><span class="ic">•</span><span>${esc(x)}</span></li>`).join('') || '<li>nothing</li>'}</ul></div>
+<div><h5>Waiting for (${r.n_waiting})</h5><ul>${r.waiting.map(x => `<li><span class="ic">🕒</span><span>${esc(x)}</span></li>`).join('') || '<li>nothing</li>'}</ul></div></div>`;
+    return `<details class="cc-trow ${esc(r.track)}"><summary><span class="cc-tr ${esc(r.track)}" title="${esc(r.track_why)}">${tr[r.track]}</span>
+<span class="cc-tn">${esc(r.name)}<small>${esc(r.track_why)}</small></span>
+<span class="cc-tph"><span class="cc-pbar"><i style="width:${pct}%"></i></span>${esc(r.phase)} · ${esc(r.phase_label)}${r.week != null ? ' · wk ' + esc(r.week) : ''}</span>
+<span class="cc-tc" title="done today">✓ ${esc(r.n_done)}</span><span class="cc-tc" title="open tasks">• ${esc(r.n_open)}</span><span class="cc-tc" title="waiting for others">🕒 ${esc(r.n_waiting)}</span>
+<span class="cc-tnext">${esc(r.next || 'no next step set')}</span></summary>${det}</details>`;
+  }).join('');
+  const li = (a, f) => a.map(f).join('') || '<li>nothing</li>';
+  const nd = li(t.not_delegated, x => `<li><b>${esc(x.client)}</b> — ${esc(x.title)}<div class="cc-sub">give to: <b>${esc(x.give_to)}</b> · ${esc(x.why)}</div></li>`);
+  const you = li(t.only_you, x => `<li><b>${esc(x.client)}</b> — ${esc(x.title)}${x.due ? `<div class="cc-sub">due ${esc(x.due)}</div>` : ''}</li>`);
+  const wt = li(t.waiting, x => `<li><b>${esc(x.who)}</b> · ${esc(x.client)} — ${esc(x.title)}${x.note ? `<div class="cc-sub">${esc(x.note)}</div>` : ''}</li>`);
+  const dn = li(t.done, x => `<li><b>${esc(x.client)}</b> — ${esc(x.title)} <span class="cc-sub">(${esc(x.owner)})</span></li>`);
+  return `<div class="cc-tiles cc-tiles6">${tiles}</div>
+<div class="cc-panel" style="margin-bottom:14px"><h4>Clients · roadmap and today</h4><div class="cc-legend">OFF = overdue portal tasks. Click a row for done / open / waiting. ✓ done today · • open tasks · 🕒 waiting for others.</div>${rows}</div>
+<div class="cc-grid2"><div class="cc-panel"><h4>Not delegated (${t.not_delegated.length})</h4><ul>${nd}</ul><h4 style="margin-top:14px">Only you (${t.only_you.length})</h4><ul>${you}</ul></div>
+<div class="cc-panel"><h4>Waiting for (${t.waiting.length})</h4><ul>${wt}</ul></div></div>
+<div class="cc-panel" style="margin-top:14px"><h4>Done today (${t.done.length} tasks)</h4><ul>${dn}</ul></div>
+<div class="cc-legend" style="margin-top:10px">Evening log: ${esc(t.log_status)}. Decisions open counts your live answers.</div>`;
+}
+
 function ccRender() {
   const s = CC.snap, el = $('grill');
-  const tabs = [['dec', 'Decisions'], ['tk', 'Tasks'], ['cli', 'Clients'], ['ag', 'Agents & waiting']].map(([k, l]) => `<button class="cc-tab${CC.tab === k ? ' on' : ''}" onclick="ccTab('${k}')">${l}</button>`).join('');
-  const body = CC.tab === 'dec' ? ccDecisions() : CC.tab === 'tk' ? ccTasks() : CC.tab === 'cli' ? ccClients() : ccAgents();
+  const tabs = [['today', 'Today'], ['dec', 'Decisions'], ['tk', 'Tasks'], ['cli', 'Clients'], ['ag', 'Agents & waiting']].map(([k, l]) => `<button class="cc-tab${CC.tab === k ? ' on' : ''}" onclick="ccTab('${k}')">${l}</button>`).join('');
+  const body = CC.tab === 'today' ? ccToday() : CC.tab === 'dec' ? ccDecisions() : CC.tab === 'tk' ? ccTasks() : CC.tab === 'cli' ? ccClients() : ccAgents();
   el.innerHTML = `<span class="backlink" onclick="showApp('admin-home')">← Übersicht</span>
 <div class="cc-head"><h1>Command Center</h1><span class="cc-meta">${esc(s.date)} WITA · ${esc(CC.mode)} snapshot ${esc(CC.snapId)} · read ${esc(s.read_at)} · <a href="#" onclick="loadGrill();return false;">reload</a></span></div>
 <div class="cc-tabs">${tabs}</div>${body}`;

@@ -1,0 +1,227 @@
+{
+ "workflow_id": "automation-completion",
+ "name": "Automation Completion Workflow",
+ "created": "2026-10-15",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/automation-completion/block-choice.md",
+   "date": "2026-10-15",
+   "note": "Reuse automation-build's existing skill+hooks block; recommend rework not new build"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/automation-completion/library-search.md",
+   "date": "2026-10-15",
+   "note": "rules.md/patterns.md already cover reliability/verification; zapier AI builder gap found"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/automation-completion/freshness.md",
+   "date": "2026-10-15",
+   "note": "INDEX 2026-10-11, 4 days old, no refresh needed; light live research on Zapier AI builder"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/automation-completion/coverage-map.md",
+   "date": "2026-10-15",
+   "note": "automation-build design+scorecard 85.7% exists uninstalled; canary covers L6 half"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/automation-completion/research-note.md",
+   "date": "2026-10-15",
+   "note": "block, 3 rules, 1 pattern, 3 open questions (scope, install location, Copilot gate wording)"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/automation-completion/use-cases.md",
+   "date": "2026-10-15",
+   "note": "3 reused use cases + 1 new (finish/install instead of redesign)"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/automation-completion/test-scenarios.md",
+   "date": "2026-10-15",
+   "note": "S1-S5 reused from automation-workflow test-scenarios.md, incl. must-not-trigger S3"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/automation-completion/hand-run.md",
+   "date": "2026-10-15",
+   "note": "Marcel Gewinnspiel incident read directly (transcript + canary synthesis) as the real task"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/automation-completion/pipeline.md",
+   "date": "2026-10-15",
+   "note": "inner automation-build pipeline (reused) + outer completion pipeline (new, 6 steps)"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/automation-completion/freedom.md",
+   "date": "2026-10-15",
+   "note": "per-step freedom table, scripts for fragile/gated steps, heuristics elsewhere"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/automation-completion/cp1-go.md",
+   "date": "2026-10-15",
+   "note": "Martin go: finish/install automation-build; hooks at user level"
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": "/Users/martindrendel/741website/00_project/workflow-builds/automation-completion/build-note.md",
+   "date": "2026-10-15",
+   "note": "installed ~/.claude/skills/automation-build/SKILL.md, user level, diff-identical to repo source"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": "/Users/martindrendel/741website/00_project/workflow-builds/automation-completion/build-note.md",
+   "date": "2026-10-15",
+   "note": "frontmatter WHAT+WHEN+negative trigger unchanged, disable-model-invocation true"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": "/Users/martindrendel/741website/00_project/workflow-builds/automation-completion/build-note.md",
+   "date": "2026-10-15",
+   "note": "checklist with gates, critical rules on top, unchanged"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": "/Users/martindrendel/741website/00_project/workflow-builds/automation-completion/build-note.md",
+   "date": "2026-10-15",
+   "note": "69 lines, references one level deep by absolute path"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": "/Users/martindrendel/741website/00_project/workflow-builds/automation-completion/build-note.md",
+   "date": "2026-10-15",
+   "note": "P5 verify step + Stop-hook-enforced done/live claim rule"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": "/Users/martindrendel/741website/00_project/workflow-builds/automation-completion/build-note.md",
+   "date": "2026-10-15",
+   "note": "per-change go, STE/German client text, no team/method names; known Drive-vs-portal gap carried over"
+  },
+  "3.7": {
+   "status": "skipped",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "",
+   "date": "2026-10-15",
+   "note": "",
+   "reason": "not unattended: Martin-triggered slash command, disable-model-invocation true, no schedule"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "/Users/martindrendel/741website/00_project/workflow-builds/automation-completion/trigger-tests.md",
+   "date": "2026-10-15",
+   "note": "S1/S3 pass in real fresh installed session; S2 surfaced a new gap (paraphrase bypasses skill+hook)"
+  },
+  "4.2": {
+   "status": "todo",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "/Users/martindrendel/741website/00_project/workflow-builds/automation-completion/baseline.md",
+   "date": "2026-10-15",
+   "note": "real incident (without) vs proven+wired hook behaviour on same inputs (with); 0 extra correction rounds in S1/S3"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-15",
+   "note": "",
+   "reason": "not a plugin; /doctor prompt-audit does not apply to a skill+hooks build; sandbox suite + fresh-session tests serve the same purpose"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "/Users/martindrendel/741website/00_project/workflow-builds/automation-completion/scorecard-2026-10-15.md",
+   "date": "2026-10-15",
+   "note": "51/56 = 91.1%, blocking zeros: 0"
+  },
+  "5.1": {
+   "status": "todo",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.2": {
+   "status": "todo",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3a": {
+   "status": "todo",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3b": {
+   "status": "todo",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3": {
+   "status": "todo",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.4": {
+   "status": "todo",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-15T06:05"
+  },
+  {
+   "gate": "cp2",
+   "passed": false,
+   "missing": 1,
+   "at": "2026-10-15T06:19"
+  }
+ ]
+}

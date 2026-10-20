@@ -1,0 +1,172 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://stuerzl-steuerstrafrecht.de/arbeitsstrafrecht/#webpage",
+   "url": "https://stuerzl-steuerstrafrecht.de/arbeitsstrafrecht/",
+   "name": "Schwarzarbeit Strafe: Anwalt Arbeitsstrafrecht | STÜRZL",
+   "description": "Schwarzarbeit, Sozialversicherungsbetrug, Arbeitnehmerüberlassung: Strafen und Bußgelder nach dem Gesetz und wie wir Sie beraten. Vertraulich anfragen.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/#website"
+   },
+   "breadcrumb": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/arbeitsstrafrecht/#breadcrumb"
+   },
+   "mainEntity": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/arbeitsstrafrecht/#service"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://stuerzl-steuerstrafrecht.de/arbeitsstrafrecht/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Startseite",
+     "item": "https://stuerzl-steuerstrafrecht.de/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Leistungen",
+     "item": "https://stuerzl-steuerstrafrecht.de/leistungen/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Schwarzarbeit, Sozialversicherung und Arbeitnehmerüberlassung",
+     "item": "https://stuerzl-steuerstrafrecht.de/arbeitsstrafrecht/"
+    }
+   ]
+  },
+  {
+   "@type": "LegalService",
+   "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei",
+   "name": "STÜRZL Steuerstrafrecht",
+   "url": "https://stuerzl-steuerstrafrecht.de/",
+   "email": "kanzlei@stuerzl-steuerstrafrecht.de",
+   "department": [
+    {
+     "@type": "LegalService",
+     "name": "STÜRZL Steuerstrafrecht München",
+     "telephone": "+49 89 72444170",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "München",
+      "postalCode": "80331",
+      "addressCountry": "DE",
+      "streetAddress": "Oberanger 32"
+     },
+     "parentOrganization": {
+      "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+     }
+    },
+    {
+     "@type": "LegalService",
+     "name": "STÜRZL Steuerstrafrecht Frankfurt am Main",
+     "telephone": "+49 69 298028870",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Frankfurt am Main",
+      "postalCode": "60329",
+      "addressCountry": "DE",
+      "streetAddress": "Untermainkai 26"
+     },
+     "parentOrganization": {
+      "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "Service",
+   "@id": "https://stuerzl-steuerstrafrecht.de/arbeitsstrafrecht/#service",
+   "serviceType": "schwarzarbeit strafe",
+   "provider": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+   },
+   "url": "https://stuerzl-steuerstrafrecht.de/arbeitsstrafrecht/"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://stuerzl-steuerstrafrecht.de/arbeitsstrafrecht/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Was passiert, wenn man wegen Schwarzarbeit angezeigt wird?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Die Behörden der Zollverwaltung prüfen nach § 2 Abs. 1 SchwarzArbG unter anderem, ob sozialversicherungsrechtliche Pflichten erfüllt werden oder wurden. Ergibt sich ein Verdacht, kann ein Ermittlungsverfahren folgen. Es kann um eine Straftat gehen, zum Beispiel nach § 266a StGB, oder um eine Ordnungswidrigkeit nach § 8 SchwarzArbG. Was im Einzelfall möglich ist, hängt vom Sachverhalt ab."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wer kann bei Schwarzarbeit betroffen sein?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Betroffen sein können Arbeitgeber, die Beiträge vorenthalten (§ 266a StGB), und Auftraggeber, die Leistungen in erheblichem Umfang ausführen lassen (§ 8 Abs. 1 Nr. 2 SchwarzArbG). Ausnahmen gibt es für Dienst- oder Werkleistungen, die nicht nachhaltig auf Gewinn gerichtet sind, etwa aus Gefälligkeit oder Nachbarschaftshilfe (§ 1 Abs. 4 und § 8 Abs. 6 SchwarzArbG)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ist Sozialversicherungsbetrug eine Straftat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Das Vorenthalten von Sozialversicherungsbeiträgen durch den Arbeitgeber ist nach § 266a StGB strafbar. Das Gesetz sieht Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe vor. Strafbar ist nach § 15 StGB nur vorsätzliches Handeln. Begeht ein Arbeitgeber eine Handlung nach § 266a Abs. 2 Nr. 1 oder 2 StGB leichtfertig und hält dadurch Beiträge vor, ist das nach § 8 Abs. 3 SchwarzArbG eine Ordnungswidrigkeit."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Was ist die Finanzkontrolle Schwarzarbeit?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "So nennt man die Prüfung durch die Behörden der Zollverwaltung. Sie prüfen nach § 2 Abs. 1 SchwarzArbG unter anderem, ob die Pflichten nach § 28a SGB IV erfüllt werden, ob Ausländer unerlaubt beschäftigt werden, ob Arbeitnehmer ohne Erlaubnis überlassen werden und ob die Arbeitsbedingungen nach dem Mindestlohngesetz eingehalten werden. Bei einem Verdacht kann ein Ermittlungsverfahren folgen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Was ist Scheinselbständigkeit?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Das Gesetz verwendet den Begriff nicht. Beschäftigung ist nach § 7 Abs. 1 SGB IV die nichtselbständige Arbeit, insbesondere in einem Arbeitsverhältnis. Anhaltspunkte sind eine Tätigkeit nach Weisungen und eine Eingliederung in die Arbeitsorganisation des Weisungsgebers. Wird jemand als Selbständiger geführt, obwohl diese Merkmale vorliegen, kann § 266a StGB eine Rolle spielen. Ob das zutrifft, hängt vom Einzelfall ab."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wann ist die Rentenversicherung im Strafverfahren relevant?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Die Deutsche Rentenversicherung ist keine Ermittlungsbehörde. Sie prüft Unternehmen auf die korrekte Abführung der Sozialversicherungsbeiträge. Sind Beiträge vorenthalten worden, zum Beispiel bei Schwarzarbeit oder Scheinselbständigkeit, ist mit ihr die korrekte Abführung abzuklären."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wann ist Arbeitnehmerüberlassung unzulässig?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Etwa dann, wenn der Verleiher keine Erlaubnis hat (§ 1 Abs. 1 AÜG) oder die Überlassungshöchstdauer überschritten wird. Sie beträgt grundsätzlich 18 Monate, tarifliche Abweichungen sind möglich (§ 1 Abs. 1b AÜG). Das Gesetz stuft beides als Ordnungswidrigkeit ein (§ 16 Abs. 1 Nr. 1 und Nr. 1e AÜG)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kann meinem Unternehmen eine Geldbuße auferlegt werden?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Das kann sein. Gegen eine juristische Person oder Personenvereinigung kann nach § 30 OWiG eine Geldbuße festgesetzt werden, wenn Leitungspersonen Pflichten durch eine Straftat oder Ordnungswidrigkeit verletzen. Hinzu kommt die Aufsichtspflicht nach § 130 OWiG."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bleibt vertraulich, was ich über Beschäftigte und Lohnabrechnungen sage?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja. Als Rechtsanwälte unterliegen wir der gesetzlichen Verschwiegenheit (§ 43a Abs. 2 BRAO, § 203 StGB). Das schließt Angaben zu Beschäftigten und Beitragszahlungen ein. Für die erste Anfrage genügt das Thema, etwa „Prüfung durch den Zoll“. Namen von Beschäftigten brauchen wir dafür nicht."
+     }
+    }
+   ]
+  }
+ ]
+}

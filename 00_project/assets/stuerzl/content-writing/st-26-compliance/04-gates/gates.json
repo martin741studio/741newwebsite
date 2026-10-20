@@ -1,0 +1,65 @@
+{
+ "date": "2026-10-11",
+ "page": "st-26-compliance/05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G2 legal": {
+   "mode": "brao",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "info": {
+    "words": 1593,
+    "placeholders": 1
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "6 Sätze über 28 Wörter (zum Beispiel: Unabhängig von Größe und Struktur des Unternehmens ist bei einer steti...)",
+    "Sprecher gemischt: ich 3, wir 39"
+   ],
+   "counts": {
+    "du": 0,
+    "sie": 41,
+    "ich": 3,
+    "wir": 39
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1593,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "[Hinweis] Begriffs-Abdeckung 72 % (11 Begriffe aus mindestens 50 % der Seiten). Fehlen: partner, systems, vermeidung. Pflicht nur, wenn die Suchabsicht den Begriff braucht."
+   ]
+  }
+ }
+}

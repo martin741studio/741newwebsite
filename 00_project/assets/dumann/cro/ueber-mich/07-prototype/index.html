@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniela Dumann | Heilpraktikerin in Berlin-Charlottenburg</title>
+<meta name="description" content="Daniela Dumann, Heilpraktikerin in Berlin-Charlottenburg seit 2002 und Vizepräsidentin der Internationalen Gesellschaft Hildegard von Bingen. Termin buchen">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#783ca0; --purple-dark:#5b2d80; --olive:#aabe1e; --olive-hover:#b9ce2a;
+  --cream:#f8f3fb; --white:#fff; --ink:#2e2238; --muted:#5d5068; --gold:#e3a600;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --rv:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;min-width:1100px;font-family:Poppins,system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;color:var(--purple);line-height:1.2;margin:0}
+h2{font-size:38px;text-align:center;margin-bottom:34px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 40px}
+section{padding:84px 0}
+.dark{background:var(--purple-dark);color:#f4ecf9;position:relative;isolation:isolate;overflow:hidden}
+.dark h2,.dark h3{color:#fff}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:12px 28px;border-radius:12px;font:600 17px/1.25 Poppins,sans-serif;text-align:center;text-decoration:none;border:2px solid transparent;transition:transform .18s var(--ease),box-shadow .18s var(--ease),background .18s var(--ease)}
+.btn-cta{background:var(--olive);color:#2a1740;box-shadow:0 4px 14px rgba(120,60,160,.18)}
+.btn-cta .arr{transition:transform .18s var(--ease)}
+.btn-cta:hover{background:var(--olive-hover);transform:translateY(-2px);box-shadow:0 8px 22px rgba(120,60,160,.28)}
+.btn-cta:hover .arr{transform:translateX(4px)}
+.btn-cta:active,.btn-ghost:active{transform:scale(.98);transition-duration:.12s}
+.btn-ghost{background:rgba(255,255,255,.55);color:var(--purple-dark);border-color:var(--purple)}
+.dark .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.75)}
+.btn-ghost:hover{background:rgba(120,60,160,.08)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--purple);outline-offset:3px}
+.cta--breathe{animation:breathe 4.5s ease-in-out infinite}
+.cta--breathe:hover{animation-play-state:paused}
+@keyframes breathe{0%,100%{transform:scale(1);box-shadow:0 4px 14px rgba(120,60,160,.18)}50%{transform:scale(1.025);box-shadow:0 10px 26px rgba(120,60,160,.30)}}
+.btn .ic-s{width:22px;height:22px;flex:none}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(248,243,251,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(120,60,160,.12)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:76px}
+.hd img.wm{height:56px;width:auto}
+nav.main{display:flex;gap:28px;align-items:center}
+nav.main a{text-decoration:none;font-size:16px;font-weight:500;color:var(--purple-dark);padding:8px 2px;border-bottom:2px solid transparent;transition:color .18s,border-color .18s}
+nav.main a:hover{color:var(--purple);border-color:rgba(120,60,160,.35)}
+.burger{display:none;width:44px;height:44px;border:none;background:none;padding:0;cursor:pointer;flex:none;align-items:center;justify-content:center}
+.burger span{display:block;width:24px;height:2px;background:var(--purple-dark);border-radius:2px;position:relative;transition:transform .2s var(--ease),opacity .2s var(--ease)}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:24px;height:2px;background:var(--purple-dark);border-radius:2px;transition:transform .2s var(--ease)}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+.hd.open .burger span{background:transparent}
+.hd.open .burger span::before{transform:translateY(7px) rotate(45deg)}
+.hd.open .burger span::after{transform:translateY(-7px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;isolation:isolate;overflow:hidden;padding:0;background:var(--cream)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url(assets/hero-bg.jpg) 78% 40%/cover no-repeat;opacity:.5}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--cream) 0%,var(--cream) 40%,rgba(248,243,251,.55) 62%,rgba(248,243,251,.15) 100%)}
+.hero .grid{display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:end;min-height:560px}
+.hero .hl{padding:64px 0 64px}
+.hero h1{font-size:44px;line-height:1.18}
+.hero p.lead{margin:20px 0 28px;color:var(--muted);font-size:18px;max-width:560px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+.reassure{margin:14px 0 0;font-size:16px;color:var(--muted)}
+.rating{display:flex;align-items:center;gap:8px;margin:14px 0 0;font-size:16px;color:var(--muted)}
+.hero .photo{align-self:end;justify-self:end}
+.hero .photo img{height:600px;width:auto;max-width:100%;object-fit:contain;object-position:bottom right;filter:drop-shadow(0 12px 28px rgba(91,45,128,.20));-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%);mask-image:linear-gradient(90deg,transparent 0,#000 16%)}
+/* hero load reveal */
+.hl>*{opacity:0;transform:translateY(var(--rv));animation:rise .5s var(--ease) forwards}
+.hl>*:nth-child(1){animation-delay:.05s}.hl>*:nth-child(2){animation-delay:.14s}.hl>*:nth-child(3){animation-delay:.23s}.hl>*:nth-child(4){animation-delay:.32s}.hl>*:nth-child(5){animation-delay:.38s}
+.hero .photo{opacity:0;animation:rise .6s var(--ease) .42s forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* stars */
+.stars{display:inline-flex;gap:3px}
+.star{width:20px;height:20px;fill:transparent;stroke:var(--gold);stroke-width:1.6;transition:fill .35s var(--ease)}
+.big .star{width:26px;height:26px}
+.is-in .star,.hero .star{fill:var(--gold)}
+.is-in .star:nth-child(1){transition-delay:.1s}.is-in .star:nth-child(2){transition-delay:.18s}.is-in .star:nth-child(3){transition-delay:.26s}.is-in .star:nth-child(4){transition-delay:.34s}.is-in .star:nth-child(5){transition-delay:.42s}
+
+/* proof strip */
+.proof{padding:26px 0;background:var(--white);border-top:1px solid rgba(120,60,160,.1);border-bottom:1px solid rgba(120,60,160,.1)}
+.proof .row{display:grid;gap:36px;align-items:center;grid-template-columns:auto 1fr auto}
+.score{display:flex;align-items:center;gap:14px}
+.score b{font:600 46px/1 'Playfair Display',serif;color:var(--purple);opacity:0;transition:opacity .4s var(--ease) .5s}
+.proof.is-in .score b,.proof .is-in .score b{opacity:1}
+.score small{display:block;font-size:14px;color:var(--muted)}
+.quote-one{font:500 20px/1.4 'Playfair Display',serif;color:var(--purple-dark);text-align:center;border-left:1px solid rgba(120,60,160,.2);border-right:1px solid rgba(120,60,160,.2);padding:4px 24px}
+.quote-one cite{display:block;font:400 14px Poppins;color:var(--muted);margin-top:4px}
+.proof a.lnk{color:var(--purple);font-weight:600;text-decoration:none;border-bottom:2px solid rgba(120,60,160,.3);padding:10px 0}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(var(--rv));transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.is-in.rv,.is-in .rv,.rv.is-in{opacity:1;transform:none}
+.rv:nth-child(2){transition-delay:.09s}.rv:nth-child(3){transition-delay:.18s}.rv:nth-child(4){transition-delay:.27s}.rv:nth-child(5){transition-delay:.36s}.rv:nth-child(6){transition-delay:.45s}
+
+/* themes */
+.themes{display:grid;gap:18px;grid-template-columns:repeat(5,minmax(0,1fr))}
+.theme{background:var(--white);border-radius:16px;padding:26px 12px 24px;text-align:center;box-shadow:0 2px 12px rgba(91,45,128,.07);transition:transform .18s var(--ease),box-shadow .18s var(--ease)}
+.theme:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(91,45,128,.12)}
+.theme .ic{width:72px;height:72px;margin:0 auto 12px;transform:scale(.85);transition:transform .5s var(--ease)}
+.is-in .theme .ic,.theme.is-in .ic{transform:scale(1)}
+.theme h3{font-size:21px;margin-bottom:8px}
+.theme p{margin:0;font-size:16px;color:var(--muted);hyphens:manual;-webkit-hyphens:manual;overflow-wrap:normal;text-wrap:pretty}
+.svc h3,.card{overflow-wrap:break-word}
+.center{text-align:center;margin-top:34px}
+
+/* services */
+.services{display:grid;gap:22px;grid-template-columns:repeat(3,1fr)}
+.svc{background:var(--white);border-radius:16px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;box-shadow:0 2px 12px rgba(91,45,128,.07)}
+.svc .im{overflow:hidden;aspect-ratio:3/2;background:#e9dff0}
+.svc .im img{width:100%;height:100%;object-fit:cover;transition:transform .35s var(--ease)}
+.svc:hover .im img{transform:scale(1.03)}
+.svc .tx{padding:20px 22px 22px;display:flex;flex-direction:column;gap:12px;flex:1;justify-content:space-between}
+.svc h3{font-family:Poppins;font-weight:600;font-size:17px;color:var(--purple-dark);line-height:1.4}
+.svc .more{display:inline-flex;align-items:center;gap:8px;color:var(--purple);font-weight:600;font-size:16px}
+.svc .more .arr{transition:transform .18s var(--ease)}
+.svc:hover .more .arr{transform:translateX(4px)}
+
+/* steps */
+.steps{position:relative;display:grid;gap:22px;grid-template-columns:repeat(4,1fr)}
+.line{position:absolute;background:rgba(120,60,160,.45);left:24px;width:calc(75% + 16.5px);top:24px;height:2px;transform-origin:left;transform:scaleX(0);transition:transform .9s var(--ease) .1s}
+.is-in .line{transform:scaleX(1)}
+.step{position:relative;display:grid;grid-template-columns:1fr;gap:14px;align-content:start}
+.num{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:600 20px 'Playfair Display';background:var(--cream);color:var(--purple);border:2px solid var(--purple);transition:background .35s var(--ease),color .35s var(--ease);position:relative;z-index:1}
+.is-in .num{background:var(--purple);color:#fff}
+.is-in .step:nth-child(2) .num{transition-delay:.2s}.is-in .step:nth-child(3) .num{transition-delay:.45s}.is-in .step:nth-child(4) .num{transition-delay:.7s}.is-in .step:nth-child(5) .num{transition-delay:.95s}
+.step h3{font-family:Poppins;font-size:18px;font-weight:600;color:var(--purple-dark);margin-bottom:4px}
+.step p{margin:0;font-size:16px;color:var(--muted)}
+.note{margin-top:34px;display:flex;align-items:center;justify-content:center;gap:12px;font-size:16px;color:var(--muted);padding:14px 18px;border-radius:12px;background:rgba(120,60,160,.07)}
+.note svg{width:30px;height:30px;color:var(--purple);flex:none}
+
+/* about */
+.about{padding:0;background:var(--purple-dark)}
+.about::before{content:"";position:absolute;inset:0;z-index:-2;background:url(assets/about-bg.jpg) 20% 50%/cover no-repeat}
+.about::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(91,45,128,.55) 0%,rgba(91,45,128,.88) 42%,rgba(91,45,128,.97) 100%)}
+.about .grid{display:grid;grid-template-columns:400px 1fr;gap:56px;align-items:end;min-height:520px}
+.about .pic{align-self:end}
+.about .pic img{width:100%;height:auto}
+.about .tx{padding:72px 0;max-width:560px;align-self:center}
+.about h2{text-align:left;margin-bottom:18px;font-size:36px}
+.about p{margin:0 0 14px;color:#efe3f6}
+.cred{position:relative;display:inline-block;padding-bottom:10px;margin-top:6px;font-weight:500;color:#fff;font-size:16px}
+.cred::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--olive);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease) .6s}
+.is-in .cred::after{transform:scaleX(1)}
+.about .pic.rv{transform:translateX(calc(var(--rv)*-1))}.about .tx.rv{transform:translateX(var(--rv))}
+.about .is-in .pic.rv,.about .is-in .tx.rv,.about.is-in .pic.rv,.about.is-in .tx.rv{transform:none}
+.about .btn{margin-top:22px}
+.deco{position:absolute;z-index:0;top:0;bottom:0;width:300px;background:url(assets/botanik.png) center bottom/auto 100% no-repeat;mix-blend-mode:lighten;pointer-events:none}
+.deco.r{right:0}
+.deco.l{left:0;transform:scaleX(-1)}
+
+/* reviews */
+.rev{display:grid;gap:20px;grid-template-columns:repeat(3,1fr)}
+.card{background:var(--white);border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(91,45,128,.07);display:flex;flex-direction:column;gap:12px}
+.card .top{display:flex;justify-content:space-between;align-items:center}
+.card blockquote{margin:0;font-size:16px;color:var(--ink)}
+.card cite{font-style:normal;font-weight:600;font-size:16px;color:var(--purple-dark)}
+.g{width:22px;height:22px;opacity:0;transition:opacity .4s var(--ease) .55s}.is-in .g{opacity:1}
+
+/* faq */
+.faq{max-width:900px;margin:0 auto;display:grid;gap:12px}
+details{background:var(--white);border-radius:14px;box-shadow:0 2px 10px rgba(91,45,128,.06);overflow:hidden}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;min-height:58px;font-weight:600;font-size:17px;color:var(--purple-dark);transition:color .2s}
+summary::-webkit-details-marker{display:none}
+summary .chev{flex:none;width:22px;height:22px;transition:transform .25s var(--ease)}
+details[open] summary{color:var(--purple)}
+details[open] summary .chev{transform:rotate(180deg)}
+.ans{padding:0 22px 20px;font-size:16px;color:var(--muted);animation:openfade .25s var(--ease)}
+@keyframes openfade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.flag{display:inline-block;margin-top:8px;padding:4px 10px;border-radius:8px;background:#fff3cd;color:#6b5200;font-size:13px;font-weight:600}
+
+/* location */
+.loc .grid{display:grid;gap:48px;grid-template-columns:1.05fr .95fr;align-items:center}
+.mapbox{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/10;background:#e6e0ea;box-shadow:0 2px 12px rgba(91,45,128,.1);opacity:0;transition:opacity .6s var(--ease)}
+.mapbox iframe{width:100%;height:100%;border:0}
+.is-in .mapbox,.mapbox.is-in{opacity:1}
+.pin{position:absolute;left:50%;top:50%;width:38px;height:38px;margin:-38px 0 0 -19px;color:var(--purple);opacity:0;transform:translateY(-12px);pointer-events:none;filter:drop-shadow(0 4px 4px rgba(0,0,0,.25))}
+.is-in .pin{opacity:1;transform:none;transition:opacity .4s var(--ease) .5s,transform .6s var(--ease) .5s}
+.addr p{margin:0 0 6px}
+.addr ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:14px;font-size:16px;color:var(--muted)}
+.addr li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
+.addr li svg{width:24px;height:24px;color:var(--purple);margin-top:2px}
+.addr .head{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
+.addr .head svg{width:26px;height:26px;color:var(--purple);margin-top:2px}
+
+/* closer */
+.closer{text-align:center;padding:84px 0}
+.closer .wrap{position:relative;z-index:1}
+.closer h2{color:#fff}
+.assure{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 30px;margin:0 0 30px;padding:0;list-style:none;font-size:16px}
+.assure li{display:inline-flex;align-items:center;gap:8px}
+.assure svg{width:22px;height:22px;color:var(--olive)}
+.closer .btns{display:flex;gap:14px;align-items:center;justify-content:center}
+.closer .assure li{opacity:0;transform:translateY(8px);transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.closer.is-in .assure li{opacity:1;transform:none}
+.closer.is-in .assure li:nth-child(2){transition-delay:.09s}.closer.is-in .assure li:nth-child(3){transition-delay:.18s}
+
+footer{background:#2e1a40;color:#cdbfd9;padding:30px 0;font-size:16px}
+footer .wrap{display:grid;gap:8px;text-align:center}
+footer a{color:#e8dbf2}
+
+/* ===== Über-mich page additions ===== */
+nav.main a.on{color:var(--purple);border-color:rgba(120,60,160,.55)}
+.hero h1{max-width:640px}
+.hero .grid{min-height:600px}
+
+/* trust strip */
+.trust{padding:30px 0}
+.trust .row{grid-template-columns:1fr auto;gap:44px;align-items:center}
+.chips{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:.8fr 1.5fr 1.05fr 1fr;gap:20px}
+.chips li{display:flex;align-items:center;gap:12px;font-size:16px;line-height:1.35;font-weight:500;color:var(--purple-dark)}
+.chips .ci{width:44px;height:44px;flex:none;color:var(--purple)}
+.trust .score{border-left:1px solid rgba(120,60,160,.2);padding-left:36px}
+.trust .score .g{opacity:1;align-self:flex-start;margin-top:4px}
+.trust .score small{font-size:16px;color:var(--ink);margin-top:2px}
+.trust .lnk2{display:inline-block;margin-top:4px;color:var(--purple);font-weight:600;text-decoration:none;border-bottom:2px solid rgba(120,60,160,.3);font-size:16px}
+
+/* approach */
+.intro{max-width:760px;margin:-8px auto 34px;text-align:center;font-size:18px;color:var(--muted)}
+.approach{display:grid;grid-template-columns:2fr 1fr;gap:28px;align-items:stretch}
+.cards4{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cards4 .theme{text-align:left;padding:24px 22px}
+.cards4 .theme .ic{margin:0 0 10px;width:64px;height:64px}
+.cards4 .theme h3{font-size:20px}
+.photo-fig{margin:0;border-radius:16px;overflow:hidden;background:var(--white);box-shadow:0 2px 12px rgba(91,45,128,.08);display:flex;flex-direction:column}
+.photo-fig img{width:100%;height:100%;min-height:0;flex:1;object-fit:cover;object-position:35% 50%}
+.photo-fig figcaption,.wide-fig figcaption{padding:14px 18px;font-size:16px;color:var(--muted);text-align:center;background:var(--white)}
+
+/* way */
+.way{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:39px;top:14px;bottom:14px;width:2px;background:rgba(120,60,160,.35)}
+.tl li{position:relative;display:grid;grid-template-columns:80px 1fr;gap:18px;padding:8px 0;align-items:start}
+.tl b{position:relative;z-index:1;justify-self:start;min-width:80px;text-align:center;background:var(--purple);color:#fff;border-radius:999px;padding:3px 0;font:600 16px/1.5 Poppins,sans-serif;box-shadow:0 0 0 4px var(--white)}
+.tl span{font-size:17px;color:var(--ink);padding-top:2px}
+.qual{background:var(--cream);border-radius:16px;padding:30px 30px 26px;box-shadow:0 2px 12px rgba(91,45,128,.07)}
+.qual h3{font-size:24px;margin-bottom:16px}
+.checks{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:12px}
+.checks li{position:relative;padding-left:32px;font-size:16px;color:var(--ink)}
+.checks li::before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border-radius:50%;background:#e4eebd url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.500l4 4L18 8' fill='none' stroke='%235b7a00' stroke-width='2.600' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.members{margin:0;padding-top:16px;border-top:1px solid rgba(120,60,160,.18);font-size:16px;color:var(--muted)}
+
+/* focus */
+.focus{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.focus .theme{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.focus .theme p{flex:1}
+.focus .more{display:inline-flex;gap:8px;margin-top:14px;color:var(--purple);font-weight:600;font-size:16px;justify-content:center}
+.focus .more .arr{transition:transform .18s var(--ease)}
+.focus .theme:hover .more .arr{transform:translateX(4px)}
+
+/* teach */
+.wide-fig{margin:0 0 28px;border-radius:18px;overflow:hidden;box-shadow:0 2px 14px rgba(91,45,128,.1);background:var(--white)}
+.wide-fig img{width:100%;height:auto;aspect-ratio:16/6.4;object-fit:cover;object-position:50% 30%}
+.teach{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.teach .card{background:var(--cream);box-shadow:none;border:1px solid rgba(120,60,160,.12)}
+.teach .card h3{font:600 19px/1.3 Poppins,sans-serif;color:var(--purple-dark)}
+.teach .card p{margin:0;font-size:16px;color:var(--muted)}
+.teach .vlogo{width:112px;height:112px;object-fit:contain;border-radius:12px}
+.lnk3{color:var(--purple);font-weight:600;text-decoration:none;border-bottom:2px solid rgba(120,60,160,.3);padding:8px 0;font-size:17px}
+.lnk3 .arr{display:inline-block;transition:transform .18s var(--ease)}
+.lnk3:hover .arr{transform:translateX(4px)}
+
+/* why band */
+.why .grid{grid-template-columns:400px 1fr}
+.why .tx{max-width:620px}
+.why .pic img{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%);mask-image:linear-gradient(90deg,transparent 0,#000 12%)}
+
+/* hint */
+.hint-sec{padding:0 0 84px;background:var(--white)}
+.hintbox{display:flex;gap:18px;align-items:flex-start;max-width:960px;margin:0 auto;padding:22px 26px;border:1.5px solid rgba(120,60,160,.45);border-radius:16px;background:var(--cream)}
+.hintbox .hi{flex:none;width:28px;height:28px;color:var(--purple);margin-top:2px}
+.hintbox p{margin:0;font-size:16px;color:var(--ink)}
+.hint-sec+.loc{padding-top:30px}
+#faq{padding-bottom:56px}
+
+.teach .tic{width:48px;height:48px;color:var(--purple);margin-bottom:-2px}
+.teach .tic{object-fit:contain}
+
+.btnrow{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* reduced motion */
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}
+ .cta--breathe{animation:none!important}
+ .rv,.hl>*,.hero .photo{transform:none!important;transition:opacity .3s linear!important;animation:none!important;opacity:1}
+ .line{transform:none!important;transition:none!important}
+ .cred::after{transform:scaleX(1)!important;transition:none!important}
+ .pin{transform:none!important}
+ .ans{animation-duration:.15s!important}
+}
+/* screenshot mode: show every reveal state */
+.shot .rv,.shot .hl>*,.shot .hero .photo{opacity:1!important;transform:none!important;animation:none!important}
+.shot .star{fill:var(--gold)!important}.shot .line{transform:none!important}.shot .num{background:var(--purple)!important;color:#fff!important}
+.shot .score b,.shot .g,.shot .pin,.shot .mapbox,.shot .closer .assure li{opacity:1!important;transform:none!important}
+.shot .cred::after{transform:scaleX(1)!important}.shot .tl li::before{transform:scale(1)!important}.shot .theme .ic{transform:none!important}
+
+/* mobile */
+@media(max-width:760px){
+ body{min-width:0}
+ html{scroll-padding-top:104px}
+ .wrap{padding:0 20px}
+ section{padding:52px 0}
+ h2{font-size:28px;margin-bottom:24px}
+
+ .hd{min-height:auto;padding:14px 0;flex-wrap:wrap;gap:10px}
+ .hd img.wm{height:40px}
+ .burger{display:flex}
+ nav.main{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:2px;background:#fff;padding:10px 20px 18px;box-shadow:0 12px 24px rgba(91,45,128,.14);border-bottom:1px solid rgba(120,60,160,.12)}
+ .hd.open nav.main{display:flex}
+ nav.main a{font-size:16px;padding:12px 2px;border-bottom:1px solid rgba(120,60,160,.08)}
+ nav.main a:last-child{border-bottom:none}
+
+ .hero .grid{grid-template-columns:1fr;min-height:auto;gap:0}
+ .hero .hl{padding:32px 0 24px}
+ .hero h1{font-size:28px;max-width:none}
+ .hero p.lead{font-size:16px;max-width:none}
+ .hero .btns{flex-direction:column;align-items:stretch}
+ .btn{font-size:15px;padding:12px 18px;min-width:0;flex-wrap:wrap}
+ .hero .photo{justify-self:center;order:-1;width:100%}
+ .hero .photo img{height:auto;max-height:340px;width:100%;object-fit:cover;object-position:top center;-webkit-mask-image:none;mask-image:none}
+
+ .proof .row,.trust .row{grid-template-columns:1fr;gap:20px;text-align:center}
+ .quote-one{border-left:none;border-right:none;border-top:1px solid rgba(120,60,160,.2);border-bottom:1px solid rgba(120,60,160,.2);padding:14px 0}
+ .chips{grid-template-columns:1fr;gap:14px;text-align:left}
+ .trust .score{border-left:none;padding-left:0;border-top:1px solid rgba(120,60,160,.2);padding-top:20px;justify-content:center;display:flex}
+
+ .themes,.focus{grid-template-columns:repeat(2,1fr)}
+ .theme p{overflow-wrap:break-word;hyphens:auto}
+
+ .services{grid-template-columns:1fr}
+
+ .steps{grid-template-columns:1fr;gap:28px}
+ .line{display:none}
+
+ .about .grid{grid-template-columns:1fr;min-height:auto;gap:0}
+ .about .pic{width:65%;margin:0 auto}
+ .about .tx{padding:32px 0;max-width:none}
+ .about h2{font-size:26px}
+ .deco{display:none}
+
+ .rev{grid-template-columns:1fr}
+
+ .loc .grid{grid-template-columns:1fr;gap:28px}
+
+ .closer{padding:52px 0}
+ .closer .btns{flex-direction:column}
+
+ /* ueber-mich specific */
+ .approach{grid-template-columns:1fr;gap:20px}
+ .cards4{grid-template-columns:1fr 1fr}
+ .cards4 .theme{padding:20px 16px}
+ .photo-fig img{aspect-ratio:4/3}
+
+ .way{grid-template-columns:1fr;gap:32px}
+ .tl::before{left:33px}
+ .tl b{min-width:66px;font-size:14px}
+ .qual{padding:24px 20px}
+
+ .wide-fig img{aspect-ratio:4/3}
+ .teach{grid-template-columns:1fr 1fr;gap:14px}
+ .teach .card{padding:18px}
+ .btnrow{flex-direction:column;align-items:stretch}
+}
+@media(max-width:420px){
+ .themes,.focus,.cards4,.teach{grid-template-columns:1fr}
+}
+</style>
+<meta name="robots" content="noindex,nofollow">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Person",
+ "@id": "https://www.danieladumann.de/ueber-mich#daniela-dumann",
+ "name": "Daniela Dumann",
+ "jobTitle": "Heilpraktikerin",
+ "description": "Heilpraktikerin in Berlin-Charlottenburg seit 2002, Vizepräsidentin der Internationalen Gesellschaft Hildegard von Bingen, Gründerin der Schule Viriditas.",
+ "url": "https://www.danieladumann.de/ueber-mich",
+ "telephone": "+49 30 36430358",
+ "email": "praxis@danieladumann.de",
+ "worksFor": {
+  "@type": "LocalBusiness",
+  "name": "Naturheilpraxis Daniela Dumann",
+  "telephone": "+49 30 36430358",
+  "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "Nithackstraße 24",
+   "postalCode": "10585",
+   "addressLocality": "Berlin",
+   "addressRegion": "Berlin",
+   "addressCountry": "DE"
+  }
+ },
+ "workLocation": {
+  "@type": "Place",
+  "name": "Naturheilpraxis Daniela Dumann",
+  "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "Nithackstraße 24",
+   "postalCode": "10585",
+   "addressLocality": "Berlin",
+   "addressRegion": "Berlin",
+   "addressCountry": "DE"
+  }
+ },
+ "hasCredential": [
+  {
+   "@type": "EducationalOccupationalCredential",
+   "name": "Diplom Sozialpädagogin (FH), seit 1985",
+   "credentialCategory": "degree"
+  },
+  {
+   "@type": "EducationalOccupationalCredential",
+   "name": "Heilpraktikerin, seit 2002",
+   "credentialCategory": "license"
+  },
+  {
+   "@type": "EducationalOccupationalCredential",
+   "name": "Psychologische Beraterin, seit 2011",
+   "credentialCategory": "certificate"
+  },
+  {
+   "@type": "EducationalOccupationalCredential",
+   "name": "Tanz- und Bewegungspädagogin, seit 2013",
+   "credentialCategory": "certificate"
+  },
+  {
+   "@type": "EducationalOccupationalCredential",
+   "name": "Entspannungstherapeutin, seit 2018",
+   "credentialCategory": "certificate"
+  },
+  {
+   "@type": "EducationalOccupationalCredential",
+   "name": "Ausbildung zur Schilddrüsenpraktikerin bei Dr. Berndt Rieger, seit 2019",
+   "credentialCategory": "certificate"
+  }
+ ],
+ "knowsAbout": [
+  "Heilkunde nach Hildegard von Bingen",
+  "Klassische Homöopathie",
+  "Orthomolekulare Medizin",
+  "Massage",
+  "Ernährungsberatung"
+ ],
+ "memberOf": [
+  {
+   "@type": "Organization",
+   "name": "Internationale Gesellschaft Hildegard von Bingen"
+  },
+  {
+   "@type": "Organization",
+   "name": "Fachverband Freie Heilpraktiker"
+  },
+  {
+   "@type": "Organization",
+   "name": "FET Fachgesellschaft für Ernährungstherapie und Prävention"
+  },
+  {
+   "@type": "Organization",
+   "name": "MeGeMit Medizinische Gesellschaft für Mikroimmuntherapie"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z" stroke-linejoin="round"/></symbol>
+ <symbol id="chev" viewBox="0 0 24 24"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+ <symbol id="google" viewBox="0 0 24 24"><path fill="#4285F4" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 01-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0012 22z"/><path fill="#FBBC05" d="M6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3.1a10 10 0 000 9.2z"/><path fill="#EA4335" d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.8-2.8A10 10 0 003.1 7.4L6.4 10C7.2 7.7 9.4 5.9 12 5.9z"/></symbol>
+
+ <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.500A2.500 2.500 0 119.500 9 2.500 2.500 0 0112 11.500z" fill="currentColor"/></symbol>
+ <symbol id="i-bus" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 11h16M8 21v-3M16 21v-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="14.500" r="1" fill="currentColor"/><circle cx="16" cy="14.500" r="1" fill="currentColor"/></symbol>
+ <symbol id="i-train" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="15" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 11h14M8 21l2-3M16 21l-2-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="14.500" r="1" fill="currentColor"/><circle cx="15" cy="14.500" r="1" fill="currentColor"/></symbol>
+ <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 16v-4l2-5h12l2 5v4M4 16h16M4 16v2h3v-2M17 16v2h3v-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="8" cy="13" r="1" fill="currentColor"/><circle cx="16" cy="13" r="1" fill="currentColor"/></symbol>
+ <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+ <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 20c0-9 5-14 15-15 0 10-5 15-14 15zM5 20c3-5 6-8 10-10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.500l4.500 4.500L19 7.500" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2.500" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 10h16M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+ <symbol id="t-leaf" viewBox="0 0 48 48"><path d="M10 40c0-16 8-26 28-28 0 18-10 28-26 28zM10 40c6-10 12-16 20-20" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="t-people" viewBox="0 0 48 48"><circle cx="24" cy="15" r="5" fill="none" stroke="currentColor" stroke-width="2.200"/><circle cx="10" cy="19" r="4" fill="none" stroke="currentColor" stroke-width="2.200"/><circle cx="38" cy="19" r="4" fill="none" stroke="currentColor" stroke-width="2.200"/><path d="M14 38c0-6 4.500-10 10-10s10 4 10 10zM2 36c0-5 3-8 8-8M46 36c0-5-3-8-8-8" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="t-cap" viewBox="0 0 48 48"><path d="M4 18L24 9l20 9-20 9zM12 22v10c0 3 5 6 12 6s12-3 12-6V22M44 18v12" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="t-book" viewBox="0 0 48 48"><path d="M24 12c-4-3-10-4-18-4v28c8 0 14 1 18 4 4-3 10-4 18-4V8c-8 0-14 1-18 4zM24 12v28" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6M12 7.500v.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</svg>
+
+<header>
+ <div class="wrap hd">
+  <a href="#top" aria-label="Naturheilpraxis Daniela Dumann, Startseite"><img class="wm" src="assets/logo-wordmark.png" alt="Naturheilpraxis Daniela Dumann" width="1657" height="486"></a>
+  <nav class="main" id="mainNav" aria-label="Hauptnavigation">
+   <a href="#">Startseite</a><a href="#top" class="on">Über mich</a><a href="#schwerpunkte">Behandlungsschwerpunkte</a><a href="#">Ablauf</a><a href="#bewertungen">Bewertungen</a><a href="#faq">FAQ</a><a href="#kontakt">Kontakt</a>
+  </nav>
+  <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav"><span></span></button>
+ </div>
+</header>
+
+<main id="top">
+
+<!-- 1 HERO -->
+<section class="hero">
+ <div class="wrap grid">
+  <div class="hl">
+   <h1>Ich bin Daniela Dumann, Heilpraktikerin in Berlin-Charlottenburg seit 2002</h1>
+   <p class="lead">Ich begleite Menschen mit der Heilkunde nach Hildegard von Bingen, mit Ernährungsberatung, Homöopathie und Naturheilkunde. Seit 2023 bin ich Vizepräsidentin der Internationalen Gesellschaft Hildegard von Bingen.</p>
+   <div class="btns">
+    <a id="heroCta" class="btn btn-cta cta--breathe" href="BOOKING"><svg class="ic-s" aria-hidden="true"><use href="#i-cal"/></svg>Termin buchen <span class="arr" aria-hidden="true">→</span></a>
+    <a class="btn btn-ghost" href="tel:+493036430358"><svg class="ic-s" aria-hidden="true"><use href="#phone"/></svg>Oder anrufen: 030 36430358</a>
+   </div>
+   <p class="reassure">Erstgespräch: 60 Minuten, 220 €</p>
+   <p class="rating"><span class="stars" aria-hidden="true"><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg></span> 5,0 Sterne bei 9 Google Bewertungen</p>
+  </div>
+  <div class="photo"><img src="assets/hero-portrait.webp" alt="Daniela Dumann, Heilpraktikerin in Berlin-Charlottenburg" width="1100" height="1656" fetchpriority="high"></div>
+ </div>
+</section>
+
+<!-- 2 TRUST -->
+<section class="proof trust" aria-label="Belege">
+ <div class="wrap row">
+  <ul class="chips">
+   <li><svg class="ci" aria-hidden="true"><use href="#t-leaf"/></svg><span>Heilpraktikerin seit 2002</span></li>
+   <li><svg class="ci" aria-hidden="true"><use href="#t-people"/></svg><span>Vizepräsidentin der Internationalen Gesellschaft Hildegard von Bingen</span></li>
+   <li><svg class="ci" aria-hidden="true"><use href="#t-cap"/></svg><span>Diplom Sozialpädagogin (FH) seit 1985</span></li>
+   <li><svg class="ci" aria-hidden="true"><use href="#t-book"/></svg><span>Gründerin der Schule Viriditas seit 2021</span></li>
+  </ul>
+  <div class="score big"><svg class="g" width="26" height="26" style="opacity:1"><use href="#google"/></svg><div><span class="stars" aria-hidden="true"><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg></span><small>5,0 Sterne bei 9 Google Bewertungen</small><a class="lnk2" href="#bewertungen">Bewertungen lesen</a></div></div>
+ </div>
+</section>
+
+<!-- 3 ANSATZ -->
+<section id="ueber-mich">
+ <div class="wrap">
+  <h2 class="rv">Erfahrungsheilkunde aus Überzeugung</h2>
+  <p class="intro rv">Ich mache Erfahrungsheilkunde aus Überzeugung. Im Mittelpunkt steht die Heilkunde nach Hildegard von Bingen. Gemeinsam mit Ihnen entwickle ich daraus eine Begleitung, die zu Ihnen passt.</p>
+  <div class="approach">
+   <div class="cards4">
+    <article class="theme rv"><img class="ic" src="assets/icon-a1.png" alt="" width="240" height="240" loading="lazy"><h3>Zeit für Ihre Geschichte</h3><p>Im Erstgespräch nehme ich mir 60 Minuten Zeit für eine ausführliche Anamnese.</p></article>
+    <article class="theme rv"><img class="ic" src="assets/icon-a2.png" alt="" width="240" height="240" loading="lazy"><h3>Heilkunde nach Hildegard von Bingen</h3><p>Ich habe sie unter anderem bei Dr. Wighard Strehlow und an der Phytaro Heilpraktikerschule in Dortmund gelernt.</p></article>
+    <article class="theme rv"><img class="ic" src="assets/icon-a3.png" alt="" width="240" height="240" loading="lazy"><h3>Eine Kombination, die zu Ihnen passt</h3><p>Gemeinsam besprechen wir die für Sie passende Kombination aus den Verfahren, die ich anbiete.</p></article>
+    <article class="theme rv"><img class="ic" src="assets/icon-a4.png" alt="" width="240" height="240" loading="lazy"><h3>Leib und Seele im Blick</h3><p>Neben der Naturheilkunde bringe ich meine Ausbildungen als Psychologische Beraterin und als Entspannungstherapeutin mit.</p></article>
+   </div>
+   <figure class="photo-fig rv"><img src="assets/consult.jpg" alt="Daniela Dumann im Gespräch mit einer Klientin in der Praxis" width="1536" height="1024" loading="lazy"><figcaption>Im Erstgespräch nehme ich mir Zeit für Sie.</figcaption></figure>
+  </div>
+  <div class="center"><a class="btn btn-cta" href="BOOKING">Termin buchen <span class="arr" aria-hidden="true">→</span></a></div>
+ </div>
+</section>
+
+<!-- 4 WEG -->
+<section style="background:var(--white)" id="weg">
+ <div class="wrap">
+  <h2 class="rv">Mein Weg zur Naturheilkunde, Schritt für Schritt</h2>
+  <div class="way">
+   <ol class="tl rv">
+    <li><b>1985</b><span>Diplom Sozialpädagogin (FH)</span></li>
+    <li><b>2002</b><span>Heilpraktikerin</span></li>
+    <li><b>2004</b><span>Medizinischer Arbeitskreis der Internationalen Hildegard Gesellschaft, Engelberg (Schweiz), Fortbildung seit 2004</span></li>
+    <li><b>2011</b><span>Psychologische Beraterin</span></li>
+    <li><b>2013</b><span>Tanz- und Bewegungspädagogin</span></li>
+    <li><b>2015</b><span>Mitglied im Vorstand der Internationalen Gesellschaft Hildegard von Bingen</span></li>
+    <li><b>2018</b><span>Entspannungstherapeutin</span></li>
+    <li><b>2019</b><span>Ausbildung zur Schilddrüsenpraktikerin bei Dr. Berndt Rieger</span></li>
+    <li><b>2021</b><span>Gründung der Schule Viriditas</span></li>
+    <li><b>2023</b><span>Vizepräsidentin der Internationalen Gesellschaft Hildegard von Bingen</span></li>
+   </ol>
+   <aside class="qual rv">
+    <h3>Qualifikationen im Überblick</h3>
+    <ul class="checks">
+     <li>Heilkunde nach Hildegard von Bingen bei Dr. Wighard Strehlow und an der Phytaro Heilpraktikerschule (Gudrun und Peter Germann), Dortmund</li>
+     <li>Klassische Homöopathie bei Yasmin Blitz-Billerbeck, Rocco Kirch, Mohinder Singh Jus und Andreas Krüger</li>
+     <li>Massageausbildungen, unter anderem bei Elke Grokenberger</li>
+     <li>Metamorphose bei Hanne Edling und Gaston St. Pierre</li>
+     <li>Psychologische Beraterin bei Hanne Edling</li>
+     <li>Tanz- und Bewegungspädagogin bei Terramedus und Eve Neeracher</li>
+     <li>Entspannungstrainerin bei Tanja Lieby</li>
+    </ul>
+    <p class="members"><b>Mitglied im und bei:</b> Fachverband Freie Heilpraktiker · Internationale Gesellschaft Hildegard von Bingen (Vorstand) · FET Fachgesellschaft für Ernährungstherapie und Prävention · MeGeMit Medizinische Gesellschaft für Mikroimmuntherapie</p>
+   </aside>
+  </div>
+  <div class="center"><a class="btn btn-cta" href="BOOKING">Termin buchen <span class="arr" aria-hidden="true">→</span></a></div>
+ </div>
+</section>
+
+<!-- 5 SCHWERPUNKTE -->
+<section id="schwerpunkte">
+ <div class="wrap">
+  <h2 class="rv">Meine Schwerpunkte</h2>
+  <div class="focus">
+   <a class="theme rv" href="#"><img class="ic" src="assets/icon-b1.png" alt="" width="240" height="240" loading="lazy"><h3>Hildegard Heilkunde</h3><p>Die Heilkunde nach Hildegard von Bingen ist mein Schwerpunkt.</p><span class="more">Mehr erfahren <span class="arr" aria-hidden="true">→</span></span></a>
+   <a class="theme rv" href="#"><img class="ic" src="assets/icon-b2.png" alt="" width="240" height="240" loading="lazy"><h3>Schilddrüsenthemen</h3><p>Naturheilkundliche Begleitung bei Schilddrüsenthemen.</p><span class="more">Mehr erfahren <span class="arr" aria-hidden="true">→</span></span></a>
+   <a class="theme rv" href="#"><img class="ic" src="assets/icon-b3.png" alt="" width="240" height="240" loading="lazy"><h3>Orthomolekulare Medizin</h3><p>Orthomolekulare Medizin gehört zu meinen Schwerpunkten.</p><span class="more">Mehr erfahren <span class="arr" aria-hidden="true">→</span></span></a>
+   <a class="theme rv" href="#"><img class="ic" src="assets/icon-b4.png" alt="" width="240" height="240" loading="lazy"><h3>Klassische Homöopathie</h3><p>Klassische Homöopathie, individuell auf Sie abgestimmt.</p><span class="more">Mehr erfahren <span class="arr" aria-hidden="true">→</span></span></a>
+   <a class="theme rv" href="#"><img class="ic" src="assets/icon-b5.png" alt="" width="240" height="240" loading="lazy"><h3>Massagen</h3><p>Massagen und Anwendungen zur tiefen Entspannung.</p><span class="more">Mehr erfahren <span class="arr" aria-hidden="true">→</span></span></a>
+  </div>
+ </div>
+</section>
+
+<!-- 6 LEHRE -->
+<section id="lehre" style="background:var(--white)">
+ <div class="wrap">
+  <h2 class="rv">Weitergeben, was ich gelernt habe</h2>
+  <figure class="wide-fig rv"><img src="assets/garden.jpg" alt="Daniela Dumann zeigt einer kleinen Gruppe eine Pflanze im Heilkräutergarten" width="1536" height="1024" loading="lazy"><figcaption>Führung durch den Heilkräutergarten.</figcaption></figure>
+  <div class="teach">
+   <article class="card rv"><img class="vlogo" src="assets/viriditas.png" alt="Logo Viriditas, Schule für Naturheilweisen" width="500" height="500" loading="lazy"><h3>Viriditas, Schule für Naturheilweisen</h3><p>Seit 2021 gibt es meine Schule Viriditas. Dort biete ich Ausbildungen nach Hildegard von Bingen an, zum Beispiel zur Gesundheitsberaterin, in Ernährungstherapie, Kräuterheilkunde und Darmheilkunde und zur Fastenleiterin.</p></article>
+   <article class="card rv"><img class="tic" src="assets/icon-a1.png" alt="" width="240" height="240" loading="lazy"><h3>Internationale Gesellschaft Hildegard von Bingen</h3><p>Die Gesellschaft wurde 1980 in Engelberg in der Schweiz gegründet. Ich bin seit 2015 im Vorstand und seit Ende 2023 Vizepräsidentin.</p></article>
+   <article class="card rv"><svg class="tic" aria-hidden="true"><use href="#t-people"/></svg><h3>Regionalgruppe Berlin und Brandenburg</h3><p>In meiner Praxis biete ich einen Treffpunkt an. Die Abende sind für alle offen. Wir sprechen über Ernährung, Kräuterheilkunde, Ausleitungsverfahren und Edelsteinheilkunde.</p></article>
+   <article class="card rv"><img class="tic" src="assets/icon-a3.png" alt="" width="240" height="240" loading="lazy"><h3>Heilkräutergarten</h3><p>Dreimal im Jahr führe ich durch den Hildegard von Bingen Heilkräutergarten in der Gartenarbeitsschule im Bezirk Schöneberg und gebe dort Workshops.</p></article>
+  </div>
+  <div class="center"><a class="lnk3" href="#">Kurse und Seminare ansehen <span class="arr" aria-hidden="true">→</span></a></div>
+ </div>
+</section>
+
+<!-- 7 BEWERTUNGEN -->
+<section id="bewertungen">
+ <div class="wrap">
+  <h2 class="rv">5,0 Sterne bei 9 Google Bewertungen</h2>
+  <!-- [FEHLT] Quotes are Google's English translation re-translated to German; real German originals needed before go-live -->
+  <div class="rev">
+   <article class="card rv"><div class="top"><span class="stars" aria-label="5 von 5 Sternen"><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg></span><svg class="g"><use href="#google"/></svg></div><blockquote>„Verfügt als Dozentin über umfassendes Wissen zur Heilkunde der Hildegard von Bingen, kombiniert mit langjähriger Erfahrung mit Patientinnen und Patienten."</blockquote><cite>Scheila B.</cite></article>
+   <article class="card rv"><div class="top"><span class="stars" aria-label="5 von 5 Sternen"><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg></span><svg class="g"><use href="#google"/></svg></div><blockquote>„Kann Daniela Dumann von Herzen empfehlen. Mein Interesse an der Heilkunde der Hildegard von Bingen hat mich zu ihr geführt."</blockquote><cite>Karin S.</cite></article>
+   <article class="card rv"><div class="top"><span class="stars" aria-label="5 von 5 Sternen"><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg><svg class="star"><use href="#star"/></svg></span><svg class="g"><use href="#google"/></svg></div><blockquote>„Hat uns die Prinzipien der Hildegard Medizin mit Tiefe, Herz und Seele vermittelt."</blockquote><cite>Dagmar J.</cite></article>
+  </div>
+  <div class="center btnrow"><a class="btn btn-cta" href="BOOKING">Termin buchen <span class="arr" aria-hidden="true">→</span></a><a class="btn btn-ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJwdcWYxZRqEcR8RDtWZzHMgI" target="_blank" rel="noopener">Alle Bewertungen auf Google ansehen</a></div>
+ </div>
+</section>
+
+<!-- 8 WARUM -->
+<section class="dark about why" id="warum">
+ <div class="deco r" aria-hidden="true"></div>
+ <div class="wrap grid">
+  <div class="pic rv"><img src="assets/about-portrait.webp" alt="Daniela Dumann, Heilpraktikerin seit 2002" width="1000" height="985" loading="lazy"></div>
+  <div class="tx rv">
+   <h2>Warum ich diesen Weg gehe</h2>
+   <p>Eigene schwere Erkrankungen haben mein Interesse an der Naturheilkunde geweckt. Das hat mich geprägt. Mein Wissen und meine Begeisterung für Hildegard von Bingen gebe ich deshalb gern weiter. Der Kontakt zu ihrer Heilkunde hat mein Leben tief geprägt und mich dankbar werden lassen, für die Wunder des Lebens und auch für die schwierigen Zeiten.</p>
+   <span class="cred">Privat bin ich seit 1994 verheiratet, habe zwei erwachsene Töchter und zwei Katzen, die manchmal mitarbeiten.</span><br>
+   <a class="btn btn-cta" href="BOOKING">Termin buchen <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+ </div>
+</section>
+
+<!-- 9 FAQ -->
+<section id="faq" style="background:var(--white)">
+ <div class="wrap">
+  <h2 class="rv">Häufige Fragen zu mir und meiner Arbeit</h2>
+  <div class="faq rv">
+   <details open><summary>Welche Ausbildung haben Sie?<svg class="chev"><use href="#chev"/></svg></summary><div class="ans">Ich bin Diplom Sozialpädagogin (FH) seit 1985 und Heilpraktikerin seit 2002. Dazu kommen Ausbildungen als Psychologische Beraterin, Tanz- und Bewegungspädagogin und Entspannungstherapeutin. Die Heilkunde nach Hildegard von Bingen habe ich unter anderem bei Dr. Wighard Strehlow und an der Phytaro Heilpraktikerschule in Dortmund gelernt.</div></details>
+   <details><summary>Was ist die Heilkunde nach Hildegard von Bingen?<svg class="chev"><use href="#chev"/></svg></summary><div class="ans">Hildegard von Bingen lebte im 12. Jahrhundert. Zu ihrer Naturheilkunde gehören unter anderem Ernährung, Kräuterheilkunde, Ausleitungsverfahren und Edelsteinheilkunde. Sie ist eine Erfahrungsheilkunde und ersetzt keine ärztliche Behandlung.</div></details>
+   <details><summary>Wie läuft das Erstgespräch ab?<svg class="chev"><use href="#chev"/></svg></summary><div class="ans">Das Erstgespräch dauert 60 Minuten und kostet 220 €. Vorher sende ich Ihnen einen Anamnesebogen zu, den Sie mir ausgefüllt zurückschicken oder zum Termin mitbringen. Im Gespräch führe ich eine ausführliche Anamnese. Danach besprechen wir gemeinsam die für Sie passende Kombination.</div></details>
+   <details><summary>Bieten Sie auch Ausbildungen und Kurse an?<svg class="chev"><use href="#chev"/></svg></summary><div class="ans">Ja. In meiner Schule Viriditas biete ich Ausbildungen nach Hildegard von Bingen an, dazu Vorträge, den Kräutersalon und Workshops. Die aktuellen Termine finden Sie unter Kurse und Seminare.</div></details>
+  </div>
+ </div>
+</section>
+
+<!-- 10 HINWEIS -->
+<section class="hint-sec">
+ <div class="wrap">
+  <aside class="hintbox rv" role="note"><svg class="hi" aria-hidden="true"><use href="#i-info"/></svg><p><b>Hinweis:</b> Die Heilkunde nach Hildegard von Bingen, die Homöopathie und weitere auf dieser Seite genannte Verfahren sind schulmedizinisch nicht allgemein anerkannt und teilweise wissenschaftlich umstritten. Ich gebe kein Heilversprechen. Meine Begleitung ersetzt keinen Arztbesuch und keine ärztliche Behandlung.</p></aside>
+ </div>
+</section>
+
+<!-- 11 STANDORT -->
+<section class="loc" id="kontakt">
+ <div class="wrap">
+  <h2 class="rv">So finden Sie zu mir</h2>
+  <div class="grid">
+   <div class="mapbox rv" style="transform:none">
+    <iframe title="Karte: Nithackstraße 24, Berlin-Charlottenburg" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=13.2936%2C52.5159%2C13.3036%2C52.5219&layer=mapnik"></iframe>
+    <svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.500A2.500 2.500 0 119.500 9 2.500 2.500 0 0112 11.500z"/></svg>
+   </div>
+   <div class="addr rv">
+    <div class="head"><svg aria-hidden="true"><use href="#i-pin"/></svg><p><strong>Naturheilpraxis Daniela Dumann</strong><br>Nithackstraße 24, 10585 Berlin-Charlottenburg<br>direkt am Schloss Charlottenburg</p></div>
+    <ul>
+     <li><svg aria-hidden="true"><use href="#i-bus"/></svg><span>Bus 109, 309 oder M45 bis Luisenplatz/Schloss Charlottenburg</span></li>
+     <li><svg aria-hidden="true"><use href="#i-train"/></svg><span>S-Bahn bis Westend, Charlottenburg oder Jungfernheide</span></li>
+     <li><svg aria-hidden="true"><use href="#i-car"/></svg><span>Mit dem Auto über die Autobahnausfahrt Spandauer Damm</span></li>
+     <li><svg aria-hidden="true"><use href="#i-clock"/></svg><span>Termine nach Vereinbarung</span></li>
+    </ul>
+    <div style="margin-top:22px"><a class="btn btn-cta" href="BOOKING">Termin buchen <span class="arr" aria-hidden="true">→</span></a></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 12 ABSCHLUSS -->
+<section class="dark closer" id="closer">
+ <div class="deco l" aria-hidden="true"></div><div class="deco r" aria-hidden="true"></div>
+ <div class="wrap">
+  <h2 class="rv">Lernen Sie mich persönlich kennen</h2>
+  <ul class="assure"><li><svg aria-hidden="true"><use href="#star" fill="currentColor" stroke="none"/></svg>5,0 Sterne bei 9 Google Bewertungen</li><li><svg aria-hidden="true"><use href="#i-leaf"/></svg>Heilpraktikerin seit 2002</li><li><svg aria-hidden="true"><use href="#i-clock"/></svg>Erstgespräch 220 €, 60 Minuten</li></ul>
+  <div class="btns"><a class="btn btn-cta cta--breathe" href="BOOKING"><svg class="ic-s" aria-hidden="true"><use href="#i-cal"/></svg>Termin buchen <span class="arr" aria-hidden="true">→</span></a><a class="btn btn-ghost" href="tel:+493036430358"><svg class="ic-s" aria-hidden="true"><use href="#phone"/></svg>030 36430358</a></div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <span>© Naturheilpraxis Daniela Dumann · Nithackstraße 24 · 10585 Berlin-Charlottenburg</span>
+  <span><a href="tel:+493036430358">030 36430358</a> · <a href="mailto:praxis@danieladumann.de">praxis@danieladumann.de</a></span>
+  <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
+ </div>
+</footer>
+
+<script>
+(function(){
+ var BOOKING='http://my.lemniscus.de/pss/21c5c780-26ba-4f11-8885-9a1d09a0c241';
+ document.querySelectorAll('a[href="BOOKING"]').forEach(function(a){a.href=BOOKING;a.target='_blank';a.rel='noopener';});
+ var q=location.search;
+ if(q.indexOf('shot=1')>-1){document.documentElement.classList.add('shot');document.body.classList.add('shot');document.querySelectorAll('details').forEach(function(d){d.open=true});}
+ // reveal once
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -12% 0px',threshold:.12});
+ document.querySelectorAll('.rv,.proof,.steps,.about,.closer,.loc').forEach(function(el){io.observe(el)});
+ var hd=document.querySelector('header .hd'),burger=document.getElementById('burgerBtn');
+ if(burger){burger.addEventListener('click',function(){var open=hd.classList.toggle('open');burger.setAttribute('aria-expanded',open?'true':'false');});
+  document.getElementById('mainNav').querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){hd.classList.remove('open');burger.setAttribute('aria-expanded','false');});});}
+ // FAQ: one open at a time
+ var ds=document.querySelectorAll('details');
+ if(q.indexOf('shot=1')<0){ds.forEach(function(d){d.addEventListener('toggle',function(){if(d.open)ds.forEach(function(o){if(o!==d)o.open=false})})});}
+})();
+</script>
+</body>
+</html>

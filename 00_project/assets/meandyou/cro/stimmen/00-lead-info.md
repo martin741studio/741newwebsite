@@ -1,0 +1,2 @@
+# me&you / Michael Ehlers — Seite „Stimmen“ (CRO-Lauf, Unterseite)
+Seite: `/stimmen` · Basis: Vorschau v2 https://clients.741.studio/meandyou/v2/index.html#stimmen (keine eigene Seite, nur Abschnitt der Startseite) · Ziel: Vertrauen belegen, dann Gespräch · Haupt-CTA: Gespräch buchen → https://clients.741.studio/meandyou/v2/termin.html?utm_source=stimmen&utm_content=<abschnitt> · Quelle: Hauptsession 2026-10-12 (Martin: Stimmen, FAQ, Gespräch buchen parallel) · Checkpoints 1 und 2 · Status: Copy freigegeben

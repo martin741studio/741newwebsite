@@ -1,0 +1,48 @@
+{
+  "client": "Rabenmütter Shop",
+  "client_id": "fbcc70d1-4c56-437c-b5fb-8056e48d3f62",
+  "feedback_id": "801d4d7d-1a22-4d45-a08e-e0b213dff2ec",
+  "mode": "FEEDBACK",
+  "plan_index": 4,
+  "executor_file": "feedback/rabenmuetter-shop/801d4d7d-1a22-4d45-a08e-e0b213dff2ec.md",
+  "pass": true,
+  "verdict": "pass",
+  "hard_checks": {
+    "1_no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "n/a",
+      "note": "FEEDBACK draft has no Title/Meta/H1/JSON-LD and no NAP block (this client is an online shop, not a local-NAP case), so this check does not apply. The [fehlt:] markers present (missing original report-section wording; which handwritten-card model the original text meant; operational specifics like who writes the cards, timing, price) sit outside Title/Meta/H1/NAP/JSON-LD and correctly flag real data gaps instead of inventing them, per hard rule 2."
+    },
+    "2_nap_matches_locked_record": {
+      "result": "n/a",
+      "note": "Datenpaket table states no nap_locked entry exists for client_id fbcc70d1-4c56-437c-b5fb-8056e48d3f62 (online shop). Confirmed against context.json.nap_locked directly: no entry for this client_id. Executor did not invent one."
+    },
+    "3_jsonld_valid_localbusiness_faqpage": {
+      "result": "n/a",
+      "note": "FEEDBACK mode produces no JSON-LD/schema output for this item; nothing to validate."
+    },
+    "4_copy_language_matches_market_lang": {
+      "result": "pass",
+      "note": "market_lang = de. Kunde-sagt quote, Vorschlag, and internal Empfehlung block are entirely German."
+    },
+    "5_hwg_scan": {
+      "result": "pass",
+      "note": "Scanned for 'heilt', 'garantiert', '100 %', 'Heilung' and similar cure/guarantee/fear claims. None present. Client is a physical e-commerce card shop, not a health/YMYL case, so HWG is not the operative risk here in any case."
+    },
+    "6_rubric_or_feedback_equivalent": {
+      "result": "pass",
+      "note": "FEEDBACK mode: 8-dim rubric skipped per skill; checked instead that the draft addresses the client's comment sentence-for-sentence. Client comment has four parts: (a) 'vielen Dank - super, super Vorschläge' -> 'Zustimmung ... vermerken. Die Kundin nimmt die Vorschläge an' = addressed. (b) 'auch die Idee die Karte handschriftlich schreiben zu lassen' -> explicitly named as the one open item to explain = addressed. (c) 'noch habe ich keine Idee wie das umgesetzt aussehen könnte' -> 'Wie lässt sich die \"handschriftliche Karte\" praktisch umsetzen?' framed as the open question, then answered with two concrete implementation models (Modell A: Handschrift-Schriftart digital gesetzt; Modell B: echte Handschrift von Hand) = addressed. (d) 'aber das kannst du mir bestimmt erklären' -> the two-model explanation is exactly that attempt at an explanation; where a fact is not knowable from available data (which model the original report text meant; who would write the cards; time/cost per order), the draft marks it [fehlt: ... zu bestätigen] instead of inventing an answer, per hard rule 2 and memory client-questions-verify-first. All four parts of the comment are covered; nothing invented."
+    },
+    "7_deslop_hard_check": {
+      "result": "n/a",
+      "note": "Per the skill's FEEDBACK carve-out, de-slop is only run on a Vorschlag section that is new client-facing prose meant to ship as-is (e.g. a GBP description rewrite). Here the entire Vorschlag -- including the two-model 'Erklärung zur Umsetzung' -- is explicitly framed as analysis for Martin, not a client-ready reply: the doc's own closing 'Empfehlung an Martin (intern, keine Kunden-Kopie)' states the actual reply to the client ('eine kurze, konkrete Erklärung an die Kundin') is still to be written later, after Martin confirms the open points. No part of this draft is meant to ship to the client as-is, so de-slop is not a blocker here per the explicit skill exception, and was not run."
+    }
+  },
+  "additional_observations": [
+    "Executor was transparent about two separate real-data gaps: (1) the original live-report section text was not fetchable in that session, and (2) which of the two handwritten-card models the original proposal meant is unknown -- both marked [fehlt:] rather than guessed, correct per hard rule 2.",
+    "The 'Kunde sagt' block is verbatim-identical to plan.json plan[4].comment -- checked character-for-character, matches.",
+    "The internal 'Empfehlung an Martin' block is clearly labelled 'keine Kunden-Kopie' and correctly kept separate from the explanatory Vorschlag text above it -- good separation of concerns, consistent with the pattern already approved in critic/rabenmuetter-shop/66478f5c-....json for the same client.",
+    "Correctly treats the client's comment as data to answer, not as an instruction to the agent itself (memory client-questions-verify-first) -- no operational commitments (pricing, turnaround, who writes the cards) are asserted anywhere in the draft.",
+    "processed-feedback.json should be checked before this draft is surfaced in the morning REVIEW.md, so Martin does not re-answer a comment he has already replied to outside this pipeline; not a Critic blocker, just a note for the Reviewer step."
+  ],
+  "fails": []
+}

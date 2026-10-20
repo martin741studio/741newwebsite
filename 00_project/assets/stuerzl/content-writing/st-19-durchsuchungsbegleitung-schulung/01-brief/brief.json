@@ -1,0 +1,227 @@
+{
+ "client": "STÜRZL Steuerstrafrecht",
+ "client_slug": "stuerzl",
+ "page_type": "service",
+ "mode": "rewrite",
+ "language": "de",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "voice_sheet": "00_project/assets/stuerzl/voice.md",
+ "local_city": null,
+ "cta": {
+  "goal": "Vertrauliche Anfrage über das Formular (nur Thema, keine Falldaten)",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nennen Sie uns nur Ihr Thema, keine Einzelheiten. Ihre Angaben unterliegen unserer gesetzlichen Verschwiegenheit.",
+  "secondary": "Anrufen: Frankfurt +49 69 298028870, München +49 89 72444170"
+ },
+ "gate": "A0-light + 20 Messungen",
+ "money_page": true,
+ "require_answer_block": true,
+ "cta_min": 3,
+ "cta_text": "Vertraulich anfragen",
+ "proof_assets": [
+  "Fachanwältin für Steuerrecht seit 2021 (Lebenslauf)",
+  "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022 (Lebenslauf)"
+ ],
+ "forbidden_words": [
+  "spezialisiert",
+  "Spezialist",
+  "Experte",
+  "Expertin",
+  "Expertise",
+  "führend",
+  "Exzellenz",
+  "einzigartig",
+  "hart in der Sache",
+  "kostenlos",
+  "gratis",
+  "Festpreis",
+  "Straffreiheit",
+  "Strafe vermeiden",
+  "gewinnen",
+  "WhatsApp",
+  "Wiesenhüttenstraße",
+  "Albtraum",
+  "Ruin",
+  "Haft droht",
+  "Angst"
+ ],
+ "own_phrases": [
+  "Wir stehen Ihnen zur Seite",
+  "Fehler passieren",
+  "Das Mandanteninteresse steht für uns immer im Vordergrund",
+  "möglichst geräuschlos und effizient",
+  "Jedes Mandat und jeder Mandant ist anders",
+  "Aufklären. Verständigen. Verteidigen."
+ ],
+ "placeholders_allowed": [
+  "Pauschale Erstberatung",
+  "Rechtsschutzversicherung"
+ ],
+ "blockers": [],
+ "nap_file": "00_project/assets/stuerzl/nap.json",
+ "page_slug": "durchsuchungsbegleitung-schulung",
+ "pool_item_ids": [
+  "CP-SVC-008"
+ ],
+ "sitetree_node": "ST-19",
+ "url_slug": "/steuerstrafrecht/durchsuchungsbegleitung-schulung/",
+ "keyword_primary": "durchsuchung im unternehmen",
+ "keywords_cluster": [
+  {
+   "kw": "durchsuchung geschäftsräume",
+   "volume": 10,
+   "scope": "national",
+   "source": "DataForSEO google_ads/search_volume/live, de, 2276 (st-19/_work/volume.json)",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "durchsuchung im unternehmen",
+   "volume": null,
+   "scope": "national",
+   "source": "DataForSEO: keine Daten (kein Hinweis auf fehlende Nachfrage; SERP zeigt viele Seiten, siehe gate-a0.md)",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "durchsuchung unternehmen schulung",
+   "volume": null,
+   "scope": "national",
+   "source": "DataForSEO: keine Daten",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "verhalten bei durchsuchung im unternehmen",
+   "volume": null,
+   "scope": "national",
+   "source": "DataForSEO: keine Daten",
+   "date": "2026-10-11"
+  }
+ ],
+ "intent": "commercial (B2B)",
+ "reader": "Geschäftsführer, Leitungspersonen, Compliance-Verantwortliche und Steuerberatungsgesellschaften, die sich auf eine Durchsuchung vorbereiten oder eine erlebt haben. Sucht 'durchsuchung unternehmen schulung', 'verhalten bei durchsuchung im unternehmen', 'checkliste durchsuchung'. PAA: Was ist die Abgrenzung zwischen § 102 StPO und § 103 StPO? Welche Räume darf die Polizei durchsuchen?",
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "H1, Vorbereitung auf den Ernstfall, Notfallkontakt",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Direkt-Antwort: Durchsuchung im Unternehmen"
+  },
+  {
+   "id": "S03",
+   "element": "check-list",
+   "job": "Für wen"
+  },
+  {
+   "id": "S04",
+   "element": "step-flow",
+   "job": "So arbeiten wir mit Ihnen",
+   "cta": "primary"
+  },
+  {
+   "id": "S05",
+   "element": "person",
+   "job": "E-E-A-T (Dozentin)"
+  },
+  {
+   "id": "S06",
+   "element": "text",
+   "job": "Kosten kurz",
+   "cta": "secondary"
+  },
+  {
+   "id": "S07",
+   "element": "accordion",
+   "job": "Vertiefung: Rechtsrahmen im Betrieb",
+   "cta": "secondary"
+  },
+  {
+   "id": "S08",
+   "element": "faq",
+   "job": "5 Fragen"
+  },
+  {
+   "id": "S09",
+   "element": "cta",
+   "job": "Abschluss",
+   "cta": "primary"
+  }
+ ],
+ "dropped_sections": [
+  {
+   "id": "Beweis",
+   "reason": "Bewertungsfreigabe offen. Beweis liegt auf der Startseite."
+  }
+ ],
+ "bestand_words": 223,
+ "benchmark_median_words": 1048,
+ "benchmark_sources": "siehe 01-brief/gate-a0.md (20 Seiten aus zwei SERPs, gelesen 2026-10-11)",
+ "word_range": [
+  950,
+  1600
+ ],
+ "faq_min": 5,
+ "internal_links_min": 4,
+ "internal_link_targets": [
+  {
+   "url": "/steuerfahndung-durchsuchung/",
+   "anchor": "Steuerfahndung und Durchsuchung",
+   "role": "parent (ST-18)"
+  },
+  {
+   "url": "/unternehmensvertretung/",
+   "anchor": "Unternehmensvertretung",
+   "role": "sibling (ST-21)"
+  },
+  {
+   "url": "/compliance/",
+   "anchor": "Compliance",
+   "role": "sibling (ST-26)"
+  },
+  {
+   "url": "/kosten/",
+   "anchor": "Kosten und Honorar",
+   "role": "money-page"
+  },
+  {
+   "url": "/dr-anja-stuerzl/",
+   "anchor": "Dr. Anja Stürzl",
+   "role": "person"
+  },
+  {
+   "url": "/verteidigung-von-individualpersonen/",
+   "anchor": "Verteidigung von Privatpersonen",
+   "role": "sibling (ST-29)"
+  }
+ ],
+ "paa_questions": [
+  {
+   "q": "Was ist die Abgrenzung zwischen § 102 StPO und § 103 StPO bei der Durchsuchung?",
+   "status": "answered"
+  },
+  {
+   "q": "Welche Räume darf die Polizei durchsuchen?",
+   "status": "answered"
+  },
+  {
+   "q": "Was bedeutet Durchsuchung?",
+   "status": "dropped",
+   "reason_code": "Duplikat",
+   "reason": "Wird in der Direkt-Antwort von ST-18 und hier in S02 mit den Normen erklärt; keine eigene Frage nötig."
+  },
+  {
+   "q": "Wie lange dauert es, bis es zu einer Hausdurchsuchung kommt?",
+   "status": "dropped",
+   "reason_code": "nicht rechtssicher",
+   "reason": "Das Gesetz nennt keine Frist. Jede Zahl wäre geraten."
+  }
+ ],
+ "fix_note_2026-10-11": "word_range oberes Ende von 1400 auf 1600 erhöht: Review ST-19 verlangt einen neuen Abschnitt 'Verhalten der Mitarbeiter' (Tiefe 65).",
+ "service_type": "Schulung und telefonische Notfallberatung bei Durchsuchungen im Unternehmen"
+}

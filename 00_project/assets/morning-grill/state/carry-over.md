@@ -29,3 +29,14 @@ Added 2026-10-13 after the first real grill:
 - [ ] Night queue live from the 17:00 run (D37). First real card: tonight if Martin is at the grill; a hand-made queue for 13.10. exists (reporting/night-shift/queue/2026-10-13.json). Tomorrow 06:13: read reporting/night-shift/2026-10-13/REVIEW.md + state.json, show pass items as release cards.
 - [ ] Night shift workflow: Martin asked the Night Shift chat (13.10.) to run the workflow-creation check (scorecard, registry row, research note). Waiting for its score. Goal sheet gaps for the night queue: no next_milestone for Dumann, Brasse, Bali, me&you; no next_workflow for Johni, Kamil, Taxi.
 - [ ] Night 13.10. result (v2, verified from state.json: 4 items, 3 pass, 1 needs_martin, $4.23, no violations): all 4 already handled (state/night-routed.json). Tomorrow's 17:00 night card must offer the pending candidate brasse-faq-live-check (state/night-pending.json, Martin's pick at the 21:30 check-in); it still needs his tick on the card.
+
+## Correction (15.10. 06:10, found via registry note from an evening run)
+- Coralie/Suriya scare-tactic WhatsApp reply: earlier reported "sent" was WRONG. Real outcome: NOT sent — Martin told that chat directly it's old news, not needed. work_item a05a1de0 set dropped/canceled (not done).
+- Lesson: today's grill found Taxi's quarter_goal was stale in goals.json despite memory being correct (fixed). Root cause = no automatic sync between a decision recorded in memory/chat and the structured files (goals.json, work_items) the grill actually scans. Worth a real fix, not just today's patch.
+- **Dumann password msg** — already sent via portal yesterday (14.10.), S2 scan only caught the drafted state. Corrected, card dropped.
+
+## Archiving (15.10. ~06:30, Martin's go)
+3 items moved to _archiv (not deleted, reversible):
+- morning-grill/2026-10-13-dryrun -> morning-grill/_archiv/2026-10-13-dryrun (git tracked, staged)
+- tracking/praxis-suriya/2026-10-12-design-dryrun -> tracking/praxis-suriya/_archiv/2026-10-12-design-dryrun (untracked, moved on disk)
+- meandyou/cro/06-gpt-assets/images/03-sit-overlooked-v1-rejected.png + its _drive copy -> same folders' _archiv/ (untracked, moved on disk)

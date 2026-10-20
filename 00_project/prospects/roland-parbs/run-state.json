@@ -1,0 +1,43 @@
+{
+ "slug": "roland-parbs",
+ "steps": {
+  "intake": {
+   "agent": "orchestrator",
+   "status": "done",
+   "at": "2026-10-16T13:38",
+   "outputs": [
+    "intake.md",
+    "intake.json",
+    "browser-queue.jsonl"
+   ],
+   "blockers": []
+  },
+  "demand": {
+   "agent": "A",
+   "status": "waiting"
+  },
+  "site": {
+   "agent": "B",
+   "status": "waiting"
+  },
+  "homepage": {
+   "agent": "C",
+   "status": "waiting"
+  },
+  "scan": {
+   "agent": "D",
+   "status": "done",
+   "at": "2026-10-16T14:29:58.214071",
+   "keyword": "heilpraktiker dannenberg",
+   "report_key": "65631fcef076bb8",
+   "solv": 2.04,
+   "found_in": 29,
+   "credits": 49,
+   "outputs": [
+    "evidence/falcon-report-65631fcef076bb8.json",
+    "../../04_site/public/review-assets/roland-parbs/scan-grid.webp",
+    "competitors.md"
+   ]
+  }
+ }
+}

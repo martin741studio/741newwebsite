@@ -1,0 +1,164 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://stuerzl-steuerstrafrecht.de/zollstrafrecht/#webpage",
+   "url": "https://stuerzl-steuerstrafrecht.de/zollstrafrecht/",
+   "name": "Zollstrafrecht Anwalt Frankfurt & München | STÜRZL",
+   "description": "Zollstrafrecht: Zollhinterziehung, Bannbruch, Zollfahndung und Hauptzollamt. Was die Abgabenordnung regelt und wie wir Sie beraten. Vertraulich anfragen.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/#website"
+   },
+   "breadcrumb": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/zollstrafrecht/#breadcrumb"
+   },
+   "mainEntity": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/zollstrafrecht/#service"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://stuerzl-steuerstrafrecht.de/zollstrafrecht/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Startseite",
+     "item": "https://stuerzl-steuerstrafrecht.de/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Leistungen",
+     "item": "https://stuerzl-steuerstrafrecht.de/leistungen/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Zollstrafrecht",
+     "item": "https://stuerzl-steuerstrafrecht.de/zollstrafrecht/"
+    }
+   ]
+  },
+  {
+   "@type": "LegalService",
+   "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei",
+   "name": "STÜRZL Steuerstrafrecht",
+   "url": "https://stuerzl-steuerstrafrecht.de/",
+   "email": "kanzlei@stuerzl-steuerstrafrecht.de",
+   "department": [
+    {
+     "@type": "LegalService",
+     "name": "STÜRZL Steuerstrafrecht München",
+     "telephone": "+49 89 72444170",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "München",
+      "postalCode": "80331",
+      "addressCountry": "DE",
+      "streetAddress": "Oberanger 32"
+     },
+     "parentOrganization": {
+      "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+     }
+    },
+    {
+     "@type": "LegalService",
+     "name": "STÜRZL Steuerstrafrecht Frankfurt am Main",
+     "telephone": "+49 69 298028870",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Frankfurt am Main",
+      "postalCode": "60329",
+      "addressCountry": "DE",
+      "streetAddress": "Untermainkai 26"
+     },
+     "parentOrganization": {
+      "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "Service",
+   "@id": "https://stuerzl-steuerstrafrecht.de/zollstrafrecht/#service",
+   "serviceType": "zollstrafrecht",
+   "provider": {
+    "@id": "https://stuerzl-steuerstrafrecht.de/#kanzlei"
+   },
+   "url": "https://stuerzl-steuerstrafrecht.de/zollstrafrecht/"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://stuerzl-steuerstrafrecht.de/zollstrafrecht/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Was ist Zollhinterziehung?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Zollhinterziehung begeht, wer den Behörden über steuerlich erhebliche Tatsachen unrichtige oder unvollständige Angaben macht oder sie pflichtwidrig in Unkenntnis lässt und dadurch Einfuhr- oder Ausfuhrabgaben verkürzt (§ 370 AO in Verbindung mit § 3 Abs. 3 AO). Strafbar ist das nur bei Vorsatz (§ 15 StGB), leichtfertiges Handeln ist nach § 378 AO eine Ordnungswidrigkeit. Das Gesetz sieht Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe vor. In besonders schweren Fällen reicht der Rahmen von sechs Monaten bis zu zehn Jahren."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Was macht die Zollfahndung?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Die Behörden des Zollfahndungsdienstes haben im Strafverfahren wegen Steuerstraftaten dieselben Rechte und Pflichten wie die Polizei nach der Strafprozessordnung. Ihre Beamten sind Ermittlungspersonen der Staatsanwaltschaft (§ 404 Abs. 1 AO). Bei einer Durchsuchung dürfen sie auch die Papiere und elektronischen Speichermedien durchsehen (§ 404 Abs. 2 AO)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wann ist das Hauptzollamt zuständig?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Das Hauptzollamt (Zollbehörde) ermittelt in Fällen, die Zölle oder Verbrauchsteuern betreffen, und ahndet Verstöße in diesen Bereichen. Außerdem ist der Zoll (Finanzkontrolle Schwarzarbeit) für die Verfolgung von illegaler Beschäftigung und dem Vorenthalten von Sozialabgaben zuständig. Mehr dazu unter Schwarzarbeit und Arbeitsstrafrecht."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Was ist Bannbruch?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Bannbruch begeht, wer Gegenstände entgegen einem Verbot einführt, ausführt oder durchführt (§ 372 Abs. 1 AO). Die Strafe richtet sich nach § 370 Abs. 1 und 2 AO, wenn keine andere Vorschrift die Tat mit Strafe oder Geldbuße bedroht."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kann ich Fehler bei Einfuhr oder Ausfuhr noch korrigieren?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Das hängt vom Einzelfall ab. Einfuhr- und Ausfuhrabgaben sind Steuern im Sinne der Abgabenordnung, deshalb kann § 371 AO eine Rolle spielen. Die Voraussetzungen sind streng, und ein Ausschlussgrund kann die Wirkung nehmen. Ob § 371 AO greift, prüfen wir vor jedem Schritt mit Ihnen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kann meinem Unternehmen eine Geldbuße auferlegt werden?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Das kann sein, auch ohne Strafverfahren. Zollvorschriften können nach § 382 AO ordnungswidrig verletzt werden. Hinzu kommt die Geldbuße gegen eine juristische Person oder Personenvereinigung nach § 30 OWiG, wenn eine Leitungsperson dabei Pflichten verletzt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Was gilt für Bargeld bei Ein- und Ausreise?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Natürliche Personen müssen auf Verlangen der Zollbediensteten Barmittel und gleichgestellte Zahlungsmittel im Gesamtwert von 10.000 Euro oder mehr, die sie in den, aus dem oder durch den Geltungsbereich des Gesetzes verbringen, nach Art, Zahl und Wert anzeigen und Herkunft und Verwendungszweck darlegen (§ 12a Abs. 1 ZollVG). Wird die Pflicht nicht eingehalten, können die Zollbediensteten die Mittel bis zu 30 Tage sicherstellen, um Herkunft oder Verwendungszweck aufzuklären (§ 12a Abs. 7 ZollVG). Die Angaben dürfen auch in Strafverfahren wegen Steuerstraftaten verwendet werden (§ 12a Abs. 5 ZollVG)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wer erfährt von meiner Anfrage zu einer Zollprüfung?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Die Verschwiegenheitspflicht nach § 43a Abs. 2 BRAO und § 203 StGB gilt für alles, was uns in Ausübung des Berufs bekannt wird, schon für Ihre Anfrage und auch gegenüber dem Hauptzollamt und der Zollfahndung. Nennen Sie uns zunächst nur das Thema, etwa „Prüfung beim Import“, ohne Unterlagen und ohne Einzelheiten."
+     }
+    }
+   ]
+  }
+ ]
+}

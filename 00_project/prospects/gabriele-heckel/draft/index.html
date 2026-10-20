@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entwurf erster Bildschirm – Gabriele Heckel, Hirschau</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#32373c;--accent:#e5bd1b;--cream:#f7f3e8;--body:#4a4f55;--line:#e7e1cf;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;width:100%;height:100vh;overflow:hidden}
+  .bar{background:var(--ink);color:#fff;font-size:15px;text-align:center;padding:10px}
+  .bar b{font-weight:700}
+  header{display:flex;align-items:center;justify-content:space-between;padding:16px 120px;border-bottom:1px solid var(--line)}
+  .word{font-family:Fraunces,serif;font-weight:600;font-size:26px;color:var(--ink);line-height:1.1}
+  .word small{display:block;font-family:Inter,sans-serif;font-size:12.5px;font-weight:500;letter-spacing:.06em;color:var(--body);margin-top:4px}
+  nav{display:flex;gap:30px;font-size:16px;font-weight:500;color:var(--body)}
+  .btn{display:inline-block;background:var(--accent);color:var(--ink);font-weight:700;border-radius:999px;padding:14px 26px;font-size:16px}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:50px 120px 34px;background:linear-gradient(180deg,#fff,var(--cream))}
+  .eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);font-weight:700;border-left:4px solid var(--accent);padding-left:10px}
+  h1{font-family:Fraunces,serif;font-weight:600;font-size:48px;line-height:1.08;margin:16px 0 18px;color:var(--ink)}
+  h1 span{color:#8a6d00}
+  .sub{font-size:19px;line-height:1.55;color:var(--body);max-width:600px}
+  .helps{margin:18px 0 0;font-size:16px;color:var(--ink);font-weight:500}
+  .ctas{display:flex;gap:14px;align-items:center;margin-top:24px}
+  .ghost{border:1.5px solid #cfc8b4;border-radius:999px;padding:13px 22px;font-size:16px;font-weight:600;color:var(--ink)}
+  .note{font-size:14px;color:#6b6f75;margin-top:12px}
+  .pic{position:relative;border-radius:22px;overflow:hidden;height:470px;box-shadow:0 20px 50px rgba(0,0,0,.12)}
+  .pic img.main{width:100%;height:100%;object-fit:cover;object-position:78% 50%}
+  .me{position:absolute;left:18px;bottom:18px;display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;padding:10px 16px 10px 10px;box-shadow:0 6px 20px rgba(0,0,0,.14);font-size:14.5px;color:var(--body)}
+  .me img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 25%}
+  .me b{display:block;font-size:15.5px;color:var(--ink)}
+  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0 120px}
+  .trust div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14.5px;color:var(--body)}
+  .trust b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
+</style>
+</head>
+<body>
+  <div class="bar">Einstiegsstunde: <b>45 Minuten für 35 €</b> · Friedrich-Zeitler-Straße 23, 92242 Hirschau</div>
+  <header>
+    <div class="word">Gabriele Heckel<small>PSYCHOTHERAPEUTISCHE PRAXIS</small></div>
+    <nav><span>Psychotherapie</span><span>Coaching</span><span>Vita</span><span>Kontakt</span></nav>
+    <span class="btn">Einstiegsstunde anfragen</span>
+  </header>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Heilpraktikerin für Psychotherapie und Coach</div>
+      <h1>Psychotherapeutische Begleitung <span>in Hirschau.</span></h1>
+      <p class="sub">Stecken Sie gerade in einer Krise, oder möchten Sie in Ihrem Leben etwas verändern? In einer Einstiegsstunde schauen wir gemeinsam, was Sie brauchen. Danach entscheiden Sie selbst, ob Sie den Weg mit mir gehen möchten.</p>
+      <p class="helps">Begleitung bei Krisen · Coaching für mehr Lebensenergie · Berührung in geschütztem Rahmen</p>
+      <div class="ctas"><span class="btn">Einstiegsstunde anfragen · 35 €</span><span class="ghost">Leistungen ansehen →</span></div>
+      <p class="note">Unverbindlich. Anfrage per Telefon 09622 703190 oder per E-Mail an praxis@gabrieleheckel.de.</p>
+    </div>
+    <div class="pic"><img class="main" src="praxis.jpg" alt="Gabriele Heckel in der Natur"><div class="me"><img src="portrait.jpg" alt="Gabriele Heckel"><div><b>Gabriele Heckel</b>Heilpraktikerin für Psychotherapie in Hirschau</div></div></div>
+  </section>
+  <div class="trust">
+    <div><b>Heilpraktikerin</b>für Psychotherapie und Coach</div>
+    <div><b>Viele Fortbildungen</b>psychologisches Wissen und Methoden</div>
+    <div><b>45 Minuten Einstieg</b>für 35 € zum Kennenlernen</div>
+    <div><b>Telefon 09622 703190</b>praxis@gabrieleheckel.de</div>
+  </div>
+</body>
+</html>

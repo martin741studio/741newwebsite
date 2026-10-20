@@ -1,0 +1,39 @@
+{
+  "plan_index": 4,
+  "client": "Praxis Hüwel",
+  "slug": "44804cf6",
+  "mode": "FEEDBACK",
+  "feedback_id": "44804cf6-c791-4a6a-b37d-836ec647aeb1",
+  "input": "feedback/praxis-huewel/44804cf6-c791-4a6a-b37d-836ec647aeb1.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "applicable": false,
+      "note": "FEEDBACK mode has no Title/Meta/H1/JSON-LD block to ship. The one [fehlt:] NAP note is explicitly an internal pre-publish check note ('zum Abgleich'), not a NAP block presented as fact — compliant with real-data-only rule."
+    },
+    "nap_matches_locked_record": {
+      "applicable": false,
+      "note": "No locked NAP record exists for this client_id in context.json.nap_locked; draft correctly flags this as [fehlt] instead of inventing or guessing, and asks Martin to confirm client_locations before publish."
+    },
+    "jsonld_valid": { "applicable": false, "note": "No JSON-LD in this FEEDBACK output." },
+    "language_matches_market_lang": { "pass": true, "note": "Entire draft is in German, matches market_lang 'de'." },
+    "hwg_scan": { "pass": true, "note": "No cure/guarantee/fear claims; content is about contact-form UX and redirect/indexing SEO, not a health claim." },
+    "feedback_addresses_comment_sentence_for_sentence": {
+      "pass": true,
+      "note": "Kunde-sagt block is verbatim vs. plan.json comment field (checked word-for-word). Vorschlag splits the comment into its two real points and answers each: (1) 'Was ist Ihr Anliegen kann besser dargestellt werden' -> concrete recommendation for an on-page Anliegen-category block instead of a redirect; (2) 'Weiterleitung nicht ideal / weitergeleitete Seiten nicht indexiert' -> correct technical SEO explanation (301/302 not independently indexable, link equity lost) + fix (own indexable URL with embedded contact form). Both sentences of the client's comment are covered; nothing is left unaddressed."
+    },
+    "deslop_body_copy": {
+      "applicable": false,
+      "note": "Per skill: de-slop only blocks when the Vorschlag is new client-facing prose meant to ship as-is (e.g. a GBP description). This Vorschlag is an internal recommendation to Martin (structured advice + [fehlt] flags for missing facts), not finished client-facing copy — not run as a blocker."
+    },
+    "metadata_matches_plan_item": {
+      "pass": true,
+      "note": "feedback_id, report_slug ('huewel-seitenbaum-2026-08'), and section_key ('7 · Einstieg & Angebot') in the output header all match plan.json[4] exactly."
+    }
+  },
+  "fails": [],
+  "minor_notes": [
+    "Diff-Hinweis is a short paragraph rather than the single line the skill format suggests — not a hard-check item, flagged for Martin's awareness only, not a failure."
+  ],
+  "verdict": "pass"
+}

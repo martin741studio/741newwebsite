@@ -1,0 +1,284 @@
+{
+ "client": "me&you Communication (Michael Ehlers)",
+ "client_slug": "meandyou",
+ "language": "de",
+ "address": "du",
+ "speaker": "dritte",
+ "legal_mode": "none",
+ "voice_sheet": "00_project/assets/meandyou/voice.md",
+ "pool_item_ids": [],
+ "intent": "commercial",
+ "reader": "Führungskräfte, Gründer, Berater, Selbstständige, die fachlich überzeugen und trotzdem nicht gehört werden; kommen über Marke oder Ads; Worte aus Bewertungen: Redeangst, unsicher, Feedback, Welten zwischen erster und letzter Rede",
+ "local_city": null,
+ "cta": {
+  "goal": "kostenloses Gespräch (30 Min, Video) buchen",
+  "channel": "booking",
+  "text": "Gespräch buchen",
+  "reassurance": "30 Minuten, kostenlos, per Video",
+  "secondary": "Termine ansehen / Telefon"
+ },
+ "gate": "A0-full",
+ "money_page": true,
+ "benchmark_median_words": 1747,
+ "benchmark_sources": [
+  {
+   "url": "_work/bench-metrics.json",
+   "words": 1747,
+   "date": "2026-10-11"
+  }
+ ],
+ "require_answer_block": true,
+ "cta_text": "Gespräch buchen",
+ "nap_file": "00_project/assets/meandyou/nap.json",
+ "schema_faq": false,
+ "page_slug": "seminare",
+ "page_type": "service",
+ "mode": "rewrite",
+ "sitetree_node": "Seminare",
+ "url_slug": "/seminare",
+ "keyword_primary": "Rhetorik-Seminare",
+ "keywords_cluster": [
+  {
+   "kw": "rhetorik seminar",
+   "volume": 880,
+   "scope": "national",
+   "source": "DataForSEO search_volume",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "rhetorik für führungskräfte",
+   "volume": 110,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "rhetorik seminar frankfurt",
+   "volume": 90,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "michael ehlers rhetorik",
+   "volume": 90,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "rhetorik seminar führungskräfte",
+   "volume": 40,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "schlagfertigkeit seminar",
+   "volume": 40,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "rhetorik seminar berlin",
+   "volume": 30,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "rhetorik seminar für anfänger",
+   "volume": null,
+   "scope": "national",
+   "source": "Google Autocomplete",
+   "date": "2026-10-12"
+  },
+  {
+   "kw": "rhetorik intensivtraining",
+   "volume": null,
+   "scope": "national",
+   "source": "Google Autocomplete",
+   "date": "2026-10-12"
+  }
+ ],
+ "bestand_words": 266,
+ "bestand_note": "Vorschau v2 seminare.html, 266 Wörter sichtbar (Live-Seite hat keine Seminarseite)",
+ "benchmark_note": "Benchmark aus Startseiten-Lauf (SERP rhetorik seminar, 2026-10-11) wiederverwendet; neuer DataForSEO-Abruf am 2026-10-12 blockiert (IP nicht freigegeben)",
+ "word_range": [
+  1500,
+  2300
+ ],
+ "faq_min": 6,
+ "internal_links_min": 5,
+ "cta_min": 6,
+ "internal_link_targets": [
+  {
+   "url": "/",
+   "anchor": "Startseite",
+   "role": "home"
+  },
+  {
+   "url": "/michael",
+   "anchor": "Mehr über Michael",
+   "role": "person"
+  },
+  {
+   "url": "/faq",
+   "anchor": "häufigen Fragen",
+   "role": "sibling"
+  },
+  {
+   "url": "/rhetorik",
+   "anchor": "Was ist Rhetorik?",
+   "role": "sibling"
+  },
+  {
+   "url": "/gespraech-buchen",
+   "anchor": "Gespräch buchen",
+   "role": "contact"
+  }
+ ],
+ "proof_assets": [
+  "ProvenExpert 250 Bewertungen",
+  "ERFOLG Magazin Top 100",
+  "Medienlogos",
+  "3 Video-Stimmen"
+ ],
+ "forbidden_words": [
+  "garantiert",
+  "Intelligente",
+  "in 30 Tagen",
+  "angstfrei",
+  "ohne Zittern",
+  "zwölf Menschen"
+ ],
+ "own_phrases": [
+  "Ein Einstieg. Dann dein eigener Weg.",
+  "Eigenständig. In beliebiger Reihenfolge.",
+  "Der Ort ist Teil der Arbeit.",
+  "Der nächste Schritt ist ein Gespräch."
+ ],
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "Was, für wen, wo, nächster Schritt, zwei Beweise",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Kurz-Antwort welches Seminar + Beweis-Leiste (P0 2)",
+   "cta": null
+  },
+  {
+   "id": "S03",
+   "element": "el-feature",
+   "job": "Der Einstieg R I, Anker frei-sprechen (P0 4)",
+   "cta": "primary"
+  },
+  {
+   "id": "S04",
+   "element": "el-grid",
+   "job": "Die Formate R II, R III, Bundle (P0 4)",
+   "cta": "primary"
+  },
+  {
+   "id": "S05",
+   "element": "table",
+   "job": "Vergleich: welches Format passt (P0 3 angepasst)",
+   "cta": null
+  },
+  {
+   "id": "S06",
+   "element": "text",
+   "job": "Im Raum: Ablauf der Tage, enthalten (P0 4)",
+   "cta": "primary"
+  },
+  {
+   "id": "S07",
+   "element": "proof",
+   "job": "Stimmen offen mit Quelle (P0 7)",
+   "cta": null
+  },
+  {
+   "id": "S08",
+   "element": "text",
+   "job": "Orte und Termine, Anker termine (P0 9)",
+   "cta": "primary"
+  },
+  {
+   "id": "S09",
+   "element": "person",
+   "job": "Michael kurz (P0 6)",
+   "cta": null
+  },
+  {
+   "id": "S10",
+   "element": "step-flow",
+   "job": "Erst ein Gespräch (P0 5)",
+   "cta": "primary"
+  },
+  {
+   "id": "S11",
+   "element": "faq",
+   "job": "FAQ Auswahl, Reihenfolge, Gruppe, Enthalten, Absage (P0 8)",
+   "cta": null
+  },
+  {
+   "id": "S12",
+   "element": "cta",
+   "job": "Abschluss Mini-Hero (P0 10)",
+   "cta": "primary"
+  }
+ ],
+ "paa_questions": [
+  {
+   "q": "Was macht man in einem Rhetorik-Seminar?",
+   "source": "SERP DE rhetorik seminar, 2026-10-11"
+  },
+  {
+   "q": "Was kostet ein Rhetorik-Seminar?",
+   "source": "SERP DE + Autocomplete, 2026-10-11"
+  },
+  {
+   "q": "Wie lerne ich am besten Rhetorik?",
+   "source": "SERP DE, 2026-10-11",
+   "status": "dropped",
+   "reason_code": "Duplikat",
+   "reason": "auf der Startseite beantwortet"
+  },
+  {
+   "q": "Welche Übungen kann ich machen, um Rhetorik zu trainieren?",
+   "source": "SERP DE, 2026-10-11",
+   "status": "dropped",
+   "reason_code": "off-offer",
+   "reason": "Selbstlern-Übungen, Seite Was ist Rhetorik"
+  },
+  {
+   "q": "Was sind die 5 Säulen der Rhetorik?",
+   "source": "SERP DE, 2026-10-11",
+   "status": "dropped",
+   "reason_code": "off-offer",
+   "reason": "Theorie, Seite Was ist Rhetorik"
+  },
+  {
+   "q": "Rhetorik Seminar für Anfänger",
+   "source": "Google Autocomplete 2026-10-12"
+  },
+  {
+   "q": "Rhetorik Seminar für Führungskräfte",
+   "source": "Google Autocomplete 2026-10-12"
+  }
+ ],
+ "placeholders_allowed": [
+  "Seminarname",
+  "Name und Rolle der Person im Gespräch",
+  "Termine und Ort Bundle",
+  "Plätze",
+  "Verpflegung",
+  "Übernachtung"
+ ],
+ "blockers": []
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>studio.741.night-shift-sleep</string>
+  <key>ProgramArguments</key><array>
+    <string>/usr/bin/pmset</string>
+    <string>sleepnow</string>
+  </array>
+  <key>StartCalendarInterval</key><array>
+    <dict><key>Weekday</key><integer>1</integer><key>Hour</key><integer>23</integer><key>Minute</key><integer>2</integer></dict>
+    <dict><key>Weekday</key><integer>2</integer><key>Hour</key><integer>23</integer><key>Minute</key><integer>2</integer></dict>
+    <dict><key>Weekday</key><integer>3</integer><key>Hour</key><integer>23</integer><key>Minute</key><integer>2</integer></dict>
+    <dict><key>Weekday</key><integer>4</integer><key>Hour</key><integer>23</integer><key>Minute</key><integer>2</integer></dict>
+    <dict><key>Weekday</key><integer>5</integer><key>Hour</key><integer>23</integer><key>Minute</key><integer>2</integer></dict>
+  </array>
+  <key>StandardOutPath</key><string>/Users/martindrendel/741website/reporting/night-shift/sleep.log</string>
+  <key>StandardErrorPath</key><string>/Users/martindrendel/741website/reporting/night-shift/sleep.log</string>
+</dict></plist>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entwurf erster Bildschirm – Claudia Tiemann</title>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--plum:#4b1683;--plum-d:#36105f;--ink:#2a2233;--mist:#eef1f2;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;width:100%;height:100vh;overflow:hidden}
+  .bar{background:var(--plum-d);color:#fff;font-size:15px;text-align:center;padding:10px}
+  .bar b{font-weight:700}
+  header{display:flex;align-items:center;justify-content:space-between;padding:12px 110px;border-bottom:1px solid #eee}
+  header img{height:58px}
+  nav{display:flex;gap:26px;font-size:15.5px;font-weight:500;color:#4a4255}
+  .btn{display:inline-block;background:var(--plum);color:#fff;font-weight:700;border-radius:999px;padding:14px 26px;font-size:16px}
+  .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center;padding:46px 110px 34px;background:linear-gradient(180deg,#fff,var(--mist))}
+  .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--plum);font-weight:700}
+  h1{font-family:"Josefin Sans",sans-serif;font-weight:400;font-size:56px;line-height:1.05;margin:14px 0 16px;color:var(--plum-d)}
+  .sub{font-size:19px;line-height:1.55;color:#4a4255;max-width:620px}
+  .stars{display:flex;align-items:center;gap:10px;margin:18px 0 20px;font-size:15.5px;color:#4a4255}
+  .stars i{color:#f2b01e;font-style:normal;letter-spacing:2px;font-size:18px}
+  .ctas{display:flex;gap:14px;align-items:center}
+  .ghost{border:1.5px solid #d3cbdc;border-radius:999px;padding:13px 22px;font-size:16px;font-weight:600;color:var(--ink)}
+  .note{font-size:14px;color:#6d6478;margin-top:12px}
+  .pic{position:relative;border-radius:22px;overflow:hidden;height:470px;box-shadow:0 20px 50px rgba(0,0,0,.12)}
+  .pic img{width:100%;height:100%;object-fit:cover;object-position:40% 30%}
+  .tag{position:absolute;left:18px;bottom:18px;background:#fff;border-radius:12px;padding:10px 14px;font-size:14.5px;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0 110px}
+  .trust div{background:#fff;border:1px solid #e3dfe8;border-radius:14px;padding:14px 16px;font-size:14.5px;color:#4a4255}
+  .trust b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
+</style>
+</head>
+<body>
+  <div class="bar">Kostenloses Kennenlerngespräch am Telefon: <b>+49 201 17150558</b> · Goethestraße 63-65, Essen-Rüttenscheid</div>
+  <header>
+    <img src="logo.png" alt="Claudia Tiemann">
+    <nav><span>Psychotherapie</span><span>Traumatherapie &amp; EMDR</span><span>Kunsttherapie</span><span>Über mich</span><span>Ablauf &amp; Honorar</span></nav>
+    <span class="btn">Kennenlerngespräch buchen</span>
+  </header>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Heilpraktikerin für Psychotherapie · Essen und online</div>
+      <h1>Traumatherapie und Psychotherapie in Essen.</h1>
+      <p class="sub">Wenn alte Erfahrungen, Angst oder Unsicherheit den Alltag schwer machen: Ich begleite Sie mit EMDR, Innerer-Kind-Arbeit und Kunsttherapie – in meiner Privatpraxis in Rüttenscheid oder online.</p>
+      <div class="stars"><i>★★★★★</i> 5,0 bei Google · 19 Bewertungen</div>
+      <div class="ctas"><span class="btn">Kostenloses Kennenlerngespräch buchen</span><span class="ghost">Ablauf &amp; Honorar →</span></div>
+      <p class="note">Am Telefon, kostenfrei und unverbindlich.</p>
+    </div>
+    <div class="pic"><img src="portrait.jpg" alt=""><div class="tag">Claudia Tiemann · Heilpraktikerin (Psychotherapie)</div></div>
+  </section>
+  <div class="trust">
+    <div><b>5,0 ★ bei Google</b>19 Bewertungen</div>
+    <div><b>EMDR · Kunsttherapie</b>Innere-Kind-Arbeit</div>
+    <div><b>Essen-Rüttenscheid</b>und online</div>
+    <div><b>Kennenlerngespräch</b>kostenfrei am Telefon</div>
+  </div>
+</body>
+</html>

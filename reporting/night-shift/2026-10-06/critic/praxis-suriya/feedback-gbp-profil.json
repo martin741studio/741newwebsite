@@ -1,0 +1,30 @@
+{
+  "plan_index": 0,
+  "client": "Praxis Suriya",
+  "slug": "feedback-gbp-profil",
+  "mode": "FEEDBACK",
+  "feedback_id": "7fd15e89-27b8-426c-a28a-d88998ef37b1",
+  "executor_file": "feedback/praxis-suriya/7fd15e89-27b8-426c-a28a-d88998ef37b1.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_title_meta_h1_nap_jsonld": "n/a — FEEDBACK item has no Title/Meta/H1/NAP/JSON-LD block; the one [fehlt: ...] present is in Diff-Hinweis, correctly flagging a missing original-text comparison, not a content placeholder.",
+    "nap_block_matches_locked_record": "n/a — no NAP block in this feedback item (subject is opening hours / CTA / accessibility, not address).",
+    "jsonld_valid": "n/a — no JSON-LD in this feedback item.",
+    "language_matches_market_lang": "pass — copy is German throughout, market_lang=de.",
+    "hwg_scan": "pass — no 'heilt', 'garantiert', '100 %', 'Heilung' or similar claims anywhere in the text.",
+    "feedback_addresses_comment_sentence_for_sentence": {
+      "result": "pass",
+      "evidence": [
+        "'Di-Do 7.30-18.00, Fr 7.30-12.00' -> Vorschlag Öffnungszeiten lists Di-Do 7:30-18:00, Fr 7:30-12:00 verbatim.",
+        "'Telefonisch Termin vereinbaren: Mo 12-14 Uhr' -> Vorschlag Hinweis-Zusatz 'Telefonische Terminvereinbarung: Montag 12:00-14:00 Uhr.'",
+        "'Termin Button habe ich nicht, nur Buchungsformular' -> Vorschlag CTA section: use booking-form link as main CTA, do not activate Google's native Termin-button.",
+        "'barrierefrei aber nicht Toilette' -> Vorschlag Barrierefreiheit: activate wheelchair-access attribute, explicitly do NOT activate wheelchair-accessible-toilet attribute.",
+        "'Öffnungszeiten kannst DU ändern wie du möchtest' -> Vorschlag Umsetzung section reads this as Martin's go-ahead to enter the three values directly, without re-asking Coralie."
+      ],
+      "note": "Mon/Sat/Sun marked 'geschlossen' is a reasonable inference from the stated Di-Do/Fr/Mo-phone pattern, not an invented new fact; no client-implied fact was left unmarked."
+    },
+    "deslop_hard_check": "not applied — Vorschlag is an internal recommendation/field-value list for Martin (which attributes to toggle, which hours to enter), not finished client-facing prose meant to ship as-is. Per SKILL.md this is not a blocker for FEEDBACK items of this kind. (The separate GBP-Beschreibung feedback item, plan index 2, is the one that is ship-as-is prose and should get the de-slop check.)"
+  },
+  "fails": [],
+  "verdict": "pass"
+}

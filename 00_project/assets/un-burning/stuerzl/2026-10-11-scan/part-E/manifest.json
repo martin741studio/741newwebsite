@@ -1,0 +1,137 @@
+{
+ "run_id": "stuerzl-2026-10-11-scan",
+ "evidence": [
+  {
+   "id": "EV-E-gsc-access-test",
+   "file": "evidence/area_e/EV-E-gsc-access-test.json",
+   "sha256": "b3ed35932422a6db22616089c6caa2a40075b67b66d359bccfa3b9fe3de5aca1",
+   "bytes": 4586,
+   "tool": "Google Search Console API (service account, readonly scope)",
+   "request": "node scripts/E/e1_gsc_test.mjs: sites.list; searchAnalytics.query (1 row, Sep 2026) and urlInspection.inspect (3 URLs) for sc-domain:stuerzl-steuerstrafrecht.de, https://stuerzl-steuerstrafrecht.de/, https://www.stuerzl-steuerstrafrecht.de/",
+   "cost_eur": 0,
+   "collected_at": "2026-10-11T05:20:12+02:00",
+   "note": "all property calls 403"
+  },
+  {
+   "id": "EV-E-site-search",
+   "file": "evidence/area_e/EV-E-site-search.json",
+   "sha256": "f09fe1f2d051759a51a440cf812f51013f610d60006fe54b561b4fc2d1a20dd2",
+   "bytes": 10232,
+   "tool": "firecrawl_search (web index, not Google)",
+   "request": "firecrawl_search query=\"site:stuerzl-steuerstrafrecht.de\" limit=50 location=Germany sources=web; second query for steuerstrafrecht/leistungen paths",
+   "cost_eur": 0,
+   "collected_at": "2026-10-11T05:22:28+02:00",
+   "note": "12 Firecrawl credits, no DataForSEO"
+  },
+  {
+   "id": "EV-E-site-search-2",
+   "file": "evidence/area_e/EV-E-site-search-2.json",
+   "sha256": "db710f2aed91f93119cc043ef03366b63b8ff52b96ee67bbdc6108a3c5893917",
+   "bytes": 1377,
+   "tool": "firecrawl_search (web index, not Google)",
+   "request": "4 further site: queries, see file",
+   "cost_eur": 0,
+   "collected_at": "2026-10-11T05:23:02+02:00",
+   "note": "one query failed 429"
+  },
+  {
+   "id": "EV-E-crawl",
+   "file": "evidence/area_e/EV-E-crawl.json",
+   "sha256": "a9448a0f502583bca39f8cb1656eb990a6fddf0ded3d4af209d73e194d1a418c",
+   "bytes": 610866,
+   "tool": "python requests + bs4 (GET only)",
+   "request": "BFS crawl from https://www.stuerzl-steuerstrafrecht.de/ depth<=4, UA 741-unburning-scan/1.0, delay 0.3 s; script scripts/E/e2_crawl.py",
+   "cost_eur": 0,
+   "collected_at": "2026-10-11T05:23:27+02:00",
+   "note": "79 URLs fetched"
+  },
+  {
+   "id": "EV-E-crawl-html",
+   "file": "evidence/area_e/EV-E-crawl-html.tar.gz",
+   "sha256": "ac7a68a4b1901a790e3e1a55a4e9305dba697deacd8f77db0daabb88c2d04856",
+   "bytes": 1163817,
+   "tool": "python requests (GET only)",
+   "request": "raw response bodies of the crawl EV-E-crawl",
+   "cost_eur": 0,
+   "collected_at": "2026-10-11T05:23:27+02:00",
+   "note": "79 bodies"
+  },
+  {
+   "id": "EV-E-probes",
+   "file": "evidence/area_e/EV-E-probes.json",
+   "sha256": "8cfd77dbb4c45278c830d589d823322d35d520a36609ede1d4a5ac960a5da704",
+   "bytes": 24852,
+   "tool": "python requests (GET only)",
+   "request": "41 GET probes of Joomla URL variants (scheme, host, index.php, trailing slash, case, tmpl/print/pdf/feed, users, search, category pagination, 404); script scripts/E/e3_probes.py",
+   "cost_eur": 0,
+   "collected_at": "2026-10-11T05:24:13+02:00",
+   "note": ""
+  },
+  {
+   "id": "EV-E-probes-2",
+   "file": "evidence/area_e/EV-E-probes-2.json",
+   "sha256": "7175a1a32b2e18b1a7edfcd549f9957e1c002a37a9ed0e6296265723a43b4b03",
+   "bytes": 4637,
+   "tool": "python requests (GET only)",
+   "request": "11 further GET probes: article and category URL variants, directory listings; inline script (same method as e3_probes.py)",
+   "cost_eur": 0,
+   "collected_at": "2026-10-11T05:27:11+02:00",
+   "note": ""
+  },
+  {
+   "id": "EV-E-dns-txt",
+   "file": "evidence/area_e/EV-E-dns-txt.txt",
+   "sha256": "aba5c56cf4503360c01b911b4db7e41f5b615c51a3fc21982ac9c2dc53f9bfbe",
+   "bytes": 272,
+   "tool": "dig",
+   "request": "dig +noall +answer TXT stuerzl-steuerstrafrecht.de",
+   "cost_eur": 0,
+   "collected_at": "2026-10-11T05:28:09+02:00",
+   "note": "shows google-site-verification TXT (domain property verification token)"
+  },
+  {
+   "id": "EV-E-robots-txt",
+   "file": "evidence/area_e/EV-E-robots-txt.txt",
+   "sha256": "d974f42f070bb96d4601c706c54f883b73a2e8334117a270682608e58c6f8cc4",
+   "bytes": 836,
+   "tool": "python requests (GET)",
+   "request": "GET https://www.stuerzl-steuerstrafrecht.de/robots.txt (taken from crawl bodies EV-E-crawl-html)",
+   "cost_eur": 0,
+   "collected_at": "2026-10-11T05:29:25+02:00",
+   "note": "raw body; pulled during crawl at 2026-10-11T05:21:57+02:00"
+  },
+  {
+   "id": "EV-E-sitemap-osmap",
+   "file": "evidence/area_e/EV-E-sitemap-osmap.xml",
+   "sha256": "0dfc722d6972bc43d280fa267c9e33dc22b97a1fc7eb8b71760a9e72d63d1213",
+   "bytes": 3512,
+   "tool": "python requests (GET)",
+   "request": "GET https://www.stuerzl-steuerstrafrecht.de/index.php?option=com_osmap&view=xml&id=1&format=xml (found via 303 from ...&view=xml&id=1; taken from crawl bodies)",
+   "cost_eur": 0,
+   "collected_at": "2026-10-11T05:29:25+02:00",
+   "note": "OSMap sitemap id=1; pulled during crawl"
+  },
+  {
+   "id": "EV-E-baseline-crawl",
+   "file": "evidence/area_e/EV-E-baseline-crawl.json",
+   "sha256": "6dc44b0ef5bc7e7b99aa6a4101cefcee394759b04ca90b44ae23571a0cfa7cd3",
+   "bytes": 44341,
+   "tool": "stored baseline file (derived, older data)",
+   "request": "copy of 00_project/assets/un-burning/stuerzl/baseline/crawl.json; original crawl from the 08.10.2026 audit research (Befunde section 10); not re-fetched by this evidence row",
+   "cost_eur": 0,
+   "collected_at": "2026-10-11T05:29:25+02:00",
+   "note": "derived: older stored data, original date 2026-10-08 per Befunde section 10"
+  },
+  {
+   "id": "EV-E-linkgraph",
+   "file": "evidence/area_e/EV-E-linkgraph.json",
+   "sha256": "f3a4ddb36e58519f7fb5483dc69347c4e3298d8fcc2aef89cc629c14ff8ed8d8",
+   "bytes": 91391,
+   "tool": "python3 + bs4 (derived)",
+   "request": "scripts/E/e4_graph.py and e5_build.py applied to the crawl bodies EV-E-crawl-html; content area = #sp-component",
+   "cost_eur": 0,
+   "collected_at": "2026-10-11T05:36:00+02:00",
+   "note": "derived data, recomputable"
+  }
+ ]
+}

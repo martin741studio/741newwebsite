@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Bali Healing · Client dashboard prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="martin-guide/martin-guide.css">
+<style>
+:root{--yellow:#fac118;--ink:#252525;--cream:#fffcf3;--paper:#fff;--line:#e8e1d3;--soft:#6b665a;--mute:#8c8677;
+--bar:#c9c2ae;--bar-now:#252525;--green:#2e7d4f;--green-bg:#e7f6ed;--amber:#a86a00;--amber-bg:#fdf3d7;--red:#b3261e;--red-bg:#fdeceb;--grey:#6b665a;--grey-bg:#f1eee6;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--cream);color:var(--ink);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}button{font-family:inherit;cursor:pointer}
+.proto{background:var(--ink);color:#fff;font-size:13px;padding:6px 16px;text-align:center}
+.top{display:flex;align-items:center;gap:16px;padding:12px 24px;background:var(--paper);border-bottom:1px solid var(--line)}
+.top img{height:30px}.top .who{margin-left:auto;font-size:14px;color:var(--soft)}
+.wrap{max-width:1080px;margin:0 auto;padding:20px 24px 96px}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:20px;scrollbar-width:none}
+.tab{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:9px 18px;font-size:15px;font-weight:500;white-space:nowrap;color:var(--ink);text-decoration:none}
+.tab.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tab .n{display:inline-block;background:var(--yellow);color:var(--ink);border-radius:999px;font-size:12px;font-weight:700;padding:0 7px;margin-left:6px}
+.sub{display:flex;gap:6px;flex-wrap:wrap;margin:-4px 0 18px;align-items:center}
+.pill{border:1px solid var(--line);background:transparent;border-radius:8px;padding:6px 12px;font-size:14px;text-decoration:none;color:var(--soft)}
+.pill.on{background:var(--yellow);color:var(--ink);border-color:var(--yellow);font-weight:700}
+.sw{margin-left:auto;display:flex;gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--paper)}
+.sw button{border:0;background:transparent;padding:6px 12px;font-size:14px;color:var(--soft)}.sw button.on{background:var(--ink);color:#fff}
+h1.t{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:38px;line-height:1.1;letter-spacing:.2px;margin:2px 0 6px}
+h2{font-size:19px;font-weight:700;margin:0 0 4px}
+h3{font-size:16px;font-weight:700}
+.lead{font-size:18px;color:var(--ink);margin:0 0 18px;max-width:62ch}
+.mut{color:var(--soft);font-size:14px}.mut.s{font-size:13px;color:var(--mute)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.gap{margin-top:16px}.gap2{margin-top:28px}
+.q{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin-bottom:8px}
+.big{font-size:44px;font-weight:700;line-height:1.05;letter-spacing:-.5px;border-bottom:4px solid var(--yellow);display:inline-block;padding-bottom:2px}
+.big.plain{border:0}
+.sentence{margin:10px 0 12px;font-size:16px}
+.chk{font-size:12px;color:var(--mute);margin-top:8px}
+/* status */
+.st{display:inline-flex;align-items:center;gap:6px;border-radius:8px;padding:3px 10px;font-size:13px;font-weight:700}
+.st svg{width:12px;height:12px;flex:0 0 auto}
+.st.green{background:var(--green-bg);color:var(--green)}.st.amber{background:var(--amber-bg);color:var(--amber)}.st.red{background:var(--red-bg);color:var(--red)}.st.grey{background:var(--grey-bg);color:var(--grey)}
+.banner{display:flex;gap:12px;align-items:center;flex-wrap:wrap;border-radius:var(--r);padding:14px 18px;margin-bottom:16px;font-size:16px;border:1px solid}
+.banner.red{background:var(--red-bg);border-color:#efc3bf;color:#6d1a15}.banner.amber{background:var(--amber-bg);border-color:#ecd9a0;color:#5b3b00}.banner.green{background:var(--green-bg);border-color:#bfe3cd;color:#1d5133}
+.banner b{font-weight:700}
+.strip{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.seg{display:flex;gap:3px}.seg i{width:14px;height:8px;border-radius:2px;background:#e3dccb}.seg i.d{background:var(--ink)}.seg i.n{background:var(--yellow)}
+/* needs you */
+.need{border:1px solid #ecd9a0;background:#fffbea;border-radius:var(--r);padding:18px 20px}
+.need ul{list-style:none;margin-top:10px}
+.need li{display:flex;gap:12px;align-items:center;padding:10px 0;border-top:1px solid #f0e4b8;flex-wrap:wrap}
+.need li:first-child{border-top:0}
+.need li .tx{flex:1 1 260px}
+.btn{border:0;border-radius:10px;padding:10px 18px;font-size:15px;font-weight:700;background:var(--yellow);color:var(--ink);text-decoration:none;display:inline-block}
+.btn.o{background:transparent;border:1px solid var(--ink)}
+/* charts */
+svg.bars{width:100%;height:auto;display:block}
+svg.bars text{font-family:"DM Sans",sans-serif;fill:var(--soft);font-size:11px}
+svg.bars .v{fill:var(--ink);font-weight:700;font-size:12px}
+.tile .num{font-size:30px;font-weight:700;line-height:1.1}
+.tile .d{font-size:14px;color:var(--soft);margin:2px 0 6px}
+.dl{display:inline-block;margin-left:6px;font-size:13px;font-weight:700;color:var(--soft)}
+/* lists, rows */
+table.t{width:100%;border-collapse:collapse;font-size:15px}
+table.t th{text-align:left;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);padding:6px 8px;border-bottom:1px solid var(--line)}
+table.t td{padding:10px 8px;border-bottom:1px solid #f1ebdc;vertical-align:top}
+.row{display:flex;gap:10px;align-items:center;margin:8px 0;font-size:15px}
+.row .l{flex:0 0 120px}.row .b{flex:1;height:12px;background:#efe9d9;border-radius:6px;overflow:hidden}.row .b i{display:block;height:100%;background:var(--bar-now);border-radius:6px}.row .c{flex:0 0 44px;text-align:right;font-weight:700}
+.bar3 .b i.t{background:var(--bar)}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.kw{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #f1ebdc;font-size:15px}
+.kw b{white-space:nowrap}
+.heat{display:grid;grid-template-columns:minmax(140px,1.6fr) repeat(3,minmax(0,1fr));gap:3px;font-size:13px}
+.heat div{padding:7px 6px;border-radius:5px;text-align:center}
+.heat .h{font-weight:700;color:var(--mute);font-size:12px;background:none}.heat .k{text-align:left;font-size:14px;background:none;padding-left:0}
+.hz0{background:#f1eee6;color:#6b665a}.hz1{background:#e6e0cf}.hz2{background:#cfc6ad}.hz3{background:#8f8566;color:#fff}.hz4{background:#252525;color:#fff}
+.gapcard{border:2px dashed #d7cfb8;border-radius:var(--r);padding:16px 18px;background:#fffefa}
+.tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.tr .col h3{display:flex;justify-content:space-between;margin-bottom:8px}
+.trk{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;font-size:15px}
+.trk .o{font-size:13px;color:var(--soft);margin-top:4px}
+.tree details{border-top:1px solid #f1ebdc;padding:8px 0}.tree summary{cursor:pointer;display:flex;justify-content:space-between;gap:10px;font-weight:500}
+.badge{font-size:12px;font-weight:700;border-radius:6px;padding:2px 8px;background:var(--grey-bg);color:var(--grey);white-space:nowrap}
+.badge.up{background:var(--amber-bg);color:var(--amber)}.badge.new{background:var(--yellow);color:var(--ink)}
+.dec{border:1px solid #ecd9a0;background:#fffbea;border-radius:var(--r);padding:18px 20px;margin-bottom:14px}
+.dec label{display:flex;gap:10px;margin:8px 0;align-items:flex-start}
+.dec input{margin-top:5px}
+.act{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.foot{margin-top:28px;font-size:13px;color:var(--mute)}
+.chat{position:fixed;right:18px;bottom:18px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:13px 20px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.mg{margin:4px 0 18px}
+.dim{opacity:.55}
+@media(max-width:860px){.grid3,.grid2,.cols3,.tr{grid-template-columns:1fr}.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.wrap{padding:16px 16px 96px}.top{padding:10px 16px}h1.t{font-size:32px}.big{font-size:38px}.heat{grid-template-columns:minmax(110px,1.4fr) repeat(3,minmax(0,1fr));font-size:12px}.row .l{flex-basis:96px}}
+</style>
+</head>
+<body>
+<div class="proto">Prototype · Bali Healing · real numbers read 13 Oct 2026 · not live · nothing here changes the portal</div>
+<header class="top"><img src="logo_black.png" alt="741"><span class="who">Bali Healing · Peggy &amp; Pasha</span></header>
+<main class="wrap" id="app"></main>
+<button class="chat" onclick="alert('Chat with 741 (prototype)')">Chat with 741</button>
+<script>
+const $=s=>document.querySelector(s);
+const fmt=n=>new Intl.NumberFormat('en-US').format(n);
+const MG='martin-guide/';
+const D={
+ months:['Apr','May','Jun','Jul','Aug','Sep','1–13 Oct'],
+ nhc:{calls:[19,16,13,9,23,21,8],web:[260,301,225,260,254,224,67],dir:[295,297,286,311,258,230,105]},
+ beauty:{calls:[null,null,null,null,null,2,null],web:[null,null,null,null,null,59,null],dir:[null,null,null,null,null,97,null]},
+ wa:[null,null,null,null,321,313,123],
+ gsc:{sep:599,aug:609,jul:653,pos:10.8,posJul:15.9},
+ rev:{nhc:{n:100,star:4.7,unans:21,leader:128,months:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep'],per:[7,2,0,0,0,1,2,0,3]},beauty:{n:10,star:5.0,unans:2}},
+ map:[
+  ['naet allergy treatment',49,'23 Sep'],['prolozone injection',36,'23 Sep'],['naturopath',35,'10 Oct'],['craniosacral therapy',25,'23 Sep'],
+  ['ozone therapy',19,'12 Oct'],['reiki',13,'23 Sep'],['ozone insufflation',8,'23 Sep'],
+  ['acupuncture',1,'10 Oct'],['skin tag removal',0,'10 Oct'],['iv drip therapy',0,'10 Oct'],['ozone major autohemotherapy',0,'23 Sep'],['ozone minor autohemotherapy',0,'23 Sep']],
+ beautyMap:['basic facial','dermatoscopy','DMAE mesotherapy','gyneco aesthetic','intramuscular shots','microneedling','PRP face','PRP hair','PPC fat reduction','acid peeling','cell reject treatment','advanced facial rejuvenation','nucleofill PDRN'],
+ ai:[['naet allergy treatment',100,100,0],['naturopath',100,66.67,0],['osteopathy',88.89,55.56,0],['craniosacral therapy',88.89,11.11,55.56],['prolozone injection',88.89,33.33,0],['access bars therapy',11.11,0,88.89],['ozone major autohemotherapy',77.78,0,55.56],['iv drip therapy',11.11,33.33,77.78],['ozone minor autohemotherapy',44.44,0,100],['ozone therapy',55.56,12.5,100],['neural therapy',44.44,66.67,55.56],['reiki',66.67,0,33.33],['ozone insufflation',55.56,0,11.11],['clinical hypnotherapy',22.22,44.44,11.11],['traditional chinese medicine',22.22,0,0],['physiotherapy',11.11,0,0]],
+ ads:{spent:571785,clicks:61,wa:14,per:40842,cpc:9374,imp:685},
+ funnel:[['Requests sent',149],['Messages sent',38],['In conversation',14],['Article offers',9],['Links live',0]],
+ tracks:[
+  ['Not started','Magazine feature every 2 months','First placement about 22 Nov','741 + you'],
+  ['Not started','Local business directories','2 of 5 directories are worth using. Ready to submit','741'],
+  ['Not started','Blog and content structure','6 new pages tied to real demand. Ready once you approve','741'],
+  ['Not started','Short videos on core pages','Open: who films','You + 741'],
+  ['Not started','Standing review-request process','Steady reviews. Target: twice the leader','You + 741'],
+  ['In progress','LinkedIn collaboration outreach','149 requests sent, 9 article offers, 0 links live','Peggy + 741'],
+  ['In progress','Google profile completeness check','Done for Natural Health Center. Beauty Clinic still to check','741'],
+  ['In progress','Competitor benchmark','Ozone and naturopath done. IV drip, skin tag, TCM need a scan','741'],
+  ['Live','Backlink deep-dive','List of links to reclaim and sites worth pursuing','741'],
+  ['Live','AI visibility starting number','Baseline for 16 keywords','741'],
+  ['Live','Sitewide business schema','Google and AI engines can read your facts','741'],
+  ['Live','Tracking: Search, Analytics, Google profile','All three numbers readable','741'],
+  ['Live','Internal linking','Pages with 0–1 inbound links down from 46 to 14','741']],
+ tree:[['Homepage','pillar',[]],['Ozone and autohemotherapy','4 keep',[]],['Naturopathy','1 keep',[]],['TCM and acupuncture','2 keep',['New acupuncture page']],['Physio and manual therapy','5 keep',[]],['Mind and energy','4 keep',[]],['Beauty hub','pillar',[]],['Skin tag and mole removal','2 keep',[]],['Skin and injectables','14 keep',[]],['IV drip / infusions','1 update',['Rename to "IV Drip"']],['Wellness hub','pillar',[]],['Content / blog','6 new',['Craniosacral','Prolozone','NAET allergy','Reiki in Canggu','Ozone insufflation vs autohemotherapy','"Bali Healing Therapy" landing']],['Contact and legal','2 keep',[]]],
+ decisions:[
+  ['Name of the IV page','"IV Drip by Bali Healing" uses the words people search for. 1,300 searches a month for "iv drip bali".',['IV Drip by Bali Healing (741 recommends)','Keep "Infusions"']],
+  ['Prices and doctor names','Visitors look for both before they book. None of your 58 pages names a price.',['I send prices and names this week','I send them next week']],
+  ['Official business name in the Google profile','Google can object to names that differ from your sign.',[]],
+  ['Category "Medical clinic"','The leading ozone and IV profiles use it. It fits only if your licences allow it.',[]],
+  ['Naturopathy and live blood analysis','You stopped them on 30 July, but the site and profile still show them.',[]],
+  ['Breathwork, sound healing, IV at home, general doctor','People search for them. Only if you offer them.',[]]],
+ reports:[
+  ['SEO and Content Roadmap','Status 13 Oct 2026','balihealing-seo-roadmap.html','Current'],
+  ['Website Structure — planned build','18 Sep 2026','balihealing-seitenbaum.html','Current'],
+  ['Local Visibility and Google Ads Update','August 2026','balihealing-local-visibility-2026-08.html','Replaced by Results: Found on Google'],
+  ['Google Ads and Website Performance','3–19 Aug 2026','balihealing-2026-08-19.html','Replaced by Results: Ads'],
+  ['Google Ads Weekly Report — Ozone Therapy','3–9 Aug 2026','','Replaced by Results: Ads']]
+};
+const RURL='https://clients.741.studio/r/a331bf716f08/';
+const S={green:['green','Fine','<svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="5.5" fill="currentColor"/></svg>'],amber:['amber','Needs you','<svg viewBox="0 0 12 12"><path d="M6 1 11.5 11H.5z" fill="currentColor"/></svg>'],red:['red','Blocked','<svg viewBox="0 0 12 12"><path d="M4 .5h4L11.5 4v4L8 11.5H4L.5 8V4z" fill="currentColor"/></svg>'],grey:['grey','No data','<svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="4.8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>']};
+const st=(c,w)=>`<span class="st ${c}">${S[c][2]}${w||S[c][1]}</span>`;
+let profile='nhc';
+function bars(vals,labels,o={}){
+ const W=o.w||340,H=o.h||96,pad=18,n=vals.length,gw=(W)/n,bw=Math.min(34,gw-8);const mx=Math.max(...vals.filter(v=>v!=null),1);
+ let g=`<defs><pattern id="h${o.id||0}" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fffefa"/><rect width="2.4" height="6" fill="#b9b19b"/></pattern></defs>`;
+ vals.forEach((v,i)=>{const x=i*gw+(gw-bw)/2;const part=o.partial===i;const last=o.full===i;
+  if(v==null){g+=`<rect x="${x}" y="${H-pad-14}" width="${bw}" height="14" rx="3" fill="none" stroke="#c9c2ae" stroke-dasharray="3 3"/>`;}
+  else{const h=Math.max(2,(H-pad-16)*v/mx);g+=`<rect x="${x}" y="${H-pad-h}" width="${bw}" height="${h}" rx="3" fill="${part?`url(#h${o.id||0})`:last?'var(--bar-now)':'var(--bar)'}" ${part?'stroke="#b9b19b"':''}/><text class="${last||part?'v':''}" x="${x+bw/2}" y="${H-pad-h-4}" text-anchor="middle">${fmt(v)}</text>`;}
+  g+=`<text x="${x+bw/2}" y="${H-3}" text-anchor="middle">${labels[i]}</text>`;});
+ return `<svg class="bars" viewBox="0 0 ${W} ${H}" role="img" aria-label="${o.aria||'Bar chart'}">${g}</svg>`;
+}
+const sum=(a,i)=>a.reduce((s,x)=>s+(x[i]||0),0);
+function enq(p,i){return {calls:D[p].calls[i],web:D[p].web[i],dir:D[p].dir[i]}}
+function seg(){let h='';for(let i=1;i<=13;i++)h+=`<i class="${i<5?'d':i==5?'n':''}"></i>`;return `<span class="seg" aria-label="Week 5 of 13">${h}</span>`}
+function mg(pose,txt,alt){return `<aside class="mg mg--small"><img class="mg__img" src="${MG}martin-${pose}.webp" alt="${alt}" width="72"><div class="mg__bubble"><span class="mg__name">Martin</span><p>${txt}</p></div></aside>`}
+function tabs(cur){const T=[['overview','Overview'],['results','Results'],['plan','Plan'],['decisions','Decisions',6],['reports','Reports'],['setup','Setup',3]];
+ return `<nav class="tabs">${T.map(t=>`<a class="tab ${cur==t[0]?'on':''}" href="#/${t[0]}">${t[1]}${t[2]?`<span class="n">${t[2]}</span>`:''}</a>`).join('')}</nav>`}
+function subnav(cur){const T=[['enquiries','Enquiries'],['found','Found on Google'],['reviews','Reviews'],['ads','Ads'],['backlinks','Backlinks']];
+ return `<div class="sub">${T.map(t=>`<a class="pill ${cur==t[0]?'on':''}" href="#/results/${t[0]}">${t[1]}</a>`).join('')}<span class="sw" role="group" aria-label="Google profile"><button class="${profile=='nhc'?'on':''}" onclick="setP('nhc')">Natural Health Center</button><button class="${profile=='beauty'?'on':''}" onclick="setP('beauty')">Beauty Clinic</button></span></div>`}
+window.setP=p=>{profile=p;render()};
+function overview(){
+ const a=enq('nhc',5),b=enq('nhc',4);const tot=a.calls+a.web+a.dir+D.wa[5],totB=b.calls+b.web+b.dir+D.wa[4];const diff=tot-totB;
+ const g6=D.nhc.calls.map((_,i)=>D.nhc.calls[i]+D.nhc.web[i]+D.nhc.dir[i]);
+ const gaps=Math.abs(diff);
+ return `${tabs('overview')}
+ <div class="strip"><b>Bali Healing</b><span class="mut">Week 5 of 13</span>${seg()}<span class="mut">Last update from 741: today, 13 Oct. Roadmap with status.</span></div>
+ <div class="banner red">${st('red','Blocked')}<span><b>Google Ads are paused since 1 Oct.</b> Google's check needs your business licence. 741 handles it this week. <b>4 things need you.</b></span></div>
+ ${mg('point','Two finished pages are hidden from Google. Once you say yes, they go live this week.','Martin points to the main message')}
+ <div class="grid3">
+  <div class="card"><div class="q">Do I get more enquiries?</div><div class="big">${fmt(tot)}</div><p class="sentence"><b>contact actions in September</b>, ${fmt(gaps)} fewer than in August. All four channels dipped a little.</p>
+   ${bars(g6,D.months,{partial:6,full:5,id:'o1',aria:'Google profile actions per month'})}<div class="chk">Google profile actions per month. WhatsApp taps: ${D.wa[5]} in September. Checked by 741 · 13 Oct</div><a class="btn o gap" href="#/results/enquiries">See enquiries</a></div>
+  <div class="card"><div class="q">Am I easier to find?</div><div class="big">${D.gsc.sep}</div><p class="sentence"><b>search clicks in September</b>, ${D.gsc.aug-D.gsc.sep} fewer than August. Average position ${D.gsc.pos} (page 2), up from ${D.gsc.posJul} in July.</p>
+   <p class="mut">On the map: top 3 on 19 of 49 spots for "ozone therapy" (12 Oct).</p><div class="chk">Checked by 741 · 13 Oct</div><a class="btn o gap" href="#/results/found">See where you show up</a></div>
+  <div class="card"><div class="q">What is 741 doing?</div><p class="sentence"><b>This week:</b> Google licence for the ads, IV drip and acupuncture pages visible again, similar treatments on the Beauty pages, videos on treatment pages.</p>
+   <p class="mut"><b>Done recently:</b> Google profile name changed · 149 outreach requests sent · pages with few internal links down from 46 to 14.</p><div class="chk">Checked by 741 · 13 Oct</div><a class="btn o gap" href="#/plan">See the plan</a></div>
+ </div>
+ <div class="need gap2"><h2>Needs you (4)</h2><span class="mut">741 waits for these. Nothing changes on your live site without your OK.</span><ul>
+  <li>${st('amber','Needs you')}<span class="tx"><b>Name of the IV page.</b> "IV Drip by Bali Healing" uses the words people search for.</span><a class="btn" href="#/decisions">Decide</a></li>
+  <li>${st('amber','Needs you')}<span class="tx"><b>Prices and doctor names.</b> None of your 58 pages names a price.</span><a class="btn" href="#/decisions">Decide</a></li>
+  <li>${st('amber','Needs you')}<span class="tx"><b>Reply to the 8 newest reviews.</b> 79 of 100 reviews have a reply. The newest do not.</span><a class="btn o" href="#/results/reviews">Open reviews</a></li>
+  <li>${st('amber','Needs you')}<span class="tx"><b>Setup: 3 steps still open</b> (business details, material, positioning questions).</span><a class="btn o" href="#/setup">Open setup</a></li></ul></div>
+ <p class="foot">Google profile numbers: Natural Health Center. Google can add the newest 2–3 days late. Sentences are drafted from the numbers and checked by 741.</p>`}
+function tile(title,vals,labels,note,o){const v=vals,last=v[5];const prev=v[4];const d=(last!=null&&prev!=null)?last-prev:null;
+ return `<div class="card tile"><div class="q">${title}</div><div class="num">${last==null?'—':fmt(last)}<span class="dl">${d==null?'':(d>0?'+':'')+d+' vs Aug'}</span></div><div class="d">${note}</div>${bars(v,labels,{partial:6,full:5,id:o,aria:title})}</div>`}
+function enquiries(){
+ const P=profile,d=D[P];const wa=D.wa;const lab=D.months;
+ const a=P=='nhc'?d.calls[5]+d.web[5]+d.dir[5]+wa[5]:null;
+ return `${tabs('results')}${subnav('enquiries')}<h1 class="t">Do I get more enquiries?</h1>
+ <p class="lead">${P=='nhc'?`<b>${fmt(a)} contact actions in September.</b> That is ${fmt(Math.abs(a-(d.calls[4]+d.web[4]+d.dir[4]+wa[4])))} fewer than in August. Calls, website visits, direction requests and WhatsApp taps each dipped a little.`:'<b>The Beauty Clinic profile had 158 Google actions in September</b> (2 calls, 59 website visits, 97 direction requests). Earlier months are not stored yet.'}</p>
+ <div class="grid2">
+  ${tile('Taps on Call',d.calls,lab,'Button taps on your Google profile. Not proven calls.','e1')}
+  ${tile('Visits to your website from Google',d.web,lab,'Clicks, not enquiries.','e2')}
+  ${tile('Asked for directions',d.dir,lab,'Google adjusts this count after the fact.','e3')}
+  ${tile('Taps on WhatsApp (website)',wa,lab,P=='nhc'?'Counted since 2 Aug. Before that: not tracked, not zero.':'Website-wide, not per profile. Counted since 2 Aug.','e4')}
+ </div>
+ <div class="grid2 gap2"><div class="gapcard"><h3>Leads you told us about</h3><p class="mut">Your website has no enquiry form, so no leads are counted yet.</p></div>
+  <div class="gapcard">${mg('think','Booked jobs: not tracked yet. Send us one number each month, for example from WhatsApp Business. Then we can show what an enquiry costs.','Martin thinks about booked jobs')}<h3>Booked jobs</h3><p class="mut">Not tracked yet.</p></div></div>
+ <p class="foot">Hatched bar: 1–13 Oct, still counting. Dashed slot: not tracked yet. Google numbers read 13 Oct. The newest 2–3 days can still grow.</p>`}
+function found(){
+ const P=profile;
+ const rows=D.map;const win=rows.filter(r=>r[1]>=25),cl=rows.filter(r=>r[1]>=5&&r[1]<25),mi=rows.filter(r=>r[1]<5);
+ const kw=r=>`<div class="kw"><span>${r[0]}</span><b>${r[1]} of 49</b></div>`;
+ const aiPlatform=[['ChatGPT',55.6],['Gemini',26.5],['Google AI mode',36.8]];
+ const cell=p=>{const x=Math.round(p/100*9);const z=x==0?0:x<=2?1:x<=4?2:x<=6?3:4;return `<div class="hz${z}">${p==12.5?'1 of 8':x+' of 9'}</div>`};
+ return `${tabs('results')}${subnav('found')}<h1 class="t">Am I easier to find?</h1>
+ ${P=='nhc'?`<p class="lead"><b>On the map you are in the top 3 on 19 of 49 spots for "ozone therapy"</b> (12 Oct). In September it was 28 of 49. For "naturopath" you are top 3 on 35 of 49.</p>
+ <div class="grid3"><div class="card"><div class="q">On the map</div><div class="big">19 of 49</div><p class="sentence">Top-3 coverage for "ozone therapy". <span class="mut">SoLV 38.78%</span></p></div>
+ <div class="card"><div class="q">In normal results</div><div class="big">${D.gsc.pos}</div><p class="sentence">Average position in Google Search, page 2. July: ${D.gsc.posJul}.</p></div>
+ <div class="card"><div class="q">In AI answers</div><div class="big">5 of 9</div><p class="sentence">ChatGPT names you in about 5 of 9 checks. Gemini about 2, Google AI mode about 3 (23 Sep).</p></div></div>
+ <div class="card gap2"><h2>Ozone therapy on the map</h2><p class="mut">Each dot is one spot around the clinic. The map shows the grid of an earlier scan. The new grid needs the 49 points saved with each scan.</p>
+  <img src="https://lf-static-v2.localfalcon.com/image/17f404087637806" alt="Grid map for ozone therapy" style="max-width:100%;border-radius:10px;margin-top:10px;border:1px solid var(--line)" loading="lazy"></div>
+ <h2 class="gap2">Where you win, where you are close, where you are missing</h2>
+ <div class="cols3 gap"><div class="card"><div class="st green">${S.green[2]}You win · 25+ of 49</div>${win.map(kw).join('')}</div><div class="card"><div class="st amber">${S.amber[2]}Close · 5–24 of 49</div>${cl.map(kw).join('')}</div><div class="card"><div class="st grey">${S.grey[2]}Missing · under 5</div>${mi.map(kw).join('')}</div></div>
+ <p class="mut s gap">12 of 18 keywords shown. Scan dates differ (23 Sep to 12 Oct). Only "ozone therapy" has a series with the same settings. Different scan settings are not comparable.</p>
+ <div class="card gap2"><h2>Ozone therapy: who is ahead?</h2><table class="t"><tr><th>Business</th><th>Reviews</th><th>Top 3 on the map</th></tr><tr><td><b>Blood Ozone Bali Therapy</b></td><td>128 (5 Oct)</td><td>98% (21 Sep)</td></tr><tr><td><b>You</b></td><td>100 (13 Oct)</td><td>39% (12 Oct)</td></tr></table><p class="mut s gap">Dates differ. The gap to the leader is mostly review count and pace.</p></div>
+ <div class="card gap2"><h2>In AI answers</h2><p class="mut">How often each AI tool named you in 9 checks per keyword. One run, 23 Sep. No trend before 3 runs.</p><div class="heat gap"><div class="h"></div><div class="h">ChatGPT</div><div class="h">Gemini</div><div class="h">Google AI mode</div>${D.ai.map(r=>`<div class="k">${r[0]}</div>${cell(r[1])}${cell(r[2])}${cell(r[3])}`).join('')}</div></div>
+ <div class="card gap2"><div class="q">Profile and site readiness</div><div class="big">45 of 100</div><p class="sentence">Our own check of your profile and site (13 Oct). It is not a rank against other clinics.</p></div>`
+ :`<p class="lead"><b>On the map, the Beauty Clinic is missing for 13 of 14 treatments</b> (0 of 49 spots). Only "hydraglo facial" shows up, on 1 of 49 spots. This is the biggest gap in the account.</p>
+ <div class="card"><div class="st grey">${S.grey[2]}Missing · 0 of 49</div>${D.beautyMap.map(k=>`<div class="kw"><span>${k}</span><b>0 of 49</b></div>`).join('')}<div class="kw"><span>hydraglo facial</span><b>1 of 49</b></div></div>
+ <p class="mut s gap">First scan 23 Sep. The Beauty Clinic has 10 reviews and 1 Google category.</p>`}`}
+function reviews(){
+ const P=profile,r=D.rev[P];const lead=D.rev.nhc.leader,tg=lead*2;
+ const mx=Math.max(r.n,lead,tg);const row=(l,v,c)=>`<div class="row"><span class="l">${l}</span><span class="b"><i style="width:${v/mx*100}%;background:${c}"></i></span><span class="c">${v}</span></div>`;
+ return `${tabs('results')}${subnav('reviews')}<h1 class="t">Do people trust me?</h1>
+ <div class="grid3"><div class="card"><div class="q">Rating</div><div class="big">${r.star.toFixed(1)} ★</div></div><div class="card"><div class="q">Reviews</div><div class="big">${r.n}</div></div><div class="card"><div class="q">Without a reply</div><div class="big">${r.unans}</div><p class="mut">${P=='nhc'?'79 of 100 have a reply. The 8 newest do not (latest 29 Sep).':'2 reviews wait for a reply.'}</p></div></div>
+ ${P=='nhc'?`<div class="card gap2"><h2>Compared with the local leader</h2>${row('You',r.n,'var(--ink)')}${row('Leader',lead,'#8f8566')}${row('Target',tg,'#d7cfb8')}<p class="sentence"><b>${lead-r.n} more reviews to match the leader. ${tg-r.n} to reach the target</b> of twice the leader. The leader is Blood Ozone Bali Therapy (128 reviews, 5 Oct).</p></div>
+ <div class="card gap2"><h2>New reviews per month, 2026</h2>${bars(D.rev.nhc.per,D.rev.nhc.months,{id:'r1',w:420,h:110,aria:'New reviews per month'})}<p class="mut s">Reviews arrive in bursts with long gaps. A steady trickle is what Google and AI tools trust. The pace needed starts once we set a target date.</p></div>`
+ :`<div class="gapcard gap2"><h3>Leader for the Beauty Clinic</h3><p class="mut">Not measured yet. We read the leader's review count with the next scan.</p></div>`}`}
+function ads(){const a=D.ads;
+ return `${tabs('results')}${subnav('ads')}<h1 class="t">What do my ads do?</h1>
+ <div class="banner red">${st('red','Paused')}<span><b>Paused since 1 Oct.</b> Google's verification is open. Upload your business licence (NIB). The check takes 1 to 10 days. Data to 12 Oct.</span></div>
+ <div class="grid3"><div class="card"><div class="q">Spent (campaign cost, all time)</div><div class="big plain">IDR ${fmt(a.spent)}</div></div><div class="card"><div class="q">WhatsApp clicks from ads</div><div class="big plain">${a.wa}</div><p class="mut">from ${a.clicks} ad clicks</p></div><div class="card"><div class="q">Cost per WhatsApp click</div><div class="big">IDR ${fmt(a.per)}</div></div></div>
+ <p class="sentence gap"><b>IDR ${fmt(a.spent)} ÷ ${a.wa} WhatsApp clicks = IDR ${fmt(a.per)} each.</b> Since 2 Aug every WhatsApp click from an ad counts as a result. We see the click, not the conversation.</p>
+ <div class="gapcard gap">${mg('think','Booked jobs: not tracked yet. Tell us each month how many WhatsApp chats became bookings.','Martin thinks about booked jobs')}<h3>Weekly spend and results</h3><p class="mut">No weekly numbers are stored yet. The weekly view starts when the ads restart.</p></div>
+ <p class="foot">Billing shows about 13% more than campaign cost because of tax. This page shows campaign cost.</p>`}
+function backlinks(){const f=D.funnel;const mx=f[0][1];
+ return `${tabs('results')}${subnav('backlinks')}<h1 class="t">Who links to me?</h1>
+ <p class="lead"><b>Of 149 requests, 9 became article offers. No link is live yet.</b> The first articles go live in October.</p>
+ <div class="card">${f.map(r=>`<div class="row"><span class="l">${r[0]}</span><span class="b"><i style="width:${r[1]/mx*100}%"></i></span><span class="c">${r[1]}</span></div>`).join('')}<p class="mut s">Since 25 Sep. Messages and accepted requests both read 38. We confirm the numbers with the outreach sheet.</p></div>
+ <div class="grid3 gap2"><div class="card tile"><div class="q">Links we can use</div><div class="num">—</div><div class="d">Not rated yet</div></div><div class="card tile"><div class="q">Broken links to fix</div><div class="num">25</div><div class="d">Checked 11 Oct</div></div><div class="card tile"><div class="q">Real sites linking</div><div class="num">—</div><div class="d">Not rated yet</div></div></div>
+ <p class="mut gap">${st('grey','Ignored')} About 960 spam links appeared after 23 Sep (73 links then, 1,034 on 11 Oct). They are not from you. Google usually ignores such links.</p>`}
+function plan(){const col=s=>D.tracks.filter(t=>t[0]==s);const c=(s,k)=>`<div class="col"><h3>${s}<span class="mut">${col(s).length}</span></h3>${col(s).map(t=>`<div class="trk"><b>${t[1]}</b><div class="o">${t[2]}</div><div class="o">${t[3]}</div></div>`).join('')}</div>`;
+ return `${tabs('plan')}<h1 class="t">The plan</h1><p class="lead">13 jobs in three stages. Open a job in the full roadmap for the details.</p>
+ <div class="tr">${c('Not started')}${c('In progress')}${c('Live')}</div>
+ <div class="card gap2 tree"><h2>Site structure</h2><p class="mut">As planned on 18 Sep. Open a branch to see what changes.</p>${D.tree.map(b=>`<details><summary><span>${b[0]}</span><span class="badge ${/new/.test(b[1])?'new':/update/.test(b[1])?'up':''}">${b[1]}</span></summary>${b[2].length?`<ul style="margin:8px 0 0 20px;font-size:15px">${b[2].map(x=>`<li>${x}</li>`).join('')}</ul>`:'<p class="mut s" style="margin-top:6px">No change planned.</p>'}</details>`).join('')}</div>
+ <div class="card gap2"><h2>Content plan</h2><p class="mut">45 topics from real searches. 19 are top priority. Live so far: not counted yet.</p><p class="sentence">Next up: Craniosacral Therapy · Prolozone Injection · NAET Allergy Treatment · Reiki in Canggu · Ozone Insufflation vs Autohemotherapy · "Bali Healing Therapy" landing page.</p></div>
+ <a class="btn gap" href="${RURL}balihealing-seo-roadmap.html">Open the full roadmap</a>`}
+function decisions(){return `${tabs('decisions')}<h1 class="t">Your decisions</h1>${mg('hello','Hi Peggy, hi Pasha. For each point I marked my recommendation. One click is enough.','Martin waves')}
+ ${D.decisions.map((d,i)=>`<div class="dec"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><h3>${d[0]}</h3>${st('amber','Needs you')}</div><p class="mut" style="margin-top:4px">${d[1]}</p>${d[2].map((o,j)=>`<label><input type="radio" name="d${i}" ${j==0&&d[2].length?'checked':''}> ${o}</label>`).join('')}
+ <div class="act"><button class="btn" onclick="this.textContent='Saved (prototype)'">Approve</button><button class="btn o">Approve with a small change</button><button class="btn o">Request a change</button></div><p class="mut s" style="margin-top:8px">If you do not reply, we keep this open and remind you.</p></div>`).join('')}`}
+function reports(){return `${tabs('reports')}<h1 class="t">Reports</h1><p class="lead">Every report with its date. Older versions point to the current page.</p>
+ <div class="card"><table class="t"><tr><th>Report</th><th>Period</th><th>State</th><th></th></tr>${D.reports.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${/Replaced/.test(r[3])?st('grey','Replaced'):st('green','Current')}<div class="mut s">${/Replaced/.test(r[3])?r[3]:''}</div></td><td>${r[2]?`<a class="btn o" href="${RURL}${r[2]}">Open</a>`:''}</td></tr>`).join('')}</table></div>`}
+function setup(){const steps=[['Sign contract and DPA','done','Signed 25 Sep'],['Grant access','done','4 of 4 required platforms connected'],['Business details','open','Check name, services, practitioners, hours'],['Upload material','open','Logo, photos, videos, certificates'],['Positioning questions','open','Top 3 services, ideal client, competitors'],['Programme start','done','Running since 14 Sep']];
+ const acc=[['Google Analytics','Connected','green','12 Oct'],['Google Business Profile','Connected','green','12 Oct'],['Google Search Console','Connected','green','12 Oct'],['Website / CMS','Connected','green','12 Oct'],['Google Tag Manager','Not needed yet','grey',''],['Directory logins','Not needed yet','grey',''],['Facebook / Instagram','Not needed yet','grey','']];
+ return `${tabs('setup')}<h1 class="t">Setup</h1><p class="lead"><b>3 of 6 steps done.</b> The ticks come from your real data. Open steps also appear in "Needs you" on the Overview.</p>
+ <div class="card">${steps.map(s=>`<div class="row"><span style="flex:0 0 auto">${s[1]=='done'?st('green','Done'):st('amber','Open')}</span><span style="flex:1"><b>${s[0]}</b><div class="mut s">${s[2]}</div></span></div>`).join('')}</div>
+ <div class="card gap2"><h2>Platforms</h2>${acc.map(a=>`<div class="row"><span style="flex:1"><b>${a[0]}</b></span>${st(a[2],a[1])}<span class="mut s" style="flex:0 0 90px">${a[3]?'checked '+a[3]:''}</span></div>`).join('')}</div>
+ <p class="foot">When all steps are done, this tab disappears and one line stays: "Setup complete".</p>`}
+function render(){const h=(location.hash||'#/overview').replace('#/','').split('/');let html;
+ if(h[0]=='results'){html={enquiries,found,reviews,ads,backlinks}[h[1]||'enquiries']()}
+ else html=({overview,plan,decisions,reports,setup}[h[0]]||overview)();
+ $('#app').innerHTML=html;window.scrollTo(0,0)}
+addEventListener('hashchange',render);render();
+</script>
+</body>
+</html>

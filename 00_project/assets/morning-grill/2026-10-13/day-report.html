@@ -1,0 +1,160 @@
+<title>741 Day Report 13.10.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one column "control room" sheet — tiles, three week charts, compare table, client cards, verdict. 741 yellow is the only accent. */
+:root{
+  --bg:#f7f6f1; --panel:#ffffff; --ink:#17160f; --mut:#6c695d; --line:#e4e1d4;
+  --y:#fac118; --y-soft:#fdf0c2; --good:#1f7a3a; --warn:#b45309; --bad:#b42318;
+  --bar2:#c9c4ae;
+  --display:"Anton","Impact","Arial Narrow",sans-serif;
+  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#13130f; --panel:#1c1b16; --ink:#f2efe3; --mut:#a6a290; --line:#33312a;
+  --y:#fac118; --y-soft:#3a3115; --good:#5bc27c; --warn:#f0a24a; --bad:#f07a6e; --bar2:#4a4738; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#13130f; --panel:#1c1b16; --ink:#f2efe3; --mut:#a6a290; --line:#33312a;
+  --y:#fac118; --y-soft:#3a3115; --good:#5bc27c; --warn:#f0a24a; --bad:#f07a6e; --bar2:#4a4738; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--body)}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:16px;padding-block:28px 56px;display:grid;gap:22px}
+header{display:grid;gap:6px}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+h1{font:400 clamp(40px,7vw,68px)/1.12 var(--display);letter-spacing:.01em;margin:0;text-wrap:balance}
+h1 em{font-style:normal;background:var(--y);color:#17160f;padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone;line-height:1}
+h2{font:400 26px/1.1 var(--display);letter-spacing:.02em;margin:0 0 4px}
+.lead{max-width:68ch;color:var(--mut);margin:0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;min-width:0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:2px;align-content:start}
+.tile b{font:400 40px/1 var(--display);font-variant-numeric:tabular-nums}
+.tile span{font-size:14px;color:var(--mut)}
+.tile small{font:500 12px var(--mono);color:var(--good)}
+.tile.hero{background:var(--y);border-color:var(--y);color:#17160f}
+.tile.hero span,.tile.hero small{color:#3d3a2c}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.chart h3{font:700 15px var(--body);margin:0}
+.chart p{font-size:13px;color:var(--mut);margin:2px 0 8px}
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{fill:var(--mut);font:500 10px var(--mono)}
+svg .val{fill:var(--ink);font:500 11px var(--mono)}
+.bar{fill:var(--bar2);transform-box:fill-box;transform-origin:bottom;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
+.bar.today{fill:var(--y)}
+.grid line{stroke:var(--line)}
+@keyframes grow{from{transform:scaleY(.04)}to{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.bar{animation:none}}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}
+th,td{text-align:right;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}
+td.t{font-weight:700;background:var(--y-soft)}
+.x{font:500 12px var(--mono);color:var(--good)}
+.clients{display:grid;gap:8px}
+.crow{display:grid;grid-template-columns:minmax(120px,190px) 1fr auto;gap:12px;align-items:center;font-size:14px}
+.cbar{display:flex;height:14px;border-radius:7px;overflow:hidden;background:var(--line)}
+.cbar i{display:block;height:100%}
+.cbar .o{background:var(--y)} .cbar .r{background:var(--good)} .cbar .c{background:var(--warn)} .cbar .d{background:var(--bar2)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--mut);margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.verdict{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.score{display:grid;gap:6px;align-content:start}
+.score h4{margin:0;font:700 15px var(--body);display:flex;justify-content:space-between;gap:8px}
+.score h4 b{font:400 24px var(--display)}
+.meter{height:8px;border-radius:4px;background:var(--line);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--y);transform-origin:left;animation:fill 1s .2s cubic-bezier(.2,.8,.2,1) both}
+@keyframes fill{from{transform:scaleX(.05)}to{transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){.meter i{animation:none}}
+.score p{margin:0;font-size:14px;color:var(--mut)}
+ul.notes{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14px;max-width:80ch}
+.foot{font-size:12.5px;color:var(--mut);max-width:80ch}
+@media (max-width:520px){.crow{grid-template-columns:1fr auto}.crow .cbar{grid-column:1/-1;order:3}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">741 Studio · Tuesday 13 October 2026 · WITA</div>
+  <h1>The day we built the <em>decision machine</em></h1>
+  <p class="lead">Decision cards went live for 8 clients. A morning grill and an evening log now run every day. Your Command Center has a "Today" view. 7 client emails explain the new system. This page counts what happened and compares it with yesterday and with the same day last week.</p>
+</header>
+
+<section class="tiles" aria-label="Today in numbers">
+  <div class="tile hero"><b>474</b><span>decisions you made in chat cards</span><small>+18 more in the portal</small></div>
+  <div class="tile"><b>72</b><span>decision cards written for clients</span><small>51 live · 21 drafts</small></div>
+  <div class="tile"><b>16</b><span>answers from clients already</span><small>13 approved · 3 changes</small></div>
+  <div class="tile"><b>2.73 B</b><span>tokens processed</span><small>4.27 M written</small></div>
+  <div class="tile"><b>63</b><span>commits shipped</span><small>7 yesterday · 0 a week ago</small></div>
+  <div class="tile"><b>7</b><span>client emails sent</span><small>via the portal, BCC you</small></div>
+</section>
+
+<section class="charts" aria-label="Last 8 days">
+  <div class="panel chart"><h3>Your decisions per day</h3><p>Answered question cards in all chats</p><svg id="c1" viewBox="0 0 320 170" role="img" aria-label="Decisions per day, 6 to 13 October"></svg></div>
+  <div class="panel chart"><h3>Tokens written per day</h3><p>Model output, millions</p><svg id="c2" viewBox="0 0 320 170" role="img" aria-label="Output tokens per day"></svg></div>
+  <div class="panel chart"><h3>Commits per day</h3><p>All branches and worktrees</p><svg id="c3" viewBox="0 0 320 170" role="img" aria-label="Commits per day"></svg></div>
+</section>
+
+<section class="panel">
+  <h2>Today against yesterday and last week</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Measure</th><th>Tue 06.10.</th><th>Mon 12.10.</th><th>Tue 13.10.</th><th>vs. week ago</th></tr></thead>
+    <tbody id="cmp"></tbody>
+  </table></div>
+</section>
+
+<section class="panel">
+  <h2>Decisions now with your clients</h2>
+  <p class="lead" style="margin-bottom:12px">Every card asks one client one question, with a recommendation. The decision module went live today, so all of this is new since this morning.</p>
+  <div class="clients" id="cl"></div>
+  <div class="legend"><span><i style="background:var(--y)"></i>open, waiting for the client</span><span><i style="background:var(--good)"></i>approved by the client</span><span><i style="background:var(--warn)"></i>client wants a change</span><span><i style="background:var(--bar2)"></i>draft, not visible yet</span></div>
+</section>
+
+<section class="panel">
+  <h2>How good was the day?</h2>
+  <div class="verdict">
+    <div class="score"><h4>Infrastructure <b>9/10</b></h4><div class="meter"><i style="width:90%"></i></div><p>Decision cards live for 8 clients, morning grill and evening log installed, Command Center with a "Today" view, outreach numbers per account, review-reporting research decided.</p></div>
+    <div class="score"><h4>Client-visible work <b>7/10</b></h4><div class="meter"><i style="width:70%"></i></div><p>7 explainer emails out, 16 client answers on day one, GA4 live at Hüwel, Kamil reports live, STÜRZL address fixed, me&amp;you draft C live.</p></div>
+    <div class="score"><h4>Focus <b>5/10</b></h4><div class="meter"><i style="width:50%"></i></div><p>46 chats in one day. Many threads opened and some stayed half done: Bali Ads still paused, Celine's login missing, STÜRZL E2 and E4 still drafts.</p></div>
+    <div class="score"><h4>Revenue <b>3/10</b></h4><div class="meter"><i style="width:30%"></i></div><p>No new deal closed today. Gunkel v2 and the Steifensand page are live, and Felix's outreach can start, so the pipeline is ready to move this week.</p></div>
+  </div>
+  <ul class="notes" style="margin-top:14px">
+    <li><b>Overall: a strong build day.</b> You moved from answering clients one by one in WhatsApp to a system where they decide in the portal. Clients answered 16 cards within hours, so it works.</li>
+    <li><b>The cost was attention.</b> 474 card answers is about 10 times yesterday. The grill exists to cut this number, so tomorrow should show fewer and bigger decisions.</li>
+    <li><b>Two risks to keep in view:</b> physiotherapiekraft.de was hacked and is offline, and the infostealer on your Mac needs the password rotation finished.</li>
+  </ul>
+</section>
+
+<p class="foot">Sources: all Claude Code chat logs of this project (main chats, sub-agents only partly logged), the portal database (approval cards, client actions, grill answers, emails log) and git. "Decisions" counts each answered question card once. Tokens include cached context that the model re-reads on every step, which is why the total is far larger than the written output. Days run 00:00 to 24:00 Bali time.</p>
+</div>
+
+<script>
+const days=[{"d":"06","out":0.76,"total":0.5,"dec":1,"commits":0,"sessions":26,"msgs":114,"tools":1454},{"d":"07","out":0.59,"total":0.37,"dec":3,"commits":0,"sessions":25,"msgs":94,"tools":1045},{"d":"08","out":1.19,"total":0.9,"dec":0,"commits":0,"sessions":12,"msgs":137,"tools":1930},{"d":"09","out":1.26,"total":1.4,"dec":2,"commits":0,"sessions":13,"msgs":186,"tools":2973},{"d":"10","out":1.94,"total":1.58,"dec":5,"commits":1,"sessions":11,"msgs":160,"tools":4829},{"d":"11","out":4.25,"total":2.38,"dec":165,"commits":3,"sessions":18,"msgs":155,"tools":7351},{"d":"12","out":3.36,"total":1.8,"dec":48,"commits":7,"sessions":34,"msgs":199,"tools":5836},{"d":"13","out":4.27,"total":2.73,"dec":474,"commits":63,"sessions":46,"msgs":261,"tools":7997}];
+function chart(id,key,fmt){
+  const svg=document.getElementById(id),W=320,H=170,L=8,R=8,T=18,B=22,w=W-L-R,h=H-T-B;
+  const max=Math.max(...days.map(d=>d[key]))*1.08||1, bw=w/days.length;
+  let s='<g class="grid">';
+  for(let i=0;i<=2;i++){const y=T+h*i/2;s+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}"/>`}
+  s+='</g>';
+  days.forEach((d,i)=>{
+    const v=d[key],bh=Math.max(1.5,h*v/max),x=L+i*bw+bw*0.18,y=T+h-bh,last=i===days.length-1;
+    s+=`<rect class="bar${last?' today':''}" style="animation-delay:${i*60}ms" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${(bw*0.64).toFixed(1)}" height="${bh.toFixed(1)}" rx="2"/>`;
+    s+=`<text x="${(x+bw*0.32).toFixed(1)}" y="${H-6}" text-anchor="middle">${d.d}.</text>`;
+    if(last||v===Math.max(...days.slice(0,-1).map(z=>z[key]))) s+=`<text class="val" x="${(x+bw*0.32).toFixed(1)}" y="${(y-5).toFixed(1)}" text-anchor="middle">${fmt(v)}</text>`;
+  });
+  svg.innerHTML=s;
+}
+chart('c1','dec',v=>v);
+chart('c2','out',v=>v.toFixed(1)+'M');
+chart('c3','commits',v=>v);
+const rows=[["Your decisions (chat cards)","dec",v=>v],["Decisions in the portal","_p",null],["Tokens written (M)","out",v=>v.toFixed(2)],["Tokens processed (B)","total",v=>v.toFixed(2)],["Commits","commits",v=>v],["Active chats","sessions",v=>v],["Your messages","msgs",v=>v],["Agent actions (tool calls)","tools",v=>v.toLocaleString('en')]];
+const a=days[0],y=days[6],t=days[7];
+document.getElementById('cmp').innerHTML=rows.map(([n,k,f])=>{
+  if(k==='_p') return `<tr><td>${n}</td><td>0</td><td>0</td><td class="t">18</td><td class="x">new today</td></tr>`;
+  const r=a[k]?(t[k]/a[k]):null;
+  return `<tr><td>${n}</td><td>${f(a[k])}</td><td>${f(y[k])}</td><td class="t">${f(t[k])}</td><td class="x">${r?('× '+(r>=10?Math.round(r):r.toFixed(1))):'from 0'}</td></tr>`;
+}).join('');
+const cl=[["Naturheilpraxis Daniela Dumann",13,0,0,14],["Praxis Hüwel",4,3,0,0],["Johni Jaya Motor",7,0,0,0],["Rabenmütter Shop",7,0,0,0],["Praxis Suriya",0,4,2,0],["Maria Brasse",6,0,0,0],["STÜRZL Steuerstrafrecht",3,0,0,3],["Kamil Böyük",0,0,0,4],["Bali Healing",2,0,0,0]];
+const mx=Math.max(...cl.map(c=>c[1]+c[2]+c[3]+c[4]));
+document.getElementById('cl').innerHTML=cl.map(([n,o,r,c,d])=>{const s=o+r+c+d,p=v=>(v/mx*100).toFixed(1)+'%';
+  return `<div class="crow"><span>${n}</span><div class="cbar" style="width:${(s/mx*100).toFixed(1)}%"><i class="o" style="width:${(o/s*100)}%"></i><i class="r" style="width:${(r/s*100)}%"></i><i class="c" style="width:${(c/s*100)}%"></i><i class="d" style="width:${(d/s*100)}%"></i></div><span style="font-variant-numeric:tabular-nums">${s}</span></div>`}).join('');
+</script>

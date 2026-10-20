@@ -1,0 +1,45 @@
+{
+  "plan_item_index": 3,
+  "client": "Rabenmütter Shop",
+  "page": "rabenmuetter/verkaufskanaele-etsy",
+  "mode": "FEEDBACK",
+  "feedback_id": "66478f5c-02a4-4076-b1c3-ad9d211e3533",
+  "source_file": "feedback/rabenmuetter/66478f5c-02a4-4076-b1c3-ad9d211e3533.md",
+  "pass": true,
+  "checks": {
+    "sentence_for_sentence_addressed": {
+      "result": "pass",
+      "reason": "Checked the Vorschlag against context.json.feedback_open id 66478f5c-02a4-4076-b1c3-ad9d211e3533 (line 534-538) clause by clause. (1) 'Etsy... bin da allerdings raus' -> 'Etsy wird nicht als Verkaufskanal empfohlen.' (2) 'auf Etsy verkaufen Menschen... gruselige Karten, handgemacht, Künstler... da passen wir... nicht rein' -> 'Die Kundin lehnt diesen Kanal ab, da sich ihr Sortiment von der auf Etsy üblichen handgemachten Künstler-Ware... unterscheidet und die Positionierung dort nicht passt.' (3) 'Wir haben (hoffe ich) über Pinterest ein Businesskonto mit Shop' -> listed as item 2, correctly carried the client's own uncertainty forward with [fehlt: vom Kunden zu bestätigen] rather than treating it as confirmed. (4) 'ich habe über TikTok einen Shop eingerichtet' -> listed as item 1, 'eingerichtet und bestätigt'. (5) 'Etsy fände ich jetzt einfach zuviel' is the closing restatement of point (1), already covered, not a separate new fact. All distinct facts in the comment (decision, reason, Pinterest status, TikTok status) are present in the Vorschlag; nothing is invented beyond what the client said."
+    },
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "pass",
+      "reason": "This FEEDBACK doc produces no Title/Meta/H1/NAP-block/JSON-LD, so the rule has nothing to violate. The one [fehlt: vom Kunden zu bestätigen] in the file sits correctly inside the Vorschlag body, flagging the client's own 'hoffe ich' uncertainty about Pinterest rather than inventing a confirmed status."
+    },
+    "nap_block_matches_locked_record": {
+      "result": "pass",
+      "reason": "Checked context.json.nap_locked directly: it holds records for client_id 3f71ef33-... (Praxis Suriya), d01f4236-... (Daniela Dumann), and 444ac77b-... (Maria Brasse) only. There is no entry for client_id fbcc70d1-4c56-437c-b5fb-8056e48d3f62 (Rabenmütter Shop). The Executor's claim that no locked NAP record exists for this client is confirmed correct, not a guess, and the file does not invent a NAP block where none applies (Rabenmütter is an online shop, not a local-SEO location client)."
+    },
+    "jsonld_valid": {
+      "result": "pass",
+      "reason": "Not applicable — a FEEDBACK draft for a client comment reply contains no JSON-LD block. Confirmed none is present or implied."
+    },
+    "market_lang_de": {
+      "result": "pass",
+      "reason": "Full file (Datenpaket table, Kunde sagt quote, Vorschlag, Diff-Hinweis) is German, matching plan item market_lang 'de'."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "reason": "Rabenmütter Shop (Trauerkarten/stationery e-commerce) is not a health/YMYL client, so HWG does not apply by scope. Ran the scan anyway as a safety check on the Vorschlag text for 'heilt', 'garantiert', '100%'/'100 %', 'Heilung' — zero matches."
+    },
+    "rubric_8dim_skipped_per_feedback_mode": {
+      "result": "pass",
+      "reason": "Per SKILL.md §3, FEEDBACK items skip the 8-dimension rubric in favour of the sentence-for-sentence check above. Confirmed this plan item is mode FEEDBACK (plan.json line 46), so the 8-dim rubric correctly does not apply here."
+    },
+    "deslop_body_copy": {
+      "result": "pass",
+      "reason": "The file itself flags (De-slop-Hinweis, line 19) that the Vorschlag is an internal planning note for the Seitenbaum structure and the 'Empfehlung an Martin' is an internal task, not client-facing copy meant to ship as-is. Verified this classification: the Vorschlag text is addressed to Martin ('Empfehlung an Martin: Den Pinterest-Status... klären'), not phrased as copy for the shop's own pages or for the client. Per SKILL.md §3 this is correctly exempt from the de-slop hard check — not run, and that is not a blocker."
+    }
+  },
+  "fails": [],
+  "notes": "Independent verification of plan item index 3 (rabenmuetter/verkaufskanaele-etsy) against context.json and plan.json. All applicable hard checks pass; several (NAP, JSON-LD, 8-dim rubric) are correctly not-applicable for this FEEDBACK item and the file does not pretend otherwise. One minor, non-blocking observation: the 'Kunde sagt' quote in the Executor file silently normalises two spacing artifacts and one obvious typo from the source comment ('Karten , handgemacht' -> 'Karten, handgemacht'; double space before 'einfach' -> single space; 'irgendwei' -> 'irgendwie'). This does not change meaning or any fact, and all substantive content is still addressed correctly, so it is not treated as a fail — but a true verbatim transcription should not silently correct the client's spelling. Flagging for awareness only, no rework required."
+}

@@ -1,0 +1,73 @@
+{
+ "_note": "Confirmed business data (Source of Truth sheet, Martin 2026-10-11: addresses are confirmed). Snapshot of the sheet: source-of-truth-2026-10-11.md. Switch on GBP and the live website waits for Martin's go; that is a publishing decision, not a data gap.",
+ "base_url": "https://stuerzl-steuerstrafrecht.de",
+ "organization": {
+  "id": "#kanzlei",
+  "name": "STÜRZL Steuerstrafrecht",
+  "type": "LegalService",
+  "email": "kanzlei@stuerzl-steuerstrafrecht.de",
+  "sameAs": [],
+  "sameAs_status": "leer bis Profile geprüft"
+ },
+ "locations": [
+  {
+   "id": "muenchen",
+   "status": "bestätigt (Source of Truth Tab 00, Google-Profil, seit Anfang 2026)",
+   "street": "Oberanger 32",
+   "postalCode": "80331",
+   "city": "München",
+   "country": "DE",
+   "telephone": "+49 89 72444170",
+   "contacts": [
+    "Lea Wimmer",
+    "Dr. Monika Glogger"
+   ],
+   "access": "Haltestelle Marienplatz (S-Bahn Stammstrecke, U3, U6) oder Sendlinger Tor (U1, U2, U7, U8); Parken öffentlich, Tiefgarage Oberanger, Tiefgarage Marienplatz (Live-Kontaktseite)"
+  },
+  {
+   "id": "frankfurt",
+   "status": "bestätigt (Source of Truth Tab 00 Standort(e), Umzug 05.10.2026; Martin 2026-10-11)",
+   "street": "Untermainkai 26",
+   "postalCode": "60329",
+   "city": "Frankfurt am Main",
+   "country": "DE",
+   "telephone": "+49 69 298028870",
+   "post_reception": "Wilhelm-Leuschner-Straße 23 (Post und Empfang)",
+   "garage": "Tiefgarage Wilhelm-Leuschner-Straße 27-29, Plätze 148 und 146",
+   "old_address_never_use": "Wiesenhüttenstraße 17"
+  }
+ ],
+ "opening_hours": null,
+ "opening_hours_status": "nicht ins Schema (Zeiten widersprechen sich zwischen Website, Google und Schema)",
+ "people": {
+  "dr-anja-stuerzl": {
+   "name": "Dr. Anja Stürzl",
+   "jobTitle": "Rechtsanwältin, Fachanwältin für Steuerrecht",
+   "url_slug": "/dr-anja-stuerzl/",
+   "credentials": [
+    "Fachanwältin für Steuerrecht",
+    "Zertifizierte Beraterin für Steuerstrafrecht (DAA)"
+   ]
+  },
+  "dr-monika-glogger": {
+   "name": "Dr. Monika Glogger",
+   "jobTitle": "Rechtsanwältin",
+   "url_slug": "/dr-monika-glogger/",
+   "credentials": [],
+   "note": "Rechtsanwältin, 50 % Teilzeit, seit April 2026 (Source of Truth Tab 01 Z46). Titel nur aus der Live-Profilseite."
+  }
+ },
+ "phone_hours": "Montag bis Freitag durchgehend 09:30 bis 14:30 Uhr. Termine und Erstberatung auch außerhalb dieser Zeiten nach Vereinbarung (Live-Kontaktseite und Source of Truth Tab 02 Zeile 38). Google-Profile und Schema nennen andere Zeiten: Schema bleibt ohne Öffnungszeiten, bis die Kanzlei eine Zeit nennt.",
+ "emergency_numbers": {
+  "values": [
+   "0160 3396513",
+   "0160 95945730"
+  ],
+  "status": "Martin 2026-10-11: Notfallnummern dürfen auf den Seiten stehen. Sie stehen heute öffentlich auf der Live-Kontaktseite. Besetzungszeiten nicht belegt: nicht zusagen (kein '24/7' ohne Beleg)."
+ },
+ "source_of_truth": {
+  "sheet_id": "10JISY6H71F_pIX8KzGhrTucDvWXfv2WYh4-M3E72SqY",
+  "snapshot": "00_project/assets/stuerzl/source-of-truth-2026-10-11.md",
+  "read_with": "node 00_project/content-writing-skill/scripts/read_sot.mjs <sheet-id> <out.json> (service account, read only)"
+ }
+}

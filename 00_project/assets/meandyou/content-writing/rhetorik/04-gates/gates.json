@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-12",
+ "page": "03-draft/draft-v4.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G2 legal": {
+   "mode": "none",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "info": {
+    "words": 1712,
+    "placeholders": 2
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "counts": {
+    "du": 81,
+    "sie": 0,
+    "ich": 5,
+    "wir": 1
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1712,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "[Hinweis] 1 von 8 Themen-Begriffen der Wettbewerber-Überschriften fehlen im Text: fazit* (3/6, z. B. \"Fazit: Erfolg durch Sprache und Haltung\")",
+    "Begriffs- und Norm-Prüfung nicht gelaufen (mit --fetch starten)",
+    "Direkt-Antwort hat 7 Sätze (Regel: 2 bis 4, etwa 50 Wörter). Kürzen für KI-Zitate."
+   ]
+  }
+ }
+}

@@ -1,0 +1,13 @@
+Search snippets (firecrawl_search, 2026-10-11) for pages that carry firm NAP and were not opened:
+ - https://de.maptons.com/p/3302892716 (+ mt, hr, bj, qa, ee, py, is subdomains): 'STÜRZL Steuerstrafrecht, Wiesenhüttenstraße 17, Deutschland, rechtsanwalt, telefon +49 69 298028870' with page time stamps 12.07.2026 to 13.09.2026 and coordinates 50.1044088 (page returns HTTP 403 to curl).
+ - https://de.linkedin.com/company/stuerzl-steuerstrafrecht : 'Orte. Primär. Wiesenhüttenstraße 17. Frankfurt, Hessen 60329, DE.' (716 Follower). firecrawl_scrape: not supported for company profiles in this team plan -> page not opened.
+ - https://firmeneintrag.creditreform.de/60329/6070874119/DR_ANJA_STUERZL_STUERZL_STEUERSTRAFRECHT : 'Dr. Anja Stürzl, STÜRZL Steuerstrafrecht, Frankfurt' (street not in snippet).
+ - https://juwist.com/mitgliederliste/ : 'Dr. Anja Stürzl, LL.M. STÜRZL Steuerstrafrecht Wiesenhüttenstraße 17 60329 Frankfurt am Main' (member list of an association, not run by the firm).
+ - https://anwaltauskunft.de/rechtsanwalt/wimmer-287f04ca/ : 'Lea Wimmer ... STÜRZL Steuerstrafrecht Oberanger 32, 80331 München. +49 (89) 7244 41 70 wimmer@stuerzl-steuerstrafrecht.de'.
+ - https://www.anwalt.de/lea-wimmer-2 : 'Rating 5.0(23) Kanzlei STÜRZL Steuerstrafrecht. Oberanger 32, 80331 München'.
+ - https://www.xing.com/profile/Lea_Wimmer2 : 'Lea Wimmer - Rechtsanwältin, Salary Partnerin, Stürzl Steuerstrafrecht' (no address in snippet).
+ - https://kulturstiftung-ukraine.org/index.php/datenschutz : separate foundation; 'Anja Stürzl Wiesenhüttenstraße 17 60329 Frankfurt am Main. Telefon: +49 69-29802887-0'.
+ - https://www.juve.de/juve-rankings/deutschland/wirtschafts-und-steuerstrafrecht/ : ranking lists 'Stürzl, Frankfurt' under 'Aufsteiger' (name only, no address, no firm profile found).
+ - Instagram/Facebook: only third-party posts mention the firm (IWW institute, a photographer). No firm-owned Instagram or Facebook profile appeared in the results.
+ - Search for '"Untermainkai 26" Stürzl Steuerstrafrecht': no result shows the new address for the firm.
+ - Search for '"Stützel Steuerstrafrecht"': no result names such a firm (see EV-C-search-5).

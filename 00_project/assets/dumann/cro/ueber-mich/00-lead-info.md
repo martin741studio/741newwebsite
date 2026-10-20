@@ -1,0 +1,4 @@
+# Naturheilpraxis Daniela Dumann: Über mich / Behandlerin (eigene Seite)
+Seite: Über mich (Behandlerinnen-Seite, E-E-A-T) · Praxis: Naturheilpraxis Daniela Dumann · Behandlerin: Daniela Dumann, Heilpraktikerin · Website: https://danieladumann.de (Wix) · Aktuelle Seite: https://www.danieladumann.de/lebenslauf (von Martin genannt) · Kontaktkanal (primär): Buchungsformular (Lemniscus), sekundär Telefon 030 36430358 · Branche: Health, HWG-Modus an · Status: Run gestartet 2026-10-11, Sonderregel von Martin: ohne Stopp an den Checkpoints durchlaufen
+Lokal: 00_project/assets/dumann/cro/ueber-mich/ · Drive: Local SEO/Daniela Dumann/CRO Homepage/Über mich/
+Geteilt mit der Startseiten-Run: ../01-input (Logo, Portraits, Website-Originale), ../07-prototype/v2/assets (Design-Bausteine), ../02-data/brand.md.

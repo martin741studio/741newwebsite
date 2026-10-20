@@ -1,100 +1,11 @@
 {
  "date": "2026-10-14",
- "read_at": "2026-10-14T05:44+08:00",
+ "read_at": "2026-10-14T14:07+08:00",
  "bookmark": "2026-10-13T11:30+08:00",
  "cards": [
   {
-   "id": "2026-10-14-741-messages",
-   "n": 1,
-   "client": "741 (all clients)",
-   "priority": 1,
-   "type": "Fire",
-   "headline": "5 clients have unread portal messages or help requests. Who answers today?",
-   "why": "Unanswered client messages are priority 1; drafts take you 2 minutes to send.",
-   "options": {
-    "a": "Agent drafts every reply now; I send them",
-    "b": "I answer them myself today",
-    "c": "Dinakar answers the technical ones, I answer the rest"
-   },
-   "recommended": "a",
-   "then": {
-    "a": "agent writes drafts per client into plan.md (```text, slop 5/5)",
-    "b": "walk queue item",
-    "c": "portal task drafts + WhatsApp line"
-   },
-   "evidence": [
-    "reporting/standup/2026-10-13.json",
-    "S5",
-    "Praxis Suriya (1 unread, 1 help)",
-    "Praxis Hüwel (0 unread, 1 help)",
-    "Daniela Dumann (0 unread, 4 help)",
-    "Maria Brasse (0 unread, 1 help)",
-    "Rabenmütter (0 unread, 1 help)"
-   ],
-   "deadline": "2026-10-14",
-   "status": "open",
-   "answer": null,
-   "answer_text": null
-  },
-  {
-   "id": "2026-10-14-kamil-messages",
-   "n": 2,
-   "client": "Kamil (Physio Anatomie + Kraft)",
-   "priority": 1,
-   "type": "Fire",
-   "headline": "Kamil: the Aug+Sep report message AND the hack message are both drafted and not sent. His site physiotherapiekraft.de was hacked and is closed (403).",
-   "why": "A hacked site is a fire-priority topic; the wording needs your eyes before it goes to a client.",
-   "options": {
-    "a": "Send both now (report pointer + hack notice)",
-    "b": "Combine into one message",
-    "c": "Show me the drafts first"
-   },
-   "recommended": "c",
-   "then": {
-    "a": "agent sends via portal/WhatsApp as drafted",
-    "b": "agent merges and re-checks slop",
-    "c": "agent pastes both drafts here"
-   },
-   "evidence": [
-    "S2 Kamil",
-    "2026-10-13 decisions.md"
-   ],
-   "deadline": "2026-10-14",
-   "status": "decided",
-   "answer": "own",
-   "answer_text": "Martin already sent both himself via WhatsApp yesterday (13.10.). New follow-up: brief Kamil in chat on a yearly website security/backup service (€500/year minimum per website) he can offer, and prepare a CRO homepage workflow idea for the Kraft site for better conversion. Draft only in the Kamil chat, do not send."
-  },
-  {
-   "id": "2026-10-14-bali-topup",
-   "n": 3,
-   "client": "Bali Healing",
-   "priority": 2,
-   "type": "Money / contract",
-   "headline": "Bali Google Ads balance is IDR 103,892, about 5 days left. The skin tag campaign is live and in Learning. Top up now?",
-   "why": "Learning phase needs steady spend; a gap now resets it.",
-   "options": {
-    "a": "Top up IDR 500,000 now (GoPay)",
-    "b": "Top up a different amount",
-    "c": "Not yet"
-   },
-   "recommended": "a",
-   "then": {
-    "a": "agent confirms the top-up went through",
-    "b": "agent tops up the amount you give",
-    "c": "card returns tomorrow"
-   },
-   "evidence": [
-    "carry-over 13.10.",
-    "Bali chat 13.10."
-   ],
-   "deadline": "2026-10-14",
-   "status": "decided",
-   "answer": "own",
-   "answer_text": "Later this day — Martin will do the top-up himself (not an agent action). Deferred, not parked: the card returns if the top-up is not done by the evening log."
-  },
-  {
    "id": "2026-10-14-suriya-gsc-row",
-   "n": 4,
+   "n": 1,
    "client": "Praxis Suriya",
    "priority": 2,
    "type": "Money / contract",
@@ -121,63 +32,35 @@
    "answer_text": null
   },
   {
-   "id": "2026-10-14-dumann-publish",
-   "n": 5,
-   "client": "Daniela Dumann",
+   "id": "2026-10-14-taxi-gdpr",
+   "n": 2,
+   "client": "Taxi-Zentrale Nürnberg",
    "priority": 2,
    "type": "Money / contract",
-   "headline": "Dumann's SEO-Fahrplan status page and 20 draft cards are ready since 13.10. but not published. 5 mismatches were found first (see carry-over).",
-   "why": "Two mismatches touch live claims (reviews count, design-approval date); worth one look before her cards go out.",
+   "headline": "Taxi GDPR plugin: no Download Key field at all — it checks its licence via a registration email, which on 01.09. was Werbeagentur Bamberger's address, not yours. A Cloudflare save also failed that day. That chat is waiting for your own word there, a relay does not count.",
+   "why": "It explicitly refused to act on a relayed go for this one.",
    "options": {
-    "a": "Publish the page and release cards in waves",
-    "b": "Show me the 5 mismatches first",
-    "c": "Wait"
-   },
-   "recommended": "b",
-   "then": {
-    "a": "agent publishes + releases wave 1",
-    "b": "agent lists the 5 mismatches here",
-    "c": "card returns tomorrow"
-   },
-   "evidence": [
-    "carry-over 13.10.",
-    "00_project/assets/dumann/status-2026-10-13/"
-   ],
-   "deadline": "2026-10-15",
-   "status": "decided",
-   "answer": "own",
-   "answer_text": "Publish the status page and release the cards so Daniela can give feedback in her client dashboard. NEW RULE: do not fix anything on the live site until Daniela gives that feedback. The 3 live mismatches (title/description reset, 3 unpublished Wix fixes) are left as-is; the open points (design-approval record, Maps name) go to her as dashboard items, not as a 741 self-fix."
-  },
-  {
-   "id": "2026-10-14-talkinfive-leak",
-   "n": 6,
-   "client": "Talkinfive (Celine)",
-   "priority": 2,
-   "type": "Money / contract",
-   "headline": "Talkinfive: an opt-out leak fix is ready (region rule tested 17/17, live-tested with Opt out). Push it and tell Billy?",
-   "why": "The change is tested; the message is only true once it is live.",
-   "options": {
-    "a": "Push the fix, then send the Billy message",
-    "b": "Push only, hold the message",
-    "c": "Not yet"
+    "a": "Open the Taxi chat and answer there",
+    "b": "Change the registration email to 741's first",
+    "c": "Park"
    },
    "recommended": "a",
    "then": {
-    "a": "agent deploys + sends via the chat's channel",
-    "b": "agent deploys only",
+    "a": "you answer in that chat",
+    "b": "message draft for the change",
     "c": "park reason"
    },
    "evidence": [
-    "13.10. Talkinfive chat"
+    "Taxi chat 14.10."
    ],
    "deadline": "2026-10-15",
-   "status": "decided",
-   "answer": "b",
-   "answer_text": "Confirmed the region/opt-out rule was already pushed live 13.10. (~17:00) and tested 5/5; the Billy message stays unsent for now (push-only). A new small issue was found during testing: the opt-out button still fires one automatic Meta event (SubscribedButtonClick, no personal data). Martin's fix instruction: switch off that automatic Meta event on opt-out, keep 741's own events, test, report. Billy message stays unsent until then."
+   "status": "open",
+   "answer": null,
+   "answer_text": null
   },
   {
    "id": "2026-10-14-suriya-listing-mails",
-   "n": 7,
+   "n": 3,
    "client": "Praxis Suriya",
    "priority": 3,
    "type": "Client deadline",
@@ -199,6 +82,122 @@
     "S7"
    ],
    "deadline": "2026-10-14",
+   "status": "open",
+   "answer": null,
+   "answer_text": null
+  },
+  {
+   "id": "2026-10-14-taxi-plugins",
+   "n": 4,
+   "client": "Taxi-Zentrale Nürnberg",
+   "priority": 3,
+   "type": "Client deadline",
+   "headline": "Taxi Nürnberg: pending plugin updates and a captcha change wait for your go. 900 spam mails and a missing Akeeba key were found 13.10.",
+   "why": "Open plugin versions are the more likely entry point; captcha stops the spam at the form.",
+   "options": {
+    "a": "Go for the plugin updates and the captcha change",
+    "b": "Updates only, no captcha yet",
+    "c": "Wait"
+   },
+   "recommended": "a",
+   "then": {
+    "a": "agent updates + adds captcha",
+    "b": "agent updates only",
+    "c": "park reason"
+   },
+   "evidence": [
+    "carry-over 13.10.",
+    "00_project/assets/morning-grill/2026-10-13/taxi-akeeba-findings.md"
+   ],
+   "deadline": "2026-10-16",
+   "status": "open",
+   "answer": null,
+   "answer_text": null
+  },
+  {
+   "id": "2026-10-14-741-overdue",
+   "n": 5,
+   "client": "741 (all clients)",
+   "priority": 4,
+   "type": "Approval",
+   "headline": "54 portal tasks are overdue across 6 clients. Many may be done in chats but not ticked.",
+   "why": "Default D6 allows 'needs review'; you decide re-plans in the Monday review.",
+   "options": {
+    "a": "Agent matches overdue tasks to chat work and proposes 'needs review' / re-plan per client for Monday",
+    "b": "Re-plan all overdue tasks today",
+    "c": "Ignore the counts until the portal sync exists"
+   },
+   "recommended": "a",
+   "then": {
+    "a": "agent writes overdue-match.md; Monday card",
+    "b": "agent drafts re-plan now",
+    "c": "park with reason"
+   },
+   "evidence": [
+    "reporting/standup/2026-10-14.json",
+    "S5",
+    "Praxis Suriya: 5",
+    "Praxis Hüwel: 2",
+    "Bali Healing: 22",
+    "Daniela Dumann: 4",
+    "Maria Brasse: 15",
+    "Rabenmütter: 6"
+   ],
+   "deadline": "2026-10-19",
+   "status": "open",
+   "answer": null,
+   "answer_text": null
+  },
+  {
+   "id": "2026-10-14-741-citations-stale",
+   "n": 6,
+   "client": "741 (citations)",
+   "priority": 5,
+   "type": "Goal gap",
+   "headline": "Citations stand still: Praxis Suriya 25, Praxis Hüwel 29 entries are 'planned' for more than 14 days.",
+   "why": "Citations live is a leading number in every goal sheet; the runbook already exists.",
+   "options": {
+    "a": "Tantri works the group-A list this week, 10 per day",
+    "b": "First build the citations workflow (run file, runbook), then work",
+    "c": "Park until the backlink merge is done"
+   },
+   "recommended": "a",
+   "then": {
+    "a": "task drafts per client from reporting/submission-runbook.mjs output",
+    "b": "start ⚙️🖇️ chat task",
+    "c": "park"
+   },
+   "evidence": [
+    "Supabase client_citations",
+    "S7",
+    "memory citations-listings-module"
+   ],
+   "deadline": "2026-10-16",
+   "status": "open",
+   "answer": null,
+   "answer_text": null
+  },
+  {
+   "id": "2026-10-14-falcon-connector",
+   "n": 7,
+   "client": "Johni Jaya Motor",
+   "priority": 5,
+   "type": "Goal gap",
+   "headline": "Local Falcon is still not enabled as a connector for Claude Code. Johni's first ranking scan has waited since 12.10.",
+   "why": "One toggle unblocks the scan that is otherwise ready to run.",
+   "options": {
+    "a": "I enable it now in claude.ai",
+    "b": "Not today"
+   },
+   "recommended": "a",
+   "then": {
+    "a": "agent runs the baseline scan once enabled",
+    "b": "card returns tomorrow"
+   },
+   "evidence": [
+    "carry-over 13.10."
+   ],
+   "deadline": "2026-10-16",
    "status": "open",
    "answer": null,
    "answer_text": null
@@ -346,19 +345,19 @@
    "open": [
     {
      "kind": "you",
-     "text": "Your click: No program start date. Set it (start = agreed trigger, e.g. contract or kickoff)."
-    },
-    {
-     "kind": "you",
      "text": "Your click: Stürzl: send the welcome mail (Airmailer, password reset) to stuerzl@stuerzl-steuerstrafrecht.de"
     },
     {
      "kind": "block",
-     "text": "Access missing: Google Ads, Google Search Console, Website / Hosting / CMS"
+     "text": "Access missing: Google Ads"
     },
     {
      "kind": "block",
      "text": "Onboarding 0/6, next: Vertrag & AVV unterzeichnen"
+    },
+    {
+     "kind": "block",
+     "text": "Last portal activity 2026-10-13 (portal only; chat work does not show)"
     },
     {
      "kind": "appr",
@@ -379,10 +378,6 @@
     {
      "kind": "block",
      "text": "Citations: 0 live, 0 submitted, 0 planned"
-    },
-    {
-     "kind": "wait",
-     "text": "Waiting for martin: go for tech items (sitemap, 404, dead links, alt text)"
     }
    ],
    "next": [
@@ -393,10 +388,10 @@
     "Program task (week 0): Vollaudit + neue Seitenarchitektur (Standorte, Rechtsgebiete, Anwältin, Hub/Spoke)"
    ],
    "moved": [
-    "Portal login created and set as approver, intro video off for her view [0d991c89][f203e46d]",
-    "Cards E1 to E6 released; E7 released, due 20.10. [0d991c89][5a89f936]",
-    "Search Console: service account now siteFullUser; 480-day export pulled, 35 opportunities [5a89f936]",
-    "Export file: 00_project/assets/stuerzl/gsc/gsc-export-480d-2026-10-13.json [5a89f936]"
+    "Decision cards E1-E6 released; portal login created and set as approver, no welcome mail sent [0d991c89]",
+    "E3 recommendation switched to option B after a close fact-check (38/44 vs 37/44 points) [0d991c89]",
+    "Intro-video welcome card turned off on her dashboard [f203e46d]",
+    "GSC verified for stuerzl-steuerstrafrecht.de; reporting-bot access confirmed [5a89f936]"
    ],
    "numbers": [
     {
@@ -414,207 +409,7 @@
      "status": "proposed"
     }
    ],
-   "milestone": "Rate-1 payment = start date"
-  },
-  {
-   "name": "Johni Jaya Motor",
-   "anchor": "johni-jaya-motor",
-   "status": "restart",
-   "phase": "P1",
-   "phase_label": "Onboarding",
-   "goal": "Restart: 3 missing access done, overdue list cleared or re-planned, then the normal Maps goal (Martin 2026-10-13)",
-   "week": 9,
-   "ob_done": 3,
-   "ob_total": 6,
-   "roadmap": [
-    {
-     "id": "P0",
-     "label": "Prospect",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P1",
-     "label": "Onboarding",
-     "state": "now",
-     "wfs": [
-      {
-       "label": "Onboarding 3/6",
-       "cls": "run",
-       "title": "portal onboarding"
-      }
-     ]
-    },
-    {
-     "id": "P2",
-     "label": "Audit",
-     "state": "next",
-     "wfs": []
-    },
-    {
-     "id": "P3",
-     "label": "Un-Burning",
-     "state": "next",
-     "wfs": []
-    },
-    {
-     "id": "P4",
-     "label": "Build-up",
-     "state": "next",
-     "wfs": []
-    },
-    {
-     "id": "P5",
-     "label": "Content",
-     "state": "next",
-     "wfs": []
-    },
-    {
-     "id": "P6",
-     "label": "Proof + Quarter",
-     "state": "next",
-     "wfs": []
-    }
-   ],
-   "open": [
-    {
-     "kind": "block",
-     "text": "Access missing: Google Analytics (GA4), Google Business Profile, Google Search Console"
-    },
-    {
-     "kind": "block",
-     "text": "25 overdue portal tasks"
-    },
-    {
-     "kind": "block",
-     "text": "Onboarding 3/6, next: Upload material"
-    },
-    {
-     "kind": "block",
-     "text": "Last portal activity 2026-08-17 (portal only; chat work does not show)"
-    },
-    {
-     "kind": "wait",
-     "text": "Waiting for martin: Enable Local Falcon connector for Claude Code in claude.ai (2 switches)"
-    },
-    {
-     "kind": "later",
-     "text": "Later list: Local Falcon is still not enabled as a connector for Claude Code. Johni's first ranking scan has waited since 12.10."
-    }
-   ],
-   "next": [
-    "Access: GA4, Google Business Profile, GSC (Martin 13.10.: tracking already exists, GBP setup is what is left; he will double-check the rest)",
-    "Program task (week 9): CTR optimisation of titles/snippets",
-    "Program task (week 9): Interaction loop (calls, directions)",
-    "Open from chat: Baseline Local Falcon scan blocked: connector not in Claude Code (fresh session too) [247f25fe]"
-   ],
-   "moved": [
-    "Full GBP pass (categories, services, booking link) and GA4/GSC access done [701c3ead]",
-    "Plan file and memory updated; Falcon scan parked with parameters saved [701c3ead]"
-   ],
-   "numbers": [
-    {
-     "metric": "missing access",
-     "baseline": 3,
-     "target": 0,
-     "due": "2026-10-20",
-     "status": "proposed"
-    },
-    {
-     "metric": "overdue tasks",
-     "baseline": 25,
-     "target": 0,
-     "due": "2026-10-27",
-     "status": "proposed"
-    }
-   ],
-   "milestone": "Access: GA4, Google Business Profile, GSC (Martin 13.10.: tracking already exists, GBP setup is what is left; he will double-check the rest)"
-  },
-  {
-   "name": "Taxi-Zentrale Nürnberg",
-   "anchor": "taxi-zentrale-n-rnberg",
-   "status": "active",
-   "phase": "P4",
-   "phase_label": "Build-up",
-   "goal": null,
-   "week": null,
-   "ob_done": null,
-   "ob_total": null,
-   "roadmap": [
-    {
-     "id": "P0",
-     "label": "Prospect",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P1",
-     "label": "Onboarding",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P2",
-     "label": "Audit",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P3",
-     "label": "Un-Burning",
-     "state": "past",
-     "wfs": []
-    },
-    {
-     "id": "P4",
-     "label": "Build-up",
-     "state": "now",
-     "wfs": []
-    },
-    {
-     "id": "P5",
-     "label": "Content",
-     "state": "next",
-     "wfs": []
-    },
-    {
-     "id": "P6",
-     "label": "Proof + Quarter",
-     "state": "next",
-     "wfs": []
-    }
-   ],
-   "open": [
-    {
-     "kind": "wait",
-     "text": "Waiting for martin: log in to Joomla + paste the key; sample spam mails from Daniel since 2026-10-13"
-    },
-    {
-     "kind": "wait",
-     "text": "Waiting for client: Daniel sends 2 or 3 spam mails with full headers"
-    },
-    {
-     "kind": "wait",
-     "text": "Waiting for martin: go for GDPR/RSForm updates and captcha"
-    },
-    {
-     "kind": "later",
-     "text": "Later list: Taxi Nürnberg: pending plugin updates and a captcha change wait for your go. 900 spam mails and a missing Akeeba key were found 13.10."
-    }
-   ],
-   "next": [
-    "Akeeba download key saved in Joomla, updates installed, spam source found and closed (Daniel 13.10.)",
-    "Open from chat: Updates GDPR 2.25 to 2.27 and RSForm! Pro wait for go [c072bfc1]",
-    "Open from chat: Captcha on forms without one needs go [c072bfc1]",
-    "Open from chat: Spam source unproven (~900 mails); form not identified [c072bfc1]"
-   ],
-   "moved": [
-    "Akeeba Backup Pro 10.4.0 and Admin Tools Pro 7.9.3 installed, Download ID saved, backup #53 first [c072bfc1]",
-    "Site, price calculator, /taxi-rechner/ redirect and admin tested ok [c072bfc1]",
-    "Message for Daniel drafted (not sent) [c072bfc1]"
-   ],
-   "numbers": [],
-   "milestone": "Akeeba download key saved in Joomla, updates installed, spam source found and closed (Daniel 13.10.)"
+   "milestone": "Google Ads live within 2 weeks of start (due ~2026-10-21)"
   },
   {
    "name": "Praxis Suriya",
@@ -682,6 +477,11 @@
        "label": "Phone playbook",
        "cls": "dry",
        "title": "dry run only · 2026-10-11"
+      },
+      {
+       "label": "Backlinks",
+       "cls": "run",
+       "title": "in progress · 2026-10-14"
       }
      ]
     },
@@ -712,12 +512,8 @@
    ],
    "open": [
     {
-     "kind": "msg",
-     "text": "Portal: 1 unread messages, 1 help requests"
-    },
-    {
      "kind": "block",
-     "text": "Access missing: Google Tag Manager"
+     "text": "Access missing: Google Search Console, Website / Hosting / CMS"
     },
     {
      "kind": "block",
@@ -725,7 +521,7 @@
     },
     {
      "kind": "block",
-     "text": "Last portal activity 2026-09-21 (portal only; chat work does not show)"
+     "text": "Last portal activity 2026-10-13 (portal only; chat work does not show)"
     },
     {
      "kind": "appr",
@@ -741,20 +537,21 @@
     },
     {
      "kind": "wait",
-     "text": "Waiting for client: GSC access back (role only viewer in WordPress too)"
+     "text": "Waiting for martin: his own go for the footer fix and the Coralie WhatsApp send (a peer relay is not enough)"
     }
    ],
    "next": [
     "First Falcon scan after cycle reset ~19.10.",
     "Next workflow: tracking (first scan), phone",
     "Program task (week 6): 30-Tage-Zwischenmessung + Vorher/Nachher-Grid an Kunden",
-    "Open from chat: Portal row for Search Console still shows 'erteilt' vs real state; card question pending [bac0e038]"
+    "Open from chat: Footer fix (add Impressum/Datenschutz links to live nav) drafted but not pushed, needs a direct go [c6d4a4c5]",
+    "Open from chat: Backlink-Workflow DACH not yet started (checkpoint 1 pending) [b88add01]"
    ],
    "moved": [
-    "Search Console + Website access rows set to 'angefragt' in portal; reply posted as 741 [bac0e038]",
-    "Portal reply to Suriya posted (id 005b0cc2); drafts in portal-reply-drafts.md [bac0e038]",
-    "Suriya decision cards fully released (earlier in chat) [0d991c89]",
-    "Run lockout: freigegeben (2026-10-13)"
+    "Scare-tactic sales pitch on Coralie (fake Google penalty, 8k rebuild) identified; reply drafted and sent [b88add01]",
+    "Footer missing Impressum/Datenschutz links confirmed on live site, logged in as admin [c6d4a4c5]",
+    "6 decision cards (E1-E4, E6, E7) released, Coralie can see and decide them in the portal [0d991c89]",
+    "741 Backlink-Workflow DACH for Suriya: Martin's go given, budget 500 EUR/month [b88add01]"
    ],
    "numbers": [
     {
@@ -853,10 +650,6 @@
    ],
    "open": [
     {
-     "kind": "msg",
-     "text": "Portal: 0 unread messages, 1 help requests"
-    },
-    {
      "kind": "block",
      "text": "Access missing: Google Tag Manager"
     },
@@ -866,7 +659,7 @@
     },
     {
      "kind": "block",
-     "text": "Last portal activity 2026-10-09 (portal only; chat work does not show)"
+     "text": "Last portal activity 2026-10-13 (portal only; chat work does not show)"
     },
     {
      "kind": "appr",
@@ -875,10 +668,6 @@
     {
      "kind": "block",
      "text": "Citations: 38 live, 0 submitted, 29 planned"
-    },
-    {
-     "kind": "wait",
-     "text": "Waiting for client: Answer to GA4 privacy card A/B and other cards, due 20.10."
     }
    ],
    "next": [
@@ -886,13 +675,13 @@
     "Next workflow: phone, citations",
     "Program task (week 8): GBP-Engagement-Takt (Fotos, Angebote, Q&A)",
     "Program task (week 8): PR-Pipeline weiterführen",
-    "Open from chat: Mark phone_click and email_click as key events in GA4 (portal task due 14.10.) [e8aede79]"
+    "Open from chat: Mark phone_click/email_click as key events in GA4 once they age in (planned 14.10.) [e8aede79]"
    ],
    "moved": [
-    "Decision card 'Datenschutz-Abschnitt zu Google Analytics' released (open) [e8aede79]",
-    "GA4 test clicks on live site: phone_click, email_click, page_view, session_start arrive [e8aede79]",
-    "7 cards released (E1,E2,E3,E5,E6,E7,E8), E4 deleted, due 20.10. [0d991c89][f239aac6]",
-    "Indexing requests sent in Search Console for 4 pages (Frequenz, Ondamed, Wartezeit, Kontakt) [e8aede79]"
+    "Freigabe-Karte (GA4 privacy section) released; Hüwel sees it on next login [e8aede79]",
+    "Test clicks on phone/email verified live in GA4 realtime (phone_click, email_click, page_view) [e8aede79]",
+    "Indexierung task closed with Search Console screenshot as proof [e8aede79]",
+    "7 decision cards released to his portal (E1,E2,E3,E5,E6,E7,E8; E4 dropped) [0d991c89]"
    ],
    "numbers": [
     {
@@ -984,12 +773,8 @@
    ],
    "open": [
     {
-     "kind": "msg",
-     "text": "Portal: 0 unread messages, 4 help requests"
-    },
-    {
      "kind": "block",
-     "text": "Access missing: Google Analytics (GA4), Google Search Console, Google Tag Manager"
+     "text": "Access missing: Google Tag Manager"
     },
     {
      "kind": "block",
@@ -1001,27 +786,24 @@
     },
     {
      "kind": "block",
-     "text": "Last portal activity 2026-10-09 (portal only; chat work does not show)"
+     "text": "Last portal activity 2026-10-13 (portal only; chat work does not show)"
     },
     {
      "kind": "block",
      "text": "Citations: 1 live, 0 submitted, 85 planned, 4 inconsistent"
-    },
-    {
-     "kind": "wait",
-     "text": "Waiting for martin: go to publish SEO-Fahrplan page and portal message"
     }
    ],
    "next": [
     "Next workflow: pool -> sitetree, copy",
     "Program task (week 5): Hub-Seite + erste 4–6 Spoke-Seiten (nach Buchungswert priorisiert)",
     "Program task (week 5): Gastartikel 1 platziert",
-    "Open from chat: Status page 'Dein SEO-Fahrplan' and portal message not published [065572cb]"
+    "Open from chat: 14 of her 27 cards still draft, waiting on review [da3afad4]"
    ],
    "moved": [
-    "13 cards open (E1-E11, E22, E23); 14 set back to draft with 'withdrawn' log rows [065572cb]",
-    "Card system extended: preview link and image on cards, line breaks kept (live, commit 8fd4cdf) [8abda0cf]",
-    "E22 card carries Track B preview link [8abda0cf]"
+    "Status page \"Dein SEO-Fahrplan\" built and published live on her portal [065572cb]",
+    "20 new draft approval cards built (E8-E27) on top of her existing drafts [065572cb]",
+    "13 of her cards now open in the portal (E1-E11, E22, E23); 14 still draft [da3afad4]",
+    "Decision-card system got a preview-link + image field and a line-break fix, pushed to live [8abda0cf]"
    ],
    "numbers": [
     {
@@ -1115,10 +897,6 @@
    ],
    "open": [
     {
-     "kind": "msg",
-     "text": "Portal: 0 unread messages, 1 help requests"
-    },
-    {
      "kind": "block",
      "text": "Access missing: Google Tag Manager"
     },
@@ -1128,7 +906,7 @@
     },
     {
      "kind": "block",
-     "text": "Last portal activity 2026-10-07 (portal only; chat work does not show)"
+     "text": "Last portal activity 2026-10-13 (portal only; chat work does not show)"
     },
     {
      "kind": "appr",
@@ -1141,14 +919,13 @@
    ],
    "next": [
     "Next workflow: citations live checks",
-    "Program task (week 5): Gastartikel 1 platziert",
-    "Open from chat: Live FAQ check on shuiguru.de only if ticked on 17:00 card [da3afad4]"
+    "Program task (week 5): Gastartikel 1 platziert"
    ],
    "moved": [
-    "Reply mail to Maria sent from martin@741.studio; sent twice by mistake, same timestamp 18:43 [24666031]",
-    "Portal reply to Brasse posted (id 7d041abf) [bac0e038]",
-    "Cards released earlier [0d991c89]",
-    "Night run: brasse-faq needs Martin; follow-up 'check live pages' (shuiguru.de FAQ) stored for 17:00 card [da3afad4]"
+    "School page hero image repositioned/cropped per her request (more room, fewer ceiling lamps), live [24666031]",
+    "Reply confirming the fix sent to her via Airmail [24666031]",
+    "6 decision cards released (E2-E7; E1 taken out) [0d991c89]",
+    "Night result handled: FAQ drafts for the 4 page texts that have no FAQ (Martin chose the follow-up 'Check the live pages' (pending candidate brasse-faq-live-check))"
    ],
    "numbers": [
     {
@@ -1243,7 +1020,7 @@
    "open": [
     {
      "kind": "block",
-     "text": "24 overdue portal tasks"
+     "text": "22 overdue portal tasks"
     },
     {
      "kind": "block",
@@ -1251,7 +1028,7 @@
     },
     {
      "kind": "block",
-     "text": "Last portal activity 2026-08-19 (portal only; chat work does not show)"
+     "text": "Last portal activity 2026-10-13 (portal only; chat work does not show)"
     },
     {
      "kind": "appr",
@@ -1260,27 +1037,19 @@
     {
      "kind": "block",
      "text": "Decided: Still open: agent prepares next step today (read-only Ads check + document list)"
-    },
-    {
-     "kind": "wait",
-     "text": "Waiting for martin: 'staging now' for English decision labels"
-    },
-    {
-     "kind": "wait",
-     "text": "Waiting for martin: Sep 30 screenshot for Pintor's questions"
     }
    ],
    "next": [
     "Next workflow: audit follow-up, pool",
     "Program task (week 5): Hub page + first 4-6 spoke pages (prioritised by booking value)",
     "Program task (week 5): Guest article 1 placed",
-    "Open from chat: Beauty LPs: pages 7 to 10 of 10 still to do [76ee66f6]"
+    "Open from chat: Google Ads balance low (~IDR 103,892, ~5 days left); needs a top-up [e9c4af07]"
    ],
    "moved": [
-    "SEO roadmap in dashboard, pointer message for Pintor/Pasha/Peggy drafted [adc36943]",
-    "Martin: no WhatsApp status messages; status and open points stay in dashboard [e9c4af07]",
-    "Ads: ozone paused, skin tag campaign live on Martin's go; Sep 30 screenshot still open [e9c4af07]",
-    "Beauty LPs: 'Similar treatments' section published on page 6 of 10 (CellreJet), live checked [76ee66f6]"
+    "All 10 Beauty landing pages got a \"Similar treatments\" cross-link section, published live on Wix [76ee66f6]",
+    "Status/roadmap page updated with a \"Status 13 October\" section (fresh GSC numbers, blockers) [adc36943]",
+    "Google Ads advertiser verification completed (PT Amana Events Indonesia); account unpaused [e9c4af07]",
+    "New Skin Tag & Mole Removal ad campaign launched, status Eligible/Learning [e9c4af07]"
    ],
    "numbers": [
     {
@@ -1362,10 +1131,6 @@
    ],
    "open": [
     {
-     "kind": "msg",
-     "text": "Portal: 0 unread messages, 1 help requests"
-    },
-    {
      "kind": "block",
      "text": "6 overdue portal tasks"
     },
@@ -1375,13 +1140,119 @@
     }
    ],
    "next": [
-    "Open from chat: 7 cards still draft, approver set [0d991c89]"
+    "Open from chat: All 7 cards still draft, none released yet [f239aac6]"
    ],
    "moved": [
-    "Portal reply to Rabenmütter posted (id 16913676); domain access row 'entfaellt' [bac0e038]"
+    "Client-work-view prototype built locally with real Morning Grill/portal data for review [8abda0cf]",
+    "E1-E7 decision cards drafted; one factual claim on E1 corrected before draft (8 of 20, not 20) [0d991c89]",
+    "Portal reply sent to her (ticket 16913676) [bac0e038]"
    ],
    "numbers": [],
    "milestone": null
+  },
+  {
+   "name": "Johni Jaya Motor",
+   "anchor": "johni-jaya-motor",
+   "status": "restart",
+   "phase": "P1",
+   "phase_label": "Onboarding",
+   "goal": "Restart: 3 missing access done, overdue list cleared or re-planned, then the normal Maps goal (Martin 2026-10-13)",
+   "week": 9,
+   "ob_done": 3,
+   "ob_total": 6,
+   "roadmap": [
+    {
+     "id": "P0",
+     "label": "Prospect",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P1",
+     "label": "Onboarding",
+     "state": "now",
+     "wfs": [
+      {
+       "label": "Onboarding 3/6",
+       "cls": "run",
+       "title": "portal onboarding"
+      }
+     ]
+    },
+    {
+     "id": "P2",
+     "label": "Audit",
+     "state": "next",
+     "wfs": []
+    },
+    {
+     "id": "P3",
+     "label": "Un-Burning",
+     "state": "next",
+     "wfs": []
+    },
+    {
+     "id": "P4",
+     "label": "Build-up",
+     "state": "next",
+     "wfs": []
+    },
+    {
+     "id": "P5",
+     "label": "Content",
+     "state": "next",
+     "wfs": []
+    },
+    {
+     "id": "P6",
+     "label": "Proof + Quarter",
+     "state": "next",
+     "wfs": []
+    }
+   ],
+   "open": [
+    {
+     "kind": "block",
+     "text": "Onboarding 3/6, next: Upload material"
+    },
+    {
+     "kind": "block",
+     "text": "Last portal activity 2026-10-13 (portal only; chat work does not show)"
+    },
+    {
+     "kind": "wait",
+     "text": "Waiting for martin: reconnect the Local Falcon connector in claude.ai so the baseline scan can run"
+    }
+   ],
+   "next": [
+    "Access: GA4, Google Business Profile, GSC (Martin 13.10.: tracking already exists, GBP setup is what is left; he will double-check the rest)",
+    "Program task (week 9): Hours levers, booking URL, attributes, FAQ",
+    "Program task (week 9): Local directories + maps apps (Indonesian set)",
+    "Program task (week 9): Team briefing, scripts live, daily asking begins"
+   ],
+   "moved": [
+    "Restart access chain closed: new 741-owned GA4 property created, tag live on the site [701c3ead]",
+    "Reporting-bot access granted on new GA4; Google verification API enabled on our own Cloud project [701c3ead]",
+    "Search Console property registered for johnijayamotor.com, robot set as owner [701c3ead]",
+    "GBP pass completed: categories, services with prices, booking link added [247f25fe]"
+   ],
+   "numbers": [
+    {
+     "metric": "missing access",
+     "baseline": 3,
+     "target": 0,
+     "due": "2026-10-20",
+     "status": "proposed"
+    },
+    {
+     "metric": "overdue tasks",
+     "baseline": 25,
+     "target": 0,
+     "due": "2026-10-27",
+     "status": "proposed"
+    }
+   ],
+   "milestone": "Access: GA4, Google Business Profile, GSC (Martin 13.10.: tracking already exists, GBP setup is what is left; he will double-check the rest)"
   },
   {
    "name": "Kamil (Physio Anatomie + Kraft)",
@@ -1437,23 +1308,17 @@
      "wfs": []
     }
    ],
-   "open": [
-    {
-     "kind": "wait",
-     "text": "Waiting for martin: go to send report message and hack message"
-    }
-   ],
+   "open": [],
    "next": [
     "Move the monthly numbers into his client dashboard and prepare improvement recommendations (website, income streams)",
-    "Open from chat: Report message to Kamil (2 lines) drafted, not sent [7d666ae6]",
-    "Open from chat: Hack/security message to Kamil not sent [e418e89f]",
-    "Open from chat: Sep Ads data gaps (clicks, Kraft budget/calls) marked 'folgt' in report [7d666ae6]"
+    "Open from chat: Ad disapproval real reason still being dug into (account shows \"Unreliable claims\", mail said \"Online gambling\") [c6d4a4c5]",
+    "Open from chat: CRO-Kraft homepage start held, he did not pick it this round [e418e89f]"
    ],
    "moved": [
-    "Ads report Aug+Sep published in Kamil's Reports tab, HTTP 200, backup first [7d666ae6]",
-    "Kraft site: spam block and hidden element removed, 'all pages 0 spam hits' [610a8689]",
-    "Kraft homepage broke after cleanup (Elementor data); restored from 17.09. revision, CSS 142KB, live ok [610a8689]",
-    "Oberhausen footer: 2 spam links (TikTok, foreign Instagram) removed, readback + live checked [e418e89f]"
+    "Security/backup offer (500 EUR/year per site) drafted, approved and sent to Kamil [e418e89f]",
+    "CSS/Elementor regression on physiotherapiekraft.de homepage found, fixed, restored and verified live [610a8689]",
+    "DataForSEO keyword audit run for both his physio sites (city-head volumes, difficulty) [610a8689]",
+    "Ads budget-increase numbers prepared for both campaigns, blocked by a real-money safeguard [c6d4a4c5]"
    ],
    "numbers": [
     {
@@ -1527,13 +1392,23 @@
      "wfs": []
     }
    ],
-   "open": [],
+   "open": [
+    {
+     "kind": "wait",
+     "text": "Waiting for client: Marcel's reply on how to handle the 16 fully-lost giveaway signups"
+    }
+   ],
    "next": [
     "Landing page (in progress 13.10.) -> Martin's intro video -> prototype for Marcel -> Ads",
     "Next workflow: offer, then cro / automation",
-    "Open from chat: Marcel reports the Zap was switched off; checking Zapier draft editor and tag [c4cdeb06]"
+    "Open from chat: 16 fully-lost giveaway signups still need a decision on how to handle [c4cdeb06]"
    ],
-   "moved": [],
+   "moved": [
+    "Giveaway automation outage fixed: Zap was off, placeholder KlickTipp tag replaced with a real tag, republished live [c4cdeb06]",
+    "Fix tested live with a real Tally submission; KlickTipp and Pipedrive both confirmed receiving data [c4cdeb06]",
+    "UptimeRobot monitors added for both giveaway pages and the landing page [c4cdeb06]",
+    "Tally's own \"redirect on completion\" setting found off too, now fixed [f8e6a6a9]"
+   ],
    "numbers": [
     {
      "metric": "offer sent",
@@ -1616,26 +1491,11 @@
      "wfs": []
     }
    ],
-   "open": [
-    {
-     "kind": "wait",
-     "text": "Waiting for martin: Record Loom and send ready message to the group"
-    },
-    {
-     "kind": "wait",
-     "text": "Waiting for client: Team answer: may Replayers page lead to community"
-    }
-   ],
+   "open": [],
    "next": [
-    "Next workflow: cro checkpoint 3",
-    "Open from chat: Go-live date for meandyou.de not set; pages stay on clients.741.studio [5c4f6ee6]"
+    "Next workflow: cro checkpoint 3"
    ],
-   "moved": [
-    "Draft C live at clients.741.studio/meandyou/, 11 approved pages incl. 3 persona pages [5c4f6ee6]",
-    "'Optionen ansehen' buttons now all lead to booking page (partner agency rule); options page offline (404) [5c4f6ee6]",
-    "All 10 pages return 200, images load [5c4f6ee6]",
-    "Replayers page shows 44 USD per month, price clarified [5c4f6ee6]"
-   ],
+   "moved": [],
    "numbers": [
     {
      "metric": "landing pages live",
@@ -1653,6 +1513,83 @@
     }
    ],
    "milestone": null
+  },
+  {
+   "name": "Taxi-Zentrale Nürnberg",
+   "anchor": "taxi-zentrale-n-rnberg",
+   "status": "active",
+   "phase": "P4",
+   "phase_label": "Build-up",
+   "goal": null,
+   "week": null,
+   "ob_done": null,
+   "ob_total": null,
+   "roadmap": [
+    {
+     "id": "P0",
+     "label": "Prospect",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P1",
+     "label": "Onboarding",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P2",
+     "label": "Audit",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P3",
+     "label": "Un-Burning",
+     "state": "past",
+     "wfs": []
+    },
+    {
+     "id": "P4",
+     "label": "Build-up",
+     "state": "now",
+     "wfs": []
+    },
+    {
+     "id": "P5",
+     "label": "Content",
+     "state": "next",
+     "wfs": []
+    },
+    {
+     "id": "P6",
+     "label": "Proof + Quarter",
+     "state": "next",
+     "wfs": []
+    }
+   ],
+   "open": [
+    {
+     "kind": "wait",
+     "text": "Waiting for martin: log in to Joomla + paste the key; sample spam mails from Daniel since 2026-10-13"
+    },
+    {
+     "kind": "wait",
+     "text": "Waiting for martin: his own go (not a relayed one) to fix the GDPR plugin licence the same way"
+    }
+   ],
+   "next": [
+    "Akeeba download key saved in Joomla, updates installed, spam source found and closed (Daniel 13.10.)",
+    "Open from chat: GDPR/cookie-banner plugin \"missing licence\" is not the same bug as Akeeba: tied to a registration email and a past Cloudflare save block [c072bfc1]",
+    "Open from chat: 900 spam mails in one night still needs a root cause (forms without captcha) [c072bfc1]"
+   ],
+   "moved": [
+    "Akeeba Backup Pro + Admin Tools Pro Download Keys fixed; both packages updated (10.4.0 / 7.9.3) [c072bfc1]",
+    "Fresh backup taken before the update (#53, 772.75 MB); site, price calculator and .htaccess verified after [c072bfc1]",
+    "Added to the client system/sidebar, was missing before [da3afad4]"
+   ],
+   "numbers": [],
+   "milestone": "Akeeba download key saved in Joomla, updates installed, spam source found and closed (Daniel 13.10.)"
   }
  ],
  "tasks": [
@@ -1759,18 +1696,20 @@
   {
    "id": "t13",
    "owner": "Martin",
-   "status": "open",
+   "status": "dropped",
    "client": "Taxi-Zentrale Nürnberg",
    "title": "Paste the Akeeba Download Key in Joomla (both Pro entries), own login",
-   "due": null
+   "due": null,
+   "evening_note": "Already resolved live as duplicate of 2026-10-13/t25 (Akeeba key fix)."
   },
   {
    "id": "t14",
    "owner": "Martin",
-   "status": "open",
+   "status": "dropped",
    "client": "Taxi-Zentrale Nürnberg",
    "title": "Send the reply to Daniel and ask for 2 or 3 spam mails with full headers",
-   "due": null
+   "due": null,
+   "evening_note": "Martin (14.10. evening, live chat): Taxi-Zentrale treated as done for now, parked."
   },
   {
    "id": "t15",
@@ -1913,27 +1852,118 @@
    "status": "open",
    "client": "Daniela Dumann",
    "title": "Send the portal message to Daniela (points to her new SEO-Fahrplan status page + 13 released cards)"
+  },
+  {
+   "id": "t31",
+   "owner": "Martin",
+   "status": "open",
+   "client": "Bali Healing",
+   "title": "Top up Google Ads (account 239-394-2913): balance IDR 103,892 ≈ 5 days (13.10.)",
+   "due": "2026-10-14"
+  },
+  {
+   "id": "t32",
+   "owner": "agent",
+   "status": "dropped",
+   "client": "Praxis Suriya",
+   "title": "Send drafted WhatsApp reply to Coralie re: third-party scare-tactic sales call (unverified Google penalty + €8k rebuild pitch)",
+   "evening_note": "Not sent. Martin confirmed twice (Suriya chat 18:58 WITA + grill chat, 14.10. evening): old news, not needed."
+  },
+  {
+   "id": "t33",
+   "owner": "agent",
+   "status": "in_progress",
+   "client": "Praxis Suriya",
+   "title": "Fix footer: link Impressum + Datenschutz (pages exist, just not linked)"
+  },
+  {
+   "id": "t34",
+   "owner": "agent",
+   "status": "in_progress",
+   "client": "Kamil (Physio Anatomie + Kraft)",
+   "title": "Find real reason for ad disapproval (mail said 'Online gambling', account shows 'Unreliable claims')"
+  },
+  {
+   "id": "t35",
+   "owner": "agent",
+   "status": "in_progress",
+   "client": "Kamil (Physio Anatomie + Kraft)",
+   "title": "Send yearly security/backup offer, €500/year floor price"
+  },
+  {
+   "id": "t36",
+   "owner": "Martin",
+   "status": "open",
+   "client": "Kamil (Physio Anatomie + Kraft)",
+   "title": "CRO Homepage start card for physiotherapiekraft.de — held, not started"
+  },
+  {
+   "id": "t37",
+   "owner": "Martin",
+   "status": "open",
+   "client": "Daniela Dumann",
+   "title": "Grill Dumann's 7 waiting decision cards next (decision-cards chat)"
+  },
+  {
+   "id": "t38",
+   "owner": "agent",
+   "status": "in_progress",
+   "client": "741 (canary)",
+   "title": "Create UptimeRobot account (C12) for page/form liveness checks"
+  },
+  {
+   "id": "t39",
+   "owner": "agent",
+   "status": "in_progress",
+   "client": "Taxi-Zentrale Nürnberg",
+   "title": "Verify which extension the expired storejextensions.org licence belongs to (GDPR plugin vs RSForm! Pro) before any fix or message to Daniel"
+  },
+  {
+   "id": "t40",
+   "owner": "agent",
+   "status": "in_progress",
+   "client": "Praxis Suriya",
+   "title": "Backlink-DACH workflow started (€500/mo, override of Hüwel-first rule); Checkpoint 1 partly done, blocked on DataForSEO IP whitelist"
+  },
+  {
+   "id": "t41",
+   "owner": "Martin",
+   "status": "open",
+   "client": "741 (infra)",
+   "title": "Whitelist IP 202.65.231.27 at app.dataforseo.com/api-access, or turn the whitelist off — blocks the Suriya backlink workflow"
+  },
+  {
+   "id": "t42",
+   "owner": "Martin",
+   "status": "dropped",
+   "client": "STÜRZL Steuerstrafrecht",
+   "title": "Program start date still not set (rate-1 payment). ALL 52 program tasks and the Google Ads setup (8 tasks) are blocked on this.",
+   "evening_note": "Stale blocker. program_start was already 2026-10-07 in the goal sheet; Martin confirmed correct 14.10. evening. Goal sheet blocker/next_milestone corrected; live portal task dropped (resolution=canceled)."
+  },
+  {
+   "id": "t43",
+   "owner": "agent",
+   "status": "open",
+   "client": "STÜRZL Steuerstrafrecht",
+   "title": "Verify Dr. Stürzl holds the owner role on GA4/GBP/GTM (granted 07.10. by Constantin Voss/KEMB, ownership not yet confirmed)"
+  },
+  {
+   "id": "t44",
+   "owner": "741 (org)",
+   "status": "open",
+   "client": "741 internal",
+   "title": "PT Amana org-structure project started in a dedicated chat (Celine = legal Komisaris, to replace within 2-3 months; org chart, tax data, client-ownership review)"
+  },
+  {
+   "id": "t45",
+   "owner": "agent/Tantri",
+   "status": "open",
+   "client": "Johni Jaya Motor",
+   "title": "Citations (Apple Maps, Bing Places, Facebook, Indonesian directories) + review-engine briefing — genuinely not started, confirmed 14.10."
   }
  ],
  "walk": [],
- "later": [
-  {
-   "client": "Taxi-Zentrale Nürnberg",
-   "headline": "Taxi Nürnberg: pending plugin updates and a captcha change wait for your go. 900 spam mails and a missing Akeeba key were found 13.10."
-  },
-  {
-   "client": "741 (all clients)",
-   "headline": "81 portal tasks are overdue across 7 clients. Many may be done in chats but not ticked."
-  },
-  {
-   "client": "741 (citations)",
-   "headline": "Citations stand still: Praxis Suriya 25, Praxis Hüwel 29 entries are 'planned' for more than 14 days."
-  },
-  {
-   "client": "Johni Jaya Motor",
-   "headline": "Local Falcon is still not enabled as a connector for Claude Code. Johni's first ranking scan has waited since 12.10."
-  }
- ],
+ "later": [],
  "agents": [
   "QUEUED (not started this run — needs a session start from the grill chat or Martin's go): Kamil chat — draft the yearly security/backup service offer (EUR 500/year minimum per site) and a CRO homepage idea for the Kraft site. Draft only, do not send. [task t25]",
   "QUEUED: Dumann chat — publish the SEO-Fahrplan status page, release the 20 draft cards in waves; put the design-approval record and the Maps-name mismatch to Daniela as dashboard items (not a 741 self-fix); leave the 3 live mismatches as they are (new rule 14.10.: no live fixes before her feedback). [tasks t27, t28]",
@@ -2031,7 +2061,7 @@
    "label": "walk-queue clicks open"
   },
   {
-   "value": "3",
+   "value": "1",
    "label": "of 12 clients need your part"
   },
   {
@@ -2042,15 +2072,15 @@
  "today": {
   "tiles": [
    {
-    "value": 5,
+    "value": 9,
     "label": "decisions open"
    },
    {
-    "value": 43,
+    "value": 51,
     "label": "items done today"
    },
    {
-    "value": 21,
+    "value": 32,
     "label": "tasks open"
    },
    {
@@ -2062,7 +2092,7 @@
     "label": "waiting on others"
    },
    {
-    "value": 7,
+    "value": 6,
     "label": "clients off track"
    }
   ],
@@ -2075,14 +2105,14 @@
     "phase_n": 1,
     "phase_max": 6,
     "week": 5,
-    "overdue": 24,
+    "overdue": 22,
     "track": "off",
-    "track_why": "24 overdue portal tasks",
+    "track_why": "22 overdue portal tasks",
     "done": [
-     "SEO roadmap in dashboard, pointer message for Pintor/Pasha/Peggy drafted [adc36943]",
-     "Martin: no WhatsApp status messages; status and open points stay in dashboard [e9c4af07]",
-     "Ads: ozone paused, skin tag campaign live on Martin's go; Sep 30 screenshot still open [e9c4af07]",
-     "Beauty LPs: 'Similar treatments' section published on page 6 of 10 (CellreJet), live checked [76ee66f6]",
+     "All 10 Beauty landing pages got a \"Similar treatments\" cross-link section, published live on Wix [76ee66f6]",
+     "Status/roadmap page updated with a \"Status 13 October\" section (fresh GSC numbers, blockers) [adc36943]",
+     "Google Ads advertiser verification completed (PT Amana Events Indonesia); account unpaused [e9c4af07]",
+     "New Skin Tag & Mole Removal ad campaign launched, status Eligible/Learning [e9c4af07]",
      "Run pool: freigegeben (2026-10-13)",
      "Night result handled: Similar Treatments blocks for the 10 Beauty pages (due 16.10.) (routed to the Bali client chat (Martin: accept + link swap))"
     ],
@@ -2091,53 +2121,20 @@
      "Martin: Answer Pintor's 30.09. questions, then send the status reply",
      "agent: Drag the staged content-pool files into the Drive folder 'Content Pool'",
      "agent: Pasha's tracker: video testimonials + Similar Treatments on each landing page",
-     "Martin: Top up the Bali Google Ads account (GoPay); IDR 500,000 recommended. Balance IDR 103,892, about 5 days left."
+     "Martin: Top up the Bali Google Ads account (GoPay); IDR 500,000 recommended. Balance IDR 103,892, about 5 days left.",
+     "Martin: Top up Google Ads (account 239-394-2913): balance IDR 103,892 ≈ 5 days (13.10.)"
     ],
-    "n_open": 4,
+    "n_open": 5,
     "waiting": [
      "Martin: Upload the NIB PDF of PT Amana in Google Ads (ads paused since 01.10.)",
      "Martin: Go-C for the English audit page (after the status reply is out)",
      "external: Google reviews the client verification (1 to 10 days after the NIB upload)",
-     "Waiting for your approval: audit result from 2026-10-13",
-     "Waiting for martin: 'staging now' for English decision labels",
-     "Waiting for martin: Sep 30 screenshot for Pintor's questions"
+     "Waiting for your approval: audit result from 2026-10-13"
     ],
-    "n_waiting": 6,
+    "n_waiting": 4,
     "decisions_open": 0,
     "next": "Next workflow: audit follow-up, pool",
     "goal": "Onboarding 6/6 and Google Ads live within 2 weeks, then bookings from Ads and Maps (Martin 2026-10-13)"
-   },
-   {
-    "name": "Daniela Dumann",
-    "anchor": "daniela-dumann",
-    "phase": "P4",
-    "phase_label": "Build-up",
-    "phase_n": 4,
-    "phase_max": 6,
-    "week": 5,
-    "overdue": 4,
-    "track": "off",
-    "track_why": "4 overdue portal tasks",
-    "done": [
-     "13 cards open (E1-E11, E22, E23); 14 set back to draft with 'withdrawn' log rows [065572cb]",
-     "Card system extended: preview link and image on cards, line breaks kept (live, commit 8fd4cdf) [8abda0cf]",
-     "E22 card carries Track B preview link [8abda0cf]"
-    ],
-    "n_done": 3,
-    "open": [
-     "agent: Publish the SEO-Fahrplan status page and release the 20 draft cards in waves",
-     "agent: Put the design-approval record and the Maps-name mismatch to Daniela as dashboard items, not a 741 self-fix; leave the 3 live mismatches as they are",
-     "Martin: Send the portal message to Daniela (points to her new SEO-Fahrplan status page + 13 released cards)"
-    ],
-    "n_open": 3,
-    "waiting": [
-     "Martin: Click Publish in Wix for the 3 saved subpage fixes",
-     "Waiting for martin: go to publish SEO-Fahrplan page and portal message"
-    ],
-    "n_waiting": 2,
-    "decisions_open": 0,
-    "next": "Next workflow: pool -> sitetree, copy",
-    "goal": "53 Google reviews by day 90 and top 3 in Maps for the main keywords (Martin 2026-10-13)"
    },
    {
     "name": "Praxis Suriya",
@@ -2151,20 +2148,25 @@
     "track": "off",
     "track_why": "5 overdue portal tasks",
     "done": [
-     "Search Console + Website access rows set to 'angefragt' in portal; reply posted as 741 [bac0e038]",
-     "Portal reply to Suriya posted (id 005b0cc2); drafts in portal-reply-drafts.md [bac0e038]",
-     "Suriya decision cards fully released (earlier in chat) [0d991c89]",
-     "Run lockout: freigegeben (2026-10-13)"
+     "Scare-tactic sales pitch on Coralie (fake Google penalty, 8k rebuild) identified; reply drafted and sent [b88add01]",
+     "Footer missing Impressum/Datenschutz links confirmed on live site, logged in as admin [c6d4a4c5]",
+     "6 decision cards (E1-E4, E6, E7) released, Coralie can see and decide them in the portal [0d991c89]",
+     "741 Backlink-Workflow DACH for Suriya: Martin's go given, budget 500 EUR/month [b88add01]",
+     "Run lockout: freigegeben (2026-10-13)",
+     "Run backlink: in Arbeit (2026-10-14)"
     ],
-    "n_done": 4,
-    "open": [],
-    "n_open": 0,
+    "n_done": 6,
+    "open": [
+     "agent: Fix footer: link Impressum + Datenschutz (pages exist, just not linked)",
+     "agent: Backlink-DACH workflow started (€500/mo, override of Hüwel-first rule); Checkpoint 1 partly done, blocked on DataForSEO IP whitelist"
+    ],
+    "n_open": 2,
     "waiting": [
      "Dinakar: Backup, image optimisation (existing images only), caching, CSS/JS cleanup",
      "Tantri: Open the verify links of the directories that are not live yet",
      "Waiting for your approval: pool result from 2026-10-11",
      "Waiting for client: GSC access back since 2026-10-12",
-     "Waiting for client: GSC access back (role only viewer in WordPress too)"
+     "Waiting for martin: his own go for the footer fix and the Coralie WhatsApp send (a peer relay is not enough)"
     ],
     "n_waiting": 5,
     "decisions_open": 2,
@@ -2172,33 +2174,37 @@
     "goal": "Top 3 in the Maps grid for the 5 tracked keywords (Martin 2026-10-13)"
    },
    {
-    "name": "Johni Jaya Motor",
-    "anchor": "johni-jaya-motor",
-    "phase": "P1",
-    "phase_label": "Onboarding",
-    "phase_n": 1,
+    "name": "Daniela Dumann",
+    "anchor": "daniela-dumann",
+    "phase": "P4",
+    "phase_label": "Build-up",
+    "phase_n": 4,
     "phase_max": 6,
-    "week": 9,
-    "overdue": 25,
+    "week": 5,
+    "overdue": 4,
     "track": "off",
-    "track_why": "25 overdue portal tasks",
+    "track_why": "4 overdue portal tasks",
     "done": [
-     "Full GBP pass (categories, services, booking link) and GA4/GSC access done [701c3ead]",
-     "Plan file and memory updated; Falcon scan parked with parameters saved [701c3ead]"
+     "Status page \"Dein SEO-Fahrplan\" built and published live on her portal [065572cb]",
+     "20 new draft approval cards built (E8-E27) on top of her existing drafts [065572cb]",
+     "13 of her cards now open in the portal (E1-E11, E22, E23); 14 still draft [da3afad4]",
+     "Decision-card system got a preview-link + image field and a line-break fix, pushed to live [8abda0cf]"
     ],
-    "n_done": 2,
+    "n_done": 4,
     "open": [
-     "agent: Access check, client message draft, re-plan of the 25 overdue tasks",
-     "Martin: Enable the Local Falcon connector for Claude Code (2 switches in claude.ai)"
+     "agent: Publish the SEO-Fahrplan status page and release the 20 draft cards in waves",
+     "agent: Put the design-approval record and the Maps-name mismatch to Daniela as dashboard items, not a 741 self-fix; leave the 3 live mismatches as they are",
+     "Martin: Send the portal message to Daniela (points to her new SEO-Fahrplan status page + 13 released cards)",
+     "Martin: Grill Dumann's 7 waiting decision cards next (decision-cards chat)"
     ],
-    "n_open": 2,
+    "n_open": 4,
     "waiting": [
-     "Waiting for martin: Enable Local Falcon connector for Claude Code in claude.ai (2 switches)"
+     "Martin: Click Publish in Wix for the 3 saved subpage fixes"
     ],
     "n_waiting": 1,
     "decisions_open": 0,
-    "next": "Access: GA4, Google Business Profile, GSC (Martin 13.10.: tracking already exists, GBP setup is what is left; he will double-check the rest)",
-    "goal": "Restart: 3 missing access done, overdue list cleared or re-planned, then the normal Maps goal (Martin 2026-10-13)"
+    "next": "Next workflow: pool -> sitetree, copy",
+    "goal": "53 Google reviews by day 90 and top 3 in Maps for the main keywords (Martin 2026-10-13)"
    },
    {
     "name": "Praxis Hüwel",
@@ -2212,10 +2218,10 @@
     "track": "off",
     "track_why": "2 overdue portal tasks",
     "done": [
-     "Decision card 'Datenschutz-Abschnitt zu Google Analytics' released (open) [e8aede79]",
-     "GA4 test clicks on live site: phone_click, email_click, page_view, session_start arrive [e8aede79]",
-     "7 cards released (E1,E2,E3,E5,E6,E7,E8), E4 deleted, due 20.10. [0d991c89][f239aac6]",
-     "Indexing requests sent in Search Console for 4 pages (Frequenz, Ondamed, Wartezeit, Kontakt) [e8aede79]",
+     "Freigabe-Karte (GA4 privacy section) released; Hüwel sees it on next login [e8aede79]",
+     "Test clicks on phone/email verified live in GA4 realtime (phone_click, email_click, page_view) [e8aede79]",
+     "Indexierung task closed with Search Console screenshot as proof [e8aede79]",
+     "7 decision cards released to his portal (E1,E2,E3,E5,E6,E7,E8; E4 dropped) [0d991c89]",
      "Run backlink: in Arbeit (2026-10-13)"
     ],
     "n_done": 5,
@@ -2224,10 +2230,9 @@
     ],
     "n_open": 1,
     "waiting": [
-     "Waiting for your approval: pool result from 2026-10-11",
-     "Waiting for client: Answer to GA4 privacy card A/B and other cards, due 20.10."
+     "Waiting for your approval: pool result from 2026-10-11"
     ],
-    "n_waiting": 2,
+    "n_waiting": 1,
     "decisions_open": 0,
     "next": "GBP round 2 (FAQ, review replies, ~19 services)",
     "goal": "First measurable patient leads from Maps and the website (Martin 2026-10-13)"
@@ -2244,13 +2249,12 @@
     "track": "off",
     "track_why": "15 overdue portal tasks",
     "done": [
-     "Reply mail to Maria sent from martin@741.studio; sent twice by mistake, same timestamp 18:43 [24666031]",
-     "Portal reply to Brasse posted (id 7d041abf) [bac0e038]",
-     "Cards released earlier [0d991c89]",
-     "Night run: brasse-faq needs Martin; follow-up 'check live pages' (shuiguru.de FAQ) stored for 17:00 card [da3afad4]",
+     "School page hero image repositioned/cropped per her request (more room, fewer ceiling lamps), live [24666031]",
+     "Reply confirming the fix sent to her via Airmail [24666031]",
+     "6 decision cards released (E2-E7; E1 taken out) [0d991c89]",
      "Night result handled: FAQ drafts for the 4 page texts that have no FAQ (Martin chose the follow-up 'Check the live pages' (pending candidate brasse-faq-live-check))"
     ],
-    "n_done": 5,
+    "n_done": 4,
     "open": [
      "Martin: Answer the question on card E1 (E2-E4 release started)"
     ],
@@ -2275,15 +2279,17 @@
     "track": "off",
     "track_why": "6 overdue portal tasks",
     "done": [
-     "Portal reply to Rabenmütter posted (id 16913676); domain access row 'entfaellt' [bac0e038]"
+     "Client-work-view prototype built locally with real Morning Grill/portal data for review [8abda0cf]",
+     "E1-E7 decision cards drafted; one factual claim on E1 corrected before draft (8 of 20, not 20) [0d991c89]",
+     "Portal reply sent to her (ticket 16913676) [bac0e038]"
     ],
-    "n_done": 1,
+    "n_done": 3,
     "open": [],
     "n_open": 0,
     "waiting": [],
     "n_waiting": 0,
     "decisions_open": 0,
-    "next": "Open from chat: 7 cards still draft, approver set [0d991c89]",
+    "next": "Open from chat: All 7 cards still draft, none released yet [f239aac6]",
     "goal": "The 'Baseline -> Ziel' values of the Rabenmütter report page (Martin 2026-10-13); agent copies them here, Martin confirms"
    },
    {
@@ -2298,25 +2304,23 @@
     "track": "unknown",
     "track_why": "no portal program",
     "done": [
-     "Akeeba Backup Pro 10.4.0 and Admin Tools Pro 7.9.3 installed, Download ID saved, backup #53 first [c072bfc1]",
-     "Site, price calculator, /taxi-rechner/ redirect and admin tested ok [c072bfc1]",
-     "Message for Daniel drafted (not sent) [c072bfc1]"
+     "Akeeba Backup Pro + Admin Tools Pro Download Keys fixed; both packages updated (10.4.0 / 7.9.3) [c072bfc1]",
+     "Fresh backup taken before the update (#53, 772.75 MB); site, price calculator and .htaccess verified after [c072bfc1]",
+     "Added to the client system/sidebar, was missing before [da3afad4]"
     ],
     "n_done": 3,
     "open": [
-     "Martin: Paste the Akeeba Download Key in Joomla (both Pro entries), own login",
-     "Martin: Send the reply to Daniel and ask for 2 or 3 spam mails with full headers"
+     "agent: Verify which extension the expired storejextensions.org licence belongs to (GDPR plugin vs RSForm! Pro) before any fix or message to Daniel"
     ],
-    "n_open": 2,
+    "n_open": 1,
     "waiting": [
      "agent: Read-only check of the Joomla admin: update sites, versions, captcha settings",
      "external: Daniel forwards sample spam mails (full headers)",
      "Waiting for martin: log in to Joomla + paste the key; sample spam mails from Daniel since 2026-10-13",
-     "Waiting for client: Daniel sends 2 or 3 spam mails with full headers",
-     "Waiting for martin: go for GDPR/RSForm updates and captcha"
+     "Waiting for martin: his own go (not a relayed one) to fix the GDPR plugin licence the same way"
     ],
-    "n_waiting": 5,
-    "decisions_open": 0,
+    "n_waiting": 4,
+    "decisions_open": 2,
     "next": "Akeeba download key saved in Joomla, updates installed, spam source found and closed (Daniel 13.10.)",
     "goal": null
    },
@@ -2331,14 +2335,23 @@
     "overdue": null,
     "track": "unknown",
     "track_why": "no portal program",
-    "done": [],
-    "n_done": 0,
+    "done": [
+     "Giveaway automation outage fixed: Zap was off, placeholder KlickTipp tag replaced with a real tag, republished live [c4cdeb06]",
+     "Fix tested live with a real Tally submission; KlickTipp and Pipedrive both confirmed receiving data [c4cdeb06]",
+     "UptimeRobot monitors added for both giveaway pages and the landing page [c4cdeb06]",
+     "Tally's own \"redirect on completion\" setting found off too, now fixed [f8e6a6a9]",
+     "Run automation: in Arbeit (2026-10-14)",
+     "Run canary: in Arbeit (2026-10-14)"
+    ],
+    "n_done": 6,
     "open": [
      "Martin: Sequence: landing page -> intro video -> prototype -> Ads"
     ],
     "n_open": 1,
-    "waiting": [],
-    "n_waiting": 0,
+    "waiting": [
+     "Waiting for client: Marcel's reply on how to handle the 16 fully-lost giveaway signups"
+    ],
+    "n_waiting": 1,
     "decisions_open": 0,
     "next": "Landing page (in progress 13.10.) -> Martin's intro video -> prototype for Marcel -> Ads",
     "goal": "Close a new website build with a monthly subscription, plus Google Ads as soon as possible; show Hüwel as proof (Martin 2026-10-13)"
@@ -2354,60 +2367,17 @@
     "overdue": null,
     "track": "unknown",
     "track_why": "no portal program",
-    "done": [
-     "Draft C live at clients.741.studio/meandyou/, 11 approved pages incl. 3 persona pages [5c4f6ee6]",
-     "'Optionen ansehen' buttons now all lead to booking page (partner agency rule); options page offline (404) [5c4f6ee6]",
-     "All 10 pages return 200, images load [5c4f6ee6]",
-     "Replayers page shows 44 USD per month, price clarified [5c4f6ee6]"
-    ],
-    "n_done": 4,
+    "done": [],
+    "n_done": 0,
     "open": [
      "Martin: Record the Loom, send the ready message to the group, set the go-live date for meandyou.de"
     ],
     "n_open": 1,
-    "waiting": [
-     "Waiting for martin: Record Loom and send ready message to the group",
-     "Waiting for client: Team answer: may Replayers page lead to community"
-    ],
-    "n_waiting": 2,
+    "waiting": [],
+    "n_waiting": 0,
     "decisions_open": 0,
     "next": "Next workflow: cro checkpoint 3",
     "goal": "Both landing pages live and the no-show rate measured and lowered (Martin 2026-10-13)"
-   },
-   {
-    "name": "STÜRZL Steuerstrafrecht",
-    "anchor": "st-rzl-steuerstrafrecht",
-    "phase": "P1",
-    "phase_label": "Onboarding",
-    "phase_n": 1,
-    "phase_max": 6,
-    "week": 0,
-    "overdue": 0,
-    "track": "on",
-    "track_why": "no overdue portal task",
-    "done": [
-     "Portal login created and set as approver, intro video off for her view [0d991c89][f203e46d]",
-     "Cards E1 to E6 released; E7 released, due 20.10. [0d991c89][5a89f936]",
-     "Search Console: service account now siteFullUser; 480-day export pulled, 35 opportunities [5a89f936]",
-     "Export file: 00_project/assets/stuerzl/gsc/gsc-export-480d-2026-10-13.json [5a89f936]",
-     "Night result handled: 35 GSC opportunities: which page gets which fix (routed: client decision card for Anja)"
-    ],
-    "n_done": 5,
-    "open": [
-     "Martin: Decide card E3 (A or B; recommendation B) and release the Stürzl cards"
-    ],
-    "n_open": 1,
-    "waiting": [
-     "Waiting for your approval: audit result from 2026-10-11",
-     "Waiting for your approval: cro result from 2026-10-11",
-     "Waiting for your approval: pool result from 2026-10-11",
-     "Waiting for your approval: cro_b result from 2026-10-11",
-     "Waiting for martin: go for tech items (sitemap, 404, dead links, alt text)"
-    ],
-    "n_waiting": 5,
-    "decisions_open": 2,
-    "next": "Rate-1 payment = start date",
-    "goal": "Start date fixed, Google Ads live within 2 weeks after start, approved money pages live (Martin 2026-10-13)"
    },
    {
     "name": "Kamil (Physio Anatomie + Kraft)",
@@ -2421,26 +2391,94 @@
     "track": "on",
     "track_why": "no overdue portal task",
     "done": [
-     "Ads report Aug+Sep published in Kamil's Reports tab, HTTP 200, backup first [7d666ae6]",
-     "Kraft site: spam block and hidden element removed, 'all pages 0 spam hits' [610a8689]",
-     "Kraft homepage broke after cleanup (Elementor data); restored from 17.09. revision, CSS 142KB, live ok [610a8689]",
-     "Oberhausen footer: 2 spam links (TikTok, foreign Instagram) removed, readback + live checked [e418e89f]",
+     "Security/backup offer (500 EUR/year per site) drafted, approved and sent to Kamil [e418e89f]",
+     "CSS/Elementor regression on physiotherapiekraft.de homepage found, fixed, restored and verified live [610a8689]",
+     "DataForSEO keyword audit run for both his physio sites (city-head volumes, difficulty) [610a8689]",
+     "Ads budget-increase numbers prepared for both campaigns, blocked by a real-money safeguard [c6d4a4c5]",
      "Night result handled: Public read-only check of physiotherapieoberhausen.com after the Kraft hack (routed to the Kamil chat (Martin: remove the 2 spam footer links))"
     ],
     "n_done": 5,
     "open": [
      "Martin: Decide: pause or keep the Kraft Google Ads while physiotherapiekraft.de is closed (403)",
      "agent: Hacked site physiotherapiekraft.de: plugin comparison + cleanup; full scan of the Oberhausen site",
-     "agent: Draft in the Kamil chat: a yearly website security/backup service offer (EUR 500/year minimum per site) and a CRO homepage workflow idea for the Kraft site. Draft only, do not send."
+     "agent: Draft in the Kamil chat: a yearly website security/backup service offer (EUR 500/year minimum per site) and a CRO homepage workflow idea for the Kraft site. Draft only, do not send.",
+     "agent: Find real reason for ad disapproval (mail said 'Online gambling', account shows 'Unreliable claims')",
+     "agent: Send yearly security/backup offer, €500/year floor price",
+     "Martin: CRO Homepage start card for physiotherapiekraft.de — held, not started"
     ],
-    "n_open": 3,
-    "waiting": [
-     "Waiting for martin: go to send report message and hack message"
-    ],
-    "n_waiting": 1,
+    "n_open": 6,
+    "waiting": [],
+    "n_waiting": 0,
     "decisions_open": 0,
     "next": "Move the monthly numbers into his client dashboard and prepare improvement recommendations (website, income streams)",
     "goal": "Monthly reports current (August, September) and cost per lead held or lowered (Martin 2026-10-13)"
+   },
+   {
+    "name": "STÜRZL Steuerstrafrecht",
+    "anchor": "st-rzl-steuerstrafrecht",
+    "phase": "P1",
+    "phase_label": "Onboarding",
+    "phase_n": 1,
+    "phase_max": 6,
+    "week": 0,
+    "overdue": 0,
+    "track": "on",
+    "track_why": "no overdue portal task",
+    "done": [
+     "Decision cards E1-E6 released; portal login created and set as approver, no welcome mail sent [0d991c89]",
+     "E3 recommendation switched to option B after a close fact-check (38/44 vs 37/44 points) [0d991c89]",
+     "Intro-video welcome card turned off on her dashboard [f203e46d]",
+     "GSC verified for stuerzl-steuerstrafrecht.de; reporting-bot access confirmed [5a89f936]",
+     "Night result handled: 35 GSC opportunities: which page gets which fix (routed: client decision card for Anja)"
+    ],
+    "n_done": 5,
+    "open": [
+     "Martin: Decide card E3 (A or B; recommendation B) and release the Stürzl cards",
+     "agent: Verify Dr. Stürzl holds the owner role on GA4/GBP/GTM (granted 07.10. by Constantin Voss/KEMB, ownership not yet confirmed)"
+    ],
+    "n_open": 2,
+    "waiting": [
+     "Waiting for your approval: audit result from 2026-10-11",
+     "Waiting for your approval: cro result from 2026-10-11",
+     "Waiting for your approval: pool result from 2026-10-11",
+     "Waiting for your approval: cro_b result from 2026-10-11"
+    ],
+    "n_waiting": 4,
+    "decisions_open": 2,
+    "next": "Rate-1 payment = start date",
+    "goal": "Start date fixed, Google Ads live within 2 weeks after start, approved money pages live (Martin 2026-10-13)"
+   },
+   {
+    "name": "Johni Jaya Motor",
+    "anchor": "johni-jaya-motor",
+    "phase": "P1",
+    "phase_label": "Onboarding",
+    "phase_n": 1,
+    "phase_max": 6,
+    "week": 9,
+    "overdue": 0,
+    "track": "on",
+    "track_why": "no overdue portal task",
+    "done": [
+     "Restart access chain closed: new 741-owned GA4 property created, tag live on the site [701c3ead]",
+     "Reporting-bot access granted on new GA4; Google verification API enabled on our own Cloud project [701c3ead]",
+     "Search Console property registered for johnijayamotor.com, robot set as owner [701c3ead]",
+     "GBP pass completed: categories, services with prices, booking link added [247f25fe]"
+    ],
+    "n_done": 4,
+    "open": [
+     "agent: Access check, client message draft, re-plan of the 25 overdue tasks",
+     "Martin: Enable the Local Falcon connector for Claude Code (2 switches in claude.ai)",
+     "agent/Tantri: Citations (Apple Maps, Bing Places, Facebook, Indonesian directories) + review-engine briefing — genuinely not started, confirmed 14.10."
+    ],
+    "n_open": 3,
+    "waiting": [
+     "Waiting for martin: reconnect the Local Falcon connector in claude.ai so the baseline scan can run"
+    ],
+    "n_waiting": 1,
+    "decisions_open": 1,
+    "next": "Access: GA4, Google Business Profile, GSC (Martin 13.10.: tracking already exists, GBP setup is what is left; he will double-check the rest)",
+    "goal": "Restart: 3 missing access done, overdue list cleared or re-planned, then the normal Maps goal (Martin 2026-10-13)"
    }
   ],
   "not_delegated": [],
@@ -2453,16 +2491,6 @@
    {
     "client": "Marcel Rosenbach",
     "title": "Sequence: landing page -> intro video -> prototype -> Ads",
-    "due": null
-   },
-   {
-    "client": "Taxi-Zentrale Nürnberg",
-    "title": "Paste the Akeeba Download Key in Joomla (both Pro entries), own login",
-    "due": null
-   },
-   {
-    "client": "Taxi-Zentrale Nürnberg",
-    "title": "Send the reply to Daniel and ask for 2 or 3 spam mails with full headers",
     "due": null
    },
    {
@@ -2503,6 +2531,26 @@
    {
     "client": "Daniela Dumann",
     "title": "Send the portal message to Daniela (points to her new SEO-Fahrplan status page + 13 released cards)",
+    "due": null
+   },
+   {
+    "client": "Bali Healing",
+    "title": "Top up Google Ads (account 239-394-2913): balance IDR 103,892 ≈ 5 days (13.10.)",
+    "due": "2026-10-14"
+   },
+   {
+    "client": "Kamil (Physio Anatomie + Kraft)",
+    "title": "CRO Homepage start card for physiotherapiekraft.de — held, not started",
+    "due": null
+   },
+   {
+    "client": "Daniela Dumann",
+    "title": "Grill Dumann's 7 waiting decision cards next (decision-cards chat)",
+    "due": null
+   },
+   {
+    "client": "741 (infra)",
+    "title": "Whitelist IP 202.65.231.27 at app.dataforseo.com/api-access, or turn the whitelist off — blocks the Suriya backlink workflow",
     "due": null
    }
   ],
@@ -2572,6 +2620,6 @@
    }
   ],
   "done": [],
-  "log_status": "none"
+  "log_status": "draft"
  }
 }

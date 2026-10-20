@@ -47,7 +47,7 @@ Das Rhetorik-Seminar für Führungskräfte und Unternehmer mit Michael Ehlers is
 <!-- design: dunkles Band (Anthrazit warm), vier kurze Zeilen mit Situationsnamen als kleine Überschrift. Wenig Elemente. -->
 ## Wo der Auftritt hinter der Substanz zurückbleibt
 
-Du kennst dein Geschäft. Die Zahlen stimmen, das Team ist gut. Trotzdem gibt es Momente, in denen das nicht ankommt.
+Du kennst dein Geschäft. Die Zahlen stimmen, das Team ist gut. Trotzdem gibt es Momente, in denen das nicht ankommt. Dein Angebot verliert nicht immer gegen das bessere Angebot. Manchmal verliert es gegen den besseren Auftritt.
 
 - **Der Pitch.** Du stellst dein Unternehmen vor, und der Raum hört höflich zu. Mehr passiert nicht.
 - **Der Beirat.** Du hast die bessere Begründung. Am Ende setzt sich durch, wer klarer spricht.

@@ -1,0 +1,42 @@
+{
+  "plan_index": 1,
+  "client": "Praxis Suriya",
+  "mode": "FEEDBACK",
+  "feedback_id": "61abce05-2b04-49b4-b4ab-420ab4374080",
+  "input_file": "feedback/praxis-suriya/61abce05-2b04-49b4-b4ab-420ab4374080.md",
+  "pass": true,
+  "checks": {
+    "no_fehlt_in_required_fields": {
+      "pass": true,
+      "note": "No [fehlt: placeholder inside the NAP block; both [fehlt:] uses are legitimate real-data gaps (missing original report section, unconfirmed weekend hours), carried over unchanged from feedback_id 5bea6cb2 which this item extends."
+    },
+    "nap_match": {
+      "pass": true,
+      "note": "Draft NAP block matches nap_locked field-by-field: name 'Praxis Suriya - Ayurveda & Naturheilkunde', street 'Schützenpfad 29', postal_code 55218, city 'Ingelheim am Rhein', phone '+49 174 7411087', category 'Heilpraktiker'."
+    },
+    "json_ld_valid": {
+      "pass": true,
+      "note": "N/A for FEEDBACK mode - no JSON-LD produced or required."
+    },
+    "language_match": {
+      "pass": true,
+      "note": "Copy is German; client is a DACH practice (market_lang DE)."
+    },
+    "hwg_scan": {
+      "pass": true,
+      "note": "Content is GBP opening-hours/CTA/accessibility logistics, no health claims of any kind - no 'heilt', 'garantiert', 'Heilung', '100%'."
+    },
+    "feedback_addresses_comment": {
+      "pass": true,
+      "note": "Sentence-for-sentence against context.json.feedback_open[id=61abce05...]: (1)-(3) opening hours, Monday phone booking, and Termin-Button/Buchungsformular are identical to feedback_id 5bea6cb2 (same section, 28s earlier) and are correctly carried forward unchanged rather than re-derived. (4) NEW: 'barrier frei aber nicht Toilette' -> new 'Barrierefreiheit' subsection states the practice is accessible but the toilet is not, with a concrete GBP-attribute recommendation (keep 'Barrierefreier Eingang', disable 'Barrierefreie Toilette') instead of a blanket accessible claim. This is the one new point in this comment vs. its predecessor and it is fully addressed."
+    },
+    "deslop_hard_check": {
+      "pass": true,
+      "applicable": false,
+      "note": "Per SKILL.md FEEDBACK rules, de-slop only blocks when the Vorschlag is new client-facing prose meant to ship as-is (e.g. a GBP description rewrite). This Vorschlag is a data table plus internal recommendations to Martin ('Empfehlung: ...') about which GBP attributes to configure - not client-facing marketing copy - so the check does not apply as a blocker."
+    }
+  },
+  "fails": [],
+  "verdict": "pass",
+  "reason": "FEEDBACK item correctly treats this as a continuation of the same GBP thread as feedback_id 5bea6cb2: carries forward the unchanged opening-hours/Termin-Button content and adds exactly the one new point from this comment (toilet not barrier-free) as a grounded, actionable GBP-attribute recommendation. No invented facts, genuine gaps still flagged with [fehlt: ...], no HWG or NAP issues."
+}

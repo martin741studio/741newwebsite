@@ -1,0 +1,51 @@
+{
+  "client": "Rabenmütter Shop",
+  "client_id": "fbcc70d1-4c56-437c-b5fb-8056e48d3f62",
+  "task_id": "77261080-f295-4d5e-877f-07245cba28f7",
+  "mode": "CREATE",
+  "plan_index": 5,
+  "executor_file": "specs/rabenmuetter-shop/trauerkarten-kollektion-hub.md",
+  "pass": false,
+  "verdict": "retry",
+  "hard_checks": {
+    "1_no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "fail",
+      "note": "Title ('Trauerkarten online kaufen | Rabenmütter Verlag') and Meta description are complete, no [fehlt:]. H1 is complete, no [fehlt:]. NAP block: n/a for this item, no nap_locked record for this client_id (online shop, correctly not invented). But the JSON-LD section is not a draft with gaps — it is entirely absent and says so explicitly: '[fehlt: Kein JSON-LD-Entwurf in dieser Datei.]' That is a [fehlt:] marker inside the JSON-LD field itself, so this check fails on the JSON-LD clause even though Title/Meta/H1 are clean."
+    },
+    "2_nap_matches_locked_record": {
+      "result": "n/a",
+      "note": "Checked context.json.nap_locked directly: no entry for client_id fbcc70d1-4c56-437c-b5fb-8056e48d3f62. Spec correctly states 'nicht zutreffend' instead of inventing a NAP block — this is an online shop with no physical location in the dataset."
+    },
+    "3_jsonld_valid_localbusiness_faqpage": {
+      "result": "fail",
+      "note": "No JSON-LD block exists in the file to parse. Spec explains why (no real category URLs or real FAQ questions available yet, so writing JSON-LD now would mean inventing content, which is correctly refused) — but the hard check is binary: JSON-LD must parse and contain the required schema types. Zero JSON-LD present = fail, regardless of the (valid) reason for its absence. CollectionPage/ItemList + FAQPage is the right target schema for this page type; neither exists yet."
+    },
+    "4_copy_language_matches_market_lang": {
+      "result": "pass",
+      "note": "market_lang = de. Title, meta, H1, outline, GEO direct-answer draft, definition box, and all internal notes are consistently German."
+    },
+    "5_hwg_scan": {
+      "result": "pass",
+      "note": "Scanned for 'heilt', 'garantiert', '100 %', 'Heilung' and similar cure/guarantee/fear language. None present. Not a health/YMYL client (e-commerce card shop), so HWG is not the operative compliance risk here regardless."
+    },
+    "6_rubric_every_dimension_ge_80": {
+      "result": "fail",
+      "note": "Scored the 8 dimensions against references/scoring-rubric.md, using only what the spec itself provides (no invented evidence): (1) Search-intent match ~70 — hub/collection page type is right for transactional intent, but category and motif names are unconfirmed placeholders, so structure is not yet verified against the real site. (2) Topical depth ~15 — spec itself flags this 'nicht geprüft'; zero competitor/SERP subtopic coverage confirmed. (3) GEO-extractability ~35 — direct-answer block and one definition exist, but the FAQ block is completely empty (no real PAA questions) and every concrete fact (price, delivery time, card formats) is [fehlt:]. (4) E-E-A-T ~20 — spec self-rates this 'schwach'; no named practitioner/author, no Über-uns paragraph. (5) Local signals — n/a, correctly not scored (bundesweiter Online-Shop, no local case). (6) Technical on-page ~85 — title/meta/H1 complete and within char limits, keyword front-loaded, logical H2 outline. (7) Schema = 0 — no JSON-LD at all (see check 3). (8) Internal links ~50 — real sibling cluster links named (two Ratgeber pages, both with real task IDs), but no upward link to a pillar page is known, so the page is a partial orphan at the top of the hierarchy. Four of seven scored dimensions (2, 3, 4, 7) are far below the required ≥80 bar, so this fails decisively — consistent with the Executor's own self-check table in the file, which already flags dimensions 2, 3, 4, 7 as under 80."
+    },
+    "7_deslop_hard_check": {
+      "result": "n/a",
+      "note": "Per skill scope, de-slop applies to CREATE/AUDIT body copy. The 'Body content' section of this spec explicitly says 'Noch nicht ausformuliert' (not yet written) — there is no finished body copy to run deslop.py against. The only finished prose is the 2-3 sentence GEO direct-answer draft and a one-line definition, which the Executor flagged as a first draft, not final ship-ready copy, and explicitly noted no deslop run was needed at this size. Read that text manually as a sanity check: short sentences, active voice, no filler adjectives, no AI-tell phrasing — no concern, but this check is n/a rather than pass because it is not the artifact the check is scoped to (finished body copy)."
+    }
+  },
+  "additional_observations": [
+    "This item was already self-marked by the Executor as BLOCKED / needs_martin: no_dataforseo_tool before reaching this Critic step, per the skill's explicit instruction for that exact situation ('that page must be marked needs_martin ... rather than the Executor guessing keyword data'). The Critic grading here confirms independently, via the standard rubric and hard checks, that the file would fail regardless — it is not just missing keyword volumes, it is missing schema entirely (hard check 3) and has a [fehlt:] marker inside the JSON-LD field (hard check 1), plus four rubric dimensions well under 80.",
+    "Everything the Executor did include is well-sourced and honest: real client feedback quotes (66478f5c, 801d4d7d) with correct feedback_id references, real task IDs from the roadmap, and a clean refusal to invent JSON-LD, FAQ, category names, or competitor subtopics without real data. No fabricated numbers or claims found anywhere in the file — hard rule 2 (real data only) is respected throughout.",
+    "A second Executor attempt on this same page is very unlikely to pass unless DataForSEO (and ideally a working site-fetch for rabenmuetter-verlag.de) becomes reachable in that session — the missing pieces (competitor subtopics, real PAA questions, real category/URL structure, JSON-LD) all depend on tools the Executor already reported as unavailable, not on effort. Flagging this for whoever reviews the retry outcome, so a second identical blocker is not mistaken for a new problem.",
+    "The handwritten-card Modell A/B ambiguity is correctly left open pending feedback_id 801d4d7d resolution, and the spec correctly avoids promising a fixed feature before that is confirmed — good discipline, not a Critic concern."
+  ],
+  "fails": [
+    "hard_check_1: [fehlt:] marker present inside JSON-LD field",
+    "hard_check_3: no JSON-LD present at all — cannot validate CollectionPage/FAQPage schema",
+    "hard_check_6: rubric dimensions 2 (Topical depth ~15), 3 (GEO-extractability ~35), 4 (E-E-A-T ~20), 7 (Schema = 0) all well below the required ≥80"
+  ]
+}

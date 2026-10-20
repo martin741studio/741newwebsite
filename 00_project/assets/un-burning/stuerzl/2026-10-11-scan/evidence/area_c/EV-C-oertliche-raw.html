@@ -1,0 +1,1460 @@
+<!DOCTYPE html >
+<html lang="de">
+<!--  2063 -->
+<head>
+
+						
+	
+
+
+<meta name="viewport" content="width=device-width, user-scalable=yes">
+
+<title>Das Örtliche Telefonbuch</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description">
+<meta name="keywords">
+
+
+
+
+
+	
+
+
+
+	<meta name="robots" content="noindex,nofollow"/>
+
+
+
+
+
+
+
+
+
+
+	
+<!-- WIPE Web Analytics (html head new map ) - BEGIN -->
+<script src="/js/oe.ws.js?42420_569"></script>
+<script src="https://wipe.de/wa.js"></script>
+<script>
+oeStorageHandler = new WebStorageHandler ();
+var isUseCookies = oeStorageHandler.getWaConsent();
+
+var wwa$ = (_WA_) ? _WA_.getAnalyzer("OE", { trackPagePerf: true, trackClicks: true, trackAdb: true, trackAdbRate: 2, useCookies: isUseCookies }) : null;
+</script>
+
+
+<!-- WIPE Web Analytics (html head new map ) - END -->        
+
+<link href="https://www.dasoertliche.de/img/favicon.ico" rel="icon" type="image/ico">
+<link href="https://www.dasoertliche.de/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="https://www.dasoertliche.de/search/OpenSearch.xml" rel="search" type="application/opensearchdescription+xml" title="Das Ö–rtliche" />
+
+
+
+<link href="/css/master.css?42309_569" rel="stylesheet" type="text/css" >
+<link href="/css/search.css?42309_569" rel="stylesheet" type="text/css" >
+<link href="/iconfont/style.css?40501_569" rel="stylesheet" type="text/css">	
+<link href="/css/ugc.css?42309_569" rel="stylesheet" type="text/css" >
+
+
+
+ 
+<link href="/css/btrusted_seal.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/print.css?42309_569" media="print" rel="stylesheet" type="text/css">
+
+<link href="/css/hitlist.css?42309_569" rel="stylesheet" type="text/css">
+<script>
+var adblock = true;
+</script>
+<script src="/js/adframe.js?null"></script>
+<script src="/js/oe.core.js?42420_569"></script>
+<script src="/js/oe.plugins.js?42420_569"></script>
+<script src="/js/oe.core.options.js?39078_569"></script>
+
+<script>
+
+/* <![CDATA[ */
+var werbUrl = "//www.dasoertliche.de/services/werben/contactlistregional.php?adtype=3";
+var rzWebUrl = "https://www.dasoertliche.de/";
+var ac_path = "";
+var ac_min = "1";
+var ac_match = "false";
+var ac_auto = "true";
+var ac_seed = "";
+var ci = "Frankfurt am Main";
+var kgs = "";
+var buab = "69000188";
+var zbuab = "69000197,69000195,69000194,69000198,69000193";
+var book = "2243";
+
+
+var vnr = "337";
+
+
+var option_reg = "true";
+var moreURL = "https://www.dasoertliche.de/";
+
+
+
+/* ]]> */
+
+</script>
+
+<script src="/js/oetb.global.js?40539_569"></script>
+<script src="/js/rmif.js?41077_569"></script>
+
+
+            <script src="/js/liwAnalytics.js"></script>
+
+
+
+<script>
+
+
+/* Initialisierung SearchboxHandler */
+
+var options = {
+   reg: (option_reg === 'true'),
+   autoComplete: {
+		 minChars: ac_min,
+		 matchSubset: ac_match,
+		 autoSubmit: ac_auto,
+         onChangeTerm: onChangeTerm,
+         moreURL     : moreURL,
+         moreParams  : "zvo_ok=3"
+   },
+   kwAutoComplete: {
+			 minChars: ac_min,
+			 matchSubset: ac_match,
+			 autoSubmit: false,
+	         onChangeTerm: onChangeTermKw
+	},
+	radiusSearch: {
+		values: {
+			min:0,
+			value:0
+		},
+		onSlideEnd: function (value,lastValue) {
+			if (value > 0) {
+				wwa$.logAction("Umkreis auswählen_an")
+			} else {
+				wwa$.logAction("Umkreis auswählen_aus")
+			}
+		} 
+	},	
+	searchHistory: {
+		origin: "https://www.dasoertliche.de",
+		path: "js/oe.storage.html"
+	},
+	wipe: {
+    	analyzer: wwa$
+  	}
+}
+
+
+
+
+var oel_actReferrer = document.referrer;
+var oeInitialLoad = true;
+var act_form = "search_nat";
+var sb_form = "";
+
+String.prototype.equalsIgnoreCase = function(arg) {               
+   return (this.toLowerCase()==(arg.toLowerCase()));
+}
+
+
+
+
+var fasts = 0;
+
+var onClick = function (event){
+	
+	fasts = 0;
+	form_name = logClickChoice(event, "false");
+	
+
+	var myInner = event.element.innerHTML + "";
+	myInner = myInner.substring(myInner.indexOf("i>")+1);
+	var isDropDown = true;
+	if (myInner.length > 1){
+		isDropDown = false;
+	}
+	
+	if (!isDropDown) {
+		fasts = 1;
+	}
+
+	switch (event.searchType.selector) {
+    	case "i.icon-horn":
+    	break;
+    	case "i.icon-phone":
+    	break;
+		case "i.icon-aeskulap":
+		form_name = "search_pharm";		
+    	break;    	
+		case "i.icon-cashcard":
+		form_name = "search_cash_dispenser";
+    	break;    	
+	}
+	
+	act_form = form_name;
+	
+	addParams= addOrReplaceNonEmptyParameter(addParams, "buc","2243");
+	addParams= addOrReplaceNonEmptyParameter(addParams, "buab","69000188");
+	addParams= addOrReplaceNonEmptyParameter(addParams, "zbuab","69000197,69000195,69000194,69000198,69000193");
+	addParams= addOrReplaceNonEmptyParameter(addParams, "kgs","");
+	addParams= addOrReplaceNonEmptyParameter(addParams, "ci","Frankfurt am Main");
+	addParams= addOrReplaceNonEmptyParameter(addParams, "county","");
+	addParams= addOrReplaceNonEmptyParameter(addParams, "customregion","");
+	addParams= addOrReplaceNonEmptyParameter(addParams, "zvo_ok","1");
+
+
+
+
+
+let kwVal = $("input[name='kw']").val();
+let	ciVal = $("input[name='ci']").val();
+
+if (kwVal) {
+	addParams= addOrReplaceNonEmptyParameter(addParams, "kw", kwVal);
+}
+if (ciVal) {
+	addParams= addOrReplaceNonEmptyParameter(addParams, "ci", ciVal);
+}
+
+   addParams += "&seo=false";
+
+
+
+var vnr = "337";
+
+
+
+   if (oeInitialLoad == false) {
+   	
+	 logPageSwitchEvent(form_name, "2243", vnr);
+   }
+   
+	try {
+		// Anzeigen Laden
+		loadAds();
+	} catch(e) {}
+
+   $.get('https://www.dasoertliche.de/?form_name=sb_loader&c=' + form_name + '&' + addParams,  function(data) {
+    	if (isSearchTypeChange(event)) {
+    		$(".inputarea").html("");
+		}   
+    	$v$.sbHandler.setHTML(event.searchType, data, addParams);
+   });
+   return false;   
+}
+
+function switchSearchType(type) {
+
+	if ((false == false) && ("Frankfurt am Main" != "")) {
+		// Trefferliste aufrufen
+		var url = "";
+		if (type == 'atm') {
+			url = "https://www.dasoertliche.de/?zvo_ok=&seo=false&buc=2243&plz=&kgs=&quarter=&district=&ci=Frankfurt am Main&st=&zgb=0&radius=0&buab=&form_name=search_cash_dispenser";
+		} else if (type == 'pha') {
+			var date = new Date();
+			var dateFormated = date.toISOString().slice(0,10).replace(/-/g,"");  /* YYYYMMDD */
+			url = "https://www.dasoertliche.de/?zvo_ok=&seo=false&buc=2243&plz=&quarter=&district=&ci=Frankfurt am Main&st=&date=" + dateFormated + "&radius=3&kgs=&buab=&zbuab=&form_name=search_pharm";
+		}
+		window.location.href = url;
+	} else {
+		// Nationale Seite - nur Suchmaske Umschalten
+		if (type == 'atm') {
+			$v$.sbHandler.select($oe$.search.SB_TYPES.search_atm);
+		} else if (type == 'pha') {
+			$v$.sbHandler.select($oe$.search.SB_TYPES.search_pha);
+		}		
+		
+	}
+	
+}
+
+
+function triggerSearchAfterChange(searchType) {
+	var pharmUrl = ("" !== null) ? "" : "";
+	var atmUrl = ("" !== null) ? "" : "";
+	if (searchType === $v$.sbHandler.types.search_pha && pharmUrl !== "") {
+    		window.location.href = pharmUrl
+  		}
+	if (searchType === $v$.sbHandler.types.search_atm && atmUrl !== "") {
+    		window.location.href = atmUrl
+  		}
+	
+	if ((fasts == 1) && (false == false) && ("Frankfurt am Main" != "")) {
+  		if ( (searchType === $v$.sbHandler.types.search_pha && pharmUrl === "") ||
+  			(searchType === $v$.sbHandler.types.search_atm  && atmUrl === "")) {
+    		$(".findbutton" ).trigger( "click" );
+  		}
+  	}
+}
+
+function isSearchTypeChange(event) {
+	let className = $('.searchselect').attr('class').split(" ")[1];
+	let searchboxTypes = $v$.sbHandler.types;
+	let actSuffix = event.searchType.idSuffix;
+	switch (actSuffix) {
+		case searchboxTypes.search_std.idSuffix:
+			if (className === searchboxTypes.search_std.ddClass) {
+				return false;
+			}
+			break;
+		case searchboxTypes.search_ext.idSuffix:
+			if (className === searchboxTypes.search_ext.ddClass) {
+				return false;
+			}
+			break;
+		case searchboxTypes.search_inverse.idSuffix:
+			if (className === searchboxTypes.search_inverse.ddClass) {
+				return false;
+			}
+			break;
+		case searchboxTypes.search_atm.idSuffix:
+			if (className === searchboxTypes.search_atm.ddClass) {
+				return false;
+			}
+			break;
+		case searchboxTypes.search_zip.idSuffix:
+			if (className === searchboxTypes.search_zip.ddClass) {
+				return false;
+			}
+			break;
+		case searchboxTypes.search_areacode.idSuffix:
+			if (className === searchboxTypes.search_areacode.ddClass) {
+				return false;
+			}
+			break;
+		case searchboxTypes.search_pha.idSuffix:
+			if (className === searchboxTypes.search_pha.ddClass) {
+				return false;
+			}
+			break;
+		default:
+			return true;
+	}
+	return true;
+}
+
+
+
+function setHTML(searchType, html, addParams){
+   $v$.sbHandler.setHTML(searchType, html, addParams);
+}
+
+
+var addParams = addOrReplaceNonEmptyParameter("", "form_name","search_nat");
+addParams= addOrReplaceNonEmptyParameter(addParams, "buc","2243");
+addParams= addOrReplaceNonEmptyParameter(addParams, "buab","69000188");
+addParams= addOrReplaceNonEmptyParameter(addParams, "zbuab","69000197,69000195,69000194,69000198,69000193");
+addParams= addOrReplaceNonEmptyParameter(addParams, "kgs","");
+addParams= addOrReplaceNonEmptyParameter(addParams, "zvo_ok","1");
+
+
+function onAfterChange(searchType) {
+	triggerSearchAfterChange(searchType);
+}
+
+$(document).ready (function (){
+	$v$.sbHandler = new $oe$.search.SearchboxHandler (onClick, options, addParams, onAfterChange);
+    $v$.sbHandler.bindEvents();
+
+    if (__cmp) {
+		var consent = __cmp("getCMPData");
+		if(consent && "vendorConsents" in consent)	{
+			if("c53582" in consent.vendorConsents && consent.vendorConsents["c53582"]) {
+				$v$.sbHandler.enableSearchHistory();
+				console.log("$v$.sbHandler.enableSearchHistory();");
+			}
+	 	}
+	}   	
+
+
+    oeInitialLoad = false;
+    
+    $v$.sibHandler = new $oe$.sidebar.SidebarHandler({
+       wipe: {analyzer: wwa$}
+    });
+    $v$.sibHandler.bindEvents();
+	
+});
+  
+</script>
+
+		<script>
+		$(document).ready ( function () {
+			$("form[name='search_nat_ext'], form[name='search_nat_umg']").submit(function() {
+				checkRadius();
+			});
+		
+			$("form").one("change", function() {
+				 var pltext = $("#std_suchwort").attr('placeholder');
+				 var kwtext = $("#std_suchwort").val();
+				 if (pltext === kwtext) {
+					$("#std_suchwort").val('');
+				 }
+				 pltext = $("#std_ort").attr('placeholder');
+				 kwtext = $("#std_ort").val();
+				 if (pltext === kwtext)  {
+					$("#std_ort").val('');
+				 }
+				let oldCi = (null != "Frankfurt am Main") ? "Frankfurt am Main" : "";
+				checkCity(oldCi, "69000188","")
+			});
+			
+		});
+		
+				
+		
+		function checkRadius() {
+			var isChecked = true;
+			var myRad = $("#umkreis_umkreis").val();
+			
+			if (myRad == "0"){
+				isChecked = false;
+			}
+		 
+		
+			 var oldFormName = $(".stage form input[name='form_name']").val();
+			 if (!isChecked) { 
+				 wwa$.logAction("Umkreis auswählen_aus");
+			}
+			 if (isChecked) { 
+				 wwa$.logAction("Umkreis auswählen_an");
+				var newFormName = oldFormName.replace("_ext","_umg");
+				$(".stage form input[name='form_name']").val(newFormName);
+				
+				$(".stage form input[name='form_name']").each(function() {
+					   $(this).val("search_nat_umg");
+				});
+				
+				newFormName = $(".stage form input[name='form_name']").val();
+				$("#myHiddForm").val(newFormName);
+				var qName = $("#myHiddForm").val();
+			  	
+			}
+		 
+		}
+		
+		function setWipe() {
+			alert("SETWIPE");
+		}
+		// meinOeUser: null
+		
+		
+		// Attribut ist eigentlich immer da, wenn Suchleiste vorhanden
+		wwa$.setCustomPageAttr("Suchleiste_Sticky");
+	</script>
+	
+
+<script src="/js/jquery.cookies.2.2.0.js"></script>
+
+
+<script>
+	/* <![CDATA[ */
+	var KM_BASE_URL = "https://mein.dasoertliche.de/";
+	var KM_STATIC_URL = "https://mein.dasoertliche.de/";
+	var KM_RZ_ID = "";
+	/* ]]> */
+</script>
+
+
+
+
+
+		
+	
+
+
+
+<script src="/js/oetb.hitlist.js?40537_569"></script>
+
+<script src="/js/4call/fixed4call.js?40050_569"></script>
+<script src="/js/4call/multimedia4call.js?40050_569"></script>
+
+
+
+<link rel="preconnect" href="https://c.delivery.consentmanager.net">
+<link rel="preconnect" href="https://cdn.consentmanager.net">
+
+
+</head>
+
+
+				
+
+<script>
+
+var reportUrl = "\/\/www.dasoertliche.de\/eintragservice\/";
+var meinOeUrl = "https:\/\/mein.dasoertliche.de\/pub\/registration\/register";
+var mySchnupp = "";
+var schnupperUrl = "https:\/\/services.dasoertliche.de\/services\/schnupperpaket\/sp\/";
+
+var reportUrl = "\/\/www.dasoertliche.de\/eintragservice\/";
+var ugcUrl = "";
+
+
+var arkey = "";
+var kw = "St\u00FCrzl Steuerstrafrecht";
+var ci = "Frankfurt am Main";
+var kgs = "";
+var buab = "69000188";
+if (kgs.length > 0) arkey = kgs;
+else arkey = makeArkeyFromBuab(buab);
+
+$(document).ready(function() {
+	$('.ugc_banner_big .btn').bind('click', function() {
+		
+		var url = "";		
+		var id = $(".ugc_banner_big :radio:checked").attr("id");
+		var wipeText = "";
+		
+		if(id == 'ugc1') {
+			url = meinOeUrl;
+			if (url.endsWith("/")) {
+				url = url.substring(0, url.length-1);
+			}			
+			wipeText = " (privat bei MeinÖrtliches)"
+		} else if(id == 'ugc2') {
+			url = schnupperUrl;
+			if (ugcUrl != ""){
+				url = mySchnupp;
+			}
+
+			
+			wipeText = " (eigenes Unternehmen)";
+		} else if(id == 'ugc3') {
+			url = reportUrl + "add/?own=false&at=business&context=web";
+			// Suchkontext fehlt noch...	
+			var q_kw= encodeURIComponent(kw);
+			var q_arkey = arkey;
+			var q_ci = encodeURIComponent(ci);
+			url += "&q_kw=" + q_kw + "&q_arkey=" + q_arkey + "&q_ci=" + q_ci;
+			
+			if (ugcUrl != ""){
+				url = ugcUrl;
+			}
+			
+			
+			wipeText = " (fehlendes Unternehmen)";
+		} else {
+			return;
+		}
+		
+		wwa$.logAction("UGC - Suchalternativen - Eintrag hinzufügen" + wipeText);
+		
+		// Neuen Tab oeffnen
+		window.open(url, "_blank");
+		
+	});	
+});
+
+</script>
+
+
+
+<body class="flex">
+
+
+<link rel="stylesheet" href="https://cdn.consentmanager.net/delivery/cmp.min.css" />
+<script>window.gdprAppliesGlobally=true;if(!("cmp_id" in window)||window.cmp_id<1){window.cmp_id=0}if(!("cmp_cdid" in window)){window.cmp_cdid="27d5525692dd"}if(!("cmp_params" in window)){window.cmp_params=""}if(!("cmp_host" in window)){window.cmp_host="c.delivery.consentmanager.net"}if(!("cmp_cdn" in window)){window.cmp_cdn="cdn.consentmanager.net"}if(!("cmp_proto" in window)){window.cmp_proto="https:"}if(!("cmp_codesrc" in window)){window.cmp_codesrc="1"}window.cmp_getsupportedLangs=function(){var b=["DE","EN","FR","IT","NO","DA","FI","ES","PT","RO","BG","ET","EL","GA","HR","LV","LT","MT","NL","PL","SV","SK","SL","CS","HU","RU","SR","ZH","TR","UK","AR","BS"];if("cmp_customlanguages" in window){for(var a=0;a<window.cmp_customlanguages.length;a++){b.push(window.cmp_customlanguages[a].l.toUpperCase())}}return b};window.cmp_getRTLLangs=function(){var a=["AR"];if("cmp_customlanguages" in window){for(var b=0;b<window.cmp_customlanguages.length;b++){if("r" in window.cmp_customlanguages[b]&&window.cmp_customlanguages[b].r){a.push(window.cmp_customlanguages[b].l)}}}return a};window.cmp_getlang=function(j){if(typeof(j)!="boolean"){j=true}if(j&&typeof(cmp_getlang.usedlang)=="string"&&cmp_getlang.usedlang!==""){return cmp_getlang.usedlang}var g=window.cmp_getsupportedLangs();var c=[];var f=location.hash;var e=location.search;var a="languages" in navigator?navigator.languages:[];if(f.indexOf("cmplang=")!=-1){c.push(f.substr(f.indexOf("cmplang=")+8,2).toUpperCase())}else{if(e.indexOf("cmplang=")!=-1){c.push(e.substr(e.indexOf("cmplang=")+8,2).toUpperCase())}else{if("cmp_setlang" in window&&window.cmp_setlang!=""){c.push(window.cmp_setlang.toUpperCase())}else{if(a.length>0){for(var d=0;d<a.length;d++){c.push(a[d])}}}}}if("language" in navigator){c.push(navigator.language)}if("userLanguage" in navigator){c.push(navigator.userLanguage)}var h="";for(var d=0;d<c.length;d++){var b=c[d].toUpperCase();if(g.indexOf(b)!=-1){h=b;break}if(b.indexOf("-")!=-1){b=b.substr(0,2)}if(g.indexOf(b)!=-1){h=b;break}}if(h==""&&typeof(cmp_getlang.defaultlang)=="string"&&cmp_getlang.defaultlang!==""){return cmp_getlang.defaultlang}else{if(h==""){h="EN"}}h=h.toUpperCase();return h};(function(){var u=document;var v=u.getElementsByTagName;var h=window;var o="";var b="_en";if("cmp_getlang" in h){o=h.cmp_getlang().toLowerCase();if("cmp_customlanguages" in h){for(var q=0;q<h.cmp_customlanguages.length;q++){if(h.cmp_customlanguages[q].l.toUpperCase()==o.toUpperCase()){o="en";break}}}b="_"+o}function x(i,e){var w="";i+="=";var s=i.length;var d=location;if(d.hash.indexOf(i)!=-1){w=d.hash.substr(d.hash.indexOf(i)+s,9999)}else{if(d.search.indexOf(i)!=-1){w=d.search.substr(d.search.indexOf(i)+s,9999)}else{return e}}if(w.indexOf("&")!=-1){w=w.substr(0,w.indexOf("&"))}return w}var k=("cmp_proto" in h)?h.cmp_proto:"https:";if(k!="http:"&&k!="https:"){k="https:"}var g=("cmp_ref" in h)?h.cmp_ref:location.href;var j=u.createElement("script");j.setAttribute("data-cmp-ab","1");var c=x("cmpdesign","cmp_design" in h?h.cmp_design:"");var f=x("cmpregulationkey","cmp_regulationkey" in h?h.cmp_regulationkey:"");var r=x("cmpgppkey","cmp_gppkey" in h?h.cmp_gppkey:"");var n=x("cmpatt","cmp_att" in h?h.cmp_att:"");j.src=k+"//"+h.cmp_host+"/delivery/cmp.php?"+("cmp_id" in h&&h.cmp_id>0?"id="+h.cmp_id:"")+("cmp_cdid" in h?"&cdid="+h.cmp_cdid:"")+"&h="+encodeURIComponent(g)+(c!=""?"&cmpdesign="+encodeURIComponent(c):"")+(f!=""?"&cmpregulationkey="+encodeURIComponent(f):"")+(r!=""?"&cmpgppkey="+encodeURIComponent(r):"")+(n!=""?"&cmpatt="+encodeURIComponent(n):"")+("cmp_params" in h?"&"+h.cmp_params:"")+(u.cookie.length>0?"&__cmpfcc=1":"")+"&l="+o.toLowerCase()+"&o="+(new Date()).getTime();j.type="text/javascript";j.async=true;if(u.currentScript&&u.currentScript.parentElement){u.currentScript.parentElement.appendChild(j)}else{if(u.body){u.body.appendChild(j)}else{var t=v("body");if(t.length==0){t=v("div")}if(t.length==0){t=v("span")}if(t.length==0){t=v("ins")}if(t.length==0){t=v("script")}if(t.length==0){t=v("head")}if(t.length>0){t[0].appendChild(j)}}}var m="js";var p=x("cmpdebugunminimized","cmpdebugunminimized" in h?h.cmpdebugunminimized:0)>0?"":".min";var a=x("cmpdebugcoverage","cmp_debugcoverage" in h?h.cmp_debugcoverage:"");if(a=="1"){m="instrumented";p=""}var j=u.createElement("script");j.src=k+"//"+h.cmp_cdn+"/delivery/"+m+"/cmp"+b+p+".js";j.type="text/javascript";j.setAttribute("data-cmp-ab","1");j.async=true;if(u.currentScript&&u.currentScript.parentElement){u.currentScript.parentElement.appendChild(j)}else{if(u.body){u.body.appendChild(j)}else{var t=v("body");if(t.length==0){t=v("div")}if(t.length==0){t=v("span")}if(t.length==0){t=v("ins")}if(t.length==0){t=v("script")}if(t.length==0){t=v("head")}if(t.length>0){t[0].appendChild(j)}}}})();window.cmp_addFrame=function(b){if(!window.frames[b]){if(document.body){var a=document.createElement("iframe");a.style.cssText="display:none";if("cmp_cdn" in window&&"cmp_ultrablocking" in window&&window.cmp_ultrablocking>0){a.src="//"+window.cmp_cdn+"/delivery/empty.html"}a.name=b;document.body.appendChild(a)}else{window.setTimeout(window.cmp_addFrame,10,b)}}};window.cmp_rc=function(h){var b=document.cookie;var f="";var d=0;while(b!=""&&d<100){d++;while(b.substr(0,1)==" "){b=b.substr(1,b.length)}var g=b.substring(0,b.indexOf("="));if(b.indexOf(";")!=-1){var c=b.substring(b.indexOf("=")+1,b.indexOf(";"))}else{var c=b.substr(b.indexOf("=")+1,b.length)}if(h==g){f=c}var e=b.indexOf(";")+1;if(e==0){e=b.length}b=b.substring(e,b.length)}return(f)};window.cmp_stub=function(){var a=arguments;__cmp.a=__cmp.a||[];if(!a.length){return __cmp.a}else{if(a[0]==="ping"){if(a[1]===2){a[2]({gdprApplies:gdprAppliesGlobally,cmpLoaded:false,cmpStatus:"stub",displayStatus:"hidden",apiVersion:"2.0",cmpId:31},true)}else{a[2](false,true)}}else{if(a[0]==="getUSPData"){a[2]({version:1,uspString:window.cmp_rc("")},true)}else{if(a[0]==="getTCData"){__cmp.a.push([].slice.apply(a))}else{if(a[0]==="addEventListener"||a[0]==="removeEventListener"){__cmp.a.push([].slice.apply(a))}else{if(a.length==4&&a[3]===false){a[2]({},false)}else{__cmp.a.push([].slice.apply(a))}}}}}}};window.cmp_gpp_ping=function(){return{gppVersion:"1.0",cmpStatus:"stub",cmpDisplayStatus:"hidden",supportedAPIs:["tcfca","usnat","usca","usva","usco","usut","usct"],cmpId:31}};window.cmp_gppstub=function(){var a=arguments;__gpp.q=__gpp.q||[];if(!a.length){return __gpp.q}var g=a[0];var f=a.length>1?a[1]:null;var e=a.length>2?a[2]:null;if(g==="ping"){return window.cmp_gpp_ping()}else{if(g==="addEventListener"){__gpp.e=__gpp.e||[];if(!("lastId" in __gpp)){__gpp.lastId=0}__gpp.lastId++;var c=__gpp.lastId;__gpp.e.push({id:c,callback:f});return{eventName:"listenerRegistered",listenerId:c,data:true,pingData:window.cmp_gpp_ping()}}else{if(g==="removeEventListener"){var h=false;__gpp.e=__gpp.e||[];for(var d=0;d<__gpp.e.length;d++){if(__gpp.e[d].id==e){__gpp.e[d].splice(d,1);h=true;break}}return{eventName:"listenerRemoved",listenerId:e,data:h,pingData:window.cmp_gpp_ping()}}else{if(g==="getGPPData"){return{sectionId:3,gppVersion:1,sectionList:[],applicableSections:[0],gppString:"",pingData:window.cmp_gpp_ping()}}else{if(g==="hasSection"||g==="getSection"||g==="getField"){return null}else{__gpp.q.push([].slice.apply(a))}}}}}};window.cmp_msghandler=function(d){var a=typeof d.data==="string";try{var c=a?JSON.parse(d.data):d.data}catch(f){var c=null}if(typeof(c)==="object"&&c!==null&&"__cmpCall" in c){var b=c.__cmpCall;window.__cmp(b.command,b.parameter,function(h,g){var e={__cmpReturn:{returnValue:h,success:g,callId:b.callId}};d.source.postMessage(a?JSON.stringify(e):e,"*")})}if(typeof(c)==="object"&&c!==null&&"__uspapiCall" in c){var b=c.__uspapiCall;window.__uspapi(b.command,b.version,function(h,g){var e={__uspapiReturn:{returnValue:h,success:g,callId:b.callId}};d.source.postMessage(a?JSON.stringify(e):e,"*")})}if(typeof(c)==="object"&&c!==null&&"__tcfapiCall" in c){var b=c.__tcfapiCall;window.__tcfapi(b.command,b.version,function(h,g){var e={__tcfapiReturn:{returnValue:h,success:g,callId:b.callId}};d.source.postMessage(a?JSON.stringify(e):e,"*")},b.parameter)}if(typeof(c)==="object"&&c!==null&&"__gppCall" in c){var b=c.__gppCall;window.__gpp(b.command,function(h,g){var e={__gppReturn:{returnValue:h,success:g,callId:b.callId}};d.source.postMessage(a?JSON.stringify(e):e,"*")},"parameter" in b?b.parameter:null,"version" in b?b.version:1)}};window.cmp_setStub=function(a){if(!(a in window)||(typeof(window[a])!=="function"&&typeof(window[a])!=="object"&&(typeof(window[a])==="undefined"||window[a]!==null))){window[a]=window.cmp_stub;window[a].msgHandler=window.cmp_msghandler;window.addEventListener("message",window.cmp_msghandler,false)}};window.cmp_setGppStub=function(a){if(!(a in window)||(typeof(window[a])!=="function"&&typeof(window[a])!=="object"&&(typeof(window[a])==="undefined"||window[a]!==null))){window[a]=window.cmp_gppstub;window[a].msgHandler=window.cmp_msghandler;window.addEventListener("message",window.cmp_msghandler,false)}};window.cmp_addFrame("__cmpLocator");if(!("cmp_disableusp" in window)||!window.cmp_disableusp){window.cmp_addFrame("__uspapiLocator")}if(!("cmp_disabletcf" in window)||!window.cmp_disabletcf){window.cmp_addFrame("__tcfapiLocator")}if(!("cmp_disablegpp" in window)||!window.cmp_disablegpp){window.cmp_addFrame("__gppLocator")}window.cmp_setStub("__cmp");if(!("cmp_disabletcf" in window)||!window.cmp_disabletcf){window.cmp_setStub("__tcfapi")}if(!("cmp_disableusp" in window)||!window.cmp_disableusp){window.cmp_setStub("__uspapi")}if(!("cmp_disablegpp" in window)||!window.cmp_disablegpp){window.cmp_setGppStub("__gpp")};</script>
+
+<script>
+
+function setOffline(e,o) {
+	  o.dontshow = 1;
+}
+
+if (typeof hideCMPScreen !== "undefined") {
+	__cmp("addEventListener",["init",setOffline,false],null);
+	__cmp("addEventListener",["settings",setOffline,false],null);  	
+}
+
+
+
+
+  var cmpLayerShown = false;
+  
+  function setConsentScreenVisible() {
+	  cmpLayerShown = true;
+	  wwa$.setCustomPageAttr({ "CMP-Layer ": "true" });
+  }
+  __cmp("addEventListener",["consentscreen",setConsentScreenVisible,false],null);
+  
+
+
+  function waitForPageReadyAndLoadAds() {
+	
+	  if (document.readyState === 'complete' || document.state === 'loaded') {
+		  var consent = __cmp("getCMPData");
+		  var TCString = consent.consentstring;
+		  initAds(TCString);
+	  } else {
+		  setTimeout(waitForPageReadyAndLoadAds, 100);
+	  }	
+	  
+  }
+  
+  function loadAdsAfterConsent() {
+	  
+	  if (typeof(initAds) != "undefined") {
+		  waitForPageReadyAndLoadAds();
+	  }
+	  
+  }
+  
+    function setOetbConsent() {
+		var consent = __cmp("getCMPData");
+		if("vendorConsents" in consent)	{
+			if("c53582" in consent.vendorConsents && consent.vendorConsents["c53582"]) {
+				
+			    const ablauf = new Date();
+			    const inDreissigTagen = ablauf.getTime() + (30 * 24 * 60 * 60 * 1000);
+			    ablauf.setTime(inDreissigTagen);
+				document.cookie = "Orte=Frankfurt+am+Main; domain=dasoertliche.de; path=/; expires=" + ablauf.toGMTString() + ";";
+				
+				if ($v$.sbHandler) {
+					$v$.sbHandler.enableSearchHistory();
+					console.log("$v$.sbHandler.enableSearchHistory();");					
+				}
+		 	} else {
+		 		document.cookie = "Orte=; domain=dasoertliche.de; path=/; Max-Age=0;";
+				if ($v$.sbHandler) {
+					$v$.sbHandler.disableSearchHistory();
+					console.log("$v$.sbHandler.disableSearchHistory();");
+				}
+		 	}
+		}   	
+    }
+    
+	__cmp("addEventListener", ["consent",loadAdsAfterConsent,false], null);  
+	__cmp("addEventListener", ["consent",setOetbConsent,false], null);
+  
+</script>
+
+
+
+<script type="text/javascript">
+	
+__cmp("addEventListener",["consent",setWipeConsent,false],null);           
+__cmp("addEventListener",["consentapproved",logApproved,false],null);
+__cmp("addEventListener",["consentscreencustom",logCustom,false],null);
+
+function setWipeConsent(e,o) {
+	
+	var wipeVendorId = "c24360";
+	
+	if (wipeVendorId != null && wipeVendorId.length > 0) {
+		var consent = __cmp("getCMPData");
+		if("vendorConsents" in consent)	{
+			if(wipeVendorId in consent.vendorConsents && consent.vendorConsents[wipeVendorId]) {
+				try {					
+					wwa$.setOptions({ useCookies: consent.vendorConsents[wipeVendorId] });
+					console.log("wwa$.setOptions({ useCookies:" + consent.vendorConsents[wipeVendorId] + "})");
+					// Entscheidung merken
+					if (typeof oeStorageHandler != "undefined") {
+						oeStorageHandler.setWaConsent(consent.vendorConsents[wipeVendorId]);
+					}
+				} catch (e) {
+					console.log(e);
+				}
+		 	} else {
+		 		try {
+					wwa$.setOptions({ useCookies: false });
+					console.log("wwa$.setOptions({ useCookies: false})");
+					// Entscheidung merken
+					if (typeof oeStorageHandler != "undefined") {
+						oeStorageHandler.setWaConsent(false);
+					}		 		
+				} catch (e) {
+					console.log(e);
+				}		 		
+		 	}
+		}
+
+	}	
+	
+}
+	
+
+function logCustom() {
+	wwa$.logAction("CMP_Einstellungen")
+}
+
+function logApproved() {
+	return wwa$.logAction("CMP_Akzeptieren", this)
+}
+
+</script>
+
+
+
+<script>
+
+var kw = "St\u00FCrzl Steuerstrafrecht";
+var ugck = "ADV3434ADFADSF";
+var myUgcUrl = "";
+var reportUrlNew = myUgcUrl;
+var reportUrl = "\/\/www.dasoertliche.de\/eintragservice\/";
+var mySchnupp = "";
+var myCust =  "";
+
+var mySEO = "false";
+var arkey = "";
+var myEncIdArr = new Array();
+var myAtArr = new Array();
+var myKdArr = new Array();
+
+</script>
+
+
+<script>
+wwa$.setPageAttr({
+  apiv: "2.1.0",
+  webv: "5.69.3-42893_202610021409",
+  reqHdr: [ "T-C-I: a@-qrs6ks" ],
+  srvId: "n@def.omfcthkdbwca.bd:dr",
+  srvDc: "0166",
+  httpStatus: 410,
+  pageName: "suchalt",
+  q_q: "Stürzl Steuerstrafrecht",
+  bookNo: "2243",
+  pubNo: "337",
+  r_pgno: 0,
+  q_start: "1",
+  r_from: "1",
+  q_loc: "Frankfurt am Main",
+  r_pghc: 0,
+  q_type: "Standardsuche",
+  r_total: 0,
+  q_locid: "90690088",
+  r_attr: []
+});
+wwa$.logPageView();
+</script>
+
+
+<a id="totop"></a>
+<!--  oberer Banner bundesweit -->
+
+<!--  Ende oberer Banner bundesweit -->
+
+<!--  Rechter Banner und oberer Banner regional -->   
+
+	
+
+	
+		
+	
+
+	<!-- aside for banner-right -->
+	<aside id="banner-right" class="noprint">	
+	    	    
+						    					
+					
+				<script type="text/javascript">
+				    var adblock = false;							  
+					function testFakeBanner() {						
+					  $("body").prepend('<div class="AdBox" id="afj2zYLow4ueq8r"></div>');									
+					  var adElement = document.getElementById('afj2zYLow4ueq8r');
+					  var adElementStyle = getComputedStyle(adElement, null);			  
+					  if(adElementStyle.display === 'none' ) {						
+						if ( typeof adblock != 'undefined' ) {
+							adblock = true;							
+						}			  			  			 
+					  }
+					  $("#afj2zYLow4ueq8r").remove();
+					}
+		
+					document.addEventListener("DOMContentLoaded", function(event) {		    			
+						testFakeBanner();
+						// OEWEB-5690 Hinweistext bei aktivem AdBlocker JSPs auf Thymeleaf umstellen
+						if (adblock) {	
+							$("#banner-right").remove();
+							$("#blocker-message").load("https:\/\/www.dasoertliche.de\/"+"ajaxload?page=blockmsg", {server: "https:\/\/www.dasoertliche.de\/", 
+								buc: "2243", ci: "Frankfurt am Main", st: null, kgs: "", buab: "69000188", zbuab: "69000197,69000195,69000194,69000198,69000193"});
+							$("#blocker-message").css("float","right");
+							$("#blocker-message").css("width","207px");
+						} else {
+							$("#blocker-message").remove();
+						}	
+					});			
+				</script>
+														
+			
+		
+		
+<div id="ts01">
+<script>
+ts01src="https://ad13.adfarm1.adition.com/js?wp_id=4256336&prf[kw]=Stuerzl-Steuerstrafrecht&prf[loc]=Frankfurt-am-Main&prf[buid]=2243&prf[kgs]=&prf[sz]=156x60";
+setScriptSrc("ts01", ts01src);
+</script>
+</div>
+
+<div id="ts02">
+<script>
+ts02src="https://ad13.adfarm1.adition.com/js?wp_id=4256337&prf[kw]=Stuerzl-Steuerstrafrecht&prf[loc]=Frankfurt-am-Main&prf[buid]=2243&prf[kgs]=&prf[sz]=156x60";
+setScriptSrc("ts02", ts02src);
+</script>
+</div>
+
+<div id="ts03">
+<script>
+ts03src="https://ad13.adfarm1.adition.com/js?wp_id=4256338&prf[kw]=Stuerzl-Steuerstrafrecht&prf[loc]=Frankfurt-am-Main&prf[buid]=2243&prf[kgs]=&prf[sz]=156x60";
+setScriptSrc("ts03", ts03src);
+</script>
+</div>
+
+<div id="ts04">
+<script>
+ts04src="https://ad13.adfarm1.adition.com/js?wp_id=4256339&prf[kw]=Stuerzl-Steuerstrafrecht&prf[loc]=Frankfurt-am-Main&prf[buid]=2243&prf[kgs]=&prf[sz]=156x60";
+setScriptSrc("ts04", ts04src);
+</script>
+</div>
+
+<div id="ts05">
+<script>
+ts05src="https://ad13.adfarm1.adition.com/js?wp_id=4256340&prf[kw]=Stuerzl-Steuerstrafrecht&prf[loc]=Frankfurt-am-Main&prf[buid]=2243&prf[kgs]=&prf[sz]=156x60";
+setScriptSrc("ts05", ts05src);
+</script>
+</div>
+
+
+
+<div id="StickyPos" style="float:left;">
+<img src="/img/onePixel.gif" alt="" width="200" height="1" style="display: block;"/>
+</div>
+<div style="position:absolute;visibility:hidden;" id="AdFloater">
+<script>
+stcysrc="https://ad13.adfarm1.adition.com/js?wp_id=4256341&prf[kw]=Stuerzl-Steuerstrafrecht&prf[loc]=Frankfurt-am-Main&prf[buid]=2243&prf[kgs]=&prf[sz]=150x200";
+setScriptSrc("AdFloater", stcysrc);
+</script>
+</div>
+
+
+	</aside>
+	<aside id="blocker-message" class="noprint" style="float:right;width:207px"></aside>	
+
+	
+	<!-- aside for banner-top 2 -->
+	<aside id="banner-top" class="noprint" style="height:98px;"><div style="margin:4px 0 4px 0;" id="wp01">
+<script>
+wp1src="https://ad13.adfarm1.adition.com/js?wp_id=4256342&prf[kw]=Stuerzl-Steuerstrafrecht&prf[loc]=Frankfurt-am-Main&prf[buid]=2243&prf[kgs]=&prf[sz]=728x90";
+setScriptSrc("wp01", wp1src);
+</script>
+</div>
+
+</aside>	
+
+	
+<!--  end Rechter Banner  -->
+
+<!--  Außen-Container  -->
+  <!--  Innen-Container  -->
+  <div id="oetbwrap">
+      
+  
+                    
+          
+          <!-- title Debug Ausgaben:          
+            noTitleCondition=false,
+          	title=für Frankfurt am Main,
+          	ci=Frankfurt am Main,
+          	lCi=,
+          	BWSearch=,
+          	BNR_BW = "301",
+          	buc=2243,
+          	landingPageUrl=,
+          	seo=false,
+          	URL_SEARCHPAGE=https://www.dasoertliche.de/?form_name=search_reg&amp;cmd=cmd_search_std_reg&amp;ci=Frankfurt+am+Main&amp;buc=2243&amp;buab=69000188,
+          	// OEWEB-4965 Entfernung NOFOLLOW-Attribut aus Links der Top-Navigation / Footer       
+          	selfUrl=/,
+          	queryString=zvo_ok=1&amp;form_name=search_nat&amp;kw=St%C3%BCrzl%20Steuerstrafrecht&amp;rci=true&amp;ciInput=Frankfurt%20am%20Main&amp;buc=2243&amp;ci=Frankfurt%20am%20Main&amp;buab=69000188&amp;zbuab=69000197,69000195,69000194,69000198,69000193&amp;zort=Frankfurt%20am%20Main&amp;zplz=60,
+          	logoLinkIsFollow=false,
+            logoRelNofollow=nofollow,      
+          -->
+          
+                    
+	
+<noscript>
+<div id="hinweis" class="js">
+<strong>
+Um alle Funktionen von Das Örtliche uneingeschränkt nutzen zu können, aktivieren Sie bitte JavaScript!
+<br>
+Auf Trefferlisten mit verkürzter Rufnummer klicken Sie bitte - sofern Javascript ausgeschaltet ist - auf den Namen!
+</strong>
+</div>
+</noscript>
+
+
+	<header class="clearfix">
+			
+			
+			
+				<a href="https://www.dasoertliche.de/?form_name=search_reg&amp;cmd=cmd_search_std_reg&amp;ci=Frankfurt+am+Main&amp;buc=2243&amp;buab=69000188" title="Das Örtliche" rel="nofollow" class="logo">	
+					<img onclick="return wwa$.logAction('Logo')" width="252" height="42" 
+				     	src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjUzIDQzIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTMgNDM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojMDI0Rjk5O308L3N0eWxlPjxnPjxnPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yNS4zNiwyNS40M2MwLDUuMy0xLjQsMTAuOTktNS45OCwxNC4xOEMxNS43Miw0Mi4xNiwxMS41Myw0Mi40LDcsNDIuNGMtMS41MSwwLTMuMDIsMC00LjUzLDAgQzEuMjQsNDIuNDEsMCw0Mi4zOSwwLDQwLjZjMC0xLjQ2LDAtMjcuMTYsMC0yOS4xM2MwLTEuNDksMC40Ni0xLjkzLDEuNTUtMi4wNmMwLjAzLDAsMS45NCwwLDIuOTUsMGMzLjM5LDAsNi45LTAuMjMsMTAuMjEsMC42MiBjNS45LDEuNTEsOS4xNyw1LjYsMTAuMjUsMTEuMDVDMjUuMjQsMjIuNTIsMjUuMzYsMjMuOTgsMjUuMzYsMjUuNDN6IE0yMC43NSwyNS42MWMwLTQuMjUtMS4wOS04LjU5LTUuMTUtMTEgYy0yLjYzLTEuNTYtNC45Ny0xLjU0LTguNi0xLjU0Yy0wLjU3LDAtMi42MywwLTIuNjMsMHMwLDMuNzIsMCw1LjIzYzAsNC43NiwwLDIwLjQzLDAsMjAuNDNzMS4yOSwwLjAxLDEuNTcsMC4wMSBjMy4yMywwLDYuNjYsMC4yMiw5LjU5LTEuMzlDMTkuNzQsMzUuMDYsMjAuNzUsMzAuMDMsMjAuNzUsMjUuNjF6Ii8+PHBhdGggY2xhc3M9InN0MCIgZD0iTTQ4LjkxLDQxLjgxYzAuMDMsMS4wOC0zLjYxLDAuOS0zLjU4LDAuMmMwLjAxLTAuMjItMC4wMy0xLjc3LTAuMDMtMi40OWMtMy4xMSwzLjQ3LTcuOTgsNC4zNC0xMS45LDIuMzQgYy0zLjgyLTEuOTQtNC40OS03LjY4LTEuNDctMTAuNzFjMi42Ni0yLjY2LDYuOTMtMi44NCwxMC40Ni0yLjg0YzAuNTksMCwyLjM0LTAuMDEsMi4zNC0wLjAxUzQ1LDI0LjczLDQ0LDIzLjE0IGMtMS4xNy0xLjg0LTIuNzgtMi4wNS01LjE4LTEuOThjLTEuNywwLjA1LTMuODksMC43Ny01LjgzLDEuOTljLTAuODQsMC41My0xLjUxLDAuNDQtMS42Ni0wLjI3Yy0wLjE3LTAuODQtMC4zMi0yLjA2LDAuNC0yLjcgYzEuNTYtMS4zOCw0LjMxLTIuMDYsNi4yOC0yLjMzYzQuMjktMC41OSw5LjA5LDAuMzIsMTAuNDQsNC43N2MwLjYsMS45NiwwLjQ4LDQuMDYsMC40OCw2LjA5IEM0OC45MiwzMS40NSw0OC45Myw0MC4yNyw0OC45MSw0MS44MXogTTQ0LjczLDMxLjMyYzAsMC0yLjkzLDAtNSwwLjA2Yy0yLjcsMC4wOS01LjA3LDEuNDQtNS4yOSwzLjUzIGMtMC4zNiwzLjQ1LDEuNzYsNC44NSw0Ljg4LDQuNjZjMS40NC0wLjA5LDIuNjYtMC44NSwzLjc0LTEuNzdjMC42OS0wLjU4LDEuNjUtMS42MywxLjY1LTEuNjNMNDQuNzMsMzEuMzJ6Ii8+PHBhdGggY2xhc3M9InN0MCIgZD0iTTcxLjAzLDM1LjUzYy0wLjA0LDMuODYtMi40NSw2LjM0LTYuNDQsNy4xNGMtMS44NCwwLjM3LTMuNzcsMC4zLTUuNi0wLjExYy0xLjM5LTAuMy0zLjI3LTAuOTctMy45LTEuODUgYy0wLjM4LTAuNTMtMC4zMy0yLjExLTAuMTktMi43NWMwLjIxLTAuOTEsMC43MS0wLjcsMS40NC0wLjI4YzEuNTQsMC44OSwzLjExLDEuNjYsNC45MSwxLjgxYzEuNjksMC4xNCwzLjk3LTAuMTksNC45NS0xLjUgYzAuOTgtMS4zLDAuOTYtMy4yNi0wLjQxLTQuMzljLTEuNDctMS4yLTMuNDMtMS43NC01LjEzLTIuNDdDNTksMzAuNDIsNTcuMzQsMjkuNTUsNTYuMzMsMjhjLTIuMDEtMy4wOC0wLjg1LTcuMzIsMi4yOC05LjExIGMxLjYtMC45MiwzLjQ1LTEuMjQsNS4yOC0xLjIxYzEuNzMsMC4wMyw0LjM0LDAuNDQsNS42OCwxLjc4YzAuMzMsMC4zMiwwLjYsMy4yMi0wLjM4LDMuMjFjLTAuNDgsMC0wLjUtMC4yOS0xLjU3LTAuNzggYy0wLjc2LTAuMzUtMi4wMy0wLjgzLTMuMTQtMC45MmMtMS45Ny0wLjE4LTQuMTksMC4xNS00LjksMi4xMWMtMC45MSwyLjUsMS4xLDMuODUsMi4zNSw0LjQxIEM2Ni4xNiwyOS4zNiw3MS4wOSwzMC4yOSw3MS4wMywzNS41M3oiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTE0Ljk2LDI1LjUzYzAsNi44My0yLjIsMTMuODgtOC45OCwxNi40Yy00LjQ4LDEuNjYtMTMuODYsMS45LTE3LjgyLTQuNTNjLTEuNzYtMi44Ni0yLjIzLTQuNjUtMi42NS05LjE3IGMtMC4xMy0xLjM2LTAuMTUtNywxLjQ2LTEwLjgxYzMuMDctNy4yNyw5LjU5LTkuMTEsMTYuNDEtOC4yOGMzLjc3LDAuNDYsNi44OCwyLjE5LDguOTIsNS4yNCBDMTE0LjM4LDE3LjQ4LDExNC45NiwyMS43MSwxMTQuOTYsMjUuNTN6IE0xMTAuMzIsMjUuODNjMC4wNC00LjIzLTAuOTItMTAuMjItNS40Mi0xMi4yNWMtMy42NS0xLjY0LTEwLjA5LTEuNTEtMTIuOTcsMy43IGMtMS4yNCwyLjI1LTEuNjQsNC44Ny0xLjc1LDcuNGMtMC4xMiwyLjY5LDAuMDQsNS41NiwwLjg5LDguMTNjMC43NCwyLjI1LDIuMTIsNC4yMiw0LjI3LDUuMzFjMi4wOSwxLjA1LDUuMTcsMS4xNSw3LjAxLDAuOCBDMTA4LjEyLDM3LjgyLDExMC4yNSwzMi42NCwxMTAuMzIsMjUuODN6IE05Ny41MywzLjQzYzAsMS45Ny0wLjc5LDIuNS0yLjQ1LDIuNTFjLTIsMC4wMi0yLjUtMC42NS0yLjUtMi40NSBjMC0yLjA2LDAuNzktMi40NCwyLjUyLTIuNDZDOTYuOTUsMS4wMiw5Ny41MywxLjcxLDk3LjUzLDMuNDN6IE0xMDguMDUsMy40M2MwLDEuODQtMC42MSwyLjUyLTIuNDUsMi41MSBjLTEuNywwLTIuNDktMC40Mi0yLjQ5LTIuNTVjMC0xLjcyLDAuNS0yLjM2LDIuNTMtMi4zNkMxMDcuMzYsMS4wMywxMDguMDUsMS41LDEwOC4wNSwzLjQzeiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMzQuODEsMjAuMTFjMCwwLjY5LDAsMi4xMi0wLjUxLDIuMThjLTAuNDEsMC4wNS0xLjE0LTAuMjgtMS41NC0wLjM5Yy0wLjU2LTAuMTYtMS4xMy0wLjI3LTEuNzItMC4yMyBjLTIuMDQsMC4xMy0zLjQxLDIuMDUtNC40OCwzLjU4Yy0wLjUyLDAuNzUtMC45NCwxLjQxLTAuOTQsMS40MXMwLjAxLDE0LjY2LDAsMTUuMTVjLTAuMDIsMC43Mi0xLjA5LDAuNzItMS45MiwwLjcyIGMtMC44MSwwLTIuMjgsMC0yLjI4LTAuNzhjMC0xLjU1LTAuMDItMjEuOTksMC0yMy4wNmMwLjAxLTAuNTksMC44Ni0wLjY1LDIuMDEtMC42NWMxLjQyLDAsMS43NywwLjIxLDEuNzksMC44NyBjMC4wMiwxLjA0LDAuMDEsMi4yMywwLjAxLDMuMjZjMS4yOS0xLjg4LDIuOTctNC4wMiw1LjM2LTQuNGMxLjAzLTAuMTcsMi4xMy0wLjA2LDMuMTIsMC4yNSBDMTM0LjkzLDE4LjQxLDEzNC44MSwxOC43LDEzNC44MSwyMC4xMXoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUxLjUzLDQwLjFjMCwwLjU4LDAuMDEsMS4zNS0wLjQxLDEuODFjLTAuMzcsMC40LTEuMjksMC42My0xLjksMC43NGMtMS41NCwwLjI5LTMuMjIsMC4zLTQuNzItMC4xOSBjLTMuMS0wLjk5LTMuOTEtMy45NC0zLjkxLTcuMDNjMC0yLjY1LDAtNS4zLDAtNy45NWMwLTEuNTYsMC01LjgzLDAtNS44M3MtMi45NS0wLjAyLTMuMy0wLjAyYy0wLjI2LDAtMC43NS0wLjIyLTAuNzUtMS44MiBjMC0xLjcxLDAuNy0xLjY2LDAuODctMS42NmMwLjMyLDAsMy4xOSwwLDMuMTksMHMwLjAxLTUuMDgsMC4wMS01LjUyYzAtMC43NSwxLjQ1LTAuNzYsMi4yNS0wLjc3YzEuMTgsMCwxLjk0LDAuMiwxLjk0LDAuODQgYzAsMC43OCwwLDUuNDUsMCw1LjQ1czEuNjMsMC4wMSwyLjE0LDAuMDFjMS42NCwwLDIuMTcsMCwzLjc1LDBjMC43NSwwLDAuODUsMC45MywwLjg1LDEuNjFjMCwwLjk3LTAuMTQsMS45LTAuODYsMS45IGMtMC40NywwLTEuOTYsMC0zLjMsMGMtMC4yNCwwLTIuNTctMC4wMS0yLjU3LTAuMDFzLTAuMDEsMTEuOTMsMCwxMi44YzAuMDEsMS4yNCwwLjE0LDIuODYsMC44NCwzLjc5IGMwLjg1LDEuMTMsMi40NSwxLjA3LDMuNzEsMC44MWMwLjg1LTAuMTgsMS40LTAuNzIsMS44My0wLjQ1QzE1MS41OCwzOC44NSwxNTEuNTMsMzkuNzEsMTUxLjUzLDQwLjF6Ii8+PHBhdGggY2xhc3M9InN0MCIgZD0iTTE2MC40NSw0Mi41NGMtMS4xLDAtMi4zNSwwLjA1LTIuMzUtMC44YzAtMC40NywwLTMyLjQ1LDAtMzMuOTRjMC0wLjg0LDAuODUtMC45LDIuMDktMC45IGMwLjc4LDAsMi4xMSwwLDIuMTEsMC44MWMwLDAuMzYsMCwyOC43OSwwLDMzLjk3QzE2Mi4zLDQyLjI0LDE2MS45LDQyLjU0LDE2MC40NSw0Mi41NHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTc0Ljc2LDExLjA4YzAsMi4xMS0wLjgzLDIuNTUtMi42MiwyLjU1Yy0xLjk5LDAtMi41OC0wLjY1LTIuNTgtMi41YzAtMS44MSwwLjUxLTIuNTMsMi42Mi0yLjU1IEMxNzQuMTUsOC41NywxNzQuNzYsOS4xMiwxNzQuNzYsMTEuMDh6IE0xNzQuMjcsNDEuNzdjMCwwLjcxLTEuMTUsMC43Ny0xLjk2LDAuNzdjLTEuNTMsMC0yLjI0LTAuMjEtMi4yNC0wLjY4IGMwLTEuNTksMC0yMS44MywwLTIyLjk3YzAtMC43OSwwLjg4LTAuODUsMi4wOS0wLjg1YzEuNDYsMCwyLjExLDAuMTMsMi4xMSwwLjg3QzE3NC4yNywyMi42NiwxNzQuMjcsMzcuOTgsMTc0LjI3LDQxLjc3eiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xOTguNTQsMzguMjhjMC4wNiwxLjY3LTAuNTQsMi4yNy0yLjAyLDMuMDljLTEuNTgsMC44Ny0zLjM4LDEuMzktNS4xOCwxLjVjLTMuNDYsMC4yLTYuOTItMS4wMi04Ljg2LTQuMDEgYy0xLjkzLTIuOTctMi4yNC02LjgyLTEuOTYtMTAuMjZjMC4yOC0zLjM0LDEuNDUtNi44MSw0LjItOC45MWMyLjg5LTIuMiw3LjEyLTIuNTMsMTAuNDYtMS4yNGMxLjE4LDAuNDYsMy4wMSwxLjM4LDMuMTksMi41NCBjMC40MywyLjc1LTAuNTksMy4yNS0xLjE4LDIuODJjLTEuNDgtMS4wNy0yLjM3LTItNC43MS0yLjQ1Yy0xLjUxLTAuMjktMy4xOS0wLjExLTQuNTEsMC43NGMtMi43MiwxLjc0LTMuMTYsNS41LTMuMTQsOC40NCBjMC4wMywzLjU5LDEuMDgsNy45OSw1LjIzLDguNjNjMS45NywwLjMsMy44My0wLjIyLDUuNDctMS4zMWMxLjAyLTAuNjgsMS43OS0xLjQ4LDIuMjQtMS41IEMxOTguNjQsMzYuMzEsMTk4LjUxLDM3LjM4LDE5OC41NCwzOC4yOHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjIzLjg3LDQxLjc3YzAsMC43MS0xLjE1LDAuNzctMi4wMywwLjc3Yy0xLjUzLDAtMi4xNy0wLjIxLTIuMTctMC43OGMwLTEuODIsMC0xMC4wMywwLTEyLjA0IGMwLTIsMC4xLTQuMS0wLjgyLTUuOTNjLTAuODItMS42NC0yLjIzLTIuNTQtNC4yMS0yLjQ0Yy0xLjksMC4xLTMuNDYsMS4zMi00Ljc0LDIuNjJjLTAuNjIsMC42My0xLjU3LDEuNzctMS41NywxLjc3IHMwLDEuNiwwLDIuMTljMCw0LjA1LDAsMTMuMzMsMCwxMy44NGMwLDAuNy0wLjk5LDAuOC0yLDAuOGMtMC43OCwwLTIuMiwwLjA2LTIuMi0wLjgyYzAtMC4yMSwwLTI2LjM0LDAtMzQuMDMgYzAtMC44MywxLjEzLTAuODEsMi4xOC0wLjgxYzEuMSwwLDIuMDIsMC4wNiwyLjAyLDAuODNjMCwwLjQxLDAsMTMuNDEsMCwxMy43NGMzLjAxLTMuMTIsNi4zNi00LjYxLDEwLjQ0LTMuMzEgYzMuNTgsMS4xNCw1LjA5LDQuODQsNS4wOSw4LjU2QzIyMy44NiwzMC4zLDIyMy44Nyw0MC4zOCwyMjMuODcsNDEuNzd6Ii8+PHBhdGggY2xhc3M9InN0MCIgZD0iTTI1Mi4xMiwyOS4zMWMwLDEuNzYtMS4xOSwxLjgzLTIuMTIsMS44M2MtMS43NCwwLTExLjc4LDAtMTQuNjMsMGMwLDMsMC41Myw2LjEyLDMuNzEsNy42MyBjMi4yMywxLjA2LDUuOCwwLjk2LDkuMzgtMC4zM2MxLjAyLTAuMzcsMi40NS0xLjM0LDIuNjUtMC4wN2MwLjA3LDAuNDMsMC4yOSwyLjAzLTAuNSwyLjcyYy0wLjUzLDAuNDYtMi43NiwxLjEtNC4wMSwxLjM2IGMtMS42LDAuMzMtMy4yMSwwLjQ4LTQuODUsMC40MmMtMi45Mi0wLjExLTUuODktMS03LjktMy4yM2MtMi4wNi0yLjI5LTIuNzItNS40OC0yLjgyLTguNDdjLTAuMS0zLjEzLDAuNC02LjQzLDIuMTgtOS4wOCBjMS42NS0yLjQ1LDQuMzItMy45Niw3LjI0LTQuM2MzLjMzLTAuNCw2LjgsMC4yNiw5LjE5LDIuOTljMS4xMywxLjI5LDEuOCwyLjg5LDIuMTUsNC41NkMyNTIuMDcsMjYuNjcsMjUyLjEyLDI4LDI1Mi4xMiwyOS4zMXogTTI0Ny44OSwyOC4wNmMwLjE0LTMuODgtMS41Ny02Ljc5LTUuNDEtNy4wN2MtNC4yNS0wLjMxLTYuOTQsMi43Mi03LjA5LDcuMDdDMjM5LjU2LDI4LjA2LDI0My43MiwyOC4wNiwyNDcuODksMjguMDZ6Ii8+PC9nPjwvZz48L3N2Zz4=" 
+				     	alt="Das &Ouml;rtliche">		
+				</a>
+			
+		
+		
+		
+			
+					    	
+			
+	     	    <div id="claim">für Frankfurt am Main</div>
+	     	
+		
+
+
+			
+	<!-- div for Banner-Head -->	  		   		
+	<div class="noprint">
+				    
+		    <div id="banner-fullsize">
+<script>
+fssrc="https://ad13.adfarm1.adition.com/js?wp_id=4256343&prf[kw]=Stuerzl-Steuerstrafrecht&prf[loc]=Frankfurt-am-Main&prf[buid]=2243&prf[kgs]=&prf[sz]=468x60";
+setScriptSrc("banner-fullsize", fssrc);
+</script>
+</div>
+
+
+		
+						
+	</div>
+
+
+
+	</header>	<!-- end header -->
+
+
+    <!--  Inhalt-Container  -->
+
+      <!--  Content-Bereich  -->
+      <div class="clearfix" id="content">
+		
+		<!-- Suchboxen --> 
+		
+		<nav class="mainnav">
+         <ul id="subnav" class="searchlist ontop">
+            <li><a href="//www.dasoertliche.de/rueckwaertssuche/" onclick="window.location.href=&#39;//www.dasoertliche.de/rueckwaertssuche/&#39;;return false;"><i class="icon-rewind"></i>R&uuml;ckw&auml;rtssuche</a></li>
+
+            <li><a href="javascript:switchSearchType(&#39;atm&#39;)" rel="nofollow"><i class="icon-cashcard"></i>Geldautomaten</a></li>
+            <li><a href="javascript:switchSearchType(&#39;pha&#39;)" rel="nofollow"><i class="icon-aeskulap"></i>Notapotheken</a></li>
+           
+            <li id="subnav_sp_offer">
+				<a href="https://services.dasoertliche.de/services/schnupperpaket/sp/" onclick="return wwa$.logOutboundLink('Schnupperpaket');"><i class="icon-tag"></i>Kostenfreier Eintragsservice</a>
+    		</li>
+         </ul>
+
+		 <ul class="searchlist ontop mini">
+			<li class="a11y"><a href="//www.dasoertliche.de/barrierefrei/" title="Zur Informationsseite Barrierefreiheit" aria-label="Zur Informationsseite Barrierefreiheit" onclick="return wwa$.logAction('Barrierefreiheit', this);"></a></li>
+			
+			<li>
+	        	<a href="https://www.dasoertliche.de//?meinoe=login&amp;container=login" data-lightbox-type="iframe" id="meinOeLogin" 
+	        		rel="nofollow" onclick="return wwa$.logAction('Profil_Anmelden')"><i class="moetbstatus"></i><span>Anmelden</span></a>              
+	        </li>
+	        
+	        	        
+				
+		 </ul>
+         
+        </nav>
+	
+		<div class="stage">
+		
+	          
+	           
+				 	
+					
+				 		
+		 
+		 
+	         <div class="searcharea clearfix">
+         	
+            	
+            	
+            	
+            	
+            	
+            	
+            	
+            	
+            	<div class="searchselect standard"><a href="" aria-label="Ihre gewählte Suche" rel="nofollow"></a></div>
+         	
+            <ul class="searchdrop gone">
+               <li class="standard"><a href="" rel="nofollow"><i class="icon-standard"></i></a></li>
+               <li class="advanced"><a href="" rel="nofollow"><i class="icon-spyglass"></i></a></li>
+               <li class="atm"><a href="" rel="nofollow"><i class="icon-cashcard"></i></a></li>
+               <li class="reverse"><a href="" rel="nofollow"><i class="icon-rewind"></i></a></li>
+               <li class="pharmacy"><a href=" " rel="nofollow"><i class="icon-aeskulap"></i></a></li>
+               <li class="postal"><a href="" rel="nofollow"><i class="icon-horn"></i></a></li>
+               <li class="prefix"><a href="" rel="nofollow"><i class="icon-phone"></i></a></li>
+            </ul>
+
+            <form method="get" name="" action="https://www.dasoertliche.de/" onsubmit="return wwa$.logAction('Finden', this)">
+            	
+            	
+            	
+            	
+            	
+            	
+            	
+            	
+            	<div class="inputarea">
+               <!-- Standardsuche-->
+               <div class="clearme empty">
+                  <input name="kw" id="std_suchwort" placeholder="Name (oder Suchwort)" aria-label="Name (oder Suchwort)" value="Stürzl Steuerstrafrecht" autofocus="autofocus">
+                  <span>&times;</span>
+               </div>
+               <div class="clearme">
+                  <input name="ci" id="std_ort" placeholder="Ort o. PLZ" aria-label="Ort o. PLZ" value="Frankfurt am Main">
+                  <span>&times;</span>
+               </div>
+                  <input type="hidden" name="kgs" value="">
+                  <input type="hidden" name="buab" value="69000188">
+                  <input type="hidden" name="zbuab" value="69000197,69000195,69000194,69000198,69000193">
+                  <input type="hidden" name="form_name" value="search_nat">
+	</div>
+                <span class="icon-magnify"><input type="submit" class="findbutton" value="Finden"></span>
+            </form>
+         </div>                 
+	
+		 
+	
+	    </div>     
+         
+         <hr class="searchend">
+  
+     <div class="greybox">
+		
+			<div id="banner_nulltreffer" style="background-color:#CCCCCC;border:0 none;margin: 5px 0 20px 100px;width:510px;">
+			    <div class="noprint" id="el_banner">
+<script>
+elsrc="https://ad13.adfarm1.adition.com/js?wp_id=4256344&prf[kw]=Stuerzl-Steuerstrafrecht&prf[loc]=Frankfurt-am-Main&prf[buid]=2243&prf[kgs]=&prf[sz]=560x60";
+setScriptSrc("el_banner", elsrc);
+</script>
+</div>
+
+
+			</div>
+			<script>
+				// alert ($('.banner_nulltreffer').height());
+				if ($('#banner_nulltreffer').height() < 10) {
+					$('#banner_nulltreffer').attr("style", "display:none;");
+				}
+			</script>     	
+		
+
+     <!--  Meldung  -->
+       <div id="hinweis"> <span>i </span><div> Abweichendes Suchergebnis!<br >
+         F&uuml;r&nbsp;<strong> Stürzl Steuerstrafrecht</strong>&nbsp;in <strong>Frankfurt am Main</strong>
+         konnte leider kein exakt passender Eintrag ermittelt werden<br >
+  		 Bitte w&auml;hlen Sie eine Alternative aus der Liste aus.</div>
+  		 
+		<!-- Hinweis zur PLZ-Suche usw., nicht bei T-Online  -->
+		
+			
+			
+			
+		
+		<!-- ENDE Hinweis -->
+  		 
+  	  </div>
+  	  
+  	  
+      <!--  end Meldung  -->
+
+         <!--  Liste  -->
+         
+         <table id="alternativ">
+           
+           <tr>
+             <!--  &Uuml;berschrift  -->
+             <th scope="row">
+				
+				
+				
+						Folgende Alternativen k&ouml;nnen wir Ihnen anbieten:
+				
+			</th>
+            <!--  end &Uuml;berschrift  -->
+           </tr>
+           	
+									
+					<tr>
+													
+						
+							<td>
+								<a href="https://www.dasoertliche.de/?form_name=search_nat&amp;radius=0&amp;ci=Frankfurt am Main&amp;pc=&amp;kgs=&amp;buab=69000188&amp;zbuab=69000197,69000195,69000194,69000198,69000193&amp;rgid=&amp;buc=2243&amp;zvo_ok=1&amp;st=&amp;hn=&amp;cx=&amp;cy=&amp;fn=&amp;atfilter=&amp;quarterfilter=&amp;priv=&amp;oeff=&amp;firma=&amp;sfn=&amp;sst=&amp;kw=Steuerstrafrecht">Steuerstrafrecht</a><span>(3)</span>
+							</td>													
+						
+					</tr>					
+					<tr>
+						
+							
+								<td>
+									</span><a href="https://www.dasoertliche.de/?form_name=search_nat&amp;radius=0&amp;ci=Frankfurt am Main&amp;pc=&amp;kgs=&amp;buab=69000188&amp;zbuab=69000197,69000195,69000194,69000198,69000193&amp;rgid=&amp;buc=2243&amp;zvo_ok=1&amp;st=&amp;hn=&amp;cx=&amp;cy=&amp;fn=&amp;atfilter=&amp;quarterfilter=&amp;priv=&amp;oeff=&amp;firma=&amp;sfn=&amp;sst=&amp;catkeyfilter=0092400&amp;catkw=Rechtsanwälte&amp;kw=Rechtsanwälte">Rechtsanwälte</a><span>(682)</td>
+							
+													
+						
+					</tr>
+				
+					
+				
+				
+         </table>
+         
+         <!--  end Liste  -->
+         
+        <br/><br/>	           			
+		<div class="ugc_banner_big">
+			<h4>Hier fehlt ein Eintrag?</h4>
+  					<p>
+    					Jetzt mithelfen, Das&nbsp;&Ouml;rtliche noch besser zu machen!
+      					Hier kostenfrei Unternehmen zur Eintragung vorschlagen oder eigenen Privateintrag hinzuf&uuml;gen.
+  					</p>
+  					<ul>
+  						<li><input type="radio" id="ugc3" name="entrytype" /><label for="ugc3">Ich m&ouml;chte ein <strong>fehlendes Unternehmen</strong> eintragen.</label></li>
+  						<li><input type="radio" id="ugc2" name="entrytype" /><label for="ugc2">Ich m&ouml;chte mein <strong>eigenes Unternehmen</strong> eintragen (Schnupperpaket).</label></li>
+  						<li><input type="radio" id="ugc1" name="entrytype" /><label for="ugc1">Ich m&ouml;chte mich <strong>privat</strong> bei Mein&nbsp;&Ouml;rtliches eintragen.</label></li>
+  					</ul>
+  					<input type="button" class="btn" value="Eintrag hinzufügen" />
+		</div>
+	
+
+     </div>
+
+      </div>
+      <!--  end Content-Bereich  -->
+
+	  
+      <footer id="footer">
+ 
+ 	
+ 		
+ 	
+ 
+    <section class="head">
+            <span>Ein Angebot Ihrer Verlage Das Örtliche</span>
+
+                <a href="https://www.dtme.de/" rel="nofollow"
+                   onclick="return wwa$.logOutboundLink('Fußzeile_Link_DeTeMedien-Logo', this)"
+                   target="_blank" title="DTM Deutsche Tele Medien GmbH"><img loading="lazy" src="/img/lgo_detemedien.gif" alt="DTM Deutsche Tele Medien GmbH"></a>
+                
+
+                    <a href="http://www.tg-verlag.de"  rel="nofollow"
+                       onclick="return wwa$.logOutboundLink('Fußzeile_Link_Verlagslogo', this)"
+                       target="_blank"><img loading="lazy" class="verlag" src="/img/logoCache/337.gif" alt="TG Telefonbuch-Verlag Frankfurt/M.-Chemnitz GmbH" title="TG Telefonbuch-Verlag Frankfurt/M.-Chemnitz GmbH"></a>
+
+                    
+
+                
+        </section>
+        <section>
+                <ul>
+                    <li>
+                        <a href="https://www.dasoertliche.de/?form_name=search_nat&amp;cmd=cmd_nav_startpage"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Startseite national', this)" rel="nofollow"
+                           title="Das Örtliche für Deutschland">Startseite Deutschland</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#" class="js-bookmark" rel="nofollow"
+                           onclick="setTimeout(function(){return wwa$.logOutboundLink('Fußzeile_Ö zu Favoriten', this), 2000})"
+                           title="Das Örtliche zu Favoriten">Das Örtliche zu Favoriten</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="https://www.dtme.de/ihr-eintrag/ihr-privater-eintrag/"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Kontakt', this)"
+                           target="_blank" title="Kontakt">Kontakt</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+						<a href="https://www.dasoertliche.de/inhaltemelden/" onclick="return wwa$.logAction('LP_Inhaltemelden', this)"
+                           title="Inhalte melden">Inhalte melden</a>
+                    </li>
+                </ul>
+        </section>
+        <section>
+                <ul>
+                	
+                    <li><a href="//www.dasoertliche.de/services/werben"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Werben', this)"
+                           title="Werben in Das Örtliche">Werben</a>
+                    </li>
+                    
+                    <li><a href="//www.dasoertliche.de/services/buchbestellung/"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Buchbestellung', this)"
+                           title="Bestellen Sie hier Ihr Buchexemplar von Das Örtliche">Buchbestellung</a
+                    ></li>
+                    
+                    <li><a href="//www.dasoertliche-marketing.de/021_press_list.php" target="_blank"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Presse')"
+                           rel="nofollow noopener" title="Pressemitteilungen von Das Örtliche">Presse</a>
+                    </li>
+                </ul>
+                <ul>
+                    
+                    <li><a href="https://www.dasoertliche.de/mobil/"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Ö unterwegs', this)"
+                           title="Das Örtliche Mobil">Das Örtliche für Unterwegs</a>
+                    </li>
+                    
+                    <li><a href="https://mobil.dasoertliche.de/"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Mobil', this)"
+                           title="Das Mobilportal von Das Örtliche">Mobil</a>
+                    </li>
+                    
+                    <li><a href="https://mein.dasoertliche.de/"
+                    	onclick="return wwa$.logAction('Fußzeile_Mein Örtliches')" 
+                    	title="Anmeldung bei Mein Örtliches">Mein &Ouml;rtliches</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="https://www.dasoertliche.de/nutzungsbedingungen"
+                           onclick="return wwa$.logAction('Fußzeile_Nutzungsbedingungen')"
+                           title="Nutzungsbedingungen">Nutzungsbedingungen</a>
+                    </li>
+                    <li>
+                        <a href="https://www.dasoertliche.de/datenschutz"
+                           onclick="return wwa$.logAction('Fußzeile_Datenschutz')"
+                           title="Datenschutz">Datenschutz</a>
+                    </li>
+                    <li>
+                        
+                    </li>
+                </ul>
+                <ul>
+                    
+                	<li><a href="https://www.dasoertliche.de/netiquette"
+                		onclick="return wwa$.logAction('Fußzeile_Netiquette')"
+                		title="Netiquette">Netiquette</a>
+                	</li>
+                	
+                    <li><a href="https://www.dasoertliche.de/?ci=Frankfurt%20am%20Main&amp;cmd=cmd_nav_impressum&amp;buc=2243" onclick="return wwa$.logAction('Fußzeile_Impressum')"  
+                           title="Impressum"  rel="nofollow">Impressum</a></li>                   
+					<li><a href="#" onclick="openCmp()"  
+                           title="Datenschutz-Einstellungen"  
+                           rel="nofollow noopener">Datenschutz-Einstellungen</a></li>                                       
+                </ul>
+        </section>
+
+        <section>
+                <ul>
+                    
+                    <li><a href="//www.dasoertliche.de/freibad"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Freibäder', this)"
+                           title="Freibad und Badesee finden mit dem Strandbadguide von Das Örtliche">Freib&auml;der finden</a
+                    ></li>
+                    
+                    <li><a href="//www.dasoertliche.de/weihnachtsmarkt"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Weihnachten', this)"
+                           title="Weihnachtsmärkte in Deutschland finden mit der Weihnachtsmarkt-Suche von Das Örtliche">Weihnachtsmärkte finden</a>
+                    </li>
+                    
+                    <li><a href="https://www.dasoertliche.de/adresssuche/" onclick="return wwa$.logOutboundLink('Fußzeile_LP_Adresssuche', this)" title="Die Adresssuche von Das &Ouml;rtliche">Adresssuche</a></li>
+                </ul>
+                <ul>
+                    
+                    <li><a href="//www.dasoertliche.de/geldautomaten/"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Geldautomaten', this)"
+                           title="Die Geldautomatensuche von Das Örtliche">Geldautomaten</a>
+                    </li>
+                    
+                    <li><a href="//www.dasoertliche.de/notapotheken/"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Notapotheken', this)"
+                           title="Notdienste Apotheken in Das Örtliche">Notapotheken</a>
+                    </li>
+                    
+                    <li><a href="https://www.dasoertliche.de/telefonauskunft/" onclick="return wwa$.logOutboundLink('Fußzeile_LP_Telefonauskunft', this)" title="Die Telefonauskunft von Das &Ouml;rtliche">Telefonauskunft</a></li>
+                </ul>
+                <ul>
+                    
+                    <li><a href="//www.dasoertliche.de/postleitzahlen/"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Postleitzahlen', this)"
+                           title="Die Postleitzahlensuche von Das Örtliche">Postleitzahlen</a>
+                    </li>
+                    
+                    <li><a href="//www.dasoertliche.de/vorwahl/"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Vorwahlen', this)"
+                           title="Die Vorwahlsuche von Das Örtliche">Vorwahlen</a>
+                    </li>
+                    
+                    <li><a href="https://www.dasoertliche.de/firmensuche/" onclick="return wwa$.logOutboundLink('Fußzeile_LP_Firmensuche', this)" title="Die Firmensuche von Das &Ouml;rtliche">Firmensuche</a></li>
+                </ul>
+                <ul>
+                    
+                    <li><a href="//www.dasoertliche.de/rueckwaertssuche/"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Rückwärtssuche', this)"
+                           title="Die Rückwärtssuche von Das Örtliche">R&uuml;ckw&auml;rtssuche</a>
+                    </li>
+                    
+                    <li><a href="https://www.dasoertliche.de/branchenbuch/" onclick="return wwa$.logOutboundLink('Fußzeile_LP_Branchenbuch', this)" title="Das Branchenbuch von Das &Ouml;rtliche">Branchenbuch</a></li>
+                    
+            	    <li><a href="https://www.dasoertliche.de/personensuche/" onclick="return wwa$.logOutboundLink('Fußzeile_LP_Personensuche', this)" title="Die Personensuche von Das &Ouml;rtliche">Personensuche</a></li>
+                </ul>
+        </section>
+
+        
+        <section>
+                <ul>
+                    <li>
+                        
+                        <a href="https://www.golocal.de/" target="_blank"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Link_GoLocal')" rel="nofollow noopener"
+                           title="GoLocal">GoLocal</a>
+                    </li>
+                </ul>
+                <ul>
+                    
+                    <li>
+                        <a href="https://www.dtme.de/" target="_blank"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Link_DeTeMedien', this)" rel="nofollow noopener"
+                           title="DTM Deutsche Tele Medien GmbH">DTM Deutsche Tele Medien GmbH</a>
+                    </li>                   
+                </ul>
+                <ul>
+                </ul>
+                <ul>
+                	<li>
+                		<a href="https://www.dasoertliche.de/pressebereich/telefonbetrug" target="_blank"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Telefonbetrug', this)"
+                           title="Verbrauchertipps gegen Telefonbetrug">Verbrauchertipps</a>
+                    </li>
+                </ul>
+        </section>
+        <section class="icons">
+                <ul>
+                    
+                    <li><i class="icon-facebook"></i>
+                        <a href="https://www.facebook.com/pages/DasOrtliche/132038165608/"
+                           target="_blank" onclick="return wwa$.logOutboundLink('Fußzeile_Facebook')"
+                           rel="nofollow noopener"
+                           title="Das Örtliche auf Facebook">Facebook &ndash; Fan werden</a>
+                    </li>
+				</ul>
+                <ul>
+                    
+                    <li><i class="icon-instagram"></i>
+					<a href="https://www.instagram.com/dasoertliche/"
+						target="_blank" onclick="return wwa$.logOutboundLink('Fußzeile_Instagram')"
+						rel="nofollow noopener"
+						title="Das Örtliche auf Instagram">Folge uns auf Instagram</a>
+					</li> 
+					                    
+                </ul>
+                <ul>
+                    
+                    <li><a href="https://www.dasoertliche.de/Top/"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_LP_BLE', this)"
+                           title="Die besten lokalen Empfehlungen">Die besten lokalen Empfehlungen</a>
+                    </li>                                 
+                    
+                </ul>
+                <ul>
+                    
+                    <li><a href="https://www.dasoertliche.de/Themen/index.html"
+                           onclick="return wwa$.logOutboundLink('Fußzeile_Suchbegriffe', this)"
+						   title="Suchbegriffe">Suchbegriffe</a>
+                    </li>
+                </ul>
+		</section>
+		<section>
+            <span class="copy">&copy; Das &Ouml;rtliche 2026</span>
+            <a class="totop" href="#totop" onclick="wwa$.logAction('Sprungmarke');" rel="nofollow"><i class="icon-arrowup"></i>
+            <span>nach oben</span></a>
+            
+        </section>
+</footer>
+	  
+
+    <!--  end Inhalt-Container  --> 
+  </div>
+  
+  <!--  end Innen-Container  -->
+
+  
+	<div id="kvSpacer" class="kvspacer" style="display:none">
+	<img src="/img/kvSpacer.gif" alt="Abstand" width="10" height="100">
+</div>
+<div id="kvBanner" class="sticky_bottom" style="visibility: hidden;">
+	<script>
+	stcysrc="https://ad13.adfarm1.adition.com/js?wp_id=4256346&prf[kw]=Stuerzl-Steuerstrafrecht&prf[loc]=Frankfurt-am-Main&prf[buid]=2243&prf[kgs]=&prf[sz]=728x90";
+	setScriptSrc("kvBanner", stcysrc);
+	document.addEventListener("DOMContentLoaded", function(event) { 
+		var $kvSpacer = document.getElementById("kvSpacer");
+		$kvSpacer.remove();
+		document.getElementById("oetbwrap").appendChild($kvSpacer);
+		$kvSpacer.style.display =  "block";
+	});
+	</script>
+</div>
+
+	
+
+
+<script src="/js/oe.plugins.js?42420_569"></script>
+<script src="/js/oe.sb.js?42420_569"></script>
+
+
+	
+<script>
+function logOutMeinOeAPI() {
+	try {
+		$.ajax({
+			type: "GET",
+			url: "https://mein.dasoertliche.de/auth/logout?client_id=oe-web",
+			async: false,
+			crossDomain: true,
+		    xhrFields: {
+				withCredentials: true
+			},
+	       	success: function(xhr, status, exc) {
+	       		wwa$.logAction("Profil_abmelden");
+	       		console.log ("logOutMeinOeAPI() OK:" + status + exc);	 
+    		},
+	       	error: function(xhr, status, exc) {
+	       		console.log ("logOutMeinOeAPI() Error:" + status + exc);	 
+    		}
+		});
+	} catch (e) {
+		console.log ("logOutMeinOeAPI() exception=" + e);
+	}
+}
+</script>
+ 
+	<script>
+	    var lightboxHandlerMeinOeLogin = new $oe$.media.LightboxHandler($('#meinOeLogin'), {
+	   		href: $($('#meinOeLogin')).attr("href"),
+	       	lightboxType: "iframe",
+	       	addClass: "max900"
+	   	});
+	</script>
+	
+	
+
+ 
+	
+
+ 
+
+
+ 
+   
+</body>
+
+</html>

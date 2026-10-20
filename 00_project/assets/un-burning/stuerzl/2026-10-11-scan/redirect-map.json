@@ -1,0 +1,320 @@
+{
+ "run": "stuerzl-2026-10-11-scan-partD",
+ "collected_at": "2026-10-11T05:37:59+02:00",
+ "backlink_data": "Stored pull of 2026-10-09 (DataForSEO Backlinks): site totals 100 backlinks, 58 referring domains; anchors and referring domains only, NO per-URL target list. Match by URL was possible only where an anchor equals the URL (/index.php/lina: 5 backlinks / 4 domains). Everything else is unknown or 0 in the anchors file. No new pull.",
+ "gsc_note": "No Search Console access: every gsc_clicks_90d is unknown. Decision tree step 1 (never delete a URL with clicks or backlinks) cannot be completed for exact_duplicate rows, hence approval blocked.",
+ "probes_not_in_wild": "Probed variants without index.php (e.g. /kanzlei, /steuerstrafrecht) and upper-case /index.php/Kanzlei return 404 and are not linked anywhere. Listed in EV-D-variants, not in this map.",
+ "evidence": [
+  "EV-D-crawl-data",
+  "EV-D-variants",
+  "EV-D-analysis",
+  "EV-D-external-links",
+  "EV-D-bl-anchors",
+  "EV-D-feeds-pagination"
+ ],
+ "rows": [
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/schwerpunkte",
+   "status_now": 404,
+   "kind": "dead_internal_link",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": 0,
+    "note": "no URL-anchored backlink in stored anchors file (2026-10-09); pull reports broken_backlinks 0"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/leistungen",
+   "reason": "Home page link 'mehr zu den Schwerpunkten' points here; the Leistungen page lists the 9 areas. Also fix the home link itself.",
+   "type": 301,
+   "approval": "proposed",
+   "linked_from": [
+    "https://www.stuerzl-steuerstrafrecht.de/"
+   ]
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/tel.+498972444170",
+   "status_now": 404,
+   "kind": "malformed_tel_href",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": null,
+   "reason": "Not a page: malformed tel link. Fix the href to tel:+498972444170 on the pages that carry it. No redirect.",
+   "type": null,
+   "approval": "proposed",
+   "linked_from": [
+    "https://www.stuerzl-steuerstrafrecht.de/index.php/dr-monika-glogger",
+    "https://www.stuerzl-steuerstrafrecht.de/index.php/lea-wimmer"
+   ],
+   "href_fix_to": "tel:+498972444170"
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/tel.+4969298028870",
+   "status_now": 404,
+   "kind": "malformed_tel_href",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": null,
+   "reason": "Not a page: malformed tel link. Fix the href to tel:+4969298028870 on the pages that carry it. No redirect.",
+   "type": null,
+   "approval": "proposed",
+   "linked_from": [
+    "https://www.stuerzl-steuerstrafrecht.de/index.php/florentine-jilg",
+    "https://www.stuerzl-steuerstrafrecht.de/index.php/thorben-hoppe"
+   ],
+   "href_fix_to": "tel:+4969298028870"
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/linkedin.com/in/dr-monika-glogger-geb-werndl-3354a9123",
+   "status_now": 404,
+   "kind": "malformed_external_href",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": null,
+   "reason": "Not a page: external link written without scheme. Fix the href to the full LinkedIn address (derived from the broken href, confirm with the person).",
+   "type": null,
+   "approval": "proposed",
+   "linked_from": [
+    "https://www.stuerzl-steuerstrafrecht.de/index.php/dr-monika-glogger"
+   ],
+   "href_fix_to": "https://www.linkedin.com/in/dr-monika-glogger-geb-werndl-3354a9123"
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/lina",
+   "status_now": 404,
+   "kind": "former_team_page_with_backlinks",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": 5,
+    "referring_domains": 4,
+    "note": "anchor = URL, first seen 2026-04-15, stored pull dated 2026-10-09 (derived)",
+    "source_file": "baseline/bl_anchors.json"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/team",
+   "reason": "Former team page. Stored anchors file lists 5 backlinks from 4 domains, all from the forum thread (group C). Low priority; confirm the person left the team first.",
+   "type": 301,
+   "approval": "proposed"
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/images/slider-arrow.svg",
+   "status_now": 404,
+   "kind": "asset_404",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": 0,
+    "note": "asset"
+   },
+   "target_url": null,
+   "reason": "Image file missing; restore the file or remove the reference. No redirect.",
+   "type": null,
+   "approval": "proposed"
+  },
+  {
+   "old_url": "https://www.otto-schmidt.de/seminare/seminare-steuerrecht/steuerstrafverfahren-und-besteuerungsverfahren",
+   "status_now": 404,
+   "kind": "external_dead_link",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "outbound link, not a backlink"
+   },
+   "target_url": null,
+   "reason": "External site no longer has the page; remove the link on the 3 pages that carry it. No replacement URL found, none invented.",
+   "type": null,
+   "approval": "proposed"
+  },
+  {
+   "old_url": "http://stuerzl-steuerstrafrecht.de/",
+   "status_now": 301,
+   "kind": "existing_301",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de",
+   "reason": "single hop, keep",
+   "type": 301,
+   "approval": "keep",
+   "hops": 1
+  },
+  {
+   "old_url": "http://www.stuerzl-steuerstrafrecht.de/",
+   "status_now": 301,
+   "kind": "existing_301",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de/",
+   "reason": "single hop, keep",
+   "type": 301,
+   "approval": "keep",
+   "hops": 1
+  },
+  {
+   "old_url": "https://stuerzl-steuerstrafrecht.de/",
+   "status_now": 301,
+   "kind": "existing_301",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de",
+   "reason": "single hop, keep",
+   "type": 301,
+   "approval": "keep",
+   "hops": 1
+  },
+  {
+   "old_url": "http://www.stuerzl-steuerstrafrecht.de/index.php/kanzlei",
+   "status_now": 301,
+   "kind": "existing_301",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/kanzlei",
+   "reason": "single hop, keep (same for https apex deep links)",
+   "type": 301,
+   "approval": "keep",
+   "hops": 1
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/index.php",
+   "status_now": 200,
+   "kind": "proposed_duplicate",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de/",
+   "reason": "Same page as the home page, self canonical, no redirect. 301 to /.",
+   "type": 301,
+   "approval": "proposed"
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/",
+   "status_now": 200,
+   "kind": "proposed_duplicate",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de/",
+   "reason": "Same page as the home page, self canonical, no redirect. 301 to /.",
+   "type": 301,
+   "approval": "proposed"
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/home",
+   "status_now": 200,
+   "kind": "proposed_duplicate",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de/",
+   "reason": "Same page as the home page, self canonical, no redirect. 301 to /.",
+   "type": 301,
+   "approval": "proposed"
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/kanzlei/",
+   "status_now": 200,
+   "kind": "proposed_duplicate_trailing_slash",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/kanzlei",
+   "reason": "Trailing-slash twin with its own canonical. Rule: 301 every /index.php/<x>/ to /index.php/<x> (example row).",
+   "type": 301,
+   "approval": "proposed"
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/component/content/category/allgemein?Itemid=228",
+   "status_now": 200,
+   "kind": "category_duplicate",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/aktuelles",
+   "reason": "Menu item 'Aktuelles' by raw component route; 788 words vs 308 on /aktuelles (check list completeness first).",
+   "type": 301,
+   "approval": "proposed"
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/component/content/category/allgemein?Itemid=0",
+   "status_now": 200,
+   "kind": "category_duplicate",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/aktuelles",
+   "reason": "Identical text to ?Itemid=228 (similarity 1.0).",
+   "type": 301,
+   "approval": "proposed"
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/steuerstrafrecht/selbstanzeige-korrekturberatung",
+   "status_now": 200,
+   "kind": "exact_duplicate",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/steuerstrafrecht",
+   "reason": "Text identical to the parent area page (similarity 1.0). Preferred fix is own text for the sub page; 301 only if the page is not wanted. GSC clicks needed to pick the stronger page.",
+   "type": 301,
+   "approval": "blocked"
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/selbstanzeigen-steuerliche-korrekturen/selbstanzeige-beratung-begleitung-selbstanzeige",
+   "status_now": 200,
+   "kind": "exact_duplicate",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/selbstanzeigen-steuerliche-korrekturen",
+   "reason": "Text identical to the parent area page (similarity 1.0). Same decision rule.",
+   "type": 301,
+   "approval": "blocked"
+  },
+  {
+   "old_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/ordnungswidrigkeiten/steuerordnungswidrigkeiten",
+   "status_now": 200,
+   "kind": "exact_duplicate",
+   "gsc_clicks_90d": "unknown (no GSC access)",
+   "backlinks": {
+    "count": null,
+    "note": "unknown at URL level: stored pull 2026-10-09 has anchors and domains only; no URL-anchored backlink entry for this URL"
+   },
+   "target_url": "https://www.stuerzl-steuerstrafrecht.de/index.php/ordnungswidrigkeiten",
+   "reason": "Text identical to the parent area page (similarity 1.0). Same decision rule.",
+   "type": 301,
+   "approval": "blocked"
+  }
+ ]
+}

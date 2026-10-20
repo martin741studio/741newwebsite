@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-12",
+  "started": "20:00",
+  "model": "claude-sonnet-5",
+  "budget": {
+    "pages_max": 6,
+    "invocations_max": 14,
+    "invocations_used": 9
+  },
+  "plan": [
+    {
+      "client": "Praxis Suriya",
+      "client_id": "3f71ef33-8c74-4ea1-b2d3-0273c2e99649",
+      "mode": "FEEDBACK",
+      "page": "suriya/gbp-oeffnungszeiten",
+      "feedback_id": "61abce05-2b04-49b4-b4ab-420ab4374080"
+    },
+    {
+      "client": "Praxis Suriya",
+      "client_id": "3f71ef33-8c74-4ea1-b2d3-0273c2e99649",
+      "mode": "FEEDBACK",
+      "page": "suriya/nap-domains",
+      "feedback_id": "d1c58471-eafc-4ef9-8418-1611a2345445"
+    },
+    {
+      "client": "Praxis Suriya",
+      "client_id": "3f71ef33-8c74-4ea1-b2d3-0273c2e99649",
+      "mode": "FEEDBACK",
+      "page": "suriya/gbp-beschreibung",
+      "feedback_id": "21a25f8b-8ee2-4f8f-8378-36aac01e35c4"
+    },
+    {
+      "client": "Rabenmütter Shop",
+      "client_id": "fbcc70d1-4c56-437c-b5fb-8056e48d3f62",
+      "mode": "FEEDBACK",
+      "page": "rabenmuetter/verkaufskanaele-etsy",
+      "feedback_id": "66478f5c-02a4-4076-b1c3-ad9d211e3533"
+    },
+    {
+      "client": "Rabenmütter Shop",
+      "client_id": "fbcc70d1-4c56-437c-b5fb-8056e48d3f62",
+      "mode": "FEEDBACK",
+      "page": "rabenmuetter/trauerkarten-pillar-handschrift",
+      "feedback_id": "801d4d7d-1a22-4d45-a08e-e0b213dff2ec"
+    },
+    {
+      "client": "Rabenmütter Shop",
+      "client_id": "fbcc70d1-4c56-437c-b5fb-8056e48d3f62",
+      "mode": "AUDIT",
+      "page": "rabenmuetter/shop-navigation-kategorien",
+      "task_id": "4577d1d6-c16f-4b49-a27f-4b1e60a7d1d5"
+    }
+  ],
+  "pages": {
+    "suriya/gbp-oeffnungszeiten": { "mode": "FEEDBACK", "attempts": 1, "status": "pass", "critic": "critic/praxis-suriya/gbp-oeffnungszeiten.json" },
+    "suriya/nap-domains": { "mode": "FEEDBACK", "attempts": 1, "status": "pass", "critic": "critic/praxis-suriya/nap-domains.json" },
+    "suriya/gbp-beschreibung": { "mode": "FEEDBACK", "attempts": 1, "status": "pass", "critic": "critic/praxis-suriya/gbp-beschreibung.json" },
+    "rabenmuetter/verkaufskanaele-etsy": { "mode": "FEEDBACK", "attempts": 1, "status": "pass", "critic": "critic/rabenmuetter/verkaufskanaele-etsy.json" },
+    "rabenmuetter/trauerkarten-pillar-handschrift": { "mode": "FEEDBACK", "attempts": 1, "status": "pass", "critic": "critic/rabenmuetter/trauerkarten-pillar-handschrift.json" },
+    "rabenmuetter/shop-navigation-kategorien": { "mode": "AUDIT", "attempts": 2, "status": "needs_martin", "critic": "critic/rabenmuetter/shop-navigation-kategorien.json", "note": "Attempt 2 (Executor) re-ran WebFetch on rabenmuetter-verlag.de — identical tool-level 404 (model: claude-3-5-haiku-20241022). curl fallback blocked by session permission layer again. No DataForSEO tool present in this session either. Same blocker as attempt 1, now confirmed a third independent time (attempt-1 Executor, attempt-1 Critic, attempt-2 Executor). Per SKILL.md §3 'Never a third attempt' — marked needs_martin, not requeued. Audit file reporting/night-shift/2026-10-12/audits/rabenmuetter/shop-navigation-kategorien.md updated to reflect attempt 2 and final needs_martin status. Martin must confirm site access (fetch/curl) or DataForSEO access before this item can be retried in a future night." }
+  },
+  "stopped_reason": null
+}

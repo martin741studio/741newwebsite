@@ -1,0 +1,349 @@
+# Source of Truth Stürzl: Auszug als Text (Snapshot 2026-10-11)
+
+Quelle: Google Sheet `10JISY6H71F_pIX8KzGhrTucDvWXfv2WYh4-M3E72SqY` (Requirement Sheets), gelesen über das Dienstkonto (Sheets API, nur lesen). Tabs 00 bis 07, 11 und 12. Maßgeblich bleibt das Sheet. Vor jeder Aussage „offen“ hier nachsehen.
+
+## 00 Übersicht
+
+- Z1: 741 · Client Requirement Sheets
+- Z2: Vorlage — für einen neuen Kunden: diese Datei kopieren (nicht bearbeiten), umbenennen auf den Kundennamen, dann füllen. Nie neue Fragen erfinden — nur diese Felder nutzen.
+- Z4: Kundenname / Firma | STÜRZL Steuerstrafrecht
+- Z5: Ansprechpartner | Dr. Anja Stürzl (Inhaberin); operativ Monika Glogger
+- Z6: Branche | Rechtsanwaltskanzlei – Steuerstrafrecht & Wirtschaftsstrafrecht
+- Z7: Standort(e) | Frankfurt am Main (Stammsitz; Umzug 05.10.2026 – neue Adresse Untermainkai 26, 60329 Frankfurt am Main, Post/Empfang Wilhelm-Leuschner-Str. 23, Tiefgarage Wilhelm-Leuschner-Str. 27-29 Plätze 148/146; Umstellung in GBP/Website noch offen, Martins Go steht aus); München (seit Anfang 2026)
+- Z8: Datum Erstgespräch | 17.09.2026 (Erstgespräch); 06.10.2026 (Onboarding-Call)
+- Z9: Datum Vertragsunterschrift | Rechnung Rate 1 datiert 28.09.2026 (741/280926)
+- Z10: Programmstart (Zahlungseingang Rate 1)
+- Z11: Domain | stuerzl-steuerstrafrecht.de
+- Z12: Portal-Client-ID (Supabase) | b6f6e303-50e4-4afb-a343-337206cec316
+- Z13: Ansprechpartner 741 / Projektverantwortlich | Martin Drendel
+- Z15: Tabs in dieser Mappe
+- Z16: 00 Übersicht | Diese Seite — Stammdaten
+- Z17: 01 Erstgespraech | 1 · Das Erstgespräch (wird im Call ausgefüllt)
+- Z18: 02 Audit | 2 · Das Audit (erster Monat nach Vertrag)
+- Z19: 03 Un-Burning | 3 · Das Un-Burning (Altlasten der Vorgänger beheben)
+- Z20: 04 Telefon klingeln | 4 · Das Telefon zum Klingeln bringen (GBP + Website + Off-Page)
+- Z21: 05 Beweis | 5 · Beweis zum Nachprüfen (laufend)
+- Z22: 06 War Room | 6 · The Quarterly War Room (alle 90 Tage neu ausfüllen)
+- Z23: 07 Promises | 7 · Die 6 Versprechen (Zusagen aus dem Erstgespräch)
+
+## 01 Erstgespraech
+
+- Z1: 1 · Das Erstgespräch
+- Z2: Wird WÄHREND des ersten Gesprächs ausgefüllt (40–60 Minuten, kein Verkaufsgespräch). Gesprächspartner ist immer der Inhaber oder die Person, die die Strategie verantwortet.
+- Z4: Nr | Frage / Feld | Antwort (Kunde) | Notiz / Kontext
+- Z5: 1 · Lead-Gewinnung & Marketing bisher
+- Z6: 1 | Aktuelle Lead-Kanäle | anwalt.de (größter Kanal, Profile für Kanzlei + Anja + Kollegin Lea Wimmer); Empfehlung/Mundpropaganda; E-Mail; Chat-Widget auf der Website; Telefon (laut Anja ungefähr gleich viel wie E-Mail); LinkedIn aktiv, aber bisher kein nachweisbarer Mandant darüber. Seit Februar 2026 erstmals Anfragen über Google/anwalt.de, davor nur Empfehlung. | Wo entstehen heute echte Anfragen? Empfehlung, Google, Social, Lead-Portale, Laufkundschaft.
+- Z7: 2 | Bisheriges Marketing und Ergebnisse | Vorherige SEO-Agentur vor ca. 18 Monaten, einige tausend Euro bezahlt, kaum Output: nur kleine Geschwindigkeits-Tipps, davon konnte nur die Hälfte umgesetzt werden, weil der Webdesigner (Hr. Linkemann) meinte, die Seitenstruktur ginge sonst verloren. | Was wurde probiert (Agentur, Freelancer, selbst gemacht) und was kam dabei heraus.
+- Z8: 3 | Aktuelles SEO-Setup | Keine laufende aktive Betreuung durch die alte Agentur (KEMB). GTM, GBP und GA4 am 07.10.2026 an 741 übergeben. Offen: Search Console, Hosting/Domain, Google Ads. | Läuft gerade eine SEO-Betreuung? Durch wen, seit wann, was wird geliefert.
+- Z9: 4 | Plan ohne Zusammenarbeit | Was macht der Kunde, falls wir NICHT zusammenarbeiten? Zeigt, wie dringend das Problem ist.
+- Z10: 5 | Anlass für das Gespräch | Fachliche Autorität (Lehrtätigkeit Bundesfinanzakademie, Fachberater-Lehrgang, Masterstudiengang-Dozentur, Vorträge/Veröffentlichungen) spiegelt sich online nicht wider. Vorherige Agentur enttäuschend, kaum Ergebnis für das Geld. | Warum genau jetzt dieses Gespräch? Konkreter Auslöser, nicht "allgemeines Interesse".
+- Z11: 2 · Leistungen, Margen & Ticket-Größen
+- Z12: 6 | Geschäftsmodell und Zielgruppe | Kanzlei für Steuerstrafrecht (Kernfokus) + Wirtschaftsstrafrecht, Unternehmensverteidigung, neu: Compliance-Beratung. Zielgruppe: Unternehmen und Privatpersonen mit Steuer-/Wirtschaftsstrafverfahren, oft größere/komplexere Fälle, deutschlandweit, vereinzelt international. | Wer kauft, und wie trifft diese Person die Entscheidung?
+- Z13: 7 | Profitabelste Leistungen | Größere Unternehmensverfahren, va. mit bereits eingeleitetem Strafverfahren; Haftsachen (nur bei zahlungsfähigen/versicherten Mandanten); umfangreiche Selbstanzeigen; Compliance-Beratung für Unternehmen (laut Anja 'das Lukrativste'). | Welche 1–3 Leistungen bringen das meiste Geld, nicht nur das meiste Volumen.
+- Z14: 8 | Durchschnittliche Ticket-Größe | Ø Auftragswert in EUR, möglichst nach Leistung aufgeschlüsselt.
+- Z15: 9 | Leistungen mit der höchsten Marge | Compliance-Beratung für Unternehmen, größere Wirtschaftsstrafverfahren. | Wo bleibt nach Kosten am meisten übrig — das lenkt den Werbefokus.
+- Z16: 10 | Kundenwert (LTV) | Was ist ein Kunde über die gesamte Zusammenarbeit wert? Bestimmt, was eine neue Anfrage kosten darf.
+- Z17: 3 · Lead-Volumen & Abschlussquoten
+- Z18: 11 | Qualifizierte Anfragen pro Monat | Zahl, keine Schätzung "viele/wenige" — nachfragen, bis eine Zahl da ist.
+- Z19: 12 | Abschlussquote je Kanal | Erstberatungsgebühr 350 € eingeführt, um unqualifizierte Google-Anfragen zu filtern (Stundensätze 350–450 €). /  / Stand 11.10.2026 (Kostentext der Kanzlei): Erstberatung als Pauschale EUR 250–350 je nach Zeit und Umfang, „üblicherweise“ (vorher in diesem Feld: 350 € fest). Stundensätze laut neuem Text EUR 350–500 je nach Seniorität (vorher 350–450). Text noch nicht live. | Wie viel Prozent der Anfragen aus welchem Kanal werden zu zahlenden Kunden.
+- Z20: 13 | ROI-Check: Schafft das Team das Volumen? | Ja – Anja: 'kein Problem', auch bei starkem Anstieg an Mandaten. | Reicht die aktuelle Kapazität für mehr Anfragen, oder würden wir Erwartungen wecken, die niemand bedienen kann.
+- Z21: 4 · Gebiet & CRM-Daten
+- Z22: 14 | Wichtigste Orte und Einzugsgebiet | Deutschlandweit, keine feste regionale Grenze; Standorte Frankfurt (Stammsitz) und München; vereinzelt Mandate aus Hamburg, Düsseldorf, auch international (Schweiz, Österreich, London). | Städte/Stadtteile, aus denen die besten Kunden kommen.
+- Z23: 15 | CRM-Daten: Wo entstehen die besten Aufträge? | Falls ein CRM existiert: Gibt es eine Auswertung nach Ort/Postleitzahl?
+- Z24: 16 | Expansion in neue Orte | München ist bereits aktive Expansion (Standort seit Anfang 2026), soll online präsenter werden – eigene Standortseite gewünscht. | Gibt es einen Wunsch oder Plan, in neue Gebiete zu wachsen?
+- Z25: 5 · Google-Profil & lokale Rankings
+- Z26: 17 | Bedeutung des Profils für die Anfragen | Hoch – laut Anja richten sich 90% der Leute nach dem Google-Profil, wo sie hinfahren. | Wie viel vom heutigen Geschäft kommt über das Google-Unternehmensprofil?
+- Z27: 18 | Anzahl Profile und Adressen | 2 Profile: Frankfurt (seit Dez. 2023) und München (seit Anfang 2026). Frankfurt gerade umgezogen (neue Adresse noch nachzureichen), zwei Hauseingänge mit unterschiedlichen Adressen (Haupteingang/Post), Tiefgarage mit eigener Adresse. | Wie viele Google-Profile existieren, und stehen echte, physische Adressen dahinter?
+- Z28: 19 | Bewertungen pro Monat und Bewertungs-Prozess | Kaum Bewertungen bisher, kein fester Prozess. Mandanten sind wegen Vertraulichkeit zurückhaltend (Steuerstrafrecht); anonyme Bewertungen möglich. | Wie viele neue Bewertungen pro Monat, und gibt es einen festen Ablauf, der sie einsammelt?
+- Z29: 20 | Aktuelle Rankings und Wettbewerber im Map Pack | München: für 'Steuerstrafrecht München' bereits gut sichtbar. Frankfurt: für 'Strafverteidiger' (höheres Suchvolumen als 'Steuerhinterziehung') taucht die Kanzlei noch gar nicht auf. | Wer steht heute vorne, wenn man die eigene Leistung + Ort sucht?
+- Z30: 21 | Google Ads: Betreuung, Budget, letzte Optimierung | Aktuell keine laufende Kampagne, kein festes Jahresbudget. Relevante Themen laut Gespräch: Selbstanzeige, Durchsuchungsbeschluss, Steuerstrafverfahren. | Läuft eine Kampagne, wer betreut sie, wann wurde sie zuletzt angefasst?
+- Z31: 6 · Live-Check: Technik, On-Page & Assets
+- Z32: 22 | Eigentum: Domain, Website, Analytics, Profil | GTM (GTM-WFPFSTK2), GBP und GA4 (Property 483853149, Mess-ID G-FCG9RTJ1YQ) seit 07.10.2026 bei 741. Offen: Search Console, Google Ads-Zugang, Eigentümer-Check Domain/Hosting. Website = Joomla + SP Page Builder (nicht WordPress), Linkemann bleibt technischer Ansprechpartner. | WICHTIGSTE FRAGE DES GESPRÄCHS. Wer hat Admin-Zugriff auf jedes dieser vier Dinge?
+- Z33: 23 | Startseite und Conversion (CTAs, Formular) | Chat-Widget auf der Website laut Call 'UPUS/Chat Pod' (Anbieter unverifiziert) sendet bei Kontakt eine E-Mail-Benachrichtigung. | Führt die Startseite zu einer klaren Handlung (Anruf, Formular, Termin)?
+- Z34: 24 | Schnelle Hebel: H1, interne Links, 404, Ladezeit | Erste technische Blick: fehlende Überschriften, kaputte Links, Ladezeit.
+- Z35: 25 | Qualität der Standort-Seiten | München hat noch KEINE eigene Standortseite (bisher nur Kontaktdaten denkbar, laut Linkemann 'sonst leere Seite') – muss inhaltlich aufgebaut werden. | Eigene Texte pro Ort/Leistung, oder dünne, austauschbare Vorlage?
+- Z36: 26 | NAP-Check live (Name, Adresse, Telefon) | Frankfurt-Adresse hat sich durch Umzug geändert, muss überall aktualisiert werden. Zwei Adressen am neuen Standort (Haupt-/Posteingang) – mit Linkemann klären, welche im Profil als Hauptadresse steht. | Google-Namen kopieren, direkt suchen: tauchen alte Namen/Nummern auf?
+- Z37: 27 | Indexierung der wichtigen Seiten | Stehen die Geld-Seiten in Google Search Console als indexiert?
+- Z38: 28 | Tech-Stack und Tracking | Domain-Rating 18 (Stand 17.09., 741-Analyse). | CMS, Hosting; läuft Microsoft Clarity, GTM, GA4 oder CallRail bereits?
+- Z39: 7 · Off-Page, lokale PR & Reputation
+- Z40: 29 | Backlink-Check | Domain-Rating 18, laut 741 u. a. über anwalt.de und PR-Artikel zu stärken. | Welche Backlinks wurden bisher überhaupt aufgebaut?
+- Z41: 30 | Lokale PR und Verzeichniseinträge | anwalt.de-Profile vorhanden und aktiv genutzt (Kanzlei, Anja Stürzl, Kollegin Lea Wimmer). | Lokale Presse, Verzeichnisse, vollständige Citations vorhanden?
+- Z42: 31 | Social-Media-Präsenz | LinkedIn aktiv bespielt, dient laut Team eher der Branchen-/Kollegen-Vernetzung als direkter Mandatsgewinnung. | Aktiv gepflegt, im Footer verlinkt, zeigt echte Aufträge/Bewertungen?
+- Z43: 32 | Negativ-Suche zur Marke | Live-Suche nach dem Markennamen: negative Presse, schlechte Bewertungen, offene Beschwerden?
+- Z44: 8 · Abläufe, Tracking & Kommunikation
+- Z45: 33 | CRM und Umsatz-Zuordnung | Welches CRM, wie aktuell gepflegt, wie werden Anrufe später den Daten zugeordnet?
+- Z46: 34 | Ansprechpartner | Dr. Anja Stürzl (Inhaberin). Operativ: Monika Glogger (Rechtsanwältin, 50% Teilzeit, seit April 2026) für Content/Website-Themen. Florentine Jilg (Organisation/IT). Extern: Hr. Linkemann (Webdesigner, hält aktuell noch Teile der Zugänge). | Wer ist der feste Ansprechpartner (Inhaber, Marketingleitung, Partner/in)?
+- Z47: 35 | Tabu-Bereiche auf der Website | Gibt es Inhalte, alte Texte oder rechtliche Formulierungen, die NICHT angefasst werden dürfen?
+- Z48: 36 | Kommunikation: Kanal und Rhythmus | Primär E-Mail. WhatsApp für schnelle interne Abstimmung möglich, aber Anja ist zurückhaltend bei Mandanten-Kommunikation über WhatsApp (Aktenführungspflicht). | Bevorzugter Kanal (Slack, WhatsApp, E-Mail) und gewünschter Rhythmus (wöchentlich, monatlich).
+- Z49: 9 · Gatekeeping ("Nein sagen")
+- Z50: 37 | Kapazitäten: Team und Auslastung | Vorhanden – Anja: Team kann auch einen starken Anstieg an Mandaten bewältigen. | Hat der Betrieb aktuell die Kapazität, mehr Aufträge anzunehmen?
+- Z51: 38 | Finanzieller Spielraum | Kein festes Marketing-Jahresbudget bisher, Entscheidungen fallen individuell. | Kann sich der Betrieb die Betreuung leisten, ohne in finanzielle Bedrängnis zu geraten?
+- Z52: 39 | Anfrage-Annahme: Realitäts-Check | Anfragen kommen laut Anja etwa gleich verteilt über Telefon und E-Mail, kaum Laufkundschaft. | Werden Anrufe heute überhaupt zuverlässig angenommen? Wenn nicht: erst das lösen, bevor wir Werbung draufsetzen.
+- Z53: Ergebnis
+- Z54: 40 | Die 2 bis 3 schnellsten Hebel | (1) Google-Profile vervollständigen: neue Frankfurt-Adresse eintragen, München-Standortseite aufbauen. (2) Fachliche Autorität online sichtbar machen (Lehrtätigkeit, Vorträge, Veröffentlichungen aktuell nicht gebündelt dargestellt). (3) Google Ads auf Kernbegriffe mit echtem Volumen (Selbstanzeige, Durchsuchungsbeschluss, Steuerstrafverfahren) statt Streuverlust auf 'Strafverteidiger'. | Was wir im Gespräch als erste, schnell wirksame Maßnahmen identifiziert haben.
+- Z55: 41 | Was du bekommst und was nicht | Gesamtpaket Local-SEO-Dominanz + Google Ads, 7.999 € in 2 Raten (Rechnung 741/280926), vereinbart vor diesem Call. Website-Umsetzung im Festpreis enthalten. Erster Monat Ads-Betreuung inklusive, Werbebudget ca. 1.000 €/Monat zahlt die Kundin direkt an Google. | Klar benennen, was im Angebot enthalten ist und was ausdrücklich nicht.
+- Z56: 42 | Nächster Schritt | Fehlende Google-Zugänge einholen (alte Agentur/Linkemann), Keyword-Liste zur Abstimmung schicken, Compliance-Text + Kostenseiten-Text von Monika einarbeiten, neue Frankfurt-Adresse + Fotos (in ca. 2 Monaten) nachreichen. /  / Stand 11.10.2026: Compliance-Text und Kostenseiten-Text sind eingegangen (Mail der Kanzlei, Anhänge vom 09.10.). Ablage: Drive „STÜRZL Steuerstrafrecht“ > Kundentexte. Offen: Platz für den KI-Baustein (Frage der Kanzlei an Martin), neue Frankfurt-Adresse + Fotos. | Konkret: wer macht was bis wann (z. B. Angebot folgt, Audit-Termin, Vertrag).
+
+## 02 Audit
+
+- Z1: 2 · Das Audit
+- Z2: Erst NACH Vertragsunterschrift, im ersten Monat. Volle Bestandsaufnahme — vieles überschneidet sich bewusst mit dem Erstgespräch, wird hier aber tiefer geprüft statt nur erfragt (Login-Zugriff, nicht nur Aussage des Kunden).
+- Z4: Nr | Frage / Feld | Antwort (Kunde) | Notiz / Kontext
+- Z5: Leadgenerierung & Marketing-Historie
+- Z6: 1 | Aktuelle Lead-Kanäle | Stand 08.10.2026: Keine Zahlen je Kanal vorhanden (kein CRM, GA4 für Dienst-Account noch nicht freigegeben). Qualitativ (Call 06.10.): anwalt.de = größter digitaler Kanal (Kanzlei-Profil 5,0/79 Bewertungen, Anja 5,0/55), Empfehlungen, Website-Chat (E-Mail-Benachrichtigung), E-Mail und Telefon „etwa gleich verteilt“, kaum Laufkundschaft. GA4 erfasst phone_click/email_click seit 05/2025 (KEMB) → Zahlen folgen nach Freigabe von Property 483853149. | Mit echten Zahlen je Kanal, nicht nur Einschätzung aus dem Erstgespräch.
+- Z7: 2 | Bisherige Marketing-Performance | Stand 08.10.2026: Organisch (SERP Frankfurt 08.10.): Marke Platz 1; „anwalt steuerstrafrecht“ Platz 27; „fachanwalt steuerrecht frankfurt“, „steuerstrafrecht frankfurt“, „selbstanzeige anwalt“, „steuerfahndung anwalt“, „anwalt steuerhinterziehung frankfurt“, „anwalt steuerstrafrecht münchen“, „steuerstrafrecht münchen“: nicht in Top 30. Maps 01.10.: 1 Begriff stark (anwalt steuerhinterziehung 63,3 %), steuerfahndung anwalt 22,5 %, 6 Begriffe ≤2 %. Einziger belegter Vorgänger-Nachweis: GSC-Screenshot Voss 27.05.2025 (320 Klicks / 5.150 Impressionen in 28 Tagen, Ø Position 33). → Tab 09, Tab 10 | → Tab '09 Maps-Baseline' + '10 Keywords & SERP' · Was hat in der Vergangenheit nachweislich funktioniert — das wird weiter ausgefahren.
+- Z8: 3 | Aktuelles SEO-Setup | Stand 08.10.2026: Joomla 5 + SP Page Builder + Helix Ultimate. GTM-WFPFSTK2 → GA4 G-FCG9RTJ1YQ (Property 483853149), Events: phone_click, email_click, link_click, menu_item_click, on_page_navigation, expand_sections; n3t Cookie Consent mit Consent-Mode-Signalen. Schema: LegalService (nur Frankfurt) + Person (Name) + ContactPoint + Öffnungszeiten 09–18 (weicht von Telefonzeit 09:30–14:30 ab). Keine XML-Sitemap, robots.txt ohne Sitemap-Zeile, kein llms.txt, kein Google-Ads-Tag, keine Breadcrumbs. Domain-Rank (DataForSEO) 122, erste Links seit 30.01.2024. | Worauf baut die neue Arbeit auf? Was ist technisch schon vorhanden.
+- Z9: 4 | Alternativplan | Im Erstgespräch und Onboarding-Call nicht besprochen. | Was würde der Kunde tun, wenn bestimmte Maßnahmen nicht funktionieren.
+- Z10: 5 | Grund für diesen Call | Call 06.10. (Anja): Die fachliche Expertise (Bundesfinanzakademie, Fachberater-Lehrgang, Master-Dozentur, Kommentare, Vorträge, Rankings) ist online nicht auffindbar. Monika: ChatGPT empfiehlt fachlich schwächere Kanzleien. Dazu: München soll präsenter werden; Umzug Frankfurt 05.10.2026. | Dokumentierter Anlass, damit alle Beteiligten später denselben Ausgangspunkt kennen.
+- Z11: Geografischer Fokus & CRM-Daten
+- Z12: 6 | Ziel-Stadtteile & Einzugsgebiete | Stand 08.10.2026: Kein Stadtteil-Fokus seitens Kanzlei (bundesweit, direkte Frankfurter Mandate „2–3“). Maps-Scan 01.10. (anwalt steuerstrafrecht): Top 3 nur Gutleutviertel/Gallus und Süden; Platz 13–20+ in Innenstadt, Nordend, Bornheim, Ostend. Arbeits-Priorität: 5-km-Radius um Untermainkai 26 (neue Adresse) + München Altstadt (Oberanger 32). | Konkrete Liste der Stadtteile/Orte, auf die optimiert wird.
+- Z13: 7 | CRM-Datenauswertung | Kein CRM bekannt, im Call nicht genannt. Keine Auswertung nach Ort möglich. | Welche Erkenntnis liefert das CRM zu den besten Auftrags-Orten (falls vorhanden).
+- Z14: 8 | Expansionsabsicht | Bestätigt 06.10.: München ist aktiver Standort (eigene Räume, Standortleitung Lea Wimmer, Profil seit Anfang 2026) und soll online präsenter werden (eigene Standortseite gewünscht). Weitere Standorte: nicht genannt. | Bestätigt: Sollen neue Gebiete erschlossen werden, und wenn ja wann.
+- Z15: Profitabilität & Ticket-Größen
+- Z16: 9 | Profitabelste Leistungen | Bestätigt 06.10. (Anja/Monika), ohne Zahlen: größere Verfahren mit Unternehmensbezug, bereits eingeleitete Strafverfahren, Fälle mit Durchsuchungsbeschluss/Haftbefehl, Compliance-Beratung für Unternehmen, umfangreiche Selbstanzeigen; Präventivberatung vermögender Mandanten („dankbar“, online schwer zu filtern). | Bestätigt aus dem Erstgespräch, ggf. mit echten Zahlen aus Buchhaltung/CRM.
+- Z17: 10 | Durchschnittliche Ticket-Größe | Keine Ø-Zahl genannt. Bekannt: Stundensätze 350–450 € (Tab 01), Erstberatung 350 €; Kleinfälle (Hinterziehung ~400 €) laut Anja unwirtschaftlich. /  / Stand 11.10.2026 (Text „Transparente Kosten“ der Kanzlei, noch nicht live): Stundensätze EUR 350–500 je nach Seniorität, Sechs-Minuten-Takt, Pauschalvergütung im Einzelfall (z. B. Gutachten), Vorschuss üblicherweise EUR 1.000–5.000, Erstberatung EUR 250–350, Vier-Augen-Prinzip (zwei Anwält:innen je Mandat), monatliche Abrechnung mit Tätigkeitsnachweis, keine Abrechnung nach RVG. ACHTUNG Widerspruch: Die FAQ auf der Website nennt noch 380–450 (Inhaberin), 330–400 (assoziierte Partner:innen) und 280–350 EUR (angestellte Anwält:innen). | Mit echten Zahlen, falls im Erstgespräch nur geschätzt.
+- Z18: 11 | Leistungen mit höchster Marge | Compliance-Beratung für Unternehmen, umfangreiche Selbstanzeigen, größere Wirtschafts-/Unternehmensverfahren (Call 06.10.). /  / Stand 11.10.2026: Textbaustein Compliance von der Kanzlei erhalten (Datei vom 08.06.2026, 370 Wörter). Inhalt: Beratung (Compliance-Management-Systeme, Code of Conduct, Pflichten der Geschäftsleitung, Hinweisgeberschutz, Regulatorik, Schulungen) und Aufarbeitung bei Verstößen (interne Untersuchungen, Begleitung gegenüber Behörden). Der Text nennt „Steuer“ und „Tax Compliance“ nicht. Ablage: Drive „STÜRZL Steuerstrafrecht“ > Kundentexte. | Bestätigt, bestimmt die Content- und Keyword-Priorität.
+- Z19: 12 | Customer Lifetime Value (LTV) | Keine Zahl vorhanden. Mandate laufen laut Anja teils über Monate oder Jahre. | Falls möglich mit echter Zahl aus dem CRM/der Buchhaltung belegt.
+- Z20: Lead-Volumen & Abschlussquoten
+- Z21: 13 | Aktuelles monatliches Lead-Volumen | Keine Zahl vorhanden. Anja 06.10.: „so gut wie keine Telefonate“, wenig Laufkundschaft. Baseline wird aus GA4-Events (phone_click, email_click) ab Zugriff gezogen. | Baseline-Zahl, mit der spätere Fortschritte verglichen werden.
+- Z22: 14 | Abschlussquoten nach Kanal | Keine Zahl vorhanden. | Baseline-Zahl je Kanal.
+- Z23: 15 | ROI-Tragfähigkeits-Check | Ja. Anja 06.10.: „Du kannst so gut sein und dass wir zugeschüttet werden mit Mandaten – kein Problem.“ | Kann das Team zusätzliches Volumen überhaupt abarbeiten.
+- Z24: Google-Profil & lokale Rankings
+- Z25: 16 | GBP-Abhängigkeit der Leads | Kein Prozentwert vorhanden. GBP-Insights (Anrufe, Routen, Website-Klicks) nach Verknüpfung des Profils auslesen. | Wie viel Prozent der Leads laufen heute über das Google-Profil.
+- Z26: 17 | GBP-Anzahl & echte Adressen | Stand 08.10.2026: 2 Profile, beide echt. Frankfurt: Place ID ChIJyVGAdikEaW8RUOWpEJs-2XA, 5,0/14, nur Kategorie „Rechtsanwalt“, 7 Fotos, seit 12/2023, Adresse noch Wiesenhüttenstraße 17 (Umzug 05.10. → Untermainkai 26). München: Oberanger 32, 5,0/1, „Rechtsanwalt“, 0 Fotos, seit Anfang 2026. Keine Doppel- oder Altprofile in Maps gefunden (01.10.). /  / Stand 09.10.2026: Die in Maps führenden Profile (Local-Falcon-Lauf 09.10., „anwalt steuerstrafrecht“) führen „Strafverteidiger“ und/oder „Anwalt für Steuerrecht“ als Kategorie. Stürzl nur „Rechtsanwalt“. Bewertungen erklären den Vorsprung nicht: Tikbas und Pohl haben 0 Bewertungen und liegen bei 24,5 % und 16,3 % SoLV. → Tab 15 | Alle vorhandenen Profile geprüft, auch doppelte/alte.
+- Z27: 18 | Bewertungstempo & Prozesse | Stand 08.10.2026: Google Frankfurt 14 Bewertungen, die 3 sichtbaren Rezensionen „vor 6 Monaten“ (01.10.) → Tempo ≈ 0/Monat zuletzt. Kein Prozess. Vertraulichkeit als Hürde (Monika), anonyme Bewertungen möglich. Bewertungsfluss geht heute zu anwalt.de (79 Kanzlei / 55 Anja), nicht zu Google. | Ist-Stand der Bewertungsgeschwindigkeit und des Einsammel-Prozesses.
+- Z28: 19 | Aktuelles Ranking-Wissen | Belegt: Maps-Baseline 01.10.2026 (8 Keywords, 7×7, 5 km) und organische SERP 08.10.2026 → Tab 09 und Tab 10. Kundenaussage „München gut sichtbar“ gilt nur für die Markensuche (organisch Platz 1), nicht für Gattungsbegriffe. /  / Stand 09.10.2026: Local-Falcon-Kampagne (5 Keywords × 5 Plattformen, 7×7, 5 Meilen, Mitte alte Adresse). Maps-SoLV Frankfurt je Keyword 2 % (Wirtschaftsstrafrecht 0 %). KI-Sichtbarkeit bei „anwalt steuerstrafrecht“: AI Mode 54 %, Gemini 47 %, ChatGPT 29 %. „anwalt wirtschaftsstrafrecht“ auf allen Plattformen 0 %. Die Werte sind wegen anderem Radius (5 Meilen statt 5 km) nicht mit der Baseline vom 01.10. vergleichbar. Bericht-Key fe76d86f6e46b4e, Kampagne 56d95fc22d54bef. | → Tab '09 Maps-Baseline' + '10 Keywords & SERP' · Belegter Ist-Stand der Rankings, nicht nur Bauchgefühl des Kunden.
+- Z29: 20 | Google-Ads-Audit | Keine laufende Kampagne (Call 06.10.: „früher mal Google Ads, jetzt nicht mehr“). Ob ein Konto existiert, ist offen (access_grant Google Ads: ausstehend). Website: kein Ads-Tag, keine Conversion. Kundenwunsch Ads-Fokus: Selbstanzeige, Durchsuchungsbeschluss, Steuerstrafverfahren. | Volle Prüfung einer laufenden Kampagne: Budget, Struktur, letzte Pflege.
+- Z30: Live-Technik-Check (Bildschirm teilen)
+- Z31: 21 | Asset-Eigentümerschaft | Stand 08.10.2026: GBP, GA4 und GTM seit 07.10. im 741-Konto (von Constantin Voss/KEMB übergeben) – Eigentümer-Rollen (Hauptinhaber/Admin = Anja?) noch nicht geprüft. Search Console: Domain-Property vermutlich von Hr. Linkemann (Voss hatte dort keine Rechte). Domain (.de) + Hosting: Anbieter und Vertragsinhaber unbekannt, bei Voss angefragt. Joomla-Admin: 741 hat Zugang (über Linkemann). Anja-Google-Konto: anja.stuerzl@googlemail.com. | Mit Login geprüft: Wer besitzt wirklich Domain, Website, Analytics, Profil.
+- Z32: 22 | Startseite & Conversion-UX | Stand 08.10.2026: Startseite = Hero-Bild + Claim „Aufklären. Verständigen. Verteidigen.“, H1 „Kanzlei“, keine Kontakt-Handlung im ersten Blickfeld. Sticky-Button „Hier Online-Anfrage stellen“ (Chat-Widget) desktop + mobil vorhanden. Mobil deckt der Cookie-Banner ca. 60 % des Bildschirms (Screenshot 08.10.). Kein Formular, Kontakt nur tel:/mailto:/Chat. Telefon Mo–Fr 09:30–14:30. | Live beurteilt: Führt die Seite jemanden zur Handlung?
+- Z33: 23 | Schnelle SEO-Fehler | Stand 08.10.2026 (Crawl 80 URLs): Title Startseite „– Home“, H1 „Kanzlei“; 27 Seiten mit zwei H1 (alle Leistungsseiten: „Leistungen“ + Bereich), 18 Seiten ohne H1 (Team-, Artikel-Kategorie-Seiten). 404: /index.php/schwerpunkte (von Startseite verlinkt), /linkedin.com/… (Seite Dr. Glogger, fehlendes https://), 2× href="tel.+49…“ statt tel: (Unterseiten). Keine Sitemap. TTFB 1,3–2,9 s, LCP 7,2 s (gerendert), 35 Scripts + 13 Stylesheets, 892 KB Bilder auf der Startseite. Meta-Descriptions: 1 Satz, teils identisch (Leistungen = FAQ). | Im Audit gefundene, schnell behebbare Fehler (H1, Links, 404, Ladezeit).
+- Z34: 24 | Qualität der Location-Seiten | Keine Standortseiten. Kontaktseite trägt beide Standorte (2 H1: „Frankfurt am Main“, „München“) mit Anfahrt/Parken; Schema kennt nur Frankfurt. Teamseite nennt beide Adressen im Footer. | Geprüft Seite für Seite: eigener Text oder Vorlage.
+- Z35: 25 | Live-NAP-Konsistenz-Check | Stand 08.10.2026 (Web-Suche): Alle gefundenen Einträge zeigen noch Wiesenhüttenstraße 17 (bis 05.10. korrekt). Abweichungen: Infobel „Frankfurt (Oder)“ statt am Main; Cylex München „Neuhauser Str. 3a“ statt Oberanger 32; anwalt.de-Profil Anja nennt „Rechtsanwaltskammer Köln“ (prüfen); Telefon in 3 Schreibweisen (+49 69 29 80 28 87-0 / 069 298028870 / 069 29802887-0). → Tab 11 | → Tab '11 Citations & NAP' · Markenname bei Google gesucht: wo weichen Name/Adresse/Telefon ab.
+- Z36: 26 | Indexierungs-Check | Search Console nicht freigegeben → noch nicht prüfbar. Crawl 08.10.: 80 URLs, davon ~25 Varianten derselben Kategorie-/Artikelseiten (?Itemid=…, &start=10, ?format=feed) – Index-Aufblähung wahrscheinlich; Canonical ist gesetzt. | In Search Console geprüft: Geld-Seiten indexiert, unwichtige Seiten nicht überladen.
+- Z37: 27 | Tech-Stack & Analytics-Check | Joomla 5 (Helix Ultimate, SP Page Builder); Hosting unbekannt (Antwortzeit 1,3–2,9 s spricht gegen Caching). GTM ✓, GA4 ✓ (Events s. 3.0), Consent Mode ✓, Microsoft Clarity ✗, CallRail ✗, Chat-Widget ✓ (Anbieter laut Call „UPUS/Chat Pod“, unverifiziert), Google Ads ✗. /  / Stand 09.10.2026: GTM-Version 4 live (Telefon- und E-Mail-Trigger korrigiert, neues Event chat_cta_click für den Chat-Button, Parameter contact_target). Key Events email_click und phone_click in GA4 gesetzt. Chat-Widget ist Botario/Jupus (auf der Live-Seite bestätigt). | CMS, Hosting, GTM/GA4/CallRail — alles live im Entwicklertool geprüft.
+- Z38: Off-Page, PR & Reputation
+- Z39: 28 | Backlink-Audit | Stand 08.10.2026: Rank 122 · 100 Backlinks · 58 verweisende Domains (55 Hauptdomains) · Spam-Score 31. Davon 44 Domains mit Spam-Score ≥50 (.shop/.online/Casino/PBN, seit 07/2026, Anchor „High Quality Dofollow Backlinks DA 50 PA 40 Premium PBN Netw“ = 24 Links) → Disavow-Kandidaten. Seriös: bestlawyers.com (13), anwaltauskunft.de (4), tax-talents.de, tzelepis.de, reimes-presseblick. Wettbewerber (Ref-Domains): DREYENBERG 736, Pohl 766, Burkhard 434, Hepp 125, ROSE & PARTNER 2.107, Böttner 1.169, Brauer 1.621. Volle Liste → Tab 08 /  / Stand 09.10.2026: Disavow-Datei vorbereitet (37 Spam-Domains), noch nicht hochgeladen. Wartet auf Search-Console-Zugang. Sechs Domains werden vorher von Hand geprüft (Forenthread, US-Verzeichnis mit falschen Orten, Blog). | → Tab '08 Backlink-Audit' · Vollständige Liste der bisherigen Backlinks, inkl. Qualität.
+- Z40: 29 | Lokale PR & Citations | Stand 08.10.2026: Vorhanden: anwalt.de (Kanzlei + Anja + Lea), 11880, Creditreform, Cylex (München, falsche Adresse), Infobel (falsche Stadt), Anwalt-Lotse, maptons (Scraper), JuWiSt-Mitgliederliste, Best Lawyers, LTO-Kanzleiprofil, LinkedIn (Kanzlei + Personen), Xing (Lea Wimmer). In der Suche NICHT gefunden: Gelbe Seiten, Das Örtliche, Yelp, GoLocal, Facebook-Seite; Bing Places/Apple Maps ungeprüft. → Tab 11 /  / Stand 09.10.2026: Die KI-Plattformen zitieren anwalt.de (Frankfurt, Themen Steuerstrafrecht, Steuerfahndung, Selbstanzeige), anwalt24.de und das Deutsche Anwaltsregister. Diese Einträge zuerst prüfen und mit der neuen Adresse angleichen. | → Tab '11 Citations & NAP' · Vollständigkeits-Check aller Verzeichniseinträge.
+- Z41: 30 | Social-Media-Auftritt | LinkedIn: Kanzleiseite (716 Follower, 08.10.) + aktives Profil Anja (Fachposts z. B. „Durchsuchung und Steuerfahndung“), im Website-Footer verlinkt; dient laut Team der Branchenvernetzung, keine Mandate zurechenbar. Instagram: nur Fremdbeiträge (Fotografin, IWW). Keine Bewertungen/Auszeichnungen auf der Website eingebunden. | Geprüft: aktiv, verlinkt, zeigt echte Arbeit?
+- Z42: 31 | Anti-SEO & Negativ-PR-Suche | Suche 08.10. („Stürzl Steuerstrafrecht“ + Erfahrungen/Bewertung/Beschwerde/Kritik): keine negativen Treffer. Nur positive Presse (LTO, JUVE, azur, ZRI, RWS, Capital, Private Banking Magazin) und 5,0-Bewertungen (Google, anwalt.de). KI-Risiko: fehlende strukturierte Expertise-Daten, nicht negative Inhalte. | Tiefere Suche nach negativer Presse/Bewertungen, die KI-Suchmodelle aufgreifen könnten.
+- Z43: Betrieb & Kommunikationsregeln
+- Z44: 32 | CRM & Umsatz-Zuordnung | Kein CRM, kein CallRail. Attribution heute nur über GA4-Events (phone_click/email_click) und Google-Profil-Insights. Ads-Conversions müssen vor Kampagnenstart angelegt werden. | Wie werden CallRail-Anrufe später mit den CRM-Verkaufsdaten abgeglichen.
+- Z45: 33 | Ansprechpartner | Dr. Anja Stürzl (Entscheidungen, Inhaberin) · Dr. Monika Glogger (Texte/Website, Compliance, Kosten) · Florentine Jilg (Organisation, Adresse, Fotos) · extern Hr. Linkemann (Webdesign/Joomla, Teile der Zugänge) · Constantin Voss/KEMB (Alt-Agentur, Übergabe). | Bestätigter fester Ansprechpartner für die laufende Zusammenarbeit.
+- Z46: 34 | Tabu-Bereiche der Website | Nicht explizit besprochen. Zu beachten: Kostenseite wird gerade von Monika überarbeitet (nicht parallel ändern); FAQ „Kosten/RVG“ und Impressum sind berufsrechtlich formuliert; Website-Design gefällt Anja („clean“) – kein Redesign. /  / Stand 11.10.2026: Die Kanzlei hat den Kostentext geliefert. Er soll als sichtbare Seite auf die Website. Der Kostenteil (II) soll aus den FAQ entfernt werden. Der KI-Baustein soll ebenfalls auf die Website, der Platz ist offen. Nichts davon ist live, jede Änderung braucht Martins Go. Beim Entfernen aus den FAQ beachten: Weiterleitung oder Anker, Querverweise anpassen, Thema Versicherung/Rechtsschutz klären (der neue Text enthält es nicht). | Bestätigte Liste, was nicht angefasst werden darf.
+- Z47: 35 | Kommunikationspräferenzen | Die Infos sind intern nicht publik gemeint: Primär E-Mail; WhatsApp nur für Dringendes (Monika hat WhatsApp nur privat). Updates per Mail + Dashboard, Erklärvideos zu Reports. Freigabe-Prinzip: Vorschau → Freigabe → Umsetzung. | Bestätigter Kanal und Rhythmus (z. B. wöchentliches Loom, monatlicher Call).
+- Z48: Eignungsprüfung ("Nein sagen können")
+- Z49: 36 | Operative Kapazität | Ja (Anja 06.10.). | Hat der Betrieb JETZT die Kapazität für mehr Aufträge.
+- Z50: 37 | Finanzielle Tragfähigkeit | Paket 7.999 € in 2 Raten (Rechnung 741/280926, Rate 1 fällig 05.10. – Zahlungseingang noch zu bestätigen); Ads-Budget ~1.000 €/Monat direkt an Google; kein festes Marketing-Jahresbudget. | Ist die Betreuung ohne finanzielle Belastung tragbar.
+- Z51: 38 | Realitäts-Check der Anrufannahme | Telefon laut Website Mo–Fr 09:30–14:30 (Zentrale FFM +49 69 29 80 28 87-0, MUC +49 89 72 44 41 7-0), Notfall-Mobilnummern für Durchsuchungen. Außerhalb: E-Mail/Chat. Für Ads: Anruf-Assets nur in den Telefonzeiten. | Werden Anrufe im Betrieb zuverlässig angenommen und bearbeitet.
+
+## 04 Telefon klingeln
+
+- Z1: au
+- Z2: Der größte Block: Google-Profil, Website und Off-Page gemeinsam aufgebaut, damit Anfragen entstehen. Bei jedem Feld: Status (gemacht / läuft / offen) + Notiz, nicht nur Haken.
+- Z4: Nr | Frage / Feld | Antwort (Kunde) | Notiz / Kontext
+- Z5: Profile Foundation (Profil-Fundament)
+- Z6: 1 | Physische Adresse
+- Z7: 2 | Einzugsgebiete (Service Areas)
+- Z8: 3 | Rufnummern-Attribution
+- Z9: 4 | Unternehmensbeschreibung
+- Z10: Kategorien & Dienstleistungen
+- Z11: 5 | Primärkategorie (Primary Category)
+- Z12: 6 | Sekundärkategorien (Secondary Categories)
+- Z13: 7 | Service-Ausbau
+- Z14: Visual Layer & Foto-Engine
+- Z15: 8 | Kontinuierlicher Foto-Upload
+- Z16: 9 | Vorher/Nachher-Bilder
+- Z17: 10 | Team- & Fahrzeugfotos
+- Z18: Posting Engine (Beiträge)
+- Z19: 11 | Regelmäßige Google Posts
+- Z20: 12 | Saisonale Angebote & Promos
+- Z21: Review Machine (Bewertungs-System)
+- Z22: 13 | CRM-Automatisierung
+- Z23: 14 | RFID / QR-Tapping-Karten
+- Z24: 15 | Mitarbeiter-Incentive
+- Z25: 16 | Review Velocity (Bewertungsgeschwindigkeit)
+- Z26: 17 | Antwort-Disziplin
+- Z32: Website-Fundament & Gesundheit (Site Foundation & Health Checks)
+- Z33: 22 | Ladezeit-Optimierung (Site Speed)
+- Z34: 23 | Mobile UX (User Experience)
+- Z35: 24 | Modernes Website-Design
+- Z36: 25 | Automatisierte Canary-Checks (Ongoing Health Checks)
+- Z37: 26 | Hosting Uptime Sanity Checks
+- Z38: Startseiten-Optimierung (Homepage Optimization)
+- Z39: 27 | Lokale Relevanzsignale
+- Z40: 28 | Verlinkungsfokus
+- Z41: Haupt- & Unter-Dienstleistungsseiten (Key Service & Subservice Pages)
+- Z42: 29 | Dedizierte Service-Seiten
+- Z43: 30 | H1- & H2-Optimierung
+- Z44: 31 | Spezifischer Content & echte Jobs
+- Z45: 32 | Unter-Dienstleistungsseiten (Subservice Pages)
+- Z46: Standortseiten (Service Area / Location Pages)
+- Z47: 33 | Regionale Abdeckung
+- Z48: 34 | Kein KI-Slop
+- Z49: 35 | Tiefe Funnel-Struktur
+- Z50: Interaktive Asset-Seiten (Low-Hanging Asset Pages)
+- Z51: 36 | Nützliche Tools & Rechner
+- Z52: 37 | SEO-Hebel
+- Z53: Dynamische interne Verlinkung (Internal Linking Adjustments)
+- Z54: 38 | Fluss nach oben (Inverted Tree)
+- Z55: 39 | Regelmäßige Anpassungen
+- Z56: Die Conversion-Ebene (CRO)
+- Z57: 40 | Hero Section Lead-Formular
+- Z58: 41 | Sticky Mobile Navigation
+- Z59: 42 | Kontrastreiche CTAs im Fließtext
+- Z60: 43 | On-Site Social Proof
+- Z61: 44 | Form Abandonment Capture
+- Z62: 45 | CRM-Anbindung
+- Z63: Kaufentscheidende Inhalte (Content That Closes)
+- Z64: 46 | Kosten- & Preisseiten (Cost/Pricing Pages)
+- Z65: 47 | Entscheidungshilfen
+- Z66: 48 | Lokale FAQs
+- Z67: 49 | Eigene „Best-of"-Verzeichnisse
+- Z68: Lokale Texturen & Nachweise (Proof & Local Textures)
+- Z69: 50 | Echte Projektberichte
+- Z70: 51 | Verweis auf Google Maps Landmarks
+- Z71: 52 | Eingebettete Rezensionen mit Ortsbezug
+- Z72: 53 | Social-Media-Verknüpfung
+- Z73: Technisches On-Page-SEO (Technical On-Page)
+- Z74: 54 | Local Schema (JSON-LD)
+- Z75: 55 | Meta-Titles & Meta-Descriptions
+- Z76: 56 | H1-Struktur
+- Z77: 57 | Bildoptimierung
+- Z78: 58 | Exakte NAP-Konsistenz
+- Z79: 59 | LLM.txt
+- Z80: 60 | Canonical Tags & Breadcrumbs
+- Z81: Tracking & Attributions-Abschluss
+- Z82: 61 | GTM & GA4 Event-Tracking
+- Z83: 62 | CallRail-Tracking
+- Z84: Citations & Listings (Branchenverzeichnisse)
+- Z85: 63 | Granular / Niche Citations
+- Z86: 64 | Local Citations
+- Z87: 65 | Pillar Citations
+- Z88: 66 | Data Aggregators & Syndication
+- Z89: 67 | Citation Indexation
+- Z90: Local Link Building (Lokales Ökosystem-Linkbuilding)
+- Z91: 68 | Community Sponsorships
+- Z92: 69 | Chambers of Commerce
+- Z93: 70 | Trade Organizations
+- Z94: 71 | Local Publications & Bloggers
+- Z95: 72 | Charities & .org-Links
+- Z96: 73 | Manufacturers & Suppliers
+- Z97: 74 | Local Event Sponsorships
+- Z103: Digital PR & Brand Mentions (Digitale PR & Marken-Erwähnungen)
+- Z104: 79 | HARO / Connectively
+- Z105: 80 | Unlinked Mentions Mining
+- Z106: 81 | Reputation Management
+- Z107: LLM & AI-Specific Citations (Spezifische KI-Zitierung)
+- Z108: 82 | LLM-Strukturierung & Zitate
+
+## 05 Beweis
+
+- Z1: 5 · Beweis zum Nachprüfen
+- Z2: Alles, was belegt, dass die Arbeit wirkt — und zwar mit Rohdaten, nicht mit geschönten Dashboards.
+- Z4: Nr | Frage / Feld | Antwort (Kunde) | Notiz / Kontext
+- Z5: Phones, Not Rankings (Anrufe statt Ranking-Mythen)
+- Z6: 1 | Messung echter Leads | Zählt nur echte Anrufe/Anfragen, nicht Rankings als Selbstzweck.
+- Z7: 2 | Filterung von Spam-Anrufen via CallRail | Spam-/Fehlanrufe technisch herausgefiltert?
+- Z8: 3 | Kosten pro gebuchtem Auftrag (Cost per Booked Job) | Was kostet ein tatsächlich gebuchter Auftrag, nicht nur ein Anruf?
+- Z9: Bewertungs-Metriken & Velocity-Überwachung
+- Z10: 4 | Laufende Velocity-Prüfung | Wird das Bewertungstempo kontinuierlich beobachtet?
+- Z11: 5 | Frühwarnsystem bei Engpässen | Gibt es eine Meldung, wenn das Tempo spürbar nachlässt?
+- Z12: Kommunikations-Kadenzen & Berichts-Formate
+- Z13: 6 | Schneller Asynchron-Support | Wie schnell wird üblicherweise auf Nachrichten reagiert?
+- Z14: 7 | Wöchentliche Looms & Claude-PDFs | Läuft eine regelmäßige Kurz-Doku als Video/PDF?
+- Z15: 8 | Ungefilterte Roh-Walkthroughs | Werden Ergebnisse so gezeigt, wie sie sind, nicht nur geschönt?
+- Z16: 9 | Monatliche Strategie-Calls | Fester monatlicher Termin vereinbart?
+- Z17: 10 | Das Kernprinzip ("Never Wondering") | Kunde soll nie rätseln müssen, woran gerade gearbeitet wird.
+- Z18: GeoGrid Rank Scans (Koordinaten-genaue Kartensichtbarkeit)
+- Z19: 11 | Raster-Scans (GeoGrids) | Regelmäßiger Raster-Scan rund um den Standort eingerichtet (z. B. Local Falcon)?
+- Z20: 12 | Lückenlose Konsistenz | Gleiche Keywords, gleicher Rhythmus, über Zeit vergleichbar?
+- Z21: 13 | Keine Vanity-Keywords | Nur Begriffe, die zur echten Leistung passen, keine Schönheits-Keywords?
+- Z22: Die Attributions-Kette (Reconciliation mit dem CRM)
+- Z23: 14 | Abgleich von Leads und CRM | Werden Leads regelmäßig mit dem CRM abgeglichen (veraltete Leads raus)?
+- Z24: 15 | KI-Agenten für Finanz-Reconciliation | Falls genutzt: automatischer Abgleich mit tatsächlichem Umsatz.
+- Z25: Unverfälschte Belege & Drittanbieter-Daten (Unmanipulierbar)
+- Z26: 16 | Roh-Screenshots statt Agentur-Dashboards | Werden echte Screenshots statt nur eigener Grafiken geliefert?
+- Z27: 17 | Unabhängiges SERP-Tracking | Rankings über ein unabhängiges Drittanbieter-Tool nachprüfbar?
+- Z28: 18 | Kunden-Prüfung im Google-Profil | Kann der Kunde die Zahlen selbst im eigenen Google-Konto nachsehen?
+- Z29: Always-On Monitoring & Automatisierte Canaries
+- Z30: 19 | Automatisierte KI-Kanarienvögel (Canaries) | Läuft eine automatische, tägliche Prüfung der Seite?
+- Z31: 20 | Sofortige Benachrichtigung | Wird bei einem Ausfall/Problem sofort benachrichtigt (nicht erst im Monatsbericht)?
+
+## 07 Promises
+
+- Z1: 7 · Die 6 Versprechen
+- Z2: Was dem Kunden im Erstgespräch zugesagt wurde — damit jederzeit nachvollziehbar bleibt, worauf wir uns festgelegt haben. Spalte "Notiz" ist hier besonders wichtig: individuelle Abweichungen (z. B. andere Kündigungsfrist) IMMER eintragen.
+- Z4: Nr | Frage / Feld | Antwort (Kunde) | Notiz / Kontext
+- Z5: Das Versprechen für das Erstgespräch (First Call Promise)
+- Z6: 1 | Kein Verkaufsdruck (No High-Pressure Sales) | Bestätigt: kein Drängen, Kunde entscheidet in eigenem Tempo.
+- Z7: 2 | Kein striktes Zeitlimit | Gespräch wurde nicht künstlich verkürzt.
+- Z8: 3 | Ehrliches "Nein" (Gatekeeping) | Falls es nicht passt: das wurde offen gesagt, nicht schöngeredet.
+- Z9: Die 6 Kern-Versprechen der Zusammenarbeit
+- Z10: 4 | 1. 100 % Asset-Eigentum (You Own Everything) | Vollständiges Eigentum ab Tag 1, keine Geiselhaft bei Domain/Website/Profil/Analytics.
+- Z11: 5 | 2. Monat-zu-Monat-Verträge | Keine Knebelverträge, 30 Tage Kündigungsfrist — Abweichung hier eintragen, falls vereinbart.
+- Z12: 6 | 3. Keine falschen Versprechungen | Keine garantierten Platz-1-Rankings zugesagt; SEO wurde als dynamisch erklärt.
+- Z13: 7 | 4. Keine Ergebnisse über Nacht | Langfristiger Zinseszins-Effekt erklärt, keine Wunder in Woche 1 versprochen.
+- Z14: 8 | 5. Transparente Preisstellung | Qualität statt Billig-Vorlage, Staffelung nach Aufwand erklärt. KEINE Beträge in dieses Dokument eintragen — Preise bleiben im Angebot/Vertrag, nicht in diesem Sheet.
+- Z15: 9 | 6. Schnelle Erst-Erfolge durch CRO | Conversion-Optimierung in Woche 1–3 als realistischer erster Hebel genannt.
+- Z16: Das Grundprinzip: Beweise statt Vertrauen (You Don't Have to Trust Me)
+- Z17: 10 | Transparenz ab Tag 1 | Zugesagt: von Anfang an offen, nichts versteckt.
+- Z18: 11 | Selbstüberprüfbar | Zugesagt: der Kunde kann jede Zahl selbst nachprüfen (siehe Board 5, Beweis zum Nachprüfen).
+
+## 11 Citations & NAP
+
+- Z1: NAP-Audit · Web-Suche 08.10.2026 · Soll-Adresse: Untermainkai 26, 60329 Frankfurt (Vorschlag, Go offen)
+- Z3: Verzeichnis | URL | Name wie gezeigt | Adresse wie gezeigt | Telefon wie gezeigt | Status 08.10.2026 | Aktion
+- Z4: Google-Unternehmensprofil Frankfurt | https://www.google.com/maps/place/?q=place_id:ChIJyVGAdikEaW8RUOWpEJs-2XA | STÜRZL Steuerstrafrecht | Wiesenhüttenstraße 17, 60329 Frankfurt am Main | +49 69 298028870 | alt (Umzug 05.10.) | Adresse auf Untermainkai 26 ändern (nach Go), Kategorien, Leistungen
+- Z5: Google-Unternehmensprofil München | Google Maps „STÜRZL Steuerstrafrecht Oberanger 32“ | STÜRZL Steuerstrafrecht | Oberanger 32, 80331 München | +49 89 72444170 | korrekt | Fotos, Kategorien, Leistungen
+- Z6: Website Kontakt/Impressum/Footer | https://www.stuerzl-steuerstrafrecht.de/index.php/kontakt | STÜRZL Steuerstrafrecht | Wiesenhüttenstraße 17 (+ Oberanger 32) | +49 69 29 80 28 87-0 / 069 29802887-0 | alt | Adresse + einheitliches Telefonformat + Schema
+- Z7: anwalt.de Kanzlei | https://www.anwalt.de/kanzlei-stuerzl-steuerstrafrecht | Kanzlei STÜRZL Steuerstrafrecht | Wiesenhüttenstraße 17, 60329 Frankfurt am Main | alt · 5,0/79 | Adresse ändern
+- Z8: anwalt.de Dr. Anja Stürzl | https://www.anwalt.de/anja-stuerzl | Rechtsanwältin Dr. Anja Stürzl LL.M. | Wiesenhüttenstraße 17 | alt · 5,0/55 · nennt „Rechtsanwaltskammer Köln“ | Adresse + Kammer prüfen
+- Z9: 11880 | https://www.11880.com/branchenbuch/frankfurt-am-main/081314253B114102102/stuerzl-steuerstrafrecht.html | STÜRZL Steuerstrafrecht | (Frankfurt, aktualisiert 07/2026) | 069 298028870 | prüfen | Adresse ändern
+- Z10: Creditreform Firmeneintrag | https://firmeneintrag.creditreform.de/60329/6070874119/DR_ANJA_STUERZL_STUERZL_STEUERSTRAFRECHT | Dr. Anja Stürzl, STÜRZL Steuerstrafrecht | PLZ 60329 Frankfurt | prüfen | Adresse ändern
+- Z11: Cylex (München) | https://web2.cylex.de/firma-home/stuerzl-steuerstrafrecht-17045957.html | STÜRZL Steuerstrafrecht | Neuhauser Str. 3a, 80331 München | 089 72444170 | FALSCH (Adresse) | korrigieren auf Oberanger 32 oder löschen
+- Z12: Infobel | https://www.infobel.com/de/germany/sturzl_steuerstrafrecht/frankfurt_oder/DE109851584-069298028870/businessdetails.aspx | STÜRZL Steuerstrafrecht | Wiesenhüttenstraße 17, 60329 Frankfurt (Oder) | 069298028870 | FALSCH (Stadt) | korrigieren oder löschen
+- Z13: Anwalt-Lotse | https://anwalt-lotse.de/rechtsanwaeltin/anja-stuerzl-frankfurt-5vtd/ | Rechtsanwältin Dr. jur. Anja Stürzl | Wiesenhüttenstr. 17, 60329 Frankfurt + Oberanger 32 München | 069 … / 089-72444170 | alt | Adresse ändern
+- Z14: maptons (Scraper) | https://mt.maptons.com/p/3302892716 | STÜRZL Steuerstrafrecht | Wiesenhüttenstraße 17 | +49 69 298028870 | alt · Scraper | ignorieren / Löschung anfragen
+- Z15: JuWiSt Mitgliederliste | https://juwist.com/mitgliederliste/ | Dr. Anja Stürzl, LL.M. STÜRZL Steuerstrafrecht | Wiesenhüttenstraße 17, 60329 Frankfurt am Main | alt | Adresse ändern lassen (Verband)
+- Z16: Best Lawyers Firmenprofil | https://www.bestlawyers.com/firms/sturzl-steuerstrafrecht/104283/DE | STÜRZL Steuerstrafrecht | verlinkt (13 Backlinks) | Adresse prüfen
+- Z17: LTO Kanzleiprofil | https://www.lto.de/kanzleien-unternehmen/kanzleien/profile/stuerzl-steuerstrafrecht | Stürzl Steuerstrafrecht | prüfen | Adresse/Link prüfen
+- Z18: LinkedIn Kanzleiseite | https://de.linkedin.com/company/stuerzl-steuerstrafrecht | STÜRZL Steuerstrafrecht | 716 Follower | Adresse im Profil prüfen
+- Z19: Xing (Lea Wimmer) | https://www.xing.com/profile/Lea_Wimmer2 | Lea Wimmer – Stürzl Steuerstrafrecht | Person | –
+- Z20: Gelbe Seiten | NICHT gefunden (Suche 08.10.) | anlegen mit neuer NAP
+- Z21: Das Örtliche | NICHT gefunden | anlegen
+- Z22: Yelp | NICHT gefunden | anlegen
+- Z23: GoLocal / meinestadt | NICHT gefunden | anlegen
+- Z24: Facebook-Seite | NICHT gefunden | optional
+- Z25: Bing Places | ungeprüft | prüfen/anlegen
+- Z26: Apple Maps | ungeprüft | prüfen/anlegen
+- Z27: Rechtsanwaltskammer Frankfurt / München (Verzeichnis) | ungeprüft | Eintrag + Adresse prüfen
+
+## 12 Expertise & Erwähnungen
+
+- Z1: E-E-A-T-Quellen & Erwähnungen · Web-Suche 08.10.2026
+- Z3: Quelle | URL | Inhalt | Typ | Link-Status (Backlink-Liste 08.10.)
+- Z4: LTO | https://www.lto.de/kanzleien-unternehmen/transfermarkt/detail/198-dr-anja-stuerzl-wechselt-zu-stuerzl-steuerstrafrecht | Gründung 12/2023 | Presse | kein Link (Backlink-Liste)
+- Z5: LTO | https://www.lto.de/recht/kanzleien-unternehmen/k/stuerzl-steuerstrafrecht-zweite-niederlassung-muenchen | München-Eröffnung | Presse | kein Link
+- Z6: LTO | https://www.lto.de/recht/kanzleien-unternehmen/k/steuerstrafrechts-boutique-stuerzl-neuzugang-muenchen-lea-wimmer | Lea Wimmer | Presse | kein Link
+- Z7: JUVE | https://www.juve.de/markt-und-management/bekannte-steuerstrafrechtlerin-von-rettenmaier-gruendet-eigene-boutique/ | Gründung | Presse | kein Link
+- Z8: JUVE Ranking | https://www.juve.de/juve-rankings/deutschland/wirtschafts-und-steuerstrafrecht/ | Anja Stürzl im Ranking Wirtschafts- und Steuerstrafrecht | Ranking | kein Link
+- Z9: ZRI online | https://www.zri-online.de/aktuell/stuerzl-steuerstrafrecht-eroeffnet-buero-in-muenchen-79764/ | München | Presse | kein Link
+- Z10: RWS Verlag | https://www.rws-verlag.de/news/newsticker-kanzleien/steuerstrafrechtsboutique-stuerzl-verstaerkt-sich-mit-prozessrechtler-85603/ | Thorben Hoppe | Presse | kein Link
+- Z11: azur online | https://www.azur-online.de/beruf-karriere/mission-steuerstrafrecht/ | Porträt | Presse | kein Link
+- Z12: Private Banking Magazin | https://www.private-banking-magazin.de/steuerfalle-schenkungen-ehe-man-sich-verschenkt/ | Gastbeitrag | Fachbeitrag | kein Link
+- Z13: Bundesfinanzministerium / Bundesfinanzakademie | https://www.bundesfinanzministerium.de/Content/DE/Downloads/Ministerium/Bundesfinanzakademie/2025-09-11-bruehler-sympsion-steuerstrafrecht.pdf | Referentin Brühler Symposion | Lehre/Behörde | kein Link
+- Z14: IWW-Kongress Praxis Steuerstrafrecht | https://www.kongress-praxis-steuerstrafrecht.de/referenten | Referentin (Anja + Lea) | Vortrag | kein Link
+- Z15: Fachseminare von Fürstenberg | https://www.fachseminare-von-fuerstenberg.de/unternehmen/dozenten/dr-anja-stuerzl | Dozentin, DAA-Zertifizierung | Lehre | kein Link
+- Z16: R&W Fachkonferenzen | https://www.ruw-fachkonferenzen.de/sprecher/dr-anja-stuerzl-ll-m/ | Sprecherin, Vita | Vortrag | kein Link
+- Z17: C.F. Müller – Kluge Köpfe im Strafrecht | https://www.cfmueller.de/archiv_newsletter.htm | Newsletter Ausgabe 34 (02/2026) | Publikation | kein Link
+- Z18: wistra | https://www.wistra-online.com/66440.htm | Aufsatz (Stürzl-Friedlein) Teilselbstanzeige | Publikation | kein Link
+- Z19: Peter Lang Verlag | https://www.peterlang.com/document/1113457 | Dissertation | Publikation | kein Link
+- Z20: Best Lawyers | https://www.bestlawyers.com/firms/sturzl-steuerstrafrecht/104283/DE | Firmenprofil, 2 Anwältinnen, 3 Rechtsgebiete | Ranking | VERLINKT (13)
+- Z21: Best Law Firms | https://www.bestlawfirms.com/germany/corporate-governance-and-compliance-practice/frankfurt-main | Hessen Tier 2 Corporate Governance & Compliance 2026 | Ranking | prüfen
+- Z22: young-tle | https://www.young-tle.com/boards/young-leaders | Young Leader | Netzwerk | kein Link
+- Z23: JuWiSt | https://juwist.com/mitgliederliste/ | Mitgründerin/Mitglied | Verband | kein Link
+- Z24: anwaltauskunft.de | Profil | Verzeichnis | VERLINKT (4)
+- Z25: tax-talents.de | Eintrag | Verzeichnis | VERLINKT (1)
+- Z26: LinkedIn Anja | https://de.linkedin.com/in/dr-anja-st%C3%BCrzl-ll-m-a85934a5 | VdU-Mitglied, Stiftungs-Vorstand, Fachposts | Social | sameAs
+- Z27: Instagram (Fotografin faridehfoto) | https://www.instagram.com/reel/Daa0ROvgMDi/ | Corporate-Porträts Anja + Thorben Hoppe | Social | –

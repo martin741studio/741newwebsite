@@ -1,0 +1,234 @@
+{
+ "client": "STÜRZL Steuerstrafrecht",
+ "client_slug": "stuerzl",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "language": "de",
+ "voice_sheet": "00_project/assets/stuerzl/voice.md",
+ "mode": "new",
+ "cta": {
+  "goal": "Vertrauliche Anfrage über das Formular (nur Thema, keine Falldaten)",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nennen Sie uns nur Ihr Thema, keine Einzelheiten. Ihre Angaben unterliegen unserer gesetzlichen Verschwiegenheit.",
+  "secondary": "Anrufen: Frankfurt +49 69 298028870, München +49 89 72444170"
+ },
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "H1 mit Kosten-Keyword, Haltung (offen über Geld)",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Kostenmodell in 4 Sätzen"
+  },
+  {
+   "id": "S03",
+   "element": "el-grid",
+   "job": "Wovon die Kosten abhängen"
+  },
+  {
+   "id": "S04",
+   "element": "table",
+   "job": "So wird abgerechnet (Zeit, Stundensatz, Selbstanzeige, Pauschale, Vorschuss, Rechnung, Erstberatung), RVG-Begründung, § 3a RVG, Vier-Augen-Prinzip",
+   "cta": "secondary"
+  },
+  {
+   "id": "S05",
+   "element": "text",
+   "job": "Wer die Kosten trägt (Vergütungsvereinbarung, Rechtsschutz, Staatskasse)"
+  },
+  {
+   "id": "S06",
+   "element": "el-grid",
+   "job": "Warum sich die Investition lohnt (belegbare Punkte aus dem Kundentext, ohne BRAO-Risikowörter)"
+  },
+  {
+   "id": "S07",
+   "element": "text",
+   "job": "KI-Einsatz (Baustein der Kanzlei, Prüfhinweis)"
+  },
+  {
+   "id": "S08",
+   "element": "faq",
+   "job": "FAQ Kosten, Preis zuerst"
+  },
+  {
+   "id": "S09",
+   "element": "cta",
+   "job": "Abschluss",
+   "cta": "primary"
+  }
+ ],
+ "gate": "A0",
+ "require_answer_block": true,
+ "cta_min": 3,
+ "cta_text": "Vertraulich anfragen",
+ "proof_assets": [
+  "Fachanwältin für Steuerrecht seit 2021 (Lebenslauf)",
+  "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022 (Lebenslauf)"
+ ],
+ "forbidden_words": [
+  "spezialisiert",
+  "Spezialist",
+  "Experte",
+  "Expertin",
+  "Expertise",
+  "führend",
+  "Exzellenz",
+  "kostenlos",
+  "Festpreis",
+  "WhatsApp",
+  "Wiesenhüttenstraße",
+  "Albtraum",
+  "Ruin",
+  "Haft droht"
+ ],
+ "own_phrases": [
+  "Wir stehen Ihnen zur Seite",
+  "langjährige Praxiserfahrung",
+  "Fehler passieren",
+  "Das Mandanteninteresse steht für uns immer im Vordergrund",
+  "möglichst geräuschlos und effizient",
+  "Jedes Mandat und jeder Mandant ist anders"
+ ],
+ "placeholders_allowed": [
+  "Stundensätze",
+  "Vorschuss-Rahmen",
+  "Pauschale Erstberatung",
+  "Rechtsschutzversicherung",
+  "KI Datenschutz und Berufsrecht",
+  "Abrechnung von Selbstanzeige-Mandaten"
+ ],
+ "blockers": [],
+ "page_slug": "kosten",
+ "page_type": "cost",
+ "pool_item_ids": [
+  "CP-SVC-003",
+  "CP-BRD-006"
+ ],
+ "sitetree_node": "ST-31",
+ "url_slug": "/kosten/",
+ "keyword_primary": "anwaltskosten selbstanzeige",
+ "keywords_cluster": [
+  {
+   "kw": "strafverteidiger kosten",
+   "volume": 210,
+   "scope": "national",
+   "source": "DataForSEO google_ads/search_volume/live, de, 2276",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "anwaltskosten selbstanzeige",
+   "volume": 10,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "selbstanzeige kosten",
+   "volume": 10,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "strafverteidiger stundensatz",
+   "volume": 10,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  }
+ ],
+ "intent": "commercial",
+ "reader": "Privatperson oder Unternehmer, die vor der ersten Anfrage wissen wollen, wie ein Anwalt im Steuerstrafverfahren oder bei einer Selbstanzeige abrechnet und wer die Kosten trägt.",
+ "local_city": null,
+ "money_page": false,
+ "benchmark_median_words": 744,
+ "benchmark_sources": "siehe 01-brief/gate-a0.md (17 Kostenseiten von Kanzleien, gelesen 2026-10-11). Typ D: kurz ist normal, Boden 70 % des Medians als Richtwert.",
+ "word_range": [
+  520,
+  1750
+ ],
+ "faq_min": 6,
+ "internal_links_min": 4,
+ "internal_link_targets": [
+  {
+   "url": "/selbstanzeige/",
+   "anchor": "Selbstanzeige",
+   "role": "sibling"
+  },
+  {
+   "url": "/steuerstrafrecht/",
+   "anchor": "Steuerstrafrecht",
+   "role": "pillar"
+  },
+  {
+   "url": "/dr-anja-stuerzl/",
+   "anchor": "Dr. Anja Stürzl",
+   "role": "person"
+  },
+  {
+   "url": "/faq/",
+   "anchor": "häufige Fragen",
+   "role": "hub"
+  },
+  {
+   "url": "/unternehmensvertretung/",
+   "anchor": "Unternehmensvertretung",
+   "role": "sibling"
+  },
+  {
+   "url": "/steuerstrafrecht/gutachten-risikobewertung/",
+   "anchor": "Gutachten und Risikobewertung",
+   "role": "sibling"
+  },
+  {
+   "url": "/kontakt/",
+   "anchor": "Kontakt",
+   "role": "contact"
+  }
+ ],
+ "nap_file": "00_project/assets/stuerzl/nap.json",
+ "paa_questions": [
+  {
+   "q": "Wer trägt die Kosten bei einer Strafanzeige?",
+   "status": "dropped",
+   "reason_code": "off-offer",
+   "reason": "Strafanzeige als Anzeigeerstatter, nicht Angebot der Kanzlei"
+  },
+  {
+   "q": "Wie hoch sind die Kosten für einen Anwalt im Steuerstrafverfahren?",
+   "status": "answered"
+  },
+  {
+   "q": "Sind Anwaltskosten steuerlich absetzbar?",
+   "status": "dropped",
+   "reason_code": "nicht rechtssicher",
+   "reason": "Antwort braucht gelesene Rechtsprechung und steuerliche Prüfung; keine Quelle im Lauf gespeichert, Frage an die Kanzlei (OPEN-FLAGS)"
+  },
+  {
+   "q": "Was kostet ein Strafrechtanwalt?",
+   "status": "answered"
+  },
+  {
+   "q": "Wer bezahlt den Anwalt im Strafverfahren?",
+   "status": "answered"
+  },
+  {
+   "q": "Was kostet eine Beratung beim Fachanwalt für Steuerrecht?",
+   "status": "answered"
+  },
+  {
+   "q": "Kann man Anwaltskosten im Strafrecht von der Steuer absetzen?",
+   "status": "dropped",
+   "reason_code": "Duplikat",
+   "reason": "gleiche Frage wie 'Sind Anwaltskosten steuerlich absetzbar?'"
+  }
+ ],
+ "schema_faq": true
+}

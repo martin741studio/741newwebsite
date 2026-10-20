@@ -1,0 +1,149 @@
+{
+ "client": "STÜRZL Steuerstrafrecht",
+ "client_slug": "stuerzl",
+ "page_slug": "leistungen",
+ "page_type": "hub",
+ "mode": "rewrite",
+ "language": "de",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "voice_sheet": "00_project/assets/stuerzl/voice.md",
+ "pool_item_ids": [
+  "CP-SVC-001"
+ ],
+ "sitetree_node": "ST-10",
+ "url_slug": "/leistungen/",
+ "keyword_primary": "leistungen steuerstrafrecht",
+ "keywords_cluster": [
+  {
+   "kw": "anwalt steuerstrafrecht",
+   "volume": 480,
+   "scope": "national",
+   "source": "DataForSEO (03-demand/volume.json), Sitetree-Keyword, gehört ST-11",
+   "date": "2026-10-11"
+  }
+ ],
+ "intent": "navigational",
+ "reader": "Besucher, der wissen will, welcher Bereich der Kanzlei zu seiner Lage passt (Privatperson oder Unternehmen). Löst den toten Link /index.php/schwerpunkte ab.",
+ "local_city": null,
+ "cta": {
+  "goal": "Vertrauliche Anfrage über das Formular (nur Thema, keine Falldaten)",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nennen Sie uns nur Ihr Thema, keine Einzelheiten. Ihre Angaben unterliegen unserer gesetzlichen Verschwiegenheit.",
+  "secondary": "Anrufen: Frankfurt +49 69 298028870, München +49 89 72444170"
+ },
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "H1 mit Leistungen, Situation, ein Weg",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Was die Kanzlei abdeckt, in 4 Sätzen"
+  },
+  {
+   "id": "S03",
+   "element": "el-grid",
+   "job": "Sechs Karten mit Link auf die Kind-Seiten"
+  },
+  {
+   "id": "S04",
+   "element": "check-list",
+   "job": "Wegweiser: Situation zu Bereich",
+   "cta": "primary"
+  },
+  {
+   "id": "S05",
+   "element": "faq",
+   "job": "4 Fragen"
+  },
+  {
+   "id": "S06",
+   "element": "cta",
+   "job": "Abschluss",
+   "cta": "primary"
+  }
+ ],
+ "gate": "A0-brand",
+ "money_page": false,
+ "bestand_words": 152,
+ "benchmark_median_words": null,
+ "benchmark_sources": "Nur Referenz, keine Untergrenze (Typ C): 10 Hub-Seiten von Wettbewerbern, Median 466 Wörter, siehe 01-brief/gate-a0.md",
+ "word_range": [
+  350,
+  700
+ ],
+ "require_answer_block": true,
+ "faq_min": 4,
+ "internal_links_min": 8,
+ "internal_link_targets": [
+  {
+   "url": "/steuerstrafrecht/",
+   "anchor": "Steuerstrafrecht",
+   "role": "sibling"
+  },
+  {
+   "url": "/selbstanzeige/",
+   "anchor": "Selbstanzeige",
+   "role": "sibling"
+  },
+  {
+   "url": "/steuerfahndung-durchsuchung/",
+   "anchor": "Steuerfahndung und Durchsuchung",
+   "role": "sibling"
+  },
+  {
+   "url": "/unternehmensvertretung/",
+   "anchor": "Unternehmensvertretung",
+   "role": "sibling"
+  },
+  {
+   "url": "/kosten/",
+   "anchor": "Kosten und Honorar",
+   "role": "money-page"
+  },
+  {
+   "url": "/dr-anja-stuerzl/",
+   "anchor": "Dr. Anja Stürzl",
+   "role": "person"
+  }
+ ],
+ "cta_min": 3,
+ "cta_text": "Vertraulich anfragen",
+ "proof_assets": [
+  "Fachanwältin für Steuerrecht seit 2021 (Lebenslauf)",
+  "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022 (Lebenslauf)"
+ ],
+ "forbidden_words": [
+  "spezialisiert",
+  "Spezialist",
+  "Experte",
+  "Expertin",
+  "Expertise",
+  "führend",
+  "Exzellenz",
+  "kostenlos",
+  "Festpreis",
+  "WhatsApp",
+  "Wiesenhüttenstraße",
+  "Albtraum",
+  "Ruin",
+  "Haft droht"
+ ],
+ "own_phrases": [
+  "Das Mandanteninteresse steht für uns immer im Vordergrund",
+  "Zu unseren Mandanten zählen Privatpersonen ebenso wie Unternehmen",
+  "Aufklären. Verständigen. Verteidigen."
+ ],
+ "placeholders_allowed": [],
+ "blockers": [],
+ "paa_questions": [],
+ "nap_file": "00_project/assets/stuerzl/nap.json",
+ "schema_faq": false,
+ "keyword_note": "Hub ohne Rankingziel (Typ C). Das Sitetree nennt 'anwalt steuerstrafrecht' (480) auch für ST-10, aber das Keyword gehört der Säulenseite ST-11 und der Startseite ST-00 (S6 Kannibalisierung). Der Hub nimmt die Navigations-Phrase 'leistungen steuerstrafrecht'. Kein Volumen vorhanden. Martin entscheidet, siehe OPEN-FLAGS B3."
+}

@@ -1,0 +1,62 @@
+{
+  "client": "Client Name",
+  "client_slug": "client-slug",
+  "phase": "P4",
+  "updated_at": "2026-10-16T12:00:00Z",
+  "north_star_goal": {
+    "title": "North Star description",
+    "target_metric": "Primary KPI",
+    "deadline": "YYYY-MM-DD",
+    "source": "Audit / Contract"
+  },
+  "benchmark_delta": {
+    "baseline": {
+      "key_metric_1": 0
+    },
+    "market_benchmark": {
+      "key_metric_1": 0
+    },
+    "gap_summary": "Summary of delta between baseline and target"
+  },
+  "milestones": [
+    {
+      "id": "M1",
+      "title": "Diagnosis & Audit",
+      "phase": "P2",
+      "status": "completed",
+      "completed_at": "YYYY-MM-DD",
+      "evidence": "path/to/evidence.md"
+    },
+    {
+      "id": "M2",
+      "title": "Harm Repair & Quick-Wins",
+      "phase": "P3",
+      "status": "in_progress",
+      "tasks": [
+        {"id": "T2.1", "task": "Task description", "status": "ready"}
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "Growth Build-Up",
+      "phase": "P4",
+      "status": "pending",
+      "tasks": [
+        {"id": "T3.1", "task": "Task description", "status": "pending"}
+      ]
+    },
+    {
+      "id": "M4",
+      "title": "Proof & Telemetry Verification",
+      "phase": "P6",
+      "status": "pending",
+      "tasks": [
+        {"id": "T4.1", "task": "Task description", "status": "pending"}
+      ]
+    }
+  ],
+  "client_rules": [
+    "Strict plain text only in client-editable WordPress text boxes",
+    "No modifying live templates without backup"
+  ]
+}

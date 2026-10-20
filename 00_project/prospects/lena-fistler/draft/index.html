@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entwurf erster Bildschirm – Lena Fistler, Körpertherapie München</title>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--acc:#60609e;--acc-d:#4d4d86;--plum:#775c85;--ink:#47464a;--bg:#ecebf0;--card:#e9e9f2;--line:#c4c5d9;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Open Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);width:100%;height:100vh;overflow:hidden}
+  .bar{background:var(--acc-d);color:#fff;font-size:15px;text-align:center;padding:10px}
+  .bar b{font-weight:700}
+  header{display:flex;align-items:center;justify-content:space-between;padding:14px 120px;background:#fff;border-bottom:1px solid var(--line)}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand img{height:64px}
+  .brand b{display:block;font-family:"Josefin Sans",sans-serif;font-size:22px;font-weight:700;color:var(--acc)}
+  .brand span{font-size:13.5px;color:#6b6870}
+  nav{display:flex;gap:26px;font-size:15.5px;font-weight:600;color:var(--ink)}
+  .btn{display:inline-block;background:var(--acc);color:#fff;font-weight:700;border-radius:999px;padding:14px 26px;font-size:16px}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:48px 120px 32px;background:linear-gradient(180deg,#fff,var(--bg))}
+  .eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--plum);font-weight:700}
+  h1{font-family:"Josefin Sans",sans-serif;font-weight:700;font-size:44px;line-height:1.1;margin:14px 0 18px;color:var(--acc)}
+  h1 span{color:var(--plum)}
+  .sub{font-size:19px;line-height:1.55;color:#55525a;max-width:600px}
+  .stars{display:flex;align-items:center;gap:10px;margin:20px 0 22px;font-size:15.5px;color:#55525a}
+  .stars i{color:#f2b01e;font-style:normal;letter-spacing:2px;font-size:18px}
+  .ctas{display:flex;gap:14px;align-items:center}
+  .ghost{border:1.5px solid var(--line);border-radius:999px;padding:13px 22px;font-size:16px;font-weight:600;color:var(--ink);background:#fff}
+  .note{font-size:14px;color:#6b6870;margin-top:12px}
+  .pic{position:relative;border-radius:22px;overflow:hidden;height:470px;background:var(--card);box-shadow:0 20px 50px rgba(0,0,0,.10);display:flex;align-items:center;justify-content:center}
+  .pic img.main{height:440px;width:auto}
+  .me{position:absolute;left:18px;bottom:18px;display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;padding:10px 16px 10px 10px;box-shadow:0 6px 20px rgba(0,0,0,.12);font-size:14.5px}
+  .me b{display:block;font-size:15.5px}
+  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0 120px}
+  .trust .t{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14.5px;color:#55525a}
+  .trust .seal{display:flex;align-items:center;gap:12px}
+  .trust .seal img{height:54px;width:54px;flex:none}
+  .trust b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
+</style>
+</head>
+<body>
+  <div class="bar">Termine nach Vereinbarung · <b>Nymphenburger Str. 166, 80634 München</b></div>
+  <header>
+    <div class="brand"><img src="logo.png" alt="Logo Praxis für ganzheitliche Körpertherapie"><div><b>Lena Fistler</b><span>Praxis für ganzheitliche Körpertherapie</span></div></div>
+    <nav><span>Über mich</span><span>Schwerpunkte</span><span>Therapiemethoden</span><span>Behandlungskosten</span></nav>
+    <span class="btn">Termin buchen</span>
+  </header>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Craniosacrale Osteopathie · Taping · Skoliose</div>
+      <h1>Heilpraktikerin für Körpertherapie in <span>München</span></h1>
+      <p class="sub">Rücken, Stress oder Erschöpfung belasten Dich im Alltag? Ich kenne das. Aus eigener Erfahrung weiß ich, wie viel Kraft es kostet. Ich zeige Dir in Ruhe, wie Du Deinen Körper besser kennenlernst und ihn Schritt für Schritt im Alltag stärken kannst.</p>
+      <div class="stars"><i>★★★★★</i> 5,0 bei Google · 2 Bewertungen</div>
+      <div class="ctas"><span class="btn">Termin buchen</span><span class="ghost">Behandlungskosten ansehen →</span></div>
+      <p class="note">Termine nach Vereinbarung. Du erreichst mich per Mail unter kontakt@lenafistler.de.</p>
+    </div>
+    <div class="pic"><img class="main" src="portrait.png" alt="Lena Fistler, Heilpraktikerin"><div class="me"><img src="portrait.png" alt="" style="width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 20%;background:#fff"><div><b>Lena Fistler</b>Heilpraktikerin in München</div></div></div>
+  </section>
+  <div class="trust">
+    <div class="t"><b>Heilpraktikerin</b>mit Erlaubnis des Gesundheitsamts München (2024)</div>
+    <div class="t"><b>Eigene Praxis</b>seit 2025 in der Nymphenburger Str.</div>
+    <div class="t seal"><img src="seal.png" alt="Siegel Fachverband Deutscher Heilpraktiker e.V."><div><b>Fachverband</b>Mitglied im Fachverband Deutscher Heilpraktiker e.V.</div></div>
+    <div class="t"><b>5,0 ★ bei Google</b>2 Bewertungen</div>
+  </div>
+</body>
+</html>

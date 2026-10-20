@@ -1,0 +1,1553 @@
+{
+ "client": "Praxis Suriya",
+ "as_of": "2026-10-11",
+ "catalog_version": "0.1.0",
+ "quick_wins": [],
+ "tasks": [
+  {
+   "measure_id": "G03",
+   "label_de": "Einzugsgebiete",
+   "pillar": "P1 Google-Profil",
+   "kind": "change",
+   "action_text": "Draft the service-area list from the approved catchment (Ingelheim, Bingen, Mainz, Wiesbaden plus real neighbours). Remove \"Deutschland\". Needs go (gate 8: keep the real service-area setting).",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [
+    "8"
+   ],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 1,
+   "risk": 0,
+   "score": 3.0,
+   "phase": "d1-30",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 1
+  },
+  {
+   "measure_id": "G05",
+   "label_de": "Unternehmensbeschreibung",
+   "pillar": "P1 Google-Profil",
+   "kind": "change",
+   "action_text": "Compare the live text with the approved week-1 text. Run the HWG check. Edit only with go.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 1,
+   "risk": 0,
+   "score": 3.0,
+   "phase": "d1-30",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 2
+  },
+  {
+   "measure_id": "G18",
+   "label_de": "Antwort-Disziplin",
+   "pillar": "P1 Google-Profil",
+   "kind": "change",
+   "action_text": "Send Coralie neutral thank-you reply templates (she answers herself; HWG: never confirm a patient). 741 does not reply.",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 1,
+   "risk": 0,
+   "score": 3.0,
+   "phase": "d1-30",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 3
+  },
+  {
+   "measure_id": "O05",
+   "label_de": "Indexierung der Verzeichniseinträge",
+   "pillar": "P3 Off-Page",
+   "kind": "check",
+   "action_text": "Re-check evidence: citation monitor, Google quote search",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.0,
+   "phase": "d1-30",
+   "depends_on": [
+    "O02"
+   ],
+   "blocked_by": [
+    "un-burning",
+    "O02"
+   ],
+   "state": "proposed",
+   "rank": 4
+  },
+  {
+   "measure_id": "W07",
+   "label_de": "Lokale Relevanzsignale",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Run audit fields B06.02/B06.05 to fix the point list.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 4,
+   "confidence": 0.75,
+   "effort": 1,
+   "risk": 0,
+   "score": 3.0,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 5
+  },
+  {
+   "measure_id": "W10",
+   "label_de": "H1- und H2-Optimierung",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Fix H1 on /termin-buchen/ and legacy pages; do not touch page 1511 without Coralie's go.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 1,
+   "risk": 0,
+   "score": 3.0,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 6
+  },
+  {
+   "measure_id": "W22",
+   "label_de": "Kontrastreiche CTAs und Click-to-Call im Fließtext",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Add tel: link with +49 174 7411087 in hero and footer (Martin go; page 1511 excluded).",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 1,
+   "risk": 0,
+   "score": 3.0,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 7
+  },
+  {
+   "measure_id": "W23",
+   "label_de": "Vertrauenssignale (inkl. Google-Icon bei Zitaten)",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Add the block on the 2 missing pages; Martin checks each quote for healing claims.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 1,
+   "risk": 0,
+   "score": 3.0,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 8
+  },
+  {
+   "measure_id": "W28",
+   "label_de": "Lokale FAQs",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Add FAQ to the 2 editable pages; page 1511 only with Coralie's go.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 1,
+   "risk": 0,
+   "score": 3.0,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 9
+  },
+  {
+   "measure_id": "W08",
+   "label_de": "Verlinkungsfokus",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Add content links from the homepage to /ayurveda-therapie/ and missing main services (link only, never edit page 1511).",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 0.75,
+   "effort": 1,
+   "risk": 0,
+   "score": 2.25,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 10
+  },
+  {
+   "measure_id": "W20",
+   "label_de": "Lead-Formular oben",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Test a short form or anchor button above the fold; no health details in the form.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 4,
+   "confidence": 1.0,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 1.6,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 11
+  },
+  {
+   "measure_id": "W01",
+   "label_de": "Ladezeit (Site Speed)",
+   "pillar": "P2 Website",
+   "kind": "check",
+   "action_text": "Re-check evidence: PageSpeed API result, site audit script",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.5,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 12
+  },
+  {
+   "measure_id": "W05",
+   "label_de": "Hosting-Erreichbarkeits-Check (Uptime)",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Set up an uptime check with alert to Martin.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.75,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.5,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 13
+  },
+  {
+   "measure_id": "W12",
+   "label_de": "Unter-Dienstleistungsseiten",
+   "pillar": "P2 Website",
+   "kind": "check",
+   "action_text": "Re-check evidence: content pool items, page list",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.5,
+   "phase": "m2+",
+   "depends_on": [
+    "W09"
+   ],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 14
+  },
+  {
+   "measure_id": "W14",
+   "label_de": "Kein KI-Slop",
+   "pillar": "P2 Website",
+   "kind": "check",
+   "action_text": "Re-check evidence: similarity script, slop lint",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.5,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 15
+  },
+  {
+   "measure_id": "W31",
+   "label_de": "Verweis auf Google-Maps-Landmarks",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Check each landmark mention against Maps; add the missing places.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.75,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.5,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 16
+  },
+  {
+   "measure_id": "O08",
+   "label_de": "Berufs- und Branchenverbände",
+   "pillar": "P3 Off-Page",
+   "kind": "check",
+   "action_text": "Re-check evidence: backlink sheet",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.5,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [
+    "client"
+   ],
+   "state": "proposed",
+   "rank": 17
+  },
+  {
+   "measure_id": "O09",
+   "label_de": "Lokale Presse und Blogger",
+   "pillar": "P3 Off-Page",
+   "kind": "change",
+   "action_text": "New earned press contact via partner swap (S16) or a labelled paid article through backlink-dach; Martin go.",
+   "owner_type": [
+    "human"
+   ],
+   "gate": [
+    "4"
+   ],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 1.2,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 18
+  },
+  {
+   "measure_id": "O20",
+   "label_de": "LLM-Strukturierung und Zitate",
+   "pillar": "P3 Off-Page",
+   "kind": "change",
+   "action_text": "Set up 10-30 stable money prompts; repeat the AI check monthly (scan expires in 3 days).",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 1.2,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 19
+  },
+  {
+   "measure_id": "G11",
+   "label_de": "Team- und Fahrzeugfotos (beschriftet)",
+   "pillar": "P1 Google-Profil",
+   "kind": "check",
+   "action_text": "Re-check evidence: GBP photos, client photo intake",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.0,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [
+    "client"
+   ],
+   "state": "proposed",
+   "rank": 20
+  },
+  {
+   "measure_id": "O06",
+   "label_de": "Lokale Sponsoring-Partnerschaften",
+   "pillar": "P3 Off-Page",
+   "kind": "check",
+   "action_text": "Re-check evidence: sponsor list, backlink sheet",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.0,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [
+    "client"
+   ],
+   "state": "proposed",
+   "rank": 21
+  },
+  {
+   "measure_id": "O14",
+   "label_de": "Domain-Rating-Überwachung und Indexierung",
+   "pillar": "P3 Off-Page",
+   "kind": "check",
+   "action_text": "Re-check evidence: DataForSEO backlinks summary, indexation check",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.0,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 22
+  },
+  {
+   "measure_id": "O15",
+   "label_de": "Auswahl der Linktexte",
+   "pillar": "P3 Off-Page",
+   "kind": "check",
+   "action_text": "Re-check evidence: DataForSEO anchors",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.0,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 23
+  },
+  {
+   "measure_id": "O16",
+   "label_de": "Auswahl der Quell-Domains",
+   "pillar": "P3 Off-Page",
+   "kind": "check",
+   "action_text": "Re-check evidence: gap analysis, classifier output",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.0,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 24
+  },
+  {
+   "measure_id": "O18",
+   "label_de": "Unverlinkte Erwähnungen aufspüren",
+   "pillar": "P3 Off-Page",
+   "kind": "check",
+   "action_text": "Re-check evidence: brand search results, reclaim log",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.0,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 25
+  },
+  {
+   "measure_id": "W02",
+   "label_de": "Mobile Bedienbarkeit",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Run the mobile check list (375 px) and let Martin test the menu on a phone.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 0.75,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 0.9,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 26
+  },
+  {
+   "measure_id": "W09",
+   "label_de": "Dedizierte Service-Seiten",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Run seo-page-optimizer AUDIT on the top money pages; HWG check per page.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 5,
+   "confidence": 0.75,
+   "effort": 4.5,
+   "risk": 0,
+   "score": 0.83,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 27
+  },
+  {
+   "measure_id": "G12",
+   "label_de": "Regelmäßige Google Posts",
+   "pillar": "P1 Google-Profil",
+   "kind": "change",
+   "action_text": "Write the next 4 posts (own text, HWG check). Post only with go. Calendar: 1 per 14 days.",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 2,
+   "confidence": 1.0,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 0.8,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 28
+  },
+  {
+   "measure_id": "W32",
+   "label_de": "Eingebettete Rezensionen mit Ortsbezug",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Add source link to the review page; Martin checks quotes.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 2,
+   "confidence": 1.0,
+   "effort": 1,
+   "risk": 2,
+   "score": 0.67,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 29
+  },
+  {
+   "measure_id": "W04",
+   "label_de": "Automatisierte Frühwarn-Checks (Canary)",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Add the site to the canary list (check homepage, form, sitemap daily).",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.75,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 0.6,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 30
+  },
+  {
+   "measure_id": "W03",
+   "label_de": "Modernes Website-Design",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Optional: run cro-homepage Track A for '/'; Martin decides.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 0.75,
+   "effort": 4.5,
+   "risk": 0,
+   "score": 0.5,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 31
+  },
+  {
+   "measure_id": "G04",
+   "label_de": "Rufnummern-Attribution (Tracking-Nummer)",
+   "pillar": "P1 Google-Profil",
+   "kind": "change",
+   "action_text": "Optional later: choose provider, secondary number only, GDPR consent first (gate 9). Needs Martin go.",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "gate": [
+    "9"
+   ],
+   "impact": 2,
+   "confidence": 0.75,
+   "effort": 2.5,
+   "risk": 2,
+   "score": 0.33,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 32
+  },
+  {
+   "measure_id": "W17",
+   "label_de": "SEO-Hebel der Tools",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Derive 3 tool ideas from GSC queries; no diagnosis tools.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.75,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.5,
+   "phase": "later",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 33
+  },
+  {
+   "measure_id": "G20",
+   "label_de": "Meldung von Spam-Einträgen",
+   "pillar": "P1 Google-Profil",
+   "kind": "check",
+   "action_text": "Re-check evidence: evidence log, Maps listing screenshot",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.0,
+   "phase": "later",
+   "depends_on": [],
+   "blocked_by": [
+    "un-burning"
+   ],
+   "state": "proposed",
+   "rank": 34
+  },
+  {
+   "measure_id": "G22",
+   "label_de": "Google-Profil-Übernahme durch Dritte / Capturing",
+   "pillar": "P1 Google-Profil",
+   "kind": "check",
+   "action_text": "Re-check evidence: Maps search by old name and address, manager list",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.0,
+   "phase": "later",
+   "depends_on": [],
+   "blocked_by": [
+    "un-burning"
+   ],
+   "state": "proposed",
+   "rank": 35
+  },
+  {
+   "measure_id": "W35",
+   "label_de": "llms.txt",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Prepare llms.txt draft from the page tree; publish with go.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 1,
+   "confidence": 1.0,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.0,
+   "phase": "later",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 36
+  },
+  {
+   "measure_id": "O10",
+   "label_de": "Gemeinnützige Organisationen (.org-Links)",
+   "pillar": "P3 Off-Page",
+   "kind": "check",
+   "action_text": "Re-check evidence: sponsor list, donation receipt",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.0,
+   "phase": "later",
+   "depends_on": [],
+   "blocked_by": [
+    "client"
+   ],
+   "state": "proposed",
+   "rank": 37
+  },
+  {
+   "measure_id": "O12",
+   "label_de": "Sponsoring lokaler Veranstaltungen",
+   "pillar": "P3 Off-Page",
+   "kind": "check",
+   "action_text": "Re-check evidence: sponsor list",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.0,
+   "phase": "later",
+   "depends_on": [
+    "O06"
+   ],
+   "blocked_by": [
+    "O06",
+    "client"
+   ],
+   "state": "proposed",
+   "rank": 38
+  },
+  {
+   "measure_id": "O17",
+   "label_de": "HARO / Connectively",
+   "pillar": "P3 Off-Page",
+   "kind": "change",
+   "action_text": "Research 2 DACH expert-quote channels; HWG check per quote.",
+   "owner_type": [
+    "human"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.75,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 0.6,
+   "phase": "later",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 39
+  },
+  {
+   "measure_id": "G19",
+   "label_de": "Bearbeitungsvorschläge (Suggest edits)",
+   "pillar": "P1 Google-Profil",
+   "kind": "check",
+   "action_text": "Re-check evidence: evidence log (screenshot, date, rule broken)",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 1,
+   "confidence": 0.5,
+   "effort": 1,
+   "risk": 0,
+   "score": 0.5,
+   "phase": "later",
+   "depends_on": [],
+   "blocked_by": [
+    "un-burning"
+   ],
+   "state": "proposed",
+   "rank": 40
+  },
+  {
+   "measure_id": "W29",
+   "label_de": "Eigene \"Best-of\"-Verzeichnisse",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Low priority; only with Martin go and neutral criteria (gate 11).",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [
+    "11"
+   ],
+   "impact": 1,
+   "confidence": 1.0,
+   "effort": 2.5,
+   "risk": 2,
+   "score": 0.22,
+   "phase": "later",
+   "depends_on": [],
+   "blocked_by": [],
+   "state": "proposed",
+   "rank": 41
+  },
+  {
+   "measure_id": "G17",
+   "label_de": "Review Velocity",
+   "pillar": "P1 Google-Profil",
+   "kind": "change",
+   "action_text": "Fix the ask process first (G14, G15). Get leader pace from the audit (B05.03, B11.03). Target 2x leader.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 5,
+   "confidence": 1.0,
+   "effort": 1,
+   "risk": 0,
+   "score": 5.0,
+   "phase": "d1-30",
+   "depends_on": [
+    "G14"
+   ],
+   "blocked_by": [
+    "G14"
+   ],
+   "state": "blocked",
+   "rank": 42
+  },
+  {
+   "measure_id": "G15",
+   "label_de": "RFID / QR-Tapping-Karten",
+   "pillar": "P1 Google-Profil",
+   "kind": "change",
+   "action_text": "Ask Coralie whether the guide is handed out; prepare a QR card file if wanted.",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 0.75,
+   "effort": 1,
+   "risk": 0,
+   "score": 2.25,
+   "phase": "d1-30",
+   "depends_on": [],
+   "blocked_by": [
+    "client"
+   ],
+   "state": "blocked",
+   "rank": 43
+  },
+  {
+   "measure_id": "G08",
+   "label_de": "Service-Ausbau (20 bis 50)",
+   "pillar": "P1 Google-Profil",
+   "kind": "change",
+   "action_text": "Draft: remove Faszientherapie (needs go). Add service descriptions after HWG check. Map each service to its page (W09).",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 4,
+   "confidence": 1.0,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 1.6,
+   "phase": "d1-30",
+   "depends_on": [
+    "W09"
+   ],
+   "blocked_by": [
+    "W09"
+   ],
+   "state": "blocked",
+   "rank": 44
+  },
+  {
+   "measure_id": "O03",
+   "label_de": "Kern-Verzeichniseinträge",
+   "pillar": "P3 Off-Page",
+   "kind": "change",
+   "action_text": "Submit the 4 missing core directories after the NAP fix (runbook group A).",
+   "owner_type": [
+    "agent",
+    "human"
+   ],
+   "gate": [],
+   "impact": 4,
+   "confidence": 1.0,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 1.6,
+   "phase": "d1-30",
+   "depends_on": [],
+   "blocked_by": [
+    "un-burning"
+   ],
+   "state": "blocked",
+   "rank": 45
+  },
+  {
+   "measure_id": "O01",
+   "label_de": "Spezielle Nischen-Verzeichnisse",
+   "pillar": "P3 Off-Page",
+   "kind": "change",
+   "action_text": "Correct NAP at Theralupa, Jameda, ärzte.de (claim route); merge the Theralupa duplicate; then submit the rest.",
+   "owner_type": [
+    "agent",
+    "human"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 1.2,
+   "phase": "d1-30",
+   "depends_on": [],
+   "blocked_by": [
+    "un-burning"
+   ],
+   "state": "blocked",
+   "rank": 46
+  },
+  {
+   "measure_id": "O02",
+   "label_de": "Lokale Verzeichniseinträge",
+   "pillar": "P3 Off-Page",
+   "kind": "change",
+   "action_text": "Fix portal statuses from the live check; correct NAP per nap-corrections.json (BrightLocal or client login).",
+   "owner_type": [
+    "agent",
+    "human"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 1.2,
+   "phase": "d1-30",
+   "depends_on": [],
+   "blocked_by": [
+    "un-burning"
+   ],
+   "state": "blocked",
+   "rank": 47
+  },
+  {
+   "measure_id": "O04",
+   "label_de": "Datenaggregatoren und Verteilung",
+   "pillar": "P3 Off-Page",
+   "kind": "change",
+   "action_text": "Update aggregator pack to 'Praxis Suriya' and Mo-Sa 07:30-20:00; verify each listing URL.",
+   "owner_type": [
+    "agent",
+    "human"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 0.75,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 0.9,
+   "phase": "d1-30",
+   "depends_on": [],
+   "blocked_by": [
+    "un-burning"
+   ],
+   "state": "blocked",
+   "rank": 48
+  },
+  {
+   "measure_id": "G14",
+   "label_de": "CRM-Automatisierung (Bewertungsanfrage)",
+   "pillar": "P1 Google-Profil",
+   "kind": "change",
+   "action_text": "Write the ask process (who, when, channel, consent) and test it; mail or SMS only with consent (gate 2).",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "gate": [
+    "2"
+   ],
+   "impact": 4,
+   "confidence": 0.75,
+   "effort": 2.5,
+   "risk": 3,
+   "score": 0.55,
+   "phase": "d1-30",
+   "depends_on": [
+    "G15"
+   ],
+   "blocked_by": [
+    "G15",
+    "client"
+   ],
+   "state": "blocked",
+   "rank": 49
+  },
+  {
+   "measure_id": "G01",
+   "label_de": "Keyword im Profilnamen (DBA)",
+   "pillar": "P1 Google-Profil",
+   "kind": "change",
+   "action_text": "Do nothing live. Martin decides (gate 1). After the decision, re-scan \"heilpraktiker ingelheim\" (49 credits, Martin go) to see the effect of the name change.",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "gate": [
+    "1"
+   ],
+   "impact": 2,
+   "confidence": 1.0,
+   "effort": 1,
+   "risk": 3,
+   "score": 0.5,
+   "phase": "d1-30",
+   "depends_on": [],
+   "blocked_by": [
+    "un-burning"
+   ],
+   "state": "blocked",
+   "rank": 50
+  },
+  {
+   "measure_id": "W33",
+   "label_de": "Local Schema (JSON-LD)",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Align schema and imprint handles after G01; read the rating from the real source.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 1,
+   "risk": 0,
+   "score": 3.0,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [
+    "G01"
+   ],
+   "state": "blocked",
+   "rank": 51
+  },
+  {
+   "measure_id": "G09",
+   "label_de": "Kontinuierlicher Foto-Upload",
+   "pillar": "P1 Google-Profil",
+   "kind": "change",
+   "action_text": "Request photo set from Coralie (team, practice sign, rooms). Use file-name rule service-district-brand, geotag, caption. Upload only with go.",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 1.2,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [
+    "client"
+   ],
+   "state": "blocked",
+   "rank": 52
+  },
+  {
+   "measure_id": "W06",
+   "label_de": "Wichtigste Seite der Website",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Put the phone number in the hero as a tel: link; measure speed; check sticky CTA on mobile.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 4,
+   "confidence": 0.75,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 1.2,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [
+    "W01"
+   ],
+   "state": "blocked",
+   "rank": 53
+  },
+  {
+   "measure_id": "W18",
+   "label_de": "Fluss nach oben",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Apply link-plan.json step by step with Martin's go (never edit page 1511).",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 1.2,
+   "phase": "m2+",
+   "depends_on": [
+    "W09"
+   ],
+   "blocked_by": [
+    "un-burning",
+    "W09"
+   ],
+   "state": "blocked",
+   "rank": 54
+  },
+  {
+   "measure_id": "W11",
+   "label_de": "Spezifischer Content und echte Jobs",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Ask Coralie for process-based examples (no cure story); written consent first.",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 3,
+   "confidence": 0.75,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 0.9,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [
+    "client"
+   ],
+   "state": "blocked",
+   "rank": 55
+  },
+  {
+   "measure_id": "W25",
+   "label_de": "CRM-Anbindung",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Decide a lead log (portal Anfragen tab) with a data processing agreement; no health data.",
+   "owner_type": [
+    "agent",
+    "client"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 0.75,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 0.9,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [
+    "client"
+   ],
+   "state": "blocked",
+   "rank": 56
+  },
+  {
+   "measure_id": "W34",
+   "label_de": "Basics: Alt, Canonical, Breadcrumbs, Meta",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Fix alt text, meta and H1 in one batch with go; request indexing for /akupunktur-ingelheim-praxis/.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 1.0,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 0.8,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [
+    "un-burning"
+   ],
+   "state": "blocked",
+   "rank": 57
+  },
+  {
+   "measure_id": "W13",
+   "label_de": "Regionale Abdeckung",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Plan one Bingen page with real local value (spec via seo-page-optimizer).",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 4.5,
+   "risk": 0,
+   "score": 0.67,
+   "phase": "m2+",
+   "depends_on": [
+    "W09"
+   ],
+   "blocked_by": [
+    "W09"
+   ],
+   "state": "blocked",
+   "rank": 58
+  },
+  {
+   "measure_id": "W26",
+   "label_de": "Kosten- und Preisseiten",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Draft updated cost page from confirmed prices; Martin checks HWG wording; Coralie confirms numbers.",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 2.5,
+   "risk": 2,
+   "score": 0.67,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [
+    "client"
+   ],
+   "state": "blocked",
+   "rank": 59
+  },
+  {
+   "measure_id": "W30",
+   "label_de": "Echte Projektberichte",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Only after written consent and HWG rules; ask Coralie in one bundle with W11.",
+   "owner_type": [
+    "client",
+    "agent"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 3,
+   "confidence": 0.75,
+   "effort": 2.5,
+   "risk": 2,
+   "score": 0.5,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [
+    "client",
+    "W11"
+   ],
+   "state": "blocked",
+   "rank": 60
+  },
+  {
+   "measure_id": "O19",
+   "label_de": "Reputations-Management und Reddit-Beobachtung",
+   "pillar": "P3 Off-Page",
+   "kind": "change",
+   "action_text": "Set a monthly brand watch; negative items go to un-burning; no burying (gate 3).",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [
+    "3"
+   ],
+   "impact": 2,
+   "confidence": 0.75,
+   "effort": 1,
+   "risk": 2,
+   "score": 0.5,
+   "phase": "m2+",
+   "depends_on": [],
+   "blocked_by": [
+    "un-burning"
+   ],
+   "state": "blocked",
+   "rank": 61
+  },
+  {
+   "measure_id": "W19",
+   "label_de": "Regelmäßige Anpassungen",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Schedule a monthly crawl diff and orphan count.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.75,
+   "effort": 1,
+   "risk": 0,
+   "score": 1.5,
+   "phase": "later",
+   "depends_on": [
+    "W18"
+   ],
+   "blocked_by": [
+    "W18"
+   ],
+   "state": "blocked",
+   "rank": 62
+  },
+  {
+   "measure_id": "W27",
+   "label_de": "Entscheidungshilfen (Vergleich, Finanzierung, Garantie)",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "List top 3 decisions from GSC; add comparison block only with real facts, no promises.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 3,
+   "confidence": 0.75,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 0.9,
+   "phase": "later",
+   "depends_on": [],
+   "blocked_by": [
+    "W26"
+   ],
+   "state": "blocked",
+   "rank": 63
+  },
+  {
+   "measure_id": "W16",
+   "label_de": "Nützliche Tools und Rechner",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Low priority; any tool must be info-only (HWG). Decide with W17.",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [
+    "5"
+   ],
+   "impact": 3,
+   "confidence": 1.0,
+   "effort": 4.5,
+   "risk": 0,
+   "score": 0.67,
+   "phase": "later",
+   "depends_on": [],
+   "blocked_by": [
+    "W17"
+   ],
+   "state": "blocked",
+   "rank": 64
+  },
+  {
+   "measure_id": "W15",
+   "label_de": "Tiefe Funnel-Struktur",
+   "pillar": "P2 Website",
+   "kind": "change",
+   "action_text": "Martin names the approved tree; then apply link-plan.json (with go).",
+   "owner_type": [
+    "agent"
+   ],
+   "gate": [],
+   "impact": 2,
+   "confidence": 0.75,
+   "effort": 2.5,
+   "risk": 0,
+   "score": 0.6,
+   "phase": "later",
+   "depends_on": [
+    "W13"
+   ],
+   "blocked_by": [
+    "W13",
+    "un-burning"
+   ],
+   "state": "blocked",
+   "rank": 65
+  },
+  {
+   "measure_id": "O13",
+   "label_de": "Strategischer Backlink-Kauf",
+   "pillar": "P3 Off-Page",
+   "kind": "change",
+   "action_text": "Hold the order until G17 and W09/W34 are fixed; then run the backlink-dach buy path.",
+   "owner_type": [
+    "human"
+   ],
+   "gate": [
+    "4"
+   ],
+   "impact": 2,
+   "confidence": 0.75,
+   "effort": 4.5,
+   "risk": 3,
+   "score": 0.2,
+   "phase": "later",
+   "depends_on": [
+    "G17",
+    "W09"
+   ],
+   "blocked_by": [
+    "G17"
+   ],
+   "state": "blocked",
+   "rank": 66
+  }
+ ]
+}

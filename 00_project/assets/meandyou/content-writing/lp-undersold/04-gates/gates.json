@@ -1,6 +1,6 @@
 {
  "date": "2026-10-12",
- "page": "00_project/assets/meandyou/content-writing/lp-undersold/05-final/page.md",
+ "page": "content-writing/lp-undersold/05-final/page.md",
  "pass": true,
  "gates": {
   "G1 facts": {
@@ -21,9 +21,11 @@
   "G3 seo": {
    "pass": true,
    "fails": [],
-   "warns": [],
+   "warns": [
+    "Wortzahl 1456 außerhalb Zielbereich 900 bis 1450"
+   ],
    "info": {
-    "words": 1440,
+    "words": 1456,
     "placeholders": 8
    }
   },
@@ -34,7 +36,7 @@
     "Sprecher gemischt: ich 7, wir 3"
    ],
    "counts": {
-    "du": 52,
+    "du": 53,
     "sie": 0,
     "ich": 7,
     "wir": 3
@@ -43,7 +45,7 @@
   "G5 slop (lint)": {
    "lang": "de",
    "score": 5,
-   "words": 1440,
+   "words": 1456,
    "hits": {
     "vocabulary": [],
     "constructions": [],

@@ -1,0 +1,73 @@
+  <style>
+    .sv-sub { margin: .6rem 0 .4rem; font-size: 1.55rem; line-height: 1.4; font-weight: 400; color: rgba(255,255,255,.78); opacity: 0; transform: translateY(6px); transition: opacity .35s ease, transform .35s ease; pointer-events: none; }
+    .models_item.sv-on .sv-sub { opacity: 1; transform: none; }
+    @media (max-width: 600px) { .sv-sub { font-size: 2.2rem; } }
+    @media (prefers-reduced-motion: reduce) { .sv-sub { transition: none; transform: none; } }
+  </style>
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function countUp() {
+        var stats = document.querySelectorAll('.conv-statcard-stat');
+        if (reduce || !('IntersectionObserver' in window)) return;
+        stats.forEach(function (el) {
+          var m = el.textContent.trim().match(/^\+(\d+)%$/);
+          if (!m) return;
+          var to = parseInt(m[1], 10);
+          el.textContent = '+0%';
+          var io = new IntersectionObserver(function (entries) {
+            if (!entries[0].isIntersecting) return;
+            io.disconnect();
+            var t0 = performance.now(), dur = 1400;
+            (function step(t) {
+              var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+              el.textContent = '+' + Math.round(to * e) + '%';
+              if (p < 1) requestAnimationFrame(step);
+            })(t0);
+          }, { threshold: 0.6 });
+          io.observe(el);
+        });
+      }
+
+      var SUBS = [
+        'Conversion-orientierte Websites, die Vertrauen schaffen und verkaufen.',
+        'Marke und Interface aus einem Guss.',
+        'Top Rankings in Google Suche und Google Maps.',
+        'Kampagnen, die sich rechnen.',
+        'Workflows, die Zeit sparen.',
+        'Mehr Anfragen aus denselben Besuchern.',
+        'Eine Marke, die im Kopf bleibt.',
+        'Wir analysieren Ihre Ziele, Zielgruppe und den Markt.'
+      ];
+
+      function serviceLines() {
+        var items = document.querySelectorAll('.section_models .models_item');
+        if (!items.length) return;
+        items.forEach(function (it, i) {
+          if (!SUBS[i]) return;
+          var p = document.createElement('p');
+          p.className = 'sv-sub';
+          p.textContent = SUBS[i];
+          it.appendChild(p);
+        });
+        function on(i) { items.forEach(function (el, j) { el.classList.toggle('sv-on', i === j); }); }
+        on(0);
+        if (window.ScrollTrigger) {
+          var mobile = window.innerWidth <= 768;
+          items.forEach(function (it, i) {
+            ScrollTrigger.create({
+              trigger: it,
+              start: mobile ? 'top 40%' : 'top 20%',
+              end: 'bottom center',
+              onEnter: function () { on(i); },
+              onEnterBack: function () { on(i); }
+            });
+          });
+        }
+      }
+
+      function init() { countUp(); serviceLines(); }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+    })();
+  </script>

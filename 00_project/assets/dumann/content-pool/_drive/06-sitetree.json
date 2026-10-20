@@ -1,0 +1,1425 @@
+{
+ "meta": {
+  "client": "Naturheilpraxis Daniela Dumann",
+  "slug": "dumann",
+  "domain": "danieladumann.de",
+  "built": "2026-10-11",
+  "programme_modules_source": "website-struktur-master-prompt.md Schritt 4 und 6 (Programmplan-Datei nicht gefunden unter ~/Downloads)"
+ },
+ "kpi": {
+  "Bleibt": 19,
+  "Überarbeiten": 10,
+  "Neu": 2,
+  "Vorschlag": 3
+ },
+ "kpi_patient": {
+  "Bleibt": 6,
+  "Überarbeiten": 10,
+  "Neu": 2,
+  "Vorschlag": 3
+ },
+ "nodes": [
+  {
+   "id": "ST-00",
+   "parent": null,
+   "title": "Startseite",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M2 Startseite",
+   "job": "Hero mit Stadt, Beweis-Leiste, Leistungen, erster Termin, Über, FAQ, Standort. Aufbau nach CRO-Blueprint (10 Zeilen).",
+   "path": "/",
+   "kw": "heilpraktiker berlin",
+   "pool_tag": "homepage",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-LOC-001",
+    "CP-LOC-002",
+    "CP-LOC-003",
+    "CP-LOC-005",
+    "CP-LOC-006",
+    "CP-SVC-001",
+    "CP-SVC-002",
+    "CP-SVC-003",
+    "CP-SVC-004",
+    "CP-SVC-005",
+    "CP-SVC-021",
+    "CP-BRD-001",
+    "CP-BRD-002",
+    "CP-BRD-003",
+    "CP-BRD-004",
+    "CP-AUT-001",
+    "CP-AUT-002",
+    "CP-AUT-003",
+    "CP-AUT-006",
+    "CP-AUT-007"
+   ],
+   "_gsc": {
+    "clicks": 151,
+    "impressions": 1169
+   },
+   "_words": 335,
+   "_schema": [
+    "LocalBusiness",
+    "PostalAddress",
+    "WebSite"
+   ],
+   "_kw": {
+    "kw": "heilpraktiker berlin",
+    "volume": 1600,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-LOC-001",
+     "priority": "A",
+     "topic": "Hero-Überschrift mit Stadt und Bezirk (Heilpraktikerin Berlin-Charlottenburg)",
+     "status": "draft"
+    },
+    {
+     "id": "CP-LOC-002",
+     "priority": "C",
+     "topic": "Standort-Block: Adresse, Anreise Bus/S-Bahn/Auto, Karte, Termine nach Vereinbarung",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-LOC-003",
+     "priority": "B",
+     "topic": "Umgebung in einem Satz (Wilmersdorf, Westend, Schöneberg, Spandau) ohne eigene Ortsseiten",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-LOC-005",
+     "priority": "B",
+     "topic": "LocalBusiness-/MedicalBusiness-Auszeichnung mit Geo, Öffnungszeiten, sameAs",
+     "status": "draft"
+    },
+    {
+     "id": "CP-LOC-006",
+     "priority": "B",
+     "topic": "Namens- und Profil-Konsistenz: Website 'Naturheilpraxis Daniela Dumann' vs. GBP 'Hildegard von Bingen Berlin Naturheilpraxis …'",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-SVC-001",
+     "priority": "B",
+     "topic": "Leistungs-Übersicht: 8 Karten mit Link zur Leistung",
+     "status": "draft"
+    },
+    {
+     "id": "CP-SVC-002",
+     "priority": "B",
+     "topic": "Der erste Termin: Ablauf, Dauer 60 Min, Preis 220 €, Buchung",
+     "status": "draft"
+    },
+    {
+     "id": "CP-SVC-003",
+     "priority": "B",
+     "topic": "Preise und Abrechnung: 220 € Erstanamnese, 150 €/Std, GebüH, private Erstattung ohne Garantie",
+     "status": "draft"
+    },
+    {
+     "id": "CP-SVC-004",
+     "priority": "A",
+     "topic": "FAQ-Set mit kurzen Direktantworten (Kosten, Kasse, Vorbereitung, Absage, Arzt oder Heilpraktiker)",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-SVC-005",
+     "priority": "B",
+     "topic": "'Ist das etwas für mich?': 3 bis 5 Anliegen der Praxis, in Alltagssprache",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-SVC-021",
+     "priority": "B",
+     "topic": "Direkte Kurzantworten (40–60 Wörter) unter den FAQ für KI-Antworten",
+     "status": "draft"
+    },
+    {
+     "id": "CP-BRD-001",
+     "priority": "A",
+     "topic": "Positionierung: Hildegard-Heilkunde in Charlottenburg (im lesbaren Wettbewerbs-Set unbesetzt)",
+     "status": "draft"
+    },
+    {
+     "id": "CP-BRD-002",
+     "priority": "B",
+     "topic": "Methode in 3 Sätzen: Mein Ansatz (ersetzt das Bach-Zitat)",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-BRD-003",
+     "priority": "B",
+     "topic": "Über Daniela: Geschichte, warum Hildegard, echtes Portrait",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-BRD-004",
+     "priority": "A",
+     "topic": "Zwei Zielgruppen trennen: Startseite für Patient:innen, Viriditas-Schule als eigener Bereich",
+     "status": "draft"
+    },
+    {
+     "id": "CP-AUT-001",
+     "priority": "B",
+     "topic": "Qualifikationen: Heilpraktikerin seit 2002, Dipl.-Sozialpädagogin (FH) seit 1985, weitere Abschlüsse",
+     "status": "draft"
+    },
+    {
+     "id": "CP-AUT-002",
+     "priority": "B",
+     "topic": "Vizepräsidentin Internationale Gesellschaft Hildegard von Bingen (Vorstand seit 2015, VP seit 2023)",
+     "status": "draft"
+    },
+    {
+     "id": "CP-AUT-003",
+     "priority": "A",
+     "topic": "Beweis-Leiste: Google 5,0 (9 Bewertungen) mit kurzem Zitat",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-AUT-006",
+     "priority": "B",
+     "topic": "Hildegard-Kräutergarten als Beweis-Asset (Seminare, Pflanzen aus dem Garten)",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-AUT-007",
+     "priority": "C",
+     "topic": "Verbände und Mitgliedschaften mit echten Logos (Fachverband Freie Heilpraktiker, FET, MeGeMit, Hildegard-Gesellschaft)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-10",
+   "parent": "ST-00",
+   "title": "Behandlungen und Preise (Leistungs-Hub)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Leistungsübersicht mit Preisen und Abrechnung. Krankheitslisten raus (HWG). Verlinkt jede Einzelleistung.",
+   "path": "/behandlungen",
+   "kw": "heilpraktiker kosten",
+   "pool_items": [
+    "CP-SVC-003",
+    "CP-SVC-002"
+   ],
+   "kind": "hub",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-003",
+    "CP-SVC-002"
+   ],
+   "_gsc": {
+    "clicks": 12,
+    "impressions": 289
+   },
+   "_words": 2611,
+   "_schema": [],
+   "_kw": {
+    "kw": "heilpraktiker kosten",
+    "volume": 880,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-003",
+     "priority": "B",
+     "topic": "Preise und Abrechnung: 220 € Erstanamnese, 150 €/Std, GebüH, private Erstattung ohne Garantie",
+     "status": "draft"
+    },
+    {
+     "id": "CP-SVC-002",
+     "priority": "B",
+     "topic": "Der erste Termin: Ablauf, Dauer 60 Min, Preis 220 €, Buchung",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-11",
+   "parent": "ST-10",
+   "title": "Aderlass nach Hildegard",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Verfahren, Ablauf, Dauer, Preis. Keine Wirkversprechen. Fragen-Set unten.",
+   "path": "/aderlass-therapie",
+   "kw": "aderlass berlin",
+   "pool_tag": "service:aderlass",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-006",
+    "CP-SVC-007"
+   ],
+   "_gsc": {
+    "clicks": 11,
+    "impressions": 256
+   },
+   "_words": 2638,
+   "_schema": [],
+   "_kw": {
+    "kw": "aderlass berlin",
+    "volume": 50,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-006",
+     "priority": "A",
+     "topic": "Aderlass nach Hildegard: Leistungskarte und eigene Seite",
+     "status": "draft"
+    },
+    {
+     "id": "CP-SVC-007",
+     "priority": "A",
+     "topic": "Aderlass-Fragen: Was kostet er, wie oft, wie lange dauert er",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-12",
+   "parent": "ST-10",
+   "title": "Darmsanierung nach Hildegard",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Methode, Ablauf, Fragen (nach Antibiotika, wie lange). Nicht Colon-Hydro.",
+   "path": "/darmsanierung",
+   "kw": "darmsanierung berlin",
+   "pool_tag": "service:darmsanierung",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-008",
+    "CP-SVC-009"
+   ],
+   "_gsc": {
+    "clicks": 4,
+    "impressions": 378
+   },
+   "_words": 1016,
+   "_schema": [],
+   "_kw": {
+    "kw": "darmsanierung berlin",
+    "volume": 90,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-008",
+     "priority": "B",
+     "topic": "Darmsanierung nach Hildegard: Leistungskarte und eigene Seite",
+     "status": "draft"
+    },
+    {
+     "id": "CP-SVC-009",
+     "priority": "B",
+     "topic": "Darmsanierung-Fragen: nach Antibiotika, wie lange, was essen",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-13",
+   "parent": "ST-10",
+   "title": "Ernährungsberatung",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Ernährungsberatung mit Hildegard-Ansatz in Charlottenburg.",
+   "path": "/ernährungsberatung",
+   "kw": "ernährungsberatung berlin",
+   "pool_tag": "service:ernaehrungsberatung",
+   "kind": "page",
+   "audience": "patient",
+   "note": "Geprüft: /ernaehrungstherapie-hildegard-von-bingen ist eine Ausbildungsseite (Kurs buchen), keine Dublette. Sie liegt im Viriditas-Bereich.",
+   "_items": [
+    "CP-SVC-010"
+   ],
+   "_gsc": {
+    "clicks": 3,
+    "impressions": 205
+   },
+   "_words": 1248,
+   "_schema": [],
+   "_kw": {
+    "kw": "ernährungsberatung berlin",
+    "volume": 1600,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-010",
+     "priority": "A",
+     "topic": "Ernährungsberatung: Leistungskarte und eigene Seite",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-14",
+   "parent": "ST-10",
+   "title": "Fasten nach Hildegard (Begleitung für Patient:innen)",
+   "status": "Vorschlag",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Eigene Patienten-Seite für Fasten-Begleitung. Die heutige Seite /hildegard-fasten ist eine Kursseite.",
+   "slug": "/fasten-nach-hildegard/",
+   "kw": "fasten nach hildegard von bingen",
+   "pool_tag": "service:fasten",
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Begleitet sie Patient:innen beim Fasten, oder nur Kurse?"
+   ],
+   "note": "Suchen zu Hildegard-Fasten landen heute auf der Kursseite /hildegard-fasten, weit hinter Seite 1.",
+   "_items": [
+    "CP-SVC-011",
+    "CP-SVC-012"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "fasten nach hildegard von bingen",
+    "volume": 320,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-011",
+     "priority": "A",
+     "topic": "Fasten nach Hildegard: Begleitung für Patient:innen",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-SVC-012",
+     "priority": "B",
+     "topic": "Hildegard-Fasten-Fragen: Anleitung, Erfahrungen, Dauer",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-15",
+   "parent": "ST-10",
+   "title": "Oligoscan und Mikronährstoffe",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Verfahren, Grenzen, Ablauf, Preis. Ehrlich zur Aussagekraft.",
+   "path": "/oligoscan",
+   "kw": "oligoscan",
+   "pool_tag": "service:oligoscan",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-013"
+   ],
+   "_gsc": {
+    "clicks": 8,
+    "impressions": 79
+   },
+   "_words": 1239,
+   "_schema": [],
+   "_kw": {
+    "kw": "oligoscan",
+    "volume": 260,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-013",
+     "priority": "A",
+     "topic": "Oligoscan / Mikronährstoffanalyse",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-16",
+   "parent": "ST-10",
+   "title": "Schilddrüse",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Stärkste Patientenseite (siehe Zahlen). URL und Rankings schützen. Text neu, HWG-sicher, Leistung genau benennen.",
+   "path": "/schilddrüse",
+   "kw": "schilddrüse heilpraktiker",
+   "pool_tag": "service:schilddruese",
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Was genau bietet sie an (Massage, Begleitung, Labor)?",
+    "Die Seite nennt Mikroimmuntherapie. Sie fehlt in der Leistungsliste. Bietet sie das an?"
+   ],
+   "note": "H1 heute: Schilddrüsenspezialist und Mikroimmuntherapie, Text beginnt mit Hypothyreose. HWG- und Spezialisten-Claim prüfen, bevor die Seite wächst.",
+   "_items": [
+    "CP-SVC-014"
+   ],
+   "_gsc": {
+    "clicks": 40,
+    "impressions": 569
+   },
+   "_words": 733,
+   "_schema": [],
+   "_kw": {
+    "kw": "schilddrüse heilpraktiker",
+    "volume": null,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-014",
+     "priority": "A",
+     "topic": "Schilddrüse: Begleitung (Leistung genau klären)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-17",
+   "parent": "ST-10",
+   "title": "Homöopathie",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Klassische Homöopathie, Erstanamnese 220 bis 380 EUR, Ablauf.",
+   "path": "/homoeopathie",
+   "kw": "homöopathie berlin",
+   "pool_tag": "service:homoeopathie",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-SVC-015"
+   ],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 15
+   },
+   "_words": 446,
+   "_schema": [],
+   "_kw": {
+    "kw": "homöopathie berlin",
+    "volume": 140,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-015",
+     "priority": "A",
+     "topic": "Homöopathie",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-18",
+   "parent": "ST-10",
+   "title": "Massagen und Anwendungen",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Nebenleistung. Hildegard-Anwendungen, ohne Wellness-Versprechen.",
+   "path": "/massage",
+   "kw": "massage charlottenburg",
+   "pool_tag": "service:massage",
+   "kind": "page",
+   "audience": "patient",
+   "note": "Mit der Kundin klären, ob Massage Kernleistung bleibt.",
+   "_items": [
+    "CP-SVC-016"
+   ],
+   "_gsc": {
+    "clicks": 1,
+    "impressions": 161
+   },
+   "_words": 1107,
+   "_schema": [],
+   "_kw": {
+    "kw": "massage charlottenburg",
+    "volume": 720,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-016",
+     "priority": "B",
+     "topic": "Massagen & Anwendungen (Hildegard-Anwendungen)",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-19",
+   "parent": "ST-10",
+   "title": "Hildegard-Heilkunde: wie die Praxis damit arbeitet (Hub)",
+   "status": "Neu",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Erklärt Methode und die 5 Säulen. Verlinkt alle Einzelleistungen. Stärkt die Alleinstellung.",
+   "slug": "/hildegard-heilkunde/",
+   "kw": "hildegard von bingen medizin",
+   "pool_tag": "service:hildegard-heilkunde",
+   "kind": "hub",
+   "audience": "patient",
+   "note": "Herkunft: Methodentext der Kundin auf /behandlungen (Abschnitt Hildegard Heilkunde).",
+   "_items": [
+    "CP-SVC-018"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "hildegard von bingen medizin",
+    "volume": 590,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-018",
+     "priority": "A",
+     "topic": "Hildegard-Heilkunde erklärt (Hub): Was ist das, die 5 Säulen, wie arbeitet die Praxis damit",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-20",
+   "parent": "ST-10",
+   "title": "Pflanzenheilkunde",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "später",
+   "job": "Bleibt, wie sie ist. Patienten-Fassung folgt in einem späteren Lauf.",
+   "path": "/kräuterheilkunde",
+   "kw": "kräuterheilkunde",
+   "pool_items": [
+    "CP-SVC-017"
+   ],
+   "kind": "page",
+   "audience": "both",
+   "_items": [
+    "CP-SVC-017"
+   ],
+   "_gsc": {
+    "clicks": 1,
+    "impressions": 253
+   },
+   "_words": 420,
+   "_schema": [],
+   "_kw": {
+    "kw": "kräuterheilkunde",
+    "volume": 320,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-SVC-017",
+     "priority": "B",
+     "topic": "Pflanzenheilkunde / Hildegard-Kräuter aus Patient:innen-Sicht",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-30",
+   "parent": "ST-00",
+   "title": "Über Daniela Dumann (Behandlerin, E-E-A-T)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M6 Behandlerseite",
+   "job": "Abschlüsse, Vizepräsidentin der Gesellschaft, Mitgliedschaften, Geschichte, Person-Auszeichnung. Der Über-mich-Prototyp liegt vor.",
+   "path": "/lebenslauf",
+   "kw": "daniela dumann heilpraktikerin berlin",
+   "pool_items": [
+    "CP-AUT-010",
+    "CP-BRD-003",
+    "CP-AUT-001",
+    "CP-AUT-002",
+    "CP-AUT-006",
+    "CP-AUT-007",
+    "CP-BRD-002"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "_items": [
+    "CP-AUT-010",
+    "CP-BRD-003",
+    "CP-AUT-001",
+    "CP-AUT-002",
+    "CP-AUT-006",
+    "CP-AUT-007",
+    "CP-BRD-002"
+   ],
+   "_gsc": {
+    "clicks": 9,
+    "impressions": 291
+   },
+   "_words": 216,
+   "_schema": [],
+   "_kw": {
+    "kw": "daniela dumann heilpraktikerin berlin",
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": [
+    {
+     "id": "CP-AUT-010",
+     "priority": "C",
+     "topic": "Person-Auszeichnung (Person, sameAs, Mitgliedschaften) auf der Behandlerinnen-Seite",
+     "status": "draft"
+    },
+    {
+     "id": "CP-BRD-003",
+     "priority": "B",
+     "topic": "Über Daniela: Geschichte, warum Hildegard, echtes Portrait",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-AUT-001",
+     "priority": "B",
+     "topic": "Qualifikationen: Heilpraktikerin seit 2002, Dipl.-Sozialpädagogin (FH) seit 1985, weitere Abschlüsse",
+     "status": "draft"
+    },
+    {
+     "id": "CP-AUT-002",
+     "priority": "B",
+     "topic": "Vizepräsidentin Internationale Gesellschaft Hildegard von Bingen (Vorstand seit 2015, VP seit 2023)",
+     "status": "draft"
+    },
+    {
+     "id": "CP-AUT-006",
+     "priority": "B",
+     "topic": "Hildegard-Kräutergarten als Beweis-Asset (Seminare, Pflanzen aus dem Garten)",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-AUT-007",
+     "priority": "C",
+     "topic": "Verbände und Mitgliedschaften mit echten Logos (Fachverband Freie Heilpraktiker, FET, MeGeMit, Hildegard-Gesellschaft)",
+     "status": "needs_client"
+    },
+    {
+     "id": "CP-BRD-002",
+     "priority": "B",
+     "topic": "Methode in 3 Sätzen: Mein Ansatz (ersetzt das Bach-Zitat)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-31",
+   "parent": "ST-30",
+   "title": "Erfahrungen von Patient:innen",
+   "status": "Vorschlag",
+   "origin": "vorschlag",
+   "module": "M6 Behandlerseite",
+   "job": "Drei Stimmen zu Ablauf und Atmosphäre, mit Einwilligung. Keine Wirkaussagen.",
+   "slug": "/erfahrungen/",
+   "kw": "heilpraktiker erfahrungen",
+   "pool_items": [
+    "CP-AUT-005"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Mindestens 3 Zitate mit schriftlicher Einwilligung"
+   ],
+   "_items": [
+    "CP-AUT-005"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "heilpraktiker erfahrungen",
+    "volume": 110,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-AUT-005",
+     "priority": "C",
+     "topic": "Erfahrungsberichte von Patient:innen mit Einwilligung (Ablauf, Atmosphäre, keine Wirkung)",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-32",
+   "parent": "ST-00",
+   "title": "Blog (Hildegard-Kräuterlexikon, Rezepte)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M8 Hub und Spoke",
+   "job": "Bleibt. Der Blog stützt das Fach. Kategorien bleiben.",
+   "path": "/blog",
+   "kw": "hildegard von bingen kräuter",
+   "kind": "hub",
+   "audience": "both",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 252
+   },
+   "_words": 372,
+   "_schema": [],
+   "_kw": {
+    "kw": "hildegard von bingen kräuter",
+    "volume": 320,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-33",
+   "parent": "ST-32",
+   "title": "Hildegard-Medizin erklärt (Wissens-Hub)",
+   "status": "Vorschlag",
+   "origin": "vorschlag",
+   "module": "M8 Hub und Spoke",
+   "job": "Themen-Hub mit eigenen Quellen. Verlinkt Blogartikel und die Leistungen.",
+   "slug": "/hildegard-wissen/",
+   "kw": "hildegard von bingen medizin",
+   "pool_tag": "blog-faq",
+   "kind": "hub",
+   "audience": "patient",
+   "note": "Entsteht aus Suchanfragen (Autocomplete, GSC), nicht aus Kundeninhalt. Deshalb Vorschlag.",
+   "_items": [
+    "CP-AUT-009"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "hildegard von bingen medizin",
+    "volume": 590,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-AUT-009",
+     "priority": "B",
+     "topic": "Wissensseite 'Hildegard-Medizin erklärt' als Themen-Hub mit eigenen Quellen",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-40",
+   "parent": "ST-00",
+   "title": "Kontakt und Anfahrt",
+   "status": "Neu",
+   "origin": "programm",
+   "module": "M5 Standort",
+   "job": "Adresse, Anfahrt, Karte, Termin-Weg, Telefon. Heute gibt es nur ein Formular auf der Startseite.",
+   "slug": "/kontakt/",
+   "kw": "heilpraktiker berlin charlottenburg",
+   "pool_items": [
+    "CP-LOC-002"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Parken und Barrierefreiheit"
+   ],
+   "note": "Herkunft: Pflichtseite des Programms (Kontakt, Impressum, Datenschutz).",
+   "_items": [
+    "CP-LOC-002"
+   ],
+   "_gsc": null,
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "heilpraktiker berlin charlottenburg",
+    "volume": null,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-LOC-002",
+     "priority": "C",
+     "topic": "Standort-Block: Adresse, Anreise Bus/S-Bahn/Auto, Karte, Termine nach Vereinbarung",
+     "status": "needs_client"
+    }
+   ]
+  },
+  {
+   "id": "ST-41",
+   "parent": "ST-00",
+   "title": "Termin buchen",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M10 Conversion",
+   "job": "Bestehende Buchungsseite. Der Link zum Buchungssystem muss auch auf dem Handy erreichbar sein.",
+   "path": "/book-online",
+   "kind": "page",
+   "audience": "patient",
+   "_items": [],
+   "_gsc": {
+    "clicks": 3,
+    "impressions": 113
+   },
+   "_words": 719,
+   "_schema": [
+    "Course",
+    "ItemList",
+    "ListItem",
+    "Organization"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-42",
+   "parent": "ST-00",
+   "title": "Impressum",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Pflichtseite.",
+   "path": "/impressum",
+   "kind": "system",
+   "audience": "patient",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 37
+   },
+   "_words": 362,
+   "_schema": [],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-43",
+   "parent": "ST-00",
+   "title": "Datenschutzerklärung",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Pflichtseite.",
+   "path": "/datenschutzerklärung",
+   "kind": "system",
+   "audience": "patient",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 6
+   },
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-44",
+   "parent": "ST-00",
+   "title": "Widerruf und Stornierung",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Pflichtseite.",
+   "path": "/widerruf-stornierung",
+   "kind": "system",
+   "audience": "patient",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 3
+   },
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-50",
+   "parent": null,
+   "title": "Viriditas: Kurse und Seminare (eigener Bereich)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Zweite Zielgruppe. Bleibt unverändert. Eigener Lauf mit eigener Zielgruppe.",
+   "path": "/kurse-seminare",
+   "kw": "fastenleiter ausbildung",
+   "pool_items": [
+    "CP-BRD-005"
+   ],
+   "kind": "hub",
+   "audience": "trainee",
+   "_items": [
+    "CP-BRD-005"
+   ],
+   "_gsc": {
+    "clicks": 53,
+    "impressions": 345
+   },
+   "_words": 743,
+   "_schema": [
+    "Course",
+    "ItemList",
+    "ListItem",
+    "Organization"
+   ],
+   "_kw": {
+    "kw": "fastenleiter ausbildung",
+    "volume": 170,
+    "has_volume_record": true
+   },
+   "_item_info": [
+    {
+     "id": "CP-BRD-005",
+     "priority": "A",
+     "topic": "Viriditas – Kurse und Ausbildung: eigene Seiten und Teaser",
+     "status": "draft"
+    }
+   ]
+  },
+  {
+   "id": "ST-51",
+   "parent": "ST-50",
+   "title": "Ausbildung Kräuterheilkunde",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/ausbildung-kraeuterheilkunde",
+   "kind": "page",
+   "audience": "trainee",
+   "kw": "ausbildung kräuterheilkunde",
+   "_items": [],
+   "_gsc": {
+    "clicks": 16,
+    "impressions": 1133
+   },
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "ausbildung kräuterheilkunde",
+    "volume": 170,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-52",
+   "parent": "ST-50",
+   "title": "Ausbildung Ganzheitsmedizin und Gesundheitsberater",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/ausbildung-ganzheitsmedizin-gesundheitsberater",
+   "kind": "page",
+   "audience": "trainee",
+   "kw": "gesundheitsberater ausbildung",
+   "_items": [],
+   "_gsc": {
+    "clicks": 11,
+    "impressions": 693
+   },
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "gesundheitsberater ausbildung",
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-53",
+   "parent": "ST-50",
+   "title": "Ausbildung Fastenleiterin",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/ausbildung-fastenleiterin",
+   "kind": "page",
+   "audience": "trainee",
+   "kw": "fastenleiter ausbildung",
+   "_items": [],
+   "_gsc": {
+    "clicks": 5,
+    "impressions": 176
+   },
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": "fastenleiter ausbildung",
+    "volume": 170,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-54",
+   "parent": "ST-50",
+   "title": "Ausbildung Darmheilkunde",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/ausbildung-darmheilkunde",
+   "kind": "page",
+   "audience": "trainee",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 51
+   },
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-55",
+   "parent": "ST-50",
+   "title": "Ausbildung vor Ort",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/ausbildung-vor-ort",
+   "kind": "page",
+   "audience": "trainee",
+   "_items": [],
+   "_gsc": {
+    "clicks": 3,
+    "impressions": 33
+   },
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-56",
+   "parent": "ST-50",
+   "title": "Hildegard-Fasten (Kursseite)",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/hildegard-fasten",
+   "kind": "page",
+   "audience": "trainee",
+   "kw": "hildegard fasten",
+   "_items": [],
+   "_gsc": {
+    "clicks": 3,
+    "impressions": 1009
+   },
+   "_words": 426,
+   "_schema": [
+    "Course",
+    "ItemList",
+    "ListItem",
+    "Organization"
+   ],
+   "_kw": {
+    "kw": "hildegard fasten",
+    "volume": 90,
+    "has_volume_record": true
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-57",
+   "parent": "ST-50",
+   "title": "Workshops",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/workshops",
+   "kind": "page",
+   "audience": "trainee",
+   "_items": [],
+   "_gsc": {
+    "clicks": 6,
+    "impressions": 215
+   },
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-58",
+   "parent": "ST-50",
+   "title": "Vorträge",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/vortraege",
+   "kind": "page",
+   "audience": "trainee",
+   "_items": [],
+   "_gsc": {
+    "clicks": 1,
+    "impressions": 60
+   },
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-59",
+   "parent": "ST-50",
+   "title": "Kräutersalon",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/kraeutersalon",
+   "kind": "page",
+   "audience": "trainee",
+   "_items": [],
+   "_gsc": {
+    "clicks": 1,
+    "impressions": 17
+   },
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-60",
+   "parent": "ST-50",
+   "title": "Fortbildung und Supervision",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/fortbildung-supervision",
+   "kind": "page",
+   "audience": "trainee",
+   "_items": [],
+   "_gsc": {
+    "clicks": 0,
+    "impressions": 6
+   },
+   "_words": null,
+   "_schema": null,
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-61",
+   "parent": "ST-50",
+   "title": "Internationale Hildegard-Gesellschaft",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/hildegard-gesellschaft",
+   "kind": "page",
+   "audience": "trainee",
+   "_items": [],
+   "_gsc": {
+    "clicks": 3,
+    "impressions": 199
+   },
+   "_words": 313,
+   "_schema": [],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-62",
+   "parent": "ST-50",
+   "title": "Ausbildung Ernährungstherapie nach Hildegard",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "eigener Lauf",
+   "job": "Bleibt unverändert. Teil des Viriditas-Bereichs.",
+   "path": "/ernaehrungstherapie-hildegard-von-bingen",
+   "kind": "page",
+   "audience": "trainee",
+   "_items": [],
+   "_gsc": {
+    "clicks": 3,
+    "impressions": 67
+   },
+   "_words": 903,
+   "_schema": [
+    "Course",
+    "ItemList",
+    "ListItem",
+    "Organization"
+   ],
+   "_kw": {
+    "kw": null,
+    "volume": null,
+    "has_volume_record": false
+   },
+   "_item_info": []
+  },
+  {
+   "id": "ST-90",
+   "parent": null,
+   "title": "Wix-System- und Veranstaltungsseiten",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "außerhalb",
+   "job": "Bleibt. Termin- und Produktseiten, Beiträge, Blog-Kategorien, Mitgliederbereich. Nicht Teil dieses Plans.",
+   "kind": "group",
+   "group_patterns": [
+    "/service-page/",
+    "/product-page/",
+    "/post/",
+    "/blog/",
+    "/category/",
+    "/members|/challenges|/file-share|/booking-form"
+   ],
+   "audience": "both",
+   "_items": [],
+   "_count": 84,
+   "_gsc": null
+  }
+ ],
+ "redirect_proposals": [],
+ "catchment": [
+  {
+   "level": 1,
+   "name": "Kern-Ort",
+   "places": [
+    "Charlottenburg",
+    "Berlin"
+   ],
+   "action": "Startseite und alle Leistungen mit Ortsbezug. Slugs bleiben, Texte schärfen.",
+   "kw": [
+    "heilpraktiker berlin",
+    "heilpraktiker berlin charlottenburg",
+    "ernährungsberatung charlottenburg"
+   ],
+   "volumes": {
+    "heilpraktiker berlin": 1600,
+    "heilpraktiker berlin charlottenburg": null,
+    "ernährungsberatung charlottenburg": 30
+   }
+  },
+  {
+   "level": 2,
+   "name": "Große Nachbarn",
+   "places": [
+    "Wilmersdorf",
+    "Westend",
+    "Schöneberg"
+   ],
+   "action": "Keine eigenen Seiten: Volumen 10 oder keine Daten, keine Einzugs-Belege. Namen im Fließtext der Startseite und der Kontaktseite.",
+   "kw": [
+    "heilpraktiker wilmersdorf",
+    "heilpraktiker westend",
+    "heilpraktiker schöneberg"
+   ],
+   "volumes": {
+    "heilpraktiker wilmersdorf": 10,
+    "heilpraktiker westend": 10,
+    "heilpraktiker schöneberg": null
+   }
+  },
+  {
+   "level": 3,
+   "name": "Klarer dritter Ort",
+   "places": [],
+   "action": "Keiner belegt. Erst nach Antwort der Kundin und echten Zahlen aus der Search Console.",
+   "kw": [],
+   "volumes": {}
+  },
+  {
+   "level": 4,
+   "name": "Kleinorte",
+   "places": [
+    "Spandau",
+    "Reinickendorf"
+   ],
+   "action": "Nur im Fließtext oder FAQ, nach Bestätigung des Einzugsgebiets.",
+   "kw": [
+    "heilpraktiker spandau"
+   ],
+   "volumes": {
+    "heilpraktiker spandau": 70
+   }
+  }
+ ],
+ "referring_domains": {
+  "danieladumann.de": 148,
+  "natura-heilpraxis.de": 215,
+  "manu-lemke.de": 89,
+  "betty-timpe.de": 55
+ },
+ "unassigned_items": [],
+ "benchmark": {
+  "homepages_measured": {
+   "natura-heilpraxis.de": 2785,
+   "ihre-heilpraktiker.berlin": 1986,
+   "ellennagel.de": 426,
+   "naturheilpraxis-colettemoench.de": 341,
+   "homoeopathie-ayurveda-berlin.de": 415,
+   "manu-lemke.de": 778,
+   "betty-timpe.de": 664
+  },
+  "median_words": 664,
+  "floor_70pct": 465,
+  "own_homepage_words": 335,
+  "own_below_floor": true
+ }
+}

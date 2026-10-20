@@ -1,0 +1,242 @@
+{
+ "workflow_id": "sales-pitch",
+ "name": "Sales Call & High-Ticket Pitch Architecture",
+ "created": "2026-10-17",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "0.0": {
+   "status": "done",
+   "title": "Inputs Martin gives confirmed via interactive grill (inputs-grill.md: Job, Surface, Cadence, Limits)",
+   "evidence": "00_project/workflow-builds/sales-pitch/inputs-grill.md",
+   "date": "2026-10-17",
+   "note": "Confirmed via Decision Cards"
+  },
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/sales-pitch/research-note.md",
+   "date": "2026-10-17",
+   "note": "Skill sequential with gates per patterns.md"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/sales-pitch/research-note.md",
+   "date": "2026-10-17",
+   "note": "Hormozi, Miner NEPQ, Voss tactical empathy"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/sales-pitch/research-note.md",
+   "date": "2026-10-17",
+   "note": "INDEX.md refreshed 2026-10-11 (< 1 week)"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/sales-pitch/research-note.md",
+   "date": "2026-10-17",
+   "note": "Coverage map: sales-einwandbehandlung, prospect-mini"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/sales-pitch/research-note.md",
+   "date": "2026-10-17",
+   "note": "Synthesis of 60-minute diagnostic masterclass"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/sales-pitch/use-cases.md",
+   "date": "2026-10-17",
+   "note": "3 practical use cases defined"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/sales-pitch/test-scenarios.md",
+   "date": "2026-10-17",
+   "note": "3 test scenarios with negative trigger"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/sales-pitch/hand-run.md",
+   "date": "2026-10-17",
+   "note": "60-minute hand-run for premium clinic/coach"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/sales-pitch/pipeline.md",
+   "date": "2026-10-17",
+   "note": "Cybernetic pipeline with Checkpoints 1 & 2"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/sales-pitch/decisions.md",
+   "date": "2026-10-17",
+   "note": "R1.7 separation deterministic vs heuristic"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/sales-pitch/decisions.md",
+   "date": "2026-10-17",
+   "note": "Checkpoint 1 Martin Go confirmed"
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": ".claude/skills/sales-pitch/SKILL.md",
+   "date": "2026-10-17",
+   "note": "Built per 741 patterns"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": ".claude/skills/sales-pitch/SKILL.md",
+   "date": "2026-10-17",
+   "note": "Frontmatter with WHAT, WHEN, and negative trigger"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": ".claude/skills/sales-pitch/SKILL.md",
+   "date": "2026-10-17",
+   "note": "Body as checklist with critical rules on top"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": ".claude/skills/sales-pitch/SKILL.md",
+   "date": "2026-10-17",
+   "note": "References one level deep, body under 500 lines"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": ".claude/skills/sales-pitch/SKILL.md",
+   "date": "2026-10-17",
+   "note": "Verification command with verify_pitch.py"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": ".claude/skills/sales-pitch/SKILL.md",
+   "date": "2026-10-17",
+   "note": "741 house rules and anti-guru rules applied"
+  },
+  "3.7": {
+   "status": "skipped",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "",
+   "date": "2026-10-17",
+   "note": "",
+   "reason": "On-demand procedure triggered by Martin, never runs unattended"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/sales-pitch/trigger-tests.md",
+   "date": "2026-10-17",
+   "note": "Trigger tests T1-T3 passed"
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/sales-pitch/functional-test.md",
+   "date": "2026-10-17",
+   "note": "Functional test verified with verify_pitch.py"
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/sales-pitch/baseline.md",
+   "date": "2026-10-17",
+   "note": "Baseline comparison completed"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-17",
+   "note": "",
+   "reason": "Project skill, not a plugin; doctor audit replaced by fresh trigger/functional tests"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/sales-pitch/scorecard.md",
+   "date": "2026-10-17",
+   "note": "Scorecard 100% (46/46) zero blocking zeros"
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/sales-pitch/decisions.md",
+   "date": "2026-10-17",
+   "note": "Checkpoint 2 Martin Go confirmed"
+  },
+  "5.2": {
+   "status": "done",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": ".claude/skills/sales-pitch/SKILL.md",
+   "date": "2026-10-17",
+   "note": "Committed to project skills"
+  },
+  "5.3a": {
+   "status": "done",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "00_project/workflow-registry/registry.json",
+   "date": "2026-10-17",
+   "note": "Added to registry.json and _run.json emitted"
+  },
+  "5.3b": {
+   "status": "skipped",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "2026-10-17",
+   "note": "",
+   "reason": "Internal live-call tool for Martin; not customer-facing guide"
+  },
+  "5.3": {
+   "status": "done",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/sales-pitch-workflow.md",
+   "date": "2026-10-17",
+   "note": "Memory file + MEMORY.md updated"
+  },
+  "5.4": {
+   "status": "skipped",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "2026-10-17",
+   "note": "",
+   "reason": "On-demand procedure only, never scheduled"
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-17T06:25"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-17T06:27"
+  },
+  {
+   "gate": "install",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-17T06:29"
+  }
+ ]
+}

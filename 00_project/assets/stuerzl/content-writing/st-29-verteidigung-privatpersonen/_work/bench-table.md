@@ -1,0 +1,25 @@
+Median 1008.5, 70 % = 705, Seiten 22 von 22
+| Wörter | Seite |
+| --- | --- |
+| 3882 | https://www.strafrecht-bundesweit.de/steuerstrafrecht-privatpersonen/ |
+| 3774 | https://ffpv.de/expertise/steuerstrafrecht |
+| 2450 | https://www.lhp-gruppe.de/steuerstrafverfahren/zeuge-im-steuerstrafverfahren/ |
+| 2410 | https://steuerstrafverteidiger.net/ |
+| 2147 | https://www.die-anwalts-kanzlei.de/steuerstrafrecht/ |
+| 2033 | https://rechtsanwaelte-gsp.de/rechtsberatung/steuerstrafrecht/ |
+| 1777 | https://www.cornea-franz.de/anwalt-steuerhinterziehung/ |
+| 1503 | https://www.kanzlei-rudnicki.de/anwalt-strafrecht-berlin/steuerstrafrecht/ |
+| 1472 | https://www.sdmw.de/steuerstrafrecht/ |
+| 1429 | https://se-legal.de/rechtsanwalt/strafrecht/tatigkeit-als-zeugenbeistand-in-strafsachen/ |
+| 1224 | https://www.bms-rechtsanwaelte.de/wirtschaftsstrafrecht/zeugenbeistand |
+| 793 | https://gwgl-hamburg.de/rechtsgebiete/steuern/steuerstrafrecht/ |
+| 758 | https://fries.law/steuerstrafrecht.html |
+| 712 | https://www.drburkhard.de/steuerstrafrecht/ |
+| 639 | https://www.michalkerosskopf.de/ |
+| 601 | https://dengler-dengler.de/leistungen/recht/steuerstrafrecht/ |
+| 545 | https://kanzlei-beisenbusch.de/strafrecht/steuerstrafrecht/ |
+| 461 | https://www.strafrecht.de/de/zeugenbeistand/ |
+| 364 | https://www.gtkr.de/kompetenzen/steuerstrafrecht/ |
+| 223 | https://www.kfdr.de/zeugenbeistand |
+| 222 | https://www.verteidiger-in-zollstrafsachen.de/t%C3%A4tigkeitsbereiche/steuerstrafrecht/ |
+| 67 | https://www.rechtsanwalt-bongard.de/rechtstipps/zeugenbeistand-wann-lohnt-sich-ein-anwalt-fuer-zeugen |

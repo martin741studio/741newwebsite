@@ -1,0 +1,144 @@
+{
+ "client": "me&you Communication (Michael Ehlers)",
+ "client_slug": "meandyou",
+ "language": "de",
+ "address": "du",
+ "speaker": "wir",
+ "legal_mode": "none",
+ "voice_sheet": "00_project/assets/meandyou/voice.md",
+ "pool_item_ids": [],
+ "local_city": null,
+ "gate": "A0-brand",
+ "require_answer_block": false,
+ "nap_file": "00_project/assets/meandyou/nap.json",
+ "schema_faq": false,
+ "page_slug": "termin",
+ "page_type": "contact",
+ "mode": "rewrite",
+ "sitetree_node": "Gespräch buchen",
+ "url_slug": "/gespraech-buchen",
+ "money_page": false,
+ "intent": "transactional",
+ "indexing": "noindex (Buchungsseite, nur Ziel der CTAs und Ads)",
+ "reader": "kommt warm von einer der neuen Seiten oder aus der Ad (Video /sichtbarkeit-neu); will wissen: was passiert im Gespräch, mit wem spreche ich, kostet es etwas, muss ich danach kaufen; Sorge: Verkaufsgespräch, Zeitverlust",
+ "keyword_primary": "Gespräch buchen",
+ "keywords_cluster": [
+  {
+   "kw": "michael ehlers",
+   "volume": 480,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  }
+ ],
+ "cta": {
+  "goal": "Termin im Calendly-Kalender buchen (Event Sichtbarkeit Neu, 30 Minuten, Video)",
+  "channel": "booking",
+  "text": "Termin wählen",
+  "reassurance": "30 Minuten, kostenlos, per Video. Lieber anrufen: +49 15888367664",
+  "secondary": "Telefon"
+ },
+ "cta_text": "Termin wählen",
+ "cta_min": 5,
+ "bestand_words": null,
+ "bestand_note": "Vorschau v2 termin.html, etwa 230 Wörter; Live /sichtbarkeit-termin etwa 40 Wörter",
+ "benchmark_median_words": null,
+ "benchmark_sources": [],
+ "word_range": [
+  550,
+  1000
+ ],
+ "faq_min": 6,
+ "internal_links_min": 1,
+ "internal_link_targets": [
+  {
+   "url": "https://www.meandyou.de/datenschutz",
+   "anchor": "Datenschutz",
+   "role": "legal"
+  },
+  {
+   "url": "#kalender",
+   "anchor": "Termin wählen",
+   "role": "contact"
+  }
+ ],
+ "proof_assets": [
+  "ProvenExpert 227 von 250",
+  "seit 1990",
+  "8.000 Teilnehmer",
+  "St. Gallen",
+  "3 Zitate"
+ ],
+ "forbidden_words": [
+  "garantiert",
+  "Intelligente",
+  "Verkaufsdruck",
+  "unverbindlich"
+ ],
+ "own_phrases": [
+  "Erst ein Gespräch. Dann entscheidest du.",
+  "Unübersehbar wird man nicht, indem man lauter wird.",
+  "Wir klären, wo du stehst und welches Format passt."
+ ],
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "was, mit wem, wie lange, Kalender rechts, Beweis und Telefon am Kalender",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "step-flow",
+   "job": "Ablauf in drei Schritten, was du im Gespräch klärst",
+   "cta": "primary"
+  },
+  {
+   "id": "S03",
+   "element": "person",
+   "job": "wer dich erwartet: Gesprächspartner, Michael als Kopf dahinter",
+   "cta": null
+  },
+  {
+   "id": "S04",
+   "element": "proof",
+   "job": "ProvenExpert-Zeile, drei offene Zitate",
+   "cta": "primary"
+  },
+  {
+   "id": "S05",
+   "element": "check-list",
+   "job": "Vorbereitung, WhatsApp-Hinweis, Umbuchen statt absagen",
+   "cta": null
+  },
+  {
+   "id": "S06",
+   "element": "faq",
+   "job": "sechs Einwände",
+   "cta": "primary"
+  },
+  {
+   "id": "S07",
+   "element": "cta",
+   "job": "Abschluss, Rücksprung zum Kalender, Telefon",
+   "cta": "primary"
+  },
+  {
+   "id": "S08",
+   "element": "text",
+   "job": "Bestätigungszustand nach der Buchung (ersetzt die linke Spalte von S01)",
+   "cta": null
+  }
+ ],
+ "paa_questions": [],
+ "placeholders_allowed": [
+  "Name und Rolle der Person im Gespräch",
+  "Foto der Person im Gespräch",
+  "Fragen im Formular eingerichtet",
+  "Buchungsfenster",
+  "Video von Michael",
+  "Video-Tool",
+  "erste WhatsApp nach der Buchung eingerichtet"
+ ],
+ "blockers": []
+}

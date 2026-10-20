@@ -1,0 +1,48 @@
+name: Monthly Client Reports (GA4 → Portal)
+
+# Erzeugt am 28. jedes Monats einen GA4-Monatsreport (letzter voller Monat) je
+# konfiguriertem Kunden, lädt ihn in den Supabase-Storage (materials-Bucket) und
+# verlinkt ihn über client_reports → erscheint automatisch im Reports-Tab des Kunden.
+#
+# Benötigte Repo-Secrets (Settings → Secrets and variables → Actions):
+#   GA_SA_KEY_B64        base64 des GA-Service-Account-JSON (reporting-bot)
+#   SUPABASE_URL         https://galjmtozcgxcwtzkzbpi.supabase.co
+#   SUPABASE_SERVICE_KEY service_role-Key des 741-portal-Projekts
+#
+# base64 erzeugen:  base64 -i .secrets/ga-sc-reporting-bot.json | pbcopy
+
+on:
+  schedule:
+    - cron: '0 6 28 * *'    # 28. des Monats, 06:00 UTC
+  workflow_dispatch:          # manueller Start aus dem Actions-Tab (mit optionalem Monat)
+    inputs:
+      month:
+        description: 'Monat YYYY-MM (leer = letzter voller Monat)'
+        required: false
+
+jobs:
+  reports:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Restore GA service-account key
+        run: |
+          mkdir -p .secrets
+          echo "${{ secrets.GA_SA_KEY_B64 }}" | base64 -d > .secrets/ga-sc-reporting-bot.json
+      - name: Generate + upload client reports
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          MONTH="${{ github.event.inputs.month }}"
+          if [ -n "$MONTH" ]; then
+            node reporting/monthly-client-report.mjs --upload --month=$MONTH
+          else
+            node reporting/monthly-client-report.mjs --upload
+          fi
+      - name: Cleanup key
+        if: always()
+        run: rm -f .secrets/ga-sc-reporting-bot.json

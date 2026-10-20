@@ -1,0 +1,56 @@
+{
+  "pass": true,
+  "mode": "FEEDBACK",
+  "client": "Praxis Suriya",
+  "slug": "3-beschreibung",
+  "feedback_id": "21a25f8b-8ee2-4f8f-8378-36aac01e35c4",
+  "plan_item_index": 2,
+  "rubric_skipped": true,
+  "checks": {
+    "addresses_client_comment_sentence_for_sentence": {
+      "result": "pass",
+      "detail": [
+        "Source comment (context.json feedback_open, id 21a25f8b) starts with 'ÄNDERN:' then a complete GBP description text -- read correctly as a ready-made replacement, not a request for a new draft.",
+        "Compared the Vorschlag text in feedback/Praxis Suriya/21a25f8b-....md against the context.json comment word by word: identical. No paraphrase, no addition, no omission.",
+        "Every sentence of the client comment is carried into the Vorschlag; nothing was invented beyond what the client supplied."
+      ]
+    },
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "n/a",
+      "detail": "This FEEDBACK draft is a GBP 'Beschreibung' field recommendation, not a page spec -- it has no Title/Meta/H1/NAP/JSON-LD fields. The single [fehlt: ...] tag sits in the Diff-Hinweis, explaining that the original report section could not be fetched for a before/after compare. That is the correct use of [fehlt:] under hard rule 2 (mark missing data, never invent) and is not inside a required field, so this check does not apply."
+    },
+    "nap_matches_locked_record": {
+      "result": "n/a",
+      "detail": "No NAP block in this draft -- content is a business-description text field, not address/phone/hours data."
+    },
+    "jsonld_valid": {
+      "result": "n/a",
+      "detail": "No JSON-LD in this FEEDBACK draft."
+    },
+    "language_matches_market": {
+      "result": "pass",
+      "detail": "DACH practice, market_lang 'de'. Draft is fully in German."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "detail": "Checked for 'heilt', 'garantiert', '100 %', 'Heilung' -- none present. Text names conditions addressed (Migräne, überlastetes Nervensystem, Kopf-/Nacken-/Kieferbeschwerden) and methods used (Akupunktur, manuelle Körpertherapie, Nervenregulation, Ayurveda, orthomolekulare Medizin) without any cure or outcome promise."
+    }
+  },
+  "extra_verification": {
+    "character_count_claim": {
+      "claimed": "669 Zeichen",
+      "verified": 669,
+      "method": "Isolated the exact Vorschlag text to its own file and ran wc -m",
+      "result": "pass -- claim is accurate; fits GBP's 750-character limit with 81 characters of margin"
+    },
+    "verbatim_source_match": {
+      "method": "grepped context.json for feedback_id 21a25f8b and diffed the comment field against the Vorschlag text",
+      "result": "pass -- exact match, confirms no drift or rewriting during drafting"
+    }
+  },
+  "notes": [
+    "Diff-Hinweis correctly states the original report section text was unreachable (not in repo, live report page unreachable from this run) rather than fabricating a before/after comparison -- consistent with hard rule 2 (real data only).",
+    "'Umsetzung' note correctly flags that no further Rückfrage at Coralie is needed since the text came ready-made from the client -- appropriate scope, still just a staged draft for Martin's morning review, no publish action taken."
+  ],
+  "fails": []
+}

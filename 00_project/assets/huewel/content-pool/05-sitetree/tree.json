@@ -1,0 +1,491 @@
+{
+ "meta": {
+  "client": "Praxis Hüwel (Martin Hüwel)",
+  "slug": "huewel",
+  "domain": "www.praxis-huewel.de",
+  "built": "2026-10-11",
+  "programme_modules_source": "website-struktur-master-prompt.md Schritt 4 und 6 (Programmplan-Datei nicht gefunden unter ~/Downloads)",
+  "gsc_note": "Search Console page data (2026-07-11 to 2026-10-09) mostly covers the OLD site, which was replaced on 2026-10-06. New URLs have no history yet. Pages without a number below are not zero: they are not listed under their new address."
+ },
+ "nodes": [
+  {
+   "id": "ST-00",
+   "parent": null,
+   "title": "Startseite",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M2 Startseite",
+   "job": "Stark aufgebaut (1.603 Wörter, FAQ-Markup). Hero, Beweis-Leiste, Anliegen, Leistungen, Ablauf, Preise, Über, Stimmen, FAQ, Standort. Pool-Items ergänzen, nichts umbauen.",
+   "path": "/",
+   "kw": "heilpraktiker nürnberg",
+   "pool_tag": "homepage",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-01",
+   "parent": "ST-00",
+   "title": "Heilpraktiker Nürnberg – Gesundheitspraxis im Nürbanum",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort",
+   "job": "Zweite Seite für 'heilpraktiker nürnberg' (1.063 Wörter). Rolle gegen die Startseite klären, damit sie nicht gegeneinander ranken.",
+   "path": "/heilpraktiker-n%C3%BCrnberg.html",
+   "kw": "heilpraktiker nürnberg",
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Welche der beiden Seiten soll für 'heilpraktiker nürnberg' stehen?"
+   ],
+   "note": "Bei 'heilpraktiker nürnberg' steht die Praxis nicht unter den ersten Treffern (Position 14,9 in der Search Console)."
+  },
+  {
+   "id": "ST-10",
+   "parent": "ST-00",
+   "title": "Methoden als Werkzeuge (Hub)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Erklärt, wie die vier Werkzeuge zusammenspielen. Verlinkt jede Methode.",
+   "path": "/methoden-als-werkzeuge.html",
+   "pool_tag": "service:methoden-hub",
+   "kw": "naturheilkunde nürnberg",
+   "kind": "hub",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-11",
+   "parent": "ST-10",
+   "title": "Frequenztherapie (Ondamed / PEMF)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Hauptbegriff der Praxis. Verfahren, Ablauf, Einordnung, Kosten. 'Frequenztherapie' bleibt der Begriff.",
+   "path": "/methoden-als-werkzeuge/frequenztherapie.html",
+   "kw": "frequenztherapie nürnberg",
+   "pool_tag": "service:frequenztherapie",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-12",
+   "parent": "ST-11",
+   "title": "Magnetfeldtherapie (PEMF) / Ondamed",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Ausbauen von 220 Wörtern: Verfahren, Ablauf, ehrliche Einordnung. Nutzt den Suchbegriff 'magnetfeldtherapie'.",
+   "path": "/methoden-als-werkzeuge/ondamed-therapie.html",
+   "kw": "magnetfeldtherapie",
+   "pool_tag": "service:magnetfeldtherapie",
+   "kind": "page",
+   "audience": "patient",
+   "note": "Die URL sagt 'ondamed-therapie'. Sie bleibt. Title und H1 tragen 'Magnetfeldtherapie (PEMF)'."
+  },
+  {
+   "id": "ST-13",
+   "parent": "ST-10",
+   "title": "Psychosomatische Energetik (PSE)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Hauptseite zur PSE.",
+   "path": "/methoden-als-werkzeuge/psychosomatische-energetik.html",
+   "kw": "psychosomatische energetik nürnberg",
+   "pool_tag": "service:pse",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-14",
+   "parent": "ST-10",
+   "title": "Homöopathie Nürnberg",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Stärkste Nachfrage der Praxis in der Search Console. Ablauf, Kosten, Fragen. Keine Wirksamkeits-Aussagen.",
+   "path": "/methoden-als-werkzeuge/homoeopathie.html",
+   "kw": "homöopathie nürnberg",
+   "pool_tag": "service:homoeopathie",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-15",
+   "parent": "ST-10",
+   "title": "Gesundheitscheck (Bioscan)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Ablauf, Umfang, Grenzen des Verfahrens.",
+   "path": "/methoden-als-werkzeuge/gesundheitscheck.html",
+   "kw": "gesundheitscheck heilpraktiker",
+   "pool_tag": "service:gesundheitscheck",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-16",
+   "parent": "ST-10",
+   "title": "Bioresonanz: erklärt und eingeordnet",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Bleibt als Einordnungs-Seite. Nie als Methodenversprechen. Grenzt die Frequenztherapie ab.",
+   "path": "/methoden-als-werkzeuge/bioresonanz.html",
+   "kw": "bioresonanz",
+   "pool_tag": "service:bioresonanz",
+   "kind": "page",
+   "audience": "patient",
+   "note": "Bicom und Bioresonanz sind vorbelastet (Hinweis von Hüwel). Entscheidung 2026-10-11: Die Erklärung bleibt. Die Seite fällt nicht weg."
+  },
+  {
+   "id": "ST-20",
+   "parent": "ST-15",
+   "title": "Bioscan",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "240 Parameter erklärt, mit ehrlicher Einordnung. Link zum Gesundheitscheck.",
+   "path": "/bioscan.html",
+   "kw": "bioscan",
+   "pool_tag": "service:bioscan",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-21",
+   "parent": "ST-15",
+   "title": "Vitalstoffanalyse",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Was untersucht wird, Ablauf, Fragen.",
+   "path": "/vitalstoffanalyse.html",
+   "kw": "vitalstoffanalyse nürnberg",
+   "pool_tag": "service:vitalstoffanalyse",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-22",
+   "parent": "ST-21",
+   "title": "Mikronährstoff-Begleitung",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Ausbauen von 204 Wörtern. Für wen, Ablauf, Grenzen. Keine Mangel-Diagnose.",
+   "path": "/mikron%C3%A4hrstoff-begleitung.html",
+   "kw": "mikronährstoffanalyse",
+   "pool_tag": "service:mikronaehrstoffe",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-23",
+   "parent": "ST-10",
+   "title": "Nebennierenschwäche (naturheilkundliches Konzept)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Bleibt als 'Konzept' mit Abgrenzung zu Morbus Addison.",
+   "path": "/nebennierenschw%C3%A4che.html",
+   "kw": "nebennierenschwäche symptome",
+   "pool_tag": "service:nebennierenschwaeche",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-24",
+   "parent": "ST-10",
+   "title": "Chronische Erschöpfung",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Zuerst ärztlich abklären, dann Begleitung. Keine Behandlungs- oder Heilaussage.",
+   "path": "/chronische-ersch%C3%B6pfung.html",
+   "kw": "chronische erschöpfung",
+   "pool_tag": "service:erschoepfung",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-25",
+   "parent": "ST-24",
+   "title": "Begleitung bei PostVac und Long Covid",
+   "status": "Neu",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Eigene Seite für die Leistung aus dem Google-Profil. Nur Begleitung, ärztliche Abklärung zuerst.",
+   "slug": "/postvac-long-covid-begleitung.html",
+   "kw": "post vac syndrom",
+   "pool_tag": "service:postvac",
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Gespräch Martin Drendel und Martin Hüwel abwarten; dann Text von Hüwel freigeben"
+   ],
+   "note": "Herkunft: Leistung von Hüwel für das Google-Profil bestätigt. Höchstes HWG-Risiko der Seite. Wartet auf das Gespräch (Stand 2026-10-11). Bis dahin keine Seite."
+  },
+  {
+   "id": "ST-26",
+   "parent": "ST-10",
+   "title": "Ursachen-Klarheitsanalyse",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Ausbauen von 181 Wörtern: Inhalt, Ablauf, Preis, für wen.",
+   "path": "/ursachen-klarheitsanalyse.html",
+   "kw": null,
+   "pool_tag": "service:ursachenanalyse",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-27",
+   "parent": "ST-10",
+   "title": "Der Wartezeit-Vermeider (Mini-Audit)",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M10 Conversion",
+   "job": "Einstieg für Besucher, die noch nicht buchen. Seite hat 167 Wörter.",
+   "path": "/der-wartezeit-vermeider.html",
+   "pool_tag": "service:wartezeit",
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-30",
+   "parent": "ST-00",
+   "title": "Was ist Ihr Anliegen?",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Leistungsseiten",
+   "job": "Heute eine Sammelseite für alle Anliegen (597 Wörter). Wird zum Hub für einzelne Anliegen-Seiten.",
+   "path": "/was-ist-ihr-anliegen.html",
+   "kw": "bei welchen beschwerden zum heilpraktiker",
+   "pool_tag": "service:anliegen",
+   "kind": "hub",
+   "audience": "patient",
+   "needs_client": [
+    "Texte der zwei Anliegen-Seiten freigeben"
+   ],
+   "note": "Die alten Unterseiten (Schmerzen und Verletzungen: 7 Klicks bei 71 Impressionen in 90 Tagen) leiten heute auf Anker dieser Seite. Entscheidung 2026-10-11: zwei Anliegen-Seiten gehen voran. Nur Anliegen, keine Diagnosen."
+  },
+  {
+   "id": "ST-31",
+   "parent": "ST-30",
+   "title": "Schmerzen und Verletzungen (Anliegen)",
+   "status": "Vorschlag",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Eigene Seite aus dem Inhalt der alten Seite. Alltag und Anliegen, keine Krankheitsnamen.",
+   "slug": "/anliegen-schmerzen-verletzungen.html",
+   "kw": "bandscheibenvorfall nürnberg",
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Freigabe des Anliegens und des Textes"
+   ],
+   "note": "Herkunft: Inhalt der alten Seite. Entscheidung 2026-10-11: geht voran. Vorschlag bleibt es, bis Hüwel den Text freigibt (HWG)."
+  },
+  {
+   "id": "ST-32",
+   "parent": "ST-30",
+   "title": "Stress, Erschöpfung und Psyche (Anliegen)",
+   "status": "Vorschlag",
+   "origin": "kunde",
+   "module": "M5 Leistungsseiten",
+   "job": "Eigene Seite für Stress, Erschöpfung und Anspannung. Alltagssprache, keine Diagnosen. Schlaf folgt erst bei belegter Nachfrage.",
+   "slug": "/anliegen-stress-psyche.html",
+   "kw": "stress heilpraktiker nürnberg",
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Freigabe des Anliegens und des Textes"
+   ],
+   "note": "Herkunft: Inhalt der alten Seite 'psyche-seele-konflikte-aengste' und 'stress-verhindern'. Entscheidung 2026-10-11: geht voran. Vorschlag bleibt es, bis Hüwel den Text freigibt."
+  },
+  {
+   "id": "ST-40",
+   "parent": "ST-00",
+   "title": "Termine und Ablauf",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M10 Conversion",
+   "job": "Ersttermin, Vorbereitung, Honorar, Absage, Mini-FAQ. Preise und Erstattung klar.",
+   "path": "/termine.html",
+   "kw": "heilpraktiker erstgespräch",
+   "pool_items": [
+    "CP-SVC-002",
+    "CP-SVC-003",
+    "CP-SVC-005",
+    "CP-SVC-004"
+   ],
+   "kind": "page",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-41",
+   "parent": "ST-00",
+   "title": "Kontakt und Anfahrt",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M5 Standort",
+   "job": "Heute 104 Wörter. Anfahrt, Parken, Nürbanum, Zeiten, Karte, Formular.",
+   "path": "/kontakt.html",
+   "kw": null,
+   "pool_items": [
+    "CP-LOC-002",
+    "CP-SVC-026"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Parken und Barrierefreiheit bestätigen"
+   ]
+  },
+  {
+   "id": "ST-42",
+   "parent": "ST-00",
+   "title": "Über mich: Martin Hüwel",
+   "status": "Überarbeiten",
+   "origin": "bestand",
+   "module": "M6 Behandlerseite",
+   "job": "Klinik-Erfahrung, Ausbildung, Verbände, Person-Auszeichnung. 375 Wörter.",
+   "path": "/ueber-mich.html",
+   "kw": "martin hüwel",
+   "pool_items": [
+    "CP-BRD-003",
+    "CP-AUT-001",
+    "CP-AUT-006",
+    "CP-AUT-008",
+    "CP-AUT-004"
+   ],
+   "kind": "page",
+   "audience": "patient",
+   "needs_client": [
+    "Liste der Weiterbildungen und Verbände mit Nachweis"
+   ]
+  },
+  {
+   "id": "ST-50",
+   "parent": "ST-00",
+   "title": "Blog und Beiträge",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M8 Hub und Spoke",
+   "job": "Bleibt. Beiträge auf Wirksamkeitsaussagen prüfen (HWG).",
+   "path": "/blog.html",
+   "pool_items": [
+    "CP-AUT-005",
+    "CP-SVC-010"
+   ],
+   "kind": "hub",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-51",
+   "parent": "ST-50",
+   "title": "Fünf Beiträge zur Homöopathie",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "M8 Hub und Spoke",
+   "job": "Bleiben. Vor dem Ausbau auf HWG prüfen.",
+   "kind": "group",
+   "group_patterns": [
+    "/artikel/"
+   ],
+   "audience": "patient"
+  },
+  {
+   "id": "ST-60",
+   "parent": "ST-00",
+   "title": "Impressum",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Pflichtseite.",
+   "path": "/impressum.html",
+   "kind": "system",
+   "audience": "patient"
+  },
+  {
+   "id": "ST-61",
+   "parent": "ST-00",
+   "title": "Datenschutz",
+   "status": "Bleibt",
+   "origin": "bestand",
+   "module": "Pflicht",
+   "job": "Pflichtseite. Von Hüwel gegenlesen lassen (offen).",
+   "path": "/datenschutz.html",
+   "kind": "system",
+   "audience": "patient"
+  }
+ ],
+ "reasons": [
+  "<b>The homepage is strong. The depth is uneven.</b> The homepage has {home_words} words (floor {floor}, median of 13 Nürnberg practice homepages {median}). The method pages have 540 to 780 words, but Magnetfeldtherapie has {words:ST-12}, Mikronährstoffe {words:ST-22}, Ursachen-Klarheitsanalyse {words:ST-26}, Wartezeit-Vermeider {words:ST-27} and Kontakt {words:ST-41} words. There is no page for PostVac and Long Covid and none for single concerns.",
+  "<b>The relaunch changes the data.</b> Search Console (2026-07-11 to 2026-10-09) mixes the old and the new site. 62 of the 72 page clicks went to the home page. The old concern pages are now redirect stubs to anchors of one page. The old page 'Schmerzen und Verletzungen' had 7 clicks and 71 impressions.",
+  "<b>Own visibility.</b> DataForSEO lists only 2 keywords with volume for the domain after the relaunch. In the Local Falcon scan of 2026-08-18 the practice held 'frequenztherapie nürnberg' at 87.8 % and 'heilpraktiker nürnberg' at 6.1 %. Today it stands at position 14.6 for 'heilpraktiker nürnberg' (Search Console).",
+  "<b>Proof and structured data are thin.</b> Google shows 10 reviews, the competitors in the Local Pack 22 to 107. The MedicalBusiness markup has no opening hours, no sameAs and no service list.",
+  "<b>Links.</b> Referring domains: {rd}. Source: DataForSEO backlinks summary, 2026-10-11."
+ ],
+ "not_built": [
+  "Pages for Fürth, Erlangen, Schwabach: demand 210 to 320 searches, but no catchment proof and no local facts (pool item CP-LOC-004, cut).",
+  "Pages for Entgiftung, Darmsanierung, Histamin-Test, Mikroimmuntherapie: not offered (CP-SVC-023, cut). Together more than 38,000 searches that do not fit the services.",
+  "Pages for Heilpraktiker-Ausbildung and Heileurythmie: not offered (CP-SVC-024, cut).",
+  "A page for entrepreneurs and a page for heavy metals wait for the client (CP-SVC-021, CP-SVC-022).",
+  "Directory work and the Doctolib correction: link and entity work, not pages (CP-AUT-007, CP-LOC-005)."
+ ],
+ "redirect_proposals": [],
+ "catchment": [
+  {
+   "level": 1,
+   "name": "Kern-Ort",
+   "places": [
+    "Nürnberg",
+    "Südstadt",
+    "Nürbanum"
+   ],
+   "action": "Startseite und alle Leistungen mit Ortsbezug. Standort-Block mit Nürbanum und Anfahrt.",
+   "kw": [
+    "heilpraktiker nürnberg",
+    "heilpraktiker nürnberg südstadt",
+    "homöopathie nürnberg",
+    "frequenztherapie nürnberg",
+    "naturheilpraxis nürnberg"
+   ]
+  },
+  {
+   "level": 2,
+   "name": "Große Nachbarn",
+   "places": [
+    "Erlangen",
+    "Fürth"
+   ],
+   "action": "Keine eigenen Seiten: Nachfrage da, aber keine Einzugs-Belege und keine lokalen Fakten. Namen im Absatz zur Umgebung.",
+   "kw": [
+    "heilpraktiker erlangen",
+    "heilpraktiker fürth"
+   ]
+  },
+  {
+   "level": 3,
+   "name": "Klarer dritter Ort",
+   "places": [],
+   "action": "Keiner belegt. Erst nach den echten Patienten-Orten von Hüwel.",
+   "kw": []
+  },
+  {
+   "level": 4,
+   "name": "Kleinorte",
+   "places": [
+    "Schwabach"
+   ],
+   "action": "Nur im Fließtext.",
+   "kw": [
+    "heilpraktiker schwabach"
+   ]
+  }
+ ]
+}

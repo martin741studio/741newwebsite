@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dein nächstes Money-Level | Growth Identity Coaching – Deep NLP</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tally Embed Script for seamless popup or inline interaction -->
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <style>
+    :root {
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Source Sans 3', sans-serif;
+      --color-bg: #FAFAFA;
+      --color-card: #FFFFFF;
+      --color-text-main: #111827;
+      --color-text-muted: #4B5563;
+      --color-accent-yellow: #FFE11F;
+      --color-accent-gold: #F59E0B;
+      --color-dark: #000000;
+      --color-border: #E5E7EB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-lg: 0 20px 40px -15px rgba(0,0,0,0.12);
+      --shadow-xl: 0 25px 50px -12px rgba(0,0,0,0.18);
+      --radius-lg: 18px;
+      --radius-pill: 9999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      font-family: var(--font-body);
+      color: var(--color-text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 0 16px 60px 16px;
+    }
+
+    /* Top Brand Bar */
+    .brand-header {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 0 16px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .brand-logo {
+      height: 48px;
+      width: auto;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    .brand-logo:hover {
+      transform: scale(1.03);
+    }
+
+    /* Main Container */
+    .thankyou-container {
+      max-width: 840px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Overheadline */
+    .overheadline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFBEB;
+      color: #92400E;
+      border: 1px solid #FDE68A;
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      margin-top: 16px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Main Headline */
+    .headline {
+      font-family: var(--font-heading);
+      font-size: 2.35rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--color-text-main);
+      margin-bottom: 18px;
+      max-width: 780px;
+      letter-spacing: -0.02em;
+    }
+
+    @media (max-width: 640px) {
+      .headline {
+        font-size: 1.75rem;
+        line-height: 1.3;
+      }
+    }
+
+    /* Subline */
+    .subline {
+      font-size: 1.2rem;
+      color: var(--color-text-muted);
+      max-width: 680px;
+      margin-bottom: 36px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 640px) {
+      .subline {
+        font-size: 1.05rem;
+        margin-bottom: 24px;
+      }
+    }
+
+    /* Video Frame Card */
+    .video-wrapper {
+      width: 100%;
+      max-width: 760px;
+      position: relative;
+      background: #000;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid rgba(0,0,0,0.08);
+      margin-bottom: 32px;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* Video Placeholder / Thumbnail Artwork */
+    .video-thumbnail {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      padding: 24px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .video-wrapper:hover .video-thumbnail {
+      transform: scale(1.015);
+    }
+
+    .thumbnail-badge {
+      font-family: var(--font-heading);
+      background: var(--color-accent-yellow);
+      color: #000;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(255, 225, 31, 0.4);
+    }
+
+    .thumbnail-title {
+      font-family: var(--font-heading);
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: #FFFFFF;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      max-width: 600px;
+      text-shadow: 0 4px 16px rgba(0,0,0,0.6);
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .thumbnail-title {
+        font-size: 1.45rem;
+        margin-bottom: 16px;
+      }
+    }
+
+    /* Play Button */
+    .play-button-circle {
+      width: 76px;
+      height: 76px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .play-button-circle svg {
+      width: 32px;
+      height: 32px;
+      fill: #0F172A;
+      margin-left: 4px;
+    }
+
+    .video-wrapper:hover .play-button-circle {
+      transform: scale(1.12);
+      background: #FFFFFF;
+      box-shadow: 0 14px 30px rgba(255, 225, 31, 0.5);
+    }
+
+    .video-wrapper:hover .play-button-circle svg {
+      fill: #000000;
+    }
+
+    /* CTA Button Section */
+    .cta-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      max-width: 640px;
+      margin-bottom: 48px;
+    }
+
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      max-width: 540px;
+      background: var(--color-accent-yellow);
+      color: #000000;
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 800;
+      text-decoration: none;
+      padding: 20px 32px;
+      border-radius: 12px;
+      border: 3px solid #000000;
+      cursor: pointer;
+      box-shadow: 0 8px 0 #000000;
+      transition: all 0.15s ease-in-out;
+      text-transform: none;
+    }
+
+    .btn-apply:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 0 #000000;
+      background: #FFF04D;
+    }
+
+    .btn-apply:active {
+      transform: translateY(4px);
+      box-shadow: 0 4px 0 #000000;
+    }
+
+    @media (max-width: 640px) {
+      .btn-apply {
+        font-size: 1.1rem;
+        padding: 18px 24px;
+      }
+    }
+
+    .btn-apply svg {
+      width: 24px;
+      height: 24px;
+      stroke: #000000;
+      stroke-width: 2.5;
+      fill: none;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-apply:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* Subline under Button */
+    .subline-cta {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #4B5563;
+      max-width: 500px;
+      line-height: 1.45;
+    }
+
+    /* Information Box / Trust Signals */
+    .trust-box {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 14px;
+      padding: 24px 28px;
+      max-width: 680px;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 48px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .trust-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: #374151;
+    }
+
+    .trust-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.45;
+    }
+
+    .trust-list li span.bullet {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--color-border);
+      padding-top: 24px;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 840px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.85rem;
+      color: #6B7280;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: #4B5563;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover {
+      color: #000000;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Brand Logo Header -->
+  <header class="brand-header">
+    <a href="https://deep-nlp.com/" title="Deep NLP Startseite">
+      <img src="https://deep-nlp.com/wp-content/uploads/2024/03/2-8-300x300.png" alt="DEEP NLP Logo" class="brand-logo" width="48" height="48">
+    </a>
+  </header>
+
+  <!-- Main Thank-You Content -->
+  <main class="thankyou-container">
+
+    <!-- Overheadline -->
+    <div class="overheadline">
+      🕓 Nur wenige 1:1-Coaching-Plätze verfügbar!
+    </div>
+
+    <!-- Main Headline -->
+    <h1 class="headline">
+      Dein nächstes Money-Level beginnt mit Deiner Growth Identity!
+    </h1>
+
+    <!-- Subline -->
+    <p class="subline">
+      Erfahre im Video, wie wir Deine Growth-Identity entwickeln, damit Dein Einkommen auf ein völlig neues Level wächst.
+    </p>
+
+    <!-- Video Wrapper / Player Placeholder -->
+    <div class="video-wrapper" id="videoTrigger" onclick="openApplicationModal()" title="Video abspielen / Bewerbung starten">
+      <div class="video-thumbnail">
+        <div class="thumbnail-badge">EXKLUSIVES 1:1-COACHING</div>
+        <div class="thumbnail-title">NEUE IDENTITÄT, MEHR GELD?!</div>
+        <div class="play-button-circle" aria-label="Video abspielen">
+          <svg viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-container">
+      <!-- Button connects with new Tally application form. Configured for Tally Popup Modal & fallback URL -->
+      <a href="#tally-open" 
+         class="btn-apply" 
+         id="applyBtn"
+         data-tally-open="wAbCdE" 
+         data-tally-layout="modal"
+         data-tally-width="680"
+         data-tally-auto-close="0"
+         onclick="handleApplyClick(event)">
+        <span>Jetzt für 1zu1-Coaching bewerben!</span>
+        <svg viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+
+      <!-- Subline under Button -->
+      <p class="subline-cta">
+        Begrenzte 1:1-Kapazität. Bewirb Dich jetzt für die nächste Coaching-Runde!
+      </p>
+    </div>
+
+    <!-- Clarification / Process Overview Box -->
+    <div class="trust-box">
+      <div class="trust-title">
+        <span>💡</span> So funktioniert Deine Bewerbung:
+      </div>
+      <ul class="trust-list">
+        <li>
+          <span class="bullet">1️⃣</span>
+          <span><strong>Kurze Standortbestimmung:</strong> Beantworte wenige gezielte Fragen zu Deiner aktuellen Situation und Deinen Einkommenszielen (Dauer ca. 2–3 Minuten).</span>
+        </li>
+        <li>
+          <span class="bullet">2️⃣</span>
+          <span><strong>Persönliche Prüfung:</strong> Marcel und das NLP-Team prüfen Deine Angaben sorgfältig auf Passgenauigkeit.</span>
+        </li>
+        <li>
+          <span class="bullet">3️⃣</span>
+          <span><strong>Rückmeldung:</strong> Wenn Dein Profil für einen der wenigen 1:1-Plätze passt, melden wir uns persönlich für die nächsten Schritte.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <ul class="footer-links">
+        <li><a href="https://deep-nlp.com/impressum/" target="_blank" rel="noopener">IMPRESSUM</a></li>
+        <li>•</li>
+        <li><a href="https://deep-nlp.com/datenschutz/" target="_blank" rel="noopener">DATENSCHUTZ</a></li>
+      </ul>
+      <p>&copy; 2026 DEEP NLP &bull; Marcel Rosenbach. Alle Rechte vorbehalten.</p>
+    </footer>
+
+  </main>
+
+  <script>
+    // Handler for CTA click
+    function handleApplyClick(e) {
+      // If Tally embed script is active and form ID configured, Tally opens automatically via data attributes.
+      // Fallback: If opening direct URL or placeholder
+      if (typeof Tally !== 'undefined') {
+        // Tally modal triggered
+      } else {
+        console.log('Tally popup triggered');
+      }
+    }
+
+    function openApplicationModal() {
+      // Clicking video thumbnail can trigger playback or application
+      const btn = document.getElementById('applyBtn');
+      if (btn) {
+        btn.click();
+      }
+    }
+  </script>
+</body>
+</html>

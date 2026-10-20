@@ -1,0 +1,31 @@
+-- Johni Jaya Motor (b84427b9-57bc-4145-83fc-ec284d2de785): 7 decision cards as DRAFT for the portal module "Entscheidungen".
+-- Status draft = the client sees nothing. Nothing is released. Facts checked on 13 Oct 2026 (Bali lesson: every card verified first).
+-- Language: English, Martin in first person, "you", simple words. Indonesia: HWG does not apply. health_client = false. No tool names.
+-- Codes start at E1 (the client had no items before).
+--
+-- Checks behind each card (details in queue.md):
+--   E1 Hours: site footer + Yoast schema = Mon-Sat 09:00-16:30 (curl 13.10.); Google Maps (Chrome 13.10.) "Open, Closes 4.30 pm";
+--      owner post dated 11 Aug 2026 on the Maps listing says "Buka setiap hari, 09.00-18.00"; competitor closing times from the Maps search
+--      "bengkel mobil jakarta utara" (9 results, 13.10.): 7 close after 16.30 (Fortuna 5pm, Permata Gading 5pm, Quick Service 9pm,
+--      Phoran 5pm, DOMO 5pm, Shop & Drive 8pm, Dokter Mobil 5pm), 2 close at 4.30pm (Nusantara, Leo Jaya).
+--   E2 Form: WordPress table wp_e_submissions (read only, 13.10.): 1,603 rows 9 May 2025 to 13 Oct 2026, form on page 32 (home) = 1,598,
+--      "Booking Overhaul" on page 992242 = 5. No row has an Indonesian phone number or an Indonesian email. All readable rows are spam
+--      (ads, bots, medical text, "I wanted to know your price" bot template in many languages). First row is a test by the developer.
+--      No captcha keys and no honeypot field are set. Email action goes to an address on johnijayamotor.com.
+--   E3 Offers: home page text "EXP 01.03.2026" twice (Diskon 10% Tune Up akhir pekan, gratis Balancing for Overhaul); same offers without
+--      end date on /tune-up-mobil-jakarta-utara/, /balancing-jakarta-utara/, /overhaul-mesin-jakarta-utara/ (curl of all 30 sitemap URLs, 13.10.).
+--      "Lihat Semua Promo" href="#".
+--   E4 WhatsApp: home page has 1 wa.me link (footer number text, "wa.me/+62..."), service pages have buttons with the text "Halo Johni Jaya Motor".
+--      GBP booking link = wa.me/628176583223 (set 13.10., memory johnijayamotor-client).
+--   E5 H1: live H1 "Servis Mobil Cepat, Berkualitas, dan Terpercaya di Jakarta Utara" (curl 13.10.); title already has "Bengkel & Servis Mobil".
+--      Search Console, 90 days to 11 Oct 2026: 25 query rows, 65 impressions, 13 rows with "bengkel" = 38 impressions (58%), 1 row with "servis".
+--      Small numbers, many terms are hidden by Google. All page impressions (408) and clicks (8) are on the home page.
+--   E6 Prices: home page "Mulai dari" for all 5 jobs; service pages "Mulai Rp140.000", "Mulai Rp385.000", "Mulai Rp250.000", "Mulai Rp4.000.000",
+--      but balancing page "Rp50.000 / ban" without "from". GBP side from Martin's dashboard pass of 13.10. (memory): Spooring, Tune Up, Carbon Clean
+--      saved as FIXED prices, Balancing and Overhaul as "from". NOT visible in the public Maps view yet (pending Google review).
+--      Confirm the GBP price type in the Business Profile Manager before release.
+--   E7 Reviews: Maps shows 31 reviews, 5.0 (13.10.). Maps search results (13.10.): Leo Jaya 24, Phoran 45, Fortuna 69, Permata Gading 94,
+--      Nusantara 131, Shop & Drive 141, Quick Service 255, DOMO 285, Dokter Mobil 406 (middle = 131). Owner replies to reviews himself.
+-- Approver: no approver is set. A client login profile exists (user ccb8d800-a54e-4439-b74a-2b4c0273ba8d, "Johni Jaya Motor", created by SQL,
+--   credentials not sent). Martin decides if this user becomes approver_user_id. Until then the client cannot decide.
+-- Risk: E3 and E6 are price items (active yes, no 7-day rule). hwg_checked stays false (not a health client).

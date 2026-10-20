@@ -1,0 +1,68 @@
+{
+ "date": "2026-10-11",
+ "page": "st-37-krypto/05-final/page.md",
+ "pass": true,
+ "gates": {
+  "G1 facts": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Claims nicht verwendet: ['C05']"
+   ]
+  },
+  "G2 legal": {
+   "mode": "brao",
+   "pass": true,
+   "block": [],
+   "review": [],
+   "notice_missing": false,
+   "fails": []
+  },
+  "G3 seo": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "Wortzahl 1467 außerhalb Zielbereich 850 bis 1300"
+   ],
+   "info": {
+    "words": 1467,
+    "placeholders": 4
+   }
+  },
+  "G4 style": {
+   "pass": true,
+   "fails": [],
+   "warns": [],
+   "counts": {
+    "du": 0,
+    "sie": 10,
+    "ich": 1,
+    "wir": 6
+   }
+  },
+  "G5 slop (lint)": {
+   "lang": "de",
+   "score": 5,
+   "words": 1467,
+   "hits": {
+    "vocabulary": [],
+    "constructions": [],
+    "punctuation": [],
+    "rhythm": [],
+    "invented proof": []
+   },
+   "pass": true,
+   "fails": [],
+   "warns": []
+  },
+  "G6 seo/geo coverage + schema": {
+   "pass": true,
+   "fails": [],
+   "warns": [
+    "[Hinweis] Begriffs-Abdeckung 72 % (40 Begriffe aus mindestens 50 % der Seiten). Fehlen: finanzamt, anleger, wallet, online, besteuerung, steuerberater, investoren, börsen, airdrops, übersicht, blockchain. Pflicht nur, wenn die Suchabsicht den Begriff braucht.",
+    "Article ohne datePublished (erst nach Freigabe des Kunden setzen)",
+    "Article ohne Autorenname"
+   ]
+  }
+ }
+}

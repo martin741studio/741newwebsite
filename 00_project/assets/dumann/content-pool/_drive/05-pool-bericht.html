@@ -1,0 +1,997 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Content Pool: Naturheilpraxis Daniela Dumann</title><style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1d2320;--mut:#66706b;--line:#e2e0d8;--acc:#2f5d50;--a:#2f5d50;--b:#8a6d1f;--c:#6b7280;--cut:#a23b3b;--warn:#b45309;--ok:#2f5d50}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#141816;--card:#1c211f;--ink:#e8ece9;--mut:#9aa5a0;--line:#2b322f;--acc:#7fc4ae;--a:#7fc4ae;--b:#d6b25a;--c:#9aa5a0;--cut:#e08585;--warn:#e0a45a;--ok:#7fc4ae}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 80px}
+h1{font-size:28px;margin:0 0 4px}h2{font-size:22px;margin:40px 0 12px;padding-top:8px;border-top:1px solid var(--line)}h3{font-size:18px;margin:24px 0 8px}h5{margin:0 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.sub{color:var(--mut);margin:0 0 16px}.meta{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:13px}
+.chip b{color:var(--acc)}
+.find{display:grid;gap:10px}.find div{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:8px;padding:12px 16px}
+.find .ids{display:block;margin-top:6px;font-size:12px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.pcard h3{margin:0 0 6px}.pcard .cnt{font-size:13px;color:var(--mut);margin-bottom:8px}.pcard ol{padding-left:18px;margin:8px 0 0;font-size:14px}
+table{border-collapse:collapse;width:100%;font-size:14px;background:var(--card)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--bg);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.tblwrap{overflow-x:auto}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px}.filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 14px;cursor:pointer;font-size:13px}.filters button.on{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+details.item{background:var(--card);border:1px solid var(--line);border-radius:8px;margin:6px 0}details.item>summary{list-style:none;cursor:pointer;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 12px}
+details.item>summary::-webkit-details-marker{display:none}.rank{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--mut)}
+.topic{flex:1 1 280px;font-weight:600}.num{font-variant-numeric:tabular-nums;width:28px;text-align:right}.bar{display:inline-block;width:80px;height:8px;background:var(--line);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+.prio{display:inline-block;min-width:22px;text-align:center;border-radius:4px;color:#fff;font-weight:700;font-size:12px;padding:1px 6px}.pr-A{background:var(--a)}.pr-B{background:var(--b)}.pr-C{background:var(--c)}.pr-cut{background:var(--cut)}
+.tag2,.tag{font-size:12px;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:1px 6px}.pill{font-size:11px;border-radius:4px;padding:1px 6px;border:1px solid var(--line)}.c-review{color:var(--warn);border-color:var(--warn)}.c-block{color:var(--cut);border-color:var(--cut)}.c-ok{color:var(--ok)}
+.st{font-size:12px;color:var(--mut)}.st-needs_client{color:var(--warn)}.st-adjacent_review{color:var(--cut)}
+.body{padding:4px 16px 14px;border-top:1px solid var(--line)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:720px){.grid{grid-template-columns:1fr}.bar{display:none}}
+.mut{color:var(--mut)}.mini td{border:0;padding:2px 10px 2px 0}.needs{color:var(--warn)}details.raw{margin-top:8px}details.raw summary{cursor:pointer;color:var(--acc);font-size:14px}details.raw li{font-size:13px;margin:3px 0}
+.map td:first-child{white-space:nowrap;font-weight:600}.empty{color:var(--mut);font-style:italic}
+a{color:var(--acc)}.note{background:var(--card);border:1px dashed var(--line);border-radius:8px;padding:10px 14px;margin:10px 0;font-size:14px}
+.hidden{display:none}
+</style></head><body><div class="wrap">
+<h1>Content Pool: Naturheilpraxis Daniela Dumann</h1><p class="sub">Homepage first. Existing site. Health client, HWG mode.</p>
+<div class="meta"><span class="chip">Date <b>2026-10-11</b></span><span class="chip">Mode <b>existing</b></span><span class="chip">Items <b>40</b> live, <b>2</b> cut</span><span class="chip">Paid data <b>0.48 USD</b> of 5 USD cap</span><span class="chip">Competitor sites <b>16</b> (1 unreadable)</span><span class="chip">Validator <b>passed</b></span></div>
+<h2 id="findings">What you must know first</h2><div class="find">
+<div>Her Search Console shows two audiences. Of the 4,199 impressions in the listed queries, 1,981 (47 %) come from training and lexicon searches, 2,032 (48 %) from patient and service searches, and 186 from her name. The clicks show the problem: 98 clicks come from her name, 12 from patient and service searches, 3 from training searches. Patient searches show up, but they do not bring clicks yet. The DataForSEO data adds: 0 of 63 ranked keywords is a generic patient search such as &#x27;heilpraktiker berlin&#x27;. The homepage must speak to patients. The Viriditas school moves to its own area.<span class="ids">Items: CP-BRD-004, CP-BRD-005</span></div>
+<div>Her own Search Console (3 months, 375 clicks in total) shows real patient demand that the site already serves near the top: Schilddrüse queries get 269 impressions (best position 3.5), Aderlass queries get 152 impressions (best position 1.5). Hildegard fasting searches get 942 impressions, but the best position is 46.2, far from page 1, on a course page.<span class="ids">Items: CP-SVC-014, CP-SVC-006, CP-SVC-011</span></div>
+<div>The homepage has 335 words. The floor from gate A0 is 465 words (70 % of the median 664 words of 7 competitor homepages). The page is below the floor.<span class="ids">Items: CP-SVC-001, CP-SVC-002, CP-SVC-003</span></div>
+<div>Hildegard-Heilkunde in Charlottenburg is open ground in the readable set: 0 of 9 local practice sites name Hildegard in title, heading or URL. Caveat: the site naturheilpraxis-berlin-westend.de ranks #2 for this search and blocks all readers. Check it by hand before this claim goes to the client.<span class="ids">Items: CP-BRD-001, CP-SVC-018</span></div>
+<div>The big competitor keywords are a trap. Colon-Hydro-Therapie (6,600 searches), HPU and Blutegel (5,400) belong to services the client does not offer. The fit test cuts them.<span class="ids">Items: CP-SVC-020</span></div>
+<div>Proof is the weak point, links are not. Google shows 5.0 with 9 reviews. Competitors in the Local Pack have 13 to 51 reviews. All visible reviews are about courses, not about patient visits. Patient quotes with consent do not exist yet. Her domain has 148 referring domains, the three competitors checked have 55 to 215 (DataForSEO backlinks summary, 2026-10-11).<span class="ids">Items: CP-AUT-003, CP-AUT-004, CP-AUT-005</span></div>
+<div>Visitors expect prices, a first-visit block and an FAQ. 5 of 9 local sites show prices or costs. The client has verified prices (220 EUR, 150 EUR per hour). Use them.<span class="ids">Items: CP-SVC-002, CP-SVC-003, CP-SVC-004</span></div>
+</div>
+<h2 id="pillars">The four pillars</h2><div class="cards">
+<div class="pcard"><h3>Location</h3><div class="cnt">5 items · 1 A · 3 need the client</div><p>Hero with city and district, a full location block, places named in text only. Place pages for Wilmersdorf and Westend fail the proof rule and are cut. Open: catchment, parking, one brand name across website and Google profile.</p><b>Top items</b><ol><li>Hero-Überschrift mit Stadt und Bezirk (Heilpraktikerin Berlin-Charlottenburg) <span class="mut">(83)</span></li><li>Umgebung in einem Satz (Wilmersdorf, Westend, Schöneberg, Spandau) ohne eigene Ortsseiten <span class="mut">(72)</span></li><li>Namens- und Profil-Konsistenz: Website &#x27;Naturheilpraxis Daniela Dumann&#x27; vs. GBP &#x27;Hildegard von Bingen Berlin Naturheilpraxis …&#x27; <span class="mut">(66)</span></li></ol></div>
+<div class="pcard"><h3>Main service</h3><div class="cnt">20 items · 9 A · 5 need the client</div><p>Eight real services, each with a card and later its own page. Questions and costs sit around real services only. Condition-based Hildegard searches wait for the client and the HWG check. Seasonal note: fasting interest peaks in February.</p><b>Top items</b><ol><li>Aderlass nach Hildegard: Leistungskarte und eigene Seite <span class="mut">(83)</span></li><li>Schilddrüse: Begleitung (Leistung genau klären) <span class="mut">(83)</span></li><li>Ernährungsberatung: Leistungskarte und eigene Seite <span class="mut">(83)</span></li></ol></div>
+<div class="pcard"><h3>Brand</h3><div class="cnt">5 items · 3 A · 2 need the client</div><p>Hildegard-Heilkunde as the clear difference. Method in three sentences, story of the practitioner. Two audiences are split: patients on the homepage, trainees in the Viriditas area.</p><b>Top items</b><ol><li>Positionierung: Hildegard-Heilkunde in Charlottenburg (im lesbaren Wettbewerbs-Set unbesetzt) <span class="mut">(88)</span></li><li>Viriditas – Kurse und Ausbildung: eigene Seiten und Teaser <span class="mut">(81)</span></li><li>Zwei Zielgruppen trennen: Startseite für Patient:innen, Viriditas-Schule als eigener Bereich <span class="mut">(76)</span></li></ol></div>
+<div class="pcard"><h3>Authority</h3><div class="cnt">10 items · 1 A · 4 need the client</div><p>Qualifications and the vice-president role are verified and unique. Reviews, patient quotes and the garden need client input. Directory listings go to the backlink workflow.</p><b>Top items</b><ol><li>Beweis-Leiste: Google 5,0 (9 Bewertungen) mit kurzem Zitat <span class="mut">(78)</span></li><li>Hildegard-Kräutergarten als Beweis-Asset (Seminare, Pflanzen aus dem Garten) <span class="mut">(73)</span></li><li>Qualifikationen: Heilpraktikerin seit 2002, Dipl.-Sozialpädagogin (FH) seit 1985, weitere Abschlüsse <span class="mut">(72)</span></li></ol></div>
+</div>
+<h2 id="map">Homepage map: where the pool plugs into the CRO blueprint</h2><p class="mut">The 10 rows are the CRO P0 blueprint. The pool never removes a row. It ranks what goes into each row.</p><div class="tblwrap"><table class="map"><tr><th>CRO row</th><th>Pool items (best first)</th></tr>
+<tr><td>1 Hero</td><td><span class="prio pr-A">A</span> Positionierung: Hildegard-Heilkunde in Charlottenburg (im lesbaren Wettbewerbs-Set unbesetzt) <span class="mut">CP-BRD-001</span><br><span class="prio pr-A">A</span> Hero-Überschrift mit Stadt und Bezirk (Heilpraktikerin Berlin-Charlottenburg) <span class="mut">CP-LOC-001</span></td></tr>
+<tr><td>2 Proof strip</td><td><span class="prio pr-A">A</span> Beweis-Leiste: Google 5,0 (9 Bewertungen) mit kurzem Zitat <span class="mut">CP-AUT-003</span></td></tr>
+<tr><td>3 Is this for me?</td><td><span class="prio pr-B">B</span> &#x27;Ist das etwas für mich?&#x27;: 3 bis 5 Anliegen der Praxis, in Alltagssprache <span class="mut">CP-SVC-005</span></td></tr>
+<tr><td>4 Services</td><td><span class="prio pr-B">B</span> Leistungs-Übersicht: 8 Karten mit Link zur Leistung <span class="mut">CP-SVC-001</span></td></tr>
+<tr><td>5 First visit</td><td><span class="prio pr-B">B</span> Preise und Abrechnung: 220 € Erstanamnese, 150 €/Std, GebüH, private Erstattung ohne Garantie <span class="mut">CP-SVC-003</span><br><span class="prio pr-B">B</span> Der erste Termin: Ablauf, Dauer 60 Min, Preis 220 €, Buchung <span class="mut">CP-SVC-002</span></td></tr>
+<tr><td>6 About the practitioner</td><td><span class="prio pr-B">B</span> Über Daniela: Geschichte, warum Hildegard, echtes Portrait <span class="mut">CP-BRD-003</span><br><span class="prio pr-B">B</span> Hildegard-Kräutergarten als Beweis-Asset (Seminare, Pflanzen aus dem Garten) <span class="mut">CP-AUT-006</span><br><span class="prio pr-B">B</span> Qualifikationen: Heilpraktikerin seit 2002, Dipl.-Sozialpädagogin (FH) seit 1985, weitere Abschlüsse <span class="mut">CP-AUT-001</span><br><span class="prio pr-B">B</span> Methode in 3 Sätzen: Mein Ansatz (ersetzt das Bach-Zitat) <span class="mut">CP-BRD-002</span><br><span class="prio pr-B">B</span> Vizepräsidentin Internationale Gesellschaft Hildegard von Bingen (Vorstand seit 2015, VP seit 2023) <span class="mut">CP-AUT-002</span><br><span class="prio pr-C">C</span> Verbände und Mitgliedschaften mit echten Logos (Fachverband Freie Heilpraktiker, FET, MeGeMit, Hildegard-Gesellschaft) <span class="mut">CP-AUT-007</span></td></tr>
+<tr><td>7 Reviews</td><td><span class="empty">No pool item. The CRO blueprint row stays as is.</span></td></tr>
+<tr><td>8 FAQ</td><td><span class="prio pr-A">A</span> FAQ-Set mit kurzen Direktantworten (Kosten, Kasse, Vorbereitung, Absage, Arzt oder Heilpraktiker) <span class="mut">CP-SVC-004</span><br><span class="prio pr-B">B</span> Umgebung in einem Satz (Wilmersdorf, Westend, Schöneberg, Spandau) ohne eigene Ortsseiten <span class="mut">CP-LOC-003</span><br><span class="prio pr-B">B</span> Direkte Kurzantworten (40–60 Wörter) unter den FAQ für KI-Antworten <span class="mut">CP-SVC-021</span></td></tr>
+<tr><td>9 Location</td><td><span class="prio pr-C">C</span> Standort-Block: Adresse, Anreise Bus/S-Bahn/Auto, Karte, Termine nach Vereinbarung <span class="mut">CP-LOC-002</span></td></tr>
+<tr><td>10 Closing CTA</td><td><span class="empty">No pool item. The CRO blueprint row stays as is.</span></td></tr>
+<tr><td>Whole page</td><td><span class="prio pr-A">A</span> Zwei Zielgruppen trennen: Startseite für Patient:innen, Viriditas-Schule als eigener Bereich <span class="mut">CP-BRD-004</span><br><span class="prio pr-B">B</span> Namens- und Profil-Konsistenz: Website &#x27;Naturheilpraxis Daniela Dumann&#x27; vs. GBP &#x27;Hildegard von Bingen Berlin Naturheilpraxis …&#x27; <span class="mut">CP-LOC-006</span><br><span class="prio pr-B">B</span> LocalBusiness-/MedicalBusiness-Auszeichnung mit Geo, Öffnungszeiten, sameAs <span class="mut">CP-LOC-005</span></td></tr>
+</table></div>
+<h3>Items for other pages (one line each, ready for the next page run)</h3><div class="tblwrap"><table><tr><th>Page tag</th><th>Items</th></tr>
+<tr><td>authority-page</td><td><span class="prio pr-C">C</span> Erfahrungsberichte von Patient:innen mit Einwilligung (Ablauf, Atmosphäre, keine Wirkung) <span class="mut">CP-AUT-005</span><br><span class="prio pr-C">C</span> Person-Auszeichnung (Person, sameAs, Mitgliedschaften) auf der Behandlerinnen-Seite <span class="mut">CP-AUT-010</span></td></tr>
+<tr><td>blog-faq</td><td><span class="prio pr-B">B</span> Wissensseite &#x27;Hildegard-Medizin erklärt&#x27; als Themen-Hub mit eigenen Quellen <span class="mut">CP-AUT-009</span></td></tr>
+<tr><td>later</td><td><span class="prio pr-A">A</span> Viriditas – Kurse und Ausbildung: eigene Seiten und Teaser <span class="mut">CP-BRD-005</span><br><span class="prio pr-B">B</span> Bewertungen von Patient:innen aufbauen (Programm-Aufgabe, kein Seitentext) <span class="mut">CP-AUT-004</span><br><span class="prio pr-B">B</span> Pflanzenheilkunde / Hildegard-Kräuter aus Patient:innen-Sicht <span class="mut">CP-SVC-017</span><br><span class="prio pr-C">C</span> Hildegard-Medizin nach Beschwerde (Wechseljahre, Arthrose, Bluthochdruck, Diabetes, Haarausfall …) <span class="mut">CP-SVC-019</span></td></tr>
+<tr><td>offsite</td><td><span class="prio pr-C">C</span> Verzeichnis-Einträge als Linkziele (Portale, die bei &#x27;heilpraktiker berlin charlottenburg&#x27; auf Seite 1 stehen) <span class="mut">CP-AUT-008</span></td></tr>
+<tr><td>service:aderlass</td><td><span class="prio pr-A">A</span> Aderlass nach Hildegard: Leistungskarte und eigene Seite <span class="mut">CP-SVC-006</span><br><span class="prio pr-A">A</span> Aderlass-Fragen: Was kostet er, wie oft, wie lange dauert er <span class="mut">CP-SVC-007</span></td></tr>
+<tr><td>service:darmsanierung</td><td><span class="prio pr-B">B</span> Darmsanierung nach Hildegard: Leistungskarte und eigene Seite <span class="mut">CP-SVC-008</span><br><span class="prio pr-B">B</span> Darmsanierung-Fragen: nach Antibiotika, wie lange, was essen <span class="mut">CP-SVC-009</span></td></tr>
+<tr><td>service:ernaehrungsberatung</td><td><span class="prio pr-A">A</span> Ernährungsberatung: Leistungskarte und eigene Seite <span class="mut">CP-SVC-010</span></td></tr>
+<tr><td>service:fasten</td><td><span class="prio pr-A">A</span> Fasten nach Hildegard: Begleitung für Patient:innen <span class="mut">CP-SVC-011</span><br><span class="prio pr-B">B</span> Hildegard-Fasten-Fragen: Anleitung, Erfahrungen, Dauer <span class="mut">CP-SVC-012</span></td></tr>
+<tr><td>service:hildegard-heilkunde</td><td><span class="prio pr-A">A</span> Hildegard-Heilkunde erklärt (Hub): Was ist das, die 5 Säulen, wie arbeitet die Praxis damit <span class="mut">CP-SVC-018</span></td></tr>
+<tr><td>service:homoeopathie</td><td><span class="prio pr-A">A</span> Homöopathie <span class="mut">CP-SVC-015</span></td></tr>
+<tr><td>service:massage</td><td><span class="prio pr-B">B</span> Massagen &amp; Anwendungen (Hildegard-Anwendungen) <span class="mut">CP-SVC-016</span></td></tr>
+<tr><td>service:oligoscan</td><td><span class="prio pr-A">A</span> Oligoscan / Mikronährstoffanalyse <span class="mut">CP-SVC-013</span></td></tr>
+<tr><td>service:schilddruese</td><td><span class="prio pr-A">A</span> Schilddrüse: Begleitung (Leistung genau klären) <span class="mut">CP-SVC-014</span></td></tr>
+</table></div>
+<h2 id="detail">Detail per pillar</h2><div class="filters"><button class="on" data-f="all">All</button><button data-f="A">A</button><button data-f="B">B</button><button data-f="C">C</button><button data-f="client">Needs client</button><button data-f="adj">Adjacent</button></div>
+<h3>Location</h3><details class="item p-A" data-prio="A" data-pillar="location">
+<summary><span class="rank">LOC-001</span><span class="prio pr-A">A</span>
+<span class="topic">Hero-Überschrift mit Stadt und Bezirk (Heilpraktikerin Berlin-Charlottenburg)</span><span class="bar"><i style="width:83%"></i></span><span class="num">83</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Kern-Ortsbezug der Praxis (NAP Nithackstraße 24, 10585 Berlin-Charlottenburg)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: hero</p>
+<p><b>Question:</b> Heilpraktikerin in meiner Nähe in Charlottenburg</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>100</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>33</td><td class="mut">6 of 9 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker berlin <b>1,600</b>, heilpraktikerin berlin <b>no data</b>, heilpraktiker charlottenburg <b>no data</b>, heilpraktiker berlin charlottenburg <b>no data</b>, heilpraktikerin charlottenburg <b>no data</b></p>
+<p><b>Autocomplete:</b> heilpraktiker charlottenburg; heilpraktiker berlin charlottenburg; heilpraktiker berlin charlottenburg wilmersdorf</p><p><b>Client signal:</b> danieladumann.de rankt für KEIN Patienten-Keyword (0 von 63 Rankings, dataset.md 1.6); SERP-Check 11.10.: nicht auf Seite 1, nicht im Local Pack. GSC 3 months: 5 queries, 16 impressions, 0 clicks, best position 4.0; top query &#x27;naturheilpraxis berlin&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://danieladumann.de/">https://danieladumann.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, heilpraktiker-seiffert.de, homoeopathie-ayurveda-berlin.de, daniela-kniese.de, manu-lemke.de, betty-timpe.de</p>
+<p class='mut'>Anteil lokaler Praxis-Sites mit &#x27;Charlottenburg&#x27; in Titel, Überschrift oder URL</p>
+
+
+
+<details class="raw"><summary>Raw data (7 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker berlin</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^heilpraktiker (berlin )?charlottenburg</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">^heilpraktiker (in )?berlin | heilpraktiker.*charlottenburg | ^naturheilpraxis berlin</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">danieladumann.de rankt für KEIN Patienten-Keyword (0 von 63 Rankings, dataset.md 1.6); SERP-Check 11.10.: nicht auf Seit</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,heilpraktiker-seiffert.de,homoeopathie-ayurveda-berlin.de,daniela-kniese.de,manu-lemke.de,betty-timpe.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">heilpraktiker berlin charlottenburg</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.6</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="location">
+<summary><span class="rank">LOC-003</span><span class="prio pr-B">B</span>
+<span class="topic">Umgebung in einem Satz (Wilmersdorf, Westend, Schöneberg, Spandau) ohne eigene Ortsseiten</span><span class="bar"><i style="width:72%"></i></span><span class="num">72</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Stufe 4 der Einzugsgebiet-Regel: Orte nur im Text</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: faq</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>78</td><td class="mut">2 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker wilmersdorf <b>10</b>, heilpraktiker westend <b>10</b>, heilpraktiker spandau <b>70</b>, heilpraktiker schöneberg <b>no data</b></p>
+<p><b>Client signal:</b> GSC 3 months: 1 queries, 10 impressions, 0 clicks, best position 32.8; top query &#x27;naturheilkunde reinickendorf&#x27;</p>
+<p><b>Live site:</b> weak (<a href="https://www.danieladumann.de/post/heilkräutergarten-nach-hildegard-von-bingen-in-der-gartenarbeitsschule-tempelhof-schöneberg">https://www.danieladumann.de/post/heilkräutergarten-nach-hildegard-von-bingen-in-der-gartenarbeitsschule-tempelhof-schöneberg</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilpraktiker-seiffert.de, homoeopathie-ayurveda-berlin.de</p>
+<p class='mut'>Anteil lokaler Sites, die Nachbarbezirke nennen</p>
+
+
+<ul class='needs'><li>[FEHLT] Einzugsgebiet vom Kunden bestätigen: welche Bezirke kommen real</li></ul>
+<details class="raw"><summary>Raw data (6 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker wilmersdorf</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker westend</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker spandau</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">wilmersdorf|westend|schöneberg|spandau|reinickendorf</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">GSC 3 months: 1 queries, 10 impressions, 0 clicks, best position 32.8; top query &#x27;naturheilkunde reinickendorf&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilpraktiker-seiffert.de,homoeopathie-ayurveda-berlin.de</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="location">
+<summary><span class="rank">LOC-006</span><span class="prio pr-B">B</span>
+<span class="topic">Namens- und Profil-Konsistenz: Website &#x27;Naturheilpraxis Daniela Dumann&#x27; vs. GBP &#x27;Hildegard von Bingen Berlin Naturheilpraxis …&#x27;</span><span class="bar"><i style="width:66%"></i></span><span class="num">66</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Eigene Entität; GBP-Dublette ist im Memory dokumentiert</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">0 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Client signal:</b> GBP-Name weicht von Website-Name ab (dataset.md 1.7, Memory dumann-client: Dublette)</p>
+
+
+
+
+
+<ul class='needs'><li>[FEHLT] Entscheidung: ein Markenname für Website, GBP, Verzeichnisse</li></ul>
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">GBP-Name weicht von Website-Name ab (dataset.md 1.7, Memory dumann-client: Dublette)</span></li><li><span class="tag">gbp</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.7</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="location">
+<summary><span class="rank">LOC-005</span><span class="prio pr-B">B</span>
+<span class="topic">LocalBusiness-/MedicalBusiness-Auszeichnung mit Geo, Öffnungszeiten, sameAs</span><span class="bar"><i style="width:62%"></i></span><span class="num">62</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Technische Entität der Praxis; Daten aus kanonischem NAP</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: entity-schema.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>44</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>56</td><td class="mut">4 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+
+<p><b>Competitors covering it:</b> ihre-heilpraktiker.berlin, daniela-kniese.de, manu-lemke.de, betty-timpe.de</p>
+<p class='mut'>Anteil lokaler Sites mit MedicalBusiness/Physician im JSON-LD</p>
+
+
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">ihre-heilpraktiker.berlin,daniela-kniese.de,manu-lemke.de,betty-timpe.de</span></li><li><span class="tag">competitor-page</span> <a href="../02-competitors/metrics.json">02-competitors/metrics.json</a> <span class="mut">jsonld_types</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="location">
+<summary><span class="rank">LOC-002</span><span class="prio pr-C">C</span>
+<span class="topic">Standort-Block: Adresse, Anreise Bus/S-Bahn/Auto, Karte, Termine nach Vereinbarung</span><span class="bar"><i style="width:55%"></i></span><span class="num">55</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Reale Praxisdaten, kanonisches NAP</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: standort</p>
+<p><b>Question:</b> Wie komme ich zur Praxis?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>22</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>39</td><td class="mut">2 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilpraktiker-seiffert.de, daniela-kniese.de</p>
+<p class='mut'>Überschrift oder URL mit Anfahrt/Standort</p>
+
+
+<ul class='needs'><li>[FEHLT] Parken und Barrierefreiheit</li><li>[FEHLT] ob &#x27;Termine nach Vereinbarung&#x27; so bleibt (GBP: keine Öffnungszeiten)</li></ul>
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilpraktiker-seiffert.de,daniela-kniese.de</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.7 und 1.9 (NAP, Anfahrt im Footer)</span></li></ul></details>
+</div></details>
+<h3>Main service</h3><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-006</span><span class="prio pr-A">A</span>
+<span class="topic">Aderlass nach Hildegard: Leistungskarte und eigene Seite</span><span class="bar"><i style="width:83%"></i></span><span class="num">83</span>
+<span class="tag2">service:aderlass</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Leistung &#x27;Aderlass Therapie&#x27; auf Live-Seite; Hildegard-Bezug ist ihr Fach</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>80</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>83</td><td class="mut">2 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): aderlass berlin <b>50</b>, aderlass wirkung <b>110</b> <em>nat.</em>, aderlass heilpraktiker <b>no data</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> aderlass; aderlass ebm; aderlass goä; aderlass gut</p><p><b>People also ask:</b> Bei welcher Krankheit wird Aderlass gemacht?; Wie viel kostet ein Aderlass?</p><p><b>Client signal:</b> danieladumann.de ranks #77 for &#x27;wer macht aderlass&#x27; (50/month). GSC 3 months: 15 queries, 152 impressions, 2 clicks, best position 1.5; top query &#x27;aderlass berlin&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://www.danieladumann.de/aderlass-therapie">https://www.danieladumann.de/aderlass-therapie</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilkunde-riedig.de, naturheilpraxis-dreher.de</p>
+<p class='mut'>Seite oder Überschrift zu Aderlass bei lokalen und Nischen-Sites</p>
+<p><b>Compliance note:</b> HWG: keine Wirkversprechen, keine Krankheitsnamen (Bluthochdruck, Hämochromatose). Verfahren und Ablauf beschreiben.</p>
+
+
+<details class="raw"><summary>Raw data (7 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">aderlass berlin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">aderlass wirkung</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^aderlass nach hildegard | ^aderlass( |$) | aderlasstherapie</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Bei welcher Krankheit wird Aderlass gemacht?</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">aderla</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">danieladumann.de ranks #77 for &#x27;wer macht aderlass&#x27; (50/month). GSC 3 months: 15 queries, 152 impressions, 2 clicks, bes</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilkunde-riedig.de,naturheilpraxis-dreher.de</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-014</span><span class="prio pr-A">A</span>
+<span class="topic">Schilddrüse: Begleitung (Leistung genau klären)</span><span class="bar"><i style="width:83%"></i></span><span class="num">83</span>
+<span class="tag2">service:schilddruese</span><span class="pill c-review">HWG review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Leistung &#x27;Schilddrüsen Behandlung&#x27; auf Live-Seite; Weiterbildung Schilddrüsenpraktikerin 2019</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>80</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>83</td><td class="mut">2 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): schilddrüse heilpraktiker <b>no data</b> <em>nat.</em>, schilddrüse heilpraktiker berlin <b>no data</b>, heilpraktiker hashimoto berlin <b>no data</b></p>
+<p><b>Client signal:</b> danieladumann.de ranks #61 for &#x27;heilstein schilddrüse&#x27; (70/month). GSC 3 months: 18 queries, 269 impressions, 8 clicks, best position 3.5; top query &#x27;hildegard von bingen schilddrüse&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://www.danieladumann.de/schilddrüse">https://www.danieladumann.de/schilddrüse</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> ihre-heilpraktiker.berlin, betty-timpe.de</p>
+
+<p><b>Compliance note:</b> HWG hoch: Schilddrüsenerkrankungen sind Krankheiten. Wording &#x27;Behandlung&#x27; prüfen.</p>
+
+<ul class='needs'><li>[FEHLT] Was genau bietet sie an (Massage, Begleitung, Labor)?</li></ul>
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">schilddrüse|schilddrüsen</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">danieladumann.de ranks #61 for &#x27;heilstein schilddrüse&#x27; (70/month). GSC 3 months: 18 queries, 269 impressions, 8 clicks, </span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">ihre-heilpraktiker.berlin,betty-timpe.de</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-betty-timpe.de.json">03-demand/ranked-betty-timpe.de.json</a> <span class="mut">heilpraktiker für schilddrüse #15 (260/Monat)</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-010</span><span class="prio pr-A">A</span>
+<span class="topic">Ernährungsberatung: Leistungskarte und eigene Seite</span><span class="bar"><i style="width:83%"></i></span><span class="num">83</span>
+<span class="tag2">service:ernaehrungsberatung</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Leistung &#x27;Ernährungsberatung &amp; Fasten&#x27; auf Live-Seite</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>100</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>58</td><td class="mut">5 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): ernährungsberatung berlin <b>1,600</b>, ernährungsberatung charlottenburg <b>30</b>, ernährungsberatung heilpraktiker <b>140</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> ernährungsberatung berlin; ernährungsberatung berlin tk; ernährungsberatung berlin aok; ernährungsberatung berlin baby</p>
+<p><b>Live site:</b> present (<a href="https://www.danieladumann.de/ernährungsberatung">https://www.danieladumann.de/ernährungsberatung</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ellennagel.de, homoeopathie-ayurveda-berlin.de, manu-lemke.de, betty-timpe.de</p>
+<p class='mut'>Die SERP &#x27;ernährungsberatung berlin&#x27; führen Kliniken, Krankenkassen und Ernährungsfachkräfte, keine Heilpraktiker. Lokales Ziel: Charlottenburg + Hildegard-Ansatz.</p>
+
+
+
+<details class="raw"><summary>Raw data (6 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">ernährungsberatung berlin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">ernährungsberatung charlottenburg</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">ernährungsberatung heilpraktiker</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^ernährungsberatung berlin</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ellennagel.de,homoeopathie-ayurveda-berlin.de,manu-lemke.de,betty-timpe.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-3.json">02-competitors/serp-3.json</a> <span class="mut">ernährungsberatung berlin</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-011</span><span class="prio pr-A">A</span>
+<span class="topic">Fasten nach Hildegard: Begleitung für Patient:innen</span><span class="bar"><i style="width:82%"></i></span><span class="num">82</span>
+<span class="tag2">service:fasten</span><span class="pill c-review">HWG review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Leistung &#x27;Ernährungsberatung &amp; Fasten&#x27;; eigene Seite /hildegard-fasten ist aber eine Kursseite</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>84</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>75</td><td class="mut">3 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): fasten berlin <b>480</b>, fastenkur berlin <b>480</b>, fasten nach hildegard von bingen <b>320</b> <em>nat.</em>, hildegard fasten <b>90</b> <em>nat.</em>, fastenkur begleitung <b>no data</b> <em>nat.</em>, hildegard fasten berlin <b>no data</b></p>
+<p><b>Autocomplete:</b> hildegard fasten; hildegard fasten tee; fasten nach hildegard; hildegard fasten buch</p><p><b>Client signal:</b> danieladumann.de ranks #75 for &#x27;hildegard von bingen fasten&#x27; (480/month). GSC 3 months: 12 queries, 942 impressions, 0 clicks, best position 46.2; top query &#x27;fasten nach hildegard von bingen&#x27;</p><p><b>Trend:</b> Google Trends (DE, 12 Monate): &#x27;fasten&#x27; Spitze 15.02.2026 = 100; Inhalt vor der Fastenzeit (Januar) fertig haben.</p>
+<p><b>Live site:</b> present (<a href="https://www.danieladumann.de/hildegard-fasten">https://www.danieladumann.de/hildegard-fasten</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, heilpraktiker-seiffert.de, naturheilpraxis-dreher.de</p>
+
+<p><b>Compliance note:</b> HWG: Fasten nicht als Therapie bei Krankheit bewerben.</p>
+
+<ul class='needs'><li>[FEHLT] Bietet sie Fastenbegleitung für Patient:innen an, oder nur Kurse? Seite /hildegard-fasten ist eine Kursseite (Course-Schema).</li></ul>
+<details class="raw"><summary>Raw data (9 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">fasten berlin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">fastenkur berlin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">fasten nach hildegard von bingen</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard fasten</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^hildegard fasten | fasten nach hildegard</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">^(?!.*(ausbildung|weiterbildung|kurs|seminar|workshop|lernen|leiter|studium|gesundheitsberater)).*(fasten|fastenkur|heilfasten)</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">danieladumann.de ranks #75 for &#x27;hildegard von bingen fasten&#x27; (480/month). GSC 3 months: 12 queries, 942 impressions, 0 c</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,heilpraktiker-seiffert.de,naturheilpraxis-dreher.de</span></li><li><span class="tag">trends</span> <a href="../03-demand/trends.json">03-demand/trends.json</a> <span class="mut">fasten, 2025-10 bis 2026-10</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-015</span><span class="prio pr-A">A</span>
+<span class="topic">Homöopathie</span><span class="bar"><i style="width:81%"></i></span><span class="num">81</span>
+<span class="tag2">service:homoeopathie</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Leistung &#x27;Homöopathie&#x27;; Erstanamnese 220–380 € live verifiziert</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>67</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>92</td><td class="mut">1 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): homöopathie berlin <b>140</b>, klassische homöopathie berlin <b>no data</b>, homöopathie charlottenburg <b>10</b></p>
+<p><b>Autocomplete:</b> homöopathie berlin; homöopathie berlin kinder; homöopathie berlin pankow; homöopathie berlin. mitte</p><p><b>Client signal:</b> GSC 3 months: 1 queries, 6 impressions, 0 clicks, best position 81.3; top query &#x27;homöopathie berlin&#x27;</p>
+<p><b>Live site:</b> weak (<a href="https://danieladumann.de/">https://danieladumann.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> homoeopathie-ayurveda-berlin.de</p>
+
+<p><b>Compliance note:</b> HWG: keine Wirkversprechen.</p>
+
+
+<details class="raw"><summary>Raw data (6 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">homöopathie berlin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">homöopathie charlottenburg</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^homöopathie (berlin|charlottenburg)</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">^(?!.*(ausbildung|weiterbildung|kurs|seminar|workshop|lernen|leiter|studium|gesundheitsberater)).*homöopathie</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">GSC 3 months: 1 queries, 6 impressions, 0 clicks, best position 81.3; top query &#x27;homöopathie berlin&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">homoeopathie-ayurveda-berlin.de</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-013</span><span class="prio pr-A">A</span>
+<span class="topic">Oligoscan / Mikronährstoffanalyse</span><span class="bar"><i style="width:79%"></i></span><span class="num">79</span>
+<span class="tag2">service:oligoscan</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Leistung &#x27;Oligoscan &amp; Mikronährstoffe&#x27;; Seite /oligoscan rankt schon (#63)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>92</td><td class="mut">1 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): oligoscan <b>260</b> <em>nat.</em>, mikronährstoffanalyse <b>2,900</b> <em>nat.</em>, oligoscan berlin <b>10</b></p>
+<p><b>Autocomplete:</b> oligoscan test; oligoscan kosten; oligoscan messung; oligoscan test price</p><p><b>Client signal:</b> danieladumann.de ranks #63 for &#x27;oligoscan&#x27; (260/month). GSC 3 months: 7 queries, 28 impressions, 0 clicks, best position 10.6; top query &#x27;oligoscan&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://www.danieladumann.de/oligoscan">https://www.danieladumann.de/oligoscan</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> ihre-heilpraktiker.berlin</p>
+
+<p><b>Compliance note:</b> HWG/UWG: Aussagekraft und Grenzen des Verfahrens ehrlich nennen; kein Diagnose-Anspruch.</p>
+
+
+<details class="raw"><summary>Raw data (7 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">oligoscan</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">mikronährstoffanalyse</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">oligoscan berlin</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^oligoscan (was|erfahrungen|kosten|test|messung)</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">oligoscan|vitalstoff</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">danieladumann.de ranks #63 for &#x27;oligoscan&#x27; (260/month). GSC 3 months: 7 queries, 28 impressions, 0 clicks, best position</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">ihre-heilpraktiker.berlin</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-018</span><span class="prio pr-A">A</span>
+<span class="topic">Hildegard-Heilkunde erklärt (Hub): Was ist das, die 5 Säulen, wie arbeitet die Praxis damit</span><span class="bar"><i style="width:76%"></i></span><span class="num">76</span>
+<span class="tag2">service:hildegard-heilkunde</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Ihr Kernfach und Alleinstellung; Seite &#x27;Hildegard Heilkunde&#x27; existiert als Karte</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>70</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>75</td><td class="mut">3 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): hildegard von bingen medizin <b>590</b> <em>nat.</em>, hildegard von bingen heilpraktiker berlin <b>no data</b>, hildegard von bingen berlin <b>50</b>, was ist hildegard medizin <b>10</b> <em>nat.</em>, 5 säulen der hildegard medizin <b>40</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> hildegard medizin; hildegard medizin at; hildegard medizin buch; hildegard medizin leber</p><p><b>People also ask:</b> Was empfiehlt Hildegard von Bingen?; Welche Heilmethoden verwendete Hildegard von Bingen?; Welche Krankheiten hatte Hildegard von Bingen?</p><p><b>Client signal:</b> danieladumann.de ranks #75 for &#x27;hildegard von bingen fasten&#x27; (480/month). GSC 3 months: 2 queries, 70 impressions, 0 clicks, best position 48.2; top query &#x27;hildegard medizin kräuter&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://www.danieladumann.de/hildegard-gesellschaft">https://www.danieladumann.de/hildegard-gesellschaft</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilkunde-riedig.de, naturheilpraxis-dreher.de, naturheilpraxis-nathan.de</p>
+<p class='mut'>Keine lokale Praxis-Site im lesbaren Set hat eine Hildegard-Seite; nur Nischen-Sites. Deren Hildegard-Seiten haben 303 und 773 Wörter (Zahlen in competitor.covering).</p>
+<p><b>Compliance note:</b> HWG: Lehre erklären, nicht heilen. Bach-Zitat &#x27;echte Heilung&#x27; nicht übernehmen.</p>
+
+
+<details class="raw"><summary>Raw data (10 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard von bingen medizin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard von bingen berlin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">was ist hildegard medizin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">5 säulen der hildegard medizin</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^was ist hildegard medizin | ^hildegard medizin( |$)</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Was empfiehlt Hildegard von Bingen?</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">hildegard (von bingen )?(medizin|heilkunde)</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">danieladumann.de ranks #75 for &#x27;hildegard von bingen fasten&#x27; (480/month). GSC 3 months: 2 queries, 70 impressions, 0 cli</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilkunde-riedig.de,naturheilpraxis-dreher.de,naturheilpraxis-nathan.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-9.json">02-competitors/serp-9.json</a> <span class="mut">hildegard von bingen heilpraktiker berlin</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-004</span><span class="prio pr-A">A</span>
+<span class="topic">FAQ-Set mit kurzen Direktantworten (Kosten, Kasse, Vorbereitung, Absage, Arzt oder Heilpraktiker)</span><span class="bar"><i style="width:75%"></i></span><span class="num">75</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Antworten stammen aus echten Praxisdaten; PAA liefert die Fragen</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: faq. Section: faq</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>55</td><td class="mut">basis: paa</td></tr>
+<tr><td>Gap</td><td>56</td><td class="mut">4 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker oder arzt <b>110</b> <em>nat.</em>, heilpraktiker erfahrungen <b>110</b> <em>nat.</em></p>
+<p><b>People also ask:</b> Kann ein Heilpraktiker wirklich helfen?; Wann ist ein Heilpraktiker sinnvoll?; Wann mündliche Prüfung Heilpraktiker?</p>
+<p><b>Live site:</b> weak (<a href="https://danieladumann.de/behandlungen">https://danieladumann.de/behandlungen</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ihre-heilpraktiker.berlin, heilpraktiker-seiffert.de, daniela-kniese.de</p>
+<p class='mut'>FAQ-Block auf der gemessenen Seite</p>
+
+
+<ul class='needs'><li>[FEHLT] Absage-Regel (Frist, Kosten)</li><li>[FEHLT] Vorbereitung auf den ersten Termin</li></ul>
+<details class="raw"><summary>Raw data (5 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker oder arzt</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker erfahrungen</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Kann ein Heilpraktiker wirklich helfen?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ihre-heilpraktiker.berlin,heilpraktiker-seiffert.de,daniela-kniese.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">AI-Übersicht und PAA bei &#x27;heilpraktiker berlin charlottenburg&#x27;</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="service">
+<summary><span class="rank">SVC-007</span><span class="prio pr-A">A</span>
+<span class="topic">Aderlass-Fragen: Was kostet er, wie oft, wie lange dauert er</span><span class="bar"><i style="width:75%"></i></span><span class="num">75</span>
+<span class="tag2">service:aderlass</span><span class="pill c-review">HWG review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Fragen rund um ihre echte Leistung</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: faq.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>80</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>83</td><td class="mut">2 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): aderlass kosten <b>70</b> <em>nat.</em>, aderlass wie oft <b>260</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> wie aderlass; aderlass kosten; aderlass wie oft; aderlass wie viel</p><p><b>People also ask:</b> Bei welcher Krankheit wird Aderlass gemacht?; Wie viel kostet ein Aderlass?</p><p><b>Client signal:</b> GSC 3 months: 15 queries, 152 impressions, 2 clicks, best position 1.5; top query &#x27;aderlass berlin&#x27;</p>
+<p><b>Live site:</b> weak (<a href="https://danieladumann.de/">https://danieladumann.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilkunde-riedig.de, naturheilpraxis-dreher.de</p>
+
+<p><b>Compliance note:</b> HWG: &#x27;bei welcher Krankheit&#x27; nicht beantworten. Nur Ablauf, Dauer, Preis.</p>
+
+<ul class='needs'><li>[FEHLT] Preis und Dauer eines Aderlasses</li></ul>
+<details class="raw"><summary>Raw data (7 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">aderlass kosten</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">aderlass wie oft</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">aderlass (wie|was|kosten) | (wie|was).*aderlass</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Bei welcher Krankheit wird Aderlass gemacht?</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">aderla</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">GSC 3 months: 15 queries, 152 impressions, 2 clicks, best position 1.5; top query &#x27;aderlass berlin&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilkunde-riedig.de,naturheilpraxis-dreher.de</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-012</span><span class="prio pr-B">B</span>
+<span class="topic">Hildegard-Fasten-Fragen: Anleitung, Erfahrungen, Dauer</span><span class="bar"><i style="width:73%"></i></span><span class="num">73</span>
+<span class="tag2">service:fasten</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Bildung rund um die Fasten-Leistung</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: faq.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>80</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>75</td><td class="mut">3 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): hildegard fasten anleitung <b>10</b> <em>nat.</em>, hildegard fasten erfahrungen <b>10</b> <em>nat.</em>, hildegard von bingen abnehmen <b>170</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> hildegard fasten anleitung; hildegard fasten erfahrungen; hildegard von bingen fasten kur; fasten hildegard von bingen anleitung</p><p><b>Client signal:</b> GSC 3 months: 12 queries, 942 impressions, 0 clicks, best position 46.2; top query &#x27;fasten nach hildegard von bingen&#x27;</p>
+<p><b>Live site:</b> weak (<a href="https://danieladumann.de/">https://danieladumann.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, heilpraktiker-seiffert.de, naturheilpraxis-dreher.de</p>
+
+<p><b>Compliance note:</b> UWG/HWG: &#x27;Abnehmen&#x27; nicht versprechen.</p>
+
+
+<details class="raw"><summary>Raw data (7 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard fasten anleitung</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard fasten erfahrungen</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard von bingen abnehmen</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">hildegard.*fasten (anleitung|erfahrungen|kur|woche) | fasten.*hildegard.*(anleitung|erfahrungen)</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">^(?!.*(ausbildung|weiterbildung|kurs|seminar|workshop|lernen|leiter|studium|gesundheitsberater)).*(fasten|fastenkur|heilfasten)</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">GSC 3 months: 12 queries, 942 impressions, 0 clicks, best position 46.2; top query &#x27;fasten nach hildegard von bingen&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,heilpraktiker-seiffert.de,naturheilpraxis-dreher.de</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-003</span><span class="prio pr-B">B</span>
+<span class="topic">Preise und Abrechnung: 220 € Erstanamnese, 150 €/Std, GebüH, private Erstattung ohne Garantie</span><span class="bar"><i style="width:73%"></i></span><span class="num">73</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Zahlen live verifiziert (dataset.md 1.9)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: erster-termin</p>
+<p><b>Question:</b> Was kostet ein Heilpraktiker? Zahlt die Krankenkasse?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>56</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>44</td><td class="mut">5 of 9 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker kosten <b>880</b> <em>nat.</em>, was kostet ein heilpraktiker <b>320</b> <em>nat.</em>, heilpraktiker private krankenkasse <b>10</b> <em>nat.</em>, heilpraktiker kassenleistung <b>50</b> <em>nat.</em>, heilpraktiker berlin preise <b>20</b></p>
+<p><b>Autocomplete:</b> was kostet aderlass; heilpraktiker kosten; heilpraktiker ils kosten; heilpraktiker kosten aok</p><p><b>People also ask:</b> Ist die Ganzheitliche Medizin in Berlin eine Kassenleistung?; Was kostet 1 Std Heilpraktiker?; Was kostet 1 Std beim Heilpraktiker?</p>
+<p><b>Live site:</b> present (<a href="https://danieladumann.de/behandlungen">https://danieladumann.de/behandlungen</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ihre-heilpraktiker.berlin, heilpraktiker-seiffert.de, homoeopathie-ayurveda-berlin.de, betty-timpe.de</p>
+<p class='mut'>Preise sichtbar auf der gemessenen Seite oder Preis-URL</p>
+
+
+
+<details class="raw"><summary>Raw data (9 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker kosten</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">was kostet ein heilpraktiker</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker private krankenkasse</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker kassenleistung</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker berlin preise</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^heilpraktiker.*kosten | was kost | wie viel kost</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Ist die Ganzheitliche Medizin in Berlin eine Kassenleistung?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ihre-heilpraktiker.berlin,heilpraktiker-seiffert.de,homoeopathie-ayurveda-berlin.de,betty-timpe.de</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.9 Preise</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-008</span><span class="prio pr-B">B</span>
+<span class="topic">Darmsanierung nach Hildegard: Leistungskarte und eigene Seite</span><span class="bar"><i style="width:73%"></i></span><span class="num">73</span>
+<span class="tag2">service:darmsanierung</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Leistung &#x27;Darm Sanierung&#x27; auf Live-Seite</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>80</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>42</td><td class="mut">7 of 12 local+niche cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): darmsanierung berlin <b>90</b>, darmsanierung heilpraktiker <b>390</b> <em>nat.</em>, darmsanierung nach hildegard von bingen <b>10</b> <em>nat.</em>, heilpraktiker darmsanierung berlin <b>10</b>, darmsanierung <b>18,100</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> darmsanierung; darmsanierung dm; darmsanierung wo; darmsanierung kur</p><p><b>People also ask:</b> Wie macht man am besten eine Darmsanierung?; Wie oft sollte man eine Darmsanierung machen?</p><p><b>Client signal:</b> danieladumann.de ranks #26 for &#x27;darmsanierung hildegard von bingen&#x27; (170/month). GSC 3 months: 14 queries, 130 impressions, 0 clicks, best position 16.0; top query &#x27;darmsanierung berlin&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://www.danieladumann.de/darmsanierung">https://www.danieladumann.de/darmsanierung</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ihre-heilpraktiker.berlin, heilpraktiker-seiffert.de, manu-lemke.de, betty-timpe.de, naturheilpraxis-dreher.de, naturheilpraxis-nathan.de</p>
+<p class='mut'>Colon-Hydro-Therapie zählt NICHT als Darmsanierung (andere Leistung)</p>
+<p><b>Compliance note:</b> HWG: keine Heilversprechen bei Darmerkrankungen.</p>
+
+
+<details class="raw"><summary>Raw data (10 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">darmsanierung berlin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">darmsanierung heilpraktiker</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">darmsanierung nach hildegard von bingen</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker darmsanierung berlin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">darmsanierung</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^darmsanierung( |$)</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Wie macht man am besten eine Darmsanierung?</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">darmsanierung|darmaufbau|darmgesundheit|darmreinigung</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">danieladumann.de ranks #26 for &#x27;darmsanierung hildegard von bingen&#x27; (170/month). GSC 3 months: 14 queries, 130 impressio</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ihre-heilpraktiker.berlin,heilpraktiker-seiffert.de,manu-lemke.de,betty-timpe.de,naturheilpraxis-dreher.de,naturheilpra</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-002</span><span class="prio pr-B">B</span>
+<span class="topic">Der erste Termin: Ablauf, Dauer 60 Min, Preis 220 €, Buchung</span><span class="bar"><i style="width:72%"></i></span><span class="num">72</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Preise und Dauer live verifiziert (dataset.md 1.9)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: erster-termin</p>
+<p><b>Question:</b> Wie läuft der erste Termin beim Heilpraktiker ab?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>45</td><td class="mut">basis: paa</td></tr>
+<tr><td>Gap</td><td>56</td><td class="mut">4 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker erstanamnese <b>no data</b> <em>nat.</em>, heilpraktiker termin berlin <b>no data</b></p>
+<p><b>Autocomplete:</b> aderlass ablauf; darmsanierung ablauf; heilpraktiker erstanamnese kosten; heilpraktiker kosten erstgespräch</p><p><b>People also ask:</b> Was kostet ein Beratungsgespräch beim Heilpraktiker?</p>
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ihre-heilpraktiker.berlin, heilpraktiker-seiffert.de, daniela-kniese.de</p>
+<p class='mut'>Überschrift/URL zum Ablauf des ersten Termins</p>
+
+
+
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">erstgespräch|erstanamnese|erster termin|ablauf</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Was kostet ein Beratungsgespräch beim Heilpraktiker?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ihre-heilpraktiker.berlin,heilpraktiker-seiffert.de,daniela-kniese.de</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.9 Preise</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-001</span><span class="prio pr-B">B</span>
+<span class="topic">Leistungs-Übersicht: 8 Karten mit Link zur Leistung</span><span class="bar"><i style="width:72%"></i></span><span class="num">72</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Alle 8 Leistungen stehen auf der Live-Seite (dataset.md 1.1)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: leistungen</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>78</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>22</td><td class="mut">7 of 9 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://danieladumann.de/">https://danieladumann.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ellennagel.de, heilpraktiker-seiffert.de, naturheilpraxis-colettemoench.de, homoeopathie-ayurveda-berlin.de, daniela-kniese.de, betty-timpe.de</p>
+<p class='mut'>Überschrift/URL mit Leistungen</p>
+
+
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ellennagel.de,heilpraktiker-seiffert.de,naturheilpraxis-colettemoench.de,homoeopathie-ayurveda-berlin.de,daniela-kniese</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.1</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-021</span><span class="prio pr-B">B</span>
+<span class="topic">Direkte Kurzantworten (40–60 Wörter) unter den FAQ für KI-Antworten</span><span class="bar"><i style="width:70%"></i></span><span class="num">70</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Format-Item; Inhalte kommen aus CP-SVC-002 bis 004</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: faq</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>55</td><td class="mut">basis: paa</td></tr>
+<tr><td>Gap</td><td>56</td><td class="mut">4 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>People also ask:</b> Kann ein Heilpraktiker wirklich helfen?; Wann ist ein Heilpraktiker sinnvoll?; Wann mündliche Prüfung Heilpraktiker?</p>
+
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ihre-heilpraktiker.berlin, heilpraktiker-seiffert.de, daniela-kniese.de</p>
+<p class='mut'>5 von 10 lesbaren Ergebnisseiten zeigen eine Google-KI-Übersicht, u. a. &#x27;heilpraktiker berlin charlottenburg&#x27; und &#x27;heilpraktiker kosten&#x27;</p>
+
+
+
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Kann ein Heilpraktiker wirklich helfen?</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ihre-heilpraktiker.berlin,heilpraktiker-seiffert.de,daniela-kniese.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">ai_overview vorhanden</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-8.json">02-competitors/serp-8.json</a> <span class="mut">ai_overview vorhanden</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-017</span><span class="prio pr-B">B</span>
+<span class="topic">Pflanzenheilkunde / Hildegard-Kräuter aus Patient:innen-Sicht</span><span class="bar"><i style="width:66%"></i></span><span class="num">66</span>
+<span class="tag2">later</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Leistung &#x27;Pflanzenheilkunde&#x27;; vorhandene Rankings sind aber Ausbildungs-/Lexikon-Suchen</p><p><b>Fit 2 of 3.</b> Both audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>92</td><td class="mut">1 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): kräuterheilkunde <b>320</b> <em>nat.</em>, hildegard von bingen kräuter <b>320</b> <em>nat.</em>, pflanzenheilkunde berlin <b>10</b></p>
+<p><b>Client signal:</b> danieladumann.de ranks #21 for &#x27;kräuterheilkunde&#x27; (320/month)</p>
+<p><b>Live site:</b> present (<a href="https://danieladumann.de/">https://danieladumann.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> ihre-heilpraktiker.berlin</p>
+<p class='mut'>Die 320er-Nachfrage &#x27;kräuterheilkunde&#x27; gehört zur Ausbildungsseite, nicht zur Praxis.</p>
+<p><b>Compliance note:</b> HWG: Pflanzen-Wirkaussagen (Wermut, Lungenkraut) auf Lexikonseiten prüfen.</p>
+
+
+<details class="raw"><summary>Raw data (5 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">kräuterheilkunde</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard von bingen kräuter</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">pflanzenheilkunde berlin</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">danieladumann.de ranks #21 for &#x27;kräuterheilkunde&#x27; (320/month)</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">ihre-heilpraktiker.berlin</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-009</span><span class="prio pr-B">B</span>
+<span class="topic">Darmsanierung-Fragen: nach Antibiotika, wie lange, was essen</span><span class="bar"><i style="width:65%"></i></span><span class="num">65</span>
+<span class="tag2">service:darmsanierung</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Bildung rund um ihre echte Leistung</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: faq.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>80</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>42</td><td class="mut">7 of 12 local+niche cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): darmsanierung nach antibiotika <b>3,600</b> <em>nat.</em>, darmsanierung wie lange <b>140</b> <em>nat.</em>, darmsanierung kosten <b>30</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> darmsanierung ablauf; darmsanierung was essen; darmsanierung wie lange; darmsanierung nach antibiotika</p><p><b>People also ask:</b> Wie macht man am besten eine Darmsanierung?; Wie oft sollte man eine Darmsanierung machen?</p><p><b>Client signal:</b> GSC 3 months: 14 queries, 130 impressions, 0 clicks, best position 16.0; top query &#x27;darmsanierung berlin&#x27;</p>
+<p><b>Live site:</b> weak (<a href="https://www.danieladumann.de/darmsanierung">https://www.danieladumann.de/darmsanierung</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ihre-heilpraktiker.berlin, heilpraktiker-seiffert.de, manu-lemke.de, betty-timpe.de, naturheilpraxis-dreher.de, naturheilpraxis-nathan.de</p>
+
+<p><b>Compliance note:</b> HWG: Antibiotika-Bezug nur als Ablauf-Info, keine Wirkaussage.</p>
+
+
+<details class="raw"><summary>Raw data (8 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">darmsanierung nach antibiotika</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">darmsanierung wie lange</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">darmsanierung kosten</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">darmsanierung (nach antibiotika|wie lange|was essen|ablauf) | wie lange.*darmsanierung</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Wie macht man am besten eine Darmsanierung?</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">darmsanierung|darmaufbau|darmgesundheit|darmreinigung</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">GSC 3 months: 14 queries, 130 impressions, 0 clicks, best position 16.0; top query &#x27;darmsanierung berlin&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ihre-heilpraktiker.berlin,heilpraktiker-seiffert.de,manu-lemke.de,betty-timpe.de,naturheilpraxis-dreher.de,naturheilpra</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-016</span><span class="prio pr-B">B</span>
+<span class="topic">Massagen &amp; Anwendungen (Hildegard-Anwendungen)</span><span class="bar"><i style="width:64%"></i></span><span class="num">64</span>
+<span class="tag2">service:massage</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Leistung existiert, aber &#x27;massage charlottenburg&#x27; zieht Wellness-Suchende; Nebenleistung</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>89</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">6 of 12 local+niche cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): massage charlottenburg <b>720</b>, heilpraktiker massage berlin <b>30</b></p>
+<p><b>Client signal:</b> danieladumann.de ranks #41 for &#x27;schilddrüsenmassage&#x27; (70/month). GSC 3 months: 5 queries, 36 impressions, 0 clicks, best position 10.5; top query &#x27;schilddrüsenmassage&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://www.danieladumann.de/massage">https://www.danieladumann.de/massage</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, heilpraktiker-seiffert.de, homoeopathie-ayurveda-berlin.de, manu-lemke.de, naturheilkunde-riedig.de, naturheilpraxis-dreher.de</p>
+<p class='mut'>Prüfen, ob die Kundin Massage als Kernleistung will. Das Keyword passt zu Wellness-Studios.</p>
+<p><b>Compliance note:</b> HWG: &#x27;Selbstheilungskräfte aktivieren&#x27; auf Altseite streichen.</p>
+
+
+<details class="raw"><summary>Raw data (5 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">massage charlottenburg</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker massage berlin</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">massage</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">danieladumann.de ranks #41 for &#x27;schilddrüsenmassage&#x27; (70/month). GSC 3 months: 5 queries, 36 impressions, 0 clicks, best</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,heilpraktiker-seiffert.de,homoeopathie-ayurveda-berlin.de,manu-lemke.de,naturheilkunde-riedig.de,naturheilpraxis-dreher</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="service">
+<summary><span class="rank">SVC-005</span><span class="prio pr-B">B</span>
+<span class="topic">&#x27;Ist das etwas für mich?&#x27;: 3 bis 5 Anliegen der Praxis, in Alltagssprache</span><span class="bar"><i style="width:64%"></i></span><span class="num">64</span>
+<span class="tag2">homepage</span><span class="pill c-review">HWG review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Anliegen müssen aus dem Wunschpatienten-Profil der Kundin kommen, nicht aus Wettbewerbern</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: block. Section: fuer-mich</p>
+<p><b>Question:</b> Bei welchen Beschwerden gehe ich zum Heilpraktiker?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>78</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>22</td><td class="mut">7 of 9 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ihre-heilpraktiker.berlin, heilpraktiker-seiffert.de, homoeopathie-ayurveda-berlin.de, daniela-kniese.de, manu-lemke.de, betty-timpe.de</p>
+<p class='mut'>Überschrift mit Anliegen/Beschwerden</p>
+<p><b>Compliance note:</b> HWG: keine Krankheitslisten, keine Diagnosen, kein &#x27;behandeln bei X&#x27;. Als Anliegen formulieren.</p>
+
+<ul class='needs'><li>[FEHLT] Wunschpatient:in und die 3 bis 5 Anliegen, die sie begleitet</li></ul>
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ihre-heilpraktiker.berlin,heilpraktiker-seiffert.de,homoeopathie-ayurveda-berlin.de,daniela-kniese.de,manu-lemke.de,bet</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">Bei welchen Beschwerden zum Heilpraktiker?</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="service">
+<summary><span class="rank">SVC-019</span><span class="prio pr-C">C</span>
+<span class="topic">Hildegard-Medizin nach Beschwerde (Wechseljahre, Arthrose, Bluthochdruck, Diabetes, Haarausfall …)</span><span class="bar"><i style="width:43%"></i></span><span class="num">43</span>
+<span class="tag2">later</span><span class="pill c-review">HWG review</span><span class="st st-adjacent_review">Adjacent: Martin decides</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Krankheitsbezogene Suchen. Die Kundin behandelt diese Beschwerden laut Datenlage nicht ausdrücklich</p><p><b>Fit 1 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>45</td><td class="mut">basis: autocomplete</td></tr>
+<tr><td>Gap</td><td>58</td><td class="mut">5 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>33</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): hildegard medizin wechseljahre <b>10</b> <em>nat.</em>, hildegard medizin bluthochdruck <b>10</b> <em>nat.</em>, hildegard medizin arthrose <b>no data</b> <em>nat.</em>, hildegard von bingen abnehmen <b>170</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> hildegard medizin leber; hildegard medizin magen; hildegard medizin arthrose; hildegard medizin diabetes</p>
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ihre-heilpraktiker.berlin, heilpraktiker-seiffert.de, homoeopathie-ayurveda-berlin.de, betty-timpe.de</p>
+
+<p><b>Compliance note:</b> HWG hoch: krankheitsbezogene Wirkaussagen.</p>
+<p><b>Decision note:</b> Angrenzend. Nur mit Kundin klären und HWG prüfen. Nicht auf die Startseite.</p>
+
+<details class="raw"><summary>Raw data (5 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard medizin wechseljahre</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard medizin bluthochdruck</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard von bingen abnehmen</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">hildegard medizin (wechseljahre|arthrose|bluthochdruck|depression|diabetes|haarausfall|cholesterin|leber|magen)</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ihre-heilpraktiker.berlin,heilpraktiker-seiffert.de,homoeopathie-ayurveda-berlin.de,betty-timpe.de</span></li></ul></details>
+</div></details>
+<h3>Brand</h3><details class="item p-A" data-prio="A" data-pillar="brand">
+<summary><span class="rank">BRD-001</span><span class="prio pr-A">A</span>
+<span class="topic">Positionierung: Hildegard-Heilkunde in Charlottenburg (im lesbaren Wettbewerbs-Set unbesetzt)</span><span class="bar"><i style="width:88%"></i></span><span class="num">88</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Ihr Kernfach; Domain-Autorität in Hildegard-Themen vorhanden (Vizepräsidentin Gesellschaft)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: hero</p>
+<p><b>Question:</b> Gibt es in Berlin eine Heilpraktikerin für Hildegard-Medizin?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>100</td><td class="mut">0 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): hildegard von bingen heilpraktiker berlin <b>no data</b>, hildegard von bingen berlin <b>50</b>, hildegard medizin berlin <b>no data</b></p>
+<p><b>Autocomplete:</b> hildegard medizin; hildegard medizin at; hildegard medizin buch; hildegard medizin leber</p><p><b>Client signal:</b> GSC 3 months: 2 queries, 19 impressions, 1 clicks, best position 4.2; top query &#x27;hildegard von bingen berlin&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://danieladumann.de/">https://danieladumann.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+
+<p class='mut'>0 von 9 lesbaren lokalen Sites haben Hildegard in Titel, Überschrift oder URL. Einschränkung: naturheilpraxis-berlin-westend.de (Aderlass-Seite, Platz 2 bei dieser Suche) ist gesperrt (HTTP 403) und konnte nicht gelesen werden. Prüfen, bevor die Aussage &#x27;unbesetzt&#x27; an die Kundin geht.</p>
+
+
+
+<details class="raw"><summary>Raw data (5 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard von bingen berlin</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^hildegard medizin( |$)</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">hildegard.*berlin</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">GSC 3 months: 2 queries, 19 impressions, 1 clicks, best position 4.2; top query &#x27;hildegard von bingen berlin&#x27;</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-9.json">02-competitors/serp-9.json</a> <span class="mut">hildegard von bingen heilpraktiker berlin</span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="brand">
+<summary><span class="rank">BRD-005</span><span class="prio pr-A">A</span>
+<span class="topic">Viriditas – Kurse und Ausbildung: eigene Seiten und Teaser</span><span class="bar"><i style="width:81%"></i></span><span class="num">81</span>
+<span class="tag2">later</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Echtes Angebot (122 URLs in der Sitemap, 63 Rankings)</p><p><b>Fit 3 of 3.</b> Trainee audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>80</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>100</td><td class="mut">0 of 6 niche+topic cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): fastenleiter ausbildung <b>170</b> <em>nat.</em>, ausbildung kräuterheilkunde <b>170</b> <em>nat.</em>, hildegard medizin ausbildung <b>10</b> <em>nat.</em>, viriditas <b>210</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> hildegard medizin ausbildung</p><p><b>Client signal:</b> danieladumann.de ranks #74 for &#x27;gesundheitsberater ausbildung&#x27; (720/month). GSC 3 months: 90 queries, 1778 impressions, 3 clicks, best position 1.0; top query &#x27;kräuterheilkunde&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://danieladumann.de/kurse-seminare">https://danieladumann.de/kurse-seminare</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+
+
+
+<p><b>Decision note:</b> Eigener Lauf mit eigener Zielgruppe. Nicht in die Praxis-Startseite mischen.</p>
+
+<details class="raw"><summary>Raw data (7 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">fastenleiter ausbildung</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">ausbildung kräuterheilkunde</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard medizin ausbildung</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">viriditas</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">hildegard.*ausbildung</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">ausbildung|weiterbildung|fastenleiter|kräuterheilkunde|gesundheitsberater|kurs|seminar|workshop|lernen|studium</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">danieladumann.de ranks #74 for &#x27;gesundheitsberater ausbildung&#x27; (720/month). GSC 3 months: 90 queries, 1778 impressions, </span></li></ul></details>
+</div></details><details class="item p-A" data-prio="A" data-pillar="brand">
+<summary><span class="rank">BRD-004</span><span class="prio pr-A">A</span>
+<span class="topic">Zwei Zielgruppen trennen: Startseite für Patient:innen, Viriditas-Schule als eigener Bereich</span><span class="bar"><i style="width:76%"></i></span><span class="num">76</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Struktur-Entscheidung aus der Datenlage</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>80</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">0 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Client signal:</b> 63 von 63 Rankings gehören zu Ausbildung, Kurs oder Lexikon (dataset.md 1.6); alle 3 sichtbaren Google-Bewertungen betreffen Kurse (dataset.md 1.8). GSC 3 months: 90 queries, 1778 impressions, 3 clicks, best position 1.0; top query &#x27;kräuterheilkunde&#x27;</p>
+
+
+
+
+
+
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">ausbildung|weiterbildung|fastenleiter|kräuterheilkunde|gesundheitsberater|kurs|seminar|workshop|lernen|studium</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">63 von 63 Rankings gehören zu Ausbildung, Kurs oder Lexikon (dataset.md 1.6); alle 3 sichtbaren Google-Bewertungen betre</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.6 und 1.8</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="brand">
+<summary><span class="rank">BRD-003</span><span class="prio pr-B">B</span>
+<span class="topic">Über Daniela: Geschichte, warum Hildegard, echtes Portrait</span><span class="bar"><i style="width:73%"></i></span><span class="num">73</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Eigene Biografie (lebenslauf live verifiziert)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: ueber</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>67</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>33</td><td class="mut">6 of 9 local cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://danieladumann.de/lebenslauf">https://danieladumann.de/lebenslauf</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ihre-heilpraktiker.berlin, ellennagel.de, naturheilpraxis-colettemoench.de, homoeopathie-ayurveda-berlin.de, manu-lemke.de</p>
+<p class='mut'>Überschrift/URL zur Person</p>
+
+
+<ul class='needs'><li>[FEHLT] Motivation-Text freigeben (offen laut Memory dumann-ueber-mich-page)</li></ul>
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ihre-heilpraktiker.berlin,ellennagel.de,naturheilpraxis-colettemoench.de,homoeopathie-ayurveda-berlin.de,manu-lemke.de</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.9 E-E-A-T</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="brand">
+<summary><span class="rank">BRD-002</span><span class="prio pr-B">B</span>
+<span class="topic">Methode in 3 Sätzen: Mein Ansatz (ersetzt das Bach-Zitat)</span><span class="bar"><i style="width:68%"></i></span><span class="num">68</span>
+<span class="tag2">homepage</span><span class="pill c-review">HWG review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Eigene Methode; Inhalt aus ihren Texten</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: block. Section: ueber</p>
+<p><b>Question:</b> Was ist Hildegard-Medizin und wie arbeitet sie damit?</p></div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>30</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>75</td><td class="mut">3 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): 5 säulen der hildegard medizin <b>40</b> <em>nat.</em></p>
+
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ellennagel.de, manu-lemke.de</p>
+
+<p><b>Compliance note:</b> HWG: Bach-Zitat &#x27;keine echte Heilung ohne …&#x27; nicht übernehmen (dataset.md 1.9).</p>
+
+<ul class='needs'><li>[FEHLT] Freigabe des Methodentexts durch die Kundin</li></ul>
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">5 säulen der hildegard medizin</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ellennagel.de,manu-lemke.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-10.json">02-competitors/serp-10.json</a> <span class="mut">related_searches: 5 Säulen der Hildegard-Medizin</span></li></ul></details>
+</div></details>
+<h3>Authority</h3><details class="item p-A" data-prio="A" data-pillar="authority">
+<summary><span class="rank">AUT-003</span><span class="prio pr-A">A</span>
+<span class="topic">Beweis-Leiste: Google 5,0 (9 Bewertungen) mit kurzem Zitat</span><span class="bar"><i style="width:78%"></i></span><span class="num">78</span>
+<span class="tag2">homepage</span><span class="pill c-review">HWG review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>GBP-Daten live (dataset.md 1.7). Achtung: alle sichtbaren Zitate betreffen Kurse</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof. Section: beweis-leiste</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>67</td><td class="mut">3 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Client signal:</b> Local Pack: Lemke 4,9 (51), Timpe 5,0 (36), Käßner 5,0 (13). Dumann 5,0 (9).</p>
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ihre-heilpraktiker.berlin, heilpraktiker-seiffert.de</p>
+<p class='mut'>Bewertungen/Referenzen sichtbar</p>
+<p><b>Compliance note:</b> HWG: Bewertungen ohne Wirkversprechen; Kurszitate nicht als Patientenstimmen zeigen.</p>
+
+<ul class='needs'><li>[FEHLT] 6 weitere Bewertungstexte und deutsche Originale (dataset.md Liste)</li><li>[FEHLT] Bewertungen von Patient:innen</li></ul>
+<details class="raw"><summary>Raw data (4 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">Local Pack: Lemke 4,9 (51), Timpe 5,0 (36), Käßner 5,0 (13). Dumann 5,0 (9).</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ihre-heilpraktiker.berlin,heilpraktiker-seiffert.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">local_pack ratings</span></li><li><span class="tag">gbp</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.7, 1.8</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="authority">
+<summary><span class="rank">AUT-006</span><span class="prio pr-B">B</span>
+<span class="topic">Hildegard-Kräutergarten als Beweis-Asset (Seminare, Pflanzen aus dem Garten)</span><span class="bar"><i style="width:73%"></i></span><span class="num">73</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Garten ist im Dataset belegt, aber der Ort widerspricht sich</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof. Section: ueber</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>32</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>100</td><td class="mut">0 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): hildegard von bingen kräutergarten <b>50</b> <em>nat.</em></p>
+
+<p><b>Live site:</b> weak (<a href="https://www.danieladumann.de/service-page/husten-nein-danke-gartenworkshop-1">https://www.danieladumann.de/service-page/husten-nein-danke-gartenworkshop-1</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+
+
+
+
+<ul class='needs'><li>[FEHLT] Wo liegt der Garten: Schorfheide oder Schöneberg?</li><li>[FEHLT] echte Fotos</li></ul>
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard von bingen kräutergarten</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.9 Besonderes Asset</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="authority">
+<summary><span class="rank">AUT-001</span><span class="prio pr-B">B</span>
+<span class="topic">Qualifikationen: Heilpraktikerin seit 2002, Dipl.-Sozialpädagogin (FH) seit 1985, weitere Abschlüsse</span><span class="bar"><i style="width:72%"></i></span><span class="num">72</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Live verifiziert auf /lebenslauf (dataset.md 1.9)</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof. Section: ueber</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>44</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>56</td><td class="mut">4 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> present (<a href="https://danieladumann.de/lebenslauf">https://danieladumann.de/lebenslauf</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ihre-heilpraktiker.berlin, homoeopathie-ayurveda-berlin.de, manu-lemke.de</p>
+<p class='mut'>Überschrift/URL mit Qualifikation</p>
+
+
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ihre-heilpraktiker.berlin,homoeopathie-ayurveda-berlin.de,manu-lemke.de</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.9 E-E-A-T</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="authority">
+<summary><span class="rank">AUT-004</span><span class="prio pr-B">B</span>
+<span class="topic">Bewertungen von Patient:innen aufbauen (Programm-Aufgabe, kein Seitentext)</span><span class="bar"><i style="width:71%"></i></span><span class="num">71</span>
+<span class="tag2">later</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Lücke im Beweis: 9 Bewertungen gegen 13 bis 51 im Local Pack, davon keine Patientenstimme</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>60</td><td class="mut">basis: client</td></tr>
+<tr><td>Gap</td><td>67</td><td class="mut">3 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+<p><b>Client signal:</b> Local Pack: Käßner 13, Timpe 36, Lemke 51 Bewertungen. Dumann 9 (nur Kursbezug).</p>
+
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ihre-heilpraktiker.berlin, heilpraktiker-seiffert.de</p>
+
+
+
+
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">Local Pack: Käßner 13, Timpe 36, Lemke 51 Bewertungen. Dumann 9 (nur Kursbezug).</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ihre-heilpraktiker.berlin,heilpraktiker-seiffert.de</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">local_pack votes_count</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="authority">
+<summary><span class="rank">AUT-002</span><span class="prio pr-B">B</span>
+<span class="topic">Vizepräsidentin Internationale Gesellschaft Hildegard von Bingen (Vorstand seit 2015, VP seit 2023)</span><span class="bar"><i style="width:58%"></i></span><span class="num">58</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Live verifiziert; im Wettbewerb nicht belegt</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof. Section: ueber</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>50</td><td class="mut">0 of 12 local+niche cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>100</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+
+<p class='mut'>Kein lokaler oder Nischen-Wettbewerber nennt diese Rolle</p>
+
+
+
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.9 E-E-A-T</span></li></ul></details>
+</div></details><details class="item p-B" data-prio="B" data-pillar="authority">
+<summary><span class="rank">AUT-009</span><span class="prio pr-B">B</span>
+<span class="topic">Wissensseite &#x27;Hildegard-Medizin erklärt&#x27; als Themen-Hub mit eigenen Quellen</span><span class="bar"><i style="width:52%"></i></span><span class="num">52</span>
+<span class="tag2">blog-faq</span><span class="pill c-review">HWG review</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Bildung zu ihrem Kernfach; Wettbewerb in der Tiefe: Nischen-Sites 303–773 Wörter, Themenseiten 1.589 bis 4.386</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: block.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>83</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>17</td><td class="mut">5 of 6 niche+topic cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): hildegard von bingen medizin <b>590</b> <em>nat.</em>, was ist hildegard medizin <b>10</b> <em>nat.</em>, hildegard von bingen kräuter <b>320</b> <em>nat.</em></p>
+<p><b>Autocomplete:</b> hildegard medizin; hildegard medizin at; hildegard medizin buch; hildegard medizin leber</p><p><b>People also ask:</b> Was empfiehlt Hildegard von Bingen?; Welche Heilmethoden verwendete Hildegard von Bingen?; Welche Krankheiten hatte Hildegard von Bingen?</p><p><b>Client signal:</b> GSC 3 months: 26 queries, 235 impressions, 0 clicks, best position 5.0; top query &#x27;hildegard medizin kräuter&#x27;</p>
+<p><b>Live site:</b> present (<a href="https://danieladumann.de/">https://danieladumann.de/</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> naturheilkunde-riedig.de, naturheilpraxis-dreher.de, naturheilpraxis-nathan.de, naturheilkunde.de, heilpraxisnet.de</p>
+
+<p><b>Compliance note:</b> HWG: Lehre darstellen, keine Wirkaussagen.</p>
+
+
+<details class="raw"><summary>Raw data (8 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard von bingen medizin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">was ist hildegard medizin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hildegard von bingen kräuter</span></li><li><span class="tag">autocomplete</span> <a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">^hildegard medizin( |$)</span></li><li><span class="tag">paa</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-*.json</a> <span class="mut">Was empfiehlt Hildegard von Bingen?</span></li><li><span class="tag">ranked</span> <a href="../03-demand/gsc-queries-90d.tsv">03-demand/gsc-queries-90d.tsv</a> <span class="mut">^(?!.*(ausbildung|weiterbildung|kurs|seminar|workshop|lernen|leiter|studium|gesundheitsberater)).*(hildegard.*(medizin|kräuter|leber|darm|er</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">GSC 3 months: 26 queries, 235 impressions, 0 clicks, best position 5.0; top query &#x27;hildegard medizin kräuter&#x27;</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">naturheilkunde-riedig.de,naturheilpraxis-dreher.de,naturheilpraxis-nathan.de,naturheilkunde.de,heilpraxisnet.de</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="authority">
+<summary><span class="rank">AUT-007</span><span class="prio pr-C">C</span>
+<span class="topic">Verbände und Mitgliedschaften mit echten Logos (Fachverband Freie Heilpraktiker, FET, MeGeMit, Hildegard-Gesellschaft)</span><span class="bar"><i style="width:50%"></i></span><span class="num">50</span>
+<span class="tag2">homepage</span><span class="pill c-ok">HWG ok</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Live verifiziert auf /lebenslauf</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof. Section: ueber</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>22</td><td class="mut">basis: expectation</td></tr>
+<tr><td>Gap</td><td>39</td><td class="mut">2 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> ihre-heilpraktiker.berlin, manu-lemke.de</p>
+
+
+
+<ul class='needs'><li>[FEHLT] Logo-Dateien der Verbände</li></ul>
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">ihre-heilpraktiker.berlin,manu-lemke.de</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.9</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="authority">
+<summary><span class="rank">AUT-005</span><span class="prio pr-C">C</span>
+<span class="topic">Erfahrungsberichte von Patient:innen mit Einwilligung (Ablauf, Atmosphäre, keine Wirkung)</span><span class="bar"><i style="width:46%"></i></span><span class="num">46</span>
+<span class="tag2">authority-page</span><span class="pill c-review">HWG review</span><span class="st st-needs_client">Needs client</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Gibt es noch nicht; nur 1 anonyme Stimme &#x27;H.&#x27; auf der Altseite</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: proof.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>39</td><td class="mut">2 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>67</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, heilpraktiker-seiffert.de</p>
+
+<p><b>Compliance note:</b> HWG: kein Vorher/Nachher, keine Wirkaussagen.</p>
+
+<ul class='needs'><li>[FEHLT] Mindestens 3 Zitate mit schriftlicher Einwilligung</li></ul>
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,heilpraktiker-seiffert.de</span></li><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">dataset.md 1.1 Sektion 6</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="authority">
+<summary><span class="rank">AUT-010</span><span class="prio pr-C">C</span>
+<span class="topic">Person-Auszeichnung (Person, sameAs, Mitgliedschaften) auf der Behandlerinnen-Seite</span><span class="bar"><i style="width:41%"></i></span><span class="num">41</span>
+<span class="tag2">authority-page</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>E-E-A-T-Technik; Seite &#x27;Über mich&#x27; wurde als Prototyp gebaut</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: entity-schema.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>25</td><td class="mut">0 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>100</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): none</p>
+
+
+
+<p class='mut'>Nicht gemessen: Person-Schema der Wettbewerber wurde nicht ausgewertet.</p>
+
+
+
+<details class="raw"><summary>Raw data (1 sources)</summary><ul><li><span class="tag">client-data</span> <a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">Memory dumann-ueber-mich-page</span></li></ul></details>
+</div></details><details class="item p-C" data-prio="C" data-pillar="authority">
+<summary><span class="rank">AUT-008</span><span class="prio pr-C">C</span>
+<span class="topic">Verzeichnis-Einträge als Linkziele (Portale, die bei &#x27;heilpraktiker berlin charlottenburg&#x27; auf Seite 1 stehen)</span><span class="bar"><i style="width:40%"></i></span><span class="num">40</span>
+<span class="tag2">offsite</span><span class="pill c-ok">HWG ok</span><span class="st st-draft">Draft</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Übergabe an backlink-dach. Quelle: SERP vom 11.10.2026</p><p><b>Fit 3 of 3.</b> Patient audience. Item type: link-target.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>0</td><td class="mut">basis: none</td></tr>
+<tr><td>Gap</td><td>25</td><td class="mut">0 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>100</td><td></td></tr><tr><td>Conversion</td><td>33</td><td></td></tr><tr><td>Effort</td><td>67</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker berlin charlottenburg <b>no data</b></p>
+
+
+
+<p class='mut'>Ziele: doctolib.de, werkenntdenbesten.de, doctify.com, theralupa.de (Platz 1 und 3 bei &#x27;hildegard von bingen heilpraktiker berlin&#x27;), portasanitas.de</p>
+
+
+
+<details class="raw"><summary>Raw data (2 sources)</summary><ul><li><span class="tag">serp</span> <a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">doctolib, werkenntdenbesten, doctify</span></li><li><span class="tag">serp</span> <a href="../02-competitors/serp-9.json">02-competitors/serp-9.json</a> <span class="mut">theralupa.de #1 und #3</span></li></ul></details>
+</div></details>
+<h2 id="cut">Cut items and why</h2><details class="item p-cut" data-prio="cut" data-pillar="location">
+<summary><span class="rank">LOC-004</span><span class="prio pr-cut">cut</span>
+<span class="topic">Eigene Ortsseiten Wilmersdorf / Westend</span><span class="bar"><i style="width:48%"></i></span><span class="num">48</span>
+<span class="tag2">cut</span><span class="pill c-ok">HWG ok</span><span class="st st-cut">Cut</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Volumen 10 pro Ort, keine belegten lokalen Besonderheiten, kein Einzugssignal der Kundin</p><p><b>Fit 2 of 3.</b> Patient audience. Item type: page.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>32</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>78</td><td class="mut">2 of 9 local cover it</td></tr>
+<tr><td>Fit</td><td>67</td><td></td></tr><tr><td>Conversion</td><td>0</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): heilpraktiker wilmersdorf <b>10</b>, heilpraktiker westend <b>10</b></p>
+
+<p><b>Live site:</b> missing <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> heilpraktiker-seiffert.de, homoeopathie-ayurveda-berlin.de</p>
+
+
+<p><b>Decision note:</b> Regel Ortsseite: braucht Nachfrage UND Einzugssignal UND eigene lokale Fakten. Alle drei fehlen. Ortsnamen nur im Text (CP-LOC-003).</p>
+
+<details class="raw"><summary>Raw data (3 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker wilmersdorf</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">heilpraktiker westend</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">heilpraktiker-seiffert.de,homoeopathie-ayurveda-berlin.de</span></li></ul></details>
+</div></details><details class="item p-cut" data-prio="cut" data-pillar="service">
+<summary><span class="rank">SVC-020</span><span class="prio pr-cut">cut</span>
+<span class="topic">Konkurrenz-Themen ohne Leistung der Kundin: Colon-Hydro-Therapie, HPU, Blutegel, Vitamin-C-Infusion</span><span class="bar"><i style="width:33%"></i></span><span class="num">33</span>
+<span class="tag2">cut</span><span class="pill c-ok">HWG ok</span><span class="st st-cut">Cut</span></summary>
+<div class="body">
+<div class="grid">
+<div><h5>Why</h5><p>Kundin bietet das nicht an (Leistungsliste dataset.md 1.1). Große Konkurrenz-Rankings sind hier Falle, kein Ziel</p><p><b>Fit 0 of 3.</b> Patient audience. Item type: cut-log.</p>
+</div>
+<div><h5>Numbers</h5><table class="mini"><tr><td>Demand</td><td>78</td><td class="mut">basis: volume</td></tr>
+<tr><td>Gap</td><td>33</td><td class="mut">8 of 12 local+niche cover it (table stakes)</td></tr>
+<tr><td>Fit</td><td>0</td><td></td></tr><tr><td>Conversion</td><td>0</td><td></td></tr><tr><td>Effort</td><td>33</td><td class="mut">higher = less work</td></tr></table></div>
+</div>
+<p><b>Keywords</b> (searches per month, 2026-10-11): hydro colon therapie berlin <b>320</b>, hpu <b>5,400</b> <em>nat.</em>, blutegeltherapie berlin <b>140</b>, vitamin c infusion <b>5,400</b> <em>nat.</em></p>
+
+<p><b>Live site:</b> weak (<a href="https://www.danieladumann.de/post/hildegard-von-bingen-kräuterlexikon-pelargonienmischpulver">https://www.danieladumann.de/post/hildegard-von-bingen-kräuterlexikon-pelargonienmischpulver</a>) <span class="mut">Auto check. Confirm by hand.</span></p>
+<p><b>Competitors covering it:</b> natura-heilpraxis.de, ihre-heilpraktiker.berlin, ellennagel.de, heilpraktiker-seiffert.de, naturheilpraxis-colettemoench.de, manu-lemke.de, naturheilkunde-riedig.de, naturheilpraxis-dreher.de</p>
+
+
+<p><b>Decision note:</b> Regel &#x27;Keyword muss zur echten Leistung passen&#x27;. Colon-Hydro ≠ Darmsanierung nach Hildegard.</p>
+
+<details class="raw"><summary>Raw data (7 sources)</summary><ul><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hydro colon therapie berlin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">hpu</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">blutegeltherapie berlin</span></li><li><span class="tag">volume</span> <a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">vitamin c infusion</span></li><li><span class="tag">sitemap</span> <a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">natura-heilpraxis.de,ihre-heilpraktiker.berlin,ellennagel.de,heilpraktiker-seiffert.de,naturheilpraxis-colettemoench.de,manu-lemke.de,naturh</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-natura-heilpraxis.de.json">03-demand/ranked-natura-heilpraxis.de.json</a> <span class="mut">hydro colon therapie 6600/Monat #22</span></li><li><span class="tag">ranked</span> <a href="../03-demand/ranked-ihre-heilpraktiker.berlin.json">03-demand/ranked-ihre-heilpraktiker.berlin.json</a> <span class="mut">hpu 5400/Monat, blutegeltherapie 5400/Monat</span></li></ul></details>
+</div></details>
+<h2 id="decisions">Decisions for Martin</h2><ol><li>Confirm the split: homepage for patients, Viriditas as its own area (CP-BRD-004, CP-BRD-005).</li><li>Adjacent topic CP-SVC-019 (Hildegard by complaint): keep out of the homepage until the client and the HWG check say yes.</li><li>Check naturheilpraxis-berlin-westend.de by hand (blocked for all readers).</li><li>Send the client form (13 open facts) before copy starts. Items with status needs_client stay drafts until then.</li><li>Massage (CP-SVC-016) and Pflanzenheilkunde (CP-SVC-017) are minor. Decide if they stay on the homepage.</li></ol>
+<h2 id="client">Open facts from the client</h2><div class="tblwrap"><table><tr><th>[FEHLT]</th><th>Blocks items</th></tr><tr><td>Was genau bietet sie an (Massage, Begleitung, Labor)?</td><td>CP-SVC-014</td></tr><tr><td>Bietet sie Fastenbegleitung für Patient:innen an, oder nur Kurse? Seite /hildegard-fasten ist eine Kursseite (Course-Schema).</td><td>CP-SVC-011</td></tr><tr><td>6 weitere Bewertungstexte und deutsche Originale (dataset.md Liste)</td><td>CP-AUT-003</td></tr><tr><td>Bewertungen von Patient:innen</td><td>CP-AUT-003</td></tr><tr><td>Absage-Regel (Frist, Kosten)</td><td>CP-SVC-004</td></tr><tr><td>Vorbereitung auf den ersten Termin</td><td>CP-SVC-004</td></tr><tr><td>Preis und Dauer eines Aderlasses</td><td>CP-SVC-007</td></tr><tr><td>Motivation-Text freigeben (offen laut Memory dumann-ueber-mich-page)</td><td>CP-BRD-003</td></tr><tr><td>Wo liegt der Garten: Schorfheide oder Schöneberg?</td><td>CP-AUT-006</td></tr><tr><td>echte Fotos</td><td>CP-AUT-006</td></tr><tr><td>Einzugsgebiet vom Kunden bestätigen: welche Bezirke kommen real</td><td>CP-LOC-003</td></tr><tr><td>Freigabe des Methodentexts durch die Kundin</td><td>CP-BRD-002</td></tr><tr><td>Entscheidung: ein Markenname für Website, GBP, Verzeichnisse</td><td>CP-LOC-006</td></tr><tr><td>Wunschpatient:in und die 3 bis 5 Anliegen, die sie begleitet</td><td>CP-SVC-005</td></tr><tr><td>Parken und Barrierefreiheit</td><td>CP-LOC-002</td></tr><tr><td>ob &#x27;Termine nach Vereinbarung&#x27; so bleibt (GBP: keine Öffnungszeiten)</td><td>CP-LOC-002</td></tr><tr><td>Logo-Dateien der Verbände</td><td>CP-AUT-007</td></tr><tr><td>Mindestens 3 Zitate mit schriftlicher Einwilligung</td><td>CP-AUT-005</td></tr></table></div><p class="mut">The full list for the client is in 01-client/client-baseline.md section 8 and in the German form.</p>
+<h2 id="raw">Raw data</h2><h3>Competitor pages measured</h3><div class="tblwrap"><table><tr><th>Page</th><th>Tier</th><th>Words</th><th>H2</th><th>FAQ</th><th>Price</th><th>Rating</th><th>Method</th></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.natura-heilpraxis.de/</a></td><td>local</td><td>2785</td><td>11</td><td>yes</td><td>yes</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.natura-heilpraxis.de/ganzheitliche-therapien/ganzheitliche-medizin</a></td><td>local</td><td>249</td><td>4</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">ihre-heilpraktiker.berlin/</a></td><td>local</td><td>1986</td><td>9</td><td>yes</td><td>yes</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.ellennagel.de/</a></td><td>local</td><td>426</td><td>12</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td>https://www.naturheilpraxis-berlin-westend.de/manuelle-verfahren/aderlass</td><td>local</td><td colspan="6"><b>unreadable</b>: HTTP 403. Not read as "nothing found".</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">heilpraktiker-seiffert.de/therapien/colon-hydro-therapie-berlin-charlo</a></td><td>local</td><td>1606</td><td>11</td><td>yes</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.naturheilpraxis-colettemoench.de/</a></td><td>local</td><td>341</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.homoeopathie-ayurveda-berlin.de/</a></td><td>local</td><td>415</td><td>5</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.naturheilkunde-riedig.de/hildegardvonbingen/</a></td><td>niche</td><td>773</td><td>1</td><td>-</td><td>yes</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.naturheilpraxis-dreher.de/hildegard-von-bingen.html</a></td><td>niche</td><td>303</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">naturheilpraxis-nathan.de/</a></td><td>niche</td><td>56</td><td>0</td><td>-</td><td>-</td><td>-</td><td>chrome-rendered</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.naturheilkunde.de/naturheilverfahren/hildegard-medizin.html</a></td><td>topic</td><td>1589</td><td>7</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.heilpraxisnet.de/themen/hildegard-von-bingen/</a></td><td>topic</td><td>4386</td><td>12</td><td>-</td><td>-</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.nuernberger.de/themenwelt/gesundheit-freizeit/heilpraktiker-kosten</a></td><td>topic</td><td>1715</td><td>9</td><td>yes</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">fastenakademie.de/fastenwandern/%F0%9F%8C%BF-7-tage-ambulantes-fasten-</a></td><td>client</td><td>567</td><td>1</td><td>-</td><td>yes</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">praxis-christinefuss.de/therapiemethoden/darmsanierung/</a></td><td>client</td><td>457</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.kathisturm-ernaehrung.de/</a></td><td>client</td><td>446</td><td>5</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.w-a-praxis.de/coaching-in-berlin-charlottenburg/ernaehrungsberatun</a></td><td>client</td><td>48</td><td>0</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.daniela-kniese.de/heilpraktikerpraxis/berlin-charlottenburg</a></td><td>local</td><td>638</td><td>7</td><td>yes</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.manu-lemke.de/</a></td><td>local</td><td>778</td><td>5</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">www.betty-timpe.de/</a></td><td>local</td><td>664</td><td>4</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">danieladumann.de/</a></td><td>client</td><td>335</td><td>1</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">danieladumann.de/behandlungen</a></td><td>client</td><td>2611</td><td>9</td><td>yes</td><td>yes</td><td>yes</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">danieladumann.de/lebenslauf</a></td><td>client</td><td>216</td><td>1</td><td>-</td><td>-</td><td>-</td><td>http</td></tr>
+<tr><td><a href="../02-competitors/metrics.json">danieladumann.de/hildegard-fasten</a></td><td>client</td><td>426</td><td>9</td><td>-</td><td>yes</td><td>-</td><td>http</td></tr>
+</table></div>
+<h3>Files</h3><ul><li><a href="../01-client/client-baseline.md">01-client/client-baseline.md</a> <span class="mut">client facts and [FEHLT] list</span></li><li><a href="../02-competitors/metrics.json">02-competitors/metrics.json</a> <span class="mut">page measures</span></li><li><a href="../02-competitors/site_urls.json">02-competitors/site_urls.json</a> <span class="mut">competitor sitemaps</span></li><li><a href="../02-competitors/serp-1.json">02-competitors/serp-1.json</a> <span class="mut">SERP 'heilpraktiker berlin charlottenburg' (serp-1 to serp-11 exist)</span></li><li><a href="../03-demand/volume.json">03-demand/volume.json</a> <span class="mut">search volumes, call 1</span></li><li><a href="../03-demand/volume2.json">03-demand/volume2.json</a> <span class="mut">search volumes, call 2</span></li><li><a href="../03-demand/autocomplete.json">03-demand/autocomplete.json</a> <span class="mut">Google autocomplete tree</span></li><li><a href="../03-demand/trends.json">03-demand/trends.json</a> <span class="mut">Google Trends</span></li><li><a href="../03-demand/ranked-danieladumann.de.json">03-demand/ranked-danieladumann.de.json</a> <span class="mut">own rankings (more ranked-*.json for competitors)</span></li><li><a href="../04-pool/pool.json">04-pool/pool.json</a> <span class="mut">the pool, machine-readable</span></li><li><a href="../spend.jsonl">spend.jsonl</a> <span class="mut">every paid call and its cost</span></li></ul>
+</div><script>
+document.querySelectorAll('.filters').forEach(function(f){f.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+f.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var v=b.dataset.f;
+document.querySelectorAll('details.item').forEach(function(d){d.classList.toggle('hidden',!(v==='all'||d.dataset.prio===v||(v==='client'&&d.querySelector('.st-needs_client'))||(v==='adj'&&d.querySelector('.st-adjacent_review'))))})})});
+</script></body></html>

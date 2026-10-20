@@ -1,0 +1,228 @@
+{
+ "client": "STÜRZL Steuerstrafrecht",
+ "client_slug": "stuerzl",
+ "page_slug": "selbstanzeige",
+ "page_type": "service",
+ "mode": "rewrite",
+ "language": "de",
+ "address": "sie",
+ "speaker": "wir",
+ "legal_mode": "BRAO",
+ "voice_sheet": "00_project/assets/stuerzl/voice.md",
+ "pool_item_ids": [
+  "CP-SVC-009",
+  "CP-SVC-010"
+ ],
+ "sitetree_node": "ST-14",
+ "url_slug": "/selbstanzeige/",
+ "keyword_primary": "selbstanzeige anwalt",
+ "keywords_cluster": [
+  {
+   "kw": "selbstanzeige finanzamt",
+   "volume": 720,
+   "scope": "national",
+   "source": "DataForSEO google_ads/search_volume/live, de, 2276",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "selbstanzeige steuerhinterziehung",
+   "volume": 480,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "strafbefreiende selbstanzeige",
+   "volume": 170,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "selbstanzeige anwalt",
+   "volume": 10,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  },
+  {
+   "kw": "selbstanzeige kosten",
+   "volume": 10,
+   "scope": "national",
+   "source": "DataForSEO",
+   "date": "2026-10-11"
+  }
+ ],
+ "intent": "commercial",
+ "reader": "Privatperson oder Unternehmer, der Einnahmen nicht erklärt oder Fehler in Steuererklärungen entdeckt hat und wissen will, ob eine Selbstanzeige noch geht, was sie verlangt und was ein Anwalt dabei tut. Sucht 'selbstanzeige finanzamt', 'selbstanzeige steuerhinterziehung', 'selbstanzeige anwalt'. Fragen aus PAA: Ist eine Selbstanzeige straffrei? Wer bezahlt den Anwalt? Wie hoch ist die Strafe bei 5.000 Euro?",
+ "local_city": null,
+ "cta": {
+  "goal": "Vertrauliche Anfrage über das Formular (nur Thema, keine Falldaten)",
+  "channel": "form",
+  "text": "Vertraulich anfragen",
+  "reassurance": "Nennen Sie uns nur Ihr Thema, keine Einzelheiten. Ihre Angaben unterliegen unserer gesetzlichen Verschwiegenheit.",
+  "secondary": "Anrufen: Frankfurt +49 69 298028870, München +49 89 72444170"
+ },
+ "sections": [
+  {
+   "id": "S01",
+   "element": "hero",
+   "job": "H1, Situation, ein Weg",
+   "cta": "primary"
+  },
+  {
+   "id": "S02",
+   "element": "answer",
+   "job": "Direkt-Antwort"
+  },
+  {
+   "id": "S03",
+   "element": "check-list",
+   "job": "Situationen"
+  },
+  {
+   "id": "S04",
+   "element": "step-flow",
+   "job": "Ablauf",
+   "cta": "primary"
+  },
+  {
+   "id": "S05",
+   "element": "person",
+   "job": "E-E-A-T"
+  },
+  {
+   "id": "S06",
+   "element": "text",
+   "job": "Kosten kurz",
+   "cta": "secondary"
+  },
+  {
+   "id": "S07",
+   "element": "accordion",
+   "job": "Vertiefung: § 371 Anforderungen, Ausschlussgründe, 25.000 Euro / § 398a",
+   "cta": "secondary"
+  },
+  {
+   "id": "S08",
+   "element": "faq",
+   "job": "8 Fragen"
+  },
+  {
+   "id": "S09",
+   "element": "cta",
+   "job": "Abschluss",
+   "cta": "primary"
+  }
+ ],
+ "dropped_sections": [
+  {
+   "id": "Beweis",
+   "reason": "Bewertungsfreigabe offen (CP-AUT-002 needs_client, anwalt.de-Zahl nicht freigegeben). Beweis liegt auf der Startseite. Titel stehen im Person-Block."
+  }
+ ],
+ "gate": "A0-full",
+ "money_page": true,
+ "bestand_words": 248,
+ "benchmark_median_words": 1566,
+ "benchmark_sources": "siehe 01-brief/gate-a0.md (11 Seiten, gelesen 2026-10-11)",
+ "word_range": [
+  1100,
+  1700
+ ],
+ "require_answer_block": true,
+ "faq_min": 12,
+ "internal_links_min": 3,
+ "internal_link_targets": [
+  {
+   "url": "/steuerstrafrecht/",
+   "anchor": "Steuerstrafrecht",
+   "role": "pillar"
+  },
+  {
+   "url": "/kosten/",
+   "anchor": "Kosten und Honorar",
+   "role": "money-page"
+  },
+  {
+   "url": "/dr-anja-stuerzl/",
+   "anchor": "Dr. Anja Stürzl",
+   "role": "person"
+  },
+  {
+   "url": "/steuerfahndung-durchsuchung/",
+   "anchor": "Steuerfahndung und Durchsuchung",
+   "role": "sibling"
+  }
+ ],
+ "cta_min": 3,
+ "cta_text": "Vertraulich anfragen",
+ "proof_assets": [
+  "Fachanwältin für Steuerrecht seit 2021 (Lebenslauf)",
+  "Zertifizierte Beraterin für Steuerstrafrecht (DAA) seit 2022 (Lebenslauf)"
+ ],
+ "forbidden_words": [
+  "spezialisiert",
+  "Spezialist",
+  "Experte",
+  "Expertin",
+  "Expertise",
+  "führend",
+  "Exzellenz",
+  "kostenlos",
+  "Festpreis",
+  "WhatsApp",
+  "Wiesenhüttenstraße",
+  "Albtraum",
+  "Ruin",
+  "Haft droht"
+ ],
+ "own_phrases": [
+  "Wir stehen Ihnen zur Seite",
+  "langjährige Praxiserfahrung",
+  "Fehler passieren",
+  "Das Mandanteninteresse steht für uns immer im Vordergrund",
+  "möglichst geräuschlos und effizient",
+  "Jedes Mandat und jeder Mandant ist anders"
+ ],
+ "placeholders_allowed": [
+  "Pauschale Erstberatung",
+  "Rechtsschutzversicherung",
+  "Vorschuss-Rahmen"
+ ],
+ "blockers": [],
+ "paa_questions": [
+  {
+   "q": "Ist eine Selbstanzeige straffrei?",
+   "status": "answered"
+  },
+  {
+   "q": "Wer bezahlt den Anwalt im Strafverfahren?",
+   "status": "answered"
+  },
+  {
+   "q": "Kann man einen Rechtsanwalt anzeigen?",
+   "status": "dropped",
+   "reason": "Passt nicht zum Angebot (Beschwerde gegen Anwälte).",
+   "reason_code": "off-offer"
+  },
+  {
+   "q": "Wie hoch ist die Strafe bei 5000 € Steuerhinterziehung?",
+   "status": "answered"
+  },
+  {
+   "q": "Was bedeutet strafbefreiende Selbstanzeige bei Steuerhinterziehung",
+   "status": "answered"
+  },
+  {
+   "q": "Bis wann kann ich eine Selbstanzeige abgeben",
+   "status": "answered"
+  },
+  {
+   "q": "Wann verjährt eine Steuerhinterziehung",
+   "status": "answered"
+  }
+ ],
+ "nap_file": "00_project/assets/stuerzl/nap.json",
+ "schema_faq": false
+}

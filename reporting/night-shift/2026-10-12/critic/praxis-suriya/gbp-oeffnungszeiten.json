@@ -1,0 +1,37 @@
+{
+  "plan_item_index": 0,
+  "client": "Praxis Suriya",
+  "page": "suriya/gbp-oeffnungszeiten",
+  "mode": "FEEDBACK",
+  "feedback_id": "61abce05-2b04-49b4-b4ab-420ab4374080",
+  "source_file": "feedback/praxis-suriya/61abce05-2b04-49b4-b4ab-420ab4374080.md",
+  "pass": true,
+  "checks": {
+    "sentence_for_sentence_addressed": {
+      "result": "pass",
+      "reason": "All four client statements are addressed: (1) 'Di-Do 7.30-18.00, Fr 7.30-12.00' -> table Di/Mi/Do 7:30-18:00, Fr 7:30-12:00; (2) 'Telefonisch Termin Mo 12-14 Uhr' -> table Montag 12:00-14:00 phone-only; (3) 'Termin Button habe ich nicht, nur Buchungsformular' -> Vorschlag Punkt 2 (Termin-Button); (4) 'barrierefrei aber nicht Toilette' -> Vorschlag Punkt 3 (Barrierefreiheit)."
+    },
+    "nap_block_matches_locked_record": {
+      "result": "pass",
+      "reason": "Name, Schützenpfad 29 / 55218 Ingelheim am Rhein, +49 174 7411087, Heilpraktiker all match context.json.nap_locked for client_id 3f71ef33-8c74-4ea1-b2d3-0273c2e99649 field by field."
+    },
+    "no_fehlt_in_title_meta_h1_nap_jsonld": {
+      "result": "pass",
+      "reason": "No Title/Meta/H1/JSON-LD in a FEEDBACK doc; NAP block itself has no [fehlt:]. The one [fehlt: vom Kunden zu bestätigen] is on Samstag/Sonntag hours inside the GBP hours table, not the NAP block — correctly flagged instead of invented, per the real-data-only rule."
+    },
+    "market_lang_de": {
+      "result": "pass",
+      "reason": "Entire draft is in German, matching market_lang 'de'."
+    },
+    "hwg_scan": {
+      "result": "pass",
+      "reason": "No cure/guarantee/fear claims ('heilt', 'garantiert', '100%', 'Heilung') in the copy. 'Heilpraktiker' is only the locked category label, not a health claim."
+    },
+    "deslop_body_copy": {
+      "result": "not_applicable",
+      "reason": "Vorschlag is an internal recommendation to Martin (GBP field edits), not client-facing prose shipped as-is — per SKILL.md §3 this is not a de-slop blocker."
+    }
+  },
+  "fails": [],
+  "notes": "Executor correctly declined to invent Monday in-person hours, weekend hours, or a GBP CTA type not in evidence; flagged data gaps instead. Repeat-feedback note to Martin about the missing processed-feedback.json ledger entry is informational and not a Critic concern."
+}

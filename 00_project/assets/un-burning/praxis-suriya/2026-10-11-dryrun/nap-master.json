@@ -1,0 +1,84 @@
+{
+ "name": "Praxis Suriya",
+ "owner": "Coralie Suriyapperuma (Heilpraktikerin)",
+ "address": {
+  "street": "Schützenpfad 29",
+  "postal_code": "55218",
+  "city": "Ingelheim am Rhein",
+  "country": "DE"
+ },
+ "phone": "0174 7411087",
+ "phone_e164": "+491747411087",
+ "website": "https://www.suriya-praxis.de",
+ "website_note": "Live site canonical and GSC property are the non-www host https://suriya-praxis.de/ (www answers 301 to non-www, verified). The memory master says www. Decision for Martin: pick one canonical form for all listings. Proposal: non-www, because the site, schema and GSC use it.",
+ "email": "suriyapraxis@gmail.com",
+ "hours": {
+  "mon-sat": "07:30-20:00",
+  "sun": "closed"
+ },
+ "categories_primary": "Heilpraktiker/in (Naturopath)",
+ "legal_form": "Einzelunternehmen (Impressum: Coralie Suriyapperuma)",
+ "locked_at": "2026-09-02",
+ "locked_by": "Martin (Coralie confirmed name 02.09. and address 08.09. by WhatsApp)",
+ "source": "memory praxis-suriya-client.md (SOURCE OF TRUTH) ; Supabase client_locations row cfec507f... (nap_status locked)",
+ "confidence": "client_stated",
+ "old_values": {
+  "names": [
+   "Praxis Suriya - Ayurveda & Naturheilkunde",
+   "Heilpraktiker Ingelheim I Praxis Suriya - Ayurveda & Naturheilkunde",
+   "Ayurveda Praxis Suriya Ingelheim",
+   "Suriya Ingelheim",
+   "Suriya Praxis",
+   "Suriya Heilpraktikerin",
+   "Praxis Suriya für Naturheilkunde und Ayurveda",
+   "Praxis Coralie Suriyapperuma Heilpraktikerin"
+  ],
+  "addresses": [
+   "Binger Str. 41 / Bingerstr. 41 (former home, not found live anywhere in this run)"
+  ],
+  "phones_found_in_the_wild_not_master": [
+   "06132 9723199",
+   "06132 9795890",
+   "01622714361",
+   "01573 0331732 (also written 0157 30 33 17 32)"
+  ],
+  "phones_status": "Liveness of these numbers is NOT verified. Nobody called them. Needs Coralie's answer (client_stated)."
+ },
+ "conflicts_inside_the_master_sources": [
+  {
+   "field": "name",
+   "supabase_client_locations.business_name": "Praxis Suriya - Ayurveda & Naturheilkunde",
+   "memory_master": "Praxis Suriya",
+   "evidence": [
+    "EV-C-client-locations"
+   ]
+  },
+  {
+   "field": "services",
+   "supabase_client_locations.services": "contains 'Faszientherapie'",
+   "memory_master": "Coralie does NOT offer Faszientherapie (08.09.)",
+   "evidence": [
+    "EV-C-client-locations"
+   ]
+  },
+  {
+   "field": "socials.instagram",
+   "supabase": "suriya.ayurveda",
+   "site_schema_and_footer": "suriya.praxis",
+   "evidence": [
+    "EV-C-client-locations",
+    "EV-D-crawl-sitemap"
+   ]
+  },
+  {
+   "field": "website",
+   "supabase": "https://suriya-praxis.de",
+   "memory_master": "https://www.suriya-praxis.de",
+   "evidence": [
+    "EV-C-client-locations",
+    "EV-A-headers-www"
+   ]
+  }
+ ],
+ "collected_at": "2026-10-11T01:38:33+02:00"
+}

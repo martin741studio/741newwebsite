@@ -1,0 +1,48 @@
+{
+  "title": "Content Pool: me&you Persona Pages",
+  "subtitle": "Three landing pages, one per persona: Replayers, Overlooked, Undersold. New pages. Three agents ran in parallel. Paid data 0.39 USD for 59 items.",
+  "findings": [
+    {
+      "text": "Replayers: people search for the exact persona problem. 'treppenwitz' has 1600 searches per month and 'schlagfertigkeit' has 2400 (volume-1.json). Autocomplete shows 'schlagfertigkeit ist das was einem auf dem nachhauseweg einfällt'. No trainer ranks for 'treppenwitz' (serp-12.json). This moment becomes the recognition block of the page.",
+      "items": ["CP-BRD-102", "CP-BRD-101", "CP-SVC-101"]
+    },
+    {
+      "text": "Replayers: competitor pages sell lists of techniques. Michael's method starts with the person (Persönlichkeit, Kongruenz, Wirkung). That is the difference. The free video training, the book and the podcast are the natural first steps for this persona. The current LP shows only the call.",
+      "items": ["CP-LOC-101", "CP-SVC-102", "CP-SVC-104", "CP-AUT-103"]
+    },
+    {
+      "text": "Overlooked: the demand is in the course term, not in the problem words. 'rhetorik kurs' has 1600 and 'rhetorik online kurs' has 210. 'im meeting nicht gehört werden' has no data (volume-1.json). No competitor course page names the gap between competence and impact. The hero keeps the approved problem line for ad traffic. Course, method and comparison carry the search part.",
+      "items": ["CP-BRD-201", "CP-BRD-204", "CP-SVC-201"]
+    },
+    {
+      "text": "Overlooked: the online course is the persona product, but the course facts are thin. We only know 'video lessons' and 'access at least 12 months'. Five items depend on Martin's decision: does this page show the course or only the call?",
+      "items": ["CP-SVC-201", "CP-SVC-202", "CP-SVC-203", "CP-AUT-204"]
+    },
+    {
+      "text": "Undersold: no competitor names Mallorca, Barcelona, Zypern or Dubai. The places are the clear gap. But they are not a search lever: 'rhetorik seminar mallorca' has no data. The places convert ad traffic. Leader terms ('führungskräfte kommunikation' 210, 'rhetorik für führungskräfte' 110) go into title, H2 and 'Für wen'.",
+      "items": ["CP-LOC-301", "CP-LOC-302", "CP-SVC-303"]
+    },
+    {
+      "text": "All three current LPs (v2) show facts that conflict with the dataset: '5 Bücher' (Michael's own site says nine), 'Top 100 Speaker' (approved copy says Top 100 Trainer), and the heading 'Vorher. Nachher.' without a before or after (UWG risk). The new pages fix this.",
+      "items": ["CP-AUT-201", "CP-AUT-301"]
+    },
+    {
+      "text": "Length floor (gate A0, 70 % of the competitor median per persona): Replayers 1083 words, Overlooked 1193 words, Undersold 836 words. Source: metrics-<persona>.json. The persona rules ask for few elements, so the Undersold page stays near the floor.",
+      "items": []
+    }
+  ],
+  "pillars": {
+    "location": "Here 'location' means the first step and where people train, not place pages. Replayers: free video training online, seminar places as one quiet line. Overlooked: online course from anywhere. Undersold: the places and dates as the product, as headings.",
+    "service": "Replayers: Schlagfertigkeit, frei sprechen, Lampenfieber only as FAQ (no health claims). Overlooked: online course, curriculum, format table, Durchsetzen and überzeugen. Undersold: small group and format, formats for leaders, cost question without a price. Media training and 1:1 coaching are fit 1 until the client confirms them.",
+    "brand": "Each page keeps its approved hero line. Replayers: the Treppenwitz and 'den Faden verlieren' as recognition. Overlooked: method as a numbered system and a comparison table. Undersold: substance above appearance, quiet and wide.",
+    "authority": "Michael: since 1990, over 8,000 participants, nine books, St. Gallen, ARTE and WELT TV. Proof per persona: Replayers quotes about Redeangst; Overlooked ProvenExpert 227 of 250 plus quotes on impact; Undersold peers (Sarna Röser, Peter Escher). Never the Google star number. Names need consent."
+  },
+  "decisions": [
+    "CTA per page: copy deck says 'Gespräch buchen' on all three LPs. The product ladder says Replayers = free training, Overlooked = online course, Undersold = application and private follow-up. Choose per page.",
+    "Undersold: du or Sie. The approved hero says 'Ihr Unternehmen'. The rest of the site uses du.",
+    "Community 'Talk to Me' on the Replayers page (CP-SVC-105): the FAQ run cut it, the design guide lists it. In or out?",
+    "CP-SVC-107 (Schlagfertig im Job) overlaps with Overlooked. Keep it on Replayers with the 'after the meeting' angle?",
+    "Adjacent offers (fit 1): 1:1 coaching (CP-SVC-308), media training (CP-SVC-309), '5 Säulen' PAA answer (CP-AUT-205). Out until the client confirms.",
+    "Open client facts before copy: course details, free training content, seminar names R I to R III, person in the call, Mallorca dates 2027, consent for quote names."
+  ]
+}

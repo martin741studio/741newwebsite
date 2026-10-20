@@ -1,0 +1,242 @@
+{
+ "workflow_id": "collab-content",
+ "name": "Co-Marketing & Backlink Collaboration Workflow",
+ "created": "2026-10-16",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "0.0": {
+   "status": "done",
+   "title": "Inputs Martin gives confirmed via interactive grill (inputs-grill.md: Job, Surface, Cadence, Limits)",
+   "evidence": "00_project/workflow-builds/collab-content/inputs-grill.md",
+   "date": "2026-10-16",
+   "note": "Confirmed via Decision Cards"
+  },
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/collab-content/research-note.md",
+   "date": "2026-10-16",
+   "note": "Skill + helper script chosen"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/collab-content/research-note.md",
+   "date": "2026-10-16",
+   "note": "Library searched for content/collab"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/collab-content/research-note.md",
+   "date": "2026-10-16",
+   "note": "Library verified fresh (< 1 week)"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/collab-content/research-note.md",
+   "date": "2026-10-16",
+   "note": "Existing assets: content-pool, balihealing baseline"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/collab-content/research-note.md",
+   "date": "2026-10-16",
+   "note": "Synthesis: Co-marketing guides over reciprocal links"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/collab-content/use-cases.md",
+   "date": "2026-10-16",
+   "note": "2-3 use cases documented"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/collab-content/test-scenarios.md",
+   "date": "2026-10-16",
+   "note": "3 test scenarios documented"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/collab-content/hand-run.md",
+   "date": "2026-10-16",
+   "note": "Bali Healing x Ayurvedagram Bali pilot documented"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/collab-content/pipeline.md",
+   "date": "2026-10-16",
+   "note": "Pipeline with checkpoints documented"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/collab-content/pipeline.md",
+   "date": "2026-10-16",
+   "note": "Degrees of freedom per step documented (Rule R1.7)"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/collab-content/decisions.md",
+   "date": "2026-10-16",
+   "note": "Martin approved Checkpoint 1 via Decision Card"
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": ".claude/skills/collab-content/SKILL.md",
+   "date": "2026-10-16",
+   "note": "Folder created with scripts/, references/, assets/"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": ".claude/skills/collab-content/SKILL.md",
+   "date": "2026-10-16",
+   "note": "Frontmatter includes WHAT + WHEN + negative trigger"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": ".claude/skills/collab-content/SKILL.md",
+   "date": "2026-10-16",
+   "note": "Checklist with gates and critical rules on top"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": ".claude/skills/collab-content/SKILL.md",
+   "date": "2026-10-16",
+   "note": "References 1 level deep; body is 75 lines"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": ".claude/skills/collab-content/SKILL.md",
+   "date": "2026-10-16",
+   "note": "Verification step with lint_collab.py and _run.json"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": ".claude/skills/collab-content/SKILL.md",
+   "date": "2026-10-16",
+   "note": "741 plain-text CMS and YMYL house rules enforced"
+  },
+  "3.7": {
+   "status": "skipped",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "Attended workflow only (always interactive with Martin)"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/collab-content/trigger-tests.md",
+   "date": "2026-10-16",
+   "note": "3 trigger tests verified"
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/collab-content/functional-test.md",
+   "date": "2026-10-16",
+   "note": "Functional test verified on Bali Healing x Ayurvedagram"
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/collab-content/baseline.md",
+   "date": "2026-10-16",
+   "note": "Baseline comparison documented (-95% ideation time)"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "Local repository skill, plugin eval not applicable"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/collab-content/scorecard.md",
+   "date": "2026-10-16",
+   "note": "Scorecard: 100%, 0 blocking zeros"
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/collab-content/ship-log.md",
+   "date": "2026-10-16",
+   "note": "Martin approved Checkpoint 2 via Decision Card"
+  },
+  "5.2": {
+   "status": "done",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": ".claude/skills/collab-content/SKILL.md",
+   "date": "2026-10-16",
+   "note": "Installed into .claude/skills/collab-content/"
+  },
+  "5.3a": {
+   "status": "done",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "00_project/workflow-registry/registry.json",
+   "date": "2026-10-16",
+   "note": "Registered in workflow registry and built to Desktop Excel"
+  },
+  "5.3b": {
+   "status": "skipped",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "Internal agent workflow, client guide not applicable"
+  },
+  "5.3": {
+   "status": "done",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/collab-content-workflow.md",
+   "date": "2026-10-16",
+   "note": "Memory file created and indexed in MEMORY.md"
+  },
+  "5.4": {
+   "status": "skipped",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "2026-10-16",
+   "note": "",
+   "reason": "Interactive on-demand workflow, scheduled run not applicable"
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-16T20:12"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-16T20:16"
+  },
+  {
+   "gate": "install",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-16T20:19"
+  }
+ ]
+}
