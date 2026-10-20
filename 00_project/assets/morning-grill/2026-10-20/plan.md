@@ -25,9 +25,7 @@ Scheduled run (06:14 WITA). Read-only scan + judgment cards only. No agent sessi
 
 ### Card 4: Ulrike Röth — Cancel today, confirm tomorrow
 - **Decision:** 14:00 tomorrow is correct
-- **Owner:** Agent
-- **Draft:** WhatsApp message to cancel 16:00 call today
-- **Next:** Martin approves, Agent sends
+- **Status:** ✓ CLOSED — no message action needed
 
 ### Card 5: 741 clients — Reconcile 58 overdue tasks
 - **Decision:** Agent matches tasks to chat deliverables, marks 'needs review'

@@ -1,0 +1,2 @@
+- 2026-10-21: NEW client in goal sheet: Katharina Kisser (status active)
+- 2026-10-21: me&you / Pauspapier: phase P4 -> None

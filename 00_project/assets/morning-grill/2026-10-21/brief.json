@@ -1,0 +1,922 @@
+{
+ "date": "2026-10-21",
+ "bookmark": "2026-10-20T17:10+08:00",
+ "read_at": "2026-10-21T06:07+08:00",
+ "time_zone": "WITA (UTC+8)",
+ "sources": {
+  "S1_sessions": {
+   "status": "ok",
+   "error": null
+  },
+  "S2_chats": {
+   "status": "ok",
+   "error": null
+  },
+  "S3_registry": {
+   "status": "ok",
+   "error": null
+  },
+  "S4_git": {
+   "status": "ok",
+   "error": null
+  },
+  "S5_standup": {
+   "status": "ok",
+   "error": null
+  },
+  "S6_nightshift": {
+   "status": "ok",
+   "error": null
+  },
+  "S7_citations": {
+   "status": "ok",
+   "error": null
+  },
+  "S8_tracking": {
+   "status": "unreadable",
+   "error": "tracking workflow not built yet"
+  },
+  "S9_memory": {
+   "status": "ok",
+   "error": null
+  },
+  "S10_calendar": {
+   "status": "ok",
+   "error": null
+  },
+  "S11_cards": {
+   "status": "ok",
+   "error": null
+  },
+  "S12_prospects": {
+   "status": "ok",
+   "error": null
+  },
+  "S13_deadlines": {
+   "status": "ok",
+   "error": null
+  }
+ },
+ "cards": [
+  {
+   "id": "2026-10-21-portal-bug-01",
+   "client": "741 Studio (intern)",
+   "priority": 1,
+   "type": "decide",
+   "headline": "Portal client view hides Kontakte/Newsletter/Anfragen tabs for Hüwel, Suriya, Stürzl — what's the fix?",
+   "evidence": [
+    "[e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]",
+    "[5a89f936-dc15-4db3-98f2-8cb0ee11d622.jsonl]",
+    "S2"
+   ],
+   "options": {
+    "a": "Agent investigates root cause now, proposes a fix for your review",
+    "b": "Quick patch: force tabs visible for all clients today, verify root cause later",
+    "c": "Park, not urgent, revisit next week"
+   },
+   "recommended": "a",
+   "why": "A silent bug hiding tabs could mean clients miss messages; root cause first avoids a wrong quick patch on live client-facing code.",
+   "deadline": "2026-10-21",
+   "created": "2026-10-21",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "Agent starts a session, reads the portal code, proposes a fix (no live change without your go)",
+    "b": "Agent writes the patch and asks for go before deploying",
+    "c": "Noted in plan.md, resurfaces next Monday"
+   }
+  },
+  {
+   "id": "2026-10-21-gayo-contract-01",
+   "client": "741 Studio (intern)",
+   "priority": 2,
+   "type": "decide",
+   "headline": "Gayo contract v7.2 (EN+Bahasa) ready, Ibu Made confirmed the structure — how do you want it sent for signing?",
+   "evidence": [
+    "[72125a55-acd3-4da1-af05-53c79049d4e7.jsonl]",
+    "S2"
+   ],
+   "options": {
+    "a": "Email both versions to Gayo, cc Ibu Made, ask Gayo to sign first",
+    "b": "WhatsApp the files directly to Gayo",
+    "c": "Park, discuss live on a call with Gayo first"
+   },
+   "recommended": "a",
+   "why": "Email gives a paper trail for an employment contract; cc'ing Ibu Made keeps the reviewer in the loop on the final version.",
+   "deadline": "2026-10-21",
+   "created": "2026-10-21",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "Agent drafts the email with v7.2 attached for your review and send",
+    "b": "Agent drafts the WhatsApp text, you send",
+    "c": "Noted as waiting_for in Gayo's goal sheet"
+   }
+  },
+  {
+   "id": "2026-10-21-suriya-listing-mails",
+   "client": "Praxis Suriya",
+   "priority": 3,
+   "type": "route",
+   "headline": "Praxis Suriya: 29 directory confirmation emails are unhandled. Verify links can expire.",
+   "evidence": [
+    "Supabase listing_emails (handled = false)",
+    "S7"
+   ],
+   "options": {
+    "a": "Tantri clicks the verify links today (portal task + WhatsApp)",
+    "b": "Agent lists them first, I decide",
+    "c": "Park"
+   },
+   "recommended": "a",
+   "why": "Group A listings are 741's job; expired links mean a new submission.",
+   "deadline": "2026-10-21",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "task draft for Tantri with the list",
+    "b": "agent writes list into plan.md",
+    "c": "park reason required"
+   }
+  },
+  {
+   "id": "2026-10-21-malware-watch-01",
+   "client": "Katharina Kisser",
+   "priority": 3,
+   "type": "decide",
+   "headline": "Katharina Kisser + Physio Kraft: 30-min malware watch has stayed clean for ~12h since cleanup — step down or keep tight?",
+   "evidence": [
+    "[f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]",
+    "S2"
+   ],
+   "options": {
+    "a": "Step down to hourly checks (still watching, less overhead)",
+    "b": "Keep 30-min watch another 24h to be safe",
+    "c": "Stop the extra watch, rely on normal site monitoring"
+   },
+   "recommended": "b",
+   "why": "Reinfection risk is highest in the first 48h after a cleanup; one more day of tight watch is cheap insurance.",
+   "deadline": "2026-10-21",
+   "created": "2026-10-21",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "Agent switches both sites to hourly checks",
+    "b": "Agent keeps the 30-min watch running another 24h",
+    "c": "Agent stops the extra watch, normal monitoring continues"
+   }
+  },
+  {
+   "id": "2026-10-21-741-overdue",
+   "client": "741 (all clients)",
+   "priority": 4,
+   "type": "decide",
+   "headline": "71 portal tasks are overdue across 8 clients. Many may be done in chats but not ticked.",
+   "evidence": [
+    "reporting/standup/2026-10-20.json",
+    "S5",
+    "Maria Brasse: 14",
+    "STÜRZL Steuerstrafrecht: 10",
+    "Johni Jaya Motor: 6",
+    "Bali Healing: 16",
+    "Rabenmütter: 4",
+    "Praxis Suriya: 6",
+    "Daniela Dumann: 6",
+    "Praxis Hüwel: 9"
+   ],
+   "options": {
+    "a": "Agent matches overdue tasks to chat work and proposes 'needs review' / re-plan per client for Monday",
+    "b": "Re-plan all overdue tasks today",
+    "c": "Ignore the counts until the portal sync exists"
+   },
+   "recommended": "a",
+   "why": "Default D6 allows 'needs review'; you decide re-plans in the Monday review.",
+   "deadline": "2026-10-19",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "agent writes overdue-match.md; Monday card",
+    "b": "agent drafts re-plan now",
+    "c": "park with reason"
+   }
+  },
+  {
+   "id": "2026-10-21-Praxis Hüwel-approve",
+   "client": "Praxis Hüwel",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Praxis Hüwel: 1 workflow results wait for your approval for more than 3 days (pool).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-Bali Healing-approve",
+   "client": "Bali Healing",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Bali Healing: 1 workflow results wait for your approval for more than 3 days (audit).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  }
+ ],
+ "below_the_line": [
+  {
+   "id": "2026-10-21-Praxis Suriy-approve",
+   "client": "Praxis Suriya",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Praxis Suriya: 1 workflow results wait for your approval for more than 3 days (pool).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-741 Studio (-approve",
+   "client": "741 Studio (Eigen-Audit)",
+   "priority": 4,
+   "type": "approve",
+   "headline": "741 Studio (Eigen-Audit): 1 workflow results wait for your approval for more than 3 days (audit).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-Sabine Schwa-approve",
+   "client": "Sabine Schwarz",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Sabine Schwarz: 1 workflow results wait for your approval for more than 3 days (prospect).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-Stephan Meye-approve",
+   "client": "Stephan Meyer",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Stephan Meyer: 1 workflow results wait for your approval for more than 3 days (prospect).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-Claudia Mari-approve",
+   "client": "Claudia Maria Steifensand",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Claudia Maria Steifensand: 1 workflow results wait for your approval for more than 3 days (prospect).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-Manuela Stet-approve",
+   "client": "Manuela Stetter",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Manuela Stetter: 1 workflow results wait for your approval for more than 3 days (prospect).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-Korinna Hein-approve",
+   "client": "Korinna Heintze",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Korinna Heintze: 2 workflow results wait for your approval for more than 3 days (booking-sequence, sales-call-prep).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-741 Studio (-approve",
+   "client": "741 Studio (intern)",
+   "priority": 4,
+   "type": "approve",
+   "headline": "741 Studio (intern): 1 workflow results wait for your approval for more than 3 days (evening).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-Lena Fistler-approve",
+   "client": "Lena Fistler",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Lena Fistler: 1 workflow results wait for your approval for more than 3 days (prospect).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-Roland Parbs-approve",
+   "client": "Roland Parbs",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Roland Parbs: 1 workflow results wait for your approval for more than 3 days (prospect).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-Markus Frey-approve",
+   "client": "Markus Frey",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Markus Frey: 1 workflow results wait for your approval for more than 3 days (prospect).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-Stephan Bren-approve",
+   "client": "Stephan Brenner",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Stephan Brenner: 1 workflow results wait for your approval for more than 3 days (prospect).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-Gabriele Hec-approve",
+   "client": "Gabriele Heckel",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Gabriele Heckel: 1 workflow results wait for your approval for more than 3 days (prospect).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-Claudia Füge-approve",
+   "client": "Claudia Fügel",
+   "priority": 4,
+   "type": "approve",
+   "headline": "Claudia Fügel: 1 workflow results wait for your approval for more than 3 days (prospect).",
+   "evidence": [
+    "00_project/workflow-registry/registry.json",
+    "S3"
+   ],
+   "options": {
+    "a": "Approve all",
+    "b": "Open them now (walk queue)",
+    "c": "Reject, needs rework"
+   },
+   "recommended": "b",
+   "why": "Approval needs your eyes; the walk queue keeps it to the results.",
+   "deadline": "2026-10-22",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "workflow_registry.py approve per run",
+    "b": "walk queue with links",
+    "c": "rework task to the agent"
+   }
+  },
+  {
+   "id": "2026-10-21-741-citations-stale",
+   "client": "741 (citations)",
+   "priority": 5,
+   "type": "decide",
+   "headline": "Citations stand still: Praxis Suriya 25, Praxis Hüwel 29 entries are 'planned' for more than 14 days.",
+   "evidence": [
+    "Supabase client_citations",
+    "S7",
+    "memory citations-listings-module"
+   ],
+   "options": {
+    "a": "Tantri works the group-A list this week, 10 per day",
+    "b": "First build the citations workflow (run file, runbook), then work",
+    "c": "Park until the backlink merge is done"
+   },
+   "recommended": "a",
+   "why": "Citations live is a leading number in every goal sheet; the runbook already exists.",
+   "deadline": "2026-10-16",
+   "status": "open",
+   "answer": null,
+   "park_reason": null,
+   "then": {
+    "a": "task drafts per client from reporting/submission-runbook.mjs output",
+    "b": "start ⚙️🖇️ chat task",
+    "c": "park"
+   }
+  }
+ ],
+ "walk_queue": [],
+ "clients": {
+  "Praxis Suriya": {
+   "today": [
+    "Program task (week 7): Vollständiger Internal-Linking-Durchgang: alle neuen Leistungs-, Standort- & Cluster-Seiten thematisch verknüpfen, Money-Pages gezielt stärken, sprechende Anchor-Texte, Hub↔Spoke sauber schließen",
+    "Program task (week 7): Cluster-Ausbau läuft weiter",
+    "Program task (week 7): PR-Pipeline: zweite Pitch-Welle"
+   ],
+   "fixed": [],
+   "watch": [
+    "Access missing: Google Search Console, Website / Hosting / CMS",
+    "6 overdue portal tasks",
+    "Last portal activity 2026-10-13 (portal only; chat work does not show)",
+    "Citations: 31 live, 0 submitted, 25 planned",
+    "Waiting for client: GSC access back since 2026-10-12"
+   ],
+   "next": [
+    "First Falcon scan after cycle reset ~19.10.",
+    "Next workflow: tracking (first scan), phone"
+   ],
+   "goal": "Top 3 in the Maps grid for the 5 tracked keywords (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P4",
+   "chat": "local_3702122f-abe4-4a49-9c58-2ab484fd1086"
+  },
+  "Praxis Hüwel": {
+   "today": [
+    "Program task (week 9): CTR-Optimierung Titel/Snippets",
+    "Program task (week 9): Interaktions-Loop (Anrufe, Route)",
+    "Open from chat: Client view hides Kontakte and Newsletter tabs (contacts: true). Same bug for Suriya, Stürzl. [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]"
+   ],
+   "fixed": [
+    "Homöopathie headline now 'Näheres zur Banerji Methode'. PR #10 merged and live. [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]",
+    "Hüwel set up Codex repo access on a call. He made PR #10, Martin reviewed and merged. [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]",
+    "Client still saw the old headline. Server was correct. Browser or Codex cache. [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]"
+   ],
+   "watch": [
+    "Access missing: Google Tag Manager",
+    "9 overdue portal tasks",
+    "Last portal activity 2026-10-13 (portal only; chat work does not show)",
+    "Citations: 38 live, 0 submitted, 29 planned",
+    "Waiting for martin: Choose fix scope and method for the portal Kontakte/Newsletter bug"
+   ],
+   "next": [
+    "GBP round 2 (FAQ, review replies, ~19 services)",
+    "Next workflow: phone, citations"
+   ],
+   "goal": "First measurable patient leads from Maps and the website (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P4",
+   "chat": "local_78a6b59d-dc6b-486c-a4fc-55c99656b50e"
+  },
+  "STÜRZL Steuerstrafrecht": {
+   "today": [
+    "Program task (week 2): Fotos/Videos einpflegen, Anwalts-Profile, Post-Rhythmus startet",
+    "Program task (week 2): INP < 200 ms, Core Web Vitals, Schema (LocalBusiness, Person, FAQ)",
+    "Program task (week 2): Erste Standort- und Top-Leistungsseiten in Produktion",
+    "Open from chat: Cards E1 (startpage headline) and E2 (categories) wait for Anja's click. [5a89f936-dc15-4db3-98f2-8cb0ee11d622.jsonl]",
+    "Open from chat: E3 (design): new CRO round with her feedback as brief, later. [5a89f936-dc15-4db3-98f2-8cb0ee11d622.jsonl]",
+    "Open from chat: Google Ads: required 'Zugänge' step with a 5-step guide. Client has not done it. [5a89f936-dc15-4db3-98f2-8cb0ee11d622.jsonl]"
+   ],
+   "fixed": [
+    "Anja's two voice notes checked against facts. No card changed without her click. [5a89f936-dc15-4db3-98f2-8cb0ee11d622.jsonl]",
+    "Onboarding: Facebook/Instagram, domain, directory logins set to 'entfällt' with her note. [5a89f936-dc15-4db3-98f2-8cb0ee11d622.jsonl]",
+    "Cards E4, E5, E7, E8 decided by Anja. [5a89f936-dc15-4db3-98f2-8cb0ee11d622.jsonl]",
+    "Title rule saved: expert titles only on person pages. Checked against live profiles. [5a89f936-dc15-4db3-98f2-8cb0ee11d622.jsonl]"
+   ],
+   "watch": [
+    "Access missing: Google Ads",
+    "10 overdue portal tasks",
+    "Onboarding 0/6, next: Vertrag & AVV unterzeichnen",
+    "Last portal activity 2026-10-13 (portal only; chat work does not show)",
+    "Citations: 0 live, 0 submitted, 0 planned",
+    "Waiting for client: Clicks on decision cards E1 and E2",
+    "Waiting for client: Answer on the compliance text",
+    "Waiting for client: Google Ads: account under her address, invite the 741 manager"
+   ],
+   "next": [
+    "Google Ads live within 2 weeks of start (due ~2026-10-21)",
+    "Next workflow: copy approvals, cro"
+   ],
+   "goal": "Start date fixed, Google Ads live within 2 weeks after start, approved money pages live (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P1",
+   "chat": "local_4d2052e4-d986-4cc4-a03c-d4d8d7b79bdb"
+  },
+  "Daniela Dumann": {
+   "today": [
+    "Program task (week 6): Weitere Spokes, Core/Outer-Verlinkung",
+    "Program task (week 6): 30-Tage-Zwischenmessung + Vorher/Nachher-Grid an Kunden"
+   ],
+   "fixed": [],
+   "watch": [
+    "Access missing: Google Tag Manager",
+    "6 overdue portal tasks",
+    "Onboarding 5/6, next: Fragebogen Positionierung",
+    "Last portal activity 2026-10-14 (portal only; chat work does not show)",
+    "Citations: 1 live, 0 submitted, 85 planned, 4 inconsistent"
+   ],
+   "next": [
+    "Next workflow: pool -> sitetree, copy"
+   ],
+   "goal": "53 Google reviews by day 90 and top 3 in Maps for the main keywords (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P4",
+   "chat": "local_03cdcb69-f227-4162-98d2-430bfd51b959"
+  },
+  "Maria Brasse": {
+   "today": [
+    "Program task (week 6): Weitere Spokes, Core/Outer-Verlinkung",
+    "Program task (week 6): 30-Tage-Zwischenmessung + Vorher/Nachher-Grid an Kunden"
+   ],
+   "fixed": [
+    "Mobile fix: tagline 'Lern- und Arbeitsverbesserung' was cut off on phones. Now hidden under 768px. [24666031-8aca-44ba-8446-4ad31ffdab3e.jsonl]",
+    "Logo stays. CSS rule set on post 12, confirmed in live HTML, 20.10. 21:55 WITA. [24666031-8aca-44ba-8446-4ad31ffdab3e.jsonl]",
+    "Site access credentials were found and used (credential mentioned, value not recorded). [24666031-8aca-44ba-8446-4ad31ffdab3e.jsonl]"
+   ],
+   "watch": [
+    "Access missing: Google Tag Manager",
+    "14 overdue portal tasks",
+    "Last portal activity 2026-10-13 (portal only; chat work does not show)",
+    "Citations: 1 live, 25 submitted, 31 planned"
+   ],
+   "next": [
+    "Next workflow: citations live checks"
+   ],
+   "goal": "Top 3 in Maps for Feng Shui Berlin keywords and more requests than the 30.09. baseline (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P4",
+   "chat": "local_a6311a65-fd78-4230-bc86-c427aa7cb0dc"
+  },
+  "Bali Healing": {
+   "today": [
+    "Program task (week 6): More spokes, core/outer linking",
+    "Program task (week 6): 30-day interim measurement + before/after grid to client",
+    "Open from chat: Ads billing and tracking blocker: not touched in this window. [76ee66f6-fc79-4277-b76a-5426ee6ba669.jsonl]"
+   ],
+   "fixed": [
+    "'Similar treatments' section built on 4 approved Wellness pages. Live, DOM-checked. [76ee66f6-fc79-4277-b76a-5426ee6ba669.jsonl]",
+    "Intramuscular Shots page: 3 cards live (Infusions, Ozone, Prolozone), links and brand checked. [76ee66f6-fc79-4277-b76a-5426ee6ba669.jsonl]",
+    "Agent stopped after the 4 approved pages, as agreed with Martin. [76ee66f6-fc79-4277-b76a-5426ee6ba669.jsonl]"
+   ],
+   "watch": [
+    "16 overdue portal tasks",
+    "Onboarding 2/6, next: Grant access",
+    "Last portal activity 2026-10-13 (portal only; chat work does not show)"
+   ],
+   "next": [
+    "Next workflow: audit follow-up, pool"
+   ],
+   "goal": "Onboarding 6/6 and Google Ads live within 2 weeks, then bookings from Ads and Maps (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P1",
+   "chat": "local_f85771e6-dfcb-403a-a238-ed0fbccbb030"
+  },
+  "Rabenmütter": {
+   "today": [
+    "Program task (week 6): FAQ-Blöcke (KI-zitierbar) ergänzen"
+   ],
+   "fixed": [],
+   "watch": [
+    "4 overdue portal tasks",
+    "Onboarding 2/6, next: Konto & Stammdaten",
+    "Last portal activity 2026-10-14 (portal only; chat work does not show)"
+   ],
+   "next": [],
+   "goal": "The 'Baseline -> Ziel' values of the Rabenmütter report page (Martin 2026-10-13); agent copies them here, Martin confirms",
+   "status": "active",
+   "phase": "P4",
+   "chat": "local_efe1b833-106f-4276-9bda-026856b03025"
+  },
+  "Johni Jaya Motor": {
+   "today": [
+    "Program task (week 10): 60-day measurement",
+    "Program task (week 10): Add photos/videos, practitioner profiles, posting rhythm starts",
+    "Program task (week 10): Continue user-signal optimisation"
+   ],
+   "fixed": [],
+   "watch": [
+    "6 overdue portal tasks",
+    "Onboarding 3/6, next: Upload material",
+    "Last portal activity 2026-10-14 (portal only; chat work does not show)"
+   ],
+   "next": [
+    "Access: GA4, Google Business Profile, GSC (Martin 13.10.: tracking already exists, GBP setup is what is left; he will double-check the rest)"
+   ],
+   "goal": "Restart: 3 missing access done, overdue list cleared or re-planned, then the normal Maps goal (Martin 2026-10-13)",
+   "status": "restart",
+   "phase": "P1",
+   "chat": "local_03e24cbe-ddb1-49e4-ba31-59f3ea5d57b4"
+  },
+  "Kamil (Physio Anatomie + Kraft)": {
+   "today": [],
+   "fixed": [
+    "physiotherapiekraft.de: same 30-min watch and IP block as Kisser. Clean at 05:12 WITA. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]",
+    "Wordfence blocked one login attack 368 times (03:34-04:05 WITA). Home page stayed up. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]",
+    "Logs: site answered normally every hour from 21:30 to 05:15 WITA. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]"
+   ],
+   "watch": [],
+   "next": [
+    "Move the monthly numbers into his client dashboard and prepare improvement recommendations (website, income streams)"
+   ],
+   "goal": "Monthly reports current (August, September) and cost per lead held or lowered (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P6",
+   "chat": "local_6681ef9f-5848-4b28-9073-25e5cacaf787"
+  },
+  "Marcel Rosenbach": {
+   "today": [
+    "Open from chat: 9 old Zapier runs and one test run still stuck. None completed. [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]",
+    "Open from chat: No new Gewinnspiel entry since 20.10. 00:59 WITA. The fix is not tested on a real case. [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]",
+    "Open from chat: Likely cause: short session life of the old KlickTipp connection. Not confirmed. [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]"
+   ],
+   "fixed": [
+    "KlickTipp connection repaired about 19.10. It showed Expired again on 20.10. [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]"
+   ],
+   "watch": [
+    "Waiting for martin: Click Reconnect on the KlickTipp connection (Connections page is open)"
+   ],
+   "next": [
+    "Landing page (in progress 13.10.) -> Martin's intro video -> prototype for Marcel -> Ads",
+    "Next workflow: offer, then cro / automation"
+   ],
+   "goal": "Close a new website build with a monthly subscription, plus Google Ads as soon as possible; show Hüwel as proof (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P0",
+   "chat": "local_61b8f208-18a7-4a11-981d-0fb3170dad82"
+  },
+  "me&you / Pauspapier": {
+   "today": [],
+   "fixed": [],
+   "watch": [],
+   "next": [
+    "Next workflow: cro checkpoint 3"
+   ],
+   "goal": "Both landing pages live and the no-show rate measured and lowered (Martin 2026-10-13)",
+   "status": "active",
+   "phase": "P4",
+   "chat": null
+  }
+ },
+ "line_741": [
+  "Calendar: Scooter pay kadek with  at 2026-10-21T09:00+08:00 WITA (confirmed)",
+  "Calendar: 30 min meeting between 741 Studio and Ulrike Röth with Ulrike Röth at 2026-10-21T14:00+08:00 WITA (confirmed)",
+  "Calendar: 30 min meeting between 741 Studio and Tina Lawin with Tina Lawin / Bettina Lawin at 2026-10-21T17:30+08:00 WITA (confirmed)",
+  "Calendar: 30 min meeting between 741 Studio and Klaus-Dieter with Klaus-Dieter / Agentur Meerblick at 2026-10-22T15:00+08:00 WITA (confirmed)",
+  "Parked (2026-09-23): waiting for the lawyer's reply to Martin's letter (pay 0 €)",
+  "Review pages ready, not sent: Claudia Tiemann, Ana Violeta Fredel, Lena Fistler, Stephan Meyer, Roland Parbs, Markus Frey, Claudia Maria Steifensand, Manuela Stetter, Stephan Brenner, Gabriele Heckel, Sabine Schwarz, Catja Grieshaber, Claudia Fügel, Christian Ruether",
+  "Lead follow-up: Eri Trostl (overdue (> 7 days))"
+ ],
+ "goal_gaps": 18
+}

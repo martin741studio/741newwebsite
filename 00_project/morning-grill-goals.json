@@ -1,5 +1,5 @@
 {
- "_note": "GENERATED 2026-10-20T06:14 from Supabase (portal clients: status/phase/program dates/work_goals) + morning-grill-goals-overlay.json (everything else). Do not hand-edit this file — edit Supabase or the overlay. Generator: 00_project/morning-grill-skill/scripts/generate_goals.py (goals-data-architecture, 2026-10-15).",
+ "_note": "GENERATED 2026-10-21T06:42 from Supabase (portal clients: status/phase/program dates/work_goals) + morning-grill-goals-overlay.json (everything else). Do not hand-edit this file — edit Supabase or the overlay. Generator: 00_project/morning-grill-skill/scripts/generate_goals.py (goals-data-architecture, 2026-10-15).",
  "clients": [
   {
    "client": "Praxis Suriya",
@@ -522,6 +522,68 @@
    "aliases": [
     "kamil",
     "physio"
+   ]
+  },
+  {
+   "client": "Katharina Kisser",
+   "registry_name": "Katharina Kisser",
+   "status": "active",
+   "grill": "daily",
+   "phase": null,
+   "program_start": null,
+   "program_end": null,
+   "quarter_goal": null,
+   "goal_numbers": [],
+   "leading": [
+    {
+     "metric": "741 tasks done per week",
+     "weekly_threshold": null,
+     "owner": "agent+team"
+    }
+   ],
+   "next_milestone": "Site fully clean and hardened after the 2026-10-20 malware/credential incident",
+   "blockers": [
+    "Reinfection watch (incident 00_project/security/incident-handover-2026-10-20.md)",
+    "Booking/Stripe flow not yet fully re-verified after plugin restore"
+   ],
+   "waiting_for": [],
+   "client_rules": [],
+   "chat": "local_6dcdbc6d-6594-49a0-9ac5-6ab3313c5e6e",
+   "next_workflow": null,
+   "notes": "Added to overlay 2026-10-21 (was missing, caused a recurring warning). New client, picked up mid-crisis (malware/credential compromise, see security incident doc).",
+   "aliases": [
+    "kisser",
+    "katharinakisser"
+   ]
+  },
+  {
+   "client": "me&you / Pauspapier",
+   "registry_name": "me&you / Pauspapier",
+   "status": "active",
+   "grill": "daily",
+   "phase": null,
+   "program_start": null,
+   "program_end": null,
+   "quarter_goal": null,
+   "goal_numbers": [],
+   "leading": [
+    {
+     "metric": "741 tasks done per week",
+     "weekly_threshold": null,
+     "owner": "agent+team"
+    }
+   ],
+   "next_milestone": "Next workflow: cro checkpoint 3",
+   "blockers": [],
+   "waiting_for": [],
+   "client_rules": [],
+   "chat": "local_5c4f6ee6-ba4e-47c4-8a82-ecf176ed92ea",
+   "next_workflow": "cro checkpoint 3",
+   "notes": "Added to overlay 2026-10-21 (was missing, caused a recurring warning).",
+   "aliases": [
+    "meandyou",
+    "pauspapier",
+    "michael ehlers"
    ]
   },
   {

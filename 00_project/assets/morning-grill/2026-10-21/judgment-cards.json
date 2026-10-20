@@ -1,0 +1,53 @@
+[
+ {
+  "id": "2026-10-21-portal-bug-01",
+  "client": "741 Studio (intern)",
+  "priority": 1,
+  "type": "decide",
+  "headline": "Portal client view hides Kontakte/Newsletter/Anfragen tabs for Hüwel, Suriya, Stürzl — what's the fix?",
+  "evidence": ["[e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]", "[5a89f936-dc15-4db3-98f2-8cb0ee11d622.jsonl]", "S2"],
+  "options": {"a": "Agent investigates root cause now, proposes a fix for your review", "b": "Quick patch: force tabs visible for all clients today, verify root cause later", "c": "Park, not urgent, revisit next week"},
+  "recommended": "a",
+  "why": "A silent bug hiding tabs could mean clients miss messages; root cause first avoids a wrong quick patch on live client-facing code.",
+  "deadline": "2026-10-21",
+  "created": "2026-10-21",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {"a": "Agent starts a session, reads the portal code, proposes a fix (no live change without your go)", "b": "Agent writes the patch and asks for go before deploying", "c": "Noted in plan.md, resurfaces next Monday"}
+ },
+ {
+  "id": "2026-10-21-gayo-contract-01",
+  "client": "741 Studio (intern)",
+  "priority": 2,
+  "type": "decide",
+  "headline": "Gayo contract v7.2 (EN+Bahasa) ready, Ibu Made confirmed the structure — how do you want it sent for signing?",
+  "evidence": ["[72125a55-acd3-4da1-af05-53c79049d4e7.jsonl]", "S2"],
+  "options": {"a": "Email both versions to Gayo, cc Ibu Made, ask Gayo to sign first", "b": "WhatsApp the files directly to Gayo", "c": "Park, discuss live on a call with Gayo first"},
+  "recommended": "a",
+  "why": "Email gives a paper trail for an employment contract; cc'ing Ibu Made keeps the reviewer in the loop on the final version.",
+  "deadline": "2026-10-21",
+  "created": "2026-10-21",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {"a": "Agent drafts the email with v7.2 attached for your review and send", "b": "Agent drafts the WhatsApp text, you send", "c": "Noted as waiting_for in Gayo's goal sheet"}
+ },
+ {
+  "id": "2026-10-21-malware-watch-01",
+  "client": "Katharina Kisser",
+  "priority": 3,
+  "type": "decide",
+  "headline": "Katharina Kisser + Physio Kraft: 30-min malware watch has stayed clean for ~12h since cleanup — step down or keep tight?",
+  "evidence": ["[f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]", "S2"],
+  "options": {"a": "Step down to hourly checks (still watching, less overhead)", "b": "Keep 30-min watch another 24h to be safe", "c": "Stop the extra watch, rely on normal site monitoring"},
+  "recommended": "b",
+  "why": "Reinfection risk is highest in the first 48h after a cleanup; one more day of tight watch is cheap insurance.",
+  "deadline": "2026-10-21",
+  "created": "2026-10-21",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {"a": "Agent switches both sites to hourly checks", "b": "Agent keeps the 30-min watch running another 24h", "c": "Agent stops the extra watch, normal monitoring continues"}
+ }
+]

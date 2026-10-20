@@ -40,3 +40,10 @@ Added 2026-10-13 after the first real grill:
 - morning-grill/2026-10-13-dryrun -> morning-grill/_archiv/2026-10-13-dryrun (git tracked, staged)
 - tracking/praxis-suriya/2026-10-12-design-dryrun -> tracking/praxis-suriya/_archiv/2026-10-12-design-dryrun (untracked, moved on disk)
 - meandyou/cro/06-gpt-assets/images/03-sit-overlooked-v1-rejected.png + its _drive copy -> same folders' _archiv/ (untracked, moved on disk)
+
+## WP malware incident Kisser + Physio Kraft — Martin's decisions 20.10. ~21:30 WITA (chat cards, do NOT ask again)
+Details: memory wp-incident-2026-10-20-kisser-physiokraft.md. Watch ran until 23:00 WITA.
+- [ ] 21.10. morning: new WP admin passwords (all admins, both sites) into vault client_credentials + Wordfence 2FA on; guide each admin through 2FA. Decided: "Yes, tomorrow morning".
+- [ ] 21.10.: Kisser forms/booking replacement PLAN (Gravity Forms, Booked, Bookme are in quarantine; blocks empty). Check which pages use them, suggest a clean replacement as cards. No change without go.
+- [ ] 21.10.: Physio Search Console spam sitemaps manga.php + shop.php — Martin's click: open GSC in Chrome first, lead him click by click.
+- [ ] This week: update round, one at a time with backup + page check: Goodlayers/Infinite theme (Kisser), PHP 8.3 for CF7, Elementor 4 + Pro (Physio). Fresh copies of Awsm Team Pro + Elementor Pro in the same round (not before). Novamira stays out of Kisser.
