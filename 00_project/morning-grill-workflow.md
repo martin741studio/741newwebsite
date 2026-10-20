@@ -101,8 +101,10 @@ Rule: each source has a bookmark in `state/bookmarks.json` (R6.1 of the workflow
 | S12 | 741 level | `00_project/revenue-model-100k.md`, prospects `_run.json`, lead memory files | Pipeline line, follow-ups due | agency numbers |
 | S14 | WhatsApp (Mac app) | **Interactive grill only, Martin present.** computer-use opens WhatsApp.app (one-time access grant), reads business chats only (clients, team, prospects — no personal/family chats). Voice notes: locate the media file on disk and transcribe with `whisper --model small` (memory `audio-transcription-fast`); screen-reading alone cannot transcribe audio. | Summary per chat, prepared answers (drafts), prepared actions, routed to the client's chat or team drafts | client/team WhatsApp messages |
 | S15 | Email (Airmail, all accounts, unified inbox) | **Interactive grill only, Martin present.** computer-use opens Airmail's unified inbox (all connected accounts). Business-relevant mail; same drafting and routing rules as S14. | Summary, prepared answers, prepared actions | email |
+| S16 | Outreach & Sales board | Supabase `741-portal` project (`galjmtozcgxcwtzkzbpi`): `outreach_accounts` joined to `daily_report_accounts`/`daily_reports` — per LinkedIn account requests_sent, accepted, pitched, follow_ups, replies, interested, last report day | Per-account LinkedIn numbers, judged (which account works, which is stalled, which never reports) | outreach/sales activity, added 2026-10-20 (Martin: "needs to be checked once a day, every time") |
 
 Decided 2026-10-14 (D38, see decisions table): S14/S15 never run in the unattended 06:00/17:00 scheduled task — personal data, no one watching. They run only when Martin says "grill me" (or asks directly) and are present in the chat.
+Decided 2026-10-20: S16 runs every grill (morning and evening, scheduled or interactive) — it is read-only Supabase data, no personal-data restriction. A stalled account (sent but not pitched/replied for 2+ days) or a never-reported account becomes a judgment card.
 
 ## 4. Morning scan (M0)
 
