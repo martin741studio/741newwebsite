@@ -51,3 +51,12 @@ Workflow ID: `sales-pitch`
   - Add `/sales-pitch` command to UpNote workflow overview table.
 
 **Status Checkpoint 2:** APPROVED & SHIPPED (Martin Go).
+
+
+---
+
+## 2026-10-21 Offer update v1.1 (Martin's cards in the side session)
+
+- **Trigger:** Martin re-priced the offer on 2026-10-21 and put it live on the growth page (section "Zwei Wege, mit uns zu arbeiten").
+- **Change:** two packages only (Power Engine 7.999 € first, 90-Tage-Erfolgspaket 4.999 €), no Starter by phone, no −10 %, value stack 15.000 €, new guarantee wording, 3 bonuses, payment default + 60 % fallback, referral after the yes, Gebietsschutz, Sichtbarkeits-Schutz 397 €/Monat follow-up. verify_pitch.py rewritten to 10 checks.
+- **Martin's answers (cards, 2026-10-21):** Commit = "Commit now (Recommended)" · Guru terms = "Replace them (Recommended)" · Evidence = "Fresh test on real prospect (Recommended)" · Old cockpits = "Rebuild Ulrike Röth".
