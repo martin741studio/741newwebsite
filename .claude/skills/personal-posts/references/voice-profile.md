@@ -72,6 +72,25 @@ This skill is scoped to **Martin's personal account** (the voice above, all 7 pi
 
 For a contradiction-style post, work through: the accepted narrative -> the potential contradiction -> the incentive or mechanism behind it -> a real example or personal experience (accuracy rules apply) -> an alternative interpretation or counterargument -> a memorable, honest hook -> a clear takeaway or open question. This is the shape the "we're all a family" test post already follows by instinct; use it deliberately for pillar-1 posts, not as a rigid template for every pillar (a pillar-7 personal story or a pillar-6 discipline post does not need a "narrative vs. contradiction" structure forced onto it).
 
+## Braindumps and the complaint-vs-insight rule (Martin's own words, 2026-10-22)
+
+Martin wants a place to dump raw, unprocessed thinking (`scripts/braindump.py`) without every dump being treated as post-ready. His own limit, stated directly: he does not want to put out posts that just read as complaints.
+
+A real frustration or irritation can be the SEED of a pillar-1 or pillar-2 post, but the post itself has to land on an actual mechanism or insight, not just vent the frustration. The test: strip the emotion out of the raw dump and ask what is left. If what is left is still a real claim about how something works (a pattern, an incentive, a mechanism) -> it is distillable, run it through the editorial method above. If what is left is only "this annoys me" with no underlying claim -> it is not ready; say so plainly rather than dressing a complaint up as an insight.
+
+## First-principles note (Martin's own words, 2026-10-22 — the real purpose of this workflow)
+
+The point of this skill is not only to produce posts. Martin wants the process itself to help him actually understand the topic — first-principles thinking — and for the published post to carry that understanding to readers, not just a hook. His words: "I need you in this workflow to help me to understand better... with putting it online and posting we also help others to learn this."
+
+So every angle-generation step (SKILL.md step 5) opens with a short first-principles note, written out and shown to Martin BEFORE the hook options, not folded invisibly into them:
+
+1. **Root mechanism.** Why does the pattern actually happen — the real incentive or cause underneath it, not just a restatement that it happens.
+2. **Cross-domain translation, especially to business.** Where else the same mechanism shows up — business is Martin's own primary meaning-making domain, so this is not optional decoration, it is the point. If the same mechanism already appears in a business-account post or pillar, say so explicitly (it may turn into a second, business-account angle on the same underlying insight).
+
+Only after this note does the usual set of hook angles follow. The note is working material Martin reads and can correct — it is itself part of "distilling an inferred interpretation into a confirmed claim" (Accuracy rules), not a finished claim on its own.
+
+**Workflow for a raw dump (not a single clear thought):** save it first (`scripts/braindump.py add personal "<text>"`, status starts `raw`), then distill it before offering angles — do not skip straight to step 4 (angle generation) on raw, unprocessed text. Confirm the distilled claim with Martin (it is very likely an "interpretation inferred from conversation" at this stage, not yet his "explicitly expressed opinion" — accuracy rules apply in full). Once he confirms the distilled claim, mark the dump `distilled` and proceed to normal angle generation from that confirmed claim, not from the raw text.
+
 ## Headline-prompt / copy-rules reuse (Martin's go, 2026-10-22)
 
 Draft the opening line of every post the way the DR hero formula builds a headline, scaled down to one sentence instead of a page hero. Source: `~/.claude/skills/content-writing/references/copy-rules.md` (741 Content-Raster). Read directly, never call `/content-write` — that skill is scoped to client-voice page and blog copy.
