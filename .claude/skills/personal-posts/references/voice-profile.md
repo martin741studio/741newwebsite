@@ -84,12 +84,13 @@ A real frustration or irritation can be the SEED of a pillar-1 or pillar-2 post,
 
 The point of this skill is not only to produce posts. Martin wants the process itself to help him actually understand the topic — first-principles thinking — and for the published post to carry that understanding to readers, not just a hook. His words: "I need you in this workflow to help me to understand better... with putting it online and posting we also help others to learn this."
 
-So every angle-generation step (SKILL.md step 5) opens with a short first-principles note, written out and shown to Martin BEFORE the hook options, not folded invisibly into them:
+**Correction, Martin's own words, 2026-10-22, round 2:** the first real run of this note was written out as one finished block of prose — root mechanism and business translation both, before Martin had answered anything. That is wrong. His words: "I have to think by myself because learning is something hard... it can't be too much comfort... I need it one by one, decision card by decision card." Comfort (reading a finished answer) does not build understanding; being asked and answering does. So the note is NEVER delivered as one prose block. It is always at least two separate `AskUserQuestion` cards, in sequence, each one waiting for Martin's answer before the next is written:
 
-1. **Root mechanism.** Why does the pattern actually happen — the real incentive or cause underneath it, not just a restatement that it happens.
-2. **Cross-domain translation, especially to business.** Where else the same mechanism shows up — business is Martin's own primary meaning-making domain, so this is not optional decoration, it is the point. If the same mechanism already appears in a business-account post or pillar, say so explicitly (it may turn into a second, business-account angle on the same underlying insight).
+1. **Card 1, root mechanism.** Do not assert the mechanism as a finished paragraph. Offer it as a question with real candidate framings as options (not a leading single answer) — "here's what I think is underneath this, does it match, or is there a sharper mechanism?" Wait for his answer. Only his confirmed (or corrected) answer becomes the working mechanism.
+2. **Card 2, cross-domain translation, especially to business.** Built on his Card-1 answer, not on the original guess. Same shape: a real candidate translation, not a finished paragraph, asking whether it holds or needs correcting. If the same mechanism already appears in a business-account post or pillar, say so and ask whether that becomes a second, business-account angle.
+3. Only after both cards are answered does the usual angle-hook card (SKILL.md step 5) follow, built on the confirmed mechanism and translation, not the original guess.
 
-Only after this note does the usual set of hook angles follow. The note is working material Martin reads and can correct — it is itself part of "distilling an inferred interpretation into a confirmed claim" (Accuracy rules), not a finished claim on its own.
+This takes more turns than writing it all out at once. That is the point, not a cost to minimize.
 
 **Workflow for a raw dump (not a single clear thought):** save it first (`scripts/braindump.py add personal "<text>"`, status starts `raw`), then distill it before offering angles — do not skip straight to step 4 (angle generation) on raw, unprocessed text. Confirm the distilled claim with Martin (it is very likely an "interpretation inferred from conversation" at this stage, not yet his "explicitly expressed opinion" — accuracy rules apply in full). Once he confirms the distilled claim, mark the dump `distilled` and proceed to normal angle generation from that confirmed claim, not from the raw text.
 
@@ -114,4 +115,9 @@ See `platform-specs.md` for the checkable length rules.
 
 ## Image (Instagram + Facebook, Martin's go 2026-10-22)
 
-No 741 branding. These are Martin's personal posts, not agency marketing material. Build the image with `scripts/build_personal_image.py "<pull-quote>" "Martin Drendel" <platform>`: it reuses the existing headless-Chrome render pipeline (`social-visuals-workflow`) but with a new, separate, minimal template (`07_social/templates/personal_post_quote.html`) — plain background, no logo, no 741 colors, just the pull-quote and "Martin Drendel" underneath. Never point a personal post at the 741-branded templates (`linkedin_post.html` and similar) — those are client/agency material.
+No 741 branding. These are Martin's personal posts, not agency marketing material. Never point a personal post at the 741-branded templates (`linkedin_post.html` and similar) — those are client/agency material. Two styles exist; ask Martin which one fits the post (card, not an assumption) when it isn't obvious:
+
+- **Quote card (default).** `scripts/build_personal_image.py "<pull-quote>" "Martin Drendel" <platform>` — plain background, the pull-quote and "Martin Drendel" underneath. Template `07_social/templates/personal_post_quote.html`.
+- **Mechanism diagram (Martin's go, 2026-10-22 — strongest fit for a pillar-1 post that has a clean "people assume X / actually Y" shape).** `scripts/build_personal_mechanism.py "<what people assume>" "<what's actually true>" "Martin Drendel" <platform>` — a two-band visual, the assumption muted on top, the reality bold below, split by a rule. Pulls directly from the confirmed root-mechanism card (step 5a), not a separate invention. Template `07_social/templates/personal_mechanism_diagram.html`.
+
+Both reuse the same headless-Chrome render pipeline (`social-visuals-workflow` precedent). More styles can be added the same way; ask before building a new one rather than guessing which post needs it.

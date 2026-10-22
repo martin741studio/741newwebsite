@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+ *{margin:0;padding:0;box-sizing:border-box}
+ html,body{width:1080px;height:1080px;overflow:hidden}
+ .post{width:1080px;height:1080px;background:#f7f5f0;font-family:'DM Sans',Arial,sans-serif;color:#1a1a1a;display:flex;flex-direction:column}
+ .half{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 100px}
+ .assume{background:#eae7e0}
+ .assume .label{font-size:24px;font-weight:700;letter-spacing:2px;color:#8a8577;margin-bottom:20px}
+ .assume .txt{font-size:42px;line-height:1.3;font-weight:500;color:#6b675d;white-space:pre-wrap}
+ .divider{height:3px;background:#1a1a1a;margin:0 100px}
+ .truth{background:#f7f5f0}
+ .truth .label{font-size:24px;font-weight:700;letter-spacing:2px;color:#1a1a1a;margin-bottom:20px}
+ .truth .txt{font-size:50px;line-height:1.26;font-weight:700;color:#1a1a1a;white-space:pre-wrap}
+ .sig{padding:0 100px 56px;font-size:26px;font-weight:700;color:#55504a}
+</style></head><body>
+<div class="post">
+ <div class="half assume">
+  <div class="label">WHAT PEOPLE ASSUME</div>
+  <div class="txt">{{ASSUMPTION}}</div>
+ </div>
+ <div class="divider"></div>
+ <div class="half truth">
+  <div class="label">WHAT'S ACTUALLY TRUE</div>
+  <div class="txt">{{REALITY}}</div>
+ </div>
+ <div class="sig">{{AUTHOR}}</div>
+</div>
+</body></html>
