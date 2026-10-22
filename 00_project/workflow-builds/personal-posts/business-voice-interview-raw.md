@@ -16,6 +16,6 @@ Real-world evidence: Martin sees companies try the DIY route and then come back 
 
 Takeaway: the real value of an agency isn't gatekeeping content or tactics — it's turning content into exercises/tasks that get executed consistently over time. "What really helps" is execution infrastructure, not access to more information.
 
-## Note on an unclear detail — flagged, not resolved
+## Note on an unclear detail — resolved by Martin, 2026-10-22
 
-"We can take content from Hamusi" — unclear reference (a person, a tool, or a mishearing/typo). Per the new accuracy rule, this detail is NOT used verbatim in any drafted post until Martin confirms what it refers to. The underlying argument (content -> exercises/tasks -> execution) does not depend on resolving it.
+"We can take content from Hamusi" was a mishearing/transcription of **Alex Hormozi**. Martin's actual idea: take real Hormozi teaching material (frameworks, content) as a SOURCE for the business account's educational pillar, and turn it into 741's own execution exercises and tasks (matches the already-documented ACCCM framework in `references/strategy-notes.md`: "Do shit, talk about what you did, do bigger shit"). This does NOT mean naming Hormozi in a published post — house rule (`no-method-sources-in-deliverables`, same rule `content-writing`'s DR/copy-rules framework already follows): method sources are never named in client or deliverable material. The pattern is noted in `references/voice-profile-business.md` §"Topic pillars" under "Educational agency content".

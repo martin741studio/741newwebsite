@@ -24,7 +24,7 @@ Built from one live interview (2026-10-22, card "Test opinion"; raw material in 
 
 ## Topic pillars (741 Studio business account)
 
-1. Educational agency content — how SEO, marketing, AI, or ranking actually works, the parts most people get wrong.
+1. Educational agency content — how SEO, marketing, AI, or ranking actually works, the parts most people get wrong. Martin's own source for this pillar (2026-10-22): real teaching material from people like Alex Hormozi, turned into 741's own execution exercises and tasks — not reposted, not quoted, translated into "here's the exercise, here's the task." **Never name the source in a published post** (house rule `no-method-sources-in-deliverables`, same standard `content-writing`'s DR/copy-rules framework already follows — call the underlying method "741's approach", not a person's name).
 2. Client transformations — anonymized by default, named only with that client's go.
 3. Agency operations / build-in-public — real 741 decisions and numbers.
 4. Execution reality — why access to information or AI tools isn't the bottleneck; routine, conditioning, and long-term distributed responsibility are.
