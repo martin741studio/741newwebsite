@@ -1,0 +1,53 @@
+[
+ {
+  "id": "2026-10-22-suriya-pw-01",
+  "client": "Praxis Suriya",
+  "priority": 1,
+  "type": "decide",
+  "headline": "Page 5146 (patient form + diet-plan PDFs) has no password — anyone with the URL can open it. Fix before Coralie gets the link?",
+  "evidence": ["[b88add01-075c-4d8b-9213-05abf36dd995.jsonl]", "S2"],
+  "options": {"a": "Agent password-protects the page now, then sends Coralie the URL + password", "b": "Send Coralie the URL now, protect later", "c": "Park, low risk for now"},
+  "recommended": "a",
+  "why": "It's patient-facing health data (form + diet plan); protecting it before distributing the link costs nothing and avoids an avoidable exposure.",
+  "deadline": "2026-10-22",
+  "created": "2026-10-22",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {"a": "Agent sets a password on page 5146, confirms, then the Coralie reply (password, PDFs, Zoom link) goes out", "b": "Agent sends the URL as-is, password follows later", "c": "Noted, no change"}
+ },
+ {
+  "id": "2026-10-22-marcel-klicktipp-01",
+  "client": "Marcel Rosenbach",
+  "priority": 2,
+  "type": "decide",
+  "headline": "KlickTipp Gewinnspiel-tag stuck at 40 contacts for 2 days, 8 leads (18.-20.10.) missing, 11 Zapier runs held — root cause is in KlickTipp itself. What now?",
+  "evidence": ["[c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]", "S2"],
+  "options": {"a": "Tell Marcel to contact KlickTipp support directly about the stuck tag/held runs (Recommended)", "b": "Agent keeps retrying the replay", "c": "Park, revisit if more leads pile up"},
+  "recommended": "a",
+  "why": "Agent already stopped retrying because one more run got stuck after the last replay — this needs KlickTipp's own side fixed, not more automation pressure from our end.",
+  "deadline": "2026-10-22",
+  "created": "2026-10-22",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {"a": "Agent drafts the message to Marcel for you to send", "b": "Agent retries once more, reports result", "c": "Noted, re-check Monday"}
+ },
+ {
+  "id": "2026-10-22-meta-wave3-01",
+  "client": "741 Studio (intern)",
+  "priority": 3,
+  "type": "decide",
+  "headline": "Meta Hook-Test Wave 3 (Praxis H21-H30) shows zero impressions at last check — delivery problem or just early?",
+  "evidence": ["[6262bfe8-1ffa-4971-a571-cb0c2f6d86f4.jsonl]", "S2"],
+  "options": {"a": "Agent checks the ad set now (budget, approval status, audience size) and reports (Recommended)", "b": "Wait another day, Meta delivery can lag", "c": "Pause Wave 3, move budget to the waves that are working"},
+  "recommended": "a",
+  "why": "A quick check now tells us whether this is a real block (disapproved, budget, audience too narrow) or just normal Meta ramp-up lag.",
+  "deadline": "2026-10-22",
+  "created": "2026-10-22",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {"a": "Agent checks and reports back with a fix proposal if needed", "b": "No action, recheck tomorrow", "c": "Agent pauses Wave 3, reallocates budget"}
+ }
+]

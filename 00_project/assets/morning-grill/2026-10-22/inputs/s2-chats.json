@@ -1,0 +1,306 @@
+{
+  "bookmark": "2026-10-21T06:30+08:00",
+  "read_at": "2026-10-22T09:14:14+08:00",
+  "files_read": 42,
+  "files_unreadable": [],
+  "clients": {
+    "Praxis Suriya": {
+      "done": [
+        "Coralie: patient form and diet plan PDFs linked on login page 5146; both return HTTP 200. [b88add01-075c-4d8b-9213-05abf36dd995.jsonl]",
+        "Wrong button on page 5146 corrected to the PDF download. [b88add01-075c-4d8b-9213-05abf36dd995.jsonl]"
+      ],
+      "open": [
+        "Site down: cyon took all webhostings offline on 20.10 15:45 (PHP patch). Not confirmed back at last check. [76aac353-2f88-402b-aed6-c63a76e03ee8.jsonl]",
+        "Ayurveda 3-column layout: not verified; layout looked broken on return from the outage. [76aac353-2f88-402b-aed6-c63a76e03ee8.jsonl]",
+        "Page 5146 has no password. PDFs open for anyone with the URL. [b88add01-075c-4d8b-9213-05abf36dd995.jsonl]",
+        "Workbook cut from 24 MB to 2 MB; upload and third login-page button still queued. [b88add01-075c-4d8b-9213-05abf36dd995.jsonl]",
+        "Coralie still owes: password, Beratungs-PDF, Zoom date and link. [b88add01-075c-4d8b-9213-05abf36dd995.jsonl]"
+      ],
+      "waiting_for": [
+        {
+          "who": "client",
+          "what": "Coralie: password, Beratungs-PDF, Zoom appointment with link. [b88add01-075c-4d8b-9213-05abf36dd995.jsonl]",
+          "since": "2026-10-21"
+        },
+        {
+          "who": "team",
+          "what": "cyon (hoster): site restore after PHP patch, staged per server. [76aac353-2f88-402b-aed6-c63a76e03ee8.jsonl]",
+          "since": "2026-10-20"
+        }
+      ],
+      "client_promises": [
+        "Draft reply to Coralie's three points, after the MCP queue returns. [b88add01-075c-4d8b-9213-05abf36dd995.jsonl]",
+        "Check the Ayurveda page after the cyon restore. [76aac353-2f88-402b-aed6-c63a76e03ee8.jsonl]"
+      ],
+      "needs_martin": [
+        "Decide: password-protect page 5146 before Coralie gets the URL. [b88add01-075c-4d8b-9213-05abf36dd995.jsonl]",
+        "Check the cyon status page; confirm the Suriya site loads. [76aac353-2f88-402b-aed6-c63a76e03ee8.jsonl]"
+      ],
+      "last_activity": "2026-10-22 07:08 WITA"
+    },
+    "Praxis Hüwel": {
+      "done": [
+        "Birthday mail built: own on/off switch, subject, text, image link; daily 06:00 UTC cron. [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]",
+        "Test mail sent and save tested; fields no longer clear on Vorschau click. [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]",
+        "Newsletter contacts restored; Martin confirmed the contact list is back (21.10 06:49). [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]"
+      ],
+      "open": [
+        "WhatsApp button: Codex has no pull request yet; Codex preview failed in its own session. [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]",
+        "New WhatsApp Business number: unclear if the draft uses the old or new number. [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]",
+        "Birthday mail: live_send_enabled stays off; only Martin can enable full sending. [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]"
+      ],
+      "waiting_for": [
+        {
+          "who": "client",
+          "what": "Hüwel: enter 'Erstelle jetzt den Pull Request' in Codex. [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]",
+          "since": "2026-10-21"
+        }
+      ],
+      "client_promises": [
+        "Agent checks the WhatsApp pull request and gives its own preview once it exists. [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]"
+      ],
+      "needs_martin": [
+        "Tell Hüwel the Codex pull-request sentence (text in chat). [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]",
+        "Decide when to enable live sending for the birthday mail. [e8aede79-09ab-48f2-bb09-c693c2246af3.jsonl]"
+      ],
+      "last_activity": "2026-10-22 06:05 WITA"
+    },
+    "Daniela Dumann": {
+      "done": [
+        "WhatsApp follow-up text drafted for Daniela; asks for a call. Slop check 5/5. [065572cb-f2b0-4923-b9a8-4d18606e8a2f.jsonl]"
+      ],
+      "open": [
+        "Dashboard waits for Daniela's OK; 27 decision cards still open. [065572cb-f2b0-4923-b9a8-4d18606e8a2f.jsonl]"
+      ],
+      "waiting_for": [
+        {
+          "who": "client",
+          "what": "Daniela: call and OK on the dashboard. [065572cb-f2b0-4923-b9a8-4d18606e8a2f.jsonl]",
+          "since": "2026-10-21"
+        }
+      ],
+      "client_promises": [],
+      "needs_martin": [
+        "Send the WhatsApp follow-up to Daniela (text ready in chat). [065572cb-f2b0-4923-b9a8-4d18606e8a2f.jsonl]"
+      ],
+      "last_activity": "2026-10-21 12:48 WITA"
+    },
+    "Bali Healing": {
+      "done": [
+        "Wix Similar Treatments: every page in the sheet is live, incl. Nucleofill (PDRN) Injections and Infusions. [76ee66f6-fc79-4277-b76a-5426ee6ba669.jsonl]",
+        "Collab: Drive folders for Heartbeat, Sukhavati, Swatma, Morlinka set to 'Anyone with the link'. [98bdd6ee-f407-473c-a874-1c60c7680c1c.jsonl]",
+        "Three partner messages (Heartbeat, Sukhavati, Swatma) ready to send as-is. [98bdd6ee-f407-473c-a874-1c60c7680c1c.jsonl]"
+      ],
+      "open": [
+        "Morlinka message waits for her contact info. [98bdd6ee-f407-473c-a874-1c60c7680c1c.jsonl]"
+      ],
+      "waiting_for": [
+        {
+          "who": "client",
+          "what": "Morlinka contact info for the collab message. [98bdd6ee-f407-473c-a874-1c60c7680c1c.jsonl]",
+          "since": "2026-10-22"
+        }
+      ],
+      "client_promises": [],
+      "needs_martin": [
+        "Send the three ready partner messages; get Morlinka contact info. [98bdd6ee-f407-473c-a874-1c60c7680c1c.jsonl]"
+      ],
+      "last_activity": "2026-10-22 09:11 WITA"
+    },
+    "Marcel Rosenbach": {
+      "done": [
+        "Zapier re-login done by Martin; connection shows 'Connected'; 10 held runs replayed. [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]"
+      ],
+      "open": [
+        "KlickTipp Gewinnspiel tag stuck at 40 contacts for 2 days. [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]",
+        "8 leads from 18.-20.10 are not in the tag yet. [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]",
+        "11 Zapier runs still 'held' after replay; one more than before. [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]",
+        "Root cause sits in KlickTipp. Agent stopped further replays. [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]"
+      ],
+      "waiting_for": [
+        {
+          "who": "client",
+          "what": "Marcel: fix the KlickTipp problem with KlickTipp directly. [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]",
+          "since": "2026-10-21"
+        }
+      ],
+      "client_promises": [],
+      "needs_martin": [
+        "Tell Marcel to contact KlickTipp about the stuck tag and held runs. [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]",
+        "Decide how to recover the 8 missing Gewinnspiel leads. [c4cdeb06-61a3-4eca-a368-aa6fcb62c55d.jsonl]"
+      ],
+      "last_activity": "2026-10-22 06:07 WITA"
+    },
+    "Katharina Kisser": {
+      "done": [
+        "Malware fix from 20.10 19:35 holds: no successful hidden-file calls since. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]",
+        "Kisser and Physio sites checked 21.10 14:54: no backdoors, admins or spam found. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]",
+        "WP Mail SMTP updated to 4.10.3; files match wordpress.org originals. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]"
+      ],
+      "open": [
+        "Kisser site still on PHP 8.2. Switch waits for the Goodlayers theme update. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]"
+      ],
+      "waiting_for": [
+        {
+          "who": "martin",
+          "what": "Goodlayers theme-shop login step before the 22.10 update. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]",
+          "since": "2026-10-21"
+        }
+      ],
+      "client_promises": [
+        "Goodlayers update first in the 22.10 round, then PHP 8.3 for Kisser. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]"
+      ],
+      "needs_martin": [
+        "Confirm the Goodlayers update go for 22.10. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]"
+      ],
+      "last_activity": "2026-10-22 09:14 WITA"
+    },
+    "Johni Jaya Motor": {
+      "done": [
+        "johnijayamotor.com moved to PHP 8.3. First try gave 503; second try ran clean. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]"
+      ],
+      "open": [],
+      "waiting_for": [],
+      "client_promises": [],
+      "needs_martin": [],
+      "last_activity": "2026-10-22 07:10 WITA"
+    },
+    "Kamil (Physio Anatomie + Kraft)": {
+      "done": [
+        "PHP 8.3 switch on physiotherapiekraft.de (likely Kamil) with DB backup and page tests. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]",
+        "physio-pathologie-dortmund.de also moved to PHP 8.3; owner not verified. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]"
+      ],
+      "open": [],
+      "waiting_for": [],
+      "client_promises": [],
+      "needs_martin": [],
+      "last_activity": "2026-10-22 07:10 WITA"
+    },
+    "Tacheles": {
+      "done": [
+        "Offer to Jan drafted: shop care 1.800 EUR/yr, Rundum 3.000 EUR/yr, prepaid yearly. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]",
+        "Market check: DACH shop packages 124-149 EUR/month; Tacheles pays 65 EUR/h today. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]"
+      ],
+      "open": [
+        "Jan has not received the offer yet. Martin sends it himself. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]"
+      ],
+      "waiting_for": [
+        {
+          "who": "martin",
+          "what": "Send Jan the offer message (text in chat). [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]",
+          "since": "2026-10-21"
+        }
+      ],
+      "client_promises": [
+        "Offer promises free hack cleanup as a guarantee. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]"
+      ],
+      "needs_martin": [
+        "goals.json lists Tacheles as done; Jan offer work is still open. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]"
+      ],
+      "last_activity": "2026-10-21 17:22 WITA"
+    },
+    "741 internal": {
+      "done": [
+        "Martin sent Gayo the LinkedIn brief: pause invites 7 days, restart at 80/week. [a222cf48-7c80-4d7a-aa22-21b8d631d6c0.jsonl]",
+        "Revenue model: diagnosis (section 0) and audit (section 9) written. [4348baf2-98ad-426c-ad97-6de1a2f66353.jsonl]",
+        "Pricing set in revenue model: Core 4.999, Care 397/quarter, Power Engine 7.999. [4348baf2-98ad-426c-ad97-6de1a2f66353.jsonl]",
+        "Sales-pitch skill moved to two-package offer; commit 46a8bfab; gate 95.7 %. [77008422-3968-4d08-be7a-237917efb645.jsonl]",
+        "Captions: CapCut assembly prompt draft v1 and caption style done; slop 5/5. [6ac71933-c451-4b7f-a6b2-96f2244687b1.jsonl]",
+        "Host PHP patch: Mac on 8.5.12; 8 sites on PHP 8.3; martindrendel.com update started. [f203e46d-0f60-4f47-8fd8-17f629b4c9c8.jsonl]",
+        "Hook-test readouts for 21.10 and 22.10 written; Wave W2 started 22.10. [6bc831df-3341-4bfd-98a7-6601fe224791.jsonl]"
+      ],
+      "open": [
+        "LinkedIn: 1,341 invites pending; acceptance 5-16 % per week vs 25 % healthy. [a222cf48-7c80-4d7a-aa22-21b8d631d6c0.jsonl]",
+        "Meta Wave 3 (Praxis H21-H30): zero impressions at last check. [6262bfe8-1ffa-4971-a571-cb0c2f6d86f4.jsonl]",
+        "Personal-post skill: knowledge-base synthesis still being added (22.10 01:14 UTC). [83c27f55-9f2f-4eda-9f0c-a98c9c490c07.jsonl]",
+        "CapCut test run not done yet. [6ac71933-c451-4b7f-a6b2-96f2244687b1.jsonl]"
+      ],
+      "waiting_for": [
+        {
+          "who": "team",
+          "what": "Gayo: withdraw pending invites older than 3 weeks; send Sent-tab screenshot. [a222cf48-7c80-4d7a-aa22-21b8d631d6c0.jsonl]",
+          "since": "2026-10-21"
+        }
+      ],
+      "client_promises": [],
+      "needs_martin": [
+        "Check Meta Wave 3 delivery; decide if the schedule needs a fix. [6262bfe8-1ffa-4971-a571-cb0c2f6d86f4.jsonl]"
+      ],
+      "last_activity": "2026-10-22 09:14 WITA"
+    },
+    "Bettina Lawin (prospect)": {
+      "done": [
+        "Review page v2 live at 741.studio/review/bettina-lawin-v2/; Loom talk-track written. [76b92d80-3acb-4164-b390-0ec8a06c15ad.jsonl]",
+        "WhatsApp 2 (morning) and 3 (30 min before) texts generated for the 21.10 call. [44dacb6f-68d9-46a0-b912-bb06fcda8882.jsonl]",
+        "Rebook message drafted with the 30-min cal.com link after the missed call. [76b92d80-3acb-4164-b390-0ec8a06c15ad.jsonl]"
+      ],
+      "open": [
+        "Prospect missed the 21.10 11:30 CEST call and apologised. [76b92d80-3acb-4164-b390-0ec8a06c15ad.jsonl]"
+      ],
+      "waiting_for": [
+        {
+          "who": "client",
+          "what": "Prospect: pick a new call slot via the cal.com link. [76b92d80-3acb-4164-b390-0ec8a06c15ad.jsonl]",
+          "since": "2026-10-21"
+        }
+      ],
+      "client_promises": [],
+      "needs_martin": [
+        "Send the rebook message (text ready in chat). [76b92d80-3acb-4164-b390-0ec8a06c15ad.jsonl]"
+      ],
+      "last_activity": "2026-10-21 19:31 WITA"
+    },
+    "Ulrike Röth (prospect)": {
+      "done": [
+        "Reschedule message ready: points her to the review page to pick a new slot. [aa2e132e-3d80-4504-8e6f-9771014e04c8.jsonl]"
+      ],
+      "open": [
+        "Call cancelled (she is ill). Scheduled WhatsApp 3 still reminds of the 8:00 call. [11dddd3b-1828-49c1-84ca-032f967d5ceb.jsonl]"
+      ],
+      "waiting_for": [
+        {
+          "who": "client",
+          "what": "Ulrike: pick a new call slot on her review page. [aa2e132e-3d80-4504-8e6f-9771014e04c8.jsonl]",
+          "since": "2026-10-21"
+        }
+      ],
+      "client_promises": [],
+      "needs_martin": [
+        "Do not send WhatsApp 3 (old 8:00 time). Send the reschedule text instead. [11dddd3b-1828-49c1-84ca-032f967d5ceb.jsonl]"
+      ],
+      "last_activity": "2026-10-21 13:30 WITA"
+    },
+    "STÜRZL Steuerstrafrecht": {
+      "done": [],
+      "open": [],
+      "waiting_for": [],
+      "client_promises": [],
+      "needs_martin": [],
+      "last_activity": ""
+    },
+    "Maria Brasse": {
+      "done": [],
+      "open": [],
+      "waiting_for": [],
+      "client_promises": [],
+      "needs_martin": [],
+      "last_activity": ""
+    },
+    "Rabenmütter": {
+      "done": [],
+      "open": [],
+      "waiting_for": [],
+      "client_promises": [],
+      "needs_martin": [],
+      "last_activity": ""
+    },
+    "me&you / Pauspapier": {
+      "done": [],
+      "open": [],
+      "waiting_for": [],
+      "client_promises": [],
+      "needs_martin": [],
+      "last_activity": ""
+    }
+  }
+}
