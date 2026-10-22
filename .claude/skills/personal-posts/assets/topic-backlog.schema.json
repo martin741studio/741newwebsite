@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "personal-posts topic backlog",
+  "type": "object",
+  "required": ["ideas"],
+  "properties": {
+    "ideas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "lane", "idea", "status", "added"],
+        "properties": {
+          "id": {"type": "integer"},
+          "lane": {"enum": ["agency-insight", "seo-opinion", "client-result", "mindset"]},
+          "idea": {"type": "string"},
+          "source": {"type": "string"},
+          "status": {"enum": ["open", "used", "skipped"]},
+          "added": {"type": "string", "format": "date"},
+          "used_date": {"type": ["string", "null"], "format": "date"}
+        }
+      }
+    }
+  }
+}

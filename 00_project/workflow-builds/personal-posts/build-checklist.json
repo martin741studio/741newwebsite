@@ -1,0 +1,242 @@
+{
+ "workflow_id": "personal-posts",
+ "name": "Personal Posts (Martin's Social Voice)",
+ "created": "2026-10-22",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "0.0": {
+   "status": "done",
+   "title": "Inputs Martin gives confirmed via interactive grill (inputs-grill.md: Job, Surface, Cadence, Limits)",
+   "evidence": "00_project/workflow-builds/personal-posts/inputs-grill.md",
+   "date": "2026-10-22",
+   "note": "4 params confirmed from live grill in chat-base session, 2026-10-22"
+  },
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/personal-posts/research-note.md",
+   "date": "2026-10-22",
+   "note": "Skill chosen; disable-model-invocation true (external cleanse send)"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/personal-posts/research-note.md",
+   "date": "2026-10-22",
+   "note": "grep for social/personal-brand/founder-voice: no hits, gap confirmed"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/personal-posts/research-note.md",
+   "date": "2026-10-22",
+   "note": "INDEX.md last refresh 2026-10-11, within 3-month window"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/personal-posts/research-note.md",
+   "date": "2026-10-22",
+   "note": "social-visuals, content-writing copy-rules, slopmonster, claims-need-real-data reused"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/personal-posts/research-note.md",
+   "date": "2026-10-22",
+   "note": "research note written"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/personal-posts/use-cases.md",
+   "date": "2026-10-22",
+   "note": "3 use cases: agency-insight, client-result, personal/mindset text-only"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/personal-posts/test-scenarios.md",
+   "date": "2026-10-22",
+   "note": "obvious, paraphrase, must-not-trigger scenarios written"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/personal-posts/hand-run.md",
+   "date": "2026-10-22",
+   "note": "real task hand-run: Martin's quoted opinion -> 4 platform drafts, all 5/5 slop-clean"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/personal-posts/pipeline.md",
+   "date": "2026-10-22",
+   "note": "pipeline with one real checkpoint (Martin's go per post)"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/personal-posts/decisions.md",
+   "date": "2026-10-22",
+   "note": "degrees of freedom table: scripts vs guided prompt"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/personal-posts/decisions.md",
+   "date": "2026-10-22",
+   "note": "Martin's go, 2026-10-22, on updated design (topic backlog + copy-rules mapping)"
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": ".claude/skills/personal-posts/SKILL.md",
+   "date": "2026-10-22",
+   "note": "folder: SKILL.md + scripts/ + references/ + assets/ (project skill, matches captions/content-pool pattern)"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": ".claude/skills/personal-posts/SKILL.md",
+   "date": "2026-10-22",
+   "note": "frontmatter: WHAT+WHEN+NOT; disable-model-invocation true (external cleanse send)"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": ".claude/skills/personal-posts/SKILL.md",
+   "date": "2026-10-22",
+   "note": "10-step checklist with gates; Critical rules on top"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": ".claude/skills/personal-posts/SKILL.md",
+   "date": "2026-10-22",
+   "note": "52 lines; references one level deep (voice-profile.md, platform-specs.md)"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": ".claude/skills/personal-posts/SKILL.md",
+   "date": "2026-10-22",
+   "note": "verify_draft.py at step 6: run until exit 0 before showing Martin"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": ".claude/skills/personal-posts/SKILL.md",
+   "date": "2026-10-22",
+   "note": "no auto-post, claims-need-real-data, client-go check, slop gate all applied"
+  },
+  "3.7": {
+   "status": "skipped",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "",
+   "date": "2026-10-22",
+   "note": "",
+   "reason": "always attended: Martin triggers every run himself, no schedule, no bookmarks, nothing unattended"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/personal-posts/trigger-tests.md",
+   "date": "2026-10-22",
+   "note": "3 fresh-session scenarios; found+fixed disable-model-invocation defect"
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/personal-posts/functional-test.md",
+   "date": "2026-10-22",
+   "note": "fresh-session functional test; 3 real defects found and fixed (path, image branding, learned tell)"
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/personal-posts/baseline.md",
+   "date": "2026-10-22",
+   "note": "with vs without: 16 tool calls + verified gate + image vs 0 tool calls, no image, self-reported check only"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-22",
+   "note": "",
+   "reason": "not a plugin, no /doctor prompt-audit target; covered by 4.1/4.2 fresh-session tests instead"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/personal-posts/scorecard.md",
+   "date": "2026-10-22",
+   "note": "98% (53/54), no blocking zeros, A and D both clean"
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/personal-posts/decisions.md",
+   "date": "2026-10-22",
+   "note": "Martin's go, 2026-10-22: Go, ship it"
+  },
+  "5.2": {
+   "status": "todo",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3a": {
+   "status": "done",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "00_project/workflow-registry/registry.json",
+   "date": "2026-10-22",
+   "note": "registered id=personal-posts; _run.json writer built+tested (scripts/run_log.py). Note: Excel auto-sync (Workflow-Uebersicht.xlsx) failed, pre-existing env gap: openpyxl missing, Homebrew Python blocks global pip install (PEP 668) -- unrelated to this build, flagged to Martin"
+  },
+  "5.3b": {
+   "status": "skipped",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "2026-10-22",
+   "note": "",
+   "reason": "no client or prospect sees this deliverable -- it's Martin's own personal social content"
+  },
+  "5.3": {
+   "status": "done",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/personal-posts-workflow.md",
+   "date": "2026-10-22",
+   "note": "memory file written + MEMORY.md line added"
+  },
+  "5.4": {
+   "status": "skipped",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "2026-10-22",
+   "note": "",
+   "reason": "not scheduled -- Martin triggers every run himself, on demand"
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-22T08:47"
+  },
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-22T08:54"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-22T09:18"
+  }
+ ]
+}
