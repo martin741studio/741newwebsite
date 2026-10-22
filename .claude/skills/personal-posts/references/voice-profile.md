@@ -2,6 +2,10 @@
 
 Built from one live interview (2026-10-22), not from old posts. Martin has never posted before, so this file is the only source of tone. Treat every rule here as provisional until Martin corrects it on a real draft; the first corrections update this file (house rule: patch the skill, not a one-off reply).
 
+## Core philosophy (Martin's content intelligence brief, 2026-10-22)
+
+Question the narrative. Understand the incentives. Observe the behavior. Think for yourself. The central move across most posts: the gap between a socially accepted narrative and the actual behavior underneath it — explored honestly, without assuming the gap means everyone involved is lying. Full source context in `references/content-intelligence-brief.md`.
+
 ## Core stance
 
 - Contempt for corporate-platitude dishonesty. Example target: "we're all a family."
@@ -28,6 +32,9 @@ Built from one live interview (2026-10-22), not from old posts. Martin has never
 - No hedge-everything corporate softening ("in my humble opinion", "no offense to anyone, but"). State the view straight.
 - No forced engagement bait ("comment YES if you agree", "tag someone who needs this").
 - No throat-clearing openers: "the truth is", "to be honest", "honestly". State the claim; do not announce that you are about to be honest about it. (Found in the 4.2 functional test: a first-pass LinkedIn draft scored 4/5 on the slop lint for exactly this.)
+- No fake luxury entrepreneurship ("day in the life of a 7-figure founder" posturing) and no forced controversy. Forced controversy is a manufactured hot take with nothing real behind it; the voice's willingness to be polarizing above is earned (a real contradiction, a real stance), never manufactured for engagement.
+- No exaggerated certainty. A strong opinion stated plainly is the voice; a claim dressed up as more certain or more universal than Martin actually believes it is not.
+- No invented personal stories or experiences, ever. See "Accuracy rules" below — this is the single most important addition from the 2026-10-22 content intelligence brief.
 
 ## Style defaults (not a hard rule, applied unless it kills the voice)
 
@@ -37,12 +44,33 @@ Built from one live interview (2026-10-22), not from old posts. Martin has never
 - **No outbound links in the post body, ever.** If a link matters, it goes in the first comment, never the post text itself (`references/strategy-notes.md`; `scripts/check_lengths.py` warns if a draft contains a bare URL). This is unrelated to the no-auto-post rule — it is a drafting rule about where a link lives, not permission to post one.
 - A real, owned flaw or limitation stated plainly (not a hedge) can open or anchor a post — it reads as more credible than a claim with no acknowledged edge. Optional, not required on every post.
 
-## Topic lanes (all four in rotation)
+## Accuracy rules (Martin's content intelligence brief, 2026-10-22 — critical, applies before every draft)
 
-1. Agency insights / build-in-public — real 741 numbers and decisions.
-2. SEO/marketing opinions.
-3. Client results — anonymized by default (industry + real number, no name, no logo); named only with that client's own go for that specific post.
-4. Personal/mindset pieces.
+Before drafting from Martin's raw thought or from anything stated about him in a prior conversation, classify it as one of: a **confirmed personal experience** (he lived it, stated as fact), an **explicitly expressed opinion** (he said this is what he thinks), an **interpretation inferred from conversation** (a reasonable read, not his own words), or a **hypothesis for content exploration** (an idea to test, not a claim at all). Never present an inferred opinion or a hypothesis as Martin's confirmed belief or lived experience in a published post. A post built on anything but a confirmed experience or an explicitly expressed opinion needs Martin's confirmation before it ships — fold this into step 3 (claim check): the check covers personal narrative accuracy, not only numbers.
+
+The personal-background and personality-trait notes in `references/content-intelligence-brief.md` are context for calibrating tone, not pre-written claims — never turn an "observed personality characteristic" from that file into a first-person anecdote Martin never actually told you.
+
+## Topic pillars (Martin's content intelligence brief, 2026-10-22; supersedes the earlier 4-lane list, which maps into these)
+
+1. Uncomfortable truths and social contradictions (the core move: accepted narrative vs. actual behavior — includes the earlier "personal/mindset" lane).
+2. Human behavior, psychology, and relationships.
+3. Entrepreneurship, money, work, and competition (includes the earlier "agency insights / build-in-public" lane).
+4. Freedom, cultural differences, and life abroad.
+5. Technology, AI, marketing, and business reality (includes the earlier "SEO/marketing opinions" lane).
+6. Health, performance, discipline, and self-development.
+7. Personal stories, mistakes, experiments, and reflections.
+
+Client results stay their own cross-cutting rule, not a pillar: anonymized by default (industry + real number, no name, no logo); named only with that client's own go for that specific post. Applies wherever a post touches pillar 3 or 5 with a real client example.
+
+**Business is one subject among many, never the majority.** This is Martin's personal account, not 741 Studio's business account (see "Account separation" below) — do not let pillar-3/5 agency content crowd out the other five pillars, and do not let any post read as a disguised agency promotion.
+
+## Account separation (Martin's content intelligence brief, 2026-10-22)
+
+This skill is scoped to **Martin's personal account** (the voice above, all 7 pillars, business as one topic among many). 741 Studio's own business account (educational agency content, client transformations, measurable results, no personal-life material) is a separate concern, out of this skill's scope — it is not built here. If Martin wants that automated too, it needs its own design pass (own voice rules, own account, likely 741-branded images), not a silent extension of this skill.
+
+## Editorial method (optional technique, strongest fit for pillar-1 "uncomfortable truths" posts)
+
+For a contradiction-style post, work through: the accepted narrative -> the potential contradiction -> the incentive or mechanism behind it -> a real example or personal experience (accuracy rules apply) -> an alternative interpretation or counterargument -> a memorable, honest hook -> a clear takeaway or open question. This is the shape the "we're all a family" test post already follows by instinct; use it deliberately for pillar-1 posts, not as a rigid template for every pillar (a pillar-7 personal story or a pillar-6 discipline post does not need a "narrative vs. contradiction" structure forced onto it).
 
 ## Headline-prompt / copy-rules reuse (Martin's go, 2026-10-22)
 

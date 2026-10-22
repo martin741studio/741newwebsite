@@ -16,7 +16,12 @@ import json, os, sys, datetime
 ROOT = '/Users/martindrendel/741website'
 PATH = os.path.join(ROOT, '00_project', 'assets', '741studio', 'personal-posts', 'topic-backlog.json')
 SEED_PATH = os.path.join(os.path.dirname(__file__), '..', 'assets', 'topic-backlog-seed.json')
-LANES = ('agency-insight', 'seo-opinion', 'client-result', 'mindset')
+# 7 content pillars (Martin's content intelligence brief, 2026-10-22) + client-result as a
+# cross-cutting 8th bucket for backlog purposes (see references/voice-profile.md).
+LANES = (
+    'uncomfortable-truths', 'human-behavior', 'entrepreneurship', 'freedom-culture',
+    'tech-ai-marketing', 'health-performance', 'personal-stories', 'client-result',
+)
 
 
 def load():

@@ -11,7 +11,7 @@
         "required": ["id", "lane", "idea", "status", "added"],
         "properties": {
           "id": {"type": "integer"},
-          "lane": {"enum": ["agency-insight", "seo-opinion", "client-result", "mindset"]},
+          "lane": {"enum": ["uncomfortable-truths", "human-behavior", "entrepreneurship", "freedom-culture", "tech-ai-marketing", "health-performance", "personal-stories", "client-result"]},
           "idea": {"type": "string"},
           "source": {"type": "string"},
           "status": {"enum": ["open", "used", "skipped"]},
