@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "personal-posts topic backlog",
+  "title": "personal-posts topic backlog (both accounts)",
   "type": "object",
   "required": ["ideas"],
   "properties": {
@@ -8,10 +8,18 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "lane", "idea", "status", "added"],
+        "required": ["id", "account", "lane", "idea", "status", "added"],
         "properties": {
           "id": {"type": "integer"},
-          "lane": {"enum": ["uncomfortable-truths", "human-behavior", "entrepreneurship", "freedom-culture", "tech-ai-marketing", "health-performance", "personal-stories", "client-result"]},
+          "account": {"enum": ["personal", "business"]},
+          "lane": {
+            "enum": [
+              "uncomfortable-truths", "human-behavior", "entrepreneurship", "freedom-culture",
+              "tech-ai-marketing", "health-performance", "personal-stories", "client-result",
+              "educational", "client-transformation", "agency-ops", "execution-reality",
+              "measurable-results"
+            ]
+          },
           "idea": {"type": "string"},
           "source": {"type": "string"},
           "status": {"enum": ["open", "used", "skipped"]},
