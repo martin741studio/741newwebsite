@@ -50,6 +50,8 @@ Before drafting from Martin's raw thought or from anything stated about him in a
 
 The personal-background and personality-trait notes in `references/content-intelligence-brief.md` are context for calibrating tone, not pre-written claims — never turn an "observed personality characteristic" from that file into a first-person anecdote Martin never actually told you.
 
+**Externally verifiable claims get researched, not just asked about (real case, 2026-10-22).** Some claims are facts only Martin can confirm (his own experience, 741's own numbers) — those go back to him as a question. Other claims are about the world and can be checked against real, credible sources (a comparative claim about corruption, a statistic, "studies show..."). For those, do the research yourself (WebSearch / firecrawl, credible and non-partisan sources, academic or equivalent) before drafting anything, especially for a comparative or politically-loaded claim. Report what the research actually says, even when it does not support the original framing — the first real test of this rule found that Martin's draft claim ("government is more corrupt than the rich") was not supported by the literature, and the honest, better-sourced reframe ("wealth concentration and government corruption are often the same mechanism — state capture") turned out sharper and more defensible than the original. Never force research to confirm a predetermined conclusion.
+
 ## Topic pillars (Martin's content intelligence brief, 2026-10-22; supersedes the earlier 4-lane list, which maps into these)
 
 1. Uncomfortable truths and social contradictions (the core move: accepted narrative vs. actual behavior — includes the earlier "personal/mindset" lane).
