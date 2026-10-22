@@ -1,2 +1,3 @@
 - 2026-10-14 evening: Dashboard feed built and verified against Google (clicks 14→33, pos 17.9→6.6); Falcon after-scan: 2/6 keywords improved [8ccce35e].
 - 2026-10-19 evening: quiet; Content Pool report + GBP round 2 draft wait for Martin's eye check; GTM access, 7 overdue portal tasks.
+- 2026-10-21 evening: [agent, card 1] Anfragen tab live, Kontakte (58) + Newsletter verified; newsletter live send needs your go. Content-pool review still yours (card 4) [e8aede79].

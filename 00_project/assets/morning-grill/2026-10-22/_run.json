@@ -1,22 +1,21 @@
 {
  "client": "741 Studio (intern)",
- "workflow": "morning",
+ "workflow": "evening",
  "mode": "Echt",
  "date": "2026-10-22",
- "status": "fertig",
+ "status": "fertig (evening log unconfirmed)",
  "last_run": "2026-10-22",
- "local": "00_project/assets/morning-grill/2026-10-22",
- "result": "00_project/assets/morning-grill/command-center.html",
- "snapshot_id": 36,
- "bookmark_used": "2026-10-21T06:30+08:00",
- "bookmark_moved": true,
+ "local": "00_project/assets/morning-grill/2026-10-22/evening",
+ "result": "00_project/assets/morning-grill/2026-10-22/evening-log.md",
  "sources_ok": 12,
- "sources_unreadable": [
-  "S8_tracking"
- ],
- "cards": 7,
- "cards_answered": 4,
- "tasks": 85,
- "note": "Interactive run with Martin (after the 06:13 scheduled scan). 4 new judgment cards answered: Suriya page 5146 password (done live), Marcel/KlickTipp (parked, login password given by Martin for LastPass, not typed anywhere), Meta Wave 3 (resolved per Martin's portal answer), Hüwel 2 unread messages (replied draft delivered, preview artifact published for the unmerged PR #9 page since no live preview URL exists). Dashboard-login check done: all 11 active clients have not opened the portal in 8+ days. Suriya site outage (cyon-wide PHP-CVE emergency shutdown) confirmed resolved. Portal 'own' answers surfaced real feedback: cards must show message content inline (memory morning-grill-cards-show-content-inline.md), Suriya directory-emails scope expanded from 'list' to 'complete the verification' (not done this run, needs its own session).",
- "written_at": "2026-10-22T09:55+08:00"
+ "sources_unreadable": ["S8_tracking"],
+ "night_queue": {
+  "written": true,
+  "items": 2,
+  "selected": ["dumann-third-google-account", "johnijaya-overdue-replan-draft"],
+  "blocked": ["stuerzl-ads-draft (night-safety filter: 'Ads' keyword forbidden)"]
+ },
+ "evening_log_status": "draft, unconfirmed — Martin gave no answer on the confirm card; carries to tomorrow's morning brief per the hard rule",
+ "note": "Scheduled 17:00 scan ran first (session local_12db111c); this interactive run picked up from its scan/status-report, wrote evening-log.md, surfaced the Marcel/KlickTipp password Martin gave this morning (confirmed NOT the right one), ran the night queue (2 rounds, 3 picked, 1 blocked by safety filter), appended per-client logs.",
+ "written_at": "2026-10-23T06:30+08:00"
 }
