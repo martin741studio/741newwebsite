@@ -4,7 +4,7 @@ Internes Dokument. Nicht an die Kundin senden.
 
 **Datum:** 2026-10-24
 **Zweig:** still (keine Antwort, keine Zahlung, Wix-Zugang entfernt)
-**Status:** in Arbeit. Martins Entscheidungen 24.10.: eine E-Mail mit Status und Zahlungserinnerung, Versand über Airmailer nach Go
+**Status:** Stufe 1 gesendet am 24.10.2026 (Martin, Airmailer). Wartet auf Kundenantwort oder Zahlung bis Fr 31.10. Stufe 2 fällig Mi 29.10., ohne Erinnerungs-Task (Martins Entscheidung)
 
 ## 1. Zeitachse
 
@@ -109,9 +109,9 @@ Schluss: Die Sichtbarkeit ist stabil, kein Einbruch. Das Schweigen hat keinen si
 
 | Stufe | fällig am | Status |
 | --- | --- | --- |
-| 1 erste Nachricht (Status + Zahlungserinnerung, Frist 31.10.) | nach Martins Go, E-Mail über Airmailer | Entwurf fertig, wartet auf Go |
-| 2 Arbeit ruht (+3 Werktage) | 3 Werktage nach Versand von Stufe 1 | offen |
-| 3 Optionen für Martin (+3 Werktage) | 3 Werktage nach Stufe 2 | offen |
+| 1 Zahlungserinnerung + Status (Frist 31.10.) | 24.10.2026 | gesendet von Martin (Airmailer), geloggt in emails_log + activity_log |
+| 2 Arbeit ruht (+3 Werktage) | Mi 29.10.2026 | offen, kein Erinnerungs-Task; Martin sagt, wann |
+| 3 Optionen für Martin (+3 Werktage) | Mo 03.11.2026 | offen |
 
 ## 11. Auflösung
 
