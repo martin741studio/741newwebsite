@@ -1,0 +1,207 @@
+[
+ {
+  "id": "2026-10-24-huewel-preview-01",
+  "client": "Praxis Hüwel",
+  "priority": 1,
+  "type": "decide",
+  "headline": "Martin Hüwel wrote 20.10. in the portal (4 days unread): he cannot find the preview of 'Stress, Erschöpfung und Psyche'. A reply with a text-only preview link was drafted 22.10., never sent. Send it?",
+  "evidence": [
+   "portal messages 20.10. 08:35 UTC: 'Hi Martin,'",
+   "portal messages 20.10. 08:36 UTC: 'Ich wollte mir gerade die Vorschau zur neuen Seite: Stress, Erschöpfung und Psyche, ansehen, finde den aber nicht; auch nicht unter dem angegebenen Link. Ich kann den also nicht gegenlesen.'",
+   "S5 reporting/standup/2026-10-23.json: Praxis Hüwel 2 unread",
+   "chat da3afad4 22.10. 16:14 WITA: reply draft with preview link (text-only artifact page), see message-drafts.md",
+   "curl 24.10.: praxis-huewel.de/anliegen-stress-psyche.html = 404 (page not live yet)"
+  ],
+  "options": {
+   "a": "Send the 22.10. reply draft today (text-only preview; see message-drafts.md) (Recommended)",
+   "b": "Agent first builds a styled preview on clients.741.studio, then you send a reply with that link",
+   "c": "You answer him in the portal yourself"
+  },
+  "recommended": "a",
+  "why": "A client who cannot read his own page draft stops the approval loop; the answer exists since 22.10. and only needs your send.",
+  "deadline": "2026-10-24",
+  "created": "2026-10-24",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "You paste it in the portal; agent marks the thread in the Hüwel chat",
+   "b": "Agent task today in the Hüwel chat; reply draft updated with the new link",
+   "c": "Walk item for you"
+  }
+ },
+ {
+  "id": "2026-10-24-stuerzl-ads-golive-01",
+  "client": "STÜRZL Steuerstrafrecht",
+  "priority": 2,
+  "type": "decide",
+  "headline": "STÜRZL Ads: the campaign is built and paused under the 741 account (CID 803-173-1693), but the ad disclosure shows 'Ads funded by Martin Drendel', not the firm. How do we go live?",
+  "evidence": [
+   "chat 'STÜRZL: Google Ads Konto' 23.10.: campaign 'STÜRZL - Steuerstrafrecht - Search - Frankfurt', 3 ad groups, 33 EUR/day, Hessen + Mainz, status Paused",
+   "memory anja-stuerzl-client.md 23.10.: deadline 21.10. missed because the firm never gave account access",
+   "evening log 23.10.: payer-name disclosure open, go to activate open, Anja's last details open"
+  ],
+  "options": {
+   "a": "Start the advertiser verification in the firm's name now (takes days), activate as soon as Anja confirms the last details (Recommended)",
+   "b": "Activate now under Martin's name, fix the payer name later",
+   "c": "Wait for Anja's full reply first, no verification yet"
+  },
+  "recommended": "a",
+  "why": "Verification runs in parallel and costs nothing; a law firm ad that names a private payer looks wrong to a client who checks.",
+  "deadline": "2026-10-24",
+  "created": "2026-10-24",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "Agent lists the verification steps and the documents Anja must send; the activation stays a separate go",
+   "b": "Agent activates the campaign today after your go (33 EUR/day)",
+   "c": "Nothing until her reply; card returns"
+  }
+ },
+ {
+  "id": "2026-10-24-meta-phase2-01",
+  "client": "741 (Meta Hook-Test)",
+  "priority": 2,
+  "type": "decide",
+  "headline": "Meta Phase 2 (leads, 4 ad sets, 25 EUR/day each) is built and paused in business account 322502131; the W4/W5 readout lands today 07:10. Start it?",
+  "evidence": [
+   "chat 'Facebook Ads API' 23.10.: Phase 2 ad sets Kanzlei H12/H05, Praxis H24/H21, ads in review",
+   "readout 23.10.: H24 hook 71.5 %, H12 57.5 %, link-CTR 0.07 %; Phase 1 10,090 ThruPlays in 30 days at EUR 0.03 each, Kanzlei EUR 0.02",
+   "memory meta-ads-api-token-workflow.md: Phase 1 live until 24.10. 07:10"
+  ],
+  "options": {
+   "a": "Yes: start all 4 ad sets today after the 07:10 readout, if W4/W5 confirm the Phase-1 hooks (Recommended)",
+   "b": "Start only the 2 Kanzlei ad sets (cheapest ThruPlay), 50 EUR/day, Praxis waits",
+   "c": "Hold until Monday 27.10."
+  },
+  "recommended": "a",
+  "why": "The hooks are proven on 10,000 ThruPlays; the lead question is only answered with the lead campaign running.",
+  "deadline": "2026-10-24",
+  "created": "2026-10-24",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "Agent in the Facebook Ads chat activates the 4 ad sets after the readout and reports the first numbers tomorrow 07:10",
+   "b": "Agent activates the 2 Kanzlei ad sets only",
+   "c": "Card returns Monday with the weekend readout"
+  }
+ },
+ {
+  "id": "2026-10-24-kamil-ads-location-01",
+  "client": "Kamil (Physio Anatomie + Kraft)",
+  "priority": 2,
+  "type": "decide",
+  "headline": "Both Kamil campaigns (Kraft 50 EUR/day, Anatomie 38 EUR/day) target 'Presence or interest', so clicks from people outside Oberhausen cost money. Switch to 'Presence'?",
+  "evidence": [
+   "chat 'Kamil — Physio Anatomie + Kraft' 23.10.: read-only review, nothing changed; calls per day Kraft 2.8 to 3.9, Anatomie 2.4 to 3.5 after 15.10.",
+   "goal sheet: cost per lead held or lowered",
+   "memory ads-changes-need-reasoned-go"
+  ],
+  "options": {
+   "a": "Switch both campaigns to 'Presence' today (Recommended)",
+   "b": "Switch Kraft only, watch Anatomie one more week",
+   "c": "Keep 'Presence or interest'"
+  },
+  "recommended": "a",
+  "why": "A physio practice sells to people who are in the city; interest-only clicks rarely become patients and the call rise came without them.",
+  "deadline": "2026-10-24",
+  "created": "2026-10-24",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "Agent changes the location option on both campaigns and logs before/after in the Kamil chat",
+   "b": "Agent changes Kraft only",
+   "c": "Nothing; noted in the goal sheet"
+  }
+ },
+ {
+  "id": "2026-10-24-suriya-status-01",
+  "client": "Praxis Suriya",
+  "priority": 3,
+  "type": "decide",
+  "headline": "Coralie waits for word on the 3 download buttons (live since 23.10.) and on Zoom and the second login. You asked 23.10. 17:39: client update, or internal next steps only?",
+  "evidence": [
+   "chat 'Suriya Ayurveda-Seite' 23.10.: third download button live on post 5146, buttons on 5043 repointed, HTTP 200 checked",
+   "chat 'Coralie / Praxis Suriya': Zoom search site-wide clean; second login question open",
+   "evening log 23.10.: text to Coralie on the 3 buttons drafted, owner Martin",
+   "message-drafts.md (this run)"
+  ],
+  "options": {
+   "a": "Send Coralie the short status (3 buttons, Zoom clean, login answer); draft in message-drafts.md (Recommended)",
+   "b": "Internal next-steps list only, no message to Coralie this week",
+   "c": "Hold"
+  },
+  "recommended": "a",
+  "why": "The buttons are her own request and they are live; a two-line confirmation closes it before she asks again.",
+  "deadline": "2026-10-24",
+  "created": "2026-10-24",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "You send the draft; agent logs it in the Suriya chat",
+   "b": "Agent writes the next-steps list into plan.md",
+   "c": "Card returns Monday"
+  }
+ },
+ {
+  "id": "2026-10-24-dumann-stage2-01",
+  "client": "Daniela Dumann",
+  "priority": 3,
+  "type": "decide",
+  "headline": "Dumann lockout: stage 1 (reminder) went out 24.10.; stage 2 'work rests' is due Wed 29.10. When should the agent prepare it?",
+  "evidence": [
+   "chat 'Client access lockout workflow' 24.10.: dossier silent branch done, no reply since 17.09.; 24 portal cards back to draft; commit 2bc7e01f",
+   "memory dumann-client.md 24.10."
+  ],
+  "options": {
+   "a": "Agent prepares the stage-2 draft Tue 28.10.; you decide Wed 29.10. (Recommended)",
+   "b": "Prepare it now, send only on your go",
+   "c": "Cancel stage 2 if she replies by 28.10., else ask again"
+  },
+  "recommended": "a",
+  "why": "The dossier sets Wednesday; a draft one day before keeps the facts fresh and leaves her time to react.",
+  "deadline": "2026-10-28",
+  "created": "2026-10-24",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "Agent task due 28.10. in the lockout chat",
+   "b": "Agent drafts today",
+   "c": "Card returns 28.10."
+  }
+ },
+ {
+  "id": "2026-10-24-night-queue-rule-01",
+  "client": "741 (night shift)",
+  "priority": 7,
+  "type": "decide",
+  "headline": "The night shift has not run for 3 nights: the 17:00 scheduled run cannot ask the night-queue card, so no queue file is written (rule D37). Change the rule?",
+  "evidence": [
+   "pulse.log 21.-23.10.: 'night-queue none 0 items (AskUserQuestion unavailable in this session)'",
+   "2026-10-23/evening/night-queue-items.json: 8 candidates (Suriya M3 change list, Kisser forms plan, Dumann third Google account, Johni re-plan, Bali testimonials, STÜRZL service pages, Kamil location brief)",
+   "spec D37: NO ANSWER = NO FILE"
+  ],
+  "options": {
+   "a": "For one week: the 17:00 run writes the top 4 candidates itself (drafts, research, public audits only); you see results in the morning (Recommended)",
+   "b": "You tick the night card in chat at 17:00 ('log the day') on the days you are here",
+   "c": "Pause the night shift"
+  },
+  "recommended": "a",
+  "why": "Three empty nights cost more than one week of auto-picked drafts that you still release in the morning.",
+  "deadline": "2026-10-24",
+  "created": "2026-10-24",
+  "status": "open",
+  "answer": null,
+  "park_reason": null,
+  "then": {
+   "a": "Agent notes the one-week rule in state/carry-over.md; evening run writes the queue with --confirmed-by this card",
+   "b": "Nothing changes",
+   "c": "Night shift LaunchAgent stays idle; no candidates built"
+  }
+ }
+]
