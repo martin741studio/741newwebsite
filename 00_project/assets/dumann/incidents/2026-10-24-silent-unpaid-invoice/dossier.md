@@ -24,9 +24,9 @@ Internes Dokument. Nicht an die Kundin senden.
 | 13.10. | Mail „Deine neue Startseite und 12 weitere Punkte" + Portal-Nachricht zu ihren Hilfe-Anfragen (Zugänge); Nachricht ungelesen | `emails_log`, `messages` |
 | 14.10. | Statusseite „Dein SEO-Fahrplan" live; Mail „Dein Zugang zum Portal ist wieder frei" (Passwort-vergessen-Anleitung) | `activity_log`, `emails_log` |
 | 14.–19.10. | 27 Entscheidungskarten E1–E27 im Portal; keine einzige entschieden | `approval_items` alle `open`, go_by leer |
-| 24.10. | Martin: sie antwortet nicht mehr und hat nicht auf die Rechnung reagiert | Chat |
+| 24.10. | Martin: sie antwortet nicht mehr (zuletzt WhatsApp) und hat nicht auf Rechnung 741/091026 reagiert. Portal: 24 Karten zurück auf Entwurf (E4, E22, E23 bleiben offen), 3 Haken zurückgesetzt (Seiten live, Fotos, Team-Briefing) | Chat, Supabase |
 
-Letzte nachweisbare Aktion der Kundin: **17.09.2026**. Seitdem 37 Tage ohne Reaktion im Portal. Mails ab 01.10.: Zustellung „sent", Öffnung nicht messbar.
+Letzte Aktion der Kundin **im Portal**: 17.09.2026. **Achtung (Martin 24.10.):** Es gab weiter WhatsApp-Kontakt. Portal-Daten zeigen nicht alle Kanäle. Nie „seit X nichts gehört" schreiben. Mails ab 01.10.: Zustellung „sent", Öffnung nicht messbar.
 
 ## 2. Bedingungen der Kundin (harte Vorgaben)
 
@@ -102,7 +102,7 @@ Schluss: Die Sichtbarkeit ist stabil, kein Einbruch. Das Schweigen hat keinen si
 
 ## 9. Entwürfe
 
-- `nachricht-entwurf.md` — Stufe 1 plus Zahlungserinnerung (Rate 2, neue Frist Freitag 31.10.). Prüfung `verify_draft.py`: PASS. Slop-Lint deslop_de: siehe Chat 24.10.
+- `nachricht-entwurf.md` — erste Zahlungserinnerung (Rate 2, Frist Freitag 31.10.) mit Leistungsstand, nach Martins Korrektur 24.10. (kein „nichts gehört", Reporting, kostenpflichtige Werkzeuge, fertige Bausteine im Gesamtpreis, Schweigen keine Option). `verify_draft.py`: PASS. deslop_de: 5/5.
 - Keine Arbeitsübersicht, solange sie keine verlangt.
 
 ## 10. Stufen (Zweig „still")
