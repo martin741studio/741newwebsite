@@ -97,7 +97,8 @@ def build():
         for j in (1, 2): ws.cell(row=ws.max_row, column=j).alignment = Alignment(vertical='top'); ws.cell(row=ws.max_row, column=j).border = box
         ws.cell(row=ws.max_row, column=1).font = Font(bold=True)
     ws.column_dimensions['A'].width = 24; ws.column_dimensions['B'].width = 9
-    for k in range(len(order)): ws.column_dimensions[chr(67 + k)].width = 26
+    from openpyxl.utils import get_column_letter
+    for k in range(len(order)): ws.column_dimensions[get_column_letter(3 + k)].width = 26
     ws.row_dimensions[1].height = 34; ws.row_dimensions[2].height = 62; ws.freeze_panes = 'C3'
     ws.append([]); ws.append(['Legende: grün = von Martin freigegeben · gelb = fertig, Freigabe offen · orange = in Arbeit · blau = Trockenlauf (Test) · grau = Archiv · – = nicht durchgeführt'])
     ws.append(['Neue Freigaben trägt Claude automatisch ein (Befehl `approve`). Alle Befehle: Blatt Befehle. Stand: ' + today()])
