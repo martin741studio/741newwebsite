@@ -1,0 +1,76 @@
+commit c5b3be2d418ef91aee081d98b68e84ca9d50c502
+Author: Martin Drendel <martindrendel@Martins-MacBook-Pro-7.local>
+Date:   Sun Oct 25 07:49:01 2026 +0800
+
+    feat(marketing-grill): new workflow — 741's own marketing-channel grill
+    
+    Built via /workflow-create, following 00_project/workflow-creation-workflow.md
+    end to end (CP1 gate passed, CP2 gate passed, scorecard 93.3%, 5/5 trigger
+    tests). Knowledge base made a first-class, checked step per Martin's brief:
+    
+    - Hormozi library refreshed 109 -> 120 sources (11 new, 2026-10-25), AI
+      source-guide summary + excerpt per source (full audiobook alone is
+      242,570 chars — Martin's scope decision), INDEX.md updated.
+    - "The Content Marketing Playbook" notebook reused from content-format-board
+      and personal-posts (no duplicate full export), plus one new scoped query
+      for channel selection -> playbook-notes-channel-selection.md.
+    - New derived layer: _derived/marketing-grill-rules.md and
+      _derived/marketing-grill-questions.md, each line citing its source; the
+      skill greps these at run time, never carries the knowledge in its own body.
+    
+    Skill: .claude/skills/marketing-grill/ (SKILL.md, scripts/check_infra_state.py,
+    scripts/check_citations.py, scripts/run_log.py, references/card-pattern.md,
+    assets/playbook-template.md). 4 AskUserQuestion card rounds (what to do,
+    where to reach people, how to focus, how it's structured). Never launches
+    ads, sends outreach, spends money, or changes a live site.
+    
+    First real run (2026-10-25): grilled Martin live on 741's own marketing,
+    produced 00_project/assets/741studio/marketing-grill/2026-10-25/playbook.md.
+    Caught and patched a real flaw mid-run — a card almost stated a stale team
+    assignment ("Maya") as fact; now a hard skill rule, not a one-off fix.
+    
+    Registered in the workflow registry (framework python3.10, not Homebrew's
+    python3 which is missing openpyxl — documented in the workflow's memory file).
+    
+    Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
+
+ .claude/skills/marketing-grill/SKILL.md            |  45 ++++
+ .../marketing-grill/assets/playbook-template.md    |  26 +++
+ .../marketing-grill/references/card-pattern.md     |  17 ++
+ .../marketing-grill/scripts/check_citations.py     |  65 ++++++
+ .../marketing-grill/scripts/check_infra_state.py   |  75 +++++++
+ .claude/skills/marketing-grill/scripts/run_log.py  |  57 +++++
+ .../marketing-grill/2026-10-25/playbook.md         |  38 ++++
+ ...0m-offers-by-alex-hormozi-summary-greg-faxon.md |  35 +++
+ ...mozi-make-irresistible-offers-full-audiobook.md |  19 ++
+ ...0m-offers-grand-slam-offer-explained-scalabl.md |  11 +
+ ...113-100m-offers-key-insights-takeaways-loxie.md |  19 ++
+ .../114-100-million-dollar-offers-alex-hormozi.md  |  11 +
+ ...-offers-so-good-people-feel-stupid-saying-no.md |  19 ++
+ .../116-summary-of-100m-offers-belt-course.md      |  11 +
+ ...ld-an-offer-people-cant-refuse-asset-academy.md |  11 +
+ .../118-alex-hormozi-100m-offers-deven-davis.md    |   9 +
+ ...9-hormozi-value-equation-skills-mark-lobehub.md |  11 +
+ ...-do-30m-a-year-why-does-it-feel-unprofitable.md |  19 ++
+ 00_project/knowledge/hormozi-library/INDEX.md      |  13 +-
+ .../_derived/marketing-grill-questions.md          |  30 +++
+ .../_derived/marketing-grill-rules.md              |  31 +++
+ .../_derived/playbook-notes-channel-selection.md   |  37 ++++
+ .../_derived/visibility-leads-master-reference.md  | 211 ++++++++++++++++++
+ .../workflow-builds/marketing-grill/baseline.md    |  17 ++
+ .../marketing-grill/build-checklist.json           | 235 +++++++++++++++++++++
+ .../marketing-grill/coverage-map.md                |  20 ++
+ .../workflow-builds/marketing-grill/decisions.md   |  26 +++
+ .../marketing-grill/degrees-of-freedom.md          |  12 ++
+ .../marketing-grill/functional-test.md             |  11 +
+ .../workflow-builds/marketing-grill/hand-run.md    |  31 +++
+ .../marketing-grill/inputs-grill.md                |  28 +++
+ .../workflow-builds/marketing-grill/pipeline.md    |  56 +++++
+ .../playbook-notes-channel-selection.md            |  37 ++++
+ .../marketing-grill/research-note.md               |  23 ++
+ .../workflow-builds/marketing-grill/scorecard.md   |  62 ++++++
+ .../marketing-grill/test-scenarios.md              |  17 ++
+ .../marketing-grill/trigger-tests.md               |  13 ++
+ .../workflow-builds/marketing-grill/use-cases.md   |  24 +++
+ 00_project/workflow-registry/registry.json         |  79 ++++++-
+ 39 files changed, 1499 insertions(+), 12 deletions(-)
