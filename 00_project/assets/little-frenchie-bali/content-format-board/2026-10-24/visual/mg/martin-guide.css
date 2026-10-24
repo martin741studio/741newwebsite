@@ -1,0 +1,25 @@
+/* 741 Martin guide callout · v1 2026-10-12 · rules: README.md */
+.mg{--mg-accent:#fac118;--mg-ink:#1d1d1f;--mg-bubble:#ffffff;--mg-line:#e8e1d3;
+  display:flex;align-items:flex-end;gap:14px;margin:28px 0;max-width:min(640px,100%);box-sizing:border-box;font-family:"DM Sans",system-ui,sans-serif}
+.mg__img{width:112px;height:auto;flex:0 0 auto;filter:drop-shadow(0 6px 10px rgba(0,0,0,.12))}
+.mg__bubble{position:relative;min-width:0;flex:1 1 auto;overflow-wrap:anywhere;background:var(--mg-bubble);color:var(--mg-ink);border:1px solid var(--mg-line);
+  border-left:4px solid var(--mg-accent);border-radius:14px;padding:14px 18px;margin-bottom:34px;
+  font-size:16px;line-height:1.5;box-shadow:0 8px 24px rgba(20,20,30,.08)}
+.mg__bubble p{margin:0}.mg__bubble p+p{margin-top:6px}
+.mg__name{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8a6d00;margin-bottom:4px}
+.mg__bubble::before{content:"";position:absolute;left:-11px;bottom:18px;width:16px;height:16px;background:var(--mg-bubble);
+  border-left:1px solid var(--mg-line);border-bottom:1px solid var(--mg-line);transform:rotate(45deg)}
+/* Martin on the right, bubble on the left */
+.mg--right{flex-direction:row-reverse;margin-left:auto}
+.mg--right .mg__bubble{border-left:1px solid var(--mg-line);border-right:4px solid var(--mg-accent)}
+.mg--right .mg__bubble::before{left:auto;right:-11px;transform:rotate(225deg)}
+.mg--flip .mg__img{transform:scaleX(-1)}
+.mg--small .mg__img{width:72px}.mg--small .mg__bubble{font-size:14px;padding:10px 14px;margin-bottom:20px}
+/* on dark sections */
+.mg--dark{--mg-bubble:#1f2a44;--mg-ink:#f5f2ea;--mg-line:#33405f}.mg--dark .mg__name{color:var(--mg-accent)}
+/* reveal once, calm (CRO motion spec) */
+.mg[data-reveal]{opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease}
+.mg[data-reveal].is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.mg[data-reveal]{opacity:1;transform:none;transition:none}}
+@media (max-width:600px){.mg{gap:10px}.mg--right{margin-left:0}.mg__img{width:64px}.mg__bubble{font-size:15px;margin-bottom:16px}}
+@media print{.mg{break-inside:avoid}.mg__img{filter:none}.mg__bubble{box-shadow:none}.mg[data-reveal]{opacity:1;transform:none}}

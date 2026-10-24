@@ -7,3 +7,5 @@ Internal document. Never name a creator or their program (e.g. "Alex Garcia", "C
 | 001 | `001-you-only-need-4-content-formats-alex-garcia.md` | Alex Garcia (YouTube) | 2026-06-24 | 2026-10-24 (Apify `johnvc/YoutubeTranscripts`) |
 
 Freshness note: 001 is ~4 months old at the time of pull. The taxonomy (shot structure, Yap levels) is a durable production framework, not a time-sensitive claim, so it is kept — but re-verify against the creator's current material before relying on it past 2027-04-24 (9 months from upload).
+
+Outcome references (Martin's example links per format level, all verified live 2026-10-24): `.claude/skills/content-format-board/references/outcome-references.md`.

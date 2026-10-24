@@ -121,7 +121,7 @@
    "title": "Verification step with evidence at the end of the body",
    "evidence": ".claude/skills/content-format-board/scripts/verify_board.py",
    "date": "2026-10-24",
-   "note": "verify_board.py: sections, fields, banned terms, promises, placeholders, slop 5/5"
+   "note": "verify_board.py (written board) + verify_visual.py (phase 2)"
   },
   "3.6": {
    "status": "done",
@@ -243,6 +243,12 @@
    "passed": true,
    "missing": 0,
    "at": "2026-10-24T15:57"
+  },
+  {
+   "gate": "install",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-24T16:54"
   }
  ]
 }
