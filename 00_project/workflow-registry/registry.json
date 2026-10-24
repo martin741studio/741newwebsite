@@ -425,6 +425,23 @@
    "view": "",
    "install": "",
    "short": ""
+  },
+  {
+   "id": "content-format-board",
+   "label": "Content Format Board",
+   "alias": "",
+   "maturity": "installiert 2026-10-24",
+   "approved": "ja (CP2 2026-10-24)",
+   "doc": "00_project/workflow-builds/content-format-board/",
+   "skill": ".claude/skills/content-format-board/SKILL.md",
+   "note": "",
+   "slash": "/content-format-board <name>",
+   "slash_status": "aktiv",
+   "chat": "",
+   "resume": "",
+   "view": "",
+   "install": "",
+   "short": "Video-Ideen-Board je Kunde/Prospect, 4 Formate + echte Kundenfragen"
   }
  ],
  "clients": [
@@ -672,6 +689,27 @@
    "drive": "",
    "local": "",
    "note": "automatisch angelegt (Ordner 00_project/prospects/bettina-lawin/booking/_run.json), bitte prüfen"
+  },
+  {
+   "name": "Swatma Wellness Bali",
+   "type": "Lead",
+   "drive": "",
+   "local": "",
+   "note": "automatisch angelegt (Ordner 00_project/assets/audit/swatma/2026-10-22-call/run.json), bitte prüfen"
+  },
+  {
+   "name": "Yiwen Cyrus",
+   "type": "Lead",
+   "drive": "",
+   "local": "",
+   "note": "automatisch angelegt (Ordner 00_project/prospects/mainraum/_run.json), bitte prüfen"
+  },
+  {
+   "name": "Lovely (Little Frenchie)",
+   "type": "Lead",
+   "drive": "",
+   "local": "",
+   "note": "automatisch angelegt (Ordner 00_project/prospects/little-frenchie-bali/_run.json), bitte prüfen"
   }
  ],
  "runs": [
@@ -1251,11 +1289,11 @@
    "approved": true,
    "approved_date": "2026-10-13",
    "mode": "Echt",
-   "last_run": "2026-10-22",
+   "last_run": "2026-10-24",
    "drive": "",
-   "local": "00_project/assets/morning-grill/2026-10-22",
+   "local": "00_project/assets/morning-grill/2026-10-24",
    "result": "00_project/assets/morning-grill/command-center.html",
-   "note": "Scheduled 06:13 run, Martin not present. Steps 0-6 only; no card rounds, no tasks publish, no bookmark move. Auto cards already decided 20./21.10. moved below the line (unread msgs -> click item, 29 Suriya emails, overdue tasks, pool/audit approvals). S2 by one Sonnet subagent (36 transcripts). S16 outreach table appended to status-report.md."
+   "note": "Scheduled 06:13 run built the full brief; Martin answered all 19 cards/walk-items directly in the portal Command Center before this interactive session started. This session: pulled + verified the answers, clarified 2 ambiguous 'own' notes (Hüwel = general content-writing-workflow reminder, Marcel = KlickTipp not ClickUp, confirmed typo), verified disk space (43% used, 23GB free, matches his Done click). STÜRZL Ads account created earlier today under 741's manager account (CID 803-173-1693), paused, pending advertiser verification (parked per Martin)."
   },
   {
    "client": "741 Studio (Eigen-Audit)",
@@ -1304,11 +1342,11 @@
    "approved": false,
    "approved_date": "",
    "mode": "Echt",
-   "last_run": "2026-10-13",
+   "last_run": "2026-10-23",
    "drive": "",
-   "local": "00_project/prospects/claudia-maria-steifensand",
-   "result": "https://741.studio/review/claudia-maria-steifensand/",
-   "note": "validate: 0 Fehler, 0 Hinweise. LIVE (Prüfung 2026-10-13); neue lokale Änderungen brauchen ein Deploy nach Go."
+   "local": "00_project/prospects/claudia-maria-steifensand-v2",
+   "result": "https://741.studio/review/claudia-maria-steifensand-v2/",
+   "note": "validate: 0 Fehler, 1 Hinweise, Loom fehlt. Noch nicht live: Deploy nach Go."
   },
   {
    "client": "741 Studio (Eigen-Audit)",
@@ -1404,15 +1442,15 @@
   {
    "client": "741 Studio (intern)",
    "workflow": "evening",
-   "status": "fertig, Freigabe offen",
+   "status": "fertig (evening log unconfirmed)",
    "approved": false,
    "approved_date": "",
    "mode": "Echt",
-   "last_run": "2026-10-14",
+   "last_run": "2026-10-22",
    "drive": "",
-   "local": "00_project/assets/morning-grill/2026-10-14",
-   "result": "00_project/assets/morning-grill/command-center.html",
-   "note": "Scheduled 17:00 task (read-only scan, evening-log draft, snapshot id=21) followed by a live round with Martin once he replied with a voice note from the admin Kundenarbeit view. AskUserQuestion became available mid-turn; ran 2 rounds (6 questions). Resolved live: (1) Coralie/Suriya scare-tactic reply confirmed NOT sent (matches what Martin told the Suriya chat 18:58 WITA) — work_item a05a1de0 set dropped/canceled; (2) Stuerzl 'program start not set' card was stale — goals.json already had program_start=2026-10-07, blocker just never cleared; fixed goals.json (removed 'No start date' blocker, new next_milestone) and dropped work_item 1aeebce5; (3) Taxi-Zentrale: Akeeba-key task (t13) was already dropped live as duplicate, Daniel-reply task (t14/work_item 72a0429a) dropped per Martin's 'park it'; (4) Nachweis-Link UX gap documented in 00_project/client-work-visibility/data-model.md (DB already allows label-only evidence, admin UI still forces a URL) per Martin's 'exempt decision tasks' call; (5) Hueweal 'Magnetfelder' = his decision card E5 (Variante A), already built on a test branch (work_item f1b3fa29, status needs_check), just awaiting Martin's live-go, no further action; (6) portal per-card-actions idea captured as admin-only backlog note (memory kundenarbeit-admin-card-actions.md), per Martin's scope ('only for me as admin'). Synced evening/tasks.json and tasks.json locally (t14/t32/t42 -> dropped) and evening-log.md. Also compacted MEMORY.md 20.3KB->17.6KB per a hook size warning. Night queue (2b) not run: AskUserQuestion was unavailable during the unattended portion, so no card/no queue per the workflow's own rule; could still be run now that AskUserQuestion is available, if Martin wants it tonight."
+   "local": "00_project/assets/morning-grill/2026-10-22/evening",
+   "result": "00_project/assets/morning-grill/2026-10-22/evening-log.md",
+   "note": "Scheduled 17:00 scan ran first (session local_12db111c); this interactive run picked up from its scan/status-report, wrote evening-log.md, surfaced the Marcel/KlickTipp password Martin gave this morning (confirmed NOT the right one), ran the night queue (2 rounds, 3 picked, 1 blocked by safety filter), appended per-client logs."
   },
   {
    "client": "Korinna Heintze",
@@ -1608,6 +1646,84 @@
    "local": "00_project/prospects/bettina-lawin-v2",
    "result": "https://741.studio/review/bettina-lawin-v2/",
    "note": "validate: 1 Fehler, 1 Hinweise, Loom fehlt. Noch nicht live: Deploy nach Go."
+  },
+  {
+   "client": "741 Studio (Eigen-Audit)",
+   "workflow": "personal-posts",
+   "status": "in Arbeit",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Echt",
+   "last_run": "2026-10-23",
+   "drive": "",
+   "local": "00_project/assets/741studio/personal-posts/2026-10-23",
+   "result": "",
+   "note": ""
+  },
+  {
+   "client": "Swatma Wellness Bali",
+   "workflow": "audit",
+   "status": "fertig, Freigabe offen",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Echt",
+   "last_run": "2026-10-22",
+   "drive": "",
+   "local": "00_project/assets/audit/swatma/2026-10-22-call",
+   "result": "00_project/assets/audit/swatma/2026-10-22-call/report/internal.html",
+   "note": "Lauf swatma-2026-10-22-call, Verdikt Offen (automatisch erkannt)"
+  },
+  {
+   "client": "Yiwen Cyrus",
+   "workflow": "prospect",
+   "status": "fertig, Freigabe offen",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Echt",
+   "last_run": "2026-10-23",
+   "drive": "",
+   "local": "00_project/prospects/mainraum",
+   "result": "https://741.studio/review/mainraum/",
+   "note": "validate: 0 Fehler, 1 Hinweise, Loom fehlt. LIVE (Prüfung 2026-10-23); neue lokale Änderungen brauchen ein Deploy nach Go."
+  },
+  {
+   "client": "Lovely (Little Frenchie)",
+   "workflow": "prospect",
+   "status": "fertig, Freigabe offen",
+   "approved": false,
+   "approved_date": "",
+   "mode": "Echt",
+   "last_run": "2026-10-23",
+   "drive": "",
+   "local": "00_project/prospects/little-frenchie-bali",
+   "result": "https://741.studio/review/little-frenchie-bali/",
+   "note": "validate: 0 Fehler, 1 Hinweise, Loom fehlt. Noch nicht live: Deploy nach Go."
+  },
+  {
+   "client": "Daniela Dumann",
+   "workflow": "lockout",
+   "status": "freigegeben",
+   "approved": true,
+   "approved_date": "2026-10-24",
+   "mode": "Echt",
+   "last_run": "2026-10-24",
+   "drive": "",
+   "local": "00_project/assets/dumann/incidents/2026-10-24-silent-unpaid-invoice",
+   "result": "00_project/assets/dumann/incidents/2026-10-24-silent-unpaid-invoice/dossier.md",
+   "note": "Zahlungserinnerung Rate 2 + Status am 24.10. von Martin gesendet (Frist 31.10.); Wix-Zugang entzogen; Stufe 2 fällig 29.10."
+  },
+  {
+   "client": "Lovely (Little Frenchie)",
+   "workflow": "content-format-board",
+   "status": "freigegeben",
+   "approved": true,
+   "approved_date": "2026-10-24",
+   "mode": "Echt",
+   "last_run": "2026-10-24",
+   "drive": "",
+   "local": "00_project/assets/little-frenchie-bali/content-format-board/2026-10-24",
+   "result": "00_project/assets/little-frenchie-bali/content-format-board/2026-10-24/board.md",
+   "note": "Ideas 1+2 first; readiness, on-camera, 4 fact checks open"
   }
  ],
  "commands": [
