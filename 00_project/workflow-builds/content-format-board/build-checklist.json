@@ -1,0 +1,242 @@
+{
+ "workflow_id": "content-format-board",
+ "name": "Content Format Board",
+ "created": "2026-10-24",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "0.0": {
+   "status": "done",
+   "title": "Inputs Martin gives confirmed via interactive grill (inputs-grill.md: Job, Surface, Cadence, Limits)",
+   "evidence": "00_project/workflow-builds/content-format-board/inputs-grill.md",
+   "date": "2026-10-24",
+   "note": "4-parameter grill confirmed by Martin 2026-10-24"
+  },
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/content-format-board/research-note.md",
+   "date": "2026-10-24",
+   "note": "Skill chosen, per decision tree + pattern 4.1"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/content-format-board/research-note.md",
+   "date": "2026-10-24",
+   "note": "grep confirmed no existing format taxonomy; 2 false positives ruled out"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/knowledge/content-format-library/INDEX.md",
+   "date": "2026-10-24",
+   "note": "real source found+ingested via Apify transcript; 4mo old, flagged re-verify date"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/content-format-board/research-note.md",
+   "date": "2026-10-24",
+   "note": "5 memories + skills listing + NotebookLM Content Marketing Playbook (video findings -> playbook-notes.md)"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/content-format-board/research-note.md",
+   "date": "2026-10-24",
+   "note": "research note written"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/content-format-board/use-cases.md",
+   "date": "2026-10-24",
+   "note": "3 use cases written"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/content-format-board/test-scenarios.md",
+   "date": "2026-10-24",
+   "note": "obvious, paraphrase, 4 negative cases"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/content-format-board/hand-run.md",
+   "date": "2026-10-24",
+   "note": "Little Frenchie real hand-run confirmed by Martin 2026-10-24"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/content-format-board/pipeline.md",
+   "date": "2026-10-24",
+   "note": "9-step pipeline with checkpoint"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/content-format-board/pipeline.md",
+   "date": "2026-10-24",
+   "note": "deterministic scripts (resolve_target, log_research_calls, label_map) vs heuristic steps marked inline"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/content-format-board/decisions.md",
+   "date": "2026-10-24",
+   "note": "Martin go at CP1 2026-10-24 after NotebookLM integration"
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": ".claude/skills/content-format-board/SKILL.md",
+   "date": "2026-10-24",
+   "note": "folder: SKILL.md + scripts/ (5) + references/ (4) + assets/ (2)"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": ".claude/skills/content-format-board/SKILL.md",
+   "date": "2026-10-24",
+   "note": "description WHAT+WHEN+NOT; allowed-tools narrow; model invocation on (no publish side effect), Martin go is the gate"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": ".claude/skills/content-format-board/SKILL.md",
+   "date": "2026-10-24",
+   "note": "10-step checklist, Critical on top, 3 checkpoints"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": ".claude/skills/content-format-board/references/format-taxonomy.md",
+   "date": "2026-10-24",
+   "note": "4 references one level deep; SKILL.md 54 lines"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": ".claude/skills/content-format-board/scripts/verify_board.py",
+   "date": "2026-10-24",
+   "note": "verify_board.py: sections, fields, banned terms, promises, placeholders, slop 5/5"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": ".claude/skills/content-format-board/SKILL.md",
+   "date": "2026-10-24",
+   "note": "STE, no invented data, slop gate, per-board go, client-language boards"
+  },
+  "3.7": {
+   "status": "skipped",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "",
+   "date": "2026-10-24",
+   "note": "",
+   "reason": "not unattended: on-demand, Martin in the chat, no scheduled run"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/content-format-board/trigger-tests.md",
+   "date": "2026-10-24",
+   "note": "2 positive PASS, 4 negative PASS, fresh subagent sessions"
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/content-format-board/functional-test.md",
+   "date": "2026-10-24",
+   "note": "fresh session, BOARD PASSED 6 ideas, 9 findings patched into the skill"
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/content-format-board/baseline.md",
+   "date": "2026-10-24",
+   "note": "with vs without: 43 vs 19 calls, 219k vs 170k tokens, 0 vs 3 corrections"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-24",
+   "note": "",
+   "reason": "not a plugin (no claude plugin eval); /doctor prompt-audit is a terminal dialog, not available in this app session"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/content-format-board/scorecard.md",
+   "date": "2026-10-24",
+   "note": "58/60 = 96.7 %, 0 blocking zeros"
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/content-format-board/decisions.md",
+   "date": "2026-10-24",
+   "note": "Martin go at CP2 2026-10-24, scorecard 96.7 %"
+  },
+  "5.2": {
+   "status": "todo",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3a": {
+   "status": "todo",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3b": {
+   "status": "skipped",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "2026-10-24",
+   "note": "",
+   "reason": "board is a markdown proposal for Martin's pitch, not a rendered client page; no guide placement"
+  },
+  "5.3": {
+   "status": "todo",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.4": {
+   "status": "skipped",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "2026-10-24",
+   "note": "",
+   "reason": "on demand only, no routine or LaunchAgent"
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-24T15:20"
+  },
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-24T15:30"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-24T15:54"
+  }
+ ]
+}
