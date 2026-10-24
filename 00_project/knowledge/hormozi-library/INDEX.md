@@ -1,6 +1,6 @@
 # Hormozi Library (NotebookLM export)
 
-Source: NotebookLM notebook ed95df8f-28d3-4c6b-aea9-408154c442ee, exported 2026-10-06. 109 sources.
+Source: NotebookLM notebook ed95df8f-28d3-4c6b-aea9-408154c442ee, exported 2026-10-06 (sources 1-109, full transcripts). Freshness-refreshed 2026-10-25 for the `marketing-grill` workflow build: the live notebook had grown to 120 sources; the 11 new ones (110-120) were added as web articles/videos about $100M Offers and one business-coaching session. Given one of them is a 242,570-character full audiobook, Martin decided (2026-10-25) to capture the AI "source guide" summary in full plus a representative excerpt for 110-120, not full raw transcripts — marked "(partial)" or "(summary only)" in the table below. 120 sources total.
 
 | # | Title | Type | Chars | File |
 |---|---|---|---|---|
@@ -113,3 +113,14 @@ Source: NotebookLM notebook ed95df8f-28d3-4c6b-aea9-408154c442ee, exported 2026-
 | 107 | You Can Judge Anyone's Competence With 2 Questions | video | 4507 | 107-you-can-judge-anyone-s-competence-with-2-questions.md |
 | 108 | You Only Get Three or Four Big Swings in Life | video | 5571 | 108-you-only-get-three-or-four-big-swings-in-life.md |
 | 109 | Your Life Doesn't Need to Be Easier. Just Simpler | video | 3513 | 109-your-life-doesn-t-need-to-be-easier-just-simpler.md |
+| 110 | $100M Offers by Alex Hormozi (Summary) - Greg Faxon | web (partial) | ~3800 | 110-100m-offers-by-alex-hormozi-summary-greg-faxon.md |
+| 111 | $100M Offers by Alex Hormozi \| Make Irresistible Offers \| Full Audiobook | video (partial, full=242570) | ~3500 | 111-100m-offers-by-alex-hormozi-make-irresistible-offers-full-audiobook.md |
+| 112 | $100M Offers by Alex Hormozi: the Grand Slam Offer Explained - Scalabl | web (summary only) | ~1200 | 112-100m-offers-grand-slam-offer-explained-scalabl.md |
+| 113 | $100M Offers: Key Insights & Takeaways from Alex Hormozi - Loxie | web (partial) | ~2400 | 113-100m-offers-key-insights-takeaways-loxie.md |
+| 114 | 100 MILLION DOLLAR OFFERS ALEX HORMOZI | web (summary only) | ~1300 | 114-100-million-dollar-offers-alex-hormozi.md |
+| 115 | Alex Hormozi - How To Make Offers So Good People Feel Stupid Saying No | video (partial, full=69162) | ~2600 | 115-alex-hormozi-how-to-make-offers-so-good-people-feel-stupid-saying-no.md |
+| 116 | Summary of $100M Offers: How to Make Offers So Good People Feel Stupid Saying No - Belt Course | web (summary only) | ~1000 | 116-summary-of-100m-offers-belt-course.md |
+| 117 | The Grand Slam Offer: How to Build an Offer People Can't Refuse \| Asset Academy | web (summary only) | ~1700 | 117-grand-slam-offer-how-to-build-an-offer-people-cant-refuse-asset-academy.md |
+| 118 | alex hormozi - $100m offers - Deven Davis | web (full, short source) | 797 | 118-alex-hormozi-100m-offers-deven-davis.md |
+| 119 | hormozi-value-equation \| Skills Mark... - LobeHub | web (summary only) | ~1700 | 119-hormozi-value-equation-skills-mark-lobehub.md |
+| 120 | "I Do $30M a Year. Why Does It Feel Unprofitable?" | video (partial, full=8152) | ~2200 | 120-i-do-30m-a-year-why-does-it-feel-unprofitable.md |
