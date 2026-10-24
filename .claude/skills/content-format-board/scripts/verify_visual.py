@@ -52,11 +52,12 @@ def main(argv):
         fail('no prompts file')
     else:
         t = open(pp, encoding='utf-8').read().lower()
+        if not all(c in t for c in CANDID):
+            fail('prompts lack the candid shared block (references/visual-phase.md §3)')
+        t = re.sub(r'\bno (cinematic|editorial|soft dreamy)[^,.;]*', '', t)  # the candid block forbids these words; a negation is not a use
         for s in BAD_STYLE:
             if s in t:
                 fail(f'prompts use editorial wording: "{s}" (Martin: looks like AI / a fable book)')
-        if not all(c in t for c in CANDID):
-            fail('prompts lack the candid shared block (references/visual-phase.md §3)')
 
     if stage == 'page':
         for n in ideas:
