@@ -5,10 +5,115 @@ Usage: build_page.py <prospect_dir>
 Writes 04_site/review/<slug>/index.html. Never edit that file by hand: change prospect.json and run again.
 All text comes from prospect.json. This file only knows the layout.
 """
-import html, json, os, sys
+import re, html, json, os, sys
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
 MINI = os.path.join(ROOT, '00_project', 'prospect-mini')
+EN_MAP = [  # lang == 'en' (2026-10-23): fixed German template strings -> English; longest first
+ ("Die ersten 5 Sekunden entscheiden, ob jemand anfragt", "The first 5 seconds decide whether someone books"),
+ ("Was Agenturen verstecken: von Anfang bis Ende, nichts versteckt", "What agencies hide: start to finish, nothing hidden"),
+ ("30 Minuten, kostenlos: Ich zeige dir live, wer in deinem Markt oben steht – und warum.", "30 minutes, free: I show you live who ranks on top in your market, and why."),
+ ("4 Bereiche, jeder Punkt an deiner echten Seite geprüft. Fahr über einen Bereich oder tipp ihn an, um ihn zu öffnen.", "4 areas, every point checked on your real site. Hover over an area or tap it to open it."),
+ ("6 Schritte, die sofort wirken – ohne neue Website.", "6 steps that work right away, without a new website."),
+ ("Alle Werte sind Annahmen zum Selber-Einstellen. Das Werbebudget zahlst du direkt an Google.", "All values are assumptions you can adjust yourself. The ad budget goes directly to Google."),
+ ("Anzeigen stehen über der Karte und den Suchergebnissen. Sie bringen Anfragen sofort – solange das Budget läuft. Du zahlst pro Klick.", "Ads sit above the map and the search results. They bring enquiries at once, as long as the budget runs. You pay per click."),
+ ("Beides bringt Besucher. Ob daraus eine Anfrage wird, entscheidet deine Startseite – siehe Schritt 3 weiter oben.", "Both bring visitors. Whether they become an enquiry is decided by your home page, see step 3 above."),
+ ("Dein persönliches Video folgt in Kürze – die Analyse unten steht schon komplett.", "Your personal video follows shortly. The review below is already complete."),
+ ("Der 5-Sekunden-Test: was dein erster Bildschirm heute nicht beantwortet", "The 5-second test: what your first screen does not answer today"),
+ ("Die 6 wichtigsten neuen Inhalte für deine Website", "The 6 most important new pages for your website"),
+ ("Die Karte zeigt, wo du stehst. Hier siehst du, warum – und was konkret passiert.", "The map shows where you stand. Here you see why, and what happens next."),
+ ("Plätze in der Google-Karte und in der Suche kosten pro Klick nichts. Sie brauchen ein paar Monate – und wirken dann dauerhaft.", "Spots on the Google map and in search cost nothing per click. They take a few months, and then they last."),
+ ("Wer in der Google-Karte unter den ersten drei steht, bekommt den Großteil aller Klicks, Anrufe und Routen.", "Whoever is in the top three of the Google map gets most of the clicks, calls and directions."),
+ ("Ziel-Szenario: unter den ersten drei im ganzen Einzugsgebiet (Simulation)", "Target scenario: in the top three across the whole area (simulation)"),
+ ("Google ordnete den Betrieb unvollständig ein, Leistungen fehlten, keine Seiten für die einzelnen Leistungen und Orte.", "Google had the business filed incompletely, services were missing, no pages for the single services and places."),
+ ("In der Karte unsichtbar, Einordnung und Leistungen unvollständig, langsame Website, keine Einträge in Branchenbüchern.", "Invisible on the map, category and services incomplete, slow website, no directory listings."),
+ ("Leistungen nicht im Google-Eintrag, keine Bewertungen, Website nicht fürs Handy gebaut.", "Services not in the Google listing, no reviews, website not built for phones."),
+ ("Ungenaue Einordnung bei Google, Leistungen nicht eingetragen, keine Bewertungen, keine Messung.", "Vague category on Google, services not listed, no reviews, no tracking."),
+ ("Ich leite 741.Studio, ein kleines Remote-Team aus Designern, Entwicklern, Media Buyern und Growth Marketern in Indonesien", "I run 741.Studio, a small remote team of designers, developers, media buyers and growth marketers in Indonesia"),
+ ("und Europa.", "and Europe."),
+ ("Indonesien, Deutschland und Australien.", "Indonesia, Germany and Australia."),
+ ("Deutschland und Australien.", "Germany and Australia."),
+ ("Mein Grundsatz: Komplexität ist der Feind der Ausführung. Wir suchen die wenigen Schritte, die bei dir am meisten bewirken.", "My principle: complexity is the enemy of execution. We look for the few steps that move the most for you."),
+ ("Bewertungen von 0 auf 5,0 Sterne – mit Nachfass-Vorlage, jede beantwortet", "Reviews from 0 to 5.0 stars, with a follow-up template, every one answered"),
+ ("Website schneller gemacht, klare Überschriften mit Suchbegriffen", "Website made faster, clear headings with search terms"),
+ ("Website fürs Handy gebaut, neue Hauptüberschrift", "Website built for phones, new main heading"),
+ ("Name und Beschreibung im Google-Eintrag mit den echten Suchbegriffen", "Name and description in the Google listing with the real search terms"),
+ ("Gleiche Adresse in allen Branchenbüchern, Apple Karten und Bing", "Same address in all directories, Apple Maps and Bing"),
+ ("Richtige Einordnung: Erziehungs-, Psychologische und Beziehungsberaterin", "Right category: parenting, psychological and relationship counsellor"),
+ ("Leistungen eingetragen: Körperpsychotherapie, Biosynthese, Hakomi", "Services listed: body psychotherapy, biosynthesis, Hakomi"),
+ ("Alle Leistungen eingetragen, je mit passender Seite", "All services listed, each with its own page"),
+ ("Eigene Seiten je Leistung und je Einzugsgebiet", "Own pages per service and per area"),
+ ("Einordnung im Google-Eintrag präzisiert", "Category in the Google listing sharpened"),
+ ("Zusätzliche Einordnungen im Google-Eintrag ergänzt", "Additional categories added to the Google listing"),
+ ("Einträge in Branchenbüchern von null aufgebaut", "Directory listings built from zero"),
+ ("Bewertungs-Routine von null aufgebaut", "Review routine built from zero"),
+ ("Feste Routine für Bewertungen und Antworten", "Fixed routine for reviews and replies"),
+ ("Bewertungs-Routine eingeführt", "Review routine introduced"),
+ ("Rund 100 Verweise von lokalen Seiten aus der Region", "Around 100 links from local sites in the region"),
+ ("Ergebnis: an 91 % der Karte sichtbar – bei 109 Mitbewerbern", "Result: visible on 91 % of the map, against 109 competitors"),
+ ("Ergebnis: im Schnitt Platz 1,8 im ganzen Gebiet", "Result: average rank 1.8 across the whole area"),
+ ("„Heilpraktikerin“, 5.400 Suchen/Monat", "\"Heilpraktikerin\" (naturopath), 5,400 searches/month"),
+ ("„Körperpsychotherapie“, vorher um Platz 6", "\"body psychotherapy\", before around rank 6"),
+ ("der Karte unter den ersten 3, in 8 Wochen", "of the map in the top 3, in 8 weeks"),
+ ("So haben wir es gemacht – 4 Fälle ansehen", "This is how we did it: see 4 cases"),
+ ("Für diese Betriebe war er es", "For these businesses the jump was real"),
+ ("Ist der Sprung realistisch?", "Is the jump realistic?"),
+ ("Jahre Erfahrung mit lokaler Sichtbarkeit bei Google", "years of experience with local visibility on Google"),
+ ("Unternehmen unterstützt", "businesses supported"),
+ ("Gründer und CEO von 741.Studio", "Founder and CEO of 741.Studio"),
+ ("Werbeagentur · Nürnberg", "Advertising agency · Nuremberg"),
+ ("Fälle schließen", "Close cases"),
+ ("Google-Karte · Sichtbarkeits-Check", "Google map · visibility check"),
+ ("Was Sichtbarkeit bei Google für dich bedeutet", "What Google visibility means for you"),
+ ("Was wir auf deiner Website geprüft haben", "What we checked on your website"),
+ ("Was du schon morgen verbessern könntest", "What you could improve tomorrow"),
+ ("Was wir an deinem Google-Eintrag konkret ändern", "What we change in your Google listing"),
+ ("Vorher aufräumen: was dich heute Anrufe kostet", "Clean up first: what costs you calls today"),
+ ("Deine Ausgangslage auf einen Blick", "Your starting point at a glance"),
+ ("Sichtbarkeit bei Google hat zwei Quellen:", "Google visibility has two sources:"),
+ ("Gefunden in Karte und Suche (unbezahlt)", "Found on the map and in search (unpaid)"),
+ ("Karte und Suche: baut sich auf", "Map and search: builds up"),
+ ("Was nach der Karte kommt", "What comes after the map"),
+ ("Woher die Anfragen kommen", "Where the enquiries come from"),
+ ("Was Menschen bei Google eingeben", "What people type into Google"),
+ ("Mein strukturierter Fahrplan", "My structured roadmap"),
+ ("Sofort-Maßnahmen", "Quick wins"),
+ ("Besucher / Monat", "visitors / month"),
+ ("Anfragen / Monat", "enquiries / month"),
+ ("unbezahlte Plätze", "unpaid spots"),
+ ("Ohne Zahl bei Google:", "No number from Google:"),
+ ("Google gibt für viele Begriffe keine Suchzahlen heraus – das heißt nicht, dass niemand sucht.", "Google gives no search numbers for many terms. That does not mean nobody searches."),
+ ("Was das heißt:", "What this means:"),
+ ("Die gute Nachricht:", "The good news:"),
+ ("← Tabelle seitwärts wischen →", "← swipe the table sideways →"),
+ ("🔍 Zum Vergrößern antippen", "🔍 Tap to enlarge"),
+ ("Bild vergrößert", "Image enlarged"),
+ ("● Karte + Suche", "● Map + search"),
+ ("Priorität", "Priority"), ("Maßnahme", "Action"), ("Aufwand", "Effort"), ("Warum", "Why"),
+ ("Hoch", "High"), ("Mittel", "Medium"), ("Gering", "Low"),
+ ("Schritt für Schritt zu echter Sichtbarkeit für", "Step by step to real visibility for"),
+ ("Schritt 1", "Step 1"), ("Schritt 2", "Step 2"), ("Schritt 3", "Step 3"),
+ ("ich habe eine persönliche Analyse deiner", "I prepared a personal review of your"),
+ ("erstellt.", "."),
+ ("Zeig mir meinen Markt →", "Show me my market →"),
+ ("Kostenloses Gespräch buchen", "Book a free call"),
+ ("Martin von 741 zeigt auf das Ergebnis", "Martin from 741 points at the result"), ("Martin von 741 denkt nach", "Martin from 741 thinks"),
+ ("Martin von 741 hat eine Idee", "Martin from 741 has an idea"), ("Martin von 741 freut sich", "Martin from 741 is pleased"), ("Martin von 741 winkt", "Martin from 741 waves"),
+ ("Heutige Startseite von", "Today's home page of"), ("Entwurf des ersten Bildschirms für", "Draft of the first screen for"), (", erster Bildschirm", ", first screen"),
+ ("So sollte es aussehen", "How it should look"), ("Heute", "Today"),
+ ("Oben in der Karte bei", "Top of the map for"), ("So ordnet Google sie ein", "How Google files them"), ("Google-Bewertungen", "Google reviews"),
+ ("Gelb = Fragen und Themen, grün = Suche nach", "Yellow = questions and topics, green = searches for"),
+ ("ganz oben und", "at the very top and"),
+ ("ausbaufähig", "to improve"), ("dringend", "urgent"), ("passt", "ok"),
+ ("Ausbaufähig", "To improve"), ("Dringend", "Urgent"), ("Passt", "OK"),
+ ("Suchen / Monat", "searches / month"), ("Suchen im Monat", "searches a month"),
+ ("PRIVATE WEBSITE- &amp; SICHTBARKEITS-ANALYSE", "PRIVATE WEBSITE &amp; VISIBILITY REVIEW"),
+ ("Persönlich aufgenommen für:", "Recorded personally for:"),
+ ("Hallo ", "Hi "),
+ ("Priorisierter Plan", "Prioritized Plan"),  # 2026-10-25: found missing while building the Little Frenchie marketing-plan page; same bug exists on her live index.html (roadmap() eyebrow)
+ ("✉️ E-Mail schreiben", "✉️ Send an email"),  # 2026-10-25: same gap, final()'s secondary CTA button
+]
+
 CAL = 'https://cal.com/741-studio-simjzw/30min'
 E = html.escape
 
@@ -395,6 +500,35 @@ def calc(p):
   ''' + CALC_JS % json.dumps(G, ensure_ascii=False) + '\n<!-- 741 Wachstums-Rechner (Karte + Google-Anzeigen) END -->\n'
 
 
+# ---------------------------------------------------------------- marketing plan (guarded alternate page type, 2026-10-25)
+def marketing_rounds(p):
+    """Renders the 'rounds' narrative for page_type == 'marketing_plan' (e.g. a 741 Marketing Grill output
+    turned into a visual page). Reuses the exact sys-sec/sys-card/sys-item/sys-good classes from system(),
+    not a new skeleton (review-page-standard-template-only). p['rounds'] = [{id, eyebrow, h2, lead,
+    items: [{tag, title, text}], good, guide_key}, ...]. Never used by the audit page_type (default)."""
+    out = []
+    for i, r in enumerate(p.get('rounds', [])):
+        items = ''.join(
+            f'<div class="sys-item"><div class="sys-rank">{j + 1}</div><div><strong>{E(it["title"])}</strong>'
+            f'<span>{(f"<span class=" + chr(34) + "sys-tag" + chr(34) + ">" + E(it["tag"]) + "</span>") if it.get("tag") else ""}{t(it["text"])}</span></div></div>'
+            for j, it in enumerate(r.get('items', [])))
+        good = f'<div class="sys-good">{t(r["good"])}</div>' if r.get('good') else ''
+        gd = guide(p, r['guide_key']) if r.get('guide_key') else ''
+        alt = ' alt' if i % 2 == 1 else ''
+        out.append(f'''<section class="sys-sec{alt}" id="{E(r.get('id', f'round-{i + 1}'))}">
+    <div class="sys-head">
+      <span class="sys-eyebrow">{t(r.get('eyebrow', ''))}</span>
+      <h2>{t(r['h2'])}</h2>
+      <p>{t(r['lead'])}</p>
+    </div>
+    <div class="sys-list" style="max-width:1060px;">{items}</div>
+    {good}
+    <div style="max-width:1060px;margin:14px auto 0;">{gd}</div>
+  </section>
+''')
+    return '\n'.join(out)
+
+
 # ---------------------------------------------------------------- piano check
 PILL = {'ok': ('pn-ok', 'Passt'), 'warn': ('pn-warn', 'Ausbaufähig'), 'crit': ('pn-crit', 'Dringend')}
 
@@ -584,18 +718,40 @@ def main():
     pfile = sys.argv[2] if len(sys.argv) > 2 else 'prospect.json'
     p = json.load(open(os.path.join(pdir, pfile), encoding='utf-8'))
     s = open(os.path.join(MINI, 'template.html'), encoding='utf-8').read()
-    for name, fn in [('hero', hero), ('grid', grid), ('system', system), ('calc', calc), ('check', check),
-                     ('quickwins', quickwins), ('roadmap', roadmap), ('proof', lambda p: ''), ('final', final)]:
+    if p.get('page_type') == 'marketing_plan':
+        # Guarded alternate mode (2026-10-25, Little Frenchie Marketing Grill page): same shell, same CSS,
+        # same slot system -- only which function fills each slot changes. The audit-only slots (grid,
+        # system's own local-SEO narrative, calc, check, quickwins) are left empty; "system" is filled by
+        # marketing_rounds() instead, roadmap and final are reused unchanged. Never affects page_type
+        # unset (the default audit review page every other prospect uses).
+        slots = [('hero', hero), ('grid', lambda p: ''), ('system', marketing_rounds), ('calc', lambda p: ''),
+                 ('check', lambda p: ''), ('quickwins', lambda p: ''), ('roadmap', roadmap), ('proof', lambda p: ''), ('final', final)]
+    else:
+        slots = [('hero', hero), ('grid', grid), ('system', system), ('calc', calc), ('check', check),
+                 ('quickwins', quickwins), ('roadmap', roadmap), ('proof', lambda p: ''), ('final', final)]
+    for name, fn in slots:
         mark = f'<!--SLOT:{name}-->\n'
         assert s.count(mark) == 1, name
         s = s.replace(mark, fn(p))
     if p.get('plural'):  # page speaks to a team, not to an owner ("euer Haus"): switch the fixed template phrases
         for a_, b_ in PLURAL: s = s.replace(a_, b_)
+    if p.get('lang') == 'en':  # English page: partials, lang, booking link, fixed strings
+        s = s.replace('{{> header_de}}', '{{> header}}').replace('{{> footer_de}}', '{{> footer}}').replace('<html lang="de"', '<html lang="en"')
+        s = s.replace(CAL, 'https://calendly.com/martin-233/15-minute-meeting?back=1')
+        for a_, b_ in EN_MAP: s = s.replace(a_, b_)
+        s = s.replace("'de-DE'", "'en-US'").replace('"de-DE"', '"en-US"')
+        s = s.replace(' €', ' ' + p.get('currency', 'EUR')).replace('€', p.get('currency', 'EUR'))
+    if p.get('hide_grid'):  # prospect without a Google entry (2026-10-23): no Maps scan section
+        s = re.sub(r'<!-- 741 Maps-Scan Beweis START -->.*?<!-- 741 Maps-Scan Beweis END -->', '', s, flags=re.S)
+    if p.get('hide_step2'):  # no Google entry: drop the map competitor table, point the overview card at the website check
+        s = re.sub(r'<section class="sys-sec" id="telefon-klingeln">.*?</section>', '', s, count=1, flags=re.S)
+        s = s.replace('href="#telefon-klingeln"', 'href="#check"')
     s = s.replace('%%TITLE%%', E(p['meta']['title'])).replace('%%DESC%%', E(p['meta']['desc'])).replace('%%SLUG%%', p['slug'])
     out = os.path.join(ROOT, '04_site', 'review', p['slug'])
     os.makedirs(out, exist_ok=True)
-    open(os.path.join(out, 'index.html'), 'w', encoding='utf-8').write(s)
-    print('built', os.path.join(out, 'index.html'), len(s))
+    out_file = p.get('output_file', 'index.html')  # guarded override (2026-10-25): a sibling page, never overwrites index.html unless explicitly unset
+    open(os.path.join(out, out_file), 'w', encoding='utf-8').write(s)
+    print('built', os.path.join(out, out_file), len(s))
 
 
 if __name__ == '__main__':
