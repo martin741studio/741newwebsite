@@ -176,3 +176,25 @@ This is a credential-driven campaign from the 2026-10-13 infostealer theft. Site
 3. **Then clean katharinakisser.at** (same runbook as Kraft: backup, remove droppers/planted files, clean core, new salts, check robots/sitemaps, Search Console removal).
 4. Then rotate WP admin passwords on all client sites and force logouts.
 5. Keep the full list-A rotation from this report running (browser passwords, API keys, SSH keys).
+
+## Fourth check (2026-10-26, 09:35 WITA, read-only)
+
+Martin asked for a fresh check, 12 days after the last one and 6 days after the server-side reinfection campaign (`wp-incident-2026-10-20-kisser-physiokraft`, same attacker group, still probing as of 23.10). **Result: laptop still clean of malware. One standing risk not yet closed: the original stolen SSH keys.**
+
+| Item | Status | Evidence |
+|------|--------|----------|
+| Launch items changed since 14.10. | **clean** | `homebrew.mxcl.mariadb.plist` renamed to `sh.brew.mariadb.plist` (Homebrew's own rename, 15.10.); TeamViewer plists updated 22.10. (vendor auto-update, signed). No unknown entries. |
+| AMOS backdoor paths, cron, shell files | **clean** | No `~/.helper` etc. Cron unchanged (2 known jobs). `.zshrc`/`.zprofile` mtimes unchanged since before the incident — no tampering. |
+| Login items | **clean** | Claude, Loom (listed twice, harmless UI duplicate), Google Chrome, Fathom (stale, points to a missing app), Notion. Atomic BI stays removed. |
+| Quarantine | **changed by Martin, expected** | `stolen-archive.zip` is gone (folder mtime 25.10.) — matches the open item "delete when no longer needed." `hk3ug2dm.bin` (mode 000) and the staging folder (mode 000) remain. |
+| Processes | **clean** | 4 long-running orphaned `cat` processes (since 14.10.) are leftover log-pipe readers from an earlier Claude Code session's own scratchpad (`remote-login.log`, `rc-login.log`, `setup-token4.log` — server-setup logging), not malware: no network, no suspicious file access. |
+| Network (established) | **clean** | 0 connections to any of the 5 known attacker IPs from both incidents (178.62.247.40, 195.2.76.117, 193.24.211.10, 20.194.45.183, 109.172.87.198). All connections go to expected apps and to 185.2.31.101 (741 server). |
+| Listening ports | **improved** | MariaDB now bound to `127.0.0.1:3306` only (was `*:3306`). `node *:3000` (Vite) and ARDAgent still open to the network — unchanged hygiene gap. |
+| Firewall | **still off** | Unchanged since 13.10. (S3). |
+| New executables/scripts since 14.10. in `~/Library`, `/tmp`, `/private/var/folders`, `~/Downloads`, `/Users/Shared` | **clean** | Only the known `mlx-whisper` pipx install, the known Codex launcher, and Apple's own Translation-feature hotfix files. |
+| `~/Downloads` newest files | **clean** | Client work (CRO mockup, Loom script, WhatsApp media, an Elementor add-on folder, a LinkedIn export zip). No installer, no script. |
+| Browser extensions | **clean** | 37 total, all Chrome-Web-Store-verified, none unpacked. One new since the last check: ChatGPT (23.10., store-verified). Atomic BI confirmed removed. |
+| SIP, Gatekeeper, XProtect | **clean** | SIP on, Gatekeeper on, XProtect 5368 (newer than the 5366 seen on 14.10.). |
+| **SSH keys** | **NOT ROTATED — standing risk** | `id_ed25519` (25.01.), `id_rsa` (19.02.), `google_compute_engine` (11.02.) are unchanged since before the theft — the attacker's copies from 13.10. still work on any host that has not removed the matching public key. A new key `id_ai_server` was added 19.10. for other work; it does not address this. |
+
+**Conclusion: no new malware or persistence on the laptop.** The open risk is not on the laptop itself — it is that the stolen SSH keys from 13.10. were never rotated, 13 days later, while the same attacker group is still actively probing 741's infrastructure (confirmed 23.10.).
