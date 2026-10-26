@@ -198,3 +198,5 @@ Martin asked for a fresh check, 12 days after the last one and 6 days after the 
 | **SSH keys** | **NOT ROTATED — standing risk** | `id_ed25519` (25.01.), `id_rsa` (19.02.), `google_compute_engine` (11.02.) are unchanged since before the theft — the attacker's copies from 13.10. still work on any host that has not removed the matching public key. A new key `id_ai_server` was added 19.10. for other work; it does not address this. |
 
 **Conclusion: no new malware or persistence on the laptop.** The open risk is not on the laptop itself — it is that the stolen SSH keys from 13.10. were never rotated, 13 days later, while the same attacker group is still actively probing 741's infrastructure (confirmed 23.10.).
+
+**Martin, 26.10. ~09:50 WITA: the SSH key risk is "already handled elsewhere."** He did not specify how. The key files on this laptop (`id_ed25519`, `id_rsa`, `google_compute_engine`) are unchanged, so either their matching public keys were removed from the remote hosts, or new keys were issued through another session/machine. Not independently verified on the laptop side.
