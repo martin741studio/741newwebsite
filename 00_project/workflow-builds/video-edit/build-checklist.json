@@ -196,32 +196,34 @@
    "note": "Committed to main, 34 files"
   },
   "5.3a": {
-   "status": "todo",
+   "status": "done",
    "title": "Registry entry (add-workflow) and _run.json per run",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "00_project/workflow-registry/registry.json",
+   "date": "2026-10-27",
+   "note": "Registered via add-workflow; _run.json written for the real C0929.MP4 run. Excel auto-sync failed (openpyxl not installed, known env gap, not fixed without Martin's go) — registry.json itself saved fine before that step"
   },
   "5.3b": {
-   "status": "todo",
+   "status": "skipped",
    "title": "Martin guide where a client or prospect sees output",
    "evidence": "",
-   "date": "",
-   "note": ""
+   "date": "2026-10-27",
+   "note": "",
+   "reason": "Internal/741-own-use tool — no client or prospect ever sees this skill's output directly through a page; Martin applies the Martin-guide convention himself if he ever ships a video as a client deliverable"
   },
   "5.3": {
-   "status": "todo",
+   "status": "done",
    "title": "Memory file + MEMORY.md line",
-   "evidence": "",
-   "date": "",
-   "note": ""
+   "evidence": "/Users/martindrendel/.claude/projects/-Users-martindrendel-741website/memory/video-edit-workflow.md",
+   "date": "2026-10-27",
+   "note": "Memory file + MEMORY.md line written"
   },
   "5.4": {
-   "status": "todo",
+   "status": "skipped",
    "title": "Scheduled run done once by hand and read, if scheduled",
    "evidence": "",
-   "date": "",
-   "note": ""
+   "date": "2026-10-27",
+   "note": "",
+   "reason": "On-demand only (chat-triggered), Cadence in inputs-grill.md states never scheduled"
   }
  },
  "gate_log": [
@@ -254,6 +256,12 @@
    "passed": true,
    "missing": 0,
    "at": "2026-10-27T19:52"
+  },
+  {
+   "gate": "install",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-27T19:57"
   }
  ]
 }
