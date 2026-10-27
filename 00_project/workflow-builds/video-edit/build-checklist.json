@@ -1,0 +1,259 @@
+{
+ "workflow_id": "video-edit",
+ "name": "Video Edit",
+ "created": "2026-10-27",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "0.0": {
+   "status": "done",
+   "title": "Inputs Martin gives confirmed via interactive grill (inputs-grill.md: Job, Surface, Cadence, Limits)",
+   "evidence": "00_project/workflow-builds/video-edit/inputs-grill.md",
+   "date": "2026-10-27",
+   "note": "4 inputs confirmed via AskUserQuestion, 2 rounds, 2026-10-27; reference URL received"
+  },
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/video-edit/research-note.md",
+   "date": "2026-10-27",
+   "note": "skill, chat-triggered, no side-effect daemon"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/video-edit/research-note.md",
+   "date": "2026-10-27",
+   "note": "grep of workflow-library, no existing video-edit precedent; content-format-board/captions reused as architecture"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/video-edit/research-note.md",
+   "date": "2026-10-27",
+   "note": "new library built 2026-10-27, refresh due 2027-01-27, gaps flagged"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/video-edit/coverage-map.md",
+   "date": "2026-10-27",
+   "note": "captions/content-format-board/social-visuals/thumbnail checked, no duplicate; video editing is new ground"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "/Users/martindrendel/741website/00_project/workflow-builds/video-edit/research-note.md",
+   "date": "2026-10-27",
+   "note": "10-20 line research note written, 3 rules + 1 pattern cited"
+  },
+  "1.6": {
+   "status": "done",
+   "title": "Knowledge base: local sources, exports still needed, derived rules+questions (skip only when the workflow rests on no knowledge base)",
+   "evidence": "00_project/knowledge/video-editing-library/INDEX.md",
+   "date": "2026-10-27",
+   "note": "library built: INDEX.md + 3 numbered sources + 2 reference profiles + derived rules/questions, nothing still to export"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/video-edit/use-cases.md",
+   "date": "2026-10-27",
+   "note": "3 use cases + 3 must-not-trigger cases"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/video-edit/test-scenarios.md",
+   "date": "2026-10-27",
+   "note": "obvious/paraphrase/2x negative scenarios written before body"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/video-edit/hand-run.md",
+   "date": "2026-10-27",
+   "note": "Real task: Martin's C0929.MP4 styled + captioned per his pasted reference image; title badge + center captions added, 9:16 pad, loudnorm, exported; two real script fixes made during the run"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/video-edit/pipeline.md",
+   "date": "2026-10-27",
+   "note": "pipeline with 2 Martin-go checkpoints (edit plan, export)"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/video-edit/degrees-of-freedom.md",
+   "date": "2026-10-27",
+   "note": "R1.7 split: deterministic scripts vs qualitative heuristics"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/video-edit/decisions.md",
+   "date": "2026-10-27",
+   "note": "Martin go via card 2026-10-27: 'Ja, passt so' on the real hand-run export"
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": ".claude/skills/video-edit/SKILL.md",
+   "date": "2026-10-27",
+   "note": "SKILL.md + scripts/ + references/ + assets/, matches the 741 skill folder template"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": ".claude/skills/video-edit/SKILL.md",
+   "date": "2026-10-27",
+   "note": "Frontmatter: WHAT (edits raw footage into a reference-styled video) + WHEN (trigger phrases) + explicit NOT-for negative trigger (captions skill, content-format-board)"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": ".claude/skills/video-edit/SKILL.md",
+   "date": "2026-10-27",
+   "note": "## Critical rules on top, ## Workflow as a tickable checklist with two embedded CHECKPOINT lines"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": ".claude/skills/video-edit/SKILL.md",
+   "date": "2026-10-27",
+   "note": "Body 80 lines (well under 500); references/ and assets/ are one level deep, no nesting"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": ".claude/skills/video-edit/SKILL.md",
+   "date": "2026-10-27",
+   "note": "## Verification section at the end: render_cut.py's own duration check, export file existence check, report file path + why-these-choices note together"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": ".claude/skills/video-edit/SKILL.md",
+   "date": "2026-10-27",
+   "note": "House rules applied: two mandatory go-checkpoints before any render/before done (no-change-without-go pattern), why-these-choices disclosure note every run (R-PROCESS.2), never uploads/posts"
+  },
+  "3.7": {
+   "status": "skipped",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "",
+   "date": "2026-10-27",
+   "note": "",
+   "reason": "Workflow is on-demand only (chat-triggered), never runs unattended/scheduled per Cadence in inputs-grill.md"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/video-edit/trigger-test-results.md",
+   "date": "2026-10-27",
+   "note": "4/4 fresh-session trigger tests correct (2 positive, 2 negative)"
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/video-edit/functional-test-results.md",
+   "date": "2026-10-27",
+   "note": "Fresh-session real task found 7 real defects, all fixed same day, re-verified against the fix"
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/video-edit/baseline-comparison.md",
+   "date": "2026-10-27",
+   "note": "Discovery-cost-absorbed comparison: every defect the skill now prevents was a real dead end hit once during this build"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-10-27",
+   "note": "",
+   "reason": "No plugin eval infra used for this build; /doctor prompt-audit not applicable to a project skill"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/video-edit/scorecard.md",
+   "date": "2026-10-27",
+   "note": "91.7% (55/60), no zero in A or D"
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/video-edit/decisions.md",
+   "date": "2026-10-27",
+   "note": "Martin go via card 2026-10-27: 'Ja, fertig bauen'"
+  },
+  "5.2": {
+   "status": "todo",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3a": {
+   "status": "todo",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3b": {
+   "status": "todo",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3": {
+   "status": "todo",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.4": {
+   "status": "todo",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": false,
+   "missing": 1,
+   "at": "2026-10-27T11:58"
+  },
+  {
+   "gate": "cp1",
+   "passed": false,
+   "missing": 1,
+   "at": "2026-10-27T17:22"
+  },
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-27T17:39"
+  },
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-27T19:25"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-10-27T19:52"
+  }
+ ]
+}

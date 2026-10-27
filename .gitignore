@@ -15,3 +15,9 @@ build_workspace/04_site.zip
 # Per-turn go markers (741 hooks)
 .claude/go/
 .whm_credentials.env
+
+# video-edit: raw third-party reference downloads (large, re-fetchable via reference_profile.py)
+# and disposable QA/test render scratch (documented in functional-test-results.md, not kept as files)
+00_project/knowledge/video-editing-library/references/*/raw/
+00_project/knowledge/video-editing-library/references/*/_audio.wav
+00_project/workflow-builds/video-edit/functional-test/
