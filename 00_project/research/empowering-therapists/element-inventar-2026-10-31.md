@@ -117,3 +117,19 @@ Stand 31.10.2026. Jede Zeile: das Element, was es konkret ist, und die Aufgabe, 
 | "Business coach who practiced as one first" | Abgrenzung von Coaches ohne Praxis-Erfahrung. |
 | Praxis gebaut, auf sechs Therapeutinnen vergrößert, 2024 verkauft | Beweis, dass die Methode über die eigene Praxis hinaus trägt. |
 | Mission "a practice that holds a life" | Nicht Wachstum um des Wachstums willen. Spricht die Burnout-Erfahrung an. |
+
+## G. Das Einkommensziel als Element (Ergänzung 31.10., Hinweis von Martin)
+
+| Ort | Zahl | Warum es da ist |
+|---|---|---|
+| Retreat-Seite | "hitting $10-20k months as a private practice therapist" | Setzt das Ziel als Normalzustand einer Privatpraxis. |
+| Blog "6 figures" und Instagram-Reel | 15 Sitzungen mal 150 Dollar sind 117.000 Dollar im Jahr, bei 200 Dollar 156.000, bei 250 Dollar 195.000 | Macht sechsstellig rechnerisch erreichbar, mit 15 Stunden pro Woche. |
+| Testimonials | "$10,000 months within weeks of finishing", "$34K month in 12 months", "$2k-4k to $12k-16k in 6 months", Screenshots mit 14.035 und 12.000 Dollar Projektion | Beweis mit Zeitangabe, dass andere die Zahl erreicht haben. |
+| Instagram "Which hill" | "$250 sessions. No sliding scale. Fewer clients. Zero guilt." | Stundensatz als Identität. |
+| Instagram "scary goal" | "Maybe it's your first $10K month. Raising your rate to $250." | Die Leserin spricht die Zahl selbst aus. Kommentar als Commitment. |
+| Buchtitel | "The Wealthy Therapist" | Das Einkommen ist der Name des Produkts. |
+| Ihre eigene Zahl | "$400K month", "multi million dollar company", "$100 million" als Ziel | Sie lebt die Regel selbst. |
+
+**Staffelung:** Das Programm garantiert 8 Klientinnen (Eingangsgröße, kontrollierbar). Die Testimonials übersetzen das in 10.000-Dollar-Monate (das eigentliche Kaufmotiv). Retreat und Wealthy Therapist Program setzen 10.000 bis 20.000 und mehr als nächste Stufe. Sie garantiert die Klientenzahl und lässt die Kundinnen das Einkommen aussprechen.
+
+**Warum es zieht:** Die Zielgruppe trägt Schuld beim Thema Geld. Die Zahl steht deshalb nie allein, sondern immer mit der Erlaubnis: weniger Klienten, mehr Zeit, "a practice that holds a life".
