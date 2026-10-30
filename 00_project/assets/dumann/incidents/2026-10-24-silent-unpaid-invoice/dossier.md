@@ -4,7 +4,7 @@ Internes Dokument. Nicht an die Kundin senden.
 
 **Datum:** 2026-10-24
 **Zweig:** still (keine Antwort, keine Zahlung, Wix-Zugang entfernt)
-**Status:** Stufe 1 gesendet am 24.10.2026 (Martin, Airmailer). Wartet auf Kundenantwort oder Zahlung bis Fr 31.10. Stufe 2 fällig Mi 29.10., ohne Erinnerungs-Task (Martins Entscheidung)
+**Status:** Stufe 1 gesendet am 24.10.2026, Stufe 2 gesendet am 30.10.2026 (beide Martin, Airmailer). Frist für ihre Rückmeldung: Mi 04.11.2026. Arbeit an der Website ruht bis dahin. Erinnerungs-Task `dumann-frist-2026-11-04` prüft am 05.11. 09:00 (Berlin) nur lesend und bereitet Stufe 3 vor.
 
 ## 1. Zeitachse
 
@@ -25,6 +25,7 @@ Internes Dokument. Nicht an die Kundin senden.
 | 14.10. | Statusseite „Dein SEO-Fahrplan" live; Mail „Dein Zugang zum Portal ist wieder frei" (Passwort-vergessen-Anleitung) | `activity_log`, `emails_log` |
 | 14.–19.10. | 27 Entscheidungskarten E1–E27 im Portal; keine einzige entschieden | `approval_items` alle `open`, go_by leer |
 | 24.10. | Martin: sie antwortet nicht mehr (zuletzt WhatsApp) und hat nicht auf Rechnung 741/091026 reagiert. Portal: 24 Karten zurück auf Entwurf (E4, E22, E23 bleiben offen), 3 Haken zurückgesetzt (Seiten live, Fotos, Team-Briefing) | Chat, Supabase |
+| 30.10. | Martin: weiter keine Antwort von ihr; sie hat ihm nur eine Mail weitergeleitet (Absender daniela.dumann@live.de, Inhalt nicht bekannt). Stufe-2-Mail „Deine Entscheidungen warten seit Wochen auf dich“ von Martin per Airmailer gesendet, Frist Mi 04.11., Arbeit an der Website ruht. Portal-Stand: letzter Login 28.08., 3 Karten offen, 0 entschieden | Chat (Dumann-Dashboard), Supabase, `nachricht-stufe2-2026-10-30.md` |
 
 Letzte Aktion der Kundin **im Portal**: 17.09.2026. **Achtung (Martin 24.10.):** Es gab weiter WhatsApp-Kontakt. Portal-Daten zeigen nicht alle Kanäle. Nie „seit X nichts gehört" schreiben. Mails ab 01.10.: Zustellung „sent", Öffnung nicht messbar.
 
@@ -103,6 +104,7 @@ Schluss: Die Sichtbarkeit ist stabil, kein Einbruch. Das Schweigen hat keinen si
 ## 9. Entwürfe
 
 - `nachricht-entwurf.md` — erste Zahlungserinnerung (Rate 2, Frist Freitag 31.10.) mit Leistungsstand, nach Martins Korrektur 24.10. (kein „nichts gehört", Reporting, kostenpflichtige Werkzeuge, fertige Bausteine im Gesamtpreis, Schweigen keine Option). `verify_draft.py`: PASS. deslop_de: 5/5.
+- `nachricht-stufe2-2026-10-30.md` — Stufe 2: Frist Mi 04.11., Arbeit ruht, Liste des Vorbereiteten, 3 offene Karten, Login-Weg, Gespräch als Alternative. Kein Rechnungsthema (Martins Vorgabe: klarer Ton, kein „easy“). `verify_draft.py --final`: PASS. deslop_de: 5/5. Gesendet 30.10. (Martin, Airmailer).
 - Keine Arbeitsübersicht, solange sie keine verlangt.
 
 ## 10. Stufen (Zweig „still")
@@ -110,8 +112,8 @@ Schluss: Die Sichtbarkeit ist stabil, kein Einbruch. Das Schweigen hat keinen si
 | Stufe | fällig am | Status |
 | --- | --- | --- |
 | 1 Zahlungserinnerung + Status (Frist 31.10.) | 24.10.2026 | gesendet von Martin (Airmailer), geloggt in emails_log + activity_log |
-| 2 Arbeit ruht (+3 Werktage) | Mi 29.10.2026 | offen, kein Erinnerungs-Task; Martin sagt, wann |
-| 3 Optionen für Martin (+3 Werktage) | Mo 03.11.2026 | offen |
+| 2 Arbeit ruht (+3 Werktage) | Mi 29.10.2026 | gesendet 30.10.2026 von Martin (Airmailer), Frist für sie Mi 04.11. |
+| 3 Optionen für Martin (+3 Werktage) | Do 05.11.2026 (Tag nach der Frist) | offen; Task `dumann-frist-2026-11-04` prüft Login/Karten/Nachrichten und legt nur interne Optionen vor |
 
 ## 11. Auflösung
 
