@@ -76,3 +76,4 @@ Abschlussfrage: „Sollen wir den Kick-off für nächste Woche fixieren?“
 - Preise gezeigt: 7.999 € (mit Ads) / 4.999 € 90 Tage. Reaktion: "aua, gerade gar nicht drin". Garantie im Call: 100 % Geld zurück, wenn Top 3 nicht erreicht. Raten: 2 üblich, 3 möglich (Martin). Sie entscheidet mit ihrem Mann.
 - Martin 31.10.: nur Ratenzahlung anbieten, kein kleineres Paket. Nachfassen per WhatsApp in ein paar Tagen, Martin setzt sich die Erinnerung selbst.
 - Zusammenfassung-PDF + E-Mail: `zusammenfassung-2026-10-30/` (deslop 5/5). Martin sagte 31.10. per Karte, er schickt die E-Mail jetzt ab (Empfang nicht bestätigt).
+- KORREKTUR 31.10. (Martin): Im Call wurde klar, dass die Review-Page den FALSCHEN Google-Eintrag analysiert hat (Eintrag bei Zorneding ist nicht ihrer). Alle Aussagen zu ihrem GBP aus PDF + E-Mail entfernt, Review-Page-Link aus beiden raus. Review-Page muss mit ihren echten Daten (Dorfen) neu gebaut werden, bevor sie wieder verlinkt wird.

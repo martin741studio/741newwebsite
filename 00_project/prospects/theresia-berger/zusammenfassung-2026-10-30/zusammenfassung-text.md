@@ -36,9 +36,9 @@ Eine Investition in dieser Höhe entscheidest du zusammen mit deinem Mann. Sie w
 
 Was ich dir gezeigt habe
 
-Dein Google-Eintrag heißt „Theresia Berger · Lichtpräsenzmeisterin · Präsenzfotografie“. Deine Website heißt „Coaching für Frauen in der Lebensmitte“. Für Google sind das zwei verschiedene Angebote. Du hast gesagt: Das passe ich an.
+Zuerst eine Korrektur: Meine Analyse-Seite hat zum Teil einen Eintrag erfasst, der nicht deiner ist. Die Zahlen zum Google-Eintrag auf der Seite gelten deshalb nicht für dich. Ich baue die Seite mit deinen Daten neu und schicke dir den Link.
 
-Nach dem Gespräch habe ich nachgesehen: Dein Google-Eintrag steht bei Zorneding, rund 40 km von Dorfen entfernt. Wer in Dorfen oder Erding sucht, bekommt dich deshalb nicht angezeigt.
+Dein Google-Eintrag und deine Website müssen dasselbe sagen: ein Name, eine Leistung, ein Ort. Das gilt genauso für alle Verzeichnisse, in denen du stehst.
 
 Deine Hauptüberschrift lautet „Entfalte, was in dir liegt“. Für Menschen ist das schön, für Google sagt sie nichts über deine Leistung und deinen Ort. Die weiteren Überschriften sollten die Fragen aufgreifen, die Menschen bei Google stellen.
 
@@ -83,14 +83,14 @@ Preise netto. Gebietsschutz: Pro Ort betreue ich nur einen Betrieb deiner Fachri
 
 Was du jetzt schon selbst tun kannst, ohne Kosten
 
-Standort im Google-Eintrag auf Dorfen ändern.
- Das ist der größte Hebel und dauert zehn Minuten.
-
-Ein Name, eine Leistung.
- Website-Titel und Google-Eintrag so angleichen, dass beide dasselbe sagen: wer du bist, was du anbietest, wo.
+Google-Eintrag prüfen.
+ Ein Eintrag unter deinem Namen, mit deiner Adresse in Dorfen und deiner Telefonnummer. Falls es noch keinen gibt, lege ihn an.
 
 Leistungen in den Eintrag eintragen.
  Coaching, Nervensystem-Regulation, Präsenzfotografie, jede als eigene Leistung mit kurzer Beschreibung.
+
+Hauptüberschrift der Website.
+ Leistung und Ort in die erste Überschrift, der Satz „Entfalte, was in dir liegt“ kann als Unterzeile bleiben.
 
 Wie es weitergeht
 
@@ -98,4 +98,4 @@ Du sprichst mit deinem Mann und entscheidest in Ruhe. Es gibt keinen Zeitdruck v
 
 Wenn die Summe das Hindernis ist, sag es mir offen. Dann schauen wir zusammen, welcher Weg zu deiner Lage passt. Dafür melde ich mich in ein paar Tagen per WhatsApp bei dir.
 
-Deine Analyse bleibt für dich online: 741.studio/review/theresia-berger
+Die korrigierte Analyse-Seite bekommst du von mir, sobald sie steht.
