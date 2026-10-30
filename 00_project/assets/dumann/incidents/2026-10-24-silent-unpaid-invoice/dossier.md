@@ -112,7 +112,7 @@ Schluss: Die Sichtbarkeit ist stabil, kein Einbruch. Das Schweigen hat keinen si
 | Stufe | fällig am | Status |
 | --- | --- | --- |
 | 1 Zahlungserinnerung + Status (Frist 31.10.) | 24.10.2026 | gesendet von Martin (Airmailer), geloggt in emails_log + activity_log |
-| 2 Arbeit ruht (+3 Werktage) | Mi 29.10.2026 | gesendet 30.10.2026 von Martin (Airmailer), Frist für sie Mi 04.11. |
+| 2 Arbeit ruht (+3 Werktage) | Mi 29.10.2026 | gesendet 30.10.2026 von Martin (Airmailer, martin@741.studio), Frist für sie Mi 04.11. **Bounce 30.10. 07:54:** Microsoft lehnt die Absender-IP 185.2.31.101 (741.studio-Hosting) ab, Fehler 550 5.7.1 S3150. Mail nicht angekommen. Martin sendet denselben Text von einem anderen Konto erneut (offen). Hinweis: Mails von martin@741.studio an live.de/outlook/hotmail scheitern, bis der Hoster die IP entsperren lässt; die Stufe-1-Mail vom 24.10. ging evtl. denselben Weg (nicht geprüft) |
 | 3 Optionen für Martin (+3 Werktage) | Do 05.11.2026 (Tag nach der Frist) | offen; Task `dumann-frist-2026-11-04` prüft Login/Karten/Nachrichten und legt nur interne Optionen vor |
 
 ## 11. Auflösung
