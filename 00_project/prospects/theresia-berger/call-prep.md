@@ -70,3 +70,9 @@ Abschlussfrage: „Sollen wir den Kick-off für nächste Woche fixieren?“
 - Standort: Theresia sitzt in **Dorfen bei Erding** (Impressum: An der Leiten 13 a, 84405 Dorfen). Ihr Google-Eintrag ist bei **Zorneding** gepinnt (Koordinaten 48.0886 / 11.8080), rund 40 km entfernt. Der Scan vom 18.09.2026 lief deshalb rund um Zorneding.
 - Review-Page korrigiert und live (Hero, Meta, Scan-Text, Grund-Satz, Lokale Signale): Dorfen bei Erding als Standort, Zorneding nur noch als Ort des Google-Eintrags.
 - Offen: neuer Local-Falcon-Scan rund um Dorfen / Erding und Seite danach neu bauen (Falcon-Connector war in der Session getrennt).
+
+## Nach dem Call 30.10.2026 (Zusammenfassung 31.10.)
+- Call 62 Min (Transkript Google Doc 1Pd3jsCnZVi8MG74n5wcLzuiJ_UhTqgLhoUtBBzu6gZs). Sie: Burnout vor 2 Jahren, jetzt körperorientiertes Coaching / Nervensystem / schamanische Arbeit + Präsenzfotografie; online + vor Ort Dorfen; Einzel-Coachings 129 €/h, ~250 €/2h; Facebook ~5.000 Kontakte; halbe bis dreiviertel Stelle (Mann 100 % schwerbehindert, Schwiegervater 95 mit 24h-Pflege; NICHT in Kundendokumenten nennen).
+- Preise gezeigt: 7.999 € (mit Ads) / 4.999 € 90 Tage. Reaktion: "aua, gerade gar nicht drin". Garantie im Call: 100 % Geld zurück, wenn Top 3 nicht erreicht. Raten: 2 üblich, 3 möglich (Martin). Sie entscheidet mit ihrem Mann.
+- Martin 31.10.: nur Ratenzahlung anbieten, kein kleineres Paket. Nachfassen per WhatsApp in ein paar Tagen, Martin setzt sich die Erinnerung selbst.
+- Zusammenfassung-PDF + E-Mail: `zusammenfassung-2026-10-30/` (deslop 5/5). Martin sagte 31.10. per Karte, er schickt die E-Mail jetzt ab (Empfang nicht bestätigt).
