@@ -1,6 +1,6 @@
 # Konzept: Einkommens-Punkt auf der 741 Review-Page
 
-Stand 31.10.2026. Nur Konzept, nichts gebaut. Grundlage: Element-Inventar Empowering Therapists (Abschnitt G) und der heutige Wachstums-Rechner in `build_page.py`.
+Stand 31.10.2026. Nur Konzept, nichts gebaut. Martin 31.10.: Konzept als Grundlage freigegeben, Bau erst nach Werten und Wortlaut und separater Freigabe. Grundlage: Element-Inventar Empowering Therapists (Abschnitt G) und der heutige Wachstums-Rechner in `build_page.py`.
 
 ## 1. Was die Review-Page heute rechnet
 
@@ -60,10 +60,10 @@ Martin sieht vor dem Call, welche Zielzahl sie eingestellt hat, wenn wir den Reg
 
 ## 4. Was fehlt und entschieden werden muss
 
-1. **Branchenwerte für Deutschland mit Quelle.** Satz pro Sitzung und typische Sitzungen pro Woche für Heilpraktiker, Physio privat, Psychotherapie privat, Coaching, Massage. Ohne Quelle kein Startwert (Regel: Zahlen brauchen Daten). Das ist eine eigene Recherche.
+1. **Branchenwerte für Deutschland mit Quelle.** Erledigt 31.10.: `branchenwerte-de-2026-10-31.md` mit Satz, Sitzungen pro Woche, Startwert-Bändern und Quellen je Zeile für fünf Branchen.
 2. **Schätzregel für "Sitzungen heute".** Welche Signale, welche Bänder (niedrig, mittel, hoch). Muss einmal festgelegt und dann in `prospect.json` als `income.sessions_est` mit Begründung eingetragen werden.
-3. **Zielwert-Standard.** 10.000 € wie bei ihr, oder pro Branche anders. Bei Physio privat ist 10.000 € für eine Einzelpraxis anders zu lesen als bei Coaching.
-4. **Speichern des Reglers.** Ja oder nein. Wenn ja: Datenschutz-Hinweis am Regler, weil es ein personenbezogener Wert auf einer persönlichen Seite ist.
+3. **Zielwert-Standard.** Entschieden 31.10. (Martin): pro Branche. Psychotherapie und Physio 10.000 €, Heilpraktiker und Coaching 8.000 €, Massage 5.000 €. Herleitung in `branchenwerte-de-2026-10-31.md`.
+4. **Speichern des Reglers.** Entschieden 31.10. (Martin): ja. Slug, Zeitstempel, Zielwert in Supabase, kurzer Hinweis am Regler. Bau erst nach separater Freigabe.
 5. **Wortlaut der Preis-Zeile.** "N Wochen deiner Lücke" oder "M neue Kunden" oder beides.
 6. **Schema.** Neuer Block `income` in `prospect.json`, neue Funktion `income(p)` in `build_page.py` vor `calc(p)`, JS teilt sich die Regler `conv`, `deal`, `val`, `vol`, `share` mit dem Rechner. Validierung in `validate.py` für fehlende Quellen.
 
