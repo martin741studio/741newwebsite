@@ -36,10 +36,14 @@ Die zwei Zahlen nebeneinander zeigen den Preis-Hebel ohne ein Wort: 10.000 € s
 
 ### Spalte 3: Lücke und Weg
 
+**Kernaussage (Martin, 31.10.):** Eine Person schafft eine begrenzte Zahl an Sitzungen. 17 Sitzungen à 50 Minuten pro Woche sind schon 3 bis 4 Arbeitstage (Kapazitäten mit Quellen in `branchenwerte-de-2026-10-31.md`). Der Weg zu 10.000 bis 20.000 € geht deshalb nicht über mehr Einzelstunden. Er geht so: Sichtbarkeit bringt reichlich Menschen. Ein Teil davon will und kann hochpreisig kaufen. Die Spalte rechnet darum nicht "fehlende Sitzungen", sondern "Reichweite mal Anteil Hochpreis-Käufer".
+
+
 - **Lücke pro Monat.** Ziel minus heute.
-- **Fehlende neue Kunden pro Monat.** Lücke geteilt durch Wert pro Kunde (Regler aus dem Rechner, verknüpft).
-- **Nötige Anfragen und Besucher.** Über Abschlussquote und Anfragequote aus dem Rechner zurückgerechnet.
-- **Vergleich mit dem Markt.** Nötige Besucher gegen Suchvolumen mal Klickanteil. Ergebnis als Satz: "Mit Top-3-Plätzen bei 'Heilpraktiker Erding' sind das X Besucher im Monat. Das reicht für Y der Z fehlenden Kunden." Wenn es nicht reicht, steht da: "Der Rest kommt über den Satz oder über Pakete."
+- **Menschen, die dich finden.** Suchvolumen mal Klickanteil aus dem Rechner: "Mit Top-3-Plätzen bei 'Heilpraktiker Erding' sehen dich X Menschen im Monat."
+- **Anfragen daraus.** Über die Anfragequote aus dem Rechner.
+- **Hochpreis-Käufer darunter.** Regler "Anteil, der ein Paket oder Intensiv-Format bucht", Startwert 2 %, und Regler "Preis des Pakets", Startwert nach Branche (zum Beispiel 1.500 bis 3.000 €). Ergebnis: "Zwei bis drei Buchungen im Monat schließen deine Lücke, ohne eine zusätzliche Einzelstunde."
+- **Kapazitäts-Hinweis.** Eine Zeile mit der Branchen-Kapazität pro Person und Quelle, damit klar ist, warum Menge allein nicht reicht.
 - **Was 741 kostet, in deiner Lücke gemessen.** "Das Programm kostet 4.999 € einmalig. Das sind N Wochen deiner Lücke" oder "M neue Kunden". Das ist die Rechtfertigung des Preises, in ihren Zahlen, nicht in unseren.
 
 ### Was sich dadurch im Call ändert
@@ -64,7 +68,8 @@ Martin sieht vor dem Call, welche Zielzahl sie eingestellt hat, wenn wir den Reg
 2. **Schätzregel für "Sitzungen heute".** Welche Signale, welche Bänder (niedrig, mittel, hoch). Muss einmal festgelegt und dann in `prospect.json` als `income.sessions_est` mit Begründung eingetragen werden.
 3. **Zielwert-Standard.** Entschieden 31.10. (Martin): 10.000 bis 20.000 € im Monat, für alle Branchen gleich. Regler startet bei 10.000 €, Skala bis 20.000 € und darüber. Die Branche ändert nicht das Ziel, sondern den Weg dorthin (Satz, Pakete, Mitarbeiter). Mein Vorschlag "pro Branche niedriger" war falsch und ist verworfen.
 4. **Speichern des Reglers.** Entschieden 31.10. (Martin): ja. Slug, Zeitstempel, Zielwert in Supabase, kurzer Hinweis am Regler. Bau erst nach separater Freigabe.
-5. **Wortlaut der Preis-Zeile.** "N Wochen deiner Lücke" oder "M neue Kunden" oder beides.
+5. **Wortlaut der Preis-Zeile.** "N Wochen deiner Lücke" oder "M Paket-Buchungen" oder beides.
+7. **Paket-Preis pro Branche.** Startwert für den Regler "Preis des Pakets" mit Quelle (Intensiv-Formate, Mehrsitzungs-Pakete). Noch nicht recherchiert.
 6. **Schema.** Neuer Block `income` in `prospect.json`, neue Funktion `income(p)` in `build_page.py` vor `calc(p)`, JS teilt sich die Regler `conv`, `deal`, `val`, `vol`, `share` mit dem Rechner. Validierung in `validate.py` für fehlende Quellen.
 
 ## 5. Alle Aktionen und Teile ihrer Programme, nummeriert
