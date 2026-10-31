@@ -28,7 +28,7 @@ Platz: vor dem Wachstums-Rechner, nach dem Website-Check. Drei Spalten, alle Wer
 
 ### Spalte 2: Ziel
 
-- **Wunsch-Monatseinkommen.** Regler, Startwert 10.000 €. Sie stellt ihn selbst ein. Das ist ihr Muster: Die Kundin spricht die Zahl aus.
+- **Wunsch-Monatsumsatz.** Regler, Startwert 10.000 €, Skala bis 20.000 € und darüber. Sie stellt ihn selbst ein. Das ist ihr Muster: Die Kundin spricht die Zahl aus. Das Ziel ist für alle Branchen dasselbe.
 - **Sitzungen pro Woche, die dafür nötig sind, bei deinem heutigen Satz.** Rechnung: Ziel mal 12 geteilt durch 45 geteilt durch Satz.
 - **Satz, der dafür nötig ist, bei deinen heutigen Sitzungen.** Rechnung: Ziel mal 12 geteilt durch 45 geteilt durch Sitzungen.
 
@@ -62,7 +62,7 @@ Martin sieht vor dem Call, welche Zielzahl sie eingestellt hat, wenn wir den Reg
 
 1. **Branchenwerte für Deutschland mit Quelle.** Erledigt 31.10.: `branchenwerte-de-2026-10-31.md` mit Satz, Sitzungen pro Woche, Startwert-Bändern und Quellen je Zeile für fünf Branchen.
 2. **Schätzregel für "Sitzungen heute".** Welche Signale, welche Bänder (niedrig, mittel, hoch). Muss einmal festgelegt und dann in `prospect.json` als `income.sessions_est` mit Begründung eingetragen werden.
-3. **Zielwert-Standard.** Entschieden 31.10. (Martin): pro Branche. Psychotherapie und Physio 10.000 €, Heilpraktiker und Coaching 8.000 €, Massage 5.000 €. Herleitung in `branchenwerte-de-2026-10-31.md`.
+3. **Zielwert-Standard.** Entschieden 31.10. (Martin): 10.000 bis 20.000 € im Monat, für alle Branchen gleich. Regler startet bei 10.000 €, Skala bis 20.000 € und darüber. Die Branche ändert nicht das Ziel, sondern den Weg dorthin (Satz, Pakete, Mitarbeiter). Mein Vorschlag "pro Branche niedriger" war falsch und ist verworfen.
 4. **Speichern des Reglers.** Entschieden 31.10. (Martin): ja. Slug, Zeitstempel, Zielwert in Supabase, kurzer Hinweis am Regler. Bau erst nach separater Freigabe.
 5. **Wortlaut der Preis-Zeile.** "N Wochen deiner Lücke" oder "M neue Kunden" oder beides.
 6. **Schema.** Neuer Block `income` in `prospect.json`, neue Funktion `income(p)` in `build_page.py` vor `calc(p)`, JS teilt sich die Regler `conv`, `deal`, `val`, `vol`, `share` mit dem Rechner. Validierung in `validate.py` für fehlende Quellen.

@@ -80,11 +80,11 @@ Stand 31.10.2026. Jede Zahl mit Quelle. Werte sind Umsatz pro Praxis vor Kosten 
 
 **Startwerte (Annahme):** Satz 60 € pro 60 Minuten. Behandlungen pro Woche: niedrig 8, mittel 15, hoch 22. Monatsumsatz bei 45 Wochen: niedrig 1.800 €, mittel 3.400 €, hoch 5.000 €.
 
-**Ziel 10.000 € im Monat:** bei 60 € sind das 44 Behandlungen pro Woche. Das schafft eine Person nicht. Für Massage ist 10.000 € kein Einzelpraxis-Ziel. Der Zielwert muss hier anders stehen, zum Beispiel 5.000 €, oder der Weg geht über Mitarbeiter und Pakete.
+**Ziel 10.000 € im Monat:** bei 60 € sind das 44 Behandlungen pro Woche. Das schafft eine Person nicht. Der Weg führt hier über Mitarbeiter, 90-Minuten-Formate und Pakete. Das Ziel bleibt.
 
 ## 6. Was das für den Block bedeutet
 
-- **Der Zielwert 10.000 € passt nicht für alle Branchen.** Psychotherapie und Physio erreichen ihn mit Menge. Heilpraktiker und Coaching nur mit Satz. Massage gar nicht allein. Der Regler braucht einen Startwert pro Branche: Psychotherapie und Physio 10.000 €, Heilpraktiker und Coaching 8.000 €, Massage 5.000 €. Alles Annahmen, die du setzt.
+- **Das Ziel bleibt für alle Branchen 10.000 bis 20.000 € (Martin, 31.10.).** Die Branche ändert den Weg, nicht das Ziel. Psychotherapie und Physio erreichen es mit Menge. Heilpraktiker und Coaching mit dem Satz. Massage mit Mitarbeitern und Paketen. Der Block zeigt pro Branche den passenden Weg, nicht ein kleineres Ziel.
 - **Die Satz-Zeile ist bei Heilpraktikern und Coaches die wichtigste.** Dort zeigt der Vergleich "Sitzungen nötig bei deinem Satz" gegen "Satz nötig bei deinen Sitzungen" den Hebel am deutlichsten. Das deckt sich mit ihrer Reihenfolge: Preis zuerst.
 - **Alle Zahlen sind Umsatz.** Die Quellen betonen durchgehend, dass davon 40 bis 65 % übrig bleiben. Der Block muss "Umsatz" sagen, nie "Einkommen". Sonst ist er angreifbar.
 - **Die Heilpraktiker-Umfrage ist von 2016.** Für Preise gibt es neuere Quellen (2025 und 2026), für Mengen nicht. Das steht so im Block, mit Jahr.
