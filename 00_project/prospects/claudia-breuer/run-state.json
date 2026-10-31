@@ -1,0 +1,99 @@
+{
+ "slug": "claudia-breuer",
+ "steps": {
+  "intake": {
+   "agent": "orchestrator",
+   "status": "done",
+   "at": "2026-10-30T16:11",
+   "outputs": [
+    "intake.md",
+    "intake.json",
+    "browser-queue.jsonl"
+   ],
+   "blockers": []
+  },
+  "demand": {
+   "agent": "A",
+   "status": "done",
+   "at": "2026-10-31T15:08",
+   "outputs": [
+    "demand.md",
+    "cost_ledger.jsonl",
+    "evidence/dfs-volumes-ads.json",
+    "evidence/dfs-serp-hp-psychotherapie-bonn.json",
+    "evidence/dfs-serp-psychotherapie-bonn.json",
+    "evidence/dfs-name-breuer-psychotherapie-bonn.json",
+    "evidence/dfs-name-claudia-breuer-hp.json",
+    "evidence/dfs-bl-summary.json",
+    "evidence/dfs-bl-refdomains-spam.json"
+   ],
+   "blockers": [],
+   "gap_keyword": "psychotherapie bonn",
+   "gap_volume": 2900,
+   "gap_rule": "PASS",
+   "cost_usd": 0.1491
+  },
+  "site": {
+   "agent": "B",
+   "status": "done",
+   "at": "2026-10-31T15:09",
+   "outputs": [
+    "site-findings.md",
+    "evidence/comp-pages.json",
+    "evidence/raw/*.html",
+    "evidence/raw/*.txt"
+   ],
+   "blockers": [
+    "Price conflict on the site: Einzelgespräch 100 EUR (home, 60 min) vs 80 EUR (/honorar-ablauf). Calculator val needs a decision."
+   ]
+  },
+  "homepage": {
+   "agent": "C",
+   "status": "done",
+   "at": "2026-10-31T15:30",
+   "outputs": [
+    "homepage.md",
+    "draft/index.html",
+    "evidence/home-draft-1440.jpg",
+    "evidence/scorecard-today.md",
+    "../../04_site/public/review-assets/claudia-breuer/startseite-entwurf.webp",
+    "../../04_site/public/review-assets/claudia-breuer/startseite-heute.webp",
+    "../../04_site/public/review-assets/claudia-breuer/foto-1.webp",
+    "../../04_site/public/review-assets/claudia-breuer/foto-2.webp"
+   ],
+   "blockers": [
+    "no practice photo on site (only 2 portraits, 2 real photos instead of 3)",
+    "live home page fails HWG item 22 (fear appeal)"
+   ],
+   "score": "10/44"
+  },
+  "scan": {
+   "agent": "D",
+   "status": "done",
+   "at": "2026-10-31T15:40",
+   "outputs": [
+    "scan-search.md",
+    "competitors.md",
+    "evidence/falcon-report-5d88be0ed475d1e.json",
+    "../../../04_site/public/review-assets/claudia-breuer/scan-grid.webp",
+    "../../../04_site/public/review-assets/claudia-breuer/scan-grid.png",
+    "cost_ledger.jsonl"
+   ],
+   "blockers": [],
+   "notes": "Gap keyword psychotherapie bonn, report_key 5d88be0ed475d1e, SoLV 2.04 (1 of 49), found_in 24, centre rank 2, top competitor Gestaltpraxis Nina Josten SoLV 28.57. Credits: 49 scan + 2 place search."
+  },
+  "operator": {
+   "agent": "O",
+   "status": "done",
+   "at": "2026-10-31T15:10",
+   "outputs": [
+    "evidence/google-panel-2026-10-30.md",
+    "evidence/home-today-1440.jpg",
+    "evidence/home-images.txt"
+   ],
+   "blockers": [
+    "home-today-1440.jpg is 1456x825 (Chrome window maximum 1512 css px, resize to 1440 not applied)"
+   ]
+  }
+ }
+}
