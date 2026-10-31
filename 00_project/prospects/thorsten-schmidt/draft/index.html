@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entwurf erster Bildschirm – Kanzlei Schmidt</title>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#161616;--muted:#5e5e5e;--line:#e2e2e2;--soft:#f7f7f7;--cta:#000;--cta-text:#fff;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Karla,system-ui,sans-serif;color:var(--ink);background:#fff;width:100%;height:100vh;overflow:hidden}
+  header{display:flex;align-items:center;justify-content:space-between;padding:16px 120px;border-bottom:1px solid var(--line)}
+  header img{height:56px;width:auto}
+  nav{display:flex;gap:30px;font-size:16px;font-weight:500;color:var(--muted)}
+  .phone{font-size:16px;font-weight:700;color:var(--ink)}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:44px 120px 32px;background:linear-gradient(180deg,#fff,var(--soft))}
+  .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  h1{font-family:"Old Standard TT",serif;font-weight:700;font-size:50px;line-height:1.1;margin:14px 0 18px;color:var(--ink)}
+  h1 span{color:#555}
+  .sub{font-size:19px;line-height:1.55;color:#3d3d3d;max-width:610px}
+  .list{font-size:16px;font-weight:500;color:var(--ink);margin-top:14px}
+  .ctas{display:flex;gap:16px;align-items:center;margin-top:26px}
+  .btn{display:inline-block;background:var(--cta);color:var(--cta-text);font-weight:700;border-radius:4px;padding:15px 26px;font-size:16px}
+  .ghost{border:1.5px solid #bdbdbd;border-radius:4px;padding:13px 22px;font-size:16px;font-weight:700;color:var(--ink)}
+  .note{font-size:14px;color:var(--muted);margin-top:12px}
+  .pic{position:relative;border-radius:6px;overflow:hidden;height:440px;box-shadow:0 18px 44px rgba(0,0,0,.12)}
+  .pic img.main{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+  .me{position:absolute;left:18px;bottom:18px;background:#fff;border-radius:6px;padding:12px 16px;box-shadow:0 6px 20px rgba(0,0,0,.14);font-size:14.5px;color:var(--muted)}
+  .me b{display:block;font-size:16px;color:var(--ink)}
+  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:22px 120px 26px}
+  .trust div{background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 16px;font-size:14.5px;color:var(--muted)}
+  .trust b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
+</style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Kanzlei Schmidt – Rechtsanwalt, Steuerberater">
+    <nav><span>Start</span><span>Ihr Berater</span><span>Kontakt</span></nav>
+    <span class="phone">02241 2407450</span>
+  </header>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Steuerrecht und Gesellschaftsrecht aus einer Hand</div>
+      <h1>Steuerberater und Rechtsanwalt <span>in Troisdorf</span></h1>
+      <p class="sub">Sie führen ein Unternehmen oder planen eine Investition? Dann greifen Steuerrecht und Gesellschaftsrecht oft ineinander. Ich prüfe Steuer und Recht gemeinsam, damit Sie nicht zwischen zwei Beratern hin und her laufen müssen. Das spart Zeit.</p>
+      <p class="list">Umstrukturierungen · Unternehmenskäufe · Immobilien und Steuer · Streit mit Gesellschaftern</p>
+      <div class="ctas"><span class="btn">Ersten Termin anfragen</span><span class="ghost">Anrufen: 02241 2407450</span></div>
+      <p class="note">Telefonisch, per Video oder persönlich in Troisdorf, ganz wie es für Sie passt. Schreiben Sie mir einfach Ihre Kontaktdaten.</p>
+    </div>
+    <div class="pic"><img class="main" src="portrait.jpg" alt="Thorsten Schmidt, Rechtsanwalt und Steuerberater"><div class="me"><b>Thorsten Schmidt</b>Rechtsanwalt und Steuerberater</div></div>
+  </section>
+  <div class="trust">
+    <div><b>Seit 2016</b>als Rechtsanwalt zugelassen</div>
+    <div><b>Seit 2018</b>als Steuerberater bestellt</div>
+    <div><b>Steuer und Recht</b>interdisziplinär aus einer Hand</div>
+    <div><b>Troisdorf</b>vor Ort, online oder telefonisch</div>
+  </div>
+</body>
+</html>

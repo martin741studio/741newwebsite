@@ -1,0 +1,16 @@
+# Image URLs on https://kanzlei-schmidt.online/ (agent O, 2026-10-31)
+# GoDaddy website builder (img1.wsimg.com). Query strings omitted by the browser tool filter.
+# Screenshot: evidence/home-today-1440.jpg is 1456x825 px (Chrome window cannot go below the screen width 1512 css px; resize to 1440 was not applied). Cookie banner ("Diese Website verwendet Cookies", buttons Ablehnen / Annehmen) was declined with "Ablehnen"; it was gone in the screenshot.
+
+## <img> elements (4)
+0 | https://img1.wsimg.com/isteam/videos/5ZQADOw... (video poster/frame, path cut by the tool) | natural 1080x606 | shown 0x0 (hidden) | alt = the same video URL
+1 | https://img1.wsimg.com/isteam/ip/827baf23-0c29-4ea3-bf48-9c4b71371112/schmidt_logo_schwarz_rgb.png/:/rs=w:1084,h:400,cg:true,m/cr=w:1084,h:400/qt=q:95 | 542x200 | 0x0 (hidden, mobile header copy) | alt "Kanzlei Schmidt"
+2 | same logo file as 1 | 542x200 | 372x200 | alt "Kanzlei Schmidt"   (visible logo, top left)
+3 | https://img1.wsimg.com/isteam/ip/827baf23-0c29-4ea3-bf48-9c4b71371112/Omergy%20-%20Startbild.JPG/:/cr=t:0.24%25,l:0%25,w:99.51%25,h:99.51%25/rs=w:1160,h:772 | 1160x772 | 737x490 | alt EMPTY   (portrait of Thorsten Schmidt, below the hero; file name "Omergy - Startbild.JPG", no alt text)
+
+## CSS background images (2)
+- https://img1.wsimg.com/isteam/videos/5ZQADOw... on DIV.x-el, 1425x643: the HERO is a background VIDEO (1 <video> element, 6 <source> elements), blurred laptop / typing hands with city skyline. It is not a still image. First-screen headline: "Interdisziplinäre Beratung auf den Punkt", sub "Ich freue mich, Sie persönlich kennenzulernen", button "Kontakt aufnehmen".
+- https://img1.wsimg.com/isteam/ip/827baf23-0c29-4ea3-bf48-9c4b71371112/IMG_6681.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:3070,... on a DIV with class d-none, 0x0 (hidden): the still fallback image of the hero (shown only when the video does not play, e.g. on some mobile layouts).
+
+## First-screen notes
+Nav: Start, Ihr Berater, Datenschutzerklärung, Impressum, plus a login-style user icon. Logo: "SCHMIDT RECHTSANWALT STEUERBERATER". No phone number and no address on the first screen.
