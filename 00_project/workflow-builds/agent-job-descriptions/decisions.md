@@ -28,3 +28,7 @@ GATE PASSED (cp1) shown in full. Card answer: "Go, build the skill (Recommended)
 
 ## 2026-11-03 — Checkpoint 2 (Ship go)
 GATE PASSED (cp2) shown in full, scorecard 96.7 %. Card answer: "Go, register, commit, document, install (Recommended)" — confirmed. Proceeding to Step 5. Placing `webdev.md` into `.claude/rules/agents/` stays a separate card after the install.
+
+## 2026-11-03 — after install
+- Place webdev: "Go, place it now (Recommended)" — placed at `.claude/rules/agents/webdev.md`, roster active, `_run.json` written.
+- Friday hook-in: "Yes, send the task to the Morning Grill session (Recommended)" — task sent to the Morning Grill session; it edits its own skill with its own Go.
