@@ -1,0 +1,249 @@
+{
+ "workflow_id": "agent-job-descriptions",
+ "name": "Agent Job Descriptions",
+ "created": "2026-11-03",
+ "process": "00_project/workflow-creation-workflow.md",
+ "steps": {
+  "0.0": {
+   "status": "done",
+   "title": "Inputs Martin gives confirmed via interactive grill (inputs-grill.md: Job, Surface, Cadence, Limits)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/inputs-grill.md",
+   "date": "2026-11-03",
+   "note": "confirmed by card 03.11."
+  },
+  "1.1": {
+   "status": "done",
+   "title": "Building block chosen with reason (patterns.md section 3)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/research-note.md",
+   "date": "2026-11-03",
+   "note": "skill, two modes, disable-model-invocation"
+  },
+  "1.2": {
+   "status": "done",
+   "title": "Library searched for the topic (grep result or notes)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/research-note.md",
+   "date": "2026-11-03",
+   "note": "grep approval/self-review; R0.5 R3.7 R4.5 R6"
+  },
+  "1.3": {
+   "status": "done",
+   "title": "Library freshness checked (INDEX.md date; refresh if older than 6 weeks)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/research-note.md",
+   "date": "2026-11-03",
+   "note": "workflow-library due 22.11.; new library built today"
+  },
+  "1.4": {
+   "status": "done",
+   "title": "Existing 741 assets checked (coverage map)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/coverage-map.md",
+   "date": "2026-11-03",
+   "note": "go-gate, grill, registry reused; roster+review built"
+  },
+  "1.5": {
+   "status": "done",
+   "title": "Research note written (10-20 lines)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/research-note.md",
+   "date": "2026-11-03",
+   "note": "block, 3 rules, 1 pattern, open Qs"
+  },
+  "1.6": {
+   "status": "done",
+   "title": "Knowledge base: local sources, exports still needed, derived rules+questions (skip only when the workflow rests on no knowledge base)",
+   "evidence": "00_project/knowledge/agent-job-library/INDEX.md",
+   "date": "2026-11-03",
+   "note": "13 sources local, derived rules+questions+roster"
+  },
+  "2.1": {
+   "status": "done",
+   "title": "2-3 use cases (trigger, steps, tools, result)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/use-cases.md",
+   "date": "2026-11-03",
+   "note": "UC1 write, UC2 review, UC3 client template"
+  },
+  "2.2": {
+   "status": "done",
+   "title": "3 test scenarios with expected output, BEFORE the body (obvious, paraphrase, must-not-trigger)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/test-scenarios.md",
+   "date": "2026-11-03",
+   "note": "T1 obvious, T2 paraphrase, T3+T4 must not"
+  },
+  "2.3": {
+   "status": "done",
+   "title": "One real task solved by hand with Martin; context noted",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/hand-run.md",
+   "date": "2026-11-03",
+   "note": "Web Developer JD by hand, grilled in 3 rounds; night shift as 2nd example"
+  },
+  "2.4": {
+   "status": "done",
+   "title": "Pipeline with checkpoints",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/pipeline.md",
+   "date": "2026-11-03",
+   "note": "write + review pipelines, 4 card gates"
+  },
+  "2.5": {
+   "status": "done",
+   "title": "Degrees of freedom per step (script vs heuristic)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/degrees-of-freedom.md",
+   "date": "2026-11-03",
+   "note": "4 scripts low freedom, drafting high"
+  },
+  "2.6": {
+   "status": "done",
+   "title": "Checkpoint 1: Martin go on the design (decision record)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/decisions.md",
+   "date": "2026-11-03",
+   "note": "CP1 go card 03.11."
+  },
+  "3.1": {
+   "status": "done",
+   "title": "Folder from the 741 template (patterns.md section 5)",
+   "evidence": ".claude/skills/agent-job-descriptions/SKILL.md",
+   "date": "2026-11-03",
+   "note": "built per template"
+  },
+  "3.2": {
+   "status": "done",
+   "title": "Frontmatter: WHAT + WHEN + negative trigger",
+   "evidence": ".claude/skills/agent-job-descriptions/SKILL.md",
+   "date": "2026-11-03",
+   "note": "built per template"
+  },
+  "3.3": {
+   "status": "done",
+   "title": "Body as checklist with gates; critical rules on top",
+   "evidence": ".claude/skills/agent-job-descriptions/SKILL.md",
+   "date": "2026-11-03",
+   "note": "built per template"
+  },
+  "3.4": {
+   "status": "done",
+   "title": "References one level deep; body under 500 lines",
+   "evidence": ".claude/skills/agent-job-descriptions/SKILL.md",
+   "date": "2026-11-03",
+   "note": "built per template"
+  },
+  "3.5": {
+   "status": "done",
+   "title": "Verification step with evidence at the end of the body",
+   "evidence": ".claude/skills/agent-job-descriptions/SKILL.md",
+   "date": "2026-11-03",
+   "note": "built per template"
+  },
+  "3.6": {
+   "status": "done",
+   "title": "741 house rules applied",
+   "evidence": ".claude/skills/agent-job-descriptions/SKILL.md",
+   "date": "2026-11-03",
+   "note": "built per template"
+  },
+  "3.7": {
+   "status": "skipped",
+   "title": "Unattended rules (rules.md section 6), if it runs unattended",
+   "evidence": "",
+   "date": "2026-11-03",
+   "note": "",
+   "reason": "skill runs only with Martin present; unattended rules apply to the agents it describes and sit in the block template (R1.8, R2.6) and rung-ladder"
+  },
+  "4.1": {
+   "status": "done",
+   "title": "Trigger tests in a fresh session (3 scenarios, results recorded)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/trigger-tests.md",
+   "date": "2026-11-03",
+   "note": "5/5 fresh subagents"
+  },
+  "4.2": {
+   "status": "done",
+   "title": "Functional test in a fresh session (real task)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/functional-test.md",
+   "date": "2026-11-03",
+   "note": "fresh subagent, 6 findings, 4 patched in skill, 2 are agent proposals"
+  },
+  "4.3": {
+   "status": "done",
+   "title": "Baseline with vs without (corrections, tool calls, tokens)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/baseline.md",
+   "date": "2026-11-03",
+   "note": "with/without comparison"
+  },
+  "4.4": {
+   "status": "skipped",
+   "title": "Plugin eval or /doctor prompt-audit, if it applies",
+   "evidence": "",
+   "date": "2026-11-03",
+   "note": "",
+   "reason": "not a plugin; validate_jd.py is the eval (14 checks) and ran on the real webdev description"
+  },
+  "4.5": {
+   "status": "done",
+   "title": "Scorecard >= 80 %, no zero in A or D",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/scorecard.md",
+   "date": "2026-11-03",
+   "note": "96.7 %, no zeros in A or D"
+  },
+  "5.1": {
+   "status": "done",
+   "title": "Checkpoint 2: Martin go on scorecard + one real output (decision record)",
+   "evidence": "00_project/workflow-builds/agent-job-descriptions/decisions.md",
+   "date": "2026-11-03",
+   "note": "CP2 go card 03.11."
+  },
+  "5.2": {
+   "status": "todo",
+   "title": "Committed (project files) or path noted in memory (personal skill)",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.3a": {
+   "status": "done",
+   "title": "Registry entry (add-workflow) and _run.json per run",
+   "evidence": "00_project/workflow-registry/registry.json",
+   "date": "2026-11-03",
+   "note": "add-workflow agent-job-descriptions"
+  },
+  "5.3b": {
+   "status": "skipped",
+   "title": "Martin guide where a client or prospect sees output",
+   "evidence": "",
+   "date": "2026-11-03",
+   "note": "",
+   "reason": "internal artifact; no client or prospect sees a job description"
+  },
+  "5.3": {
+   "status": "todo",
+   "title": "Memory file + MEMORY.md line",
+   "evidence": "",
+   "date": "",
+   "note": ""
+  },
+  "5.4": {
+   "status": "skipped",
+   "title": "Scheduled run done once by hand and read, if scheduled",
+   "evidence": "",
+   "date": "2026-11-03",
+   "note": "",
+   "reason": "not scheduled; review mode runs from the Friday grill with Martin"
+  }
+ },
+ "gate_log": [
+  {
+   "gate": "cp1",
+   "passed": false,
+   "missing": 2,
+   "at": "2026-11-03T07:14"
+  },
+  {
+   "gate": "cp1",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-11-03T07:28"
+  },
+  {
+   "gate": "cp2",
+   "passed": true,
+   "missing": 0,
+   "at": "2026-11-03T07:39"
+  }
+ ]
+}
