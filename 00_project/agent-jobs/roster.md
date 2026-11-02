@@ -12,3 +12,4 @@ Manager: Martin · review day: Friday · source: `roster.json` (edit with `roste
 | canary | Canary outage watch | runner | UptimeRobot + Zapier Manager + Telegram; /canary triage | draft | `00_project/agent-jobs/canary.md` | — | — | — |
 | command-board-sync | Command board sync | scheduled | desktop task command-board-sync (disabled) | draft | `00_project/agent-jobs/command-board-sync.md` | — | — | — |
 | chat-base | Chat base / workflow architecture | chat | ⚙️🏗️ Chat-based workflow architecture | draft | `00_project/agent-jobs/chat-base.md` | — | — | — |
+| sales-director | Sales Director (pipeline owner, light research) | chat | standing chat 💰 Sales Director | active | `00_project/agent-jobs/sales-director.md` | .claude/rules/agents/sales-director.md | — | — |

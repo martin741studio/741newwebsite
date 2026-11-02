@@ -32,3 +32,15 @@ GATE PASSED (cp2) shown in full, scorecard 96.7 %. Card answer: "Go, register, c
 ## 2026-11-03 — after install
 - Place webdev: "Go, place it now (Recommended)" — placed at `.claude/rules/agents/webdev.md`, roster active, `_run.json` written.
 - Friday hook-in: "Yes, send the task to the Morning Grill session (Recommended)" — task sent to the Morning Grill session; it edits its own skill with its own Go.
+
+## 2026-11-03 — Run 2: Sales Director (write mode, 2 card rounds)
+- Active today (Martin's words): "we have Gayo and one or two other people who are actually reaching out via LinkedIn DM. (I think it could be an idea to also have scheduled LinkedIn posting in it, just to get more views.) Then we sent the review pages Loom, plus the videos that are already analysed, over there, and people who are interested book a call" + LinkedIn (own seat), review pages + Loom, booking sequence + pitch calls. Cold email, HubSpot reactivation, affiliates, Meta lead magnet = dormant.
+- Owns: "Overview + weekly brief + proposals + light research (Recommended)".
+- Research: "Weekly, 60-minute cap, one source per week (Recommended)".
+- Pipeline SoT: "CRM sheet Pipeline tab + prospects folders (Recommended)".
+- LI posting: "Yes, as a posting calendar with proposals (Recommended)" — post text via /741-post or /personal-post per Go.
+- Outreach team: "Reads their numbers, one team line per week, no messages to them (Recommended)".
+- Goal number: "Booked calls per week (Recommended)" — target set on the first Friday review.
+- Cadence: "Monday pipeline brief as a grill card + Friday review (Recommended)".
+
+- Place sales-director: "Go, place it now (Recommended)" — placed at `.claude/rules/agents/sales-director.md`, roster active.
