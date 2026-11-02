@@ -124,12 +124,22 @@ CSS = mic.CSS + r"""
 #faq .acc{grid-template-columns:1fr}
 #faq .acc details:nth-child(2){border-top:0}
 #oeffentlich{padding:100px 0}
+@media (max-width:640px){
+ .hero--vids{height:auto!important;max-height:none!important;min-height:0!important;overflow:visible!important;display:flex!important;flex-direction:column!important;padding:104px 0 40px!important}
+ .hero--vids .hero__in{order:1!important}
+ .hero--vids .hero__txt{padding-top:0!important}
+ .hero__vids{order:2!important;position:static!important;width:100%!important;right:auto!important;top:auto!important;bottom:auto!important;display:grid!important;grid-template-columns:1fr 1fr 1fr!important;gap:10px!important;padding:0 20px!important;margin-top:32px!important;box-sizing:border-box!important}
+ .hero__vids .hv,.hero__vids .hv:nth-child(1),.hero__vids .hv:nth-child(2),.hero__vids .hv:nth-child(3){transform:none!important;width:100%!important;aspect-ratio:9/16!important;border-radius:16px!important}
+ .hero--vids .tlink.skip{display:none!important}
+ .hero__vids .go{grid-column:1/-1!important;position:static!important;transform:none!important;margin:8px auto 0!important;width:max-content!important}
+}
 """
 
 
 def header():
     return f'''<header class="hdr"><div class="hdr__in">
  <a class="hdr__logo" href="{V2}index.html"><img src="assets/logo-dark.png" alt="Michael Ehlers &amp; You Communication, Startseite" width="1794" height="647"></a>
+ <button class="hdr__burger" aria-label="Menü" aria-expanded="false"><span></span></button>
  <nav aria-label="Hauptnavigation"><a href="{V2}seminare.html">Seminare</a><a href="{V2}michael.html">Michael</a><a href="{V2}rhetorik.html">Was ist Rhetorik</a><a href="#top" aria-current="page" style="color:var(--cta)">Stimmen</a><a href="{V2}faq.html">FAQ</a></nav>
  <a class="btn" href="{BOOK}header">Gespräch buchen</a>
 </div></header>'''
@@ -142,7 +152,7 @@ def s01():
 <section class="hero hero--vids" id="top">
  <a class="hero__vids js-tovideos" href="#videos" aria-label="Direkt zu den Videos">{v}<span class="go" aria-hidden="true">Direkt zu den Videos {arrow}</span></a>
  <div class="wrap hero__in"><div class="hero__txt">
-  <p class="proofline rv">{STARS} 227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert · über 8.000 Teilnehmer</p>
+  <p class="proofline rv">{STARS} 4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert · über 8.000 Teilnehmer</p>
   <h1 class="rv"><span class="kicker">Michael Ehlers Erfahrungen:</span><span class="big">Vorher.<br>Nachher.</span></h1>
   <p class="sub rv">Was Teilnehmer nach ihrem Seminar mit Michael Ehlers anders machen. In ihren eigenen Worten.</p>
   <p class="body rv">Hier findest du Kundenstimmen zum Rhetorik-Seminar: wie Menschen es erlebt haben und was sich an ihrer Kommunikation geändert hat. Jede Stimme steht mit ihrer Quelle da. Wir zeigen Ausschnitte, Kürzungen im Satz markieren wir mit […].</p>
@@ -156,14 +166,14 @@ def s01():
 
 
 def s02():
-    N = [('250', 'Bewertungen auf ProvenExpert, 227 davon mit 5 Sternen'), ('Seit 2016', 'ist Michaels Profil dort aktiv'),
+    N = [('4,9 von 5', 'Sternen auf ProvenExpert, 250 Bewertungen'), ('Über 30 Jahre', 'Erfahrung als Rhetoriktrainer'),
          ('Über 8.000', 'Teilnehmer in seinen Seminaren'), ('3 Videos', 'in denen Teilnehmer selbst erzählen')]
     b = ''.join(f'<div class="num"><b>{k}</b><span>{v}</span></div>' for k, v in N)
     return f'''
 <section class="proof" id="erfahrungen">
  <div class="wrap"><div class="proof__grid">
   <div class="stack rv"><h2>Welche Erfahrungen machen Teilnehmer mit Michael Ehlers?</h2>
-   <p class="ans">Teilnehmer beschreiben vor allem drei Dinge: viel Übung vor der Gruppe, eine direkte Rückmeldung von Michael und mehr Sicherheit beim Sprechen. Auf ProvenExpert haben 227 von 250 Bewertungen 5 Sterne, keine Bewertung dort liegt unter 3 Sternen.</p></div>
+   <p class="ans">Teilnehmer beschreiben vor allem drei Dinge: viel Übung vor der Gruppe, eine direkte Rückmeldung von Michael und mehr Sicherheit beim Sprechen. Auf ProvenExpert liegt der Durchschnitt bei 4,9 von 5 Sternen.</p></div>
   <div class="rv" data-in><div class="nums">{b}</div></div>
  </div></div>
 </section>'''
@@ -182,7 +192,7 @@ VIDS = [
 def s03():
     c = ''.join(f'''<div class="vcol rv" data-d="{i-1}">
    <div class="vid" data-src="{VID % i}" role="button" tabindex="0" aria-label="Video {i} abspielen"><img src="assets/vp-{i}-tall.webp" alt="Standbild aus Video {i}: Teilnehmerstimme" width="540" height="960"><b>{PLAY}</b><span>{d}</span></div>
-   <h3>{e(h)} {t('[von Kunde bestätigen: Vorname und Rolle]')}</h3>
+   <h3>{e(h)}</h3>
    <blockquote>{e(q)}</blockquote>
    <p>{e(p)}</p>
   </div>''' for i, d, h, q, p in VIDS)
@@ -200,17 +210,17 @@ def s03():
 
 THEMES = [
  ('Redeangst: was Teilnehmer erleben', [
-   ('„Michael schafft es, das Maximum aus einem rauszuholen und die Redeangst zu nehmen.“', 'Julian L.', 'Rhetorik 1 auf Mallorca, ProvenExpert, 2023'),
+   ('„Michael schafft es, das Maximum aus einem rauszuholen und die Redeangst zu nehmen.“', 'Julian L.', 'ETHOS auf Mallorca, ProvenExpert, 2023'),
    ('„Zu beobachten und selbst zu erfahren beim Sprechen viel sicherer und dadurch viel authentischer zu sein war einfach der Wahnsinn.“', 'Jenny E.', 'Google')]),
  ('Praxis statt Theorie', [
    ('„Seine Tipps sind soo wertvoll und die praktischen Übungen zeigten direkt einen Unterschied!“', 'Anna H.', 'Google'),
    ('„Zudem habe ich Werkzeuge mitnehmen dürfen die mir in der Rhetorik und meinen Presentationen enorm weiterhelfen werden.“', 'Oliver E.', 'Google')]),
  ('Eine Rückmeldung, mit der du arbeiten kannst', [
-   ('„Die Herangehensweise und das individuelle Feedback haben mich sehr motiviert und mir unheimlich viel Selbstvertrauen geschenkt um das Beste aus mir rauszuholen.“', 'Jasmina L.', 'Rhetorik 1 auf Mallorca, ProvenExpert, 2023'),
-   ('„Neben den witzigen Übungen zu den Vortragstechniken, haben mir auch die Feedback-Übungen sehr gut gefallen […]“', 'Anonym', 'Rhetorik 1 auf Mallorca, ProvenExpert, 2023')]),
+   ('„Die Herangehensweise und das individuelle Feedback haben mich sehr motiviert und mir unheimlich viel Selbstvertrauen geschenkt um das Beste aus mir rauszuholen.“', 'Jasmina L.', 'ETHOS auf Mallorca, ProvenExpert, 2023'),
+   ('„Neben den witzigen Übungen zu den Vortragstechniken, haben mir auch die Feedback-Übungen sehr gut gefallen […]“', 'Anonym', 'ETHOS auf Mallorca, ProvenExpert, 2023')]),
  ('Für Anfänger und für Profis', [
-   ('„Ich fand es spannend, dass wir Teilnehmer ein Mix von Anfänger bis Profi waren und Michael uns alle, egal auf welchem Level, weiterbringen konnte.“', 'Christin R.', 'Rhetorik 1 auf Mallorca, ProvenExpert, 2023'),
-   ('„Herr Ehlers versteht es auf die Bedürfnisse aller Teilnehmenden einzugehen und dabei das Gesamtziel nicht aus dem Auge zu verlieren.“', 'Moritz B.', 'Rhetorik 1 auf Mallorca, ProvenExpert, 2023')]),
+   ('„Ich fand es spannend, dass wir Teilnehmer ein Mix von Anfänger bis Profi waren und Michael uns alle, egal auf welchem Level, weiterbringen konnte.“', 'Christin R.', 'ETHOS auf Mallorca, ProvenExpert, 2023'),
+   ('„Herr Ehlers versteht es auf die Bedürfnisse aller Teilnehmenden einzugehen und dabei das Gesamtziel nicht aus dem Auge zu verlieren.“', 'Moritz B.', 'ETHOS auf Mallorca, ProvenExpert, 2023')]),
  ('Mehr über dich selbst erfahren', [
    ('„Ich habe viel über mich selbst herausgefunden.“', 'Tino R.', 'Google'),
    ('„[…] jeder von uns durfte sich selbst besser kennenlernen und mehr darüber erfahren wer er wirklich ist.“', 'Jenny E.', 'Google')]),
@@ -234,7 +244,7 @@ def s05():
          ('<img src="assets/logo-mdr.webp" alt="MDR">', '„Trotz 40 Jahren Medienerfahrung konnte ich erstaunlich viel vom Rhetoriktraining profitieren.“', 'Peter Escher', 'Moderator MDR'),
          ('<i aria-hidden="true">„</i>', '„Ich habe in diesem Kurs mehr gelernt als in all meinen bisherigen Schulungen zusammen.“', 'Emrullah Ates', 'Teilnehmer, Google')]
     c = ''.join(f'<figure class="pq rv"><div class="mk">{m}</div><blockquote>{e(q)}</blockquote><p><b>{e(n)}</b>{e(r)}</p></figure>' for m, q, n, r in P)
-    c += f'<figure class="pq rv"><div class="mk"><i aria-hidden="true">„</i></div><blockquote>{t("[von Kunde bestätigen: vollständiger Wortlaut]")}</blockquote><p><b>Neven Subotic</b>Fußball-Bundesliga-Profi</p></figure>'
+    c += f'<figure class="pq rv"><div class="mk"><i aria-hidden="true">„</i></div><blockquote>{t("")}</blockquote><p><b>Neven Subotic</b>Fußball-Bundesliga-Profi</p></figure>'
     return f'''
 <section class="sec" id="oeffentlich">
  <div class="wrap">
@@ -245,8 +255,8 @@ def s05():
 
 
 def s06():
-    B = [(I_SPEAK, 'Du hältst Reden vor der Gruppe.', 'Drei Tage Training, dazu ein Tag Get Together.', '„Besonders beeindruckt hat mich der Praxisteil, in dem wir freie Reden vor der Gruppe hielten […]“', 'Michael B., Rhetorik 1 auf Mallorca, ProvenExpert, 2023'),
-         (I_CAM, 'Du siehst dich auf Video.', 'Drei Videoanalysen mit sofortiger Rückmeldung.', '„Die Trainings vor der Kamera mit den darauf folgenden Auswertungen helfen die Selbst- und Fremdwahrnehmung zu schärfen.“', 'Julian L., Rhetorik 1 auf Mallorca, ProvenExpert, 2023'),
+    B = [(I_SPEAK, 'Du hältst Reden vor der Gruppe.', 'Drei Tage Training, dazu ein Tag Get Together.', '„Besonders beeindruckt hat mich der Praxisteil, in dem wir freie Reden vor der Gruppe hielten […]“', 'Michael B., ETHOS auf Mallorca, ProvenExpert, 2023'),
+         (I_CAM, 'Du siehst dich auf Video.', 'Drei Videoanalysen mit sofortiger Rückmeldung.', '„Die Trainings vor der Kamera mit den darauf folgenden Auswertungen helfen die Selbst- und Fremdwahrnehmung zu schärfen.“', 'Julian L., ETHOS auf Mallorca, ProvenExpert, 2023'),
          (I_VR, 'Du sprichst vor virtuellem Publikum.', 'Im VR-Training sprichst du vor einem großen virtuellen Publikum. Michael B. nennt das „unglaublich real“.', '', ''),
          (I_PIN, 'Du lernst an besonderen Orten.', 'Die Seminare finden auf Mallorca, in Barcelona, Zypern, Dubai, Frankfurt und Berlin statt.', '„Ich war vergangenes Wochenende 4 Tage auf Mallorca zum Rhetorikseminar auf Empfehlung von einem Bekannten. Es war wirklich richtig gut !“', 'Belinda E., Google')]
     c = ''.join(f'<div class="blk rv">{i}<div><h3>{h}</h3><p>{e(p)}</p>' + (f'<blockquote>{e(q)}<small>{e(s)}</small></blockquote>' if q else '') + '</div></div>' for i, h, p, q, s in B)
@@ -290,17 +300,18 @@ def s08():
   <div class="stack">
    <h2 class="rv">Woher die Stimmen kommen</h2>
    <p class="rv">Die Zitate auf dieser Seite stammen aus vier Quellen: aus dem Profil von Michael Ehlers auf ProvenExpert, aus Bewertungen bei Google, aus drei Videos, in denen Teilnehmer erzählen, und aus Stimmen, die schon auf meandyou.de stehen.</p>
-   <p class="rv">Auf ProvenExpert stehen 250 veröffentlichte Bewertungen. 227 davon haben 5 Sterne, 21 haben 4 Sterne und 2 haben 3 Sterne. Keine Bewertung hat 1 oder 2 Sterne. Das Profil ist seit 2016 aktiv. ProvenExpert schreibt selbst, dass die Bewertungen freiwillig sind und nicht gekauft werden können.</p>
+   <p class="rv">Auf ProvenExpert stehen 250 veröffentlichte Bewertungen, im Durchschnitt 4,9 von 5 Sternen. 227 davon haben 5 Sterne, 21 haben 4 Sterne und 2 haben 3 Sterne. Keine Bewertung hat 1 oder 2 Sterne. Das Profil ist seit 2016 aktiv. ProvenExpert schreibt selbst, dass die Bewertungen freiwillig sind und nicht gekauft werden können.</p>
    <p class="rv">Wir zitieren wörtlich, auch mit Tippfehlern. Wir zeigen Ausschnitte. Kürzungen im Satz markieren wir mit […]. Bei ProvenExpert nennen wir Vorname und Initial (oder Anonym), das Seminar, wenn angegeben, und das Jahr. Bei Google nennen wir Vorname und Initial. Jede Stimme gibt die Meinung eines Menschen wieder. Dein Weg kann anders aussehen.</p>
+   <p class="rv"><a class="tlink" href="https://www.provenexpert.com/de-de/michael-ehlers/" target="_blank" rel="noopener">Alle Bewertungen auf ProvenExpert ansehen</a></p>
   </div>
-  <div class="bars rv" data-in><h3>250 Bewertungen auf ProvenExpert</h3>{bars}</div>
+  <div class="bars rv" data-in><h3>4,9 von 5 Sternen · 250 Bewertungen auf ProvenExpert</h3>{bars}</div>
  </div>
 </section>'''
 
 
 def s09():
     steps = [('Termin wählen.', 'Online, zu einer Zeit, die dir passt. Bestätigung per E-Mail, Erinnerung per WhatsApp.'),
-             ('30 Minuten per Video.', 'Mit Michaels Team [von Kunde bestätigen: Name und Rolle der Person im Gespräch] sprichst du über deine Situation und deine Ziele.'),
+             ('30 Minuten per Video.', 'Du sprichst mit einem Experten aus Michaels Team über deine Situation und deine Ziele.'),
              ('Danach entscheiden.', 'Du weißt, welches Seminar passt, und entscheidest in Ruhe.')]
     c = ''.join(f'<div class="fstep"><span class="n">{i}</span><div class="fstep__t"><h3>{h}</h3><p>{t(p)}</p></div></div>' for i, (h, p) in enumerate(steps, 1))
     return f'''
@@ -314,12 +325,12 @@ def s09():
 
 
 FAQ = [
- ('Wie sind die Erfahrungen mit Michael Ehlers?', 'Auf ProvenExpert haben 227 von 250 Bewertungen 5 Sterne. In den Texten geht es oft um Übung vor der Gruppe, um Michaels direkte Rückmeldung und um mehr Sicherheit beim Sprechen. Auch bei Google schreiben Teilnehmer über ihre Seminartage.'),
- ('Gibt es auch Kritik an Michael Ehlers?', 'Ja, nicht jede Stimme ist begeistert. Auf ProvenExpert haben 21 Bewertungen 4 Sterne und zwei Bewertungen 3 Sterne. Auch bei Google stehen nicht nur positive Bewertungen. Alle Bewertungen kannst du dort selbst lesen.'),
- ('Sind die Bewertungen echt?', 'Die Zitate stammen aus öffentlichen Profilen bei ProvenExpert und Google, aus drei Videos und von der Website von me&you. Laut ProvenExpert sind Bewertungen dort freiwillig und können nicht gekauft werden. In den Videos sprechen Teilnehmer selbst über ihr Seminar.'),
- ('Für wen ist das Seminar laut Teilnehmern geeignet?', 'Teilnehmer beschreiben Gruppen von Anfängern bis Profis. In den Videos empfehlen zwei Teilnehmer das Seminar ausdrücklich Geschäftsführern. Ob es für dich passt, klärst du im kostenlosen Gespräch.'),
- ('Wie kann ich Rhetorik trainieren?', 'Teilnehmer nennen oft dasselbe: reden und Rückmeldung bekommen. Dann wieder reden. Ein Teilnehmer sagt im Video über Bücher und Internet: „Es ist kein echtes Üben, man bekommt kein Feedback.“ Mehr dazu liest du in den <a class="tlink" href="' + V2 + 'faq.html">häufigen Fragen</a>.'),
- ('Was kostet ein Rhetorikkurs bei Michael Ehlers?', 'Den Preis für dein Seminar nennt dir Michaels Team im kostenlosen Gespräch. Dort klärst du auch, welches Format zu dir passt.'),
+ ('Wie sind die Erfahrungen mit Michael Ehlers?', 'Wer bei Michael trainiert, bleibt nicht bei der Theorie. Teilnehmer berichten von intensiven Übungen, direktem Feedback und dem Moment, in dem sie vor anderen deutlich sicherer sprechen. Auf ProvenExpert ergibt sich aus den bisher vorliegenden 250 Bewertungen ein Durchschnitt von 4,9 von 5 Sternen. Weitere persönliche Eindrücke findest du in den Videoberichten und auf Google.'),
+ ('Gibt es auch Kritik an Michael Ehlers?', 'Ja. Erfahrungen sind persönlich und nicht jede Bewertung fällt gleich aus. Wir möchten, dass du dir selbst ein Bild machst. Deshalb kannst du die veröffentlichten Bewertungen auf ProvenExpert und Google direkt nachlesen, auch die kritischen.'),
+ ('Sind die Bewertungen echt?', 'Die Erfahrungsberichte stammen aus öffentlich zugänglichen Bewertungen auf ProvenExpert und Google sowie aus Videos, in denen Teilnehmer selbst zu Wort kommen. Über die verlinkten Plattformen kannst du die veröffentlichten Bewertungen selbst einsehen.'),
+ ('Für wen ist das Seminar geeignet?', 'Für Menschen, die in wichtigen Momenten etwas zu sagen haben und dabei auch gehört werden möchten. Ob du gerade anfängst oder bereits Teams führst, vor Kunden präsentierst oder auf Bühnen stehst: Entscheidend ist dein nächster Entwicklungsschritt. Du kannst die Seminare einzeln oder in den angebotenen Zweierbundles buchen. Im kostenlosen Gespräch klären wir, welches Seminar zu deinen Zielen passt.'),
+ ('Wie kann ich Rhetorik trainieren?', 'Indem du ins Sprechen kommst. Du übst, erhältst direktes Feedback und probierst es erneut. So erkennst du, wie du unter Druck reagierst und wie du klarer und glaubwürdiger wirkst. Michaels Seminare verbinden genau dieses praktische Training mit der Arbeit an deiner Persönlichkeit.'),
+ ('Was kostet ein Rhetorikkurs bei Michael Ehlers?', 'Das hängt vom Seminar und vom Format ab. Ein Online Seminar kostet 3.899 € und ist auf maximal 14 Teilnehmer begrenzt. Ein Präsenzseminar kostet 5.000 €. Zwei Seminare im Bundle kosten zusammen 9.500 € statt 10.000 €. KAIROS in Mexiko hat wegen des längeren Formats einen eigenen Preis. Weitere Fragen klärst du mit einem Experten aus Michaels Team. Dort besprechen wir auch, welche Leistungen im jeweiligen Angebot enthalten sind.'),
 ]
 
 
@@ -347,7 +358,7 @@ def s11():
   <h2 class="rv">Deine Stimme kommt später.<br>Erst kommt das Gespräch.</h2>
   <p class="rv">Der erste Schritt ist ein Gespräch von 30 Minuten. Kostenlos und per Video. Danach weißt du, ob das Seminar zu dir passt.</p>
   <ul class="rv">{li}</ul>
-  <p class="proofline rv">{STARS} 227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert</p>
+  <p class="proofline rv">{STARS} 4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert</p>
   <div class="cta-row rv">{btn('abschluss', 'btn btn--light cta--breathe')}<p class="tel">Lieber anrufen: <a href="{TEL}">+49 15888367664</a></p></div>
   <p class="back rv">Zurück zur <a href="{V2}index.html">Startseite</a></p>
  </div></div>
@@ -391,7 +402,7 @@ def page():
     return f'''<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Michael Ehlers Erfahrungen: Stimmen von Teilnehmern</title>
-<meta name="description" content="Michael Ehlers Erfahrungen: 227 von 250 Bewertungen auf ProvenExpert mit 5 Sternen. Videos und Zitate, wörtlich und mit Quelle. Was Teilnehmer erleben.">
+<meta name="description" content="Michael Ehlers Erfahrungen: 4,9 von 5 Sternen auf ProvenExpert, basierend auf 250 Bewertungen. Videos und Zitate, wörtlich und mit Quelle. Was Teilnehmer erleben.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap">
 <style>{CSS}</style>
 <script type="application/ld+json">{schema()}</script>
