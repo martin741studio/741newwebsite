@@ -8,14 +8,53 @@
 --navy:#2B3C52;--char:#47403A;--ink:#2A2622;--muted:#5E5650;--on-dark:#F2EDE4;--line:rgba(71,64,58,.16);--gold:#C9A24A;
 --serif:"Libre Baskerville",Georgia,serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--r:22px;--w:1240px}
 *{box-sizing:border-box}html{scroll-behavior:auto}
+html,body{overflow-x:hidden;max-width:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.62 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block;height:auto}
 a{color:inherit}
 a[href^="tel:"]{white-space:nowrap}
 section[id]{scroll-margin-top:96px}
-h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em;text-wrap:balance;overflow-wrap:break-word;word-break:break-word}
+h1,h1 *{min-width:0}
 h2{font-size:44px;line-height:1.16}
 h3{font-size:24px;line-height:1.3}
+@media (max-width:640px){
+ .wrap{padding:0 20px!important}
+ h1 .big,.hero h1 .big,.hero--ov h1 .big,.hero--faq h1 .big,.hero--rp h1 .big,.u-hero h1 .big,.bk h1 .big{font-size:clamp(32px,9.5vw,44px)!important;line-height:1.14!important}
+ h2,.band h2,.closer h2,.u-band h2,.u-closer h2,.u-dark h2{font-size:clamp(26px,7vw,34px)!important;line-height:1.18!important;max-width:none!important}
+ h3{font-size:19px!important}
+ .sec{padding:64px 0!important}
+ .proofline,.hero--split .proofline,.u-hero .proofline,.hero--vids .proofline{flex-wrap:wrap!important;white-space:normal!important;font-size:15px!important}
+ .hdr__in{flex-wrap:wrap!important}
+ .stats b,.fact b,.nums b,.u-facts b{white-space:normal!important}
+ .subnav .ftopics{width:calc(100% - 24px)!important;max-width:560px!important;overflow-x:auto!important;flex-wrap:nowrap!important;-webkit-overflow-scrolling:touch!important;justify-content:flex-start!important}
+ .subnav .ftopics .chip{white-space:nowrap!important;flex:none!important}
+ .media{flex-wrap:wrap!important;gap:18px 24px!important}
+ .media span{white-space:normal!important}
+ .u-hero__txt,.hero__txt{max-width:100%!important}
+ /* split hero (home, seminare, michael, rhetorik): photo stays a full-bleed hero background and fades vertically into the paper, text + buttons sit on solid paper */
+ .hero,.hero--split{display:block!important;position:relative!important;height:auto!important;min-height:0!important;max-height:none!important;padding:0 0 44px!important;overflow:hidden!important}
+ .hero__img,.hero--split .hero__img{position:absolute!important;inset:0 0 auto 0!important;width:100%!important;height:420px!important;margin:0!important;overflow:hidden!important}
+ .hero__img img,.hero--split .hero__img img{height:100%!important;margin:0!important;object-position:50% 20%!important}
+ .hero__img::after,.hero--split .hero__img::after{display:block!important;content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(180deg,rgba(250,248,244,0) 0%,rgba(250,248,244,0) 38%,rgba(250,248,244,.72) 62%,var(--paper) 100%)!important}
+ .hero__in{padding:0 20px!important}
+ .hero__txt,.hero--split .hero__txt{padding-top:300px!important;gap:14px!important}
+ .hero .proofline{font-size:14px!important;gap:8px!important;line-height:1.4!important}
+ .hero .body{font-size:17px!important}
+ .hero .sub{font-size:20px!important}
+ .cta-row{width:100%!important}
+ .hero .btns,.btns{flex-direction:column!important;width:100%!important;gap:12px!important}
+ .hero .btns .btn,.btns .btn,.hero .cta-row>.btn,.u-hero .cta-row>.btn{width:100%!important;padding:18px 20px!important;font-size:17px!important;white-space:normal!important;text-align:center!important}
+ .btn--ghost{background:#fff!important;border:1.5px solid rgba(42,38,34,.22)!important}
+ .assure{font-size:14px!important;align-items:flex-start!important}
+ .tblw{overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
+ table.tb,table.cmp{width:max-content!important;min-width:100%!important}
+ table.cmp{display:block!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
+ /* every multi-column grid site-wide collapses to one column on mobile */
+ .acc,.acc2,.acc2c,.after,.ansgrid,.badges,.badges4,.bar,.bk__grid,.bkpage .clarify,.blk,.blocks,.books,.clarify,.closer--ov .closer__in,.closer--plain .closer__in,.cols01,.cols3,.credrow,.diag,.epl,.err,.exc,.factgrid,.facts,.facts4,.faq6,.faqgrid,.feat,.flow,.fmts,.foot--min .foot__in,.foot__in,.formats,.ftopics,.grpgrid,.hero--faq .hero__in,.incl,.learn,.method,.mgrid,.mgrid2,.mic,.mic .qq,.moments,.myths,.narrow .pod,.nums,.opt,.parts,.pcard,.place,.places,.pod,.pods,.prep,.pricing,.proof__grid,.pstrip__in,.pub,.pull,.q2,.q4,.qgrid,.qgrid3,.quotes4,.rl,.rlc,.rp-answer,.rp-comm,.rp-learn .ex3,.rp-learn .learn,.rp-meth,.rp-meth .cols01,.rp-mic,.rp-proof__in,.rp-steps,.scard,.scards,.seminar,.sits,.split,.ssum,.stats,.step,.steps5,.talk2,.tgrid,.themes,.tiles,.tl,.topics,.trans,.trio,.two,.u-bi,.u-cgrid,.u-cols,.u-csteps,.u-dtop,.u-facts,.u-kurz__grid,.u-method,.u-mic,.u-pgrid,.u-sits,.u-steps,.u-voices .qgrid,.u-who,.vcols,.vids,.voices,.voices .vids,.vsl,.who2{grid-template-columns:1fr!important}
+ .rp-who{flex-wrap:wrap!important}
+ .calendly-inline-widget{min-width:0!important}
+}
 p{margin:0}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 40px}
 .ov{font:600 14px/1.2 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--cta)}
@@ -45,6 +84,21 @@ p{margin:0}
 .hdr nav{display:flex;gap:30px;margin-left:auto;font-size:16px;font-weight:500}
 .hdr nav a{text-decoration:none;color:var(--ink)}.hdr nav a:hover{color:var(--cta)}
 .hdr .btn{padding:14px 24px;font-size:16px}
+.hdr__burger{display:none;margin-left:auto;width:40px;height:40px;border:none;background:none;cursor:pointer;flex:none;position:relative}
+.hdr__burger span,.hdr__burger span::before,.hdr__burger span::after{content:"";position:absolute;left:9px;right:9px;height:2px;background:var(--ink);transition:transform .2s,opacity .2s}
+.hdr__burger span{top:19px}.hdr__burger span::before{top:-8px}.hdr__burger span::after{top:8px}
+.hdr__in.open .hdr__burger span{background:transparent}
+.hdr__in.open .hdr__burger span::before{transform:translateY(8px) rotate(45deg)}
+.hdr__in.open .hdr__burger span::after{transform:translateY(-8px) rotate(-45deg)}
+@media (max-width:860px){
+ .hdr{top:0}
+ .hdr__in{border-radius:0;padding:10px 14px;gap:0;flex-wrap:wrap}
+ .hdr nav{display:none;order:4;width:100%;flex-direction:column;align-items:flex-start;gap:0;margin:14px 0 4px;font-size:19px}
+ .hdr__in.open nav{display:flex}
+ .hdr nav a{padding:12px 0;width:100%;border-top:1px solid rgba(42,38,34,.1)}
+ .hdr .btn{margin-left:auto;padding:11px 18px;font-size:14px;order:2}
+ .hdr__burger{display:block;order:3;margin-left:10px}
+}
 /* hero */
 .hero{position:relative;min-height:760px;height:100vh;max-height:900px;display:flex;align-items:center;overflow:hidden;background:var(--paper)}
 .hero__img{position:absolute;inset:0 0 0 auto;width:66%;overflow:hidden}
@@ -468,7 +522,6 @@ p{margin:0}
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://www.meandyou.de/gespraech-buchen#webpage", "url": "https://www.meandyou.de/gespraech-buchen", "name": "Kostenloses Gespräch buchen · me&you Michael Ehlers", "inLanguage": "de", "publisher": {"@id": "https://www.meandyou.de/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://www.meandyou.de/"}, {"@type": "ListItem", "position": 2, "name": "Gespräch buchen", "item": "https://www.meandyou.de/gespraech-buchen"}]}, {"@type": "EducationalOrganization", "@id": "https://www.meandyou.de/#organization", "name": "Institut Michael Ehlers GmbH", "alternateName": "me&you Communication", "url": "https://www.meandyou.de/", "email": "management@meandyou.de", "contactPoint": {"@type": "ContactPoint", "telephone": "+49 15888367664", "contactType": "sales", "availableLanguage": "de"}}]}</script>
 </head><body class="bkpage"><header class="hdr hdr--min"><div class="hdr__in">
  <a class="hdr__logo" href="#top"><img src="assets/logo-dark.png" alt="Michael Ehlers &amp; You Communication" width="1794" height="647"></a>
- <a class="tel" href="tel:+4915888367664"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+49 15888367664</a>
 </div></header><main>
 <section class="bk" id="top">
  <div class="wrap bk__grid">
@@ -478,7 +531,7 @@ p{margin:0}
     <h1 class="rv"><span class="kicker">Gespräch buchen:</span><span class="big">Finde heraus, wo du gerade Wirkung verlierst.</span></h1>
     <p class="body rv">In 30 Minuten klären wir, wo du stehst und welches Seminar zu deiner Situation passt. Danach entscheidest du in Ruhe.</p>
     <ul class="ticks rv"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>30 Minuten per Video, von überall</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>kostenlos, danach entscheidest du in Ruhe</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Bestätigung per E-Mail, Erinnerung per WhatsApp</span></li></ul>
-    <div class="whoami rv"><span class="ava"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4 21a8 8 0 0 1 16 0z"/></svg></span><p>Du sprichst mit einem Mitglied aus Michaels Team. <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Name und Rolle der Person im Gespräch]</span></p></div>
+    <div class="whoami rv"><span class="ava"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4 21a8 8 0 0 1 16 0z"/></svg></span><p>Du sprichst mit einem Experten aus Michaels Team.</p></div>
     <div class="pick rv"><b>Termin wählen</b><span>Wähle rechts einen freien Termin. Die Uhrzeiten zeigt der Kalender in deiner Zeitzone.</span></div>
    </div>
    <div class="done" aria-live="polite">
@@ -486,21 +539,18 @@ p{margin:0}
     <h2>Dein Termin steht.</h2>
     <p class="body">Schön, dass du dabei bist. Datum und Uhrzeit siehst du rechts, die Bestätigung ist auf dem Weg in dein Postfach.</p>
     <ol class="nsteps">
-     <li><p><b>Schau in dein Postfach.</b>In der Bestätigungsmail stehen alle Details und der Link zum Umbuchen. <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Umbuchen-Link in der Bestätigungsmail]</span> Keine Mail bekommen? Ruf an: <a href="tel:+4915888367664">+49 15888367664</a></p></li>
-     <li><p><b>Antworte auf die WhatsApp.</b>Kurz nach der Buchung meldet sich das Team mit einer Frage zu deiner Situation. Zwei Sätze als Antwort genügen. <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: erste WhatsApp nach der Buchung eingerichtet]</span></p></li>
-     <li><p><b>Schau dir die Nachricht von Michael an.</b>Er erzählt dir in rund einer Minute, worum es im Gespräch geht.</p>
-      <div class="vidph"><img src="assets/michael-door.webp" alt="" width="1200" height="1800"><b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></b><span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Video von Michael für die Bestätigung]</span></div></li>
+     <li><p><b>Schau in dein Postfach.</b>In der Bestätigungsmail stehen alle Details.</p></li>
+     <li><p><b>Antworte auf die WhatsApp.</b>Kurz nach der Buchung meldet sich das Team mit einer Frage zu deiner Situation. Zwei Sätze als Antwort genügen.</p></li>
     </ol>
     <p class="body">Am meisten hast du davon, wenn du eine konkrete Situation mitbringst.</p>
    </div>
   </div>
   <div class="bk__main rv" id="kalender">
    <div class="bkc">
-    <p class="bkc__proof"><img src="assets/logo-provenexpert.png" alt="ProvenExpert" width="404" height="180"><span class="stars" aria-label="5 Sterne"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span><span>227 von 250 Bewertungen auf ProvenExpert mit 5 Sternen · seit 1990 Rhetoriktraining mit Michael Ehlers</span></p>
+    <p class="bkc__proof"><img src="assets/logo-provenexpert.png" alt="ProvenExpert" width="404" height="180"><span class="stars" aria-label="5 Sterne"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span><span>4,9 von 5 Sternen auf ProvenExpert · seit 1990 Rhetoriktraining mit Michael Ehlers</span></p>
     <div class="calendly-inline-widget" data-base="https://calendly.com/me-you/sichtbarkeit-neu" data-opts="hide_event_type_details=1&hide_gdpr_banner=1&background_color=ffffff&text_color=2a2622&primary_color=4f6d90"><span class="cal-load">Kalender lädt …</span></div>
    </div>
    <div class="bk__under">
-    <p class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Lieber anrufen? <a href="tel:+4915888367664">+49 15888367664</a></span></p>
     <p class="row"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Deine Handynummer brauchen wir für die Erinnerung per WhatsApp.</span></p>
     <p class="row small"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Deine Angaben verarbeitet der Kalenderdienst Calendly. Mehr dazu in den <a href="https://www.meandyou.de/datenschutz">Datenschutzhinweisen</a>.</span></p>
    </div>
@@ -512,7 +562,7 @@ p{margin:0}
   <div class="center"><h2 class="rv">Erst ein Gespräch. Dann entscheidest du.</h2></div>
   <div class="flow" data-in>
    <div class="flow__line"><i></i></div>
-   <div class="fstep rv"><span class="n">01</span><div class="fstep__t"><h3>Termin wählen.</h3><p>Du suchst dir oben einen freien Termin aus und trägst deine Kontaktdaten ein. <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: drei kurze Fragen im Formular eingerichtet]</span> Danach bekommst du eine Bestätigung per E-Mail.</p></div></div>
+   <div class="fstep rv"><span class="n">01</span><div class="fstep__t"><h3>Termin wählen.</h3><p>Du suchst dir oben einen freien Termin aus und trägst deine Kontaktdaten ein. Danach bekommst du eine Bestätigung per E-Mail.</p></div></div>
    <div class="fstep rv"><span class="n">02</span><div class="fstep__t"><h3>Gespräch per Video.</h3><p>30 Minuten mit Michaels Team. Wir klären, wo du stehst und welches Format passt.</p></div></div>
    <div class="fstep rv"><span class="n">03</span><div class="fstep__t"><h3>In Ruhe entscheiden.</h3><p>Wenn ein Seminar passt, bekommst du Termine und alle Details. Ob und wann du buchst, entscheidest du danach.</p></div></div>
   </div>
@@ -524,7 +574,7 @@ p{margin:0}
  <div class="wrap">
   <h2 class="rv">Mit wem du sprichst</h2>
   <div class="talk2">
-   <div class="pcard rv"><div class="ph"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4 21a8 8 0 0 1 16 0z"/></svg></div><div><h3>Dein Gesprächspartner</h3><p>Ein Mitglied aus Michaels Team führt das Gespräch. <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Name und Rolle der Person im Gespräch]</span> <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Foto der Person im Gespräch]</span></p></div></div>
+   <div class="pcard rv"><div class="ph"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4 21a8 8 0 0 1 16 0z"/></svg></div><div><h3>Dein Gesprächspartner</h3><p>Du sprichst mit einem Experten aus Michaels Team.</p></div></div>
    <div class="pcard rv"><div class="ph"><img src="assets/michael-door.webp" alt="Michael Ehlers lächelt, an einen Holzrahmen gelehnt" width="1200" height="1800"></div><div><h3>Der Kopf dahinter: Michael Ehlers</h3><p>Im Gespräch ist Michael nicht dabei. Er trainiert seit 1990 Menschen in Rhetorik und ist Lehrbeauftragter an der Universität St. Gallen. Das ERFOLG Magazin zählte ihn 2017 zu den Top 100 Trainern im deutschsprachigen Raum. Über 8.000 Menschen haben bei ihm trainiert.</p></div></div>
   </div>
  </div>
@@ -532,7 +582,7 @@ p{margin:0}
 <section class="sec sec--cream" id="stimmen">
  <div class="wrap">
   <div class="stack" style="align-items:center"><h2 class="rv center">Was Teilnehmer nach dem Seminar schreiben</h2>
-   <p class="pe rv"><img src="assets/logo-provenexpert.png" alt="ProvenExpert" width="404" height="180"><span class="stars" aria-label="5 Sterne"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span><span>227 von 250 Bewertungen auf ProvenExpert vergeben 5 Sterne.</span></p></div>
+   <p class="pe rv"><img src="assets/logo-provenexpert.png" alt="ProvenExpert" width="404" height="180"><span class="stars" aria-label="5 Sterne"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span><span>4,9 von 5 Sternen, basierend auf 250 Bewertungen auf ProvenExpert.</span></p></div>
   <div class="qgrid3"><article class="q3 rv"><span class="stars" aria-label="5 Sterne"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span><h3>Egal, auf welchem Level</h3><blockquote>„Ich fand es spannend, dass wir Teilnehmer ein Mix von Anfänger bis Profi waren und Michael uns alle, egal auf welchem Level, weiterbringen konnte.“</blockquote><p class="src"><b>Christin R.</b>, ProvenExpert</p></article><article class="q3 rv"><span class="stars" aria-label="5 Sterne"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span><h3>Reden vor der Gruppe</h3><blockquote>„Besonders beeindruckt hat mich der Praxisteil, in dem wir freie Reden vor der Gruppe hielten und sowohl von Michael Ehlers als auch von den anderen Teilnehmern wertvolles Feedback bekamen.“</blockquote><p class="src"><b>Michael B.</b>, ProvenExpert</p></article><article class="q3 rv"><h3>Auch für Profis</h3><blockquote>„Trotz 40 Jahren Medienerfahrung konnte ich erstaunlich viel vom Rhetoriktraining profitieren.“</blockquote><p class="src"><b>Peter Escher</b>, Moderator MDR</p></article></div>
   <div class="ctabar rv"><a class="btn" href="#kalender" data-jump>Termin wählen</a></div>
  </div>
@@ -541,13 +591,13 @@ p{margin:0}
  <div class="wrap">
   <h2 class="rv center">So holst du das meiste aus den 30 Minuten</h2>
   <div class="prep"><div class="pc rv"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M10 21v-6h4v6"/></svg></i><div><b>Ein ruhiger Ort.</b><p>30 Minuten ohne Unterbrechung, Kamera an.</p></div></div><div class="pc rv"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg></i><div><b>Eine konkrete Situation.</b><p>Zum Beispiel das Meeting, in dem du zuletzt nicht durchgedrungen bist.</p></div></div><div class="pc rv"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/></svg></i><div><b>Stift und Papier.</b><p>Du wirst dir etwas notieren wollen.</p></div></div></div>
-  <p class="prep-note rv">Vor dem Termin erinnert dich das Team per WhatsApp. 15 Minuten vorher kommt dort auch der Link zum Gespräch. Wenn du doch nicht kannst, findest du in deiner Bestätigungsmail einen Link, mit dem du umbuchst, statt den Termin verfallen zu lassen. <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Umbuchen-Link in der Bestätigungsmail]</span></p>
+  <p class="prep-note rv">Vor dem Termin erinnert dich das Team per WhatsApp. 15 Minuten vorher kommt dort auch der Link zum Gespräch. Wenn du doch nicht kannst, ruf einfach an und wir finden einen neuen Termin.</p>
  </div>
 </section>
 <section class="sec" id="fragen">
  <div class="wrap">
   <h2 class="rv center">Bevor du buchst: sechs kurze Antworten</h2>
-  <div class="faq6"><div class="rv"><h3><i>1.</i>Was kostet das Gespräch?</h3><p>Nichts. Das Gespräch ist kostenlos.</p></div><div class="rv"><h3><i>2.</i>Muss ich danach ein Seminar buchen?</h3><p>Nein. Wenn ein Seminar passt, bekommst du Termine und Details. Ob und wann du buchst, entscheidest du danach.</p></div><div class="rv"><h3><i>3.</i>Spreche ich mit Michael Ehlers?</h3><p>Du sprichst mit einem Mitglied aus Michaels Team. Es klärt mit dir, ob und welches Format zu dir passt. <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Name und Rolle der Person im Gespräch]</span></p></div><div class="rv"><h3><i>4.</i>Wie läuft das Gespräch technisch?</h3><p>Per Videocall am Laptop oder Handy. Den Link schickt dir das Team per WhatsApp, spätestens 15 Minuten vorher. <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Video-Tool des Gesprächs]</span></p></div><div class="rv"><h3><i>5.</i>Was, wenn mir etwas dazwischenkommt?</h3><p>Buch einfach um. Den Link dafür findest du in deiner Bestätigungsmail. <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Umbuchen-Link in der Bestätigungsmail]</span></p></div><div class="rv"><h3><i>6.</i>Kann ich auch anrufen?</h3><p>Ja. Du erreichst das Team unter <a href="tel:+4915888367664">+49 15888367664</a>.</p></div></div>
+  <div class="faq6"><div class="rv"><h3><i>1.</i>Was kostet das Gespräch?</h3><p>Nichts. Das Gespräch ist kostenlos.</p></div><div class="rv"><h3><i>2.</i>Muss ich danach ein Seminar buchen?</h3><p>Nein. Wenn ein Seminar passt, bekommst du Termine und Details. Ob und wann du buchst, entscheidest du danach.</p></div><div class="rv"><h3><i>3.</i>Spreche ich mit Michael Ehlers?</h3><p>Du sprichst mit einem Experten aus Michaels Team. Es klärt mit dir, ob und welches Format zu dir passt.</p></div><div class="rv"><h3><i>4.</i>Wie läuft das Gespräch technisch?</h3><p>Per Videocall am Laptop oder Handy. Den Link schickt dir das Team per WhatsApp, spätestens 15 Minuten vorher.</p></div><div class="rv"><h3><i>5.</i>Was, wenn mir etwas dazwischenkommt?</h3><p>Sag einfach kurz Bescheid, dann finden wir gemeinsam einen neuen Termin.</p></div><div class="rv"><h3><i>6.</i>Kann ich auch anrufen?</h3><p>Ja. Du erreichst das Team unter <a href="tel:+4915888367664">+49 15888367664</a>.</p></div></div>
   <div class="ctabar rv"><a class="btn" href="#kalender" data-jump>Termin wählen</a></div>
  </div>
 </section></main>
@@ -580,6 +630,13 @@ p{margin:0}
  // one FAQ open at a time
  var ds = document.querySelectorAll('.acc details');
  ds.forEach(function(d){ d.addEventListener('toggle', function(){ if(d.open){ ds.forEach(function(o){ if(o!==d) o.open=false; }); } }); });
+ // mobile nav burger
+ var hin = document.querySelector('.hdr__in'), burger = document.querySelector('.hdr__burger');
+ if(hin && burger){
+  burger.addEventListener('click', function(){ hin.classList.toggle('open'); });
+  hin.querySelectorAll('nav a').forEach(function(a){ a.addEventListener('click', function(){ hin.classList.remove('open'); }); });
+  addEventListener('resize', function(){ if(innerWidth>860) hin.classList.remove('open'); });
+ }
 })();
 </script><script>
 (function(){

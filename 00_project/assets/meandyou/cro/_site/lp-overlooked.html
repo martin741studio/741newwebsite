@@ -8,14 +8,53 @@
 --navy:#2B3C52;--char:#47403A;--ink:#2A2622;--muted:#5E5650;--on-dark:#F2EDE4;--line:rgba(71,64,58,.16);--gold:#C9A24A;
 --serif:"Libre Baskerville",Georgia,serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--r:22px;--w:1240px}
 *{box-sizing:border-box}html{scroll-behavior:auto}
+html,body{overflow-x:hidden;max-width:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.62 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block;height:auto}
 a{color:inherit}
 a[href^="tel:"]{white-space:nowrap}
 section[id]{scroll-margin-top:96px}
-h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em;text-wrap:balance;overflow-wrap:break-word;word-break:break-word}
+h1,h1 *{min-width:0}
 h2{font-size:44px;line-height:1.16}
 h3{font-size:24px;line-height:1.3}
+@media (max-width:640px){
+ .wrap{padding:0 20px!important}
+ h1 .big,.hero h1 .big,.hero--ov h1 .big,.hero--faq h1 .big,.hero--rp h1 .big,.u-hero h1 .big,.bk h1 .big{font-size:clamp(32px,9.5vw,44px)!important;line-height:1.14!important}
+ h2,.band h2,.closer h2,.u-band h2,.u-closer h2,.u-dark h2{font-size:clamp(26px,7vw,34px)!important;line-height:1.18!important;max-width:none!important}
+ h3{font-size:19px!important}
+ .sec{padding:64px 0!important}
+ .proofline,.hero--split .proofline,.u-hero .proofline,.hero--vids .proofline{flex-wrap:wrap!important;white-space:normal!important;font-size:15px!important}
+ .hdr__in{flex-wrap:wrap!important}
+ .stats b,.fact b,.nums b,.u-facts b{white-space:normal!important}
+ .subnav .ftopics{width:calc(100% - 24px)!important;max-width:560px!important;overflow-x:auto!important;flex-wrap:nowrap!important;-webkit-overflow-scrolling:touch!important;justify-content:flex-start!important}
+ .subnav .ftopics .chip{white-space:nowrap!important;flex:none!important}
+ .media{flex-wrap:wrap!important;gap:18px 24px!important}
+ .media span{white-space:normal!important}
+ .u-hero__txt,.hero__txt{max-width:100%!important}
+ /* split hero (home, seminare, michael, rhetorik): photo stays a full-bleed hero background and fades vertically into the paper, text + buttons sit on solid paper */
+ .hero,.hero--split{display:block!important;position:relative!important;height:auto!important;min-height:0!important;max-height:none!important;padding:0 0 44px!important;overflow:hidden!important}
+ .hero__img,.hero--split .hero__img{position:absolute!important;inset:0 0 auto 0!important;width:100%!important;height:420px!important;margin:0!important;overflow:hidden!important}
+ .hero__img img,.hero--split .hero__img img{height:100%!important;margin:0!important;object-position:50% 20%!important}
+ .hero__img::after,.hero--split .hero__img::after{display:block!important;content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(180deg,rgba(250,248,244,0) 0%,rgba(250,248,244,0) 38%,rgba(250,248,244,.72) 62%,var(--paper) 100%)!important}
+ .hero__in{padding:0 20px!important}
+ .hero__txt,.hero--split .hero__txt{padding-top:300px!important;gap:14px!important}
+ .hero .proofline{font-size:14px!important;gap:8px!important;line-height:1.4!important}
+ .hero .body{font-size:17px!important}
+ .hero .sub{font-size:20px!important}
+ .cta-row{width:100%!important}
+ .hero .btns,.btns{flex-direction:column!important;width:100%!important;gap:12px!important}
+ .hero .btns .btn,.btns .btn,.hero .cta-row>.btn,.u-hero .cta-row>.btn{width:100%!important;padding:18px 20px!important;font-size:17px!important;white-space:normal!important;text-align:center!important}
+ .btn--ghost{background:#fff!important;border:1.5px solid rgba(42,38,34,.22)!important}
+ .assure{font-size:14px!important;align-items:flex-start!important}
+ .tblw{overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
+ table.tb,table.cmp{width:max-content!important;min-width:100%!important}
+ table.cmp{display:block!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
+ /* every multi-column grid site-wide collapses to one column on mobile */
+ .acc,.acc2,.acc2c,.after,.ansgrid,.badges,.badges4,.bar,.bk__grid,.bkpage .clarify,.blk,.blocks,.books,.clarify,.closer--ov .closer__in,.closer--plain .closer__in,.cols01,.cols3,.credrow,.diag,.epl,.err,.exc,.factgrid,.facts,.facts4,.faq6,.faqgrid,.feat,.flow,.fmts,.foot--min .foot__in,.foot__in,.formats,.ftopics,.grpgrid,.hero--faq .hero__in,.incl,.learn,.method,.mgrid,.mgrid2,.mic,.mic .qq,.moments,.myths,.narrow .pod,.nums,.opt,.parts,.pcard,.place,.places,.pod,.pods,.prep,.pricing,.proof__grid,.pstrip__in,.pub,.pull,.q2,.q4,.qgrid,.qgrid3,.quotes4,.rl,.rlc,.rp-answer,.rp-comm,.rp-learn .ex3,.rp-learn .learn,.rp-meth,.rp-meth .cols01,.rp-mic,.rp-proof__in,.rp-steps,.scard,.scards,.seminar,.sits,.split,.ssum,.stats,.step,.steps5,.talk2,.tgrid,.themes,.tiles,.tl,.topics,.trans,.trio,.two,.u-bi,.u-cgrid,.u-cols,.u-csteps,.u-dtop,.u-facts,.u-kurz__grid,.u-method,.u-mic,.u-pgrid,.u-sits,.u-steps,.u-voices .qgrid,.u-who,.vcols,.vids,.voices,.voices .vids,.vsl,.who2{grid-template-columns:1fr!important}
+ .rp-who{flex-wrap:wrap!important}
+ .calendly-inline-widget{min-width:0!important}
+}
 p{margin:0}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 40px}
 .ov{font:600 14px/1.2 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--cta)}
@@ -45,6 +84,21 @@ p{margin:0}
 .hdr nav{display:flex;gap:30px;margin-left:auto;font-size:16px;font-weight:500}
 .hdr nav a{text-decoration:none;color:var(--ink)}.hdr nav a:hover{color:var(--cta)}
 .hdr .btn{padding:14px 24px;font-size:16px}
+.hdr__burger{display:none;margin-left:auto;width:40px;height:40px;border:none;background:none;cursor:pointer;flex:none;position:relative}
+.hdr__burger span,.hdr__burger span::before,.hdr__burger span::after{content:"";position:absolute;left:9px;right:9px;height:2px;background:var(--ink);transition:transform .2s,opacity .2s}
+.hdr__burger span{top:19px}.hdr__burger span::before{top:-8px}.hdr__burger span::after{top:8px}
+.hdr__in.open .hdr__burger span{background:transparent}
+.hdr__in.open .hdr__burger span::before{transform:translateY(8px) rotate(45deg)}
+.hdr__in.open .hdr__burger span::after{transform:translateY(-8px) rotate(-45deg)}
+@media (max-width:860px){
+ .hdr{top:0}
+ .hdr__in{border-radius:0;padding:10px 14px;gap:0;flex-wrap:wrap}
+ .hdr nav{display:none;order:4;width:100%;flex-direction:column;align-items:flex-start;gap:0;margin:14px 0 4px;font-size:19px}
+ .hdr__in.open nav{display:flex}
+ .hdr nav a{padding:12px 0;width:100%;border-top:1px solid rgba(42,38,34,.1)}
+ .hdr .btn{margin-left:auto;padding:11px 18px;font-size:14px;order:2}
+ .hdr__burger{display:block;order:3;margin-left:10px}
+}
 /* hero */
 .hero{position:relative;min-height:760px;height:100vh;max-height:900px;display:flex;align-items:center;overflow:hidden;background:var(--paper)}
 .hero__img{position:absolute;inset:0 0 0 auto;width:66%;overflow:hidden}
@@ -389,6 +443,7 @@ body{background:var(--cool)}
 .dbox__b p{color:var(--on-dark);font-size:17px}
 .dbox figcaption{font:italic 400 17px/1.5 var(--serif);color:var(--on-navy-2);padding:0 6px}
 .diag .dbox:not(:last-child)::after{content:"";position:absolute;right:-29px;top:56px;border:7px solid transparent;border-left:10px solid rgba(169,190,211,.75)}
+.dbox__ex{font-size:15.5px;line-height:1.5;color:var(--on-dark);opacity:.9;padding:0 6px}.dbox__ex b{color:var(--sand);font-weight:600}
 .mnote{margin-top:36px;text-align:center}
 /* intro column beside table */
 .tgrid{display:grid;grid-template-columns:330px 1fr;gap:48px;align-items:start;margin-top:30px}
@@ -447,6 +502,7 @@ table.tb{width:100%;border-collapse:collapse;font-size:17px}
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://www.meandyou.de/lp-overlooked#webpage", "url": "https://www.meandyou.de/lp-overlooked", "name": "Sich Gehör verschaffen: Rhetorik mit Michael Ehlers", "inLanguage": "de", "about": {"@id": "https://www.meandyou.de/michael#person"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://www.meandyou.de/"}, {"@type": "ListItem", "position": 2, "name": "Sich Gehör verschaffen", "item": "https://www.meandyou.de/lp-overlooked"}]}, {"@type": "EducationalOrganization", "@id": "https://www.meandyou.de/#organization", "name":"Me&You Communication FZCO", "alternateName": "me&you Communication", "url": "https://www.meandyou.de/", "address": {"@type": "PostalAddress", "streetAddress": "Landsknechtstraße 50", "postalCode": "96103", "addressLocality": "Hallstadt", "addressCountry": "DE"}}, {"@type": "Person", "@id": "https://www.meandyou.de/michael#person", "name": "Michael Ehlers", "jobTitle": "Rhetoriktrainer und Executive Coach", "worksFor": {"@id": "https://www.meandyou.de/#organization"}, "url": "https://www.meandyou.de/michael", "sameAs": ["https://institut-ehlers.de/michael-ehlers"]}, {"@type": "Service", "@id": "https://www.meandyou.de/lp-overlooked#service", "name": "Rhetoriktraining: sich Gehör verschaffen", "serviceType": "Rhetoriktraining", "provider": {"@id": "https://www.meandyou.de/#organization"}, "url": "https://www.meandyou.de/lp-overlooked"}, {"@type": "FAQPage", "@id": "https://www.meandyou.de/lp-overlooked#faq", "mainEntity": [{"@type": "Question", "name": "Was kostet ein Rhetorikkurs bei Michael Ehlers?", "acceptedAnswer": {"@type": "Answer", "text": "Das Gespräch ist kostenlos. Den Preis für das Format, das zu dir passt, nennt dir Michaels Team im Gespräch."}}, {"@type": "Question", "name": "Wie verschaffe ich mir im Meeting Gehör?", "acceptedAnswer": {"@type": "Answer", "text": "Bring deinen Kern zuerst, in zwei Minuten und mit klarem Aufbau. Bleib ruhig, wenn dich jemand unterbricht. Achte darauf, dass dein Auftritt zu deinen Worten passt. Diese Teile trainierst du im Seminar."}}, {"@type": "Question", "name": "Was bringt ein Rhetorikkurs, wenn ich fachlich schon gut bin?", "acceptedAnswer": {"@type": "Answer", "text": "Er trainiert den Teil, den Fachwissen nicht abdeckt: den Aufbau deines Arguments und deinen Vortrag. Im Seminar sprichst du selbst und wirst dabei auf Video aufgenommen. Danach bekommst du Rückmeldung. Ein bestimmtes Ergebnis kann niemand versprechen. Auf dem Video siehst du aber selbst, wie du wirkst."}}, {"@type": "Question", "name": "Wie kann ich Durchsetzungsvermögen lernen?", "acceptedAnswer": {"@type": "Answer", "text": "Indem du seine Teile einzeln übst. Durchsetzungsvermögen zeigt sich in deiner Argumentation und in deiner Reaktion auf Angriffe. Beides lässt sich trainieren, zum Beispiel mit Überzeugungspsychologie und dem Kontern unfairer Methoden. Laut musst du dafür nicht werden."}}, {"@type": "Question", "name": "Welche Kompetenz ist Durchsetzungsvermögen?", "acceptedAnswer": {"@type": "Answer", "text": "Durchsetzungsvermögen zählt zu den sozialen Kompetenzen. Du vertrittst deine Position so, dass andere ihr folgen können. Dazu brauchst du einen klaren Aufbau und Ruhe unter Druck. Dein Auftritt muss außerdem zu deinen Worten passen."}}, {"@type": "Question", "name": "Wie lerne ich am besten Rhetorik?", "acceptedAnswer": {"@type": "Answer", "text": "Durch Üben mit ehrlicher Rückmeldung. Bücher geben dir das Wissen. Unter Druck hilft dir aber nur, was du geübt hast. Deshalb arbeiten die Seminare mit Reden vor der Gruppe und mit Videoanalyse."}}, {"@type": "Question", "name": "Ist das Gespräch ein Verkaufsgespräch?", "acceptedAnswer": {"@type": "Answer", "text": "Michaels Team klärt mit dir, wo du stehst und welches Format passt. Danach bekommst du die Details. Ob du buchst, entscheidest du allein."}}, {"@type": "Question", "name": "Muss ich mich verstellen oder lauter werden?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Rhetorik bedeutet nicht, lauter oder extrovertierter zu sein. Introvertierte überzeugen oft durch Präzision und Ruhe. Nicht anders werden, klarer werden."}}, {"@type": "Question", "name": "Ich habe schon Kommunikationstrainings gemacht. Was ist hier anders?", "acceptedAnswer": {"@type": "Answer", "text": "Der Startpunkt. Hier beginnt die Arbeit bei deiner Persönlichkeit und deinen Mustern. Danach kommen die Techniken, passend zu deinem Naturell."}}]}]}</script>
 </head><body><header class="hdr"><div class="hdr__in">
  <a class="hdr__logo" href="index.html"><img src="assets/lp-overlooked/logo-dark.png" alt="Michael Ehlers &amp; You Communication, Startseite" width="1794" height="647"></a>
+ <button class="hdr__burger" aria-label="Menü" aria-expanded="false"><span></span></button>
  <nav aria-label="Hauptnavigation"><a href="seminare.html">Seminare</a><a href="michael.html">Michael</a><a href="rhetorik.html">Was ist Rhetorik</a><a href="stimmen.html">Stimmen</a><a href="#faq">FAQ</a></nav>
  <a class="btn" href="gespraech-buchen.html?utm_source=lp-overlooked&utm_content=header" data-event="booking_click">Optionen ansehen</a>
 </div></header><main>
@@ -456,7 +512,7 @@ table.tb{width:100%;border-collapse:collapse;font-size:17px}
    <h1 class="rv"><span class="kicker">Sich Gehör verschaffen:</span><span class="big">Recht zu haben<br>war nie das Problem.</span></h1>
    <p class="sub rv">Du bist bestinformiert im Raum. Gefolgt wird trotzdem jemand anderem. Zwischen Kompetenz und Wirkung liegt eine Lücke.</p>
    <p class="body rv">Michael Ehlers trainiert seit 1990 Menschen, deren Fachwissen stimmt und deren Wirkung im Meeting dahinter zurückbleibt. Im Training arbeitest du an Argumentation und Auftritt. Dazu gehören Videoanalyse und direkte Rückmeldung.</p>
-   <p class="proofline rv"><span class="stars" aria-label="5 Sterne"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span> 227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert · über 8.000 Teilnehmer</p>
+   <p class="proofline rv"><span class="stars" aria-label="5 Sterne"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span> 4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert · über 8.000 Teilnehmer</p>
    <div class="cta-row rv"><a class="btn btn--light cta--breathe" href="gespraech-buchen.html?utm_source=lp-overlooked&utm_content=hero" data-event="booking_click">Optionen ansehen</a><p class="assure"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>30 Minuten, kostenlos, per Video. Du klärst, welches Format zu dir passt.</p></div>
   </div>
  </div>
@@ -466,7 +522,7 @@ table.tb{width:100%;border-collapse:collapse;font-size:17px}
  <div class="wrap pstrip__in">
   <div class="pstrip__face rv"><img src="assets/lp-overlooked/michael-face.webp" alt="Michael Ehlers, Porträt" width="360" height="360"></div>
   <div class="nums rv"><div><b>Seit 1990</b><span>Rhetoriktrainer</span></div><div><b>8.000+</b><span>Teilnehmer</span></div><div><b>Neun Bücher</b><span>als Autor oder Herausgeber</span></div><div><b>Top 100</b><span>Trainer laut ERFOLG Magazin (Ausgabe 2017)</span></div></div>
-  <blockquote class="rv">„Michael Ehlers zeigt, wie man […] wirklich gehört wird.“<small>Bewertung bei Google, Auslassung mit […] markiert <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Freigabe Zitat]</span></small></blockquote>
+  <blockquote class="rv">„Michael Ehlers zeigt, wie man […] wirklich gehört wird.“<small>Bewertung bei Google, Auslassung mit […] markiert</small></blockquote>
  </div>
 </section>
 <section class="sec sec--cool gridded" id="gehoer-verschaffen">
@@ -489,8 +545,7 @@ table.tb{width:100%;border-collapse:collapse;font-size:17px}
  <div class="wrap">
   <div class="mgrid2"><div><h2 class="rv">Wirkung beginnt nicht bei der Technik.</h2>
   <p class="mintro rv">Die meisten Rhetoriktrainings starten bei Werkzeugen. Wir starten davor: bei Persönlichkeit, Selbstbild, Mustern und innerer Stabilität. Erst wenn das steht, tragen die Werkzeuge.</p></div>
-  <div class="diag"><figure class="dbox rv"><div class="dbox__b"><i>01</i><h3>Persönlichkeit.</h3><p>Wer du bist, bevor du sprichst.</p></div><figcaption>Die Frage dahinter: Welche Muster zeigen sich, wenn du unter Druck sprichst?</figcaption></figure><figure class="dbox rv"><div class="dbox__b"><i>02</i><h3>Kongruenz.</h3><p>Wenn Haltung und Worte dasselbe sagen.</p></div><figcaption>Die Frage dahinter: Passt das, was du sagst, zu dem, wie du es sagst?</figcaption></figure><figure class="dbox rv"><div class="dbox__b"><i>03</i><h3>Wirkung.</h3><p>Was davon im Raum ankommt.</p></div><figcaption>Die Frage dahinter: Was nehmen die anderen mit, wenn du fertig bist?</figcaption></figure></div></div>
-  <p class="mnote rv"><span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: ein Satz und eine Übung je Methodenschritt]</span></p>
+  <div class="diag"><figure class="dbox rv"><div class="dbox__b"><i>01</i><h3>Persönlichkeit.</h3><p>Wer du bist, bevor du sprichst.</p></div><figcaption>Die Frage dahinter: Welche Muster zeigen sich, wenn du unter Druck sprichst?</figcaption><p class="dbox__ex"><b>Übung:</b> Notier dir die letzten drei Situationen, in denen du geschwiegen hast, obwohl du eine Meinung hattest. Was war in diesem Moment der eigentliche Grund?</p></figure><figure class="dbox rv"><div class="dbox__b"><i>02</i><h3>Kongruenz.</h3><p>Wenn Haltung und Worte dasselbe sagen.</p></div><figcaption>Die Frage dahinter: Passt das, was du sagst, zu dem, wie du es sagst?</figcaption><p class="dbox__ex"><b>Übung:</b> Nimm einen Satz auf, den du bald sagen musst. Hör ihn dir an und frag dich: Klingt das, wie es gemeint ist?</p></figure><figure class="dbox rv"><div class="dbox__b"><i>03</i><h3>Wirkung.</h3><p>Was davon im Raum ankommt.</p></div><figcaption>Die Frage dahinter: Was nehmen die anderen mit, wenn du fertig bist?</figcaption><p class="dbox__ex"><b>Übung:</b> Frag nach dem nächsten Gespräch eine Person, die dabei war: Was hast du bei mir mitgenommen?</p></figure></div></div>
  </div>
 </section>
 <section class="sec sec--cool" id="vergleich">
@@ -507,23 +562,23 @@ table.tb{width:100%;border-collapse:collapse;font-size:17px}
  <div class="wrap">
   <h2 class="rv">Was du trainierst, wenn du überzeugen willst</h2>
   <div class="tgrid"><p class="lead rv">Überzeugungskraft besteht aus einzelnen Fähigkeiten. Jede davon lässt sich üben. Die Tabelle zeigt, welche Situation zu welchem Thema gehört und in welchem Seminar es vorkommt.</p>
-  <div class="tblw rv"><table class="tb tb--top"><thead><tr><td aria-hidden="true"></td><th scope="col">Situation</th><th scope="col">Was du trainierst</th><th scope="col">Seminar</th></tr></thead><tbody><tr><td class="n">01</td><td class="sitc">Dein Argument stimmt, die Entscheidung fällt anders</td><td>Überzeugungspsychologie: Motive erkennen, Argumente gezielt platzieren</td><td><a class="tag" href="seminare.html#ruhig-bleiben">Ruhig bleiben, wenn es eng wird</a></td></tr><tr><td class="n">02</td><td class="sitc">Du wirst unterbrochen oder angegriffen</td><td>Unfaire Methoden durchschauen und ruhig kontern, Schlagfertigkeit</td><td><a class="tag" href="seminare.html#ruhig-bleiben">Ruhig bleiben, wenn es eng wird</a></td></tr><tr><td class="n">03</td><td class="sitc">Die Diskussion läuft ohne Ergebnis</td><td>Meetings führen: Diskussionen leiten, Ergebnisse klar sichern</td><td><a class="tag" href="seminare.html#ruhig-bleiben">Ruhig bleiben, wenn es eng wird</a></td></tr><tr><td class="n">04</td><td class="sitc">Deine Idee braucht zu lange</td><td>In 2 Minuten ein starkes Statement setzen, mit klarer Formel aufbauen</td><td><a class="tag" href="seminare.html#frei-sprechen">Frei sprechen</a></td></tr><tr><td class="n">05</td><td class="sitc">Du sollst eine Gruppe gewinnen</td><td>Gruppen überzeugen mit Methoden großer Redner, Zuhören</td><td><a class="tag" href="seminare.html#mit-sprache-fuehren">Mit Sprache führen</a></td></tr></tbody></table></div></div>
-  <p class="below rv">In „Frei sprechen“ und „Ruhig bleiben, wenn es eng wird“ kommt die Körpersprache dazu: Signale des Gegenübers erkennen und die eigene Gestik gezielt einsetzen. Überzeugend argumentieren und souverän auftreten: Beides trainierst du im selben Seminar. Die Seminarnamen sind Arbeitstitel <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Seminarname]</span>. Alle Inhalte findest du auf der Seite <a class="tlink" href="seminare.html">Seminare</a>.</p>
+  <div class="tblw rv"><table class="tb tb--top"><thead><tr><td aria-hidden="true"></td><th scope="col">Situation</th><th scope="col">Was du trainierst</th><th scope="col">Seminar</th></tr></thead><tbody><tr><td class="n">01</td><td class="sitc">Dein Argument stimmt, die Entscheidung fällt anders</td><td>Überzeugungspsychologie: Motive erkennen, Argumente gezielt platzieren</td><td><a class="tag" href="seminare.html#ruhig-bleiben">LOGOS</a></td></tr><tr><td class="n">02</td><td class="sitc">Du wirst unterbrochen oder angegriffen</td><td>Unfaire Methoden durchschauen und ruhig kontern, Schlagfertigkeit</td><td><a class="tag" href="seminare.html#ruhig-bleiben">LOGOS</a></td></tr><tr><td class="n">03</td><td class="sitc">Die Diskussion läuft ohne Ergebnis</td><td>Meetings führen: Diskussionen leiten, Ergebnisse klar sichern</td><td><a class="tag" href="seminare.html#ruhig-bleiben">LOGOS</a></td></tr><tr><td class="n">04</td><td class="sitc">Deine Idee braucht zu lange</td><td>In 2 Minuten ein starkes Statement setzen, mit klarer Formel aufbauen</td><td><a class="tag" href="seminare.html#frei-sprechen">ETHOS</a></td></tr><tr><td class="n">05</td><td class="sitc">Du sollst eine Gruppe gewinnen</td><td>Gruppen überzeugen mit Methoden großer Redner, Zuhören</td><td><a class="tag" href="seminare.html#mit-sprache-fuehren">PATHOS</a></td></tr></tbody></table></div></div>
+  <p class="below rv">In ETHOS und LOGOS kommt die Körpersprache dazu: Signale des Gegenübers erkennen und die eigene Gestik gezielt einsetzen. Überzeugend argumentieren und souverän auftreten: Beides trainierst du im selben Seminar. Alle Inhalte findest du auf der Seite <a class="tlink" href="seminare.html">Seminare</a>.</p>
  </div>
 </section>
 <section class="sec sec--cool" id="formate">
  <div class="wrap">
   <h2 class="rv">Rhetorikkurs online oder Seminar: Was passt zu dir?</h2>
   <div class="tgrid"><p class="lead rv">Die Tabelle zeigt die Formate im Vergleich. Welches zu dir passt, klärst du vorher in einem kurzen Gespräch.</p>
-  <div class="tblw rv"><table class="tb tb--fmt"><thead><tr><td aria-hidden="true"></td><th scope="col">Online-Kurs</th><th scope="col">Seminar</th><th scope="col" class="hl">Gespräch</th></tr></thead><tbody><tr><th scope="row">Wo</th><td>online, von überall</td><td>vor Ort: Mallorca, Barcelona, Dubai, Frankfurt, Berlin, Zypern</td><td class="hl">per Video</td></tr><tr><th scope="row">Wie</th><td>Selbstlernkurs mit Video-Lektionen</td><td>Intensivtraining in der Gruppe, 10 bis 14 Plätze</td><td class="hl">30 Minuten mit Michaels Team</td></tr><tr><th scope="row">Rückmeldung</th><td><span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Extras des Online-Kurses]</span></td><td>dreimal Videoanalyse mit Sofort-Feedback, VR-Training</td><td class="hl">Einschätzung deiner Situation</td></tr><tr><th scope="row">Zeit</th><td>in deinem Tempo, Zugang mindestens 12 Monate</td><td>3 Tage Training und 1 Tag Get Together</td><td class="hl">30 Minuten</td></tr><tr><th scope="row">Nächster Schritt</th><td>im Gespräch klären</td><td>im Gespräch klären</td><td class="hl">Termin online wählen</td></tr></tbody></table></div></div>
-  <div class="ctarow"><p class="below rv" style="margin-top:0">Den Kursnamen und den genauen Umfang nennt dir Michaels Team im Gespräch <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Kursname]</span>. Preise stehen nicht auf dieser Seite. Du erfährst sie im Gespräch.</p>
+  <div class="tblw rv"><table class="tb tb--fmt"><thead><tr><td aria-hidden="true"></td><th scope="col">Online-Kurs</th><th scope="col">Seminar</th><th scope="col" class="hl">Gespräch</th></tr></thead><tbody><tr><th scope="row">Wo</th><td>online, von überall</td><td>vor Ort: Mallorca, Barcelona, Dubai, Frankfurt, Berlin, Zypern</td><td class="hl">per Video</td></tr><tr><th scope="row">Wie</th><td>Selbstlernkurs mit Video-Lektionen</td><td>Intensivtraining in der Gruppe, 14 Plätze</td><td class="hl">30 Minuten mit einem Experten aus Michaels Team</td></tr><tr><th scope="row">Rückmeldung</th><td>Video-Lektionen, Workbook, Community und Live-Q&amp;A</td><td>dreimal Videoanalyse mit Sofort-Feedback, VR-Training</td><td class="hl">Einschätzung deiner Situation</td></tr><tr><th scope="row">Zeit</th><td>in deinem Tempo, Zugang mindestens 12 Monate</td><td>3 Tage Training und 1 Tag Get Together</td><td class="hl">30 Minuten</td></tr><tr><th scope="row">Nächster Schritt</th><td>im Gespräch klären</td><td>im Gespräch klären</td><td class="hl">Termin online wählen</td></tr></tbody></table></div></div>
+  <div class="ctarow"><p class="below rv" style="margin-top:0">Der Kurs heißt „Rhetorik für Intelligente". Den genauen Umfang nennt dir Michaels Team im Gespräch. Preise stehen nicht auf dieser Seite. Du erfährst sie im Gespräch.</p>
   <div class="cta-row rv" style="align-items:flex-end"><a class="btn" href="gespraech-buchen.html?utm_source=lp-overlooked&utm_content=formate" data-event="booking_click">Optionen ansehen</a><p class="assure"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>30 Minuten, kostenlos, per Video.</p></div></div>
  </div>
 </section>
 <section class="sec sec--grey" id="ablauf">
  <div class="wrap">
   <h2 class="rv">Der erste Schritt dauert 30 Minuten</h2>
-  <div class="flow" data-in><div class="flow__line"><i></i></div><div class="fstep rv"><span class="n">1</span><div class="fstep__t"><h3>Termin wählen.</h3><p>Du suchst dir online einen freien Termin aus. Danach bekommst du eine Bestätigung per E-Mail und vor dem Termin eine kurze Erinnerung per WhatsApp.</p></div></div><div class="fstep rv"><span class="n">2</span><div class="fstep__t"><h3>Gespräch per Video.</h3><p>30 Minuten mit Michaels Team <span class="fehlt" title="[FEHLT]">[von Kunde bestätigen: Name und Rolle der Person im Gespräch]</span>. Michaels Team klärt mit dir, wo du stehst und welches Format passt. Bring gern eine konkrete Situation mit, zum Beispiel ein Meeting, in dem du nicht durchgedrungen bist.</p></div></div><div class="fstep rv"><span class="n">3</span><div class="fstep__t"><h3>In Ruhe entscheiden.</h3><p>Du bekommst die Details zum passenden Format. Ob du buchst, entscheidest du danach.</p></div></div></div>
+  <div class="flow" data-in><div class="flow__line"><i></i></div><div class="fstep rv"><span class="n">1</span><div class="fstep__t"><h3>Termin wählen.</h3><p>Du suchst dir online einen freien Termin aus. Danach bekommst du eine Bestätigung per E-Mail und vor dem Termin eine kurze Erinnerung per WhatsApp.</p></div></div><div class="fstep rv"><span class="n">2</span><div class="fstep__t"><h3>Gespräch per Video.</h3><p>30 Minuten mit einem Experten aus Michaels Team. Wir klären mit dir, wo du stehst und welches Format passt. Bring gern eine konkrete Situation mit, zum Beispiel ein Meeting, in dem du nicht durchgedrungen bist.</p></div></div><div class="fstep rv"><span class="n">3</span><div class="fstep__t"><h3>In Ruhe entscheiden.</h3><p>Du bekommst die Details zum passenden Format. Ob du buchst, entscheidest du danach.</p></div></div></div>
   <p class="costline rv">Kosten: keine.</p>
   <div class="cta-row rv" style="margin-top:22px"><a class="btn" href="gespraech-buchen.html?utm_source=lp-overlooked&utm_content=ablauf">Gespräch buchen</a></div>
  </div>
@@ -541,7 +596,7 @@ table.tb{width:100%;border-collapse:collapse;font-size:17px}
 </section>
 <section class="sec sec--grey" id="stimmen">
  <div class="wrap">
-  <div class="stack"><h2 class="rv">Was Teilnehmer über ihre Wirkung schreiben</h2><p class="lead rv">Auf ProvenExpert haben 227 von 250 Bewertungen 5 Sterne (Stand: Oktober 2026). Vier Auszüge, die zu dieser Situation passen. Auslassungen sind mit […] markiert.</p></div>
+  <div class="stack"><h2 class="rv">Was Teilnehmer über ihre Wirkung schreiben</h2><p class="lead rv">Auf ProvenExpert liegt der Durchschnitt bei 4,9 von 5 Sternen (Stand: Oktober 2026). Vier Auszüge, die zu dieser Situation passen. Auslassungen sind mit […] markiert.</p></div>
   <div class="q2"><article class="q rv"><h3>Wie andere dich wahrnehmen</h3><blockquote>„Ich habe gelernt, meine innere Haltung zum Ausgangspunkt jeder Präsentation zu machen […] Wie ich spreche, wie ich wirke, wie ich wahrgenommen werde.“</blockquote><div class="who"><span>Adrian B.</span><span class="src">Google</span></div></article><article class="q rv"><h3>Selbstbild und Fremdbild</h3><blockquote>„Die Trainings vor der Kamera mit den darauf folgenden Auswertungen helfen die Selbst- und Fremdwahrnehmung zu schärfen.“</blockquote><div class="who"><span>Julian L.</span><span class="src">ProvenExpert</span></div></article><article class="q rv"><h3>Auch für Erfahrene</h3><blockquote>„Trotz 40 Jahren Medienerfahrung konnte ich erstaunlich viel vom Rhetoriktraining profitieren.“</blockquote><div class="who"><span>Peter Escher</span><span class="src">Moderator MDR</span></div></article><article class="q rv"><h3>Nach anderen Schulungen</h3><blockquote>„Ich habe in diesem Kurs mehr gelernt als in all meinen bisherigen Schulungen zusammen.“</blockquote><div class="who"><span>Emrullah A.</span><span class="src">Google</span></div></article></div>
   <div class="vids rv"><div class="vid"><img src="assets/lp-overlooked/v-stimme-1.webp" alt="Teilnehmer-Video 1" width="540" height="960"><b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></b><span>1:00</span></div><div class="vid"><img src="assets/lp-overlooked/v-stimme-2.webp" alt="Teilnehmer-Video 2" width="540" height="960"><b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></b><span>1:12</span></div><div class="vid"><img src="assets/lp-overlooked/v-stimme-3.webp" alt="Teilnehmer-Video 3" width="540" height="960"><b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></b><span>1:23</span></div></div>
   <p class="vcap center rv">Drei Teilnehmer erzählen im Video, wie sie das Seminar erlebt haben. Jedes Video dauert etwa eine Minute. Weitere Bewertungen findest du unter <a class="tlink" href="stimmen.html">Stimmen</a>.</p>
@@ -559,7 +614,7 @@ table.tb{width:100%;border-collapse:collapse;font-size:17px}
   <div><h2 class="rv">Der nächste Schritt ist ein Gespräch.</h2>
   <p class="rv">30 Minuten, kostenlos, per Video. Michaels Team klärt mit dir, wo du stehst und welches Format passt. Danach entscheidest du in Ruhe.</p></div>
   <div><ul class="rv"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Termin online wählen</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Gespräch per Video, von überall</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>kostenlos, du entscheidest danach</span></li></ul></div>
-  <div><p class="proofline rv"><span class="stars" aria-label="5 Sterne"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span> 227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert</p>
+  <div><p class="proofline rv"><span class="stars" aria-label="5 Sterne"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/></svg></span> 4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert</p>
   <div class="cta-row rv"><a class="btn btn--light cta--breathe" href="gespraech-buchen.html?utm_source=lp-overlooked&utm_content=abschluss" data-event="booking_click">Optionen ansehen</a><p class="tel">Lieber anrufen: <a href="tel:+4915888367664">+49 15888367664</a></p></div></div>
  </div></div>
 </section>
@@ -571,7 +626,7 @@ table.tb{width:100%;border-collapse:collapse;font-size:17px}
   <div><h4>Rechtliches</h4><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a></div>
   <div><h4>Kontakt</h4><a href="tel:+4915888367664">+49 15888367664</a><a href="mailto:management@meandyou.de">management@meandyou.de</a><a href="https://www.instagram.com/michael_ehlers_rhetorik/">Instagram</a><a href="https://de.linkedin.com/in/rhetoriktrainer">LinkedIn</a></div>
  </div>
-</footer><div class="proto">Prototyp · nicht live · lokale Gesamtversion · gelb = [FEHLT]</div><script>
+</footer><script>
 (function(){
  var shot = /[?&]shot=1/.test(location.search);
  if(shot){document.documentElement.classList.add('shot');}
@@ -587,5 +642,12 @@ table.tb{width:100%;border-collapse:collapse;font-size:17px}
  // one FAQ open at a time
  var ds = document.querySelectorAll('.acc details');
  ds.forEach(function(d){ d.addEventListener('toggle', function(){ if(d.open){ ds.forEach(function(o){ if(o!==d) o.open=false; }); } }); });
+ // mobile nav burger
+ var hin = document.querySelector('.hdr__in'), burger = document.querySelector('.hdr__burger');
+ if(hin && burger){
+  burger.addEventListener('click', function(){ hin.classList.toggle('open'); });
+  hin.querySelectorAll('nav a').forEach(function(a){ a.addEventListener('click', function(){ hin.classList.remove('open'); }); });
+  addEventListener('resize', function(){ if(innerWidth>860) hin.classList.remove('open'); });
+ }
 })();
 </script></body></html>

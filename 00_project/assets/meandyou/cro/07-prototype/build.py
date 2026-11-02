@@ -25,14 +25,53 @@ CSS = r"""
 --navy:#2B3C52;--char:#47403A;--ink:#2A2622;--muted:#5E5650;--on-dark:#F2EDE4;--line:rgba(71,64,58,.16);--gold:#C9A24A;
 --serif:"Libre Baskerville",Georgia,serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--r:22px;--w:1240px}
 *{box-sizing:border-box}html{scroll-behavior:auto}
+html,body{overflow-x:hidden;max-width:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.62 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block;height:auto}
 a{color:inherit}
 a[href^="tel:"]{white-space:nowrap}
 section[id]{scroll-margin-top:96px}
-h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em;text-wrap:balance;overflow-wrap:break-word;word-break:break-word}
+h1,h1 *{min-width:0}
 h2{font-size:44px;line-height:1.16}
 h3{font-size:24px;line-height:1.3}
+@media (max-width:640px){
+ .wrap{padding:0 20px!important}
+ h1 .big,.hero h1 .big,.hero--ov h1 .big,.hero--faq h1 .big,.hero--rp h1 .big,.u-hero h1 .big,.bk h1 .big{font-size:clamp(32px,9.5vw,44px)!important;line-height:1.14!important}
+ h2,.band h2,.closer h2,.u-band h2,.u-closer h2,.u-dark h2{font-size:clamp(26px,7vw,34px)!important;line-height:1.18!important;max-width:none!important}
+ h3{font-size:19px!important}
+ .sec{padding:64px 0!important}
+ .proofline,.hero--split .proofline,.u-hero .proofline,.hero--vids .proofline{flex-wrap:wrap!important;white-space:normal!important;font-size:15px!important}
+ .hdr__in{flex-wrap:wrap!important}
+ .stats b,.fact b,.nums b,.u-facts b{white-space:normal!important}
+ .subnav .ftopics{width:calc(100% - 24px)!important;max-width:560px!important;overflow-x:auto!important;flex-wrap:nowrap!important;-webkit-overflow-scrolling:touch!important;justify-content:flex-start!important}
+ .subnav .ftopics .chip{white-space:nowrap!important;flex:none!important}
+ .media{flex-wrap:wrap!important;gap:18px 24px!important}
+ .media span{white-space:normal!important}
+ .u-hero__txt,.hero__txt{max-width:100%!important}
+ /* split hero (home, seminare, michael, rhetorik): photo stays a full-bleed hero background and fades vertically into the paper, text + buttons sit on solid paper */
+ .hero,.hero--split{display:block!important;position:relative!important;height:auto!important;min-height:0!important;max-height:none!important;padding:0 0 44px!important;overflow:hidden!important}
+ .hero__img,.hero--split .hero__img{position:absolute!important;inset:0 0 auto 0!important;width:100%!important;height:420px!important;margin:0!important;overflow:hidden!important}
+ .hero__img img,.hero--split .hero__img img{height:100%!important;margin:0!important;object-position:50% 20%!important}
+ .hero__img::after,.hero--split .hero__img::after{display:block!important;content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(180deg,rgba(250,248,244,0) 0%,rgba(250,248,244,0) 38%,rgba(250,248,244,.72) 62%,var(--paper) 100%)!important}
+ .hero__in{padding:0 20px!important}
+ .hero__txt,.hero--split .hero__txt{padding-top:300px!important;gap:14px!important}
+ .hero .proofline{font-size:14px!important;gap:8px!important;line-height:1.4!important}
+ .hero .body{font-size:17px!important}
+ .hero .sub{font-size:20px!important}
+ .cta-row{width:100%!important}
+ .hero .btns,.btns{flex-direction:column!important;width:100%!important;gap:12px!important}
+ .hero .btns .btn,.btns .btn,.hero .cta-row>.btn,.u-hero .cta-row>.btn{width:100%!important;padding:18px 20px!important;font-size:17px!important;white-space:normal!important;text-align:center!important}
+ .btn--ghost{background:#fff!important;border:1.5px solid rgba(42,38,34,.22)!important}
+ .assure{font-size:14px!important;align-items:flex-start!important}
+ .tblw{overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
+ table.tb,table.cmp{width:max-content!important;min-width:100%!important}
+ table.cmp{display:block!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
+ /* every multi-column grid site-wide collapses to one column on mobile */
+ .acc,.acc2,.acc2c,.after,.ansgrid,.badges,.badges4,.bar,.bk__grid,.bkpage .clarify,.blk,.blocks,.books,.clarify,.closer--ov .closer__in,.closer--plain .closer__in,.cols01,.cols3,.credrow,.diag,.epl,.err,.exc,.factgrid,.facts,.facts4,.faq6,.faqgrid,.feat,.flow,.fmts,.foot--min .foot__in,.foot__in,.formats,.ftopics,.grpgrid,.hero--faq .hero__in,.incl,.learn,.method,.mgrid,.mgrid2,.mic,.mic .qq,.moments,.myths,.narrow .pod,.nums,.opt,.parts,.pcard,.place,.places,.pod,.pods,.prep,.pricing,.proof__grid,.pstrip__in,.pub,.pull,.q2,.q4,.qgrid,.qgrid3,.quotes4,.rl,.rlc,.rp-answer,.rp-comm,.rp-learn .ex3,.rp-learn .learn,.rp-meth,.rp-meth .cols01,.rp-mic,.rp-proof__in,.rp-steps,.scard,.scards,.seminar,.sits,.split,.ssum,.stats,.step,.steps5,.talk2,.tgrid,.themes,.tiles,.tl,.topics,.trans,.trio,.two,.u-bi,.u-cgrid,.u-cols,.u-csteps,.u-dtop,.u-facts,.u-kurz__grid,.u-method,.u-mic,.u-pgrid,.u-sits,.u-steps,.u-voices .qgrid,.u-who,.vcols,.vids,.voices,.voices .vids,.vsl,.who2{grid-template-columns:1fr!important}
+ .rp-who{flex-wrap:wrap!important}
+ .calendly-inline-widget{min-width:0!important}
+}
 p{margin:0}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 40px}
 .ov{font:600 14px/1.2 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--cta)}
@@ -62,6 +101,21 @@ p{margin:0}
 .hdr nav{display:flex;gap:30px;margin-left:auto;font-size:16px;font-weight:500}
 .hdr nav a{text-decoration:none;color:var(--ink)}.hdr nav a:hover{color:var(--cta)}
 .hdr .btn{padding:14px 24px;font-size:16px}
+.hdr__burger{display:none;margin-left:auto;width:40px;height:40px;border:none;background:none;cursor:pointer;flex:none;position:relative}
+.hdr__burger span,.hdr__burger span::before,.hdr__burger span::after{content:"";position:absolute;left:9px;right:9px;height:2px;background:var(--ink);transition:transform .2s,opacity .2s}
+.hdr__burger span{top:19px}.hdr__burger span::before{top:-8px}.hdr__burger span::after{top:8px}
+.hdr__in.open .hdr__burger span{background:transparent}
+.hdr__in.open .hdr__burger span::before{transform:translateY(8px) rotate(45deg)}
+.hdr__in.open .hdr__burger span::after{transform:translateY(-8px) rotate(-45deg)}
+@media (max-width:860px){
+ .hdr{top:0}
+ .hdr__in{border-radius:0;padding:10px 14px;gap:0;flex-wrap:wrap}
+ .hdr nav{display:none;order:4;width:100%;flex-direction:column;align-items:flex-start;gap:0;margin:14px 0 4px;font-size:19px}
+ .hdr__in.open nav{display:flex}
+ .hdr nav a{padding:12px 0;width:100%;border-top:1px solid rgba(42,38,34,.1)}
+ .hdr .btn{margin-left:auto;padding:11px 18px;font-size:14px;order:2}
+ .hdr__burger{display:block;order:3;margin-left:10px}
+}
 /* hero */
 .hero{position:relative;min-height:760px;height:100vh;max-height:900px;display:flex;align-items:center;overflow:hidden;background:var(--paper)}
 .hero__img{position:absolute;inset:0 0 0 auto;width:66%;overflow:hidden}
@@ -251,6 +305,13 @@ JS = r"""
  // one FAQ open at a time
  var ds = document.querySelectorAll('.acc details');
  ds.forEach(function(d){ d.addEventListener('toggle', function(){ if(d.open){ ds.forEach(function(o){ if(o!==d) o.open=false; }); } }); });
+ // mobile nav burger
+ var hin = document.querySelector('.hdr__in'), burger = document.querySelector('.hdr__burger');
+ if(hin && burger){
+  burger.addEventListener('click', function(){ hin.classList.toggle('open'); });
+  hin.querySelectorAll('nav a').forEach(function(a){ a.addEventListener('click', function(){ hin.classList.remove('open'); }); });
+  addEventListener('resize', function(){ if(innerWidth>860) hin.classList.remove('open'); });
+ }
 })();
 """
 
@@ -259,7 +320,7 @@ def section_hero():
 <section class="hero" id="top">
  <div class="hero__img"><img data-plx src="assets/michael-magazine.webp" alt="Michael Ehlers, Rhetoriktrainer, liest an einem Café-Tisch im Freien" width="1467" height="2200"></div>
  <div class="wrap hero__in"><div class="hero__txt">
-  <p class="proofline rv">{STARS} 227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert · 4,8 bei Google · über 8.000 Teilnehmer</p>
+  <p class="proofline rv">{STARS} 4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert · 4,8 bei Google · über 8.000 Teilnehmer</p>
   <h1 class="rv"><span class="kicker">Rhetorik-Seminar mit Michael Ehlers:</span><span class="big">Werde unübersehbar, wenn es darauf ankommt.</span></h1>
   <p class="sub rv">Persönlichkeit. Kongruenz. Wirkung.</p>
   <p class="body rv">Michael Ehlers trainiert seit über 30 Jahren Menschen, die fachlich längst überzeugen und trotzdem nicht gehört werden. Drei Tage Intensivtraining in kleiner Gruppe, mit Videoanalyse und Sofort-Feedback.</p>
@@ -280,7 +341,7 @@ def section_proof():
     <p>Das Rhetorik-Seminar dauert drei Tage, dazu kommt ein Tag Get Together. Du trainierst in einer Gruppe von höchstens 14 Menschen, mit drei Videoanalysen und VR-Training. Seminarorte sind Mallorca, Barcelona, Zypern, Dubai, Frankfurt und Berlin. Der erste Schritt ist ein kostenloses Gespräch von 30 Minuten.</p></div>
    <div class="rv" data-in>
     <div class="badges">
-     <div class="badge">{STARS}<b>250 Bewertungen</b><span>auf ProvenExpert, 227 davon mit 5 Sternen</span></div>
+     <div class="badge">{STARS}<b>4,9 von 5 Sternen</b><span>Basierend auf 250 Bewertungen auf ProvenExpert</span></div>
      <div class="badge"><b>Top 100 Trainer</b><span>im deutschsprachigen Raum laut ERFOLG Magazin</span></div>
      <div class="badge"><b>über 8.000</b><span>Teilnehmer seit über 30 Jahren</span></div>
     </div>
@@ -293,9 +354,9 @@ def section_proof():
 
 def section_sits():
     cards = [
-     ('t1','sit-replayers.webp','Eine Frau schreibt abends am Schreibtisch in ein Notizbuch','Dir fehlen nicht die Worte. Sie kommen nur zu spät.','Im Meeting bleibst du still. Auf dem Heimweg hast du den perfekten Satz. Das Problem ist nicht dein Wissen, sondern der Moment.','https://clients.741.studio/meandyou/v2/lp-replayers.html','Mehr dazu: Wenn dir die Worte zu spät kommen'),
-     ('t2','sit-overlooked.webp','Besprechung an einem Glastisch, eine Frau spricht, die anderen sehen weg','Recht zu haben war nie das Problem.','Du bist bestinformiert im Raum. Gefolgt wird trotzdem jemand anderem. Zwischen Kompetenz und Wirkung liegt eine Lücke.','https://clients.741.studio/meandyou/v2/lp-overlooked.html','Mehr dazu: Recht haben und trotzdem überhört werden'),
-     ('t3','sit-undersold.webp','Eine Gründerin erklärt zwei Kunden am Holztisch ihr Unternehmen, warmes Licht','Dein Unternehmen ist größer, als es nach außen wirkt.','Die Substanz stimmt. Der Auftritt bleibt darunter. Nach außen wirkt das Unternehmen kleiner, als es ist.','https://clients.741.studio/meandyou/v2/lp-undersold.html','Mehr dazu: Wenn dein Unternehmen kleiner wirkt'),
+     ('t1','sit-replayers.webp','Eine Frau sitzt im Seminar am Tisch, Stift in der Hand, und hört zu','Dir fehlen nicht die Worte. Sie kommen nur zu spät.','Im Meeting bleibst du still. Auf dem Heimweg hast du den perfekten Satz. Das Problem ist nicht dein Wissen, sondern der Moment.','https://clients.741.studio/meandyou/v2/lp-replayers.html','Mehr dazu: Wenn dir die Worte zu spät kommen'),
+     ('t2','sit-overlooked.webp','Eine Frau steht auf einer Terrasse und spricht zu einer Gruppe am Tisch','Recht zu haben war nie das Problem.','Du bist bestinformiert im Raum. Gefolgt wird trotzdem jemand anderem. Zwischen Kompetenz und Wirkung liegt eine Lücke.','https://clients.741.studio/meandyou/v2/lp-overlooked.html','Mehr dazu: Recht haben und trotzdem überhört werden'),
+     ('t3','sit-undersold.webp','Eine Frau mit Notizbuch im Seminarraum, die Gruppe hört einem Vortrag zu','Dein Unternehmen ist größer, als es nach außen wirkt.','Die Substanz stimmt. Der Auftritt bleibt darunter. Nach außen wirkt das Unternehmen kleiner, als es ist.','https://clients.741.studio/meandyou/v2/lp-undersold.html','Mehr dazu: Wenn dein Unternehmen kleiner wirkt'),
     ]
     c = ''.join(f'<a class="sit {t} rv" href="{href}"><div class="sit__img"><img data-plx src="assets/{img}" alt="{alt}"></div><div class="sit__txt"><h3>{e(h)}</h3><p>{e(b)}</p><span class="tlink">{e(l)}</span></div></a>' for t,img,alt,h,b,href,l in cards)
     items = ['als überzeugend und vertrauenswürdig wahrgenommen werden willst','sicher auftreten willst, ohne laut oder aufdringlich zu sein','den Wert deiner Ideen auf den Punkt bringen willst, ohne dich in Fachwissen zu verlieren','Gespräche lenken willst, statt nur zu reagieren']
@@ -353,11 +414,11 @@ def section_method():
 
 def section_seminars():
     fmts = [
-     ('fmt-frei.webp','Kleine Gruppe übt freie Rede in einem hellen Raum','Frei sprechen, auch mit Lampenfieber','Der Einstieg. Arbeitstitel Rhetorik I',' Du lernst, sicher aufzutreten, eine Rede oder Präsentation mit klarer Struktur aufzubauen und in zwei Minuten ein starkes Statement zu setzen. Dazu kommen Körpersprache und Sprache. Mit den richtigen Fragen lenkst du Gespräche in deine Richtung. Am Ende hast du deinen eigenen Redestil.','https://clients.741.studio/meandyou/v2/seminare.html#frei-sprechen','Frei sprechen im Detail'),
-     ('fmt-ruhig.webp','Zwei Menschen im ruhigen Streitgespräch an einem Tisch','Ruhig bleiben, wenn es eng wird','Arbeitstitel Rhetorik II',' Schlagfertigkeit und Argumentation mit Überzeugungspsychologie. Dazu Meetings, die zu klaren Ergebnissen führen. Du lernst, unfaire Methoden zu durchschauen und Angriffe ruhig zu kontern. Du liest die Signale deines Gegenübers und setzt deine eigene Körpersprache bewusst ein. Für alle, die im Meeting öfter angegriffen als gehört werden.','https://clients.741.studio/meandyou/v2/seminare.html#ruhig-bleiben','Schlagfertigkeit im Detail'),
-     ('fmt-fuehren.webp','Eine Frau spricht frei vor einer kleinen Gruppe','Mit Sprache führen','Arbeitstitel Rhetorik III',' Kritik, die motiviert, und Zuhören, das verbindet. Dazu Stegreifreden vor einer Gruppe und Methoden großer Redner, die du im Alltag nutzt. Mit dem Persönlichkeitsmodell DeepOcean verstehst du, wie deine Persönlichkeit deine Rhetorik prägt.','https://clients.741.studio/meandyou/v2/seminare.html#mit-sprache-fuehren','Führen mit Sprache im Detail'),
+     ('fmt-frei.webp','Teilnehmerin spricht frei vor der Gruppe, Michael Ehlers steht daneben','ETHOS: Frei sprechen, auch mit Lampenfieber','UNÜBERSEHBAR · Modul I',' Du lernst, sicher aufzutreten, eine Rede oder Präsentation mit klarer Struktur aufzubauen und in zwei Minuten ein starkes Statement zu setzen. Dazu kommen Körpersprache und Sprache. Mit den richtigen Fragen lenkst du Gespräche in deine Richtung. Am Ende hast du deinen eigenen Redestil.','https://clients.741.studio/meandyou/v2/seminare.html#frei-sprechen','ETHOS im Detail'),
+     ('fmt-ruhig.webp','Zwei Menschen im ruhigen, konzentrierten Gespräch in der Bibliothek','LOGOS: Ruhig bleiben, wenn es eng wird','UNÜBERSEHBAR · Modul III',' Schlagfertigkeit und Argumentation mit Überzeugungspsychologie. Dazu Meetings, die zu klaren Ergebnissen führen. Du lernst, unfaire Methoden zu durchschauen und Angriffe ruhig zu kontern. Du liest die Signale deines Gegenübers und setzt deine eigene Körpersprache bewusst ein. Für alle, die im Meeting öfter angegriffen als gehört werden.','https://clients.741.studio/meandyou/v2/seminare.html#ruhig-bleiben','LOGOS im Detail'),
+     ('fmt-fuehren.webp','Michael Ehlers leitet eine kleine Gruppe im Seminarraum an','PATHOS: Mit Sprache führen','UNÜBERSEHBAR · Modul II',' Kritik, die motiviert, und Zuhören, das verbindet. Dazu Stegreifreden vor einer Gruppe und Methoden großer Redner, die du im Alltag nutzt. Mit dem Persönlichkeitsmodell DeepOcean verstehst du, wie deine Persönlichkeit deine Rhetorik prägt.','https://clients.741.studio/meandyou/v2/seminare.html#mit-sprache-fuehren','PATHOS im Detail'),
     ]
-    f = ''.join(f'<article class="fmt rv"><div class="fmt__img"><img src="assets/{img}" alt="{alt}"></div><div class="fmt__txt"><h3>{e(h)}</h3><p class="wt">{e(wt)} {fehlt("[von Kunde bestätigen: Seminarname]")}.</p><p>{e(b.strip())}</p><a class="tlink" href="{href}">{e(l)}</a></div></article>' for img,alt,h,wt,b,href,l in fmts)
+    f = ''.join(f'<article class="fmt rv"><div class="fmt__img"><img src="assets/{img}" alt="{alt}"></div><div class="fmt__txt"><h3>{e(h)}</h3><p class="wt">{e(wt)}.</p><p>{e(b.strip())}</p><a class="tlink" href="{href}">{e(l)}</a></div></article>' for img,alt,h,wt,b,href,l in fmts)
     return f'''
 <section id="seminare">
  <div class="band">
@@ -370,9 +431,9 @@ def section_seminars():
     <div class="fact rv"><b>3 + 1 Tage:</b><span>Intensivtraining und ein Tag Get Together</span></div>
     <div class="fact rv"><b>3 Videoanalysen</b><span>mit Sofort-Feedback</span></div>
     <div class="fact rv"><b>VR-Training</b><span>vor virtuellem Publikum</span></div>
-    <div class="fact rv"><b>10 bis 14 Plätze</b><span>je Seminar</span></div>
+    <div class="fact rv"><b>14 Plätze</b><span>je Seminar</span></div>
    </div>
-   <p class="noladder rv">Kein Stufenmodell. Ein klarer Einstieg, danach eigenständige Formate, die du frei wählst.</p>
+   <p class="noladder rv">Kein Stufenmodell. ETHOS, PATHOS und LOGOS einzeln oder im Zweierbundle für 9.500 € statt 10.000 €. Dazu KAIROS, die Präsenzwoche in Mexiko.</p>
    <div class="formats">{f}</div>
    <div class="center" style="margin-top:56px"><div class="cta-row">{btn('seminare')}</div></div>
   </div>
@@ -390,7 +451,7 @@ def section_call():
   <div class="flow" data-in>
    <div class="flow__line"><i></i></div>
    <div class="fstep rv"><span class="n">1</span><div class="fstep__t"><h3>Termin wählen.</h3><p>Du suchst dir online einen freien Termin aus. Danach bekommst du eine Bestätigung per E-Mail und vor dem Termin eine kurze Erinnerung per WhatsApp.</p></div></div>
-   <div class="fstep rv"><span class="n">2</span><div class="fstep__t"><h3>Gespräch per Video.</h3><p>30 Minuten mit Michaels Team. Das Gespräch ist kein Rhetoriktest. Wir klären, wo du stehst und welches Format passt.</p>{fehlt('[von Kunde bestätigen: Name und Rolle der Person im Gespräch]')}
+   <div class="fstep rv"><span class="n">2</span><div class="fstep__t"><h3>Gespräch per Video.</h3><p>30 Minuten mit einem Experten aus Michaels Team. Das Gespräch ist kein Rhetoriktest. Wir klären, wo du stehst und welches Format passt.</p>
      <p class="clar-h">Im Gespräch klärst du:</p><ul class="clar">{li}</ul>
      <p class="clar-note">Bring gern eine konkrete Situation mit, über die du sprechen willst.</p></div></div>
    <div class="fstep rv"><span class="n">3</span><div class="fstep__t"><h3>In Ruhe entscheiden.</h3><p>Du bekommst Termine und Details zu deinem Seminar. Ob und wann du buchst, entscheidest du danach.</p>
@@ -414,7 +475,7 @@ def section_voices():
 <section class="sec" id="stimmen">
  <div class="wrap">
   <div class="stack"><p class="ov rv">Stimmen</p><h2 class="rv">Was Teilnehmer über das Seminar schreiben</h2>
-   <p class="lead rv">250 Bewertungen auf ProvenExpert, 227 davon mit 5 Sternen, und 4,8 von 5 bei Google. Sechs Auszüge aus öffentlichen Bewertungen und von der bisherigen Website. Auslassungen innerhalb eines Zitats sind mit […] markiert.</p></div>
+   <p class="lead rv">4,9 von 5 Sternen auf ProvenExpert, basierend auf 250 Bewertungen, und 4,8 von 5 bei Google. Sechs Auszüge aus öffentlichen Bewertungen und von der bisherigen Website. Auslassungen innerhalb eines Zitats sind mit […] markiert.</p></div>
   <div class="qgrid">{q}</div>
   <div class="vids rv">{v}</div>
   <p class="vcap center rv">Drei Teilnehmer erzählen im Video, wie sie das Seminar erlebt haben. Jedes Video dauert etwa eine Minute.</p>
@@ -424,12 +485,12 @@ def section_voices():
 
 def section_places():
     P = [
-     ('city-mallorca.webp','Mallorca','Frei sprechen','Insel. Klarheit. Umsetzung.','Termine:',['3. bis 6. Dezember 2026','4. bis 7. März 2027','29. April bis 2. Mai 2027','14. bis 17. Oktober 2027']),
-     ('city-dubai.webp','Dubai','Mit Sprache führen','Wachstum trifft Wüste.','Termin:',['10. bis 13. Dezember 2026']),
-     ('city-barcelona.webp','Barcelona','Ruhig bleiben','Verändere deine Sprache. Verändere deine Wirkung.','Termine:',['15. bis 18. April 2027','21. bis 24. Oktober 2027']),
-     ('city-frankfurt.webp','Frankfurt','Frei sprechen','','Termin:',['17. bis 20. Juni 2027']),
-     ('city-berlin.webp','Berlin','Frei sprechen','','Termin:',['12. bis 15. August 2027']),
-     ('city-zypern.webp','Zypern','Mit Sprache führen','','Termin:',['7. bis 10. Oktober 2027']),
+     ('city-mallorca.webp','Mallorca','ETHOS','Insel. Klarheit. Umsetzung.','Termine:',['03.12. – 06.12.2026','04.03. – 07.03.2027','29.04. – 02.05.2027','14.10. – 17.10.2027']),
+     ('city-dubai.webp','Dubai','PATHOS','Wachstum trifft Wüste.','Termin:',['10.12. – 13.12.2026']),
+     ('city-barcelona.webp','Barcelona','LOGOS','Verändere deine Sprache. Verändere deine Wirkung.','Termine:',['15.04. – 18.04.2027','21.10. – 24.10.2027']),
+     ('city-frankfurt.webp','Frankfurt','ETHOS','','Termin:',['17.06. – 20.06.2027']),
+     ('city-berlin.webp','Berlin','ETHOS','','Termin:',['12.08. – 15.08.2027']),
+     ('city-zypern.webp','Zypern','PATHOS','','Termin:',['07.10. – 10.10.2027']),
     ]
     c = ''
     for img,name,fm,claim,lab,ds in P:
@@ -441,30 +502,30 @@ def section_places():
   <div class="stack"><p class="ov rv" style="color:var(--sand)">Orte und Termine</p><h2 class="rv" style="color:#fff">Sechs Orte. Die nächsten Termine.</h2>
    <p class="lead rv" style="color:rgba(242,237,228,.85)">Die Seminare finden an Orten statt, die Abstand zum Alltag schaffen. Jeder Termin dauert vier Tage: drei Tage Training und ein Tag Get Together.</p></div>
   <div class="places">{c}</div>
-  <p class="stand rv">Den Einstieg gibt es auch in Deutschland: in Frankfurt und in Berlin. Freie Plätze und den passenden Termin klärst du im Gespräch. Stand der Termine: Oktober 2026.</p>
+  <p class="stand rv">ETHOS gibt es auch in Deutschland: in Frankfurt und in Berlin. Du entscheidest, wo deine Veränderung beginnt. Ob an einem unserer Seminarstandorte oder online: Sprich mit einem Experten aus Michaels Team und erfahre, welches Format zu dir passt. Stand der Termine: Oktober 2026.</p>
   <div class="cta-row rv" style="margin-top:30px">{btn('termine','btn btn--light')}</div>
  </div>
 </section>'''
 
 FAQ = [
- ('Was kostet ein Rhetorik-Seminar bei Michael Ehlers?','Den Preis für dein Seminar nennt dir Michaels Team im kostenlosen Gespräch. Enthalten sind die drei Trainingstage, der Tag Get Together und die Übernachtungen im Seminarzeitraum.'),
+ ('Was kostet ein Rhetorikkurs bei Michael Ehlers?','Das hängt vom Seminar und vom Format ab. Ein Online Seminar kostet 3.899 € und ist auf maximal 14 Teilnehmer begrenzt. Ein Präsenzseminar kostet 5.000 €. Zwei Seminare im Bundle kosten zusammen 9.500 € statt 10.000 €. KAIROS in Mexiko hat wegen des längeren Formats einen eigenen Preis. Weitere Fragen klärst du mit einem Experten aus Michaels Team. Dort besprechen wir auch, welche Leistungen im jeweiligen Angebot enthalten sind.'),
  ('Was macht man in einem Rhetorik-Seminar bei Michael Ehlers?','Du sprichst selbst, und zwar viel. Dreimal wirst du auf Video aufgenommen und bekommst sofort Feedback. Im VR-Training sprichst du vor einem virtuellen Publikum. Die Themen hängen vom Seminar ab: im Einstieg zum Beispiel freie Rede und Struktur, in den anderen Formaten Schlagfertigkeit oder die Stegreifrede.'),
  ('Wie lernt man Rhetorik am besten?','Durch Üben mit ehrlichem Feedback. Bücher geben dir das Wissen. Unter Druck hilft dir aber nur, was du geübt hast. Deshalb arbeitet das Seminar mit Reden vor der Gruppe und mit Videoanalyse. Dazu kommt die Rückmeldung von Michael und den anderen Teilnehmern.'),
  ('Ich bin sehr introvertiert. Ist das Seminar trotzdem etwas für mich?','Gerade dann. Rhetorik bedeutet nicht, lauter oder extrovertierter zu sein. Introvertierte überzeugen oft durch Präzision und Ruhe. Mit den richtigen Techniken nutzt du diese Stärken, ohne dich zu verbiegen.'),
  ('Muss ich mich verstellen oder schauspielern?','Nein. Rhetorik heißt, mit deiner eigenen Art Wirkung zu erzielen. Nicht anders werden, klarer werden. Die Technik unterstützt deine Persönlichkeit.'),
  ('Ich habe schon Kommunikationstrainings gemacht. Lerne ich hier noch etwas Neues?','Ja. Auch erfahrene Teilnehmer lernen hier dazu. Emrullah A. schreibt bei Google: „Ich habe in diesem Kurs mehr gelernt als in all meinen bisherigen Schulungen zusammen.“'),
  ('Bin ich als Anfänger richtig?','Ja. In den Gruppen trainieren Anfänger und erfahrene Redner zusammen. Christin R. schreibt auf ProvenExpert, dass Michael alle weiterbringt, egal auf welchem Level.'),
- ('Wie groß sind die Gruppen?','Je nach Seminar 10 bis 14 Plätze. So kommt jeder dran. Kein Zuschauen, kein Verstecken in der letzten Reihe.'),
- ('Sind Übernachtung und Anreise enthalten?','Die Übernachtungen im offiziellen Seminarzeitraum sind enthalten, bei vier Seminartagen sind das drei Nächte. Anreise und Transfer zum Hotel organisierst du selbst.'),
- ('Was ist der Unterschied zwischen Seminar und Online-Kurs?','Im Seminar trainierst du vor Ort in der Gruppe, mit Videoanalyse und persönlichem Feedback. Der Online-Kurs ist ein Selbstlernkurs mit Video-Lektionen. Was zu dir passt, klärst du im Gespräch.'),
- ('Was passiert im kostenlosen Gespräch?','Du sprichst 30 Minuten per Video mit Michaels Team über deine Situation und deine Ziele. Danach weißt du, welches Seminar und welcher Ort zu dir passen. Du entscheidest in Ruhe.'),
+ ('Wie groß sind die Gruppen?','Höchstens 14 zahlende Teilnehmer pro Präsenzseminar. So kommt jeder dran. Kein Zuschauen, kein Verstecken in der letzten Reihe.'),
+ ('Sind Übernachtung und Anreise enthalten?','Drei Hotelübernachtungen ab dem offiziellen Anreisetag, Frühstück, Mittagessen und die Verpflegung während des Seminars sind inklusive. Deine Anreise, Transfers, Abendessen und zusätzliche Hotelnächte zahlst du selbst.'),
+ ('Was ist der Unterschied zwischen Präsenzseminar und Online Seminar?','Im Präsenzseminar trainierst du vor Ort in der Gruppe, mit Videoanalyse und persönlichem Feedback. Das Online Seminar ist auf maximal 14 Teilnehmer begrenzt. Was zu dir passt, klärst du im Gespräch.'),
+ ('Was passiert im kostenlosen Gespräch?','Du sprichst 30 Minuten per Video mit einem Experten aus Michaels Team über deine Situation und deine Ziele. Danach weißt du, welches Seminar und welcher Ort zu dir passen. Du entscheidest in Ruhe.'),
  ('Was passiert, wenn ich absagen muss?','Laut AGB kannst du bis 8 Wochen vor Beginn stornieren, gegen eine Stornogebühr von 30 Prozent. Danach ist der volle Preis fällig.'),
 ]
 
 def section_faq():
     items = ''
     for i,(q,a) in enumerate(FAQ):
-        mark = ' ' + fehlt('[FEHLT: Freigabe Übernachtung]') if i == 0 else ''
+        mark = ''
         items += f'<details{" open" if i == 0 else ""}><summary>{e(q)}</summary><div class="a">{e(a)}{mark}</div></details>'
     return f'''
 <section class="sec sec--cream" id="faq">
@@ -485,7 +546,7 @@ def section_closer():
   <h2 class="rv">Unübersehbar wird man nicht,<br>indem man lauter wird.</h2>
   <p class="rv">Ein Gespräch, 30 Minuten, kostenlos. Wir klären, wo du stehst und welches Format passt. Danach entscheidest du in Ruhe, ob du dabei bist.</p>
   <ul class="rv">{li}</ul>
-  <p class="proofline rv">{STARS} 227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert</p>
+  <p class="proofline rv">{STARS} 4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert</p>
   <div class="cta-row rv">{btn('abschluss','btn btn--light cta--breathe')}<p class="tel">Lieber anrufen: <a href="{TEL}">+49 15888367664</a></p></div>
  </div></div>
 </section>
@@ -502,6 +563,7 @@ def section_closer():
 def header():
     return f'''<header class="hdr"><div class="hdr__in">
  <a class="hdr__logo" href="#top"><img src="assets/logo-dark.png" alt="Michael Ehlers &amp; You Communication, Startseite" width="1794" height="647"></a>
+ <button class="hdr__burger" aria-label="Menü" aria-expanded="false"><span></span></button>
  <nav aria-label="Hauptnavigation"><a href="https://clients.741.studio/meandyou/v2/seminare.html">Seminare</a><a href="https://clients.741.studio/meandyou/v2/michael.html">Michael</a><a href="https://clients.741.studio/meandyou/v2/rhetorik.html">Was ist Rhetorik</a><a href="#stimmen">Stimmen</a><a href="#faq">FAQ</a></nav>
  {btn('header')}
 </div></header>'''
@@ -517,8 +579,8 @@ def page():
     body = header() + '<main>' + section_hero() + section_proof() + section_sits() + section_michael() + section_method() + section_seminars() + section_call() + section_voices() + section_places() + section_faq() + '</main>' + section_closer() + '<div class="proto">Prototyp · nicht live · gelb = [FEHLT]</div>'
     return f'''<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Rhetorik-Seminar mit Michael Ehlers | 3 Tage, kleine Gruppe</title>
-<meta name="description" content="Rhetorik-Seminare in kleinen Gruppen auf Mallorca, in Barcelona, Frankfurt und Berlin. Drei Tage mit Videoanalyse. Kostenloses Gespräch buchen.">
+<title>UNÜBERSEHBAR: Rhetorik-Seminare mit Michael Ehlers</title>
+<meta name="description" content="ETHOS, PATHOS, LOGOS und KAIROS: Rhetorik-Seminare mit Michael Ehlers in kleinen Gruppen auf Mallorca, in Barcelona, Frankfurt und Berlin. Kostenloses Gespräch buchen.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap">
 <style>{CSS}</style>
 <script type="application/ld+json">{SCHEMA}</script>
