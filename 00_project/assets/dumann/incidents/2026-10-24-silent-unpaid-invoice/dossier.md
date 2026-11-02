@@ -4,7 +4,7 @@ Internes Dokument. Nicht an die Kundin senden.
 
 **Datum:** 2026-10-24
 **Zweig:** still (keine Antwort, keine Zahlung, Wix-Zugang entfernt)
-**Status:** Stufe 1 gesendet am 24.10.2026, Stufe 2 gesendet am 30.10.2026 (beide Martin, Airmailer). Frist für ihre Rückmeldung: Mi 04.11.2026. Arbeit an der Website ruht bis dahin. Erinnerungs-Task `dumann-frist-2026-11-04` prüft am 05.11. 09:00 (Berlin) nur lesend und bereitet Stufe 3 vor.
+**Status:** 02.11.2026: Kündigung + Geld-zurück-Forderung von ihr. Martins Linie: Rückzahlung ablehnen, Rate 2 bleibt fällig, Weiterarbeit anbieten, sachlich und fest. Antwort `nachricht-3-entwurf-2026-11-02.md` am 02.11. an Martin übergeben, er sendet selbst (Frist für Rate 2: Mo 09.11.). Keine Änderung an Google oder Website.
 
 ## 1. Zeitachse
 
