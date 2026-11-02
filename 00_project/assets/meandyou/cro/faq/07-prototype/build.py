@@ -63,9 +63,10 @@ def group(sid):
 # ---------- page parts ----------
 CSS = rh.CSS + r"""
 /* faq page additions */
-.hero--faq{min-height:0;height:auto;max-height:none;padding:118px 0 60px;display:block}
-.hero--faq .hero__in{display:grid;grid-template-columns:1.5fr .62fr;gap:52px;align-items:stretch}
-.hero--faq .hero__txt{max-width:none;padding-top:0;gap:13px}
+.hero--faq .hero__img{width:46%}
+.hero--faq .hero__img img{object-position:50% 20%}
+
+.hero--faq .hero__txt{max-width:700px;padding-top:40px;gap:13px}
 .hero--faq .body{max-width:40em}
 .hero--faq h1{gap:6px}
 .hero--faq h1 .big{font-size:62px;line-height:1.05}
@@ -127,6 +128,7 @@ section.fgrp[id]{scroll-margin-top:150px}
 def header():
     return f'''<header class="hdr"><div class="hdr__in">
  <a class="hdr__logo" href="{V2}index.html"><img src="assets/logo-dark.png" alt="Michael Ehlers &amp; You Communication, Startseite" width="1794" height="647"></a>
+ <button class="hdr__burger" aria-label="Menü" aria-expanded="false"><span></span></button>
  <nav aria-label="Hauptnavigation"><a href="{V2}seminare.html">Seminare</a><a href="{V2}michael.html">Michael</a><a href="{V2}rhetorik.html">Was ist Rhetorik</a><a href="{V2}index.html#stimmen">Stimmen</a><a href="#top" aria-current="page" style="color:var(--cta)">FAQ</a></nav>
  {btn('header')}
 </div></header>'''
@@ -141,7 +143,8 @@ def s01():
     L = SEC['S01']
     h1 = L[1][2:]
     return f'''
-<section class="hero hero--faq" id="top">
+<section class="hero hero--split hero--faq" id="top">
+ <div class="hero__img"><img data-plx src="assets/michael-door.webp" alt="Michael Ehlers, Rhetoriktrainer, lächelnd im weißen Hemd an einem Türrahmen" width="1200" height="1800"></div>
  <div class="wrap hero__in"><div class="hero__txt">
   <p class="proofline rv">{STARS} {e(L[0])}</p>
   <h1 class="rv"><span class="big">{e(h1[:14])}</span><span class="kicker">{e(h1[15:])}</span></h1>
@@ -149,7 +152,6 @@ def s01():
   <nav class="ftopics rv" aria-label="Themen">{chips()}</nav>
   <div class="cta-row rv">{btn('hero', 'btn cta--breathe')}<p class="assure">{CHECK}{e(L[5])}</p></div>
  </div>
- <div class="hero__frame rv"><img data-plx src="assets/michael-door.webp" alt="Michael Ehlers, Rhetoriktrainer, lächelnd im weißen Hemd an einem Türrahmen" width="1200" height="1800"></div>
  </div>
 </section>
 <div class="subnav" aria-hidden="true"><nav class="ftopics">{chips()}</nav></div>'''
