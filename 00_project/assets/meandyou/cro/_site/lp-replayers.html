@@ -530,7 +530,34 @@ p{margin:0}
 .closer--plain::after{background:radial-gradient(120% 140% at 85% 0%,rgba(79,109,144,.35) 0%,rgba(43,60,82,0) 60%)}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://www.meandyou.de/schlagfertigkeit-lernen#webpage", "url": "https://www.meandyou.de/schlagfertigkeit-lernen", "name": "Schlagfertigkeit lernen: Wenn die Worte zu spät kommen", "description": "Dir fällt die passende Antwort erst auf dem Heimweg ein? So lernst du Schlagfertigkeit mit Michael Ehlers: Übungen, Methode und eine Community zum Üben.", "inLanguage": "de", "about": {"@type": "Thing", "name": "Schlagfertigkeit"}, "mentions": [{"@type": "DefinedTerm", "name": "Treppenwitz", "sameAs": "https://de.wikipedia.org/wiki/Treppenwitz"}, {"@id": "https://www.meandyou.de/michael#person"}], "publisher": {"@id": "https://www.meandyou.de/#organization"}}, {"@type": "Person", "@id": "https://www.meandyou.de/michael#person", "name": "Michael Ehlers", "url": "https://www.meandyou.de/michael", "jobTitle": "Rhetoriktrainer und Executive Coach", "knowsAbout": ["Rhetorik", "Schlagfertigkeit"], "sameAs": ["https://institut-ehlers.de/michael-ehlers", "https://de.linkedin.com/in/rhetoriktrainer", "https://podcasts.apple.com/de/podcast/un%C3%BCbersehbar-der-rhetorik-podcast-mit-michael-ehlers/id286899257"]}, {"@type": "PodcastSeries", "name": "Unübersehbar – Der Rhetorik Podcast mit Michael Ehlers", "url": "https://podcasts.apple.com/de/podcast/un%C3%BCbersehbar-der-rhetorik-podcast-mit-michael-ehlers/id286899257", "startDate": "2008", "author": {"@id": "https://www.meandyou.de/michael#person"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://www.meandyou.de/"}, {"@type": "ListItem", "position": 2, "name": "Schlagfertigkeit lernen", "item": "https://www.meandyou.de/schlagfertigkeit-lernen"}]}, {"@type": "EducationalOrganization", "@id": "https://www.meandyou.de/#organization", "name":"Me&You Communication FZCO", "alternateName": "me&you Communication", "url": "https://www.meandyou.de/", "email": "management@meandyou.de"}]}</script>
-</head><body><header class="hdr"><div class="hdr__in">
+</head><body>
+<style id="mgy-gate-style">html.mgy-locked body>*:not(#mgy-gate){display:none!important}#mgy-gate{display:none}html.mgy-locked #mgy-gate{display:flex}</style>
+<div id="mgy-gate" style="position:fixed;inset:0;z-index:99999;background:#FAF8F4;color:#2A2622;align-items:center;justify-content:center;font-family:Inter,system-ui,sans-serif;padding:24px">
+ <div style="max-width:420px;width:100%;text-align:center">
+  <p style="font:600 12px/1 Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#64809E;margin:0 0 14px">me&amp;you Communication</p>
+  <h1 style="font:400 28px/1.25 Georgia,serif;margin:0 0 14px">Diese Seite wird gerade aufgebaut.</h1>
+  <p style="color:#7B736B;margin:0 0 24px;font-size:15px">Team-Zugang mit Passwort.</p>
+  <form id="mgy-gate-form" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+   <input id="mgy-gate-pw" type="password" placeholder="Passwort" autocomplete="off" style="padding:12px 16px;border-radius:999px;border:1.5px solid rgba(42,38,34,.22);font-size:15px;min-width:200px">
+   <button type="submit" style="padding:12px 26px;border-radius:999px;border:none;background:#2B3C52;color:#fff;font:600 15px/1 Inter,sans-serif;cursor:pointer">Ansehen</button>
+  </form>
+  <p id="mgy-gate-err" style="color:#B0453D;font-size:13px;margin:12px 0 0;display:none">Falsches Passwort.</p>
+ </div>
+</div>
+<script>(function(){
+ var KEY='mgy_gate_ok';
+ if(localStorage.getItem(KEY)==='1'){return;}
+ document.documentElement.classList.add('mgy-locked');
+ document.addEventListener('DOMContentLoaded',function(){
+  var f=document.getElementById('mgy-gate-form'),pw=document.getElementById('mgy-gate-pw'),err=document.getElementById('mgy-gate-err');
+  f.addEventListener('submit',function(e){
+   e.preventDefault();
+   if(pw.value==='pagencymeandyou'){localStorage.setItem(KEY,'1');document.documentElement.classList.remove('mgy-locked');}
+   else{err.style.display='block';pw.value='';pw.focus();}
+  });
+ });
+})();</script>
+<header class="hdr"><div class="hdr__in">
  <a class="hdr__logo" href="index.html"><img src="assets/lp-replayers/logo-dark.png" alt="Michael Ehlers &amp; You Communication, Startseite" width="1794" height="647"></a>
  <button class="hdr__burger" aria-label="Menü" aria-expanded="false"><span></span></button>
  <nav aria-label="Hauptnavigation"><a href="seminare.html">Seminare</a><a href="michael.html">Michael</a><a href="rhetorik.html">Was ist Rhetorik</a><a href="stimmen.html">Stimmen</a><a href="faq.html">FAQ</a></nav>
