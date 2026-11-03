@@ -52,3 +52,6 @@ GATE PASSED (cp2) shown in full, scorecard 96.7 %. Card answer: "Go, register, c
 ## 2026-11-03 — Thursday research trigger + scope
 - Thursday trigger: "Add a Thursday card to the morning grill (Recommended)" — task sent to the Morning Grill session, same pattern as Monday/Friday, its own Go.
 - Other agents: "Just Sales Director and Web Developer for now (Recommended)" — night shift, grill brief, evening log, canary, command sync stay drafts.
+
+## 2026-11-03 — Thursday trigger landed (Morning Grill's own Go)
+Morning Grill session added step 7b2 (Thursday research card) with its own Go, and caught a real path inconsistency in sales-director.md: duty 4 named `00_project/research/sales/<date>-<slug>.md` for the research note, but "Actions it may take alone" named `00_project/assets/741studio/sales/`. Fixed to one path (`00_project/research/sales/`) for the research note; the brief and posting calendar stay under `00_project/assets/741studio/sales/`. Re-placed.
