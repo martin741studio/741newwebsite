@@ -44,3 +44,7 @@ GATE PASSED (cp2) shown in full, scorecard 96.7 %. Card answer: "Go, register, c
 - Cadence: "Monday pipeline brief as a grill card + Friday review (Recommended)".
 
 - Place sales-director: "Go, place it now (Recommended)" — placed at `.claude/rules/agents/sales-director.md`, roster active.
+
+## 2026-11-03 — Sales Director week-1 follow-up
+- The running Sales Director session found 100 active Pipeline rows with no next-action date at all (rule S1.2), bigger than the 9 overdue rows in its first brief. Card: "Add to Monday's brief as its own section (Recommended)" — confirmed. No work on the backlog this week; it becomes a ranked section of next Monday's brief.
+- During its own run, the Sales Director session got Martin's own Go (in that chat) for a booked-calls target of 4/week and for correcting 3 CRM sheet rows (Claudia Tiemann, Corinne Wilhelm, Theresia Berger) to match the real state found in the prospect folders. Logged here for the build record; the per-change go happened in that session, not this one.
