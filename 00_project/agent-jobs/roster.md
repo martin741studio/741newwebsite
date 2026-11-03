@@ -13,3 +13,4 @@ Manager: Martin · review day: Friday · source: `roster.json` (edit with `roste
 | command-board-sync | Command board sync | scheduled | desktop task command-board-sync (disabled) | draft | `00_project/agent-jobs/command-board-sync.md` | — | — | — |
 | chat-base | Chat base / workflow architecture | chat | ⚙️🏗️ Chat-based workflow architecture | draft | `00_project/agent-jobs/chat-base.md` | — | — | — |
 | sales-director | Sales Director (pipeline owner, light research) | chat | standing chat 💰 Sales Director | active | `00_project/agent-jobs/sales-director.md` | .claude/rules/agents/sales-director.md | — | — |
+| project-manager | Project Manager (client + agency task flow) | chat | standing chat 📋 Project Manager | active | `00_project/agent-jobs/project-manager.md` | .claude/rules/agents/project-manager.md | — | — |

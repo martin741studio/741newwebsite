@@ -55,3 +55,15 @@ GATE PASSED (cp2) shown in full, scorecard 96.7 %. Card answer: "Go, register, c
 
 ## 2026-11-03 — Thursday trigger landed (Morning Grill's own Go)
 Morning Grill session added step 7b2 (Thursday research card) with its own Go, and caught a real path inconsistency in sales-director.md: duty 4 named `00_project/research/sales/<date>-<slug>.md` for the research note, but "Actions it may take alone" named `00_project/assets/741studio/sales/`. Fixed to one path (`00_project/research/sales/`) for the research note; the brief and posting calendar stay under `00_project/assets/741studio/sales/`. Re-placed.
+
+## 2026-11-03 — Run 3: Project Manager (write mode, round 1)
+- Martin's ask (his words, cut off at the end): "Wir haben ja Roadmaps in unserem Dashboard und Tasks, die zu tun sind für jeden Kunden, Tasks, die zu tun sind für unsere eigene Agentur, damit es ständig läuft. Wir haben eigentlich Backlink-Creation. Irgendwie fehlt mir der richtige Project-Manager. … nimm die Knowledge Base von Alex Hormozi und schau, was online recherchierbar ist … Wir haben keine Aktivitäten … bei denen die Aufgaben verteilt und abgearbeitet werden, nur weil ich"
+- Doers: all four — Dinakar and Tantri; Gayo and the outreach people (non-sales tasks only); the Upwork execution partner; the AI agents.
+- Task SoT: "work_items in the portal is the list; roadmaps feed it (Recommended)".
+- Handoff: "You brief everyone yourself from the PM's list" — the PM prepares the list; it drafts no per-person messages.
+- Alone vs card: "Drafts alone; one Go per day publishes the list (Recommended)".
+- Round 2: Scope "Clients and 741's own tasks, one list (Recommended)" · Cadence "Daily list in the 06:13 grill + Monday plan + Friday review (Recommended)" · Stale "3 working days no update = stale; blocked = card same day; client waiting 7 days = dashboard request (Recommended)" · Goal "Milestone on-time rate per client + done-with-proof count (Recommended)".
+
+## 2026-11-03 — Project Manager: place + Upwork list decision
+- Place: "Go, place and wire it in (Recommended)".
+- Upwork list: "Same work_items rows (Recommended)" — one list, agent still never messages the partner.
