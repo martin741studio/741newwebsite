@@ -1,5 +1,5 @@
 # Einwandbehandlung & Risikominimierung — Call-Playbook 741.Studio
-(Stand 27.07.2026 · Pakete: Starter 1.999 / 90-Tage 3.699 mit Garantie / Power Engine 7.999 + Ads-Mgmt)
+(Stand 03.11.2026, angeglichen an den 741 Call-Raster vom 21.10.2026 · Pakete am Telefon: Power Engine 7.999 € + Ads-Management zuerst als Anker, dann 90-Tage-Erfolgspaket 4.999 € mit Garantie · Starter 1.999 € wird am Telefon nicht mehr angeboten · Preise nur im Gespräch, nie schriftlich vorab)
 
 ## Die 3 Prinzipien vor jedem Einwand
 
@@ -9,10 +9,12 @@
 
 ## Der Garantie-Baustein (Kern der Risikominimierung)
 
-Nur beim 90-Tage-Paket (3.699 €). Vorschlagsmechanik (Konditionen final von Martin festzulegen):
-> "Wir definieren im Kick-off gemeinsam das messbare Ziel — z. B. deine Top-3-Sichtbarkeit im Ranking-Radar auf X % zu heben. Erreichen wir das definierte Ziel in 90 Tagen nicht, arbeiten wir kostenlos weiter, bis es erreicht ist — oder du bekommst dein Geld zurück. Das Risiko liegt komplett bei mir."
+Nur beim 90-Tage-Erfolgspaket (4.999 €). Wortlaut aus dem Call-Raster (Martin 21.10.2026), keine Geld-zurück-Zusage:
+> "Bist du nach 90 Tagen nicht in den Top 3 auf Google Maps, arbeiten wir ohne Zusatzkosten weiter, bis du dort bist. Das Risiko liegt bei mir."
 
-EN: *"In the kick-off we define one measurable target together — for example lifting your Top-3 visibility on the ranking radar to X%. If we don't hit that target in 90 days, we keep working for free until we do — or you get your money back. The risk sits entirely with me."*
+EN: *"If you are not in the Top 3 on Google Maps after 90 days, we keep working at no extra cost until you are. The risk sits with me."*
+
+Nie "Geld zurück" sagen (Call-Raster Phase 4: "Do not promise money back"). Fragt der Prospect nach Rückerstattung: Antwort ist die Weiterarbeit ohne Zusatzkosten, nicht eine Erstattung.
 
 Warum das funktioniert: Das Ziel ist objektiv messbar (49-Punkte-Raster, monatlicher Report) — keine Diskussion, was "Erfolg" heißt.
 
@@ -55,7 +57,7 @@ Dahinter: "Meine Situation ist besonders."
 
 ### 8. "Warum nicht ein Freelancer für die Hälfte?"
 Dahinter: Preisvergleich ohne Systemvergleich.
-- EN: *"You can absolutely buy tasks cheaper. What you can't buy cheaper is a system with measurement and a guarantee. A freelancer sells you hours — if it doesn't work, you paid anyway. Here, if the target isn't hit, I keep working for free or you get your money back. Which risk profile do you prefer?"*
+- EN: *"You can absolutely buy tasks cheaper. What you can't buy cheaper is a system with measurement and a guarantee. A freelancer sells you hours — if it doesn't work, you paid anyway. Here, if the target isn't hit after 90 days, I keep working at no extra cost until it is. Which risk profile do you prefer?"*
 
 ### 9. "Wir hatten schon mal SEO, hat nichts gebracht"
 Dahinter: einmal verbrannt.
