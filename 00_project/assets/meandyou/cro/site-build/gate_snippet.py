@@ -4,6 +4,7 @@ a shared team password until Martin lifts this. Split into its own file so assem
 quoting stays simple."""
 
 GATE_PASSWORD = "pagencymeandyou"
+GATE_ENABLED = False
 
 GATE_SNIPPET = """
 <style id="mgy-gate-style">html.mgy-locked body>*:not(#mgy-gate){display:none!important}#mgy-gate{display:none}html.mgy-locked #mgy-gate{display:flex}</style>
@@ -52,7 +53,9 @@ def apply_gate_and_banner(out_dir):
             fp = os.path.join(root, fn)
             html = open(fp, encoding="utf-8").read()
             html = PROTO_BADGE_RE.sub("", html)
-            if 'id="mgy-gate"' not in html and "<body" in html:
+            # Gate disabled 04.11.2026: Tajan (Pagency) gave the go to open the site.
+            # Set GATE_ENABLED = True to lock the site again with the same password.
+            if GATE_ENABLED and 'id="mgy-gate"' not in html and "<body" in html:
                 i = html.index(">", html.index("<body")) + 1
                 html = html[:i] + GATE_SNIPPET + html[i:]
             open(fp, "w", encoding="utf-8").write(html)
