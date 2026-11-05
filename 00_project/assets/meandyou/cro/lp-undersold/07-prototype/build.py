@@ -215,6 +215,7 @@ CSS = sem.CSS + r"""
 def header():
     return f'''<header class="hdr"><div class="hdr__in">
  <a class="hdr__logo" href="{V2}index.html"><img src="assets/logo-dark.png" alt="Michael Ehlers &amp; You Communication, Startseite" width="1794" height="647"></a>
+ <button class="hdr__burger" aria-label="Menü" aria-expanded="false"><span></span></button>
  <nav aria-label="Hauptnavigation"><a href="{V2}seminare.html">Seminare</a><a href="{V2}michael.html">Michael</a><a href="{V2}rhetorik.html">Was ist Rhetorik</a><a href="{V2}stimmen.html">Stimmen</a><a href="{V2}faq.html">FAQ</a></nav>
  {btn('header')}
 </div></header>'''

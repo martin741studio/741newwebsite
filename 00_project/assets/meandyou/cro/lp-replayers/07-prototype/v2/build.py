@@ -174,6 +174,7 @@ CSS = rh.CSS + r"""
 def header():
     return f'''<header class="hdr"><div class="hdr__in">
  <a class="hdr__logo" href="{V2}index.html"><img src="assets/logo-dark.png" alt="Michael Ehlers &amp; You Communication, Startseite" width="1794" height="647"></a>
+ <button class="hdr__burger" aria-label="Menü" aria-expanded="false"><span></span></button>
  <nav aria-label="Hauptnavigation"><a href="{V2}seminare.html">Seminare</a><a href="{V2}michael.html">Michael</a><a href="{V2}rhetorik.html">Was ist Rhetorik</a><a href="{V2}index.html#stimmen">Stimmen</a><a href="{V2}faq.html">FAQ</a></nav>
  {btn('header')}
 </div></header>'''
@@ -215,7 +216,7 @@ def s03():
 <section class="sec" id="treppenwitz">
  <div class="wrap rp-answer">
   <div class="stack"><h2 class="rv">{h(L[0])}</h2><p class="ans rv">{e(L[1])}</p><p class="ans2 rv">{e(L[2])}</p></div>
-  <div class="rp-photo rv"><img src="assets/sit-replayers.webp" alt="Eine Frau schreibt abends am Schreibtisch in ein Notizbuch" width="1536" height="1024"></div>
+  <div class="rp-photo rv"><img src="assets/sit-replayers.webp" alt="Eine Frau sitzt im Seminar am Tisch, Stift in der Hand, und hört zu" width="1122" height="748"></div>
  </div>
 </section>'''
 
@@ -272,12 +273,13 @@ def s07():
     L = SEC['S07']
     ex = [x for x in L if re.match(r'^\d\. ', x)]
     c = ''.join(f'<div class="exc rv"><i>{x[0]}</i><p>{md(x[3:])}</p></div>' for x in ex)
-    ph = [x for x in L if x.startswith('[von Kunde')][0]
+    ph_list = [x for x in L if x.startswith('[von Kunde')]
+    ph_html = f'<p class="rv">{t(ph_list[0])}</p>' if ph_list else ''
     return f'''
 <section class="sec sec--cream rp-learn" id="uebungen">
  <div class="wrap learn">
   <div class="stack"><h2 class="rv">{h(L[0])}</h2><p class="lead rv">{e(L[1])}</p></div>
-  <div class="ex"><h3 class="exh rv">{h(L[2])}</h3><p class="lead rv" style="margin:0">{e(L[3])}</p><div class="ex3">{c}</div><p class="rv">{t(ph)}</p><p class="lead rv" style="margin:0">{e(L[-1])}</p></div>
+  <div class="ex"><h3 class="exh rv">{h(L[2])}</h3><p class="lead rv" style="margin:0">{e(L[3])}</p><div class="ex3">{c}</div>{ph_html}<p class="lead rv" style="margin:0">{e(L[-1])}</p></div>
  </div>
 </section>'''
 

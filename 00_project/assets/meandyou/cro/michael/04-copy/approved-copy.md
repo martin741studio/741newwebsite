@@ -136,7 +136,7 @@ Laut ERFOLG Magazin zählte Michael Ehlers zu den Top 100 Trainern im deutschspr
 <!-- design: echtes Gruppenfoto (Seminargruppe mit Zertifikaten) links, Text rechts, drei Format-Links. -->
 ## Seminare mit Michael
 
-In den Seminaren von me&you trainierst du drei Tage in einer kleinen Gruppe von höchstens 14 Menschen. Dazu kommt ein Tag Get Together. Du hältst Reden und siehst dich dreimal auf Video. Rückmeldung bekommst du sofort. Im VR-Training sprichst du vor einem virtuellen Publikum. Die Seminare finden auf Mallorca, in Barcelona, Zypern und Dubai statt, den Einstieg gibt es auch in Frankfurt und Berlin [von Kunde bestätigen: Leitet Michael die Seminare selbst].
+In den Seminaren von me&you trainierst du drei Tage in einer kleinen Gruppe von höchstens 14 Menschen. Dazu kommt ein Tag Get Together. Du hältst Reden und siehst dich dreimal auf Video. Rückmeldung bekommst du sofort. Im VR-Training sprichst du vor einem virtuellen Publikum. Die Seminare finden auf Mallorca, in Barcelona, Zypern und Dubai statt, den Einstieg gibt es auch in Frankfurt und Berlin. Michael leitet jedes Seminar selbst.
 
 Du beginnst mit dem Einstieg „Frei sprechen“. Danach wählst du frei: ruhig bleiben, wenn es eng wird, oder mit Sprache führen. Der nächste Termin: Mallorca, 3. bis 6. Dezember 2026. Alle Formate und Termine findest du auf der Seite [Seminare](/seminare).
 

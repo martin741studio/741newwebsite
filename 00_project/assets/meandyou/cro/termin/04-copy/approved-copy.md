@@ -63,7 +63,7 @@ Im Gespräch klärst du:
 ## Mit wem du sprichst
 
 **Dein Gesprächspartner**
-Ein Mitglied aus Michaels Team führt das Gespräch. [von Kunde bestätigen: Name und Rolle der Person im Gespräch] [von Kunde bestätigen: Foto der Person im Gespräch]
+Ein Mitglied aus Michaels Team führt das Gespräch. [von Kunde bestätigen: Name und Rolle der Person im Gespräch]
 
 **Der Kopf dahinter: Michael Ehlers**
 Im Gespräch ist Michael nicht dabei. Er trainiert seit 1990 Menschen in Rhetorik und ist Lehrbeauftragter an der Universität St. Gallen. Das ERFOLG Magazin zählte ihn 2017 zu den Top 100 Trainern im deutschsprachigen Raum. Über 8.000 Menschen haben bei ihm trainiert.
@@ -95,7 +95,7 @@ Im Gespräch ist Michael nicht dabei. Er trainiert seit 1990 Menschen in Rhetori
 - **Eine konkrete Situation.** Zum Beispiel das Meeting, in dem du zuletzt nicht durchgedrungen bist.
 - **Stift und Papier.** Du wirst dir etwas notieren wollen.
 
-Vor dem Termin erinnert dich das Team per WhatsApp. 15 Minuten vorher kommt dort auch der Link zum Gespräch. Wenn du doch nicht kannst, findest du in deiner Bestätigungsmail einen Link, mit dem du umbuchst, statt den Termin verfallen zu lassen. [von Kunde bestätigen: Umbuchen-Link in der Bestätigungsmail]
+Vor dem Termin erinnert dich das Team per WhatsApp. 15 Minuten vorher kommt dort auch der Link zum Gespräch. Wenn du doch nicht kannst, ruf einfach an und wir finden einen neuen Termin.
 <!-- /S05 -->
 
 <!-- S06 faq | element: faq | cta: primary -->
@@ -112,10 +112,10 @@ Nein. Wenn ein Seminar passt, bekommst du Termine und Details. Ob und wann du bu
 Du sprichst mit einem Mitglied aus Michaels Team. Es klärt mit dir, ob und welches Format zu dir passt. [von Kunde bestätigen: Name und Rolle der Person im Gespräch]
 
 ### Wie läuft das Gespräch technisch?
-Per Videocall am Laptop oder Handy. Den Link schickt dir das Team per WhatsApp, spätestens 15 Minuten vorher. [von Kunde bestätigen: Video-Tool des Gesprächs]
+Per Videocall am Laptop oder Handy. Den Link schickt dir das Team per WhatsApp, spätestens 15 Minuten vorher.
 
 ### Was, wenn mir etwas dazwischenkommt?
-Buch einfach um. Den Link dafür findest du in deiner Bestätigungsmail. [von Kunde bestätigen: Umbuchen-Link in der Bestätigungsmail]
+Ruf einfach an, dann finden wir gemeinsam einen neuen Termin: +49 15888367664
 
 ### Kann ich auch anrufen?
 Ja. Du erreichst das Team unter +49 15888367664.
@@ -139,9 +139,9 @@ Lieber anrufen: +49 15888367664
 
 Schön, dass du dabei bist. Datum und Uhrzeit siehst du rechts, die Bestätigung ist auf dem Weg in dein Postfach.
 
-1. **Schau in dein Postfach.** In der Bestätigungsmail stehen alle Details und der Link zum Umbuchen. [von Kunde bestätigen: Umbuchen-Link in der Bestätigungsmail] Keine Mail bekommen? Ruf an: +49 15888367664
+1. **Schau in dein Postfach.** In der Bestätigungsmail stehen alle Details. Keine Mail bekommen? Ruf an: +49 15888367664
 2. **Antworte auf die WhatsApp.** Kurz nach der Buchung meldet sich das Team mit einer Frage zu deiner Situation. Zwei Sätze als Antwort genügen. [von Kunde bestätigen: erste WhatsApp nach der Buchung eingerichtet]
-3. **Schau dir die Nachricht von Michael an.** Er erzählt dir in rund einer Minute, worum es im Gespräch geht. [von Kunde bestätigen: Video von Michael für die Bestätigung]
+
 
 Am meisten hast du davon, wenn du eine konkrete Situation mitbringst.
 <!-- /S08 -->

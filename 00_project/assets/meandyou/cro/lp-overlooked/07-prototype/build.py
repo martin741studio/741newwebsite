@@ -127,6 +127,7 @@ body{background:var(--cool)}
 .dbox__b p{color:var(--on-dark);font-size:17px}
 .dbox figcaption{font:italic 400 17px/1.5 var(--serif);color:var(--on-navy-2);padding:0 6px}
 .diag .dbox:not(:last-child)::after{content:"";position:absolute;right:-29px;top:56px;border:7px solid transparent;border-left:10px solid rgba(169,190,211,.75)}
+.dbox__ex{font-size:15.5px;line-height:1.5;color:var(--on-dark);opacity:.9;padding:0 6px}.dbox__ex b{color:var(--sand);font-weight:600}
 .mnote{margin-top:36px;text-align:center}
 /* intro column beside table */
 .tgrid{display:grid;grid-template-columns:330px 1fr;gap:48px;align-items:start;margin-top:30px}
@@ -186,6 +187,7 @@ table.tb{width:100%;border-collapse:collapse;font-size:17px}
 def header():
     return f'''<header class="hdr"><div class="hdr__in">
  <a class="hdr__logo" href="{V2}index.html"><img src="assets/logo-dark.png" alt="Michael Ehlers &amp; You Communication, Startseite" width="1794" height="647"></a>
+ <button class="hdr__burger" aria-label="Menü" aria-expanded="false"><span></span></button>
  <nav aria-label="Hauptnavigation"><a href="{V2}seminare.html">Seminare</a><a href="{V2}michael.html">Michael</a><a href="{V2}rhetorik.html">Was ist Rhetorik</a><a href="{V2}index.html#stimmen">Stimmen</a><a href="#faq">FAQ</a></nav>
  {btn('header')}
 </div></header>'''
@@ -268,15 +270,15 @@ def s05():
     boxes = ''
     for x in u[2:5]:
         n, h, rest = lead_bold(x)
-        line, q = rest.split(' Die Frage dahinter: ')
-        boxes += f'<figure class="dbox rv"><div class="dbox__b"><i>{n}</i><h3>{e(h)}</h3><p>{e(line)}</p></div><figcaption>Die Frage dahinter: {e(q)}</figcaption></figure>'
+        line, rest2 = rest.split(' Die Frage dahinter: ')
+        q, ex = rest2.split(' Übung: ')
+        boxes += f'<figure class="dbox rv"><div class="dbox__b"><i>{n}</i><h3>{e(h)}</h3><p>{e(line)}</p></div><figcaption>Die Frage dahinter: {e(q)}</figcaption><p class="dbox__ex"><b>Übung:</b> {e(ex)}</p></figure>'
     return f'''
 <section class="sec sec--navy gridded" id="methode">
  <div class="wrap">
   <div class="mgrid2"><div><h2 class="rv">{e(u[0])}</h2>
   <p class="mintro rv">{e(u[1])}</p></div>
   <div class="diag">{boxes}</div></div>
-  <p class="mnote rv">{t(u[5])}</p>
  </div>
 </section>'''
 
@@ -303,7 +305,7 @@ def s06():
 def s07():
     u = U['S07']
     hd = row(u[2])
-    anchors = {'Ruhig bleiben, wenn es eng wird': 'ruhig-bleiben', 'Frei sprechen': 'frei-sprechen', 'Mit Sprache führen': 'mit-sprache-fuehren'}
+    anchors = {'LOGOS': 'ruhig-bleiben', 'ETHOS': 'frei-sprechen', 'PATHOS': 'mit-sprache-fuehren'}
     body = ''
     for i, r in enumerate(map(row, u[3:8]), 1):
         body += f'<tr><td class="n">0{i}</td><td class="sitc">{e(r[0])}</td><td>{e(r[1])}</td><td><a class="tag" href="{V2}seminare.html#{anchors[r[2]]}">{e(r[2])}</a></td></tr>'

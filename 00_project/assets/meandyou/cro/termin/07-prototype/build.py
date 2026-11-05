@@ -143,7 +143,6 @@ CSS = rh.CSS + r"""
 def header():
     return f'''<header class="hdr hdr--min"><div class="hdr__in">
  <a class="hdr__logo" href="#top"><img src="assets/logo-dark.png" alt="Michael Ehlers &amp; You Communication" width="1794" height="647"></a>
- <a class="tel" href="{TEL}">{ICON['phone']}+49 15888367664</a>
 </div></header>'''
 
 
@@ -158,7 +157,7 @@ def s01_s08():
     <h1 class="rv"><span class="kicker">Gespräch buchen:</span><span class="big">Finde heraus, wo du gerade Wirkung verlierst.</span></h1>
     <p class="body rv">In 30 Minuten klären wir, wo du stehst und welches Seminar zu deiner Situation passt. Danach entscheidest du in Ruhe.</p>
     <ul class="ticks rv">{ticks}</ul>
-    <div class="whoami rv"><span class="ava">{ICON['user']}</span><p>{t('Du sprichst mit einem Mitglied aus Michaels Team. [von Kunde bestätigen: Name und Rolle der Person im Gespräch]')}</p></div>
+    <div class="whoami rv"><span class="ava">{ICON['user']}</span><p>{t('Du sprichst mit einem Experten aus Michaels Team.')}</p></div>
     <div class="pick rv"><b>Termin wählen</b><span>Wähle rechts einen freien Termin. Die Uhrzeiten zeigt der Kalender in deiner Zeitzone.</span></div>
    </div>
    <div class="done" aria-live="polite">
@@ -166,21 +165,18 @@ def s01_s08():
     <h2>Dein Termin steht.</h2>
     <p class="body">Schön, dass du dabei bist. Datum und Uhrzeit siehst du rechts, die Bestätigung ist auf dem Weg in dein Postfach.</p>
     <ol class="nsteps">
-     <li><p><b>Schau in dein Postfach.</b>{t('In der Bestätigungsmail stehen alle Details und der Link zum Umbuchen. [von Kunde bestätigen: Umbuchen-Link in der Bestätigungsmail]')} Keine Mail bekommen? Ruf an: <a href="{TEL}">+49 15888367664</a></p></li>
-     <li><p><b>Antworte auf die WhatsApp.</b>{t('Kurz nach der Buchung meldet sich das Team mit einer Frage zu deiner Situation. Zwei Sätze als Antwort genügen. [von Kunde bestätigen: erste WhatsApp nach der Buchung eingerichtet]')}</p></li>
-     <li><p><b>Schau dir die Nachricht von Michael an.</b>Er erzählt dir in rund einer Minute, worum es im Gespräch geht.</p>
-      <div class="vidph"><img src="assets/michael-door.webp" alt="" width="1200" height="1800"><b>{PLAY}</b>{t('[von Kunde bestätigen: Video von Michael für die Bestätigung]')}</div></li>
+     <li><p><b>Schau in dein Postfach.</b>{t('In der Bestätigungsmail stehen alle Details.')}</p></li>
+     <li><p><b>Antworte auf die WhatsApp.</b>{t('Kurz nach der Buchung meldet sich das Team mit einer Frage zu deiner Situation. Zwei Sätze als Antwort genügen.')}</p></li>
     </ol>
     <p class="body">Am meisten hast du davon, wenn du eine konkrete Situation mitbringst.</p>
    </div>
   </div>
   <div class="bk__main rv" id="kalender">
    <div class="bkc">
-    <p class="bkc__proof"><img src="assets/logo-provenexpert.png" alt="ProvenExpert" width="404" height="180">{STARS}<span>227 von 250 Bewertungen auf ProvenExpert mit 5 Sternen · seit 1990 Rhetoriktraining mit Michael Ehlers</span></p>
+    <p class="bkc__proof"><img src="assets/logo-provenexpert.png" alt="ProvenExpert" width="404" height="180">{STARS}<span>4,9 von 5 Sternen auf ProvenExpert · seit 1990 Rhetoriktraining mit Michael Ehlers</span></p>
     <div class="calendly-inline-widget" data-base="{CAL}" data-opts="{CAL_OPTS}"><span class="cal-load">Kalender lädt …</span></div>
    </div>
    <div class="bk__under">
-    <p class="row">{ICON['phone']}<span>Lieber anrufen? <a href="{TEL}">+49 15888367664</a></span></p>
     <p class="row">{CHECK}<span>Deine Handynummer brauchen wir für die Erinnerung per WhatsApp.</span></p>
     <p class="row small">{ICON['lock']}<span>Deine Angaben verarbeitet der Kalenderdienst Calendly. Mehr dazu in den <a href="https://www.meandyou.de/datenschutz">Datenschutzhinweisen</a>.</span></p>
    </div>
@@ -197,7 +193,7 @@ def s02():
   <div class="center"><h2 class="rv">Erst ein Gespräch. Dann entscheidest du.</h2></div>
   <div class="flow" data-in>
    <div class="flow__line"><i></i></div>
-   <div class="fstep rv"><span class="n">01</span><div class="fstep__t"><h3>Termin wählen.</h3><p>{t('Du suchst dir oben einen freien Termin aus und trägst deine Kontaktdaten ein. [von Kunde bestätigen: drei kurze Fragen im Formular eingerichtet] Danach bekommst du eine Bestätigung per E-Mail.')}</p></div></div>
+   <div class="fstep rv"><span class="n">01</span><div class="fstep__t"><h3>Termin wählen.</h3><p>{t('Du suchst dir oben einen freien Termin aus und trägst deine Kontaktdaten ein. Danach bekommst du eine Bestätigung per E-Mail.')}</p></div></div>
    <div class="fstep rv"><span class="n">02</span><div class="fstep__t"><h3>Gespräch per Video.</h3><p>30 Minuten mit Michaels Team. Wir klären, wo du stehst und welches Format passt.</p></div></div>
    <div class="fstep rv"><span class="n">03</span><div class="fstep__t"><h3>In Ruhe entscheiden.</h3><p>Wenn ein Seminar passt, bekommst du Termine und alle Details. Ob und wann du buchst, entscheidest du danach.</p></div></div>
   </div>
@@ -213,7 +209,7 @@ def s03():
  <div class="wrap">
   <h2 class="rv">Mit wem du sprichst</h2>
   <div class="talk2">
-   <div class="pcard rv"><div class="ph">{ICON['user']}</div><div><h3>Dein Gesprächspartner</h3><p>{t('Ein Mitglied aus Michaels Team führt das Gespräch. [von Kunde bestätigen: Name und Rolle der Person im Gespräch] [von Kunde bestätigen: Foto der Person im Gespräch]')}</p></div></div>
+   <div class="pcard rv"><div class="ph">{ICON['user']}</div><div><h3>Dein Gesprächspartner</h3><p>{t('Du sprichst mit einem Experten aus Michaels Team.')}</p></div></div>
    <div class="pcard rv"><div class="ph"><img src="assets/michael-door.webp" alt="Michael Ehlers lächelt, an einen Holzrahmen gelehnt" width="1200" height="1800"></div><div><h3>Der Kopf dahinter: Michael Ehlers</h3><p>Im Gespräch ist Michael nicht dabei. Er trainiert seit 1990 Menschen in Rhetorik und ist Lehrbeauftragter an der Universität St. Gallen. Das ERFOLG Magazin zählte ihn 2017 zu den Top 100 Trainern im deutschsprachigen Raum. Über 8.000 Menschen haben bei ihm trainiert.</p></div></div>
   </div>
  </div>
@@ -229,7 +225,7 @@ def s04():
 <section class="sec sec--cream" id="stimmen">
  <div class="wrap">
   <div class="stack" style="align-items:center"><h2 class="rv center">Was Teilnehmer nach dem Seminar schreiben</h2>
-   <p class="pe rv"><img src="assets/logo-provenexpert.png" alt="ProvenExpert" width="404" height="180">{STARS}<span>227 von 250 Bewertungen auf ProvenExpert vergeben 5 Sterne.</span></p></div>
+   <p class="pe rv"><img src="assets/logo-provenexpert.png" alt="ProvenExpert" width="404" height="180">{STARS}<span>4,9 von 5 Sternen, basierend auf 250 Bewertungen auf ProvenExpert.</span></p></div>
   <div class="qgrid3">{q}</div>
   <div class="ctabar rv">{btn()}</div>
  </div>
@@ -246,7 +242,7 @@ def s05():
  <div class="wrap">
   <h2 class="rv center">So holst du das meiste aus den 30 Minuten</h2>
   <div class="prep">{c}</div>
-  <p class="prep-note rv">{t('Vor dem Termin erinnert dich das Team per WhatsApp. 15 Minuten vorher kommt dort auch der Link zum Gespräch. Wenn du doch nicht kannst, findest du in deiner Bestätigungsmail einen Link, mit dem du umbuchst, statt den Termin verfallen zu lassen. [von Kunde bestätigen: Umbuchen-Link in der Bestätigungsmail]')}</p>
+  <p class="prep-note rv">{t('Vor dem Termin erinnert dich das Team per WhatsApp. 15 Minuten vorher kommt dort auch der Link zum Gespräch. Wenn du doch nicht kannst, ruf einfach an und wir finden einen neuen Termin.')}</p>
  </div>
 </section>'''
 
@@ -254,9 +250,9 @@ def s05():
 FAQ = [
  ('Was kostet das Gespräch?', 'Nichts. Das Gespräch ist kostenlos.'),
  ('Muss ich danach ein Seminar buchen?', 'Nein. Wenn ein Seminar passt, bekommst du Termine und Details. Ob und wann du buchst, entscheidest du danach.'),
- ('Spreche ich mit Michael Ehlers?', 'Du sprichst mit einem Mitglied aus Michaels Team. Es klärt mit dir, ob und welches Format zu dir passt. [von Kunde bestätigen: Name und Rolle der Person im Gespräch]'),
- ('Wie läuft das Gespräch technisch?', 'Per Videocall am Laptop oder Handy. Den Link schickt dir das Team per WhatsApp, spätestens 15 Minuten vorher. [von Kunde bestätigen: Video-Tool des Gesprächs]'),
- ('Was, wenn mir etwas dazwischenkommt?', 'Buch einfach um. Den Link dafür findest du in deiner Bestätigungsmail. [von Kunde bestätigen: Umbuchen-Link in der Bestätigungsmail]'),
+ ('Spreche ich mit Michael Ehlers?', 'Du sprichst mit einem Experten aus Michaels Team. Es klärt mit dir, ob und welches Format zu dir passt.'),
+ ('Wie läuft das Gespräch technisch?', 'Per Videocall am Laptop oder Handy. Den Link schickt dir das Team per WhatsApp, spätestens 15 Minuten vorher.'),
+ ('Was, wenn mir etwas dazwischenkommt?', 'Sag einfach kurz Bescheid, dann finden wir gemeinsam einen neuen Termin.'),
 ]
 
 

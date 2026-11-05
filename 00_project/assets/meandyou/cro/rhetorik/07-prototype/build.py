@@ -82,6 +82,7 @@ CSS = mic.CSS + r"""
 def header():
     return f'''<header class="hdr"><div class="hdr__in">
  <a class="hdr__logo" href="{V2}index.html"><img src="assets/logo-dark.png" alt="Michael Ehlers &amp; You Communication, Startseite" width="1794" height="647"></a>
+ <button class="hdr__burger" aria-label="Menü" aria-expanded="false"><span></span></button>
  <nav aria-label="Hauptnavigation"><a href="{V2}seminare.html">Seminare</a><a href="{V2}michael.html">Michael</a><a href="#top" aria-current="page" style="color:var(--cta)">Was ist Rhetorik</a><a href="{V2}index.html#stimmen">Stimmen</a><a href="#faq">FAQ</a></nav>
  <a class="btn" href="{BOOK}header">Gespräch buchen</a>
 </div></header>'''
@@ -96,7 +97,7 @@ def s01():
 <section class="hero hero--split" id="top">
  <div class="hero__img"><img data-plx src="assets/michael-cafe.webp" alt="Michael Ehlers im weißen Hemd an einem Tisch" width="1400" height="1982"></div>
  <div class="wrap hero__in"><div class="hero__txt">
-  <p class="proofline rv">{STARS} 227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert · über 8.000 Teilnehmer</p>
+  <p class="proofline rv">{STARS} 4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert · über 8.000 Teilnehmer</p>
   <h1 class="rv"><span class="kicker">Was ist Rhetorik?</span><span class="big">Was Rhetorik wirklich ist<br>und was sie nicht ist.</span></h1>
   <p class="sub rv">Kein Verkaufstext. Eine Erklärung, für alle, die hier zum ersten Mal sind.</p>
   <p class="body rv">Rhetorik ist die Kunst der Rede. Hier erfährst du, woher sie kommt, wie sie wirkt und wie du sie lernst. Mit Beispielen von Michael Ehlers, der seit 1990 Menschen in Rhetorik trainiert.</p>
@@ -208,7 +209,7 @@ def s08():
   <p class="lead rv" style="color:rgba(242,237,228,.85);margin-top:20px">Die meisten Rhetoriktrainings starten bei Werkzeugen. Michael Ehlers startet davor: bei Persönlichkeit, Selbstbild, Mustern und innerer Stabilität. Erst wenn das steht, tragen die Werkzeuge.</p>
   <p class="trio-h rv" style="color:var(--sand);margin-top:36px">Persönlichkeit. Kongruenz. Wirkung.</p>
   <div class="cols01" style="margin-top:14px">{c}</div>
-  <p class="lead rv" style="color:rgba(242,237,228,.85);margin-top:36px;max-width:48em">{t('In den Seminaren schaut Michael genau hin [von Kunde bestätigen: Leitet Michael die Seminare selbst], wie eine Aussage im Raum ankommt. Und was von ihr bleibt, wenn jemand widerspricht. Seine Rückmeldung ist direkt. Du arbeitest mit dem, was du schon mitbringst.')} <a class="tlink" style="color:#fff" href="{V2}michael.html">Mehr über Michael</a></p>
+  <p class="lead rv" style="color:rgba(242,237,228,.85);margin-top:36px;max-width:48em">{t('In den Seminaren schaut Michael selbst genau hin, wie eine Aussage im Raum ankommt. Und was von ihr bleibt, wenn jemand widerspricht. Seine Rückmeldung ist direkt. Du arbeitest mit dem, was du schon mitbringst.')} <a class="tlink" style="color:#fff" href="{V2}michael.html">Mehr über Michael</a></p>
   <div class="cta-row rv" style="margin-top:30px">{btn('methode', 'btn btn--light')}</div>
  </div>
 </section>'''
@@ -254,7 +255,7 @@ def s11():
   <a class="vsl__v rv" href="{TRAIN}video"><img src="assets/vsl-poster.webp" alt="Standbild aus dem kostenlosen Video: Michael Ehlers im Studio" width="1920" height="1080"><b>{PLAY}</b></a>
   <div class="stack">
    <h2 class="rv">Das kostenlose Training von Michael Ehlers</h2>
-   <p class="lead rv">{t('Nicht mehr überhört, sondern unübersehbar. In einem kostenlosen Video zeigt Michael Ehlers, wie du Aufmerksamkeit und Vertrauen gewinnst, ohne laut zu werden oder dich zu verbiegen [von Kunde bestätigen: Inhalt und Länge des Trainings]. In seine Arbeit fließen über 30 Jahre Erfahrung mit Executives, Unternehmern, Politikern und Profisportlern.')}</p>
+   <p class="lead rv">{t('Nicht mehr überhört, sondern unübersehbar. In einem kostenlosen Video zeigt Michael Ehlers, wie du Aufmerksamkeit und Vertrauen gewinnst, ohne laut zu werden oder dich zu verbiegen. In seine Arbeit fließen über 30 Jahre Erfahrung mit Executives, Unternehmern, Politikern und Profisportlern.')}</p>
    <p class="lead rv">Das Video ist für alle, die gehört werden wollen, ohne sich zu verstellen. Nach dem Video kannst du ein kostenloses persönliches Gespräch buchen. Das ist freiwillig.</p>
    <div class="cta-row rv">{btn('training')}</div>
   </div>

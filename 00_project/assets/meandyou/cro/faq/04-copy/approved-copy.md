@@ -18,7 +18,7 @@ flags: see OPEN-FLAGS.md
 <!-- FLAG: Storno nach AGB (8 Wochen, 30 %) statt Gutschein der Sales-Checkliste; Übernachtung, Verpflegung, Begleitperson, Programm Get Together, Seminarleitung, Person im Gespräch und Bundle-Termine vom Kunden bestätigen. Siehe OPEN-FLAGS.md -->
 <!-- S01 hero | element: hero | cta: primary -->
 <!-- design: kompakter Hero wie Startseite, Text links, kleines echtes Foto Michael rechts. H1: „Häufige Fragen“ groß (Copy Deck), Rest klein. Darunter Sprungnavigation als Chips mit sieben Themen. utm_content=hero -->
-227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert · über 8.000 Teilnehmer
+4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert · über 8.000 Teilnehmer
 
 # Häufige Fragen zu den Rhetorik-Seminaren mit Michael Ehlers
 
@@ -34,12 +34,12 @@ Deine Frage fehlt? Kläre sie in einem kostenlosen Gespräch von 30 Minuten per 
 <!-- design: helles Band, Antwort links, vier Fakten-Kacheln rechts, Zitat darunter. -->
 ## Das Wichtigste in Kürze
 
-Die drei Seminare von Michael Ehlers dauern je vier Tage: drei Trainingstage und ein Tag Get Together, bei allen aktuellen Terminen von Donnerstag bis Sonntag. In Gruppen mit 10, 12 oder 14 Plätzen wirst du dreimal auf Video aufgenommen und sprichst im VR-Training vor einem virtuellen Publikum. Welches Seminar passt, ob noch Plätze frei sind und was es kostet, klärst du in einem kostenlosen Gespräch von 30 Minuten.
+Die Seminare ETHOS, PATHOS und LOGOS von Michael Ehlers dauern je vier Tage: drei Trainingstage und ein Tag Get Together, bei allen aktuellen Terminen von Donnerstag bis Sonntag. In Gruppen mit höchstens 14 Plätzen wirst du dreimal auf Video aufgenommen und sprichst im VR-Training vor einem virtuellen Publikum. Welches Seminar passt, ob noch Plätze frei sind und was es kostet, klärst du in einem kostenlosen Gespräch von 30 Minuten.
 
 - **4 Tage** je Seminar, Donnerstag bis Sonntag
-- **10 bis 14** Plätze je Gruppe
+- **14** Plätze je Gruppe
 - **6 Orte:** Mallorca, Barcelona, Dubai, Zypern, Frankfurt, Berlin
-- **250 Bewertungen** auf ProvenExpert, 227 davon mit 5 Sternen
+- **4,9 von 5 Sternen** auf ProvenExpert, 250 Bewertungen
 
 „Die Herangehensweise und das individuelle Feedback haben mich sehr motiviert […]“ Jasmina L., ProvenExpert
 <!-- /S02 -->
@@ -49,16 +49,16 @@ Die drei Seminare von Michael Ehlers dauern je vier Tage: drei Trainingstage und
 ## Seminar und Inhalte
 
 ### Was ist ein Rhetorik-Seminar?
-Ein Training, in dem du freies Reden und sicheres Auftreten übst. Bei me&you stehst du dafür an allen drei Trainingstagen selbst vor der Gruppe. Danach bekommst du Rückmeldung vom Trainer und von den anderen Teilnehmern [von Kunde bestätigen: Leitet Michael die Seminare selbst].
+Ein Training, in dem du freies Reden und sicheres Auftreten übst. Bei me&you stehst du dafür an allen drei Trainingstagen selbst vor der Gruppe. Danach bekommst du Rückmeldung vom Trainer und von den anderen Teilnehmern.
 
 ### Was macht man in einem Rhetorik-Seminar?
 Du hältst kurze Reden und bekommst direkt danach Feedback. Drei Videoanalysen zeigen dir, wie du auf andere wirkst. Im VR-Training stehst du vor einem großen virtuellen Saal. Die weiteren Themen hängen vom Seminar ab, zum Beispiel Struktur, Schlagfertigkeit oder Stegreifrede.
 
 ### Welche Seminare gibt es?
-Drei Seminare und ein kompaktes Bundle. Der Einstieg „Frei sprechen“ behandelt Auftreten, freie Rede und Struktur. In „Ruhig bleiben, wenn es eng wird“ geht es um Schlagfertigkeit und Argumentation, in „Mit Sprache führen“ um Führung, Zuhören und Stegreifrede. Die Namen sind Arbeitstitel [von Kunde bestätigen: Seminarname].
+Vier Seminare unter der Dachmarke UNÜBERSEHBAR: ETHOS behandelt Auftreten, freie Rede und Struktur. In LOGOS geht es um Schlagfertigkeit und Argumentation, in PATHOS um Führung, Zuhören und Stegreifrede. KAIROS ist die Präsenzwoche in Mexiko. ETHOS, PATHOS und LOGOS kannst du einzeln oder im Zweierbundle buchen, nach aktueller Entscheidung ohne zwingende Reihenfolge.
 
 ### Mit welchem Seminar fange ich an?
-Mit dem Einstieg „Frei sprechen“. Er legt die Basis für Auftreten und Struktur. Die beiden anderen Formate wählst du danach in beliebiger Reihenfolge. Hast du schon viel Erfahrung, frag im Gespräch, ob ein anderer Start sinnvoll ist.
+In der Regel mit ETHOS. Es legt die Basis für Auftreten und Struktur. Die anderen Formate wählst du danach frei. Hast du schon viel Erfahrung, frag im Gespräch, ob ein anderer Start sinnvoll ist.
 
 ### Bin ich als Anfänger richtig?
 Ja. Erfahrung als Redner brauchst du nicht. In den Gruppen sitzen Anfänger neben Profis. Christin R. schreibt auf ProvenExpert, dass Michael alle weiterbringt, „egal auf welchem Level“.
@@ -67,7 +67,10 @@ Ja. Erfahrung als Redner brauchst du nicht. In den Gruppen sitzen Anfänger nebe
 Dazu zwei Stimmen von Teilnehmern mit Erfahrung. Peter Escher, Moderator beim MDR: „Trotz 40 Jahren Medienerfahrung konnte ich erstaunlich viel vom Rhetoriktraining profitieren.“ Emrullah A. hatte schon mehrere Schulungen besucht. Sein Fazit bei Google: „Ich habe in diesem Kurs mehr gelernt als in all meinen bisherigen Schulungen zusammen.“
 
 ### Passt das Seminar für Führungskräfte?
-Ja. Führungskräfte sind eine der Hauptgruppen, dazu Gründerinnen und Gründer, Beraterinnen und Berater. Für die Arbeit mit einem Team passt das Format „Mit Sprache führen“: Kritik klar formulieren, zuhören, vor Gruppen frei sprechen. Mit wenig Zeit fragst du nach dem Rhetorik Bundle.
+Ja. Führungskräfte sind eine der Hauptgruppen, dazu Gründerinnen und Gründer, Beraterinnen und Berater. Für die Arbeit mit einem Team passt PATHOS: Kritik klar formulieren, zuhören, vor Gruppen frei sprechen. Mit wenig Zeit fragst du nach dem Zweierbundle.
+
+### Für wen ist das Seminar geeignet?
+Für Menschen, die in wichtigen Momenten etwas zu sagen haben und dabei auch gehört werden möchten. Ob du gerade anfängst oder bereits Teams führst, vor Kunden präsentierst oder auf Bühnen stehst: Entscheidend ist dein nächster Entwicklungsschritt. Du kannst die Seminare einzeln oder in den angebotenen Zweierbundles buchen. Im kostenlosen Gespräch klären wir, welches Seminar zu deinen Zielen passt.
 
 ### Ich bin introvertiert. Passt das trotzdem?
 Ja. Rhetorik heißt nicht, lauter oder extrovertierter zu werden. Viele Introvertierte überzeugen durch Präzision und Ruhe. Im Seminar arbeitest du mit genau diesen Stärken.
@@ -94,22 +97,22 @@ Alle Inhalte und Formate im Detail: [Seminare](/seminare)
 An sechs Orten. Im Ausland sind das Mallorca, Barcelona, Dubai, Zypern. In Deutschland sind es Frankfurt und Berlin. Die Orte schaffen Abstand zum Büro. Das Institut selbst sitzt in Hallstadt bei Bamberg.
 
 ### Welches Seminar findet wo statt?
-Den Einstieg gibt es auf Mallorca, in Frankfurt und in Berlin. „Ruhig bleiben“ findet in Barcelona statt. „Mit Sprache führen“ läuft 2026 in Dubai und 2027 auf Zypern.
+ETHOS gibt es auf Mallorca, in Frankfurt und in Berlin. LOGOS findet in Barcelona statt. PATHOS läuft 2026 in Dubai und 2027 auf Zypern.
 
 ### Wann ist der nächste Termin?
-Mallorca vom 3. bis 6. Dezember 2026, danach Dubai vom 10. bis 13. Dezember 2026. Für die drei Seminare stehen 2027 acht weitere Termine fest, von März bis Oktober. Die vollständige Liste findest du unter [alle Termine](/seminare#termine).
+Mallorca vom 03.12. – 06.12.2026, danach Dubai vom 10.12. – 13.12.2026. Für die Seminare stehen 2027 weitere Termine fest, von März bis Oktober. Die vollständige Liste findest du unter [alle Termine](/seminare#termine).
 
 ### An welchen Wochentagen finden die Seminare statt?
 Jeder Termin beginnt an einem Donnerstag und endet am Sonntag. Für die Seminartage selbst sind das zwei Arbeitstage, dazu kommt je nach Ort die Anreise.
 
 ### Gibt es Seminare in Deutschland?
-Ja. Den Einstieg bietet Michaels Team auch in Frankfurt an, vom 17. bis 20. Juni 2027, und in Berlin, vom 12. bis 15. August 2027. Wer nicht fliegen will, beginnt dort.
+Ja. ETHOS bietet Michaels Team auch in Frankfurt an, vom 17.06. – 20.06.2027, und in Berlin, vom 12.08. – 15.08.2027. Wer nicht fliegen will, beginnt dort.
 
-### Wann findet das Rhetorik Bundle statt?
-Das Bundle dauert zwei Tage und fasst Inhalte aus dem Einstieg und aus „Ruhig bleiben“ zusammen. Termine und Ort nennt dir Michaels Team im Gespräch [von Kunde bestätigen: Termine und Ort Bundle].
+### Was ist das Zweierbundle?
+Ein Bundle umfasst genau zwei Seminare: ETHOS und PATHOS oder PATHOS und LOGOS. Nach aktueller Entscheidung gibt es keine zwingende Reihenfolge. Wenn du im Bundle buchst oder an mehreren Seminaren teilnehmen möchtest, haben wir das passende Angebot für dich, mit Budgetvorteil. Deine Termine und Standorte wählst du für beide Seminare selbst. KAIROS ist nicht Bestandteil des Zweierbundles und separat buchbar.
 
 ### Sind noch Plätze frei?
-Das erfährst du im Gespräch. Je nach Seminar gibt es nur 10, 12 oder 14 Plätze.
+Das erfährst du im Gespräch. Jedes Seminar hat höchstens 14 Plätze.
 
 Stand der Termine: Oktober 2026.
 
@@ -127,42 +130,45 @@ In den drei Seminaren dreimal. Nach jeder Aufnahme folgt sofort die Auswertung. 
 Im VR-Training sprichst du in einer virtuellen Umgebung vor einem großen Publikum. Michael B. beschreibt es auf ProvenExpert als KI-gesteuert und „unglaublich real“.
 
 ### Wie groß ist die Gruppe?
-Im Einstieg 14 Plätze, bei „Ruhig bleiben“ 10 und bei „Mit Sprache führen“ 12. Jeder kommt dran, niemand schaut nur zu.
+Höchstens 14 zahlende Teilnehmer pro Seminar. Jeder kommt dran, niemand schaut nur zu.
 
 ### Was passiert am Tag Get Together?
-Zu jedem Termin gehört neben den drei Trainingstagen ein Tag Get Together mit der Gruppe [von Kunde bestätigen: Programm Get Together].
+Am Anreisetag findet ein Get Together statt, ein entspanntes Kennenlernen mit Michael und den übrigen Teilnehmern. Die genaue Uhrzeit wird vorab mitgeteilt.
 
 ### Welche Unterlagen bekomme ich?
-Im Einstieg arbeitest du mit Worksheets und Übungen. Bei „Ruhig bleiben“ bekommst du Strategien und Workbooks.
+Du arbeitest in den Seminaren mit Strategien und Workbooks, passend zu ETHOS, PATHOS oder LOGOS.
 
 ### Ist die Übernachtung enthalten?
-Ja, für den offiziellen Seminarzeitraum. Bei vier Seminartagen sind das drei Nächte [von Kunde bestätigen: Übernachtung]. Reist du früher an oder bleibst länger, buchst du die Extranächte selbst.
+Ja. Drei Hotelübernachtungen ab dem offiziellen Anreisetag sind inklusive, dazu Frühstück, Mittagessen und die Verpflegung während des Seminars. Reist du früher an oder bleibst länger, buchst du die Extranächte selbst.
 
 ### Sind Anreise und Transfer enthalten?
 Nein. Flug, Bahn oder Auto organisierst und bezahlst du selbst. Das gilt auch für den Weg vom Flughafen zum Hotel.
 
 ### Welche Verpflegung ist dabei?
-Während des Programms gibt es Snacks, Getränke und ein leichtes Frühstück. Das Frühstück im Hotel und das Abendessen zahlst du selbst [von Kunde bestätigen: Verpflegung].
+Frühstück, Mittagessen sowie Kaffee, Tee, Wasser und kleine Snacks während des Seminars sind inklusive. Abendessen sowie Speisen und Getränke bei gemeinsamen Restaurantbesuchen zahlst du selbst.
 
 ### Darf ich eine Begleitperson mitbringen?
-Ja, auf eigene Kosten. Ein Zimmer-Upgrade, zum Beispiel auf ein Doppelzimmer, buchst du direkt beim Hotel und zahlst es dort [von Kunde bestätigen: Begleitperson].
+Du möchtest deine Reise mit einer Begleitperson verbinden? Sehr gerne. Deine Begleitung kann mitreisen. Zusätzliche Hotelkosten oder ein Zimmerupgrade übernimmst du selbst. Die Teilnahme am Seminar ist ausschließlich gebuchten Seminarteilnehmern vorbehalten.
 <!-- /S05 -->
 
 <!-- S06 faq | element: faq | cta: primary -->
 <!-- design: id="kosten". Gruppenkopf 04, Preis-Frage zuerst und offen. utm_content=kosten -->
 ## Kosten und Storno
 
-### Was kostet ein Rhetorik-Seminar bei Michael Ehlers?
-Den Preis für dein Seminar erfährst du im kostenlosen Gespräch. Auf dieser Website stehen keine Preise. Enthalten sind unter anderem die Trainingstage und die Übernachtungen im Seminarzeitraum.
+### Was kostet ein Rhetorikkurs bei Michael Ehlers?
+Das hängt vom Seminar und vom Format ab. Jedes Seminar ist auf maximal 14 Teilnehmer begrenzt. Wenn du im Bundle buchst oder an mehreren Seminaren teilnehmen möchtest, haben wir das passende Angebot für dich, mit Budgetvorteil. Den genauen Preis besprichst du im Gespräch. Weitere Fragen klärst du mit einem Experten aus Michaels Team. Dort besprechen wir auch, welche Leistungen im jeweiligen Angebot enthalten sind.
 
 ### Was ist im Preis enthalten?
-Die drei Trainingstage, der Tag Get Together und die Übernachtungen im offiziellen Seminarzeitraum [von Kunde bestätigen: Übernachtung]. Dazu kommen die Videoanalysen, das VR-Training und die Unterlagen. Nicht enthalten sind Anreise und Transfer, Extranächte sowie Hotelfrühstück und Abendessen [von Kunde bestätigen: Verpflegung].
+Die drei Trainingstage, der Tag Get Together und drei Hotelübernachtungen ab dem offiziellen Anreisetag, dazu Frühstück, Mittagessen und die Verpflegung während des Seminars. Dazu kommen die Videoanalysen, das VR-Training und die Unterlagen. Nicht enthalten sind Anreise und Transfer, Extranächte sowie Abendessen.
+
+### Gibt es ein Online-Seminar?
+Ja. Erlebe Michaels Seminare auch online. Du möchtest an deiner Präsenz und Wirkung arbeiten, ohne zu verreisen? Informiere dich im persönlichen Gespräch über das passende Online-Format. Die Plätze sind auf maximal 14 Teilnehmer begrenzt.
 
 ### Kann ich ein gebuchtes Seminar stornieren?
 Ja. Laut AGB ist eine Stornierung bis 8 Wochen vor Seminarbeginn möglich, gegen eine Gebühr von 30 Prozent. Bei einer späteren Absage ist der volle Preis fällig.
 
 ### Kann ich erst einmal kostenlos reinschauen?
-Ja. Michael Ehlers hat ein kostenloses Video-Training aufgenommen [von Kunde bestätigen: Inhalt und Länge des Trainings]. Darin zeigt er, wie du Aufmerksamkeit und Vertrauen gewinnst, ohne laut zu werden. Du findest es unter [Kostenloses Training ansehen](https://www.meandyou.de/sichtbarkeit-neu?utm_source=faq&utm_content=kosten).
+Ja. Michael Ehlers hat ein kostenloses Video-Training aufgenommen. Darin zeigt er, wie du Aufmerksamkeit und Vertrauen gewinnst, ohne laut zu werden. Du findest es unter [Kostenloses Training ansehen](https://www.meandyou.de/sichtbarkeit-neu?utm_source=faq&utm_content=kosten).
 
 **Gespräch buchen**
 <!-- /S06 -->
@@ -175,7 +181,7 @@ Ja. Michael Ehlers hat ein kostenloses Video-Training aufgenommen [von Kunde bes
 Ein Termin von 30 Minuten per Video. Du sprichst über deine Situation und deine Ziele. Am Ende weißt du, welches Seminar und welcher Termin zu dir passen.
 
 ### Mit wem spreche ich?
-Mit einem Mitglied aus Michaels Team, das die Seminare kennt [von Kunde bestätigen: Name und Rolle der Person im Gespräch].
+Du sprichst mit einem Experten aus Michaels Team, der die Seminare kennt.
 
 ### Ist das ein Verkaufsgespräch?
 Ja, auch. Ihr klärt, welches Seminar zu dir passt, und du erfährst den Preis. Eine Verpflichtung gehst du damit nicht ein. Ob und wann du dich anmeldest, entscheidest du danach in Ruhe.
@@ -206,7 +212,7 @@ Ja, unter +49 15888367664. Schriftliche Fragen gehen an management@meandyou.de.
 Rhetoriktrainer, Executive Coach und Autor. Sein erstes Rhetorikseminar gab er 1990. Er lehrt an der Universität St. Gallen und hat neun Bücher als Autor oder Herausgeber veröffentlicht. Seinen Werdegang findest du unter [Mehr über Michael](/michael).
 
 ### Leitet Michael die Seminare selbst?
-[von Kunde bestätigen: Leitet Michael die Seminare selbst]. Michael B. schrieb 2023 über sein Seminar auf Mallorca, er habe Feedback „sowohl von Michael Ehlers als auch von den anderen Teilnehmern“ bekommen.
+Ja, Michael leitet jedes Seminar selbst. Michael B. schrieb 2023 über sein Seminar auf Mallorca, er habe Feedback „sowohl von Michael Ehlers als auch von den anderen Teilnehmern“ bekommen.
 
 ### Was ist das Ehlers-Rhetorik-Framework?
 Michaels eigene Methode, entstanden aus über 30 Jahren Training. Sie setzt vor den Werkzeugen an: bei Persönlichkeit, Selbstbild, Mustern und innerer Stabilität. Die drei Schritte heißen Persönlichkeit. Kongruenz. Wirkung.
@@ -214,8 +220,14 @@ Michaels eigene Methode, entstanden aus über 30 Jahren Training. Sie setzt vor 
 ### Arbeitet Michael auch mit Unternehmen?
 Ja. Vorstände und Geschäftsleitungen coacht er persönlich, auch in der Krisenkommunikation. Trainings auf weiteren Ebenen übernehmen zwei Trainer, die er selbst ausgebildet und lizenziert hat. Diese Angebote laufen über sein Institut.
 
-### Was sagen Teilnehmer über die Seminare?
-Auf ProvenExpert stehen 250 Bewertungen, 227 davon mit 5 Sternen. Christian S. schreibt dort: „Keiner versteht es besser seine Teilnehmer durch fordern zu fördern.“ Weitere Stimmen mit Namen und Seminar liest du unter [Stimmen](/stimmen).
+### Wie sind die Erfahrungen mit Michael Ehlers?
+Wer bei Michael trainiert, bleibt nicht bei der Theorie. Teilnehmer berichten von intensiven Übungen, direktem Feedback und dem Moment, in dem sie vor anderen deutlich sicherer sprechen. Auf ProvenExpert ergibt sich aus den bisher vorliegenden 250 Bewertungen ein Durchschnitt von 4,9 von 5 Sternen. Weitere persönliche Eindrücke findest du in den Videoberichten und auf Google. Christian S. schreibt auf ProvenExpert: „Keiner versteht es besser seine Teilnehmer durch fordern zu fördern.“ Weitere Stimmen mit Namen und Seminar liest du unter [Stimmen](/stimmen).
+
+### Gibt es auch Kritik an Michael Ehlers?
+Ja. Erfahrungen sind persönlich und nicht jede Bewertung fällt gleich aus. Wir möchten, dass du dir selbst ein Bild machst. Deshalb kannst du die veröffentlichten Bewertungen auf ProvenExpert und Google direkt nachlesen, auch die kritischen.
+
+### Sind die Bewertungen echt?
+Die Erfahrungsberichte stammen aus öffentlich zugänglichen Bewertungen auf ProvenExpert und Google sowie aus Videos, in denen Teilnehmer selbst zu Wort kommen. Über die verlinkten Plattformen kannst du die veröffentlichten Bewertungen selbst einsehen.
 <!-- /S08 -->
 
 <!-- S09 faq | element: faq -->
@@ -231,8 +243,8 @@ Ethos, Pathos und Logos, so hat es Aristoteles eingeteilt. Ethos meint die Glaub
 ### Was sind die fünf Säulen der Rhetorik?
 Meist die fünf Arbeitsschritte einer Rede aus der klassischen Rhetorik: Stoff finden, ordnen, ausformulieren, einprägen und vortragen. Eine verbindliche Einteilung gibt es nicht.
 
-### Wie lernt man Rhetorik am besten?
-Durch Üben mit ehrlicher Rückmeldung. Lesen bringt dir Wissen. Wenn es darauf ankommt, trägt dich nur das Geübte. Im Seminar bekommst du in drei Tagen beides: viel Übung und ehrliche Rückmeldung.
+### Wie kann ich Rhetorik trainieren?
+Indem du ins Sprechen kommst. Du übst, erhältst direktes Feedback und probierst es erneut. So erkennst du, wie du unter Druck reagierst und wie du klarer und glaubwürdiger wirkst. Michaels Seminare verbinden genau dieses praktische Training mit der Arbeit an deiner Persönlichkeit.
 
 ### Welche Übungen kann ich machen, um Rhetorik zu trainieren?
 Sprich zwei Minuten frei zu einem Thema aus deinem Alltag. Nimm dich dabei mit dem Handy auf und sieh dir die Aufnahme an. Frag danach eine Person deines Vertrauens, was hängen geblieben ist.
@@ -259,7 +271,7 @@ Dann stell sie im Gespräch. 30 Minuten, kostenlos, per Video. Danach weißt du,
 - Termin online wählen
 - schriftlich an management@meandyou.de
 
-227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert
+4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert
 
 **[Gespräch buchen](/gespraech-buchen)**
 Lieber anrufen: +49 15888367664

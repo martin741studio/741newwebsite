@@ -24,7 +24,7 @@ Du bist bestinformiert im Raum. Gefolgt wird trotzdem jemand anderem. Zwischen K
 
 Michael Ehlers trainiert seit 1990 Menschen, deren Fachwissen stimmt und deren Wirkung im Meeting dahinter zurückbleibt. Im Training arbeitest du an Argumentation und Auftritt. Dazu gehören Videoanalyse und direkte Rückmeldung.
 
-227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert · über 8.000 Teilnehmer
+4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert · über 8.000 Teilnehmer
 
 **[Gespräch buchen](/gespraech-buchen?utm_source=lp-overlooked&utm_content=hero)**
 30 Minuten, kostenlos, per Video. Du klärst, welches Format zu dir passt.
@@ -37,7 +37,7 @@ Michael Ehlers trainiert seit 1990 Menschen, deren Fachwissen stimmt und deren W
 - **Neun Bücher** als Autor oder Herausgeber
 - **Top 100** Trainer laut ERFOLG Magazin (Ausgabe 2017)
 
-„Michael Ehlers zeigt, wie man […] wirklich gehört wird.“ Bewertung bei Google, Auslassung mit […] markiert [von Kunde bestätigen: Freigabe Zitat]
+„Michael Ehlers zeigt, wie man […] wirklich gehört wird.“ Bewertung bei Google, Auslassung mit […] markiert
 <!-- /S02 -->
 
 <!-- S03 answer | element: answer -->
@@ -78,13 +78,14 @@ Gedacht ist das für Führungskräfte, Gründerinnen und Gründer, Beraterinnen 
 
 Die meisten Rhetoriktrainings starten bei Werkzeugen. Wir starten davor: bei Persönlichkeit, Selbstbild, Mustern und innerer Stabilität. Erst wenn das steht, tragen die Werkzeuge.
 
-**01 Persönlichkeit.** Wer du bist, bevor du sprichst. Die Frage dahinter: Welche Muster zeigen sich, wenn du unter Druck sprichst?
+**01 Persönlichkeit.** Wer du bist, bevor du sprichst. Bevor du an Technik arbeitest, lohnt der Blick auf dein eigenes Muster: In welchen Momenten ziehst du dich zurück, obwohl du etwas zu sagen hast?
+Übung: Notier dir die letzten drei Situationen, in denen du geschwiegen hast, obwohl du eine Meinung hattest. Was war in diesem Moment der eigentliche Grund?
 
-**02 Kongruenz.** Wenn Haltung und Worte dasselbe sagen. Die Frage dahinter: Passt das, was du sagst, zu dem, wie du es sagst?
+**02 Kongruenz.** Wenn Haltung und Worte dasselbe sagen. Zuhörer merken es, wenn Ton und Inhalt auseinanderfallen, noch bevor sie erklären können, warum.
+Übung: Nimm einen Satz auf, den du bald sagen musst. Hör ihn dir an und frag dich: Klingt das, wie es gemeint ist?
 
-**03 Wirkung.** Was davon im Raum ankommt. Die Frage dahinter: Was nehmen die anderen mit, wenn du fertig bist?
-
-[von Kunde bestätigen: ein Satz und eine Übung je Methodenschritt]
+**03 Wirkung.** Was davon im Raum ankommt. Nicht, was du gesagt hast, zählt, sondern was beim Gegenüber übrig bleibt.
+Übung: Frag nach dem nächsten Gespräch eine Person, die dabei war: Was hast du bei mir mitgenommen? Vergleiche es mit dem, was du sagen wolltest.
 <!-- /S05 -->
 
 <!-- S06 table | element: table | cta: primary -->
@@ -114,13 +115,13 @@ Ein Teilnehmer beschreibt den Unterschied. „Statt starrer Schemata, die nur Ko
 
 | Situation | Was du trainierst | Seminar |
 |---|---|---|
-| Dein Argument stimmt, die Entscheidung fällt anders | Überzeugungspsychologie: Motive erkennen, Argumente gezielt platzieren | Ruhig bleiben, wenn es eng wird |
-| Du wirst unterbrochen oder angegriffen | Unfaire Methoden durchschauen und ruhig kontern, Schlagfertigkeit | Ruhig bleiben, wenn es eng wird |
-| Die Diskussion läuft ohne Ergebnis | Meetings führen: Diskussionen leiten, Ergebnisse klar sichern | Ruhig bleiben, wenn es eng wird |
-| Deine Idee braucht zu lange | In 2 Minuten ein starkes Statement setzen, mit klarer Formel aufbauen | Frei sprechen |
-| Du sollst eine Gruppe gewinnen | Gruppen überzeugen mit Methoden großer Redner, Zuhören | Mit Sprache führen |
+| Dein Argument stimmt, die Entscheidung fällt anders | Überzeugungspsychologie: Motive erkennen, Argumente gezielt platzieren | LOGOS |
+| Du wirst unterbrochen oder angegriffen | Unfaire Methoden durchschauen und ruhig kontern, Schlagfertigkeit | LOGOS |
+| Die Diskussion läuft ohne Ergebnis | Meetings führen: Diskussionen leiten, Ergebnisse klar sichern | LOGOS |
+| Deine Idee braucht zu lange | In 2 Minuten ein starkes Statement setzen, mit klarer Formel aufbauen | ETHOS |
+| Du sollst eine Gruppe gewinnen | Gruppen überzeugen mit Methoden großer Redner, Zuhören | PATHOS |
 
-In „Frei sprechen“ und „Ruhig bleiben, wenn es eng wird“ kommt die Körpersprache dazu: Signale des Gegenübers erkennen und die eigene Gestik gezielt einsetzen. Überzeugend argumentieren und souverän auftreten: Beides trainierst du im selben Seminar. Die Seminarnamen sind Arbeitstitel [von Kunde bestätigen: Seminarname]. Alle Inhalte findest du auf der Seite [Seminare](/seminare).
+In ETHOS und LOGOS kommt die Körpersprache dazu: Signale des Gegenübers erkennen und die eigene Gestik gezielt einsetzen. Überzeugend argumentieren und souverän auftreten: Beides trainierst du im selben Seminar. Alle Inhalte findest du auf der Seite [Seminare](/seminare).
 <!-- /S07 -->
 
 <!-- S08 table | element: table | cta: primary -->
@@ -132,12 +133,12 @@ Die Tabelle zeigt die Formate im Vergleich. Welches zu dir passt, klärst du vor
 | | Online-Kurs | Seminar | Gespräch |
 |---|---|---|---|
 | Wo | online, von überall | vor Ort: Mallorca, Barcelona, Dubai, Frankfurt, Berlin, Zypern | per Video |
-| Wie | Selbstlernkurs mit Video-Lektionen | Intensivtraining in der Gruppe, 10 bis 14 Plätze | 30 Minuten mit Michaels Team |
-| Rückmeldung | [von Kunde bestätigen: Extras des Online-Kurses] | dreimal Videoanalyse mit Sofort-Feedback, VR-Training | Einschätzung deiner Situation |
+| Wie | Selbstlernkurs mit Video-Lektionen | Intensivtraining in der Gruppe, 14 Plätze | 30 Minuten mit einem Experten aus Michaels Team |
+| Rückmeldung | Video-Lektionen, Workbook, Community und Live-Q&A | dreimal Videoanalyse mit Sofort-Feedback, VR-Training | Einschätzung deiner Situation |
 | Zeit | in deinem Tempo, Zugang mindestens 12 Monate | 3 Tage Training und 1 Tag Get Together | 30 Minuten |
 | Nächster Schritt | im Gespräch klären | im Gespräch klären | Termin online wählen |
 
-Den Kursnamen und den genauen Umfang nennt dir Michaels Team im Gespräch [von Kunde bestätigen: Kursname]. Preise stehen nicht auf dieser Seite. Du erfährst sie im Gespräch.
+Der Kurs heißt „Rhetorik für Intelligente". Den genauen Umfang nennt dir Michaels Team im Gespräch. Preise stehen nicht auf dieser Seite. Du erfährst sie im Gespräch.
 
 **[Gespräch buchen](/gespraech-buchen?utm_source=lp-overlooked&utm_content=formate)**
 30 Minuten, kostenlos, per Video.
@@ -148,7 +149,7 @@ Den Kursnamen und den genauen Umfang nennt dir Michaels Team im Gespräch [von K
 ## Der erste Schritt dauert 30 Minuten
 
 1. **Termin wählen.** Du suchst dir online einen freien Termin aus. Danach bekommst du eine Bestätigung per E-Mail und vor dem Termin eine kurze Erinnerung per WhatsApp.
-2. **Gespräch per Video.** 30 Minuten mit Michaels Team [von Kunde bestätigen: Name und Rolle der Person im Gespräch]. Michaels Team klärt mit dir, wo du stehst und welches Format passt. Bring gern eine konkrete Situation mit, zum Beispiel ein Meeting, in dem du nicht durchgedrungen bist.
+2. **Gespräch per Video.** 30 Minuten mit einem Experten aus Michaels Team. Wir klären mit dir, wo du stehst und welches Format passt. Bring gern eine konkrete Situation mit, zum Beispiel ein Meeting, in dem du nicht durchgedrungen bist.
 3. **In Ruhe entscheiden.** Du bekommst die Details zum passenden Format. Ob du buchst, entscheidest du danach.
 
 Kosten: keine.
@@ -178,7 +179,7 @@ Namen seiner Mandanten nennt er nicht. [Mehr über Michael](/michael)
 <!-- design: offene Karten im Raster, kein Laufband. Jede Karte: Überschrift, Zitat, Name, Quelle. Darunter die drei echten Video-Stimmen. -->
 ## Was Teilnehmer über ihre Wirkung schreiben
 
-Auf ProvenExpert haben 227 von 250 Bewertungen 5 Sterne (Stand: Oktober 2026). Vier Auszüge, die zu dieser Situation passen. Auslassungen sind mit […] markiert.
+Auf ProvenExpert liegt der Durchschnitt bei 4,9 von 5 Sternen (Stand: Oktober 2026). Vier Auszüge, die zu dieser Situation passen. Auslassungen sind mit […] markiert.
 
 ### Wie andere dich wahrnehmen
 „Ich habe gelernt, meine innere Haltung zum Ausgangspunkt jeder Präsentation zu machen […] Wie ich spreche, wie ich wirke, wie ich wahrgenommen werde.“ Adrian B., Google
@@ -241,7 +242,7 @@ Weitere Antworten findest du in den [häufigen Fragen](/faq). Wenn du Rhetorik e
 - Gespräch per Video, von überall
 - kostenlos, du entscheidest danach
 
-227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert
+4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert
 
 **[Gespräch buchen](/gespraech-buchen?utm_source=lp-overlooked&utm_content=abschluss)**
 Lieber anrufen: +49 15888367664

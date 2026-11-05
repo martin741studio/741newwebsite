@@ -138,7 +138,7 @@ Persönlichkeit. Kongruenz. Wirkung.
 
 **Wirkung.** Was davon im Raum ankommt.
 
-In den Seminaren schaut Michael genau hin [von Kunde bestätigen: Leitet Michael die Seminare selbst], wie eine Aussage im Raum ankommt. Und was von ihr bleibt, wenn jemand widerspricht. Seine Rückmeldung ist direkt. Du arbeitest mit dem, was du schon mitbringst. [Mehr über Michael](/michael)
+In den Seminaren schaut Michael genau hin, wie eine Aussage im Raum ankommt. Und was von ihr bleibt, wenn jemand widerspricht. Seine Rückmeldung ist direkt. Du arbeitest mit dem, was du schon mitbringst. [Mehr über Michael](/michael)
 
 **Kostenloses Training ansehen**
 <!-- /S08 -->
@@ -180,7 +180,7 @@ Im Seminar übst du genau so, nur intensiver: drei Tage in einer kleinen Gruppe 
 <!-- design: Feature-Box mit Video-Standbild (Play-Symbol) links, Text rechts. -->
 ## Das kostenlose Training von Michael Ehlers
 
-Nicht mehr überhört, sondern unübersehbar. In einem kostenlosen Video zeigt Michael Ehlers, wie du Aufmerksamkeit und Vertrauen gewinnst, ohne laut zu werden oder dich zu verbiegen [von Kunde bestätigen: Inhalt und Länge des Trainings]. In seine Arbeit fließen über 30 Jahre Erfahrung mit Executives, Unternehmern, Politikern und Profisportlern.
+Nicht mehr überhört, sondern unübersehbar. In einem kostenlosen Video zeigt Michael Ehlers, wie du Aufmerksamkeit und Vertrauen gewinnst, ohne laut zu werden oder dich zu verbiegen. In seine Arbeit fließen über 30 Jahre Erfahrung mit Executives, Unternehmern, Politikern und Profisportlern.
 
 Das Video ist für alle, die gehört werden wollen, ohne sich zu verstellen. Nach dem Video kannst du ein kostenloses persönliches Gespräch buchen. Das ist freiwillig.
 

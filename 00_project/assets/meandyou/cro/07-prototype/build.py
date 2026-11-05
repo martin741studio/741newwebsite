@@ -440,7 +440,7 @@ def section_seminars():
     <div class="fact rv"><b>VR-Training</b><span>vor virtuellem Publikum</span></div>
     <div class="fact rv"><b>14 Plätze</b><span>je Seminar</span></div>
    </div>
-   <p class="noladder rv">Kein Stufenmodell. ETHOS, PATHOS und LOGOS einzeln oder im Zweierbundle für 9.500 € statt 10.000 €. Dazu KAIROS, die Präsenzwoche in Mexiko.</p>
+   <p class="noladder rv">Kein Stufenmodell. ETHOS, PATHOS und LOGOS einzeln oder im Zweierbundle. Wenn du im Bundle buchst oder an mehreren Seminaren teilnehmen möchtest, haben wir das passende Angebot für dich, mit Budgetvorteil. Dazu KAIROS, die Präsenzwoche in Mexiko.</p>
    <div class="formats">{f}</div>
    <div class="center" style="margin-top:56px"><div class="cta-row">{btn('seminare')}</div></div>
   </div>
@@ -515,7 +515,7 @@ def section_places():
 </section>'''
 
 FAQ = [
- ('Was kostet ein Rhetorikkurs bei Michael Ehlers?','Das hängt vom Seminar und vom Format ab. Ein Online Seminar kostet 3.899 € und ist auf maximal 14 Teilnehmer begrenzt. Ein Präsenzseminar kostet 5.000 €. Zwei Seminare im Bundle kosten zusammen 9.500 € statt 10.000 €. KAIROS in Mexiko hat wegen des längeren Formats einen eigenen Preis. Weitere Fragen klärst du mit einem Experten aus Michaels Team. Dort besprechen wir auch, welche Leistungen im jeweiligen Angebot enthalten sind.'),
+ ('Was kostet ein Rhetorikkurs bei Michael Ehlers?','Das hängt vom Seminar und vom Format ab. Jedes Seminar ist auf maximal 14 Teilnehmer begrenzt. Wenn du im Bundle buchst oder an mehreren Seminaren teilnehmen möchtest, haben wir das passende Angebot für dich, mit Budgetvorteil. Den genauen Preis besprichst du im Gespräch. Weitere Fragen klärst du mit einem Experten aus Michaels Team. Dort besprechen wir auch, welche Leistungen im jeweiligen Angebot enthalten sind.'),
  ('Was macht man in einem Rhetorik-Seminar bei Michael Ehlers?','Du sprichst selbst, und zwar viel. Dreimal wirst du auf Video aufgenommen und bekommst sofort Feedback. Im VR-Training sprichst du vor einem virtuellen Publikum. Die Themen hängen vom Seminar ab: im Einstieg zum Beispiel freie Rede und Struktur, in den anderen Formaten Schlagfertigkeit oder die Stegreifrede.'),
  ('Wie lernt man Rhetorik am besten?','Durch Üben mit ehrlichem Feedback. Bücher geben dir das Wissen. Unter Druck hilft dir aber nur, was du geübt hast. Deshalb arbeitet das Seminar mit Reden vor der Gruppe und mit Videoanalyse. Dazu kommt die Rückmeldung von Michael und den anderen Teilnehmern.'),
  ('Ich bin sehr introvertiert. Ist das Seminar trotzdem etwas für mich?','Gerade dann. Rhetorik bedeutet nicht, lauter oder extrovertierter zu sein. Introvertierte überzeugen oft durch Präzision und Ruhe. Mit den richtigen Techniken nutzt du diese Stärken, ohne dich zu verbiegen.'),

@@ -50,15 +50,15 @@ Teilnehmer beschreiben vor allem drei Dinge: viel Übung vor der Gruppe, eine di
 
 Drei Teilnehmer erzählen vor der Kamera, wo sie vor dem Seminar standen und was sich danach geändert hat.
 
-**Video 1 (1:00): Klarer erklären.** [von Kunde bestätigen: Vorname und Rolle]
+**Video 1 (1:00): Klarer erklären.**
 „Früher brauchte ich zehn Minuten, Dinge zu erklären. Heute gelingt mir das in zwei Minuten und jeder versteht mich gleich.“
 Vorher hatte er im Internet recherchiert und Bücher gelesen. „Es ist kein echtes Üben, man bekommt kein Feedback.“ „Es gab auf jeden Fall Missverständnisse.“ Heute sagt er: „Ja, mein Selbstbewusstsein ist auf jeden Fall gewachsen.“
 
-**Video 2 (1:12): Weniger Herzpochen.** [von Kunde bestätigen: Vorname und Rolle]
+**Video 2 (1:12): Weniger Herzpochen.**
 „Ich hab mich tatsächlich jetzt auch kurz vor dem Seminar zum Teil vor den Konflikten gescheut.“
 Es fehlten ihr die Werkzeuge, um frei zu sprechen. Sie war noch etwas aufgeregt, „aber gar nicht mehr dieses extreme Herzpochen“. Ein Mitarbeitergespräch hatte sie lange aufgeschoben.
 
-**Video 3 (1:23): Kürzere Meetings.** [von Kunde bestätigen: Vorname und Rolle]
+**Video 3 (1:23): Kürzere Meetings.**
 „Unsere Teammeetings gingen von zwei Stunden auf fünfundvierzig Minuten runter und wir sind produktiver geworden.“
 Vor dem Seminar lag ihr Selbstbewusstsein in Gesprächen nach eigenen Worten „bei minus eins“. „Nach der ersten Übung haben wir Feedback bekommen. Das hat sich eingeprägt.“ Heute spricht sie langsamer: „früher war ich schneller, viel zu schnell eigentlich“.
 
@@ -118,7 +118,7 @@ Diese Stimmen stehen schon heute auf der Website von me&you.
 
 „Ich habe in diesem Kurs mehr gelernt als in all meinen bisherigen Schulungen zusammen.“ Emrullah Ates, Teilnehmer, Google
 
-Neven Subotic, Fußball-Bundesliga-Profi [von Kunde bestätigen: vollständiger Wortlaut]
+Neven Subotic, Fußball-Bundesliga-Profi
 <!-- /S05 -->
 
 <!-- S06 el-grid | element: el-grid | cta: primary -->

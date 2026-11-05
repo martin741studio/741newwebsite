@@ -18,7 +18,7 @@ flags: see OPEN-FLAGS.md
 <!-- FLAG: du statt Sie (Copy Deck Treatment 3), ein Button im Inhalt weit unten, Seminarnamen offen, Mallorca-Termine 2027 laut Live-Seite, Sales-Checkliste nicht freigegeben, Person im Gespräch offen. Siehe OPEN-FLAGS.md -->
 <!-- S01 hero | element: hero -->
 <!-- design: breites Ortsbild in goldenem Licht (Finca oder Terrasse am Meer), kleine Schrift davor. Kicker = kleiner H1-Teil, große Zeile = Copy Deck. Kein Button im Inhalt, der Header-Button bleibt sichtbar. Leiser Textlink zum Anker #orte. -->
-227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert · Rhetoriktrainer seit 1990
+4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert · Rhetoriktrainer seit 1990
 
 # Rhetorik-Seminar für Führungskräfte und Unternehmer: Dein Unternehmen ist größer, als es nach außen wirkt.
 
@@ -75,26 +75,26 @@ Die meisten Rhetoriktrainings starten bei Werkzeugen. Wir starten davor: bei Per
 Abstand vom Büro schafft Raum für den eigenen Auftritt. Jeder Termin umfasst vier Seminartage, von Donnerstag bis Sonntag.
 
 ### Mallorca
-Frei sprechen. 3. bis 6. Dezember 2026 · 4. bis 7. März 2027 · 29. April bis 2. Mai 2027 · 14. bis 17. Oktober 2027
+ETHOS. 03.12. – 06.12.2026 · 04.03. – 07.03.2027 · 29.04. – 02.05.2027 · 14.10. – 17.10.2027
 
 ### Barcelona
-Ruhig bleiben, wenn es eng wird. 15. bis 18. April 2027 · 21. bis 24. Oktober 2027
+LOGOS. 15.04. – 18.04.2027 · 21.10. – 24.10.2027
 
 ### Zypern
-Mit Sprache führen. 7. bis 10. Oktober 2027
+PATHOS. 07.10. – 10.10.2027
 
 ### Dubai
-Mit Sprache führen. 10. bis 13. Dezember 2026
+PATHOS. 10.12. – 13.12.2026
 
 ### Frankfurt
-Frei sprechen. 17. bis 20. Juni 2027
+ETHOS. 17.06. – 20.06.2027
 
 ### Berlin
-Frei sprechen. 12. bis 15. August 2027
+ETHOS. 12.08. – 15.08.2027
 
 Wer nicht fliegen will, beginnt in Frankfurt oder Berlin. Ob an einem Termin noch Plätze frei sind, erfährst du im Gespräch. Stand der Termine: Oktober 2026.
 
-„[…] Aufgrund der tollen Atmosphäre und einzigartigen Lage lernt es sich sehr entspannt.“ Christian S., Rhetorik I auf Mallorca, ProvenExpert
+„[…] Aufgrund der tollen Atmosphäre und einzigartigen Lage lernt es sich sehr entspannt.“ Christian S., ETHOS auf Mallorca, ProvenExpert
 <!-- /S05 -->
 
 <!-- S06 el-grid | element: el-grid -->
@@ -103,22 +103,22 @@ Wer nicht fliegen will, beginnt in Frankfurt oder Berlin. Ob an einem Termin noc
 
 Jeder in der Gruppe spricht selbst.
 
-- **Du sprichst selbst.** Du hältst Reden vor der Gruppe und bekommst Rückmeldung von Michael und von den anderen Teilnehmern [von Kunde bestätigen: Leitet Michael die Seminare selbst].
+- **Du sprichst selbst.** Du hältst Reden vor der Gruppe und bekommst Rückmeldung von Michael und von den anderen Teilnehmern.
 - **Du siehst dich, wie andere dich sehen.** Dreimal wirst du auf Video aufgenommen. Die Auswertung kommt direkt danach.
 - **Du übst vor großem Publikum.** Im VR-Training sprichst du vor einem virtuellen Saal.
 - **Du hast einen Tag mehr.** Ein weiterer Tag gehört dem Get Together.
 
 ### Drei Seminare zur Wahl
 
-Wenn du noch kein Seminar bei Michael besucht hast, beginnst du mit dem Einstieg. Die Formate bauen nicht aufeinander auf. Danach wählst du das Thema, das in deinem Alltag gerade zählt [von Kunde bestätigen: Seminarname].
+Wenn du noch kein Seminar bei Michael besucht hast, beginnst du mit ETHOS. Nach aktueller Entscheidung gibt es keine zwingende Reihenfolge bei der Teilnahme. Danach wählst du das Thema, das in deinem Alltag gerade zählt.
 
-- **Frei sprechen** (Einstieg, Rhetorik I, 14 Plätze): sicher auftreten, in zwei Minuten ein starkes Statement setzen, jede Rede mit einer klaren Formel aufbauen, den eigenen Redestil finden.
-- **Ruhig bleiben, wenn es eng wird** (Rhetorik II, 10 Plätze): Schlagfertigkeit, Überzeugungspsychologie, unfaire Methoden durchschauen, Körpersprache lesen, Meetings führen.
-- **Mit Sprache führen** (Rhetorik III, 12 Plätze): Kritik klar und motivierend formulieren, zuhören, Stegreifreden halten, Gruppen überzeugen.
+- **ETHOS** (14 Plätze): sicher auftreten, in zwei Minuten ein starkes Statement setzen, jede Rede mit einer klaren Formel aufbauen, den eigenen Redestil finden.
+- **LOGOS** (14 Plätze): Schlagfertigkeit, Überzeugungspsychologie, unfaire Methoden durchschauen, Körpersprache lesen, Meetings führen.
+- **PATHOS** (14 Plätze): Kritik klar und motivierend formulieren, zuhören, Stegreifreden halten, Gruppen überzeugen.
 
-Das Rhetorik Bundle verbindet Inhalte aus Rhetorik I und II in zwei Tagen, mit Elevator Pitches und Auftrittscoaching mit Videoanalyse [von Kunde bestätigen: Termine und Ort Bundle]. Alle Inhalte stehen unter [alle Seminare im Überblick](/seminare).
+Je zwei Seminare kombinierst du im Zweierbundle. Wenn du im Bundle buchst oder an mehreren Seminaren teilnehmen möchtest, haben wir das passende Angebot für dich, mit Budgetvorteil. Deine Termine und Standorte wählst du selbst. KAIROS, die Präsenzwoche in Mexiko, ist separat buchbar. Alle Inhalte stehen unter [alle Seminare im Überblick](/seminare).
 
-Bei den dreitägigen Seminaren sind die Trainingstage, der Tag Get Together und die Übernachtungen im Seminarzeitraum enthalten [von Kunde bestätigen: Übernachtung]. Im Seminar gibt es Snacks, Getränke und ein leichtes Frühstück. Hotelfrühstück und Abendessen sind nicht enthalten [von Kunde bestätigen: Verpflegung]. Anreise und Transfer organisierst du selbst.
+Drei Hotelübernachtungen ab dem offiziellen Anreisetag, Frühstück, Mittagessen und die Verpflegung während des Seminars sind inklusive. Deine Anreise, Transfers, Abendessen und zusätzliche Hotelnächte zahlst du selbst.
 <!-- /S06 -->
 
 <!-- S07 check-list | element: check-list -->
@@ -130,7 +130,7 @@ Bei den dreitägigen Seminaren sind die Trainingstage, der Tag Get Together und 
 - Führungskräfte, die Teams und Gremien überzeugen müssen
 - Beraterinnen und Berater, deren Rat gehört werden soll
 
-Das Rhetorik Bundle richtet sich zusätzlich an Menschen aus Vertrieb, Marketing und Kommunikation.
+Das Zweierbundle richtet sich zusätzlich an Menschen aus Vertrieb, Marketing und Kommunikation.
 
 In den Gruppen trainieren Erfahrene und Einsteiger zusammen. Christin R. schreibt dazu auf ProvenExpert: „Ich fand es spannend, dass wir Teilnehmer ein Mix von Anfänger bis Profi waren und Michael uns alle, egal auf welchem Level, weiterbringen konnte. […]“
 
@@ -155,7 +155,7 @@ Laut ERFOLG Magazin zählte er zu den Top 100 Trainern im deutschsprachigen Raum
 <!-- design: drei offene Karten, kein Laufband. Je Karte kurze Überschrift, Zitat, Name, Quelle. Darunter Link zu den Stimmen. -->
 ## Was Teilnehmer mitnehmen
 
-250 Bewertungen auf ProvenExpert, 227 davon mit 5 Sternen. Drei Stimmen, Auslassungen sind mit […] markiert.
+4,9 von 5 Sternen auf ProvenExpert, basierend auf 250 Bewertungen. Drei Stimmen, Auslassungen sind mit […] markiert.
 
 ### Auch nach 40 Jahren Medienerfahrung
 „Trotz 40 Jahren Medienerfahrung konnte ich erstaunlich viel vom Rhetoriktraining profitieren.“ Peter Escher, Moderator MDR
@@ -164,7 +164,7 @@ Laut ERFOLG Magazin zählte er zu den Top 100 Trainern im deutschsprachigen Raum
 „[…] Statt ‚höher, schneller, perfekter‘ geht es um Authentizität, Substanz und das Vertrauen in die eigene Stimme. […]“ Adrian Bourcevet, vier Tage auf Mallorca, Google-Bewertung
 
 ### Ein Ort, der etwas bewegt
-„Dieses Training hat beruflich wie privat einiges in Bewegung gebracht. Ein intensiver Stretch der Komfortzone in wunderschönem Ambiente […]“ V., Rhetorik II in Barcelona, ProvenExpert
+„Dieses Training hat beruflich wie privat einiges in Bewegung gebracht. Ein intensiver Stretch der Komfortzone in wunderschönem Ambiente […]“ V., LOGOS in Barcelona, ProvenExpert
 
 Mehr Erfahrungen findest du bei den [weiteren Stimmen](/stimmen).
 <!-- /S09 -->
@@ -174,7 +174,7 @@ Mehr Erfahrungen findest du bei den [weiteren Stimmen](/stimmen).
 ## Häufige Fragen von Unternehmern und Führungskräften
 
 ### Passt das Seminar für Führungskräfte und Unternehmer?
-Ja. Das Seminar ist ein Kommunikationstraining für Führungskräfte, Gründerinnen und Gründer sowie Beraterinnen und Berater. Auch Unternehmerinnen und Unternehmer trainieren bei Michael Ehlers. Wer Teams führt und Gruppen überzeugen muss, findet im Format „Mit Sprache führen“ den Schwerpunkt dafür. Der Einstieg legt die Basis mit Auftreten und Struktur.
+Ja. Das Seminar ist ein Kommunikationstraining für Führungskräfte, Gründerinnen und Gründer sowie Beraterinnen und Berater. Auch Unternehmerinnen und Unternehmer trainieren bei Michael Ehlers. Wer Teams führt und Gruppen überzeugen muss, findet in PATHOS den Schwerpunkt dafür. ETHOS legt die Basis mit Auftreten und Struktur.
 
 ### Wie kommuniziere ich als Führungskraft richtig?
 Als Führungskraft kommunizierst du klar, wenn Haltung und Worte dasselbe sagen. Deshalb beginnt Michael Ehlers bei der Haltung. Im Seminar übst du, Kritik klar und motivierend zu formulieren. Du trainierst auch das Zuhören und das Überzeugen von Gruppen.
@@ -183,16 +183,16 @@ Als Führungskraft kommunizierst du klar, wenn Haltung und Worte dasselbe sagen.
 Durch Sprechen und Rückmeldung, immer wieder. Im Seminar hältst du eigene Reden vor der Gruppe. Du siehst dich dreimal auf Video und übst im VR-Training vor einem virtuellen Publikum.
 
 ### Wie groß ist die Gruppe?
-Je nach Seminar 10, 12 oder 14 Plätze. So kommt jeder dran, und niemand sitzt nur im Publikum.
+Höchstens 14 zahlende Teilnehmer pro Präsenzseminar. So kommt jeder dran, und niemand sitzt nur im Publikum.
 
 ### Muss ich mich verstellen?
 Nein. Ziel ist ein Auftritt, der zu dir passt. Nicht anders werden, klarer werden.
 
 ### Was kostet ein Rhetorikkurs bei Michael Ehlers?
-Den Preis nennt dir Michaels Team im kostenlosen Gespräch, zusammen mit dem passenden Seminar und Termin. Bei den dreitägigen Seminaren sind die Trainingstage, der Tag Get Together und die Übernachtungen im Seminarzeitraum enthalten [von Kunde bestätigen: Übernachtung].
+Das hängt vom Seminar und vom Format ab. Jedes Seminar ist auf maximal 14 Teilnehmer begrenzt. Wenn du im Bundle buchst oder an mehreren Seminaren teilnehmen möchtest, haben wir das passende Angebot für dich, mit Budgetvorteil. Den genauen Preis besprichst du im Gespräch.
 
 ### Ich habe wenig Zeit. Wie lange dauert ein Seminar?
-Alle aktuellen Termine laufen von Donnerstag bis Sonntag. Kürzer ist das Rhetorik Bundle mit zwei Tagen [von Kunde bestätigen: Termine und Ort Bundle].
+Alle aktuellen Termine laufen von Donnerstag bis Sonntag.
 
 ### Kann ich ein gebuchtes Seminar stornieren?
 Ja, bis 8 Wochen vor dem Start. Dann berechnet Michaels Team laut AGB 30 Prozent des Preises. Bei einer späteren Absage ist der volle Preis fällig.
@@ -207,13 +207,13 @@ Weitere Antworten stehen in den [häufigen Fragen](/faq). Was zur Rhetorik gehö
 Das Gespräch dauert 30 Minuten und findet per Video statt. Du klärst, welches Seminar und welcher Ort zu dir passen. Danach entscheidest du in Ruhe.
 
 1. **Termin wählen.** Im Kalender suchst du dir eine freie Zeit aus. Die Bestätigung kommt per E-Mail, die Erinnerung per WhatsApp.
-2. **Gespräch per Video.** 30 Minuten mit Michaels Team [von Kunde bestätigen: Name und Rolle der Person im Gespräch]. Es geht um deinen Auftritt und um das Seminar, das dazu passt.
+2. **Gespräch per Video.** 30 Minuten mit einem Experten aus Michaels Team. Es geht um deinen Auftritt und um das Seminar, das dazu passt.
 3. **In Ruhe entscheiden.** Danach hast du alle Details zu Seminar und Termin. Ob du buchst, entscheidest du ohne Druck.
 
 **[Gespräch buchen](/gespraech-buchen)**
 30 Minuten, kostenlos, per Video. Lieber anrufen: +49 15888367664
 
-227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert · über 8.000 Teilnehmer
+4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert · über 8.000 Teilnehmer
 <!-- /S11 -->
 
 <!-- TECH -->

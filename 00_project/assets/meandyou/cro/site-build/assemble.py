@@ -2,7 +2,9 @@
 Run: python3 assemble.py  ->  ../_site/ (serve with: python3 -m http.server 8819 --directory ../_site)
 Pages are taken from their run folders. A page is included as soon as its 07-prototype/index.html exists.
 Links to the v2 preview are rewritten to the local pages; pages that do not exist yet keep the preview link."""
-import os, re, shutil
+import os, re, shutil, subprocess, sys
+
+from gate_snippet import apply_gate_and_banner
 
 CRO = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 OUT = os.path.join(CRO, '_site')
@@ -21,6 +23,7 @@ PAGES = {
     'lp-replayers.html': 'lp-replayers/07-prototype/v2',  # community version (39 €), approved 12.10.
     'lp-overlooked.html': 'lp-overlooked',
     'impressum.html': 'impressum', 'datenschutz.html': 'datenschutz', 'agb.html': 'agb',
+    'sichtbarkeit-neu.html': 'sichtbarkeit-neu',
 }
 # 'optionen.html': 'optionen' was live 13.10. for a few hours. Pauspapier decided the same day: "Optionen ansehen" always leads to the booking page. Source kept in cro/optionen/.
 # Round Table 12.10. + Pauspapier 13.10.: main button label "Gespräch buchen" -> "Optionen ansehen"; the target stays the booking page. Not on Replayers (community) and the booking page.
@@ -66,6 +69,9 @@ def main():
         for ext, local in (('https://www.meandyou.de/impressum', 'impressum.html'), ('https://www.meandyou.de/datenschutz', 'datenschutz.html'), ('https://www.meandyou.de/agb', 'agb.html')):
             if local in present:
                 html = html.replace(f'href="{ext}"', f'href="{local}"')
+        # free-training soft CTA now has a local page too (24.10.): point faq/lp-replayers/rhetorik at it, but never rewrite the page's own canonical self-reference.
+        if 'sichtbarkeit-neu.html' in present and fname != 'sichtbarkeit-neu.html':
+            html = html.replace('https://www.meandyou.de/sichtbarkeit-neu?', 'sichtbarkeit-neu.html?')
         if fname not in OPTIONS_BUTTON_SKIP:
             # sections that explain the call itself (steps, costs) keep "Gespräch buchen"
             keep_call = {'ablauf', 'gespraech', 'kosten'} | ({'abschluss'} if fname == 'lp-undersold.html' else set())
@@ -75,8 +81,15 @@ def main():
                     return m.group(0)
                 return f'<a {m.group(1)}href="gespraech-buchen.html?{m.group(2)}" data-event="booking_click">Optionen ansehen</a>'
             html = re.sub(r'<a ([^>]*)href="gespraech-buchen\.html\?([^"]*)">Gespräch buchen</a>', swap, html)
-        html = html.replace('Prototyp · nicht live', 'Prototyp · nicht live · lokale Gesamtversion')
         open(os.path.join(OUT, fname), 'w', encoding='utf-8').write(html)
+    # nested page: videokurs/start.html (own build.py writes its deploy copy to _site/videokurs/ itself)
+    vk = os.path.join(CRO, 'videokurs', '07-prototype', 'build.py')
+    if os.path.isfile(vk):
+        subprocess.run([sys.executable, vk], check=True, cwd=os.path.dirname(vk))
+        present['videokurs/start.html'] = 'videokurs'
+
+    apply_gate_and_banner(OUT)
+
     missing = [f for f in PAGES if f not in present]
     open(os.path.join(OUT, 'README.txt'), 'w').write('me&you Gesamtversion (lokal)\nSeiten: ' + ', '.join(present) + '\nNoch nicht fertig (Links zeigen auf die v2-Vorschau): ' + (', '.join(missing) or 'keine') + '\n')
     print('pages:', list(present), '| missing:', missing)

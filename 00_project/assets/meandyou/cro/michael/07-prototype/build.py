@@ -65,6 +65,7 @@ ICON_MIC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wi
 def header():
     return f'''<header class="hdr"><div class="hdr__in">
  <a class="hdr__logo" href="{V2}index.html"><img src="assets/logo-dark.png" alt="Michael Ehlers &amp; You Communication, Startseite" width="1794" height="647"></a>
+ <button class="hdr__burger" aria-label="Menü" aria-expanded="false"><span></span></button>
  <nav aria-label="Hauptnavigation"><a href="{V2}seminare.html">Seminare</a><a href="#top" aria-current="page" style="color:var(--cta)">Michael</a><a href="{V2}rhetorik.html">Was ist Rhetorik</a><a href="#stimmen">Stimmen</a><a href="#faq">FAQ</a></nav>
  {btn('header')}
 </div></header>'''
@@ -75,7 +76,7 @@ def s01():
 <section class="hero hero--split" id="top">
  <div class="hero__img"><img data-plx src="assets/michael-chair.webp" alt="Michael Ehlers, Rhetoriktrainer, sitzt im Ledersessel" width="720" height="1280"></div>
  <div class="wrap hero__in"><div class="hero__txt">
-  <p class="proofline rv">{STARS} 227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert · über 8.000 Teilnehmer</p>
+  <p class="proofline rv">{STARS} 4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert · über 8.000 Teilnehmer</p>
   <h1 class="rv"><span class="kicker">Michael Ehlers, Rhetoriktrainer:</span><span class="big">Dreißig Jahre<br>vor vollen Räumen.</span></h1>
   <p class="sub rv">Autorität, die man nicht behaupten muss.</p>
   <p class="body rv">Michael Ehlers arbeitet seit 1990 als Rhetoriktrainer. Seit über 30 Jahren trainiert er in Seminaren und im Coaching Menschen, deren Worte Gewicht haben. Er lehrt auch an der Universität St. Gallen.</p>
@@ -130,7 +131,7 @@ def s04():
 <section class="sec sec--cream" id="methode">
  <div class="wrap">
   <h2 class="motto rv">Wer etwas zu sagen hat, sollte es sagen können.</h2>
-  <p class="motto-sub rv">{t('So beschreibt Michael Ehlers seine Arbeit [von Kunde bestätigen: Wortlaut Motto]. Er sieht Wirkung als Handwerk. Und er traut sie auch Menschen zu, die sich selbst schon abgeschrieben haben.')}</p>
+  <p class="motto-sub rv">{t('So beschreibt Michael Ehlers seine Arbeit. Er sieht Wirkung als Handwerk. Und er traut sie auch Menschen zu, die sich selbst schon abgeschrieben haben.')}</p>
   <div class="trio">
    <div class="portrait rv"><img data-plx src="assets/michael-white.webp" alt="Michael Ehlers im weißen Hemd" width="988" height="1312"></div>
    <div class="trio-list"><p class="trio-h rv">Persönlichkeit. Kongruenz. Wirkung.</p>{li}<div class="cta-row rv">{btn('methode')}</div></div>
@@ -171,7 +172,7 @@ def s06():
 
 
 def s07():
-    Q = [('Fordern, um zu fördern', '„Keiner versteht es besser seine Teilnehmer durch fordern zu fördern.“', 'Christian S., Rhetorik I auf Mallorca', 'ProvenExpert'),
+    Q = [('Fordern, um zu fördern', '„Keiner versteht es besser seine Teilnehmer durch fordern zu fördern.“', 'Christian S., ETHOS auf Mallorca', 'ProvenExpert'),
          ('Feedback, das trägt', '„Die Redeübungen haben mich definitiv auf ein anderes Level gebracht und Michaels Feedback war unheimlich wertschätzend, klar und unglaublich hilfreich.“', 'Jenny E.', 'Google'),
          ('Auch nach 40 Jahren Medienerfahrung', '„Trotz 40 Jahren Medienerfahrung konnte ich erstaunlich viel vom Rhetoriktraining profitieren.“', 'Peter Escher', 'Moderator MDR'),
          ('Mit Humor', '„Ein begeisterndes Training mit einer anregenden und humorvollen Atmosphäre. Rundum gelungen.“', 'Sarna Röser', 'Bundesvorsitzende „Die Jungen Unternehmer“')]
@@ -181,7 +182,7 @@ def s07():
  <div class="wrap">
   <h2 class="rv">Wie Teilnehmer Michael als Trainer erleben</h2>
   <div class="qgrid q4">{c}</div>
-  <p class="vcap rv" style="margin-top:28px">250 Bewertungen auf ProvenExpert, 227 davon mit 5 Sternen.</p>
+  <p class="vcap rv" style="margin-top:28px">4,9 von 5 Sternen, basierend auf 250 Bewertungen auf ProvenExpert.</p>
  </div>
 </section>'''
 
@@ -193,8 +194,8 @@ def s08():
   <div class="grp rv"><img data-plx src="assets/seminar-group.webp" alt="Seminargruppe mit Zertifikaten unter Palmen, Michael Ehlers vorne links" width="1350" height="1800"></div>
   <div class="stack">
    <h2 class="rv">Seminare mit Michael</h2>
-   <p class="lead rv">{t('In den Seminaren von me&you trainierst du drei Tage in einer kleinen Gruppe von höchstens 14 Menschen. Dazu kommt ein Tag Get Together. Du hältst Reden und siehst dich dreimal auf Video. Rückmeldung bekommst du sofort. Im VR-Training sprichst du vor einem virtuellen Publikum. Die Seminare finden auf Mallorca, in Barcelona, Zypern und Dubai statt, den Einstieg gibt es auch in Frankfurt und Berlin [von Kunde bestätigen: Leitet Michael die Seminare selbst].')}</p>
-   <p class="lead rv">Du beginnst mit dem Einstieg „Frei sprechen“. Danach wählst du frei: ruhig bleiben, wenn es eng wird, oder mit Sprache führen. Der nächste Termin: Mallorca, 3. bis 6. Dezember 2026. Alle Formate und Termine findest du auf der Seite <a class="tlink" href="{V2}seminare.html">Seminare</a>.</p>
+   <p class="lead rv">{t('In den Seminaren von me&you trainierst du drei Tage in einer kleinen Gruppe von höchstens 14 Menschen. Dazu kommt ein Tag Get Together. Du hältst Reden und siehst dich dreimal auf Video. Rückmeldung bekommst du sofort. Im VR-Training sprichst du vor einem virtuellen Publikum. Die Seminare finden auf Mallorca, in Barcelona, Zypern und Dubai statt, den Einstieg gibt es auch in Frankfurt und Berlin. Michael leitet jedes Seminar selbst.')}</p>
+   <p class="lead rv">Du beginnst mit ETHOS. Danach wählst du frei: LOGOS, wenn es darum geht ruhig zu bleiben, oder PATHOS, um mit Sprache zu führen. Der nächste Termin: Mallorca, 03.12. – 06.12.2026. Alle Formate und Termine findest du auf der Seite <a class="tlink" href="{V2}seminare.html">Seminare</a>.</p>
    <div class="cta-row rv">{btn('seminare')}</div>
   </div>
  </div>
@@ -203,7 +204,7 @@ def s08():
 
 def s09():
     steps = [('Termin wählen.', 'Online, zu einer Zeit, die dir passt. Bestätigung per E-Mail, Erinnerung per WhatsApp.'),
-             ('30 Minuten per Video.', 'Mit Michaels Team [von Kunde bestätigen: Name und Rolle der Person im Gespräch] sprichst du über deine Situation und deine Ziele.'),
+             ('30 Minuten per Video.', 'Du sprichst mit einem Experten aus Michaels Team über deine Situation und deine Ziele.'),
              ('Danach entscheiden.', 'Du weißt, welches Seminar passt, und entscheidest in Ruhe.')]
     c = ''.join(f'<div class="fstep"><span class="n">{i}</span><div class="fstep__t"><h3>{h}</h3><p>{t(p)}</p></div></div>' for i, (h, p) in enumerate(steps, 1))
     return f'''
@@ -224,7 +225,7 @@ FAQ = [
  ('Wo sitzt sein Institut?', 'Das Institut Michael Ehlers GmbH sitzt in Hallstadt bei Bamberg. Die Seminare finden an wechselnden Orten statt.'),
  ('Was ist das SGMI Center for Rhetoric?', 'Ein Bereich des SGMI Management Institut St. Gallen. Michael Ehlers ist dort Expert Lead. Diese Rolle ist von seinem Lehrauftrag an der Universität St. Gallen getrennt.'),
  ('Arbeitet Michael auch mit Unternehmen?', 'Ja. Coachings für Vorstände und Geschäftsleitungen führt er persönlich. Für Trainings auf weiteren Ebenen arbeiten zwei von ihm ausgebildete und lizenzierte Trainer.'),
- ('Was kostet ein Seminar bei Michael Ehlers?', 'Den Preis für dein Seminar nennt dir Michaels Team im kostenlosen Gespräch.'),
+ ('Was kostet ein Seminar bei Michael Ehlers?', 'Das hängt vom Seminar und vom Format ab. Jedes Seminar ist auf maximal 14 Teilnehmer begrenzt. Wenn du im Bundle buchst oder an mehreren Seminaren teilnehmen möchtest, haben wir das passende Angebot für dich, mit Budgetvorteil. Den genauen Preis besprichst du im Gespräch.'),
 ]
 
 
@@ -251,7 +252,7 @@ def s11():
   <h2 class="rv">Dreißig Jahre Erfahrung,<br>ein Gespräch entfernt.</h2>
   <p class="rv">Der erste Schritt ist ein Gespräch von 30 Minuten. Kostenlos und per Video. Danach weißt du, welches Seminar zu dir passt.</p>
   <ul class="rv">{li}</ul>
-  <p class="proofline rv">{STARS} 227 von 250 Bewertungen mit 5 Sternen auf ProvenExpert</p>
+  <p class="proofline rv">{STARS} 4,9 von 5 Sternen · Basierend auf 250 Bewertungen auf ProvenExpert</p>
   <div class="cta-row rv">{btn('abschluss', 'btn btn--light cta--breathe')}<p class="tel">Lieber anrufen: <a href="{TEL}">+49 15888367664</a></p></div>
   <p class="back rv">Zurück zur <a href="{V2}index.html">Startseite</a></p>
  </div></div>
