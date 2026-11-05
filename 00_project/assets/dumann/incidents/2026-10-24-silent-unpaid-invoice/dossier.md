@@ -126,8 +126,8 @@ Schluss: Die Sichtbarkeit ist stabil, kein Einbruch. Das Schweigen hat keinen si
 | --- | --- | --- |
 | 1 Zahlungserinnerung + Status (Frist 31.10.) | 24.10.2026 | gesendet von Martin (Airmailer), geloggt in emails_log + activity_log |
 | 2 Arbeit ruht (+3 Werktage) | Mi 29.10.2026 | gesendet 30.10.2026 von Martin (Airmailer, martin@741.studio), Frist für sie Mi 04.11. **Bounce 30.10. 07:54:** Microsoft lehnt die Absender-IP 185.2.31.101 (741.studio-Hosting) ab, Fehler 550 5.7.1 S3150. Mail nicht angekommen. **Erneut gesendet 30.10. von 741studio18@gmail.com (Gmail, Martin), gleicher Text, BCC martin@741.studio. Kein Bounce bekannt.** Hinweis: Mails von martin@741.studio an live.de/outlook/hotmail scheitern, bis der Hoster die IP entsperren lässt; die Stufe-1-Mail vom 24.10. ging evtl. denselben Weg (nicht geprüft) |
-| 3 Optionen für Martin (+3 Werktage) | Do 05.11.2026 (Tag nach der Frist) | offen; Task `dumann-frist-2026-11-04` prüft Login/Karten/Nachrichten und legt nur interne Optionen vor |
+| 3 Optionen für Martin (+3 Werktage) | Do 05.11.2026 (Tag nach der Frist) | geprüft 05.11.2026 (Task `dumann-frist-2026-11-04`, nur lesend): im Portal keine Reaktion. Letzter Login 28.08.2026 (unverändert), 0 Entscheidungskarten seit 24.10. entschieden (24 draft, 3 offen: E4, E22, E23, unverändert), keine Portal-Nachricht von ihr seit 01.10., kein `report_feedback` seit 17.09. Ob sie über WhatsApp/E-Mail reagiert hat, kann aus Portal-Daten nicht beurteilt werden (Martin gefragt) — Auflösung Stufe 3 folgt danach. |
 
 ## 11. Auflösung
 
-- offen
+- offen. Portal-Check 05.11.2026 abgeschlossen, keine Reaktion im Portal. Martins Antwort zu anderen Kanälen (WhatsApp/Mail) steht noch aus; danach erst interne Optionen (Telefonat vs. Trennung) vorlegen.
