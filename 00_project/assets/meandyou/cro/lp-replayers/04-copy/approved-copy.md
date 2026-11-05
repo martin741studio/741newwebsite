@@ -27,7 +27,7 @@ Im Meeting bleibst du still. Auf dem Heimweg hast du den perfekten Satz. Das Pro
 4,9 von 5 Sternen · Basierend auf 250 Bewertungen für Michael Ehlers auf ProvenExpert · über 8.000 Seminarteilnehmer
 
 **Community beitreten**
-Talk to ME. Mitgliedschaft 30 € monatlich.
+Talk to ME. Monatliche Mitgliedschaft.
 <!-- /S01 -->
 
 <!-- S02 proof | element: proof -->
@@ -131,7 +131,7 @@ Schlagfertigkeit wächst mit Übung, und üben fällt mit anderen leichter. Daru
 Adrian Bourcevet, Bewertung auf Skool, August 2026, nach drei Monaten Mitgliedschaft
 
 **Community beitreten**
-Mitgliedschaft 30 € monatlich.
+Monatliche Mitgliedschaft.
 <!-- /S08 -->
 
 <!-- S09 el-grid | element: el-grid -->
@@ -187,7 +187,7 @@ Christin R., ProvenExpert, ETHOS auf Mallorca
 <!-- design: drei Schritte als weiche Liste ohne Linien, rechts eine Karte mit Kosten und Kündigung und dem Button. utm_content=start -->
 ## So fängst du an, in deinem Tempo
 
-1. **Du trittst Talk to ME bei.** Du zahlst 30 € monatlich.
+1. **Du trittst Talk to ME bei.** Die Mitgliedschaft läuft monatlich.
 2. **Du übst im Alltag.** Jeden Tag kommt ein kurzer Impuls zum Ausprobieren.
 3. **Du bringst deinen Fall in einen Q&A Call.** Zweimal pro Woche sprichst du mit Michael über echte Situationen aus deinem Alltag.
 
@@ -196,7 +196,7 @@ Du zahlst monatlich und kannst auf Skool kündigen. Wie das geht, steht in den [
 Wenn du später vor Ort trainieren willst: Schlagfertigkeit ist Thema im Seminar [LOGOS](/seminare#ruhig-bleiben), das 2027 in Barcelona stattfindet. [Alle Seminare](/seminare)
 
 **Community beitreten**
-Talk to ME, Mitgliedschaft 30 € monatlich.
+Talk to ME, monatliche Mitgliedschaft.
 <!-- /S12 -->
 
 <!-- S13 faq | element: faq -->
@@ -207,7 +207,7 @@ Talk to ME, Mitgliedschaft 30 € monatlich.
 Du übst mit täglichen Impulsen, zwei Q&A Calls pro Woche mit Michael und im Austausch mit den anderen Mitgliedern. Alles Weitere steht oben unter [Talk to ME](#community).
 
 ### Was kostet die Community?
-Du zahlst 30 € monatlich.
+Die Mitgliedschaft läuft monatlich. Den Beitrag siehst du beim Beitritt.
 
 ### Kann ich kündigen?
 Ja. Die Mitgliedschaft läuft monatlich. Du kündigst in deinen Einstellungen auf Skool. Laut Skool endet sie dann zum Ende des laufenden Abrechnungszeitraums.
@@ -248,7 +248,7 @@ Weitere Antworten findest du in den [häufigen Fragen](/faq).
 
 Die Worte hast du schon. In der Community übst du, sie im richtigen Moment zu finden: jeden Tag ein bisschen, mit Michael und mit Menschen, die das Gleiche üben.
 
-- 30 € monatlich
+- monatliche Mitgliedschaft
 - täglicher Impuls und zwei Q&A Calls pro Woche
 - regelmäßige Live-Calls mit Michael
 

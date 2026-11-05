@@ -249,14 +249,12 @@ def s_pricing():
    <div class="pcard">
     <span class="tag">Bequeme Einmalzahlung</span>
     <ul>{fli}</ul>
-    <span class="price">€ 999</span>
     <span class="price-note">Mit einer Zahlung alles erledigt.</span>
     {btn(ABLEFY_CARDS)}
    </div>
    <div class="pcard">
     <span class="tag">Cashflow-freundlich: Ratenzahlung</span>
     <ul>{fli}</ul>
-    <span class="price">€ 1.149</span>
     <span class="price-note">Ratenzahlung in 2 oder 4 Teilzahlungen möglich.</span>
     {btn(ABLEFY_CARDS)}
    </div>
