@@ -1,0 +1,59 @@
+{
+  "id": "example-kontaktformular",
+  "version": "001",
+  "status": "draft",
+  "title": "Kontaktformular mit Lead-Eintrag in Supabase",
+  "created": "2026-11-06",
+  "approved": {"by": "", "date": "", "words": "", "hash": ""},
+  "context": {
+    "who_uses": "Besucher von 741.studio (öffentlich), Martin liest die Leads im Portal",
+    "goal": "Jede Anfrage landet sicher in public.leads, Martin verliert keine Anfrage mehr",
+    "access": "Browser, Seite 741.studio/kontakt/",
+    "limits": ["Daten bleiben in der EU (Supabase EU-Region)", "kein externer Formular-Dienst", "Deadline 2026-11-20"],
+    "out_of_scope": ["CRM-Sync nach HubSpot", "Newsletter-Anmeldung"]
+  },
+  "module_types": ["base", "form", "landing-page", "data"],
+  "sources": [
+    {"id": "S1", "title": "DSGVO Art. 5, 6, 13", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj", "type": "law", "checked": "2026-11-06"},
+    {"id": "S2", "title": "WCAG 2.2 (1.3.1, 3.3.1, 3.3.2)", "url": "https://www.w3.org/TR/WCAG22/", "type": "standard", "checked": "2026-11-06"},
+    {"id": "S3", "title": "OWASP Input Validation Cheat Sheet", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html", "type": "guide", "checked": "2026-11-06"},
+    {"id": "S4", "title": "Supabase Row Level Security", "url": "https://supabase.com/docs/guides/database/postgres/row-level-security", "type": "vendor", "checked": "2026-11-06"}
+  ],
+  "milestones": [
+    {"id": "M1", "title": "Anfrage kommt sicher an", "exit": "alle must-Kriterien in M1 bestehen mit Beleg"},
+    {"id": "M2", "title": "Barrierefrei und spam-fest", "exit": "alle must-Kriterien in M2 bestehen mit Beleg"}
+  ],
+  "criteria": [
+    {"id": "AC-001", "milestone": "M1", "category": "functional", "priority": "must",
+     "text": "Given a visitor fills name, email and message, When she submits, Then one row appears in public.leads with these values and source = 'kontakt'",
+     "measure": "exactly 1 new row per submit, fields equal to the input",
+     "verify": {"method": "e2e", "how": "Playwright test kontakt.spec.ts submits the form and reads public.leads via service key"},
+     "sources": ["S3"]},
+    {"id": "AC-002", "milestone": "M1", "category": "security", "priority": "must",
+     "text": "The anon key can insert into public.leads but cannot select, update or delete rows",
+     "measure": "select/update/delete with anon key return 0 rows or permission error",
+     "verify": {"method": "command", "how": "psql as anon role runs select/update/delete on public.leads, all denied"},
+     "sources": ["S4"]},
+    {"id": "AC-003", "milestone": "M1", "category": "privacy", "priority": "must",
+     "text": "The form shows a link to the privacy page and states the purpose of the data before submit",
+     "measure": "link to /datenschutz/ and purpose sentence visible above the submit button",
+     "verify": {"method": "e2e", "how": "Playwright checks the link href and the purpose text"},
+     "sources": ["S1"]},
+    {"id": "AC-004", "milestone": "M2", "category": "accessibility", "priority": "must",
+     "text": "Every field has a visible label and an error message that names the field",
+     "measure": "axe-core reports 0 violations of rules label and aria-input-field-name",
+     "verify": {"method": "e2e", "how": "Playwright with @axe-core/playwright on /kontakt/"},
+     "sources": ["S2"]},
+    {"id": "AC-005", "milestone": "M2", "category": "security", "priority": "should",
+     "text": "A hidden honeypot field filled by a bot blocks the insert",
+     "measure": "submit with honeypot filled -> 0 new rows, HTTP 200 without hint",
+     "verify": {"method": "e2e", "how": "Playwright fills the honeypot and counts rows"},
+     "sources": ["S3"]}
+  ],
+  "tasks": [
+    {"id": "T-01", "title": "Supabase: RLS policies for public.leads", "owner": "worker1", "criteria": ["AC-002"], "files": ["supabase/migrations/"], "depends_on": []},
+    {"id": "T-02", "title": "Form markup, labels, privacy text, honeypot", "owner": "worker2", "criteria": ["AC-003", "AC-004", "AC-005"], "files": ["04_site/kontakt/"], "depends_on": []},
+    {"id": "T-03", "title": "Submit handler and e2e tests", "owner": "worker1", "criteria": ["AC-001"], "files": ["04_site/assets/js/kontakt.js", "tests/kontakt.spec.ts"], "depends_on": ["T-01"]}
+  ],
+  "limits": {"max_fix_rounds": 2, "max_must_per_milestone": 15}
+}
