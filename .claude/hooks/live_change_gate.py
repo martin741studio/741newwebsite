@@ -21,10 +21,22 @@ import _go  # noqa: E402
 FTP_RE = re.compile(
     r"\b(?:node|bun)\s+\S*(?:upload(?:_one|_only)?\.m?js|ftp-delete-old\.mjs)\b"
     r"|\bnpm\s+run\s+deploy\b"
-    r"|\blftp\b|\bsftp\b|(?<![\w-])ftp\s+\S"
+    r"|(?:^|[;&|(]\s*)(?:lftp|sftp|ftp)\s+\S"
     r"|\bcurl\b[^|;&]*(?:\s-T\s|\s--upload-file\b|ftps?://)",
-    re.IGNORECASE,
+    re.IGNORECASE | re.MULTILINE,
 )
+
+# Text that is data, not a command: heredoc bodies and quoted strings handed to
+# printf/echo. A memory note or commit message that mentions "FTP deploy" or
+# ".claude/settings.json" must not trip the gate (false positives 2026-11-08).
+HEREDOC_RE = re.compile(r"<<-?\s*['\"]?(\w+)['\"]?[^\n]*\n.*?\n\1\s*$", re.DOTALL | re.MULTILINE)
+DEVNULL_RE = re.compile(r"(?:\d*>>?|&>)\s*/dev/null|\d>&\d")
+
+
+def command_only(cmd):
+    """Return the command text without heredoc bodies and /dev/null redirects."""
+    cmd = HEREDOC_RE.sub("<<HEREDOC_BODY_REMOVED", cmd)
+    return DEVNULL_RE.sub(" ", cmd)
 
 NOVA_TOOL_RE = re.compile(r"^mcp__novamira-[^_]+(?:_[^_]+)*__mcp-adapter-execute-ability$")
 NOVA_READ_RE = re.compile(r"(?:^|[/-])(?:get|list|read|discover|search|find|info|status|check)(?:[/-]|$)")
@@ -72,7 +84,7 @@ def main():
     session = data.get("session_id", "")
 
     if tool == "Bash":
-        cmd = inp.get("command", "")
+        cmd = command_only(inp.get("command", ""))
         writes = BASH_WRITE_RE.search(cmd)
         if GO_DIR_RE.search(cmd) and writes:
             return out("deny", "[741 go-gate] .claude/go/ holds go markers. Only Martin's prompt sets them.")

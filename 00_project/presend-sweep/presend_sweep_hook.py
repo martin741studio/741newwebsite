@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stop hook (DRAFT, not installed): Martin's pre-send sweep.
+"""Stop hook (ACTIVE, global via ~/.claude/settings.json): Martin's pre-send sweep.
 
 Blocks the end of a turn when the final message hands Martin a prose list of open points or his own steps,
 or ends with a prose question, instead of AskUserQuestion cards. Uses stop_hook_active so it never loops.

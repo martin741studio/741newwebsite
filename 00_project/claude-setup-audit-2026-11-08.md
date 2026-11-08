@@ -180,3 +180,5 @@ Descriptions: 31.598 Zeichen (~8k Tokens) in jeder Session. Ziel nach Kürzung: 
 | Immer geladener Kontext | ~64 KB | ~32 KB | |
 
 Offen (kein Go): Block D Job-Descriptions/Team, Block E Hooks-Doku + Falsch-Positiv in `live_change_gate` (blockt lesende Bash-Befehle mit „FTP"/„deploy"/settings.json im Text; heute 5× bei Prüfern), Widersprüche F1–F4, Kamil-Ads-Konto 992-981-4693 vs 4093 (in `kamil-physio-client` markiert), Behandler-Seite Kunden-CI vs 741-CI (in `startseite-money-page-standard` markiert). 13 UNSICHER-Memories unverändert in M. Commit steht aus.
+
+Nachtrag 08.11. (zweites Go): Block D umgesetzt (4 Job-Descriptions auf je unter 2.500 Zeichen, per place.py neu platziert, Validator PASS; 5 Roster-Geister entfernt; morning-grill-brief archiviert; webdev-Regel nur noch für suriya/stuerzl/talkinfive). Block E umgesetzt (Go-Gate ignoriert Heredoc-Bodies und /dev/null-Redirects, `ftp` nur noch als Befehl; 5 Regressionstests, 32/32 grün; README + presend-Docstring auf "aktiv"). F1 entschieden: Nachricht nach Deploy + Live-Check. Offen: F2–F4 (HTML-Ausnahmen jetzt in CLAUDE.md), Kamil-Ads-Konto-Ziffer, Behandler-Seite CI, 13 UNSICHER-Memories.

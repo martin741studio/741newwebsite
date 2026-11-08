@@ -31,6 +31,12 @@ t "edit user settings without go"   deny  live_change_gate.py "$(pre Write '{"fi
 t "cat settings is fine"            allow live_change_gate.py "$(pre Bash '{"command":"cat .claude/settings.json"}')"
 t "sed -i settings without go"      deny  live_change_gate.py "$(pre Bash '{"command":"sed -i \"\" s/a/b/ .claude/settings.local.json"}')"
 t "edit normal file is fine"        allow live_change_gate.py "$(pre Edit "{\"file_path\":\"$PWD/04_site/index.html\"}")"
+# false positives fixed 2026-11-08: data text is not a command
+t "grep settings 2>/dev/null fine"  allow live_change_gate.py "$(pre Bash '{"command":"grep -n hooks .claude/settings.json 2>/dev/null"}')"
+t "heredoc mentioning deploy fine"  allow live_change_gate.py "$(pre Bash '{"command":"cat > /tmp/x.md <<EOF\nFTP deploy notes, npm run deploy later\nEOF"}')"
+t "echo FTP prose fine"             allow live_change_gate.py "$(pre Bash '{"command":"echo \"FTP deploy war ein Fehlalarm\" >> /tmp/log.md"}')"
+t "commit message with deploy fine" allow live_change_gate.py "$(pre Bash '{"command":"git commit -m \"fix FTP deploy script\""}')"
+t "ftp as command without go"       deny  live_change_gate.py "$(pre Bash '{"command":"ftp ftp.741.studio"}')"
 
 prompt "ok go, deploy the review page"
 t "ftp upload.js WITH go"           allow live_change_gate.py "$(pre Bash '{"command":"node upload.js"}')"
