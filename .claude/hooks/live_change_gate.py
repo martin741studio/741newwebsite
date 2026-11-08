@@ -33,10 +33,19 @@ HEREDOC_RE = re.compile(r"<<-?\s*['\"]?(\w+)['\"]?[^\n]*\n.*?\n\1\s*$", re.DOTAL
 DEVNULL_RE = re.compile(r"(?:\d*>>?|&>)\s*/dev/null|\d>&\d")
 
 
+QUOTED_RE = re.compile(r'"(?:[^"\\]|\\.)*"|\'[^\']*\'')
+
+
 def command_only(cmd):
     """Return the command text without heredoc bodies and /dev/null redirects."""
     cmd = HEREDOC_RE.sub("<<HEREDOC_BODY_REMOVED", cmd)
     return DEVNULL_RE.sub(" ", cmd)
+
+
+def unquoted(cmd):
+    """Command text with quoted strings blanked: a '>' inside a commit message
+    or an echo argument is data, not a redirect (false positive 2026-11-08)."""
+    return QUOTED_RE.sub('""', cmd)
 
 NOVA_TOOL_RE = re.compile(r"^mcp__novamira-[^_]+(?:_[^_]+)*__mcp-adapter-execute-ability$")
 NOVA_READ_RE = re.compile(r"(?:^|[/-])(?:get|list|read|discover|search|find|info|status|check)(?:[/-]|$)")
@@ -85,7 +94,7 @@ def main():
 
     if tool == "Bash":
         cmd = command_only(inp.get("command", ""))
-        writes = BASH_WRITE_RE.search(cmd)
+        writes = BASH_WRITE_RE.search(unquoted(cmd))
         if GO_DIR_RE.search(cmd) and writes:
             return out("deny", "[741 go-gate] .claude/go/ holds go markers. Only Martin's prompt sets them.")
         if PROTECTED_RE.search(cmd) and writes:

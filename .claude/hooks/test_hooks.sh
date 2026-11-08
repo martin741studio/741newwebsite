@@ -37,6 +37,8 @@ t "heredoc mentioning deploy fine"  allow live_change_gate.py "$(pre Bash '{"com
 t "echo FTP prose fine"             allow live_change_gate.py "$(pre Bash '{"command":"echo \"FTP deploy war ein Fehlalarm\" >> /tmp/log.md"}')"
 t "commit message with deploy fine" allow live_change_gate.py "$(pre Bash '{"command":"git commit -m \"fix FTP deploy script\""}')"
 t "ftp as command without go"       deny  live_change_gate.py "$(pre Bash '{"command":"ftp ftp.741.studio"}')"
+t "commit msg with > and hooks path" allow live_change_gate.py "$(pre Bash '{"command":"git add .claude/hooks/README.md && git commit -m \"docs <noreply@anthropic.com>\""}')"
+t "echo > hooks file still denied"  deny  live_change_gate.py "$(pre Bash '{"command":"echo \"x\" > .claude/hooks/new.py"}')"
 
 prompt "ok go, deploy the review page"
 t "ftp upload.js WITH go"           allow live_change_gate.py "$(pre Bash '{"command":"node upload.js"}')"
