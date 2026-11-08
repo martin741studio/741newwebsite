@@ -1,6 +1,6 @@
 ---
 name: un-burning
-description: Runs the 741 Un-Burning clean-up for one client. Finds everything that harms the online presence (wrong NAP, spam listings, 404s, duplicates, thin or orphan pages, bad indexing, suspect reviews), builds a harm register and a keep/fix/kill list, and repairs approved items in controlled waves with snapshot and rollback. Use when Martin says "Un-Burning für KUNDE", "Altlasten aufräumen", "Fundament bereinigen vor SEO", "NAP-Bereinigung", "404 auf 301", "Index aufräumen", or "/un-burning". Do NOT use for the Maps audit (maps-audit), for writing or rewriting page copy (seo-page-optimizer), for CRO prototypes (cro-homepage), for backlink outreach (backlink-dach), or for growth SEO.
+description: Runs the 741 Un-Burning clean-up for one client. Finds what harms the online presence (wrong NAP, spam listings, 404s, duplicates, thin or orphan pages, bad indexing, suspect reviews), builds a harm register and keep/fix/kill list, repairs approved items in waves with rollback. Trigger on "Un-Burning für KUNDE", "Altlasten aufräumen", "NAP-Bereinigung", "404 auf 301", "Index aufräumen", "/un-burning". Not for the Maps audit (maps-audit).
 disable-model-invocation: true
 allowed-tools: Read, Grep, Glob, Bash(python3:*), Bash(curl:*), Bash(dig:*), Bash(whois:*), Bash(ls:*), Bash(mkdir:*), Bash(shasum:*)
 ---
@@ -41,19 +41,18 @@ Copy this checklist and tick it off:
 - [ ] 9. **GO-3.** Show the client tab draft, the message draft and the Drive link. Wait. Release only on a clear yes.
 - [ ] 10. Deliver: Drive link, screenshot as a file, list of open items. State what was verified and how.
 
-## Decision rules (short)
 
-- Page with clicks or backlinks: keep, fix, or merge with a 301. Never delete.
-- Duplicate: keep the stronger page (clicks, backlinks, position), merge the other with a 301.
-- Thin intended service or location page: fix with real local content from the client. Thin unintended page: merge or noindex.
-- Orphan with value: add a content link from its parent. Orphan without value: merge, 301 or noindex.
-- Wrong NAP on a listing: claim and fix first. Delete only if the correction route fails. Each delete needs a per-item go.
-- Suspect review: report only if it fits a Google policy case. 741 does not answer reviews.
-- Full rules per check: spec section 6.
+## Rules in short
+
+- Page with clicks or backlinks: keep, fix, or merge with a 301. Never delete. Duplicate: keep the stronger page, 301 the other. Wrong NAP on a listing: claim and fix first, delete only if the correction route fails (per-item go). Suspect review: report only if it fits a Google policy case; 741 does not answer reviews.
+- **Suriya:** read `references/suriya-rules.md` before any change (page 1511 stays untouched, name, address, phone, forms, no live edit). Dinakar edits the same site: name the pages of each wave at GO-2.
+- Browser reads of a Google profile only with Martin's go, read only, as 741studio18.
+
+Details: `references/decision-rules.md` (all decision rules, browser reads), `references/suriya-rules.md`, `references/registry-and-guide.md` (registry sync, Martin guide), `references/subagent-prompts.md` (prompts for the C, D, E scan agents and the reviewer).
 
 ## Output template
 
-Page 1 of `report/internal.html` always has: four area lights (B, C, D, E), damage tally (blocks revenue / leaks link power / cosmetic), top 5 leaks, next 3 actions, open approvals, before/after, data coverage. See `report-wireframe.md`. ALWAYS use this layout.
+Page 1 of `report/internal.html` always has: four area lights (B, C, D, E), damage tally (blocks revenue / leaks link power / cosmetic), top 5 leaks, next 3 actions, open approvals, before/after, data coverage. See `00_project/un-burning-workflow/report-wireframe.md`. ALWAYS use this layout. `scripts/build_report.py` builds both reports from `harm-register.json`.
 
 ## Checkpoints
 
@@ -62,34 +61,9 @@ Page 1 of `report/internal.html` always has: four area lights (B, C, D, E), dama
 
 ## Verification
 
-- `validate_run.py` must print `VALID`. `validate_changes.py` must print `WAVE OK` before any execution. Fix until they pass.
+- `validate_run.py` must print `VALID`. `validate_changes.py` must print `WAVE OK` before any execution.
 - The final report states: the commands run, their output, the screenshot path, the Drive link.
 
-## Browser reads (area B and precondition facts)
+## Registry
 
-With Martin's go, read a Google profile in Claude in Chrome as 741studio18 (`business.google.com/locations`; address and name in the list, status, suspension). Read only. Save screenshots as evidence with a hash. Close every dialog without changing anything. Close tabs you opened. Manager lists and GA4 roles are onboarding facts: record them in `preconditions.json`, never as items.
-
-## Suriya rules (client-specific)
-
-Official name "Praxis Suriya". Only address Schützenpfad 29. Phone 0174 7411087. Page 1511 on `/ayurveda-therapie/` stays untouched. Forms, phone and hours stay 1:1 on every page. No menu change without a go. No live edit of a page: build new, set old offline, take the slug. Export postmeta before any change. Dinakar edits the same WordPress site: name the pages of each wave at GO-2 so Martin can warn him.
-
-## References
-
-- `references/subagent-prompts.md` (prompts for the C, D, E scan agents and the reviewer)
-- `scripts/build_report.py` builds both reports from `harm-register.json` (no separate template file)
-
-## Registry entry (2026-10-11)
-
-Every run of this workflow is recorded in the workflow registry. The Excel `~/Desktop/Workflow-Uebersicht.xlsx` shows per client whether the workflow ran, its state, the last run, Martin's approval and the folder links.
-- At the start or end of a run: `python3 /Users/martindrendel/741website/00_project/workflow-registry/workflow_registry.py upsert --client "<client>" --workflow unburning --status "in Arbeit|Trockenlauf|fertig, Freigabe offen" --local <folder> --drive <url> --result <file>`
-- When Martin approves the result: `python3 /Users/martindrendel/741website/00_project/workflow-registry/workflow_registry.py approve --client "<client>" --workflow unburning` in the same turn, then tell Martin the sheet was updated. A hook reminds Claude when a message sounds like an approval.
-Workflow id: `unburning` (Un-Burning).
-
-## Registry: automatic (2026-10-11)
-
-The overview Excel `~/Desktop/Workflow-Uebersicht.xlsx` updates itself. A Stop hook runs `workflow_registry.py sync --quiet` after every turn. You do not call `upsert` for normal progress. Keep `<run>/run.json` current: field `client`, field `mode` (`dryrun` or `live`) and field `finished_at` when the run ends. `sync` reads them.
-For any other file layout, write `_run.json` in the run folder (schema in `00_project/workflow-registry/README.md`). Only the approval stays manual: when Martin approves a result, run `approve` in the same turn and say that the Excel is updated.
-
-## Martin guide (2026-10-12)
-
-The 741 character Martin points out the one thing per section the reader must not miss. Rules, poses, markup and the inline helper: `00_project/assets/brand/martin-guide/README.md`. In this workflow: in the client report: point at the biggest leak, insight at the first fix, celebrate when an area turns green. Max 1 callout per section, bubble text in first person and plain language, every number with source and date, check desktop and mobile with a screenshot.
+The overview Excel updates itself (Stop hook `workflow_registry.py sync`). Keep `<run>/run.json` current: `client`, `mode` (`dryrun` or `live`), `finished_at`. Approval is manual: `python3 /Users/martindrendel/741website/00_project/workflow-registry/workflow_registry.py approve --client "<client>" --workflow unburning` in the same turn.

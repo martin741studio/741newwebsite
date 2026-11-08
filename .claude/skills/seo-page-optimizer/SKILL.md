@@ -1,157 +1,63 @@
 ---
 name: seo-page-optimizer
-description: >
-  Optimise a client page's CONTENT for Google + AI answer engines (GEO/AEO) + local
-  visibility, grounded in a real DataForSEO data package — not guesswork. Two modes:
-  CREATE (produce a full content spec for a new/rebuilt page) and AUDIT (score an existing
-  page/URL against the same standard and return prioritised fixes). Use this whenever the
-  task is about page content, on-page SEO, "optimise this page", "write the [service] page",
-  "topical authority", "rank in AI / ChatGPT / AI Overviews / Perplexity", "GEO", "AEO",
-  "content brief", or checking whether an existing page is aligned with our SEO standard —
-  for any 741 local-SEO client (Hüwel, Suriya/Coralie, Dumann, Kamil, Brasse, etc.).
-  Trigger it even when the user just drops a URL + keyword and asks "is this good?" or
-  "make this rank". For the prospect Maps-grid audit deliverable use `local-seo-review-page`
-  instead; this skill is about the CONTENT of a page.
+description: Optimises a client page's CONTENT for Google, AI answer engines (GEO/AEO) and local visibility from a real DataForSEO package. CREATE writes a content spec; AUDIT scores an existing page and returns prioritised fixes. Trigger on "optimise this page", "write the [service] page", "topical authority", "rank in AI / ChatGPT", "GEO", "AEO", "content brief", or a URL + keyword with "is this good?". Not for Maps-grid audits (local-seo-review-page).
 ---
 
 # SEO / GEO Page Optimizer
 
-Turn a **real data package** (keywords, competitors, questions — pulled from DataForSEO) plus the
-client's **true services & NAP** into page content that (a) matches search intent and covers the
-topic deeply enough to earn **topical authority** on Google, and (b) is structured so **AI answer
-engines quote it** (GEO/AEO). Same standard drives both jobs: writing a new page and auditing an
-existing one.
+Turns a real data package (keywords, competitors, questions from DataForSEO) plus the client's true services and NAP into page content that matches search intent, covers the topic deeply, and is structured so AI answer engines quote it. The same standard drives writing a new page and auditing an existing one.
 
-Three hard rules, because they are where SEO content usually goes wrong:
-- **Real data only — never fabricate.** Every volume, competitor claim, ranking, phone number,
-  address, price, and traffic/bounce metric comes from the data package or a verified source —
-  never invented. NAP comes from the locked canonical record; traffic/bounce/engagement come from
-  GA4/Search Console; nothing else. If a fact is missing, write `[fehlt: …]` and say so — do not
-  fill the gap with a plausible-looking placeholder presented as real. (This is the single most
-  common failure: a model confidently invents a phone number or a "88% bounce rate". Don't.)
-  See `claims-need-real-data`.
-- **Language = the client's market.** Write the page in the language the client's audience actually
-  searches in: **English** for expat/international clients (e.g. Bali Healing), **German** for DACH
-  practices. Do not default to German. Mismatched language (English keywords, German copy) is a real
-  mistake — check the client's market first.
-- **Say only what is true of the client.** Use the client's *actual* services and facts (from
-  `client_locations` / the brief). Never promise a treatment or result the client does not offer.
-  For health clients this is also a legal line (HWG in DACH) — see the compliance section.
+## Hard rules
+
+- **Real data only.** Every volume, competitor claim, ranking, phone number, address, price and traffic or bounce figure comes from the data package or a verified source. NAP comes from the locked canonical record (`client_locations.nap_status='locked'`), traffic and engagement from GA4 / Search Console. A missing fact is written `[fehlt: …]`, never a plausible placeholder (memory `claims-need-real-data`).
+- **Language = the client's market.** English for expat or international clients (e.g. Bali Healing), German for DACH practices. Check the market first.
+- **Only what is true of the client.** Use the client's actual services and facts. Never promise a treatment or result the client does not offer.
+- **Health clients (most of ours):** YMYL and HWG apply. No promised cures, no before/after misuse, no fear claims; lead with E-E-A-T. Where a competitor ranks with a claim we may not make, compete on depth, trust and specificity. See `hwg-fallstudien-guideline` and `program-deliverable-rules`.
 
 ## Pick the mode
 
-- **CREATE** — a new page, or a rebuild of a weak one. You have a target keyword/topic + the data
-  package. Output = a content spec (below) the client's CMS team can implement on Wix, WordPress,
-  Only-Inside, Novamira, etc. Output is CMS-agnostic content, not our HTML skeleton.
-- **AUDIT** — an existing page (a URL to fetch, or pasted content). Output = a score against the
-  rubric + a prioritised gap-and-fix list, so we see if it is *aligned* with the standard and what
-  to change. Read `references/scoring-rubric.md` for the exact dimensions and scoring.
+- **CREATE:** a new page or a rebuild. Target keyword plus data package in, content spec out (CMS-agnostic: Wix, WordPress, Only-Inside, Novamira).
+- **AUDIT:** an existing URL or pasted content. Score against `references/scoring-rubric.md`, return a prioritised gap-and-fix list.
 
-If the user gives a URL and asks "is this good / aligned?", that is AUDIT. If they ask to write or
-rebuild, that is CREATE. When unsure, ask one line; don't guess.
+A URL with "is this good / aligned?" is AUDIT. "Write" or "rebuild" is CREATE. If unclear, ask one line.
 
-## Step 1 — Assemble the data package (both modes)
+## Step 1: data package (both modes)
 
-The quality of the output is capped by the quality of the inputs. Gather this before writing.
-The full field-by-field contract + the exact DataForSEO calls are in `references/data-package.md`
-— read it so the client knows what to pull. Minimum viable set:
+Contract and exact DataForSEO calls: `references/data-package.md`. Minimum:
 
-- **Primary keyword** + monthly volume + difficulty (`dataforseo_labs/google/keyword_suggestions/live`
-  for on-topic terms; `ranked_keywords/live` for what the domain already ranks for). location_code
-  2276 = Germany, language_code `de`. Avoid `keyword_ideas/live` (expands too broadly → junk).
-- **Secondary / related keywords** the page should also cover (the cluster), with volumes.
-- **Top 3–5 SERP competitors** for the primary keyword + which subtopics/sections they cover
-  (this defines the depth needed to compete).
-- **People-Also-Ask / real questions** users ask (feed the FAQ + GEO answer blocks).
-- **The client's true facts**: exact services, method names, NAP, practitioner + credentials.
-  Prefer the **locked canonical NAP** (`client_locations.nap_status='locked'`) as the source of
-  truth for name/address/phone/category — never a second variant.
-- **Local context**: primary city + real catchment (only towns with real demand get their own
-  page; thin copy-paste location pages are "scaled content" and get devalued — mention small towns
-  in body text instead).
+- Primary keyword with volume and difficulty (`dataforseo_labs/google/keyword_suggestions/live`; `ranked_keywords/live` for what the domain already ranks for). `location_code` 2276 = Germany, `language_code` `de`. Avoid `keyword_ideas/live` (junk).
+- Secondary keywords (the cluster) with volumes.
+- Top 3-5 SERP competitors with their subtopics.
+- People-Also-Ask questions (feed FAQ and answer blocks).
+- The client's true facts: services, method names, NAP, practitioner and credentials.
+- Local context: primary city and real catchment. Only towns with real demand get their own page; small towns go into body text (thin copy-paste location pages are scaled content).
 
-If DataForSEO data is thin, sense-check via Google autocomplete / PAA / Trends before trusting a
-term (see `sensecheck-keywords-google`); "0" often means "no data", not "no demand".
+Thin DataForSEO data: sense-check via Google autocomplete, PAA, Trends (`sensecheck-keywords-google`). "0" often means no data, not no demand.
 
-## Step 2 (CREATE) — produce the content spec
+## Step 2 (CREATE): content spec
 
-Always return this structure. It is deliberately ordered the way both Google and AI engines read a
-page: what it is, the direct answer, then the depth.
+Return this structure:
 
 ```
 # Content Spec — [Page name] · [client]
-
-## Target
-- Primary keyword (+ volume/difficulty) · secondary keywords (the cluster) · search intent
-- URL slug (lowercase-hyphen; keep existing URLs where they already rank)
-
-## Meta
-- Title tag (≤60 char, primary keyword front-loaded, local qualifier, brand)
-- Meta description (≤155 char, benefit + primary keyword + soft CTA)
-
-## Page outline (H1 → H2/H3)
-- H1: one clear promise with the primary keyword
-- H2/H3 mapped to search intent AND the competitor subtopics AND the PAA questions
-  (this is how you reach topical depth — cover what the top results cover, plus a real edge)
-
-## GEO / AI-answer layer  ← the part most pages miss
-- A 2–4 sentence DIRECT ANSWER block right under the H1 (self-contained, quotable, no fluff)
-- Definition box for the core entity/term (AI engines extract clean definitions)
-- FAQ: the real PAA questions, each answered in 2–3 tight sentences (also ships as FAQPage schema)
-- Extractable facts: concrete specifics (who, where, how long, what it costs if public) as short
-  statements — engines cite specifics, not adjectives
-- Entities to name explicitly (methods, conditions, city, neighbouring areas) so the page is
-  unambiguous to a machine
-
-## Body content (per section)
-- Draft copy or clear guidance per H2, in the client's real voice, covering the topic fully
-- E-E-A-T: name the practitioner + credentials + real experience; first-hand, specific, honest
-
-## Structured data (JSON-LD)
-- LocalBusiness/MedicalBusiness (NAP from the locked record) + Service + FAQPage
-  + Person (practitioner, with sameAs) for E-E-A-T
-
-## Internal links
-- Link up to the pillar/hub page and across to sibling cluster pages (topical authority is a mesh,
-  not single pages)
-
-## Local signals
-- City + real catchment named naturally in copy; NAP identical to the locked canonical record
+## Target        primary keyword (+ volume/difficulty), cluster, search intent, URL slug (keep URLs that already rank)
+## Meta          title tag (≤60, keyword first, local qualifier, brand); meta description (≤155, benefit + keyword + soft CTA)
+## Outline       H1 with primary keyword; H2/H3 mapped to intent, competitor subtopics and PAA
+## GEO layer     2-4 sentence direct answer under the H1; definition box; FAQ from real PAA (also FAQPage schema);
+                 extractable concrete facts; named entities (methods, conditions, city, neighbouring areas)
+## Body          draft copy or guidance per H2 in the client's real voice; E-E-A-T: named practitioner, credentials, first-hand experience
+## Schema        LocalBusiness/MedicalBusiness (locked NAP) + Service + FAQPage + Person (with sameAs)
+## Internal links  up to the pillar, across to sibling cluster pages
+## Local signals   city and catchment named naturally; NAP identical to the locked record
 ```
 
-Then run the **self-check**: read `references/scoring-rubric.md` and confirm the spec would score
-well on every dimension before handing it over. Note any dimension you could not satisfy and why.
+Self-check: read `references/scoring-rubric.md`, confirm the spec scores well on every dimension, and note any you could not satisfy and why.
 
-Then run the **de-slop check** on the body copy (not the meta/schema blocks): the
-`slopmonster` skill's `tools/deslop.py --text "..."` scores AI-sounding vocabulary and
-sentence shapes out of 5. Below 5/5, rewrite the flagged lines in plainer words before
-handing the spec over — a page that reads like every other AI page loses trust and, for
-GEO, quotability. This is separate from the SEO rubric: a spec can score well on structure
-and still sound like AI wrote it.
+De-slop the body copy (not meta or schema): `python3 .claude/skills/slopmonster/tools/deslop.py --text "..."`. Below 5/5, rewrite the flagged lines before handing over.
 
-## Step 3 (AUDIT) — score an existing page
+## Step 3 (AUDIT)
 
-1. Get the page: fetch the URL (or use pasted content). Note the target keyword (ask if not given).
-2. Score each dimension in `references/scoring-rubric.md` (search-intent match, topical depth,
-   GEO-extractability, E-E-A-T, local signals, technical on-page, schema, internal links) 0–100,
-   with a one-line reason grounded in what is actually on the page — quote the evidence.
-3. Return: overall alignment verdict + a **prioritised gap-and-fix list** (biggest ranking/AI wins
-   first), each fix concrete and implementable, tied to the rubric dimension it lifts.
-4. If a target/competitor data package exists, compare the page against it (does it cover what the
-   top results and the PAA cover?). If not, say the audit is content-only and offer to pull the data.
-
-## Compliance (health clients — most of ours)
-
-Health/medicine is **YMYL**: Google suppresses medical content without demonstrable expertise, and
-German **HWG** forbids specific claims. So: no promised cures or guaranteed outcomes, no before/after
-misuse, no fear-based claims; keep statements to what the practitioner genuinely does and is
-qualified for; lead with E-E-A-T (real person, credentials). See `hwg-fallstudien-guideline` and
-`program-deliverable-rules`. When a competitor ranks with a claim we may not make, compete on depth,
-trust and specificity instead — never by copying a non-compliant claim.
-
-## What good looks like (the "why")
-
-A page wins on Google today by being the most complete, trustworthy answer for the intent — thin
-pages lose. It gets *quoted by AI* by making the answer easy to lift: a clean direct answer, real
-questions answered plainly, defined entities, structured data, concrete facts. These two goals
-reinforce each other; this skill optimises for both at once rather than trading one off.
+1. Fetch the URL or take the pasted content. Get the target keyword (ask if missing).
+2. Score each dimension in `references/scoring-rubric.md` 0-100 with a one-line reason that quotes the page.
+3. Return the overall verdict and a prioritised gap-and-fix list (biggest ranking and AI wins first), each fix concrete and tied to the dimension it lifts.
+4. With a data package, compare the page against what the top results and PAA cover. Without one, say the audit is content-only and offer to pull the data.

@@ -27,7 +27,7 @@ Copy this checklist into your reply at each checkpoint and tick it off:
 
 ```
 Build progress <id>:
-- [ ] 0.0 inputs grill (Job, Surface, Cadence, Limits)   - [ ] 1.1 block chosen   - [ ] 1.2 library searched   - [ ] 1.3 freshness   - [ ] 1.4 existing assets   - [ ] 1.5 research note
+- [ ] 0.0 inputs grill (Job, Surface, Cadence, Limits)   - [ ] 1.1 block chosen   - [ ] 1.2 library searched   - [ ] 1.3 freshness   - [ ] 1.4 existing assets   - [ ] 1.5 research note   - [ ] 1.6 knowledge base (local / to export / derived rules+questions; skip only with "no knowledge base")
 - [ ] 2.1 use cases   - [ ] 2.2 3 test scenarios (before the body)   - [ ] 2.3 one real task by hand   - [ ] 2.4 pipeline   - [ ] 2.5 freedom
 - [ ] CHECK cp1 → 2.6 checkpoint 1 (Martin go)
 - [ ] 3.1-3.7 build per template, verification step, unattended rules
@@ -41,7 +41,7 @@ After each step:
 
 ```bash
 python3 $C done <id> <step> <evidence-path> "short note"
-python3 $C skip <id> <step> "reason"        # only 3.7, 4.4, 5.3b, 5.4
+python3 $C skip <id> <step> "reason"        # only 1.6, 3.7, 4.4, 5.3b, 5.4
 ```
 
 At each gate:

@@ -1,83 +1,41 @@
 ---
 name: client-roadmap
-description: Creates, decomposes, and maintains 741 client roadmaps and goal milestones based on audits, market benchmarks, and empirical gap analysis. Use when Martin types /client-roadmap <client>, or asks for client roadmaps, milestone planning, or goal alignment ("Roadmap für <Kunde>", "Zwischenschritte für Celine", "Meilensteine für Suriya"). Do NOT use for one-off bugfixes without roadmap context, and NOT for writing website copy.
+description: Creates, decomposes and maintains 741 client roadmaps and goal milestones from audits, market benchmarks and gap analysis. Use when Martin types /client-roadmap <client>, or says "Roadmap für <Kunde>", "Zwischenschritte für Celine", "Meilensteine für Suriya", or asks for milestone planning or goal alignment. Not for one-off bugfixes without roadmap context.
 disable-model-invocation: true
 allowed-tools: Read, Grep, Glob, Write, Edit, Bash(python3:*)
 ---
 
 # Client Roadmap & Goal Engine (`client-roadmap`)
 
-Full specification: `/Users/martindrendel/741website/00_project/client-roadmap-workflow.md`.
-Template: `assets/roadmap-template.json`. Scripts: `scripts/`.
+Full specification: `/Users/martindrendel/741website/00_project/client-roadmap-workflow.md`. Template: `assets/roadmap-template.json`. Schema: `references/roadmap-schema.md`.
 
 ## Critical
 
-- **Zero Unapproved Strategic Drift:** Core client promises, budgets, and North Star Goals must never be altered without Martin's explicit Go via an interactive Decision Card (`ask_question`).
-- **Zero Hallucinated Numbers:** Every metric (TTFB, media size, keyword ranking, review count) must cite an authentic evidence file or verified API scan. No estimated baselines.
-- **Rule R1.7 Separation:** Gap mathematics ($\Delta = \text{Baseline} - \text{Benchmark}$) and file serialization MUST be executed via deterministic scripts. Strategic milestone sequencing is guided by 741 Phase rules ($P_0 \to P_6$).
-- **Strict Read-Only During Synthesis:** This skill plans and structures data; it never directly modifies live client websites, production DNS, or ad campaigns.
+- **No strategic drift.** Client promises, budgets and North Star Goals change only with Martin's Go via an AskUserQuestion decision card.
+- **No invented numbers.** Every metric (TTFB, media size, keyword ranking, review count) cites an evidence file or a verified API scan. No estimated baselines.
+- **Math and serialization in scripts.** Gap delta (baseline minus benchmark) and file writing run through the scripts. Milestone order follows the 741 phase rules (P0 to P6).
+- **Read-only.** This skill plans. It never changes live client sites, production DNS or ad campaigns.
 
 ## Inputs
 
-- Client identifier (`<client>` slug or name).
-- Execution mode:
-  - `show` (default: display active roadmap and pre-flight status).
-  - `create` (initial synthesis from audit + competitor benchmarks).
-  - `update` (mark milestone task complete and advance state).
+Client slug or name, and mode: `show` (default: active roadmap and pre-flight status), `create` (first synthesis from audit and competitor benchmarks), `update` (mark a milestone task complete, advance state).
 
-## Workflow Checklist
+## Steps
 
-Copy this checklist into your response and tick each step:
+1. Ingest. `show` or `update`: `python3 .claude/skills/client-roadmap/scripts/get_roadmap.py <client>`. `create`: read the audit reports in `00_project/assets/<client>/audit/` and the competitor baselines.
+2. Reality check: gap against market benchmarks, for example TTFB 2.1 s vs under 200 ms, media weight 10.5 MB vs under 1.5 MB, mobile UX (unclear dropdown vs 3-card hub).
+3. Decompose the North Star Goal into 3 to 4 sequential milestones:
+   - M1 Diagnosis & Audit (P2)
+   - M2 Harm Repair & Quick-Wins (P3)
+   - M3 Growth Build-Up & CRO (P4/P5)
+   - M4 Proof, Tracking & Telemetry (P6)
+4. CHECKPOINT: present the draft roadmap via AskUserQuestion. Persist nothing without an explicit Go.
+5. Persist: write the approved roadmap to `00_project/assets/<client>/roadmap.json` and update Supabase `public.client_goals`.
+6. Telemetry: `python3 .claude/skills/client-roadmap/scripts/write_run.py --client <client> --checkpoint cp1 --status passed`
 
-```
-Client Roadmap Progress <client> (<mode>):
-- [ ] P0 Ingest data: run scripts/get_roadmap.py <client> OR parse audit baseline
-- [ ] P1 Reality check: compute gap delta against market benchmarks
-- [ ] P2 Synthesize milestones: decompose North Star Goal into M1-M4
-- [ ] 🛑 CHECKPOINT 1: Present roadmap draft to Martin via Decision Card
-- [ ] P3 Persist state: write 00_project/assets/<client>/roadmap.json
-- [ ] P4 Telemetry: run scripts/write_run.py --client <client> --status passed
-```
+## Pre-flight banner
 
-### Step Details
-
-#### P0: Ingest Client Baseline
-If `show` or `update`:
-```bash
-python3 .claude/skills/client-roadmap/scripts/get_roadmap.py <client>
-```
-If `create`: Parse audit reports in `00_project/assets/<client>/audit/` and review competitor baseline references.
-
-#### P1: Gap Analysis (Reality Check)
-Compute the delta $\Delta = \text{Client Baseline} - \text{Market Benchmark}$:
-- Ladezeiten / TTFB (z. B. 2.1s vs. < 200ms Benchmark).
-- Medien-Gewicht (z. B. 10.5 MB vs. < 1.5 MB Benchmark).
-- Mobile UX / Conversion (z. B. unübersichtliches Dropdown vs. 3-Karten-Hub).
-
-#### P2: Milestone Decomposition
-Structure into strictly 3–4 sequential milestones:
-- $M_1$: Diagnosis & Audit ($P_2$)
-- $M_2$: Harm Repair & Quick-Wins ($P_3$)
-- $M_3$: Growth Build-Up & CRO ($P_4/P_5$)
-- $M_4$: Proof, Tracking & Telemetry ($P_6$)
-
-#### 🛑 Checkpoint 1: Martin Approval Gate
-Always present the proposed roadmap to Martin using an interactive Decision Card (`ask_question`). Never persist a new roadmap without explicit Go.
-
-#### P3: Persist Dual-Storage State
-Write the approved roadmap to:
-`00_project/assets/<client>/roadmap.json`
-and update Supabase `public.client_goals`.
-
-#### P4: Telemetry Output
-Emit the standardized run record:
-```bash
-python3 .claude/skills/client-roadmap/scripts/write_run.py --client <client> --checkpoint cp1 --status passed
-```
-
-## Agent Pre-Flight Banner Format
-
-When any chat agent starts a task for `<client>`, it must output:
+When any chat agent starts a task for `<client>`, it prints:
 ```
 [741 ROADMAP ACTIVE] <Client> · Phase: <Phase> · Active Milestone: M<x> (<Title>)
 Goal: <North Star Goal> | Top Constraint: <Client Rule>

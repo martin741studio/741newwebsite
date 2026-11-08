@@ -30,6 +30,16 @@ Built from one live interview (2026-10-22, card "Test opinion"; raw material in 
 4. Execution reality — why access to information or AI tools isn't the bottleneck; routine, conditioning, and long-term distributed responsibility are.
 5. Measurable results — real, sourced numbers only.
 
+## On-camera persona (Channel-Positioning-Quiz, Martin's answers 2026-10-27)
+
+Martin ran the "4 Channel Positions" creator quiz (`RDICAL`, `4channelcreator.pdf`) live, all 8 questions answered fresh, not guessed. Result: **TEACHER primary (7/8), PERFORMER secondary (5/8)** — no Hero, no Commentator at all. This governs how every talking-head episode (mini-series, daily German Instagram) is delivered, not just what it says.
+
+- **Teacher core:** natural problem-solver; fulfillment comes from the viewer's own "oh, now I get it" moment, not from being liked or entertaining for its own sake. Matches the account's existing "educational first" stance exactly — this is confirmation, not a new direction.
+- **Teacher watch-out (from the quiz itself):** don't go purely technical/How-To. Mix in a real moment or story alongside the teaching so it stays memorable, not just correct.
+- **Performer secondary, the part that was missing:** add energy/drama at the delivery level, not by changing the content. Concrete mechanism, Martin's go 2026-10-27: a **recurring physical prop/gesture** — write the wrong assumption down (whiteboard or equivalent), physically cross it out, write the real mechanism next to it. Same beat, every episode, at the reveal point (the "but the real problem is..." moment). Low prep, high recognition, doesn't need reinventing per the quiz's own Performer growth-tip ("recurring ideas that don't require endless reinvention").
+- This is the same assumption-vs-reality shape `build_personal_mechanism.py` already uses for static images — now extended to the on-camera performance itself, so the still-image and the video language match.
+- Mark the exact reveal line in every script as `[WHITEBOARD: <falsche Annahme> durchstreichen, <echter Mechanismus> daneben schreiben]` so it's unmissable when filming, and keep it out of the spoken/caption text itself.
+
 ## Per-platform adaptation
 
 Same shape as the personal account (`voice-profile.md` §"Per-platform adaptation"): LinkedIn full argument (3-6 short paragraphs, no hashtags), X sharpest single version (thread if needed), Instagram/Facebook caption pairs with the image, pull-quote line first.

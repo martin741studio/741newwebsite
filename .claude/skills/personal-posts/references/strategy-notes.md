@@ -1,6 +1,6 @@
 # Strategy notes — from Martin's "Content Marketing Playbook" knowledge base
 
-Source: Martin's NotebookLM notebook (37 sources: platform-algorithm research, creator interviews, academic virality research), queried 2026-10-22. Only the findings that apply to TEXT social posts (this skill's scope) are kept here; video-only findings (Reels pattern interrupts, Shorts looping, script re-hooks) are left out as out of scope. Numbers below are the notebook's synthesis of its sources, not 741's own measured data — treat them as industry research informing technique, not as `claims-need-real-data`-grade facts about any specific post's performance.
+Source: Martin's NotebookLM notebook (platform-algorithm research, creator interviews, academic virality research), queried 2026-10-22 (37 sources at that time). Re-queried 2026-10-27 after Martin added 34 new sources (73 total) — see the new section below. Only the findings that apply to TEXT social posts (this skill's scope) are kept here; video-only findings (Reels pattern interrupts, Shorts looping, script re-hooks, on-camera delivery) are left out as out of scope. Numbers below are the notebook's synthesis of its sources, not 741's own measured data — treat them as industry research informing technique, not as `claims-need-real-data`-grade facts about any specific post's performance.
 
 ## Directly actionable for this skill (folded into `voice-profile.md`)
 
@@ -22,6 +22,14 @@ Source: Martin's NotebookLM notebook (37 sources: platform-algorithm research, c
 
 - Cadence: the notebook's sources put optimal founder cadence at 3-5 substantive posts per week per platform — matches Martin's own "3-4x/week" decision from the original grill.
 - Save-worthy, substantive content (a real framework, a real number) outranks chasing likes — matches the existing "no engagement bait" hard no and the claim-proof pairing rule already in the voice profile.
+
+## Volume and series findings (added 2026-10-27, from 34 new sources Martin added to the notebook)
+
+The new sources are a creator's YouTube "daily upload" series — mostly video-production and on-camera-delivery advice, out of scope here (see `.claude/skills/content-format-board/references/playbook-notes.md` sections K-L for the video-specific findings). Three findings generalize past video, so they are kept here:
+
+- **"Quality-quantity" beats a few polished pieces.** A documented case moved from 1-2 heavily produced pieces a month to several lower-effort pieces a week; weekly output rose by roughly four times while per-piece performance held steady. Sharpens the existing cadence line above from "3-5x/week is fine" to "more, done plainly, usually beats fewer done perfectly."
+- **Name the series.** A one-off post converts far fewer readers into followers than the same idea released as part of a named, continuing format, even when the one-off gets more raw reach. Directly actionable: give the agency-insight and SEO-opinion post lanes each a recognizable series name, not just a topic.
+- **Volume finds the angle faster.** Each post is a try at a hook, angle or topic. Posting at higher volume finds what resonates with 741's audience in weeks, not years.
 
 ## Noted but not adopted into v1 (flagged for Martin, not assumed)
 
