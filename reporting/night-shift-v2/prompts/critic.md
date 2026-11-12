@@ -14,6 +14,8 @@ C5 No live action: nothing claims a send, publish, upload or live change; no fil
 C6 Usefulness: Martin could release or act on it tomorrow with at most small edits.
 C7 Copy quality (only if the item contains German client-facing copy): run `python3 00_project/content-writing-skill/scripts/deslop_de.py <file>` on the main German copy file. Score below 5/5 = fail with the top findings. For English copy run `python3 .claude/skills/slopmonster/tools/deslop.py --text "<first 1500 chars>"`.
 
+Shell rule: run every shell check as ONE simple command from the repo root, exactly as written here (for example `git status --porcelain`). No `cd`, no variables, no `;` or `&&` chains, no heredocs. Read files with the Read tool, list them with Glob. A chained command is denied by the sandbox.
+
 Verdict: pass only if C1, C2, C5 pass and at most one of C3, C4, C6, C7 fails.
 
 Write:

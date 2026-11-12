@@ -25,3 +25,5 @@ OUTPUT:
 - {ITEM_DIR}/summary.md: 3–6 lines in plain English (ASD-STE100): what you made, what is missing, what Martin must decide. No jargon.
 
 Your final reply: one line "DONE {ID}: <file names>" or "BLOCKED {ID}: <reason>".
+
+Shell rule: run every shell command as ONE simple command from the repo root, exactly as written here (for example `git status --porcelain`). No `cd`, no variables, no `;` or `&&` chains, no heredocs. Write files only with the Write tool. A chained command is denied by the sandbox.
