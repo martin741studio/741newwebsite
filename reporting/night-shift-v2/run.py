@@ -35,7 +35,7 @@ STOP_FILE = BASE / "STOP"
 ALLOWED = ",".join([
     "Read", "Write(./reporting/night-shift/**)", "Edit(./reporting/night-shift/**)", "Glob", "Grep", "WebFetch", "WebSearch",
     "Bash(python3:*)", "Bash(ls:*)", "Bash(wc:*)", "Bash(head:*)", "Bash(tail:*)",
-    "Bash(grep:*)", "Bash(cat:*)", "Bash(mkdir:*)", "Bash(cd:*)", "Bash(git status:*)", "Bash(git diff:*)",
+    "Bash(grep:*)", "Bash(cat:*)", "Bash(mkdir:*)", "Bash(cd:*)", "Bash(echo:*)", "Bash(git status:*)", "Bash(git diff:*)",
 ])
 DENIED = ",".join([
     "Bash(curl:*)", "Bash(wget:*)", "Bash(ftp:*)", "Bash(lftp:*)", "Bash(scp:*)", "Bash(sftp:*)",
@@ -101,7 +101,7 @@ class Night:
                "--strict-mcp-config", "--setting-sources", "user", "--max-budget-usd", f"{remaining:.2f}"]
         raw = self.out / f".run{n}.json"
         with open(raw, "w") as fo, open(self.out / f".run{n}.err", "w") as fe:
-            p = subprocess.Popen(cmd, cwd=REPO, stdout=fo, stderr=fe, start_new_session=True)
+            p = subprocess.Popen(cmd, cwd=REPO, stdin=subprocess.DEVNULL, stdout=fo, stderr=fe, start_new_session=True)
             while p.poll() is None:
                 if now() >= self.deadline or STOP_FILE.exists():
                     os.killpg(p.pid, signal.SIGTERM); time.sleep(5)
