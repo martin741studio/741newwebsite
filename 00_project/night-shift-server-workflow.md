@@ -1,5 +1,7 @@
 # Night Shift + Server — workflow spec v0.1 (design, checkpoint 1)
 
+> **Stand 11.11.2026: Entscheidung N52 in §15.** Die Nachtschicht zieht auf den Server `741-agents-01`. §1–§14 sind Design-Stand 13.10.
+
 Registry id: `nightshift` (not added yet). Build folder: `00_project/workflow-builds/nightshift/`. Decisions N1–N16: `decisions.md` there. Pipeline + freedom: `pipeline.md`. Use cases: `use-cases.md`. Tests: `test-scenarios.md`. Hosting: `00_project/night-shift-server-hosting-options.md`. Runbook: `00_project/night-shift-server-runbook-draft.md`. Coverage: `00_project/night-shift-server-coverage-map.md`.
 
 ## 0. Job and done
@@ -112,3 +114,66 @@ Never: send, message, publish, deploy, live site or portal writes (except the ni
 ## 14. Phase 1 = laptop (decision N27–N31, 13.10. evening)
 
 Martin: prove the night shift on the laptop first, server after 5 clean nights. Runner v2 `reporting/night-shift-v2/run.py` (queue mode, script planner + reviewer, exact run counter, cost from `total_cost_usd`, deadline kill at 22:45 WITA, STOP file `reporting/night-shift/STOP`, write check via `git status`). Claude flags: `--permission-mode dontAsk --setting-sources user --strict-mcp-config`, Write/Edit only under `reporting/night-shift/**`, deny list for curl/ftp/scp/rsync/ssh/git push/rm. LaunchAgent `studio.741.night-shift-v2` Mon–Fri 17:30 + 20:30 (20:30 = resume slot); no queue file → no run. Old v1 agent stays unloaded. Open: 17:00 night-queue card (morning-grill chat), Command Center night section for the 21:30 check-in, mail ping. Known gap: `python3` is allowed for the agents and could write outside the folder; the git check logs it as a violation.
+
+## 15. Entscheidung N52 (11.11.2026): Nachtschicht auf den Server 741-agents-01
+
+**Martins Antwort (Karte „Nacht-Host“, Abend-Grill-Folge 11.11.):** „Server 741-agents-01 (Empfehlung)“. Zweite Karte „Live-Check“: „Ja, starten + prüfen (Empfehlung)“.
+Die Karten-Antwort ist eine Richtungsentscheidung. Sie ist kein Bauauftrag. Jeder Bauschritt unten braucht Martins eigenen Auftrag, Live- und Config-Schritte zusätzlich sein Go.
+
+### 15.1 Was nachts auf dem Server läuft
+- Alle 4 Queue-Klassen aus `build_night_queue.py`: `draft`, `research`, `public_audit`, `build`. Keine Klasse braucht per Definition einen Login oder Martins Chrome.
+- Gleicher Runner wie am Laptop: `reporting/night-shift-v2/run.py` mit `claude -p`, Caps 14 Läufe / est. USD 10, `--permission-mode dontAsk`, Schreiben nur unter `reporting/night-shift/**`.
+- Ausdrücklich nicht: senden, veröffentlichen, deployen, Live-Writes (WordPress, Portal, Supabase außer Night-Cards), Ads, Geld, Arbeit mit Martins Chrome-Logins. Diese Punkte bleiben Tagesarbeit mit Go je Änderung.
+
+### 15.2 Live-Stand des Servers (read-only geprüft 11.11. ~20:10 WITA)
+| Punkt | Stand |
+|---|---|
+| Host | `741-agents-01`, Hetzner CAX31 Arm, Falkenstein, Tailscale `100.124.61.26`, up 28 Tage, Disk 14 / 150 GB |
+| Tailscale am Laptop | war gestoppt; am 11.11. auf Martins Karte gestartet |
+| Claude Code | 2.1.299, User `nightshift`, `setup-token` vorhanden (`~/.claude-oauth-token.env`, 600) |
+| Browser-Layer | Xvfb, Fluxbox, x11vnc, noVNC, Chrome (CDP 9222) laufen |
+| Health-Check | **PARKED seit 15.10. 13:14** (3× „exit 1“, kein Grund geloggt). Timer läuft weiter und meldet alle 10 min „skipped“ |
+| Remote Control | **aus seit 15.10. 13:14** (`claude-remote-control.service` dead) |
+| Drill | 01.11. FAIL: Remote Control lief schon vorher nicht |
+| Heartbeat | pingt alle 30 min „OK“ an Healthchecks.io, **obwohl** der Health-Check geparkt ist. Der Canary sieht darum kein Problem |
+| Repo-Klon | `main` auf `88ad0b69` vom 14.10. Laptop: 56 Commits nicht gepusht, `origin/main` vom 27.10., 859 offene Pfade |
+| Nacht-Runs | auf dem Server nie gelaufen; kein Nacht-Timer vorhanden |
+| Secrets | voller `.secrets/`-Ordner (13 Dateien) seit 14.10., also auch Schreib-Keys (`cpanel.env`, `kraft-ftp.env`, `meta-741.env`, `stuerzl-artfiles.env`). Widerspricht §6.6 (nur Lese-Keys) |
+
+### 15.3 Was eingerichtet werden muss (Reihenfolge, nichts davon gebaut)
+N53 (11.11.): Martin will zuerst die Schritte 1–2 (Sicherheit + Health). Start erst auf seinen eigenen Auftrag.
+1. **Secrets reduzieren (M + Go):** Schreib-Keys vom Server entfernen. Nur Lese-Keys bleiben (DataForSEO, Apify, GSC/GA4-Service-Account read, Healthchecks, Telegram nur für Pings). Prüfen, ob die Keys nach dem Infostealer vom 13.10. rotiert sind (S0).
+2. **Health-Check reparieren:** Grund für „exit 1“ am 15.10. finden, PARKED-Marker erst danach löschen, einmal von Hand laufen lassen. Heartbeat an den Health-Status koppeln, damit „parked“ nicht als „OK“ pingt.
+3. **Git-Transport (Martins Go für Push):** 56 Commits pushen; Queue-Eingaben, die die Nacht braucht (Abend-Logs, `00_project/assets/...`-Texte), committen oder per Sync auf den Server. Regel aus `night-shift-server-data-transport.md` §3 bleibt: Laptop besitzt `main`, Server nur `nightshift/*`.
+4. **Queue zum Server:** Die 17:00-Karte schreibt `reporting/night-shift/queue/<date>.json` lokal. Weg zum Server festlegen (Push der Queue-Datei auf einen Branch, Server `git pull` 17:30). Ohne Queue-Datei kein Lauf (N34 bleibt).
+5. **Runner portieren:** `run.py` auf Linux testen (Pfade, TZ `Asia/Makassar`, Deadline). Neues Fenster möglich (N6: bis 05:00), da kein 23:00-Internet-Limit mehr gilt. Fenster = Martins Entscheidung.
+6. **Tests T1–T8 auf dem Server** (`workflow-builds/nightshift/test-scenarios.md`), dann ein Hand-Lauf, dann Timer **deaktiviert** anlegen.
+7. **Go für die erste Server-Nacht** → Timer an. Laptop-LaunchAgent `studio.741.night-shift-v2` erst danach entladen (Martins Go). v1-Runner lief am 27.–30.10. noch lokal (Quelle unklar, Plist fehlt jetzt): vor dem Umzug klären.
+
+### 15.4 Zugänge und Secrets, die das berührt
+- Server: `.secrets/` (Reduktion), `setup-token` (bleibt), GitHub-Zugang des Klons (nur `nightshift/*` pushen).
+- claude.ai-Connectors sind über das volle `claude auth login` auf dem Server aktiv (Drive, Supabase, Gmail …). Der Runner nutzt `--strict-mcp-config`, darum sieht der Nacht-Lauf sie nicht. Interaktive Server-Sessions sehen sie.
+- Browser-Profil auf dem Server: Logins (Google `741studio18`, ChatGPT, LinkedIn …) waren am 14.10. nur vorbereitet. Für die Nacht nicht nötig.
+
+### 15.5 Veraltete Doku (nicht geändert)
+`night-shift-server-hosting-options.md` (CX43 Nuremberg „chosen“), `night-shift-server-runbook-draft.md` („nothing done yet“), `night-shift-server-pilot-plan.md` (N14) und `night-shift-blueprint.md` (v1) zeigen den Stand vom 13.10. Der echte Stand steht in `workflow-builds/nightshift/decisions.md` N35–N51 und in diesem §15.
+
+
+### 15.6 Zugangscheck auf dem Server (12.11.2026, read-only, vom Morgen-Grill-Chat per Tailscale-SSH)
+Modell-Regel (Martin 11.11., HARD): Nacht-Läufe und Subagents nur mit Sonnet (`claude-sonnet-5-5`). Kein Opus, kein Fable, kein Hochstufen. Kann Sonnet ein Item nicht lösen, ist es BLOCKED.
+
+| Quelle | Ergebnis | Status |
+|---|---|---|
+| Claude Code 2.1.299 + Sonnet (`claude -p --model claude-sonnet-5-5`) | Antwort „OK“ | geht |
+| Google Service Account `reporting-bot@studio-apis-503306` | Token OK, GSC 9 Properties, GA4 41 Properties | geht (Python-Lib `google-auth` fehlt, JWT per openssl geht) |
+| DataForSEO | „Access denied. Your IP is not whitelisted“ (Task 40207) | **geht nicht**: Server-IP `162.55.46.13` muss in die Whitelist (app.dataforseo.com/api-access) |
+| Supabase `741-portal` | REST erreichbar, Login Standup-User OK | geht (nur mit RLS-Rechten des Standup-Users) |
+| Local Falcon | API erreichbar, **kein Key auf dem Server** | geht nicht ohne Key |
+| Google Ads API | keine Zugangsdaten auf dem Server | geht nicht (für Planungsläufe nicht nötig) |
+| Browser / Chat / MCP | Runner nutzt `--strict-mcp-config`, keine Logins im Server-Chrome | nachts nicht verfügbar, per Design |
+| Schreib-Keys auf dem Server | `cpanel.env`, `kraft-ftp.env`, `meta-741.env`, `stuerzl-artfiles.env`, `listings-imap.env` liegen dort | widerspricht §6.6, Entfernen = Schritt 1 (N53), braucht Go |
+
+**12.11.2026, Martins Go (Karte „Schreib-Keys“):** `cpanel.env`, `kraft-ftp.env`, `meta-741.env`, `stuerzl-artfiles.env` und `listings-imap.env` vom Server entfernt (`shred -u`). Kein Server-Dienst, Timer oder Cron nutzte sie (vorher geprüft). Backup byte-gleich geprüft: `.secrets/server-removed-2026-11-12/` (Laptop, chmod 700). Auf dem Server bleiben: apify, canary-telegram, dataforseo, ga-sc-reporting-bot.json, healthchecks-uuid, standup, telegram-741, youtube-api.
+**Local Falcon (Martins Go „Key auf den Server“):** offen. Lokal gibt es keine Key-Datei in `.secrets/`; Local Falcon läuft nur über den MCP-Connector.
+
+**12.11.2026, Health-Check repariert (Martins Go, Karte „Health-Fix“):** Ursache für PARKED seit 15.10.: `health_check.py` entfernte `CLAUDE_CODE_OAUTH_TOKEN`. Claude fiel auf das abgelaufene Voll-Login zurück („OAuth session expired and could not be refreshed“, exit 1). Fix: Token aus `~/.claude-oauth-token.env` laden, Modell `claude-sonnet-5-5`, Remote Control wird nur neu gestartet, wenn der Dienst enabled ist (bleibt aus). `heartbeat_ping.sh`: sendet `/fail` bei PARKED, fehlgeschlagenem letztem Check oder Heartbeat älter als 30 min. Backups `*.bak-2026-11-12`. Handlauf 14:17 WITA: ok, $0.015. Heartbeat-Ping OK. Der `/fail`-Zweig ist nur syntaktisch geprüft, nicht live ausgelöst (würde einen Canary-Alarm senden). Kosten: Check alle 10 min ≈ $0.015 → ca. $2.2/Tag.

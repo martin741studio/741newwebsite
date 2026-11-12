@@ -166,3 +166,10 @@ Hygiene: `--permission-prompts none` added to night-shift-v2's run.py; re-ran th
 ## Heartbeat wired, first ping confirmed (15.10.)
 - canary-workflow sent the real Healthchecks.io UUID (f3ccca05-...), Martin created the account. Stored in .secrets/healthchecks-uuid.txt (gitignored, 600), copied to server at 741website/.secrets/ same as other secrets.
 - heartbeat_ping.sh + heartbeat.timer (every 30 min — safety margin under canary's 60min period/15min grace = 75min window). First real ping fired by hand: result "OK", confirmed live.
+
+## Host-Entscheidung (11.11.2026)
+- N52 Martin (Karte „Nacht-Host“): „Server 741-agents-01 (Empfehlung)“ — Nachtschicht zieht vom MacBook auf den Server, alle 4 Klassen, nichts Live. Karte „Live-Check“: „Ja, starten + prüfen“ → Tailscale am Laptop gestartet, Server read-only geprüft. Befund + Schritte: `00_project/night-shift-server-workflow.md` §15. Richtungsentscheidung, kein Bauauftrag.
+- N53 Martin (Karte „Nächster Schritt“): „Erst Sicherheit + Health (Empfehlung)“ — Reihenfolge: zuerst §15.3 Schritte 1–2 (Schreib-Keys vom Server, Health-Check-Fehler 15.10., Heartbeat an Health-Status koppeln). Präferenz, kein Bauauftrag: Start erst auf Martins eigenen Satz, jede Server-Änderung mit Go.
+- N54 (12.11.) Zugangscheck §15.6: Sonnet OK, Google SA OK (GSC 9, GA4 41), Supabase OK, DataForSEO IP nicht gewhitelistet (Martin traegt 162.55.46.13 ein), kein Local-Falcon-Key, keine Ads-Creds. N55 Martin Go: 5 Schreib-Keys vom Server entfernt, Backup Laptop. N56 Martin Go: Local-Falcon-Key auf den Server, offen (kein Key in .secrets, nur MCP).
+- N57 (12.11.) Martin: heute Nacht laeuft nichts, erst Server fertig. N58 Martin: holt den Local-Falcon-Key selbst aus dem Dashboard -> .secrets/localfalcon.env, danach Server + read-only Test.
+- N59 (12.11.) Martin Go Health-Fix: Ursache Token-Pop -> abgelaufenes Login; gefixt, entparkt, Handlauf ok, Heartbeat an Health gekoppelt, Remote Control bleibt aus.

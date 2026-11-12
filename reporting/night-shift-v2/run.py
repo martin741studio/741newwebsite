@@ -20,8 +20,11 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 BASE = REPO / "reporting" / "night-shift"
 V2 = REPO / "reporting" / "night-shift-v2"
-CLAUDE = os.environ.get("NIGHT_CLAUDE", "/opt/homebrew/bin/claude")
-MODEL = os.environ.get("NIGHT_MODEL", "claude-sonnet-5")
+import shutil
+CLAUDE = os.environ.get("NIGHT_CLAUDE") or shutil.which("claude") or "/opt/homebrew/bin/claude"
+MODEL = os.environ.get("NIGHT_MODEL", "claude-sonnet-5-5")
+if "sonnet" not in MODEL.lower():  # Martin 11.11.2026 (HARD): night runs only on Sonnet, never Opus/Fable
+    sys.exit(f"refusing to start: NIGHT_MODEL={MODEL!r} is not a Sonnet model (night shift is Sonnet-only)")
 MAX_RUNS = int(os.environ.get("NIGHT_MAX_RUNS", "14"))
 MAX_USD = float(os.environ.get("NIGHT_MAX_USD", "10"))
 MAX_TURNS = int(os.environ.get("NIGHT_MAX_TURNS", "40"))
@@ -32,7 +35,7 @@ STOP_FILE = BASE / "STOP"
 ALLOWED = ",".join([
     "Read", "Write(./reporting/night-shift/**)", "Edit(./reporting/night-shift/**)", "Glob", "Grep", "WebFetch", "WebSearch",
     "Bash(python3:*)", "Bash(ls:*)", "Bash(wc:*)", "Bash(head:*)", "Bash(tail:*)",
-    "Bash(grep:*)", "Bash(cat:*)", "Bash(mkdir:*)", "Bash(git status:*)", "Bash(git diff:*)",
+    "Bash(grep:*)", "Bash(cat:*)", "Bash(mkdir:*)", "Bash(cd:*)", "Bash(git status:*)", "Bash(git diff:*)",
 ])
 DENIED = ",".join([
     "Bash(curl:*)", "Bash(wget:*)", "Bash(ftp:*)", "Bash(lftp:*)", "Bash(scp:*)", "Bash(sftp:*)",
