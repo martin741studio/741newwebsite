@@ -1,0 +1,156 @@
+{
+  "client": "STÜRZL Steuerstrafrecht",
+  "client_slug": "stuerzl",
+  "phase": "P3",
+  "updated_at": "2026-11-06T16:00:00Z",
+  "north_star_goal": {
+    "title": "Mehr qualifizierte Mandatsanfragen über Google-Suche, Maps und KI-Antworten, deutschlandweite Positionierung",
+    "target_metric": "Erste Signale + saubere Grundlage bis Programmende (keine Ranking-Garantie); 0 Leads/0 Ads-Conversions als Startwert",
+    "deadline": "2027-01-05",
+    "source": "Programmstart 07.10.2026 (Martin, final 14.10.2026), Positionierung 'deutschlandweit' (Martin 29.10.2026), Marktrecherche + Synthese 06.11.2026"
+  },
+  "benchmark_delta": {
+    "baseline": {
+      "gsc_16_monate": "6.714 Klicks / 95.202 Impressionen (12.07.2025-04.11.2026), Ø Position ~14,9, Trend 31-35 -> 10-11",
+      "ads_seit_start": "215,28 € / 39 Klicks / 752 Impr. (29.10.-05.11.2026), 0 Conversions, Budget-Lost-IS 27% (bis 53% an schlechten Tagen)",
+      "leads": "0 Zeilen in Supabase leads",
+      "local_falcon_baseline_ffm": "01.10.2026 bestätigt, 7x7, 5km, 8 Scans",
+      "local_falcon_baseline_muc": "Lücke: keine Daten, kein Scan existiert",
+      "bundesweite_sichtbarkeit": "0 von 12 bundesweiten Testsuchen (organisch + KI-Zitat)",
+      "gbp_bewertungen": "Frankfurt 14 (Ø5,0), München 1 (Ø5,0)",
+      "source": "00_project/research/stuerzl-markt-2026-11/intern/luecken-tabelle.md"
+    },
+    "market_benchmark": {
+      "gewinner_mechanismus": "Bundesweite Spezialkanzleien (LHP, steuerdelikt.de, WINHELLER, ROSE & PARTNER, Mauss & Mauss) gewinnen über Themen-Tiefe (4-6 von 12 Treffern), nicht über die lokalen Wettbewerber aus der 09.10.-Analyse",
+      "ki_zitat_faktor": "In sich geschlossene FAQ-Frage-Antwort-Blöcke am stärksten belegt; strukturierte Daten (Schema) als Zitierfaktor in mehreren Studien genannt",
+      "zeitrahmen": "3 unabhängige Quellen: 3-4 Monate bis erste SEO-Signale, 6-12 Monate bis spürbare Wirkung; verbleibend ~8,5 Wochen im Programm",
+      "keyword_volumen": "Nachgezogen 06.11.2026 (DataForSEO, echt, nicht geschätzt): 10 von 12 bundesweiten Keywords mit Suchvolumen, stärkste 'steuerhinterziehung strafe' 4.400/Monat und 'steuerhinterziehung verjährung' 2.400/Monat. 19 von 20 KI-Money-Prompts ohne DataForSEO-Eintrag — kein Tool-Fehler, lange gesprochene KI-Fragen sind eine andere Abfrageform als kurze Keyword-Begriffe.",
+      "source": "00_project/research/stuerzl-markt-2026-11/synthese.md"
+    },
+    "gap_summary": "STÜRZL deckt bereits Teile der Gewinner-Mechanismen ab (Notfallnummer, Erstberatungspreis, FAQ, Bewertungen, Team, 2 Standorte, 'deutschlandweit' im Haupttext), hat aber 0 eigene Themenseiten zu einzelnen Rechtsfragen, kein Schema-Markup, kein Call-Tracking und eine München-GBP ohne Baseline/Montags-Öffnungszeit. DataForSEO ist seit 06.11. frei (Suchvolumen jetzt echt); Ahrefs meldet weiterhin 'Insufficient plan' (kein Brand-Radar-Export, keine frischen Backlink-Zahlen der Top-5-Kanzleien)."
+  },
+  "milestones": [
+    {
+      "id": "M1",
+      "title": "Diagnose abgeschlossen",
+      "phase": "P2",
+      "status": "completed",
+      "completed_at": "2026-11-06",
+      "evidence": "00_project/stuerzl-wettbewerber-analyse-2026-10-09.md, 00_project/research/stuerzl-markt-2026-11/synthese.md, 00_project/research/stuerzl-markt-2026-11/intern/luecken-tabelle.md"
+    },
+    {
+      "id": "M2",
+      "title": "Grundlage & Schnellgewinne",
+      "phase": "P3",
+      "status": "ready_for_execution",
+      "tasks": [
+        {
+          "id": "T2.1",
+          "task": "NAP-Korrektur anwalt.de (zeigt noch Wiesenhuettenstrasse 17, veraltet) - Kundenaufgabe, nicht 741: Karte E9 (Logins fuer Verzeichnisse) existiert bereits seit 26.10.2026, Status 'change', Kanzlei antwortete 28.10. 'Ausser Anwalt.de wuesste ich keine Logins'. Offen: E9 gezielt auf anwalt.de zuspitzen und den Login anfragen, dazu in der naechsten Kunden-Mail erwaehnen",
+          "status": "pending"
+        },
+        {
+          "id": "T2.2",
+          "task": "FAQPage-Schema fuer den bestehenden FAQ-Block ergaenzen (Korrektur 06.11. nachmittags: LegalService/Person/Leistungen-Schema ist bereits sitewide live, erster Befund 'kein Schema' war ein Messfehler eines Recherche-Tools ohne <head>-Zugriff, per curl auf Start- und Kontaktseite live widerlegt)",
+          "status": "pending"
+        },
+        {
+          "id": "T2.3",
+          "task": "Call-Tracking einrichten — Vorschlag fertig (t2.3-call-tracking-proposal.md): Empfehlung Google Ads 'Calls from website' statt Drittanbieter (Aufzeichnungsrisiko §201/§203 StGB, §43e BRAO). Hinweis: phone_click/email_click sind seit dem GTM-v7-Fix 06.11. schon getrennt messbar; es fehlt echtes Anruf-Tracking (Klick ≠ Telefonat), nicht die Trennung. Wartet auf Martins Entscheidung + Go, bevor etwas live geht.",
+          "status": "blocked"
+        },
+        {
+          "id": "T2.4",
+          "task": "Ads-Budget/Gebot gegen Budget-Lost-Impression-Share prüfen (27-53%)",
+          "status": "pending"
+        },
+        {
+          "id": "T2.5",
+          "task": "Google-Rezensions-Anfrage München anstoßen (1 Bewertung gegen 14 Frankfurt)",
+          "status": "pending"
+        },
+        {
+          "id": "T2.6",
+          "task": "Local-Falcon-Baseline München nachholen (bisher keine, nur Frankfurt existiert), gleiche Parameter wie Frankfurt 01.10. (Martin 06.11.: 'die muessen wir natuerlich machen') — ERLEDIGT 06.11.2026: 8 Scans gelaufen (7×7, 5km, Google, gleiche 8 Keywords wie Frankfurt-Baseline), 392 Credits. Details worker3-falcon-m2.md.",
+          "status": "done"
+        },
+        {
+          "id": "T2.7",
+          "task": "Local-Falcon-Kampagne 56d95fc22d54bef: Keyword-Konflikt klaeren (12 API / 5 zuletzt gescannt / 17 laut Memory) und Keywordliste auf weitere Leistungen erweitern (Martin 06.11.) — GEKLAERT 06.11.2026: live 12 Keywords (nicht 17, Memory war falsch), die 5 alten Keywords liefen noch auf allen 5 Plattformen (nicht nur Google), die 7 neuen schon korrekt. Alle 12 auf traditional/Google-only gefixt, Kampagne neu gelaufen, 588 Credits (genau wie geschaetzt). Keine Erweiterung auf weitere Leistungen (Martins Go: keine Expansion jetzt). Details worker3-falcon-m2.md.",
+          "status": "done"
+        },
+        {
+          "id": "T2.8",
+          "task": "Frischer Backlink-Check ueber DataForSEO — ERLEDIGT 06.11.2026: organisches Wachstum seit 08.10. (Backlinks 100→137, Referring Domains 58→85, Rank 122→124), Spam-Score leicht gestiegen (31→36). Kein Handlungsbedarf, nur Protokoll fuer M4. Details worker4-backlinks-ga4.md.",
+          "status": "done"
+        },
+        {
+          "id": "T2.9",
+          "task": "GA4-Data-API-Zugriff reparieren — diagnostiziert 06.11.2026: Service Account sieht 41 andere Properties, aber 483853149 (Stuerzl) taucht gar nicht in seiner Konten-Uebersicht auf (403) — spricht fuer echten Konfigurationsfehler (Rolle nicht gespeichert / falsche Property-ID / Tippfehler), nicht nur Propagationsverzoegerung. Keine Admin-Aenderung vorgenommen. Braucht Martins eigenen Check in GA4 Property Access Management.",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "Themen-Tiefe",
+      "phase": "P4",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "T3.1",
+          "task": "Themenseite Selbstanzeige (deckt sich mit geplanter Säulenseite Steuerstrafrecht aus dem 09.10.-Plan)",
+          "status": "pending"
+        },
+        {
+          "id": "T3.2",
+          "task": "Themenseite Steuerfahndung/Durchsuchung (Akutfall)",
+          "status": "pending"
+        },
+        {
+          "id": "T3.3",
+          "task": "Optional: Themenseite Krypto-Selbstanzeige",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "M4",
+      "title": "Beweis & Übergabe",
+      "phase": "P6",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "T4.1",
+          "task": "Scan nach den neuen Seiten, Vergleich mit Baseline 01.10.2026",
+          "status": "pending"
+        },
+        {
+          "id": "T4.2",
+          "task": "Abschlussbericht mit ehrlicher Einordnung (erste Signale, kein fertiges Ranking)",
+          "status": "pending"
+        },
+        {
+          "id": "T4.3",
+          "task": "Backlink-Vergleich der Top-5-Kanzleien ueber DataForSEO (Korrektur 06.11. nachmittags, Martin: Ahrefs wird bei 741 nicht genutzt, nur DataForSEO ist das echte Tool; Ahrefs-Zeilen in den Recherche-Dateien bleiben als Datenlage-Hinweis stehen, sind aber keine offene Aktion mehr)",
+          "status": "pending"
+        }
+      ]
+    }
+  ],
+  "client_rules": [
+    "Go pro Änderung, nichts automatisch live (Martin 09.10.2026)",
+    "Anwaltswerbung BRAO §43b / BORA §6: keine Erfolgsversprechen, kein 'spezialisiert/Expertise', kein Vergleich mit namentlich genannten Kanzleien",
+    "Keine RVG-Abrechnung erwähnen (individuelle Vergütungsvereinbarung)",
+    "Fachtitel nur auf Personenseiten (Anja, Lea Wimmer je nach Regel; Monika Glogger keine Fachanwältin)",
+    "Keine geschätzten Zahlen — fehlende Daten bleiben als Lücke markiert, nicht geraten",
+    "revenue-model-100k.md ist nicht für Stürzl-Tracking gedacht",
+    "Körperschaft Anwaltswerbung: keine Falldetails in Bewertungen, kein WhatsApp mit Mandanten-Inhalten"
+  ],
+  "known_gaps": [
+    "PageSpeed mobil 06.11.: Score 60 -> 90, LCP 7,2s -> 2,6s, FCP 6,7s -> 2,4s. Ursache war fehlende gzip-Kompression und fehlender Browser-Cache fuer CSS/JS (Template-CSS 427 KB -> 71 KB). Fix: Block '741 Studio 06.11.2026' am Ende der .htaccess (Artfiles DCP > Webspace > Dateimanager > stuerzl-steuerstrafrecht.de/www/.htaccess), Martins Go; Rueckbau = Block loeschen. Dazu 3 Bilder optimiert. Rest offen: Render-Blocking noch 1.750ms Ersparnis, 118 KiB ungenutztes CSS (doppelte Font Awesome, animate.css) - eigenes Go, sitewide.",
+    "GA4-Data-API weiterhin ohne Zugriff (betrifft form_anfrage-Status)",
+    "Ahrefs meldet weiterhin 'Insufficient plan' — kein Brand-Radar-Export, keine frischen Backlink-Zahlen der Top-5-Kanzleien (DataForSEO ist seit 06.11.2026 frei, Suchvolumen jetzt echt)",
+    "Aktueller Stand Kostenseite, KI-Baustein, Bewertungs-Ablauf, Compliance-v3-Platzhalter unbekannt (kein Update seit zitierten Daten gefunden)"
+  ]
+}
