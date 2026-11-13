@@ -53,7 +53,9 @@ def hm(s):
 class Night:
     def __init__(self, day, dry):
         self.day, self.dry = day, dry
-        self.out = BASE / day
+        # 13.11.2026: a dry run once wrote state.json (status 'pass') into the real day folder, which would have made
+        # the real night skip every item. Dry runs now use their own folder.
+        self.out = BASE / (f"{day}-dry" if dry else day)
         self.out.mkdir(parents=True, exist_ok=True)
         (self.out / "items").mkdir(exist_ok=True)
         (self.out / "critic").mkdir(exist_ok=True)
