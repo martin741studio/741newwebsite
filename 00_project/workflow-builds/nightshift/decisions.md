@@ -175,3 +175,10 @@ Hygiene: `--permission-prompts none` added to night-shift-v2's run.py; re-ran th
 - N59 (12.11.) Martin Go Health-Fix: Ursache Token-Pop -> abgelaufenes Login; gefixt, entparkt, Handlauf ok, Heartbeat an Health gekoppelt, Remote Control bleibt aus.
 - N60 (12.11.) Martin Go Schritte 3-6: Push, Runner-Port (Sonnet-Sperre), Server-Tests ok, Timer angelegt + disabled, push_queue/pull_results-Skripte. Offen: Timer-Go, Skill-Verdrahtung, Laptop-Agent entladen.
 - N61 (12.11.) Martin Go 1. Server-Nacht ab 13.11.: Grill-Skill verdrahtet (0a pull_results, 2b push_queue + 'Heute Nacht läuft'-Zeile, Backup SKILL.md.bak-2026-11-12), Laptop-LaunchAgent studio.741.night-shift-v2 entladen (plist in ~/Library/LaunchAgents/disabled-2026-11-12/), Server-Timer enabled (17:45 WITA, läuft nur mit Queue-Datei; 12.11. keine Queue = kein Lauf).
+
+## N62 · 13.11.2026 · Erste Server-Nacht vorbereitet (Morgen-Grill)
+- Nacht 12.11.: Timer lief 17:45:31, keine Queue, "nothing to do", $0. Health 12:43 ok.
+- Martins Karte "Nacht 13.11.": Stürzl + Suriya (Fahrplan je Kunde gegen Roadmap M2). Queue `queue/2026-11-13.json` (commit 2bedf438), `stuerzl/roadmap.json` dazu committet (war untracked, der Server hätte es nicht gehabt).
+- Fund 1: scp-Kopie plus Commit blockiert `git merge --ff-only` auf dem Server ("untracked working tree file would be overwritten"). ExecStart nutzt `;`, run.py wäre mit altem Stand gelaufen. Gelöst: scp-Kopie gelöscht (byte-gleich geprüft), ff-merge ok. Regel: Queue nie committen, nur push_queue.sh.
+- Fund 2: `run.py --dry-run` schrieb state.json mit status "pass" in den echten Tagesordner; der echte Lauf hätte beide Items übersprungen. Ordner nach `2026-11-13-dry-1310` verschoben; run.py schreibt Probeläufe jetzt nach `<day>-dry` (commit a4d90da4, Server auf a4d90da4, Probelauf erneut ok, echter Tagesordner leer).
+- Grill-Skill Schritt 2b um beide Regeln ergänzt; Queue-Karte darf im Morgen-Grill kommen, wenn der Abend-Grill zu spät für 17:45 wäre.
