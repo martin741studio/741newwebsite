@@ -12,3 +12,5 @@ Entfernte Scanner-Karten: Dumann-Frist (geparkt 11.11.), read-source-of-truth (R
    Queue reporting/night-shift/queue/2026-11-13.json (2 Items: stuerzl-fahrplan-m2-bis-ziel, suriya-fahrplan-m2-bis-ziel), commit 2bedf438, auf dem Server per git ff, Probelauf ok.
    Fund + Fix: Der Probelauf schrieb state.json mit "pass" in den echten Tagesordner, der echte Lauf hätte beide Items übersprungen. Ordner verschoben (2026-11-13-dry-1310), run.py schreibt Probeläufe jetzt nach <day>-dry (commit a4d90da4, Server aktualisiert).
    Fund 2: Queue per scp UND im Commit blockiert den ff-merge auf dem Server. Regel: Queue nicht committen, nur push_queue.sh (heute einmalig per Hand gelöst).
+
+- 13.11. ~15:20 · Karte „Nacht-Daten“: **Go – Daten-Export ins Repo**. Testlauf um 15:09 auf dem Server (1 Aufgabe, Sonnet, 0,20 $, Urteil pass, keine Verstöße) hat gezeigt: Der Server hat keinen Supabase-Zugang. Darum liegen jetzt die GSC-Daten, Map-Grids und Citations für Stürzl und Suriya als Export in `reporting/night-shift/inputs/2026-11-13-*-supabase.md`. Beide Briefs nennen den Export (Commit 21f7a000, Server aktualisiert).
